@@ -3,12 +3,12 @@ title: SYSLIB0002 錯誤
 description: 瞭解產生編譯時期錯誤 SYSLIB0002 的 obsoletion。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 00fd42975c9286221b75c87caef8d2109b9b7100
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 53eb51d5e525c463e5698710bdb6fa0c0907e43c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333250"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440773"
 ---
 # <a name="syslib0002-principalpermissionattribute-is-obsolete"></a>SYSLIB0002： PrincipalPermissionAttribute 已淘汰
 
@@ -59,6 +59,8 @@ ms.locfileid: "92333250"
       // Code that should run only when user is an administrator.
   }
   ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>請參閱
 

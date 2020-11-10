@@ -2,12 +2,12 @@
 title: .NET 5 + 中已淘汰的功能
 description: 瞭解在 .NET 5.0 和更新版本中標示為過時的 Api，這些 Api 會產生 SYSLIB 編譯器警告。
 ms.date: 10/20/2020
-ms.openlocfilehash: 13f5fb10cfe693ed621b3f45fc22e024875890c8
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333249"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440760"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 中已淘汰的功能
 
@@ -17,7 +17,7 @@ ms.locfileid: "92333249"
 
 - <xref:System.ObsoleteAttribute.UrlFormat?displayProperty=nameWithType>屬性會指示編譯器包含 URL 連結，以深入瞭解 obsoletion。
 
-如果您因為使用過時的 API 而遇到組建警告或錯誤，請遵循 [參考](#reference) 一節中所列的診斷識別碼所提供的特定指導方針。 針對過時的類型或成員， *無法* 使用 [標準診斷識別碼 (CS0618) ](../../csharp/language-reference/compiler-messages/cs0618.md) 來抑制這些 obsoletions 的警告或錯誤;請改用自訂 `SYSLIBxxxx` 診斷識別碼值。 如需詳細資訊，請參閱 [隱藏警告](#suppress-warnings)。
+如果您因為使用過時的 API 而遇到組建警告或錯誤，請遵循 [參考](#reference) 一節中所列的診斷識別碼所提供的特定指導方針。 針對過時的類型或成員， *無法* 使用 [標準診斷識別碼 (CS0618)](../../csharp/language-reference/compiler-messages/cs0618.md) 來抑制這些 obsoletions 的警告或錯誤;請改用自訂 `SYSLIBxxxx` 診斷識別碼值。 如需詳細資訊，請參閱 [隱藏警告](#suppress-warnings)。
 
 ## <a name="reference"></a>參考
 
@@ -61,9 +61,14 @@ ms.locfileid: "92333249"
    <TargetFramework>net5.0</TargetFramework>
    <!-- NoWarn below suppresses SYSLIB0001 project-wide -->
    <NoWarn>$(NoWarn);SYSLIB0001</NoWarn>
+   <!-- To suppress multiple warnings, you can use multiple NoWarn elements -->
+   <NoWarn>$(NoWarn);SYSLIB0002</NoWarn>
+   <NoWarn>$(NoWarn);SYSLIB0003</NoWarn>
+   <!-- Alternatively, you can suppress multiple warnings by using a semicolon-delimited list -->
+   <NoWarn>$(NoWarn);SYSLIB0001;SYSLIB0002;SYSLIB0003</NoWarn>
   </PropertyGroup>
 </Project>
 ```
 
 > [!NOTE]
-> 以這種方式隱藏警告，只會停用該特定 obsoletion 警告。 它不會停用任何其他警告，包括其他 obsoletion 警告。
+> 以這種方式隱藏警告只會停用您指定的 obsoletion 警告。 它不會停用任何其他警告，包括具有不同診斷識別碼的 obsoletion 警告。

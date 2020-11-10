@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553352"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440076"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 
@@ -249,7 +249,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
 
 ### <a name="stick-to-the-windows-store-app-apis"></a>前往 Windows Store 應用程式 Api
 
-當您流覽 Windows API 時，您會發現每個 API 都記載為適用于桌面應用程式、Windows Store 應用程式或兩者。 例如， [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)函式檔的 [**需求**] 區段指出此函式僅適用于桌面應用程式。 相反地， [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) 函式適用于桌面應用程式和 Windows Store 應用程式。
+當您流覽 Windows API 時，您會發現每個 API 都記載為適用于桌面應用程式、Windows Store 應用程式或兩者。 例如， [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)函式檔的 [ **需求** ] 區段指出此函式僅適用于桌面應用程式。 相反地， [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) 函式適用于桌面應用程式和 Windows Store 應用程式。
 
 開發 Profiler DLL 時，請將它視為 Windows Store 應用程式，並只使用 Windows Store 應用程式所記載的 Api。 分析您的相依性 (例如，您可以 `link /dump /imports` 針對分析工具 DLL 執行以 audit) ，然後搜尋檔以查看哪些相依性正常，哪些不是。 在大多數情況下，您的違規可以藉由將其取代為安全 (的較新形式的 API 來修正，例如，將 [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) 取代為 [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)) 。
 
@@ -273,7 +273,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
 
 這不在本主題的討論範圍內，可列出 Windows Store 應用程式許可權與傳統型應用程式不同的所有方式。 但是，每次您的 Profiler DLL (載入至 Windows Store 應用程式時，相較于桌面應用程式) 嘗試存取任何資源，其行為會有所不同。 檔案系統是最常見的範例。 磁片上有幾個位置可供指定的 Windows Store 應用程式存取 (請參閱 [ (Windows 執行階段應用程式) 的檔案存取和許可權](/previous-versions/windows/apps/hh967755(v=win.10)) ，而且您的分析工具 DLL 會受到相同的限制。 徹底測試您的程式碼。
 
-### <a name="inter-process-communication"></a>處理序間通訊
+### <a name="inter-process-communication"></a>內含式通訊
 
 如本文開頭的圖表所示，您的 Profiler DLL (載入至 Windows Store 應用程式的進程空間) 可能需要與您的分析工具 UI 進行通訊， (在個別的桌面應用程式進程空間中執行) 透過您自己的自訂處理序間通訊 (IPC) 通道。 分析工具 UI 會將信號傳送給 Profiler DLL 以修改其行為，而分析工具 DLL 會將資料從已分析的 Windows Store 應用程式傳送回分析工具 UI，以進行後置處理，並顯示給 profiler 使用者。
 
@@ -356,7 +356,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="reading-metadata-from-winmds"></a>從 Winmd 讀取中繼資料
 
-WinMD 檔案（如一般模組）包含可透過 [中繼資料 api](../metadata/index.md)讀取的中繼資料。 不過，當 CLR 讀取 WinMD 檔案時，CLR 會將 Windows 執行階段型別對應到 .NET Framework 型別，讓以 managed 程式碼進行程式設計和取用 WinMD 檔案的開發人員可以有更自然的程式設計經驗。 如需這些對應的一些範例，請參閱 [.NET Framework 支援 Windows Store 應用程式和 Windows 執行階段](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。
+WinMD 檔案（如一般模組）包含可透過 [中繼資料 api](../metadata/index.md)讀取的中繼資料。 不過，當 CLR 讀取 WinMD 檔案時，CLR 會將 Windows 執行階段型別對應到 .NET Framework 型別，讓以 managed 程式碼進行程式設計和取用 WinMD 檔案的開發人員可以有更自然的程式設計經驗。 如需這些對應的一些範例，請參閱 [.NET Framework 支援 Windows Store 應用程式和 Windows 執行階段](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。
 
 如此一來，當分析工具使用中繼資料 Api 時，您的分析工具會取得：原始 Windows 執行階段視圖或對應的 .NET Framework 視圖？  答案：由您負責。
 
@@ -388,7 +388,7 @@ WinMD 檔案（如一般模組）包含可透過 [中繼資料 api](../metadata/
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-從 .NET Framework 4.5 開始，有一個新的 GC 回呼 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)，可讓分析工具更完整的 *相依控制碼*相關資訊。 由於 GC 存留期管理的目的，這些處理常式可有效地將來源物件的參考新增至目標物件。 相依的控制碼不是新的，而且在 managed 程式碼中撰寫程式的開發人員可以使用類別來建立自己的相依控制碼， <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> 即使在 Windows 8 和 .NET Framework 4.5。
+從 .NET Framework 4.5 開始，有一個新的 GC 回呼 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)，可讓分析工具更完整的 *相依控制碼* 相關資訊。 由於 GC 存留期管理的目的，這些處理常式可有效地將來源物件的參考新增至目標物件。 相依的控制碼不是新的，而且在 managed 程式碼中撰寫程式的開發人員可以使用類別來建立自己的相依控制碼， <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> 即使在 Windows 8 和 .NET Framework 4.5。
 
 不過，managed XAML Windows Store 應用程式現在會大量使用相依的控制碼。 尤其是，CLR 會使用它們來協助管理 managed 物件與非受控 Windows 執行階段物件之間的參考迴圈。 這表示，比以往更重要的是，它比以往更重要的是，記憶體分析工具會收到這些相依控制碼的通知，以便與堆積圖形中的其餘邊緣進行視覺化。 分析工具 DLL 應使用 [RootReferences2](icorprofilercallback2-rootreferences2-method.md)、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)和 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) ，以形成堆積圖形的完整觀點。
 
@@ -406,9 +406,9 @@ WinMD 檔案（如一般模組）包含可透過 [中繼資料 api](../metadata/
 
 **CLR 與 Windows 執行階段的互動**
 
-- [適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Windows Store 應用程式**
+**Windows 市集應用程式**
 
 - [ (Windows 執行階段應用程式的檔案存取和許可權](/previous-versions/windows/apps/hh967755(v=win.10))
 

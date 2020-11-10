@@ -2,12 +2,12 @@
 title: 將部署為 Linux 容器的 ASP.NET Core 應用程式建立至 AKS/Kubernetes 叢集中
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 ms.date: 08/06/2020
-ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844559"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440825"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>將部署為 Linux 容器的 ASP.NET Core 應用程式建立至 AKS/Kubernetes orchestrator
 
@@ -33,7 +33,7 @@ ASP.NET Core 是一般用途的開發平台，由 Microsoft 和 GitHub 上的 .N
 
 **圖 4-35**. 在 Visual Studio 2019 中建立 ASP.NET Core Web 應用程式。
 
-若要在 Visual Studio 中建立範例專案，**請選取**  >  [檔案**新增**  >  **專案**]，選取 [ **web**專案類型]，然後選取 [ **ASP.NET Core web 應用程式**] 範本。 您也可以視需要搜尋範本。
+若要在 Visual Studio 中建立範例專案， **請選取**  >  [檔案 **新增**  >  **專案** ]，選取 [ **web** 專案類型]，然後選取 [ **ASP.NET Core web 應用程式** ] 範本。 您也可以視需要搜尋範本。
 
 然後輸入應用程式名稱和位置，如下圖所示。
 
@@ -51,13 +51,13 @@ ASP.NET Core 是一般用途的開發平台，由 Microsoft 和 GitHub 上的 .N
 
 如果您有任何舊版的 .NET Core，您可以從下載並安裝3.1 版 <https://dotnet.microsoft.com/download> 。
 
-若要顯示您隨時可以「Docker 化」您的專案，您可以立即新增 Docker 支援。 因此，在方案總管中的專案節點上按一下滑鼠右鍵，然後在內容功能表上選取 [**新增**  >  **Docker 支援**]。
+若要顯示您隨時可以「Docker 化」您的專案，您可以立即新增 Docker 支援。 因此，在方案總管中的專案節點上按一下滑鼠右鍵，然後在內容功能表上選取 [ **新增**  >  **Docker 支援** ]。
 
 ![將 Docker 支援新增至現有專案的內容功能表選項：以滑鼠右鍵按一下專案) 上的 (，> 新增 > Docker 支援。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-docker-support-to-project.png)
 
 **圖 4-38**. 將 Docker 支援新增至現有的專案
 
-若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。 在此情況下，請選取 [ **Linux**]。
+若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。 在此情況下，請選取 [ **Linux** ]。
 
 ![用於選取 Dockerfile 目標 OS 的選項對話方塊。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-linux-docker-support.png)
 
@@ -193,24 +193,24 @@ docker images
 
 ### <a name="create-an-acr-instance"></a>建立 ACR 實例
 
-從 **az cli**執行下列命令：
+從 **az cli** 執行下列命令：
 
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
 > [!NOTE]
-> 容器登錄名稱 (例如 `exploredocker` ，) 在 Azure 中必須是唯一的，且包含5-50 個英數位元。 如需詳細資訊，請參閱 [Create a container registry](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
+> 容器登錄名稱 (例如 `exploredocker` ，) 在 Azure 中必須是唯一的，且包含5-50 個英數位元。 如需詳細資訊，請參閱 [Create a container registry](/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
 
 ### <a name="create-the-image-in-release-mode"></a>在 [發行] 模式中建立映像
 
-您現在會在 [ **發行** ] 模式中建立映射 (準備好用於生產) ，方法是變更為 [ **發行**]，如 [圖 4-46] 所示，然後執行應用程式。
+您現在會在 [ **發行** ] 模式中建立映射 (準備好用於生產) ，方法是變更為 [ **發行** ]，如 [圖 4-46] 所示，然後執行應用程式。
 
 ![在 [發行] 模式中建置的 VS 工具列選項。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-release-mode.png)
 
 **圖 4-46**. 選取 [發行] 模式
 
-如果您執行此 `docker images` 命令，您會看到兩個建立的映射，一個用於 `debug` (**開發**) ，另一個用於 `release` (**最新** 的) 模式。
+如果您執行此 `docker images` 命令，您會看到兩個建立的映射，一個用於 `debug` ( **開發** ) ，另一個用於 `release` ( **最新** 的) 模式。
 
 ### <a name="create-a-new-tag-for-the-image"></a>為映像建立新的標記
 
@@ -230,7 +230,7 @@ az acr list --resource-group <resource-group-name> --query "[].{acrLoginServer:l
 
 ![上述命令的主控台輸出。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/az-cli-loginServer-name.png)
 
-**圖 4-48**. 使用**az cli**取得登錄的名稱
+**圖 4-48**. 使用 **az cli** 取得登錄的名稱
 
 在這兩種情況下，您都會取得名稱。 在我們的範例中為 `exploredocker.azurecr.io`。
 
@@ -264,7 +264,7 @@ docker push <login-server-name>/<image-name>:v1
 
 ![Docker push 命令的主控台輸出。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
 
-**圖 4-50**。 推播命令的主控台輸出。
+**圖 4-50** 。 推播命令的主控台輸出。
 
 若要將多容器應用程式部署到您的 AKS 叢集中，您需要一些具有的資訊清單檔案 `.yaml` ，而這些屬性大多取自 `docker-compose.yml` 和檔案 `docker-compose.override.yml` 。
 
@@ -369,9 +369,9 @@ spec:
 > 先前的檔案 `.yml` 只會 `HTTP` 使用參數來啟用埠， `ASPNETCORE_URLS` 以避免範例應用程式中遺失的憑證發生問題。
 
 > [!TIP]
-> 您可以在本指南的[**部署到 Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) 一節中，了解如何為此範例建立 AKS 叢集。
+> 您可以在本指南的 [**部署到 Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) 一節中，了解如何為此範例建立 AKS 叢集。
 
-現在您已準備好使用 **kubectl**進行部署，但您必須先使用下列命令從 AKS 叢集中取得認證：
+現在您已準備好使用 **kubectl** 進行部署，但您必須先使用下列命令從 AKS 叢集中取得認證：
 
 ```console
 az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks
@@ -379,7 +379,7 @@ az aks get-credentials --resource-group explore-docker-aks-rg --name explore-doc
 
 ![上述命令的主控台輸出：合併 "aks" 作為 C:\Users\Miguel.kube\config 中的目前內容](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/getting-aks-credentials.png)
 
-**圖 4-51**。 從 AKS 到 kubectl 環境中取得認證。
+**圖 4-51** 。 從 AKS 到 kubectl 環境中取得認證。
 
 您也必須使用下列命令，讓 AKS 叢集從 ACR 提取映射：
 
@@ -398,13 +398,13 @@ kubectl get all
 
 ![上述命令的主控台輸出：套用的部署。 已建立服務。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubectl-apply-command.png)
 
-**圖 4-52**。 部署至 Kubernetes
+**圖 4-52** 。 部署至 Kubernetes
 
 您必須等候一段時間，直到負載平衡器取得外部 IP 並檢查，然後 `kubectl get services` 應用程式應該可在該位址使用，如下圖所示：
 
 ![部署至 AKS 之應用程式的瀏覽器視圖](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/aks-deployed-application.png)
 
-**圖 4-53**。 部署至 Kubernetes
+**圖 4-53** 。 部署至 Kubernetes
 
 當部署完成時，您可以使用 ssh 通道，以本機 proxy 存取 [Kubernetes WEB UI](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) 。
 
@@ -424,7 +424,7 @@ az aks browse --resource-group exploredocker-aks-rg --name explore-docker-aks
 
 ![Kubernetes 儀表板的瀏覽器檢視，其中顯示 [部署]、[Pod]、[複本集] 和 [服務]。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubernetes-cluster-information.png)
 
-**圖 4-54**。 檢視 Kubernetes 叢集資訊
+**圖 4-54** 。 檢視 Kubernetes 叢集資訊
 
 現在您已有 ASP.NET Core 應用程式，在 Linux 容器中執行，並部署至 Azure 上的 AKS 叢集。
 

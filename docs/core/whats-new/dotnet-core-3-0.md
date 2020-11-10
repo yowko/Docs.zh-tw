@@ -6,18 +6,18 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 2488499c1b0e8d12eb3be04b9bb885649b4da974
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050276"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439725"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
 本文說明 .NET Core 3.0 中的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
-.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本、 [Visual Studio for Mac 8.3](/visualstudio/mac/install-preview)或更新版本，或使用最新的**c # 擴充**功能[Visual Studio Code](https://code.visualstudio.com/) 。
+.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用 [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本、 [Visual Studio for Mac 8.3](/visualstudio/mac/install-preview)或更新版本，或使用最新的 **c # 擴充** 功能 [Visual Studio Code](https://code.visualstudio.com/) 。
 
 立即在 Windows、macOS 或 Linux 上[下載並開始使用 .Net Core 3.0](https://aka.ms/netcore3download) 。
 
@@ -42,7 +42,7 @@ C # 8.0 語言功能的相關教學課程：
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-.NET Core 3.0 實行 **.NET Standard 2.1**。 不過，預設 `dotnet new classlib` 範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
+.NET Core 3.0 實行 **.NET Standard 2.1** 。 不過，預設 `dotnet new classlib` 範本會產生仍以 **.NET Standard 2.0** 為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -54,7 +54,7 @@ C # 8.0 語言功能的相關教學課程：
 </Project>
 ```
 
-如果目前使用 Visual Studio，您需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，因為 Visual Studio 2017 不支援 **.NET Standard 2.1** 或 **.NET Core 3.0**。
+如果目前使用 Visual Studio，您需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，因為 Visual Studio 2017 不支援 **.NET Standard 2.1** 或 **.NET Core 3.0** 。
 
 ## <a name="compiledeploy"></a>編譯/部署
 
@@ -62,7 +62,7 @@ C # 8.0 語言功能的相關教學課程：
 
 .NET Core 現在預設會建置[架構相依可執行檔](../deploying/index.md#publish-framework-dependent)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新行為。 先前，只有[獨立式部署](../deploying/index.md#publish-self-contained)會產生可執行檔。
 
-在 `dotnet build` 或期間 `dotnet publish` ，會建立可執行檔 (稱為 **appHost**) ，其符合您所使用之 SDK 的環境和平臺。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
+在 `dotnet build` 或期間 `dotnet publish` ，會建立可執行檔 (稱為 **appHost** ) ，其符合您所使用之 SDK 的環境和平臺。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
 
 - 您可以按兩下可執行檔。
 - 您可以直接從命令提示字元啟動應用程式，例如在 Windows 上為 `myapp.exe`，在 Linux 和 macOS 上為 `./myapp`。
@@ -225,7 +225,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 - 環境變數：`DOTNET_ROLL_FORWARD`
 - 命令列引數：`--roll-forward`
 
-必須指定下列其中一個值。 若省略設定，**Minor** 會是預設值。
+必須指定下列其中一個值。 若省略設定， **Minor** 會是預設值。
 
 - **LatestPatch**\
 向前復原到最高的修補程式版本。 這會停用次要版本向前復原。
@@ -267,7 +267,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 ### <a name="new-globaljson-options"></a>選項的新 global.js
 
-檔案 * 上的global.js* 有新選項，可在您嘗試定義所使用的 .NET Core SDK 版本時，提供更大的彈性。 新的選項如下：
+檔案 *上的global.js* 有新選項，可在您嘗試定義所使用的 .NET Core SDK 版本時，提供更大的彈性。 新的選項如下：
 
 - `allowPrerelease`：指出在選取要使用的 SDK 版本時，SDK 解析程式是否應考慮發行前版本。
 - `rollForward`：表示在選取 SDK 版本時要使用的向前復原原則，可在特定 SDK 版本遺失或做為指示詞使用較高版本時作為復原。
@@ -288,7 +288,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 ### <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」** 部分以「一百」** 為單位的群組中定義。 例如，**3.0._101_** 和 **3.0._201_** 便是位於兩個不同功能帶中的版本，而 **3.0._101_** 和 **3.0._199_** 則位於相同的功能帶。 此外，安裝 .NET Core SDK **3.0._101_** 時，.NET Core SDK **3.0._100_** 便會從電腦移除 (若存在的話)。 在相同電腦上安裝 .NET Core SDK **3.0._200_** 時，不會移除 .NET Core SDK **3.0._101_**。
+Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」部分以「一百」為單位的群組中定義。 例如， **3.0. _101_** 和 **3.0. _201_** 便是位於兩個不同功能帶中的版本，而 **3.0. _101_** 和 **3.0. _199_** 則位於相同的功能帶。 此外，安裝 .NET Core SDK **3.0. _101_** 時，.NET Core SDK **3.0. _100_** 便會從電腦移除 (若存在的話)。 在相同電腦上安裝 .NET Core SDK **3.0. _200_** 時，不會移除 .NET Core SDK **3.0. _101_** 。
 
 如需版本設定的詳細資訊，請參閱 [.NET Core 版本設定概觀](../versions/index.md)。
 
@@ -305,9 +305,9 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 會新增 [新增專案]**** 範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。
+Visual Studio 2019 會新增 [新增專案] 範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。
 
-如需如何移植現有 .NET Framework 應用程式的詳細資訊，請參閱[移植 WPF 專案](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)和[移植 Windows Forms 專案](../porting/winforms.md)。
+如需如何移植現有 .NET Framework 應用程式的詳細資訊，請參閱[移植 WPF 專案](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)和[移植 Windows Forms 專案](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)。
 
 #### <a name="winforms-high-dpi"></a>WinForms 高 DPI
 
@@ -372,7 +372,7 @@ Visual Studio 2019 中提供的 [Windows 應用程式套件專案](/windows/uwp/
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結套件包含裝置繫結。 如需詳細資訊，請參閱[裝置 GitHub 存放庫](https://github.com/dotnet/iot/blob/master/src/devices/)。
+GPIO 套件包含 *GPIO* 、 *SPI* 、 *I2C* 和 *PWM* 裝置的 API。 IoT 繫結套件包含裝置繫結。 如需詳細資訊，請參閱[裝置 GitHub 存放庫](https://github.com/dotnet/iot/blob/master/src/devices/)。
 
 ### <a name="arm64-linux-support"></a>ARM64 Linux 支援
 
@@ -392,10 +392,10 @@ GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結�
 - 因為用戶端與伺服器之間所需的來回行程次數減少，所以改善了連線時間。
 - 因為移除各種已淘汰和不安全的密碼編譯演算法，所以提升了安全性。
 
-.NET Core 3.0 在 Linux 系統上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2** (若可供使用)。 當 **OpenSSL 1.1.1** 可供使用時，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型就會使用 **TLS 1.3** (假設用戶端和伺服器都支援 **TLS 1.3**)。
+.NET Core 3.0 在 Linux 系統上使用 **OpenSSL 1.1.1** 、 **OpenSSL 1.1.0** 或 **OpenSSL 1.0.2** (若可供使用)。 當 **OpenSSL 1.1.1** 可供使用時，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型就會使用 **TLS 1.3** (假設用戶端和伺服器都支援 **TLS 1.3** )。
 
 > [!IMPORTANT]
-> Windows 和 macOS 尚未支援 **TLS 1.3**。
+> Windows 和 macOS 尚未支援 **TLS 1.3** 。
 
 下列 C# 8.0 範例示範連線至 <https://www.cloudflare.com> 之 Ubuntu 18.10 上的 .NET Core 3.0：
 
@@ -413,7 +413,7 @@ GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結�
 
 .NET Core 3.0 支援從標準格式匯入及匯出非對稱式公開金鑰與私密金鑰。 您無須使用 X.509 憑證。
 
-所有金鑰類型 (例如 *RSA*、*DSA*、*ECDsa* 和 *ECDiffieHellman*) 都支援下列格式：
+所有金鑰類型 (例如 *RSA* 、 *DSA* 、 *ECDsa* 和 *ECDiffieHellman* ) 都支援下列格式：
 
 - **公開金鑰**
   - X.509 SubjectPublicKeyInfo
@@ -512,7 +512,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="net-platform-dependent-intrinsics"></a>.NET 平台相依內建
 
-已新增 API，允許存取特定效能導向的 CPU 指令，例如 **SIMD** 或**位元操作指令**集合。 這些指令可協助您在某些情況 (例如有效率地平行處理資料) 下大幅提升效能。
+已新增 API，允許存取特定效能導向的 CPU 指令，例如 **SIMD** 或 **位元操作指令** 集合。 這些指令可協助您在某些情況 (例如有效率地平行處理資料) 下大幅提升效能。
 
 .NET 程式庫 (如果適用) 已開始使用這些指令來提升效能。
 
@@ -520,7 +520,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="improved-net-core-version-apis"></a>改善的 .NET Core 版本 API
 
-從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如︰
+從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如：
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

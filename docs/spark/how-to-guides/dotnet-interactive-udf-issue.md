@@ -6,18 +6,18 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224132"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441072"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>針對 Apache Spark 互動式環境在 .NET 中撰寫和呼叫 Udf
 
 在本文中，您將瞭解如何在 .NET 中使用 (Udf) 的使用者定義函數，以 Apache Spark 互動式環境。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 1. 安裝 [.Net Interactive](https://github.com/dotnet/interactive)
 2. 安裝 [Jupyter lab](https://jupyter.org/)
@@ -49,7 +49,7 @@ ms.locfileid: "92224132"
 
 上述反白顯示的錯誤是因為 UDF 元件必須先經過編譯並傳送給背景工作角色，才能在資料框架上呼叫。
 
-當您在 .NET 中為 Apache Spark 的互動式體驗 (（例如 [Azure Synapse 筆記本](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)) ）執行 udf 時，必須牢記一些重要事項。
+當您在 .NET 中為 Apache Spark 的互動式體驗 (（例如 [Azure Synapse 筆記本](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)) ）執行 udf 時，必須牢記一些重要事項。
 
 ## <a name="faqs"></a>常見問題集
 
@@ -61,7 +61,7 @@ ms.locfileid: "92224132"
 
     如同在案例中所見 `udf2_fails` ，我們看到的錯誤訊息指出型別未 `Submission#7` 標示為可序列化，這是因為 .net Interactive 會將資料格中定義的每個物件與其類別一起包裝 `Submission#` ，而這會在即時產生，因此未標示為 `Serializable` 。
 
-    基於這個理由，必須將 **參考自訂物件的 UDF 定義在與該物件相同的資料格中**。
+    基於這個理由，必須將 **參考自訂物件的 UDF 定義在與該物件相同的資料格中** 。
 
 2. **為什麼廣播變數適用于 .NET Interactive？**
     基於先前所述的原因，廣播變數不適用於 .NET Interactive。 最好是 [在廣播變數上進行這份指南](broadcast-guide.md) ，以深入瞭解廣播變數是什麼，以及如何使用它們。 廣播變數無法搭配互動式案例使用的原因，是因為 .NET 互動的設計會附加儲存格所定義的每個物件及其資料格提交類別（因為未標記為可序列化），但先前所示的例外狀況會失敗。

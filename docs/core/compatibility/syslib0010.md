@@ -3,12 +3,12 @@ title: SYSLIB0010 警告
 description: 瞭解產生編譯時期警告 SYSLIB0010 的 obsoletions。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: dcd331aa5c68381ea29848bc54ee4b1a5e75330d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 824423d58802d4a286bfed98422341097985990f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333215"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440604"
 ---
 # <a name="syslib0010-unsupported-remoting-apis"></a>SYSLIB0010：不支援的遠端 Api
 
@@ -17,9 +17,11 @@ ms.locfileid: "92333215"
 - <xref:System.MarshalByRefObject.GetLifetimeService?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject.InitializeLifetimeService?displayProperty=nameWithType>
 
-## <a name="workaround"></a>因應措施
+## <a name="workarounds"></a>因應措施
 
 請考慮使用以 WCF 或 HTTP 為基礎的 REST 服務，與其他應用程式或電腦之間的物件進行通訊。 如需詳細資訊，請參閱 [.NET FRAMEWORK .Net Core 上無法使用的技術](../porting/net-framework-tech-unavailable.md)。
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>請參閱
 

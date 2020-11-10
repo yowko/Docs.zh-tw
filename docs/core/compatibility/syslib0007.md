@@ -3,12 +3,12 @@ title: SYSLIB0007 警告
 description: 瞭解產生編譯時期警告 SYSLIB0007 的 obsoletions。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: d5410a3b3d33515e2ee6f578cad2f4deaec9c25d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333244"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439935"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007：不支援密碼編譯演算法的預設執行
 
@@ -20,7 +20,7 @@ ms.locfileid: "92333244"
 - <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=fullName>
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=fullName>
 
-## <a name="workaround"></a>因應措施
+## <a name="workarounds"></a>因應措施
 
 - 建議的動作是將對已淘汰 Api 的呼叫取代為特定演算法的 factory 方法呼叫，例如 <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType> 。 這可讓您完全掌控要具現化的演算法。
 
@@ -33,6 +33,8 @@ ms.locfileid: "92333244"
   | <xref:System.Security.Cryptography.HMAC.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | 大部分新式應用程式不建議採用 HMACSHA1 演算法。 如果可能的話，請考慮使用較強的演算法。 如需進一步指引，請參閱您的安全性顧問。 |
   | <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | 大部分新式應用程式不建議採用 HMACSHA1 演算法。 如果可能的話，請考慮使用較強的演算法。 如需進一步指引，請參閱您的安全性顧問。 |
   | <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType> |
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>請參閱
 

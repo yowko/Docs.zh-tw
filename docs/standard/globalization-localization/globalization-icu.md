@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: ca579e837b801de237859963ede0e5a9a4bfbcbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400875"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439465"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 全球化和 ICU
 
@@ -37,6 +37,29 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 > [!NOTE]
 > 即使使用 ICU， `CurrentCulture` 、 `CurrentUICulture` 和 `CurrentRegion` 成員仍會使用 Windows 作業系統 api 來接受使用者設定。
+
+### <a name="behavioral-differences"></a>行為差異
+
+如果您將應用程式升級為以 .NET 5 為目標，即使您不知道您使用的是全球化設施，也可能會在應用程式中看到變更。 此區段會列出您可能會看到的其中一項行為變更，但也會列出其他行為變更。
+
+##### <a name="stringindexof"></a>String.IndexOf
+
+請考慮下列程式碼，該程式碼會呼叫 <xref:System.String.IndexOf(System.String)?displayProperty=nameWithType> 以找出字串中分行符號的索引。
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- 在舊版的 Windows 中，程式碼片段會列印出來 `6` 。
+- 在 Windows 10 2019 年5月更新和更新版本的 .NET 5.0 和更新版本中，程式碼片段會列印 `-1` 。
+
+若要藉由執行序數搜尋而不是區分文化特性的搜尋來修正此程式碼，請呼叫多載 <xref:System.String.IndexOf(System.String,System.StringComparison)> ，並傳入 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 做為引數。
+
+您可以執行程式碼分析規則 [CA1307：為清楚起見指定 StringComparison](../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md) ，以及 [CA1309：使用序數 StringComparison](../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md) ，在您的程式碼中尋找這些呼叫位置。
+
+如需詳細資訊，請參閱在 [.net 5 + 上比較字串時的行為變更](../base-types/string-comparison-net-5-plus.md)。
 
 ### <a name="use-nls-instead-of-icu"></a>使用 NLS 而非 ICU
 
@@ -107,7 +130,7 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 如果您是透過 NuGet 套件來取用 ICU，這會在與 framework 相依的應用程式中運作。 NuGet 會解析原生資產，並將它們包含在檔案中，並將其包含在 `deps.json` 目錄的應用程式的輸出目錄中 `runtimes` 。 .NET 會從該處載入它。
 
-針對與 framework 相依的應用程式， (不是自主) 從本機組建取用 ICU 的情況下，您必須採取額外的步驟。 .NET SDK 尚未提供「鬆散」原生二進位檔的功能，可將其併入 `deps.json` (請參閱 [此 SDK 問題](https://github.com/dotnet/sdk/issues/11373)) 。 相反地，您可以藉由在應用程式的專案檔中新增其他資訊來啟用此專案。 例如︰
+針對與 framework 相依的應用程式， (不是自主) 從本機組建取用 ICU 的情況下，您必須採取額外的步驟。 .NET SDK 尚未提供「鬆散」原生二進位檔的功能，可將其併入 `deps.json` (請參閱 [此 SDK 問題](https://github.com/dotnet/sdk/issues/11373)) 。 相反地，您可以藉由在應用程式的專案檔中新增其他資訊來啟用此專案。 例如：
 
 ```xml
 <ItemGroup>

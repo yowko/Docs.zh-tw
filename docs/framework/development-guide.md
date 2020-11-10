@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3fe36ce0c53821fb79fd7689ec6f7176af3e2f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547880"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440851"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 
@@ -38,7 +38,7 @@ ms.locfileid: "90547880"
  [.NET 中的平行處理、並行和非同步程式設計](../standard/parallel-processing-and-concurrency.md)  
  提供有關 Managed 執行緒、平行程式設計和非同步程式設計模式的資訊。  
   
- [.NET Framework 中的網路程式設計](./network-programming/index.md)  
+ [以 .NET Framework 進行網路程式設計](./network-programming/index.md)  
  說明可以讓您迅速方便地整合到您應用程式之有層次、可擴充及受管理的網際網路服務實作。  
   
  設定[.NET Framework 應用程式](configure-apps/index.md)說明如何使用設定檔來變更設定，而不需要重新編譯您的 .NET Framework 應用程式。  
@@ -49,10 +49,10 @@ ms.locfileid: "90547880"
  [安全性](../standard/security/index.md)  
  提供 .NET Framework 中，可加強應用程式開發安全性的類別及服務的相關資訊。  
   
- [偵錯工具、追蹤和程式碼剖析](./debug-trace-profile/index.md)  
+ [偵錯、追蹤和程式碼剖析](./debug-trace-profile/index.md)  
  說明如何測試、最佳化及分析 .NET Framework 應用程式與應用程式的環境。 本章節包含可供系統管理員和開發者使用的資訊。  
   
- [進行多平台開發](../standard/cross-platform/index.md)  
+ [進行多平台開發](./cross-platform/index.md)  
  提供如何使用 .NET Framework ，建置可以讓多種平台與裝置 (例如電話、桌面與 Web) 共用之組件的資訊。  
   
  [部署](./deployment/index.md)  
@@ -62,10 +62,12 @@ ms.locfileid: "90547880"
  提供有關快取、延遲初始設定、可靠性和 ETW 事件的資訊。  
 
 ## <a name="reference"></a>參考  
+
  [.NET Framework 類別庫](../../api/index.md?view=netframework-4.7)  
  為每個包含在 .NET Framework 命名空間中的類別，提供語法、程式碼範例及使用方式資訊。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [快速入門](./get-started/index.md)  
  提供 .NET Framework 的完整概觀與其他資源的連結。  
   

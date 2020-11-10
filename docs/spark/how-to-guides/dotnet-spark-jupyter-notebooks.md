@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: 38263c5ce4d1686777f33f5a9742d530eafa9d89
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955708"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441059"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>在 Jupyter 筆記本中使用 .NET 進行 Apache Spark
 
@@ -26,7 +26,7 @@ ms.locfileid: "91955708"
 
 ## <a name="prerequisites"></a>必要條件
 
-- [.NET Core 3.1 SDK](https://docs.microsoft.com/dotnet/core/install/)
+- [.NET Core 3.1 SDK](../../core/install/index.yml)
 - [Apache Spark](https://spark.apache.org/downloads.html)
 - [Apache Spark .NET 背景工作](https://github.com/dotnet/spark/releases)
 
@@ -43,8 +43,8 @@ ms.locfileid: "91955708"
         > [!IMPORTANT]
         > 根據預設，會下載最新版本的套件。 **請確定您下載的版本與 Apache Spark .NET Worker 相同。**
 
-    1. 在 [ **資訊** ] 窗格中，選取 [ **下載套件** ] 以下載最新版本的套件。 封裝的名稱類似于  *microsoft。封裝版本]. nupkg*。
-    1. 將下載的封裝解壓縮。 解壓縮的目錄應包含稱為 *jar*的子目錄。 記下路徑，因為稍後會用到。
+    1. 在 [ **資訊** ] 窗格中，選取 [ **下載套件** ] 以下載最新版本的套件。 封裝的名稱類似于  *microsoft。封裝版本]. nupkg* 。
+    1. 將下載的封裝解壓縮。 解壓縮的目錄應包含稱為 *jar* 的子目錄。 記下路徑，因為稍後會用到。
 
 ## <a name="start-net-for-apache-spark"></a>啟動 Apache Spark 的 .NET
 
@@ -96,11 +96,11 @@ spark-submit ^
 
     **Jupyter Notebook**
 
-    選取 **新的 > .net (c # ) ** 或 **新的 > .net (F # ) **
+    選取 **新的 > .net (c # )** 或 **新的 > .net (F # )**
 
     **Jupyter 實驗室**
 
-    在啟動器視窗中，選取 **.net (c # ) ** 或 **.net (F # ) **
+    在啟動器視窗中，選取 **.net (c # )** 或 **.net (F # )**
 
 ### <a name="visual-studio-code-preview"></a>Visual Studio Code (preview) 
 
@@ -111,7 +111,7 @@ spark-submit ^
 >- [.NET 互動式筆記本擴充功能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
 
 1. 開啟 VS Code。
-1. 開啟 [命令選擇區] **> 命令**選擇區。
+1. 開啟 [命令選擇區] **> 命令** 選擇區。
 
     當命令選擇區出現時，輸入下列命令以建立新的 .NET 互動式筆記本：
 

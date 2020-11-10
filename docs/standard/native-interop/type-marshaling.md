@@ -2,12 +2,12 @@
 title: 類型封送處理 - .NET
 description: 了解 .NET 如何將您的類型封送處理至原生表示法。
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188389"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440994"
 ---
 # <a name="type-marshaling"></a>類型封送處理
 
@@ -65,7 +65,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.ArgIterator` | `va_list` | 不允許 |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | 不允許 |
 | `System.Collections.IEnumerable` | `IDispatch*` | 不允許 |
-| `System.DateTimeOffset` | `int64_t` 代表從 1601 年 1 月 1 日午夜起的刻度數目 || `int64_t` 代表從 1601 年 1 月 1 日午夜起的刻度數目 |
+| `System.DateTimeOffset` | `int64_t` 代表從 1601 年 1 月 1 日午夜起的刻度數目 | `int64_t` 代表從 1601 年 1 月 1 日午夜起的刻度數目 |
 
 某些類型只能以參數 (而非欄位) 的形式進行封送處理。 這些類型已列於下表中：
 

@@ -2,16 +2,16 @@
 title: dotnet publish 命令
 description: Dotnet publish 命令會將 .NET Core 專案或方案發佈至目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: e35a0671cb964e7d9b68ed5bbe261045038229aa
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654890"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440565"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
-本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -32,20 +32,20 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 此輸出包含下列資產：
 
-- 組件中的中繼語言 (IL) 程式碼，副檔名為 *dll*。
-- 檔案 * 上的.deps.js* ，其中包含專案的所有相依性。
-- *.runtimeconfig.json*檔案，指定應用程式預期的共用執行時間，以及執行時間 (的其他設定選項，例如垃圾收集類型) 。
+- 組件中的中繼語言 (IL) 程式碼，副檔名為 *dll* 。
+- 檔案 *上的.deps.js* ，其中包含專案的所有相依性。
+- *.runtimeconfig.json* 檔案，指定應用程式預期的共用執行時間，以及執行時間 (的其他設定選項，例如垃圾收集類型) 。
 - 應用程式的相依性，這些相依性會從 NuGet 快取複製到輸出資料夾。
 
 `dotnet publish`　命令的輸出已準備好部署到裝載系統 (例如伺服器、電腦、Mac、膝上型電腦) 以供執行。 這是準備應用程式以供部署的唯一正式支援的方法。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](../deploying/deploy-with-cli.md)。
 
 ### <a name="implicit-restore"></a>隱含還原
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -59,7 +59,7 @@ dotnet publish -h|--help
 dotnet publish -p:PublishProfile=FolderProfile
 ```
 
-上述範例會使用在* \<project_folder> /Properties/PublishProfiles*資料夾中找到的*FolderProfile. .pubxml*檔案。 如果您在設定屬性時指定路徑和副檔名 `PublishProfile` ，則會忽略它們。 依預設，MSBuild 會在 *Properties/PublishProfiles* 資料夾中尋找，並假設 *.pubxml* 副檔名。 若要指定包含副檔名的路徑和檔案名，請設定 `PublishProfileFullPath` 屬性，而非 `PublishProfile` 屬性。
+上述範例會使用在 *\<project_folder> /Properties/PublishProfiles* 資料夾中找到的 *FolderProfile. .pubxml* 檔案。 如果您在設定屬性時指定路徑和副檔名 `PublishProfile` ，則會忽略它們。 依預設，MSBuild 會在 *Properties/PublishProfiles* 資料夾中尋找，並假設 *.pubxml* 副檔名。 若要指定包含副檔名的路徑和檔案名，請設定 `PublishProfileFullPath` 屬性，而非 `PublishProfile` 屬性。
 
 如需詳細資訊，請參閱下列資源：
 
@@ -75,7 +75,7 @@ dotnet publish -p:PublishProfile=FolderProfile
   
   * `PROJECT` 是 [c #](csproj.md)、f # 或 Visual Basic 專案檔的路徑和檔案名，或是包含 c #、f # 或 Visual Basic 專案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。
 
-  * `SOLUTION` 這是方案檔的路徑和檔案名 (*.sln* 副檔名) ，或包含方案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。 自 .NET Core 3.0 SDK 起提供。
+  * `SOLUTION` 這是方案檔的路徑和檔案名 ( *.sln* 副檔名) ，或包含方案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。 自 .NET Core 3.0 SDK 起提供。
 
 ## <a name="options"></a>選項
 
@@ -125,7 +125,7 @@ dotnet publish -p:PublishProfile=FolderProfile
   
   如果未指定，它會預設為 framework 相依可執行檔和跨平臺二進位檔的 *[project_file_folder]/bin/[configuration]/[framework]/publish/* 。 它預設為獨立可執行檔的 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 。
 
-  在 Web 專案中，如果輸出檔案夾位於專案資料夾中，後續的 `dotnet publish` 命令會產生嵌套的輸出檔案夾。 例如，如果專案資料夾是*myproject*，而 [發行輸出] 資料夾是 [ *myproject]/[發佈*]，而您執行了 `dotnet publish` 兩次，則第二次執行會在*myproject/publish/publish*中放入 *.config*和檔案等內容*檔案。* 若要避免嵌套發行資料夾，請指定不在專案資料夾 **下的** 發行資料夾，或從專案中排除 [發行] 資料夾。 若要排除名為 *publishoutput*的發行資料夾，請將下列元素新增至 `PropertyGroup` *.csproj* 檔案中的專案：
+  在 Web 專案中，如果輸出檔案夾位於專案資料夾中，後續的 `dotnet publish` 命令會產生嵌套的輸出檔案夾。 例如，如果專案資料夾是 *myproject* ，而 [發行輸出] 資料夾是 [ *myproject]/[發佈* ]，而您執行了 `dotnet publish` 兩次，則第二次執行會在 *myproject/publish/publish* 中放入 *.config* 和檔案等內容 *檔案。* 若要避免嵌套發行資料夾，請指定不在專案資料夾 **下的** 發行資料夾，或從專案中排除 [發行] 資料夾。 若要排除名為 *publishoutput* 的發行資料夾，請將下列元素新增至 `PropertyGroup` *.csproj* 檔案中的專案：
 
   ```xml
   <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
@@ -229,7 +229,7 @@ dotnet publish -p:PublishProfile=FolderProfile
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core 應用程式發行總覽](../deploying/index.md)
 - [使用 .NET Core CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)

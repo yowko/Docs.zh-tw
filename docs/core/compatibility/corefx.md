@@ -2,12 +2,12 @@
 title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: 900fd4e0e071f19aa286dec84632006870822f26
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: 8ea1cd995484c2930c8a9c2eb4c7419be57cf9c0
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434955"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440169"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "92434955"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [LastIndexOf 已改善空白搜尋字串的處理](#lastindexof-has-improved-handling-of-empty-search-strings) | 5.0 |
 | [全域組件快取 Api 已淘汰](#global-assembly-cache-apis-are-obsolete) | 5.0 |
 | [遠端 Api 已淘汰](#remoting-apis-are-obsolete) | 5.0 |
 | [大部分的代碼啟用安全性 Api 已淘汰](#most-code-access-security-apis-are-obsolete) | 5.0 |
@@ -63,13 +64,17 @@ ms.locfileid: "92434955"
 
 ## <a name="net-50"></a>.NET 5。0
 
-[!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
+[!INCLUDE [lastindexof-improved-handling-of-empty-values](../../../includes/core-changes/corefx/5.0/lastindexof-improved-handling-of-empty-values.md)]
 
 ***
 
-[!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
+[!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
 
 **_
+
+[!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
+
+_*_
 
 [!INCLUDE [code-access-security-apis-obsolete](../../../includes/core-changes/corefx/5.0/code-access-security-apis-obsolete.md)]
 

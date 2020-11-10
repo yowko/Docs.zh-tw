@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 65f417c06886c32da8057ae612043b95c31a31bd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7f8014750d0255bd93c8fff533d90c4322f8207a
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536414"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439673"
 ---
 # <a name="operator-overloading-c-reference"></a>運算子多載 (C# 參考)
 
@@ -36,7 +36,7 @@ ms.locfileid: "90536414"
 
 下表提供 C# 運算子多載性的相關資訊：
 
-| 操作員 | Overloadability |
+| 運算子 | Overloadability |
 | --------- | --------------- |
 |[+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++](arithmetic-operators.md#increment-operator-)、[--](arithmetic-operators.md#decrement-operator---)、[true](true-false-operators.md)、[false](true-false-operators.md)|可多載這些一元運算子。|
 |[x + y](addition-operator.md)、 [x-y](subtraction-operator.md)、 [x \* y](arithmetic-operators.md#multiplication-operator-)、 [x/y](arithmetic-operators.md#division-operator-)、 [x% y](arithmetic-operators.md#remainder-operator-)、 [x & y](boolean-logical-operators.md#logical-and-operator-)、 [x &#124; y](boolean-logical-operators.md#logical-or-operator-)、 [x ^ y](boolean-logical-operators.md#logical-exclusive-or-operator-)、 [x \<\< y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-)、x [= = y](equality-operators.md#equality-operator-)、 [x！ = y](equality-operators.md#inequality-operator-)、 [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-)、 [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x > = y](comparison-operators.md#greater-than-or-equal-operator-)|可多載這些二元運算子。 某些運算子必須成對多載，如需詳細資訊，請參閱本表後的附註。|
@@ -44,7 +44,7 @@ ms.locfileid: "90536414"
 |[我&#93;的&#91;](member-access-operators.md#indexer-operator-)[`a?[i]`](member-access-operators.md#null-conditional-operators--and-)|元素存取不會視為可多載的運算子，但您可定義[索引子](../../programming-guide/indexers/index.md)。|
 |[ (T) x](type-testing-and-cast.md#cast-expression)|Cast 運算子無法多載，但您可以定義可由 cast 運算式執行的自訂型別轉換。 如需詳細資訊，請參閱[使用者定義轉換運算子](user-defined-conversion-operators.md)。|
 |[+=](arithmetic-operators.md#compound-assignment)、 [-=](arithmetic-operators.md#compound-assignment) 、 [\*=](arithmetic-operators.md#compound-assignment) 、 [/=](arithmetic-operators.md#compound-assignment) 、 [%=](arithmetic-operators.md#compound-assignment) 、 [&=](boolean-logical-operators.md#compound-assignment) 、 [&#124;=](boolean-logical-operators.md#compound-assignment)、 [^=](boolean-logical-operators.md#compound-assignment) 、、 [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|無法明確多載複合指派運算子。 不過，當您多載二元運算子時，也會隱含多載對應的複合指派運算子 (若有)。 例如，`+=` 是使用 `+` 進行評估 (可多載)。|
-|[^ x](member-access-operators.md#index-from-end-operator-)、 [x = y](assignment-operator.md)、 [x. y](member-access-operators.md#member-access-expression-)、 [`x?.y`](member-access-operators.md#null-conditional-operators--and-) 、 [c？ t： f](conditional-operator.md)、 [x？？ y](null-coalescing-operator.md)、 [x？？= y](null-coalescing-operator.md)、 [x。y](member-access-operators.md#range-operator-)、 [x >y](pointer-related-operators.md#pointer-member-access-operator--)、 [=>](lambda-operator.md) 、 [f (x) ](member-access-operators.md#invocation-expression-)、 [as](type-testing-and-cast.md#as-operator)、 [await](await.md)、 [checked](../keywords/checked.md)、 [unchecked](../keywords/unchecked.md)、 [default](default.md)、 [delegate](delegate-operator.md)、 [is](type-testing-and-cast.md#is-operator)、 [nameof](nameof.md)、 [new](new-operator.md)、 [sizeof](sizeof.md)、 [stackalloc](stackalloc.md)、 [switch](switch-expression.md)、 [typeof](type-testing-and-cast.md#typeof-operator)|這些運算子無法多載。|
+|[^ x](member-access-operators.md#index-from-end-operator-)、 [x = y](assignment-operator.md)、 [x. y](member-access-operators.md#member-access-expression-)、 [`x?.y`](member-access-operators.md#null-conditional-operators--and-) 、 [c？ t： f](conditional-operator.md)、 [x？？ y](null-coalescing-operator.md)、 [x？？= y](null-coalescing-operator.md)、 [x。y](member-access-operators.md#range-operator-)、 [x >y](pointer-related-operators.md#pointer-member-access-operator--)、 [=>](lambda-operator.md) 、 [f (x) ](member-access-operators.md#invocation-expression-)、 [as](type-testing-and-cast.md#as-operator)、 [await](await.md)、 [checked](../keywords/checked.md)、 [unchecked](../keywords/unchecked.md)、 [default](default.md)、 [delegate](delegate-operator.md)、 [is](type-testing-and-cast.md#is-operator)、 [nameof](nameof.md)、 [new](new-operator.md)、 [sizeof](sizeof.md)、 [stackalloc](stackalloc.md)、 [switch](switch-expression.md)、 [typeof](type-testing-and-cast.md#typeof-operator)、 [with](with-expression.md)|這些運算子無法多載。|
 
 > [!NOTE]
 > 比較運算子必須成對多載。 也就是說，如果多載了成對運算子的其中之一，即必須也多載另一個運算子。 這類成對運算子如下：
@@ -60,7 +60,7 @@ ms.locfileid: "90536414"
 - [運算子多載](~/_csharplang/spec/expressions.md#operator-overloading)
 - [運算子](~/_csharplang/spec/classes.md#operators)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考資料](../index.md)
 - [C# 運算子與運算式](index.md)

@@ -3,12 +3,12 @@ title: SYSLIB0006 警告
 description: 瞭解產生編譯時期警告 SYSLIB0006 的 obsoletions。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 45d2d8ec6ad99996f8b8f46d0c2e0ac2e02cf450
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 222b669a8a0260713e85721e6031144bb7bda5cc
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333251"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440656"
 ---
 # <a name="syslib0006-threadabort-is-not-supported"></a>SYSLIB0006：不支援 Thread. Abort
 
@@ -17,7 +17,7 @@ ms.locfileid: "92333251"
 - <xref:System.Threading.Thread.Abort?displayProperty=nameWithType>
 - <xref:System.Threading.Thread.Abort(System.Object)?displayProperty=nameWithType>
 
-## <a name="workaround"></a>因應措施
+## <a name="workarounds"></a>因應措施
 
 使用 <xref:System.Threading.CancellationToken> 來中止工作單位的處理，而不是呼叫 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 。 下列範例說明如何使用 <xref:System.Threading.CancellationToken> 。
 
@@ -35,6 +35,8 @@ void ProcessPendingWorkItemsNew(CancellationToken cancellationToken)
     }
 }
 ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>請參閱
 

@@ -2,12 +2,12 @@
 title: 將您的 Windows 市集應用程式移轉至 .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556924"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440890"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>將您的 Windows Store 應用程式遷移至 .NET Native
 
@@ -208,7 +208,9 @@ ms.locfileid: "90556924"
 - 系統會將回應中的 `SetCookie2` 標頭視為過時而將它忽略。
 
 <a name="Interop"></a>
+
 ### <a name="interop-differences"></a>Interop 的差異
+
  **已被取代的 API**
 
  有些與 Managed 程式碼交互操作的不常用 API 已被取代。 搭配 .NET Native 使用時，這些 Api 可能會擲回 <xref:System.NotImplementedException> 或 <xref:System.PlatformNotSupportedException> 例外狀況，或導致編譯器錯誤。 在適用於 Windows 市集應用程式的 .NET 中，這些 API 會標示為已過時，但是呼叫這些 API 會產生編譯器警告，而不是編譯器錯誤。
@@ -645,7 +647,7 @@ ms.locfileid: "90556924"
 
 - <xref:System.TypeAccessException>
 
-**建置應用程式**
+**建立應用程式**
 
 使用 Visual Studio 預設使用的 x86 建置工具。 我們不建議使用 AMD64 MSBuild 工具 (可以在 C:\Program Files (x86)\MSBuild\12.0\bin\amd64 中找到)；這些工具可能會造成組建問題。
 
@@ -661,9 +663,9 @@ ms.locfileid: "90556924"
 
 不支援在 Windows Store 應用程式專案的單元測試程式庫上啟用 .NET Native，並且會導致專案無法建立。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [快速入門](getting-started-with-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [適用于 Windows Store 應用程式的 .NET 總覽](/previous-versions/windows/apps/br230302(v=vs.140))
-- [適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

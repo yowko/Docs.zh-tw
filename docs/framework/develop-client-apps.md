@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 33d0ca2918e4e3b00e2b09f7a47c538bbe903dba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e8d3a95b58cd2cabc41be31b7a4b66b1a79317d6
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547905"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439426"
 ---
 # <a name="develop-client-applications-with-net-framework"></a>使用 .NET Framework 開發用戶端應用程式
 
@@ -39,7 +39,7 @@ ms.locfileid: "90547905"
 [適用于 UWP 應用程式的 .NET API](../../api/index.md?view=dotnet-uwp-10.0)\
 支援 UWP 應用程式之 .NET 類型的參考。
   
-[針對多個平臺進行開發](../standard/cross-platform/index.md)\
+[針對多個平臺進行開發](./cross-platform/index.md)\
 描述您可以 .NET Framework 用來以多個用戶端應用程式類型為目標的不同方法。
 
 [ASP.NET 網站開始](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
@@ -48,7 +48,7 @@ ms.locfileid: "90547905"
 [適用于 Windows Phone Silverlight 的 .NET API](/previous-versions/windows/apps/jj207211\(v=vs.105\))\
 列出 .NET Framework Api，您可以使用 Windows Phone Silverlight 來建立應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Standard](../standard/net-standard.md)
 - [概觀](./get-started/overview.md)

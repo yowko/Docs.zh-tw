@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 3ab1c502508dd042940a6c5d2a73a5b71af6a9f4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471663"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440838"
 ---
 # <a name="get-started-with-net-framework"></a>開始使用 .NET Framework
 
@@ -40,6 +40,7 @@ ms.locfileid: "92471663"
 - 多目標。 將目標設為 [.NET Standard](../../standard/net-standard.md)，開發人員就能建立可在該標準版本所支援的多個 .NET Framework 平台上運作的類別庫。 例如，以 .NET Standard 2.0 為目標的程式庫可供以 .NET Framework 4.6.1、.NET Core 2.0 和 UWP 10.0.16299 為目標的應用程式使用。
 
 <a name="ForUsers"></a>
+
 ## <a name="net-framework-for-users"></a>使用者的 .NET Framework
 
 如果您未開發 .NET Framework 的應用程式，但您使用這些應用程式，就不需要具備 .NET Framework 或其作業的特定知識。 大部分的情況下，架構對使用者來說都是完全透明的。
@@ -78,11 +79,10 @@ ms.locfileid: "92471663"
 | [安裝指南](../install/index.md) | 提供有關安裝 .NET Framework 的資訊。 |
 | [.NET Framework 和頻外版本](the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 不定期發行以及如何在您的應用程式中使用它們。 |
 | [系統需求](system-requirements.md) | 列出執行 .NET Framework 的硬體和軟體需求。 |
-| [.NET 的核心和開放原始碼](net-core-and-open-source.md) | 描述 .NET Core 的相關 .NET Framework 以及如何存取開放原始碼 .NET Core 專案。 |
 | [.NET Core 文件](../../core/introduction.md) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
 | [.NET Standard](../../standard/net-standard.md) | 討論 .NET Standard，其為個別 .NET 執行所支援的版本規格，以保證可在多個平臺上使用一組一致的 Api。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 指南](../index.yml)
 - [新功能](../whats-new/index.md)

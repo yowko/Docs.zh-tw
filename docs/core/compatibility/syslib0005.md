@@ -3,12 +3,12 @@ title: SYSLIB0005 警告
 description: 瞭解產生編譯時期警告 SYSLIB0005 的 obsoletion。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 8a9893d81c781335014c8b970c460b5a4241ed18
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 8e5420b5cfaa9515ed7a3ac4472dc5d4e49f5bcb
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333245"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439998"
 ---
 # <a name="syslib0005-the-global-assembly-cache-gac-is-not-supported"></a>SYSLIB0005：不支援全域組件快取 (GAC) 
 
@@ -20,9 +20,11 @@ ms.locfileid: "92333245"
 
   程式庫和應用程式不應使用 <xref:System.Reflection.Assembly.GlobalAssemblyCache> API 來判斷執行時間行為，因為它一律會 `false` 在 .net Core 和 .net 5 + 中傳回。
 
-## <a name="workaround"></a>因應措施
+## <a name="workarounds"></a>因應措施
 
 如果您的應用程式會查詢 <xref:System.Reflection.Assembly.GlobalAssemblyCache> 屬性，請考慮移除呼叫。 如果您在 <xref:System.Reflection.Assembly.GlobalAssemblyCache> 執行時間使用值來選擇「gac 中的元件」-flow 與「不在 gac 中的元件」的流程，請重新考慮流程是否仍然適合 .net 5 + 應用程式。
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>請參閱
 

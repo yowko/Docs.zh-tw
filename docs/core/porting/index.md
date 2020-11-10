@@ -3,12 +3,12 @@ title: 從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063237"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439738"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>從 .NET Framework 移植到 .NET Core 的總覽
 
@@ -109,14 +109,14 @@ ms.locfileid: "93063237"
 
    如果您使用 Windows 特定 Api (例如登錄存取) ，請安裝 [Windows 相容性套件](./windows-compat-pack.md)。
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
 > [分析相依性](third-party-deps.md) 
 > [封裝 NuGet 套件](../deploying/creating-nuget-packages.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ASP.NET 至 ASP.NET Core 遷移](/aspnet/core/migration/proper-to-2x)
 - [將 WPF 應用程式遷移至 .NET Core](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
-- [將 Windows Forms 應用程式遷移至 .NET Core](winforms.md)
+- [將 .NET Framework Windows Forms 應用程式遷移至 .NET](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)

@@ -3,12 +3,12 @@ title: SYSLIB0003 警告
 description: 瞭解產生編譯時期警告 SYSLIB0003 的 obsoletions。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ca774f3e4b5132cf40c632f7c49d3f183f5d578f
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a9f925904641a1aa4fd229c81ff680850e4f84bd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333247"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439959"
 ---
 # <a name="syslib0003-code-access-security-is-not-supported"></a>SYSLIB0003：不支援代碼啟用安全性
 
@@ -209,6 +209,8 @@ ms.locfileid: "92333247"
   ```
 
 - 如果您的需求很嚴苛 <xref:System.Security.Permissions.PrincipalPermission> ，請參閱 SYSLIB0002 的指引 [： PrincipalPermissionAttribute 已淘汰](syslib0002.md#workarounds)。 本指南適用于 <xref:System.Security.Permissions.PrincipalPermission> 和 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 。
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>請參閱
 

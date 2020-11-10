@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2c1358b2b63a92cb50b853043adbfaae23ccd897
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329868"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440812"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -493,9 +493,9 @@ JSON 屬性命名原則：
 
 |屬性 |值  |
 |---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00|
+| 日期    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 摘要| null|
+| 總結| null|
 
 ```json
 {
@@ -761,11 +761,11 @@ JSON 屬性命名原則：
 
 當您將稍早所示的 JSON 還原序列化為此範例類型時，額外的資料會變成屬性的索引鍵/值組 `ExtensionData` ：
 
-|屬性 |值  |備忘錄  |
+|屬性 |值  |注意  |
 |---------|---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00||
+| 日期    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | JSON)  (區分大小寫不符 `temperatureCelsius` ，因此未設定屬性。 |
-| 摘要 | 經常性存取層 ||
+| 總結 | 經常性存取層 ||
 | ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性是一個額外的，並且會成為字典中的索引鍵/值組。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|
 | |SummaryWords:<br>非經常性<br>風<br>潮濕 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|
@@ -990,9 +990,11 @@ System.Text.Json 可以使用參數化的函式，讓您可以還原序列化不
 
 ### <a name="filter-data-using-utf8jsonreader"></a>使用 Utf8JsonReader 篩選資料
 
-下列範例示範如何同步讀取檔案，並搜尋值：
+下列範例示範如何同步讀取檔案，並搜尋值。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderFromFile.cs)]
+
+ ([此範例的非同步版本](https://github.com/dotnet/samples/blob/18e31a5f1abd4f347bf96bfdc3e40e2cfb36e319/core/json/Program.cs) 可供使用。 ) 
 
 上述程式碼：
 

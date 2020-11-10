@@ -2,12 +2,12 @@
 title: 記錄和追蹤-.NET Core
 description: .NET Core 記錄和追蹤的簡介。
 ms.date: 10/12/2020
-ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997700"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439920"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 記錄和追蹤
 
@@ -15,13 +15,13 @@ ms.locfileid: "91997700"
 
 ## <a name="reasons-to-use-logging-and-tracing"></a>使用記錄和追蹤的原因
 
-這項簡單的技巧非常強大。 它可用於偵錯工具失敗的情況：
+這種簡單的技術出奇的強大。 它可用於偵錯工具失敗的情況：
 
-- 在很長一段時間內發生的問題，可能很難使用傳統偵錯工具來進行偵測。 記錄檔可讓您在長時間內進行詳細的事後剖析後評論。 相反地，偵錯工具會限制為即時分析。
-- 多執行緒應用程式和分散式應用程式通常難以進行調試。  附加偵錯工具通常會修改行為。 您可以視需要分析詳細的記錄，以瞭解複雜的系統。
-- 分散式應用程式中的問題可能是來自許多元件之間的複雜互動，而將偵錯工具連接到系統的每個部分可能並不合理。
-- 許多服務不應停止。 附加偵錯工具通常會導致逾時錯誤。
-- 問題不一定是預見。 記錄和追蹤是針對低負擔而設計，因此在發生問題的情況下，一律可以記錄程式。
+- 長時間出現的問題，可能很難利用傳統的偵錯工具進行偵錯。 記錄允許長時間進行詳盡的事後檢討。 相反地，偵錯工具受限於即時分析。
+- 多執行緒應用程式與分散式應用程式通常很難偵錯。  連結偵錯工具往往會修改行為。 您可以視需要分析詳細的記錄，以了解複雜的系統。
+- 分散式應用程式中的問題可能是因為許多元件之間的複雜互動而引發，因此，將偵錯工具連接到系統的每個部分可能並不合理。
+- 許多服務都不應該停止。 連結偵錯工具通常會導致逾時失敗。
+- 問題不一定可以預見。 記錄和追蹤是針對低額外負荷而設計，因此，在發生問題時，程式一律會進行記錄。
 
 ## <a name="net-core-apis"></a>.NET Core Api
 
@@ -29,21 +29,21 @@ ms.locfileid: "91997700"
 
 <xref:System.Console?displayProperty=nameWithType>、 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別都提供類似的列印樣式 api，方便您進行記錄。
 
-您可以選擇要使用的列印樣式 API。 主要差異包括：
+選擇要使用的列印樣式 API 完全取決於您。 主要差異包括：
 
 - <xref:System.Console?displayProperty=nameWithType>
-  - 一律啟用且一律寫入主控台。
-  - 適用于您的客戶可能需要在發行中看到的資訊。
-  - 因為這是最簡單的方法，所以通常用於臨機操作暫存的偵錯工具。 此偵錯工具程式碼通常不會簽入原始檔控制中。
+  - 一律啟用且一律寫入到主控台。
+  - 適用於客戶可能需要在發行版本中看到的資訊。
+  - 因為這是最簡單的方法，所以通常用於進行臨機操作的暫時性偵錯。 此偵錯程式碼通常絕對不會簽入到原始程式碼控制。
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - 只有在定義時才 `TRACE` 會啟用。
+  - 只有在定義 `TRACE` 時才會啟用。
   - <xref:System.Diagnostics.Trace.Listeners>依預設，寫入至附加 <xref:System.Diagnostics.DefaultTraceListener> 。
-  - 建立將在大部分組建中啟用的記錄時，請使用此 API。
+  - 在建立將在大部分組建中啟用的記錄時，使用此 API。
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - 只有在定義時才 `DEBUG` 會啟用。
-  - 寫入附加的偵錯工具。
+  - 只有在定義 `DEBUG` 時才會啟用。
+  - 寫入到已連結的偵錯工具。
   - 如果設定，則在 `*nix` 寫入至 stderr 時 `COMPlus_DebugWriteToStdErr` 。
-  - 建立只會在 debug 組建中啟用的記錄檔時，請使用此 API。
+  - 在建立將只會在偵錯組建中啟用的記錄時，使用此 API。
 
 ### <a name="logging-events"></a>記錄事件
 
@@ -53,11 +53,12 @@ ms.locfileid: "91997700"
   - EventSource 是主要的根 .NET Core 追蹤 API。
   - 適用于所有的 .NET Standard 版本。
   - 只允許追蹤可序列化的物件。
-  - 寫入附加的 [事件](xref:System.Diagnostics.Tracing.EventListener)接聽程式。
-  - .NET Core 提供下列各項的接聽程式：
+  - 可以透過設定為取用 EventSource 的任何 [EventListener](xref:System.Diagnostics.Tracing.EventListener) 實例，在同進程中使用。
+  - 可透過下列方式跨進程使用：
     - 所有平臺上的 .NET Core EventPipe
     - [Windows 事件追蹤 (ETW)](/windows/win32/etw/event-tracing-portal)
     - [適用于 Linux 的 LTTng 追蹤架構](https://lttng.org/)
+      - 逐步解說： [使用 PerfCollect 收集 LTTng 追蹤](trace-perfcollect-lttng.md)。
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - 隨附于 .NET Core，以及做為 .NET Framework 的 [NuGet 套件](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) 。

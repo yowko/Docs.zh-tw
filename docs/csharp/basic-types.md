@@ -4,12 +4,12 @@ description: 了解所有 C# 程式中的核心類型 (數字、字串和物件)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 18a73e62bf45cdc4a4eaa0985c3fe036ac3b55a8
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465256"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439712"
 ---
 # <a name="types-variables-and-values"></a>類型、變數和值
 
@@ -23,13 +23,15 @@ C # 是強型別語言。 每個變數和常數都有型別，如同每個會評
   
 - 它所包含的成員 (方法、欄位、事件等等)。  
   
-- 它繼承自的基底型別。  
-  
+- 它繼承自的基底型別。
+
+- 介面 (s) 它所執行。
+
 - 將在執行階段配置給變數的記憶體位置。  
   
 - 允許的作業類型。  
   
-編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」** 的作業。 例如，如果您宣告型別 [int](language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](language-reference/builtin-types/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰  
+編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。 例如，如果您宣告型別 [int](language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](language-reference/builtin-types/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
@@ -48,7 +50,7 @@ C # 是強型別語言。 每個變數和常數都有型別，如同每個會評
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您不能宣告 [int](language-reference/builtin-types/integral-numeric-types.md) ，然後為它指派布林值 `true` 。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」** 作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
+宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您不能宣告 [int](language-reference/builtin-types/integral-numeric-types.md) ，然後為它指派布林值 `true` 。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast* 。
 
 如需詳細資訊，請參閱 [轉換和類型轉換](programming-guide/types/casting-and-type-conversions.md)。
 
@@ -62,7 +64,7 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
   
 ## <a name="generic-types"></a>泛型類型
 
-可使用一或多個「型別參數」** 宣告的型別，做為預留位置 (具象型別**)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的型別稱為「泛型型別」**。 例如， <xref:System.Collections.Generic.List%601> 有一個依慣例提供的型別參數，即名稱 *T*。當您建立型別的實例時，您會指定清單將包含的物件類型，例如字串：  
+可使用一或多個「型別參數」宣告的型別，做為預留位置 (具象型別)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的型別稱為「泛型型別」。 例如， <xref:System.Collections.Generic.List%601> 有一個依慣例提供的型別參數，即名稱 *T* 。當您建立型別的實例時，您會指定清單將包含的物件類型，例如字串：  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
@@ -72,19 +74,19 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
 
 如先前所述，您可以使用 [var](language-reference/keywords/var.md) 關鍵字，隱含地輸入本機變數 (但不是類別成員)。 變數還是會在編譯時期收到型別，但其是由編譯器所提供的型別。 如需詳細資訊，請參閱 [隱含類型區域變數](programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
-在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」**。 如需詳細資訊，請參閱 [匿名型別](programming-guide/classes-and-structs/anonymous-types.md)。
+在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」。 如需詳細資訊，請參閱 [匿名型別](programming-guide/classes-and-structs/anonymous-types.md)。
 
-通常會想要從方法傳回多個值。 您可以建立在單一方法呼叫中傳回多個值的「Tuple 類型」**。 如需詳細資訊，請參閱 [元組類型](language-reference/builtin-types/value-tuples.md)。
+通常會想要從方法傳回多個值。 您可以建立在單一方法呼叫中傳回多個值的「Tuple 類型」。 如需詳細資訊，請參閱 [元組類型](language-reference/builtin-types/value-tuples.md)。
 
 ## <a name="the-common-type-system"></a>一般型別系統
 
 請務必了解 .NET 中有關型別系統的兩個基本概念：  
   
-- 它支援繼承原則。 型別可以衍生自稱為「基底型別」** 的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底型別同樣可以衍生自一些其他型別，所衍生的型別會繼承其繼承階層架構中兩個基底型別的成員。 所有類型 (包括 <xref:System.Int32> 這類內建數字類型 (C# 關鍵字：`int`)) 最終衍生自單一基底類型，即 <xref:System.Object> (C# 關鍵字：`object`)。 此整合型別階層稱為 [一般類型系統](../standard/common-type-system.md) (CTS) 。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。  
+- 它支援繼承原則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底型別同樣可以衍生自一些其他型別，所衍生的型別會繼承其繼承階層架構中兩個基底型別的成員。 所有類型 (包括 <xref:System.Int32> 這類內建數字類型 (C# 關鍵字：`int`)) 最終衍生自單一基底類型，即 <xref:System.Object> (C# 關鍵字：`object`)。 此整合型別階層稱為 [一般類型系統](../standard/common-type-system.md) (CTS) 。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。  
   
-- CTS 中的每個型別都會定義為「實值型別」** 或「參考型別」**。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 使用或關鍵字定義的類型 `struct` 為實 `enum` 數值型別。 如需實值型別的詳細資訊，請參閱實 [數值型別](language-reference/builtin-types/value-types.md)。 您使用 [class](language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 如需參考型別的詳細資訊，請參閱[類別](programming-guide/classes-and-structs/classes.md)。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
+- CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 使用或關鍵字定義的類型 `struct` 為實 `enum` 數值型別。 如需實值型別的詳細資訊，請參閱實 [數值型別](language-reference/builtin-types/value-types.md)。 您使用 [class](language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 如需參考型別的詳細資訊，請參閱[類別](programming-guide/classes-and-structs/classes.md)。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [結構類型](language-reference/builtin-types/struct.md)
 - [列舉類型](language-reference/builtin-types/enum.md)

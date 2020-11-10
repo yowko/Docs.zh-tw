@@ -4,12 +4,12 @@ description: 了解如何解構 Tuple 和其他類型。
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 8defd75a7cdff3490d2b0a6097ec2a898576e113
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174162"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439699"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>解構元組和其他類型
 
@@ -76,7 +76,7 @@ C# 不提供解構非 Tuple 型別的內建支援。 不過，身為類別、結
 下列範例會多載 `Deconstruct` 方法，以傳回 `Person` 物件屬性的各種組合。 每個多載會傳回：
 
 - 名字和姓氏。
-- 名字、姓氏和中間名。
+- 名字、中間名和姓氏。
 - 名字、姓氏、城市名稱和州/省名稱。
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
@@ -103,7 +103,7 @@ C# 不提供解構非 Tuple 型別的內建支援。 不過，身為類別、結
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [捨棄](discards.md)
-- [元組類型](language-reference/builtin-types/value-tuples.md)
+- [Tuple 型別](language-reference/builtin-types/value-tuples.md)

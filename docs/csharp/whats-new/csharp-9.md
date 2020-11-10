@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: e1c297cd0ff75d6a6fb4a9d38c9a241e216f500b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282332"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440864"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -66,7 +66,7 @@ C # 9.0 引進了 * *_記錄類型_* _，這是一種參考型別，可提供合
 
 除了熟悉的多載 `Equals` 、 `operator ==` 和以外 `operator !=` ，編譯器也會會合成新的 `EqualityContract` 屬性。 屬性 `Type` 會傳回符合記錄類型的物件。 如果基底類型為 `object` ，則屬性為 `virtual` 。 如果基底類型是另一種記錄類型，則此屬性為 `override` 。 如果記錄類型為 `sealed` ，則屬性為 `sealed` 。 合成會 `GetHashCode` 使用 `GetHashCode` 基底類型中宣告的所有屬性和欄位，以及記錄類型。 這些合成方法會在整個繼承階層架構中強制執行以值為基礎的相等。 這表示 `Student` 永遠不會將永遠視為 `Person` 相同名稱的。 這兩筆記錄的類型必須相符，以及在記錄類型中共用的所有屬性都相等。
 
-記錄也有合成的函式，以及用來建立複本的「複製」方法。 合成的函式有一種記錄類型的引數。 它會針對記錄的所有屬性產生具有相同值的新記錄。 如果記錄是密封的，則這個函式是私用的，否則會受到保護。 合成的 "clone" 方法支援記錄階層的複製結構。 「Clone」一詞是以引號括住，因為實際名稱是編譯器產生的。 您無法 `Clone` 在記錄類型中建立名為的方法。 合成的 "clone" 方法會傳回使用虛擬分派複製的記錄類型。 編譯器會根據上的存取修飾詞，為 "clone" 方法新增不同的修飾詞 `record` ：
+記錄也有合成的函式，以及用來建立複本的「複製」方法。 合成的函式具有記錄類型的單一參數。 它會針對記錄的所有屬性產生具有相同值的新記錄。 如果記錄是密封的，則這個函式是私用的，否則會受到保護。 合成的 "clone" 方法支援記錄階層的複製結構。 「Clone」一詞是以引號括住，因為實際名稱是編譯器產生的。 您無法 `Clone` 在記錄類型中建立名為的方法。 合成的 "clone" 方法會傳回使用虛擬分派複製的記錄類型。 編譯器會根據上的存取修飾詞，為 "clone" 方法新增不同的修飾詞 `record` ：
 
 - 如果記錄類型為，則「 `abstract` 複製」方法也是 `abstract` 。 如果基底類型不 `object` 是，則方法也是 `override` 。
 - 針對不是 `abstract` 基底類型為下列情況的記錄類型 `object` ：
@@ -98,11 +98,13 @@ C # 9.0 引進了 * *_記錄類型_* _，這是一種參考型別，可提供合
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-最後，記錄支援 _*_與-運算式_*_ 。 _*_With-expression_*_ 會指示編譯器建立記錄的複本，但 _with * 指定的屬性已修改：
+最後，記錄支援[ `with` 運算式](../language-reference/operators/with-expression.md)。 _*_ `with` Expression_ *_ 會指示編譯器建立記錄的複本，但 _with* 已修改的指定屬性：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-上述程式程式碼會建立新的 `Person` 記錄 `LastName` ，其中屬性是的複本 `person` ，而 `FirstName` 是 "Paul"。 您可以使用運算式來設定任何數目的屬性。  任何合成成員（「複製」方法除外）都可以由您撰寫。 如果記錄類型的方法符合任何合成方法的簽章，則編譯器不會合成該方法。 先前的 `Dog` 記錄範例包含手動編碼的 <xref:System.String.ToString> 方法做為範例。
+上述程式程式碼會建立新的 `Person` 記錄 `LastName` ，其中屬性是的複本 `person` ，而 `FirstName` 是 `"Paul"` 。 您可以在運算式中設定任意數目的屬性 `with` 。
+
+任何合成成員（「複製」方法除外）都可以由您撰寫。 如果記錄類型的方法符合任何合成方法的簽章，則編譯器不會合成該方法。 先前的 `Dog` 記錄範例包含手動編碼的 <xref:System.String.ToString> 方法做為範例。
 
 ## <a name="init-only-setters"></a>僅供初始化的 Setter
 
@@ -242,7 +244,7 @@ if (e is not null)
 
 針對程式碼產生器新增的兩項功能是 * **部分方法語法** _ 和 _*_模組初始化運算式_*_ 的擴充。 首先是部分方法的變更。 在 c # 9.0 之前，部分方法是 `private` 但無法指定存取修飾詞、傳回 `void` ，而且不能有 `out` 參數。 這些限制表示如果未提供任何方法執行，則編譯器會移除對部分方法的所有呼叫。 C # 9.0 會移除這些限制，但需要部分方法宣告才能執行。 程式碼產生器可以提供該執行。 為了避免引進重大變更，編譯器會考慮任何部分方法，而不使用存取修飾詞來遵循舊規則。 如果部分方法包含 `private` 存取修飾詞，則新的規則會管理該部分方法。
 
-程式碼產生器的第二項新功能是 _ * _模組初始化運算式_ * *。 模組初始化運算式是已 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 附加屬性的方法。 載入元件時，執行時間會呼叫這些方法。 模組初始化運算式方法：
+程式碼產生器的第二項新功能是 _ * _模組初始化運算式_ * *。 模組初始化運算式是已 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 附加屬性的方法。 在整個模組中的任何其他欄位存取或方法調用之前，執行時間會呼叫這些方法。 模組初始化運算式方法：
 
 - 必須是靜態
 - 必須是無參數
