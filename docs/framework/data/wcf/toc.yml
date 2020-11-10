@@ -1,7 +1,7 @@
 - name: WCF Data Services 4.5
   href: index.md
   items:
-    - name: 總覽
+    - name: 概觀
       href: wcf-data-services-overview.md
     - name: 快速入門
       href: getting-started-with-wcf-data-services.md

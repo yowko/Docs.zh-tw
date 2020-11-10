@@ -323,31 +323,31 @@
               href: linq-xml-security.md
             - name: XML 文件範例
               items:
-                - name: XML 檔j案範例：一般訂購單
+                - name: XML 檔案範例：一般訂購單
                   href: sample-xml-file-typical-purchase-order.md
-                - name: XML 檔j案範例：命名空間中的一般訂購單
+                - name: XML 檔案範例：命名空間中的一般訂購單
                   href: sample-xml-file-typical-purchase-order-namespace.md
-                - name: XML 檔j案範例：多個訂購單
+                - name: XML 檔案範例：多個訂購單
                   href: sample-xml-file-multiple-purchase-orders.md
-                - name: XML 檔j案範例：命名空間中的多個訂購單
+                - name: XML 檔案範例：命名空間中的多個訂購單
                   href: sample-xml-file-multiple-purchase-orders-namespace.md
-                - name: XML 檔j案範例：測試組態
+                - name: XML 檔案範例：測試組態
                   href: sample-xml-file-test-configuration.md
-                - name: XML 檔j案範例：測試命名空間中的組態
+                - name: XML 檔案範例：測試命名空間中的組態
                   href: sample-xml-file-test-configuration-namespace.md
-                - name: XML 檔j案範例：客戶與訂單
+                - name: XML 檔案範例：客戶與訂單
                   href: sample-xml-file-customers-orders.md
                 - name: XSD 範例檔案：客戶與訂單
                   href: sample-xsd-file-customers-orders.md
-                - name: XML 檔j案範例：命名空間中的客戶與訂單
+                - name: XML 檔案範例：命名空間中的客戶與訂單
                   href: sample-xml-file-customers-orders-namespace.md
-                - name: XML 檔j案範例：數值資料
+                - name: XML 檔案範例：數值資料
                   href: sample-xml-file-numerical-data.md
-                - name: XML 檔j案範例：命名空間中的數值資料
+                - name: XML 檔案範例：命名空間中的數值資料
                   href: sample-xml-file-numerical-data-namespace.md
-                - name: XML 檔j案範例：書籍
+                - name: XML 檔案範例：書籍
                   href: sample-xml-file-books.md
-                - name: XML 檔j案範例：合併的訂購單
+                - name: XML 檔案範例：合併的訂購單
                   href: sample-xml-file-consolidated-purchase-orders.md
         - name: 參考
           href: reference.md
