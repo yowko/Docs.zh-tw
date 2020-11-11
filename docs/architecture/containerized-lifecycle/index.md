@@ -1,19 +1,21 @@
 ---
 title: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 description: 取得使用 Docker 和 Microsoft 平臺和工具開發和部署容器化應用程式的開發和部署程式的概要說明。
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160693"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506658"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 
 ![書籍封面](./media/devops-book-cover-large-we.png)
 
 **版本 3.1** -更新為 ASP.NET Core 3。1
+
+請參閱 [變更記錄](https://aka.ms/DockerLifecycleEbookChangelog) ，以取得書籍更新和社區貢獻。
 
 本指南是使用 Microsoft 平臺和工具，透過 Docker 開發和部署容器化 ASP.NET Core 應用程式的一般總覽。 本指南包含 Azure DevOps 的高階簡介，可用於執行 CI/CD 管線，以及 Azure Container Registry (ACR) 和 Azure Kubernetes Services 部署的 AKS。
 
@@ -27,7 +29,7 @@ ms.locfileid: "91160693"
 
 作者︰
 
-> **Cesar de la Torre**，Sr. Microsoft Corp. .NET 產品小組 PM
+> **Cesar de la Torre** ，Sr. Microsoft Corp. .NET 產品小組 PM
 
 收購編輯器：
 
@@ -35,7 +37,7 @@ ms.locfileid: "91160693"
 
 開發編輯器：
 
-> Microsoft 的 Microsoft 解決方案專業人員**Bob Russell**
+> Microsoft 的 Microsoft 解決方案專業人員 **Bob Russell**
 >
 > [**八進位發行，Inc。**](http://www.octalpub.com/)
 
@@ -47,15 +49,15 @@ ms.locfileid: "91160693"
 
 Copyeditor:
 
-> Microsoft 的 Microsoft 解決方案專業人員**Bob Russell**
+> Microsoft 的 Microsoft 解決方案專業人員 **Bob Russell**
 
 參與者和檢閱者：
 
-> **Nish Anil**，Microsoft NET 小組資深方案經理
+> **Nish Anil** ，Microsoft NET 小組資深方案經理
 >
-> 以簡單的概念**Miguel Veloso**軟體發展工程師
+> 以簡單的概念 **Miguel Veloso** 軟體發展工程師
 >
-> Neudesic 提供的首席顧問**Sumit Ghosh**
+> Neudesic 提供的首席顧問 **Sumit Ghosh**
 
 ## <a name="copyright"></a>著作權
 
@@ -86,4 +88,4 @@ Docker whale 標誌是 Docker，Inc. 所用的注冊商標。
 所有其他商標和標誌屬於其各自擁有者的財產。
 
 >[!div class="step-by-step"]
->[下一個](introduction-to-containers-and-docker.md)
+>[下一步](introduction-to-containers-and-docker.md)

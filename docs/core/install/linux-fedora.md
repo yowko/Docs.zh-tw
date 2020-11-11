@@ -1,19 +1,19 @@
 ---
-title: 在 Fedora 上安裝 .NET Core-.NET Core
-description: 示範在 Fedora 上安裝 .NET Core SDK 和 .NET Core 執行時間的各種方式。
+title: 在 Fedora 上安裝 .NET-.NET
+description: 示範在 Fedora 上安裝 .NET SDK 和 .NET 執行時間的各種方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 89a55ad2e9fd66d277d0c3eb6a07bd402574bd0a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: d5b5886f8b29e0f8e935850686cc84f78c55be02
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538510"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507061"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-fedora"></a>在 Fedora 上安裝 .NET Core SDK 或 .NET Core 執行時間
+# <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>在 Fedora 上安裝 .NET SDK 或 .NET 執行時間
 
-Fedora 支援 .NET Core。 本文說明如何在 Fedora 上安裝 .NET Core。 當 Fedora 版本不受支援時，就不再支援該版本的 .NET Core。 不過，這些指示可協助您讓 .NET Core 在這些版本上執行，即使它不受支援也是一樣。
+Fedora 支援 .NET。 本文說明如何在 Fedora 上安裝 .NET。 當 Fedora 版本不受支援時，就不再支援該版本的 .NET。 不過，這些指示可協助您讓 .NET 在這些版本上執行，即使它不受支援也是一樣。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,22 +21,23 @@ Fedora 支援 .NET Core。 本文說明如何在 Fedora 上安裝 .NET Core。 �
 
 ## <a name="supported-distributions"></a>支援的發行版本
 
-下表列出目前支援的 .NET Core 版本，以及其支援的 Fedora 版本。 在 [.Net Core 的版本達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Fedora 的版本 [達到生命週期結束](https://fedoraproject.org/wiki/End_of_life)之前，會持續支援這些版本。
+下表列出目前支援的 .NET 版本，以及其支援的 Fedora 版本。 除非 .Net 的版本 [達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Fedora 的版本 [達到生命週期結束](https://fedoraproject.org/wiki/End_of_life)，否則仍支援這些版本。
 
-- ✔️表示仍支援 Fedora 或 .NET Core 的版本。
-- ❌指出該 Fedora 版本不支援 Fedora 或 .Net Core 的版本。
-- 當版本的 Fedora 和 .NET Core 版本都✔️時，支援該作業系統和 .NET 組合。
+- ✔️表示仍支援 Fedora 或 .NET 版本。
+- ❌指出該 Fedora 版本不支援 Fedora 或 .net 版本。
+- 當版本的 Fedora 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| Fedora                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (僅限手動安裝)  |
-|--------------------------|---------------|---------------|----------------|
-| ✔️ [32](linux-fedora.md#fedora-32-) | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
-| ✔️ [31](linux-fedora.md#fedora-31-) | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
-| ❌[30](linux-fedora.md#fedora-30-) | ✔️2。1        | ✔️3。1        | ❌ 5.0 預覽 |
-| ❌[29](linux-fedora.md#fedora-29-) | ✔️2。1        | ✔️3。1        | ❌ 5.0 預覽 |
-| ❌[28](linux-fedora.md#fedora-28-) | ✔️2。1        | ❌ 3.1        | ❌ 5.0 預覽 |
-| ❌[27](linux-fedora.md#fedora-27-) | ✔️2。1        | ❌ 3.1        | ❌ 5.0 預覽 |
+| Fedora               | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
+|----------------------|---------------|---------------|----------|
+| ✔️ [33](#fedora-33-) | ✔️2。1        | ✔️3。1        | ✔️5。0 |
+| ✔️ [32](#fedora-32-) | ✔️2。1        | ✔️3。1        | ✔️5。0 |
+| ❌[31](#fedora-31-) | ✔️2。1        | ✔️3。1        | ❌ 5.0 |
+| ❌ [30](#fedora-30-) | ✔️2。1        | ✔️3。1        | ❌ 5.0 |
+| ❌[29](#fedora-29-) | ✔️2。1        | ✔️3。1        | ❌ 5.0 |
+| ❌[28](#fedora-28-) | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
+| ❌[27](#fedora-27-) | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
 
-不再支援下列 .NET Core 版本。 這些內容的下載仍會保持發佈：
+不再支援下列 .NET 版本。 這些內容的下載仍會保持發佈：
 
 - 3.0
 - 2.2
@@ -46,13 +47,21 @@ Fedora 支援 .NET Core。 本文說明如何在 Fedora 上安裝 .NET Core。 �
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
+## <a name="fedora-33-"></a>Fedora 33 ✔️
+
+Fedora 33 的預設套件存放庫中有提供 .NET 5 和 .NET Core 3.1。
+
+[!INCLUDE [linux-dnf-install-31](includes/linux-install-50-dnf.md)]
+
 ## <a name="fedora-32-"></a>Fedora 32 ✔️
 
 Fedora 32 的預設套件存放庫中有提供 .NET Core 3.1。
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
-## <a name="fedora-31-"></a>Fedora 31 ✔️
+## <a name="fedora-31-"></a>Fedora 31 ❌
+
+[!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -145,4 +154,4 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 ## <a name="next-steps"></a>後續步驟
 
-- [教學課程：使用 Visual Studio Code 建立具有 .NET Core SDK 的主控台應用程式](../tutorials/with-visual-studio-code.md)
+- [教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code](../tutorials/with-visual-studio-code.md)

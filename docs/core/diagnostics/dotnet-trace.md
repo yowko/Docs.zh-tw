@@ -2,20 +2,20 @@
 title: dotnet-追蹤工具-.NET Core
 description: 安裝和使用 dotnet 追蹤命令列工具。
 ms.date: 11/21/2019
-ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517304"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507223"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
-**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 ## <a name="install-dotnet-trace"></a>安裝 dotnet-追蹤
 
-`dotnet-trace`使用[dotnet tool install](../tools/dotnet-tool-install.md)命令來安裝[NuGet 套件](https://www.nuget.org/packages/dotnet-trace)：
+`dotnet-trace`使用[dotnet 工具安裝](../tools/dotnet-tool-install.md)命令安裝[NuGet 套件](https://www.nuget.org/packages/dotnet-trace)：
 
 ```dotnetcli
 dotnet tool install --global dotnet-trace
@@ -27,13 +27,13 @@ dotnet tool install --global dotnet-trace
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet-trace`工具：
 
 * 是跨平臺 .NET Core 工具。
-* 可在不使用原生分析工具的情況下，收集執行中進程的 .NET Core 追蹤。
-* 是圍繞 .NET Core 執行時間的跨平臺技術所建立 `EventPipe` 。
+* 在不使用原生分析工具的情況下，啟用正在執行之進程的 .NET Core 追蹤收集。
+* 是以 .NET Core 執行時間的跨平臺技術為基礎 `EventPipe` 。
 * 在 Windows、Linux 或 macOS 上提供相同的體驗。
 
 ## <a name="options"></a>選項
@@ -57,7 +57,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="dotnet-trace-collect"></a>dotnet-追蹤收集
 
-從執行中的進程收集診斷追蹤。
+從正在執行的進程收集診斷追蹤。
 
 ### <a name="synopsis"></a>概要
 
@@ -66,13 +66,14 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
     [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
+    [-- <command>] (for target applications running .NET 5.0 or later)
 ```
 
 ### <a name="options"></a>選項
 
 - **`--buffersize <size>`**
 
-  設定記憶體中迴圈緩衝區的大小（以 mb 為單位）。 預設值： 256 MB。
+  設定記憶體中的圓形緩衝區大小（以 mb 為單位）。 預設值為 256 MB。
 
 - **`--clreventlevel <clreventlevel>`**
 
@@ -80,11 +81,11 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--clrevents <clrevents>`**
 
-  要發出的 CLR 運行時間事件清單。
+  要發出之 CLR 運行時間事件的清單。
 
 - **`--format {Chromium|NetTrace|Speedscope}`**
 
-  設定追蹤檔案轉換的輸出格式。 預設值為 `NetTrace`。
+  設定追蹤檔案轉換的輸出格式。 預設為 `NetTrace`。
 
 - **`-n, --name <name>`**
 
@@ -92,29 +93,36 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`-o|--output <trace-file-path>`**
 
-  所收集追蹤資料的輸出路徑。 如果未指定，則會預設為 `trace.nettrace` 。
+  所收集之追蹤資料的輸出路徑。 如果未指定，則預設為 `trace.nettrace` 。
 
 - **`-p|--process-id <PID>`**
 
-  要從中收集追蹤的處理序識別碼。
+  從中收集追蹤的處理序識別碼。
 
 - **`--profile <profile-name>`**
 
-  一組命名的預先定義提供者設定，可讓您簡潔地指定一般追蹤案例。
+  一組名為預先定義的提供者設定，可讓您簡潔地指定常見的追蹤案例。
 
 - **`--providers <list-of-comma-separated-providers>`**
 
-  要啟用的提供者清單（以逗號分隔） `EventPipe` 。 這些提供者會補充所隱含的任何提供者 `--profile <profile-name>` 。 如果特定提供者有任何不一致的情況，則此設定的優先順序會高於設定檔的隱含設定。
+  要啟用的提供者清單（以逗號分隔） `EventPipe` 。 這些提供者補充了所暗示的任何提供者 `--profile <profile-name>` 。 如果特定提供者有任何不一致的情況，此設定會優先于設定檔中的隱含設定。
 
   這份提供者清單的格式如下：
 
   - `Provider[,Provider]`
-  - `Provider`的格式為： `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` 。
-  - `KeyValueArgs`的格式為： `[key1=value1][;key2=value2]` 。
+  - `Provider` 的格式為： `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` 。
+  - `KeyValueArgs` 的格式為： `[key1=value1][;key2=value2]` 。
+
+- **`-- <command>` 僅執行 .NET 5.0 的目標應用程式 ()**
+
+  在收集設定參數之後，使用者可以在後面附加一個 `--` 命令，以啟動至少包含5.0 執行時間的 .net 應用程式。 這在診斷程式早期發生的問題（例如啟動效能問題或元件載入器和系結器錯誤）時，可能會很有説明。
+
+  > [!NOTE]
+  > 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
 
 ## <a name="dotnet-trace-convert"></a>dotnet-追蹤轉換
 
-將 `nettrace` 追蹤轉換為替代的格式，以搭配替代的追蹤分析工具使用。
+將 `nettrace` 追蹤轉換成替代的格式，以搭配使用替代的追蹤分析工具。
 
 ### <a name="synopsis"></a>概要
 
@@ -126,7 +134,7 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 
 - **`<input-filename>`**
 
-  要轉換的輸入追蹤檔案。 預設為*nettrace*。
+  要轉換的輸入追蹤檔案。 預設值為 *nettrace* 。
 
 ### <a name="options"></a>選項
 
@@ -136,7 +144,7 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 
 - **`-o|--output <output-filename>`**
 
-  輸出檔案名。 將會加入目標格式的副檔名。
+  輸出檔案名。 將會新增目標格式的擴充。
 
 ## <a name="dotnet-trace-ps"></a>dotnet-追蹤 ps
 
@@ -158,14 +166,14 @@ dotnet-trace ps [-h|--help]
 dotnet-trace list-profiles [-h|--help]
 ```
 
-## <a name="collect-a-trace-with-dotnet-trace"></a>使用 dotnet-trace 收集追蹤
+## <a name="collect-a-trace-with-dotnet-trace"></a>使用 dotnet 收集追蹤
 
-若要使用來收集追蹤 `dotnet-trace` ：
+若要使用 `dotnet-trace` 下列內容收集追蹤：
 
-- 取得要從中收集追蹤的 .NET Core 應用程式的處理序識別碼（PID）。
+- 取得 .NET Core 應用程式 (PID) 的處理序識別碼，以從中收集追蹤。
 
-  - 例如，在 Windows 上，您可以使用 [工作管理員] 或 `tasklist` 命令。
-  - 例如，在 Linux 上為 `ps` 命令。
+  - 例如，在 Windows 上，您可以使用工作管理員或 `tasklist` 命令。
+  - 例如，在 Linux 上， `ps` 命令。
   - [dotnet-追蹤 ps](#dotnet-trace-ps)
 
 - 執行以下命令：
@@ -184,23 +192,59 @@ dotnet-trace list-profiles [-h|--help]
   Recording trace 721.025 (KB)
   ```
 
-- 按下鍵以停止收集 `<Enter>` 。 `dotnet-trace`將會完成記錄事件至*nettrace*檔案。
+- 按下按鍵以停止收集 `<Enter>` 。 `dotnet-trace` 將會完成 *nettrace* 檔案的記錄事件。
 
-## <a name="view-the-trace-captured-from-dotnet-trace"></a>查看從 dotnet 所捕獲的追蹤
+## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>啟動子應用程式，並使用 dotnet 從啟動中收集追蹤
 
-在 Windows 上，您可以在[PerfView](https://github.com/microsoft/perfview)上查看*nettrace*檔案以供分析：針對其他平臺上所收集的追蹤，追蹤檔案可以移至 Windows 機器，以在 PerfView 上查看。
+注意：這只適用于執行 .NET 5.0 或更新版本的應用程式。
 
-在 Linux 上，您可以藉由將的輸出格式變更 `dotnet-trace` 為來查看追蹤 `speedscope` 。 您可以使用選項來變更輸出檔案格式 `-f|--format` - `-f speedscope` 將會 `dotnet-trace` 產生檔案 `speedscope` 。 您可以選擇 `nettrace` （預設選項）和 `speedscope` 。 `Speedscope`檔案可以在開啟 <https://www.speedscope.app> 。
+有時候，從啟動時收集處理常式的追蹤可能會很有用。 針對執行 .NET 5.0 或更新版本的應用程式，您可以使用 dotnet 來執行這項作業。
+
+這會 `hello.exe` 以 `arg1` 和它的 `arg2` 命令列引數啟動，並從其執行時間啟動中收集追蹤：
+
+```console
+dotnet-trace collect -- hello.exe arg1 arg2
+```
+
+上述命令會產生類似下列的輸出：
+
+```console
+No profile or providers specified, defaulting to trace profile 'cpu-sampling'
+
+Provider Name                           Keywords            Level               Enabled By
+Microsoft-DotNETCore-SampleProfiler     0x0000F00000000000  Informational(4)    --profile
+Microsoft-Windows-DotNETRuntime         0x00000014C14FCCBD  Informational(4)    --profile
+
+Process        : E:\temp\gcperfsim\bin\Debug\net5.0\gcperfsim.exe
+Output File    : E:\temp\gcperfsim\trace.nettrace
+
+
+[00:00:00:05]   Recording trace 122.244  (KB)
+Press <Enter> or <Ctrl+C> to exit...
+```
+
+您可以按或鍵來停止收集 `<Enter>` 追蹤 `<Ctrl + C>` 。 這樣做也會結束 `hello.exe` 。
 
 > [!NOTE]
-> .NET Core 執行時間會產生格式的追蹤 `nettrace` 。 追蹤完成後，追蹤會轉換成 speedscope （如果有指定的話）。 由於某些轉換可能會導致資料遺失，因此原始檔案 `nettrace` 會保留在轉換後的檔案旁邊。
+> 透過 `hello.exe` dotnet 追蹤會將其輸入/輸出重新導向，而您將無法與其 stdin/stdout 互動。
+> 透過 CTRL + C 或 SIGTERM 結束工具會安全地結束工具和子進程。
+> 如果子進程在工具之前結束，則工具也會結束，而且應該安全地查看追蹤。
 
-## <a name="use-dotnet-trace-to-collect-counter-values-over-time"></a>使用 dotnet 追蹤來收集一段時間的計數器值
+## <a name="view-the-trace-captured-from-dotnet-trace"></a>查看從 dotnet 捕捉的追蹤
 
-`dotnet-trace`可以
+在 Windows 中，可以在 [PerfView](https://github.com/microsoft/perfview)上查看 *nettrace* 檔案以供分析：對於在其他平臺上收集的追蹤，追蹤檔案可以移至要在 PerfView 上查看的 Windows 機器。
 
-* 用於 `EventCounter` 效能相關環境中的基本健全狀況監視。 例如，在生產環境中。
-* 收集追蹤，讓它們不需要即時查看。
+在 Linux 上，您可以藉由將的輸出格式變更 `dotnet-trace` 為來查看追蹤 `speedscope` 。 您可以使用選項來變更輸出檔案格式 `-f|--format` - `-f speedscope` 將會 `dotnet-trace` 產生檔案 `speedscope` 。 您可以選擇 `nettrace` (預設選項) 和 `speedscope` 。 `Speedscope` 您可以在中開啟檔案 <https://www.speedscope.app> 。
+
+> [!NOTE]
+> .NET Core 執行時間會以格式產生追蹤 `nettrace` 。 追蹤會轉換成 speedscope (如果在追蹤完成後指定) 。 因為某些轉換可能會導致資料遺失，所以 `nettrace` 已轉換的檔案旁邊會保留原始檔案。
+
+## <a name="use-dotnet-trace-to-collect-counter-values-over-time"></a>使用 dotnet 來收集一段時間內的計數器值
+
+`dotnet-trace` 可以：
+
+* 用於 `EventCounter` 效能敏感性環境中的基本健康情況監視。 例如，在生產環境中。
+* 收集追蹤，讓它們不需要即時觀看。
 
 例如，若要收集執行時間效能計數器值，請使用下列命令：
 
@@ -208,19 +252,19 @@ dotnet-trace list-profiles [-h|--help]
 dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCounterIntervalSec=1
 ```
 
-上述命令會告訴執行時間計數器每秒報告一次，以進行輕量的健全狀況監視。 取代 `EventCounterIntervalSec=1` 為較高的值（例如，60），可讓您在計數器資料中收集較小的追蹤。
+上述命令會告知執行時間計數器每秒回報一次，以進行輕量健康情況監視。 以 `EventCounterIntervalSec=1` 較高的值取代 (例如，60) 可讓您以較少的資料細微性收集計數器資料中較小的追蹤。
 
-下列命令可減少額外負荷和追蹤大小，而不是上述其中一個：
+下列命令可減少額外負荷和追蹤大小，而不是前一個：
 
 ```console
 dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCounterIntervalSec=1,Microsoft-Windows-DotNETRuntime:0:1,Microsoft-DotNETCore-SampleProfiler:0:1
 ```
 
-上述命令會停用運行時間事件和 managed 堆疊 profiler。
+上述命令會停用運行時間事件和 managed stack profiler。
 
 ## <a name="net-providers"></a>.NET 提供者
 
-.NET Core 執行時間支援下列 .NET 提供者。 .NET Core 會使用相同的關鍵字來同時啟用 `Event Tracing for Windows (ETW)` 和 `EventPipe` 追蹤。
+.NET Core 執行時間支援下列 .NET 提供者。 .NET Core 會使用相同的關鍵字來啟用 `Event Tracing for Windows (ETW)` 和 `EventPipe` 追蹤。
 
 | 提供者名稱                            | 資訊 |
 |------------------------------------------|-------------|

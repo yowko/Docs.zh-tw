@@ -1,21 +1,21 @@
 ---
 title: dotnet-計數器-.NET Core
-description: 瞭解如何安裝和使用 dotnet-counter 命令列工具。
+description: 瞭解如何安裝和使用 dotnet 計數器命令列工具。
 ms.date: 02/26/2020
-ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062895"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507250"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
-**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 ## <a name="install-dotnet-counters"></a>安裝 dotnet-計數器
 
-若要安裝 NuGet 套件的最新發行版本 `dotnet-counters` [ ](https://www.nuget.org/packages/dotnet-counters)，請使用[dotnet tool install](../tools/dotnet-tool-install.md)命令：
+若要安裝 `dotnet-counters` [NuGet 套件](https://www.nuget.org/packages/dotnet-counters)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
@@ -29,7 +29,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>描述
 
-`dotnet-counters`是一種效能監視工具，可用於臨機操作健全狀況監視和第一層效能調查。 它可以觀察透過 API 發佈的效能計數器值 <xref:System.Diagnostics.Tracing.EventCounter> 。 例如，您可以快速監視 CPU 使用量，或 .NET Core 應用程式中擲回之例外狀況的速率，以在使用或進行更嚴重的效能調查之前，查看是否有任何可疑的專案 `PerfView` `dotnet-trace` 。
+`dotnet-counters` 是一種效能監視工具，適用于臨機操作健全狀況監視和第一層效能調查。 它可以觀察經由 API 發佈的效能計數器值 <xref:System.Diagnostics.Tracing.EventCounter> 。 例如，您可以在 .NET Core 應用程式中快速監視 CPU 使用量或擲回例外狀況率等專案，以查看是否有任何可疑的專案，然後再使用或進行更嚴重的效能調查 `PerfView` `dotnet-trace` 。
 
 ## <a name="options"></a>選項
 
@@ -52,12 +52,12 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="dotnet-counters-collect"></a>dotnet-計數器收集
 
-定期收集選取的計數器值，並將它們匯出為指定的檔案格式，以進行後續處理。
+定期收集選取的計數器值，並將其匯出為指定的檔案格式以進行後置處理。
 
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>選項
@@ -68,11 +68,11 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`--refresh-interval <SECONDS>`**
 
-  更新所顯示計數器之間的延遲秒數
+  更新顯示的計數器之間的延遲秒數
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  以空格分隔的計數器清單。 可以指定計數器 `provider_name[:counter_name]` 。 如果在 `provider_name` 沒有符合資格的情況下使用 `counter_name` ，則會顯示所有計數器。 若要探索提供者和計數器名稱，請使用[dotnet-計數器 list](#dotnet-counters-list)命令。
+  以逗號分隔的計數器清單。 您可以指定計數器 `provider_name[:counter_name]` 。 如果在 `provider_name` 沒有符合合格計數器清單的情況下使用，則會顯示來自提供者的所有計數器。 若要探索提供者和計數器名稱，請使用 [dotnet 計數器 list](#dotnet-counters-list) 命令。
 
 - **`--format <csv|json>`**
 
@@ -80,7 +80,14 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`-o|--output <output>`**
 
-  輸出檔案的名稱。
+  輸出檔的名稱。
+
+- **`-- <command>` 僅限執行 .NET 5.0 或更新版本的目標應用程式 ()**
+
+  在收集設定參數之後，使用者可以在後面附加一個 `--` 命令，以啟動至少包含5.0 執行時間的 .net 應用程式。 `dotnet-counters` 將會使用所提供的命令啟動處理常式，並收集要求的度量。 這通常很適合用來收集應用程式啟動路徑的計量，也可以用來診斷或監視主要進入點之前或不久之後發生的問題。
+
+> [!NOTE]
+> 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
 
 ### <a name="examples"></a>範例
 
@@ -93,9 +100,17 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Starting a counter session. Press Q to quit.
   ```
 
+- `dotnet mvc.dll`以子進程的形式啟動，並開始收集執行時間計數器，並從啟動 ASP.NET Core 裝載計數器，並將其儲存為 JSON 輸出：
+
+  ```console
+  > dotnet-counters collect --format json --counters System.Runtime,Microsoft.AspNetCore.Hosting -- dotnet mvc.dll
+  Starting a counter session. Press Q to quit.
+  File saved to counter.json
+  ```
+
 ## <a name="dotnet-counters-list"></a>dotnet-計數器清單
 
-顯示計數器名稱和描述的清單，依提供者分組。
+顯示依提供者分組的計數器名稱和描述清單。
 
 ### <a name="synopsis"></a>概要
 
@@ -138,16 +153,16 @@ Microsoft.AspNetCore.Hosting
 ```
 
 > [!NOTE]
-> `Microsoft.AspNetCore.Hosting`當有識別支援這些計數器的進程（例如，在主機電腦上執行 ASP.NET Core 應用程式）時，就會顯示計數器。
+> `Microsoft.AspNetCore.Hosting`當有可支援這些計數器的進程時，就會顯示計數器，例如，當主機電腦上正在執行 ASP.NET Core 應用程式時。
 
 ## <a name="dotnet-counters-monitor"></a>dotnet-計數器監視
 
-顯示已選取計數器的定期重新整理值。
+顯示定期重新整理所選計數器的值。
 
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>選項
@@ -158,50 +173,107 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`--refresh-interval <SECONDS>`**
 
-  更新所顯示計數器之間的延遲秒數
+  更新顯示的計數器之間的延遲秒數
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  以空格分隔的計數器清單。 可以指定計數器 `provider_name[:counter_name]` 。 如果在 `provider_name` 沒有符合資格的情況下使用 `counter_name` ，則會顯示所有計數器。 若要探索提供者和計數器名稱，請使用[dotnet-計數器 list](#dotnet-counters-list)命令。
+  以逗號分隔的計數器清單。 您可以指定計數器 `provider_name[:counter_name]` 。 如果在 `provider_name` 沒有符合合格計數器清單的情況下使用，則會顯示來自提供者的所有計數器。 若要探索提供者和計數器名稱，請使用 [dotnet 計數器 list](#dotnet-counters-list) 命令。
+
+ **`-- <command>` 僅限執行 .NET 5.0 或更新版本的目標應用程式 ()**
+
+  在收集設定參數之後，使用者可以在後面附加一個 `--` 命令，以啟動至少包含5.0 執行時間的 .net 應用程式。 `dotnet-counters` 將會使用所提供的命令啟動處理常式，並監視要求的計量。 這通常很適合用來收集應用程式啟動路徑的計量，也可以用來診斷或監視主要進入點之前或不久之後發生的問題。
+
+  > [!NOTE]
+  > 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
 
 ### <a name="examples"></a>範例
 
 - 以3秒的重新整理間隔監視所有計數器 `System.Runtime` ：
 
   ```console
-  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
-
+  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 --counters System.Runtime
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
-      CPU Usage (%)                                 24
-      Working Set (MB)                            1982
-      GC Heap Size (MB)                            811
-      Gen 0 GC / second                             20
-      Gen 1 GC / second                              4
-      Gen 2 GC / second                              1
-      Number of Exceptions / sec                     4
+      Status: Running
+
+  [System.Runtime]
+      % Time in GC since last GC (%)                                 0
+      Allocation Rate (B / 1 sec)                                5,376
+      CPU Usage (%)                                                  0
+      Exception Count (Count / 1 sec)                                0
+      GC Fragmentation (%)                                          48.467
+      GC Heap Size (MB)                                              0
+      Gen 0 GC Count (Count / 1 sec)                                 1
+      Gen 0 Size (B)                                                24
+      Gen 1 GC Count (Count / 1 sec)                                 1
+      Gen 1 Size (B)                                                24
+      Gen 2 GC Count (Count / 1 sec)                                 1
+      Gen 2 Size (B)                                           272,000
+      IL Bytes Jitted (B)                                       19,449
+      LOH Size (B)                                              19,640
+      Monitor Lock Contention Count (Count / 1 sec)                  0
+      Number of Active Timers                                        0
+      Number of Assemblies Loaded                                    7
+      Number of Methods Jitted                                     166
+      POH (Pinned Object Heap) Size (B)                             24
+      ThreadPool Completed Work Item Count (Count / 1 sec)           0
+      ThreadPool Queue Length                                        0
+      ThreadPool Thread Count                                        2
+      Working Set (MB)                                              19
   ```
 
-- 僅監視 CPU 使用量和 GC 堆積大小來源 `System.Runtime` ：
+- 僅監視 CPU 使用量和 GC 堆積大小 `System.Runtime` ：
 
   ```console
-  > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
+  > dotnet-counters monitor --process-id 1902 --counters System.Runtime[cpu-usage,gc-heap-size]
 
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
+    Status: Running
+
+  [System.Runtime]
       CPU Usage (%)                                 24
       GC Heap Size (MB)                            811
   ```
 
-- 監視 `EventCounter` 使用者定義的值 `EventSource` 。 如需詳細資訊，請參閱[教學課程：在 .Net Core 中使用 EventCounters 測量效能](event-counter-perf.md)。
+- 監視 `EventCounter` 使用者自訂的值 `EventSource` 。 如需詳細資訊，請參閱 [教學課程：在 .Net Core 中使用 EventCounters 測量效能](event-counter-perf.md)。
 
   ```console
-  > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
+  > dotnet-counters monitor --process-id 1902 --counters Samples-EventCounterDemos-Minimal
 
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+
+- 啟動 `my-aspnet-server.exe` 並監視從啟動 ( .net 5.0 或更新版本載入的元件 #) ：
+
+  注意：這只適用于執行 .NET 5.0 或更新版本的應用程式。
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
+
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      Number of Assemblies Loaded                   24
+  ```
   
+- `my-aspnet-server.exe`以 `arg1` `arg2` 命令列引數啟動，並從啟動 ( .net 5.0 或更新版本監視其工作集和 GC 堆積大小，只) ：
+
+  注意：這只適用于執行 .NET 5.0 或更新版本的應用程式。
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2
+  ```
+
+  ```console
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      GC Heap Size (MB)                                 39
+      Working Set (MB)                                  59
+  ```
+
 ## <a name="dotnet-counters-ps"></a>dotnet-計數器 ps
 
 顯示可以監視的 dotnet 進程清單。

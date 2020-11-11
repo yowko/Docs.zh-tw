@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e77b7bd73c09e061a94a29703cf5286814d1ebb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602912"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506894"
 ---
 
 [您可以從「貼齊」存放區使用 .NET Core。](https://snapcraft.io/dotnet-sdk)
@@ -15,18 +15,18 @@ ms.locfileid: "84602912"
 
 ### <a name="install-the-sdk"></a>安裝 SDK
 
-.NET Core SDK 的貼齊套件都會在相同的識別碼下發布： `dotnet-sdk` 。 您可以藉由指定通道來安裝特定版本的 SDK。 SDK 包含 coresponding 執行時間。 下表列出通道：
+適用于 .NET SDK 的嵌入式管理套件都會在相同的識別碼下發布： `dotnet-sdk` 。 您可以藉由指定通道來安裝特定版本的 SDK。 SDK 包含 coresponding 執行時間。 下表列出通道：
 
-| .NET Core 版本 | 貼齊套件             |
-|-------------------|--------------------------|
-| 3.1 (LTS)          | `3.1` 或 `latest/stable` |
-| 2.1 (LTS)          | `2.1`                    |
-| .NET 5.0 預覽  | `5.0/beta`               |
+| .NET 版本 | 貼齊套件             |
+|--------------|--------------------------|
+| 5.0          | `5.0` 或 `latest/stable` |
+| 3.1 (LTS)     | `3.1` 或 `lts/stable`    |
+| 2.1 (LTS)     | `2.1`                    |
 
-使用 `snap install` 命令安裝 .NET Core SDK 的嵌入式管理套件。 使用 `--channel` 參數來指出要安裝的版本。 如果省略此參數， `latest/stable` 則會使用。 在此範例中， `3.1` 指定了：
+使用 `snap install` 命令來安裝 .NET SDK 嵌入式管理套件。 使用 `--channel` 參數來指出要安裝的版本。 如果省略此參數， `latest/stable` 則會使用。 在此範例中， `5.0` 指定了：
 
 ```bash
-sudo snap install dotnet-sdk --classic --channel=3.1
+sudo snap install dotnet-sdk --classic --channel=5.0
 ```
 
 接下來， `dotnet` 使用下列命令註冊系統的命令 `snap alias` ：
@@ -35,32 +35,33 @@ sudo snap install dotnet-sdk --classic --channel=3.1
 sudo snap alias dotnet-sdk.dotnet dotnet
 ```
 
-此命令的格式為： `sudo snap alias {package}.{command} {alias}` 。 您可以選擇任何想要 `{alias}` 的名稱。 例如，您可以在由 snap：進行安裝的特定版本之後，將命令命名為 `sudo snap alias dotnet-sdk.dotnet dotnet31` 。 當您使用命令時 `dotnet31` ，將會叫用這個特定的 .net 版本。 但是，這與大部分的教學課程和範例都不相容，因為它們預期 `dotnet` 會有命令可供使用。
+此命令的格式為： `sudo snap alias {package}.{command} {alias}` 。 您可以選擇任何想要 `{alias}` 的名稱。 例如，您可以在由 snap：進行安裝的特定版本之後，將命令命名為 `sudo snap alias dotnet-sdk.dotnet dotnet50` 。 當您使用命令時 `dotnet50` ，將會叫用這個特定的 .net 版本。 但是，這與大部分的教學課程和範例都不相容，因為它們預期 `dotnet` 會有命令可供使用。
 
 ### <a name="install-the-runtime"></a>安裝執行階段
 
 適用于 .NET Core 執行時間的貼齊套件會在其專屬套件識別碼下發布。 下表列出封裝識別碼：
 
-| .NET Core 版本 | 貼齊套件        |
+| .NET 版本      | 貼齊套件        |
 |-------------------|---------------------|
+| 5.0               | `dotnet-runtime-50` |
 | 3.1 (LTS)          | `dotnet-runtime-31` |
 | 3.0               | `dotnet-runtime-30` |
 | 2.2               | `dotnet-runtime-22` |
 | 2.1 (LTS)          | `dotnet-runtime-21` |
 
-使用 `snap install` 命令來安裝 .Net Core 執行時間嵌入式管理套件。 在此範例中，已安裝 .NET Core 3.1：
+使用 `snap install` 命令來安裝 .Net 執行時間嵌入式管理套件。 在此範例中，會安裝 .NET 5.0：
 
 ```bash
-sudo snap install dotnet-runtime-31 --classic
+sudo snap install dotnet-runtime-50 --classic
 ```
 
 接下來， `dotnet` 使用下列命令註冊系統的命令 `snap alias` ：
 
 ```bash
-sudo snap alias dotnet-runtime-31.dotnet dotnet
+sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
-此命令的格式為： `sudo snap alias {package}.{command} {alias}` 。 您可以選擇任何想要 `{alias}` 的名稱。 例如，您可以在由 snap：進行安裝的特定版本之後，將命令命名為 `sudo snap alias dotnet-runtime-31.dotnet dotnet31` 。 當您使用命令時 `dotnet31` ，將會叫用這個特定的 .net 版本。 但是，這與大部分的教學課程和範例都不相容，因為它們預期 `dotnet` 會有命令可供使用。
+此命令的格式為： `sudo snap alias {package}.{command} {alias}` 。 您可以選擇任何想要 `{alias}` 的名稱。 例如，您可以在由 snap：進行安裝的特定版本之後，將命令命名為 `sudo snap alias dotnet-runtime-50.dotnet dotnet50` 。 當您使用命令時 `dotnet50` ，將會叫用這個特定的 .net 版本。 但是，這與大部分的教學課程和範例都不相容，因為它們預期 `dotnet` 會有命令可供使用。
 
 ### <a name="ssl-certificate-errors"></a>SSL 憑證錯誤
 

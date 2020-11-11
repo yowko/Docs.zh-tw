@@ -1,19 +1,21 @@
 ---
 title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
-ms.date: 09/02/2020
-ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.date: 11/10/2020
+ms.openlocfilehash: 2055dacd46f90ba3714edb1437bcacad4c175e65
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379131"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507263"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
 ![書籍封面](./media/cover-small.png)
 
-**版本 v 3.1.2** -更新為 ASP.NET Core 3。1
+**版本 3.1** -更新為 ASP.NET Core 3。1
+
+請參閱 [變更記錄](https://aka.ms/MicroservicesEbookChangelog) ，以取得書籍更新和社區貢獻。
 
 本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。
 
@@ -47,7 +49,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 ## <a name="version"></a>版本
 
-本指南已經過修訂，涵蓋了 **.Net core 3.1** 版本，以及許多與相同「wave」技術相關的其他更新 (也就是，Azure 和其他協力廠商技術) 導致及時使用 .net Core 3.1 版本。 這就是為什麼書籍版本也更新為 **3.1**版。
+本指南已經過修訂，涵蓋了 **.Net core 3.1** 版本，以及許多與相同「wave」技術相關的其他更新 (也就是，Azure 和其他協力廠商技術) 導致及時使用 .net Core 3.1 版本。 這就是為什麼書籍版本也更新為 **3.1** 版。
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 
@@ -74,7 +76,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考應用程式，專為使用 Docker 容器進行部署所設計。 應用程式是由多個子系統所組成，包括數個電子商店 UI 前端 (Web MVC 應用程式、Web SPA 和原生行動應用程式) 。 它也包含用來執行所有必要伺服器端作業的後端微服務和容器。
 
-應用程式的目的是要展示架構模式。 **這不是用於生產環境的範本**，無法用來啟動真實世界應用程式。 事實上，應用程式會處於永久的 Beta 狀態，因為它也可用來測試出現的新可能有趣技術。
+應用程式的目的是要展示架構模式。 **這不是用於生產環境的範本** ，無法用來啟動真實世界應用程式。 事實上，應用程式會處於永久的 Beta 狀態，因為它也可用來測試出現的新可能有趣技術。
 
 ## <a name="send-us-your-feedback"></a>將您的意見反應傳送給我們！
 
@@ -84,11 +86,11 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 
 共同作者：
 
-> **Cesar de la Torre**，Sr. Microsoft Corp. .NET 產品小組 PM
+> **Cesar de la Torre** ，Sr. Microsoft Corp. .NET 產品小組 PM
 >
-> **Bill Wagner**，Sr. Microsoft Corp. C+E 內容開發人員
+> **Bill Wagner** ，Sr. Microsoft Corp. C+E 內容開發人員
 >
-> **Mike Rousos**，Microsoft DevDiv CAT 小組首席軟體工程師
+> **Mike Rousos** ，Microsoft DevDiv CAT 小組首席軟體工程師
 
 編輯者：
 
@@ -98,55 +100,55 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 
 參與者和檢閱者：
 
-> **Jeffrey Ritcher**，Microsoft Azure 小組合作夥伴軟體工程師
+> **Jeffrey Ritcher** ，Microsoft Azure 小組合作夥伴軟體工程師
 >
-> **Jimmy Bogard**，Headspring 首席架構師
+> **Jimmy Bogard** ，Headspring 首席架構師
 >
-> **Udi Dahan**，Particular Software 創辦人暨執行長
+> **Udi Dahan** ，Particular Software 創辦人暨執行長
 >
-> **Jimmy Nilsson**，Factor10 共同創辦人暨執行長
+> **Jimmy Nilsson** ，Factor10 共同創辦人暨執行長
 >
-> **Glenn Condron**，Sr. ASP.NET 小組計畫經理
+> **Glenn Condron** ，Sr. ASP.NET 小組計畫經理
 >
-> **Mark Fussell**，Microsoft Azure Service Fabric 小組 PM 主管
+> **Mark Fussell** ，Microsoft Azure Service Fabric 小組 PM 主管
 >
-> **Diego Vega**，Microsoft Entity Framework 小組 PM 主管
+> **Diego Vega** ，Microsoft Entity Framework 小組 PM 主管
 >
-> **Barry Dorrans**，Sr. 安全性計畫經理
+> **Barry Dorrans** ，Sr. 安全性計畫經理
 >
-> **Rowan Miller**，Sr. Microsoft 計畫經理
+> **Rowan Miller** ，Sr. Microsoft 計畫經理
 >
-> **Ankit Asthana**，Microsoft .NET 小組 PM 總經理
+> **Ankit Asthana** ，Microsoft .NET 小組 PM 總經理
 >
-> **Scott Hunter**，Microsoft .NET 小組合夥人暨 PM 主管
+> **Scott Hunter** ，Microsoft .NET 小組合夥人暨 PM 主管
 >
-> **Nish Anil**，Microsoft NET 小組資深方案經理
+> **Nish Anil** ，Microsoft NET 小組資深方案經理
 >
-> **Dylan Reisenberger**，Polly 架構師暨開發部門主管
+> **Dylan Reisenberger** ，Polly 架構師暨開發部門主管
 >
 > **Steve "ardalis" Smith** - 軟體架構設計人員和講師 - [Ardalis.com](https://ardalis.com)
 >
-> **Ian Cooper**，Brighter 程式碼架構師
+> **Ian Cooper** ，Brighter 程式碼架構師
 >
-> **Unai Zorrilla**，Plain Concepts 架構師暨開發部門主管
+> **Unai Zorrilla** ，Plain Concepts 架構師暨開發部門主管
 >
-> **Eduard Tomas**，Plain Concepts 開發部門主管
+> **Eduard Tomas** ，Plain Concepts 開發部門主管
 >
-> **Ramon Tomas**，Plain Concepts 開發人員
+> **Ramon Tomas** ，Plain Concepts 開發人員
 >
-> **David Sanz**，Plain Concepts 開發人員
+> **David Sanz** ，Plain Concepts 開發人員
 >
-> **Javier Valero**，Grupo Solutio 營運長
+> **Javier Valero** ，Grupo Solutio 營運長
 >
-> **Pierre Millet**，Sr. Microsoft 顧問
+> **Pierre Millet** ，Sr. Microsoft 顧問
 >
-> **Michael Friis**，Docker Inc. 產品經理
+> **Michael Friis** ，Docker Inc. 產品經理
 >
-> **Charles Lowell**，Microsoft VS CAT 小組軟體工程師
+> **Charles Lowell** ，Microsoft VS CAT 小組軟體工程師
 >
-> 以簡單的概念**Miguel Veloso**軟體發展工程師
+> 以簡單的概念 **Miguel Veloso** 軟體發展工程師
 >
-> Neudesic 提供的首席顧問**Sumit Ghosh**
+> Neudesic 提供的首席顧問 **Sumit Ghosh**
 
 ## <a name="copyright"></a>著作權
 
@@ -177,4 +179,4 @@ Docker whale 標誌是 Docker，Inc. 所用的注冊商標。
 所有其他商標和標誌屬於其各自擁有者的財產。
 
 >[!div class="step-by-step"]
->[下一個](container-docker-introduction/index.md)
+>[下一步](container-docker-introduction/index.md)

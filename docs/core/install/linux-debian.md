@@ -1,19 +1,19 @@
 ---
-title: 在 Debian 上安裝 .NET Core-.NET Core
-description: 示範在 Debian 上安裝 .NET Core SDK 和 .NET Core 執行時間的各種方式。
+title: 在 Debian 上安裝 .NET-.NET
+description: 示範在 Debian 上安裝 .NET SDK 和 .NET 執行時間的各種方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538536"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506970"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>在 Debian 上安裝 .NET Core SDK 或 .NET Core 執行時間
+# <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>在 Debian 上安裝 .NET SDK 或 .NET 執行時間
 
-本文說明如何在 Debian 上安裝 .NET Core。 當 Debian 版本不受支援時，就不再支援該版本的 .NET Core。 不過，這些指示可協助您讓 .NET Core 在這些版本上執行，即使它不受支援也是一樣。
+本文說明如何在 Debian 上安裝 .NET。 當 Debian 版本不受支援時，就不再支援該版本的 .NET。 不過，這些指示可協助您讓 .NET 在這些版本上執行，即使它不受支援也是一樣。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,19 +21,19 @@ ms.locfileid: "90538536"
 
 ## <a name="supported-distributions"></a>支援的發行版本
 
-下表列出目前支援的 .NET Core 版本，以及其支援的 Debian 版本。 在 [.Net Core 的版本達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Debian 的版本 [達到生命週期結束](https://wiki.debian.org/DebianReleases)之前，會持續支援這些版本。
+下表列出目前支援的 .NET 版本，以及其支援的 Debian 版本。 除非 .Net 的版本 [達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Debian 的版本 [達到生命週期結束](https://wiki.debian.org/DebianReleases)，否則仍支援這些版本。
 
-- ✔️表示仍支援 Debian 或 .NET Core 的版本。
-- ❌指出該 Debian 版本不支援 Debian 或 .Net Core 的版本。
-- 當版本的 Debian 和 .NET Core 版本都✔️時，支援該作業系統和 .NET 組合。
+- ✔️表示仍支援 Debian 或 .NET 版本。
+- ❌指出該 Debian 版本不支援 Debian 或 .net 版本。
+- 當版本的 Debian 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (僅限手動安裝)  |
+| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [10](#debian-10-)     | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
-| ✔️ [9](#debian-9-)       | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
-| ❌ [8](#debian-8-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 預覽 |
+| ✔️ [10](#debian-10-)     | ✔️2。1        | ✔️3。1        | ✔️5。0 |
+| ✔️ [9](#debian-9-)       | ✔️2。1        | ✔️3。1        | ✔️5。0 |
+| ❌ [8](#debian-8-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
 
-不再支援下列 .NET Core 版本。 這些內容的下載仍會保持發佈：
+不再支援下列 .NET 版本。 這些內容的下載仍會保持發佈：
 
 - 3.0
 - 2.2
@@ -52,7 +52,7 @@ wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-9-"></a>Debian 9 ✔️
 
@@ -67,7 +67,7 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-8-"></a>Debian 8 ❌
 
@@ -88,7 +88,7 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 ## <a name="apt-update-sdk-or-runtime"></a>APT 更新 SDK 或執行時間
 
-當 .NET Core 有新的修補程式版本可供使用時，您可以使用下列命令透過 APT 升級：
+當 .NET 有新的修補程式版本時，您可以使用下列命令透過 APT 升級：
 
 ```bash
 sudo apt-get update
@@ -97,7 +97,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>APT 疑難排解
 
-本節提供使用 APT 來安裝 .NET Core 時，您可能會遇到的常見錯誤的相關資訊。
+本節提供使用 APT 來安裝 .NET 時，您可能會遇到的常見錯誤的相關資訊。
 
 ### <a name="unable-to-find-package"></a>找不到套件
 
@@ -162,4 +162,4 @@ sudo apt-get update; \
 
 ## <a name="next-steps"></a>後續步驟
 
-- [教學課程：使用 Visual Studio Code 建立具有 .NET Core SDK 的主控台應用程式](../tutorials/with-visual-studio-code.md)
+- [教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code](../tutorials/with-visual-studio-code.md)

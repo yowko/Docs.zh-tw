@@ -4,12 +4,12 @@ description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可�
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329790"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506736"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -24,7 +24,7 @@ ms.locfileid: "94329790"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [通用 Windows 平台 (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [遊戲](https://dotnet.microsoft.com/apps/games)
-* [物聯網 (IoT) ](https://dotnet.microsoft.com/apps/iot)
+* [物聯網 (IoT)](/dotnet/iot)
 * [機器學習](../machine-learning/index.yml)
 * [主控台應用程式](tutorials/with-visual-studio-code.md)
 * [Windows 服務](/aspnet/core/host-and-deploy/windows-service)
@@ -141,7 +141,7 @@ SDK 下載包含下列元件：
 * [Roslyn](https://github.com/dotnet/roslyn)和[F #](https://github.com/microsoft/visualfsharp)程式設計語言編譯器。
 * [MSBuild](/visualstudio/msbuild/msbuild)組建引擎。
 * [.Net 運行](#clr)時間。 提供類型系統、元件載入、垃圾收集行程、原生 interop 及其他基本服務。
-* [執行階段程式庫](#runtime-libraries)。 提供基本資料類型和基本公用程式。
+* [運行](#runtime-libraries)時間程式庫。 提供基本資料類型和基本公用程式。
 * ASP.NET Core 執行時間。 為網際網路連線的應用程式（例如 web 應用程式、IoT 應用程式和行動後端）提供基本的服務。
 * 桌面執行時間。 提供 Windows 傳統型應用程式的基本服務，包括 Windows Forms 和 WPF。
 
@@ -262,7 +262,7 @@ GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程�
 
 如需詳細資訊，請參閱 [.net 應用程式發行總覽](deploying/index.md) 和 [.Net 和 Docker 簡介](docker/introduction.md)。
 
-## <a name="runtime-libraries"></a>執行時間程式庫
+## <a name="runtime-libraries"></a>執行階段程式庫
 
 .NET 有一組廣泛的標準類別庫。 核心集稱為「基類庫」（base class library）， (BCL) 。 完整的集合稱為執行時間程式庫或 framework 程式庫。 這些程式庫提供許多一般用途和工作負載特定類型和公用程式功能的實作為。
 
@@ -286,7 +286,7 @@ GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程�
 |---------|---------|
 | [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) | [應用程式存留期管理 (一般主機) ](extensions/generic-host.md) |
 | [DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection) | [相依性插入 (DI)](extensions/dependency-injection.md)
-| [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration) | [Configuration](extensions/configuration.md) |
+| [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration) | [設定](extensions/configuration.md) |
 | [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [Logging](extensions/logging.md) |
 | [Microsoft. Extensions. 選項](https://www.nuget.org/packages/Microsoft.Extensions.Options) | [選項模式](extensions/options.md) |
 
@@ -328,7 +328,7 @@ Entity Framework (EF) Core 是一個 [開放原始](https://github.com/aspnet/En
 
 適用于 .NET 的部分術語可能會造成混淆，因為相同的單字在不同的內容中使用不同的方式。 以下是一些比較顯著的實例：
 
-* **運行**
+* **執行階段**
 
   |Context  |「執行時間」表示 |
   |---------|---------|

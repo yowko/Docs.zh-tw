@@ -2,12 +2,12 @@
 title: 安裝當地語系化的 IntelliSense 檔案
 description: 瞭解如何設定您的開發電腦，以針對 .NET 5 + 專案使用當地語系化的 IntelliSense 檔案 (包括 Visual Studio 中的 .NET Core) 。
 ms.date: 11/06/2020
-ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439816"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506762"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>如何安裝適用于 .NET 的當地語系化 IntelliSense 檔案
 
@@ -16,7 +16,7 @@ ms.locfileid: "94439816"
 - 如何安裝這些檔案的當地語系化版本。
 - 如何修改 Visual Studio 安裝以使用不同語言。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [.Net Core 3.0 sdk](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本（例如 [.net 5 sdk](https://dotnet.microsoft.com/download/dotnet/5.0)）。
 - [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更新版本。
@@ -43,7 +43,7 @@ ms.locfileid: "94439816"
       | Windows 桌面       | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard         | *NETStandard.Library.Ref*          |
 
-   1. 巡覽至要為其安裝當地語系化 IntelliSense 的版本。 例如， *3.1.0* 。
+   1. 巡覽至要為其安裝當地語系化 IntelliSense 的版本。 例如， *5.0.0* 。
    1. 開啟 *ref* 資料夾。
    1. 開啟 Moniker 資料夾。 例如， *net 5.0* 。
 
@@ -51,7 +51,7 @@ ms.locfileid: "94439816"
 
 1. 在剛開啟的 Moniker 資料夾中建立子資料夾。 資料夾名稱會指出所要使用的語言。 下表指定不同選項：
 
-   | 語言              | 資料夾名稱 |
+   | Language              | 資料夾名稱 |
    | --------------------- | ----------- |
    | 巴西葡萄牙文  | *pt-br*     |
    | 中文 (簡體)  | *zh-hans*   |
@@ -124,6 +124,6 @@ ms.locfileid: "94439816"
 
 之後，當您開啟以您剛剛安裝的 IntelliSense 檔案版本為目標的 .NET 專案時，IntelliSense 應該會如預期般運作。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Studio 中的 IntelliSense](/visualstudio/ide/using-intellisense)

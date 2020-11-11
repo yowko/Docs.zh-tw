@@ -1,40 +1,40 @@
 ---
-title: 在 RHEL-.NET Core 上安裝 .NET Core
-description: 示範在 RHEL 上安裝 .NET Core SDK 和 .NET Core 執行時間的各種方式。
+title: 在 RHEL 上安裝 .NET-.NET
+description: 示範在 RHEL 上安裝 .NET SDK 和 .NET 執行時間的各種方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 11/10/2020
+ms.openlocfilehash: a742497bba3459a4d8772f5c9e3d915b5b18e62e
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619440"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506920"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>在 RHEL 上安裝 .NET Core SDK 或 .NET Core 執行時間
+# <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>在 RHEL 上安裝 .NET SDK 或 .NET 執行時間
 
-RHEL 支援 .NET Core。 本文說明如何在 RHEL 上安裝 .NET Core。
+RHEL 支援 .NET。 本文說明如何在 RHEL 上安裝 .NET。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>註冊您的 Red Hat 訂用帳戶
 
-若要從 RHEL 上的 Red Hat 安裝 .NET Core，您必須先使用 Red Hat 訂用帳戶管理員進行註冊。 如果未在您的系統上完成此動作，或您不確定，請參閱[.Net Core 的 Red Hat 產品檔](https://access.redhat.com/documentation/net_core/)。
+若要在 RHEL 上從 Red Hat 安裝 .NET，您必須先使用 Red Hat 訂用帳戶管理員進行註冊。 如果未在您的系統上完成此操作，或如果您不確定，請參閱 [.net 的 Red Hat 產品檔](https://access.redhat.com/documentation/net/5.0/)。
 
 ## <a name="supported-distributions"></a>支援的發行版本
 
-下表是 RHEL 7 和 RHEL 8 上目前支援的 .NET Core 版本清單。 在[.Net Core 版本達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或已不再支援 RHEL 版本之前，會持續支援這些版本。
+下表是 RHEL 7 和 RHEL 8 上目前支援的 .NET 版本清單。 除非 .Net 的版本 [達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或已不再支援 RHEL 版本，否則仍支援這些版本。
 
-- ✔️表示仍然支援 RHEL 或 .NET Core 的版本。
-- A ❌ 表示該 rhel 版本不支援 rhel 或 .Net Core 的版本。
-- 當 RHEL 版本和 .NET Core 版本都✔️時，就會支援該作業系統和 .NET 組合。
+- ✔️表示仍支援 RHEL 或 .NET 的版本。
+- ❌表示該 rhel 版本不支援 rhel 或 .net 的版本。
+- 當版本的 RHEL 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| RHEL                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview （僅限手動安裝） |
+| RHEL                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#rhel-8-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ✔️ [7](#rhel-7-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
+| ✔️ [8](#rhel-8-) | ✔️2。1        | ✔️3。1        | ✔️5。0 |
+| ✔️ [7](#rhel-7-) | ✔️2。1        | ✔️3。1        | ✔️5。0 |
 
-已不再支援下列 .NET Core 版本。 這些下載仍會保持發佈：
+不再支援下列 .NET 版本。 這些內容的下載仍會保持發佈：
 
 - 3.0
 - 2.2
@@ -42,13 +42,13 @@ RHEL 支援 .NET Core。 本文說明如何在 RHEL 上安裝 .NET Core。
 
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
-請參閱[.Net core 的 Red Hat 檔](https://access.redhat.com/documentation/net_core/)，以瞭解安裝其他版本的 .net core 所需的步驟。
+請參閱 [.net 的 Red Hat 檔](https://access.redhat.com/documentation/net/5.0/) ，以瞭解安裝其他 .net 版本所需的步驟。
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-.NET Core 包含在 RHEL 8 的應用程式資料流程存放庫中。
+.NET 包含在 RHEL 8 的應用程式資料流程存放庫中。
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="rhel-7-"></a>RHEL 7 ✔️
 
@@ -62,39 +62,39 @@ sudo yum install scl-utils
 
 ### <a name="install-the-sdk"></a>安裝 SDK
 
-.NET Core SDK 可讓您使用 .NET Core 開發應用程式。 如果您安裝 .NET Core SDK，就不需要安裝對應的執行時間。 若要安裝 .NET Core SDK，請執行下列命令：
+.NET SDK 可讓您使用 .NET 開發應用程式。 如果您安裝 .NET SDK，就不需要安裝對應的執行時間。 若要安裝 .NET SDK，請執行下列命令：
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet31 -y
-scl enable rh-dotnet31 bash
+yum install rh-dotnet50 -y
+scl enable rh-dotnet50 bash
 ```
 
-Red Hat 不建議永久啟用 `rh-dotnet31` ，因為它可能會影響其他程式。 例如， `rh-dotnet31` 包含 `libcurl` 不同于基底 RHEL 版本的版本。 這可能會導致未預期不同版本的程式發生問題 `libcurl` 。 如果您想要 `rh-dotnet` 永久啟用，請將下列程式程式碼新增至 _~/.bashrc_檔案。
+Red Hat 不建議永久啟用 `rh-dotnet50` ，因為它可能會影響其他程式。 例如， `rh-dotnet50` 包含 `libcurl` 與基底 RHEL 版本不同的版本。 這可能會導致不預期不同版本的程式發生問題 `libcurl` 。 如果您想要 `rh-dotnet` 永久啟用，請將下列這一行新增至 _~/.bashrc_ 檔案。
 
 ```bash
-source scl_source enable rh-dotnet31
+source scl_source enable rh-dotnet50
 ```
 
 ### <a name="install-the-runtime"></a>安裝執行階段
 
-.NET Core 執行時間可讓您執行使用 .NET Core 所建立且未包含執行時間的應用程式。 下列命令會安裝 ASP.NET Core 執行時間，這是適用于 .NET Core 的最相容執行時間。 在您的終端機中，執行下列命令。
+ASP.NET Core 執行時間可讓您執行不提供執行時間的 .NET 所建立的應用程式。 下列命令會安裝 ASP.NET Core 執行時間，也就是最相容的 .NET 執行時間。 在您的終端機中執行下列命令：
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
-scl enable rh-dotnet31-aspnetcore-runtime-3.1 bash
+yum install rh-dotnet50-aspnetcore-runtime-5.0 -y
+scl enable rh-dotnet50-aspnetcore-runtime-5.0 bash
 ```
 
-Red Hat 不建議永久啟用 `rh-dotnet31-aspnetcore-runtime-3.1` ，因為它可能會影響其他程式。 例如， `rh-dotnet31-aspnetcore-runtime-3.1` 包含 `libcurl` 不同于基底 RHEL 版本的版本。 這可能會導致未預期不同版本的程式發生問題 `libcurl` 。 如果您想要 `rh-dotnet31-aspnetcore-runtime-3.1` 永久啟用，請將下列程式程式碼新增至 _~/.bashrc_檔案。
+Red Hat 不建議永久啟用 `rh-dotnet50-aspnetcore-runtime-5.0` ，因為它可能會影響其他程式。 例如， `rh-dotnet50-aspnetcore-runtime-5.0` 包含 `libcurl` 與基底 RHEL 版本不同的版本。 這可能會導致不預期不同版本的程式發生問題 `libcurl` 。 如果您想要 `rh-dotnet50-aspnetcore-runtime-5.0` 永久啟用，請將下列這一行新增至 _~/.bashrc_ 檔案。
 
 ```bash
-source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
+source scl_source enable rh-dotnet50-aspnetcore-runtime-5.0
 ```
 
-除了 ASP.NET Core 執行時間之外，您還可以安裝不包含 ASP.NET Core 支援的 .NET Core 執行時間： `rh-dotnet31-aspnetcore-runtime-3.1` 使用上述命令取代 `rh-dotnet31-dotnet-runtime-3.1` 。
+除了 ASP.NET Core 執行時間之外，您還可以安裝 .NET 執行時間，不包括 ASP.NET Core 支援： `rh-dotnet50-aspnetcore-runtime-5.0` 在先前的命令中將取代為 `rh-dotnet50-dotnet-runtime-5.0` 。
 
-## <a name="snap"></a>抓取
+## <a name="snap"></a>單元
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
@@ -112,4 +112,4 @@ source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
 
 ## <a name="next-steps"></a>後續步驟
 
-- [教學課程：使用 Visual Studio Code 建立具有 .NET Core SDK 的主控台應用程式](../tutorials/with-visual-studio-code.md)
+- [教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code](../tutorials/with-visual-studio-code.md)
