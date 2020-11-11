@@ -1,26 +1,25 @@
 ---
 title: 什麼是 F#
-description: 瞭解什麼是程式F#設計語言，以及程式F#設計的樣子。 瞭解豐富的資料類型、函式，以及它們如何彼此搭配運作。
+description: '瞭解 F # 程式設計語言為何，以及 F # 程式設計的樣子。 瞭解豐富的資料類型、函式，以及它們如何彼此配合。'
 ms.date: 08/03/2018
-ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 37dc2f472d65a046e4bf67e672e2a96f4d4afded
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332738"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439648"
 ---
 # <a name="what-is-f"></a>什麼是 F\#
 
-F#是一種功能性程式設計語言，可讓您輕鬆地撰寫正確和可維護的程式碼。
+F # 是一種功能性程式設計語言，可讓您輕鬆地撰寫正確且可維護的程式碼。
 
-F#程式設計主要牽涉到定義型別和函式，這些類型和函數會自動推斷和一般化。 這可讓您的焦點停留在問題網域並操作其資料，而不是程式設計的細節。
+F # 程式設計主要牽涉到定義型別和函式，這些型別和函式會自動加以推斷。 這可讓您的焦點保持在問題領域並操作其資料，而不是程式設計的詳細資料。
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
 
 // Defines a function that takes a name and produces a greeting.
-let getGreeting name =
-    sprintf "Hello, %s! Isn't F# great?" name
+let getGreeting name = $"Hello, {name}! Isn't F# great?"
 
 [<EntryPoint>]
 let main args =
@@ -35,21 +34,21 @@ let main args =
     0
 ```
 
-F#有許多功能，包括：
+F # 有許多功能，包括：
 
 * 輕量語法
 * 預設為不可變
 * 型別推斷和自動一般化
 * 一級函式
-* 功能強大的資料類型
+* 強大的資料類型
 * 模式比對
 * 非同步程式設計
 
-一組完整的功能記載于[ F#語言參考](./language-reference/index.md)中。
+[F # 語言參考](./language-reference/index.md)中記載了一組完整的功能。
 
 ## <a name="rich-data-types"></a>豐富的資料類型
 
-資料類型（例如[記錄](./language-reference/records.md)和[區分](./language-reference/discriminated-unions.md)等位）可讓您代表複雜的資料和定義域。
+資料類型（例如 [記錄](./language-reference/records.md) 和 [差異等位）可讓您](./language-reference/discriminated-unions.md) 代表複雜的資料和網域。
 
 ```fsharp
 // Group data with Records
@@ -72,11 +71,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#記錄和差異聯集預設為非 null、不可變且可比較，因此非常容易使用。
+F # 記錄和差異聯集預設為非 null、不變且可比較，因此很容易使用。
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>使用函數和模式比對強制執行正確性
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>搭配函式和模式比對來強制執行正確性
 
-F#函式在實務上很容易宣告且功能強大。 結合[模式](./language-reference/pattern-matching.md)比對時，可讓您定義編譯器強制執行正確性的行為。
+F # 函式在實務上很容易宣告和強大。 結合 [模式](./language-reference/pattern-matching.md)比對時，它們可讓您定義編譯器強制執行其正確性的行為。
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +92,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#函式也是第一個類別，這表示它們可以當做參數傳遞，並從其他函數傳回。
+F # 函式也是第一個類別，這表示它們可以作為參數傳遞，並從其他函式傳回。
 
 ## <a name="functions-to-define-operations-on-objects"></a>定義物件作業的函數
 
-F#具有物件的完整支援，當您需要 blend 資料和功能時，這是有用的資料類型。 F#函數是用來操作物件。
+F # 對物件有完整的支援，當您需要 blend 資料和功能時，這些物件是很有用的資料類型。 F # 函式是用來操作物件。
 
 ```fsharp
 type Set<'T when 'T: comparison>(elements: seq<'T>) =
@@ -118,8 +117,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-與其撰寫物件導向的程式碼，在中F#，您通常會撰寫程式碼，將物件視為另一個資料類型，以供操作。 [泛型介面](./language-reference/interfaces.md)、[物件運算式](./language-reference/object-expressions.md)，以及合理使用[成員](./language-reference/members/index.md)等功能，在較大F#的程式中很常見。
+與其撰寫以物件為導向的程式碼，在 F # 中，您通常會撰寫程式碼，將物件視為另一種資料類型，以便處理函式。 [泛型介面](./language-reference/interfaces.md)、[物件運算式](./language-reference/object-expressions.md)和合理的[成員](./language-reference/members/index.md)用法等功能，在較大的 F # 程式中很常見。
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入瞭解更多的F#功能集，請參閱[ F#導覽](tour.md)。
+若要深入瞭解一組較大的 F # 功能，請參閱 [F # 導覽](tour.md)。
