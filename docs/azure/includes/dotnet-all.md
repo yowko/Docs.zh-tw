@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 79ab2a74e5679520f8a0225c9c709cc63ae0e35e
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 43dfee13e30132e382fb5dfdc8a4602da210ca35
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353992"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94482606"
 ---
 | 名稱 | Package | Docs | 來源 |
 | ---- | ------- | ---- | ------ |
-| 異常偵測器 | NuGet [3.0.0-preview。 2](https://www.nuget.org/packages/Azure.AI.AnomalyDetector/3.0.0-preview.2) | [docs](/dotnet/api/overview/azure/AI.AnomalyDetector-readme-pre/) | GitHub [3.0.0-preview。 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.AnomalyDetector_3.0.0-preview.2/sdk/anomalydetector/Azure.AI.AnomalyDetector/) |
-| 異常偵測器  | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
-| 應用程式組態 | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Data.AppConfiguration/1.0.2) | [docs](/dotnet/api/overview/azure/Data.AppConfiguration-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Data.AppConfiguration_1.0.2/sdk/appconfiguration/Azure.Data.AppConfiguration/) |
-| App Service 方案 | NuGet [0.2.2-Alpha](https://www.nuget.org/packages/Microsoft.Azure.AppService/0.2.2-alpha) |  |  |
+| Anomaly Detector | NuGet [3.0.0-preview。 2](https://www.nuget.org/packages/Azure.AI.AnomalyDetector/3.0.0-preview.2) | [docs](/dotnet/api/overview/azure/AI.AnomalyDetector-readme-pre/) | GitHub [3.0.0-preview。 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.AnomalyDetector_3.0.0-preview.2/sdk/anomalydetector/Azure.AI.AnomalyDetector/) |
+| Anomaly Detector  | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
+| 應用程式設定 | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Data.AppConfiguration/1.0.2) | [docs](/dotnet/api/overview/azure/Data.AppConfiguration-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Data.AppConfiguration_1.0.2/sdk/appconfiguration/Azure.Data.AppConfiguration/) |
+| App Service | NuGet [0.2.2-Alpha](https://www.nuget.org/packages/Microsoft.Azure.AppService/0.2.2-alpha) |  |  |
 | App Service-ApiApps Common | NuGet [0.9.36](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Common/0.9.36) |  |  |
 | App Service ApiApps 服務 | NuGet [0.9.64](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Service/0.9.64) |  |  |
 | Application Insights | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.ApplicationInsights/0.9.0-preview) |  |  |
@@ -351,16 +351,16 @@ ms.locfileid: "93353992"
 | 連接器-Zendesk | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zendesk/0.0.1-alpha) |  |  |
 | 連接器-Zenkraft | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zenkraft/0.0.1-alpha) |  |  |
 | Container Registry | NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Microsoft.Azure.ContainerRegistry/1.0.0-preview.1) |  | GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.ContainerRegistry_1.0.0-preview.1/sdk/containerregistry/Microsoft.Azure.ContainerRegistry/) |
-| 內容仲裁 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.ContentModerator/2.0.0) |  |  |
-| 內容仲裁 | NuGet [2.1.0-preview. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ContentModerator/2.1.0-preview.1) |  | GitHub [2.1.0-preview。 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ContentModerator_2.1.0-preview.1/sdk/cognitiveservices/Vision.ContentModerator) |
-| 核心 | NuGet [1.6.0](https://www.nuget.org/packages/Azure.Core/1.6.0) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.6.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.6.0/sdk/core/Azure.Core/) |
+| 內容仲裁者 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.ContentModerator/2.0.0) |  |  |
+| 內容仲裁者 | NuGet [2.1.0-preview. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ContentModerator/2.1.0-preview.1) |  | GitHub [2.1.0-preview。 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ContentModerator_2.1.0-preview.1/sdk/cognitiveservices/Vision.ContentModerator) |
+| 核心版 | NuGet [1.6.0](https://www.nuget.org/packages/Azure.Core/1.6.0) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.6.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.6.0/sdk/core/Azure.Core/) |
 | 核心實驗性 | NuGet [0.1.0-preview. 7](https://www.nuget.org/packages/Azure.Core.Experimental/0.1.0-preview.7) | [docs](/dotnet/api/overview/azure/Core.Experimental-readme-pre/) |  |
 | 核心 >microsoft.aspnetcore.mvc.newtonsoftjson | NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0-preview.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.NewtonsoftJson-readme-pre/) |  |
 | 核心空間 | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.Spatial-readme-pre/) |  |
 | 核心空間 >microsoft.aspnetcore.mvc.newtonsoftjson | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.Spatial.NewtonsoftJson-readme-pre/) |  |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [docs](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
-| Cosmos DB | NuGet [3.14.0](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.14.0)<br>NuGet [3.15.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.15.0-preview) | [docs](/dotnet/api/overview/azure/cosmosdb) | GitHub [3.14.0](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/3.12.0/Microsoft.Azure.Cosmos) |
-| Cosmos DB-BulkExecutor | NuGet [2.4.1-預覽](https://www.nuget.org/packages/Microsoft.Azure.CosmosDB.BulkExecutor/2.4.1-preview) |  | GitHub [2.4.1-預覽](https://github.com/Azure/azure-cosmosdb-bulkexecutor-dotnet-getting-started) |
+| Cosmos DB | NuGet [3.14.0](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.14.0)<br>NuGet [3.15.1-預覽](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.15.1-preview) | [docs](/dotnet/api/overview/azure/cosmosdb) | GitHub [3.14.0](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/3.12.0/Microsoft.Azure.Cosmos) |
+| Cosmos DB-BulkExecutor | NuGet [2.5.1-預覽](https://www.nuget.org/packages/Microsoft.Azure.CosmosDB.BulkExecutor/2.5.1-preview) |  | GitHub [2.5.1-預覽](https://github.com/Azure/azure-cosmosdb-bulkexecutor-dotnet-getting-started) |
 | Cosmos DB-Direct | NuGet [3.14.2](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Direct/3.14.2) |  | GitHub [3.14.2](https://github.com/Azure/azure-cosmos-dotnet-v3) |
 | Cosmos DB 加密 | NuGet [1.0.0-preview6](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Encryption/1.0.0-preview6) |  | GitHub [1.0.0-preview6](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/encryption/1.0.0-preview4/Microsoft.Azure.Cosmos.Encryption) |
 | 自訂影像搜尋 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomImageSearch/2.0.0) |  |  |
@@ -370,7 +370,7 @@ ms.locfileid: "93353992"
 | Data Lake-存放區 | NuGet [1.2.4-Alpha](https://www.nuget.org/packages/Microsoft.Azure.DataLake.Store/1.2.4-alpha) | [docs](/dotnet/api/overview/azure/data-lake-store) | GitHub [1.2.4-Alpha](https://github.com/Azure/azure-data-lake-store-net/tree/1.2.3-alpha) |
 | Data Lake .USQL SDK | NuGet [1.4.200831](https://www.nuget.org/packages/Microsoft.Azure.DataLake.USQL.SDK/1.4.200831) |  |  |
 | DCAP | NuGet [1.6.0](https://www.nuget.org/packages/Microsoft.Azure.DCAP/1.6.0) |  | GitHub [1.6.0](https://github.com/microsoft/Azure-DCAP-Client/tree/1.6) |
-| 數位 Twins-核心 | NuGet [1.0.0](https://www.nuget.org/packages/Azure.DigitalTwins.Core/1.0.0) | [docs](/dotnet/api/overview/azure/DigitalTwins.Core-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.DigitalTwins.Core_1.0.0/sdk/digitaltwins/Azure.DigitalTwins.Core/) |
+| 數位 Twins-核心 | NuGet [1.0.1](https://www.nuget.org/packages/Azure.DigitalTwins.Core/1.0.1) | [docs](/dotnet/api/overview/azure/DigitalTwins.Core-readme/) | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.DigitalTwins.Core_1.0.1/sdk/digitaltwins/Azure.DigitalTwins.Core/) |
 | 檔資料庫 | NuGet [2.12.0](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB/2.12.0) |  | GitHub [2.12.0](https://github.com/Azure/azure-cosmos-dotnet-v2) |
 | 檔資料庫-ChangeFeedProcessor | NuGet [2.3.2](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.ChangeFeedProcessor/2.3.2) |  | GitHub [2.3.2](https://github.com/Azure/azure-documentdb-changefeedprocessor-dotnet/tree/master) |
 | 檔資料庫-核心 | NuGet [2.12.0](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/2.12.0) |  | GitHub [2.12.0](https://github.com/Azure/azure-cosmos-dotnet-v2) |
@@ -382,7 +382,7 @@ ms.locfileid: "93353992"
 | 事件中樞-事件處理器 | NuGet [5.2.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.2.0)<br>NuGet [5.3.0-Beta. 3](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.3.0-beta.3) | [docs](/dotnet/api/overview/azure/Messaging.EventHubs.Processor-readme-pre/) | GitHub [5.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.2.0/sdk/eventhub/Azure.Messaging.EventHubs.Processor/)<br>GitHub [5.3.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.3.0-beta.3/sdk/eventhub/Azure.Messaging.EventHubs.Processor/) |
 | 事件中樞-事件處理器 | NuGet [4.3.1](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.Processor/4.3.1) |  | GitHub [4.3.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.Processor_4.3.1/sdk/eventhub/Microsoft.Azure.EventHubs.Processor/) |
 | 事件中樞-Service Fabric 處理器 | NuGet [0.5.4](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.ServiceFabricProcessor/0.5.4) |  | GitHub [0.5.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.ServiceFabricProcessor_0.5.4/sdk/eventhub/Microsoft.Azure.EventHubs.ServiceFabricProcessor/) |
-| 擴充功能-Azure | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.0.0/sdk/core/Microsoft.Extensions.Azure/) |
+| 擴充功能-Azure | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.0.0)<br>NuGet [1.1.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.1.0-beta.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.0.0/sdk/core/Microsoft.Extensions.Azure/)<br>GitHub [1.1.0-Beta. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.1.0-beta.1/sdk/core/Microsoft.Extensions.Azure/) |
 | 擴充功能-快取 Cosmos | NuGet [1.0.0-preview5](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Cosmos/1.0.0-preview5) |  | GitHub [1.0.0-preview5](https://github.com/Azure/Microsoft.Extensions.Caching.Cosmos/tree/v1.0.0-preview4) |
 | 表單辨識器 | NuGet [3.0.0](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.0.0) | [docs](/dotnet/api/overview/azure/AI.FormRecognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.0.0/sdk/formrecognizer/Azure.AI.FormRecognizer/) |
 | 表單辨識器 | NuGet [0.8.0 版-預覽](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.FormRecognizer/0.8.0-preview) |  | GitHub [0.8.0 版-預覽](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/FormRecognizer) |
@@ -421,7 +421,7 @@ ms.locfileid: "93353992"
 | 搜尋-常見 | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Common/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Common_10.1.0/sdk/search/Microsoft.Azure.Search.Common/) |
 | 搜尋資料 | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Data/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Data_10.1.0/sdk/search/Microsoft.Azure.Search.Data/) |
 | 搜尋服務 | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Service/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Service_10.1.0/sdk/search/Microsoft.Azure.Search.Service/) |
-| 服務匯流排 | NuGet [7.0.0-preview 8](https://www.nuget.org/packages/Azure.Messaging.ServiceBus/7.0.0-preview.8) | [docs](/dotnet/api/overview/azure/Messaging.ServiceBus-readme-pre/) | GitHub [7.0.0-preview 8](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.ServiceBus_7.0.0-preview.8/sdk/servicebus/Azure.Messaging.ServiceBus/) |
+| 服務匯流排 | NuGet [7.0.0-preview. 9](https://www.nuget.org/packages/Azure.Messaging.ServiceBus/7.0.0-preview.9) | [docs](/dotnet/api/overview/azure/Messaging.ServiceBus-readme-pre/) | GitHub [7.0.0-preview. 9](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.ServiceBus_7.0.0-preview.9/sdk/servicebus/Azure.Messaging.ServiceBus/) |
 | 服務匯流排 | NuGet [5.0.0](https://www.nuget.org/packages/Microsoft.Azure.ServiceBus/5.0.0) | [docs](/dotnet/api/overview/azure/Microsoft.ServiceBus-readme/) | GitHub [5.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.ServiceBus_5.0.0/sdk/servicebus/Microsoft.Azure.ServiceBus/) |
 | 服務匯流排-MessageId 外掛程式 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.ServiceBus.MessageIdPlugin/2.0.0) |  |  |
 | 服務-應用程式驗證 | NuGet [1.6.0](https://www.nuget.org/packages/Microsoft.Azure.Services.AppAuthentication/1.6.0) |  |  |
@@ -469,9 +469,9 @@ ms.locfileid: "93353992"
 | Web Redis 會話狀態提供者 | NuGet [4.0.1](https://www.nuget.org/packages/Microsoft.Web.RedisSessionStateProvider/4.0.1) |  | GitHub [4.0.1](https://github.com/Azure/aspnet-redis-providers/tree/NuGet-Release/RedisSessionStateProvider-4.0.1/src/RedisSessionStateProvider) |
 | Web 搜尋 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.WebSearch/2.0.0) |  |  |
 | WebJobsWebJobs | NuGet [0.3.2-Beta](https://www.nuget.org/packages/Microsoft.Azure.Jobs/0.3.2-beta) |  | GitHub [0.3.2-Beta 版](https://github.com/Azure/azure-webjobs-sdk) |
-| WebJobsWebJobs | NuGet [3.0.22](https://www.nuget.org/packages/Microsoft.Azure.WebJobs/3.0.22) |  | GitHub [3.0.22](https://github.com/Azure/azure-webjobs-sdk/tree/v3.0.18/src/Microsoft.Azure.WebJobs) |
+| WebJobsWebJobs | NuGet [3.0.23](https://www.nuget.org/packages/Microsoft.Azure.WebJobs/3.0.23) |  | GitHub [3.0.23](https://github.com/Azure/azure-webjobs-sdk/tree/v3.0.18/src/Microsoft.Azure.WebJobs) |
 | Webjob-核心 | NuGet [0.3.2-Beta](https://www.nuget.org/packages/Microsoft.Azure.Jobs.Core/0.3.2-beta) |  | GitHub [0.3.2-Beta 版](https://github.com/Azure/azure-webjobs-sdk) |
-| Webjob-核心 | NuGet [3.0.22](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Core/3.0.22) |  | GitHub [3.0.22](https://github.com/Azure/azure-webjobs-sdk/tree/v3.0.18) |
+| Webjob-核心 | NuGet [3.0.23](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Core/3.0.23) |  | GitHub [3.0.23](https://github.com/Azure/azure-webjobs-sdk/tree/v3.0.18) |
 | Webjob-主機儲存體 | NuGet [4.0.1](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Host.Storage/4.0.1) |  | GitHub [4.0.1](https://github.com/Azure/azure-webjobs-sdk/tree/storage-v4.0.1/src/Microsoft.Azure.WebJobs.Host.Storage) |
 | Webjob-主控制項測試 | NuGet [3.0.19](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Host.TestCommon/3.0.19) |  | GitHub [3.0.19](https://github.com/Azure/azure-webjobs-sdk) |
 | Webjob-專案範本 | NuGet [3.1.1582](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.ItemTemplates/3.1.1582) |  | GitHub [3.1.1582](https://github.com/Azure/azure-functions-templates/tree/3.1.1582) |
@@ -560,7 +560,7 @@ ms.locfileid: "93353992"
 | 管理-授權 | NuGet [2.12.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Authorization/2.12.0-preview) |  | GitHub [2.12.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Authorization_2.12.0-preview/sdk/authorization/Microsoft.Azure.Management.Authorization/) |
 | 管理-Automanage | NuGet [0.1.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Automanage/0.1.0-preview) |  |  |
 | 管理-自動化 | NuGet [3.8.1-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Automation/3.8.1-preview) | [docs](/dotnet/api/overview/azure/automation) | GitHub [3.8.1-預覽](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/automation/Microsoft.Azure.Management.Automation) |
-| 管理-AVS | NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Microsoft.Azure.Management.Avs/1.0.0-preview.1) |  | GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Avs_1.0.0-preview.1/sdk/avs/Microsoft.Azure.Management.Avs/) |
+| 管理-AVS | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Avs/1.0.0)<br>NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Microsoft.Azure.Management.Avs/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Avs_1.0.0/sdk/avs/Microsoft.Azure.Management.Avs/)<br>GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Avs_1.0.0-preview.1/sdk/avs/Microsoft.Azure.Management.Avs/) |
 | 管理-Azure Stack HCI | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.AzureStackHCI/1.0.0)<br>NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Microsoft.Azure.Management.AzureStackHCI/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.AzureStackHCI_1.0.0/sdk/azurestackhci/Microsoft.Azure.Management.AzureStackHCI/)<br>GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.AzureStackHCI_1.0.0-preview.1/sdk/azurestackhci/Microsoft.Azure.Management.AzureStackHCI/) |
 | 管理-備份服務 | NuGet [1.0.5-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.BackupServices/1.0.5-preview) |  |  |
 | 管理-批次 | NuGet [12.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Batch/12.0.0) | [docs](/dotnet/api/overview/azure/batch) | GitHub [12.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Batch_12.0.0/sdk/batch/Microsoft.Azure.Management.Batch/) |
@@ -651,7 +651,7 @@ ms.locfileid: "93353992"
 | 管理-MSI 流暢 | NuGet [1.35.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Msi.Fluent/1.35.0) |  |  |
 | 管理-MySQL | NuGet [0.1.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.MySQL/0.1.0-preview) |  |  |
 | 管理-NetApp | NuGet [1.7.0](https://www.nuget.org/packages/Microsoft.Azure.Management.NetApp/1.7.0) |  | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NetApp_1.7.0/sdk/netapp/Microsoft.Azure.Management.NetApp/) |
-| 管理-網路 | NuGet [20.1.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.1.1) |  | GitHub [20.1.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.1.1/sdk/network/Microsoft.Azure.Management.Network/) |
+| 管理-網路 | NuGet [20.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.2.0) |  | GitHub [20.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.2.0/sdk/network/Microsoft.Azure.Management.Network/) |
 | 管理-網路流暢 | NuGet [1.35.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Network.Fluent/1.35.0) | [docs](/dotnet/api/overview/azure/virtual-network) |  |
 | 管理-通知中樞 | NuGet [2.3.3-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs/2.3.3-preview) | [docs](/dotnet/api/overview/azure/notification-hubs) | GitHub [2.3.3-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NotificationHubs_2.3.3-preview/sdk/notificationhubs/Microsoft.Azure.Management.NotificationHubs/) |
 | 管理-通知中樞流暢 | NuGet [1.9.1-Beta](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs.Fluent/1.9.1-beta) |  |  |
@@ -674,7 +674,7 @@ ms.locfileid: "93353992"
 | 管理-遠端應用程式 | NuGet [1.0.9](https://www.nuget.org/packages/Microsoft.Azure.Management.RemoteApp/1.0.9) |  |  |
 | 管理-保留 | NuGet [1.13.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Reservations/1.13.0-preview) |  | GitHub [1.13.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Reservations_1.13.0-preview/sdk/reservations/Microsoft.Azure.Management.Reservations/) |
 | 管理-Resource Graph | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceGraph/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.ResourceGraph_2.0.0/sdk/resourcegraph/Microsoft.Azure.Management.ResourceGraph/) |
-| 管理-Resource Manager | NuGet [3.10.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceManager/3.10.0-preview) |  |  |
+| 管理-Resource Manager | NuGet [3.10.1-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceManager/3.10.1-preview) |  |  |
 | 管理-Resource Manager 流暢 | NuGet [1.35.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceManager.Fluent/1.35.0) | [docs](/dotnet/api/overview/azure/resource-manager) |  |
 | 管理-資源 | NuGet [2.20.1-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Resources/2.20.1-preview) |  |  |
 | 管理-範例專案發行 | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.SampleProjectPublish/0.9.0-Preview) |  |  |
@@ -690,7 +690,7 @@ ms.locfileid: "93353992"
 | 管理-Service Fabric 流暢 | NuGet [1.9.1-Beta](https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceFabric.Fluent/1.9.1-beta) |  |  |
 | 管理-SignalR | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.SignalR/1.1.0) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SignalR_1.1.0/sdk/signalr/Microsoft.Azure.Management.SignalR/) |
 | 管理-Site Recovery | NuGet [2.0.2-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.SiteRecovery/2.0.2-preview) |  |  |
-| 管理-SQL | NuGet [1.46.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Sql/1.46.0-preview) |  |  |
+| 管理-SQL | NuGet [1.47.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Sql/1.47.0-preview) |  |  |
 | 管理-SQL 流暢 | NuGet [1.35.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Sql.Fluent/1.35.0) | [docs](/dotnet/api/overview/azure/sql) |  |
 | 管理-SQL 虛擬機器 | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.SqlVirtualMachine/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SqlVirtualMachine_1.0.0/sdk/sqlvirtualmachine/Microsoft.Azure.Management.SqlVirtualMachine/) |
 | 管理-儲存體 | NuGet [17.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Storage/17.2.0) |  | GitHub [17.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Storage_17.2.0/sdk/storage/Microsoft.Azure.Management.Storage/) |
@@ -757,4 +757,5 @@ ms.locfileid: "93353992"
 | WindowsAzure 管理-流量管理員 | NuGet [0.16.1-預覽](https://www.nuget.org/packages/Microsoft.WindowsAzure.Management.TrafficManager/0.16.1-preview) |  |  |
 | WindowsAzure 管理-虛擬網路 | NuGet [0.9.9-預覽](https://www.nuget.org/packages/Microsoft.WindowsAzure.Management.VirtualNetworks/0.9.9-preview) |  |  |
 | WindowsAzure 管理-網站 | NuGet [5.0.0-發行](https://www.nuget.org/packages/Microsoft.WindowsAzure.Management.WebSites/5.0.0-prerelease)前版本 |  |  |
-| System.object | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/System.Memory.Data/1.0.0-beta.1) |  |  |
+| Amqp | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0-beta.1) |  |  |
+| System.object | NuGet [1.0.0](https://www.nuget.org/packages/System.Memory.Data/1.0.0)<br>NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/System.Memory.Data/1.0.0-beta.1) |  |  |
