@@ -14,6 +14,8 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: 數字分隔符號
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+        - name: 同步工作類型
+          href: ../../../../_csharplang/proposals/csharp-7.0/task-types.md
     - name: C# 7.1 規格提案
       items:
         - name: Async main 方法
