@@ -1,0 +1,26 @@
+- name: .NET IoT 程式庫文件
+  href: index.yml
+- name: 概觀
+  href: intro.md
+- name: 快速入門 (感知 HAT)
+  href: quickstarts/sensehat.md
+- name: 教學課程
+  expanded: true
+  items:
+    - name: 閃爍 LED
+      href: tutorials/blink-led.md
+    - name: 從感應器讀取環境情況
+      href: tutorials/temp-sensor.md
+    - name: 在 LCD 上顯示文字
+      href: tutorials/lcd-display.md
+    - name: 從類比到數位轉換器讀取值
+      href: tutorials/adc.md
+- name: 操作指南
+  expanded: true
+  items:
+    - name: 部署
+      href: deployment.md
+    - name: 偵錯
+      href: debugging.md
+- name: 應用程式開發介面參考
+  href: /dotnet/api?view=iot-dotnet-1.1
