@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 43d7a2baa75f3d71de8bbbf1d0bff7d1beb3d7cd
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efce75159cd631ad64ba03d4b65aaeb64ccdc809
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440531"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557026"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -108,7 +108,7 @@ let message = $"%s{name} is %d{age} years old."
 
 .NET 5 中沒有適用于 Visual Basic 的新語言功能。 不過，在 .NET 5 中，Visual Basic 支援延伸至：
 
-| 說明                            | `dotnet new` 參數 |
+| 描述                            | `dotnet new` 參數 |
 |----------------------------------------|------------------------|
 | 主控台應用程式                    | `console`              |
 | 類別庫                          | `classlib`             |
@@ -171,7 +171,8 @@ View body() => new StackLayout
 
 如需詳細資訊，請參閱 [.NET MAUI 藍圖](https://github.com/dotnet/maui/wiki/Roadmap)和 [.net MAUI 簡介](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) 文章。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [一個 .NET 的旅程](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [.NET 5 的效能改進](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
+- [下載 .NET SDK](https://dotnet.microsoft.com/download)

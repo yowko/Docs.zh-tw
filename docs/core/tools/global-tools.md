@@ -1,21 +1,21 @@
 ---
-title: " .NET Core 工具"
-description: 如何安裝、使用、更新和移除 .NET Core 工具。 涵蓋通用工具、工具路徑工具和區域工具。
+title: .NET 工具
+description: 如何安裝、使用、更新和移除 .NET 工具。 涵蓋通用工具、工具路徑工具和區域工具。
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598128"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556897"
 ---
-# <a name="how-to-manage-net-core-tools"></a>如何管理 .NET Core 工具
+# <a name="how-to-manage-net-tools"></a>如何管理 .NET 工具
 
-本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-.NET Core 工具是包含主控台應用程式的特殊 NuGet 套件。 您可以透過下列方式在電腦上安裝工具：
+.NET 工具是包含主控台應用程式的特殊 NuGet 套件。 您可以透過下列方式在電腦上安裝工具：
 
 * 作為全域工具。
 
@@ -29,24 +29,25 @@ ms.locfileid: "89598128"
 
   工具二進位檔會安裝在預設目錄中。 您可以從安裝目錄或其任何子目錄中叫用此工具。 不同的目錄可以使用相同工具的不同版本。
   
-  .NET CLI 會使用資訊清單檔案來追蹤哪些工具會以本機方式安裝到目錄。 在原始程式碼存放庫的根目錄中儲存資訊清單檔案時，參與者可以複製存放庫，並叫用單一 .NET Core CLI 命令，以安裝資訊清單檔案中列出的所有工具。
+  .NET CLI 會使用資訊清單檔案來追蹤哪些工具會以本機方式安裝到目錄。 在原始程式碼存放庫的根目錄中儲存資訊清單檔案時，參與者可以複製存放庫，並叫用單一 .NET CLI 命令，以安裝資訊清單檔案中列出的所有工具。
 
 > [!IMPORTANT]
-> .NET Core 工具會以完全信任的方式執行。 除非您信任作者，否則請勿安裝 .NET Core 工具。
+> .NET 工具會以完全信任的方式執行。 除非您信任作者，否則請勿安裝 .NET 工具。
 
 ## <a name="find-a-tool"></a>尋找工具
 
-目前，.NET Core 沒有工具搜尋功能。 以下是一些尋找工具的方法：
+以下是一些尋找工具的方法：
 
+* 使用 [dotnet 工具搜尋](dotnet-tool-search.md) 命令來尋找已發佈至 NuGet.org 的工具。
 * 使用 ".NET tool" 套件類型篩選準則來搜尋 [NuGet](https://www.nuget.org) 網站。 如需詳細資訊，請參閱[尋找及選擇套件](/nuget/consume-packages/finding-and-choosing-packages)。
 * 請參閱 [natemcmaster/dotnet 工具](https://github.com/natemcmaster/dotnet-tools) GitHub 存放庫中的工具清單。
 * 使用 [ToolGet](https://www.toolget.net/) 搜尋 .net 工具。
 * 請參閱 [dotnet/Aspnetcore GitHub 存放庫的 tools 目錄](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)中，由 ASP.NET Core 團隊所建立之工具的原始程式碼。
-* 深入瞭解 [.Net Core dotnet 診斷工具](../diagnostics/index.md#net-core-diagnostic-global-tools)的診斷工具。
+* 瞭解 [.net 診斷工具](../diagnostics/index.md#net-core-diagnostic-global-tools)上的診斷工具。
 
 ## <a name="check-the-author-and-statistics"></a>檢查作者和統計資料
 
-由於 .NET Core 工具是以完全信任的方式執行，而全域工具會新增至 PATH 環境變數中，因此可以非常強大。 請不要下載來自不信任人員的工具。
+由於 .NET 工具是以完全信任的方式執行，而全域工具會新增至 PATH 環境變數中，因此可能非常強大。 請不要下載來自不信任人員的工具。
 
 如果此工具裝載在 NuGet 上，您可以搜尋工具來檢查作者和統計資料。
 
@@ -92,7 +93,7 @@ dotnet tool install dotnetsay --tool-path c:\dotnet-tools
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-.NET Core SDK 不會自動將此位置新增至 PATH 環境變數。 若要叫用 [工具路徑工具](#invoke-a-tool-path-tool)，您必須使用下列其中一種方法來確定命令可供使用：
+.NET SDK 不會自動將此位置新增至 PATH 環境變數。 若要叫用 [工具路徑工具](#invoke-a-tool-path-tool)，您必須使用下列其中一種方法來確定命令可供使用：
 
 * 將安裝目錄新增至 PATH 環境變數。
 * 當您叫用工具時，指定該工具的完整路徑。
@@ -108,7 +109,7 @@ dotnet tool install dotnetsay --tool-path ~/bin
 dotnet new tool-manifest
 ```
 
-此命令會在 *.config*目錄下建立名為*dotnet-tools.js*的資訊清單檔。 若要將本機工具新增至資訊清單檔，請使用 [dotnet tool install](dotnet-tool-install.md) 命令，並 **省略** `--global` 和 `--tool-path` 選項，如下列範例所示：
+此命令會在 *.config* 目錄下建立名為 *dotnet-tools.js* 的資訊清單檔。 若要將本機工具新增至資訊清單檔，請使用 [dotnet tool install](dotnet-tool-install.md) 命令，並 **省略** `--global` 和 `--tool-path` 選項，如下列範例所示：
 
 ```dotnetcli
 dotnet tool install dotnetsay
@@ -273,10 +274,10 @@ dotnet tool --help
 dotnet <command> --help
 ```
 
-如果工具無法安裝或執行，請參閱針對 [.Net Core 工具使用問題進行疑難排解](troubleshoot-usage-issues.md)。
+如果工具無法安裝或執行，請參閱針對 [.net 工具使用問題進行疑難排解](troubleshoot-usage-issues.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：使用 .NET Core CLI 建立 .NET Core 工具](global-tools-how-to-create.md)
-- [教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 通用工具](global-tools-how-to-use.md)
-- [教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 本機工具](local-tools-how-to-use.md)
+- [教學課程：使用 .NET CLI 建立 .NET 工具](global-tools-how-to-create.md)
+- [教學課程：使用 .NET CLI 安裝和使用 .NET 通用工具](global-tools-how-to-use.md)
+- [教學課程：使用 .NET CLI 安裝和使用 .NET 本機工具](local-tools-how-to-use.md)

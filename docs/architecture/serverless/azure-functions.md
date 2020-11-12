@@ -4,16 +4,16 @@ description: 'Azure 函式提供多種語言的無伺服器功能 (c #、JavaScr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08e1aaecdee753dc25cca0d6356caaafae1ad510
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171802"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557112"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
-Azure 函數提供無伺服器計算體驗。 函式是由 *觸發* 程式叫用 (例如存取 HTTP 端點或計時器) ，並執行程式碼區塊或商務邏輯。 函式也支援連接到儲存體和佇列等資源 *的特製化* 系結。
+Azure Functions 提供無伺服器計算體驗。 函式是由 *觸發* 程式叫用 (例如存取 HTTP 端點或計時器) ，並執行程式碼區塊或商務邏輯。 函式也支援連接到儲存體和佇列等資源 *的特製化* 系結。
 
 ![Azure 函數標誌](./media/azure-functions-logo.png)
 
@@ -39,7 +39,7 @@ Azure 函數提供無伺服器計算體驗。 函式是由 *觸發* 程式叫用
 
 ## <a name="app-service-plans"></a>App service 方案
 
-函數是由 *app service 方案*支援。 此方案會定義函數應用程式所使用的資源。 您可以將方案指派給區域、判斷將使用的虛擬機器大小和數量，以及挑選定價層。 針對真正的無伺服器方法，函數應用程式可能會使用**取用方案。** 取用方案會根據負載自動調整後端。
+函數是由 *app service 方案* 支援。 此方案會定義函數應用程式所使用的資源。 您可以將方案指派給區域、判斷將使用的虛擬機器大小和數量，以及挑選定價層。 針對真正的無伺服器方法，函數應用程式可能會使用 **取用方案。** 取用方案會根據負載自動調整後端。
 
 函數應用程式的另一個裝載選項是 [Premium 方案](/azure/azure-functions/functions-premium-plan)。 此方案提供「永遠開啟」實例來避免冷啟動、支援 VNet 連線等 advanced 功能，並可在 premium 硬體上執行。
 
@@ -61,7 +61,7 @@ Azure 函數提供無伺服器計算體驗。 函式是由 *觸發* 程式叫用
 
 ## <a name="understand-triggers-and-bindings"></a>瞭解觸發程式和系結
 
-函式是由 *觸發* 程式叫用的，而且可以只有一個。 除了叫用函式之外，某些觸發程式也會作為系結。 除了觸發程式之外，您也可以定義多個系結。 系結*會提供宣告*式方式，將資料連線到您的程式碼。 您可以在 (輸入中傳遞它們) 或接收資料 (輸出) 。 觸發程式和系結可讓函式便於使用。 系結會移除手動建立資料庫或檔案系統連接的額外負荷。 系結所需的所有資訊都包含在腳本的特殊 *functions.js* 中，或使用程式碼中的屬性來宣告。
+函式是由 *觸發* 程式叫用的，而且可以只有一個。 除了叫用函式之外，某些觸發程式也會作為系結。 除了觸發程式之外，您也可以定義多個系結。 系結 *會提供宣告* 式方式，將資料連線到您的程式碼。 您可以在 (輸入中傳遞它們) 或接收資料 (輸出) 。 觸發程式和系結可讓函式便於使用。 系結會移除手動建立資料庫或檔案系統連接的額外負荷。 系結所需的所有資訊都包含在腳本的特殊 *functions.js* 中，或使用程式碼中的屬性來宣告。
 
 一些常見的觸發套裝程式括：
 

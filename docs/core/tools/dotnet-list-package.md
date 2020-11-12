@@ -1,17 +1,17 @@
 ---
 title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
-ms.date: 02/14/2020
-ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.date: 11/11/2020
+ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164761"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556884"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**本文適用于：** ✔️ .net CORE 2.2 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.2 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -24,7 +24,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
     [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
-    [--outdated] [--source <SOURCE>]
+    [--outdated] [--source <SOURCE>] [-v|--verbosity <LEVEL>]
 
 dotnet list package -h|--help
 ```
@@ -73,7 +73,7 @@ Project 'HelloPlugin' has the following package references
 
 要在其上運作的專案或解決方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果找到一個以上的解決方案或專案，則會擲回錯誤。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--config <SOURCE>`**
 
@@ -85,7 +85,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`--framework <FRAMEWORK>`**
 
-  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如： `--framework netcoreapp2.2 --framework netstandard2.0` 。
+  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如：`--framework netcoreapp2.2 --framework netstandard2.0`。
 
 - **`-h|--help`**
 
@@ -118,6 +118,10 @@ Project 'HelloPlugin' has the following package references
 - **`-s|--source <SOURCE>`**
 
   搜尋較新的套件時要使用的 NuGet 來源。 需要 `--outdated` 或 `--deprecated` 選項。
+
+- **`-v|--verbosity <LEVEL>`**
+
+  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `minimal`。
 
 ## <a name="examples"></a>範例
 

@@ -1,18 +1,18 @@
 ---
 title: 'with expression-c # 參考'
 description: '瞭解執行 c # 記錄之非破壞性變化的 with 運算式'
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 f1_keywords:
 - with_CSharpKeyword
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: 7948df3c6260e297cdb2fa380f1790a55e0abb58
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 8412dfe8663703d3b201fe98b5f4752da1b344cf
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445813"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556708"
 ---
 # <a name="with-expression-c-reference"></a>with expression (c # 參考) 
 
@@ -21,6 +21,10 @@ ms.locfileid: "94445813"
 :::code language="csharp" source="snippets/with-expression/BasicExample.cs" :::
 
 如先前的範例所示，您可以使用 [物件初始化運算式](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) 語法來指定要修改的成員及其新值。 在 `with` 運算式中，左邊運算元必須是記錄類型。
+
+運算式的結果與 `with` 運算式的運算元具有相同的執行時間類型，如下列範例所示：
+
+:::code language="csharp" source="snippets/with-expression/InheritanceExample.cs" :::
 
 如果是參考型別成員，則在複製記錄時，只會複製實例的參考。 複製和原始記錄都可以存取相同的參考型別實例。 下列範例示範了該行為：
 
@@ -37,7 +41,7 @@ ms.locfileid: "94445813"
 - [`with` 表達](~/_csharplang/proposals/csharp-9.0/records.md#with-expression)
 - [複製和複製成員](~/_csharplang/proposals/csharp-9.0/records.md#copy-and-clone-members)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)
 - [C# 運算子與運算式](index.md)

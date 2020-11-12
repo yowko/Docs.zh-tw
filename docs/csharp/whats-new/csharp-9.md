@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: e1c297cd0ff75d6a6fb4a9d38c9a241e216f500b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440864"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557216"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -31,6 +31,8 @@ C # 9.0 將下列功能和增強功能新增至 c # 語言：
 - 部分方法的新功能
 
 **.Net 5** 支援 c # 9.0。 如需詳細資訊，請參閱 [c # 語言版本控制](../language-reference/configure-language-version.md)。
+
+您可以從 [.net 下載頁面](https://dotnet.microsoft.com/download)下載最新的 .net SDK。
 
 ## <a name="record-types"></a>記錄類型
 
@@ -158,7 +160,7 @@ System.Console.WriteLine("Hello World!");
 
 您的應用程式中只有一個檔案可以使用最上層的語句。 如果編譯器在多個原始程式檔中尋找最上層的語句，則會產生錯誤。 如果您將最上層語句與宣告的程式進入點方法（通常是方法）結合，也會發生錯誤 `Main` 。 您可以認為一個檔案包含的語句通常會在 `Main` 類別的方法中 `Program` 。  
 
-這項功能最常見的用途之一就是建立教學教材。 初學者 c # 開發人員可以撰寫標準 "Hello World！" 在一或兩行程式碼中。 不需要額外的額外儀式。 不過，經驗豐富的開發人員也會發現這項功能有許多用途。 最上層的語句可啟用類似腳本的實驗體驗，類似于 Jupyter 筆記本所提供的功能。 最上層的語句非常適合小型主控台程式和公用程式。 Azure 函式是最適合最上層語句的使用案例。
+這項功能最常見的用途之一就是建立教學教材。 初學者 c # 開發人員可以撰寫標準 "Hello World！" 在一或兩行程式碼中。 不需要額外的額外儀式。 不過，經驗豐富的開發人員也會發現這項功能有許多用途。 最上層的語句可啟用類似腳本的實驗體驗，類似于 Jupyter 筆記本所提供的功能。 最上層的語句非常適合小型主控台程式和公用程式。 Azure Functions 是最適合最上層語句的使用案例。
 
 最重要的是，最重要的語句不會限制應用程式的範圍或複雜度。 這些語句可以存取或使用任何 .NET 類別。 它們也不會限制您使用命令列引數或傳回值。 最上層語句可以存取名為 args 的字串陣列。 如果最上層的語句傳回整數值，該值就會變成合成方法的整數傳回碼 `Main` 。 最上層語句可能包含非同步運算式。 在此情況下，合成的進入點會傳回 `Task` 或 `Task<int>` 。
 

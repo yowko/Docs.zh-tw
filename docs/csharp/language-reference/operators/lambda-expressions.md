@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247705"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556838"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda 運算式 (c # 參考) 
 
-「Lambda 運算式」** 是下列兩種形式之一的運算式：
+「Lambda 運算式」是下列兩種形式之一的運算式：
 
 - 以運算式作為主體的[運算式 Lambda](#expression-lambdas)：
 
@@ -50,13 +50,13 @@ ms.locfileid: "91247705"
   
 ## <a name="expression-lambdas"></a>運算式 Lambda
 
-在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
+在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
 
 ```csharp
 (input-parameters) => expression
 ```
 
-運算式 Lambda 的主體可以包含方法呼叫。 但是，如果您要建立的 [運算式樹狀](../../programming-guide/concepts/expression-trees/index.md) 架構是在 .net common language runtime 的內容之外進行評估，例如 SQL Server 中，則不應在 lambda 運算式中使用方法呼叫。 這些方法在 .NET 通用語言執行平台內容之外將不具任何意義。
+運算式 Lambda 的主體可以包含方法呼叫。 但是，如果您要建立的 [運算式樹狀](../../programming-guide/concepts/expression-trees/index.md) 架構是在 .Net Common Language RUNTIME (CLR) 的內容之外進行評估，例如在 SQL Server 中，您不應該在 lambda 運算式中使用方法呼叫。 方法不會在 .NET Common Language Runtime (CLR) 的內容之外，沒有任何意義。
 
 ## <a name="statement-lambdas"></a>陳述式 Lambda
 
@@ -215,7 +215,7 @@ Lambda 型別推斷的一般規則如下所示：
 
 ## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>Lambda 運算式中的擷取外部變數和變數範圍
 
-Lambda 可以參考「外部變數」**。 這些是在定義 Lambda 運算式的方法範圍內，或是在包含 Lambda 運算式的型別範圍內的變數。 以這種方式擷取的變數會加以儲存，以便在 Lambda 運算式中使用，即使這些變數可能會超出範圍而遭到記憶體回收。 外部變數必須確實指派，才能用於 Lambda 運算式。 下列範例將示範這些規則：
+Lambda 可以參考「外部變數」。 這些是在定義 Lambda 運算式的方法範圍內，或是在包含 Lambda 運算式的型別範圍內的變數。 以這種方式擷取的變數會加以儲存，以便在 Lambda 運算式中使用，即使這些變數可能會超出範圍而遭到記憶體回收。 外部變數必須確實指派，才能用於 Lambda 運算式。 下列範例將示範這些規則：
 
 [!code-csharp[variable scope](snippets/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 

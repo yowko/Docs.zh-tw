@@ -1,13 +1,13 @@
 ---
 title: dotnet 命令
-description: 瞭解 dotnet 命令 (.NET Core CLI) 的一般驅動程式和其使用方式。
-ms.date: 02/13/2020
-ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+description: 瞭解 dotnet 命令 (.NET CLI 的一般驅動程式) 和其使用方式。
+ms.date: 11/11/2020
+ms.openlocfilehash: a2b4b026e7c89536a6a7eaf69b31e3f62bf5adfc
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281619"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556823"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -15,7 +15,7 @@ ms.locfileid: "93281619"
 
 ## <a name="name"></a>名稱
 
-`dotnet` -.NET Core CLI 的一般驅動程式。
+`dotnet` -.NET CLI 的一般驅動程式。
 
 ## <a name="synopsis"></a>概要
 
@@ -52,13 +52,13 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 此 `dotnet` 命令有兩個功能：
 
-- 它提供使用 .NET Core 專案的命令。
+- 它提供使用 .NET 專案的命令。
 
   例如， [`dotnet build`](dotnet-build.md) 建立專案。 每個命令都會定義自己的選項和引數。 所有命令都支援 `--help` 列印出有關如何使用命令的簡短檔的選項。
 
-- 它會執行 .NET Core 應用程式。
+- 它會執行 .NET 應用程式。
 
-  您可以指定應用程式檔的路徑 `.dll` 來執行應用程式。  若要執行應用程式，您可以尋找並執行進入點，在主控台應用程式的案例中，這是 `Main` 方法。 例如，會 `dotnet myapp.dll` 執行 `myapp` 應用程式。 若要瞭解部署選項，請參閱 [.Net Core 應用程式部署](../deploying/index.md) 。
+  您可以指定應用程式檔的路徑 `.dll` 來執行應用程式。  若要執行應用程式，您可以尋找並執行進入點，在主控台應用程式的案例中，這是 `Main` 方法。 例如，會 `dotnet myapp.dll` 執行 `myapp` 應用程式。 若要瞭解部署選項，請參閱 [.net 應用程式部署](../deploying/index.md) 。
 
 ## <a name="options"></a>選項
 
@@ -66,23 +66,23 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="options-for-dotnet-by-itself"></a>Dotnet 本身的選項
 
-以下是本身的選項 `dotnet` 。 例如： `dotnet --info` 。 他們會列印環境的相關資訊。
+以下是本身的選項 `dotnet` 。 例如，`dotnet --info`。 他們會列印環境的相關資訊。
 
 - **`--info`**
 
-  會印出關於 .NET Core 安裝和電腦環境的詳細資訊，例如目前作業系統和 .NET Core 版本的認可 SHA。
+  列印 .NET 安裝和電腦環境的詳細資訊，例如目前的作業系統，以及 .NET 版本的認可 SHA。
 
 - **`--version`**
 
-  印出使用中的 .NET Core SDK 版本。
+  列印出使用中的 .NET SDK 版本。
 
 - **`--list-runtimes`**
 
-  列印已安裝的 .NET Core 執行時間清單。 X86 版本的 SDK 只會列出 x86 執行時間，而 x64 版本的 SDK 只會列出 x64 執行時間。
+  列印已安裝之 .NET 執行時間的清單。 X86 版本的 SDK 只會列出 x86 執行時間，而 x64 版本的 SDK 只會列出 x64 執行時間。
 
 - **`--list-sdks`**
 
-  列印已安裝的 .NET Core Sdk 清單。
+  列印已安裝的 .NET Sdk 清單。
 
 - **`-h|--help`**
 
@@ -90,7 +90,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="sdk-options-for-running-a-command"></a>用來執行命令的 SDK 選項
 
-以下是 `dotnet` 使用命令的選項。 例如： `dotnet build --help` 。
+以下是 `dotnet` 使用命令的選項。 例如，`dotnet build --help`。
 
 - **`-d|--diagnostics`**
 
@@ -110,7 +110,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="runtime-options"></a>執行時間選項
 
-當您執行應用程式時，可以使用下列選項 `dotnet` 。 例如： `dotnet myapp.dll --roll-forward Major` 。
+當您執行應用程式時，可以使用下列選項 `dotnet` 。 例如，`dotnet myapp.dll --roll-forward Major`。
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -122,11 +122,11 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  檔案 *deps.js* 的路徑。 檔案 *上的deps.js* 是一個設定檔，其中包含執行應用程式所需相依性的相關資訊。 這個檔案是由 .NET Core SDK 所產生。
+  檔案 *deps.js* 的路徑。 檔案 *上的deps.js* 是一個設定檔，其中包含執行應用程式所需相依性的相關資訊。 這個檔案是由 .NET SDK 產生。
 
 - **`--runtimeconfig`**
 
-  *runtimeconfig.json* 檔案的路徑。 檔案 *上的runtimeconfig.js* 是包含執行時間設定的設定檔。 如需詳細資訊，請參閱 [.Net Core 執行時間配置設定](../run-time-config/index.md#runtimeconfigjson)。
+  *runtimeconfig.json* 檔案的路徑。 檔案 *上的runtimeconfig.js* 是包含執行時間設定的設定檔。 如需詳細資訊，請參閱 [.net 執行時間設定](../run-time-config/index.md#runtimeconfigjson)。
 
 - **`--roll-forward <SETTING>`****從 .NET Core SDK 3.0 開始提供。**
 
@@ -157,7 +157,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--fx-version <VERSION>`**
 
-  用來執行應用程式的 .NET Core 執行階段版本。
+  要用來執行應用程式的 .NET 執行階段版本。
 
   此選項會覆寫應用程式檔案中第一個架構參考的版本 `.runtimeconfig.json` 。 這表示如果只有一個架構參考，它只會如預期般運作。 如果應用程式有一個以上的架構參考，則使用這個選項可能會導致錯誤。
 
@@ -167,7 +167,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 | 命令                                       | 函式                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | 建置 .NET Core 應用程式。                                     |
+| [dotnet build](dotnet-build.md)               | 建立 .NET 應用程式。                                     |
 | [dotnet build-server](dotnet-build-server.md) | 與組建所啟動的伺服器互動。                          |
 | [dotnet clean](dotnet-clean.md)               | 清除組建輸出。                                                |
 | [dotnet help](dotnet-help.md)                 | 顯示命令更詳細的線上文件。           |
@@ -213,18 +213,19 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>全域、工具路徑和本機工具命令
 
-工具是從 NuGet 套件安裝的主控台應用程式，會從命令提示字元叫用。 您可以自行撰寫工具或安裝協力廠商所撰寫的工具。 工具也稱為「通用工具」、「工具路徑工具」和「本機工具」。 如需詳細資訊，請參閱 [.Net Core 工具總覽](global-tools.md)。 從 .NET Core SDK 2.1 開始，可以使用全域和工具路徑工具。 從 .NET Core SDK 3.0 開始，可以使用本機工具。
+工具是從 NuGet 套件安裝的主控台應用程式，會從命令提示字元叫用。 您可以自行撰寫工具或安裝協力廠商所撰寫的工具。 工具也稱為「通用工具」、「工具路徑工具」和「本機工具」。 如需詳細資訊，請參閱 [.net 工具總覽](global-tools.md)。 從 .NET Core SDK 2.1 開始，可以使用全域和工具路徑工具。 從 .NET Core SDK 3.0 開始，可以使用本機工具。
 
 命令 | 函式
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 在您的電腦上安裝工具。
 [dotnet tool list](dotnet-tool-list.md) | 列出電腦上目前已安裝的所有全域、工具路徑或本機工具。
+[dotnet 工具搜尋](dotnet-tool-list.md) | 搜尋 NuGet.org 是否有在其名稱或中繼資料中具有指定之搜尋詞彙的工具。
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | 從您的電腦卸載工具。
 [dotnet tool update](dotnet-tool-update.md) | 更新電腦上所安裝的工具。
 
 ### <a name="additional-tools"></a>其他工具
 
-從 .NET Core SDK 2.1.300 開始，先前僅能透過 `DotnetCliToolReference` 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具列於下列資料表中：
+從 .NET Core SDK 2.1.300 開始，使用的一些工具現在僅適用于以專案為基礎的工具， `DotnetCliToolReference` 現在已可在 .NET SDK 中使用。 這些工具列於下列資料表中：
 
 | 工具                                              | 函式                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -260,7 +261,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  指定 .NET Core 執行時間的位置（如果未安裝在預設位置）。 Windows 上的預設位置為 `C:\Program Files\dotnet` 。 Linux 和 macOS 上的預設位置為 `/usr/share/dotnet` 。 此環境變數只會在透過產生的可執行檔（ (apphosts) ）執行應用程式時使用。 `DOTNET_ROOT(x86)` 當在64位作業系統上執行32位可執行檔時，會改用
+  指定 .NET 執行時間的位置（如果未安裝在預設位置）。 Windows 上的預設位置為 `C:\Program Files\dotnet` 。 Linux 和 macOS 上的預設位置為 `/usr/share/dotnet` 。 此環境變數只會在透過產生的可執行檔（ (apphosts) ）執行應用程式時使用。 `DOTNET_ROOT(x86)` 當在64位作業系統上執行32位可執行檔時，會改用
 
 - `NUGET_PACKAGES`
 
@@ -272,15 +273,15 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  指定是否要在第一次執行時顯示 .NET Core 歡迎畫面和遙測訊息。 設定為可將 `true` 這些訊息靜音 (值 `true` 、 `1` 或 `yes` 接受) 或設定為， `false` 以允許 (值 `false` 、 `0` 或 `no` 接受) 。 如果未設定，預設值為， `false` 而訊息將會在第一次執行時顯示。 此旗標不會影響遙測 (請參閱退出傳送 `DOTNET_CLI_TELEMETRY_OPTOUT` 遙測) 。
+  指定是否要在第一次執行時顯示 .NET 歡迎畫面和遙測訊息。 設定為可將 `true` 這些訊息靜音 (值 `true` 、 `1` 或 `yes` 接受) 或設定為， `false` 以允許 (值 `false` 、 `0` 或 `no` 接受) 。 如果未設定，預設值為， `false` 而訊息將會在第一次執行時顯示。 此旗標不會影響遙測 (請參閱退出傳送 `DOTNET_CLI_TELEMETRY_OPTOUT` 遙測) 。
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-  指定是否收集 .NET Core 工作使用資料，並將其傳送給 Microsoft。 設為 `true` 以選擇加入遙測功能 (可接受的值為 `true`、`1` 或 `yes`)。 否則，請設為 `false` 以選擇退出遙測功能 (可接受的值為 `false`、`0` 或 `no`)。 如果未設定，預設值為 `false`，且遙測功能會處於作用狀態。
+  指定是否收集 .NET 工具使用量的相關資料，並將其傳送給 Microsoft。 設為 `true` 以選擇加入遙測功能 (可接受的值為 `true`、`1` 或 `yes`)。 否則，請設為 `false` 以選擇退出遙測功能 (可接受的值為 `false`、`0` 或 `no`)。 如果未設定，預設值為 `false`，且遙測功能會處於作用狀態。
 
 - `DOTNET_MULTILEVEL_LOOKUP`
 
-  指定是否從全域位置解析 .NET Core 執行階段、共用架構或 SDK。 如果未設定，則預設為 1 (邏輯 `true`) 。 設定為 0 (邏輯 `false`) 無法從全域位置解析，且已隔離 .Net Core 安裝。 如需多層級查閱的詳細資訊，請參閱 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md) (多層級 SharedFX 查閱)。
+  指定是否從全域位置解析 .NET 執行時間、共用架構或 SDK。 如果未設定，則預設為 1 (邏輯 `true`) 。 設定為 0 (邏輯 `false`) 不會從全域位置解析，並且具有隔離的 .net 安裝。 如需多層級查閱的詳細資訊，請參閱 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md) (多層級 SharedFX 查閱)。
 
 - `DOTNET_ROLL_FORWARD`**從 .Net Core 3.x 開始提供。**
 
@@ -288,7 +289,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROLL_FORWARD_TO_PRERELEASE`**從 .Net Core 3.x 開始提供。**
 
-  如果設定為 `1` (啟用) ，則可從發行版本向前復原至發行前版本。 根據預設 (`0` -disabled) ，當要求 .Net Core 執行時間的發行版本時，向前復原只會考慮已安裝的發行版本。
+  如果設定為 `1` (啟用) ，則可從發行版本向前復原至發行前版本。 依預設 (`0` -disabled) ，當要求 .net 執行時間的發行版本時，向前復原只會考慮已安裝的發行版本。
 
   如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)。
 
@@ -300,7 +301,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  使用地區設定值（例如）設定 CLI UI 的語言 `en-us` 。 支援的值與 Visual Studio 的值相同。 如需詳細資訊，請參閱 [Visual Studio 安裝檔](/visualstudio/install/install-visual-studio?view=vs-2019)中的變更安裝程式語言一節。 適用 .NET resource manager 規則，因此您不需要挑選完全相符的結果， &mdash; 您也可以在樹狀目錄中挑選子系 `CultureInfo` 。 例如，如果您將它設定為 `fr-CA` ，CLI 會尋找並使用 `fr` 翻譯。 如果您將它設定為不支援的語言，CLI 會切換回英文。
+  使用地區設定值（例如）設定 CLI UI 的語言 `en-us` 。 支援的值與 Visual Studio 的值相同。 如需詳細資訊，請參閱 [Visual Studio 安裝檔](/visualstudio/install/install-visual-studio)中的變更安裝程式語言一節。 適用 .NET resource manager 規則，因此您不需要挑選完全相符的結果， &mdash; 您也可以在樹狀目錄中挑選子系 `CultureInfo` 。 例如，如果您將它設定為 `fr-CA` ，CLI 會尋找並使用 `fr` 翻譯。 如果您將它設定為不支援的語言，CLI 會切換回英文。
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
@@ -345,4 +346,4 @@ dotnet myapp.dll
 ## <a name="see-also"></a>另請參閱
 
 - [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)
-- [.NET Core 執行時間設定](../run-time-config/index.md)
+- [.NET 執行時間設定](../run-time-config/index.md)

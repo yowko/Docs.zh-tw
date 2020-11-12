@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495835"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557099"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -23,6 +23,8 @@ ms.locfileid: "89495835"
 
 Visual Basic 16.0/Visual Studio 2019 版本 16.0 \
 如需新功能，請參閱 [Visual Basic 16.0](#visual-basic-160)。
+
+您可以從 [.net 下載頁面](https://dotnet.microsoft.com/download)下載最新的 .net SDK。
 
 ## <a name="previous-versions"></a>舊版
 
@@ -158,7 +160,7 @@ Visual Basic 命令列編譯器現在支援 [**-refout**](../reference/command-l
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[**元組**](../programming-guide/language-features/data-types/tuples.md)
+[**Tuple**](../programming-guide/language-features/data-types/tuples.md)
 
 Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一項︰
 
@@ -289,7 +291,7 @@ End Interface
 
 現在，編譯器會使用一般多載解析規則來選擇要呼叫的最適合 `GetDetails`，而且您可以在 Visual Basic 中宣告介面關聯性 (如範例所示)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Visual Studio 2019 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)

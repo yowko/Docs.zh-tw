@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: da0e92f394507a37b0b6c163b41a575abc1c1a2b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441105"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557242"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework 的新功能
 
@@ -204,7 +204,7 @@ ms.locfileid: "94441105"
 
 - [基底類別](#core-472)
 - [ASP.NET](#asp-net472)
-- [網路](#net472)
+- [網路功能](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -353,7 +353,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **其他集合 API**
 
-.NET Framework 4.7.2 將一些新的 API 新增至 <xref:System.Collections.Generic.SortedSet%601> 和 <xref:System.Collections.Generic.HashSet%601> 類型。 其中包含：
+.NET Framework 4.7.2 將一些新的 API 新增至 <xref:System.Collections.Generic.SortedSet%601> 和 <xref:System.Collections.Generic.HashSet%601> 類型。 它們包括：
 
 - `TryGetValue` 方法，可將其他集合類型使用的 try 模式擴充為下列兩種類型。 這些方法為：
 
@@ -437,7 +437,7 @@ c.SameSite = SameSiteMode.Lax
 
 <a name="net472"></a>
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 **實作 HttpClientHandler 屬性**
 
@@ -592,7 +592,7 @@ End Class
 
 - [基底類別](#core471)
 - [Common language runtime (CLR) ](#clr)
-- [網路](#net471)
+- [網路功能](#net471)
 - [ASP.NET](#asp-net471)
 
 此外，.NET Framework 4.7.1 中的主要焦點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.1 中協助工具改善的詳細資訊，請參閱 [.NET Framework 協助工具的新](whats-new-in-accessibility.md)功能。
@@ -633,7 +633,7 @@ End Class
 
 <a name="net471"/>
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 **Message.HashAlgorithm 的 SHA-2 支援**
 
@@ -674,7 +674,7 @@ ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET
 .NET Framework 4.7 包含下列領域的新功能：
 
 - [基底類別](#Core47)
-- [網路](#net47)
+- [網路功能](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -702,7 +702,7 @@ _ *DataContractJsonSerializer 對控制字元提供更佳的支援**
 
 <a name="net47"></a>
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 .NET Framework 4.7 新增與網路有關的下列功能︰
 
@@ -744,7 +744,7 @@ Windows Communication Foundation (WCF) 加入下列功能和變更：
 
 **改進 WCF 應用程式和 WCF 序列化的可靠性**
 
-WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。 其中包含：
+WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。 它們包括：
 
 - 在呼叫 **SocketConnection.BeginRead** 和 **SocketConnection.Read** 時更有效地支援混合非同步和同步程式碼。
 - 改善中止與 **SharedConnectionListener** 和 **DuplexChannelBinder** 連線時的可靠性。
@@ -958,7 +958,7 @@ End Function
 
 為了在 .NET Framework 4.6.2 中解決此情況，會將下列三個方法新增至  <xref:System.Security.Cryptography.ECDiffieHellman> 基類，以更清楚地表示這些 KDF 常式及其輸入：
 
-|ECDiffieHellman 方法|說明|
+|ECDiffieHellman 方法|描述|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用公式衍生金鑰內容<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用公式衍生金鑰內容<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。|
@@ -1712,7 +1712,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
   預設值是 `false`。
 
-- **網路**
+- **網路功能**
 
   - **通訊端重複使用**
 
@@ -1913,7 +1913,7 @@ Windows Forms 的增強功能包括：
 
 - 透過伺服器的背景記憶體回收改善效能。 當您在 .NET Framework 4.5 中使用伺服器垃圾收集時，背景垃圾收集會自動啟用。 請參閱[記憶體回收的基本概念](../../standard/garbage-collection/fundamentals.md)主題的＜背景伺服器記憶體回收＞一節。
 
-- 背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。 請參閱<xref:System.Runtime.ProfileOptimization>。
+- 背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。 請參閱 <xref:System.Runtime.ProfileOptimization>。
 
 - 能夠限制正則運算式引擎在超時之前將嘗試解析正則運算式的時間長度。請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> 屬性。
 
@@ -2127,10 +2127,11 @@ Windows 8.x 市集應用程式是專為特定版型規格所設計，而且會�
 
 在 Visual Studio 2012 (含) 以後版本中的可攜式類別庫專案可讓您撰寫及建置可在多個 .NET Framework 平台上執行的 Managed 組件。 使用可移植的類別庫專案，您可以選擇平臺 (例如 Windows Phone 和 .NET，以) 目標的 Windows 8 x 商店應用程式。 專案中可用的類型和成員會自動限制為這些平台上的通用類型和成員。 如需詳細資訊，請參閱[可攜式類別庫](../cross-platform/portable-class-library.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 和不定期發行](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework 中協助工具的新功能](whats-new-in-accessibility.md)
 - [Visual Studio 2019 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 中 c + + 的新功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+- [下載 .NET SDK](https://dotnet.microsoft.com/download)

@@ -1,17 +1,17 @@
 ---
-title: 持久的 Azure 函式-無伺服器應用程式
-description: 持久的 Azure 函式會擴充 Azure Functions 執行時間，以在程式碼中啟用具狀態工作流程。
+title: 持久 Azure Functions-無伺服器應用程式
+description: 持久 Azure Functions 擴充 Azure Functions 執行時間，以在程式碼中啟用可設定狀態的工作流程。
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3ee628b5c2239cd13395fda7714b38b06efa058
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171789"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557151"
 ---
-# <a name="durable-azure-functions"></a>永久的 Azure 函式
+# <a name="durable-azure-functions"></a>持久 Azure Functions
 
 使用 Azure Functions 建立無伺服器應用程式時，通常會將您的作業設計成以無狀態的方式執行。 這種設計選擇的原因是因為當平臺進行調整時，會變得難以得知程式碼執行所在的伺服器。 在任何指定的時間點都有作用中的實例數目，也會變得很難瞭解。 不過，有一些應用程式類別需要已知進程的目前狀態。 請考慮將訂單提交到線上商店的流程。 簽出作業可能是由多個作業所組成的工作流程，這些作業需要知道進程的狀態。 如果客戶在其帳戶上有任何信用額度，以及處理信用卡的結果，這類資訊可能包含產品清查。 這些作業可以輕易地成為本身的內部工作流程，甚至是協力廠商系統的服務。
 
@@ -96,7 +96,7 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>建議的資源
 
-- [長期函式](/azure/azure-functions/durable-functions-overview)
+- [Durable Functions](/azure/azure-functions/durable-functions-overview)
 - [Durable Functions 的系結](/azure/azure-functions/durable-functions-bindings)
 - [管理 Durable Functions 中的實例](/azure/azure-functions/durable-functions-instance-management)
 
