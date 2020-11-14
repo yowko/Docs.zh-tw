@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/30/2020
-ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172550"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594589"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -23,7 +23,7 @@ ms.locfileid: "91172550"
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>開發 Docker 容器型應用程式的工作流程
 
-本節描述 Docker 容器型應用程式的「內部迴圈」** 開發工作流程。 內部迴圈工作流程表示不考慮更廣泛的 DevOps 工作流程，其最多可包含生產環境部署，而只著重于在開發人員電腦上完成的開發工作。 設定環境的初始步驟不包含在內，因為這些步驟只執行一次。
+本節描述 Docker 容器型應用程式的「內部迴圈」開發工作流程。 內部迴圈工作流程表示不考慮更廣泛的 DevOps 工作流程，其最多可包含生產環境部署，而只著重于在開發人員電腦上完成的開發工作。 設定環境的初始步驟不包含在內，因為這些步驟只執行一次。
 
 應用程式是由您自己的服務加上額外的程式庫 (相依性) 所組成。 以下是組建 Docker 應用程式時通常會採用的基本步驟，如圖 5-1 所示。
 
@@ -57,7 +57,7 @@ Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼、2寫入
 
 ![.NET Core 跨平臺開發選取範圍的螢幕擷取畫面。](./media/docker-app-development-workflow/dotnet-core-cross-platform-development.png)
 
-**圖 5-2**。 在 Visual Studio 2019 安裝期間選取 **.Net Core 跨平臺開發** 工作負載
+**圖 5-2** 。 在 Visual Studio 2019 安裝期間選取 **.Net Core 跨平臺開發** 工作負載
 
 您甚至可以在於您的應用程式中啟用 Docker，並在 Docker 中部署與測試之前，只使用 .NET 開始撰寫應用程式的程式碼 (如果您打算使用容器通常會使用 .NET Core)。 不過，建議您盡快開始使用 Docker，因為它會成為實際環境，可以盡快發現任何問題。 我們鼓勵您這麼做，是因為 Visual Studio 和 Docker 合作很容易，您幾乎感覺不到它，最佳範例是從 Visual Studio 偵錯多容器應用程式時。
 
@@ -77,21 +77,21 @@ Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼、2寫入
 
 Dockerfile 放在您應用程式或服務的根資料夾中。 它包含告訴 Docker 如何設定及執行容器中應用程式或服務的命令。 您可以使用程式碼手動建立 Dockerfile，將它與您的 .NET 相依性一起新增至您的專案。
 
-使用 Visual Studio 及其適用於 Docker 的工具，這項工作只需要按幾下滑鼠即可。 當您在 Visual Studio 2019 中建立新專案時，有一個名為 [ **啟用 Docker 支援**] 的選項，如 [圖 5-3] 所示。
+使用 Visual Studio 及其適用於 Docker 的工具，這項工作只需要按幾下滑鼠即可。 當您在 Visual Studio 2019 中建立新專案時，有一個名為 [ **啟用 Docker 支援** ] 的選項，如 [圖 5-3] 所示。
 
 ![顯示 [啟用 Docker 支援] 核取方塊的螢幕擷取畫面。](./media/docker-app-development-workflow/enable-docker-support-check-box.png)
 
-**圖 5-3**。 在 Visual Studio 2019 中建立新的 ASP.NET Core 專案時啟用 Docker 支援
+**圖 5-3** 。 在 Visual Studio 2019 中建立新的 ASP.NET Core 專案時啟用 Docker 支援
 
-您也可以在**方案總管**的專案上按一下滑鼠右鍵，然後選取 [**新增**Docker 支援]，在現有的 ASP.NET Core web 應用程式專案上啟用 Docker 支援  >  ** **，如圖5-4 所示。
+您也可以在 **方案總管** 的專案上按一下滑鼠右鍵，然後選取 [ **新增** Docker 支援]，在現有的 ASP.NET Core web 應用程式專案上啟用 Docker 支援  >  **** ，如圖5-4 所示。
 
 ![顯示 [新增] 功能表中 [Docker 支援] 選項的螢幕擷取畫面。](./media/docker-app-development-workflow/add-docker-support-option.png)
 
-**圖 5-4**。 在現有的 Visual Studio 2019 專案中啟用 Docker 支援
+**圖 5-4** 。 在現有的 Visual Studio 2019 專案中啟用 Docker 支援
 
 這個動作會將具有所需組態的 *Dockerfile* 新增至專案，且只能在 ASP.NET Core 專案上使用。
 
-同樣地，Visual Studio 也可以 `docker-compose.yml` 使用 [ **新增 > 容器協調器支援 ...**] 選項新增整個方案的檔案。在步驟4中，我們將更詳細地探索這個選項。
+同樣地，Visual Studio 也可以 `docker-compose.yml` 使用 [ **新增 > 容器協調器支援 ...** ] 選項新增整個方案的檔案。在步驟4中，我們將更詳細地探索這個選項。
 
 ### <a name="using-an-existing-official-net-docker-image"></a>使用現有的官方 .NET Docker 映像
 
@@ -210,7 +210,7 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 
 - **行 #2：** 在映射中建立 **/app** 目錄。
 
-- **行 #3：** 公開端口 **80**。
+- **行 #3：** 公開端口 **80** 。
 
 - **行 #5：** 開始具有「大型」映射的新階段來建立/發佈。 呼叫它的 **組建** 以供參考。
 
@@ -230,11 +230,11 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 
 - **行 #23：** 將專案 (和相依性) 和輸出發行至映射中的 **/app** 目錄。
 
-- **行 #25：** 從 **基底** 開始新的階段，並將它稱為 **最終**。
+- **行 #25：** 從 **基底** 開始新的階段，並將它稱為 **最終** 。
 
-- **行 #26：** 將目前目錄變更為 **/app**。
+- **行 #26：** 將目前目錄變更為 **/app** 。
 
-- **行 #27：** 從階段**發佈**將 **/app**目錄複寫到目前的目錄。
+- **行 #27：** 從階段 **發佈** 將 **/app** 目錄複寫到目前的目錄。
 
 - **行 #28：** 定義要在容器啟動時執行的命令。
 
@@ -242,7 +242,7 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 
 您將利用 Docker 的圖層快取功能，這項功能相當簡單：如果基底映像和命令與先前執行的某些項目相同，則可以直接使用產生的圖層，而不需要執行命令，因此節省一些時間。
 
-讓我們將重點放在**建置**階段，第 5-6 行大致相同，但第 7-17 行會因 eShopOnContainers 中的每個服務而異，因此每次都必須執行，不過如果您將第 7-16 行變更為：
+讓我們將重點放在 **建置** 階段，第 5-6 行大致相同，但第 7-17 行會因 eShopOnContainers 中的每個服務而異，因此每次都必須執行，不過如果您將第 7-16 行變更為：
 
 ```dockerfile
 COPY . .
@@ -264,7 +264,7 @@ RUN dotnet restore
 
 不過，資料夾中必須只有單一專案或方案檔，`dotnet restore` 才會執行，因此達成此目的會比較複雜，而解決的方式 (不細究) 如下：
 
-1. 將下列各行新增至 **.dockerignore**：
+1. 將下列各行新增至 **.dockerignore** ：
 
    - `*.sln`，以忽略主要資料夾樹狀目錄中的所有方案檔
 
@@ -290,7 +290,7 @@ RUN dotnet restore
 11
 12  FROM base AS final
 13  WORKDIR /app
-14  COPY --from=publish /app
+14  COPY --from=publish /app .
 15  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
@@ -300,10 +300,10 @@ RUN dotnet restore
 
 ### <a name="additional-resources"></a>其他資源
 
-- **多架構 .Net Core 映射**。
+- **多架構 .Net Core 映射** 。
   <https://github.com/dotnet/announcements/issues/14>
 
-- **建立基底映像**。 官方 Docker 文件。\
+- **建立基底映像** 。 官方 Docker 文件。\
   <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![步驟3的影像。](./media/docker-app-development-workflow/step-3-create-dockerfile-defined-images.png)
@@ -320,7 +320,7 @@ RUN dotnet restore
 
 ![顯示 docker build 命令之主控台輸出的螢幕擷取畫面。](./media/docker-app-development-workflow/run-docker-build-command.png)
 
-**圖 5-5**。 建立自訂的 Docker 映像
+**圖 5-5** 。 建立自訂的 Docker 映像
 
 除了直接從專案資料夾執行 docker build 以外，您可以選擇執行 `dotnet publish`，這樣就能使用所需的 .NET 程式庫及二進位先產生可部署的資料夾，再使用 `docker build` 命令。
 
@@ -336,7 +336,7 @@ RUN dotnet restore
 
 ### <a name="creating-docker-images-with-visual-studio"></a>使用 Visual Studio 建立 Docker 映像
 
-當您使用 Visual Studio 建立具有 Docker 支援的專案時，不用明確地建立映像。 反之，當您按 **F5** (或 **Ctrl-F5**) 執行 Docker 化的應用程式或服務時，就會為您建立映像。 雖然這個步驟會在 Visual Studio 中自動執行，而不會在您眼前發生，但知道背後情況也相當重要。
+當您使用 Visual Studio 建立具有 Docker 支援的專案時，不用明確地建立映像。 反之，當您按 **F5** (或 **Ctrl-F5** ) 執行 Docker 化的應用程式或服務時，就會為您建立映像。 雖然這個步驟會在 Visual Studio 中自動執行，而不會在您眼前發生，但知道背後情況也相當重要。
 
 ![選用步驟4的影像。](./media/docker-app-development-workflow/step-4-define-services-docker-compose-yml.png)
 
@@ -419,13 +419,13 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 
 ![顯示專案操作功能表中 [容器協調器支援] 選項的螢幕擷取畫面。](./media/docker-app-development-workflow/add-container-orchestrator-support-option.png)
 
-**圖 5-7**。 以滑鼠右鍵按一下 ASP.NET Core 專案以在 Visual Studio 2019 中新增 Docker 支援
+**圖 5-7** 。 以滑鼠右鍵按一下 ASP.NET Core 專案以在 Visual Studio 2019 中新增 Docker 支援
 
 在您將協調器支援新增至您的 Visual Studio 方案之後，您也會在 [方案總管] 中看到包含已新增 docker-compose.yml 檔案的新節點 (在 `docker-compose.dcproj` 專案檔中)，如圖 5-8 所示。
 
 ![方案總管中的 docker 撰寫節點的螢幕擷取畫面。](./media/docker-app-development-workflow/docker-compose-tree-node.png)
 
-**圖 5-8**。 在 Visual Studio 2019 中新增的 **docker 組成** 樹狀結構節點方案總管
+**圖 5-8** 。 在 Visual Studio 2019 中新增的 **docker 組成** 樹狀結構節點方案總管
 
 您可以透過 `docker-compose up` 命令來使用單一 docker-compose.yml 檔案部署多容器應用程式。 不過，Visual Studio 會新增它們的群組，方便您根據環境 (開發或生產) 和執行類型 (發行或偵錯) 來覆寫值。 這項功能會在後列各節中說明。
 
@@ -449,7 +449,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 ![使用 docker run 命令執行 Docker 容器的螢幕擷取畫面。](./media/docker-app-development-workflow/use-docker-run-command.png)
 
-**圖 5-9**。 使用 docker run 命令執行 Docker 容器
+**圖 5-9** 。 使用 docker run 命令執行 Docker 容器
 
 在本列中，命令會將容器的內部通訊埠 5000 繫結到主機電腦的通訊埠 80。 這表示主機會接聽通訊埠 80 並轉送至容器的通訊埠 5000。
 
@@ -465,7 +465,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 ![具有數個 Docker 容器的 VM](./media/docker-app-development-workflow/vm-with-docker-containers-deployed.png)
 
-**圖 5-10**。 部署了 Docker 容器的 VM
+**圖 5-10** 。 部署了 Docker 容器的 VM
 
 #### <a name="using-docker-cli"></a>使用 Docker CLI
 
@@ -473,7 +473,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 ![執行 docker-compose up 命令時的畫面檢視](./media/docker-app-development-workflow/results-docker-compose-up.png)
 
-**圖 5-11**。 執行的 docker-compose up 命令的範例結果
+**圖 5-11** 。 執行的 docker-compose up 命令的範例結果
 
 在執行 docker-compose up 命令後，應用程式及其相關容器便已部署至您的 Docker 主機，如圖 5-10 所示。
 
@@ -491,7 +491,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 ![執行 docker 撰寫專案的 debug 工具列螢幕擷取畫面。](./media/docker-app-development-workflow/debug-toolbar-docker-compose-project.png)
 
-**圖 5-12**。 在 Visual Studio 2019 中執行多容器應用程式
+**圖 5-12** 。 在 Visual Studio 2019 中執行多容器應用程式
 
 ### <a name="additional-resources"></a>其他資源
 
@@ -510,7 +510,7 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 
 ![Localhost/API/值回應的螢幕擷取畫面。](./media/docker-app-development-workflow/test-docker-app-locally-localhost.png)
 
-**圖 5-13**。 使用 localhost 在本機測試 Docker 應用程式的範例
+**圖 5-13** 。 使用 localhost 在本機測試 Docker 應用程式的範例
 
 如果 localhost 未指向 Docker 主機 IP (根據預設，當使用 Docker CE 時應該會指向 Docker 主機 IP)，請使用您電腦網路卡的 IP 位址來巡覽至您的服務。
 
@@ -520,7 +520,7 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 
 ![從取得捲曲的主控台輸出 http://10.0.75.1/API/values 。](./media/docker-app-development-workflow/test-docker-app-locally-curl.png)
 
-**圖 5-14**。 使用 curl 在本機測試 Docker 應用程式的範例
+**圖 5-14** 。 使用 curl 在本機測試 Docker 應用程式的範例
 
 ### <a name="testing-and-debugging-containers-with-visual-studio-2019"></a>使用 Visual Studio 2019 測試和偵測容器
 
@@ -546,13 +546,13 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼、2寫入 Dockerfile/秒、3-建立在 Dockerfile/s 定義的映射、4- (選擇性) 在 >docker-compose.yml yml 檔案中撰寫服務、5-執行容器或 Docker 撰寫應用程式、6-測試您的應用程式或微服務、7-推送至存放庫並重複執行。
 :::image-end:::
 
-**圖 5-15**。 使用 Visual Studio 開發時的簡化工作流程
+**圖 5-15** 。 使用 Visual Studio 開發時的簡化工作流程
 
 此外，您只需要執行一次步驟 2 (將 Docker 支援新增至您的專案)。 因此，工作流程類似於您使用 .NET 處理任何其他開發時的一般開發工作。 您需要知道實際狀況 (映像建置程序、使用哪些基底映像、容器部署等等)，有時也需要編輯 Dockerfile 或 docker-compose.yml 檔案以自訂行為。 但使用 Visual Studio 已大幅簡化工作，提高您的產能。
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Steve Lasker。使用 Visual Studio (2017) 進行 .NET Docker 開發 ** \
+- **Steve Lasker。使用 Visual Studio (2017) 進行 .NET Docker 開發** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>在 DockerFile 中使用 PowerShell 命令來設定 Windows 容器

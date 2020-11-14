@@ -4,12 +4,12 @@ description: 示範在 CentOS 上安裝 .NET SDK 和 .NET 執行時間的各種�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: d0f5d38de0f505d62f2a35c5d1c3f7161c91a96b
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: b2ed62d024c6f0d78a4ec64693f1dafeabd8f47b
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507089"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594628"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>在 CentOS 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -46,7 +46,14 @@ CentOS 支援 .NET。 本文說明如何在 CentOS 上安裝 .NET。
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-CentOS 8 的預設封裝存放庫中有提供 .NET 5.0。
+> [!TIP]
+> 預設套件存放庫中尚無法使用 .NET 5.0，但 .NET Core 3.1 為。 若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。 下列指示適用于 .NET 5.0。
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
+```
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 

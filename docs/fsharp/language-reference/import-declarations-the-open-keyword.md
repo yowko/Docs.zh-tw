@@ -2,12 +2,12 @@
 title: 匯入宣告：open 關鍵字
 description: '瞭解 F # 匯入宣告，以及它們如何指定模組或命名空間，而您可以參考其元素，而不需使用完整名稱。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557603"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557177"
 ---
 # <a name="import-declarations-the-open-keyword"></a>匯入宣告： `open` 關鍵字
 
@@ -17,6 +17,7 @@ ms.locfileid: "88557603"
 
 ```fsharp
 open module-or-namespace-name
+open type type-name
 ```
 
 ## <a name="remarks"></a>備註
@@ -42,6 +43,31 @@ printfn "%A" empty
 ```
 
 因此，當您開啟包含具有相同名稱之成員的模組或命名空間時，請小心， `List` `Seq` 改為考慮使用限定名稱。 您應該避免程式碼相依于匯入宣告順序的任何情況。
+
+## <a name="open-type-declarations"></a>開放式型別宣告
+
+F # 支援 `open` 型別，如下所示：
+
+```fsharp
+open type System.Math
+PI
+```
+
+這會公開所有可存取的靜態欄位和類型的成員。
+
+您也可以用 `open` F # 定義 [記錄](records.md) 和差異聯 [集](discriminated-unions.md) 類型來公開靜態成員。 在區分等位的情況下，您也可以公開聯集案例。 這有助於存取在您可能不想要開啟的模組內宣告的型別中的聯集案例，如下所示：
+
+```fsharp
+module M =
+    type DU = A | B | C
+
+    let someOtherFunction x = x + 1
+
+// Open only the type inside the module
+open type M.DU
+
+printfn "%A" A
+```
 
 ## <a name="namespaces-that-are-open-by-default"></a>預設會開啟的命名空間
 

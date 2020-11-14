@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: dab532fbf87cc70a860a9e3e814c081a1e11a1f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8e09fe46bf896b62f136bac92acde017f4788b3c
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538447"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594604"
 ---
 
-_只有 **x64** 架構支援安裝套件管理員_。 其他架構（例如 **ARM**）必須手動安裝 .NET CORE SDK 或 .Net Core 執行時間。 如需詳細資訊，請參閱 [手動安裝一節](#manual-install)。
+> [!IMPORTANT]
+> 只有 **x64** 架構支援安裝套件管理員。 其他架構（例如 **ARM** ）必須手動安裝 .net。 如需詳細資訊，請參閱 [手動安裝一節](#manual-install)。

@@ -2,12 +2,12 @@
 title: 介面
 description: '瞭解 F # 介面如何指定其他類別所執行的相關成員集合。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0cef2932045dae401f5aa069107815543457ca4a
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558123"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557047"
 ---
 # <a name="interfaces"></a>介面
 
@@ -100,6 +100,67 @@ type INumeric2 =
 介面可以繼承自一或多個基底介面。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+
+## <a name="implementing-interfaces-with-default-implementations"></a>使用預設實執行介面
+
+C # 支援使用預設實作為定義介面，如下所示：
+
+```csharp
+using System;
+
+namespace CSharp
+{
+    public interface MyDim
+    {
+        public int Z => 0;
+    }
+}
+```
+
+這些可直接從 F # 取用：
+
+```fsharp
+open CSharp
+
+// You can implement the interface via a class
+type MyType() =
+    member _.M() = ()
+
+    interface MyDim
+
+let md = MyType() :> MyDim
+printfn $"DIM from C#: %d{md.Z}"
+
+// You can also implement it via an object expression
+let md' = { new MyDim }
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
+```
+
+您可以使用覆寫的預設實值 `override` ，就像覆寫任何虛擬成員一樣。
+
+沒有預設實值之介面中的任何成員仍必須明確地實作為。
+
+## <a name="implementing-the-same-interface-at-different-generic-instantiations"></a>在不同的泛型具現化中執行相同的介面
+
+F # 支援在不同的泛型具現化上執行相同的介面，如下所示：
+
+```fsharp
+type IA<'T> =
+    abstract member Get : unit -> 'T
+
+type MyClass() =
+    interface IA<int> with
+        member x.Get() = 1
+    interface IA<string> with
+        member x.Get() = "hello"
+
+let mc = MyClass()
+let iaInt = mc :> IA<int>
+let iaString = mc :> IA<string>
+
+iaInt.Get() // 1
+iaString.Get() // "hello"
+```
 
 ## <a name="see-also"></a>另請參閱
 

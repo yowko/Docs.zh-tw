@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 macOS 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: c5b98767388937ba1e06b0e856a9a923d4a18b3c
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 983c5d2c04b87759b898f449bc092161b03c8ace
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506775"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594452"
 ---
 # <a name="install-net-on-macos"></a>在 macOS 上安裝 .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "94506775"
 >
 > - [在 Windows 上安裝](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [安裝在 Linux 上](linux.md)
+> - [在 Linux 上安裝](linux.md)
 
 在本文中，您將瞭解如何在 macOS 上安裝 .NET。 .NET 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET 應用程式，且不一定會包含在應用程式中。 SDK 是用來建立 .NET 應用程式和程式庫。 .NET 執行時間一律會與 SDK 一起安裝。
 
@@ -143,7 +143,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > 上述 `export` 命令只會讓執行的終端機會話提供 .NET CLI 命令。
 >
-> 您可以編輯 shell 設定檔，以永久新增命令。 Linux 有一些不同的 shell 可用，而且每個都有不同的設定檔。 例如︰
+> 您可以編輯 shell 設定檔，以永久新增命令。 Linux 有一些不同的 shell 可用，而且每個都有不同的設定檔。 例如：
 >
 > - **Bash Shell** ： *~/.bash_profile* ， *~/.bashrc*
 > - **Korn Shell** ： *~/.kshrc* 或 *. profile*
@@ -181,7 +181,7 @@ Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，�
 
 [Dotnet 安裝腳本](../tools/dotnet-install-script.md)是用於執行時間的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載腳本。
 
-腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net 5.0。 您可以藉由指定參數來選擇特定版本 `current` 。 包含 `runtime` 參數以安裝執行時間。 否則，腳本會安裝 [SDK](./windows.md)。
+腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net 3.1。 您可以藉由指定參數來選擇特定版本 `current` 。 包含 `runtime` 參數以安裝執行時間。 否則，腳本會安裝 [SDK](./windows.md)。
 
 ```bash
 ./dotnet-install.sh --channel 5.0 --runtime aspnetcore

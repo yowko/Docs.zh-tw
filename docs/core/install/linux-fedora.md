@@ -4,12 +4,12 @@ description: 示範在 Fedora 上安裝 .NET SDK 和 .NET 執行時間的各種�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: d5b5886f8b29e0f8e935850686cc84f78c55be02
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 9e96773e30fb8ee395e37dca7a4794cd42359bb2
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507061"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594605"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>在 Fedora 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -49,15 +49,31 @@ Fedora 支援 .NET。 本文說明如何在 Fedora 上安裝 .NET。 當 Fedora 
 
 ## <a name="fedora-33-"></a>Fedora 33 ✔️
 
-Fedora 33 的預設套件存放庫中有提供 .NET 5 和 .NET Core 3.1。
+> [!TIP]
+> Fedora 33 的預設套件存放庫中有提供 .NET Core 3.1。 若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。 預設套件存放庫中尚無法使用 .NET 5.0。
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-50-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="fedora-32-"></a>Fedora 32 ✔️
 
-Fedora 32 的預設套件存放庫中有提供 .NET Core 3.1。
+> [!TIP]
+> Fedora 32 的預設套件存放庫中有提供 .NET Core 3.1。 若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。 預設套件存放庫中尚無法使用 .NET 5.0。
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/32/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="fedora-31-"></a>Fedora 31 ❌
 

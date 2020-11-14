@@ -2,16 +2,16 @@
 title: 程式碼引號
 description: '瞭解 F # 程式碼引號，這是一種語言功能，可讓您以程式設計方式產生和使用 F # 程式碼運算式。'
 ms.date: 08/13/2020
-ms.openlocfilehash: 070e127397a5da7d70281d08ef7cafdb9b4f4fe5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc37fdbd6cd29e5ee94e5c0186dfe2bfeb666f32
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558331"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557190"
 ---
 # <a name="code-quotations"></a>程式碼引號
 
-本文描述程式 *代碼引號*，這是一種語言功能，可讓您以程式設計方式產生和使用 F # 程式碼運算式。 這項功能可讓您產生表示 F # 程式碼的抽象語法樹狀目錄。 然後，您可以根據應用程式的需求來進行和處理抽象語法樹狀結構。 例如，您可以使用樹狀結構來產生 F # 程式碼，或以某些其他語言產生程式碼。
+本文描述程式 *代碼引號* ，這是一種語言功能，可讓您以程式設計方式產生和使用 F # 程式碼運算式。 這項功能可讓您產生表示 F # 程式碼的抽象語法樹狀目錄。 然後，您可以根據應用程式的需求來進行和處理抽象語法樹狀結構。 例如，您可以使用樹狀結構來產生 F # 程式碼，或以某些其他語言產生程式碼。
 
 ## <a name="quoted-expressions"></a>引號運算式
 
@@ -37,6 +37,21 @@ ms.locfileid: "88558331"
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
 若要評估 F # 引號，您必須使用 [f # 引號評估](https://github.com/fsprojects/FSharp.Quotations.Evaluator)工具。 它可支援評估和執行 F # 運算式物件。
+
+F # 引號也會保留類型條件約束資訊。 請考慮下列範例：
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+函數所產生的條件約束 `inline` 會保留在程式碼 qutoation 中。 `negate`現在可以評估函數的 quotated 表單。
 
 ## <a name="expr-type"></a>Expr 類型
 

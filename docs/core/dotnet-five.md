@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: efce75159cd631ad64ba03d4b65aaeb64ccdc809
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 10c1345f4a0a37e04377250da9a7b6df7df3a105
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557026"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594534"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -137,7 +137,6 @@ let message = $"%s{name} is %d{age} years old."
 - [支援欄位](../standard/serialization/system-text-json-how-to.md#include-fields)
 - [有條件地忽略屬性](../standard/serialization/system-text-json-how-to.md#ignore-properties)
 - [支援非字串索引鍵字典](../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md#dictionary-with-non-string-key)
-- [支援非公用屬性存取子](../standard/serialization/system-text-json-how-to.md#non-public-property-accessors)
 - [允許自訂轉換器處理 null](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
 - [複製 JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
 - [使用 web 預設值建立 JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)

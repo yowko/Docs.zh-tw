@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: f8bf759272ad75b6684496a913cdef7f7912286d
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 07dd58c314c826c426193b829ea1f64669fb888b
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506796"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594565"
 ---
 
 [Dotnet 安裝腳本](../../tools/dotnet-install-script.md)用於自動化和非系統管理員安裝的 **SDK** 和 **運行** 時間。 您可以從 <https://dot.net/v1/dotnet-install.sh> 下載指令碼。
 
-腳本預設會安裝最新的 SDK [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net 5.0。 若要安裝目前版本，這可能不是 (LTS) 版本，請使用 `-c Current` 參數。
+腳本預設會安裝最新的 SDK [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net 3.1。 若要安裝目前版本，這可能不是 (LTS) 版本，請使用 `-c Current` 參數。
 
 ```bash
 ./dotnet-install.sh -c Current

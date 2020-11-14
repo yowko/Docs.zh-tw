@@ -2,16 +2,18 @@
 title: 'F # 5.0 中的新功能-F # 指南'
 description: '深入瞭解 F # 5.0 中可用的新功能。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0c4c9f42c63a1dc8c90213c43edbadd4061c132d
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445827"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557138"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5.0 的新功能
 
 F # 5.0 在 F # 語言和 F# 互動中新增了幾項改進。 它是以 **.net 5** 發行。
+
+您可以從 [.net 下載頁面](https://dotnet.microsoft.com/download)下載最新的 .net SDK。
 
 ## <a name="get-started"></a>開始使用
 
@@ -149,7 +151,6 @@ nameof op_Addition // "op_Addition"
 採用型別參數的名稱需要稍微不同的語法：
 
 ```fsharp
-
 type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
@@ -228,16 +229,16 @@ F # 5.0 使用內建3D 和4D 陣列類型中具有固定索引的配量支援。
 為了說明這一點，請考慮下列3D 陣列：
 
 *z = 0*
-|x\y|0|1|
-|---|-|-|
-|**0**|0|1|
-|**1**|2|3|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
 
 *z = 1*
-|x\y|0|1|
-|---|-|-|
-|**0**|4|5|
-|**1**|6|7|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
 
 如果您想要從陣列解壓縮配量，該怎麼辦 `[| 4; 5 |]` ？ 這現在很簡單！
 
@@ -258,6 +259,23 @@ for z in 0..dim-1 do
 // Now let's get the [4;5] slice!
 m.[*, 0, 1]
 ```
+
+## <a name="f-quotations-improvements"></a>F # 引號的增強功能
+
+F # 程式 [代碼引號](../language-reference/code-quotations.md) 現在能夠保留類型條件約束資訊。 請考慮下列範例：
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+函數所產生的條件約束 `inline` 會保留在程式碼 qutoation 中。 `negate`現在可以評估函數的 quotated 表單。
 
 ## <a name="applicative-computation-expressions"></a>Applicative 計算運算式
 

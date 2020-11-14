@@ -2,12 +2,12 @@
 title: 配量
 description: '瞭解如何使用現有 F # 資料類型的配量，以及如何為其他資料類型定義您自己的配量。'
 ms.date: 12/23/2019
-ms.openlocfilehash: d3ddb2c247c36a85842f565f051372c5f2c9a9e9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559007"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557073"
 ---
 # <a name="slices"></a>配量
 
@@ -148,6 +148,62 @@ let xs = [1 .. 10]
 
 printfn "%A" xs.[2..5] // Includes the 5th index
 ```
+
+## <a name="built-in-f-empty-slices"></a>內建 F # 空白配量
+
+如果語法可能產生不存在的配量，則 F # 清單、陣列、序列、字串、2D 陣列、3D 陣列和4D 陣列都將會產生空的磁區。
+
+請考慮下列事項：
+
+```fsharp
+let l = [ 1..10 ]
+let a = [| 1..10 |]
+let s = "hello!"
+
+let emptyList = l.[-2..(-1)]
+let emptyArray = a.[-2..(-1)]
+let emptyString = s.[-2..(-1)]
+```
+
+C # 開發人員可能會預期這些會擲回例外狀況，而不是產生空白的配量。 這是以 F # 撰寫空白集合的事實設計決策。 空白的 F # 清單可以使用另一個 F # 清單來撰寫，空字串可以加入至現有的字串等等。 使用以參數形式傳遞的值，並可以藉由產生空集合以符合 F # 程式碼的複合本質，來取得配量，是很常見的情況。
+
+## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>固定-3D 和4D 陣列的索引配量
+
+針對 F # 3D 和4D 陣列，您可以「修正」特定的索引，並將已修正該索引的其他維度進行配量。
+
+為了說明這一點，請考慮下列3D 陣列：
+
+*z = 0*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
+
+*z = 1*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
+
+如果您想要從陣列中將配量解壓縮 `[| 4; 5 |]` ，請使用固定索引配量。
+
+```fsharp
+let dim = 2
+let m = Array3D.zeroCreate<int> dim dim dim
+
+let mutable count = 0
+
+for z in 0..dim-1 do
+    for y in 0..dim-1 do
+        for x in 0..dim-1 do
+            m.[x,y,z] <- count
+            count <- count + 1
+
+// Now let's get the [4;5] slice!
+m.[*, 0, 1]
+```
+
+最後一行 `y` `z` 會修正3d 陣列的和 indicies，並採用 `x` 對應至矩陣的其餘值。
 
 ## <a name="see-also"></a>另請參閱
 
