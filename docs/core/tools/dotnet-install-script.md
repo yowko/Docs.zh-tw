@@ -1,19 +1,19 @@
 ---
 title: dotnet-install 指令碼
-description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet 安裝腳本。
+description: 瞭解安裝 .NET SDK 和共用執行時間的 dotnet 安裝腳本。
 ms.date: 09/22/2020
-ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078199"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634438"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
 ## <a name="name"></a>名稱
 
-`dotnet-install.ps1` | `dotnet-install.sh` -用來安裝 .NET Core SDK 和共用執行時間的腳本。
+`dotnet-install.ps1` | `dotnet-install.sh` -用來安裝 .NET SDK 和共用執行時間的腳本。
 
 ## <a name="synopsis"></a>概要
 
@@ -48,7 +48,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 ## <a name="description"></a>描述
 
-`dotnet-install`腳本會執行 .NET Core SDK 的非系統管理員安裝，其中包含 .NET Core CLI 和共用執行時間。 有兩個腳本：
+`dotnet-install`腳本會執行 .NET SDK 的非系統管理員安裝，其中包含 .NET CLI 和共用執行時間。 有兩個腳本：
 
 * 適用于 Windows 的 PowerShell 腳本。
 * 在 Linux/macOS 上運作的 bash 腳本。
@@ -86,13 +86,13 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分的版本號碼，例如 `2.1.0` 。 如果未指定版本，腳本會安裝 `latest` 版本。
 
-安裝腳本不會更新 Windows 上的登錄。 他們只會下載壓縮的二進位檔，並將其複製到資料夾。 如果您想要更新登錄機碼值，請使用 .NET Core 安裝程式。
+安裝腳本不會更新 Windows 上的登錄。 他們只會下載壓縮的二進位檔，並將其複製到資料夾。 如果您想要更新登錄機碼值，請使用 .NET 安裝程式。
 
 ## <a name="options"></a>選項
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  要安裝的 .NET Core 二進位檔的架構。 可能的值為 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 和 `arm`。 預設值為 `<auto>`，代表目前正在執行的 OS 架構。
+  要安裝的 .NET 二進位檔架構。 可能的值為 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 和 `arm`。 預設值為 `<auto>`，代表目前正在執行的 OS 架構。
 
 - **`-AzureFeed|--azure-feed`**
 
@@ -111,7 +111,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-DryRun|--dry-run`**
 
-  如果設定，指令碼將不會執行安裝。 取而代之的是，會顯示以一致方式安裝目前所要求的 .NET Core CLI 版本時，所要使用的命令列。 例如，如果您指定 `latest` 版本，就會顯示特定版本的連結，以便在建置指令碼中以決定性方式使用此命令。 如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。
+  如果設定，指令碼將不會執行安裝。 相反地，它會顯示要用來一致安裝目前要求的 .NET CLI 版本的命令列。 例如，如果您指定 `latest` 版本，就會顯示特定版本的連結，以便在建置指令碼中以決定性方式使用此命令。 如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。
 
 - **`-FeedCredential|--feed-credential`**
 
@@ -127,7 +127,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  指定將用來判斷 SDK 版本之檔案 [global.js](global-json.md) 的路徑。 檔案 * 上的global.js* 必須有的值 `sdk:version` 。
+  指定將用來判斷 SDK 版本之檔案 [global.js](global-json.md) 的路徑。 檔案 *上的global.js* 必須有的值 `sdk:version` 。
 
 - **`-NoCdn|--no-cdn`**
 
@@ -135,7 +135,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-NoPath|--no-path`**
 
-  如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。 根據預設，腳本會修改路徑，使 .NET Core CLI 在安裝後立即可用。
+  如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。 根據預設，腳本會修改路徑，讓 .NET CLI 在安裝後立即可供使用。
 
 - **`-ProxyAddress`**
 
@@ -170,7 +170,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  如果已經有非版本控制的檔案 (例如 *dotnet.exe*) 存在，便略過其安裝。
+  如果已經有非版本控制的檔案 (例如 *dotnet.exe* ) 存在，便略過其安裝。
 
 - **`-UncachedFeed|--uncached-feed`**
 
@@ -185,7 +185,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   代表特定的組建版本。 可能的值包括：
 
   - `latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。
-  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120` 。
+  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如：`2.0.0-preview2-006120`。
 
   如果未指定，`-Version` 會預設為 `latest`。
 
@@ -240,7 +240,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- 取得指令碼並安裝 .NET Core CLI 單行範例：
+- 取得腳本並安裝 .NET CLI 的單行指令範例：
 
   Windows：
 
@@ -257,5 +257,5 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Core 版本](https://github.com/dotnet/core/releases)
-- [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET 版本](https://github.com/dotnet/core/releases)
+- [.NET 執行時間和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

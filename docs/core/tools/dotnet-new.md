@@ -1,16 +1,16 @@
 ---
 title: dotnet new 命令
-description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
+description: Dotnet new 命令會根據指定的範本建立新的 .NET 專案。
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400587"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634451"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,7 +35,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>描述
 
-此 `dotnet new` 命令會建立 .Net Core 專案或以範本為基礎的其他成品。
+此 `dotnet new` 命令會建立以範本為基礎的 .net 專案或其他成品。
 
 命令會呼叫[範本引擎](https://github.com/dotnet/templating)，以根據指定的範本和選項在磁碟上建立成品。
 
@@ -56,9 +56,9 @@ dotnet new -h|--help
   - 如果 CLI 在叫用時找不到範本比對 `dotnet new` ，甚至不是部分。
   - 如果有較新版本的範本可供使用。 在此情況下，會建立專案或成品，但 CLI 會警告您有關範本的更新版本。
 
-  下表說明隨 .NET Core SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。 按一下 [簡短名稱] 連結，以查看特定的範本選項。
+  下表顯示隨 .NET SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。 按一下 [簡短名稱] 連結，以查看特定的範本選項。
 
-| 範本                                    | 簡短名稱                      | 語言     | Tags                                  | 推出的版本 |
+| 範本                                    | 簡短名稱                      | Language     | Tags                                  | 推出的版本 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 主控台應用程式                          | [安慰](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
 | 類別庫                                | [classlib](#classlib)           | [C#], F#, VB | 通用/程式庫                        | 1.0        |
@@ -108,7 +108,7 @@ dotnet new -h|--help
 
 - **`-h|--help`**
 
-  印出命令的說明。 您可以針對 `dotnet new` 命令本身或任何範本來叫用它。 例如 `dotnet new mvc --help`。
+  印出命令的說明。 您可以針對 `dotnet new` 命令本身或任何範本來叫用它。 例如，`dotnet new mvc --help`。
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -127,7 +127,7 @@ dotnet new -h|--help
   要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
   > [!NOTE]
-  > 某些 Shell 會將 `#` 解譯為特殊字元。 在這些情況下，請將語言參數值括在引號中。 例如 `dotnet new console -lang "F#"`。
+  > 某些 Shell 會將 `#` 解譯為特殊字元。 在這些情況下，請將語言參數值括在引號中。 例如，`dotnet new console -lang "F#"`。
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -135,7 +135,7 @@ dotnet new -h|--help
 
 - **`--nuget-source <SOURCE>`**
 
-  請指定安裝期間所要使用的 NuGet 來源。 自 .NET Core 2.1 SDK 起提供。
+  請指定安裝期間所要使用的 NuGet 來源。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -177,6 +177,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  指定要設為目標的 [架構](../../standard/frameworks.md) 。 值：`netcoreapp<version>` 建立 .NET Core 類別庫或 `netstandard<version>` 建立 .NET Standard 類別庫。 預設值是 `netstandard2.0`。
+  指定要設為目標的 [架構](../../standard/frameworks.md) 。 值： `net5.0` 或 `netcoreapp<version>` 建立 .Net 類別庫，或 `netstandard<version>` 建立 .NET Standard 類別庫。 .NET 5.0 SDK 的預設值為 `net5.0` 。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  指定要設為目標的 [架構](../../standard/frameworks.md) 。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
+  指定要設為目標的 [架構](../../standard/frameworks.md) 。 預設值是 `net5.0`。 自 .NET Core 3.1 SDK 起提供。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -515,6 +518,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ dotnet new -h|--help
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  指定要在檔案 *global.js* 中使用的 .NET Core SDK 版本。
+  指定要在 *global.js* 檔案中使用的 .net SDK 版本。
 
 ***
 
@@ -845,7 +853,7 @@ dotnet new -h|--help
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet new 的自訂範本](custom-templates.md)
 - [建立適用於 dotnet new 的自訂範本](../tutorials/cli-templates-create-item-template.md)

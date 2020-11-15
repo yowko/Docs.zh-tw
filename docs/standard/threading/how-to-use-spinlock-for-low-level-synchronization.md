@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 3fb19c2b36d97710685cac4ecd10f47a119814ce
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 8f81df527f83183804132ce09ae713fbbcf6f3ce
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189182"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634242"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>操作說明：使用 SpinLock 進行低階同步處理
 
@@ -26,7 +26,7 @@ ms.locfileid: "93189182"
   
  這個範例會使用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 類別，此類別需要使用者同步處理以進行多執行緒存取。 另一個選項是使用 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> ，這不需要任何使用者鎖定。  
   
- 請注意 `false` 在的呼叫中使用 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 。 這可提供最佳效能。 `true`在 IA64 架構上指定以使用記憶體隔離，這會清除寫入緩衝區，以確保鎖定現已可供其他執行緒結束。  
+ 請注意 `false` 在的呼叫中使用 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 。 這可提供最佳效能。 `true`在 IA64 架構上指定以使用記憶體隔離，這會清除寫入緩衝區，以確保鎖定現在可供其他執行緒進入。
   
 ## <a name="see-also"></a>另請參閱
 

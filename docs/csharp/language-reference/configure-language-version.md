@@ -3,12 +3,12 @@ title: C# 語言版本控制 - C# 指南
 description: '瞭解如何根據您的專案以及該選項背後的原因來決定 c # 語言版本。 瞭解如何手動覆寫預設值。'
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495456"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634493"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
@@ -29,9 +29,9 @@ ms.locfileid: "89495456"
 
 編譯器會根據下列規則決定預設值：
 
-| 目標架構 | version | C# 語言版本預設值 |
+| 目標架構 | 版本 | C# 語言版本預設值 |
 |------------------|---------|-----------------------------|
-| .NET             | 版     | C # 9。0                      |
+| .NET             | 版     | C# 9.0                      |
 | .NET Core        | 3.x     | C# 8.0                      |
 | .NET Core        | 2.x     | C# 7.3                      |
 | .NET Standard    | 2.1     | C# 8.0                      |
@@ -66,7 +66,7 @@ ms.locfileid: "89495456"
 
 ### <a name="configure-multiple-projects"></a>設定多個專案
 
-若要設定多個專案，您可以建立包含元素的 **.props**檔案。 `<LangVersion>` 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.Build.props** 檔案：
+若要設定多個專案，您可以建立包含元素的 **.props** 檔案。 `<LangVersion>` 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.Build.props** 檔案：
 
 ```xml
 <Project>
@@ -80,7 +80,7 @@ ms.locfileid: "89495456"
 
 ## <a name="c-language-version-reference"></a>C# 語言版本參考
 
-下表顯示所有目前的 C# 語言版本。 如果您的編譯器較舊，您的編譯器可能不一定會瞭解每一個值。 如果您安裝的是 .NET Core 3.0 或更新版本，則可以存取所列的所有專案。
+下表顯示所有目前的 C# 語言版本。 如果您的編譯器較舊，您的編譯器可能不一定會瞭解每一個值。 如果您安裝最新的 .NET SDK，則您可以存取所列的所有專案。
 
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
@@ -106,7 +106,8 @@ ms.locfileid: "89495456"
 > 7.1
 > 7.2
 > 7.3
-> 8.0 (default)
+> 8.0
+> 9.0 (default)
 > latestmajor
 > preview
 > latest

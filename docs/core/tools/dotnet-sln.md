@@ -2,20 +2,20 @@
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
 ms.date: 02/14/2020
-ms.openlocfilehash: efe52f64a29c8825070bae9ee96b430b32176ffa
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053027"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634366"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-本文**適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
-`dotnet sln` -列出或修改 .NET Core 方案檔中的專案。
+`dotnet sln` -列出或修改 .NET 方案檔中的專案。
 
 ## <a name="synopsis"></a>概要
 

@@ -1,13 +1,13 @@
 ---
 title: dotnet publish 命令
-description: Dotnet publish 命令會將 .NET Core 專案或方案發佈至目錄。
-ms.date: 02/24/2020
-ms.openlocfilehash: e35a0671cb964e7d9b68ed5bbe261045038229aa
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+description: Dotnet publish 命令會將 .NET 專案或方案發佈至目錄。
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440565"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634425"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 此輸出包含下列資產：
 
@@ -41,7 +41,7 @@ dotnet publish -h|--help
 - *.runtimeconfig.json* 檔案，指定應用程式預期的共用執行時間，以及執行時間 (的其他設定選項，例如垃圾收集類型) 。
 - 應用程式的相依性，這些相依性會從 NuGet 快取複製到輸出資料夾。
 
-`dotnet publish`　命令的輸出已準備好部署到裝載系統 (例如伺服器、電腦、Mac、膝上型電腦) 以供執行。 這是準備應用程式以供部署的唯一正式支援的方法。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](../deploying/deploy-with-cli.md)。
+`dotnet publish`　命令的輸出已準備好部署到裝載系統 (例如伺服器、電腦、Mac、膝上型電腦) 以供執行。 這是準備應用程式以供部署的唯一正式支援的方法。 根據專案指定的部署類型而定，裝載系統可能會或可能不會安裝 .NET 共用執行時間。 如需詳細資訊，請參閱 [使用 .NET CLI 發行 .net 應用程式](../deploying/deploy-with-cli.md)。
 
 ### <a name="implicit-restore"></a>隱含還原
 
@@ -165,7 +165,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`--self-contained [true|false]`**
 
-  使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 預設值為， `true` 如果指定了執行時間識別碼，且專案是可執行檔專案， (不是程式庫專案) 。 如需詳細資訊，請參閱[使用 .NET Core CLI 發佈及發佈 .Net core](../deploying/deploy-with-cli.md)[應用程式的 .net core 應用程式](../deploying/index.md)。
+  使用您的應用程式發佈 .NET 執行時間，如此一來，就不需要在目的電腦上安裝執行時間。 預設值為， `true` 如果指定了執行時間識別碼，且專案是可執行檔專案， (不是程式庫專案) 。 如需詳細資訊，請參閱[使用 .NET CLI 發行和發佈 .net](../deploying/deploy-with-cli.md)[應用程式的 .net 應用程式](../deploying/index.md)。
 
   如果使用此選項但未指定 `true` 或 `false` ，則預設值為 `true` 。 在這種情況下，請勿在之後立即放置方案或專案引數 `--self-contained` ，因為 `true` `false` 在該位置中應該有或。
 
@@ -175,7 +175,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  發行所指定執行階段的應用程式。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 如需詳細資訊，請參閱[使用 .NET Core CLI 發佈及發佈 .Net core](../deploying/deploy-with-cli.md)[應用程式的 .net core 應用程式](../deploying/index.md)。
+  發行所指定執行階段的應用程式。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 如需詳細資訊，請參閱[使用 .NET CLI 發行和發佈 .net](../deploying/deploy-with-cli.md)[應用程式的 .net 應用程式](../deploying/index.md)。
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -229,10 +229,10 @@ dotnet publish -p:PublishProfile=FolderProfile
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [.NET Core 應用程式發行總覽](../deploying/index.md)
-- [使用 .NET Core CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)
+- [.NET 應用程式發行總覽](../deploying/index.md)
+- [使用 .NET CLI 發佈 .NET 應用程式](../deploying/deploy-with-cli.md)
 - [目標架構](../../standard/frameworks.md)
 - [執行階段識別碼 (RID) 目錄](../rid-catalog.md)
 - [使用 macOS Catalina 公證](../install/macos-notarization-issues.md)

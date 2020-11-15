@@ -3,19 +3,19 @@ title: 使用 .NET 中的相依性插入
 description: 瞭解如何在您的 .NET 應用程式中使用相依性插入。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/23/2020
+ms.date: 11/13/2020
 ms.topic: tutorial
 no-loc:
 - Transient
 - Scoped
 - Singleton
 - Example
-ms.openlocfilehash: 589e15736c07b465fda308b04c91384a2502755c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b1e84685ad95372c4b2038e913199f7283135b71
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888582"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634515"
 ---
 # <a name="tutorial-use-dependency-injection-in-net"></a>教學課程：在 .NET 中使用相依性插入
 
@@ -89,6 +89,11 @@ ms.locfileid: "92888582"
 
 :::code language="csharp" source="snippets/configuration/console-di/Program.cs" range="1-18,35-60" highlight="22-26":::
 
+> 每個 `services.Add{SERVICE_NAME}` 擴充方法會新增並可能設定服務。 建議應用程式遵循此慣例。 在 <xref:Microsoft.Extensions.DependencyInjection?displayProperty=fullName> 命名空間中放置擴充方法，以封裝服務註冊群組。 包括 DI 擴充方法的命名空間部分， `Microsoft.Extensions.DependencyInjection` 也包括：
+>
+> - 可讓它們在 [IntelliSense](/visualstudio/ide/using-intellisense) 中顯示，而不需要新增其他 `using` 區塊。
+> - 防止 `using` 或類別中的過多語句 `Program` `Startup` ，這些擴充方法通常會呼叫這些擴充方法。
+
 應用程式：
 
 - <xref:Microsoft.Extensions.Hosting.IHostBuilder>使用預設系結器[設定](generic-host.md#default-builder-settings)建立實例。
@@ -124,7 +129,7 @@ Scope 2-Call 2 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 158
 - Scoped 作業只會與新的範圍變更，但在範圍內是相同的實例。
 - Singleton 作業一律相同，只會建立一次新的實例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [相依性插入指導方針](dependency-injection-guidelines.md)
 * [ASP.NET Core 中的相依性插入](/aspnet/core/fundamentals/dependency-injection)

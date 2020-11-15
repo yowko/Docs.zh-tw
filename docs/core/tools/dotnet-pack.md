@@ -1,17 +1,17 @@
 ---
 title: dotnet pack 命令
-description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
+description: Dotnet pack 命令會建立 .NET 專案的 NuGet 套件。
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537821"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634229"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-本文**適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -48,7 +48,7 @@ dotnet pack -h|--help
 
 您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild -p 參數的方法。
 
-Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj** 檔案：
+Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
 
 ```xml
 <PropertyGroup>
@@ -188,4 +188,4 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
   
   - [使用 .nuspec 封裝](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [用來建立自訂套件的 Advanced 擴充點](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [全域屬性](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [全域屬性](/visualstudio/msbuild/msbuild-properties#global-properties)

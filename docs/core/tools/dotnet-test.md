@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281606"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634379"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -280,5 +280,5 @@ dotnet test -h|--help
 ## <a name="see-also"></a>另請參閱
 
 - [架構與目標](../../standard/frameworks.md)
-- [.NET Core 執行時間識別碼 (RID) 目錄](../rid-catalog.md)
+- [.NET 執行時間識別碼 (RID) 目錄](../rid-catalog.md)
 - [透過命令列傳遞 .runsettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

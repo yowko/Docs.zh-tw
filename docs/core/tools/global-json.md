@@ -1,27 +1,27 @@
 ---
 title: global.json 概觀
-description: 了解如何使用 global.json 檔案來設定執行.NET Core CLI 命令時的 NET Core SDK 版本。
+description: 瞭解如何在執行 .NET CLI 命令時，使用 global.json file 來設定 .NET SDK 版本。
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281541"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633995"
 ---
 # <a name="globaljson-overview"></a>global.json 概觀
 
 本文 **適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
 
-*global.json* 檔案可讓您定義執行.NET Core CLI 命令時所使用的 .NET Core SDK 版本。 選取 .NET Core SDK 與指定專案所針對的執行階段沒有關係。 .NET Core SDK 版本會指出所使用的 .NET Core CLI 版本。
+檔案 *global.js* 可讓您定義執行 .net CLI 命令時使用的 .net SDK 版本。 選取 .NET SDK 與指定專案的目標執行時間無關。 .NET SDK 版本會指出使用的 .NET CLI 版本。
 
 一般而言，您會想要使用最新版的 SDK 工具，因此不需要 *global.js* 檔案。 在某些 advanced 案例中，您可能會想要控制 SDK 工具的版本，而本文將說明如何進行這項操作。
 
 如需改為指定執行階段的詳細資訊，請參閱[目標架構](../../standard/frameworks.md)。
 
-.NET Core CLI 工具會在目前工作目錄 (這不一定與專案目錄相同) 或它的其中一個上層目錄中尋找 *global.json* 檔案。
+.NET SDK 會在目前工作目錄中尋找檔案的 *global.js* (這不一定與專案目錄) 或其中一個父目錄相同。
 
 ## <a name="globaljson-schema"></a>global.json 結構描述
 
@@ -29,15 +29,15 @@ ms.locfileid: "93281541"
 
 輸入： `object`
 
-指定要選取 .NET Core SDK 的相關資訊。
+指定要選取之 .NET SDK 的相關資訊。
 
-#### <a name="version"></a>version
+#### <a name="version"></a>版本
 
 - 輸入： `string`
 
 - 提供自： .NET Core 1.0 SDK。
 
-要使用的 .NET Core SDK 版本。
+要使用的 .NET SDK 版本。
 
 此欄位：
 
@@ -84,7 +84,7 @@ ms.locfileid: "93281541"
 | `latestPatch` | 使用最新安裝的修補程式等級，此層級符合要求的主要、次要和功能頻的修補程式等級，且大於或等於指定的值。 <br> 如果找不到，會失敗。 |
 | `latestFeature` | 使用最高安裝的功能區和修補程式等級，其符合要求的主要和次要，以及大於或等於指定值的功能區和修補程式等級。 <br> 如果找不到，會失敗。 |
 | `latestMinor` | 使用最高安裝的次要、功能區和修補程式層級，以符合所要求的主要次要、功能區，以及大於或等於指定值的修補程式等級。 <br> 如果找不到，會失敗。 |
-| `latestMajor` | 使用已安裝的最高 .NET Core SDK，其版本大於或等於指定的值。 <br> 如果找不到，會失敗。 |
+| `latestMajor` | 使用版本大於或等於指定值的最高安裝 .NET SDK。 <br> 如果找不到，會失敗。 |
 | `disable`     | 不向前復原。 需要完全相符。 |
 
 ### <a name="msbuild-sdks"></a>msbuild-sdk
@@ -149,11 +149,11 @@ ms.locfileid: "93281541"
 }
 ```
 
-## <a name="globaljson-and-the-net-core-cli"></a>global.json 和.NET Core CLI
+## <a name="globaljson-and-the-net-cli"></a>和 .NET CLI 上的 global.js
 
-瞭解您電腦上安裝的 SDK 版本，以在 *global.js* 檔案中設定一個 SDK 會很有説明。 如需如何進行這項操作的詳細資訊，請參閱 [如何檢查是否已安裝 .Net Core](../install/how-to-detect-installed-versions.md#check-sdk-versions)。
+瞭解您電腦上安裝的 SDK 版本，以在 *global.js* 檔案中設定一個 SDK 會很有説明。 如需如何進行這項操作的詳細資訊，請參閱 [如何檢查是否已安裝 .net](../install/how-to-detect-installed-versions.md#check-sdk-versions)。
 
-若要在您的電腦上安裝其他 .NET Core SDK 版本，請造訪 [下載 .Net Core](https://dotnet.microsoft.com/download/dotnet-core) 頁面。
+若要在您的電腦上安裝其他 .NET SDK 版本，請造訪 [下載 .Net Core](https://dotnet.microsoft.com/download/dotnet-core) 頁面。
 
 執行 [dotnet new](dotnet-new.md) 命令，可在目前的目錄中建立新的 *global.json* 檔案，與下面的範例類似：
 
@@ -164,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>比對規則
 
 > [!NOTE]
-> 比對規則是由 `dotnet.exe` 進入點所控制，這在所有已安裝的 .Net Core 安裝的執行時間中都很常見。 當您並存安裝多個執行時間，或者或您使用的是檔案 *上的global.js* 時，會使用最新安裝的 .Net Core 執行時間版本的比對規則。
+> 比對規則是由進入點所控管 `dotnet.exe` ，在所有已安裝的 .net 已安裝執行時間中都很常見。 當您並存安裝多個執行時間，或者或您使用的是檔案 *上的global.js* 時，會使用最新安裝的 .net 執行時間版本比對規則。
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 

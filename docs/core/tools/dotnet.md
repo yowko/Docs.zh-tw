@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 瞭解 dotnet 命令 (.NET CLI 的一般驅動程式) 和其使用方式。
 ms.date: 11/11/2020
-ms.openlocfilehash: a2b4b026e7c89536a6a7eaf69b31e3f62bf5adfc
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556823"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634021"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -239,7 +239,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ## <a name="examples"></a>範例
 
-建立新的 .NET Core 主控台應用程式：
+建立新的 .NET 主控台應用程式：
 
 ```dotnetcli
 dotnet new console

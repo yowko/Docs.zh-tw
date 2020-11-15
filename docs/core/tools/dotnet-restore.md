@@ -2,18 +2,18 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925472"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634399"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
-**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet restore` - 還原專案的相依性和工具。
 
@@ -42,22 +42,22 @@ dotnet restore -h|--help
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-有時候，使用這些命令來執行隱含的 NuGet 還原可能不太方便。 例如，某些自動化系統，像是建置系統，必須明確呼叫 `dotnet restore` 以控制還原發生的時間，進而控制網路使用量。 若要防止隱含的 NuGet 還原，您可以使用 `--no-restore` 旗標搭配任何這些命令來停用隱含還原。
+有時候，使用這些命令執行隱含的 NuGet 還原可能很不方便。 例如，某些自動化系統，像是建置系統，必須明確呼叫 `dotnet restore` 以控制還原發生的時間，進而控制網路使用量。 若要防止隱含的 NuGet 還原，您可以使用 `--no-restore` 旗標搭配任何這些命令來停用隱含還原。
 
 ### <a name="specify-feeds"></a>指定摘要
 
-若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 .NET Core SDK 時，會提供預設的設定檔案。 若要指定其他摘要，請執行下列其中一項動作：
+若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 .NET SDK 時，會提供預設的設定檔案。 若要指定其他摘要，請執行下列其中一項：
 
-- 在專案目錄中建立您自己的*nuget.config*檔案。 如需詳細資訊，請參閱本文稍後的[常見 NuGet](/nuget/consume-packages/configuring-nuget-behavior)設定和[nuget.config 差異](#nugetconfig-differences)。
-- 使用 `dotnet nuget` 之類的命令 [`dotnet nuget add source`](dotnet-nuget-add-source.md) 。
+- 在專案目錄中建立您自己的 *nuget.config* 檔案。 如需詳細資訊，請參閱本文稍後的 [一般 NuGet](/nuget/consume-packages/configuring-nuget-behavior) 設定和 [nuget.config 差異](#nugetconfig-differences) 。
+- 使用 `dotnet nuget` 像這樣的命令 [`dotnet nuget add source`](dotnet-nuget-add-source.md) 。
 
-您可以使用選項覆寫*nuget.config*摘要 `-s` 。
+您可以使用選項覆寫 *nuget.config* 摘要 `-s` 。
 
-如需如何使用已驗證摘要的相關資訊，請參閱[從已驗證](/nuget/consume-packages/consuming-packages-authenticated-feeds)的摘要取用套件。
+如需如何使用已驗證摘要的詳細資訊，請參閱使用 [已驗證摘要中的套件](/nuget/consume-packages/consuming-packages-authenticated-feeds)。
 
-### <a name="global-packages-folder"></a>全域封裝資料夾
+### <a name="global-packages-folder"></a>全域套件資料夾
 
-針對相依性，您可以使用 `--packages` 引數指定已還原套件在還原作業期間的放置位置。 如果未指定，則會使用預設的 NuGet 套件快取，它位於所有作業系統上使用者主目錄的 `.nuget/packages` 目錄中。 例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1*。
+針對相依性，您可以使用 `--packages` 引數指定已還原套件在還原作業期間的放置位置。 如果未指定，則會使用預設的 NuGet 套件快取，它位於所有作業系統上使用者主目錄的 `.nuget/packages` 目錄中。 例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1* 。
 
 ### <a name="project-specific-tooling"></a>專案特定工具
 
@@ -71,11 +71,11 @@ dotnet restore -h|--help
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  繫結重新導向不適用於 `<PackageReference>` 元素，且 .NET Core 針對 NuGet 套件僅支援 `<PackageReference>` 元素。
+  系結重新導向無法使用 `<PackageReference>` 元素，而且 .net 只支援 `<PackageReference>` NuGet 套件的元素。
 
 - [解決方案](/nuget/schema/nuget-config-file#solution-section)
 
-  這是 Visual Studio 特定設定，不適用於 .NET Core。 .Net Core 不會使用 `packages.config` 檔案，而是針對 NuGet 套件使用 `<PackageReference>` 元素。
+  這項設定是 Visual Studio 特定的，不適用於 .NET。 .NET 不會使用檔案 `packages.config` ，而是會使用 `<PackageReference>` NuGet 套件的元素。
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
@@ -87,11 +87,11 @@ dotnet restore -h|--help
 
   要還原之專案檔的選用路徑。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--configfile <FILE>`**
 
-  要用於還原作業的 NuGet 組態檔 (*nuget.config*)。
+  要用於還原作業的 NuGet 組態檔 ( *nuget.config* )。
 
 - **`--disable-parallel`**
 
@@ -103,7 +103,7 @@ dotnet restore -h|--help
 
 - **`--force-evaluate`**
 
-  強制還原以重新評估所有相依性，即使鎖定檔案已經存在也一樣。
+  強制還原重新評估所有的相依性，即使鎖定檔案已存在也一樣。
 
 - **`-h|--help`**
 
@@ -119,7 +119,7 @@ dotnet restore -h|--help
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  寫入專案鎖定檔案的輸出位置。 根據預設，這會*PROJECT_ROOT\packages.lock.json*。
+  寫入專案鎖定檔案的輸出位置。 根據預設，這會 *PROJECT_ROOT\packages.lock.js開啟* 。
 
 - **`--locked-mode`**
 
@@ -143,11 +143,11 @@ dotnet restore -h|--help
 
 - **`-s|--source <SOURCE>`**
 
-  指定要在還原作業期間使用的 NuGet 套件來源 URI。 此設定會覆寫*nuget.config*檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
+  指定要在還原作業期間使用的 NuGet 套件來源 URI。 這項設定會覆寫 *nuget.config* 檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 - **`--use-lock-file`**
 
-  讓專案鎖定檔案能夠產生並搭配 restore 使用。
+  可產生專案鎖定檔案並與還原一起使用。
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -173,13 +173,13 @@ dotnet restore -h|--help
   dotnet restore -s c:\packages\mypackages
   ```
 
-- 使用提供做為來源的兩個檔案路徑，還原目前目錄中專案的相依性和工具：
+- 使用提供作為來源的兩個檔案路徑，還原目前目錄中專案的相依性和工具：
 
   ```dotnetcli
   dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages
   ```
 
-- 還原目前目錄中專案的相依性和工具，顯示詳細輸出：
+- 還原目前目錄中專案的相依性和工具，以顯示詳細的輸出：
 
   ```dotnetcli
   dotnet restore --verbosity detailed

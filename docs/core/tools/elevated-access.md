@@ -3,12 +3,12 @@ title: Dotnet 命令的提升存取權限
 description: 了解適用於需要提升存取權限的 dotnet 命令最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: b34a4d631ec0e5ef641e1ffbc91e081d25645157
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805786"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634047"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Dotnet 命令的提升存取權限
 
@@ -22,11 +22,11 @@ ms.locfileid: "80805786"
 
 我們不建議執行其他提升的權限命令。 特別是，我們不建議針對使用 MSBuild 的命令提升權限，例如 [dotnet restore](dotnet-restore.md)、[dotnet build](dotnet-build.md) 和 [dotnet run](dotnet-run.md)。 主要問題是使用者在發出 dotnet 命令後，在根及限制帳戶之間來回轉換時的權限管理問題。 您可能會發現作為限制的使用者，您無法存取由根使用者建置的檔案。 雖然有數種方法可以解決這種情況，但您從一開始其實就可以避免它們。
 
-只要您不需要在根及限制帳戶之間來回轉換，您就可以根帳戶的身分執行命令。 例如，根據預設 Docker 容器會以根帳戶執行，因此它們便具有這種特性。
+只要您不是在根和受限帳戶之間來回轉換，您就可以將命令以 root 的形式執行。 例如，根據預設 Docker 容器會以根帳戶執行，因此它們便具有這種特性。
 
 ## <a name="global-tool-installation"></a>全域工具安裝
 
-下列指示會示範針對需要提升權限才能執行的 .NET Core 工具進行安裝、執行和解除安裝時的建議方式。
+下列指示示範安裝、執行和卸載需要提高許可權來執行之 .NET 工具的建議方式。
 
 <!-- markdownlint-disable MD025 -->
 
@@ -36,9 +36,9 @@ ms.locfileid: "80805786"
 
 若資料夾 `%ProgramFiles%\dotnet-tools` 已存在，請執行下列操作來檢查 "Users" 群組是否有寫入或修改該目錄的權限：
 
-- 右鍵按一`%ProgramFiles%\dotnet-tools`下 資料夾並選擇 **「屬性**」。 [通用屬性]**** 對話方塊隨即開啟。
-- 選擇「**安全**」選項卡。在 **「群組」或「使用者名**」下,檢查「使用者」組是否具有寫入或修改目錄的許可權。
-- 若 "Users" 群組可以寫入或修改目錄，請在安裝工具時使用不同的目錄名稱，而非 *dotnet-tools*。
+- 以滑鼠右鍵按一下 `%ProgramFiles%\dotnet-tools` 資料夾，然後選取 [ **屬性** ]。 [通用屬性] 對話方塊隨即開啟。
+- 選取 [ **安全性** ] 索引標籤。在 [ **群組或使用者名稱** ] 底下，檢查 "Users" 群組是否有寫入或修改目錄的許可權。
+- 若 "Users" 群組可以寫入或修改目錄，請在安裝工具時使用不同的目錄名稱，而非 *dotnet-tools* 。
 
 若要安裝工具，請以提升權限的命令提示字元來執行下列命令。 它會在安裝期間建立 *dotnet-tools* 資料夾。
 
@@ -48,13 +48,13 @@ dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 
 ### <a name="run-the-global-tool"></a>執行全域工具
 
-**選項 1**：搭配提升權限的命令提示字元使用完整路徑：
+**選項 1** ：搭配提升權限的命令提示字元使用完整路徑：
 
 ```cmd
 "%ProgramFiles%\dotnet-tools\TOOLCOMMAND"
 ```
 
-**選項 2**：將新建立的資料夾新增到 `%Path%`。 您只需要執行此作業一次。
+**選項 2** ：將新建立的資料夾新增到 `%Path%`。 您只需要執行此作業一次。
 
 ```cmd
 setx Path "%Path%;%ProgramFiles%\dotnet-tools\"
@@ -108,4 +108,4 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Core 通用工具概觀](global-tools.md)
+- [.NET 工具總覽](global-tools.md)

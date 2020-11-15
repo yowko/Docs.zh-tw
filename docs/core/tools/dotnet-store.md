@@ -2,16 +2,16 @@
 title: dotnet store 命令
 description: "'dotnet store' 命令會在執行階段套件存放區中儲存指定的組件。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8efb11c6bf648bc7787d5627e02b180abb8a0afd
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463388"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634333"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
+本文 **適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -41,17 +41,17 @@ dotnet store -h|--help
 
 - **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-  「套件存放區資訊清單檔」** 是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 SDK 樣式專案格式。 因此，參考所需套件的專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑。 例如： `--manifest packages1.csproj --manifest packages2.csproj` 。
+  「套件存放區資訊清單檔」是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 SDK 樣式專案格式。 因此，參考所需套件的專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑。 例如：`--manifest packages1.csproj --manifest packages2.csproj`。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  要定位的[執行時識別碼](../rid-catalog.md)。
+  要設為目標的 [執行時間識別碼](../rid-catalog.md) 。
 
 ## <a name="optional-options"></a>選擇性的選項
 
 - **`--framework-version <FRAMEWORK_VERSION>`**
 
-  指定 .NET Core SDK 版本。 此選項可讓您在 `-f|--framework` 選項指定的 Framework 之外，選取特定的 Framework 版本。
+  指定 .NET SDK 版本。 此選項可讓您在 `-f|--framework` 選項指定的 Framework 之外，選取特定的 Framework 版本。
 
 - **`-h|--help`**
 
@@ -59,7 +59,7 @@ dotnet store -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  指定執行階段套件存放區的路徑。 如未指定，則預設為使用者設定檔 .NET Core 安裝目錄的 *store* 子目錄。
+  指定執行階段套件存放區的路徑。 如果未指定，則會預設為使用者設定檔 .NET 安裝目錄的 *儲存* 子目錄。
 
 - **`--skip-optimization`**
 

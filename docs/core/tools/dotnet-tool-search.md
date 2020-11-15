@@ -1,13 +1,13 @@
 ---
 title: dotnet 工具搜尋命令
-description: Dotnet 工具搜尋命令會搜尋發行至 NuGet.org 的 .NET Core 工具。
+description: Dotnet 工具搜尋命令會搜尋發行至 NuGet.org 的 .NET 工具。
 ms.date: 11/11/2020
-ms.openlocfilehash: 4357ce4864cad386968e4a76466066fbf2ce4060
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: e0289e651ec4a439c791c8c948bef2d85d9c3794
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558069"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634138"
 ---
 # <a name="dotnet-tool-search"></a>dotnet 工具搜尋
 
@@ -15,7 +15,7 @@ ms.locfileid: "94558069"
 
 ## <a name="name"></a>名稱
 
-`dotnet tool search` -搜尋已發佈至 NuGet 的所有 [.Net Core 工具](global-tools.md) 。
+`dotnet tool search` -搜尋所有已發佈至 NuGet 的 [.net 工具](global-tools.md) 。
 
 ## <a name="synopsis"></a>概要
 
@@ -100,6 +100,6 @@ dotnet tool search -h|--help
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Core 工具](global-tools.md)
-- [教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 通用工具](global-tools-how-to-use.md)
-- [教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 本機工具](local-tools-how-to-use.md)
+- [.NET 工具](global-tools.md)
+- [教學課程：使用 .NET CLI 安裝和使用 .NET 通用工具](global-tools-how-to-use.md)
+- [教學課程：使用 .NET CLI 安裝和使用 .NET 本機工具](local-tools-how-to-use.md)
