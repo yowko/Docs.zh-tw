@@ -6,18 +6,18 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223974"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687599"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>將適用于 Apache Spark 的 .NET 連線到 MongoDB
 
 在本文中，您將瞭解如何從 .NET 針對 Apache Spark 應用程式連接到 MongoDB 實例。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 1. 將 MongoDB 伺服器啟動並執行，並在其中加入一個 [資料庫，](https://docs.mongodb.com/manual/core/databases-and-collections/) (為本機伺服器下載 [此台伺服器](https://www.mongodb.com/try/download/community) ，或者您可以嘗試使用 [MongoDB](https://www.mongodb.com/cloud/atlas) 的 mongodb 服務。 ) 
 
@@ -49,7 +49,7 @@ ms.locfileid: "92223974"
         "mongodb+srv://<username>:<password>@<cluster_address>/<database>.<collection>"
         ```
 
-    2. 使用者**名稱**：您在上一節的步驟1中建立之帳戶的使用者名稱
+    2. 使用者 **名稱**：您在上一節的步驟1中建立之帳戶的使用者名稱
     3. **密碼**：建立之使用者帳戶的密碼
     4. **cluster_address**： MongoDB 叢集的主機名稱/位址
     5. **資料庫**：您要連接的 MongoDB 資料庫
@@ -82,7 +82,7 @@ ms.locfileid: "92223974"
 若要執行 Apache Spark 應用程式的 .NET，您應該在 `mongo-spark-connector` Spark 專案中將模組定義為組建定義的一部分，並 `libraryDependency` 在 `build.sbt` sbt 專案中使用。 針對 (或) 這類 Spark 環境 `spark-submit` `spark-shell` ，您應該使用 `--packages` 命令列選項，如下所示：
 
 ```bash
-spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<version>.jar yourApp.exe
+spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar yourApp.exe
 ```
 
 > [!NOTE]

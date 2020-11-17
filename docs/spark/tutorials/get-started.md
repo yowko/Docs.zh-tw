@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 16ccc8f40f290c4bc10f03d1f4d1b296b17f6b11
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955404"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687816"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教學課程：開始使用 .NET 進行 Apache Spark
 
@@ -53,40 +53,40 @@ Apache Spark 會下載為壓縮的 tgz 檔案。 使用類似 [7-Zip](https://ww
 
 ### <a name="4-install-apache-spark"></a>4. 安裝 Apache Spark
 
-[下載並安裝 Apache Spark](https://spark.apache.org/downloads.html)。 您必須從 2.3. * 或2.4.0、2.4.1、2.4.3 或2.4.4 版本中選取， ( .NET for Apache Spark 與 Apache Spark) 的其他版本不相容。
+[下載並安裝 Apache Spark](https://spark.apache.org/downloads.html)。 您必須從 2.3. * 或2.4.0、2.4.1、2.4.3、2.4.4、2.4.5、2.4.6、2.4.7 版、3.0.0 或3.0.1 版 ( .NET for Apache Spark 與其他 Apache Spark) 版本不相容。
 
-下列步驟中使用的命令假設您已 [下載並安裝 Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)。 如果您想要使用不同的版本，請將 **2.4.1** 取代為適當的版本號碼。 然後，將 **tar** 檔案和 Apache Spark 檔案解壓縮。
+下列步驟中使用的命令假設您已 [下載並安裝 Apache Spark 3.0.1](https://spark.apache.org/downloads.html)。 如果您想要使用不同的版本，請將 **3.0.1** 取代為適當的版本號碼。 然後，將 **tar** 檔案和 Apache Spark 檔案解壓縮。
 
 若要將嵌套的 **tar** 檔案解壓縮：
 
-* 找出您下載的 **spark-2.4.1-bin-hadoop 2.7. tgz** 檔案。
+* 找出您下載的 **spark-3.0.1-bin-hadoop 2.7. tgz** 檔案。
 * 以滑鼠右鍵按一下檔案，然後選取 [ **7-Zip-> 解壓縮到這裡**]。
-* **spark-2.4.1-bin-hadoop 2.7. tar** 會與您下載的 **tgz** 檔案一起建立。
+* **spark-3.0.1-bin-hadoop 2.7. tar** 會與您下載的 **tgz** 檔案一起建立。
 
 解壓縮 Apache Spark 檔案：
 
-* 以滑鼠右鍵按一下 [ **spark-2.4.1-bin-hadoop 2.7** ]，然後選取 [ **7-Zip-> 解壓縮檔案 ...** ]
-* 在 [**解壓縮至**] 欄位中輸入**C:\bin** 。
+* 以滑鼠右鍵按一下 **spark-3.0.1-bin-hadoop 2.7. tar** ，然後選取 [ **7-Zip-> 解壓縮檔案 ...** ]
+* 在 [**解壓縮至**] 欄位中輸入 **C:\bin** 。
 * 取消核 **取 [解壓縮至** ] 欄位下方的核取方塊。
-* 選取 [確定]  。
-* Apache Spark 檔案會解壓縮至 C:\bin\spark-2.4.1-bin-hadoop2.7\
+* 選取 [確定]。
+* Apache Spark 檔案會解壓縮至 C:\bin\spark-3.0.1-bin-hadoop2.7\
 
-![安裝 Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+![安裝 Spark](./media/spark-extract-with-7-zip.png)
 
 執行下列命令以設定用來尋找 Apache Spark 的環境變數。 在 Windows 上，請務必在系統管理員模式中執行命令提示字元。
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
 setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
 #### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
 ```bash
-export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
+export SPARK_HOME=~/bin/spark-3.0.1-bin-hadoop2.7/
 export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
@@ -109,24 +109,22 @@ spark-submit --version
 
 若要將 Microsoft. 背景工作角色解壓縮：
 
-* 找出您下載的 **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip** 檔案。
-* 以滑鼠右鍵按一下並選取 [ **7-Zip-> 解壓縮檔**案 ...]。
-* 在 [**解壓縮至**] 欄位中輸入**C:\bin** 。
+* 找出您下載的 **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-1.0.0.zip** 檔案。
+* 以滑鼠右鍵按一下並選取 [ **7-Zip-> 解壓縮檔** 案 ...]。
+* 在 [**解壓縮至**] 欄位中輸入 **C:\bin** 。
 * 取消核 **取 [解壓縮至** ] 欄位下方的核取方塊。
-* 選取 [確定]  。
-
-![安裝 .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
+* 選取 [確定]。
 
 ### <a name="6-install-winutils-windows-only"></a>6. 僅將 Winutils.exe 安裝 (Windows) 
 
-Apache Spark 的 .NET 需要與 Apache Spark 一起安裝 Winutils.exe。 [下載 winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)。 然後，將 Winutils.exe 複製到 **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**。
+Apache Spark 的 .NET 需要與 Apache Spark 一起安裝 Winutils.exe。 [下載 winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)。 然後，將 Winutils.exe 複製到 **C:\bin\spark-3.0.1-bin-hadoop2.7\bin**。
 
 > [!NOTE]
 > 如果您使用的是不同版本的 Hadoop （在 Spark 安裝資料夾名稱的結尾加上批註），請選取與您的 Hadoop 版本相容的 [winutils.exe 版本](https://github.com/steveloughran/winutils) 。
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. 設定 DOTNET_WORKER_DIR 並檢查相依性
 
-執行下列其中一個命令來設定 `DOTNET_WORKER_DIR` 環境變數，.net 應用程式會使用它來尋找 Apache Spark 的 .net。 請務必將取代為 `<PATH-DOTNET_WORKER_DIR>` 您下載並解壓縮的目錄 `Microsoft.Spark.Worker` 。 在 Windows 上，請務必在系統管理員模式中執行命令提示字元。
+執行下列其中一個命令來設定 `DOTNET_WORKER_DIR` 環境變數，.net 應用程式會使用此變數來尋找 Apache Spark 的背景工作二進位檔的 .net。 請務必將取代為 `<PATH-DOTNET_WORKER_DIR>` 您下載並解壓縮的目錄 `Microsoft.Spark.Worker` 。 在 Windows 上，請務必在系統管理員模式中執行命令提示字元。
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
@@ -155,7 +153,7 @@ dotnet new console -o MySparkApp
 cd MySparkApp
 ```
 
-此 `dotnet` 命令 `new` 會為您建立類型的應用程式 `console` 。 `-o`參數會建立名為*MySparkApp*的目錄，您的應用程式會儲存在此目錄中，並填入必要的檔案。 此 `cd MySparkApp` 命令會將目錄變更為您所建立的應用程式目錄。
+此 `dotnet` 命令 `new` 會為您建立類型的應用程式 `console` 。 `-o`參數會建立名為 *MySparkApp* 的目錄，您的應用程式會儲存在此目錄中，並填入必要的檔案。 此 `cd MySparkApp` 命令會將目錄變更為您所建立的應用程式目錄。
 
 ### <a name="2-install-nuget-package"></a>2. 安裝 NuGet 套件
 
@@ -216,7 +214,7 @@ namespace MySparkApp
 
 ### <a name="4-create-data-file"></a>4. 建立資料檔案
 
-您的應用程式會處理包含文字行的檔案。 在*MySparkApp*目錄中建立名為*input.txt* file 的檔案，其中包含下列文字：
+您的應用程式會處理包含文字行的檔案。 在 *MySparkApp* 目錄中建立名為 *input.txt* file 的檔案，其中包含下列文字：
 
 ```text
 Hello World
@@ -242,7 +240,7 @@ dotnet build
 spark-submit ^
 --class org.apache.spark.deploy.dotnet.DotnetRunner ^
 --master local ^
-microsoft-spark-2.4.x-<version>.jar ^
+microsoft-spark-3-0_2.12-<version>.jar ^
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 
@@ -252,7 +250,7 @@ dotnet MySparkApp.dll <path-of-input.txt>
 spark-submit \
 --class org.apache.spark.deploy.dotnet.DotnetRunner \
 --master local \
-microsoft-spark-2.4.x-<version>.jar \
+microsoft-spark-3-0_2.12-<version>.jar \
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 

@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557216"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687356"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -36,7 +36,7 @@ C # 9.0 將下列功能和增強功能新增至 c # 語言：
 
 ## <a name="record-types"></a>記錄類型
 
-C # 9.0 引進了 * *_記錄類型_* _，這是一種參考型別，可提供合成方法來提供相等的值語義。 依預設，記錄是不可變的。
+C # 9.0 引進了 **_記錄類型_* _，這是一種參考型別，可提供合成方法來提供相等的值語義。 依預設，記錄是不可變的。
 
 記錄類型可讓您輕鬆地在 .NET 中建立不可變的參考型別。 在過去，.NET 型別大多分類為參考型別 (包括類別和匿名型別) 和實值型別 (包括結構和元組) 。 雖然建議使用可變的實數值型別，但可變動的實值型別通常不會造成錯誤。 實值型別變數會保存值，以便在將實數值型別傳遞給方法時，對原始資料的複本進行變更。
 
@@ -88,7 +88,7 @@ C # 9.0 引進了 * *_記錄類型_* _，這是一種參考型別，可提供合
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-到目前為止所顯示的範例會使用傳統語法來宣告屬性。 有更精確的形式稱為「 _*_位置記錄_*_ 」。  以下是稍早定義為位置記錄的三種記錄類型：
+到目前為止所顯示的範例會使用傳統語法來宣告屬性。 有更精確的形式稱為「 _*_位置記錄_*_」。  以下是稍早定義為位置記錄的三種記錄類型：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -104,9 +104,13 @@ C # 9.0 引進了 * *_記錄類型_* _，這是一種參考型別，可提供合
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-上述程式程式碼會建立新的 `Person` 記錄 `LastName` ，其中屬性是的複本 `person` ，而 `FirstName` 是 `"Paul"` 。 您可以在運算式中設定任意數目的屬性 `with` 。
+上一行會建立新的 `Person` 記錄，其中 `LastName` 屬性是的複本 `person` ，而 `FirstName` 是 `"Paul"` 。 您可以在運算式中設定任意數目的屬性 `with` 。 您也可以使用 `with` 運算式來建立確切的複本。 您可以針對要修改的屬性指定空的集合：
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 任何合成成員（「複製」方法除外）都可以由您撰寫。 如果記錄類型的方法符合任何合成方法的簽章，則編譯器不會合成該方法。 先前的 `Dog` 記錄範例包含手動編碼的 <xref:System.String.ToString> 方法做為範例。
+
+深入瞭解這項 [記錄探索](../tutorials/exploration/records.md) 教學課程中的記錄類型。
 
 ## <a name="init-only-setters"></a>僅供初始化的 Setter
 
@@ -244,9 +248,9 @@ if (e is not null)
 
 程式碼產生器會使用 Roslyn 分析 Api 來讀取屬性或其他程式碼元素。 在該資訊中，它會將新的程式碼加入至編譯中。 來源產生器只能新增程式碼;不允許它們修改編譯中的任何現有程式碼。
 
-針對程式碼產生器新增的兩項功能是 * **部分方法語法** _ 和 _*_模組初始化運算式_*_ 的擴充。 首先是部分方法的變更。 在 c # 9.0 之前，部分方法是 `private` 但無法指定存取修飾詞、傳回 `void` ，而且不能有 `out` 參數。 這些限制表示如果未提供任何方法執行，則編譯器會移除對部分方法的所有呼叫。 C # 9.0 會移除這些限制，但需要部分方法宣告才能執行。 程式碼產生器可以提供該執行。 為了避免引進重大變更，編譯器會考慮任何部分方法，而不使用存取修飾詞來遵循舊規則。 如果部分方法包含 `private` 存取修飾詞，則新的規則會管理該部分方法。
+針對程式碼產生器新增的兩項功能是 ***部分方法語法** _ 和 _*_模組初始化運算式_*_ 的擴充。 首先是部分方法的變更。 在 c # 9.0 之前，部分方法是 `private` 但無法指定存取修飾詞、傳回 `void` ，而且不能有 `out` 參數。 這些限制表示如果未提供任何方法執行，則編譯器會移除對部分方法的所有呼叫。 C # 9.0 會移除這些限制，但需要部分方法宣告才能執行。 程式碼產生器可以提供該執行。 為了避免引進重大變更，編譯器會考慮任何部分方法，而不使用存取修飾詞來遵循舊規則。 如果部分方法包含 `private` 存取修飾詞，則新的規則會管理該部分方法。
 
-程式碼產生器的第二項新功能是 _ * _模組初始化運算式_ * *。 模組初始化運算式是已 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 附加屬性的方法。 在整個模組中的任何其他欄位存取或方法調用之前，執行時間會呼叫這些方法。 模組初始化運算式方法：
+程式碼產生器的第二項新功能是 _ *_模組初始化運算式_* *。 模組初始化運算式是已 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 附加屬性的方法。 在整個模組中的任何其他欄位存取或方法調用之前，執行時間會呼叫這些方法。 模組初始化運算式方法：
 
 - 必須是靜態
 - 必須是無參數

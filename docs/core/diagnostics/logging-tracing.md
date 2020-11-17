@@ -2,12 +2,12 @@
 title: 記錄和追蹤-.NET Core
 description: .NET Core 記錄和追蹤的簡介。
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 9af04cceeef3fbfb8392eb91667c21374511548a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439920"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687579"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 記錄和追蹤
 
@@ -55,7 +55,7 @@ ms.locfileid: "94439920"
   - 只允許追蹤可序列化的物件。
   - 可以透過設定為取用 EventSource 的任何 [EventListener](xref:System.Diagnostics.Tracing.EventListener) 實例，在同進程中使用。
   - 可透過下列方式跨進程使用：
-    - 所有平臺上的 .NET Core EventPipe
+    - 所有平臺上[的 .Net Core EventPipe](./eventpipe.md)
     - [Windows 事件追蹤 (ETW)](/windows/win32/etw/event-tracing-portal)
     - [適用于 Linux 的 LTTng 追蹤架構](https://lttng.org/)
       - 逐步解說： [使用 PerfCollect 收集 LTTng 追蹤](trace-perfcollect-lttng.md)。

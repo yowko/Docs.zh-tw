@@ -4,12 +4,12 @@ description: 瞭解如何為 Apache Spark 背景工作角色和使用者定義�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 19ecd4736baaf789a409229d35a6946c6021db45
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954954"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688185"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>針對 Apache Spark 背景工作角色和使用者定義函數二進位檔部署 .NET
 
@@ -26,7 +26,7 @@ ms.locfileid: "91954954"
 | 環境變數         | 描述
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code>已產生二進位檔的路徑。</br>它是由 Spark 驅動程式使用，並會傳遞給 Spark 執行程式。 如果未設定此變數，Spark 執行程式會搜尋環境變數中指定的路徑 <code>PATH</code> 。</br>_例如 "C:\bin\Microsoft.Spark.Worker"_
-| DOTNET_ASSEMBLY_SEARCH_PATHS | 以逗號分隔的路徑，其中 <code>Microsoft.Spark.Worker</code> 會載入元件。</br>請注意，如果路徑的開頭為 "."，則會在前面加上工作目錄。 如果在 **yarn 模式**中，"." 會代表容器的工作目錄。</br>_例如 "C:\Users \\ &lt; user name &gt; \\ &lt; mysparkapp &gt; \bin\Debug \\ &lt; dotnet version &gt; "_
+| DOTNET_ASSEMBLY_SEARCH_PATHS | 以逗號分隔的路徑，其中 <code>Microsoft.Spark.Worker</code> 會載入元件。</br>請注意，如果路徑的開頭為 "."，則會在前面加上工作目錄。 如果在 **yarn 模式** 中，"." 會代表容器的工作目錄。</br>_例如 "C:\Users \\ &lt; user name &gt; \\ &lt; mysparkapp &gt; \bin\Debug \\ &lt; dotnet version &gt; "_
 | DOTNET_WORKER_DEBUG          | 如果您想要對 <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF 進行 debug</a>，請在執行之前將此環境變數設定為 <code>1</code> <code>spark-submit</code> 。
 
 ### <a name="parameter-options"></a>參數選項
@@ -60,7 +60,7 @@ ms.locfileid: "91954954"
 ### <a name="after-submitting-my-spark-application-i-get-the-error-systemtypeloadexception-could-not-load-type-systemruntimeremotingcontextscontext"></a>提交 Spark 應用程式之後，我收到錯誤訊息 `System.TypeLoadException: Could not load type 'System.Runtime.Remoting.Contexts.Context'` 。
 > **錯誤：** [錯誤] [TaskRunner] [0] ProcessStream ( # A1 失敗，例外狀況： TypeLoadException：無法從元件 ' Mscorlib.dll，Version = 4.0.0.0，Culture = 中立，PublicKeyToken = ... ' 載入類型 ' '。
 
-**答：** 檢查 `Microsoft.Spark.Worker` 您正在使用的版本。 有兩個版本： **.NET Framework 4.6.1** 和 **.net Core 2.1. x**。 在此情況下， `Microsoft.Spark.Worker.net461.win-x64-<version>` 您可以 [下載](https://github.com/dotnet/spark/releases))  (，因為 `System.Runtime.Remoting.Contexts.Context` 只適用于 .NET Framework。
+**答：** 檢查 `Microsoft.Spark.Worker` 您正在使用的版本。 有兩個版本： **.NET Framework 4.6.1** 和 **.net Core 3.1. x**。 在此情況下， `Microsoft.Spark.Worker.net461.win-x64-<version>` 您可以 [下載](https://github.com/dotnet/spark/releases))  (，因為 `System.Runtime.Remoting.Contexts.Context` 只適用于 .NET Framework。
 
 ### <a name="how-do-i-run-my-spark-application-with-udfs-on-yarn-which-environment-variables-and-parameters-should-i-use"></a>如何? 在 YARN 上執行具有 Udf 的 spark 應用程式？ 我應該使用哪些環境變數和參數？
 
@@ -74,7 +74,7 @@ spark-submit \
 --conf spark.yarn.appMasterEnv.DOTNET_WORKER_DIR=./worker/Microsoft.Spark.Worker-<version> \
 --conf spark.yarn.appMasterEnv.DOTNET_ASSEMBLY_SEARCH_PATHS=./udfs \
 --archives hdfs://<path to your files>/Microsoft.Spark.Worker.net461.win-x64-<version>.zip#worker,hdfs://<path to your files>/mySparkApp.zip#udfs \
-hdfs://<path to jar file>/microsoft-spark-2.4.x-<version>.jar \
+hdfs://<path to jar file>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
 hdfs://<path to your files>/mySparkApp.zip mySparkApp
 ```
 

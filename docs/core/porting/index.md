@@ -3,12 +3,12 @@ title: 從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439738"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687408"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>從 .NET Framework 移植到 .NET Core 的總覽
 
@@ -115,7 +115,7 @@ ms.locfileid: "94439738"
 > [分析相依性](third-party-deps.md) 
 > [封裝 NuGet 套件](../deploying/creating-nuget-packages.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ASP.NET 至 ASP.NET Core 遷移](/aspnet/core/migration/proper-to-2x)
 - [將 WPF 應用程式遷移至 .NET Core](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)

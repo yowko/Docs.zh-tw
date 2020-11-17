@@ -1,16 +1,16 @@
 ---
 title: .NET 5 的新功能
 description: 深入瞭解 .NET 5，這是一個跨平臺和開放原始碼的開發平臺，也就是 .NET Core 的下一次演進。
-ms.date: 11/06/2020
+ms.date: 11/16/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 10c1345f4a0a37e04377250da9a7b6df7df3a105
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 04f72675744426f7dbc99e5978a9ea4bbb8015b1
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594534"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687591"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -62,7 +62,7 @@ ASP.NET Core 5.0 是以 .NET 5.0 為基礎，但會保留 "Core" 的名稱，以
 
 撰寫 .NET 5 應用程式的開發人員可以存取最新的 c # 版本和功能。 .NET 5 與 c # 9 配對，這對語言有許多新功能。 以下是一些重點：
 
-- 記錄：行為類似實值型別的不可變引用型別，並且會在語言中引入新的 `with` 關鍵字。
+- 記錄：具有以值為基礎之相等語義的參考型別，以及新運算式支援的非破壞性變化 `with` 。
 - 關聯式模式比對：將模式比對功能延伸至關聯評估和運算式的關係運算子，包括邏輯模式-新的關鍵字 `and` 、 `or` 和 `not` 。
 - 最上層語句：作為加速採用和學習 c # 的方法，您 `Main` 可以省略方法，並將應用程式視為有效，如下所示：
 
@@ -140,35 +140,6 @@ let message = $"%s{name} is %d{age} years old."
 - [允許自訂轉換器處理 null](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
 - [複製 JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
 - [使用 web 預設值建立 JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
-
-## <a name="net-maui"></a>.NET MAUI
-
-.NET MAUI 是日益普及的 Xamarin 工具組演進，在 GitHub 上的開放原始碼位於 [dotnet/MAUI](https://github.com/dotnet/maui)。 使用 .NET MAUI，可簡化 .NET 開發人員的選擇，提供支援所有新式工作負載的單一堆疊： Android、iOS、macOS 和 Windows。 使用 .NET MAUI，您可以取得以多個平臺和裝置為目標的單一專案開發人員體驗。
-
-> [!IMPORTANT]
-> .NET MAUI 是早期預覽版本。 您可以在 [xamarin/net6](https://github.com/xamarin/net6-samples)範例中找到範例原始程式碼。
-
-### <a name="model-view-update-pattern"></a>模型-視圖-更新模式
-
-開發人員喜歡新式開發模式。 「榆樹架構」是一種流暢的 UI 開發方法，它是 [模型視圖-更新](https://elmprogramming.com/model-view-update-part-1.html) 或 MVU 模式。 MVU 可提升資料和狀態管理的單向流程，以及程式碼優先的開發經驗，只要套用必要的變更，就能快速更新 UI。
-
-例如，請考慮使用 MVU 模式，以 .NET MAUI 撰寫的下列計數器：
-
-```csharp
-readonly State<int> _count = 0;
-
-[Body]
-View body() => new StackLayout
-{
-    new Label("Welcome to .NET MAUI!"),
-    new Button(
-        () => $"You clicked {_count} times.",
-        () => ++ _count.Value)
-    )
-};
-```
-
-如需詳細資訊，請參閱 [.NET MAUI 藍圖](https://github.com/dotnet/maui/wiki/Roadmap)和 [.net MAUI 簡介](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) 文章。
 
 ## <a name="see-also"></a>另請參閱
 

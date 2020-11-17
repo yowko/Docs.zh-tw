@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5418f96a3b4515224c49a1c1aa38784c348a86db
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: fb478250aa81e61edb13c9d0e0e65f6f19e6153a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516147"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687421"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>!  (null 容許) 運算子 (c # 參考) 
 
@@ -51,7 +51,7 @@ Null 容許運算子的其中一個使用案例是測試引數驗證邏輯。 �
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱[可為 null 之參考](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)型別規格之草稿的[容許運算子](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)一節。
+如需詳細資訊，請參閱[可為 null 之參考](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)型別規格之草稿的[容許運算子](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md#the-null-forgiving-operator)一節。
 
 ## <a name="see-also"></a>另請參閱
 

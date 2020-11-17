@@ -4,12 +4,12 @@ description: 瞭解如何在 Azure HDInsight 的 Jupyter 筆記本上安裝適�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5689c9ccdd13209fec33674ad8fc80dcc369660
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955045"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688276"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>在 Azure HDInsight Spark 叢集上的 Jupyter 筆記本上安裝適用于 Apache Spark 的 .NET
 
@@ -22,7 +22,7 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 > [!NOTE]
 > 這項功能是 *實驗* 性的，且不受 HDInsight Spark 團隊的支援。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 如果您還沒有帳戶，請建立一個 [Azure HDInsight Spark](/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) 叢集。
 
@@ -61,7 +61,7 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 
    在您的本機電腦上建立名為 **install-interactive-notebook.sh** 的新檔案，並貼上 [install-interactive-notebook.sh 內容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh)的內容。
 
-   將腳本上傳至可從 HDInsight 叢集存取的 [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) 。 例如： `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh` 。
+   將腳本上傳至可從 HDInsight 叢集存取的 [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) 。 例如 `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`。
 
 2. 使用 [HDInsight 指令碼動作](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)在叢集上執行 `install-interactive-notebook.sh`。
 
@@ -69,23 +69,23 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 
    |屬性  |描述  |
    |---------|---------|
-   | 指令碼類型 | 自訂 |
-   | Name | *安裝適用于 Apache Spark 互動式筆記本體驗的 .NET* |
+   | 指令碼類型 | Custom |
+   | 名稱 | *安裝適用于 Apache Spark 互動式筆記本體驗的 .NET* |
    | Bash 指令碼 URI | 您上傳 `install-interactive-notebook.sh` 的目標 URI。 |
    | 節點類型| Head 和背景工作 |
-   | 參數 | 適用于 Apache Spark 版本的 .NET。 您可以檢查 [.net 的 Apache Spark 版本](https://github.com/dotnet/spark/releases)。 例如，如果您想要安裝 Sparkdotnet 版本0.6.0，則會是 `0.6.0` 。
+   | 參數 | 適用于 Apache Spark 版本的 .NET。 您可以檢查 [.net 的 Apache Spark 版本](https://github.com/dotnet/spark/releases)。 例如，如果您想要安裝 Sparkdotnet 1.0.0 版，則會是 `1.0.0` 。
 
    當腳本動作的狀態旁邊出現綠色核取記號時，移至下一個步驟。
 
 ### <a name="start-the-livy-server"></a>啟動 Livy 伺服器
 
-遵循 [Stop Livy server](#stop-the-livy-server) 一節中的指示， **開始** (而不是 **停止**) 適用于主機的 Spark2 伺服器 **hn0** 和 **hn1**的 Livy。
+遵循 [Stop Livy server](#stop-the-livy-server) 一節中的指示， **開始** (而不是 **停止**) 適用于主機的 Spark2 伺服器 **hn0** 和 **hn1** 的 Livy。
 
 ### <a name="set-up-spark-default-configurations"></a>設定 Spark 預設設定
 
 1. 從入口網站中，選取 **[總覽**]，然後選取 [ **Ambari 首頁**]。 出現提示時，輸入叢集的叢集登入認證。
 
-2. 選取**Spark2** [Spark2 **] 和 [** 進行]。 然後，選取 [ **自訂 spark2-預設值**]。
+2. 選取 **Spark2** [Spark2 **] 和 [** 進行]。 然後，選取 [ **自訂 spark2-預設值**]。
 
    ![設定設定](./media/hdinsight-notebook-installation/spark-configs.png)
 
@@ -101,7 +101,7 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 
    * **屬性 2** 使用您在上一個腳本動作中包含 Apache Spark 的 .NET 版本。
        * 關鍵：&ensp;&ensp;`spark.dotnet.packages`
-       * 值：`["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
+       * 值：`["nuget: Microsoft.Spark, 1.0.0", "nuget: Microsoft.Spark.Extensions.Delta, 1.0.0"]`
 
    * **屬性3**
        * 關鍵：&ensp;&ensp;`spark.dotnet.interpreter`
@@ -129,7 +129,7 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 
    ![啟動 Jupyter Notebook](./media/hdinsight-notebook-installation/launch-notebook.png)
 
-   然後，選取 [**新增**  >  **.net Spark (c # ) **以建立筆記本。
+   然後，選取 [**新增**  >  **.net Spark (c # )** 以建立筆記本。
 
    ![Jupyter Notebook](./media/hdinsight-notebook-installation/create-sparkdotnet-notebook.png)
 

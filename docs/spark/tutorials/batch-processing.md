@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 666292fa2e9cecbd4e0aacd291f1008810eb257e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c161a0420de9e99478768926e5385dcfda1f9ee7
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955391"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688224"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>教學課程：使用 .NET 進行批次處理以進行 Apache Spark
 
@@ -26,7 +26,7 @@ ms.locfileid: "91955391"
 > * 將資料讀入資料框架並準備進行分析
 > * 使用 Spark SQL 來處理資料
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 如果這是您第一次使用 .NET 進行 Apache Spark，請參閱 [開始使用 .net 進行 Apache Spark](get-started.md) 教學課程，以瞭解如何準備您的環境，並針對 Apache Spark 應用程式執行您的第一個 .net。
 
@@ -46,7 +46,7 @@ ms.locfileid: "91955391"
    cd mySparkBatchApp
    ```
 
-   此 `dotnet` 命令 `new` 會為您建立類型的應用程式 `console` 。 `-o`參數會建立名為*mySparkBatchApp*的目錄，您的應用程式會儲存在此目錄中，並填入必要的檔案。 此 `cd mySparkBatchApp` 命令會將目錄變更為您剛才建立的應用程式目錄。
+   此 `dotnet` 命令 `new` 會為您建立類型的應用程式 `console` 。 `-o`參數會建立名為 *mySparkBatchApp* 的目錄，您的應用程式會儲存在此目錄中，並填入必要的檔案。 此 `cd mySparkBatchApp` 命令會將目錄變更為您剛才建立的應用程式目錄。
 
 1. 若要在應用程式中使用 .NET 進行 Apache Spark，請安裝 Microsoft Spark 套件。 在主控台中，執行下列命令：
 
@@ -56,7 +56,7 @@ ms.locfileid: "91955391"
 
 ## <a name="create-a-sparksession"></a>建立 SparkSession
 
-1. `using`在*mySparkBatchApp*中的*Program.cs*檔案頂端新增下列其他語句。
+1. `using`在 *mySparkBatchApp* 中的 *Program.cs* 檔案頂端新增下列其他語句。
 
    ```csharp
    using System;
@@ -64,7 +64,7 @@ ms.locfileid: "91955391"
    using static Microsoft.Spark.Sql.Functions;
    ```
 
-1. 將下列程式碼新增至您的專案命名空間。 稍後在程式中，會使用*s_referenceData*來根據日期進行篩選。
+1. 將下列程式碼新增至您的專案命名空間。 稍後在程式中，會使用 *s_referenceData* 來根據日期進行篩選。
 
    ```csharp
    static readonly DateTime s_referenceDate = new DateTime(2015, 10, 20);
@@ -131,7 +131,7 @@ Spark SQL 可讓您對資料進行 SQL 呼叫。 通常會結合使用者定義�
    groupedDF.OrderBy(Desc("avg(forked_from)")).Show();
    ```
 
-1. 下一個程式碼區塊會顯示最近專案的更新方式。 您可以註冊名為 *MyUDF* 的新使用者定義函數，並將它與在教學課程開頭宣告的日期 *s_referenceDate*比較。 每個專案的日期會與參考日期進行比較。 然後，Spark SQL 會用來呼叫每個資料列上的 UDF，以分析資料集中的每個專案。
+1. 下一個程式碼區塊會顯示最近專案的更新方式。 您可以註冊名為 *MyUDF* 的新使用者定義函數，並將它與在教學課程開頭宣告的日期 *s_referenceDate* 比較。 每個專案的日期會與參考日期進行比較。 然後，Spark SQL 會用來呼叫每個資料列上的 UDF，以分析資料集中的每個專案。
 
    ```csharp
    spark.Udf().Register<string, bool>(
@@ -158,7 +158,7 @@ Spark SQL 可讓您對資料進行 SQL 呼叫。 通常會結合使用者定義�
 1. 使用執行您的應用程式 `spark-submit` 。 請務必使用 Microsoft Spark jar 檔案的實際路徑來更新下列命令。
 
    ```console
-   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<version>.jar dotnet /<path>/to/netcoreapp<version>/GitHubProjects.dll
+   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar dotnet /<path>/to/netcoreapp<version>/mySparkBatchApp.dll
    ```
 
 ## <a name="get-the-code"></a>取得程式碼

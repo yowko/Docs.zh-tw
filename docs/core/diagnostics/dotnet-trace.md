@@ -2,12 +2,12 @@
 title: dotnet-追蹤工具-.NET Core
 description: 安裝和使用 dotnet 追蹤命令列工具。
 ms.date: 11/21/2019
-ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 4a3694f6ed748779809ee4c4bfd941bb6f1ac490
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507223"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687625"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -33,7 +33,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 * 是跨平臺 .NET Core 工具。
 * 在不使用原生分析工具的情況下，啟用正在執行之進程的 .NET Core 追蹤收集。
-* 是以 .NET Core 執行時間的跨平臺技術為基礎 `EventPipe` 。
+* 是以 [`EventPipe`](./eventpipe.md) .Net Core 執行時間為基礎。
 * 在 Windows、Linux 或 macOS 上提供相同的體驗。
 
 ## <a name="options"></a>選項
@@ -134,7 +134,7 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 
 - **`<input-filename>`**
 
-  要轉換的輸入追蹤檔案。 預設值為 *nettrace* 。
+  要轉換的輸入追蹤檔案。 預設值為 *nettrace*。
 
 ### <a name="options"></a>選項
 
@@ -176,7 +176,7 @@ dotnet-trace list-profiles [-h|--help]
   - 例如，在 Linux 上， `ps` 命令。
   - [dotnet-追蹤 ps](#dotnet-trace-ps)
 
-- 執行以下命令：
+- 執行下列命令：
 
   ```console
   dotnet-trace collect --process-id <PID>

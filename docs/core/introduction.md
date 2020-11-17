@@ -2,14 +2,14 @@
 title: .NET 簡介和總覽
 description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可用於建立許多種類的應用程式。
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506736"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687513"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -24,7 +24,7 @@ ms.locfileid: "94506736"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [通用 Windows 平台 (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [遊戲](https://dotnet.microsoft.com/apps/games)
-* [物聯網 (IoT)](/dotnet/iot)
+* [物聯網 (IoT) ](/dotnet/iot)
 * [機器學習](../machine-learning/index.yml)
 * [主控台應用程式](tutorials/with-visual-studio-code.md)
 * [Windows 服務](/aspnet/core/host-and-deploy/windows-service)
@@ -116,7 +116,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
   只能在 Windows 上執行。 具有廣泛的內建功能，其設計目的是使用 .NET。 所有學生、開放原始碼參與者及個人均可免費取得此社區版。
 
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) \(英文\)
 
   在 Windows、macOS 和 Linux 上執行。 免費且開放的原始碼。 擴充功能可搭配 .NET 語言使用。
 
@@ -153,7 +153,7 @@ SDK 下載包含下列元件：
 
 ### <a name="project-system-and-msbuild"></a>專案系統和 MSBuild
 
-.NET 應用程式是使用 [MSBuild](/visualstudio/msbuild/msbuild)從原始程式碼建立的。 專案檔 ( *.csproj* 、 *>.fsproj* 或 *. vbproj* ) 指定負責編譯、封裝和發佈程式碼的 [目標](/visualstudio/msbuild/msbuild-targets)[和相關聯](/visualstudio/msbuild/msbuild-tasks)工作。 有 SDK 識別碼可參考目標和工作的標準集合。 使用這些識別碼有助於讓專案檔變小且容易使用。 例如，以下是主控台應用程式的專案檔：
+.NET 應用程式是使用 [MSBuild](/visualstudio/msbuild/msbuild)從原始程式碼建立的。 專案檔 (*.csproj*、 *>.fsproj* 或 *. vbproj*) 指定負責編譯、封裝和發佈程式碼的 [目標](/visualstudio/msbuild/msbuild-targets)[和相關聯](/visualstudio/msbuild/msbuild-tasks)工作。 有 SDK 識別碼可參考目標和工作的標準集合。 使用這些識別碼有助於讓專案檔變小且容易使用。 例如，以下是主控台應用程式的專案檔：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -221,7 +221,7 @@ MSBuild 和 .NET CLI 可以搭配各種持續整合工具和環境使用，例�
 
 由於 JIT 編譯是在應用程式執行期間發生，編譯時間是執行時間的一部分。 因此，JIT 編譯程式必須將花費在優化程式碼的時間與產生的程式碼所能產生的節省時間進行平衡。 但是 JIT 編譯程式知道實際的硬體，而且可以讓開發人員不需要為不同的平臺送出不同的執行方式。
 
-.NET JIT 編譯程式可以進行階層式 *編譯* ，這表示它可以在執行時間重新編譯個別方法。 這項功能可讓它快速編譯，同時仍能針對常用的方法產生高度調整的程式碼版本。
+.NET JIT 編譯程式可以進行階層式 *編譯*，這表示它可以在執行時間重新編譯個別方法。 這項功能可讓它快速編譯，同時仍能針對常用的方法產生高度調整的程式碼版本。
 
 如需詳細資訊，請參閱 [Managed 執行](../standard/managed-execution-process.md) 程式和階層式 [編譯](whats-new/dotnet-core-3-0.md#tiered-compilation)。
 
@@ -242,7 +242,7 @@ GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程�
 
 ### <a name="working-with-unmanaged-resources"></a>使用 Unmanaged 資源
 
-有時候，程式碼需要參考 *未受管理的資源* 。 Unmanaged 資源是指 .NET 執行階段不會自動維護的資源。 例如檔案控制程式碼就是 Unmanaged 資源。 <xref:System.IO.FileStream> 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。 當您使用完成時 <xref:System.IO.FileStream> ，您必須明確釋放檔案控制代碼。
+有時候，程式碼需要參考 *未受管理的資源*。 Unmanaged 資源是指 .NET 執行階段不會自動維護的資源。 例如檔案控制程式碼就是 Unmanaged 資源。 <xref:System.IO.FileStream> 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。 當您使用完成時 <xref:System.IO.FileStream> ，您必須明確釋放檔案控制代碼。
 
 在.NET 中，參考 Unmanaged 資源的物件會實作 <xref:System.IDisposable> 介面。 當您完成使用此物件時，您可以呼叫物件的 <xref:System.IDisposable.Dispose> 方法來釋放任何 Unmanaged 資源。 .Net 語言提供了一個方便的 `using` 語句， ([c #](../csharp/language-reference/keywords/using.md)、 [F #](../fsharp/language-reference/resource-management-the-use-keyword.md)、 [VB](../visual-basic/language-reference/statements/using-statement.md)) ，可確保 `Dispose` 呼叫方法。
 
@@ -254,7 +254,7 @@ GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程�
 
 * 將應用程式發佈為 *獨立* 應用程式會產生可執行檔，其中包含 .net [運行](#sdk-and-runtimes) 時間和連結 [庫](#runtime-libraries)，以及應用程式及其相依性。 應用程式的使用者可以在未安裝 .NET 執行時間的電腦上執行它。 獨立應用程式是平臺專屬的應用程式，而且可以選擇性地使用 [AOT 編譯](#aot-compiler)形式來發佈。
 
-* 將應用程式發行為與 *framework 相依* 的應用程式，會產生可執行檔和二進位檔案 ( *.dll* 檔案，) 只包含應用程式本身及其相依性。 應用程式的使用者必須分別安裝 .NET [運行](#sdk-and-runtimes)時間。 可執行檔是平臺專屬的，但架構相依應用程式的 *.dll* 檔案是跨平臺。
+* 將應用程式發行為與 *framework 相依* 的應用程式，會產生可執行檔和二進位檔案 (*.dll* 檔案，) 只包含應用程式本身及其相依性。 應用程式的使用者必須分別安裝 .NET [運行](#sdk-and-runtimes)時間。 可執行檔是平臺專屬的，但架構相依應用程式的 *.dll* 檔案是跨平臺。
 
   您可以並存安裝多個版本的執行時間，以執行以不同執行階段版本為目標的架構相依應用程式。 如需詳細資訊，請參閱 [目標 framework](../standard/frameworks.md)。
 
@@ -264,9 +264,9 @@ GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程�
 
 ## <a name="runtime-libraries"></a>執行階段程式庫
 
-.NET 有一組廣泛的標準類別庫。 核心集稱為「基類庫」（base class library）， (BCL) 。 完整的集合稱為執行時間程式庫或 framework 程式庫。 這些程式庫提供許多一般用途和工作負載特定類型和公用程式功能的實作為。
+.NET 有一組廣泛的標準類別庫，稱為執行時間連結 [庫](../standard/glossary.md#runtime)、 [架構程式庫](../standard/glossary.md#framework-libraries)，或 [ (BCL) 的基類庫 ](../standard/glossary.md#bcl)。 這些程式庫提供許多一般用途和工作負載特定類型和公用程式功能的實作為。
 
-以下是執行時間程式庫中定義的一些類型範例：
+以下是 .NET 執行時間程式庫中定義的一些類型範例：
 
 * 基本類型，例如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType> 。
 * 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
@@ -276,9 +276,9 @@ GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程�
 * [序列化](../standard/serialization/index.md) 公用程式類型，例如 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 和 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 。
 * 高效能類型，例如 <xref:System.Span%601?displayProperty=nameWithType> 、 <xref:System.Numerics.Vector?displayProperty=nameWithType> 和 [管線](../standard/io/pipelines.md)。
 
-如需詳細資訊，請參閱 [架構](../standard/framework-libraries.md) 程式庫和連結 [庫的原始程式碼](https://github.com/dotnet/runtime/tree/master/src/libraries)。
+如需詳細資訊，請參閱執行時間連結 [庫總覽](../standard/runtime-libraries-overview.md)。 程式庫的原始程式碼位於 [GitHub dotnet/runtime 存放庫](https://github.com/dotnet/runtime/tree/master/src/libraries)中。
 
-## <a name="microsoftextensions-libraries"></a>Microsoft Extensions 程式庫
+### <a name="extensions-to-the-runtime-libraries"></a>執行時間程式庫的延伸模組
 
 某些常用應用程式功能的程式庫不包含在執行時間程式庫中，但可在 NuGet 套件中使用，如下所示：
 
@@ -344,6 +344,7 @@ Entity Framework (EF) Core 是一個 [開放原始](https://github.com/aspnet/En
   | Target Framework - 目標 Framework | .NET 應用程式或程式庫依賴的 API 集合。 範例： .NET Core 3.1、.NET Standard 2。0 |
   | Target Framework Moniker (TFM)  | TFM 是標準化的權杖格式，用於指定 .NET 應用程式或程式庫的目標 framework。 範例： `net462` 適用于 .NET Framework 4.6.2。 |
   | 與 framework 相依的應用程式 | 只能在您從 [.net 下載頁面](https://dotnet.microsoft.com/download/dotnet-core)安裝執行時間的電腦上執行的應用程式。 此使用方式中的「架構」與您從 .NET 下載頁面下載的「執行時間」相同。 |
+  | framework 程式庫 | 有時會用來做為 [運行](#runtime-libraries)時間程式庫的同義字。 |
 
 * **SDK**
 

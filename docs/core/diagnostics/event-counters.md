@@ -2,22 +2,22 @@
 title: .NET Core 中的 EventCounters
 description: 在本文中，您將瞭解什麼是 EventCounters、如何實行它們，以及如何使用它們。
 ms.date: 08/07/2020
-ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955313"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687638"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 中的 EventCounters
 
-本文**適用于：✔️** .net CORE 3.0 SDK 和更新版本
+本文 **適用于：✔️** .net CORE 3.0 SDK 和更新版本
 
 EventCounters 是 .NET Core Api，用於輕量、跨平臺和近乎即時的效能計量集合。 EventCounters 已新增為 Windows 上 .NET Framework 之「效能計數器」的跨平臺替代方案。 在本文中，您將瞭解什麼是 EventCounters、如何實行它們，以及如何使用它們。
 
 .NET Core 執行時間和一些 .NET 程式庫會使用 EventCounters （從 .NET Core 3.0 開始）發佈基本的診斷資訊。 除了 .NET 執行時間所提供的 EventCounters 之外，您還可以選擇執行自己的 EventCounters。 EventCounters 可以用來追蹤各種計量。
 
-EventCounters 即時作為的一部分 <xref:System.Diagnostics.Tracing.EventSource> ，並且會定期自動推送至接聽程式工具。 就像上的所有其他事件一樣 <xref:System.Diagnostics.Tracing.EventSource> ，它們都可以透過內部進程和跨進程的方式，透過 <xref:System.Diagnostics.Tracing.EventListener> 和 EventPipe 使用。 本文著重于 EventCounters 的跨平臺功能，並刻意排除 PerfView 和 ETW (Windows) 的事件追蹤，雖然兩者都可以搭配 EventCounters 使用。
+EventCounters 即時作為的一部分 <xref:System.Diagnostics.Tracing.EventSource> ，並且會定期自動推送至接聽程式工具。 就像上的所有其他事件一樣 <xref:System.Diagnostics.Tracing.EventSource> ，它們都可以透過內部進程和跨進程的方式，透過 <xref:System.Diagnostics.Tracing.EventListener> 和 [EventPipe](./eventpipe.md)使用。 本文著重于 EventCounters 的跨平臺功能，並刻意排除 PerfView 和 ETW (Windows) 的事件追蹤，雖然兩者都可以搭配 EventCounters 使用。
 
 ![EventCounters 同進程和跨進程的圖表影像](media/event-counters.svg)
 
@@ -127,7 +127,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter>使用 <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> API 來報告總鎖定爭用計數的增量。 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>屬性是選擇性的，但使用時，可以提供提示，指出計數器最適合顯示的時間間隔。 例如，鎖定爭用計數最適合顯示為 _每秒的計數_，因此其 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> 設定為一秒。 您可以針對不同類型的速率計數器調整顯示速率。
 
 > [!NOTE]
-> <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>Dotnet_不_會使用，且事件接聽[程式](dotnet-counters.md)不需要使用它。
+> <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>Dotnet _不_ 會使用，且事件接聽 [程式](dotnet-counters.md)不需要使用它。
 
 在 [.net 運行](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) 時間存放庫中，有更多的計數器會用來做為參考。
 

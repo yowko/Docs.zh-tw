@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ca6dab01cbd639594da0b51f145272a9a150e93c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224003"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687749"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>使用 .NET 中的廣播變數進行 Apache Spark
 
@@ -96,6 +96,11 @@ Func<Column, Column> udf2 = Udf<string, string>(
 // Calling udf2 works fine as expected
 df.Select(udf2(df["_1"])).Show();
 ```
+
+## <a name="faqs"></a>常見問題集
+
+**為什麼廣播變數適用于 .NET Interactive？**  
+廣播變數不適用於互動式案例，因為 .NET 互動的設計會附加儲存格所定義的每個物件及其資料格提交類別，因為它不會標示為可序列化，所以會因為先前所示的相同例外狀況而失敗。 如需詳細資訊，請參閱 [這篇文章](dotnet-interactive-udf-issue.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

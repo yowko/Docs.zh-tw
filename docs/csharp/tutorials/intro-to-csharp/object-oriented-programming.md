@@ -2,21 +2,21 @@
 title: 物件導向程式設計 (C#)
 description: 'C # 提供物件導向程式設計的完整支援，包括抽象、封裝、繼承和多型。'
 ms.date: 09/30/2020
-ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471591"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687990"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented c # 程式設計 (c # ) 
 
 C # 是物件導向的語言。 物件導向程式設計中所使用的四個關鍵技術包括：
 
 - *抽象* 表示隱藏型別取用者不必要的詳細資料。
-- 「封裝」** 指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。
-- 「繼承」** 則是描述依據現有類別來建立新類別的能力。
-- 「多型」** 指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。
+- 「封裝」指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。
+- 「繼承」則是描述依據現有類別來建立新類別的能力。
+- 「多型」指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。
 
 在上述教學課程中，您看到的 [類別簡介](introduction-to-classes.md) 包括 *抽象* 和 *封裝*。 `BankAccount`類別提供了銀行帳戶概念的抽象概念。 您可以修改其執行，而不會影響使用該類別的任何程式碼 `BankAccount` 。 `BankAccount`和類別都 `Transaction` 提供在程式碼中描述這些概念所需元件的封裝。
 
@@ -48,9 +48,9 @@ public class GiftCardAccount : BankAccount
 }
 ```
 
-每個類別都會 *繼承* 其共用 *基類*（類別）的共用行為 `BankAccount` 。 針對每個 *衍生類別*中的新功能和不同的功能撰寫實作為。  這些衍生類別已經具有類別中定義的所有行為 `BankAccount` 。
+每個類別都會 *繼承* 其共用 *基類*（類別）的共用行為 `BankAccount` 。 針對每個 *衍生類別* 中的新功能和不同的功能撰寫實作為。  這些衍生類別已經具有類別中定義的所有行為 `BankAccount` 。
 
-在不同的原始程式檔中建立每個新類別是很好的作法。 在 [Visual Studio](https://visualstudio.com)中，您可以在專案上按一下滑鼠右鍵，然後選取 [ *加入類別* ]，在新的檔案中加入新的類別。 在 [Visual Studio Code](https://code.visualstudio.com)中， *選取 [* 檔案]，然後選取 [ *新增* ] 以建立新的原始檔。 在任一項工具中，將檔案命名以符合類別： *InterestEarningAccount.cs*、 *LineOfCreditAccount.cs*和 *GiftCardAccount.cs*。
+在不同的原始程式檔中建立每個新類別是很好的作法。 在 [Visual Studio](https://visualstudio.com)中，您可以在專案上按一下滑鼠右鍵，然後選取 [ *加入類別* ]，在新的檔案中加入新的類別。 在 [Visual Studio Code](https://code.visualstudio.com)中， *選取 [* 檔案]，然後選取 [ *新增* ] 以建立新的原始檔。 在任一項工具中，將檔案命名以符合類別： *InterestEarningAccount.cs*、 *LineOfCreditAccount.cs* 和 *GiftCardAccount.cs*。
 
 當您建立如先前範例所示的類別時，您會發現沒有任何衍生類別會進行編譯。 函式負責初始化物件。 衍生類別的函式必須初始化衍生類別，並提供如何初始化衍生類別中所包含之基類物件的指示。 適當的初始化通常會發生，而不需要任何額外的程式碼。 類別會使用下列簽章宣告一個公用的函式 `BankAccount` ：
 
@@ -174,11 +174,13 @@ Overdrawn 帳戶時，覆寫會傳回費用交易。 如果提款未超過限制
 
 ## <a name="summary"></a>摘要
 
+如果您遇到困難，您可以 [在 GitHub 存放庫中](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)看到此教學課程的來源。
+
 本教學課程示範 Object-Oriented 程式設計中使用的許多技術：
 
 - 當您在每個類別中保留許多詳細資料時，就會使用 *抽象概念* `private` 。
 - 當您針對每個不同的帳戶類型定義了類別時，就會使用 *封裝* 。 這些類別描述了該帳戶類型的行為。
 - 當您利用已在類別中建立的實存程式碼時，就會使用 *繼承* `BankAccount` 。
-- 當您*Polymorphism*建立 `virtual` 衍生類別可覆寫的方法，以建立該帳戶類型的特定行為時，您會使用多型。
+- 當您 *Polymorphism* 建立 `virtual` 衍生類別可覆寫的方法，以建立該帳戶類型的特定行為時，您會使用多型。
 
 恭喜，您已完成所有的 c # 教學課程簡介。 若要深入瞭解，請嘗試更多 [教學](../index.md)課程。

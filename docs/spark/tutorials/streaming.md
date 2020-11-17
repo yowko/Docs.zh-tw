@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 47c716db931dc912b80844fe69283b12d030c238
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955573"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688016"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教學課程：使用 .NET 進行 Apache Spark 的結構化串流
 
@@ -24,7 +24,7 @@ ms.locfileid: "91955573"
 > * 使用 netcat 建立資料流程
 > * 使用使用者定義函數和 SparkSQL 來分析串流資料
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 如果這是您第一個適用于 Apache Spark 應用程式的 .NET，請從 [消費者入門教學](get-started.md) 課程開始，以熟悉基本概念。
 
@@ -37,7 +37,7 @@ ms.locfileid: "91955573"
    cd mySparkStreamingApp
    ```
 
-   此 `dotnet` 命令 `new` 會為您建立類型的應用程式 `console` 。 `-o`參數會建立名為*mySparkStreamingApp*的目錄，您的應用程式會儲存在此目錄中，並填入必要的檔案。 此 `cd mySparkStreamingApp` 命令會將目錄變更為您剛才建立的應用程式目錄。
+   此 `dotnet` 命令 `new` 會為您建立類型的應用程式 `console` 。 `-o`參數會建立名為 *mySparkStreamingApp* 的目錄，您的應用程式會儲存在此目錄中，並填入必要的檔案。 此 `cd mySparkStreamingApp` 命令會將目錄變更為您剛才建立的應用程式目錄。
 
 1. 若要在應用程式中使用 .NET 進行 Apache Spark，請安裝 Microsoft Spark 套件。 在主控台中，執行下列命令：
 
@@ -71,7 +71,7 @@ ms.locfileid: "91955573"
 
 ### <a name="create-a-sparksession"></a>建立 SparkSession
 
-1. `using`在*mySparkStreamingApp*中的*Program.cs*檔案頂端新增下列其他語句：
+1. `using`在 *mySparkStreamingApp* 中的 *Program.cs* 檔案頂端新增下列其他語句：
 
    ```csharp
    using System;
@@ -145,14 +145,14 @@ StreamingQuery query = arrayDf
 
 ## <a name="run-your-code"></a>執行您的程式碼
 
-Spark 中的結構化串流會透過一系列的小型 **批次**處理資料。  當您執行程式時，命令提示字元可讓您建立 netcat 連線，讓您開始輸入。 每次您在命令提示字元中輸入資料後按下 Enter 鍵時，Spark 都會將您的專案視為批次，並執行 UDF。
+Spark 中的結構化串流會透過一系列的小型 **批次** 處理資料。  當您執行程式時，命令提示字元可讓您建立 netcat 連線，讓您開始輸入。 每次您在命令提示字元中輸入資料後按下 Enter 鍵時，Spark 都會將您的專案視為批次，並執行 UDF。
 
 ### <a name="use-spark-submit-to-run-your-app"></a>使用 spark 提交來執行您的應用程式
 
 開始新的 netcat 會話之後，請開啟新的終端機，並執行您 `spark-submit` 的命令，類似于下列命令：
 
 ```powershell
-spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
+spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
 ```
 
 > [!NOTE]

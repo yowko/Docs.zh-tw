@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441059"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688172"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>在 Jupyter 筆記本中使用 .NET 進行 Apache Spark
 
@@ -43,12 +43,12 @@ ms.locfileid: "94441059"
         > [!IMPORTANT]
         > 根據預設，會下載最新版本的套件。 **請確定您下載的版本與 Apache Spark .NET Worker 相同。**
 
-    1. 在 [ **資訊** ] 窗格中，選取 [ **下載套件** ] 以下載最新版本的套件。 封裝的名稱類似于  *microsoft。封裝版本]. nupkg* 。
+    1. 在 [ **資訊** ] 窗格中，選取 [ **下載套件** ] 以下載最新版本的套件。 封裝的名稱類似于  *microsoft。封裝版本]. nupkg*。
     1. 將下載的封裝解壓縮。 解壓縮的目錄應包含稱為 *jar* 的子目錄。 記下路徑，因為稍後會用到。
 
 ## <a name="start-net-for-apache-spark"></a>啟動 Apache Spark 的 .NET
 
-執行下列命令，以在「偵錯工具」模式中啟動 Apache Spark 的 .NET。 此 `spark-submit` 命令會啟動進程，並等候來自 [SparkSession](xref:Microsoft.Spark.Sql.SparkSession)的連接。 請務必針對您所使用的 Apache Spark，提供 `microsoft-spark-<version>.jar` 適用于 .net 的個別版本的路徑。
+執行下列命令，以在「偵錯工具」模式中啟動 Apache Spark 的 .NET。 此 `spark-submit` 命令會啟動進程，並等候來自 [SparkSession](xref:Microsoft.Spark.Sql.SparkSession)的連接。 請務必針對您所使用的 Apache Spark，提供 `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` 適用于 .net 的個別版本的路徑。
 
 **Ubuntu**
 

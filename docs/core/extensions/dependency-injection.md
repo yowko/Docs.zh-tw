@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: 2199f51ab13bedd50af747ce33ceee7b6eaefd8f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 3692b9e779d450f07d47599417349bb57f72ac36
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063144"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687571"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 中的相依性插入
 
@@ -48,15 +48,15 @@ public class Worker : BackgroundService
 
 類別會建立和直接相依于 `MessageWriter` 類別。 硬式編碼的相依性（例如在先前的範例中）有問題，因此應該避免因下列原因：
 
-- 若要以 `MessageWriter` 不同的實作為取代， `MessageService` 必須修改該類別。
-- 如果 `MessageWriter` 有相依性，則也必須由類別設定 `MessageService` 。 在具有多個相依於 `MessageWriter` 之多個類別的大型專案中，設定程式碼在不同的應用程式之間會變得鬆散。
+- 若要以 `MessageWriter` 不同的實作為取代， `Worker` 必須修改該類別。
+- 如果 `MessageWriter` 有相依性，則也必須由類別設定 `Worker` 。 在具有多個相依於 `MessageWriter` 之多個類別的大型專案中，設定程式碼在不同的應用程式之間會變得鬆散。
 - 此實作難以進行單元測試。 應用程式應該使用模擬 (Mock) 或虛設常式 (Stub) `MessageWriter` 類別，這在使用此方法時無法使用。
 
 相依性插入可透過下列方式解決這些問題：
 
 - 使用介面或基底類別來將相依性資訊抽象化。
 - 在服務容器中註冊相依性。 .NET 提供內建的服務容器 <xref:System.IServiceProvider> 。 服務通常會在應用程式啟動時註冊，並附加至 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> 。 新增所有服務之後，您就可以使用 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider%2A> 來建立服務容器。
-- 將服務「插入」  到服務使用位置之類別的建構函式。 架構會負責建立相依性的執行個體，並在不再需要時將它捨棄。
+- 將服務「插入」到服務使用位置之類別的建構函式。 架構會負責建立相依性的執行個體，並在不再需要時將它捨棄。
 
 例如， `IMessageWriter` 介面會定義 `Write` 方法：
 
@@ -95,7 +95,7 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
 
 `LoggingMessageWriter` 相依于 <xref:Microsoft.Extensions.Logging.ILogger%601> 它在函式中要求的。 `ILogger<TCategoryName>` 是 [架構提供的服務](#framework-provided-services)。
 
-以鏈結方式使用相依性插入並非不尋常。 每個要求的相依性接著會要求其自己的相依性。 容器會解決圖形中的相依性，並傳回完全解析的服務。 必須先解析的相依性集合組通常稱為「相依性樹狀結構」  、「相依性圖形」  或「物件圖形」  。
+以鏈結方式使用相依性插入並非不尋常。 每個要求的相依性接著會要求其自己的相依性。 容器會解決圖形中的相依性，並傳回完全解析的服務。 必須先解析的相依性集合組通常稱為「相依性樹狀結構」、「相依性圖形」或「物件圖形」。
 
 容器會 `ILogger<TCategoryName>` 利用 [ (泛型) 開放式](/dotnet/csharp/language-reference/language-specification/types#open-and-closed-types)型別來解析，因此不需要註冊每個 [ (泛型) 結構類型](/dotnet/csharp/language-reference/language-specification/types#constructed-types)。
 
@@ -173,7 +173,7 @@ Microsoft 延伸模組使用註冊一組相關服務的慣例。 慣例是使用
 使用 Entity Framework Core 時， <xref:Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext%2A> 擴充方法預設會註冊 `DbContext` 具有範圍存留期的類型。
 
 > [!NOTE]
-> 請 * **not** _ 從 singleton 解析已設定範圍的服務，並小心不要間接執行，例如透過暫時性的服務。 處理後續要求時，它可能會導致服務有不正確的狀態。 您可以：
+> 請 ***not** _ 從 singleton 解析已設定範圍的服務，並小心不要間接執行，例如透過暫時性的服務。 處理後續要求時，它可能會導致服務有不正確的狀態。 您可以：
 >
 > - 從範圍或暫時性服務解析單一服務。
 > - 從另一個範圍或暫時性服務解析已設定範圍的服務。

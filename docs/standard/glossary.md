@@ -1,14 +1,13 @@
 ---
 title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224399"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687775"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -48,19 +47,26 @@ ASP.NET 的跨平臺、高效能、開放原始碼的實作為。
 
 請參閱 [ASP.NET Core 文件](/aspnet/#pivot=core)。
 
-## <a name="assembly"></a>組件 (assembly)
+## <a name="assembly"></a>組件
 
-*.Dll* / *.exe*檔，可包含可由應用程式或其他元件呼叫的 api 集合。
+*.Dll* / *.exe* 檔，可包含可由應用程式或其他元件呼叫的 api 集合。
 
-一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」**。 另請參閱[程式庫](#library)。
+一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」。 另請參閱[程式庫](#library)。
 
 ## <a name="bcl"></a>B c l
 
-基類庫。 也稱為 *架構程式庫*。
+基類庫。
 
 組成系統的一組程式庫。 \* (以及 Microsoft 的範圍有限。 \*) 命名空間。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。
 
-.Net 5 (的 BCL 原始程式碼 [和 .Net Core) 和更新版本](#net-5-and-later-versions) 都包含在 [.net 運行](https://github.com/dotnet/runtime)時間存放庫中。 這項較新的 .NET 執行的 BCL Api 大部分也都可在 .NET Framework 中使用，因此您可以將此原始程式碼視為 .NET Framework BCL 原始程式碼的分支。
+.Net 5 (的 BCL 原始程式碼 [和 .Net Core) 和更新版本](#net-5-and-later-versions) 都包含在 [.net 運行](https://github.com/dotnet/runtime)時間存放庫中。 這些 BCL Api 大部分也都可在 .NET Framework 中使用，因此您可以將此原始程式碼視為 .NET Framework BCL 原始程式碼的分支。
+
+下列詞彙通常會參考 BCL 所指的相同 Api 集合：
+
+- [核心 .NET 程式庫](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [framework 程式庫](#framework-libraries)
+- [執行時間程式庫](#runtime)
+- [共用架構](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，不僅可執�
 
 "Framework" 這個字在下列詞彙中有不同的意義：
 
+- [framework 程式庫](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [共用架構](#shared-framework)
 - [目標 framework](#target-framework)
 - [TFM (目標 Framework Moniker)](#tfm)
 - [與 framework 相依的應用程式](../core/deploying/index.md#publish-framework-dependent)
 
-在舊版 .NET 檔中，「架構」有時是指 [.net 的實](#implementation-of-net)。 例如，文章可能會呼叫 .NET 5 架構。
+有時「架構」是指 [.net 的實](#implementation-of-net)。 例如，文章可能會呼叫 .NET 5 架構。
+
+## <a name="framework-libraries"></a>framework 程式庫
+
+意義取決於內容。 可能參考 .Net 5 的 framework 程式庫 [ (和 .Net Core) 和更新版本](#net-5-and-later-versions)，在此情況下，它會參考 [BCL](#bcl) 所參考的相同程式庫。 它也可以參考 ASP.NET Core framework 程式庫，該程式庫是以 BCL 為依據，並為 web 應用程式提供額外的 Api。
 
 ## <a name="gc"></a>GC
 
@@ -145,7 +157,7 @@ Just-in-Time 編譯器。
 .NET 實作的範例：
 
 - [.NET Framework](#net-framework)
-- [.NET 5 和更新版本 (包括 .NET Core 2.1-3。1](#net-5-and-later-versions)
+- [.NET 5 和更新版本 (包括 .NET Core 2.1-3.1) ](#net-5-and-later-versions)
 - [通用 Windows 平台 (UWP)](#uwp)
 - [Mono](#mono)
 
@@ -258,21 +270,34 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 - .NET Native (適用於 UWP)
 - Mono 執行階段
 
-"Runtime" 這個字在下列內容中有不同的意義：
+「執行時間」一詞在某些內容中有不同的意義：
 
-* [.Net 下載頁面](https://dotnet.microsoft.com/download)。
+* [.Net 5.0 下載頁面](https://dotnet.microsoft.com/download/dotnet/5.0)上的 *.net 運行* 時間。
 
-  此處的「執行時間」表示 [CLR](#clr) 與 [BCL](#bcl) (framework 程式庫) ，您可以在電腦上下載並安裝該程式庫，讓您可以在電腦上執行與 [framework 相依](../core/deploying/index.md#publish-framework-dependent) 的應用程式。
+  您可以下載 *.net 運行* 時間或其他執行時間，例如 *ASP.NET Core 運行* 時間。 此使用方式中的 *運行* 時間是一組必須安裝在電腦上的元件，以便在電腦上執行與 [framework 相依](../core/deploying/index.md#publish-framework-dependent) 的應用程式。 .NET 執行時間包含可提供[BCL](#bcl)的[CLR](#clr)和 .net[共用架構](#shared-framework)。
 
-* [.Net 5 (和 .Net Core) 和更新版本](#net-5-and-later-versions) [ (RID) 的執行時間識別碼](../core/rid-catalog.md)。
+* *.NET 執行時間程式庫*
 
-  此處的「執行時間」表示 .NET 應用程式執行所在的作業系統平臺和 CPU 架構，例如： `linux-x64` 。
+  參考 [BCL](#bcl) 所參考的相同程式庫。 不過，其他執行時間（例如 ASP.NET Core 執行時間）會有不同的 [共用](#shared-framework)架構，以及在 BCL 上建立的其他程式庫。
 
-舊版 .NET 檔有時候會使用「執行時間」，以 [實現 .net](#implementation-of-net)的意義，如下列範例所示：
+* [ (RID) 的執行時間識別碼 ](../core/rid-catalog.md)。
 
-- 「不同的 .NET 執行階段會實作特定版本的 .NET Standard。」
-- 「要在多個執行階段上執行的程式庫應以此架構為目標。」 (指的是 .NET Standard)
-- 「不同的 .NET 執行階段會實作特定版本的 .NET Standard。 … 每個 .NET 執行階段版本會宣佈它所支援的最高 .NET Standard 版本...」
+  這裡的 *運行* 時程表示 .net 應用程式執行所在的作業系統平臺和 CPU 架構，例如： `linux-x64` 。
+
+* 有時會使用 "runtime" 來瞭解 [.net 的執行](#implementation-of-net)，如下列範例所示：
+
+  - 「不同的 .NET 執行階段會實作特定版本的 .NET Standard。 … 每個 .NET 執行階段版本會宣佈它所支援的最高 .NET Standard 版本...」
+  - 「要在多個執行階段上執行的程式庫應以此架構為目標。」 (指的是 .NET Standard)
+
+## <a name="shared-framework"></a>共用架構
+
+意義取決於內容。 *.Net 共用架構* 是指 [.net 運行](#runtime)時間中包含的程式庫。 在此情況下，適用于 .Net 5 的 *共用架構* [ (和 .net Core) 和更新版本](#net-5-and-later-versions) 會參考 [BCL](#bcl) 所參考的相同程式庫。
+
+還有其他共用架構。 *ASP.NET Core 共用架構* 是指包含在 [ASP.NET Core 運行](#runtime)時間中的程式庫，其中包含 BCL 加上 web Apps 使用的其他 api。
+
+針對與 [framework 相依的應用程式](../core/deploying/index.md#publish-framework-dependent)，共用架構包含在執行應用程式之電腦上的資料夾中所安裝之元件的程式庫。 針對獨立式 [應用](../core/deploying/index.md#publish-self-contained)程式，共用架構元件會隨附于應用程式。
+
+如需詳細資訊，請參閱 [.Net Core 基本專案的深入探討，第2部分：共用架構](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/)。
 
 ## <a name="stack"></a>堆疊
 
@@ -306,7 +331,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 ## <a name="workload"></a>workload
 
-某人正在建立的應用程式類型。 更通用於 [應用程式模型](#app-model)。 例如，在每個 .NET 檔頁面的頂端（包括此頁面）是 **工作負載**的下拉式清單，可讓您切換至 **Web** **、行動**、 **雲端**、 **桌面**和 **Machine Learning \& 資料**的檔。
+某人正在建立的應用程式類型。 更通用於 [應用程式模型](#app-model)。 例如，在每個 .NET 檔頁面的頂端（包括此頁面）是 **工作負載** 的下拉式清單，可讓您切換至 **Web** **、行動**、 **雲端**、 **桌面** 和 **Machine Learning \& 資料** 的檔。
 
 在某些內容中， *工作負載* 是指您可以選擇安裝以支援特定應用程式類型的 Visual Studio 功能集合。 如需範例，請參閱 [選取工作負載](../core/install/windows.md#select-a-workload)。
 

@@ -4,16 +4,16 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0232896254e93525f2a6f0be05417107cf7f5432
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: dd1cfdf12266b55d9dbc0210479b89ba68c59a38
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955469"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688068"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark
 
-本教學課程會教導如何將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark。
+本教學課程會教導如何將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark。 [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) 是一種受控叢集平台，其簡化在 AWS 上執行巨量資料架構。
 
 在本教學課程中，您會了解如何：
 
@@ -24,6 +24,9 @@ ms.locfileid: "91955469"
 > * 將您的應用程式部署到 Amazon EMR Spark
 > * 執行應用程式
 
+> [!Note]
+> 以 Linux 為基礎的 AWS EMR Spark。 因此，如果您想要將應用程式部署至 AWS EMR Spark，請確定您的應用程式 .NET Standard 相容，且您使用 .NET Core 編譯器來編譯應用程式。
+
 ## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請執行下列作業：
@@ -33,11 +36,11 @@ ms.locfileid: "91955469"
 
 ## <a name="prepare-worker-dependencies"></a>準備背景工作相依性
 
-**在您** spark 叢集的個別背景工作節點上，則為後端元件。 當您想要執行 C# UDF (使用者定義函式) 時，Spark 需要了解如何啟動 .NET CLR 來執行 UDF。 **Microsoft.Spark.Worker** 會向 Spark 提供類別集合，其會啟用此功能。
+**在您** spark 叢集的個別背景工作節點上，則為後端元件。 當您想要 (使用者定義函數) 執行 c # UDF 時，Spark 需要瞭解如何啟動 .NET CLR 以執行 UDF。 **Microsoft.Spark.Worker** 會向 Spark 提供類別集合，其會啟用此功能。
 
 1. 選取要部署在您叢集上的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 版本。
 
-   例如，若您想要使用 `netcoreapp2.1` 的 `.NET for Apache Spark v0.1.0`，您可以下載 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)。
+   例如，如果您想要 `.NET for Apache Spark v1.0.0` 使用 `netcoreapp3.1` ，您可以下載 [netcoreapp 3.1. linux-x64-1.0.0. gz](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)。
 
 2. 將 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 上傳到您叢集可以存取的分散式檔案系統 (例如 S3)。
 
@@ -50,7 +53,7 @@ ms.locfileid: "91955469"
    在 Linux 上執行下列命令。
 
    ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
+   dotnet publish -c Release -f netcoreapp3.1 -r ubuntu.16.04-x64
    ```
 
 3. 為發佈的檔案產生 `<your app>.zip`。
@@ -63,7 +66,7 @@ ms.locfileid: "91955469"
 
 4. 將下列項目上傳到您叢集可存取的分散式檔案系統 (例如 S3)：
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 隨附于 [Microsoft Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 套件中，並在應用程式的組建輸出目錄中共置。
+   * `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar`：此 jar 隨附于 [Microsoft Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 套件中，並在應用程式的組建輸出目錄中共置。
    * `<your app>.zip`
    * 要放在每個執行程式中工作目錄的檔案 (例如相依性檔案或每個背景工作都可存取的通用資料) 或組件 (例如包含您使用者定義函式或您應用程式相依程式庫的 DLL)。
 
@@ -111,7 +114,7 @@ aws emr create-cluster \
    --master yarn \
    --class org.apache.spark.deploy.dotnet.DotnetRunner \
    --files <comma-separated list of assemblies that contain UDF definitions, if any> \
-   s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
+   s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
    s3://mybucket/<some dir>/<your app>.zip <your app> <app args>
    ```
 
@@ -124,7 +127,7 @@ aws emr create-cluster \
 ```bash
 aws emr add-steps \
 --cluster-id j-xxxxxxxxxxxxx \
---steps Type=spark,Name="Spark Program",Args=[--master,yarn,--files,s3://mybucket/<some dir>/<udf assembly>,--class,org.apache.spark.deploy.dotnet.DotnetRunner,s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar,s3://mybucket/<some dir>/<your app>.zip,<your app>,<app arg 1>,<app arg 2>,...,<app arg n>],ActionOnFailure=CONTINUE
+--steps Type=spark,Name="Spark Program",Args=[--master,yarn,--files,s3://mybucket/<some dir>/<udf assembly>,--class,org.apache.spark.deploy.dotnet.DotnetRunner,s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar,s3://mybucket/<some dir>/<your app>.zip,<your app>,<app arg 1>,<app arg 2>,...,<app arg n>],ActionOnFailure=CONTINUE
 ```
 
 ## <a name="next-steps"></a>後續步驟

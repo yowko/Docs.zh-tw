@@ -4,22 +4,22 @@ description: 瞭解如何在 Windows 上建立適用于 Apache Spark 應用程�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: db073e6b82e63b3f0b98c9fe66a5b4d9be1356ba
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 8f197c0050d149ed03e328e72868ad4ba2f728c1
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955521"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688107"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>瞭解如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET
 
 本文會教您如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 如果您已經擁有下列所有必要條件，請跳至 [組建](#build) 步驟。
 
-  1. 下載並安裝 **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** -安裝 SDK 會將 `dotnet` 工具鏈新增至您的路徑。 支援 .NET Core 2.1、2.2 和3.1。
+  1. 下載並安裝 **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** -安裝 SDK 會將 `dotnet` 工具鏈新增至您的路徑。 支援 .NET Core 2.1、2.2 和3.1。
   2. 安裝 **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (16.3 版或更新版本) 。 此社區版本完全免費。 設定安裝時，請至少包含下列元件：
      * .NET 桌面開發
        * 所有必要元件
@@ -35,14 +35,14 @@ ms.locfileid: "91955521"
      - 將 Apache Maven 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 例如， *C:\bin\apache-maven-3.6.0\bin*。
      - 確認您可以 `mvn` 從命令列執行。
   5. 安裝 **[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)**。
-     - 下載 [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) ，並將其解壓縮至本機資料夾 (例如， * \* 使用 [7-zip](https://www.7-zip.org/)的 C:\bin\spark-2.3.2-bin-hadoop2.7) 。 (支援的 Spark 版本為 2.3*（2.4.0、2.4.1、2.4.3 和2.4.4）) 
-     - [新增環境變數](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` 。 例如，* C:\bin\spark-2.3.2-bin-hadoop2.7 \* 。
+     - 下載 [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) 並將它解壓縮至本機資料夾 (例如， *\* 使用 [7-zip](https://www.7-zip.org/)的 C:\bin\spark-3.0.1-bin-hadoop2.7) 。 (支援的 Spark 版本為2.3。*、2.4.0、2.4.1、2.4.3、2.4.4、2.4.5、2.4.6、2.4.7 版、3.0.0 和 3.0.1) 
+     - [新增環境變數](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` 。 例如，* C:\bin\spark-3.0.1-bin-hadoop2.7 \* 。
 
        ```powershell
-       set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\
+       set SPARK_HOME=C:\bin\spark-3.0.1-bin-hadoop2.7\
        ```
 
-     - 將 Apache Spark 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 例如， *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*。
+     - 將 Apache Spark 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 例如， *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*。
 
        ```powershell
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -56,10 +56,10 @@ ms.locfileid: "91955521"
               ____              __
              / __/__  ___ _____/ /__
             _\ \/ _ \/ _ `/ __/  '_/
-           /___/ .__/\_,_/_/ /_/\_\   version 2.3.2
+           /___/ .__/\_,_/_/ /_/\_\   version 3.0.1
               /_/
 
-        Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_201)
+        Using Scala version 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_201)
         Type in expressions to have them evaluated.
         Type :help for more information.
 
@@ -70,7 +70,7 @@ ms.locfileid: "91955521"
         </details>
 
   6. 安裝 **[winutils.exe](https://github.com/steveloughran/winutils)**。
-     - `winutils.exe`從 winutils.exe 存放[庫](https://github.com/steveloughran/winutils)下載二進位檔。 您應該選取用來編譯 Spark 散發套件的 Hadoop 版本。 針對 exammple，請針對 Spark 2.3.2 使用 hadoop-2.7.1。
+     - `winutils.exe`從 winutils.exe 存放[庫](https://github.com/steveloughran/winutils)下載二進位檔。 您應該選取用來編譯 Spark 散發套件的 Hadoop 版本。 針對 exammple，請使用適用于 Spark 3.0.1 的 hadoop 2.7.1。
      - 將 `winutils.exe` 二進位檔儲存至您選擇的目錄。 例如， *C:\hadoop\bin*。
      - 設定 `HADOOP_HOME` 為以不含 bin) 的 winutils.exe (來反映目錄。 例如，使用命令列：
 
@@ -110,8 +110,9 @@ mvn clean package
 
 您應該會看到針對支援的 Spark 版本所建立的 Jar：
 
-* `microsoft-spark-2.3.x\target\microsoft-spark-2.3.x-<version>.jar`
-* `microsoft-spark-2.4.x\target\microsoft-spark-2.4.x-<version>.jar`
+* `microsoft-spark-2-3\target\microsoft-spark-2-3_2.11-<spark-dotnet-version>.jar`
+* `microsoft-spark-2-4\target\microsoft-spark-2-4_2.11-<spark-dotnet-version>.jar`
+* `microsoft-spark-3-0\target\microsoft-spark-3-0_2.12-<spark-dotnet-version>.jar`
 
 ### <a name="build-the-net-for-spark-sample-applications"></a>建立適用于 Spark 的 .NET 範例應用程式
 
@@ -170,58 +171,58 @@ mvn clean package
 
       ```powershell
       cd C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\
-      dotnet publish -f netcoreapp2.1 -r win10-x64
+      dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
       範例主控台輸出：
 
       ```powershell
-      PS C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker> dotnet publish -f netcoreapp2.1 -r win10-x64
-      Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
+      PS C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker> dotnet publish -f netcoreapp3.1 -r win-x64
+      Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
       Copyright (C) Microsoft Corporation. All rights reserved.
 
         Restore completed in 299.95 ms for C:\github\dotnet-spark\src\csharp\Microsoft.Spark\Microsoft.Spark.csproj.
         Restore completed in 306.62 ms for C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\Microsoft.Spark.Worker.csproj.
-        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
-        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.Worker.dll
-        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish\
+        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.1\Microsoft.Spark.dll
+        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\Microsoft.Spark.Worker.dll
+        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
   2. 建立範例：
 
       ```powershell
       cd C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\
-      dotnet publish -f netcoreapp2.1 -r win10-x64
+      dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
       範例主控台輸出：
 
       ```powershell
-      PS C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples> dotnet publish -f netcoreapp2.1 -r win10-x64
-      Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
+      PS C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples> dotnet publish -f netcoreapp3.1 -r win-x64
+      Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
       Copyright (C) Microsoft Corporation. All rights reserved.
 
         Restore completed in 44.22 ms for C:\github\dotnet-spark\src\csharp\Microsoft.Spark\Microsoft.Spark.csproj.
         Restore completed in 336.94 ms for C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\Microsoft.Spark.CSharp.Examples.csproj.
-        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
-        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.CSharp.Examples.dll
-        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish\
+        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.1\Microsoft.Spark.dll
+        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\Microsoft.Spark.CSharp.Examples.dll
+        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
 ## <a name="run-the-net-for-spark-sample-applications"></a>執行適用于 Spark 的 .NET 範例應用程式
 
 一旦您建立範例之後， `spark-submit` 無論您是以 .NET Framework 或 .Net Core 為目標，執行它們都將會完成。 請確定您已遵循 [必要條件](#prerequisites) 一節並安裝 Apache Spark。
 
-  1. 設定 `DOTNET_WORKER_DIR` 或 `PATH` 環境變數以包含 `Microsoft.Spark.Worker` 已產生二進位檔的路徑 (例如， *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* for .NET Framework， *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish* for .net Core) ：
+  1. 設定 `DOTNET_WORKER_DIR` 或 `PATH` 環境變數以包含 `Microsoft.Spark.Worker` 已產生二進位檔的路徑 (例如， *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* for .NET Framework， *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* for .net Core) ：
 
       ```powershell
-      set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
+      set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
   
-  2. 開啟 PowerShell 並移至您的應用程式二進位檔產生所在的目錄 (例如，適用于 .NET Framework 的 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* 、.net Core) 的 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* ：
+  2. 開啟 PowerShell 並移至您的應用程式二進位檔產生所在的目錄 (例如，適用于 .NET Framework 的 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* 、.net Core) 的 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* ：
 
       ```powershell
-      cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish
+      cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
 
   3. 執行應用程式的基本結構如下：
@@ -243,7 +244,7 @@ mvn clean package
          spark-submit.cmd `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Batch.Basic %SPARK_HOME%\examples\src\main\resources\people.json
          ```
 
@@ -253,28 +254,28 @@ mvn clean package
          spark-submit.cmd `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkWordCount localhost 9999
          ```
 
-     - **[StructuredKafkaWordCount (maven 可存取的可存取) ](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+     - **[StructuredKafkaWordCount (maven 可存取的可存取)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
          ```powershell
          spark-submit.cmd `
          --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.2 `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
          ```
 
-     - **[StructuredKafkaWordCount () 提供的 jar 範例。 ](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+     - **[StructuredKafkaWordCount () 提供的 jar 範例。](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
          ```powershell
          spark-submit.cmd
          --jars path\to\net.jpountz.lz4\lz4-1.3.0.jar,path\to\org.apache.kafka\kafka-clients-0.10.0.1.jar,path\to\org.apache.spark\spark-sql-kafka-0-10_2.11-2.3.2.jar,`path\to\org.slf4j\slf4j-api-1.7.6.jar,path\to\org.spark-project.spark\unused-1.0.0.jar,path\to\org.xerial.snappy\snappy-java-1.1.2.6.jar `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
           ```

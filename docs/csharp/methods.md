@@ -4,12 +4,12 @@ description: 方法、方法參數和方法傳回值的概觀
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223668"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687454"
 ---
 # <a name="methods-in-c"></a> (c # 中的方法 ) 
 
@@ -45,9 +45,9 @@ ms.locfileid: "92223668"
 
 ## <a name="method-invocation"></a>方法引動過程
 
-方法可以是「執行個體」** 或「靜態」**。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬的類型名稱來叫用靜態方法，靜態方法不操作執行個體資料。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
+方法可以是「執行個體」或「靜態」。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬的類型名稱來叫用靜態方法，靜態方法不操作執行個體資料。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
 
-呼叫方法就像是存取欄位。 在物件名稱後 (如果呼叫的是執行個體方法) 或型別名稱後 (如果呼叫的是 `static` 方法)，加上句點、方法名稱及括弧。 引數會在括號中列出，並以逗號分隔。
+呼叫方法就像是存取欄位。 在物件名稱後 (如果呼叫的是執行個體方法) 或型別名稱後 (如果呼叫的是 `static` 方法)，加上句點、方法名稱及括弧。 引數會列在括弧中，並以逗號分隔。
 
 方法定義會指定所需的任何參數的名稱和類型。 在呼叫端叫用方法時，它會針對每個參數提供具體值及呼叫的引數。 引數必須與參數型別相容，但在呼叫程式碼中使用的引數，其引數名稱不需要與方法中定義的具名參數相同。 在下例中，`Square` 方法包含名為 *i* 之 `int` 型別的單一參數。 第一個方法呼叫會傳遞給 `Square` 方法型別 `int` 的 *num* 變數，第二個傳遞數值常數，第三個傳遞運算式。
 
@@ -57,7 +57,7 @@ ms.locfileid: "92223668"
 
 [!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-叫用方法時，您也可以使用「具名引數」**，而不是使用位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
+叫用方法時，您也可以使用 *具名引數* ，而不是位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
@@ -81,7 +81,7 @@ ms.locfileid: "92223668"
 
 ## <a name="passing-parameters"></a>傳遞參數
 
-C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數值型別的清單，請參閱 [類型](./tour-of-csharp/types.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
+C# 中的類型為「實值型別」「參考型別」。 如需內建實數值型別的清單，請參閱 [類型](./tour-of-csharp/types.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
 
 <a name="byval"></a>
 
@@ -154,11 +154,11 @@ C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數
 
 如果使用具名引數或位置和具名引數的組合來呼叫方法，則呼叫端可以省略方法呼叫中最後一個位置引數之後的任何引數。
 
-下例呼叫三次 `ExampleMethod` 方法。  前兩個方法呼叫使用位置引數。 第一個省略了這兩個選擇性引數，而第二個省略了最後一個引數。 第三個方法呼叫提供了必要參數的位置引數，但在使用具名引數將值提供給 `description` 參數時省略 `optionalInt` 引數。
+下例呼叫三次 `ExampleMethod` 方法。  前兩個方法呼叫使用位置引數。 第一個省略了這兩個選擇性引數，而第二個省略了最後一個引數。 第三個方法呼叫會提供所需參數的位置引數，但 `description` 在省略引數時，會使用具名引數將值提供給參數 `optionalInt` 。
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-使用選擇性參數會影響「多載解析」**，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
+使用選擇性參數會影響「多載解析」，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
 
 - 如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。
 - 如果找到多個候選項目，則慣用轉換的多載解析規則會套用至明確指定的引數。 會忽略選擇性參數的省略引數。
@@ -184,7 +184,7 @@ C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數
 
 使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。
 
-有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」** 和「Tuple 常值」** 輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)` 會定義由 `GetPersonalInfo` 方法所傳回的 Tuple 類型。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
+有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」和「Tuple 常值」輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)` 會定義由 `GetPersonalInfo` 方法所傳回的 Tuple 類型。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)

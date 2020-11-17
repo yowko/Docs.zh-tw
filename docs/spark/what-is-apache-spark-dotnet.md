@@ -4,16 +4,16 @@ description: 了解 .NET for Apache Spark，其為開放原始碼且跨平台的
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 2c743cf7f88d857fb87aed123bd687c353fd8b84
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955352"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688029"
 ---
 # <a name="what-is-net-for-apache-spark"></a>什麼是 .NET for Apache Spark？
 
-[Apache Spark](what-is-spark.md) 是適用于大型資料集分析的一般用途分散式處理引擎，通常是 tb 或 pb 的資料。 有了 .NET for Apache Spark、開放原始碼和跨平臺的 .net 支援，適用于熱門的開放原始碼大型資料分析架構，您現在可以使用您熟悉的語言，將 Apache Spark 的強大功能新增至您的大型資料應用程式。
+[Apache Spark](what-is-spark.md) 是適用于大型資料集分析的一般用途分散式處理引擎，通常是 tb 或 pb 的資料。 有了 .NET for Apache Spark、 [開放原始](https://github.com/dotnet/spark)碼和跨平臺的 .net 支援，適用于熱門的開放原始碼大型資料分析架構，您現在可以使用您熟悉的語言，將 Apache Spark 的強大功能新增至您的大型資料應用程式。
 
 ## <a name="why-choose-net-for-apache-spark"></a>為何選擇 .NET 進行 Apache Spark？
 
