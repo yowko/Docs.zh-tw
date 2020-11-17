@@ -11,46 +11,46 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/13/2020
 ms.locfileid: "94594605"
 ---
-# <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a><span data-ttu-id="3acdc-103">在 Fedora 上安裝 .NET SDK 或 .NET 執行時間</span><span class="sxs-lookup"><span data-stu-id="3acdc-103">Install the .NET SDK or the .NET Runtime on Fedora</span></span>
+# <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a><span data-ttu-id="90e08-103">在 Fedora 上安裝 .NET SDK 或 .NET 執行時間</span><span class="sxs-lookup"><span data-stu-id="90e08-103">Install the .NET SDK or the .NET Runtime on Fedora</span></span>
 
-<span data-ttu-id="3acdc-104">Fedora 支援 .NET。</span><span class="sxs-lookup"><span data-stu-id="3acdc-104">.NET is supported on Fedora.</span></span> <span data-ttu-id="3acdc-105">本文說明如何在 Fedora 上安裝 .NET。</span><span class="sxs-lookup"><span data-stu-id="3acdc-105">This article describes how to install .NET on Fedora.</span></span> <span data-ttu-id="3acdc-106">當 Fedora 版本不受支援時，就不再支援該版本的 .NET。</span><span class="sxs-lookup"><span data-stu-id="3acdc-106">When a Fedora version falls out of support, .NET is no longer supported with that version.</span></span> <span data-ttu-id="3acdc-107">不過，這些指示可協助您讓 .NET 在這些版本上執行，即使它不受支援也是一樣。</span><span class="sxs-lookup"><span data-stu-id="3acdc-107">However, these instructions may help you to get .NET running on those versions, even though it isn't supported.</span></span>
+<span data-ttu-id="90e08-104">Fedora 支援 .NET。</span><span class="sxs-lookup"><span data-stu-id="90e08-104">.NET is supported on Fedora.</span></span> <span data-ttu-id="90e08-105">本文說明如何在 Fedora 上安裝 .NET。</span><span class="sxs-lookup"><span data-stu-id="90e08-105">This article describes how to install .NET on Fedora.</span></span> <span data-ttu-id="90e08-106">當 Fedora 版本不受支援時，就不再支援該版本的 .NET。</span><span class="sxs-lookup"><span data-stu-id="90e08-106">When a Fedora version falls out of support, .NET is no longer supported with that version.</span></span> <span data-ttu-id="90e08-107">不過，這些指示可協助您讓 .NET 在這些版本上執行，即使它不受支援也是一樣。</span><span class="sxs-lookup"><span data-stu-id="90e08-107">However, these instructions may help you to get .NET running on those versions, even though it isn't supported.</span></span>
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
-## <a name="supported-distributions"></a><span data-ttu-id="3acdc-108">支援的發行版本</span><span class="sxs-lookup"><span data-stu-id="3acdc-108">Supported distributions</span></span>
+## <a name="supported-distributions"></a><span data-ttu-id="90e08-108">支援的發行版本</span><span class="sxs-lookup"><span data-stu-id="90e08-108">Supported distributions</span></span>
 
-<span data-ttu-id="3acdc-109">下表列出目前支援的 .NET 版本，以及其支援的 Fedora 版本。</span><span class="sxs-lookup"><span data-stu-id="3acdc-109">The following table is a list of currently supported .NET releases and the versions of Fedora they're supported on.</span></span> <span data-ttu-id="3acdc-110">除非 .Net 的版本 [達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Fedora 的版本 [達到生命週期結束](https://fedoraproject.org/wiki/End_of_life)，否則仍支援這些版本。</span><span class="sxs-lookup"><span data-stu-id="3acdc-110">These versions remain supported until either the version of [.NET reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of [Fedora reaches end-of-life](https://fedoraproject.org/wiki/End_of_life).</span></span>
+<span data-ttu-id="90e08-109">下表列出目前支援的 .NET 版本，以及其支援的 Fedora 版本。</span><span class="sxs-lookup"><span data-stu-id="90e08-109">The following table is a list of currently supported .NET releases and the versions of Fedora they're supported on.</span></span> <span data-ttu-id="90e08-110">除非 .Net 的版本 [達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Fedora 的版本 [達到生命週期結束](https://fedoraproject.org/wiki/End_of_life)，否則仍支援這些版本。</span><span class="sxs-lookup"><span data-stu-id="90e08-110">These versions remain supported until either the version of [.NET reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of [Fedora reaches end-of-life](https://fedoraproject.org/wiki/End_of_life).</span></span>
 
-- <span data-ttu-id="3acdc-111">✔️表示仍支援 Fedora 或 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="3acdc-111">A ✔️ indicates that the version of Fedora or .NET is still supported.</span></span>
-- <span data-ttu-id="3acdc-112">❌指出該 Fedora 版本不支援 Fedora 或 .net 版本。</span><span class="sxs-lookup"><span data-stu-id="3acdc-112">A ❌ indicates that the version of Fedora or .NET isn't supported on that Fedora release.</span></span>
-- <span data-ttu-id="3acdc-113">當版本的 Fedora 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。</span><span class="sxs-lookup"><span data-stu-id="3acdc-113">When both a version of Fedora and a version of .NET have ✔️, that OS and .NET combination is supported.</span></span>
+- <span data-ttu-id="90e08-111">✔️表示仍支援 Fedora 或 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="90e08-111">A ✔️ indicates that the version of Fedora or .NET is still supported.</span></span>
+- <span data-ttu-id="90e08-112">❌指出該 Fedora 版本不支援 Fedora 或 .net 版本。</span><span class="sxs-lookup"><span data-stu-id="90e08-112">A ❌ indicates that the version of Fedora or .NET isn't supported on that Fedora release.</span></span>
+- <span data-ttu-id="90e08-113">當版本的 Fedora 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。</span><span class="sxs-lookup"><span data-stu-id="90e08-113">When both a version of Fedora and a version of .NET have ✔️, that OS and .NET combination is supported.</span></span>
 
-| <span data-ttu-id="3acdc-114">Fedora</span><span class="sxs-lookup"><span data-stu-id="3acdc-114">Fedora</span></span>               | <span data-ttu-id="3acdc-115">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3acdc-115">.NET Core 2.1</span></span> | <span data-ttu-id="3acdc-116">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="3acdc-116">.NET Core 3.1</span></span> | <span data-ttu-id="3acdc-117">.NET 5。0</span><span class="sxs-lookup"><span data-stu-id="3acdc-117">.NET 5.0</span></span> |
+| <span data-ttu-id="90e08-114">Fedora</span><span class="sxs-lookup"><span data-stu-id="90e08-114">Fedora</span></span>               | <span data-ttu-id="90e08-115">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="90e08-115">.NET Core 2.1</span></span> | <span data-ttu-id="90e08-116">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="90e08-116">.NET Core 3.1</span></span> | <span data-ttu-id="90e08-117">.NET 5。0</span><span class="sxs-lookup"><span data-stu-id="90e08-117">.NET 5.0</span></span> |
 |----------------------|---------------|---------------|----------|
-| <span data-ttu-id="3acdc-118">✔️ [33](#fedora-33-)</span><span class="sxs-lookup"><span data-stu-id="3acdc-118">✔️ [33](#fedora-33-)</span></span> | <span data-ttu-id="3acdc-119">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-119">✔️ 2.1</span></span>        | <span data-ttu-id="3acdc-120">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-120">✔️ 3.1</span></span>        | <span data-ttu-id="3acdc-121">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="3acdc-121">✔️ 5.0</span></span> |
-| <span data-ttu-id="3acdc-122">✔️ [32](#fedora-32-)</span><span class="sxs-lookup"><span data-stu-id="3acdc-122">✔️ [32](#fedora-32-)</span></span> | <span data-ttu-id="3acdc-123">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-123">✔️ 2.1</span></span>        | <span data-ttu-id="3acdc-124">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-124">✔️ 3.1</span></span>        | <span data-ttu-id="3acdc-125">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="3acdc-125">✔️ 5.0</span></span> |
-| <span data-ttu-id="3acdc-126">❌[31](#fedora-31-)</span><span class="sxs-lookup"><span data-stu-id="3acdc-126">❌ [31](#fedora-31-)</span></span> | <span data-ttu-id="3acdc-127">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-127">✔️ 2.1</span></span>        | <span data-ttu-id="3acdc-128">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-128">✔️ 3.1</span></span>        | <span data-ttu-id="3acdc-129">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="3acdc-129">❌ 5.0</span></span> |
-| <span data-ttu-id="3acdc-130">❌ [30](#fedora-30-)</span><span class="sxs-lookup"><span data-stu-id="3acdc-130">❌ [30](#fedora-30-)</span></span> | <span data-ttu-id="3acdc-131">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-131">✔️ 2.1</span></span>        | <span data-ttu-id="3acdc-132">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-132">✔️ 3.1</span></span>        | <span data-ttu-id="3acdc-133">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="3acdc-133">❌ 5.0</span></span> |
-| <span data-ttu-id="3acdc-134">❌[29](#fedora-29-)</span><span class="sxs-lookup"><span data-stu-id="3acdc-134">❌ [29](#fedora-29-)</span></span> | <span data-ttu-id="3acdc-135">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-135">✔️ 2.1</span></span>        | <span data-ttu-id="3acdc-136">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-136">✔️ 3.1</span></span>        | <span data-ttu-id="3acdc-137">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="3acdc-137">❌ 5.0</span></span> |
-| <span data-ttu-id="3acdc-138">❌[28](#fedora-28-)</span><span class="sxs-lookup"><span data-stu-id="3acdc-138">❌ [28](#fedora-28-)</span></span> | <span data-ttu-id="3acdc-139">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-139">✔️ 2.1</span></span>        | <span data-ttu-id="3acdc-140">❌ 3.1</span><span class="sxs-lookup"><span data-stu-id="3acdc-140">❌ 3.1</span></span>        | <span data-ttu-id="3acdc-141">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="3acdc-141">❌ 5.0</span></span> |
-| <span data-ttu-id="3acdc-142">❌[27](#fedora-27-)</span><span class="sxs-lookup"><span data-stu-id="3acdc-142">❌ [27](#fedora-27-)</span></span> | <span data-ttu-id="3acdc-143">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="3acdc-143">✔️ 2.1</span></span>        | <span data-ttu-id="3acdc-144">❌ 3.1</span><span class="sxs-lookup"><span data-stu-id="3acdc-144">❌ 3.1</span></span>        | <span data-ttu-id="3acdc-145">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="3acdc-145">❌ 5.0</span></span> |
+| <span data-ttu-id="90e08-118">✔️ [33](#fedora-33-)</span><span class="sxs-lookup"><span data-stu-id="90e08-118">✔️ [33](#fedora-33-)</span></span> | <span data-ttu-id="90e08-119">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="90e08-119">✔️ 2.1</span></span>        | <span data-ttu-id="90e08-120">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="90e08-120">✔️ 3.1</span></span>        | <span data-ttu-id="90e08-121">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="90e08-121">✔️ 5.0</span></span> |
+| <span data-ttu-id="90e08-122">✔️ [32](#fedora-32-)</span><span class="sxs-lookup"><span data-stu-id="90e08-122">✔️ [32](#fedora-32-)</span></span> | <span data-ttu-id="90e08-123">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="90e08-123">✔️ 2.1</span></span>        | <span data-ttu-id="90e08-124">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="90e08-124">✔️ 3.1</span></span>        | <span data-ttu-id="90e08-125">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="90e08-125">✔️ 5.0</span></span> |
+| <span data-ttu-id="90e08-126">❌[31](#fedora-31-)</span><span class="sxs-lookup"><span data-stu-id="90e08-126">❌ [31](#fedora-31-)</span></span> | <span data-ttu-id="90e08-127">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="90e08-127">✔️ 2.1</span></span>        | <span data-ttu-id="90e08-128">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="90e08-128">✔️ 3.1</span></span>        | <span data-ttu-id="90e08-129">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="90e08-129">❌ 5.0</span></span> |
+| <span data-ttu-id="90e08-130">❌ [30](#fedora-30-)</span><span class="sxs-lookup"><span data-stu-id="90e08-130">❌ [30](#fedora-30-)</span></span> | <span data-ttu-id="90e08-131">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="90e08-131">✔️ 2.1</span></span>        | <span data-ttu-id="90e08-132">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="90e08-132">✔️ 3.1</span></span>        | <span data-ttu-id="90e08-133">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="90e08-133">❌ 5.0</span></span> |
+| <span data-ttu-id="90e08-134">❌[29](#fedora-29-)</span><span class="sxs-lookup"><span data-stu-id="90e08-134">❌ [29](#fedora-29-)</span></span> | <span data-ttu-id="90e08-135">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="90e08-135">✔️ 2.1</span></span>        | <span data-ttu-id="90e08-136">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="90e08-136">✔️ 3.1</span></span>        | <span data-ttu-id="90e08-137">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="90e08-137">❌ 5.0</span></span> |
+| <span data-ttu-id="90e08-138">❌[28](#fedora-28-)</span><span class="sxs-lookup"><span data-stu-id="90e08-138">❌ [28](#fedora-28-)</span></span> | <span data-ttu-id="90e08-139">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="90e08-139">✔️ 2.1</span></span>        | <span data-ttu-id="90e08-140">❌ 3.1</span><span class="sxs-lookup"><span data-stu-id="90e08-140">❌ 3.1</span></span>        | <span data-ttu-id="90e08-141">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="90e08-141">❌ 5.0</span></span> |
+| <span data-ttu-id="90e08-142">❌[27](#fedora-27-)</span><span class="sxs-lookup"><span data-stu-id="90e08-142">❌ [27](#fedora-27-)</span></span> | <span data-ttu-id="90e08-143">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="90e08-143">✔️ 2.1</span></span>        | <span data-ttu-id="90e08-144">❌ 3.1</span><span class="sxs-lookup"><span data-stu-id="90e08-144">❌ 3.1</span></span>        | <span data-ttu-id="90e08-145">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="90e08-145">❌ 5.0</span></span> |
 
-<span data-ttu-id="3acdc-146">不再支援下列 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="3acdc-146">The following versions of .NET are no longer supported.</span></span> <span data-ttu-id="3acdc-147">這些內容的下載仍會保持發佈：</span><span class="sxs-lookup"><span data-stu-id="3acdc-147">The downloads for these still remain published:</span></span>
+<span data-ttu-id="90e08-146">不再支援下列 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="90e08-146">The following versions of .NET are no longer supported.</span></span> <span data-ttu-id="90e08-147">這些內容的下載仍會保持發佈：</span><span class="sxs-lookup"><span data-stu-id="90e08-147">The downloads for these still remain published:</span></span>
 
-- <span data-ttu-id="3acdc-148">3.0</span><span class="sxs-lookup"><span data-stu-id="3acdc-148">3.0</span></span>
-- <span data-ttu-id="3acdc-149">2.2</span><span class="sxs-lookup"><span data-stu-id="3acdc-149">2.2</span></span>
-- <span data-ttu-id="3acdc-150">2.0</span><span class="sxs-lookup"><span data-stu-id="3acdc-150">2.0</span></span>
+- <span data-ttu-id="90e08-148">3.0</span><span class="sxs-lookup"><span data-stu-id="90e08-148">3.0</span></span>
+- <span data-ttu-id="90e08-149">2.2</span><span class="sxs-lookup"><span data-stu-id="90e08-149">2.2</span></span>
+- <span data-ttu-id="90e08-150">2.0</span><span class="sxs-lookup"><span data-stu-id="90e08-150">2.0</span></span>
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="3acdc-151">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="3acdc-151">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="90e08-151">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="90e08-151">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="fedora-33-"></a><span data-ttu-id="3acdc-152">Fedora 33 ✔️</span><span class="sxs-lookup"><span data-stu-id="3acdc-152">Fedora 33 ✔️</span></span>
+## <a name="fedora-33-"></a><span data-ttu-id="90e08-152">Fedora 33 ✔️</span><span class="sxs-lookup"><span data-stu-id="90e08-152">Fedora 33 ✔️</span></span>
 
 > [!TIP]
-> <span data-ttu-id="3acdc-153">Fedora 33 的預設套件存放庫中有提供 .NET Core 3.1。</span><span class="sxs-lookup"><span data-stu-id="3acdc-153">.NET Core 3.1 is available in the default package repositories for Fedora 33.</span></span> <span data-ttu-id="3acdc-154">若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。</span><span class="sxs-lookup"><span data-stu-id="3acdc-154">To install .NET Core 3.1, use the `dnf install` command with the appropriate package, such as `aspnetcore-runtime-3.1` or `dotnet-sdk-3.1`.</span></span> <span data-ttu-id="3acdc-155">預設套件存放庫中尚無法使用 .NET 5.0。</span><span class="sxs-lookup"><span data-stu-id="3acdc-155">.NET 5.0 isn't yet available in the default package repositories.</span></span>
+> <span data-ttu-id="90e08-153">Fedora 33 的預設套件存放庫中有提供 .NET Core 3.1。</span><span class="sxs-lookup"><span data-stu-id="90e08-153">.NET Core 3.1 is available in the default package repositories for Fedora 33.</span></span> <span data-ttu-id="90e08-154">若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。</span><span class="sxs-lookup"><span data-stu-id="90e08-154">To install .NET Core 3.1, use the `dnf install` command with the appropriate package, such as `aspnetcore-runtime-3.1` or `dotnet-sdk-3.1`.</span></span> <span data-ttu-id="90e08-155">預設套件存放庫中尚無法使用 .NET 5.0。</span><span class="sxs-lookup"><span data-stu-id="90e08-155">.NET 5.0 isn't yet available in the default package repositories.</span></span>
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -61,10 +61,10 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
-## <a name="fedora-32-"></a><span data-ttu-id="3acdc-156">Fedora 32 ✔️</span><span class="sxs-lookup"><span data-stu-id="3acdc-156">Fedora 32 ✔️</span></span>
+## <a name="fedora-32-"></a><span data-ttu-id="90e08-156">Fedora 32 ✔️</span><span class="sxs-lookup"><span data-stu-id="90e08-156">Fedora 32 ✔️</span></span>
 
 > [!TIP]
-> <span data-ttu-id="3acdc-157">Fedora 32 的預設套件存放庫中有提供 .NET Core 3.1。</span><span class="sxs-lookup"><span data-stu-id="3acdc-157">.NET Core 3.1 is available in the default package repositories for Fedora 32.</span></span> <span data-ttu-id="3acdc-158">若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。</span><span class="sxs-lookup"><span data-stu-id="3acdc-158">To install .NET Core 3.1, use the `dnf install` command with the appropriate package, such as `aspnetcore-runtime-3.1` or `dotnet-sdk-3.1`.</span></span> <span data-ttu-id="3acdc-159">預設套件存放庫中尚無法使用 .NET 5.0。</span><span class="sxs-lookup"><span data-stu-id="3acdc-159">.NET 5.0 isn't yet available in the default package repositories.</span></span>
+> <span data-ttu-id="90e08-157">Fedora 32 的預設套件存放庫中有提供 .NET Core 3.1。</span><span class="sxs-lookup"><span data-stu-id="90e08-157">.NET Core 3.1 is available in the default package repositories for Fedora 32.</span></span> <span data-ttu-id="90e08-158">若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。</span><span class="sxs-lookup"><span data-stu-id="90e08-158">To install .NET Core 3.1, use the `dnf install` command with the appropriate package, such as `aspnetcore-runtime-3.1` or `dotnet-sdk-3.1`.</span></span> <span data-ttu-id="90e08-159">預設套件存放庫中尚無法使用 .NET 5.0。</span><span class="sxs-lookup"><span data-stu-id="90e08-159">.NET 5.0 isn't yet available in the default package repositories.</span></span>
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -75,7 +75,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
-## <a name="fedora-31-"></a><span data-ttu-id="3acdc-160">Fedora 31 ❌</span><span class="sxs-lookup"><span data-stu-id="3acdc-160">Fedora 31 ❌</span></span>
+## <a name="fedora-31-"></a><span data-ttu-id="90e08-160">Fedora 31 ❌</span><span class="sxs-lookup"><span data-stu-id="90e08-160">Fedora 31 ❌</span></span>
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -88,7 +88,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
-## <a name="fedora-30-"></a><span data-ttu-id="3acdc-161">Fedora 30 ❌</span><span class="sxs-lookup"><span data-stu-id="3acdc-161">Fedora 30 ❌</span></span>
+## <a name="fedora-30-"></a><span data-ttu-id="90e08-161">Fedora 30 ❌</span><span class="sxs-lookup"><span data-stu-id="90e08-161">Fedora 30 ❌</span></span>
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -101,7 +101,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
-## <a name="fedora-29-"></a><span data-ttu-id="3acdc-162">Fedora 29 ❌</span><span class="sxs-lookup"><span data-stu-id="3acdc-162">Fedora 29 ❌</span></span>
+## <a name="fedora-29-"></a><span data-ttu-id="90e08-162">Fedora 29 ❌</span><span class="sxs-lookup"><span data-stu-id="90e08-162">Fedora 29 ❌</span></span>
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -114,7 +114,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-30](includes/linux-install-30-dnf.md)]
 
-## <a name="fedora-28-"></a><span data-ttu-id="3acdc-163">Fedora 28 ❌</span><span class="sxs-lookup"><span data-stu-id="3acdc-163">Fedora 28 ❌</span></span>
+## <a name="fedora-28-"></a><span data-ttu-id="90e08-163">Fedora 28 ❌</span><span class="sxs-lookup"><span data-stu-id="90e08-163">Fedora 28 ❌</span></span>
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -127,7 +127,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-20](includes/linux-install-20-dnf.md)]
 
-## <a name="fedora-27-"></a><span data-ttu-id="3acdc-164">Fedora 27 ❌</span><span class="sxs-lookup"><span data-stu-id="3acdc-164">Fedora 27 ❌</span></span>
+## <a name="fedora-27-"></a><span data-ttu-id="90e08-164">Fedora 27 ❌</span><span class="sxs-lookup"><span data-stu-id="90e08-164">Fedora 27 ❌</span></span>
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -140,34 +140,34 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-20](includes/linux-install-20-dnf.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="3acdc-165">針對套件管理員進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="3acdc-165">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="90e08-165">針對套件管理員進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="90e08-165">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="3acdc-166">本節提供使用套件管理員安裝 .NET Core 時，您可能會遇到的常見錯誤的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="3acdc-166">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
+<span data-ttu-id="90e08-166">本節提供使用套件管理員安裝 .NET Core 時，您可能會遇到的常見錯誤的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="90e08-166">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
 
-### <a name="unable-to-find-package"></a><span data-ttu-id="3acdc-167">找不到套件</span><span class="sxs-lookup"><span data-stu-id="3acdc-167">Unable to find package</span></span>
+### <a name="unable-to-find-package"></a><span data-ttu-id="90e08-167">找不到套件</span><span class="sxs-lookup"><span data-stu-id="90e08-167">Unable to find package</span></span>
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="3acdc-168">無法提取</span><span class="sxs-lookup"><span data-stu-id="3acdc-168">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="90e08-168">無法提取</span><span class="sxs-lookup"><span data-stu-id="90e08-168">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a><span data-ttu-id="3acdc-169">單元</span><span class="sxs-lookup"><span data-stu-id="3acdc-169">Snap</span></span>
+## <a name="snap"></a><span data-ttu-id="90e08-169">單元</span><span class="sxs-lookup"><span data-stu-id="90e08-169">Snap</span></span>
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
-## <a name="dependencies"></a><span data-ttu-id="3acdc-170">相依性</span><span class="sxs-lookup"><span data-stu-id="3acdc-170">Dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="90e08-170">相依性</span><span class="sxs-lookup"><span data-stu-id="90e08-170">Dependencies</span></span>
 
 [!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a><span data-ttu-id="3acdc-171">腳本式安裝</span><span class="sxs-lookup"><span data-stu-id="3acdc-171">Scripted install</span></span>
+## <a name="scripted-install"></a><span data-ttu-id="90e08-171">腳本式安裝</span><span class="sxs-lookup"><span data-stu-id="90e08-171">Scripted install</span></span>
 
 [!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
 
-## <a name="manual-install"></a><span data-ttu-id="3acdc-172">手動安裝</span><span class="sxs-lookup"><span data-stu-id="3acdc-172">Manual install</span></span>
+## <a name="manual-install"></a><span data-ttu-id="90e08-172">手動安裝</span><span class="sxs-lookup"><span data-stu-id="90e08-172">Manual install</span></span>
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a><span data-ttu-id="3acdc-173">後續步驟</span><span class="sxs-lookup"><span data-stu-id="3acdc-173">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="90e08-173">後續步驟</span><span class="sxs-lookup"><span data-stu-id="90e08-173">Next steps</span></span>
 
-- [<span data-ttu-id="3acdc-174">教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="3acdc-174">Tutorial: Create a console application with .NET SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)
+- [<span data-ttu-id="90e08-174">教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="90e08-174">Tutorial: Create a console application with .NET SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)

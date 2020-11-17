@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84603073"
 ---
 
-<span data-ttu-id="a1a04-101">❌請注意，已不再支援這個版本的 Fedora。</span><span class="sxs-lookup"><span data-stu-id="a1a04-101">❌ Please note that this version of Fedora is no longer supported.</span></span>
+<span data-ttu-id="91154-101">❌ 請注意，不再支援此版本的 Fedora。</span><span class="sxs-lookup"><span data-stu-id="91154-101">❌ Please note that this version of Fedora is no longer supported.</span></span>
