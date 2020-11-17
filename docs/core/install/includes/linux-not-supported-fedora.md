@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84603073"
 ---
 
-❌請注意，已不再支援這個版本的 Fedora。
+❌ 請注意，不再支援此版本的 Fedora。

@@ -24,7 +24,7 @@
           href: logic-apps.md
         - name: Azure 事件方格
           href: event-grid.md
-    - name: 永久的 Azure 函式
+    - name: Durable Azure Functions
       href: durable-azure-functions.md
       items:
         - name: 協調流程模式

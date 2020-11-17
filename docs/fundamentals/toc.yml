@@ -43,7 +43,7 @@ items:
             href: ../core/install/templates.md
           - name: macOS Notarization 問題
             href: ../core/install/macos-notarization-issues.md
-          - name: 如何檢查 .NET Core 版本
+          - name: 如何檢查 .NET 版本
             href: ../core/install/how-to-detect-installed-versions.md
           - name: 安裝當地語系化的 IntelliSense
             href: ../core/install/localized-intellisense.md
@@ -1412,6 +1412,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
   - name: 執行階段程式庫
     items:
+      - name: 概觀
+        href: ../standard/runtime-libraries-overview.md
       - name: 將數字、日期、其他類型格式化
         items:
           - name: 總覽
@@ -1446,7 +1448,7 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: 使用非西曆顯示日期
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: 字串
+      - name: 處理字串
         items:
           - name: .NET 中的字元編碼
             href: ../standard/base-types/character-encoding-introduction.md
@@ -1481,109 +1483,71 @@ items:
                 href: ../standard/base-types/stringbuilder.md
               - name: 作法：執行基本字串操作
                 href: ../standard/base-types/basic-manipulations.md
-          - name: .NET 中的規則運算式
+          - name: 剖析 (轉換) 字串
             items:
-              - name: 概觀
-                href: ../standard/base-types/regular-expressions.md
-                displayName: regular expressions
-              - name: 語言參考
-                items:
-                  - name: 總覽
-                    href: ../standard/base-types/regular-expression-language-quick-reference.md
-                  - name: 逸出字元
-                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
-                  - name: 字元類別
-                    href: ../standard/base-types/character-classes-in-regular-expressions.md
-                  - name: 錨點
-                    href: ../standard/base-types/anchors-in-regular-expressions.md
-                  - name: 分組建構
-                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
-                  - name: 數量詞
-                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
-                  - name: 反向參考建構
-                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
-                  - name: 替代建構
-                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
-                  - name: 替代
-                    href: ../standard/base-types/substitutions-in-regular-expressions.md
-                  - name: 規則運算式選項
-                    href: ../standard/base-types/regular-expression-options.md
-                  - name: 其他建構
-                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
-              - name: 規則運算式的最佳做法
-                href: ../standard/base-types/best-practices.md
-              - name: 規則運算式物件模型
-                href: ../standard/base-types/the-regular-expression-object-model.md
-              - name: 規則運算式行為
-                items:
-                  - name: 總覽
-                    href: ../standard/base-types/details-of-regular-expression-behavior.md
-                  - name: 回溯
-                    href: ../standard/base-types/backtracking-in-regular-expressions.md
-                  - name: 編譯和重複使用
-                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
-                  - name: 執行緒安全
-                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
-              - name: 範例
-                items:
-                  - name: 掃描 HREF
-                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
-                  - name: 變更日期格式
-                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
-                  - name: 從 URL 擷取通訊協定與連接埠號碼
-                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
-                  - name: 從字串中刪除無效的字元
-                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
-                  - name: 確認字串採用有效的電子郵件格式
-                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: 剖析 (轉換) 字串
-        items:
-          - name: 總覽
-            href: ../standard/base-types/parsing-strings.md
-          - name: 剖析數值字串
-            href: ../standard/base-types/parsing-numeric.md
-          - name: 剖析日期和時間字串
-            href: ../standard/base-types/parsing-datetime.md
-          - name: 剖析其他字串
-            href: ../standard/base-types/parsing-other.md
-      - name: 相依性插入
+              - name: 總覽
+                href: ../standard/base-types/parsing-strings.md
+              - name: 剖析數值字串
+                href: ../standard/base-types/parsing-numeric.md
+              - name: 剖析日期和時間字串
+                href: ../standard/base-types/parsing-datetime.md
+              - name: 剖析其他字串
+                href: ../standard/base-types/parsing-other.md
+      - name: 規則運算式
         items:
           - name: 概觀
-            href: ../core/extensions/dependency-injection.md
-            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-          - name: 使用相依性插入
-            href: ../core/extensions/dependency-injection-usage.md
-            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-          - name: 相依性插入指導方針
-            href: ../core/extensions/dependency-injection-guidelines.md
-            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-      - name: 設定
-        items:
-          - name: 總覽
-            href: ../core/extensions/configuration.md
-            displayName: 'configuration,config,configuration sources,config sources'
-          - name: 設定提供者
-            href: ../core/extensions/configuration-providers.md
-            displayName: 'configuration providers,config providers'
-          - name: 實作自訂組態提供者
-            href: ../core/extensions/custom-configuration-provider.md
-            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-          - name: 選項模式
-            href: ../core/extensions/options.md
-      - name: 記錄
-        items:
-          - name: 總覽
-            href: ../core/extensions/logging.md
-          - name: 記錄提供者
-            href: ../core/extensions/logging-providers.md
-          - name: 實作自訂記錄提供者
-            href: ../core/extensions/custom-logging-provider.md
-          - name: 高效能記錄
-            href: ../core/extensions/high-performance-logging.md
-          - name: 主控台記錄格式
-            href: ../core/extensions/console-log-formatter.md
-      - name: HostBuilder (一般主機)
-        href: ../core/extensions/generic-host.md
+            href: ../standard/base-types/regular-expressions.md
+            displayName: regular expressions
+          - name: 語言參考
+            items:
+              - name: 總覽
+                href: ../standard/base-types/regular-expression-language-quick-reference.md
+              - name: 逸出字元
+                href: ../standard/base-types/character-escapes-in-regular-expressions.md
+              - name: 字元類別
+                href: ../standard/base-types/character-classes-in-regular-expressions.md
+              - name: 錨點
+                href: ../standard/base-types/anchors-in-regular-expressions.md
+              - name: 分組建構
+                href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+              - name: 數量詞
+                href: ../standard/base-types/quantifiers-in-regular-expressions.md
+              - name: 反向參考建構
+                href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+              - name: 替代建構
+                href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+              - name: 替代
+                href: ../standard/base-types/substitutions-in-regular-expressions.md
+              - name: 規則運算式選項
+                href: ../standard/base-types/regular-expression-options.md
+              - name: 其他建構
+                href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+          - name: 規則運算式的最佳做法
+            href: ../standard/base-types/best-practices.md
+          - name: 規則運算式物件模型
+            href: ../standard/base-types/the-regular-expression-object-model.md
+          - name: 規則運算式行為
+            items:
+              - name: 總覽
+                href: ../standard/base-types/details-of-regular-expression-behavior.md
+              - name: 回溯
+                href: ../standard/base-types/backtracking-in-regular-expressions.md
+              - name: 編譯和重複使用
+                href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+              - name: 執行緒安全
+                href: ../standard/base-types/thread-safety-in-regular-expressions.md
+          - name: 範例
+            items:
+              - name: 掃描 HREF
+                href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+              - name: 變更日期格式
+                href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+              - name: 從 URL 擷取通訊協定與連接埠號碼
+                href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+              - name: 從字串中刪除無效的字元
+                href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+              - name: 確認字串採用有效的電子郵件格式
+                href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
       - name: 序列化
         items:
           - name: 總覽
@@ -1753,6 +1717,44 @@ items:
             href: ../standard/io/memory-mapped-files.md
       - name: 系統主控台類別
         href: ../standard/building-console-apps.md
+      - name: 相依性插入
+        items:
+          - name: 概觀
+            href: ../core/extensions/dependency-injection.md
+            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+          - name: 使用相依性插入
+            href: ../core/extensions/dependency-injection-usage.md
+            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+          - name: 相依性插入指導方針
+            href: ../core/extensions/dependency-injection-guidelines.md
+            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+      - name: 設定
+        items:
+          - name: 總覽
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: 設定提供者
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: 實作自訂組態提供者
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
+          - name: 選項模式
+            href: ../core/extensions/options.md
+      - name: 記錄
+        items:
+          - name: 總覽
+            href: ../core/extensions/logging.md
+          - name: 記錄提供者
+            href: ../core/extensions/logging-providers.md
+          - name: 實作自訂記錄提供者
+            href: ../core/extensions/custom-logging-provider.md
+          - name: 高效能記錄
+            href: ../core/extensions/high-performance-logging.md
+          - name: 主控台記錄格式
+            href: ../core/extensions/console-log-formatter.md
+      - name: HostBuilder (一般主機)
+        href: ../core/extensions/generic-host.md
   - name: 資料存取
     items:
       - name: LINQ
