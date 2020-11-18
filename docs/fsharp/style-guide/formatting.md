@@ -2,12 +2,12 @@
 title: F# 程式碼格式方針
 description: '瞭解格式化 F # 程式碼的指導方針。'
 ms.date: 08/31/2020
-ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359281"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688250"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
@@ -642,21 +642,17 @@ let daysOfWeek' includeWeekend =
 
 ## <a name="formatting-if-expressions"></a>格式化 if 運算式
 
-條件的縮排取決於構成它們的運算式大小。 如果 `cond` `e1` 和 `e2` 很短，只要將它們寫在同一行：
+條件的縮排取決於構成它們的運算式大小和複雜度。
+在下列情況中，直接將它們寫入一行：
+
+- `cond``e1`和 `e2` 很短
+- `e1` 和 `e2` 本身並非 `if/then/else` 運算式本身。
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-如果其中 `cond` 一個 `e1` 或 `e2` 更長，但不是多行：
-
-```fsharp
-if cond
-then e1
-else e2
-```
-
-如果任何運算式為多行：
+如果任何運算式為多行或運算式，則為 `if/then/else` 。
 
 ```fsharp
 if cond then
@@ -665,13 +661,26 @@ else
     e2
 ```
 
-具有和的多個條件 `elif` `else` 會在與相同的範圍中縮排 `if` ：
+使用和的多個條件， `elif` `else` 會在 `if` 遵循一行運算式的規則時，在與相同的範圍中縮排 `if/then/else` 。
 
 ```fsharp
 if cond1 then e1
 elif cond2 then e2
 elif cond3 then e3
 else e4
+```
+
+如果有任何條件或運算式為多行，則整個 `if/then/else` 運算式為多行：
+
+```fsharp
+if cond1 then
+    e1
+elif cond2 then
+    e2
+elif cond3 then
+    e3
+else
+    e4
 ```
 
 ### <a name="pattern-matching-constructs"></a>模式比對結構
@@ -879,6 +888,41 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
+```
+
+### <a name="formatting-constructors-static-members-and-member-invocations"></a>格式化函式、靜態成員和成員調用
+
+如果運算式是簡短的，請以空格分隔引數，並將它保留在同一行。
+
+```fsharp
+let person = new Person(a1, a2)
+
+let myRegexMatch = Regex.Match(input, regex)
+
+let untypedRes = checker.ParseFile(file, source, opts)
+```
+
+如果運算式很長，請使用分行符號和縮排一個範圍，而不是縮排到括弧。
+
+```fsharp
+let person =
+    new Person(
+        argument1,
+        argument2
+    )
+
+let myRegexMatch =
+    Regex.Match(
+        "my longer input string with some interesting content in it",
+        "myRegexPattern"
+    )
+
+let untypedRes =
+    checker.ParseFile(
+        fileName,
+        sourceText,
+        parsingOptionsWithDefines
+    )
 ```
 
 ## <a name="formatting-attributes"></a>格式化屬性

@@ -1,13 +1,13 @@
 ---
 title: 模式比對
 description: '瞭解如何在 F # 中使用模式來比較資料與邏輯結構、將資料分解為構成部分，或從資料中取出資訊。'
-ms.date: 08/15/2020
-ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 11/12/2020
+ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811505"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687801"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -25,7 +25,7 @@ match expression with
 ...
 ```
 
-每個模式都是以某種方式轉換輸入的規則。 在 `match` 運算式中，會依序檢查每個模式，以查看輸入資料是否與模式相容。 如果找到相符的結果運算式，就會執行結果運算式。 如果找不到相符項，則會測試下一個模式規則。 在比對[運算式](match-expressions.md)中說明選擇性的 when*條件*部分。
+每個模式都是以某種方式轉換輸入的規則。 在 `match` 運算式中，會依序檢查每個模式，以查看輸入資料是否與模式相容。 如果找到相符的結果運算式，就會執行結果運算式。 如果找不到相符項，則會測試下一個模式規則。 在比對 [運算式](match-expressions.md)中說明選擇性的 when *條件* 部分。
 
 下表顯示支援的模式。 在執行時間，輸入會根據表格中所列的順序，針對下列每個模式進行測試，而模式會以遞迴方式套用（從第一次到最後，當它們出現在您的程式碼中），並從左至右套用至每一行的模式。
 
@@ -33,7 +33,7 @@ match expression with
 |----|-----------|-------|
 |常數模式|任何數值、字元或字串常值、列舉常數或已定義的常值識別碼|`1.0`, `"test"`, `30`, `Color.Red`|
 |識別碼模式|差異聯集的 case 值、例外狀況標籤或作用中模式案例|`Some(x)`<br /><br />`Failure(msg)`|
-|變數模式|*識別碼*|`a`|
+|變數模式|*identifier*|`a`|
 |`as` 模式|*模式* as *識別碼*|`(a, b) as tuple1`|
 |或模式|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |AND 模式|*pattern1* &amp;*pattern2*|`(a, b) & (_, "test")`|
@@ -47,6 +47,7 @@ match expression with
 |搭配類型注釋的模式|*模式* ： *類型*|`a : int`|
 |類型測試模式|:? *類型* [as *識別碼* ]|`:? System.DateTime as dt`|
 |Null 模式|null|`null`|
+|Nameof 模式|*nameof 運算式*|`nameof str`|
 
 ## <a name="constant-patterns"></a>常數模式
 
@@ -214,6 +215,22 @@ Null 模式符合當您使用允許 null 值的類型時，可能出現的 null 
 下列範例會使用 null 模式和變數模式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+
+## <a name="nameof-pattern"></a>Nameof 模式
+
+`nameof`當字串值等於關鍵字後面的運算式時，模式會與字串相符 `nameof` 。 例如：
+
+```fsharp
+let f (str: string) =
+    match str with
+    | nameof str -> "It's 'str'!"
+    | _ -> "It is not 'str'!"
+
+f "str" // matches
+f "asdf" // does not match
+```
+
+[`nameof`](nameof.md)如需您可以使用之名稱的相關資訊，請參閱運算子。
 
 ## <a name="see-also"></a>另請參閱
 

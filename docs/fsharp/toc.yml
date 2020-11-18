@@ -99,6 +99,8 @@
       href: language-reference/unit-type.md
     - name: 字串
       href: language-reference/strings.md
+    - name: 插入字串
+      href: language-reference/interpolated-strings.md
     - name: Tuple
       href: language-reference/tuples.md
     - name: F# 集合類型
@@ -248,6 +250,8 @@
       href: language-reference/byrefs.md
     - name: 參考儲存格
       href: language-reference/reference-cells.md
+    - name: nameof
+      href: language-reference/nameof.md
     - name: 編譯器指示詞
       href: language-reference/compiler-directives.md
     - name: 編譯器選項
