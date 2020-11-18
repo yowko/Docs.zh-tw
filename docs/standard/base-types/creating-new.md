@@ -2,7 +2,6 @@
 title: 在 .NET 中建立新字串
 description: 瞭解如何使用指派、類別的函式或 System.string 方法，在 .NET 中結合數個字串、字串陣列或物件來建立字串。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a00274b7b6b7e7a54d8546f2176109688a4c4678
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889435"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824879"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
 
@@ -34,7 +33,7 @@ ms.locfileid: "92889435"
 ## <a name="methods-that-return-strings"></a>傳回字串的方法  
  下表列出數個可傳回新字串物件的有用方法。  
   
-|方法名稱|用途|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|從一組輸入物件建立格式化的字串。|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|從兩個或多個字串建立字串。|  

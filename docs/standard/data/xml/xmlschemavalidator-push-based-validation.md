@@ -1,17 +1,16 @@
 ---
 title: XmlSchemaValidator 推入型驗證
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-ms.openlocfilehash: d5b2fe4325000023acc98580a2a6d014f56fecbd
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9daf6f416d22cd06932cdaba1276889e319d3d90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419105"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824892"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 推入型驗證
 
@@ -152,7 +151,7 @@ validator.ValidateEndElement(null);
 
 <xref:System.Xml.Schema.XmlSchemaValidator> 類別提供幾種方法，可用於根據 XML 結構描述驗證 XML 資訊集中的項目、屬性及內容。 下表對每個方法進行說明。
 
-|方法|描述|
+|方法|說明|
 |------------|-----------------|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|驗證目前內容中的項目名稱。|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|驗證目前項目內容中的屬性，或根據做為參數傳遞給 <xref:System.Xml.Schema.XmlSchemaAttribute> 方法的 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 物件驗證屬性。|
@@ -359,7 +358,7 @@ validator.ValidateEndElement(null);
 </xs:schema>
 ```
 
-此範例會採用下列 XSD 架構做為輸入：
+此範例會採用下列 XSD 架構作為輸入：
 
 ```xml
 <book>
@@ -438,12 +437,12 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 下表說明 <xref:System.Xml.Schema.XmlSchemaValidator> 類別的狀態轉換，以及在每個狀態下可進行之方法呼叫的順序及次數。
 
-|州|轉換|
+|State|轉換|
 |-----------|----------------|
-|驗證|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
+|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|
-|元素|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* （ <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> 內容 \* ）？ <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>內容 \* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
-|內容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|
+|項目|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>內容 \*) ？ <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>內容 \* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
+|Content|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|
 
 > [!NOTE]
 > 根據 <xref:System.InvalidOperationException> 物件的目前狀態，如果呼叫上表中的每個方法的順序不正確，則它們會擲回 <xref:System.Xml.Schema.XmlSchemaValidator>。
@@ -456,7 +455,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |------------|-----------------|
 |&#124;|可呼叫方法或狀態 (垂直線前後的項目)。|
 |?|問號之前的方法或狀態是選擇性的，但如果呼叫它，則只能呼叫一次。|
-|\*|符號前面的方法或狀態 \* 是選擇性的，而且可以呼叫多次。|
+|\*|符號前面的方法或狀態 \* 是選擇性的，可以呼叫一次以上。|
 
 ## <a name="validation-context"></a>驗證內容
 

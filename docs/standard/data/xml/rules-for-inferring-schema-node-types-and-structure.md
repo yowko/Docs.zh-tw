@@ -1,14 +1,13 @@
 ---
 title: 推斷結構描述節點型別與結構的規則
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: 381c5fbd3823514de98b38840b8259a417e48fb8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 16636460c6635852bb68b4821fab5aa99b07413c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289079"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823572"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推斷結構描述節點型別與結構的規則
 本主題說明結構描述推斷程序如何將 XML 文件中所發現的節點型別轉譯為 XML 結構描述定義語言 (XSD) 結構。  
@@ -144,7 +143,7 @@ ms.locfileid: "84289079"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)

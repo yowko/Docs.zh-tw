@@ -1,8 +1,7 @@
 ---
 title: 使用 Parallel.ForEach 寫入一個簡單的平行程式
-description: 在本文中，您將瞭解如何在 .NET 中啟用資料平行處理。 在任何 IEnumerable 或 IEnumerable 資料來源上撰寫 Parallel. ForEach 迴圈。 <T>
+description: 在本文中，您將瞭解如何在 .NET 中啟用資料平行處理原則。 對任何 IEnumerable 或 IEnumerable 資料來源撰寫 Parallel. ForEach 迴圈。 <T>
 ms.date: 02/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,30 +9,30 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 59c8710a8e3fc878b2ceded8595f7f3319d4c953
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4f67f6fbe5a79e925ecd6aaec3f833704cda38c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447195"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825412"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：撰寫簡單的 Parallel ForEach 迴圈
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：撰寫簡單的 Parallel. ForEach 迴圈
 
 此範例示範如何使用 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 迴圈來透過 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 資料來源啟用資料平行處理原則。
 
 > [!NOTE]
-> 本文件使用 Lambda 運算式來定義 PLINQ 中的委派。 如果您不熟悉 c # 或 Visual Basic 中的 lambda 運算式，請參閱[PLINQ 和 TPL 中的 lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)。
+> 本文件使用 Lambda 運算式來定義 PLINQ 中的委派。 如果您不熟悉 c # 或 Visual Basic 中的 lambda 運算式，請參閱 [PLINQ 和 TPL 中的 lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)。
 
 ## <a name="example"></a>範例
 
-此範例會假設您在 C:\Users\Public\Pictures\Sample Pictures** 資料夾中擁有數個 .jpg 檔案，且建立名為 *Modified* 的新子資料夾。 當您執行範例時，其會旋轉在 *Sample Pictures* 中的各 .jpg 影像，並將其儲存至 *Modified*。 如有必要，您可以修改這兩個路徑。
+此範例會假設您在 C:\Users\Public\Pictures\Sample Pictures 資料夾中擁有數個 .jpg 檔案，且建立名為 *Modified* 的新子資料夾。 當您執行範例時，其會旋轉在 *Sample Pictures* 中的各 .jpg 影像，並將其儲存至 *Modified*。 如有必要，您可以修改這兩個路徑。
 
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 迴圈的運作方式類似 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 迴圈。 迴圈會根據系統環境分割來源集合，及對多個執行緒上的作業進行排程。 系統上的處理器愈多，平行方法的執行速度愈快。 對於某些來源集合，循序迴圈的執行速度可能更快，這取決於來源的大小和迴圈執行的作業種類。 如需效能的詳細資訊，請參閱[資料和工作平行](potential-pitfalls-in-data-and-task-parallelism.md)處理原則中的可能錯誤。
+<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 迴圈的運作方式類似 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 迴圈。 迴圈會根據系統環境分割來源集合，及對多個執行緒上的作業進行排程。 系統上的處理器愈多，平行方法的執行速度愈快。 對於某些來源集合，循序迴圈的執行速度可能更快，這取決於來源的大小和迴圈執行的作業種類。 如需效能的詳細資訊，請參閱 [資料和工作平行處理原則中的潛在陷阱](potential-pitfalls-in-data-and-task-parallelism.md)。
 
-如需平行迴圈的詳細資訊，請參閱[如何：撰寫簡單的平行處理。 For 迴圈](how-to-write-a-simple-parallel-for-loop.md)。
+如需平行迴圈的詳細資訊，請參閱 [如何：撰寫簡單的 parallel. for 迴圈](how-to-write-a-simple-parallel-for-loop.md)。
 
 若要將 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>使用於非泛型集合 ，可使用 <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> 擴充方法將集合轉換成泛型集合，如下列範例所示：
 
@@ -48,7 +47,7 @@ ms.locfileid: "84447195"
 
 在 Visual Studio 中，有 Windows Desktop 及 .NET Core 的 Visual Basic 及 C# 主控台應用程式範本。
 
-您可以從命令列使用 .NET Core CLI 命令（例如， `dotnet new console` 或 `dotnet new console -lang vb` ），也可以建立檔案，並使用命令列編譯器來執行 .NET Framework 應用程式。
+從命令列中，您可以使用 .NET Core CLI 命令 (例如 `dotnet new console` 或 `dotnet new console -lang vb`) ，也可以建立檔案並針對 .NET Framework 應用程式使用命令列編譯器。
 
 對於 .NET Core 專案，您必須參考 **System.Drawing.Common** NuGet 套件。 在 Visual Studio 中，使用 NuGet 套件管理員來安裝套件。 或者，您可將參考新增至 \*.csproj 或 \*.vbproj 檔案中的套件：
 

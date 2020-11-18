@@ -1,24 +1,24 @@
 ---
-title: dotnet-符號-.NET Core
-description: 安裝和使用 dotnet 符號命令列工具。
-ms.date: 08/26/2020
-ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+title: dotnet-符號診斷工具-.NET CLI
+description: 瞭解如何安裝和使用 dotnet 符號 CLI 工具，以下載 .NET 傾印和小型傾印的偵錯工具所需的檔案。
+ms.date: 11/17/2020
+ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679184"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825334"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>符號下載程式 (dotnet-符號) 
 
-本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="install-dotnet-symbol"></a>安裝 dotnet-符號
+## <a name="install"></a>安裝
 
-若要安裝 `dotnet-symbol` [NuGet 套件](https://www.nuget.org/packages/dotnet-symbol)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+若要安裝 `dotnet-trace` [NuGet 套件](https://www.nuget.org/packages/dotnet-trace)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
 
 ```dotnetcli
-dotnet tool install -g dotnet-symbol
+dotnet tool install --global dotnet-symbol
 ```
 
 ## <a name="synopsis"></a>概要
@@ -27,7 +27,7 @@ dotnet tool install -g dotnet-symbol
 dotnet-symbol [-h|--help] [options] <FILES>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 全域工具會將檔案 `dotnet-symbol` 下載 (符號、DAC、模組等，) 調試核心傾印和小型傾印所需的檔案。 當您在另一部電腦上捕獲到的傾印時，這會很有用。 `dotnet-symbol` 可以下載分析傾印所需的模組和符號。
 

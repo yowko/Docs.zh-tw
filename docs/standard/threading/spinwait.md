@@ -1,23 +1,22 @@
 ---
 title: SpinWait
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-ms.openlocfilehash: fb70697fd14f9f8734ca1a7896fc06c6bca5a71d
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 2031ebc30d0789181786053d401e69da782a619f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188922"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826205"
 ---
 # <a name="spinwait"></a>SpinWait
 
-<xref:System.Threading.SpinWait?displayProperty=nameWithType> 是一個輕量型同步處理類型，您可以在低階案例中使用此類型，來避免核心事件所需且成本昂貴的環境切換和核心轉換。 在多核心電腦上，預期資源不會長時間保留時，若等待中的執行緒要在使用者模式中進行數十個或數百個週期的微調，然後進行重試以取得資源，此類型可能會更有效率。 如果資源在微調之後可供使用，則您節省了數千個週期。 如果資源仍然無法使用，則您只花費了數個週期，仍可進入以核心為基礎的等候。 這個微調然後等候的組合有時稱為「兩階段等候作業」  。  
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> 是一個輕量型同步處理類型，您可以在低階案例中使用此類型，來避免核心事件所需且成本昂貴的環境切換和核心轉換。 在多核心電腦上，預期資源不會長時間保留時，若等待中的執行緒要在使用者模式中進行數十個或數百個週期的微調，然後進行重試以取得資源，此類型可能會更有效率。 如果資源在微調之後可供使用，則您節省了數千個週期。 如果資源仍然無法使用，則您只花費了數個週期，仍可進入以核心為基礎的等候。 這個微調然後等候的組合有時稱為「兩階段等候作業」。  
   
  <xref:System.Threading.SpinWait> 的設計目的是要搭配包裝核心事件（例如）的 .NET 類型使用 <xref:System.Threading.ManualResetEvent> 。 <xref:System.Threading.SpinWait> 也可單獨用來只在一個程式中進行基本微調功能。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "93188922"
  [!code-csharp[CDS_SpinWait#05](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait.cs#05)]
  [!code-vb[CDS_SpinWait#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/cds_spinwait1.vb#05)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Thread.SpinWait%2A>
 - [執行緒物件和功能](threading-objects-and-features.md)

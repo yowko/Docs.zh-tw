@@ -2,21 +2,20 @@
 title: 使用執行緒和執行緒處理
 description: 瞭解如何在 .NET 中使用執行緒和執行緒，讓您可以撰寫應用程式，同時 (多執行緒) 執行許多作業。
 ms.date: 08/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 127ea9e28d9ce303270512bf86bf4eecf2f86437
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 85968cfb1a228826429876e525f0c8452f97cfc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188701"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826088"
 ---
 # <a name="using-threads-and-threading"></a>使用執行緒和執行緒處理
 
-使用 .NET，您可以撰寫同時執行多項作業的應用程式。 可能妨礙其他作業的作業可以在另外的執行緒上執行，這類處理序稱為「多執行緒」  或「無限制執行緒」  。  
+使用 .NET，您可以撰寫同時執行多項作業的應用程式。 可能妨礙其他作業的作業可以在另外的執行緒上執行，這類處理序稱為「多執行緒」或「無限制執行緒」。  
   
 使用多執行緒的應用程式回應使用者輸入會更快，因為當處理器密集工作在另外的執行緒上執行時，使用者介面會保持使用中。 當您建立可擴充的應用程式時，多執行緒也很有幫助，因為您可以隨著工作負載增加而新增執行緒。
 
@@ -45,7 +44,7 @@ ms.locfileid: "93188701"
 
 下表列出 <xref:System.Threading.Thread>屬性的一部分：  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|若執行緒已啟動且尚未正常終止或中止，則傳回 `true`。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|取得或設定布林值，指出執行緒是否為背景執行緒。 背景執行緒與前景執行緒相似，但背景執行緒不會防止處理序停止。 一旦屬於處理程序的所有前景執行緒停止，通用語言執行平台會呼叫背景執行緒上仍在執行的 <xref:System.Threading.Thread.Abort%2A> 方法來結束處理程序。 如需詳細資訊，請參閱[前景與背景執行緒](foreground-and-background-threads.md)。|  
@@ -53,7 +52,7 @@ ms.locfileid: "93188701"
 |<xref:System.Threading.Thread.Priority%2A>|取得或設定作業系統使用的 <xref:System.Threading.ThreadPriority> 值，以設定執行緒排程的優先權。 如需詳細資訊，請參閱[排程執行緒](scheduling-threads.md)和 <xref:System.Threading.ThreadPriority> 參考。|  
 |<xref:System.Threading.Thread.ThreadState%2A>|取得包含執行緒目前狀態的 <xref:System.Threading.ThreadState> 值。|  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [執行緒和執行緒處理](threads-and-threading.md)

@@ -2,7 +2,6 @@
 title: 規則運算式中的群組建構
 description: 瞭解如何在 .NET 中使用群組結構。 群組結構會描繪正則運算式的子運算式，並捕捉輸入字串的子字串。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888504"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823000"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的群組建構
 群組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用分組建構來執行下列作業：  
@@ -62,7 +61,7 @@ ms.locfileid: "92888504"
   
  您可以用四種方式來存取擷取群組：  
   
-- 在規則運算式中使用反向參考建構。 使用語法編號，在相同的正則運算式中參考相符的子運算式 `\` ** ，其中 *number* 是所捕獲之子運算式的序號。  
+- 在規則運算式中使用反向參考建構。 使用語法編號，在相同的正則運算式中參考相符的子運算式 `\` **，其中 *number* 是所捕獲之子運算式的序號。  
   
 - 在規則運算式中使用具名的反向參考建構。 在相同的正則運算式中，使用語法名稱來參考相符的子運算式， `\k<` *name* `>` 其中 *name* 是捕捉群組的名稱或 `\k<` *數位* `>` ，其中 *number* 是捕捉群組的序數。 擷取群組的預設名稱與其序號相同。 如需詳細資訊，請參閱本主題稍後的 [具名的相符子運算式](#named_matched_subexpression) 。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "92888504"
   
 - 在規則運算式中使用具名的反向參考建構。 使用語法名稱，在相同的正則運算式中參考相符的子運算式 `\k<` *name* `>` ，其中 *name* 是所捕獲之子運算式的名稱。  
   
-- 在規則運算式中使用反向參考建構。 使用語法編號，在相同的正則運算式中參考相符的子運算式 `\` ** ，其中 *number* 是所捕獲之子運算式的序號。 具名的相符子運算式會在相符子運算式之後，由左至右連續編號。  
+- 在規則運算式中使用反向參考建構。 使用語法編號，在相同的正則運算式中參考相符的子運算式 `\` **，其中 *number* 是所捕獲之子運算式的序號。 具名的相符子運算式會在相符子運算式之後，由左至右連續編號。  
   
 - `${` *name* `}` 在或方法呼叫中使用名稱取代 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 順序 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> ，其中 *name* 是所捕獲之子運算式的名稱。  
   
@@ -172,9 +171,9 @@ ms.locfileid: "92888504"
   
 `(?'name1-name2' subexpression)`
   
- 其中 *name1* 是目前群組 (選用)， *name2* 是先前定義的群組，而 *subexpression* 是任何有效的規則運算式模式。 平衡群組定義會刪除 *name2* 的定義，並且將 *name2* 與 *name1* 之間的間隔儲存在 *name1* 中。 如果沒有定義 *name2* 群組，比對結果會回溯。 因為刪除 *name2* 的最後一個定義會顯示 *name2* 的上一個定義，所以此建構可讓您將擷取堆疊用於群組 *name2* ，以作為追蹤巢狀建構 (例如圓括弧或左右方括弧) 的計數器。  
+ 其中 *name1* 是目前群組 (選用)， *name2* 是先前定義的群組，而 *subexpression* 是任何有效的規則運算式模式。 平衡群組定義會刪除 *name2* 的定義，並且將 *name2* 與 *name1* 之間的間隔儲存在 *name1* 中。 如果沒有定義 *name2* 群組，比對結果會回溯。 因為刪除 *name2* 的最後一個定義會顯示 *name2* 的上一個定義，所以此建構可讓您將擷取堆疊用於群組 *name2*，以作為追蹤巢狀建構 (例如圓括弧或左右方括弧) 的計數器。  
   
- 平衡群組定義將 *name2* 當作堆疊使用。 每個巢狀建構的開頭字元都會放在群組及其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 找到配對的結尾字元時，就會從群組中移除其對應的開頭字元，而 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合中就會減少一個。 所有巢狀建構的開頭和結尾字元都配成對之後， *name2* 就空了。  
+ 平衡群組定義將 *name2* 當作堆疊使用。 每個巢狀建構的開頭字元都會放在群組及其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 找到配對的結尾字元時，就會從群組中移除其對應的開頭字元，而 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合中就會減少一個。 所有巢狀建構的開頭和結尾字元都配成對之後，*name2* 就空了。  
   
 > [!NOTE]
 > 在您修改下列範例中的規則運算式來使用巢狀建構的適當開頭和結尾字元之後，即可用它來處理大部分的巢狀建構，例如包含多個巢狀方法呼叫的數學運算式或程式碼字行。  
@@ -377,7 +376,7 @@ ms.locfileid: "92888504"
   
   subexpression`(?<!`  `)`  
   
- 其中 *subexpression* 是任何規則運算式模式。 若要讓比對成功， *subexpression* 絕不能出現在目前位置左邊的輸入字串中。 不過，不符合 `subexpression` 的任何子字串都不會包含在比對結果中。  
+ 其中 *subexpression* 是任何規則運算式模式。 若要讓比對成功，*subexpression* 絕不能出現在目前位置左邊的輸入字串中。 不過，不符合 `subexpression` 的任何子字串都不會包含在比對結果中。  
   
  零寬度左不合樣 (Negative Lookbehind) 判斷提示通常會用在規則運算式開頭。 其定義的模式排除了後面字串中的比對。 當擷取群組中的最後一或多個字元，絕不能是符合該群組規則運算式模式的一或多個字元時，此判斷提示也可以用來限制回溯。 例如，如果群組擷取所有連續的文字字元，您就可以使用零寬度左合樣 (Positive Lookbehind) 判斷提示，要求最後一個字元不能是底線 (\_)。  
   
@@ -453,7 +452,7 @@ ms.locfileid: "92888504"
   
  第二個擷取群組會比對句子中的每個字。 第一個擷取群組會比對每個字以及接在該字後面的標點符號和空白字元。 索引為 2 的 <xref:System.Text.RegularExpressions.Group> 物件會提供第二個擷取群組所比對之文字的相關資訊。 您可以從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件取得擷取群組所擷取的一整組文字。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)
 - [回溯](backtracking-in-regular-expressions.md)

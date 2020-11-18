@@ -2,7 +2,6 @@
 title: 非同步檔案 I/O
 description: 深入瞭解 .NET 中的非同步檔案 i/o。 瞭解非同步方法以簡化非同步作業，例如 System.io.stream.readasync、System.io.stream.writeasync 等等。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-ms.openlocfilehash: a148e6e13ec0ee4ee469a0630f150199c5a3af13
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: aaf722c4af1598b639ffc56e30639e93dbc8a514
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188597"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823455"
 ---
 # <a name="asynchronous-file-io"></a>非同步檔案 I/O
 
@@ -58,9 +57,9 @@ C# 和 Visual Basic 各有兩個進行非同步程式設計的關鍵字：
 
 [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.Stream>
-- [檔案和資料流程 i/o](index.md)
+- [檔案和資料流 I/O](index.md)
 - [使用 async 和 await 進行非同步程式設計 (c # ) ](../../csharp/programming-guide/concepts/async/index.md)
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

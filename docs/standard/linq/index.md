@@ -1,23 +1,22 @@
 ---
 title: LINQ 總覽-.NET
-description: " (LINQ) 的語言整合式查詢提供語言層級的查詢功能，以及可讓您撰寫明確宣告式程式碼的高序位函式 API （c # 和 Visual Basic）。"
+description: 'Language-Integrated Query (LINQ) 提供語言層級的查詢功能，以及更高序位的函式 API 到 c # 和 Visual Basic，可讓您撰寫表達性的程式碼。'
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554992"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825828"
 ---
 # <a name="linq-overview"></a>LINQ 概觀
 
- (LINQ) 的語言整合式查詢提供語言層級的查詢功能，以及可讓您撰寫明確宣告式程式碼的 [高序位函式](https://en.wikipedia.org/wiki/Higher-order_function) API （c # 和 Visual Basic）。
+Language-Integrated Query (LINQ) 提供語言層級的查詢功能，以及 [更高序位](https://en.wikipedia.org/wiki/Higher-order_function) 的函式 API 到 c # 和 Visual Basic，可讓您撰寫表達性的程式碼。
 
 ## <a name="language-level-query-syntax"></a>語言層級查詢語法
 
@@ -151,7 +150,7 @@ API 語法不是比較精確的查詢語法方式嗎？
 - 您必須在查詢中界定變數的範圍，因為複雜性太高。
 - 您偏好使用查詢語法，且它不會干擾您的程式碼基底。
 
-如果你符合下列條件，則此問題的答案為**否**...
+如果你符合下列條件，則此問題的答案為 **否**...
 
 - 現有的程式碼基底已經使用 API 語法
 - 您不需要在查詢內指定變數的範圍

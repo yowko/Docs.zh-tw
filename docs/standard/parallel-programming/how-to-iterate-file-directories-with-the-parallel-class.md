@@ -1,19 +1,18 @@
 ---
 title: 作法：使用平行類別逐一查看檔案目錄
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: fa67e3b94bc7b2f9afac749e50204138e9a041f0
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925255"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825698"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>作法：使用平行類別逐一查看檔案目錄
 在許多情況下，檔案反覆運算是一項可以輕鬆平行處理的作業。 [如何：使用 PLINQ 逐一查看檔案目錄](how-to-iterate-file-directories-with-plinq.md)這個主題示範針對許多案例執行此工作的最簡單方式。 不過，當您的程式碼需要處理在存取檔案系統時可能會出現的許多類型例外狀況時，便會提升此工作的複雜性。 下列範例會示範處理該問題的其中一種方式。 它會使用以堆疊為基礎的反覆運算來周遊位於特定目錄底下的所有檔案和資料夾，並能使程式碼能夠攔截並處理各種不同的例外狀況。 當然，要如何處理例外狀況仍然取決於您。  
@@ -30,6 +29,6 @@ ms.locfileid: "92925255"
   
  請注意，若有例外狀況在主執行緒上擲出，由 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 啟動的執行緒可能會繼續執行。 若要停止這些執行緒，您可以在例外處理常式中設定布林值變數，並在平行迴圈的每個反覆運算上檢查其值。 若該值指出有擲出例外狀況，請使用 <xref:System.Threading.Tasks.ParallelLoopState> 變數來停止或中斷迴圈。 如需詳細資訊，請參閱[如何：停止或中斷 Parallel.For 迴圈](/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料平行處理](data-parallelism-task-parallel-library.md)

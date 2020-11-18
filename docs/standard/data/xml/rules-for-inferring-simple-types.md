@@ -1,14 +1,13 @@
 ---
 title: 推斷簡單型別的規則
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289066"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823546"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推斷簡單型別的規則
 說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
@@ -67,14 +66,14 @@ ms.locfileid: "84289066"
 
 下列結構描述定義的屬性會在結構描述推斷期間遭到忽略。  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`xsi:type`|若發現項目指定了 `xsi:type`，則 `xsi:type` 將被忽略。|  
 |`xsi:nil`|若發現項目具有 `xsi:nil` 屬性，表示其推斷結構描述中的項目宣告具有 `nillable="true"` 值。 將 `xsi:nil` 屬性設為 `true` 的項目不能有子項目。|  
 |`xsi:schemaLocation`|如果發現 `xsi:schemaLocation`，則會加以忽略。|  
 |`xsi:noNamespaceSchemaLocation`|如果發現 `xsi:noNamespaceSchemaLocation`，則會加以忽略。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)
 - [從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)

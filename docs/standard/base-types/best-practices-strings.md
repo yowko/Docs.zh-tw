@@ -2,7 +2,6 @@
 title: 在 .NET 中比較字串的最佳作法
 description: 瞭解如何在 .NET 應用程式中有效地比較字串。
 ms.date: 05/01/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 167b9b865fb0f674559e2b87db3ed4d6d5048ffe
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400822"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825074"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>在 .NET 中比較字串的最佳作法
 
@@ -55,7 +54,7 @@ ms.locfileid: "93400822"
 
 在 .NET 中的字串操作方法大多都是多載。 一般而言，您可讓一或多個多載接受預設值，而其他不接受預設值的多載，則定義用來比較或操作字串的精確方式。 大部分不依賴預設值的方法都會包含 <xref:System.StringComparison>類型的參數，其為一種列舉類型，可明確指定依據文化特性和大小寫進行字串比較的規則。 下表說明 <xref:System.StringComparison> 列舉類型成員。
 
-|StringComparison 成員|描述|
+|StringComparison 成員|說明|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|使用目前文化特性執行區分大小寫的比較。|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|使用目前文化特性執行不區分大小寫的比較。|

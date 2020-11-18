@@ -2,7 +2,6 @@
 title: 在 .NET 中填補字串
 description: 瞭解如何在 .NET 中填補字串。 使用 PadLeft 和 PadRight 方法來新增開頭或尾端字元，以達到指定的總長度。
 ms.date: 03/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,18 +13,18 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: f90a95f0ceb5ad7cc32d451897544fffe56afb6d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 9931db1e76e3737ab3803400928169b30c3ecbda
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889045"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822941"
 ---
 # <a name="padding-strings-in-net"></a>在 .NET 中填補字串
 
 使用下列其中一個 <xref:System.String> 方法來建立由原始字串組成的新字串，而原始字串會使用前置或後置字元填補至指定的總長度。 填補字元可為空白或指定的字元。 產生的字串會靠右或靠左顯示。 若原始字串的長度已經大於或等於需要的總長度，則填補方法會傳回原封不動的原始字串。如需詳細資訊，請參閱 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 與 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 這兩個多載方法的 **傳回** 一節。
   
-|方法名稱|用途|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|以指定總長度的前置字元填補字串。|  
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|以指定總長度的後置字元填補字串。|  

@@ -2,7 +2,6 @@
 title: 自訂 TimeSpan 格式字串
 description: 瞭解 .NET 中的自訂 TimeSpan 格式字串。 自訂格式字串包含一個或多個 TimeSpan 格式規範，& 任何數目的常值字元。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: b760e7ab7f39d4e4682d5d4c3a6421b9843e1d59
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: e8447e580ac85e1ebbc33f8c8334b7c5cfeb334b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888681"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824359"
 ---
 # <a name="custom-timespan-format-strings"></a>自訂 TimeSpan 格式字串
 
@@ -66,7 +65,7 @@ ms.locfileid: "92888681"
 |"FFFFF"|時間間隔中的十萬分之一秒。 不包含小數點後的零。<br /><br /> 詳細資訊： ["FFFFF" 自訂格式規範](#F5_Specifier)。|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|時間間隔中的百萬分之一秒。 不顯示小數點後的零。<br /><br /> 詳細資訊： ["FFFFFF" 自訂格式規範](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|時間間隔中的千萬分之一秒。 不顯示小數點後的零或七位數都是零。<br /><br /> 詳細資訊： ["FFFFFFF" 自訂格式規範](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|' *string* '|常值字串分隔符號。<br /><br /> 詳細資訊： [其他字元](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*string*'|常值字串分隔符號。<br /><br /> 詳細資訊： [其他字元](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |&#92;|逸出字元。<br /><br /> 詳細資訊： [其他字元](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |任意字元|其他任何未逸出字元都會解譯為自訂格式規範。<br /><br /> 詳細資訊： [其他字元](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
@@ -74,7 +73,7 @@ ms.locfileid: "92888681"
 
 "d" 自訂格式規範會輸出 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中的完整天數。 它會輸出 <xref:System.TimeSpan> 值中的完整天數，即使該值有多個位數也一樣。 如果 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>屬性的值為零，此規範就會輸出 "0"。
 
-如果單獨使用 "d" 自訂格式規範，請指定 "%d"，以免被錯誤解譯為標準格式字串。 下列範例提供一個實例。
+如果單獨使用 "d" 自訂格式規範，請指定 "%d"，以免被錯誤解譯為標準格式字串。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#3)]
 [!code-vb[Conceptual.TimeSpan.Custom#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#3)]
@@ -103,12 +102,12 @@ ms.locfileid: "92888681"
 
 "h" 自訂格式規範會輸出 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未計入天數部分的完整時數。 如果 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值為 0 到 9，就會傳回一位數的字串值；如果 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值為 10 到 23，則會傳回兩位數的字串值。
 
-如果單獨使用 "h" 自訂格式規範，請指定 "%h"，以免被錯誤解譯為標準格式字串。 下列範例提供一個實例。
+如果單獨使用 "h" 自訂格式規範，請指定 "%h"，以免被錯誤解譯為標準格式字串。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#6)]
 [!code-vb[Conceptual.TimeSpan.Custom#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#6)]
 
-通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "%h" 自訂格式規範會，將數值字串解譯為時數。 下列範例提供一個實例。
+通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "%h" 自訂格式規範會，將數值字串解譯為時數。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#8)]
 [!code-vb[Conceptual.TimeSpan.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#8)]
@@ -124,7 +123,7 @@ ms.locfileid: "92888681"
 
 "hh" 自訂格式規範會輸出 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未計入天數部分的完整時數。 對於從 0 到 9 的值，輸出字串會包含前置零。
 
-通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "hh" 自訂格式規範，將數值字串解譯為時數。 下列範例提供一個實例。
+通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "hh" 自訂格式規範，將數值字串解譯為時數。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#9)]
 [!code-vb[Conceptual.TimeSpan.Custom#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#9)]
@@ -140,12 +139,12 @@ ms.locfileid: "92888681"
 
 "m" 自訂格式規範會輸出 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未計入天數部分的完整分鐘數。 如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值為 0 到 9，就會傳回一位數的字串值；如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值為 10 到 59，則會傳回兩位數的字串值。
 
-如果單獨使用 "m" 自訂格式規範，請指定 "%m"，以免被錯誤解譯為標準格式字串。 下列範例提供一個實例。
+如果單獨使用 "m" 自訂格式規範，請指定 "%m"，以免被錯誤解譯為標準格式字串。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#6)]
 [!code-vb[Conceptual.TimeSpan.Custom#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#6)]
 
-通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "%m" 自訂格式規範，將數值字串解譯為分鐘數。 下列範例提供一個實例。
+通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "%m" 自訂格式規範，將數值字串解譯為分鐘數。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#11)]
 [!code-vb[Conceptual.TimeSpan.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#11)]
@@ -161,7 +160,7 @@ ms.locfileid: "92888681"
 
 "mm" 自訂格式規範會輸出 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未包含在時數或天數部分中的完整分鐘數。 對於從 0 到 9 的值，輸出字串會包含前置零。
 
-通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "mm" 自訂格式規範，將數值字串解譯為分鐘數。 下列範例提供一個實例。
+通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "mm" 自訂格式規範，將數值字串解譯為分鐘數。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#13)]
 [!code-vb[Conceptual.TimeSpan.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#13)]
@@ -177,12 +176,12 @@ ms.locfileid: "92888681"
 
 "s" 自訂格式規範會輸出 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未包含在時數、天數或分鐘數部分中的完整秒數。 如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值為 0 到 9，就會傳回一位數的字串值；如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值為 10 到 59，則會傳回兩位數的字串值。
 
-如果單獨使用 "s" 自訂格式規範，請指定 "%s"，以免被錯誤解譯為標準格式字串。 下列範例提供一個實例。
+如果單獨使用 "s" 自訂格式規範，請指定 "%s"，以免被錯誤解譯為標準格式字串。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#15](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#15)]
 [!code-vb[Conceptual.TimeSpan.Custom#15](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#15)]
 
-通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "%s" 自訂格式規範，將數值字串解譯為秒數。 下列範例提供一個實例。
+通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "%s" 自訂格式規範，將數值字串解譯為秒數。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#17](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#17)]
 [!code-vb[Conceptual.TimeSpan.Custom#17](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#17)]
@@ -198,7 +197,7 @@ ms.locfileid: "92888681"
 
 "ss" 自訂格式規範會輸出 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未包含在時數、天數或分鐘數部分中的完整秒數。 對於從 0 到 9 的值，輸出字串會包含前置零。
 
-通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "ss" 自訂格式規範，將數值字串解譯為秒數。 下列範例提供一個實例。
+通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。 您可以改用 "ss" 自訂格式規範，將數值字串解譯為秒數。 下列範例提供說明。
 
 [!code-csharp[Conceptual.TimeSpan.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#18)]
 [!code-vb[Conceptual.TimeSpan.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#18)]

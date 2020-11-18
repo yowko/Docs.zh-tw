@@ -2,7 +2,6 @@
 title: 複合格式
 description: 深入瞭解 .NET 複合格式，其採用物件清單和複合格式字串（包含具有索引預留位置的固定文字）作為輸入。
 ms.date: 10/26/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,19 +13,19 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 588efff637359586630554decf57072597365d32
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889461"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823091"
 ---
 # <a name="composite-formatting"></a>複合格式
 
 .NET 複合格式功能會採用物件清單和複合格式字串作為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
   
 > [!IMPORTANT]
-> 如果您使用的語言和語言版本支援，您可以使用「內插字串」  ，而不使用複合格式字串。 內插字串是包含「插入運算式」  的字串。 每個插值的運算式會以運算式的值解析，且在字串指派時，包含在結果字串中。 如需詳細資訊，請參閱[ (c # 參考中的字串插補) 和插入](../../csharp/language-reference/tokens/interpolated.md)[字串 (Visual Basic 參考) ](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
+> 如果您使用的語言和語言版本支援，您可以使用「內插字串」，而不使用複合格式字串。 內插字串是包含「插入運算式」的字串。 每個插值的運算式會以運算式的值解析，且在字串指派時，包含在結果字串中。 如需詳細資訊，請參閱[ (c # 參考中的字串插補) 和插入](../../csharp/language-reference/tokens/interpolated.md)[字串 (Visual Basic 參考) ](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
 
 下列方法支援複合格式功能：  
   
@@ -56,7 +55,7 @@ ms.locfileid: "92889461"
 ## <a name="format-item-syntax"></a>格式項目語法  
  每個格式項目都會使用下列格式，並由下列元件所組成：  
   
- `{`*索引* [ `,` *對齊* ] [ `:` *格式字串* ]`}`  
+ `{`*索引*[ `,` *對齊*] [ `:` *格式字串*]`}`  
   
  成對的大括號 ("{" 和 "}") 是必要的。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "92889461"
  每個格式項目皆可參考清單內的任何物件。 例如，如果有三個物件，您可以指定複合格式字串（如下所示）來格式化第二個、第一個和第三個物件： " {1} {0} {2} "。 不是格式項目所參考的物件會被忽略。 <xref:System.FormatException>如果參數規範指定超出物件清單範圍的專案，則會在執行時間擲回。  
   
 ### <a name="alignment-component"></a>對齊元件  
- 選擇性 *alignment* 元件為帶正負號的整數，表示慣用的格式化欄位寬度。 如果 *alignment* 的值小於格式化字串的長度，則會忽略 *alignment* 並使用格式化字串的長度當做欄位寬度。 如果 *alignment* 為正數，欄位中的格式化資料會靠右對齊；如果 *alignment* 為負數，則會靠左對齊。 如果填補有必要，則會使用泛空白字元 (White Space)。 如果指定了 *alignment* ，則需要逗號。  
+ 選擇性 *alignment* 元件為帶正負號的整數，表示慣用的格式化欄位寬度。 如果 *alignment* 的值小於格式化字串的長度，則會忽略 *alignment* 並使用格式化字串的長度當做欄位寬度。 如果 *alignment* 為正數，欄位中的格式化資料會靠右對齊；如果 *alignment* 為負數，則會靠左對齊。 如果填補有必要，則會使用泛空白字元 (White Space)。 如果指定了 *alignment*，則需要逗號。  
   
  下列範例會定義兩個陣列，一個包含員工的名稱，另一個包含他們在兩週內的工作時數。 複合格式字串會在 20 個字元的欄位中，將名稱靠左對齊，並且在 5 個字元的欄位中，將其工作時數靠右對齊。 請注意，"N1" 標準格式字串也會用來格式化具有一個小數位數的時數。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "92889461"
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>格式字串元件  
- 選擇性 *formatString* 元件是一個格式字串，適用於將格式化的物件類型。 如果對應的物件為數值，指定標準或自訂的數值格式字串；如果對應的物件為 <xref:System.DateTime> 物件，指定標準或自訂的日期和時間格式字串；或者，如果對應的物件為列舉值，指定[列舉格式字串](enumeration-format-strings.md)。 如果未指定 *formatString* ，則會使用數值、日期和時間或列舉類型的一般 ("G") 格式規範。 如果指定 *formatString* ，則需要冒號。  
+ 選擇性 *formatString* 元件是一個格式字串，適用於將格式化的物件類型。 如果對應的物件為數值，指定標準或自訂的數值格式字串；如果對應的物件為 <xref:System.DateTime> 物件，指定標準或自訂的日期和時間格式字串；或者，如果對應的物件為列舉值，指定[列舉格式字串](enumeration-format-strings.md)。 如果未指定 *formatString*，則會使用數值、日期和時間或列舉類型的一般 ("G") 格式規範。 如果指定 *formatString*，則需要冒號。  
   
  下表列出 .NET 類別庫中支援一組預先定義格式字串的類型或類別類型，並提供列出所支援格式字串之主題的連結。 請注意，字串格式是一種可延伸機制，可讓為所有現有類型定義新的格式字串，以及定義一組應用程式定義類型所支援的格式字串。 如需詳細資訊，請參閱 <xref:System.IFormattable> 和 <xref:System.ICustomFormatter> 介面主題。  
   

@@ -2,7 +2,6 @@
 title: 檔案與資料流 I/O - .NET
 description: 瞭解檔案和資料流程 i/o 的基本概念，也就是在 .NET 中將資料傳輸到儲存體媒體或從中傳輸資料。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - IO namespace
 - files, I/O
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: aced59995c8d0f478d0565c8fb8faa4f40c32968
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 4c6efc059423740f19460f24f12df81ac54f884a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189195"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825815"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 

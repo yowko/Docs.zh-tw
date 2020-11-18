@@ -2,7 +2,6 @@
 title: .NET 規則運算式中的反向參考建構
 description: 了解如何在規則運算式中使用反向參考建構來識別重複的文字元素。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 79702f266e7233c96fef6b6aa32a7e756589f49c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889149"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825256"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>規則運算式中的反向參考建構
 
@@ -32,9 +31,9 @@ ms.locfileid: "92889149"
 
 編號反向參考會使用下列語法：
 
-`\` *number*
+`\`*數位*
 
-其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果規則運算式模式中未定義 *number* ，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。 此外，如果 *number* 識別在特定序數位置的擷取群組，但擷取群組已經被指派和其序數順序不同的數值名稱，則規則運算式剖析器也會擲回 <xref:System.ArgumentException>。
+其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果規則運算式模式中未定義 *number*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。 此外，如果 *number* 識別在特定序數位置的擷取群組，但擷取群組已經被指派和其序數順序不同的數值名稱，則規則運算式剖析器也會擲回 <xref:System.ArgumentException>。
 
 請注意八進位逸出字碼 (例如 `\16`) 與使用相同標記法之 `\`*number* 反向參考間的模稜兩可。 這個模棱兩可的情況已解決，如下所示：
 
@@ -50,7 +49,7 @@ ms.locfileid: "92889149"
 
 下列範例會在字串中尋找雙字組字元。 它會定義由下列項目組成的規則運算式 `(\w)\1`。
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |`(\w)`|比對文字字元，並將其指派給第一個擷取群組。|
 |`\1`|比對與第一個擷取群組之值相同的下一個字元。|
@@ -68,11 +67,11 @@ ms.locfileid: "92889149"
 
 `\k'`*名稱*`'`
 
-其中 *name* 是規則運算式模式中所定義之擷取群組的名稱。 如果規則運算式模式中未定義 *name* ，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。
+其中 *name* 是規則運算式模式中所定義之擷取群組的名稱。 如果規則運算式模式中未定義 *name*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。
 
 下列範例會在字串中尋找雙字組字元。 它會定義由下列項目組成的規則運算式 `(?<char>\w)\k<char>`。
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |`(?<char>\w)`|比對字組字元，並將其指派給名為 `char` 的擷取群組。|
 |`\k<char>`|比對下一個與 `char` 擷取群組值相同的字元。|
@@ -82,7 +81,7 @@ ms.locfileid: "92889149"
 
 ## <a name="named-numeric-backreferences"></a>具名的數值反向參考
 
-在含有 `\k` 的具名反向參考中， *name* 也可以是數字的字串表示。 例如，下列範例會使用規則運算式 `(?<2>\w)\k<2>` 來尋找字串中的雙字組字元。 在此案例中，範例定義了明確地命名為 "2" 的擷取群組，而反向參考也相對應地命名為 "2"。
+在含有 `\k` 的具名反向參考中，*name* 也可以是數字的字串表示。 例如，下列範例會使用規則運算式 `(?<2>\w)\k<2>` 來尋找字串中的雙字組字元。 在此案例中，範例定義了明確地命名為 "2" 的擷取群組，而反向參考也相對應地命名為 "2"。
 
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]

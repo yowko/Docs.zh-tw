@@ -3,7 +3,6 @@ title: Common Language Runtime (CLR) 總覽-.NET
 titleSuffix: ''
 description: " (CLR) ，開始使用 common language runtime。NET 的執行時間環境。 CLR 會執行程式碼，並提供服務以簡化開發程式。"
 ms.date: 10/22/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
 - code, execution
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39543a511e8f405d9205df2697bcf4fd1194bd7a
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 917649475271c288516f9eb0913a0959601427af
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687510"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823871"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Common Language Runtime (CLR) 概觀
 
@@ -70,7 +69,7 @@ Common Language Runtime 使得設計其物件可跨語言互動的元件和應�
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[Managed 執行進程](managed-execution-process.md)|描述充分利用 Common Language Runtime 所需要的步驟。|
 |[自動記憶體管理](automatic-memory-management.md)|說明記憶體回收行程如何配置和釋放記憶體。|

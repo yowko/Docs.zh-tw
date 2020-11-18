@@ -1,19 +1,18 @@
 ---
 title: 作法：撰寫自訂 PLINQ 彙總函式
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: 644d6b6f929e040a0fe688c18c774de6f434c4b3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d04f90e9c763c8ddba5ba07b650ffb878869ff3a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290768"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825464"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>作法：撰寫自訂 PLINQ 彙總函式
 此範例示範如何使用 <xref:System.Linq.ParallelEnumerable.Aggregate%2A> 方法，將自訂彙總函式套用至來源序列。  
@@ -31,7 +30,7 @@ ms.locfileid: "84290768"
   
  請注意，當 lambda 運算式主體包含單一運算式時，<xref:System.Func%602?displayProperty=nameWithType> 委派的傳回值即為運算式的值。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

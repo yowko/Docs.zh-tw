@@ -2,7 +2,6 @@
 title: 如何：從檔案讀取文字
 description: 在本文中，您可以使用適用于傳統型應用程式的 .NET 中的 StreamReader 類別，查看如何以同步或非同步方式從文字檔讀取文字的範例。
 ms.date: 01/03/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189325"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823364"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：從檔案讀取文字
 
@@ -45,7 +44,7 @@ ms.locfileid: "93189325"
 :::code language="csharp" source="snippets/how-to-read-text-from-a-file/csharp/async-wpf/MainWindow.xaml.cs":::
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/async-wpf/MainWindow.xaml.vb":::
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StreamReader>  
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
@@ -59,4 +58,4 @@ ms.locfileid: "93189325"
 - [如何：將文字寫入檔案](how-to-write-text-to-a-file.md)  
 - [如何：從字串讀取字元](how-to-read-characters-from-a-string.md)  
 - [如何：將字元寫入字串](how-to-write-characters-to-a-string.md)  
-- [檔案和資料流 I/O](index.md)
+- [檔案和資料流程 i/o](index.md)

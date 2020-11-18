@@ -1,8 +1,7 @@
 ---
 title: 非同步程式設計模型 (APM)
-description: 瞭解 .NET 中的非同步程式設計模型（APM）。 探索如何開始和結束非同步作業。
+description: 瞭解 .NET 中 (APM) 的非同步程式設計模型。 探索如何開始及結束非同步作業。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - ending asynchronous operations
 - starting asynchronous operations
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769180"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824437"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同步程式設計模型 (APM)
 使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，一種名為 `BeginOperationName`，另一種名為 `EndOperationName`，這兩種方法分別負責開始和結束非同步作業 *OperationName*。 例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。 這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。  
@@ -64,8 +63,8 @@ ms.locfileid: "84769180"
   
 - 使用 <xref:System.AsyncCallback> 委派指定作業完成時要叫用的方法。 如需說明這項技巧的範例，請參閱 [Using an AsyncCallback Delegate to End an Asynchronous Operation](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)
-- [以非同步的方式呼叫同步方法](calling-synchronous-methods-asynchronously.md) \(部分機器翻譯\)
+- [以非同步的方式呼叫同步方法](calling-synchronous-methods-asynchronously.md)
 - [使用 AsyncCallback 委派和狀態物件](using-an-asynccallback-delegate-and-state-object.md)

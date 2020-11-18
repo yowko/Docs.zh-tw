@@ -1,14 +1,13 @@
 ---
 title: 解析外部的 XSLT 樣式表和文件
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 8e7f66d67f2520b47c30307a98ed2f3fb08455df
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291470"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823585"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部的 XSLT 樣式表和文件
 在轉換期間，您可能需要進行數次外部資源解析。  
@@ -41,7 +40,7 @@ ms.locfileid: "84291470"
   
  呼叫 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法時，即會針對載入期間所提供的辨識項計算使用權限，接著將該使用權限集合指派給整個轉換程序。 若 `document()` 函式試圖啟始的動作所需要之使用權限，在使用權限集合中找不到，則會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

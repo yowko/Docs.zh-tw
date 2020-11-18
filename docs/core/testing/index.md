@@ -4,12 +4,12 @@ description: 本文簡要說明在 .NET 中測試的測試概念、術語和工�
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/19/2020
-ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 137a8f4e3bc9e3be529d5034c233d283cf158b31
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223472"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824853"
 ---
 # <a name="testing-in-net"></a>在 .NET 中測試
 
@@ -21,17 +21,17 @@ ms.locfileid: "92223472"
 
 ### <a name="unit-tests"></a>單元測試
 
-*單元測試*是練習個別軟體元件或方法（也稱為「工作單位」）的測試。 單元測試應該只測試開發人員控制項內的程式碼。 它們並不會測試基礎結構的考慮。 基礎結構的考慮包括與資料庫、檔案系統和網路資源的互動。
+*單元測試* 是練習個別軟體元件或方法（也稱為「工作單位」）的測試。 單元測試應該只測試開發人員控制項內的程式碼。 它們並不會測試基礎結構的考慮。 基礎結構的考慮包括與資料庫、檔案系統和網路資源的互動。
 
 如需有關建立單元測試的詳細資訊，請參閱 [測試控管](#testing-tools)。
 
 ### <a name="integration-tests"></a>整合測試
 
-*整合測試*與單元測試不同之處在于，它會演練兩個或多個軟體元件的功能，也稱為「整合」。 這些測試會在較廣泛的受測系統上運作，而單元測試則著重于個別的元件。 整合測試通常會包含基礎結構考慮。
+*整合測試* 與單元測試不同之處在于，它會演練兩個或多個軟體元件的功能，也稱為「整合」。 這些測試會在較廣泛的受測系統上運作，而單元測試則著重于個別的元件。 整合測試通常會包含基礎結構考慮。
 
 ### <a name="load-tests"></a>負載測試
 
-*負載測試*的目標是要判斷系統是否可以處理指定的負載，例如，使用應用程式的並行使用者數目，以及應用程式處理互動佳的能力。 如需有關 web 應用程式負載測試的詳細資訊，請參閱 [ASP.NET Core 負載/壓力測試](/aspnet/core/test/load-tests)。
+*負載測試* 的目標是要判斷系統是否可以處理指定的負載，例如，使用應用程式的並行使用者數目，以及應用程式處理互動佳的能力。 如需有關 web 應用程式負載測試的詳細資訊，請參閱 [ASP.NET Core 負載/壓力測試](/aspnet/core/test/load-tests)。
 
 ## <a name="test-considerations"></a>測試考慮
 
@@ -43,7 +43,7 @@ ms.locfileid: "92223472"
 
 ### <a name="xunit"></a>xUnit
 
-[xUnit](https://xunit.net) 是適用于 .net 的免費開放原始碼、以社區為導向的單元測試工具。 XUnit.net 是由 NUnit v2 的原始發明者所撰寫，是適用于 .NET 應用程式單元測試的最新技術。 xUnit.net 適用于 ReSharper、CodeRush、TestDriven.NET 和 [Xamarin](/apps/xamarin)。 它是 [.Net Foundation](https://dotnetfoundation.org) 的專案，並在其管理辦法下運作。
+[xUnit](https://xunit.net) 是適用于 .net 的免費開放原始碼、以社區為導向的單元測試工具。 XUnit.net 是由 NUnit v2 的原始發明者所撰寫，是適用于 .NET 應用程式單元測試的最新技術。 xUnit.net 適用于 ReSharper、CodeRush、TestDriven.NET 和 [Xamarin](https://dotnet.microsoft.com/apps/xamarin)。 它是 [.Net Foundation](https://dotnetfoundation.org) 的專案，並在其管理辦法下運作。
 
 如需詳細資訊，請參閱下列資源：
 

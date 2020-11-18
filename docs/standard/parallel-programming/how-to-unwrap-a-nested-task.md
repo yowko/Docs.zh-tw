@@ -1,19 +1,18 @@
 ---
 title: 作法：解除包裝巢狀工作
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: 9a69fa42da41ee4a071a6571042fd96fb5a009d2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cda42dbc88d73eadf04720c0faaf98151d371127
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288026"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825555"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>作法：解除包裝巢狀工作
 您可以從方法傳回工作，接著等待或繼續該工作，如下列範例所示：  
@@ -41,7 +40,7 @@ ms.locfileid: "84288026"
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]
  [!code-vb[TPL_UnWrap#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippet04.vb#04)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
 - [以工作為基礎的非同步程式設計](task-based-asynchronous-programming.md)

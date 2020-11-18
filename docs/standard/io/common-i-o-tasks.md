@@ -1,30 +1,29 @@
 ---
 title: 一般 I/O 工作
-description: 瞭解如何在 .NET 中使用 System.IO 命名空間內的類別 & 方法，& 一般目錄工作執行一般檔案工作。
+description: 瞭解如何使用 .NET 的 System.IO 命名空間中的類別 & 方法，在一般目錄工作 & 一般檔案工作。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 4b97b4e464622e482a9ef45e143865ee82e6b5d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598602"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823390"
 ---
 # <a name="common-io-tasks"></a>一般 I/O 工作
-<xref:System.IO> 命名空間 (Namespace) 提供了幾個允許可在檔案、目錄和資料流上執行各種動作 (例如讀取和寫入) 的類別。 如需詳細資訊，請參閱檔案[和資料流程 i/o](index.md)。  
+<xref:System.IO> 命名空間 (Namespace) 提供了幾個允許可在檔案、目錄和資料流上執行各種動作 (例如讀取和寫入) 的類別。 如需詳細資訊，請參閱檔案 [和資料流程 i/o](index.md)。  
   
 ## <a name="common-file-tasks"></a>一般檔案工作  
   
 |作法...|請參閱這個主題中的範例…|  
 |-------------------|--------------------------------------|  
 |建立文字檔|<xref:System.IO.File.CreateText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType> 方法|  
-|寫入文字檔|[作法：將文字寫入檔案](how-to-write-text-to-a-file.md)<br /><br /> [如何：寫入文字檔（c + +/CLI）](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|寫入文字檔|[作法：將文字寫入檔案](how-to-write-text-to-a-file.md)<br /><br /> [如何：將文字檔寫入 (c + +/CLI) ](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
 |從文字檔讀取|[作法：讀取檔案中的文字](how-to-read-text-from-a-file.md)|  
 |將文字附加至檔案|[作法：開啟並附加至記錄檔](how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType> 方法|  
-|重新命名檔案或移動檔案|<xref:System.IO.File.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
+|重新命名或移動檔案|<xref:System.IO.File.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
 |刪除檔案|<xref:System.IO.File.Delete%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType> 方法|  
 |複製檔案|<xref:System.IO.File.Copy%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.CopyTo%2A?displayProperty=nameWithType> 方法|  
 |取得檔案大小|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType> 屬性|  
@@ -45,7 +44,7 @@ ms.locfileid: "84598602"
 |存取特殊資料夾中的檔案，例如 [我的文件]|[作法：將文字寫入檔案](how-to-write-text-to-a-file.md)|  
 |建立目錄|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> 屬性|  
 |建立子目錄|<xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType> 方法|  
-|重新命名目錄或移動目錄|<xref:System.IO.Directory.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
+|重新命名或移動目錄|<xref:System.IO.Directory.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
 |複製目錄|[作法：複製目錄](how-to-copy-directories.md)|  
 |刪除目錄|<xref:System.IO.Directory.Delete%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.DirectoryInfo.Delete%2A?displayProperty=nameWithType> 方法|  
 |請參閱目錄中的檔案與子目錄|[作法：列舉目錄和檔案](how-to-enumerate-directories-and-files.md)|  
@@ -54,6 +53,6 @@ ms.locfileid: "84598602"
   
 ## <a name="see-also"></a>請參閱
 
-- [檔案和資料流程 i/o](index.md)
+- [檔案和資料流 I/O](index.md)
 - [撰寫資料流](composing-streams.md)
 - [非同步檔案 i/o](asynchronous-file-i-o.md)

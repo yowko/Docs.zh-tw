@@ -3,14 +3,13 @@ title: .NET 類別庫
 description: 了解 .NET 類別庫如何讓您將有用的功能分組成可供多個應用程式使用的模組。
 author: richlander
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: bbf8d5fa44af931e39f2bf1344c13f9d9d9bfe05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224264"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823949"
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
 
@@ -18,8 +17,8 @@ ms.locfileid: "92224264"
 
 您可以使用三種類型的類別庫：
 
-* **平台特定**類別庫可以存取指定平台中的所有 API (例如，.NET Framework、Xamarin iOS)，但是只能供將目標設為該平台的應用程式和程式庫使用。
-* **可攜式**類別庫可以存取 API 子集，並且可以供將目標設為多個平台的應用程式和程式庫使用。
+* **平台特定** 類別庫可以存取指定平台中的所有 API (例如，.NET Framework、Xamarin iOS)，但是只能供將目標設為該平台的應用程式和程式庫使用。
+* **可攜式** 類別庫可以存取 API 子集，並且可以供將目標設為多個平台的應用程式和程式庫使用。
 * **.NET Standard** 類別庫會將平台特定和可攜式程式庫概念合併到提供兼具兩者的單一模型。
 
 ## <a name="platform-specific-class-libraries"></a>平台特定類別庫

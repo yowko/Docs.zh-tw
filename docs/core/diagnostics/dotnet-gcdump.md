@@ -1,25 +1,39 @@
 ---
-title: dotnet-gcdump-.NET Core
-description: 安裝和使用 dotnet-gcdump 命令列工具。
-ms.date: 07/26/2020
-ms.openlocfilehash: c73afae9ecdfa907e9655634a0ac355cab4ef558
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+title: dotnet-gcdump 診斷工具-.NET CLI
+description: 瞭解如何安裝和使用 dotnet-gcdump CLI 工具，以使用 .NET EventPipe 收集即時 .NET 進程的 GC (垃圾收集行程) 傾印。
+ms.date: 11/17/2020
+ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687612"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826036"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>堆積分析工具 (dotnet-gcdump) 
 
 本文 **適用于：** ✔️ .net CORE 3.1 SDK 和更新版本
 
-## <a name="install-dotnet-gcdump"></a>安裝 dotnet-gcdump
+## <a name="install"></a>安裝
 
-若要安裝 `dotnet-gcdump` [NuGet 套件](https://www.nuget.org/packages/dotnet-gcdump)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+有兩種方式可以下載和安裝 `dotnet-gcdump` ：
 
-```dotnetcli
-dotnet tool install -g dotnet-gcdump
-```
+- **dotnet global tool：**
+
+  若要安裝 `dotnet-gcdump` [NuGet 套件](https://www.nuget.org/packages/dotnet-gcdump)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-gcdump
+  ```
+
+- **直接下載：**
+
+  下載符合您平臺的工具可執行檔：
+
+  | OS  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \|[x64](https://aka.ms/dotnet-gcdump/win-x64) \|[arm](https://aka.ms/dotnet-gcdump/win-arm) \|[arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \|[arm](https://aka.ms/dotnet-gcdump/linux-arm) \|[arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \|[musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \|[musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>概要
 
@@ -27,7 +41,7 @@ dotnet tool install -g dotnet-gcdump
 dotnet-gcdump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet-gcdump`全域工具會使用[EventPipe](./eventpipe.md)收集即時 .NET 進程的 GC (垃圾收集行程) 傾印。 GC 傾印的建立方式，是在目標進程中觸發 GC、開啟特殊事件，以及從事件資料流程重新產生物件根目錄的圖形。 此程式可讓您在進程執行時收集 GC 傾印，並以最少量的額外負荷進行收集。 這些傾印適用于數種案例：
 

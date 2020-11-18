@@ -1,19 +1,18 @@
 ---
 title: 作法：實作動態分割
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to create a dynamic partitioner
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
-ms.openlocfilehash: 197e71cf4f00c98891e58e5f72974c0ec407e6ce
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1120d846743ac3b89d2d110b4d1abdd0083f9eab
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288442"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825737"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>作法：實作動態分割
 
@@ -28,7 +27,7 @@ ms.locfileid: "84288442"
 
 這是區塊分割的範例，其中每個區塊包含一個元素。 藉由一次提供更多元素，可以減少鎖定競爭，理論上可以實現更快的效能。 不過，在某些時候，較大的區塊可能需要額外的負載平衡邏輯，才能在所有工作完成前使所有執行緒保持忙碌。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [PLINQ 和 TPL 的自訂 Partitioner](custom-partitioners-for-plinq-and-tpl.md)
 * [作法：為靜態分割實作 Partitioner](how-to-implement-a-partitioner-for-static-partitioning.md)

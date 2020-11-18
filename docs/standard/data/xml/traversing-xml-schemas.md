@@ -1,18 +1,17 @@
 ---
 title: 周遊 XML 結構描述
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6371d7e16af45eebf09f95bce2864be3bf44321e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289833"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824671"
 ---
 # <a name="traversing-xml-schemas"></a>周遊 XML 結構描述
 
@@ -67,7 +66,7 @@ ms.locfileid: "84289833"
 
 [建置 XML 結構描述](building-xml-schemas.md)主題中的程式碼範例使用 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 集合，將屬性 `CustomerId` 加入至 `Customer` 項目。 這是前結構描述編譯屬性。 對應的後結構描述編譯資訊集屬性為 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 集合，其保留複雜型別的所有屬性，包括透過型別衍生繼承的那些屬性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
 - [讀取及寫入 XML 結構描述](reading-and-writing-xml-schemas.md)

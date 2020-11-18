@@ -2,7 +2,6 @@
 title: .NET 規則運算式中的回溯
 description: 了解如何控制回溯規則運算式模式比對。
 ms.date: 11/12/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - strings [.NET], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: b8bd8308b91c2c358f4a462967424f55fa316504
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a15ef27f71eac9ed12889054283f8ac41d85922f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889136"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825243"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 回溯 (Backtracking) 會在規則運算式模式包含選擇性的[數量詞](quantifiers-in-regular-expressions.md)或[替代建構](alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -33,7 +32,7 @@ ms.locfileid: "92889136"
 ## <a name="linear-comparison-without-backtracking"></a>不進行回溯的線性比較  
  如果規則運算式模式沒有選擇性數量詞或替代建構，則規則運算式引擎會以線性時間執行。 也就是說，規則運算式引擎比對模式中的第一個語言項目與輸入字串中的文字之後，會嘗試比對模式中的下一個語言項目與輸入字串中的下一個字元或字元群組。 這項作業會繼續進行，直到比對成功或失敗為止。 無論成功或失敗，規則運算式引擎都會在輸入字串中一次前進一個字元。  
   
- 下列範例提供一個實例。 規則運算式 `e{2}\w\b` 會尋找兩個出現字母 "e" 的位置，這後面接著任何文字字元，然後再接著字邊界。  
+ 下列範例提供說明。 規則運算式 `e{2}\w\b` 會尋找兩個出現字母 "e" 的位置，這後面接著任何文字字元，然後再接著字邊界。  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking1.vb#1)]  
@@ -129,7 +128,7 @@ ms.locfileid: "92889136"
 ### <a name="lookbehind-assertions"></a>左合樣判斷提示  
  .NET 包含兩個語言專案（ `(?<=` *子運算式* `)` 和 `(?<!` *子運算式* `)` ），其符合輸入字串中的前一個字元或字元。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元前面的一或多個字元是否可由 *subexpression* 比對，而不需前進或回溯。  
   
- `(?<=`*子運算式* `)`是正左合樣判斷提示;亦即，目前位置前面的字元必須符合 *子運算式* 。 `(?<!`*子運算式* `)`是反左合樣判斷提示;亦即，目前位置前面的字元必須不符合 *子運算式* 。 當 *子* 運算式為前一個子運算式的子集時，正向左合樣判斷提示最有用。  
+ `(?<=`*子運算式* `)`是正左合樣判斷提示;亦即，目前位置前面的字元必須符合 *子運算式*。 `(?<!`*子運算式* `)`是反左合樣判斷提示;亦即，目前位置前面的字元必須不符合 *子運算式*。 當 *子* 運算式為前一個子運算式的子集時，正向左合樣判斷提示最有用。  
   
  下列範例使用兩個同等的規則運算式模式，來驗證電子郵件地址中的使用者名稱。 第一個模式因為進行大量回溯，而受限於低落的效能。 第二個模式修改了第一個規則運算式，將巢狀數量詞取代為左合樣判斷提示。 範例的輸入顯示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的執行時間。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "92889136"
 ### <a name="lookahead-assertions"></a>右合樣判斷提示  
  .NET 包含兩個語言專案（ `(?=` *子運算式* `)` 和 `(?!` *子運算式* `)` ），其符合輸入字串中的下一個字元或字元。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元後面的一或多個字元是否可由 *subexpression* 比對，而不需前進或回溯。  
   
- `(?=`*子運算式* `)`是右合樣判斷提示;也就是說，目前位置後面的字元必須符合 *子運算式* 。 `(?!`*子運算式* `)`是右合樣判斷提示;也就是說，目前位置後面的字元必須不符合 *子運算式* 。 當 *子* 運算式為下一個子運算式的子集時，右合樣和右合樣判斷提示最為實用。  
+ `(?=`*子運算式* `)`是右合樣判斷提示;也就是說，目前位置後面的字元必須符合 *子運算式*。 `(?!`*子運算式* `)`是右合樣判斷提示;也就是說，目前位置後面的字元必須不符合 *子運算式*。 當 *子* 運算式為下一個子運算式的子集時，右合樣和右合樣判斷提示最為實用。  
   
  下列範例使用兩個同等的規則運算式模式，這兩個模式會驗證完整類型名稱。 第一個模式因為進行大量回溯，而受限於低落的效能。 第二個修改了第一個規則運算式，將巢狀數量詞取代為右合樣判斷提示。 範例的輸入顯示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的執行時間。  
   

@@ -1,19 +1,18 @@
 ---
 title: Mutex
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
 - threading [.NET], Mutex class
 - Mutex class, about Mutex class
 - threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: ba31fff03cfffda7cf2a40a3a82b2222e8951035
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 811ee0d2d1068fc1fe8e44aa17f01e2dc243fb98
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188987"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826231"
 ---
 # <a name="mutexes"></a>Mutex
 
@@ -46,7 +45,7 @@ ms.locfileid: "93188987"
   
  如需適用於 Mutex 的存取控制安全性相關資訊，請參閱 <xref:System.Security.AccessControl.MutexSecurity> 和 <xref:System.Security.AccessControl.MutexAccessRule> 類別、<xref:System.Security.AccessControl.MutexRights> 列舉、<xref:System.Threading.Mutex.GetAccessControl%2A>、<xref:System.Threading.Mutex.SetAccessControl%2A>、<xref:System.Threading.Mutex> 類別的 <xref:System.Threading.Mutex.OpenExisting%2A> 方法，以及 <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> 建構函式。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
 - <xref:System.Threading.Mutex.%23ctor%2A>

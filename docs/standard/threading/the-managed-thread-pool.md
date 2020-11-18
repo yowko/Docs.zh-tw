@@ -2,19 +2,18 @@
 title: 受控執行緒集區
 description: 了解提供背景工作執行緒的 .NET 執行緒集區
 ms.date: 08/02/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread pooling [.NET]
 - thread pools [.NET]
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 9bc90acd6d7e1bef81e767ce8c257fed78322554
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188688"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826179"
 ---
 # <a name="the-managed-thread-pool"></a>受控執行緒集區
 
@@ -83,7 +82,7 @@ ms.locfileid: "93188688"
 - 您需要將執行緒放在單一執行緒 Apartment 中。 所有 <xref:System.Threading.ThreadPool> 執行緒都會在多執行緒 Apartment 中。  
 - 您需要有一個與執行緒關聯的固定識別，或是讓執行緒專屬於某項工作。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>

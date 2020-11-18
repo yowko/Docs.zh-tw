@@ -1,20 +1,19 @@
 ---
 title: 設定狀態資料的安全性
-description: 將狀態資料宣告為私用或內部變數，以限制其存取。 這類資料仍然可以透過反映、序列化和在調試中進行存取。
+description: 將狀態資料宣告為私用或內部變數，以限制其存取權。 這類資料仍然可以透過反映、序列化和在調試中進行存取。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - security [.NET], state data
 - code security, state data
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: 73bd0ace28e5b9661cc86d6749ceef9aa4c9ac92
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 849ed993befaceda1b04becbb7fb2530c5c62a77
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557121"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824157"
 ---
 # <a name="securing-state-data"></a>設定狀態資料的安全性
 
@@ -28,7 +27,7 @@ ms.locfileid: "87557121"
   
  請確定沒有任何您自己的方法或屬性會在無意中公開這些值。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全程式碼撰寫方針](secure-coding-guidelines.md)
 - [ASP.NET Core 安全性](/aspnet/core/security/)

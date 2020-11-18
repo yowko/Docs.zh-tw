@@ -2,7 +2,6 @@
 title: 一般類型系統
 description: 探索 .NET 中的型別系統。 深入瞭解 .NET 中的型別 (值型別或參考型別) 、類型定義、類型成員和類型成員特性。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889500"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823182"
 ---
 # <a name="common-type-system"></a>一般型別系統
 
@@ -178,10 +177,10 @@ ms.locfileid: "92889500"
 ### <a name="type-accessibility"></a>類型存取範圍  
  所有型別都具有修飾詞 (Modifier)，負責控制其他型別的存取範圍。 下表說明執行階段所支援的型別存取範圍。  
   
-|協助工具選項|描述|  
+|協助工具選項|說明|  
 |-------------------|-----------------|  
 |public|型別可供所有組件存取|  
-|組件 (assembly)|型別只能在本身的組件中存取|  
+|組件|型別只能在本身的組件中存取|  
   
  巢狀型別的存取範圍是依據其存取範圍定義域，由成員的宣告存取範圍和立即包含型別的存取範圍定義域來決定。 但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。  
   
@@ -279,10 +278,10 @@ ms.locfileid: "92889500"
 
  一般型別系統允許型別成員具有各種特性，但是所使用的語言並不需要支援所有特性。 下表將描述成員特性。  
   
-|特性|適用於|描述|  
+|特性|適用於|說明|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、屬性和事件|型別不提供方法的實作。 繼承或實作抽象方法的型別必須提供方法的實作。 唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。 所有抽象方法都是虛擬的。|  
-|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件 (assembly)<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
+|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
 |final|方法、屬性和事件|在衍生型別中無法覆寫虛擬方法。|  
 |initialize-only|欄位|只能初始化數值，在初始化之後即無法寫入。|  
 |instance|欄位、方法、屬性和事件|如果成員未標記為 `static` (C# 和 C++)、`Shared` (Visual Basic)、`virtual` (C# 和 C++) 或 `Overridable` (Visual Basic)，則為執行個體成員 (沒有 instance 關鍵字)。 在記憶體中，這類成員的複本數與使用它的物件數一樣。|  

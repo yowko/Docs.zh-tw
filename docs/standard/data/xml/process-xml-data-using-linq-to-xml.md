@@ -1,14 +1,13 @@
 ---
 title: 使用 LINQ to XML 處理 XML 資料
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
-ms.openlocfilehash: 5afa9fc84b7f41023eceb5c0734b0667dc55514e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b3aa4e160ed04fd713f46349f11970fdd7ea8bb9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556495"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824710"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>使用 LINQ to XML 處理 XML 資料
 LINQ to XML 是 .NET Framework 3.5 版中用來處理 XML 資料的新模型。 LINQ to XML 可讓開發人員進行預期對 XML 資料做的所有事情：查詢、修改、建立、儲存和序列化 XML 文件。 真正的優點則在於查詢和建立功能。  
@@ -19,7 +18,7 @@ LINQ to XML 是 .NET Framework 3.5 版中用來處理 XML 資料的新模型。 
   
  如需其用法的詳細討論，請參閱 [LINQ to XML (C#)](../../linq/linq-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md)。 如需 LINQ 架構的概觀，請參閱 [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md) 或 [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Linq>
 - <xref:System.Linq>

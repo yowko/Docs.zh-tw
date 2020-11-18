@@ -2,7 +2,6 @@
 title: .NET 規則運算式中的替代建構
 description: 了解如何在規則運算式中使用條件式比對的替代建構。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 30af871502e0db48853705206db5e2b3da28bb76
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889175"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825295"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 
@@ -49,7 +48,7 @@ ms.locfileid: "92889175"
 |<code>(a&#124;e)</code>|比對 "a" 或 "e"。|  
 |`y\b`|比對字邊界上的 "y"。|  
 
-`|` 字元也可以用來與多個字元或子運算式執行兩選一的比對，這些字元或運算式可以包含字元常值和規則運算式語言項目的任何組合。  (字元類別未提供這項功能。 ) 下列範例會使用 `|` 字元，將美國社會安全號碼解壓縮 (SSN) ，也就是具有  ，或是美國雇主識別碼 (EIN) ，也就是具有  。
+`|` 字元也可以用來與多個字元或子運算式執行兩選一的比對，這些字元或運算式可以包含字元常值和規則運算式語言項目的任何組合。  (字元類別未提供這項功能。 ) 下列範例會使用 `|` 字元，將美國社會安全號碼解壓縮 (SSN) ，也就是具有 *ddd* dd dddd 格式的9位數數位 - *dd* - **，或是美國雇主識別碼 (EIN) ，也就是具有 *dd* ddddddd 格式的9位數數位 - **。
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  

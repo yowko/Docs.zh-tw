@@ -2,7 +2,6 @@
 title: 計時器
 description: 了解哪些 .NET 計時器可用於多執行緒環境。
 ms.date: 07/03/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.openlocfilehash: c9d0b085285705af79f0fafa212867b5571863ba
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 1ab612bc32a84c1248d311b0603a01a32a25199f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188714"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826101"
 ---
 # <a name="timers"></a>計時器
 
@@ -55,7 +54,7 @@ ms.locfileid: "93188714"
 
 如需詳細資訊和範例，請參閱 <xref:System.Timers.Timer?displayProperty=nameWithType>。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>

@@ -1,17 +1,16 @@
 ---
 title: 存取 DOM 中的屬性
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-ms.openlocfilehash: a77780621032e2ce59b9db04a179c7086588219b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7a1e64c8661e97966b8d0bb84e2d330c1e06b86
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291639"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822863"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>存取 DOM 中的屬性
 
@@ -258,6 +257,6 @@ using System.Xml;
 XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

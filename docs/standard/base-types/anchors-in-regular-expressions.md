@@ -2,7 +2,6 @@
 title: .NET 規則運算式中的錨點
 description: 了解如何在規則運算式模式中使用錨點。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,17 +15,17 @@ helpviewer_keywords:
 - .NET regular expressions, anchors
 - .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: a6330eebbc69b9a3877a99a4373810d5a124c570
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 5f40270baa70c2b72d768cf0f5c4f8305f8bae7a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889162"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825269"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
   
-|錨點|描述|  
+|錨點|說明|  
 |------------|-----------------|  
 |`^`|根據預設，比對必須發生在字串的開頭；在多行模式中，它必須發生在一行的開頭。 如需詳細資訊，請參閱 [字串開頭或行首](#start-of-string-or-line-)。|  
 |`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾，或一行結尾的 `\n` 之前。 如需詳細資訊，請參閱 [字串結尾或行尾](#end-of-string-or-line-)。|  

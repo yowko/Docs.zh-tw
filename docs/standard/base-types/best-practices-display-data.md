@@ -2,16 +2,15 @@
 title: 在 .NET 中顯示和保存格式化資料的最佳作法
 description: 瞭解如何在 .NET 應用程式中有效地顯示和保存數值和日期資料。
 ms.date: 05/01/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 83a491f6c843225c6242a343fe4132c2ce7caa74
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 1748363089a80538a19e91b1955fe9257de39a4e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403603"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825139"
 ---
 # <a name="best-practices-for-displaying-and-persisting-formatted-data"></a>顯示和保存格式化資料的最佳作法
 

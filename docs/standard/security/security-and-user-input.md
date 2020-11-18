@@ -1,20 +1,19 @@
 ---
 title: 安全性和使用者輸入
-description: 您的程式碼可能會將使用者輸入的資料當做參數傳遞至其他程式碼，這可能會影響安全性。 您可以進行範圍檢查，以拒絕有問題的輸入。
+description: 您的程式碼可能會將使用者輸入的資料當作參數傳遞給其他程式碼，這可能會影響安全性。 您可以進行範圍檢查，以拒絕有問題的輸入。
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - security [.NET], user input
 - user input, security
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: e46bf8e653567637b4e6236849981fdb32df447c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: e476db90dd1fd579f4ecfe3f2088cc76c955b9c0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555938"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824053"
 ---
 # <a name="security-and-user-input"></a>安全性和使用者輸入
 
@@ -24,7 +23,7 @@ ms.locfileid: "87555938"
 
 與使用者資料相關的一些重要考量包括下列項目︰
 
-- 伺服器回應的任何使用者資料會在用戶端的伺服器網站內容中執行。 例如，如果您的 Web 服務器接受使用者資料並將它插入傳回的網頁中，它可能會包含一個 **\<script>** 標記，並在伺服器上執行 as if。
+- 伺服器回應的任何使用者資料會在用戶端的伺服器網站內容中執行。 例如，如果您的 Web 服務器接受使用者資料並將它插入傳回的網頁中，它可能會包含一個 **\<script>** 標記，並在伺服器上以 as 的形式執行。
 
 - 請記住，用戶端可以要求任何 URL。
 
@@ -56,9 +55,9 @@ ms.locfileid: "87555938"
 
   - 雙逸出 (%nn 變成 %mmnn，其中 %mm 是 '%' 的逸出)。
 
-- 請小心可能有一個以上標準格式的使用者名稱。 例如，您通常可以使用 MYDOMAIN\\username** 形式或 username**@mydomain.example.com 形式。
+- 請小心可能有一個以上標準格式的使用者名稱。 例如，您通常可以使用 MYDOMAIN\\username 形式或 username@mydomain.example.com 形式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全程式碼撰寫方針](secure-coding-guidelines.md)
 - [ASP.NET Core 安全性](/aspnet/core/security/)
