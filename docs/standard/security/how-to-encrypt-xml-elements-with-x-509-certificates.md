@@ -1,7 +1,6 @@
 ---
 title: 作法：使用 X.509 憑證加密 XML 元素
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,30 +13,30 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: c978bea7336e64d6622aca4d21c7ef3317d73957
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555717"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820185"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>作法：使用 X.509 憑證加密 XML 元素
 
-您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) XML 加密的規格，位於 <https://www.w3.org/TR/xmldsig-core/> 。  
+您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格中的 XML 加密（位於） <https://www.w3.org/TR/xmldsig-core/> 。  
   
  您可以使用 XML 加密將任何 XML 元素或文件取代為包含加密 XML 資料的 <`EncryptedData`> 元素。 <`EncryptedData`> 元素可以包含子元素，而子元素會包含有關加密時所使用之金鑰和程序的資訊。  XML 加密可讓文件中包含多個加密的元素，並允許元素加密多次。  這個程序中的程式碼範例將顯示如何建立 <`EncryptedData`> 元素和數個其他子元素，以便稍後在解密時使用。  
   
 此範例會使用兩個金鑰來加密 XML 元素。 此範例會以程式設計方式抓取憑證，並使用它來加密使用方法的 XML 元素 <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 。 就內部而言，<xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 方法會建立個別的工作階段金鑰，並使用它來加密 XML 文件。 這個方法會加密工作階段金鑰，並將它與加密的 XML 一併儲存在新的 <`EncryptedData`> 元素中。  
 
-若要解密 XML 專案，請呼叫 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法，它會自動從存放區抓取 x.509 憑證，並執行必要的解密。  如需如何將使用這個程序加密的 XML 元素解密的詳細資訊，請參閱 [如何：使用 X.509 憑證解密 XML 元素](how-to-decrypt-xml-elements-with-x-509-certificates.md)。  
+若要解密 XML 專案，請呼叫 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法，此方法會自動從存放區抓取 x.509 憑證，並執行必要的解密。  如需如何將使用這個程序加密的 XML 元素解密的詳細資訊，請參閱 [如何：使用 X.509 憑證解密 XML 元素](how-to-decrypt-xml-elements-with-x-509-certificates.md)。  
   
 這個範例適合多個應用程式需要共用加密資料或應用程式需要在它執行時間之間儲存加密資料的情況。  
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>使用 X.509 憑證加密 XML元素目  
 
-若要執行這個範例，您必須建立測試憑證，並將它儲存在憑證存放區中。 這項工作的指示僅提供給 Windows[憑證建立工具 ( # A0) ](/windows/desktop/SecCrypto/makecert)。
+若要執行此範例，您必須建立測試憑證，並將它儲存在憑證存放區中。 這項工作的指示僅提供給 Windows [憑證建立工具 ( # A0) ](/windows/desktop/SecCrypto/makecert)。
 
-1. 使用[Makecert.exe](/windows/desktop/SecCrypto/makecert)產生測試 x.509 憑證，並將它放在本機使用者存放區中。 您必須產生交換金鑰，且必須使金鑰可以匯出。 執行以下命令：  
+1. 使用 [Makecert.exe](/windows/desktop/SecCrypto/makecert) 產生測試 x.509 憑證，並將它放在本機使用者存放區中。 您必須產生交換金鑰，且必須使金鑰可以匯出。 執行下列命令：  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
@@ -112,7 +111,7 @@ ms.locfileid: "87555717"
   
 - 在以 .NET Framework 為目標的專案中，包含的參考 `System.Security.dll` 。
 
-- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 封裝[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 套件 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
   
 - 包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "87555717"
   
 此範例中使用的 X.509 憑證僅供測試使用。  應用程式應該使用由受信任的憑證授權單位單位所產生的 x.509 憑證。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

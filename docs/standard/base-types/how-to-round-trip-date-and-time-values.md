@@ -1,7 +1,6 @@
 ---
 title: 如何：反覆存取日期和時間值
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - time [.NET], round-trip values
 - formatting strings [.NET], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 4dce882e29afd5084dc84d3e176e6121c55f4af8
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 243ed98972f834c207331770f9d0202ddb60d4e6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889084"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821966"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>如何：反覆存取日期和時間值
 

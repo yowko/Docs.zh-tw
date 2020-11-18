@@ -3,12 +3,12 @@ title: EventPipe 總覽
 description: 瞭解 EventPipe 以及如何使用它來追蹤您的 .NET 應用程式，以診斷效能問題。
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: d30cdf02c3ae300401febe2078dfd3431269c73e
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 00378c4f409b307afa9183e40de6078cdafd3ae7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688568"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820614"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -47,7 +47,7 @@ EventPipe 和 ETW/LTTng 之間的另一個主要差異在於系統管理員/根�
 
 您可以使用 EventPipe，透過許多方式來追蹤您的 .NET 應用程式：
 
-* 使用以 EventPipe 為基礎的其中一個 [診斷工具](#tools-using-eventpipe) 。
+* 使用以 EventPipe 為基礎的其中一個 [診斷工具](#tools-that-use-eventpipe) 。
 
 * 使用 [NETCore](https://github.com/dotnet/diagnostics/blob/master/documentation/diagnostics-client-library-instructions.md) 撰寫您自己的工具，自行設定並開始 EventPipe 會話。
 

@@ -1,17 +1,16 @@
 ---
 title: 使用 XPathNavigator 進行結構描述驗證
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: f6e56616543bf7d2ad2e6be4d7bf7cbc50ba3a23
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 304177ed4cb600aa27142e3b1c3690a3d7053c5d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292003"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822473"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>使用 XPathNavigator 進行結構描述驗證
 您可以使用 <xref:System.Xml.XmlDocument> 類別，透過兩種方式驗證 <xref:System.Xml.XmlDocument> 物件中包含的 XML 內容。 第一種方式是使用驗證 <xref:System.Xml.XmlReader> 物件來驗證 XML 內容，第二種方式是使用 <xref:System.Xml.XmlDocument.Validate%2A> 類別的 <xref:System.Xml.XmlDocument> 方法。 此外，您也可以使用 <xref:System.Xml.XPath.XPathDocument> 類別，執行 XML 內容的唯讀驗證。  
@@ -357,7 +356,7 @@ class ValidatingReaderExample
   
  如需有關唯讀與可編輯 <xref:System.Xml.XPath.XPathNavigator> 物件的詳細資訊，請參閱[使用 XPathDocument 和 XmlDocument 讀取 XML 資料](reading-xml-data-using-xpathdocument-and-xmldocument.md)主題。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

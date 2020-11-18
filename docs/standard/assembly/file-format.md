@@ -3,18 +3,17 @@ title: .NET 組件檔格式
 description: 了解用來描述並包含 .NET 應用程式和程式庫的 .NET 組件檔格式。
 author: richlander
 ms.date: 08/20/2019
-ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: b4aa961c3a6f2d4fa1580ff608aaf2a40d462fa0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288507"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822187"
 ---
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
-.NET 會定義用來完整描述並包含 .NET 程式的二進位檔案格式（*元件*）。 組件用於程式本身以及任何相依的程式庫。 除了適當的 .NET 實作之外，.NET 程式也可以執行為一或多個沒有其他必要成品的組件。 原生相依性（包括作業系統 Api）是一項不同的考慮，而且不包含在 .NET 元件格式中，但有時會以這種格式（例如 WinRT）來描述。
+.NET 會定義用來完整描述並包含 .NET 程式的二進位檔案格式（ *assembly*）。 組件用於程式本身以及任何相依的程式庫。 除了適當的 .NET 實作之外，.NET 程式也可以執行為一或多個沒有其他必要成品的組件。 原生相依性（包括作業系統 Api）是個別的考慮，而且不包含在 .NET 元件格式中，不過這些相依性有時會以這種格式描述 (例如 WinRT) 。
 
 > 每個 CLI 元件都會攜帶該元件特定宣告、實作和參考的中繼資料。 因此，元件特定中繼資料是指元件中繼資料，而且產生的元件即為來自 ECMA 335 I.9.1 的自我描述元件和組件。
 
@@ -22,7 +21,7 @@ ms.locfileid: "84288507"
 
 格式為 CPU 並且無作業系統無關。 它已用作將目標設為許多晶片和 CPU 之 .NET 實作的一部分。 雖然格式本身具有 Windows 傳承，但是可在任何作業系統上實作。 為達 OS 互通性，大部分的值皆以位元組由小到大的格式儲存，這可說是最重大的選擇。 它沒有電腦指標大小 (例如，32 位元、64 位元) 的特定同質性。
 
-.NET 組件格式對於指定的程式或程式庫結構也具有相當的描述性。 它描述元件的內部元件，特別是定義的元件參考和類型，以及其內部結構。 工具或 API 可以讀取和處理這項資訊以供顯示，或進行程式設計決策。
+.NET 組件格式對於指定的程式或程式庫結構也具有相當的描述性。 它描述元件的內部元件，特別是元件參考和定義的類型，以及其內部結構。 工具或 API 可以讀取和處理這項資訊以供顯示，或進行程式設計決策。
 
 ## <a name="format"></a>格式
 

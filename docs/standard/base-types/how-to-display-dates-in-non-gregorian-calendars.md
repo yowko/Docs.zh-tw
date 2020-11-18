@@ -1,7 +1,6 @@
 ---
 title: 作法：在非西曆中顯示日期
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - calendars [.NET], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 6c1ab51114a1b39234adbc89526d111b3b9ba44c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6263ac2b6ce18399fa4fa56c9e2ab662a1a367b9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888439"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820562"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>作法：在非西曆中顯示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型使用西曆作為其預設月曆。 這表示即使該日期和時間是使用其他月曆所建立，呼叫日期和時間值的 `ToString` 方法仍會使用西曆顯示該日期和時間的字串表示。 以下範例將說明這種情況，其中使用兩種不同方式來建立波斯曆的日期和時間值，但在呼叫 <xref:System.DateTime.ToString%2A> 方法時，仍以西曆顯示這些日期和時間值。 此範例反映兩種常用來顯示特殊月曆之日期，但不正確的技術。  

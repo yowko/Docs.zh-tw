@@ -2,16 +2,15 @@
 title: .NET 的平行程式設計
 description: 瞭解 .NET 中的平行程式設計。 使用 .NET 執行時間、類別庫類型和診斷工具來簡化 .NET 開發。
 ms.date: 09/12/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: edb3d38b0815c6703720292a45e302c62c81650b
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 4d141a6a8fd7b7bf1aad943f8b911c8b39267223
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925333"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820354"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
 
@@ -36,7 +35,7 @@ ms.locfileid: "92925333"
 |[PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)|提供 C# 和 Visual Basic 中之 Lambda 運算式的簡短概觀，並且顯示如何在 PLINQ 和工作平行程式庫中使用這些運算式。|
 |[進一步閱讀](for-further-reading-parallel-programming.md)|提供以 .NET 進行平行程式設計的額外資訊和範例資源連結。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [非同步總覽](../async.md)
 - [Managed 執行緒處理](../threading/index.md)

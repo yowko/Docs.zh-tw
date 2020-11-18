@@ -2,15 +2,16 @@
 title: .NET Standard
 description: 瞭解 .NET Standard、其版本，以及支援它的 .NET 支援。
 ms.date: 10/05/2020
+ms.prod: dotnet
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: e0adb69d02fe427dd187c788cba34c0673e97ee6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224157"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822305"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -43,7 +44,7 @@ ms.locfileid: "92224157"
 1. 以次舊的 .NET Standard 版本為目標並建置您的專案。
 2. 如果您的專案建置成功，便重複步驟 1。 否則，請將目標重新設定為次新版本，這會是您應該使用的版本。
 
-不過，以較低的 .NET Standard 版本作為目標會產生數個支援相依性。 如果您的專案是以 .NET Standard 1.x 為目標，我們建議*同時*以 .NET Standard 2.0 作為目標。 這樣可簡化程式庫使用者的相依性圖形，而這些使用者會在 .NET Standard 2.0 相容的執行中執行，並減少需要下載的套件數目。
+不過，以較低的 .NET Standard 版本作為目標會產生數個支援相依性。 如果您的專案是以 .NET Standard 1.x 為目標，我們建議 *同時* 以 .NET Standard 2.0 作為目標。 這樣可簡化程式庫使用者的相依性圖形，而這些使用者會在 .NET Standard 2.0 相容的執行中執行，並減少需要下載的套件數目。
 
 ### <a name="net-standard-versioning-rules"></a>.NET Standard 版本控制規則
 
@@ -163,7 +164,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 * 用 `netstandard2.0` 來在 .NET Framework 與其他所有 .net 的執行之間共用程式碼。
 * 用 `netstandard2.1` 來在 Mono、Xamarin 和 .Net Core 3.x 之間共用程式碼。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Standard 版本 (來源) ](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [.NET Standard 版本 (互動式 UI) ](https://dotnet.microsoft.com/platform/dotnet-standard#versions)

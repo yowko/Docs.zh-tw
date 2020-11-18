@@ -1,7 +1,6 @@
 ---
 title: 作法：使用對稱金鑰加密 XML 元素
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,18 +14,18 @@ helpviewer_keywords:
 - XML encryption
 - Advanced Encryption Standard algorithm
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: dd69ec6a5317f7f6f800cd225d920a1934c77a0c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda1835a1390b025f2ee0509a91c59104a77ae9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555809"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820224"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>作法：使用對稱金鑰加密 XML 元素
 
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  此程式會使用進階加密標準 (AES) 演算法來加密 XML 元素。  
   
- 如需如何解密使用此程式加密之 XML 元素的詳細資訊，請參閱[如何：使用對稱金鑰解密 Xml 元素](how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
+ 如需如何將使用這個程式加密的 XML 專案解密的詳細資訊，請參閱 [如何：使用對稱金鑰解密 Xml 元素](how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
   
  當您使用如 AES 的對稱演算法來加密 XML 資料時，您必須使用相同的金鑰來加密和解密 XML 資料。  此程序中的範例假設將使用相同的金鑰來解密已加密的 XML，並且加密和解密的雙方同意使用的演算法和金鑰。  此範例不會儲存或加密在已加密 XML 中的 AES 金鑰。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "87555809"
   
 - 在以 .NET Framework 為目標的專案中，包含的參考 `System.Security.dll` 。
 
-- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 封裝[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 套件 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
   
 - 包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
@@ -102,9 +101,9 @@ ms.locfileid: "87555809"
   
 當您使用完密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [密碼編譯模型](cryptography-model.md)-說明如何在基類庫中執行密碼編譯。
+- [加密模型](cryptography-model.md) -說明如何在基類庫中執行密碼編譯。
 - [密碼編譯服務](cryptographic-services.md)
 - [跨平臺密碼編譯](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>

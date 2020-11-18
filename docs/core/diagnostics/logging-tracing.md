@@ -2,12 +2,12 @@
 title: 記錄和追蹤-.NET Core
 description: .NET Core 記錄和追蹤的簡介。
 ms.date: 10/12/2020
-ms.openlocfilehash: 9af04cceeef3fbfb8392eb91667c21374511548a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687579"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820575"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 記錄和追蹤
 
@@ -93,6 +93,8 @@ ms.locfileid: "94687579"
 - [.Net 中的記錄](../extensions/logging.md) 提供它所支援之記錄技術的總覽。
 
 - [C # 字串插補](../../csharp/language-reference/tokens/interpolated.md) 可簡化撰寫記錄程式碼的程式。
+
+- [執行時間提供者事件清單](../../fundamentals/diagnostics/runtime-events.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType>屬性適用于記錄例外狀況。
 

@@ -2,7 +2,6 @@
 title: 作法：在日期與時間值中顯示毫秒
 description: 在本文中，您將瞭解如何在 .NET 中的格式化日期和時間字串中包含日期和時間的毫秒元件。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - dates [.NET], milliseconds
 - milliseconds [.NET]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: bff458e73d603781155b18160bc7d088d8bd78cb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 333b41fe3d4fa68ce26ab5dbd7d5938dda220b9a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888465"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822109"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>作法：在日期與時間值中顯示毫秒
 預設的日期和時間格式化方法 (例如 <xref:System.DateTime.ToString?displayProperty=nameWithType>) 包括時間值的小時、分鐘和秒，但不包括它的毫秒元件。 本主題說明如何將日期和時間的毫秒部分加入格式化的日期和時間字串。  

@@ -1,17 +1,16 @@
 ---
 title: 將物件階層架構對應至 XML 資料
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 8507c4b323f97279c3054b76aaf8d52f14f0d4ad
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97cc7558f51b7bcbdb5201ef0f0c463da8f2c070
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289131"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822603"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>將物件階層架構對應至 XML 資料
 當 XML 文件在記憶體時，概念式的表示就是樹狀。 對於程式設計，您有物件階層架構來存取樹狀的節點。 下列範例顯示 XML 內容如何成為節點。  
@@ -218,6 +217,6 @@ public class Sample
   
  若要將新節點加入至 DOM，請參閱[將節點插入 XML 文件](inserting-nodes-into-an-xml-document.md)。 若要從 DOM 移除節點，請參閱[從 XML 文件移除節點、內容和值](removing-nodes-content-and-values-from-an-xml-document.md)。 若要修改 DOM 中節點的內容，請參閱[修改 XML 文件中的節點、內容和值](modifying-nodes-content-and-values-in-an-xml-document.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

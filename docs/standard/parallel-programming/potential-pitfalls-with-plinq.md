@@ -1,19 +1,18 @@
 ---
 title: PLINQ 的潛在陷阱
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: 012ac4078c1e2f17d6eef88ee295b11161a0e24a
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 1e1763132cd0ee8f1135e562c36ce4adf603f5af
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925268"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822239"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ 的潛在陷阱
 
@@ -121,6 +120,6 @@ Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>
 
 特別是，平行迴圈的反覆項目永遠不應該等候該迴圈的另一個反覆項目才能繼續。 如果平行迴圈決定以循序方式排程反覆項目，但順序相反，系統就會發生死結。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

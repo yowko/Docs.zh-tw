@@ -2,19 +2,19 @@
 title: '可為 null 的參考型別-c # 參考'
 description: '深入瞭解 c # 可為 null 的參考型別，以及如何使用它們'
 ms.date: 04/06/2020
-ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: d961af9ba3b4776e6b4ec3eeea5392fb0d0394ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471859"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822421"
 ---
 # <a name="nullable-reference-types-c-reference"></a>可為 null 的參考型別 (c # 參考) 
 
 > [!NOTE]
 > 本文涵蓋可為 null 的參考型別。 您也可以宣告 [可為 null 的實數值型別](nullable-value-types.md)。
 
-從 c # 8.0 開始，可為 null 的參考型別（在已加入 *可為 null 感知內容*的程式碼中）。 可為 null 的參考型別、null 靜態分析警告和 [null 容許運算子](../operators/null-forgiving.md) 是選擇性的語言功能。 預設會關閉所有。 *可為 null 的內容*可在專案層級使用組建設定或使用 pragma 的程式碼來控制。
+從 c # 8.0 開始，可為 null 的參考型別（在已加入 *可為 null 感知內容* 的程式碼中）。 可為 null 的參考型別、null 靜態分析警告和 [null 容許運算子](../operators/null-forgiving.md) 是選擇性的語言功能。 預設會關閉所有。 *可為 null 的內容* 可在專案層級使用組建設定或使用 pragma 的程式碼來控制。
 
  在可為 null 的感知內容中：
 
@@ -51,7 +51,7 @@ try
 
 在可為 null 的啟用內容中，編譯器會在任何參考型別的變數上執行靜態分析，可為 null 且不可為 null。 編譯器會將每個參考變數的 null 狀態追蹤為 *非 null* 或 *可能是 null*。 不可為 null 參考的預設狀態 *不是 null*。 可為 null 參考的預設狀態 *可能是 null*。
 
-不可為 null 的參考型別應該一律安全地進行取值，因為它們的 null 狀態 *不是 null*。 若要強制執行該規則，如果不可為 null 的參考型別未初始化為非 null 值，則編譯器會發出警告。 區域變數必須在宣告時指派。 每個函式都必須在其主體、呼叫的函式或使用欄位初始化運算式中，指派每個欄位。 如果不可為 null 的參考指派給其狀態 *可能是 null*的參考，則編譯器會發出警告。 不過，因為不可為 null 的參考不是 *null*，所以當這些變數被解除參考時，不會發出任何警告。
+不可為 null 的參考型別應該一律安全地進行取值，因為它們的 null 狀態 *不是 null*。 若要強制執行該規則，如果不可為 null 的參考型別未初始化為非 null 值，則編譯器會發出警告。 區域變數必須在宣告時指派。 每個函式都必須在其主體、呼叫的函式或使用欄位初始化運算式中，指派每個欄位。 如果不可為 null 的參考指派給其狀態 *可能是 null* 的參考，則編譯器會發出警告。 不過，因為不可為 null 的參考不是 *null*，所以當這些變數被解除參考時，不會發出任何警告。
 
 可為 null 的參考型別可以初始化或指派給 `null` 。 因此，靜態分析必須在取值之前判斷變數 *不是 null* 。 如果可為 null 的參考判斷為 *null*，則無法將它指派給不可為 null 的參考變數。 下列類別會顯示這些警告的範例：
 
@@ -72,9 +72,9 @@ try
 如需詳細資訊，請參閱下列 [c # 語言規格](~/_csharplang/spec/introduction.md)提案：
 
 - [可為 Null 的參考型別](~/_csharplang/proposals/csharp-8.0/nullable-reference-types.md)
-- [草稿可為 null 的參考型別規格](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [草稿可為 null 的參考型別規格](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考資料](../index.md)
-- [可為 null 的實數值型別](nullable-value-types.md)
+- [可為 Null 的實值型別](nullable-value-types.md)

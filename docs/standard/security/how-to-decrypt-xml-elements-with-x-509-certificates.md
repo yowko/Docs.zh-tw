@@ -1,7 +1,6 @@
 ---
 title: 作法：使用 X.509 憑證解密 XML 元素
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,20 +12,20 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-ms.openlocfilehash: f60947a3b722f33c88b696d47c6a4000a1cb076b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 02a4a4ada6dcc242a96d630699797f2ea76987e3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555730"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820276"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>作法：使用 X.509 憑證解密 XML 元素
 
-您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密和解密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) XML 加密的規格，位於 <https://www.w3.org/TR/xmldsig-core/> 。  
+您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密和解密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格中的 XML 加密（位於） <https://www.w3.org/TR/xmldsig-core/> 。  
   
- 這個範例會使用：[如何：使用 X.509 憑證加密 xml](how-to-encrypt-xml-elements-with-x-509-certificates.md)專案中所述的方法，解密已加密的 xml 元素。  它會尋找 <`EncryptedData`> 專案、將專案解密，然後使用原始純文字 XML 專案來取代元素。  
+ 這個範例會使用： [如何：使用 X.509 憑證來加密 xml](how-to-encrypt-xml-elements-with-x-509-certificates.md)專案中所述的方法，來解密已加密的 xml 元素。  它會尋找 <`EncryptedData`> 元素、將專案解密，然後將專案取代為原始純文字 XML 專案。  
   
-此程序的程式碼範例會使用來自目前使用者帳戶本機憑證存放區的 X.509 憑證解密 XML 項目。  此範例會使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法來自動抓取 x.509 憑證，並將儲存在 <> 專案的 <> 元素中的工作階段金鑰解密 `EncryptedKey` `EncryptedData` 。  <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法接著會自動使用工作階段金鑰解密 XML 項目。  
+此程序的程式碼範例會使用來自目前使用者帳戶本機憑證存放區的 X.509 憑證解密 XML 項目。  此範例會使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法來自動取出 x.509 憑證，並將儲存在 <> 專案的 <> 元素中的工作階段金鑰解密 `EncryptedKey` `EncryptedData` 。  <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法接著會自動使用工作階段金鑰解密 XML 項目。  
   
 這個範例適合多個應用程式需要共用加密資料或應用程式需要在它執行時間之間儲存加密資料的情況。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "87555730"
   
 - 在以 .NET Framework 為目標的專案中，包含的參考 `System.Security.dll` 。
 
-- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 封裝[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 套件 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
 
 - 包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "87555730"
 
 此範例中使用的 X.509 憑證僅供測試使用。  應用程式應該使用由受信任的憑證授權單位單位所產生的 x.509 憑證。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

@@ -1,25 +1,39 @@
 ---
-title: dotnet-計數器-.NET Core
-description: 瞭解如何安裝和使用 dotnet 計數器命令列工具。
-ms.date: 02/26/2020
-ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: dotnet-計數器診斷工具-.NET CLI
+description: 瞭解如何安裝和使用 dotnet-counter CLI 工具，以進行臨機操作健全狀況監視和第一層效能調查。
+ms.date: 11/17/2020
+ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507250"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822213"
 ---
-# <a name="dotnet-counters"></a>dotnet-counters
+# <a name="investigate-performance-counters-dotnet-counters"></a> (dotnet) 的計數器調查效能計數器
 
 本文 **適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
-## <a name="install-dotnet-counters"></a>安裝 dotnet-計數器
+## <a name="install"></a>安裝
 
-若要安裝 `dotnet-counters` [NuGet 套件](https://www.nuget.org/packages/dotnet-counters)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+有兩種方式可以下載和安裝 `dotnet-counters` ：
 
-```dotnetcli
-dotnet tool install --global dotnet-counters
-```
+- **dotnet global tool：**
+
+  若要安裝 `dotnet-counters` [NuGet 套件](https://www.nuget.org/packages/dotnet-counters)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-counters
+  ```
+
+- **直接下載：**
+
+  下載符合您平臺的工具可執行檔：
+
+  | OS  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-counters/win-x86) \|[x64](https://aka.ms/dotnet-counters/win-x64) \|[arm](https://aka.ms/dotnet-counters/win-arm) \|[arm-x64](https://aka.ms/dotnet-counters/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-counters/linux-x64) \|[arm](https://aka.ms/dotnet-counters/linux-arm) \|[arm64](https://aka.ms/dotnet-counters/linux-arm64) \|[musl-x64](https://aka.ms/dotnet-counters/linux-musl-x64) \|[musl-arm64](https://aka.ms/dotnet-counters/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>概要
 
@@ -27,7 +41,7 @@ dotnet tool install --global dotnet-counters
 dotnet-counters [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet-counters` 是一種效能監視工具，適用于臨機操作健全狀況監視和第一層效能調查。 它可以觀察經由 API 發佈的效能計數器值 <xref:System.Diagnostics.Tracing.EventCounter> 。 例如，您可以在 .NET Core 應用程式中快速監視 CPU 使用量或擲回例外狀況率等專案，以查看是否有任何可疑的專案，然後再使用或進行更嚴重的效能調查 `PerfView` `dotnet-trace` 。
 
@@ -57,14 +71,18 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>選項
 
 - **`-p|--process-id <PID>`**
 
-  要監視之進程的識別碼。
+  要從中收集計數器資料的進程識別碼。
+
+- **`-n|--name <name>`**
+
+  要從中收集計數器資料之進程的名稱。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -86,8 +104,8 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
   在收集設定參數之後，使用者可以在後面附加一個 `--` 命令，以啟動至少包含5.0 執行時間的 .net 應用程式。 `dotnet-counters` 將會使用所提供的命令啟動處理常式，並收集要求的度量。 這通常很適合用來收集應用程式啟動路徑的計量，也可以用來診斷或監視主要進入點之前或不久之後發生的問題。
 
-> [!NOTE]
-> 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
+  > [!NOTE]
+  > 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
 
 ### <a name="examples"></a>範例
 
@@ -162,7 +180,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>選項
@@ -170,6 +188,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 - **`-p|--process-id <PID>`**
 
   要監視之進程的識別碼。
+
+- **`-n|--name <name>`**
+
+  要監視之進程的名稱。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -245,7 +267,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
 - 啟動 `my-aspnet-server.exe` 並監視從啟動 ( .net 5.0 或更新版本載入的元件 #) ：
 
-  注意：這只適用于執行 .NET 5.0 或更新版本的應用程式。
+  > [!IMPORTANT]
+  > 這僅適用于執行 .NET 5.0 或更新版本的應用程式。
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
@@ -259,7 +282,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
   
 - `my-aspnet-server.exe`以 `arg1` `arg2` 命令列引數啟動，並從啟動 ( .net 5.0 或更新版本監視其工作集和 GC 堆積大小，只) ：
 
-  注意：這只適用于執行 .NET 5.0 或更新版本的應用程式。
+  > [!IMPORTANT]
+  > 這僅適用于執行 .NET 5.0 或更新版本的應用程式。
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2

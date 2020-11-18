@@ -2,7 +2,6 @@
 title: 將字串轉換成類型
 description: 瞭解 .NET 中的字串剖析。 剖析會將代表 .NET 基底類型的字串轉換成該基底類型。 剖析是格式化的反向操作。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parsing strings, about parsing strings
 - IFormatProvider interface, parsing strings
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: 3d23fa9c7ecc3593f03f70dbd5ea7bda841e8f4f
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 8fbfe8596e49ed101ea7d6bb65298e432a6fac13
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400849"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821901"
 ---
 # <a name="parse-strings-in-net"></a>在 .NET 中剖析字串
 
@@ -29,7 +28,7 @@ ms.locfileid: "93400849"
  描述如何將字串轉換成 .NET **DateTime** 類型。
 
  [剖析其他字串](parsing-other.md)\
- 描述如何將字串轉換成 **Char** 、 **Boolean** 和 **Enum** 類型。
+ 描述如何將字串轉換成 **Char**、**Boolean** 和 **Enum** 類型。
 
 ## <a name="related-sections"></a>相關章節
  [格式化類型](formatting-types.md)\

@@ -1,8 +1,7 @@
 ---
 title: 類型成員名稱
-description: 瞭解在 .NET 中命名類型成員的指導方針，例如方法、屬性、事件和欄位。
+description: 瞭解如何在 .NET 中命名類型成員的指導方針，例如方法、屬性、事件和欄位。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662494"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820909"
 ---
 # <a name="names-of-type-members"></a>類型成員名稱
 類型由成員組成：方法、屬性、事件、建構函式及欄位。 下列各節會描述為類型成員命名的方針。
@@ -26,7 +25,7 @@ ms.locfileid: "84662494"
 ## <a name="names-of-methods"></a>方法的名稱
  因為方法是採取動作的手段，所以設計方針會要求方法名稱為動詞或動詞片語。 遵循此方針也能用來區別方法名稱與屬性和類型名稱，後兩者為名詞或形容詞。
 
- ✔️提供的方法名稱是動詞或動詞片語。
+ ✔️確實提供的方法名稱為動詞或動詞片語。
 
 ```csharp
 public class String {
@@ -41,7 +40,7 @@ public class String {
 
  ✔️使用名詞、名詞片語或形容詞來命名屬性。
 
- ❌沒有符合 "Get" 方法名稱的屬性，如下列範例所示：
+ ❌ 沒有符合 "Get" 方法名稱的屬性，如下列範例所示：
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -49,9 +48,9 @@ public class String {
 
  ✔️使用複數片語來命名集合屬性，以描述集合中的專案，而不是使用後面接著 "List" 或 "Collection" 的單數片語。
 
- ✔️使用肯定片語（ `CanSeek` 而不是）來命名布林屬性 `CantSeek` 。 （選擇性）您也可以使用 "Is"、"Can" 或 "has" 作為布林值屬性的前置詞，但只有其加入值的位置。
+ ✔️使用肯定片語來命名布林值屬性， (`CanSeek` 而不是 `CantSeek`) 。 （選擇性）您也可以在布林值屬性的前面加上「是」、「可以」或「有」，但只在其新增值的位置。
 
- ✔️考慮為屬性提供與其類型相同的名稱。
+ ✔️請考慮為屬性提供與其類型相同的名稱。
 
  例如，下列屬性正確地取得並設定了名為 `Color` 的數值，所以屬性名稱即為 `Color`：
 
@@ -69,38 +68,38 @@ public class Control {
 
  範例包括 `Clicked`、`Painting`、`DroppedDown` 等等。
 
- ✔️確實使用目前和過去的時態，為事件名稱提供前後的概念。
+ ✔️會使用目前和過去的時態，為事件名稱提供之前和之後的概念。
 
  例如，在視窗關閉前發生的關閉事件會稱作 `Closing`，而在視窗關閉後發生的事件則稱作 `Closed`。
 
- ❌請勿使用 "Before" 或 "After" 前置詞或 postfixes 來表示前置和後置事件。 使用如同敘述的現在與過去時態。
+ ❌ 請勿使用 "Before" 或 "After" 前置詞或 postfixes 來表示前置和後置事件。 使用如同敘述的現在與過去時態。
 
- ✔️使用 "EventHandler" 尾碼來命名事件處理常式（做為事件種類的委派），如下列範例所示：
+ ✔️使用 "EventHandler" 後置詞 (委派做為事件種類) 的委派，如下列範例所示：
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
- ✔️確實會 `sender` `e` 在事件處理常式中使用名為和的兩個參數。
+ ✔️ `sender` `e` 在事件處理常式中使用兩個名為和的參數。
 
  傳送者參數代表引發事件的物件。 傳送者參數的類型通常為 `object`，即使可採用更明確的類型時也一樣。
 
- ✔️ DO 以 "EventArgs" 尾碼命名事件引數類別。
+ ✔️使用 "EventArgs" 尾碼來命名事件引數類別。
 
 ## <a name="names-of-fields"></a>欄位的名稱
  欄位命名方針適用於靜態公開和保護的欄位。 方針並未涵蓋內部與私人的欄位，且[成員設計方針](member.md)並不允許公開或保護的執行個體欄位。
 
- ✔️請在功能變數名稱中使用 PascalCasing。
+ ✔️在功能變數名稱中使用 PascalCasing。
 
  ✔️使用名詞、名詞片語或形容詞來命名欄位。
 
- ❌請不要使用功能變數名稱的前置詞。
+ ❌ 請勿在功能變數名稱中使用前置詞。
 
  例如，不要使用 "g_" 或 "s_" 來表示靜態欄位。
 
- *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
+ *部分©2005、2009 Microsoft Corporation。保留的擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [架構設計方針](index.md)
-- [命名方針](naming-guidelines.md)
+- [架構設計指導方針](index.md)
+- [命名指導方針](naming-guidelines.md)

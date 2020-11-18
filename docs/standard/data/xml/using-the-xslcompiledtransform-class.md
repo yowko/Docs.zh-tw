@@ -1,14 +1,13 @@
 ---
 title: 使用 XslCompiledTransform 類別
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
-ms.openlocfilehash: b9d14a79347610abcd2f770488acb53218ce3e46
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f2eae6f10cc2adf4628a0c2626617ef9a027c598
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556768"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821758"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>使用 XslCompiledTransform 類別
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別為 Microsoft .NET Framework XSLT 處理器。 此類別用於編譯樣式表，並執行 XSLT 轉換。  

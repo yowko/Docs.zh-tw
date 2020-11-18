@@ -1,28 +1,42 @@
 ---
-title: dotnet-傾印-.NET Core
-description: 安裝和使用 dotnet-傾印命令列工具。
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: dotnet-傾印診斷工具-.NET CLI
+description: 瞭解如何在不使用任何原生偵錯工具的情況下，安裝和使用 dotnet 傾印 CLI 工具來收集和分析 Windows 和 Linux 傾印。
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598110"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822200"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印收集和分析公用程式 (dotnet-傾印) 
 
-本文**適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 > [!NOTE]
-> `dotnet-dump` 在 macOS 上不受支援。
+> `dotnet-dump` 只有 .NET 5.0 和更新版本才支援 macOS。
 
-## <a name="install-dotnet-dump"></a>安裝 dotnet-傾印
+## <a name="install"></a>安裝
 
-若要安裝 `dotnet-dump` [NuGet 套件](https://www.nuget.org/packages/dotnet-dump)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+有兩種方式可以下載和安裝 `dotnet-dump` ：
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **dotnet global tool：**
+
+  若要安裝 `dotnet-dump` [NuGet 套件](https://www.nuget.org/packages/dotnet-dump)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **直接下載：**
+
+  下載符合您平臺的工具可執行檔：
+
+  | OS  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \|[x64](https://aka.ms/dotnet-dump/win-x64) \|[arm](https://aka.ms/dotnet-dump/win-arm) \|[arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \|[arm](https://aka.ms/dotnet-dump/linux-arm) \|[arm64](https://aka.ms/dotnet-dump/linux-arm64) \|[musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \|[musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>概要
 
@@ -30,11 +44,11 @@ dotnet tool install -g dotnet-dump
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet-dump`全域工具可收集和分析 Windows 和 linux 傾印，而不需要任何與 Linux 相關的原生偵錯工具 `lldb` 。 這項工具在 Alpine Linux 等平臺上很重要，因為無法使用完整的工作 `lldb` 。 此 `dotnet-dump` 工具可讓您執行 SOS 命令來分析損毀和垃圾收集行程 (GC) ，但它不是原生偵錯工具，因此不支援顯示原生堆疊框架之類的動作。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--version`**
 
@@ -58,10 +72,10 @@ dotnet-dump [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`-h|--help`**
 
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  指定要從中收集記憶體傾印的處理序識別碼。
+  指定要從中收集傾印的處理序識別碼。
+
+- **`-n|--name <name>`**
+
+  指定要從中收集傾印之進程的名稱。
 
 - **`--type <Full|Heap|Mini>`**
 
@@ -112,7 +130,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
   指定要分析之傾印檔案的路徑。
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`-c|--command <debug_command>`**
 
@@ -225,7 +243,7 @@ HResult: 80131604
 
 若要解決這個問題，請安裝 "libc6-dev" 套件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [收集和分析記憶體傾印的 blog](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/)
 - [堆積分析工具 (dotnet-gcdump) ](dotnet-gcdump.md)

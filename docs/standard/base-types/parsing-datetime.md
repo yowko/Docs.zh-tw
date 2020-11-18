@@ -2,7 +2,6 @@
 title: 將字串轉換為 DateTime
 description: 了解剖析表示日期與時間的字串，以從日期與時間字串建立 DateTime 的技術。
 ms.date: 02/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 557955b5c47695dea686527fd99653ef2efe19bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889032"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821915"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -53,7 +52,7 @@ ms.locfileid: "92889032"
 下面的範例會示範如何使用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法將 `string` 轉換成 <xref:System.DateTime>。 本範例會使用與目前執行緒相關聯的文化特性。 如果與目前文化特性相關聯的 <xref:System.Globalization.CultureInfo> 無法剖析輸入字串，則會擲回 <xref:System.FormatException>。
 
 > [!TIP]
-> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行]  按鈕以查看輸出。 您也可以編輯它們以進行實驗。
+> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行] 按鈕以查看輸出。 您也可以編輯它們以進行實驗。
 
 > [!NOTE]
 > 這些範例適用于 [c #](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) 和 [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions)的 GitHub 檔存放庫。

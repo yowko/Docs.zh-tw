@@ -2,7 +2,6 @@
 title: 在 .NET 中變更大小寫
 description: 了解如何在 .NET 中變更字串大小寫。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,18 +13,18 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 424219c8f660b7592996436160f2667f70be654f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 77b879bcc36886a8f457610e6c406bcd121dcfe7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889526"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820549"
 ---
 # <a name="change-case-in-net"></a>.NET 中的變更案例
 
 如果您撰寫的應用程式會接受來自使用者的輸入，您絕對不能確定 (的大小寫) 會用來輸入資料。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
   
-|方法名稱|用途|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成大寫。|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成小寫。|  

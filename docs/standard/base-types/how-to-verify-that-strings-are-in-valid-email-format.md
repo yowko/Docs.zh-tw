@@ -2,7 +2,6 @@
 title: 如何確認字串是否為有效的電子郵件格式
 description: 閱讀如何在 .NET 中使用正則運算式來驗證字串是否為有效電子郵件格式的範例。
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 07b8e31e4a0203b87492eb01ab686a1c56f5565d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 0f6b8b19ae6047bc419ce949ab76288a24e00f74
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889071"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821979"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何確認字串是否為有效的電子郵件格式
 

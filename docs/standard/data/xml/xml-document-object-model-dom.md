@@ -1,14 +1,13 @@
 ---
 title: XML 文件物件模型 (DOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-ms.openlocfilehash: dbc53d713d77cfdc9d0dbb8a201f2b5627a76921
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5e7c4e62b7bb19b1ddab61f78b360fed0b6752ef
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283386"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821771"
 ---
 # <a name="xml-document-object-model-dom"></a>XML 文件物件模型 (DOM)
 
@@ -33,7 +32,7 @@ XML 文件物件模型 (DOM) 類別是記憶體中 XML 文件的表示法。 DOM
 
 下圖顯示當這個 XML 資料讀入 DOM 結構時，如何建立記憶體的結構。
 
-![XML 檔結構](media/xml-to-domtree.gif "XML_To_DOMTree")XML 檔結構
+![XML 檔結構](media/xml-to-domtree.gif "XML_To_DOMTree") XML 檔結構
 
 在 XML 文件結構內，此圖中的每個圓圈表示一個節點，稱為 **XmlNode** 物件。 **XmlNode** 物件是 DOM 樹狀中的基本物件。 擴充 **XmlNode** 的 **XmlDocument** 類別支援在文件上整體執行作業的方法，例如，將它載入記憶體或將 XML 儲存至檔案。 此外，**XmlDocument** 提供一個方法來檢視和管理整個 XML 文件中的節點。 **XmlNode** 和 **XmlDocument** 都可加強效能和可用性，而且有方法和屬性可以：
 
@@ -42,7 +41,7 @@ XML 文件物件模型 (DOM) 類別是記憶體中 XML 文件的表示法。 DOM
 - 擷取整個節點，除了節點所包含的資訊之外，還有項目節點中的內容。
 
   > [!NOTE]
-  > 若應用程式不需要 DOM 所提供的結構或編輯功能，則 **XmlReader** 與 **XmlWriter** 類別會提供對 XML 的無快取、順向資料流存取。 如需詳細資訊，請參閱 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。
+  > 若應用程式不需要 DOM 所提供的結構或編輯功能，則 **XmlReader** 與 **XmlWriter** 類別會提供對 XML 的無快取、順向資料流存取。 如需詳細資訊，請參閱 <xref:System.Xml.XmlReader> 與 <xref:System.Xml.XmlWriter>。
 
 **Node** 物件有一組方法和屬性，以及基本且完整定義的特性。 這些特性的其中一些是：
 
@@ -56,9 +55,9 @@ XML 文件物件模型 (DOM) 類別是記憶體中 XML 文件的表示法。 DOM
 
   - **EntityReference**
 
-  - **元素**
+  - **Element**
 
-  - **屬性**
+  - **Attribute**
 
   **XmlDeclaration**、**Notation**、**Entity**、**CDATASection**、**Text**、**Comment**、**ProcessingInstruction** 和 **DocumentType** 節點都沒有子節點。
 
@@ -74,7 +73,7 @@ Microsoft 已擴充 API，使其可在全球資訊網協會 (W3C) DOM 層級 1 �
 
 DOM 對於將 XML 資料讀入記憶體以變更它的結構、加入或移除節點，或修改在項目所包含之內容中的節點所儲存的資料時最有用。 但是，在其他案例中，可使用其他比 DOM 更快速的類別。 對於快速、無快取、順向資料流的 XML 存取，請使用 **XmlReader** 與 **XmlWriter**。 如果您需要具游標模型和 **XPath** 的隨機存取，請使用 **XPathNavigator** 類別。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 節點的型別](types-of-xml-nodes.md)
 - [將物件階層架構對應至 XML 資料](mapping-the-object-hierarchy-to-xml-data.md)

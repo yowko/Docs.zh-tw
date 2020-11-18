@@ -1,7 +1,6 @@
 ---
 title: 中繼資料和自我描述元件
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c597c1ae6153050f08ed2976f7ee6102cdd3c797
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159348"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822343"
 ---
 # <a name="metadata-and-self-describing-components"></a>中繼資料和自我描述元件
 
@@ -157,11 +156,11 @@ JIT 編譯器會讀取整個方法的 MSIL、全面分析它，並產生那個�
 
 下表顯示 **MethodDef** 表格中，由描述 `Add` 方法的中繼資料語彙基元所參考的部分。 雖然尚有其他中繼資料表存在於這個組件中並擁有其唯一值，但只有這個表格在討論之列。
 
-|資料列|相關的虛擬位址 (RVA)|ImplFlags|Flags|Name<br /><br /> (指向字串堆積)|簽章 (指向 BLOB 堆積)|
+|資料列|相關的虛擬位址 (RVA)|ImplFlags|Flags|名稱<br /><br /> (指向字串堆積)|簽章 (指向 BLOB 堆積)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> 受管理|公用<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (建構函式)||
-|2|0x00002058|IL<br /><br /> 受管理|公用<br /><br /> Static<br /><br /> ReuseSlot|主要區段|String|
-|3|0x0000208c|IL<br /><br /> 受管理|公用<br /><br /> Static<br /><br /> ReuseSlot|加|int, int, int|
+|1|0x00002050|IL<br /><br /> 受控|公開<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (建構函式)||
+|2|0x00002058|IL<br /><br /> 受控|公用<br /><br /> Static<br /><br /> ReuseSlot|主要區段|字串|
+|3|0x0000208c|IL<br /><br /> 受控|公用<br /><br /> Static<br /><br /> ReuseSlot|加|int, int, int|
 
 表格的每一欄包含您程式碼的重要資訊。 **RVA** 欄允許執行階段計算定義這個方法之 MSIL 的起始記憶體位址。 **ImplFlags** 和 **Flags** 欄包含描述方法的位元遮罩 (例如，方法為 Public 或 Private)。 **Name** 欄對字串堆積中的方法名稱進行索引。 **Signature** 欄對 Blob 堆積中方法簽章的定義進行索引。
 
@@ -169,8 +168,8 @@ JIT 編譯器會讀取整個方法的 MSIL、全面分析它，並產生那個�
 
 藉著使用中繼資料，Runtime 擁有對載入您程式碼所需全部資訊的存取權，並處理它成為原生機器指令。 以這個方式，中繼資料允許自我描述檔案和連同一般型別系統的跨語言繼承。
 
-## <a name="related-topics"></a>[相關主題]
+## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[屬性](attributes/index.md)|描述如何套用屬性、撰寫自訂屬性和擷取儲存於屬性的資訊。|

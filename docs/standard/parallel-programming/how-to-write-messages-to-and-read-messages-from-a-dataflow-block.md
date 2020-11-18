@@ -1,7 +1,6 @@
 ---
 title: 如何：寫入和讀取資料流程區塊中的訊息
 ms.date: 09/10/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-ms.openlocfilehash: 8eb92d917bb2b03c2a505a2ba238598e0c1a450c
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: be0e78989105cc59bd041ceb8c6f31073a702f83
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022853"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820783"
 ---
 # <a name="how-to-write-and-read-messages-from-a-dataflow-block"></a>如何：寫入和讀取資料流程區塊中的訊息
 
@@ -55,8 +54,8 @@ ms.locfileid: "90022853"
 
 ## <a name="next-steps"></a>後續步驟
 
-這個範例將示範如何直接讀取和寫入訊息區塊。 您也可以連接資料流程區塊組成「管線」**，這是資料流程區塊的線性序列，或是組成「網路」**，這是資料流程區塊的圖形。 在管線或網路中，當資料可供使用時，來源會非同步散佈資料至目標。 如需建立基本資料流程管線的範例，請參閱[逐步解說：建立資料流程管線](walkthrough-creating-a-dataflow-pipeline.md)。 如需建立更複雜的資料流程網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](walkthrough-using-dataflow-in-a-windows-forms-application.md)。
+這個範例將示範如何直接讀取和寫入訊息區塊。 您也可以連接資料流程區塊組成「管線」，這是資料流程區塊的線性序列，或是組成「網路」，這是資料流程區塊的圖形。 在管線或網路中，當資料可供使用時，來源會非同步散佈資料至目標。 如需建立基本資料流程管線的範例，請參閱[逐步解說：建立資料流程管線](walkthrough-creating-a-dataflow-pipeline.md)。 如需建立更複雜的資料流程網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](walkthrough-using-dataflow-in-a-windows-forms-application.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程 (工作平行程式庫)](dataflow-task-parallel-library.md)

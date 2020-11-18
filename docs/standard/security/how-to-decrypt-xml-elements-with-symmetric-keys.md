@@ -1,7 +1,6 @@
 ---
 title: 作法：使用對稱金鑰解密 XML 元素
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,18 +11,18 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: 8c9f75442e04b76369b5b2c5c1b266ce2a511a63
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: de53cc8ef728ddc40bc8e1138a1d649e5c3e600b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555743"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820302"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>作法：使用對稱金鑰解密 XML 元素
 
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  這個程式碼範例會使用進階加密標準 (AES) 演算法來解密 XML 元素。
   
- 如需如何使用此程式加密 XML 元素的詳細資訊，請參閱[如何：使用對稱金鑰加密 xml](how-to-encrypt-xml-elements-with-symmetric-keys.md)專案。  
+ 如需如何使用此程式加密 XML 元素的詳細資訊，請參閱 [如何：使用對稱金鑰加密 xml](how-to-encrypt-xml-elements-with-symmetric-keys.md)專案。  
   
  當您使用如 AES 的對稱演算法來加密 XML 資料時，您必須使用相同的金鑰來加密和解密 XML 資料。  此程序中的範例假設使用相同的金鑰來加密已加密的 XML，並且加密和解密的雙方同意使用的演算法和金鑰。  此範例不會儲存或加密在已加密 XML 中的 AES 金鑰。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "87555743"
   
 1. 使用 how [to：使用對稱金鑰加密 xml](how-to-encrypt-xml-elements-with-symmetric-keys.md)專案中所述的技術，以先前產生的金鑰來加密 xml 元素。  
   
-2. `EncryptedData`在包含加密 xml 的物件中，尋找 XML 加密標準) 所定義的 <> (元素 <xref:System.Xml.XmlDocument> ，並建立新的 <xref:System.Xml.XmlElement> 物件來代表該元素。  
+2. `EncryptedData`在包含已加密 xml 的物件中，尋找 XML 加密標準) 所定義的 <> 專案 (<xref:System.Xml.XmlDocument> ，然後建立新的 <xref:System.Xml.XmlElement> 物件來表示該元素。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
@@ -72,7 +71,7 @@ ms.locfileid: "87555743"
   
 - 在以 .NET Framework 為目標的專案中，包含的參考 `System.Security.dll` 。
 
-- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 封裝[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 套件 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
   
 - 包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "87555743"
   
 當您完成使用對稱密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

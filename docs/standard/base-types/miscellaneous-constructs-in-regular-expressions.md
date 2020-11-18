@@ -1,7 +1,6 @@
 ---
 title: 規則運算式中的其他建構
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: f7800dee67513f885339fad67c7a999cc06cca36
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c9abccd6c93bad89cc737822fce3990c77b1b96e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889266"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821940"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>規則運算式中的其他建構
 .NET 中的規則運算式包含三個其他語言建構。 其中一個可讓您在規則運算式模式的中間，啟用或停用特定比對選項。 其餘兩個可讓您在規則運算式中包含註解。  
@@ -27,7 +26,7 @@ ms.locfileid: "92889266"
   
  您在問號之後列出要啟用的選項，並在減號之後列出要停用的選項。 下表會說明每個選項。 如需每個選項的詳細資訊，請參閱[規則運算式選項](regular-expression-options.md)。  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |`i`|不區分大小寫的比對。|  
 |`m`|多行模式。|  

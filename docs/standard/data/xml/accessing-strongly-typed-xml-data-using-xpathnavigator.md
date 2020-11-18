@@ -1,20 +1,19 @@
 ---
 title: 使用 XPathNavigator 存取強型別 XML 資料
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: 61957ff88ef57703aff1861238ee10b23c2f16ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291600"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822824"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 存取強型別 XML 資料
-做為 XPath 2.0 資料模型的實例， <xref:System.Xml.XPath.XPathNavigator> 類別可以包含對應至 common language runtime （CLR）類型的強型別資料。 根據 XPath 2.0 資料模型，只有元素和屬性可以包含強型別資料。 <xref:System.Xml.XPath.XPathNavigator>類別提供的機制，可讓您存取 <xref:System.Xml.XPath.XPathDocument> 或物件內的資料做為強型別資料，以及 <xref:System.Xml.XmlDocument> 從一種資料類型轉換成另一種的機制。  
+以 XPath 2.0 資料模型的實例 <xref:System.Xml.XPath.XPathNavigator> 而言，類別可包含對應到 common language runtime (CLR) 類型的強型別資料。 根據 XPath 2.0 資料模型，只有元素和屬性可以包含強型別資料。 <xref:System.Xml.XPath.XPathNavigator>類別提供的機制可讓您以強型別資料的形式存取或物件中的資料，以及 <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> 將資料類型轉換成另一種資料類型的機制。  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>XPathNavigator 公開的型別資訊  
  就技術而言，XML 1.0 資料沒有型別，除非它是透過 DTD、XML 結構描述定義語言 (XSD) 結構描述或其他機制予以處理。 某些類別的型別資訊，可以與 XML 項目或屬性相關聯。  
@@ -32,7 +31,7 @@ ms.locfileid: "84291600"
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator 具型別存取子  
  下表顯示可用於存取節點相關型別資訊之 <xref:System.Xml.XPath.XPathNavigator> 類別的各種屬性及方法。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|包含有效節點的 XML 結構描述型別資訊。|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|包含驗證後加入之節點的後結構描述驗證資訊集。 包含 XML 結構描述型別資訊，以及有效性資訊。|  
@@ -183,7 +182,7 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](type-support-in-the-system-xml-classes.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
