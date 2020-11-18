@@ -1,26 +1,25 @@
 ---
 title: 變更 XML 文件中的命名空間宣告
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-ms.openlocfilehash: e55486feeb427c95a9394ac83758e6052603921e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f4f081e1db2ccacf4714ad3009eefdfc290b2ed4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291574"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821823"
 ---
-# <a name="changing-namespace-declarations-in-an-xml-document"></a><span data-ttu-id="b029f-102">變更 XML 文件中的命名空間宣告</span><span class="sxs-lookup"><span data-stu-id="b029f-102">Changing Namespace Declarations in an XML Document</span></span>
-<span data-ttu-id="b029f-103">**XmlDocument** 公開命名空間宣告，而且 **xmlns** 屬性是文件物件模型的一部份。</span><span class="sxs-lookup"><span data-stu-id="b029f-103">The **XmlDocument** exposes namespace declarations and **xmlns** attributes as part of the document object model.</span></span> <span data-ttu-id="b029f-104">這些是儲存在 **XmlDocument** 中，因此當您儲存文件時，它可以保留那些屬性的位置。</span><span class="sxs-lookup"><span data-stu-id="b029f-104">These are stored in the **XmlDocument**, so when you save the document, it can preserve the location of those attributes.</span></span> <span data-ttu-id="b029f-105">變更這些屬性對已經存在於樹狀結構中之節點的 **Name**、**NamespaceURI** 和 **Prefix** 屬性並沒有影響。</span><span class="sxs-lookup"><span data-stu-id="b029f-105">Changing these attributes has no affect on the **Name**, **NamespaceURI**, and **Prefix** properties of other nodes already in the tree.</span></span> <span data-ttu-id="b029f-106">例如，如果載入下列文件，則 `test` 項目會具有 **NamespaceURI** `123.`</span><span class="sxs-lookup"><span data-stu-id="b029f-106">For example, if you load the following document, then the `test` element has **NamespaceURI** `123.`</span></span>  
+# <a name="changing-namespace-declarations-in-an-xml-document"></a><span data-ttu-id="789dd-102">變更 XML 文件中的命名空間宣告</span><span class="sxs-lookup"><span data-stu-id="789dd-102">Changing Namespace Declarations in an XML Document</span></span>
+<span data-ttu-id="789dd-103">**XmlDocument** 公開命名空間宣告，而且 **xmlns** 屬性是文件物件模型的一部份。</span><span class="sxs-lookup"><span data-stu-id="789dd-103">The **XmlDocument** exposes namespace declarations and **xmlns** attributes as part of the document object model.</span></span> <span data-ttu-id="789dd-104">這些是儲存在 **XmlDocument** 中，因此當您儲存文件時，它可以保留那些屬性的位置。</span><span class="sxs-lookup"><span data-stu-id="789dd-104">These are stored in the **XmlDocument**, so when you save the document, it can preserve the location of those attributes.</span></span> <span data-ttu-id="789dd-105">變更這些屬性對已經存在於樹狀結構中之節點的 **Name**、**NamespaceURI** 和 **Prefix** 屬性並沒有影響。</span><span class="sxs-lookup"><span data-stu-id="789dd-105">Changing these attributes has no affect on the **Name**, **NamespaceURI**, and **Prefix** properties of other nodes already in the tree.</span></span> <span data-ttu-id="789dd-106">例如，如果載入下列文件，則 `test` 項目會具有 **NamespaceURI** `123.`</span><span class="sxs-lookup"><span data-stu-id="789dd-106">For example, if you load the following document, then the `test` element has **NamespaceURI** `123.`</span></span>  
   
 ```xml  
 <test xmlns="123"/>  
 ```  
   
- <span data-ttu-id="b029f-107">如果如下所示移除 `xmlns` 屬性，則 `test` 項目仍會具有 `123` 的 **NamespaceURI**。</span><span class="sxs-lookup"><span data-stu-id="b029f-107">If you remove the `xmlns` attribute as follows, then the `test` element still has the **NamespaceURI** of `123`.</span></span>  
+ <span data-ttu-id="789dd-107">如果如下所示移除 `xmlns` 屬性，則 `test` 項目仍會具有 `123` 的 **NamespaceURI**。</span><span class="sxs-lookup"><span data-stu-id="789dd-107">If you remove the `xmlns` attribute as follows, then the `test` element still has the **NamespaceURI** of `123`.</span></span>  
   
 ```vb  
 doc.documentElement.RemoveAttribute("xmlns")  
@@ -30,7 +29,7 @@ doc.documentElement.RemoveAttribute("xmlns")
 doc.documentElement.RemoveAttribute("xmlns");  
 ```  
   
- <span data-ttu-id="b029f-108">同樣地，如果如下所示將不同的 `xmlns` 屬性加入 `doc` 項目，則 `test` 項目仍會具有 **NamespaceURI** `123`。</span><span class="sxs-lookup"><span data-stu-id="b029f-108">Likewise, if you add a different `xmlns` attribute to the `doc` element as follows, then the `test` element still has **NamespaceURI** `123`.</span></span>  
+ <span data-ttu-id="789dd-108">同樣地，如果如下所示將不同的 `xmlns` 屬性加入 `doc` 項目，則 `test` 項目仍會具有 **NamespaceURI** `123`。</span><span class="sxs-lookup"><span data-stu-id="789dd-108">Likewise, if you add a different `xmlns` attribute to the `doc` element as follows, then the `test` element still has **NamespaceURI** `123`.</span></span>  
   
 ```vb  
 doc.documentElement.SetAttribute("xmlns","456")
@@ -40,8 +39,8 @@ doc.documentElement.SetAttribute("xmlns","456")
 doc.documentElement.SetAttribute("xmlns","456");  
 ```  
   
- <span data-ttu-id="b029f-109">因此，除非儲存並重新載入 **XmlDocument** 物件，否則變更 `xmlns` 屬性並不會產生任何影響。</span><span class="sxs-lookup"><span data-stu-id="b029f-109">Therefore, changing `xmlns` attributes will have no affect until you save and reload the **XmlDocument** object.</span></span>  
+ <span data-ttu-id="789dd-109">因此，除非儲存並重新載入 **XmlDocument** 物件，否則變更 `xmlns` 屬性並不會產生任何影響。</span><span class="sxs-lookup"><span data-stu-id="789dd-109">Therefore, changing `xmlns` attributes will have no affect until you save and reload the **XmlDocument** object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b029f-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b029f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="789dd-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="789dd-110">See also</span></span>
 
-- [<span data-ttu-id="b029f-111">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="b029f-111">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)
+- [<span data-ttu-id="789dd-111">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="789dd-111">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)

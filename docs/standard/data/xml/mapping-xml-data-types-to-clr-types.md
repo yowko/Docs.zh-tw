@@ -1,23 +1,22 @@
 ---
 title: 將 XML 資料型別對應至 CLR 型別
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-ms.openlocfilehash: f14c8d961fe0934b8e843c39a217e7c2db8237c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1a79d178a4e027973591061634cfb5904dd3e0cc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289105"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822577"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="4d7d2-102">將 XML 資料型別對應至 CLR 型別</span><span class="sxs-lookup"><span data-stu-id="4d7d2-102">Mapping XML Data Types to CLR Types</span></span>
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="4ac94-102">將 XML 資料型別對應至 CLR 型別</span><span class="sxs-lookup"><span data-stu-id="4ac94-102">Mapping XML Data Types to CLR Types</span></span>
 
-<span data-ttu-id="4d7d2-103">下表說明 XML 資料型別及 Common Language Runtime (CLR) 型別之間的預設對應。</span><span class="sxs-lookup"><span data-stu-id="4d7d2-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
+<span data-ttu-id="4ac94-103">下表說明 XML 資料型別及 Common Language Runtime (CLR) 型別之間的預設對應。</span><span class="sxs-lookup"><span data-stu-id="4ac94-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4d7d2-104">`xs` 和 `xdt` 前置詞分別對應至 <https://www.w3.org/2001/XMLSchema> 和 <https://www.w3.org/2003/05/xpath-datatypes> 命名空間 URI。</span><span class="sxs-lookup"><span data-stu-id="4d7d2-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
+> <span data-ttu-id="4ac94-104">`xs` 和 `xdt` 前置詞分別對應至 <https://www.w3.org/2001/XMLSchema> 和 <https://www.w3.org/2003/05/xpath-datatypes> 命名空間 URI。</span><span class="sxs-lookup"><span data-stu-id="4ac94-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
 
-|<span data-ttu-id="4d7d2-105">XML 型別</span><span class="sxs-lookup"><span data-stu-id="4d7d2-105">XML Type</span></span>|<span data-ttu-id="4d7d2-106">CLR 型別</span><span class="sxs-lookup"><span data-stu-id="4d7d2-106">CLR Type</span></span>|
+|<span data-ttu-id="4ac94-105">XML 型別</span><span class="sxs-lookup"><span data-stu-id="4ac94-105">XML Type</span></span>|<span data-ttu-id="4ac94-106">CLR 型別</span><span class="sxs-lookup"><span data-stu-id="4ac94-106">CLR Type</span></span>|
 |--------------|--------------|
 |`xs:anyURI`|<xref:System.Uri>|
 |`xs:base64Binary`|`Byte[]`|
@@ -68,14 +67,14 @@ ms.locfileid: "84289105"
 |`xdt:untypedAtomic`|<xref:System.String>|
 |`xdt:anyAtomicType`|<xref:System.Object>|
 |`xs:anySimpleType`|<xref:System.String>|
-|<span data-ttu-id="4d7d2-107">文件節點</span><span class="sxs-lookup"><span data-stu-id="4d7d2-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="4d7d2-108">Element node</span><span class="sxs-lookup"><span data-stu-id="4d7d2-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="4d7d2-109">Attribute node</span><span class="sxs-lookup"><span data-stu-id="4d7d2-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="4d7d2-110">Namespace node</span><span class="sxs-lookup"><span data-stu-id="4d7d2-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="4d7d2-111">Text node</span><span class="sxs-lookup"><span data-stu-id="4d7d2-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="4d7d2-112">Comment node</span><span class="sxs-lookup"><span data-stu-id="4d7d2-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="4d7d2-113">Processing instruction node</span><span class="sxs-lookup"><span data-stu-id="4d7d2-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="4ac94-107">文件節點</span><span class="sxs-lookup"><span data-stu-id="4ac94-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="4ac94-108">Element node</span><span class="sxs-lookup"><span data-stu-id="4ac94-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="4ac94-109">Attribute node</span><span class="sxs-lookup"><span data-stu-id="4ac94-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="4ac94-110">Namespace node</span><span class="sxs-lookup"><span data-stu-id="4ac94-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="4ac94-111">Text node</span><span class="sxs-lookup"><span data-stu-id="4ac94-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="4ac94-112">Comment node</span><span class="sxs-lookup"><span data-stu-id="4ac94-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="4ac94-113">Processing instruction node</span><span class="sxs-lookup"><span data-stu-id="4ac94-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a><span data-ttu-id="4d7d2-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4d7d2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ac94-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="4ac94-114">See also</span></span>
 
-- [<span data-ttu-id="4d7d2-115">System.Xml 類別中的型別支援</span><span class="sxs-lookup"><span data-stu-id="4d7d2-115">Type Support in the System.Xml Classes</span></span>](type-support-in-the-system-xml-classes.md)
+- [<span data-ttu-id="4ac94-115">System.Xml 類別中的型別支援</span><span class="sxs-lookup"><span data-stu-id="4ac94-115">Type Support in the System.Xml Classes</span></span>](type-support-in-the-system-xml-classes.md)

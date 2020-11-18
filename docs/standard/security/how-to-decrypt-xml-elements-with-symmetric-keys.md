@@ -1,7 +1,6 @@
 ---
 title: 作法：使用對稱金鑰解密 XML 元素
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,49 +11,49 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: 8c9f75442e04b76369b5b2c5c1b266ce2a511a63
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: de53cc8ef728ddc40bc8e1138a1d649e5c3e600b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555743"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820302"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a><span data-ttu-id="32753-102">作法：使用對稱金鑰解密 XML 元素</span><span class="sxs-lookup"><span data-stu-id="32753-102">How to: Decrypt XML Elements with Symmetric Keys</span></span>
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a><span data-ttu-id="4e950-102">作法：使用對稱金鑰解密 XML 元素</span><span class="sxs-lookup"><span data-stu-id="4e950-102">How to: Decrypt XML Elements with Symmetric Keys</span></span>
 
-<span data-ttu-id="32753-103">您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。</span><span class="sxs-lookup"><span data-stu-id="32753-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to encrypt an element within an XML document.</span></span>  <span data-ttu-id="32753-104">XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。</span><span class="sxs-lookup"><span data-stu-id="32753-104">XML Encryption allows you to store or transport sensitive XML, without worrying about the data being easily read.</span></span>  <span data-ttu-id="32753-105">這個程式碼範例會使用進階加密標準 (AES) 演算法來解密 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="32753-105">This code example decrypts an XML element using the Advanced Encryption Standard (AES) algorithm.</span></span>
+<span data-ttu-id="4e950-103">您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。</span><span class="sxs-lookup"><span data-stu-id="4e950-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to encrypt an element within an XML document.</span></span>  <span data-ttu-id="4e950-104">XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。</span><span class="sxs-lookup"><span data-stu-id="4e950-104">XML Encryption allows you to store or transport sensitive XML, without worrying about the data being easily read.</span></span>  <span data-ttu-id="4e950-105">這個程式碼範例會使用進階加密標準 (AES) 演算法來解密 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="4e950-105">This code example decrypts an XML element using the Advanced Encryption Standard (AES) algorithm.</span></span>
   
- <span data-ttu-id="32753-106">如需如何使用此程式加密 XML 元素的詳細資訊，請參閱[如何：使用對稱金鑰加密 xml](how-to-encrypt-xml-elements-with-symmetric-keys.md)專案。</span><span class="sxs-lookup"><span data-stu-id="32753-106">For information about how to encrypt an XML element using this procedure, see [How to: Encrypt XML Elements with Symmetric Keys](how-to-encrypt-xml-elements-with-symmetric-keys.md).</span></span>  
+ <span data-ttu-id="4e950-106">如需如何使用此程式加密 XML 元素的詳細資訊，請參閱 [如何：使用對稱金鑰加密 xml](how-to-encrypt-xml-elements-with-symmetric-keys.md)專案。</span><span class="sxs-lookup"><span data-stu-id="4e950-106">For information about how to encrypt an XML element using this procedure, see [How to: Encrypt XML Elements with Symmetric Keys](how-to-encrypt-xml-elements-with-symmetric-keys.md).</span></span>  
   
- <span data-ttu-id="32753-107">當您使用如 AES 的對稱演算法來加密 XML 資料時，您必須使用相同的金鑰來加密和解密 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="32753-107">When you use a symmetric algorithm like AES to encrypt XML data, you must use the same key to encrypt and decrypt the XML data.</span></span>  <span data-ttu-id="32753-108">此程序中的範例假設使用相同的金鑰來加密已加密的 XML，並且加密和解密的雙方同意使用的演算法和金鑰。</span><span class="sxs-lookup"><span data-stu-id="32753-108">The example in this procedure assumes that the encrypted XML was encrypted using the same key, and that the encrypting and decrypting parties agree on the algorithm and key to use.</span></span>  <span data-ttu-id="32753-109">此範例不會儲存或加密在已加密 XML 中的 AES 金鑰。</span><span class="sxs-lookup"><span data-stu-id="32753-109">This example does not store or encrypt the AES key within the encrypted XML.</span></span>  
+ <span data-ttu-id="4e950-107">當您使用如 AES 的對稱演算法來加密 XML 資料時，您必須使用相同的金鑰來加密和解密 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="4e950-107">When you use a symmetric algorithm like AES to encrypt XML data, you must use the same key to encrypt and decrypt the XML data.</span></span>  <span data-ttu-id="4e950-108">此程序中的範例假設使用相同的金鑰來加密已加密的 XML，並且加密和解密的雙方同意使用的演算法和金鑰。</span><span class="sxs-lookup"><span data-stu-id="4e950-108">The example in this procedure assumes that the encrypted XML was encrypted using the same key, and that the encrypting and decrypting parties agree on the algorithm and key to use.</span></span>  <span data-ttu-id="4e950-109">此範例不會儲存或加密在已加密 XML 中的 AES 金鑰。</span><span class="sxs-lookup"><span data-stu-id="4e950-109">This example does not store or encrypt the AES key within the encrypted XML.</span></span>  
   
- <span data-ttu-id="32753-110">這個範例適合單一應用程式需要根據記憶體中儲存的工作階段金鑰，或是根據衍生自密碼的強式密碼編譯金鑰，來加密資料。</span><span class="sxs-lookup"><span data-stu-id="32753-110">This example is appropriate for situations where a single application needs to encrypt data based on a session key stored in memory, or based on a cryptographically strong key derived from a password.</span></span>  <span data-ttu-id="32753-111">對於兩個或多個應用程式需要共用加密的 XML 資料的情況，請考慮使用根據非對稱式演算法或 X.509 憑證的加密配置。</span><span class="sxs-lookup"><span data-stu-id="32753-111">For situations where two or more applications need to share encrypted XML data, consider using an encryption scheme based on an asymmetric algorithm or an X.509 certificate.</span></span>  
+ <span data-ttu-id="4e950-110">這個範例適合單一應用程式需要根據記憶體中儲存的工作階段金鑰，或是根據衍生自密碼的強式密碼編譯金鑰，來加密資料。</span><span class="sxs-lookup"><span data-stu-id="4e950-110">This example is appropriate for situations where a single application needs to encrypt data based on a session key stored in memory, or based on a cryptographically strong key derived from a password.</span></span>  <span data-ttu-id="4e950-111">對於兩個或多個應用程式需要共用加密的 XML 資料的情況，請考慮使用根據非對稱式演算法或 X.509 憑證的加密配置。</span><span class="sxs-lookup"><span data-stu-id="4e950-111">For situations where two or more applications need to share encrypted XML data, consider using an encryption scheme based on an asymmetric algorithm or an X.509 certificate.</span></span>  
   
-### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a><span data-ttu-id="32753-112">使用對稱金鑰解密 XML 項目</span><span class="sxs-lookup"><span data-stu-id="32753-112">To decrypt an XML element with a symmetric key</span></span>  
+### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a><span data-ttu-id="4e950-112">使用對稱金鑰解密 XML 項目</span><span class="sxs-lookup"><span data-stu-id="4e950-112">To decrypt an XML element with a symmetric key</span></span>  
   
-1. <span data-ttu-id="32753-113">使用 how [to：使用對稱金鑰加密 xml](how-to-encrypt-xml-elements-with-symmetric-keys.md)專案中所述的技術，以先前產生的金鑰來加密 xml 元素。</span><span class="sxs-lookup"><span data-stu-id="32753-113">Encrypt an XML element with the previously generated key using the techniques described in [How to: Encrypt XML Elements with Symmetric Keys](how-to-encrypt-xml-elements-with-symmetric-keys.md).</span></span>  
+1. <span data-ttu-id="4e950-113">使用 how [to：使用對稱金鑰加密 xml](how-to-encrypt-xml-elements-with-symmetric-keys.md)專案中所述的技術，以先前產生的金鑰來加密 xml 元素。</span><span class="sxs-lookup"><span data-stu-id="4e950-113">Encrypt an XML element with the previously generated key using the techniques described in [How to: Encrypt XML Elements with Symmetric Keys](how-to-encrypt-xml-elements-with-symmetric-keys.md).</span></span>  
   
-2. <span data-ttu-id="32753-114">`EncryptedData`在包含加密 xml 的物件中，尋找 XML 加密標準) 所定義的 <> (元素 <xref:System.Xml.XmlDocument> ，並建立新的 <xref:System.Xml.XmlElement> 物件來代表該元素。</span><span class="sxs-lookup"><span data-stu-id="32753-114">Find the <`EncryptedData`> element (defined by the XML Encryption standard) in an <xref:System.Xml.XmlDocument> object that contains the encrypted XML and create a new <xref:System.Xml.XmlElement> object to represent that element.</span></span>  
+2. <span data-ttu-id="4e950-114">`EncryptedData`在包含已加密 xml 的物件中，尋找 XML 加密標準) 所定義的 <> 專案 (<xref:System.Xml.XmlDocument> ，然後建立新的 <xref:System.Xml.XmlElement> 物件來表示該元素。</span><span class="sxs-lookup"><span data-stu-id="4e950-114">Find the <`EncryptedData`> element (defined by the XML Encryption standard) in an <xref:System.Xml.XmlDocument> object that contains the encrypted XML and create a new <xref:System.Xml.XmlElement> object to represent that element.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3. <span data-ttu-id="32753-115">從先前建立的 <xref:System.Xml.XmlElement> 物件載入原始的 XML 資料，以建立 <xref:System.Security.Cryptography.Xml.EncryptedData> 物件。</span><span class="sxs-lookup"><span data-stu-id="32753-115">Create an <xref:System.Security.Cryptography.Xml.EncryptedData> object by loading the raw XML data from the previously created <xref:System.Xml.XmlElement> object.</span></span>  
+3. <span data-ttu-id="4e950-115">從先前建立的 <xref:System.Xml.XmlElement> 物件載入原始的 XML 資料，以建立 <xref:System.Security.Cryptography.Xml.EncryptedData> 物件。</span><span class="sxs-lookup"><span data-stu-id="4e950-115">Create an <xref:System.Security.Cryptography.Xml.EncryptedData> object by loading the raw XML data from the previously created <xref:System.Xml.XmlElement> object.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4. <span data-ttu-id="32753-116">建立新 <xref:System.Security.Cryptography.Xml.EncryptedXml> 物件，並使用它來解密使用相同金鑰加密的 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="32753-116">Create a new <xref:System.Security.Cryptography.Xml.EncryptedXml> object and use it to decrypt the XML data using the same key that was used for encryption.</span></span>  
+4. <span data-ttu-id="4e950-116">建立新 <xref:System.Security.Cryptography.Xml.EncryptedXml> 物件，並使用它來解密使用相同金鑰加密的 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="4e950-116">Create a new <xref:System.Security.Cryptography.Xml.EncryptedXml> object and use it to decrypt the XML data using the same key that was used for encryption.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5. <span data-ttu-id="32753-117">將加密的項目取代為 XML 文件中剛解密的純文字項目。</span><span class="sxs-lookup"><span data-stu-id="32753-117">Replace the encrypted element with the newly decrypted plaintext element within the XML document.</span></span>  
+5. <span data-ttu-id="4e950-117">將加密的項目取代為 XML 文件中剛解密的純文字項目。</span><span class="sxs-lookup"><span data-stu-id="4e950-117">Replace the encrypted element with the newly decrypted plaintext element within the XML document.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
-## <a name="example"></a><span data-ttu-id="32753-118">範例</span><span class="sxs-lookup"><span data-stu-id="32753-118">Example</span></span>  
- <span data-ttu-id="32753-119">這個範例假設名為 `"test.xml"` 的檔案已存在於和編譯程式相同的目錄中。</span><span class="sxs-lookup"><span data-stu-id="32753-119">This example assumes that a file named `"test.xml"` exists in the same directory as the compiled program.</span></span>  <span data-ttu-id="32753-120">它同時也假設 `"test.xml"` 包含 `"creditcard"` 元素。</span><span class="sxs-lookup"><span data-stu-id="32753-120">It also assumes that `"test.xml"` contains a `"creditcard"` element.</span></span>  <span data-ttu-id="32753-121">您可以將下列 XML 放入稱為 `test.xml` 的檔案，並使用它搭配此範例。</span><span class="sxs-lookup"><span data-stu-id="32753-121">You can place the following XML into a file called `test.xml` and use it with this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e950-118">範例</span><span class="sxs-lookup"><span data-stu-id="4e950-118">Example</span></span>  
+ <span data-ttu-id="4e950-119">這個範例假設名為 `"test.xml"` 的檔案已存在於和編譯程式相同的目錄中。</span><span class="sxs-lookup"><span data-stu-id="4e950-119">This example assumes that a file named `"test.xml"` exists in the same directory as the compiled program.</span></span>  <span data-ttu-id="4e950-120">它同時也假設 `"test.xml"` 包含 `"creditcard"` 元素。</span><span class="sxs-lookup"><span data-stu-id="4e950-120">It also assumes that `"test.xml"` contains a `"creditcard"` element.</span></span>  <span data-ttu-id="4e950-121">您可以將下列 XML 放入稱為 `test.xml` 的檔案，並使用它搭配此範例。</span><span class="sxs-lookup"><span data-stu-id="4e950-121">You can place the following XML into a file called `test.xml` and use it with this example.</span></span>  
   
 ```xml  
 <root>  
@@ -68,25 +67,25 @@ ms.locfileid: "87555743"
  [!code-csharp[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#1)]
  [!code-vb[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="32753-122">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="32753-122">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4e950-122">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4e950-122">Compiling the Code</span></span>  
   
-- <span data-ttu-id="32753-123">在以 .NET Framework 為目標的專案中，包含的參考 `System.Security.dll` 。</span><span class="sxs-lookup"><span data-stu-id="32753-123">In a project that targets .NET Framework, include a reference to `System.Security.dll`.</span></span>
+- <span data-ttu-id="4e950-123">在以 .NET Framework 為目標的專案中，包含的參考 `System.Security.dll` 。</span><span class="sxs-lookup"><span data-stu-id="4e950-123">In a project that targets .NET Framework, include a reference to `System.Security.dll`.</span></span>
 
-- <span data-ttu-id="32753-124">在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 封裝[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。</span><span class="sxs-lookup"><span data-stu-id="32753-124">In a project that targets .NET Core or .NET 5, install NuGet package [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml).</span></span>
+- <span data-ttu-id="4e950-124">在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 套件 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。</span><span class="sxs-lookup"><span data-stu-id="4e950-124">In a project that targets .NET Core or .NET 5, install NuGet package [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml).</span></span>
   
-- <span data-ttu-id="32753-125">包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。</span><span class="sxs-lookup"><span data-stu-id="32753-125">Include the following namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, and <xref:System.Security.Cryptography.Xml>.</span></span>  
+- <span data-ttu-id="4e950-125">包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。</span><span class="sxs-lookup"><span data-stu-id="4e950-125">Include the following namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, and <xref:System.Security.Cryptography.Xml>.</span></span>  
   
-## <a name="net-security"></a><span data-ttu-id="32753-126">.NET 安全性</span><span class="sxs-lookup"><span data-stu-id="32753-126">.NET Security</span></span>
+## <a name="net-security"></a><span data-ttu-id="4e950-126">.NET 安全性</span><span class="sxs-lookup"><span data-stu-id="4e950-126">.NET Security</span></span>
   
-<span data-ttu-id="32753-127">絕對不要以純文字儲存密碼編譯金鑰，或以純文字格式在電腦之間傳輸金鑰。</span><span class="sxs-lookup"><span data-stu-id="32753-127">Never store a cryptographic key in plaintext or transfer a key between machines in plaintext.</span></span>  
+<span data-ttu-id="4e950-127">絕對不要以純文字儲存密碼編譯金鑰，或以純文字格式在電腦之間傳輸金鑰。</span><span class="sxs-lookup"><span data-stu-id="4e950-127">Never store a cryptographic key in plaintext or transfer a key between machines in plaintext.</span></span>  
   
-<span data-ttu-id="32753-128">當您完成使用對稱密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="32753-128">When you are done using a symmetric cryptographic key, clear it from memory by setting each byte to zero or by calling the <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> method of the managed cryptography class.</span></span>  
+<span data-ttu-id="4e950-128">當您完成使用對稱密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="4e950-128">When you are done using a symmetric cryptographic key, clear it from memory by setting each byte to zero or by calling the <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> method of the managed cryptography class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32753-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="32753-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e950-129">請參閱</span><span class="sxs-lookup"><span data-stu-id="4e950-129">See also</span></span>
 
-- [<span data-ttu-id="32753-130">密碼編譯模型</span><span class="sxs-lookup"><span data-stu-id="32753-130">Cryptography Model</span></span>](cryptography-model.md)
-- [<span data-ttu-id="32753-131">密碼編譯服務</span><span class="sxs-lookup"><span data-stu-id="32753-131">Cryptographic Services</span></span>](cryptographic-services.md)
-- [<span data-ttu-id="32753-132">跨平臺密碼編譯</span><span class="sxs-lookup"><span data-stu-id="32753-132">Cross-Platform Cryptography</span></span>](cross-platform-cryptography.md)
+- [<span data-ttu-id="4e950-130">密碼編譯模型</span><span class="sxs-lookup"><span data-stu-id="4e950-130">Cryptography Model</span></span>](cryptography-model.md)
+- [<span data-ttu-id="4e950-131">密碼編譯服務</span><span class="sxs-lookup"><span data-stu-id="4e950-131">Cryptographic Services</span></span>](cryptographic-services.md)
+- [<span data-ttu-id="4e950-132">跨平臺密碼編譯</span><span class="sxs-lookup"><span data-stu-id="4e950-132">Cross-Platform Cryptography</span></span>](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
-- [<span data-ttu-id="32753-133">作法：使用對稱金鑰加密 XML 元素</span><span class="sxs-lookup"><span data-stu-id="32753-133">How to: Encrypt XML Elements with Symmetric Keys</span></span>](how-to-encrypt-xml-elements-with-symmetric-keys.md)
-- [<span data-ttu-id="32753-134">ASP.NET Core 資料保護</span><span class="sxs-lookup"><span data-stu-id="32753-134">ASP.NET Core Data Protection</span></span>](/aspnet/core/security/data-protection/introduction)
+- [<span data-ttu-id="4e950-133">作法：使用對稱金鑰加密 XML 元素</span><span class="sxs-lookup"><span data-stu-id="4e950-133">How to: Encrypt XML Elements with Symmetric Keys</span></span>](how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [<span data-ttu-id="4e950-134">ASP.NET Core 資料保護</span><span class="sxs-lookup"><span data-stu-id="4e950-134">ASP.NET Core Data Protection</span></span>](/aspnet/core/security/data-protection/introduction)
