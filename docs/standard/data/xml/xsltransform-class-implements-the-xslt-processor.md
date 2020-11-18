@@ -1,17 +1,16 @@
 ---
 title: XslTransform 類別實作 XSLT 處理器
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: eec5d6588d907e2d12b588ab3bfe743d6d1eaff9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 57632321edf086b644da7ea4fca893edb589834f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281605"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818174"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 類別實作 XSLT 處理器
 
@@ -178,7 +177,7 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-此範例會使用 library .xml 和 print_root .xsl 檔案做為輸入，並將下列內容輸出到主控台：
+此範例會使用 library.xml 並 print_root .xsl 檔案作為輸入，並將下列內容輸出到主控台：
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
@@ -235,7 +234,7 @@ print_root.xsl
 
 在 .NET Framework 版本 1.1 中，<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> 屬性已遭淘汰。 請改用新的 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 多載，它採用的是 <xref:System.Xml.XmlResolver> 物件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)

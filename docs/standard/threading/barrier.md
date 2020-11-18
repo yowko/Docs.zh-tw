@@ -1,23 +1,22 @@
 ---
 title: 屏障
 ms.date: 09/14/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-ms.openlocfilehash: 5aa34f7f39f4b9b626bea29372cf984f3cefb361
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4eab74ef07ac56a4d3ff65e67bb9fbd45dbfc9bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138156"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819938"
 ---
 # <a name="barrier"></a>屏障
 
-<xref:System.Threading.Barrier?displayProperty=nameWithType> 是同步處理原始物件，可讓多個執行緒 (也稱為「參與者」**) 以並行方式分階段處理演算法。 每個參與者都會執行，直到它到達程式碼中的屏障點為止。 屏障代表一個工作階段的結束。 當參與者到達屏障時，它就會封鎖，直到所有參與者都到達相同的屏障為止。 在所有參與者都到達屏障之後，您就可以選擇性地叫用階段後動作。 當所有其他執行緒仍然處於封鎖狀態時，單一執行緒可以使用這個階段後動作來執行動作。 執行這個動作之後，這些參與者都會解除封鎖。  
+<xref:System.Threading.Barrier?displayProperty=nameWithType> 是同步處理原始物件，可讓多個執行緒 (也稱為「參與者」) 以並行方式分階段處理演算法。 每個參與者都會執行，直到它到達程式碼中的屏障點為止。 屏障代表一個工作階段的結束。 當參與者到達屏障時，它就會封鎖，直到所有參與者都到達相同的屏障為止。 在所有參與者都到達屏障之後，您就可以選擇性地叫用階段後動作。 當所有其他執行緒仍然處於封鎖狀態時，單一執行緒可以使用這個階段後動作來執行動作。 執行這個動作之後，這些參與者都會解除封鎖。  
   
  下列程式碼片段示範基本屏障模式。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "73138156"
   
  如需詳細資訊，請參閱[使用接續工作鏈結工作](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行緒物件和功能](threading-objects-and-features.md)
-- [操作說明：使用屏障同步處理並行作業](how-to-synchronize-concurrent-operations-with-a-barrier.md)
+- [如何：使用屏障同步處理並行作業](how-to-synchronize-concurrent-operations-with-a-barrier.md)

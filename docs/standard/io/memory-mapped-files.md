@@ -2,7 +2,6 @@
 title: 記憶體對應檔案
 description: 探索 .NET 中的記憶體對應檔案，其中包含虛擬記憶體中的檔案內容，並允許應用程式直接寫入記憶體來修改檔案。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: e6f9a760d7673eecf161b1d84d890cc14d09235e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: dc0da9842df7b0a827293c42d80ccdd418a043b2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189013"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819197"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
 
@@ -147,6 +146,6 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [檔案和資料流程 i/o](index.md)
+- [檔案和資料流 I/O](index.md)

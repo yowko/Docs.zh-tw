@@ -1,7 +1,6 @@
 ---
 title: 作法：解決模稜兩可的時間
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - time zones [.NET], ambiguous time
 - ambiguous time [.NET]
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
-ms.openlocfilehash: 467153ad1217e529f52bf90262c4264de069ff00
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 29a549d519bd3b6c10fef8205b30a07a71f01d1a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063517"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817753"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>作法：解決模稜兩可的時間
 
@@ -53,7 +52,7 @@ ms.locfileid: "93063517"
 
 - <xref:System>使用 `using` c # 程式碼) 所需的語句來匯入命名空間 (。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)
 - [如何：讓使用者解決不明確的時間](let-users-resolve-ambiguous-times.md)

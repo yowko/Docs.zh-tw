@@ -1,7 +1,6 @@
 ---
 title: 尋找定義於本機系統的時區
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zones [.NET], local
 - time zones [.NET], finding local system time zones
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - UTC times, finding local system time zones
 - time zones [.NET], UTC
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
-ms.openlocfilehash: c968c7891a4fc9b77ed6224a9fc5f8f6d8f5d80b
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 02467e10494e72c83ad9521228f6c4151c4a6bd1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063686"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817935"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>尋找定義於本機系統的時區
 
@@ -35,7 +34,7 @@ ms.locfileid: "93063686"
 
 時區識別項是唯一識別時區的索引鍵欄位。 雖然大部分的索引鍵相對較短，但時區識別項相較之下就很長。 在大部分情況下，其值會對應到 <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType> 屬性，用來提供時區標準時間的名稱。 不過仍有例外狀況。 若要確定您提供了有效的識別項，最好是列舉系統上可用的時區，並記下其相關聯的識別項。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)
 - [如何：存取預先定義的 UTC 和當地時區物件](access-utc-and-local.md)

@@ -1,18 +1,17 @@
 ---
 title: 語言獨立性以及與語言無關的元件
 description: 了解如何使用 .NET 中支援的許多語言之一進行開發，例如 C#、C++/CLI、F#、IronPython、VB、Visual COBOL 和 PowerShell。
-ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
-ms.technology: dotnet-standard
+ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162982"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819080"
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
@@ -146,9 +145,9 @@ End Class
 成員 | [一般類型成員](#type-members-in-general) | 全域靜態欄位和方法不符合 CLS 標準。 | 36
 成員 | -- | 常值靜態欄位的值是透過使用欄位初始化中繼資料來指定。 符合 CLS 標準的常值必須具有欄位初始化中繼資料所指定的值，這個中繼資料與常值有完全相同的類型 (如果該常值是 `enum`，則為基礎類型)。 | 13
 成員 | [一般類型成員](#type-members-in-general) | vararg 條件約束不是 CLS 的一部分，CLS 所支援的唯一呼叫慣例是標準的 Managed 呼叫慣例。 | 15
-命名規範 | [命名規範](#naming-conventions) | 組件必須遵守 Unicode Standard 3.0 技術報告編號 15 附錄 7 的各項規則，它規定可以啟始並包含在識別項中的字元集，[Unicode Normalization Forms](https://unicode.org/reports/tr15/) 線上提供這份報告。 識別項應使用 Unicode Normalization 表格 C 所定義的標準格式。基於 CLS 目的，如果兩個識別項的小寫對應 (如 Unicode 不區分地區設定、一對一小寫對應所指定) 相同，則它們便為相同。 也就是依據 CLS，兩個識別項若要被視為不同，不只是大小寫，還要有其他不同之處。 不過，為了覆寫繼承的定義，CLI 需要使用原始宣告的確切編碼。 | 4
-多載化 | [命名規範](#naming-conventions) | 在符合 CLS 標準的範圍中引入的所有名稱，除了名稱完全相同且透過多載解析的情況之外，都必須是不同的獨立類型。 也就是說，CTS 允許單一類型對方法和欄位使用同樣的名稱，但 CLS 不允許。 | 5
-多載化 | [命名規範](#naming-conventions) | 即使 CTS 允許區別不同簽章，還是必須單獨依據識別項比較來區別欄位和巢狀類型。 具有相同名稱 (by 識別碼比較的方法、屬性和事件) 應該不只是傳回類型不同，除非在 CLS 規則39中指定。 | 6
+命名規範 | [命名慣例](#naming-conventions) | 組件必須遵守 Unicode Standard 3.0 技術報告編號 15 附錄 7 的各項規則，它規定可以啟始並包含在識別項中的字元集，[Unicode Normalization Forms](https://unicode.org/reports/tr15/) 線上提供這份報告。 識別項應使用 Unicode Normalization 表格 C 所定義的標準格式。基於 CLS 目的，如果兩個識別項的小寫對應 (如 Unicode 不區分地區設定、一對一小寫對應所指定) 相同，則它們便為相同。 也就是依據 CLS，兩個識別項若要被視為不同，不只是大小寫，還要有其他不同之處。 不過，為了覆寫繼承的定義，CLI 需要使用原始宣告的確切編碼。 | 4
+多載化 | [命名慣例](#naming-conventions) | 在符合 CLS 標準的範圍中引入的所有名稱，除了名稱完全相同且透過多載解析的情況之外，都必須是不同的獨立類型。 也就是說，CTS 允許單一類型對方法和欄位使用同樣的名稱，但 CLS 不允許。 | 5
+多載化 | [命名慣例](#naming-conventions) | 即使 CTS 允許區別不同簽章，還是必須單獨依據識別項比較來區別欄位和巢狀類型。 具有相同名稱 (by 識別碼比較的方法、屬性和事件) 應該不只是傳回類型不同，除非在 CLS 規則39中指定。 | 6
 多載化 | [多載](#overloads) | 只有屬性和方法可以多載。 | 37
 多載化 | [多載](#overloads) |屬性和方法只可以根據其參數數目和類型多載，除了名為 `op_Implicit` 和 `op_Explicit` 的轉換運算子，也可以根據其傳回類型多載。 | 38
 多載化 | -- | 如果在有相同名稱的類型中宣告兩個或更多符合 CLS 標準的方法，則對一組特定的類型具現化來說，它們具有相同的參數和傳回型別，而且所有這些方法在語意上與這些類型具現化相等。 | 48
@@ -167,7 +166,7 @@ End Class
 小節的索引：
 
 * [類型和類型成員簽章](#types-and-type-member-signatures)
-* [命名規範](#naming-conventions)
+* [命名慣例](#naming-conventions)
 * [類型轉換](#type-conversion)
 * [陣列](#arrays)
 * [介面](#interfaces)
@@ -295,7 +294,7 @@ End Class
 
 .NET 的[一般型別系統](common-type-system.md)包含了幾個內建類型，這些內建類型直接受到 Common Language Runtime 的支援，並且在組譯碼的中繼資料中以特殊方式進行編碼。 在這些內建類型中，下表所列的類型符合 CLS 標準。
 
-符合 CLS 規範的類型 | 描述
+符合 CLS 規範的類型 | 說明
 ------------------ | -----------
 [位元組](xref:System.Byte) | 8 位元不帶正負號的整數
 [Int16](xref:System.Int16) | 16 位元帶正負號的整數
@@ -311,7 +310,7 @@ End Class
 
 下表所列的內建類型不符合 CLS 標準。
 
-不符合標準的類型 | 描述 | 符合 CLS 規範替代方案
+不符合標準的類型 | 說明 | 符合 CLS 規範替代方案
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | 8 位元帶正負號的整數資料類型 | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16 位元不帶正負號的整數 | [Int32](xref:System.Int32)
@@ -2042,9 +2041,9 @@ End Class
 
 事件是由它的名稱和類型來定義。 事件類型是用來表示事件的委派。 例如，`DbConnection.StateChange` 事件的類型為 `StateChangeEventHandler`。 除了事件本身之外，具有以事件名稱為根據之名稱的三個方法會提供事件的實作，並且在組件的中繼資料中標記為 `SpecialName`：
 
-* 加入事件處理常式的方法，名為 `add` _*事件*名稱。 例如，`DbConnection.StateChange` 事件的事件訂閱方法是命名為 `add_StateChange`。
+* 加入事件處理常式的方法，名為 `add` _ *事件* 名稱。 例如，`DbConnection.StateChange` 事件的事件訂閱方法是命名為 `add_StateChange`。
 
-* 用來移除事件處理常式的方法，名稱為 `remove` _*事件*事件處理常式。 例如，`DbConnection.StateChange` 事件的移除方法是命名為 `remove_StateChange`。
+* 用來移除事件處理常式的方法，名稱為 `remove` _ *事件* 事件處理常式。 例如，`DbConnection.StateChange` 事件的移除方法是命名為 `remove_StateChange`。
 
 * 用於表示事件已發生的方法，名稱為 `raise`\_*EventName*。
 

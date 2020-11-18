@@ -1,17 +1,16 @@
 ---
 title: 使用 XmlSchemaCollection 的 XDR 驗證
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9edde2fc0da97b570162775a33c95d472cda974b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709994"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819275"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 的 XDR 驗證
 
@@ -30,7 +29,7 @@ xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
-下列程式碼範例會建立接受**XmlTextReader**的**XmlValidatingReader** ，並將 xdr 架構（加上 Xdr）新增至**XmlSchemaCollection**：
+下列程式碼範例會建立接受 **XmlTextReader** 的 **XmlValidatingReader** ，並將 Xdr 架構（加總）新增至 **XmlSchemaCollection**：
 
 ```vb
 Imports System.IO
@@ -70,7 +69,7 @@ Namespace ValidationSample
         End Sub
 
         Public Shared Sub ValidationHandler(sender As Object, args As ValidationEventArgs)
-            Console.WriteLine("***Validation error")
+            Console.WriteLine("**_Validation error")
             Console.WriteLine($"Severity:{args.Severity}")
             Console.WriteLine($"Message:{args.Message}")
         End Sub
@@ -123,7 +122,7 @@ namespace ValidationSample
 
         public static void ValidationHandler(object sender, ValidationEventArgs args)
         {
-            Console.WriteLine("***Validation error");
+            Console.WriteLine("_*_Validation error");
             Console.WriteLine($"\tSeverity:{args.Severity}");
             Console.WriteLine($"\tMessage:{args.Message}");
         }
@@ -131,7 +130,7 @@ namespace ValidationSample
 }
 ```
 
-以下簡述要驗證的輸入檔 (*HeadCount.xml*) 內容：
+以下列出要驗證的輸入檔（_HeadCount.xml *）內容：
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->
@@ -154,7 +153,7 @@ namespace ValidationSample
 </Schema>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
 - [XmlSchemaCollection 結構描述編譯](xmlschemacollection-schema-compilation.md)

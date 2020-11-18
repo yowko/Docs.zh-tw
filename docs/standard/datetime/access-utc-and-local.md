@@ -1,7 +1,6 @@
 ---
 title: 作法：存取預先定義的 UTC 和當地時區物件
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - time zones [.NET], retrieving
 - time zones [.NET], UTC
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
-ms.openlocfilehash: 598cd631fab1ddc115bc6153580351b1dc14d5bf
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b92ac812ed0bd0e80bb3a6ab03b52746eb15db97
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063881"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818104"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>作法：存取預先定義的 UTC 和當地時區物件
 
@@ -51,7 +50,7 @@ ms.locfileid: "93063881"
 
 - <xref:System>使用 `using` c # 程式碼) 所需的語句來匯入命名空間 (。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)
 - [尋找定義於本機系統的時區](finding-the-time-zones-on-local-system.md)

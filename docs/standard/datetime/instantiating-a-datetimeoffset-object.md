@@ -2,7 +2,6 @@
 title: 具現化 DateTimeOffset 物件
 description: 瞭解如何具現化 (在 .NET 中建立) DateTimeOffset 物件的實例。 深入瞭解日期 & 時間常值、函式、隱含類型轉換、& 更多資訊。
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-ms.openlocfilehash: 4158a3d3bbd7ada87dd0c773cf9a0f5e001ad918
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b0eae79e9c39694bdc87622a4c442083791c6109
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063621"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817805"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>具現化 DateTimeOffset 物件
 
@@ -93,6 +92,6 @@ ms.locfileid: "93063621"
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)

@@ -1,18 +1,17 @@
 ---
 title: 驗證 DOM 中的 XML 文件
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-ms.openlocfilehash: 949dc52c332b17784b0e1851d178465fe4881b6f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db3748d1d0e1a5687219d5b07d1261639a4ef670
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287632"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819288"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>驗證 DOM 中的 XML 文件
 
@@ -86,7 +85,7 @@ ms.locfileid: "84287632"
 
  如需說明 <xref:System.Xml.Schema.ValidationEventHandler> 的範例，請參閱上述＜將 XML 文件載入到 DOM 時進行驗證＞及＜驗證 DOM 中的 XML 文件＞。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XmlReader>

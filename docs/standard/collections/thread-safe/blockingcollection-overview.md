@@ -1,20 +1,19 @@
 ---
 title: BlockingCollection 概觀
-description: 閱讀有關 BlockingCollection <T> （.net 中的安全線程集合類別）的資訊。 這個類別所提供的功能，像是並行新增 & 從多個執行緒取得專案。
+description: 深入瞭解 BlockingCollection <T> ，這是 .net 中的安全線程集合類別。 這個類別所提供的功能包括並行新增 & 從許多執行緒中取得專案。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-ms.openlocfilehash: fc11f6c28a551e56d3bac4c5be9c08a396c0c6b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0378d038d6081c7ad04fc233ac151ab2bb223fa5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600798"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818657"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概觀
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是提供下列功能的安全執行緒集合類別︰  
@@ -83,4 +82,4 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [集合和資料結構](../index.md)
-- [安全線程集合](index.md)
+- [安全執行緒集合](index.md)

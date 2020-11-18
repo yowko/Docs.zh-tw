@@ -1,14 +1,13 @@
 ---
 title: 使用 XML 結構描述
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-ms.openlocfilehash: f239d67d959c1f7a0bfebfaaaa49de9cf9c9a111
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: adad77eaefd85abf111a25180b7289af997a7222
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281683"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818410"
 ---
 # <a name="working-with-xml-schemas"></a>使用 XML 結構描述
 若要定義 XML 文件的結構及其項目關聯性、資料類型及內容條件約束，可以使用文件類型定義 (DTD) 或 XML 結構描述定義語言 (XSD) 結構描述。 儘管當 XML 文件滿足全球資訊網協會 (W3C) 可延伸標記語言 (XML) 1.0 版建議事項定義的所有語法要求時，會將其視為格式正確，但是它必須格式正確且符合由其 DTD 或結構描述所定義的條件約束才會被視為有效。 因此，儘管所有有效 XML 文件的格式都正確，但是並非所有格式正確的 XML 文件都有效。  

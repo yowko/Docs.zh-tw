@@ -3,13 +3,13 @@ title: .NET Standard 的新功能
 description: 本文摘要說明 .NET Standard 的每個新版本中的新功能和增強功能。
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
-ms.technology: dotnet-standard
-ms.openlocfilehash: 36bd1f9a0dad06d11110b35e9a66f22140cee5ca
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.prod: dotnet-whatsnew
+ms.openlocfilehash: 299477a7375381fa7f8064562e2a68e221944a05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557268"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817170"
 ---
 # <a name="whats-new-in-net-standard"></a>.NET Standard 的新功能
 
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard 簡介](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

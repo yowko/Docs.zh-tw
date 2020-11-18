@@ -2,18 +2,17 @@
 title: 執行緒與執行緒處理
 description: 深入瞭解執行緒，例如進程 & 執行緒、使用多個執行緒的時機，& 如何使用多執行緒來提高 .NET 中的回應能力或輸送量。
 ms.date: 11/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: f7af6e1e73016e67c097b4fdbfb5f5d2d84e00d3
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 20550b597e27c75f00d16528871007988dd6b885
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188129"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819535"
 ---
 # <a name="threads-and-threading"></a>執行緒與執行緒處理
 
@@ -21,12 +20,12 @@ ms.locfileid: "93188129"
 
 ## <a name="processes-and-threads"></a>處理序和執行緒
 
-「處理序」  是正在執行的程式。 作業系統使用處理序來分隔正在執行的應用程式。 「執行緒」  是要作業系統配置處理器時間的基本單位。 每個執行緒都有[排程優先順序](scheduling-threads.md)，並保有系統在執行緒執行暫停時用來儲存執行緒內容的一組結構。 執行緒內容包括執行緒順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。 多個執行緒可在一個處理序中執行。 一個處理序的所有執行緒都共用該處理序的虛擬位址空間。 執行緒可以執行任一部分的程式碼，包括另一個執行緒目前正在執行的部分。
+「處理序」是正在執行的程式。 作業系統使用處理序來分隔正在執行的應用程式。 「執行緒」是要作業系統配置處理器時間的基本單位。 每個執行緒都有[排程優先順序](scheduling-threads.md)，並保有系統在執行緒執行暫停時用來儲存執行緒內容的一組結構。 執行緒內容包括執行緒順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。 多個執行緒可在一個處理序中執行。 一個處理序的所有執行緒都共用該處理序的虛擬位址空間。 執行緒可以執行任一部分的程式碼，包括另一個執行緒目前正在執行的部分。
 
 > [!NOTE]
 > .NET Framework 提供一種方法，可讓您使用 *應用程式域* 來隔離進程內的應用程式。 無法在 .NET Core 上使用 (應用程式域 ) 。如需詳細資訊，請參閱[應用程式域](../../framework/app-domains/application-domains.md)文章中的[應用程式域和執行緒](../../framework/app-domains/application-domains.md#application-domains-and-threads)一節。
 
-根據預設，.NET 程式會從單一執行緒開始，通常稱為「主」  執行緒。 不過，它可以建立額外的執行緒與主執行緒平行或同時執行程式碼。 這些執行緒通常稱為 *工作者* 執行緒。
+根據預設，.NET 程式會從單一執行緒開始，通常稱為「主」執行緒。 不過，它可以建立額外的執行緒與主執行緒平行或同時執行程式碼。 這些執行緒通常稱為 *工作者* 執行緒。
 
 ## <a name="when-to-use-multiple-threads"></a>使用多執行緒的時機
 
@@ -48,7 +47,7 @@ TPL 和 PLINQ 都憑藉 <xref:System.Threading.ThreadPool> 執行緒來運作。
 
 請務必處理執行緒中的例外狀況。 執行緒中未處理的例外狀況一般會終止處理序。 如需詳細資訊，請參閱[受控執行緒中的例外狀況](exceptions-in-managed-threads.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行緒物件和功能](threading-objects-and-features.md)
 - [Managed 執行緒最佳做法](managed-threading-best-practices.md)

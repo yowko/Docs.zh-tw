@@ -2,7 +2,6 @@
 title: 隔離儲存區
 description: 探索隔離儲存區，這是一種資料儲存機制，透過定義將程式碼與儲存的資料產生關聯的標準化方式，來提供隔離 & 的安全。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1b123b231a7b6856ca527d00b5927c1a8d0e08b6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282022"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819132"
 ---
 # <a name="isolated-storage"></a>隔離儲存區 (Isolated Storage)
 
@@ -236,7 +235,7 @@ __重要事項：__ 如果您的環境具有多個互相不受信任的使用者
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[隔離的類型](types-of-isolation.md)|描述各種類型的隔離。|
 |[作法：取得隔離儲存區的存放區](how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
@@ -247,7 +246,7 @@ __重要事項：__ 如果您的環境具有多個互相不受信任的使用者
 |[作法：尋找隔離儲存區中的現有檔案和目錄](how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
 |[作法：讀取和寫入隔離儲存區中的檔案](how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
 |[作法：刪除隔離儲存區中的檔案和目錄](how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
-|[檔案和資料流程 i/o](index.md)|說明如何執行同步和非同步檔案及資料流存取。|
+|[檔案和資料流 I/O](index.md)|說明如何執行同步和非同步檔案及資料流存取。|
 
 <a name="reference"></a>
 

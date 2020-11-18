@@ -1,7 +1,6 @@
 ---
 title: 時區概觀
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zones [.NET], about time zones
 - transition time [.NET]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - adjustment rule [.NET]
 - time zones [.NET], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-ms.openlocfilehash: 0f0fdbe4b63ddc9d55f7397fa71198d72e60e669
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1e876fd608b088b02385467367948440549e96e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064102"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817506"
 ---
 # <a name="time-zone-overview"></a>時區概觀
 
@@ -71,6 +70,6 @@ ms.locfileid: "93064102"
 
 如需各時區間轉換時間的詳細資訊，請參閱[在各時區間轉換時間](converting-between-time-zones.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)

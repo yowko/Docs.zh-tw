@@ -3,17 +3,16 @@ title: .NET 架構元件
 description: 描述 .NET 架構元件，例如 .NET Standard、.NET 執行、.NET 執行時間和工具。
 author: cartermp
 ms.date: 10/05/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224391"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819418"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
-.NET 應用程式是針對一或多個「.NET 實作」** 所開發並在其中執行。 .NET 的執行包含 .NET Framework、.NET 5 (和 .NET Core) 以及 Mono。 有多個 .NET 的程式開發人員（稱為 .NET Standard）通用的 API 規格。 本文提供上述每個概念的簡介。
+.NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。 .NET 的執行包含 .NET Framework、.NET 5 (和 .NET Core) 以及 Mono。 有多個 .NET 的程式開發人員（稱為 .NET Standard）通用的 API 規格。 本文提供上述每個概念的簡介。
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -106,7 +105,7 @@ C # 語言和 Common Language 基礎結構 (CLI) 規格會透過[ECMA Internatio
 
 下列官方 Ecma 檔適用于 [c #](http://www.ecma-international.org/publications/standards/Ecma-334.htm) 和 [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)) ：
 
-- **C # 語言標準 (5.0 版) **： [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **C # 語言標準 (5.0 版)**： [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **通用語言基礎結構**：適用于 [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 表單和 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 格式。
 - **衍生自資料分割 IV XML 檔案的資訊**： [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 和 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 格式提供。
 
@@ -116,7 +115,7 @@ ISO/IEC [公開可用的標準](https://standards.iso.org/ittf/PubliclyAvailable
 - **資訊技術-通用語言基礎結構 (CLI) 資料分割 I 到 VI**： [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **資訊技術（通用語言基礎結構 (CLI) ）從資料分割 IV XML 檔案衍生的資訊技術報告**： [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 簡介](../core/introduction.md)
 - [.NET Standard 簡介](net-standard.md)

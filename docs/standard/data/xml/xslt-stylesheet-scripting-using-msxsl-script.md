@@ -1,17 +1,16 @@
 ---
 title: 使用 <msxsl:script> 加入 XSLT 樣式表指令碼
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 61538656580878da775d4a42dac40165c7941eee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555929"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818267"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用  加入 XSLT 樣式表指令碼\<msxsl:script>
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
@@ -64,9 +63,9 @@ ms.locfileid: "90555929"
   
 |類型|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
+|字串|System.String|XPath|  
 |布林值|System.Boolean|XPath|  
-|Number|System.Double|XPath|  
+|數字|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -229,6 +228,6 @@ public class Sample
 </circles>
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

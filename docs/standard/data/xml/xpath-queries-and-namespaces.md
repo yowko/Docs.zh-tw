@@ -1,18 +1,17 @@
 ---
 title: XPath 查詢及命名空間
-description: 瞭解 & 命名空間的 XPath 查詢。 XPath 查詢知道 XML 檔中的命名空間 & 可以使用命名空間前置詞來限定元素 & 屬性名稱。
+description: 瞭解 & 命名空間的 XPath 查詢。 XPath 查詢會知道 XML 檔中的命名空間 & 可以使用命名空間前置詞來限定元素 & 屬性名稱。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: e8533d372a747432201dfbc4d879ecd3fbceaf8e
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769245"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818384"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查詢及命名空間
 XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。 使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  
@@ -77,7 +76,7 @@ query.SetContext(manager);
 XPathNodeIterator nodes = navigator.Select(query);  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

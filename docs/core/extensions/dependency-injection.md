@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: 3692b9e779d450f07d47599417349bb57f72ac36
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: cc030e32846690b6544b99030800b50055a3113e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687571"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818825"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 中的相依性插入
 
@@ -66,7 +66,7 @@ public class Worker : BackgroundService
 
 :::code language="csharp" source="snippets/configuration/dependency-injection/MessageWriter.cs":::
 
-範例程式碼會 `IMessageWriter` 使用具象類型來註冊服務 `MessageWriter` 。 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped%2A>方法會使用範圍存留期（單一要求的存留期）來註冊服務。 將在此主題稍後將說明[服務存留期](#service-lifetimes)。
+範例程式碼會 `IMessageWriter` 使用具象類型來註冊服務 `MessageWriter` 。 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped%2A>方法會使用範圍存留期（單一要求的存留期）來註冊服務。 本文稍後會說明[服務存留期](#service-lifetimes)。
 
 :::code language="csharp" source="snippets/configuration/dependency-injection/Program.cs" highlight="16":::
 
@@ -220,7 +220,7 @@ Microsoft 延伸模組使用註冊一組相關服務的慣例。 慣例是使用
 
 :::code language="csharp" source="snippets/configuration/console-di-ienumerable/ExampleService.cs" highlight="9-18":::
 
-會 `ExampleService` 定義兩個函式參數：單一 `IMessageWriter` 和 `IEnumerable<IMessageWriter>` 。 Single `IMessageWriter` 是最後一個已註冊的實作，而 `IEnumerable<IMessageWriter>` 代表所有已註冊的實作為。
+會 `ExampleService` 定義兩個函式參數：單一 `IMessageWriter` 和 `IEnumerable<IMessageWriter>` 。 Single `IMessageWriter` 是最後一個已註冊的執行，而 `IEnumerable<IMessageWriter>` 代表所有已註冊的實作為。
 
 此架構也會提供 `TryAdd{LIFETIME}` 擴充方法，只有在尚未註冊任何執行時，才會註冊服務。
 
@@ -312,7 +312,7 @@ services.Add(descriptor);
 
 範圍服務會由建立這些服務的容器處置。 如果在根容器中建立範圍服務，服務的存留期會有效地升階為 singleton，因為它只會在應用程式關閉時由根容器處置。 當呼叫 `BuildServiceProvider` 時，驗證服務範圍會攔截到這些情況。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 .NET 中的相依性插入](dependency-injection-usage.md)
 - [相依性插入指導方針](dependency-injection-guidelines.md)

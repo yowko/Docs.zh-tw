@@ -1,17 +1,16 @@
 ---
 title: 使用 XslTransform 類別進行 XSLT 轉換
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-ms.openlocfilehash: e03eb08c71ff2d031ac61a702683e3950d94f2be
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: ccdee1bbb94581d842cfc6fabe0f98dd6ec1d252
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160231"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818228"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>使用 XslTransform 類別進行 XSLT 轉換
 
@@ -20,7 +19,7 @@ ms.locfileid: "78160231"
 
 XSLT 的目的在於，將來源 XML 文件的內容轉換為使用不同格式或結構的其他文件 (例如，將 XML 轉換為 HTML 以供網站使用，或將 XML 轉換為僅含某個應用程式所需之欄位的文件)。 這項轉換程序是由全球資訊網協會 (W3C) [XSLT 1.0 版建議事項](https://www.w3.org/TR/1999/REC-xslt-19991116)所指定。 在 .NET Framework 之 <xref:System.Xml.Xsl> 命名空間中的 <xref:System.Xml.Xsl.XslTransform> 類別為 XSLT 處理器，其實作此規格功能。 W3C XSLT 1.0 版建議事項中有少數功能未被實作，列示於 [XslTransform 的輸出](outputs-from-an-xsltransform.md)中。 下圖說明 .NET Framework 的轉換架構。
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 
 ![顯示 XSLT 轉換架構的圖表。](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif)
 
@@ -92,7 +91,7 @@ public class Sample
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

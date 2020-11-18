@@ -1,7 +1,6 @@
 ---
 title: 作法：將時區儲存到內嵌資源
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063400"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817597"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>作法：將時區儲存到內嵌資源
 
@@ -55,7 +54,7 @@ ms.locfileid: "93063400"
 
 9. 將產生的 .resx 檔加入至應用程式的 Visual Studio 專案。
 
-10. 使用 Visual Studio 中的 [ **屬性** ] 視窗，確認 .resx 檔案的 [ **組建動作** ] 屬性設定為 [ **內嵌資源** ]。
+10. 使用 Visual Studio 中的 [ **屬性** ] 視窗，確認 .resx 檔案的 [ **組建動作** ] 屬性設定為 [ **內嵌資源**]。
 
 ## <a name="example"></a>範例
 
@@ -68,7 +67,7 @@ ms.locfileid: "93063400"
 
 因為 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> 方法會將完整的標頭資訊加入至 .NET XML 資源檔，所以無法用來將資源新增至現有的檔案。 此範例會藉由檢查 SerializedTimeZones .resx 檔案來處理此情況，如果存在，則會將其所有的資源（除了兩個序列化的時區以外）儲存至泛型 <xref:System.Collections.Generic.Dictionary%602> 物件。 然後會刪除現有的檔案，並將現有的資源新增至新的 SerializedTimeZones .resx 檔。 序列化的時區資料也會新增至此檔案。
 
-資源的索引鍵 (或 **名稱** ) 欄位不應包含內嵌空格。 在 <xref:System.String.Replace%28System.String%2CSystem.String%29> 指派給資源檔之前，會呼叫方法，以移除時區識別碼中的所有內嵌空格。
+資源的索引鍵 (或 **名稱**) 欄位不應包含內嵌空格。 在 <xref:System.String.Replace%28System.String%2CSystem.String%29> 指派給資源檔之前，會呼叫方法，以移除時區識別碼中的所有內嵌空格。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
@@ -81,7 +80,7 @@ ms.locfileid: "93063400"
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)
 - [時區概觀](time-zone-overview.md)

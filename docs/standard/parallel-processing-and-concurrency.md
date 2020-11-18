@@ -2,18 +2,17 @@
 title: .NET 中的平行處理、並行和非同步程式設計
 description: 了解如何針對平行處理和非同步程式設計，使用 .NET 功能讓您的應用程式更具回應且更為快速
 ms.date: 04/06/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel processing [.NET]
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-ms.openlocfilehash: 2f65d7ec317a12c933eda41c5fd957d21c332b42
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7ac888ed877adf3652f5de243a046f3c5117dc61
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285868"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817493"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET 中的平行處理、並行和非同步程式設計
 .NET 提供數種方式，以供您撰寫非同步程式碼，讓應用程式對使用者更具回應，並撰寫使用多個執行緒執行的平行程式碼，將您使用者電腦的效能最大化。  

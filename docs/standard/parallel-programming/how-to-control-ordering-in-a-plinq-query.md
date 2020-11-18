@@ -1,19 +1,18 @@
 ---
 title: 作法：控制 PLINQ 查詢中的順序
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-ms.openlocfilehash: 80e199d75471eba219f1f3da12d307b6cd1d90cf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 88f19092b06e4dece202e880287bdb95e04d2f2d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285452"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817103"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>作法：控制 PLINQ 查詢中的順序
 這些範例示範如何使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 擴充方法來控制 PLINQ 查詢中的順序。  
@@ -43,7 +42,7 @@ ms.locfileid: "84285452"
   
  若要執行此方法，請將它貼到 [PLINQ 資料範例](plinq-data-sample.md)專案中的 PLINQDataSample 類別，然後按 F5 鍵。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

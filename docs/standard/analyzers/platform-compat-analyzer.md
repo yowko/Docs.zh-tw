@@ -3,18 +3,19 @@ title: 平台相容性分析器
 description: Roslyn 分析器，可協助偵測跨平臺應用程式和程式庫中的平臺相容性問題。
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805294"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819483"
 ---
 # <a name="platform-compatibility-analyzer"></a>平台相容性分析器
 
 您可能聽過「單一 .NET」的格言：單一、統一的平臺，可用於建立任何類型的應用程式。 .NET 5.0 SDK 包含 ASP.NET Core、Entity Framework Core、WinForms、WPF、Xamarin 和 ML.NET，並且會隨著時間增加更多平臺的支援。 .NET 5.0 致力於提供一種體驗，讓您不必擔心不同的 .NET 種類，但也不會嘗試完全抽象化基礎作業系統)  (作業系統。 您將繼續能夠呼叫平臺專屬的 Api，例如 P/Invoke、WinRT 或適用于 iOS 和 Android 的 Xamarin 系結。
 
-但是，在元件上使用平臺特定的 Api，表示程式碼無法在所有平臺上運作。 我們需要在設計階段偵測到此情況的方法，讓開發人員在不小心使用平臺特定 Api 時取得診斷。 為了達成此目標，.NET 5.0 引進了 [平臺相容性分析器](/visualstudio/code-quality/ca1416) 和互補的 api，協助開發人員在適當的情況下識別及使用平臺特定的 api。
+但是，在元件上使用平臺特定的 Api，表示程式碼無法在所有平臺上運作。 我們需要在設計階段偵測到此情況的方法，讓開發人員在不小心使用平臺特定 Api 時取得診斷。 為了達成此目標，.NET 5.0 引進了 [平臺相容性分析器](../../fundamentals/code-analysis/quality-rules/ca1416.md) 和互補的 api，協助開發人員在適當的情況下識別及使用平臺特定的 api。
+
 新的 Api 包括：
 
 - <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 將 Api 標注為平臺特定的批註，並 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> 將 api 標注為在特定 OS 上不受支援。 這些屬性可以選擇性地包含版本號碼，並已套用至核心 .NET 程式庫中的某些平臺特定 Api。
@@ -23,26 +24,26 @@ ms.locfileid: "91805294"
 > [!TIP]
 > 平臺相容性分析器會升級並取代[.NET API 分析器](../../standard/analyzers/api-analyzer.md)的[探索跨平臺問題](../../standard/analyzers/api-analyzer.md#discover-cross-platform-issues)功能。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-平臺相容性分析器是 Roslyn 的程式碼品質分析器之一。 從 .NET 5.0 開始，這些分析器會 [隨附于 .NET SDK](../../fundamentals/code-analysis/overview.md)。 根據預設，平臺相容性分析器僅針對以或更新版本為目標的專案啟用 `net5.0` 。 不過，您可以針對以其他架構為目標的專案 [啟用](/visualstudio/code-quality/ca1416.md#configurability) 它。
+平臺相容性分析器是 Roslyn 的程式碼品質分析器之一。 從 .NET 5.0 開始，這些分析器即[隨附於 .NET SDK](../../fundamentals/code-analysis/overview.md)。 根據預設，平臺相容性分析器僅針對以或更新版本為目標的專案啟用 `net5.0` 。 不過，您可以針對以其他架構為目標的專案 [啟用它](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability) 。
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>分析器如何判斷平臺相關性
 
-- **未歸屬 API**會視為在**所有 OS 平臺**上運作。
+- **未歸屬 API** 會視為在 **所有 OS 平臺** 上運作。
 - 標記為的 API `[SupportedOSPlatform("platform")]` 只會被視為可移植到指定的作業系統 `platform` 。
   - 您可以多次套用屬性，以指出 () 的 **多平臺支援** `[SupportedOSPlatform("windows"), SupportedOSPlatform("Android6.0")]` 。
-  - 如果未使用適當的**平臺內容**參考平臺特定 api，分析器會產生**警告**：
-    - 如果專案未以支援的平臺為目標，則會**發出警告** (例如，Windows 特定的 API 呼叫和專案的目標 `<TargetFramework>net5.0-ios14.0</TargetFramework>`) 。
-    - 如果專案是多目標 () ，則會**發出警告** `<TargetFramework>net5.0</TargetFramework>` 。
-    - 如果在以任何**指定平臺**為目標的專案中參考平臺特定的 api，則**不會發出警告** (例如，針對 Windows 特定的 api 呼叫和專案的目標 `<TargetFramework>net5.0-windows</TargetFramework>`) 。
-    - 如果平臺特定 API 呼叫受到對應平臺檢查方法的防護，則**不會發出警告** (例如 `if(OperatingSystem.IsWindows())`) 。
-    - 如果從相同平臺特定的內容參考平臺特定的 API， (**呼叫網站也**以) 進行屬性化，則**不會發出警告** `[SupportedOSPlatform("platform")` 。
+  - 如果未使用適當的 **平臺內容** 參考平臺特定 api，分析器會產生 **警告**：
+    - 如果專案未以支援的平臺為目標，則會 **發出警告** (例如，Windows 特定的 API 呼叫和專案的目標 `<TargetFramework>net5.0-ios14.0</TargetFramework>`) 。
+    - 如果專案是多目標 () ，則會 **發出警告** `<TargetFramework>net5.0</TargetFramework>` 。
+    - 如果在以任何 **指定平臺** 為目標的專案中參考平臺特定的 api，則 **不會發出警告** (例如，針對 Windows 特定的 api 呼叫和專案的目標 `<TargetFramework>net5.0-windows</TargetFramework>`) 。
+    - 如果平臺特定 API 呼叫受到對應平臺檢查方法的防護，則 **不會發出警告** (例如 `if(OperatingSystem.IsWindows())`) 。
+    - 如果從相同平臺特定的內容參考平臺特定的 API， (**呼叫網站也** 以) 進行屬性化，則 **不會發出警告** `[SupportedOSPlatform("platform")` 。
 - 標記為的 API `[UnsupportedOSPlatform("platform")]` 只會在指定的 OS 上被視為不受支援， `platform` 但所有其他平臺皆支援此 API。
   - 您可以使用不同的平臺多次套用屬性，例如 `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]` 。
-  - 只有當對**warning** `platform` 呼叫位置有效時，分析器才會產生警告：
-    - 如果專案的目標平臺是以不 (支援的屬性為目標的平臺，例如，如果 API 是以屬性化，而且呼叫位置的目標是) ，則會**發出警告** `[UnsupportedOSPlatform("windows")]` `<TargetFramework>net5.0-windows</TargetFramework>` 。
-    - **Warns**如果專案是多目標且 `platform` 包含在預設[MSBuild `<SupportedPlatform>` ](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props)專案群組中，或 `platform` 手動包含在 `MSBuild` items 群組內，則會發出警告 \<SupportedPlatform> ：
+  - 只有當對 **warning** `platform` 呼叫位置有效時，分析器才會產生警告：
+    - 如果專案的目標平臺是以不 (支援的屬性為目標的平臺，例如，如果 API 是以屬性化，而且呼叫位置的目標是) ，則會 **發出警告** `[UnsupportedOSPlatform("windows")]` `<TargetFramework>net5.0-windows</TargetFramework>` 。
+    - **Warns** 如果專案是多目標且 `platform` 包含在預設 [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props)專案群組中，或 `platform` 手動包含在 `MSBuild` items 群組內，則會發出警告 \<SupportedPlatform> ：
 
       ```XML
       <ItemGroup>
@@ -50,7 +51,7 @@ ms.locfileid: "91805294"
       </ItemGroup>
       ```
 
-    - 如果您要建立的應用程式不是以不受支援的平臺為目標，或為多目標，且該平臺未包含在預設的 [ [MSBuild `<SupportedPlatform>` ](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props)專案] 群組中，則**不會發出警告**。
+    - 如果您要建立的應用程式不是以不受支援的平臺為目標，或為多目標，且該平臺未包含在預設的 [ [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props)專案] 群組中，則 **不會發出警告**。
 - 這兩個屬性都可以使用或不含版本號碼作為平臺名稱的一部分來具現化。
   - 版本號碼的格式 `major.minor[.build[.revision]]` 為; `major.minor` 是必要的， `build` 而且和 `revision` 部分是選擇性的。 例如，「Windows 7.0」表示 Windows 7.0 版，但「Windows」則會被視為 Windows 0.0。
 
@@ -80,7 +81,7 @@ ms.locfileid: "91805294"
     ```
 
   - **不一致的清單**。 如果某些平臺的最低版本是 `[SupportedOSPlatform]` 在 `[UnsupportedOSPlatform]` 其他平臺上，則會被視為不一致，分析器不支援此版本。
-  - 如果和屬性的最小版本 `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` 相等，分析器會將平臺視為 **支援的唯一清單**的一部分。
+  - 如果和屬性的最小版本 `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` 相等，分析器會將平臺視為 **支援的唯一清單** 的一部分。
 - 平臺屬性可以套用至類型、成員 (方法、欄位、屬性和事件) 以及具有不同平臺名稱或版本的元件。
   - 在最上層套用的屬性 `target` 會影響其所有成員和類型。
   - 只有當子系層級的屬性符合規則「子批註可以縮小平臺支援，但無法將其加寬」時，才適用。

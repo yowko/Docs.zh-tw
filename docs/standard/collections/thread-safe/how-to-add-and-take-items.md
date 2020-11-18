@@ -1,24 +1,23 @@
 ---
-title: 如何：從 BlockingCollection 個別加入和擷取項目
+title: 作法：從 BlockingCollection 個別新增和擷取項目
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: f895be4c20a0cccad23e27db3d488355a614cbfc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5501e108d1866fc1ae6fc66f9fe665b63373414b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287883"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818631"
 ---
-# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>如何：從 BlockingCollection 個別加入和擷取項目
+# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>作法：從 BlockingCollection 個別新增和擷取項目
 本範例示範如何利用封鎖方式和非封鎖方式，在 <xref:System.Collections.Concurrent.BlockingCollection%601> 中加入和移除項目。 如需 <xref:System.Collections.Concurrent.BlockingCollection%601> 的詳細資訊，請參閱 [BlockingCollection 概觀](blockingcollection-overview.md)。  
   
- 如需如何列舉 <xref:System.Collections.Concurrent.BlockingCollection%601> ，直到它是空的，而且不會再加入任何專案的範例，請參閱[如何：使用 ForEach 移除 BlockingCollection 中的專案](how-to-use-foreach-to-remove.md)。
+ 如需如何列舉， <xref:System.Collections.Concurrent.BlockingCollection%601> 直到它是空的，而且不會再加入其他元素的範例，請參閱 [如何：使用 ForEach 移除 BlockingCollection 中的專案](how-to-use-foreach-to-remove.md)。
   
 ## <a name="example"></a>範例  
  第一個範例示範如何加入和擷取項目，以便在集合暫時空白 (擷取時)、達到最大容量 (加入時) 或超過指定的逾時期限時封鎖作業。 請注意，只有在已建立 BlockingCollection，並在建構函式中指定最大容量時，才會啟用最大容量封鎖。  
@@ -32,7 +31,7 @@ ms.locfileid: "84287883"
  [!code-csharp[CDS_BlockingCollection#02](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example02.cs#02)]
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [BlockingCollection 概觀](blockingcollection-overview.md)

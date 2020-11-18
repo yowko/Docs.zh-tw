@@ -1,14 +1,13 @@
 ---
 title: 內嵌在文件中的樣式表指示詞
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 25946fd14a82428ae4367cd33511df68e9929203
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710150"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818566"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>內嵌在文件中的樣式表指示詞
 
@@ -35,6 +34,6 @@ ms.locfileid: "75710150"
 
 根據全球資訊網協會 (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/) (建立樣式表與 XML 文件的關聯 1.0 版建議事項)，能建立 XSLT 樣式表與 XML 文件關聯的處理指示為 `<?xml-stylesheet?>`，以破折號取代冒號。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

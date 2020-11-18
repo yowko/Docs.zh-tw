@@ -2,7 +2,6 @@
 title: 比較 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo
 description: 瞭解 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 類型之間的差異，以代表 .NET 中的日期和時間資訊。
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - time zones [.NET], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 5d6173642e88165bb52d5d9cfc85c8889ce763a5
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23c846dfd634e476b60ffd867519a60a0ae6b6cf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063868"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818091"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間進行選擇
 
@@ -119,6 +118,6 @@ ms.locfileid: "93063868"
 
 若要在 .NET 中利用時區支援，您必須知道當日期和時間物件具現化時，日期和時間值所屬的時區。 時區通常是未知的，特別是在 web 或網路應用程式中。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)

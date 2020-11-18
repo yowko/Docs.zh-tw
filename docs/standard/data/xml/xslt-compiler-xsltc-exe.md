@@ -1,14 +1,13 @@
 ---
 title: XSLT 編譯器 (xsltc.exe)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: 18f351546699487316858198b705e970de4856c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cfeebc3ac0c0259c975439dc93c3c5f003b60c40
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282606"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818319"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 編譯器 (xsltc.exe)
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後編譯的樣式表可以直接傳遞到新的 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 您無法使用 xsltc.exe 產生簽署的組件。  
@@ -23,13 +22,13 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 ## <a name="argument"></a>引數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |`sourceFile`|指定樣式表的名稱。 樣式表必須是本機檔案或位於內部網路上。|  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|為下列樣式表的類別指定名稱。 類別名稱可以是完整名稱。<br /><br /> 類別名稱預設為樣式表的名稱。 例如，如果編譯了樣式表 customers.xsl，預設類別名稱就是 customers。|  
 |`/debug[`+&#124;-`]`|指定是否要產生偵錯資訊。<br /><br /> 指定 `+` 或 `/debug` 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (PDB) 檔案中。 產生的 PDB 檔案名稱是 `assemblyName`.pdb。<br /><br /> 指定 `-` (當您未指定 `/debug` 時，它就會生效) 不會建立任何偵錯資訊。 產生正式版本組件。 **注意：** 在偵錯模式下編譯對於 XSLT 效能會有顯著的影響。|  
@@ -80,7 +79,7 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [作法：使用組件執行 XSLT 轉換](how-to-perform-an-xslt-transformation-by-using-an-assembly.md)

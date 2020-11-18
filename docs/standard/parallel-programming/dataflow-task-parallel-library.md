@@ -1,8 +1,7 @@
 ---
 title: 資料流程 (工作平行程式庫)
-description: 瞭解如何在工作平行程式庫（TPL）中使用資料流程元件，以改善啟用並行的應用程式的穩定性。
+description: 瞭解如何使用工作平行程式庫中的資料流程元件 (TPL) 來改善啟用平行存取之應用程式的穩定性。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8c6eeab852f30535d721aa44b3c60e4b6febe0fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662546"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817636"
 ---
 # <a name="dataflow-task-parallel-library"></a>資料流程 (工作平行程式庫)
-工作平行程式庫 (TPL) 提供資料流程元件來協助增加啟用並行的應用程式之穩定性。 這些資料流程元件合稱為「TPL 資料流程程式庫」**。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、Visual Basic 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」**。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  
+工作平行程式庫 (TPL) 提供資料流程元件來協助增加啟用並行的應用程式之穩定性。 這些資料流程元件合稱為「TPL 資料流程程式庫」。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、Visual Basic 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  
   
  本文件提供 TPL 資料流程程式庫的概觀。 此文件描述程式設計模型、預先定義的資料流程區塊類型，以及描述如何設定資料流程區塊以符合應用程式的特定需求。  
 
@@ -28,12 +27,12 @@ ms.locfileid: "84662546"
  TPL 資料流程程式庫提供了訊息傳遞之基礎，也是平行處理具有高輸送量與低延遲、需要大量 CPU 與 I/O 的應用程式之基礎。 這也可以讓您明確地控制資料如何緩衝以及如何在系統中移動。 若要進一步了解資料流程程式撰寫模型，請考慮以非同步方式從磁碟載入影像並建立這些影像組合的應用程式。 傳統的程式設計模型通常需要您使用回呼和同步處理物件 (例如鎖定)，來協調工作與存取共用資料。 您可以使用資料流程程式撰寫模型來建立資料流程物件，從磁碟讀取影像時，該資料流程物件可以處理影像。 在資料流程模型下，您宣告資料的處理方式、宣告其可使用的時機，以及資料之間的相依性。 由於執行階段會處理資料之間的相依性，您通常可以避免存取共用資料之同步處理的需求。 此外，因為執行階段排程是依據資料的非同步抵達來運作，所以資料流程可以藉由有效管理基礎執行緒以改善回應性和輸送量。 如需在 Windows Forms 應用程式中使用資料流程程式撰寫模型來實作影像處理的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ### <a name="sources-and-targets"></a>來源和目標  
- TPL 資料流程程式庫由「資料流程區塊」** 所組成，其為緩衝及處理資料的資料結構。 TPL 定義三種資料流程區塊：「來源區塊」**、「目標區塊」** 和「傳播程式區塊」**。 來源區塊可當做資料來源，可以從中讀取。 目標區塊可當做資料接收器，可以寫入。 傳播程式區塊可當做來源區塊和目標區塊，而且可以從中讀取和寫入。 TPL 定義 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 介面代表來源、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 代表目標，以及 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> 代表傳播程式。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 繼承自 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>。  
+ TPL 資料流程程式庫由「資料流程區塊」所組成，其為緩衝及處理資料的資料結構。 TPL 定義三種資料流程區塊：「來源區塊」、「目標區塊」和「傳播程式區塊」。 來源區塊可當做資料來源，可以從中讀取。 目標區塊可當做資料接收器，可以寫入。 傳播程式區塊可當做來源區塊和目標區塊，而且可以從中讀取和寫入。 TPL 定義 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 介面代表來源、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 代表目標，以及 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> 代表傳播程式。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 繼承自 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>。  
   
  TPL 資料流程程式庫提供幾種預先定義的資料流程區塊類型，這些類型會實作 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 介面。 本文件的[預先定義的資料流程區塊類型](#predefined-dataflow-block-types)一節描述這些資料流程區塊類型。  
   
 ### <a name="connecting-blocks"></a>連接區塊  
- 您也可以連接資料流程區塊來形成「管線」**(資料流程區塊的線性序列) 或「網路」**(資料流程區塊的圖形)。 管線是網路的一種格式。 在管線或網路中，當資料可供使用時，來源會非同步散佈資料至目標。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法將來源資料流程區塊連結至目標區塊。 來源可以連接至零或多個目標；目標可以從零或更多個來源連接。 您可以同時在管線或網路中加入或移除資料流程區塊。 預先定義的資料流程區塊類型會處理連結和取消連結的所有執行緒安全性層面。  
+ 您也可以連接資料流程區塊來形成「管線」(資料流程區塊的線性序列) 或「網路」(資料流程區塊的圖形)。 管線是網路的一種格式。 在管線或網路中，當資料可供使用時，來源會非同步散佈資料至目標。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法將來源資料流程區塊連結至目標區塊。 來源可以連接至零或多個目標；目標可以從零或更多個來源連接。 您可以同時在管線或網路中加入或移除資料流程區塊。 預先定義的資料流程區塊類型會處理連結和取消連結的所有執行緒安全性層面。  
   
  如需連接資料流程區塊以形成基本管線的範例，請參閱[逐步解說：建立資料流程管線](walkthrough-creating-a-dataflow-pipeline.md)。 如需連接資料流程區塊以形成更複雜網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](walkthrough-using-dataflow-in-a-windows-forms-application.md)。 如需在來源提供目標訊息後將目標從來源取消連結的範例，請參閱[如何：取消連結資料流程區塊](how-to-unlink-dataflow-blocks.md)。  
   
@@ -44,14 +43,14 @@ ms.locfileid: "84662546"
 > 由於每個預先定義來源資料流程區塊類型確保訊息都會按照收到訊息的順序來散佈，所以每個訊息都必須由來源區塊所讀取，之後來源區塊才可處理下一個訊息。 因此，當您使用篩選以連接多個目標至來源時，請確定至少有一個目標區塊會接收每一個訊息。 否則，您的應用程式可能會發生死結。  
   
 ### <a name="message-passing"></a>訊息傳遞  
- 資料流程程式設計模型與「訊息傳遞」** 的概念有關，其中程式的獨立元件可藉由傳送訊息相互通訊。 在應用程式元件之間散佈訊息的其中一種方式，為呼叫 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 方法，來將訊息傳送至目標資料流程區塊通知 (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 會同步動作；<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> 會非同步動作)，以及呼叫 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 方法，以接收來自來源區塊的訊息。 您可以傳送輸入資料至管線的前端節點 (目標區塊)，並接收來自管線的終端節點或網路 (一個或多個來源區塊) 的終端節點之輸出資料，將這些方法結合資料流程管線或網路。 您也可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 方法，從第一個具有可用資料並在此資料中執行動作之提供的來源讀取。  
+ 資料流程程式設計模型與「訊息傳遞」的概念有關，其中程式的獨立元件可藉由傳送訊息相互通訊。 在應用程式元件之間散佈訊息的其中一種方式，為呼叫 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 方法，來將訊息傳送至目標資料流程區塊通知 (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 會同步動作；<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> 會非同步動作)，以及呼叫 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 方法，以接收來自來源區塊的訊息。 您可以傳送輸入資料至管線的前端節點 (目標區塊)，並接收來自管線的終端節點或網路 (一個或多個來源區塊) 的終端節點之輸出資料，將這些方法結合資料流程管線或網路。 您也可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 方法，從第一個具有可用資料並在此資料中執行動作之提供的來源讀取。  
   
  來源區塊會呼叫 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> 方法，以提供資料給目標區塊。 目標區塊對於所提供的訊息會採取三種回應之一：它可以接受該訊息、拒絕該訊息或延後該訊息。 當目標接受該訊息時，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法會傳回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>。 當目標拒絕該訊息時，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法會傳回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>。 當目標要求不再接收來自來源的任何訊息時，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 會傳回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>。 在接收這類傳回值之後，以及從這類目標自動取消連結之後，預先定義的來源區塊類型就不會傳遞訊息給連結的目標。  
   
  當目標區塊延後該訊息以供稍後使用時，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法會傳回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>。 延後訊息的目標區塊可以於稍後呼叫 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 方法，以嘗試保留所提供的訊息。 此時訊息仍為可用，而且可由目標區塊所使用，或者訊息已由另一個目標所採用。 當目標區塊於稍後要求此訊息，或者不再需要此訊息時，便會分別呼叫 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 方法。 訊息保留通常由在非窮盡模式下操作的資料流程區塊型別所使用。 本文稍後將說明非窮盡模式。 除了保留已延後的訊息之外，目標區塊也可以使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 方法，來嘗試直接使用其他延後的訊息。  
   
 ### <a name="dataflow-block-completion"></a>資料流程區塊的完成  
- 資料流程區塊也支援「完成」** 的概念。 在已完成狀態中的資料流程區塊並不會執行任何進一步的工作。 每個資料流程區塊都具有相關聯的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 物件，稱為*完成工作*，代表該區塊的完成狀態。 由於您可以使用完成工作來等候 <xref:System.Threading.Tasks.Task> 物件結束，所以可以等候資料流程網路的一或多個終端節點完成。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 介面定義了 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法，該方法會通知為其所要求的資料流程區塊完成，以及定義了 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 屬性，該屬性會傳回資料流程區塊的完成工作。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 這兩者都是繼承自 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 介面。  
+ 資料流程區塊也支援「完成」的概念。 在已完成狀態中的資料流程區塊並不會執行任何進一步的工作。 每個資料流程區塊都具有相關聯的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 物件，稱為 *完成工作*，代表該區塊的完成狀態。 由於您可以使用完成工作來等候 <xref:System.Threading.Tasks.Task> 物件結束，所以可以等候資料流程網路的一或多個終端節點完成。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 介面定義了 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法，該方法會通知為其所要求的資料流程區塊完成，以及定義了 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 屬性，該屬性會傳回資料流程區塊的完成工作。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 這兩者都是繼承自 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 介面。  
   
  有兩種方式用來判斷資料流程區塊是否完成而沒有錯誤，還是遇到一或多個錯誤或已取消。 第一種方式為在 `try`-`catch` 區塊 (在 Visual Basic 中為 `Try`-`Catch`) 中的完成工作上呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 下列範例會建立一個會在其輸入值小於零時擲回 <xref:System.ArgumentOutOfRangeException> 的 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件。 當這個範例呼叫完成工作上的 <xref:System.Threading.Tasks.Task.Wait%2A> 時，會擲回 <xref:System.AggregateException>。 可透過 <xref:System.AggregateException> 物件的 <xref:System.AggregateException.InnerExceptions%2A> 屬性存取 <xref:System.ArgumentOutOfRangeException>。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "84662546"
  您也可以使用在接續工作主體中的屬性 (例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>)，判斷資料流程區塊完成狀態中的其他資訊。 如需接續工作及其與取消跟錯誤處理之關聯的詳細資訊，請參閱[使用接續工作鏈結工作](chaining-tasks-by-using-continuation-tasks.md)、[工作取消](task-cancellation.md)和[例外狀況處理](exception-handling-task-parallel-library.md)。  
 
 ## <a name="predefined-dataflow-block-types"></a>預先定義的資料流程區塊類型  
- TPL 資料流程程式庫提供幾種預先定義的資料流程區塊類型。 這些類型分為三類：「緩衝區塊」**、「執行區塊」** 和「群組區塊」**。 下列章節描述組成這些類別的區塊類型。  
+ TPL 資料流程程式庫提供幾種預先定義的資料流程區塊類型。 這些類型分為三類：「緩衝區塊」、「執行區塊」和「群組區塊」。 下列章節描述組成這些類別的區塊類型。  
   
 ### <a name="buffering-blocks"></a>緩衝區塊  
  緩衝區塊保存供資料消費者使用的資料。 TPL 資料流程程式庫提供三個緩衝區塊類型：<xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601?displayProperty=nameWithType>。  
@@ -158,7 +157,7 @@ ms.locfileid: "84662546"
 #### <a name="batchblockt"></a>BatchBlock(T)  
  <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別將稱為批次的輸入資料集合併為輸出資料陣列。 在建立 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件時，請指定每一批次的大小。 當 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件接收指定的輸入項目計數時，會非同步散佈包含這些項目的陣列。 如果 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件設定為完成狀態，但未包含足夠構成批次的項目，則會散佈包含剩餘輸入項目的最後一個陣列。  
   
- <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別會在*窮盡*或*非窮盡*模式下運作。 在窮盡模式 (這是預設值)，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件接受每則提供的訊息，並在接收指定的項目計數後散佈陣列。 在非窮盡模式，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件延後所有傳入訊息，直到來源提供給區塊的訊息足以形成批次。 因為窮盡模式需要較少的處理額外負荷，通常其效能優於非窮盡模式。 不過，在您必須以不可部分完成的方式協調來自多個來源之消耗時，可以使用非窮盡模式。 在 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601.%23ctor%2A> 建構函式的 `dataflowBlockOptions` 參數中，設定 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 為 `False`，來指定非窮盡模式。  
+ <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別會在 *窮盡* 或 *非窮盡* 模式下運作。 在窮盡模式 (這是預設值)，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件接受每則提供的訊息，並在接收指定的項目計數後散佈陣列。 在非窮盡模式，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件延後所有傳入訊息，直到來源提供給區塊的訊息足以形成批次。 因為窮盡模式需要較少的處理額外負荷，通常其效能優於非窮盡模式。 不過，在您必須以不可部分完成的方式協調來自多個來源之消耗時，可以使用非窮盡模式。 在 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601.%23ctor%2A> 建構函式的 `dataflowBlockOptions` 參數中，設定 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 為 `False`，來指定非窮盡模式。  
   
  下列基本範例傳遞數個 <xref:System.Int32> 值至 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件，該物件會在一個批次中保存十個項目。 為了保證所有的值都會從 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 散佈，此範例會呼叫 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法會將 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件設定為完成狀態，因此，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件會散佈任何的剩餘項目做為最後的批次。  
   
@@ -234,7 +233,7 @@ ms.locfileid: "84662546"
  如需示範如何在 Windows Forms 應用程式中使用取消的範例，請參閱[如何：取消資料流程區塊](how-to-cancel-a-dataflow-block.md)。 如需 TPL 中取消的詳細資訊，請參閱[工作取消](task-cancellation.md)。  
   
 ### <a name="specifying-greedy-versus-non-greedy-behavior"></a>指定窮盡與非窮盡的行為  
- 許多群組資料流程區塊類型可以在「窮盡」** 或「非窮盡」** 模式中運作。 預先定義的資料流程區塊類型預設會在窮盡模式下運作。  
+ 許多群組資料流程區塊類型可以在「窮盡」或「非窮盡」模式中運作。 預先定義的資料流程區塊類型預設會在窮盡模式下運作。  
   
  對於聯結區塊類型 (例如 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>)，窮盡模式表示即使與其相聯結的對應資料尚未可用，區塊會立即接受資料。 非窮盡模式則表示區塊會延後處理所有傳入訊息，直到其中之一在其每個目標上可用於完成聯結。 如果任何延後的訊息皆不再可用，則聯結區塊會釋出所有延後的訊息，並重新啟動此程序。 對於 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別，窮盡和非窮盡的行為類似，但是在非窮盡模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件將所有傳入訊息延後，直到來自不同來源的訊息足夠可用，以完成批次。  
   
@@ -243,9 +242,9 @@ ms.locfileid: "84662546"
 ## <a name="custom-dataflow-blocks"></a>自訂資料流程區塊  
  雖然 TPL 資料流程程式庫提供許多預先定義的區塊類型，但您可以建立會執行自訂行為的其他區塊類型。 直接實作 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 或 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 介面，或是使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 方法來建立封裝現有區塊類型行為的複雜區塊。 如需示範如何實作自訂資料流程區塊功能的範例，請參閱[逐步解說：建立自訂資料流程區塊類型](walkthrough-creating-a-custom-dataflow-block-type.md)。
 
-## <a name="related-topics"></a>[相關主題]  
+## <a name="related-topics"></a>相關主題  
   
-|Title|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[作法：對資料流程區塊寫入訊息和讀取訊息](how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)|示範如何寫入訊息至 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 物件及讀取該物件中的訊息。|  
 |[作法：實作產生者/取用者資料流程模式](how-to-implement-a-producer-consumer-dataflow-pattern.md)|描述如何使用此資料流程模型以實作生產者-消費者模式，其中生產者傳送訊息至資料流程區塊，而消費者從該區塊讀取訊息。|  

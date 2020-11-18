@@ -2,7 +2,6 @@
 title: 建立執行緒，並在啟動期間傳遞資料
 description: 瞭解如何在 .NET 中的作業系統進程開始時建立執行緒和傳遞資料。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET], passing data to threads
 - threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f44eb9dabc9145cd0e6ec9bfd3d484c9079e803
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188376"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819925"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>建立執行緒，並在啟動期間傳遞資料
 
@@ -58,7 +57,7 @@ ms.locfileid: "93188376"
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]
  [!code-vb[System.Threading.ThreadStart2#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source4.vb#4)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadStart>

@@ -2,19 +2,18 @@
 title: Managed 執行緒處理的基本概念
 description: 請參閱其他 managed 執行緒文章的連結，其中涵蓋例外狀況、同步處理資料、前景 & 背景執行緒、本機儲存空間等主題。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET], multiple threads
 - threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 16785b1c21c5810e55429f6756dcf591c90d8499
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189130"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819665"
 ---
 # <a name="managed-threading-basics"></a>受控執行緒處理的基本概念
 

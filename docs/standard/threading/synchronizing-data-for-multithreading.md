@@ -2,18 +2,17 @@
 title: 同步處理多執行緒處理的資料
 description: 瞭解如何在 .NET 中同步處理多執行緒的資料。 選擇已同步處理的程式碼區域、手動同步處理或同步處理的內容等策略。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188584"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819639"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步多執行緒處理的資料
 
@@ -62,13 +61,13 @@ ms.locfileid: "93188584"
 ### <a name="compiler-support"></a>編譯器支援  
  Visual Basic 和 C# 均支援使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 來鎖定物件的語言關鍵字。 Visual Basic 支援 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 陳述式；C# 支援 [lock](../../csharp/language-reference/keywords/lock-statement.md) 陳述式。  
   
- 在這兩種情況下，如果在程式碼區塊中擲回例外狀況， **lock** 或 **SyncLock** 取得的鎖定會自動釋放。 C # 和 Visual Basic 編譯器會以監視器發出 **try** / **finally** 區塊 **。** 請在 try 的開頭輸入，然後在 **finally** 區塊中進行 **monitor. Exit** 。 如果在 **lock** 或 **SyncLock** 區塊內擲回例外狀況，會執行 **finally** 處理常式以允許您進行任何清除工作。  
+ 在這兩種情況下，如果在程式碼區塊中擲回例外狀況，**lock** 或 **SyncLock** 取得的鎖定會自動釋放。 C # 和 Visual Basic 編譯器會以監視器發出 **try** / **finally** 區塊 **。** 請在 try 的開頭輸入，然後在 **finally** 區塊中進行 **monitor. Exit** 。 如果在 **lock** 或 **SyncLock** 區塊內擲回例外狀況，會執行 **finally** 處理常式以允許您進行任何清除工作。  
   
 ## <a name="synchronized-context"></a>同步處理的內容  
 
 僅限在 .NET Framework 和 Xamarin 應用程式中，您可以在任何 <xref:System.ContextBoundObject> 上使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 來同步所有執行個體方法和欄位。 相同內容網域中所有物件都共用相同的鎖定。 允許多個執行緒存取方法和欄位，但是一次只允許單一執行緒。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [執行緒和執行緒處理](threads-and-threading.md)

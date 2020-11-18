@@ -1,36 +1,35 @@
 ---
 title: 使用安全執行緒集合的時機
-description: 知道何時要在 .NET 中使用安全線程集合。 有5個集合類型特別設計來支援多執行緒新增 & 移除作業。
+description: 瞭解在 .NET 中使用安全線程集合的時機。 有5個集合類型專門設計來支援多執行緒新增 & 移除作業。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 92fb912cdd2030f87bee1109b9944e1fa857dddd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326045"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819457"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>使用安全線程集合的時機
 
-.NET Framework 4 引進了五個特別設計來支援多執行緒新增和移除作業的集合類型。 為了達到執行緒安全，這些類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
+.NET Framework 4 引進了五個專門設計來支援多執行緒新增和移除作業的集合類型。 為了達成執行緒安全性，這些類型會使用各種有效的鎖定和無鎖定的同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
   
  在某些情況下，同步處理負荷會顯得微不足道，並且在受到外部鎖定保護時，讓多執行緒類型執行速度大幅加快，而且擴充的狀況遠優於其非安全執行緒對等項目。 在其他情況下，負荷可能會讓安全執行緒類型的執行和擴充速度等於甚於比外部鎖定之非安全執行緒版本的類型還要慢。  
   
  下列各節所提供的一般指引是有關何時使用安全執行緒集合，與其具有使用者所提供之讀取和寫入作業鎖定的非安全執行緒對等項目。 因為效能可能會因許多因素而不同，所以本指南不是特定的，也不一定適用於所有情況。 如果效能十分重要，則決定要使用之集合類型的最佳方式是根據代表性電腦組態和負載來測量效能。 本範例使用下列詞彙：  
   
- *單純生產者-消費者案例*\
+ *純粹生產者-消費者案例*\
  任何指定的執行緒都是新增或移除元素，而非同時執行兩項作業。  
   
  *混合生產者-消費者案例*\
  任何指定的執行緒都是新增和移除元素。  
   
- *加速效果*\
+ *加速*\
  相對於相同案例中的另一種類型，具有較快速的演算法效能。  
   
- *延展性*\
+ *可 伸縮 性*\
  效能會隨著電腦上的核心數目等比例地增加。 在八個核心上進行擴充之演算法的執行速度，比兩個核心還要快。  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) 與 Queue(T) 的比較  
@@ -62,7 +61,7 @@ ms.locfileid: "85326045"
 ## <a name="blockingcollection"></a>BlockingCollection  
  需要界限和封鎖語意時，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的執行速度可能會比任何自訂實作還要快。 它也支援大量取消、列舉和例外狀況處理。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [安全線程集合](index.md)

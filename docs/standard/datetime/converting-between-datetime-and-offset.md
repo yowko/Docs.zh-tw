@@ -2,7 +2,6 @@
 title: 在 DateTime 與 DateTimeOffset 之間轉換
 description: 在 .NET 中轉換 DateTimeOffset 值與日期時間值。 DateTimeOffset 結構提供比 DateTime 結構更多的時區感知。
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: af75a467c344e299037dc6c2077e4a6ef6df2df9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063842"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818078"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>在 DateTime 與 DateTimeOffset 之間轉換
 
@@ -128,6 +127,6 @@ ms.locfileid: "93063842"
 
 - 它假設位移等於當地時區位移的日期和時間代表當地時區。 因為日期和時間值與其原始時區解除關聯，所以這可能不是這種情況；日期和時間可能源自另一個具有相同位移的時區。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [日期、時間和時區](index.md)

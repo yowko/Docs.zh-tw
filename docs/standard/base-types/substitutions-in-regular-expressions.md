@@ -2,7 +2,6 @@
 title: 在規則運算式中執行替代
 description: 使用 .NET 中的正則運算式進行替代，以取代相符的文字。 替代專案是只有在取代模式內才能辨識的語言元素。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 935fbf573c00aeaec639884888d7e3e6a83c7056
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 0f2fbe7e8b9c13d811a2fe50db0709405dfa1da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888928"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818813"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 
@@ -27,7 +26,7 @@ ms.locfileid: "92888928"
   
  .NET 會定義下表列出的替代項目。  
   
-|Substitution|描述|  
+|Substitution|說明|  
 |------------------|-----------------|  
 |$ *number*|包括在取代字串中與 *數字* 所指定之擷取群組相符的最後一個子字串，其中 *數字* 是十進位值。 如需詳細資訊，請參閱 [替代編號群組](#substituting-a-numbered-group)。|  
 |${ *name* }|包含由 `(?<` 取代字串中的 *名稱* 所指定之指定群組所比對的最後一個子字串 `> )` 。 如需詳細資訊，請參閱 [替代具名群組](#substituting-a-named-group)。|  
@@ -140,7 +139,7 @@ ms.locfileid: "92888928"
   
  在這個範例中，輸入字串 `"aa1bb2cc3dd4ee5"` 包含五個相符項目。 下表將說明 ``$` `` 替代如何使規則運算式引擎取代輸入字串中的每個相符項目。 插入的文字會以粗體顯示在結果資料行中。  
   
-|相符項目|位置|相符項目前的字串|結果字串|  
+|比對|位置|相符項目前的字串|結果字串|  
 |-----------|--------------|-------------------------|-------------------|  
 |1|2|aa|aa **aa** bb2cc3dd4ee5|  
 |2|5|aa1bb|aaaabb **aa1bb** cc3dd4ee5|  
@@ -158,7 +157,7 @@ ms.locfileid: "92888928"
   
  在這個範例中，輸入字串 `"aa1bb2cc3dd4ee5"` 包含五個相符項目。 下表將說明 `$'` 替代如何使規則運算式引擎取代輸入字串中的每個相符項目。 插入的文字會以粗體顯示在結果資料行中。  
   
-|相符項目|位置|相符項目後的字串|結果字串|  
+|比對|位置|相符項目後的字串|結果字串|  
 |-----------|--------------|------------------------|-------------------|  
 |1|2|bb2cc3dd4ee5|aa **bb2cc3dd4ee5** bb2cc3dd4ee5|  
 |2|5|cc3dd4ee5|aabb2cc3dd4ee5bb **cc3dd4ee5** cc3dd4ee5|  
@@ -194,7 +193,7 @@ ms.locfileid: "92888928"
   
  在這個範例中，輸入字串 `"ABC123DEF456"` 包含兩個相符項目。 下表將說明 `$_` 替代如何使規則運算式引擎取代輸入字串中的每個相符項目。 插入的文字會以粗體顯示在結果資料行中。  
   
-|相符項目|位置|相符項目|結果字串|  
+|比對|位置|比對|結果字串|  
 |-----------|--------------|-----------|-------------------|  
 |1|3|123|ABC **ABC123DEF456** DEF456|  
 |2|5|456|ABCABC123DEF456DEF **ABC123DEF456**|  

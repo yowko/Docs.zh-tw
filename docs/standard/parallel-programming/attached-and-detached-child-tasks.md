@@ -1,22 +1,21 @@
 ---
 title: 附加與中斷連結的子工作
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: c8a5d2c1ccb8bb2d272c2582cd416cdfd75506d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5d27aff02d0afd1c288e5d18e52be4745132a70
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285686"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817519"
 ---
 # <a name="attached-and-detached-child-tasks"></a>附加與中斷連結的子工作
-「子工作」**(或「巢狀工作」**) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」**) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」**(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」**(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
+「子工作」(或「巢狀工作」) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
   
  下表列出這兩種子工作之間的基本差異。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "84285686"
  工作取消需要合作。 也就是說，若要能取消，每個附加或中斷連結的子工作必須監視取消語彙基元的狀態。 如果您想要使用一個取消要求來取消父系及其所有子系，您會將相同的語彙基元當做引數傳遞至所有工作，並在每個工作中提供邏輯以回應每個工作中的要求。 如需詳細資訊，請參閱[工作取消](task-cancellation.md)和[如何：取消工作及其子系](how-to-cancel-a-task-and-its-children.md)。  
   
 ### <a name="when-the-parent-cancels"></a>當父系取消時  
- 如果父系在其子工作啟動之前自行取消，則永遠不會啟動子系。 如果父系在子工作已經開始之後自行取消，則子系會執行到完成為止，除非它有自己的取消邏輯。 如需詳細資訊，請參閱 [Task Cancellation](task-cancellation.md)。  
+ 如果父系在其子工作啟動之前自行取消，則永遠不會啟動子系。 如果父系在子工作已經開始之後自行取消，則子系會執行到完成為止，除非它有自己的取消邏輯。 如需詳細資訊，請參閱[工作取消](task-cancellation.md)。  
   
 ### <a name="when-a-detached-child-task-cancels"></a>當取消中斷連結的子工作時  
  如果中斷連結的子工作使用傳遞給父系的相同語彙基元來自行取消，且父系不等候子工作，則不會傳播任何例外狀況，因為例外狀況被視為良性合作取消。 此行為與任何最上層工作相同。  
@@ -76,7 +75,7 @@ ms.locfileid: "84285686"
   
  當子工作未及時完成時，您也可能想要防止子工作附加到其父系。 由於父工作會在所有子工作完成後才完成，因此長時間執行的子工作可能造成整個應用程式效能不佳。 如需示範如何藉由防止工作附加至其父工作以改善應用程式效能的範例，請參閱[如何：防止子工作附加到其父系](how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](index.md)
 - [資料平行處理](data-parallelism-task-parallel-library.md)

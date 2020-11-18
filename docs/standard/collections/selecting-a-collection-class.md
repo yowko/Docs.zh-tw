@@ -2,7 +2,6 @@
 title: 選取集合類別
 description: 瞭解如何在 .NET 中決定要選擇哪一個集合類別。 使用錯誤的類型可能會限制您使用集合。
 ms.date: 03/18/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - last-in-first-out collections
 - first-in-first-out collections
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: 2a3615d5bb404247ec9280ff3c88e2c10a75768b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 7af08949df999ab80fce1308927d87a8935e3b5d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889331"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818722"
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
 

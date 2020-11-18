@@ -1,14 +1,13 @@
 ---
 title: msxsl:node-set() 函式的支援
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 30652d8cbaac333cc1cb35954742b16dc7c4764b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 26ae3014af93377dc106b5638ba194bd38e3dc9e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071985"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818540"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() 函式的支援
 `msxsl:node-set` 函式讓您可以將 result tree fragment 轉換為節點集。 產生的節點集永遠包含單一節點，且為樹狀結構的根節點。  
@@ -51,6 +50,6 @@ ms.locfileid: "91071985"
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

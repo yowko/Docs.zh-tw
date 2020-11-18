@@ -2,19 +2,18 @@
 title: Managed 執行緒中的取消作業
 description: 瞭解 managed 執行緒中的取消作業。 瞭解非同步或長時間執行的同步作業的合作式取消中的取消權杖。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 09c39202f1564ac544fdf30a07952990b309b661
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188467"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819951"
 ---
 # <a name="cancellation-in-managed-threads"></a>Managed 執行緒中的取消作業
 
@@ -45,7 +44,7 @@ ms.locfileid: "93188467"
   
 - 送出要求的物件藉著只使用一個方法呼叫，來發出取消要求給權杖的所有複本。  
   
-- 接聽程式可以透過將這些權杖聯結成單一個「連結的權杖」(linked token)  來同時接聽多個權杖。  
+- 接聽程式可以透過將這些權杖聯結成單一個「連結的權杖」(linked token) 來同時接聽多個權杖。  
   
 - 使用者程式碼可以注意並回應來自程式庫程式碼的取消要求，並且程式庫程式碼可以注意並回應來自使用者程式碼的取消要求。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "93188467"
 ## <a name="cancellation-types"></a>取消類型  
  取消架構被實作為一組相關的類型，這些會在下表中列出。  
   
-|類型名稱|描述|  
+|類型名稱|說明|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|建立取消權杖，並發出取消要求給該權杖所有複本的物件。|  
 |<xref:System.Threading.CancellationToken>|輕量型的實值類型通常做為方法參數傳遞至一或多個接聽程式。 接聽程式會監控權杖中 `IsCancellationRequested` 屬性的值，藉由輪詢、回呼，或等候控制代碼。|  
@@ -142,12 +141,12 @@ ms.locfileid: "93188467"
   
 - 如果程式庫程式碼提供取消作業，它也應該提供一個接受外部取消權杖而進一步讓使用者程式碼可以要求取消的公用方法。  
   
-- 如果程式庫程式碼呼叫使用者程式碼，程式庫程式碼應該將 OperationCanceledException(externalToken) 解譯為 *合作式取消* ，且不一定解譯為失敗例外狀況。  
+- 如果程式庫程式碼呼叫使用者程式碼，程式庫程式碼應該將 OperationCanceledException(externalToken) 解譯為 *合作式取消*，且不一定解譯為失敗例外狀況。  
   
 - 使用者委派應該及時嘗試回應來自程式庫程式碼的取消要求。  
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 是遵循這些指導方針之類別的範例。 如需詳細資訊，請參閱工作 [取消](../parallel-programming/task-cancellation.md) 和 [如何：取消 PLINQ 查詢](../parallel-programming/how-to-cancel-a-plinq-query.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Managed 執行緒處理的基本概念](managed-threading-basics.md)
