@@ -1,7 +1,6 @@
 ---
 title: 逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d9c4b2d5cfab28f10be82724f46660e4b42ce410
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284581"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829917"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
 
@@ -22,14 +21,14 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 1. 開始此逐步解說之前，請先閱讀[資料流程](dataflow-task-parallel-library.md)文件中的＜聯結區塊＞一節。
 
 2. 確定您電腦上有可用的 Northwind 資料庫複本 (Northwind.sdf)。 這個檔案通常位於資料夾：%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\。
 
     > [!IMPORTANT]
-    > 在某些 Windows 版本中，如果 Visual Studio 是以非系統管理員模式執行，就無法連線到 Northwind.sdf。 若要連線到 Northwind.sdf，請使用 [以系統管理員身分執行]**** 模式來啟動 Visual Studio 或 Visual Studio 開發人員命令提示字元。
+    > 在某些 Windows 版本中，如果 Visual Studio 是以非系統管理員模式執行，就無法連線到 Northwind.sdf。 若要連線到 Northwind.sdf，請使用 [以系統管理員身分執行] 模式來啟動 Visual Studio 或 Visual Studio 開發人員命令提示字元。
 
 本逐步解說包含下列各節：
 
@@ -51,7 +50,7 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 
 ## <a name="creating-the-console-application"></a>建立主控台應用程式
 
-1. 在 Visual Studio 中，建立 Visual c # 或 Visual Basic**主控台應用程式**專案。 在本文件中，專案命名為 `DataflowBatchDatabase`。
+1. 在 Visual Studio 中，建立 Visual c # 或 Visual Basic **主控台應用程式** 專案。 在本文件中，專案命名為 `DataflowBatchDatabase`。
 
 2. 在您的專案中，加入 System.Data.SqlServerCe.dll 的參考，和 System.Threading.Tasks.Dataflow.dll 的參考。
 
@@ -129,6 +128,6 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
 [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

@@ -2,7 +2,6 @@
 title: 密碼編譯服務
 description: .NET 所支援的加密方法和作法的總覽。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET]
 - pattern of derived class inheritance
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5558c60768b992984c3800b482961128d3bf5d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281721"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829904"
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 
@@ -71,7 +70,7 @@ ms.locfileid: "93281721"
 
 一種稱為區塊編碼器的私密金鑰演算法，可用來一次加密一個資料區塊。 像是資料加密標準 (DES)、TripleDES、進階加密標準 (AES) 這類區塊編碼器，會以密碼編譯方式將 *n* 個位元組的輸入區塊轉換成加密位元組輸出區塊。 如果您想要加密或解密位元組序列，就必以區塊為單位進行。 因為 *n* 很小 (DES 和 TripleDES 為 8 個位元組；AES 為 16 個位元組 [預設值]、24 個位元組或 32 個位元組)，所以大於 *n* 的資料值必須一次以一個區塊為單位加密。 資料值小於 *n* 必須展開成 *n* 以便進行處理。
 
-有一種簡易的區塊編碼器型式，稱為電子碼書 (ECB) 模式。 ECB 模式並不算安全，因為它不會使用初始化向量來初始化第一個純文字區塊。 對於某個指定的私密金鑰 *k* ，不使用初始化向量的簡單區塊編碼器會將同一個純文字輸入區塊加密成同一個加密文字輸出區塊。 因此，如果您的輸入純文字資料流中有重複的區塊，在輸出加密文字資料流中也會有重複區塊。 這些重複的輸出區塊會警示未經授權的使用者，可能已採用弱式加密之演算法，以及可能的攻擊模式。 因此 ECB Cipher 模式比較容易對分析，以及最終的金鑰探索受到攻擊。
+有一種簡易的區塊編碼器型式，稱為電子碼書 (ECB) 模式。 ECB 模式並不算安全，因為它不會使用初始化向量來初始化第一個純文字區塊。 對於某個指定的私密金鑰 *k*，不使用初始化向量的簡單區塊編碼器會將同一個純文字輸入區塊加密成同一個加密文字輸出區塊。 因此，如果您的輸入純文字資料流中有重複的區塊，在輸出加密文字資料流中也會有重複區塊。 這些重複的輸出區塊會警示未經授權的使用者，可能已採用弱式加密之演算法，以及可能的攻擊模式。 因此 ECB Cipher 模式比較容易對分析，以及最終的金鑰探索受到攻擊。
 
 在基底類別程式庫中提供的的區塊編碼器類別會使用稱為 Cipher 區塊鏈結 (CBC) 的預設鏈結模式，但是若您想變更，也可以變更此預設值。
 
@@ -216,7 +215,7 @@ RSA 允許加密和簽署，但 DSA 只能用來簽署。 DSA 與 RSA 並不安�
 
 - <xref:System.Security.Cryptography.CngProperty> 維護常用的金鑰屬性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [加密模型](cryptography-model.md) -說明如何在基類庫中執行密碼編譯。
 - [跨平臺密碼編譯](cross-platform-cryptography.md)

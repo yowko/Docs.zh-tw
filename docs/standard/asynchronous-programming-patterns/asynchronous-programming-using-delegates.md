@@ -1,7 +1,6 @@
 ---
 title: 使用委派非同步設計程式
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - BeginInvoke method
 - asynchronous programming, delegates
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: 05e574536abe4eac823b7b74369f5b191724e5b5
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: da468d3b16ee504317c7de2e216a9be2073d1cf3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889253"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830502"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>使用委派非同步設計程式
 

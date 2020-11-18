@@ -1,8 +1,7 @@
 ---
 title: 逐步解說：建立密碼編譯應用程式
-description: 逐步解說建立密碼編譯應用程式。 瞭解如何在 Windows Forms 應用程式中加密和解密內容。
+description: 逐步解說如何建立密碼編譯應用程式。 瞭解如何在 Windows Forms 應用程式中加密和解密內容。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,19 +10,19 @@ helpviewer_keywords:
 - cryptography [NET], cryptographic application example
 - cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557186"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830554"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說：建立密碼編譯應用程式
 
 > [!NOTE]
 > 本文適用于 Windows。
 >
-> 如需 ASP.NET Core 的詳細資訊，請參閱[ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)。
+> 如需 ASP.NET Core 的詳細資訊，請參閱 [ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)。
 
 本逐步解說示範如何加密和解密內容。 程式碼範例是針對 Windows Form 應用程式所設計。 此應用程式不會示範真實世界案例，例如使用智慧卡。 相反地，它會示範加密和解密的基本概念。  
   
@@ -31,14 +30,14 @@ ms.locfileid: "87557186"
   
 - 使用 <xref:System.Security.Cryptography.Aes> 類別 (一個對稱算法) 來加密和解密資料，使用其自動產生的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 和 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>。  
   
-- 使用 <xref:System.Security.Cryptography.RSA> 非對稱演算法來加密金鑰，並將其解密為所加密的資料 <xref:System.Security.Cryptography.Aes> 。 非對稱演算法最適合用於較少量的資料，例如金鑰。  
+- 使用 <xref:System.Security.Cryptography.RSA> 非對稱演算法來加密金鑰，並將其解密至加密的資料 <xref:System.Security.Cryptography.Aes> 。 非對稱演算法最適合用於較少量的資料，例如金鑰。  
   
     > [!NOTE]
     > 如果您想要保護電腦上的資料，而不是與其他人交換加密的內容，請考慮使用 <xref:System.Security.Cryptography.ProtectedData> 類別。  
   
  下表摘要說明本主題中的密碼編譯工作。  
   
-|Task|描述|  
+|工作|說明|  
 |----------|-----------------|  
 |建立 Windows Form 應用程式|列出執行應用程式所需的控制項。|  
 |宣告全域物件|宣告字串路徑變數、<xref:System.Security.Cryptography.CspParameters>，和 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 以擁有 <xref:System.Windows.Forms.Form> 類別的全域內容。|  
@@ -60,7 +59,7 @@ ms.locfileid: "87557186"
 
 在此逐步解說中的大部分程式碼範例，已設計為按鈕控制項的事件處理常式。 下表列出範例應用程式所需的控制項，及其必要名稱以符合程式碼範例。  
   
-|控制|Name|文字屬性 (如有需要)|  
+|控制|名稱|文字屬性 (如有需要)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密檔案|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密檔案|  
@@ -72,7 +71,7 @@ ms.locfileid: "87557186"
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- 按兩下 [Visual Studio 設計工具] 中的按鈕，以建立其事件處理常式。
+ 按兩下 Visual Studio 設計工具中的按鈕，以建立其事件處理常式。
   
 ## <a name="declaring-global-objects"></a>宣告全域物件  
 
@@ -225,9 +224,9 @@ ms.locfileid: "87557186"
   
 2. 按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。 這將會成功，因為您有完整金鑰組可以解密。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [密碼編譯模型](cryptography-model.md)-說明如何在基類庫中執行密碼編譯。
+- [加密模型](cryptography-model.md) -說明如何在基類庫中執行密碼編譯。
 - [密碼編譯服務](cryptographic-services.md)
 - [跨平臺密碼編譯](cross-platform-cryptography.md)
 - [ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)

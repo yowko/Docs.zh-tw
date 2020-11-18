@@ -1,18 +1,17 @@
 ---
 title: 編輯 XML 結構描述
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-ms.openlocfilehash: b309c390ede3afc38122188337fa0dc3336e3ad5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e900a558c6599d00e8f848ea50e5b30985475d1b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292055"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830255"
 ---
 # <a name="editing-xml-schemas"></a>編輯 XML 結構描述
 
@@ -135,7 +134,7 @@ ms.locfileid: "84292055"
 </xs:schema>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
 - [讀取及寫入 XML 結構描述](reading-and-writing-xml-schemas.md)

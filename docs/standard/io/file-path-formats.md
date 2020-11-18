@@ -2,7 +2,6 @@
 title: Windows 系統上的檔案路徑格式
 description: 在本文中，您將瞭解 Windows 系統上的檔案路徑格式，例如傳統 DOS 路徑、DOS 裝置路徑，以及通用命名慣例 (UNC) 路徑。
 ms.date: 06/06/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 378fe56bcd54469bc82d762868636daec6eb286e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188051"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831165"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 

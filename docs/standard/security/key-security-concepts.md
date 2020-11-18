@@ -1,7 +1,6 @@
 ---
 title: 重要的安全性概念
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 5dedf6df8e6cf2cf886e68cc132a44abfb201c49
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554393"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831061"
 ---
 # <a name="key-security-concepts"></a>重要的安全性概念
 
@@ -75,6 +74,6 @@ ms.locfileid: "90554393"
 
 授權是決定是否允許主體執行所要求動作的程序。 授權會在驗證之後進行，它會使用主體的身分識別和角色相關資訊來判斷主體可以存取哪些資源。 您可以使用 .NET 以角色為基礎的安全性來執行授權。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ASP.NET Core 安全性](/aspnet/core/security/)

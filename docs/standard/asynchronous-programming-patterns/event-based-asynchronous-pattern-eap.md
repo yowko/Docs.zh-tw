@@ -2,18 +2,17 @@
 title: 事件架構非同步模式 (EAP)
 description: 請參閱 .NET 中事件架構非同步模式 (EAP) 的相關文章連結，例如執行、最佳作法、實行 EAP 用戶端等。
 ms.date: 07/23/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous calls
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 16aabeb55a56c63449a865d00044c463657de740
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c15bb6c9ec6ea737e6f240376e12bf8de3aa61bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888837"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830398"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>事件架構非同步模式 (EAP)
 

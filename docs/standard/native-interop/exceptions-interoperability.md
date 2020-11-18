@@ -1,18 +1,17 @@
 ---
 title: 例外狀況互通性
 ms.date: 01/16/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - unmanaged code, exceptions
 - exceptions, unmanaged code
 - interop, exceptions
 - exceptions, interop
-ms.openlocfilehash: 90774b5d1b64feb34e01f48708d94f8f841a7c9d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: db7c9943c298607aa91a4bd08ddc12bbafc872be
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550868"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830619"
 ---
 # <a name="working-with-interop-exceptions-in-unmanaged-code"></a>使用非受控碼中的 Interop 例外狀況
 
@@ -24,7 +23,7 @@ ms.locfileid: "90550868"
 
 如需詳細資訊，請參閱 [longjmp 檔](/cpp/c-runtime-library/reference/longjmp)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [例外狀況](index.md)
 - [使用原生程式庫進行 Interop](https://www.mono-project.com/docs/advanced/pinvoke/#runtime-exception-propagation)

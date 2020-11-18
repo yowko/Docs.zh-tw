@@ -1,19 +1,18 @@
 ---
 title: 讀取及寫入 XML 結構描述
-description: 使用架構物件模型（SOM） API，從 .NET 中的檔案或其他來源讀取及寫入 XML 架構定義語言（XSD）架構。
+description: 使用架構物件模型 (SOM) API，從 .NET 中的檔案或其他來源讀取和寫入 XML 架構定義語言 (XSD) 架構。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: 874b0bdb0e13d545cfff4c813881f1398a8f9487
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ae951efafd68d0ddf4f74876edd4c12564d68dde
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767659"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830879"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>讀取及寫入 XML 結構描述
 結構描述物件模型 (SOM) API 可從檔案或其他來源中讀取及寫入 XML 結構描述定義語言 (XSD) 結構描述，並使用 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別 (該命名空間對應於全球資訊網協會 (W3C) XML 結構描述建議事項中所定義的結構) 來建置記憶體中的 XML 結構描述。  
@@ -46,7 +45,7 @@ ms.locfileid: "84767659"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
 - [建置 XML 結構描述](building-xml-schemas.md)

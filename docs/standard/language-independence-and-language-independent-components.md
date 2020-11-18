@@ -1,7 +1,6 @@
 ---
 title: 語言獨立性以及與語言無關的元件
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: aeaf58276537fab72fdcde81b0465acbbdb23140
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160837"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831152"
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
@@ -37,7 +36,7 @@ ms.locfileid: "92160837"
 
   - [類型和類型成員簽章](#Types)
 
-  - [命名規範](#naming)
+  - [命名慣例](#naming)
 
   - [類型轉換](#conversion)
 
@@ -135,9 +134,9 @@ ms.locfileid: "92160837"
 |成員|[一般類型成員](#members)|全域靜態欄位和方法不符合 CLS 標準。|36|
 |成員|--|常值靜態欄位的值是透過使用欄位初始化中繼資料來指定。 符合 CLS 標準的常值必須具有欄位初始化中繼資料所指定的值，這個中繼資料與常值有完全相同的類型 (如果該常值是 `enum`，則為基礎類型)。|13|
 |成員|[一般類型成員](#members)|vararg 條件約束不是 CLS 的一部分，CLS 所支援的唯一呼叫慣例是標準的 Managed 呼叫慣例。|15|
-|命名規範|[命名規範](#naming)|組件必須遵循 Unicode Standard 3.0 技術報告編號 15 附錄 7，其規定可以啟始並包含在識別項中的字元集。如需取得此報告，請造訪 <https://www.unicode.org/reports/tr15/tr15-18.html> \(英文\)。 識別項應使用 Unicode Normalization 表格 C 所定義的標準格式。基於 CLS 目的，如果兩個識別項的小寫對應 (如 Unicode 不區分地區設定、一對一小寫對應所指定) 相同，則它們便為相同。 也就是依據 CLS，兩個識別項若要被視為不同，不只是大小寫，還要有其他不同之處。 不過，為了覆寫繼承的定義，CLI 需要使用原始宣告的確切編碼。|4|
-|多載化|[命名規範](#naming)|在符合 CLS 標準的範圍中引入的所有名稱，除了名稱完全相同且透過多載解析的情況之外，都必須是不同的獨立類型。 也就是說，CTS 允許單一類型對方法和欄位使用同樣的名稱，但 CLS 不允許。|5|
-|多載化|[命名規範](#naming)|即使 CTS 允許區別不同簽章，還是必須單獨依據識別項比較來區別欄位和巢狀類型。 經由識別項比較之後，具有相同名稱的方法、屬性和事件不可僅以傳回型別做區分，除非符合 CLS 第 39 條規則中所指定的內容。|6|
+|命名規範|[命名慣例](#naming)|組件必須遵循 Unicode Standard 3.0 技術報告編號 15 附錄 7，其規定可以啟始並包含在識別項中的字元集。如需取得此報告，請造訪 <https://www.unicode.org/reports/tr15/tr15-18.html> \(英文\)。 識別項應使用 Unicode Normalization 表格 C 所定義的標準格式。基於 CLS 目的，如果兩個識別項的小寫對應 (如 Unicode 不區分地區設定、一對一小寫對應所指定) 相同，則它們便為相同。 也就是依據 CLS，兩個識別項若要被視為不同，不只是大小寫，還要有其他不同之處。 不過，為了覆寫繼承的定義，CLI 需要使用原始宣告的確切編碼。|4|
+|多載化|[命名慣例](#naming)|在符合 CLS 標準的範圍中引入的所有名稱，除了名稱完全相同且透過多載解析的情況之外，都必須是不同的獨立類型。 也就是說，CTS 允許單一類型對方法和欄位使用同樣的名稱，但 CLS 不允許。|5|
+|多載化|[命名慣例](#naming)|即使 CTS 允許區別不同簽章，還是必須單獨依據識別項比較來區別欄位和巢狀類型。 經由識別項比較之後，具有相同名稱的方法、屬性和事件不可僅以傳回型別做區分，除非符合 CLS 第 39 條規則中所指定的內容。|6|
 |多載化|[多載](#overloads)|只有屬性和方法可以多載。|37|
 |多載化|[多載](#overloads)|屬性和方法只可以根據其參數數目和類型多載，除了名為 `op_Implicit` 和 `op_Explicit` 的轉換運算子，也可以根據其傳回類型多載。|38|
 |多載化|--|如果在有相同名稱的類型中宣告兩個或更多符合 CLS 標準的方法，則對一組特定的類型具現化來說，它們具有相同的參數和傳回型別，而且所有這些方法在語意上與這些類型具現化相等。|48|
@@ -172,7 +171,7 @@ ms.locfileid: "92160837"
 
 .NET 的[一般型別系統](base-types/common-type-system.md)包含了幾個內建類型，這些內建類型直接受到 Common Language Runtime 的支援，並且在組譯碼的中繼資料中以特殊方式進行編碼。 在這些內建類型中，下表所列的類型符合 CLS 標準。
 
-|符合 CLS 規範的類型|描述|
+|符合 CLS 規範的類型|說明|
 |-------------------------|-----------------|
 |<xref:System.Byte>|8 位元不帶正負號的整數|
 |<xref:System.Int16>|16 位元帶正負號的整數|
@@ -188,7 +187,7 @@ ms.locfileid: "92160837"
 
 下表所列的內建類型不符合 CLS 標準。
 
-|不符合標準的類型|描述|符合 CLS 規範替代方案|
+|不符合標準的類型|說明|符合 CLS 規範替代方案|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|8 位元帶正負號的整數資料類型|<xref:System.Int16>|
 |<xref:System.TypedReference>|物件和其執行階段類型的指標|無|
@@ -271,7 +270,7 @@ Common Language Specification 定義兩個轉換運算子：
 
 - `op_Explicit`，用於可能會導致大小 (值轉換為某個範圍較小的值) 或精確度遺失的縮小轉換。 例如，<xref:System.Decimal> 結構包含多載 `op_Explicit` 運算子，以便將 <xref:System.Double> 和 <xref:System.Single> 值轉換為 <xref:System.Decimal>，以及將 <xref:System.Decimal> 值轉換為整數值 <xref:System.Double>、<xref:System.Single> 和 <xref:System.Char>。
 
-不過，並非所有語言都支援運算子多載或自訂運算子定義。 如果您選擇實作這些轉換運算子，也應該提供執行轉換的替代方式。 建議您提供 `From` *xxx*和 `To` *xxx*方法。
+不過，並非所有語言都支援運算子多載或自訂運算子定義。 如果您選擇實作這些轉換運算子，也應該提供執行轉換的替代方式。 建議您提供 `From` *xxx* 和 `To` *xxx* 方法。
 
 下面範例定義了符合 CLS 標準的隱含和明確轉換。 它會建立 `UDouble` 類別，表示帶正負號的雙精確度浮點數。 它支援從 `UDouble` 到 <xref:System.Double> 的隱含轉換，以及支援從 `UDouble` 到 <xref:System.Single>、<xref:System.Double> 到 `UDouble` 以及 <xref:System.Single> 到 `UDouble` 的明確轉換。 它也會定義 `ToDouble` 方法做為隱含轉換運算子的替代方法，以及定義 `ToSingle`、`FromDouble` 和 `FromSingle` 方法做為明確轉換運算子的替代方法。
 
@@ -381,7 +380,7 @@ Common Language Specification 只支援標準的 Managed 呼叫慣例。 它不�
 [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
 [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]
 
-泛型型別名稱的編碼格式為 * \` n*，其中 *名稱* 是類型名稱， \` 是字元常值，而 *n* 則是在類型上宣告的參數數目，或針對嵌套的泛型型別，則是新引入之型別參數的數目。 這個泛型類型名稱編碼方式主要適用於使用反映來存取程式庫中符合 CLS 標準之泛型類型的開發人員。
+泛型型別名稱的編碼格式為 *\` n*，其中 *名稱* 是類型名稱， \` 是字元常值，而 *n* 則是在類型上宣告的參數數目，或針對嵌套的泛型型別，則是新引入之型別參數的數目。 這個泛型類型名稱編碼方式主要適用於使用反映來存取程式庫中符合 CLS 標準之泛型類型的開發人員。
 
 如果限制式是套用至泛型類型，則任何當做限制式使用的類型也必須符合 CLS 標準。 下面範例定義了不符合 CLS 規範的類別 (名稱為 `BaseClass`) 以及類型參數必須衍生自 `BaseCollection` 的泛型類別 (名稱為 `BaseClass`)。 但是因為 `BaseClass` 不符合 CLS 標準，所以編譯器會發出警告。
 
@@ -426,7 +425,7 @@ Common Language Specification 會對巢狀類型和保護的成員施加保守�
 
 符合 CLS 規範的類型中的屬性必須遵守下列規則：
 
-- 屬性必須有 setter、getter 或兩者皆有。 在組件中，這些會實作為特殊方法，也就是，會顯示為不同的方法 (getter 命名為 `get_`propertyname**，而 setter 則為 `set_`propertyname**)，並在組件的中繼資料中標記為 `SpecialName`。 C# 和 Visual Basic 編譯器會自動強制執行這項規則，而不需要套用 <xref:System.CLSCompliantAttribute> 屬性。
+- 屬性必須有 setter、getter 或兩者皆有。 在組件中，這些會實作為特殊方法，也就是，會顯示為不同的方法 (getter 命名為 `get_`propertyname，而 setter 則為 `set_`propertyname)，並在組件的中繼資料中標記為 `SpecialName`。 C# 和 Visual Basic 編譯器會自動強制執行這項規則，而不需要套用 <xref:System.CLSCompliantAttribute> 屬性。
 
 - 屬性的類型是屬性 getter 的傳回型別和 setter 的最後一個引數。 這些類型必須符合 CLS 規範，而且引數不能以傳址方式指派給屬性 (也就是它們不能是 Managed 指標)。
 
@@ -438,9 +437,9 @@ Common Language Specification 會對巢狀類型和保護的成員施加保守�
 
 事件是由它的名稱和類型來定義。 事件類型是用來表示事件的委派。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的類型為 <xref:System.ResolveEventHandler>。 除了事件本身之外，具有以事件名稱為根據之名稱的三個方法會提供事件的實作，並且在組件的中繼資料中標記為 `SpecialName`：
 
-- 用於加入事件處理常式的方法，名稱為 `add_`EventName**。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的事件訂閱方法是命名為 `add_AssemblyResolve`。
+- 用於加入事件處理常式的方法，名稱為 `add_`EventName。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的事件訂閱方法是命名為 `add_AssemblyResolve`。
 
-- 用於移除事件處理常式的方法，名稱為 `remove_`EventName**。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的移除方法是命名為 `remove_AssemblyResolve`。
+- 用於移除事件處理常式的方法，名稱為 `remove_`EventName。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的移除方法是命名為 `remove_AssemblyResolve`。
 
 - 用於表示事件已發生的方法，名稱為 `raise_`*EventName*。
 

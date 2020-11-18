@@ -1,7 +1,6 @@
 ---
 title: 作法：存取硬體加密裝置
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-ms.openlocfilehash: 7cd3aab80a8388c1d4ce08e4ae94aae84cfff239
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: c4f0b77985dea1818729af41b69a4a7d30427415
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557134"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829891"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>作法：存取硬體加密裝置
 
@@ -51,7 +50,7 @@ ms.locfileid: "87557134"
 
 下列程式碼範例示範如何使用智慧卡簽署資料。  程式碼範例會建立公開智慧卡的 <xref:System.Security.Cryptography.CspParameters> 物件，然後使用 CSP 初始化 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件。  程式碼範例接著會簽署並驗證某些資料。  
 
-由於 SHA1 的衝突問題，我們建議 SHA256 或更好。
+由於 SHA1 的衝突問題，我們建議使用 SHA256 或更好的方式。
   
 [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
 [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
@@ -65,7 +64,7 @@ ms.locfileid: "87557134"
   
 - 您必須使用讀卡機的特定資訊初始化 <xref:System.Security.Cryptography.CspParameters> 物件。  如需詳細資訊，請參閱讀卡機的文件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

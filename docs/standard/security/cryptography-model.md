@@ -2,7 +2,6 @@
 title: .NET 密碼編譯模型
 description: 在 .NET 中審視一般密碼編譯演算法的實作為。 瞭解物件繼承、串流設計、& 設定的可延伸加密模型。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: a157a9a76f87a2a56c616b76c933e6d8d6415b03
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: f9ec08992cb8db8f81f11de661612e1b7d15131c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281580"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831113"
 ---
 # <a name="net-cryptography-model"></a>.NET 密碼編譯模型
 
@@ -78,7 +77,7 @@ ms.locfileid: "93281580"
 - 從密碼產生金鑰：
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [密碼編譯服務](cryptographic-services.md)
 - [跨平臺密碼編譯](cross-platform-cryptography.md)

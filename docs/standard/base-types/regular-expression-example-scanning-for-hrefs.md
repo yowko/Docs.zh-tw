@@ -2,7 +2,6 @@
 title: 規則運算式範例：掃描 HREF
 description: 請參閱 .NET 中的正則運算式範例。 此範例會搜尋輸入字串，並顯示所有 href 屬性值和其位置。
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: f2f7cca1e357971d2b0be2a0d7ddfb8ae208a44a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6f11825a5d744fd03c08545213bd4d6eaa14dd6d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889396"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830281"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 下列範例將搜尋輸入字串，並顯示所有 href="..." 值和它們在字串中的位置。  

@@ -1,7 +1,6 @@
 ---
 title: 實作事件架構非同步模式的最佳作法
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6c2df4c2877f9191bd2b8190869c359a74de8e8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888915"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830489"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
 
@@ -39,7 +38,7 @@ ms.locfileid: "92888915"
   
 - 在與此方法相同的類別上定義 <em>MethodName</em>**Completed** 事件。  
   
-- 對衍生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 類別的 <em>MethodName</em>**Completed** 事件，定義 <xref:System.EventArgs> 類別和伴隨的委派。 預設類別名稱的格式應該為 <em>MethodName</em>**CompletedEventArgs** 。  
+- 對衍生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 類別的 <em>MethodName</em>**Completed** 事件，定義 <xref:System.EventArgs> 類別和伴隨的委派。 預設類別名稱的格式應該為 <em>MethodName</em>**CompletedEventArgs**。  
   
 - 確定 <xref:System.EventArgs> 類別是 <em>MethodName</em> 方法的傳回值所特有。 當您使用 <xref:System.EventArgs> 類別時，應該不需要開發人員轉換結果。  
   

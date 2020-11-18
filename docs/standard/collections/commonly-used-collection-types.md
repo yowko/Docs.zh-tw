@@ -2,7 +2,6 @@
 title: 常用的集合類型
 description: 瞭解 .NET 中常用的集合類型，例如雜湊資料表、佇列、堆疊、包、字典和清單。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - collections [.NET], generic
 - objects [.NET], grouping in collections
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 8677ba5b4404d49e2f6e07cda19ac437254a5897
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889383"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831243"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
 集合類型是資料集合 (例如雜湊表、佇列、堆疊、封包、字典和清單) 最常見的一些呈現方式。  
@@ -33,7 +32,7 @@ ms.locfileid: "92889383"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[集合和資料結構](index.md)|討論 .NET 中可用的各種集合類型，包括堆疊、佇列、清單、陣列和字典。|  
 |[Hashtable 和 Dictionary 集合類型](hashtable-and-dictionary-collection-types.md)|說明泛型和非泛型雜湊字典類型的功能。|  

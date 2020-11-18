@@ -1,22 +1,21 @@
 ---
 title: 認識 PLINQ 中的加速
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 627f1327a9fe87fc226dfbb40df50ec4855edfb9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284893"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829969"
 ---
 # <a name="understanding-speedup-in-plinq"></a>認識 PLINQ 中的加速
-PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派，來加快 LINQ to Objects 查詢的執行速度。 當來源集合中每個元素的處理各自獨立，個別委派之間沒有涉及任何共用狀態時，PLINQ 能夠發揮最佳執行效能。 這類作業在 LINQ to Objects 和 PLINQ 中相當常見，通常稱為「令人愉快的平行」**，因為它們很容易出借本身供多個執行緒上的排程使用。 不過，並非所有查詢都全部由令人愉快的平行作業所組成；在大多數情況下，查詢會涉及一些無法平行處理或是會拖慢平行執行速度的運算子。 而且，即使查詢是完全令人愉快的平行查詢，PLINQ 仍然必須分割資料來源並在執行緒上排定工作，通常還會在查詢完成時合併結果。 所有這些作業都會計入平行處理的計算成本中；這些添加平行處理的成本稱為「額外負荷」**。 若要在 PLINQ 查詢中達到最佳效能，目標就是要將令人愉快的平行部分提升到最高，並將需要額外負荷的部分降到最低。 本文提供資訊來協助您撰寫儘可能發揮最高效率又仍然能產生正確結果的 PLINQ 查詢。  
+PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派，來加快 LINQ to Objects 查詢的執行速度。 當來源集合中每個元素的處理各自獨立，個別委派之間沒有涉及任何共用狀態時，PLINQ 能夠發揮最佳執行效能。 這類作業在 LINQ to Objects 和 PLINQ 中相當常見，通常稱為「令人愉快的平行」，因為它們很容易出借本身供多個執行緒上的排程使用。 不過，並非所有查詢都全部由令人愉快的平行作業所組成；在大多數情況下，查詢會涉及一些無法平行處理或是會拖慢平行執行速度的運算子。 而且，即使查詢是完全令人愉快的平行查詢，PLINQ 仍然必須分割資料來源並在執行緒上排定工作，通常還會在查詢完成時合併結果。 所有這些作業都會計入平行處理的計算成本中；這些添加平行處理的成本稱為「額外負荷」。 若要在 PLINQ 查詢中達到最佳效能，目標就是要將令人愉快的平行部分提升到最高，並將需要額外負荷的部分降到最低。 本文提供資訊來協助您撰寫儘可能發揮最高效率又仍然能產生正確結果的 PLINQ 查詢。  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>影響 PLINQ 查詢效能的因素  
  下列各節列出一些影響平行查詢效能的最重要因素。 這些是一般陳述，本身並不足以預測所有情況下的查詢效能。 如往常一般，請務必在電腦上使用一系列代表性設定和負載來測量特定查詢的實際效能。  
@@ -82,6 +81,6 @@ PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派�
   
 - 包含 Reverse 的查詢 (但套用至可編製索引的資料來源時除外)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

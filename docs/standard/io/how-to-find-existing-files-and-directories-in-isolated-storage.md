@@ -1,7 +1,6 @@
 ---
 title: 作法：尋找隔離儲存區中的現有檔案和目錄
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: 00d960f536d4094f9f62a37637dfcaec3916fb5b
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: ebd2ae6684e7b3390b29aeebeb2552b4616a69f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188740"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830723"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>作法：尋找隔離儲存區中的現有檔案和目錄
 
@@ -39,7 +38,7 @@ ms.locfileid: "93188740"
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [隔離儲存區](isolated-storage.md)

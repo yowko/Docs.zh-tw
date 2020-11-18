@@ -1,17 +1,16 @@
 ---
 title: 從 XslTransform 類別移轉
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 32fac1b5ab339dd4c71d761cf07fcde99ce1f2fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b441e23b13983a0fdb54b7785e249a04bf1407c8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550159"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830203"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>從 XslTransform 類別移轉
 
@@ -67,7 +66,7 @@ writer.Close();
 
 ### <a name="debug-option"></a>偵錯選項
 
-<xref:System.Xml.Xsl.XslCompiledTransform> 類別可以產生偵錯資訊，此資訊可讓您使用 Microsoft Visual Studio 偵錯工具來偵錯樣式表。 如需相關資訊，請參閱 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> 。
+<xref:System.Xml.Xsl.XslCompiledTransform> 類別可以產生偵錯資訊，此資訊可讓您使用 Microsoft Visual Studio 偵錯工具來偵錯樣式表。 如需詳細資訊，請參閱 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>。
 
 ## <a name="behavioral-differences"></a>行為的差異
 
@@ -125,7 +124,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 - 與結構描述相關的 XPath 擴充函式：<xref:System.Xml.Xsl.XslCompiledTransform> 原本就不支援這些函式。 不過，它們可以實作為擴充函式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XSLT 轉換](xslt-transformations.md)
 - [使用 XslCompiledTransform 類別](using-the-xslcompiledtransform-class.md)

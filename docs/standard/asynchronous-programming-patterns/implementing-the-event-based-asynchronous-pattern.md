@@ -2,7 +2,6 @@
 title: 實作事件架構非同步模式
 description: 瞭解如何在 .NET 中執行以事件為基礎的非同步模式 (EAP) 。 EAP 是封裝具有非同步功能之類別的標準方式。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3f48f5d4f03928f8c9a2db2724e542be2b38fc63
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888785"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830346"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式
 
@@ -65,19 +64,19 @@ ms.locfileid: "92888785"
 
 ## <a name="naming-asynchronous-methods"></a>為非同步方法命名
 
-對於您要為其提供非同步對應的每一個 MethodName  同步方法：
+對於您要為其提供非同步對應的每一個 MethodName 同步方法：
 
 定義 _方法方法_ 的 **非同步** 方法：
 
 - 傳回 `void`。
 
-- 使用與 MethodName  方法相同的參數。
+- 使用與 MethodName 方法相同的參數。
 
 - 接受多個引動過程。
 
 （選擇性）定義 _方法名稱_**非同步** 多載，與 _方法名稱_**相同，但** 有一個稱為的額外物件值參數 `userState` 。 需要這麼做的前提是，您已準備好管理您擁有之方法的多個並行引動過程，在此情況下，`userState` 值會傳回給所有的事件處理常式，以供區別該方法的各個引動過程。 您也可以純粹為了能有位置可儲存使用者狀態以供日後擷取，而選擇這樣做。
 
-針對每個個別的 _方法名稱_ ， **非同步** 方法簽章：
+針對每個個別的 _方法名稱_，**非同步** 方法簽章：
 
 1. 在相同的類別中定義下列事件來作為方法︰
 
@@ -215,11 +214,11 @@ ms.locfileid: "92888785"
 
 雖然使用和是一般情況下，在 .NET 中不建議使用， `out` `ref` 以下是出現時要遵循的規則：
 
-假設同步方法為 MethodName  ：
+假設同步方法為 MethodName：
 
-- `out`*方法名稱* 的參數不應該是 _方法名稱_ 為 **Async** 的一部分。 相反地，它們應該 _是方法名稱_**>completedeventargs** 的一部分，其名稱與 ( *方法* 名稱中的對等參數相同，除非) 有更適當的名稱。
+- `out`*方法名稱* 的參數不應該是 _方法名稱_ 為 **Async** 的一部分。 相反地，它們應該 _是方法名稱_**>completedeventargs** 的一部分，其名稱與 (*方法* 名稱中的對等參數相同，除非) 有更適當的名稱。
 
-- `ref`*方法* 名稱的參數應該會以 _方法名稱_**Async** 的一部分形式出現，並 _作為方法名稱_ ( **>completedeventargs** 的一部分，除非有 *MethodName* 更適當的名稱) 。
+- `ref`*方法* 名稱的參數應該會以 _方法名稱_**Async** 的一部分形式出現，並 _作為方法名稱_ (**>completedeventargs** 的一部分，除非有 *MethodName* 更適當的名稱) 。
 
 例如，假設：
 

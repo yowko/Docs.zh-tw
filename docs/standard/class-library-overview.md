@@ -2,7 +2,6 @@
 title: .NET 類別庫概觀
 description: 瞭解 .NET 類別庫。 .NET Api 包括類別、介面、委派和實數值型別，以提供系統功能的存取權。
 ms.date: 02/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET], library overview
 - .NET, library overview
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 44a46db4fa7ebf6dd5802cc07e7d18744c72ad68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687524"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831256"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 
@@ -69,7 +68,7 @@ ms.locfileid: "92687524"
   
  此命名配置可讓程式庫開發人員輕鬆擴充 .NET 以建立階層式型別群組，並以一致且有意義的方式來命名它們。 此外還允許以完整名稱明確識別型別 (也就是藉由命名空間和型別名稱)，其可避免型別名稱衝突。 程式庫開發人員為其命名空間建立名稱時，應使用以下命名慣例：  
   
- *CompanyName* . *TechnologyName*  
+ *CompanyName*.*TechnologyName*  
   
  例如，`Microsoft.Word`　命名空間符合這個方針。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "92687524"
   
  下表列出 .NET 所提供基底類型的清單、簡要描述各類型，並且指示 Visual Basic、C#、C++ 和 F# 中的對應類型。  
   
-|類別|類別名稱|描述|Visual Basic 資料類型|C# 資料型別|C++/CLI 資料類型|F# 資料類型|  
+|類別|類別名稱|說明|Visual Basic 資料類型|C# 資料型別|C++/CLI 資料類型|F# 資料類型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整數|<xref:System.Byte>|8 位元不帶正負號的整數。|**位元組**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8 位元帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**SByte**|**sbyte**|**char**<br /> -或-<br /> **signed** **char**|**sbyte**|  

@@ -2,18 +2,17 @@
 title: 工作平行程式庫 (TPL)
 description: 探索 (TPL) 的工作平行程式庫，這是一組公用類型和 Api，可簡化將平行處理原則加入至 .NET 中的應用程式 & 並行處理的程式。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, concurrency in
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 596671b267484561a8697546caa5a4764242ebd3
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 5c26799338b46f5f0420c3b082e7d84fade27a26
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925229"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829995"
 ---
 # <a name="task-parallel-library-tpl"></a>工作平行程式庫 (TPL)
 
@@ -23,7 +22,7 @@ ms.locfileid: "92925229"
   
 ## <a name="related-articles"></a>相關文章  
   
-|標題|描述|  
+|標題|說明|  
 |-|-|  
 |[資料平行處理](data-parallelism-task-parallel-library.md)|說明如何建立平行 `for` 和 `foreach` 迴圈 (在 Visual Basic 中為 `For` 和 `For Each`)。|  
 |[以工作為基礎的非同步程式設計](task-based-asynchronous-programming.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> (以隱含方式) 或直接使用 <xref:System.Threading.Tasks.Task> 物件 (以明確方式) 建立和執行工作。|  
@@ -32,6 +31,6 @@ ms.locfileid: "92925229"
 |[平行 LINQ (PLINQ)](introduction-to-plinq.md)|說明如何使用 LINQ 查詢達到資料平行處理原則。|  
 |[平行程式設計](index.md)|.NET 平行程式設計的最上層節點。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 .NET Core & 進行平行程式設計的範例 .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

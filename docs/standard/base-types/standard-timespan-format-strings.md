@@ -2,7 +2,6 @@
 title: 標準 TimeSpan 格式字串
 description: 請參閱標準 TimeSpan 格式字串，其使用單一格式規範來定義 .NET 中 TimeSpan 值的文字標記法。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888941"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831308"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 
@@ -41,7 +40,7 @@ ms.locfileid: "92888941"
   
 下表列出標準時間間隔格式規範。  
   
-|格式規範|Name|描述|範例|  
+|格式規範|名稱|描述|範例|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|常數 (非變異) 格式|這個規範不區分文化特性。 它採用 `[-][d'.']hh':'mm':'ss['.'fffffff]` 格式<br /><br /> \ ("t" 與 "T" 格式字串會產生相同的結果)。<br /><br /> 詳細資訊：[常數 ("c") 格式規範](#the-constant-c-format-specifier)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|一般短格式|這個規範只會輸出需要的內容。 它會區分文化特性，並採用 `[-][d':']h':'mm':'ss[.FFFFFFF]` 格式。<br /><br /> 詳細資訊：[一般短 ("g") 格式規範](#the-general-short-g-format-specifier)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (fr-FR)|  
@@ -50,11 +49,11 @@ ms.locfileid: "92888941"
 ## <a name="the-constant-c-format-specifier"></a>常數 ("c") 格式規範  
  "c" 格式規範會以下列形式傳回 <xref:System.TimeSpan> 值的字串表示：  
   
- [-][ *d* .] *hh* : *mm* : *ss* [. *fffffff* ]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 句號 (.) 和冒號 (:) 是常值的符號。 下表說明其餘項目。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -76,11 +75,11 @@ ms.locfileid: "92888941"
 ## <a name="the-general-short-g-format-specifier"></a>一般短 ("g") 格式規範  
  "g" <xref:System.TimeSpan> 格式規範會以壓縮形式傳回 <xref:System.TimeSpan> 值的字串表示，而且只包括必要的項目。 它有下列形式：  
   
- [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
+ [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -100,11 +99,11 @@ ms.locfileid: "92888941"
 ## <a name="the-general-long-g-format-specifier"></a>一般長 ("G") 格式規範  
  "G" <xref:System.TimeSpan> 格式規範會以長形式傳回 <xref:System.TimeSpan> 值的字串表示，而此形式一律會同時包含日數和小數秒數。 從 "G" 標準格式規範產生的字串具有下列形式：  
   
- [-] *d* ： *hh* ： *mm* ： *ss* 。 *fffffff*  
+ [-]*d*：*hh*：*mm*：*ss*。*fffffff*  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|天數，沒有前置的零。|  

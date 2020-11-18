@@ -1,19 +1,18 @@
 ---
 title: TPL 和傳統 .NET 非同步程式設計
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: 498bde82d05259bdc561d08819d024090b0417f0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: bd6f32f8e77161007f4cfe49fa808167a17a3ec6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688016"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829982"
 ---
 # <a name="tpl-and-traditional-net-asynchronous-programming"></a>TPL 和傳統 .NET 非同步程式設計
 

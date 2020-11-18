@@ -2,7 +2,6 @@
 title: 加密資料
 description: 瞭解如何使用對稱演算法或非對稱演算法來加密 .NET 中的資料。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - cryptography [.NET], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 75bb0fa52b8002efe0027f026de8c0910735e55e
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 574ef3f829406d661e19f004e9a7d150954fd9e5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440968"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830593"
 ---
 # <a name="encrypting-data"></a>加密資料
 

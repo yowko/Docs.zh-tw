@@ -1,7 +1,6 @@
 ---
 title: 執行不區分文化特性的字串作業
 ms.date: 08/22/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - case mappings
 - custom case mappings
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 0f7e8dde395feb548e6808547a223a3fa8855561
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063907"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829761"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>執行不區分文化特性的字串作業
 
@@ -41,7 +40,7 @@ ms.locfileid: "93063907"
  [不區分文化特性的字串作業](culture-insensitive-string-operations.md)  
  描述為何您應該注意對字串執行作業時的文化特性，並提供指導方針來指出何時該執行區分文化特性的作業，何時該執行不區分文化特性的作業。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [排序權數資料表 (適用於 Windows 系統上的 .NET)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [預設 Unicode 定序元素資料表 (適用於 Linux 和 macOS 上的 .NET Core)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

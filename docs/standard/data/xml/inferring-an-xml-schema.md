@@ -1,14 +1,13 @@
 ---
 title: 推斷 XML 結構描述
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-ms.openlocfilehash: 212dafef0fefe701e27d148fd34984589e713fe8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d9bf14087a32ad04d9e3510c8543a3270f135653
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287671"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830918"
 ---
 # <a name="inferring-an-xml-schema"></a>推斷 XML 結構描述
 說明如何使用結構描述物件模型 (SOM) <xref:System.Xml.Schema.XmlSchemaInference> 類別從 XML 文件結構來推斷 XML 結構描述定義語言 (XSD) 結構描述。  
@@ -25,7 +24,7 @@ ms.locfileid: "84287671"
  [推斷簡單型別的規則](rules-for-inferring-simple-types.md)  
  說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)
 - [從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)

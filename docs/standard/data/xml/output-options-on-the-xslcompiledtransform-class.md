@@ -1,14 +1,13 @@
 ---
 title: XslCompiledTransform 類別的輸出選項
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-ms.openlocfilehash: e9ffdc1377dbf124f042802279e7e7a275222eff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 777324e81ac809866dab68259dceca89c6091a3c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288702"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830086"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸出選項
 本主題討論可用的 XSLT 輸出選項。 您可以指定樣式表中或 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上的輸出選項。  
@@ -21,7 +20,7 @@ ms.locfileid: "84288702"
 |屬性名稱|行為|  
 |--------------------|--------------|  
 |method|支援。|  
-|version|忽略。 對於 XML 版本始終為 1.0，對於 HTML 則為 4.0。|  
+|版本|忽略。 對於 XML 版本始終為 1.0，對於 HTML 則為 4.0。|  
 |編碼|輸出至 <xref:System.IO.TextWriter> 時忽略。 使用 <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> 屬性代替。|  
 |omit-xml-declaration|支援。|  
 |獨立|支援。|  
@@ -40,7 +39,7 @@ ms.locfileid: "84288702"
 #### <a name="xmlwriter"></a>XmlWriter  
  <xref:System.Xml.XmlWriter> 類別可寫出 XML 資料流或檔案。 您可以藉由使用 <xref:System.Xml.XmlWriter> 類別，指定要在 <xref:System.Xml.XmlWriterSettings> 物件上支援的功能 (包含輸出選項)。 <xref:System.Xml.XmlWriter> 類別是 <xref:System.Xml> 架構不可或缺的一部分。 使用此輸出型別，將輸出結果傳遞至其他 XML 處理序。  
   
-#### <a name="string"></a>String  
+#### <a name="string"></a>字串  
  使用此輸出型別，指定輸出檔案的 URI。  
   
 #### <a name="stream"></a>資料流  
@@ -51,10 +50,10 @@ ms.locfileid: "84288702"
 #### <a name="textwriter"></a>TextWriter  
  <xref:System.IO.TextWriter> 會寫入連續的字元。 它會在 <xref:System.IO.StringWriter> 及 <xref:System.IO.StreamWriter> 類別中實作，這些類別會將字元分別寫入到字串或資料流。 要輸出至字串時，請使用此輸出型別。  
   
-## <a name="notes"></a>備忘稿  
+## <a name="notes"></a>注意  
   
 - 寫出空白標記時，請在項目名稱的最後一個字元與反斜線之間寫入一個空格，例如 `<myElement />`。 如此可讓舊版瀏覽器正確顯示所產生的 HTML 頁面。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XSLT 轉換](xslt-transformations.md)

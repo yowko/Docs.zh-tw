@@ -1,19 +1,18 @@
 ---
 title: PLINQ 資料範例
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291704"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830567"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 資料範例
 此範例包含 .csv 格式的範例資料，以及將它轉換成記憶體中客戶、產品、訂單及訂單詳細資料集合的方法。 若要使用 PLINQ 進一步實驗，您可以將其他主題中的程式碼範例貼到本主題的程式碼中，並從 `Main` 方法叫用它。 您也可以搭配您自己的 PLINQ 查詢使用這項資料。  
@@ -29,7 +28,7 @@ ms.locfileid: "84291704"
   
 2. 使用這些步驟之後的程式碼取代 Module1.vb 或 Program.cs 的內容。  
   
-3. 在 [專案]**** 功能表上，按一下 [加入新項目]****。 選取 [文字檔]****，然後按一下 [確定]****。 複製本主題中的資料，然後將它貼到新的文字檔中。 在 [檔案]**** 功能表上，按一下 [儲存]****，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。  
+3. 在 [專案] 功能表上，按一下 [加入新項目]。 選取 [文字檔]，然後按一下 [確定]。 複製本主題中的資料，然後將它貼到新的文字檔中。 在 [檔案] 功能表上，按一下 [儲存]，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。  
   
 4. 按 F5 鍵，確認專案正確地建置和執行。 主控台視窗中應該會顯示以下輸出。  
   
@@ -860,6 +859,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

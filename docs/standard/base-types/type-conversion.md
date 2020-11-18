@@ -2,7 +2,6 @@
 title: .NET 中的類型轉換
 description: 瞭解 .NET 中的類型轉換，它會在新類型中建立相當於舊型別值的值，但可能不會保留原始的身分識別。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 4f7e4400aa15532b04fd4e39219775af34068685
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 8e1ea153ccd65de967a34e79d4a26c96e678c4ad
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687542"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831022"
 ---
 # <a name="type-conversion-in-net"></a>.NET 中的類型轉換
 
@@ -105,7 +104,7 @@ ms.locfileid: "92687542"
  大多數的編譯器都允許明確轉換以已檢查或未檢查的方式執行。 如果執行已檢查的轉換，當要轉換之類型的值不在目標類型的範圍內時，則會擲回 <xref:System.OverflowException>。 在同樣的狀況下執行未檢查的轉換時，轉換可能不會擲回例外狀況，但實際行為會變得不明確，且可能產生不正確的值。  
   
 > [!NOTE]
-> 在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定]  對話方塊中的 [移除整數的溢位檢查]  核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定]  對話方塊中的 [移除整數的溢位檢查]  核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
+> 在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
   
  下列 C# 範例使用 `checked` 和 `unchecked` 關鍵字，說明將超出 <xref:System.Byte> 範圍的值轉換為 <xref:System.Byte> 時的行為差異。 已檢查的轉換會擲回例外狀況，但未檢查的轉換會指派 <xref:System.Byte.MaxValue?displayProperty=nameWithType> 給 <xref:System.Byte> 變數。  
   

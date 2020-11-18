@@ -2,7 +2,6 @@
 title: 如何：開啟並附加至記錄檔
 description: 使用 .NET 中的 StreamWriter 和 StreamReader 類別來開啟並附加至記錄檔，這會將字元寫入和讀取資料流程中的字元。
 ms.date: 01/21/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: ed8345901dc5f44e947bd076944d7e61eac561da
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: f92dd34b15ca79f229b365c7c2db4ace411d9353
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188168"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830749"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：開啟並附加至記錄檔
 
@@ -45,4 +44,4 @@ ms.locfileid: "93188168"
 - [如何：將文字寫入檔案](how-to-write-text-to-a-file.md)  
 - [如何：從字串讀取字元](how-to-read-characters-from-a-string.md)  
 - [如何：將字元寫入字串](how-to-write-characters-to-a-string.md)  
-- [檔案和資料流 I/O](index.md)
+- [檔案和資料流程 i/o](index.md)

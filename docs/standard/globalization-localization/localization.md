@@ -1,7 +1,6 @@
 ---
-title: Localization
+title: 當地語系化
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - culture, localization
 - application development [.NET], localization
@@ -14,14 +13,14 @@ helpviewer_keywords:
 - localization [.NET], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-ms.openlocfilehash: e92184f48b2d2255138da5b2a6e7e2977a95e2e3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 5d47d002c714ea80b6f94c810f2dca726c273134
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93062954"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829826"
 ---
-# <a name="localization"></a>Localization
+# <a name="localization"></a>當地語系化
 
 當地語系化是一種程序，可將應用程式資源翻譯為應用程式所支援之每個文化特性的當地語系化版本。 只有在完成[可當地語系化檢閱](localizability-review.md)步驟，以確認全球化的應用程式已準備好進行當地語系化之後，才能繼續進行當地語系化步驟。
 
@@ -31,7 +30,7 @@ ms.locfileid: "93062954"
 
 Windows Software Development Kit (SDK) 提供 Windows Forms 資源編輯器 (Winres.exe)，讓您可以快速地將 Windows Forms 當地語系化成目標文化特性。 如需有關使用此工具的相關資訊，請參閱 [Winres.exe (Windows Forms 資源編輯器)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [全球化和當地語系化](index.md)
 - [當地語系化能力審查](localizability-review.md)

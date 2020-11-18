@@ -1,8 +1,7 @@
 ---
 title: 全球化與當地語系化 .NET 應用程式
-description: 瞭解如何開發可供全球使用的應用程式。 瞭解 .NET 中的全球化、當地語系化性檢查和當地語系化。
+description: 瞭解如何開發可供使用的全球應用程式。 瞭解如何在 .NET 中進行全球化、當地語系化當地語系化和當地語系化。
 ms.date: 06/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - international applications [.NET]
 - globalization [.NET], encoding
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: a3894b7bf9b8aa013b346c169d21c6db270fe987
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 670a159844cfeb475b26c1d1aa85e7f09a95c21f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600785"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829852"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>全球化與當地語系化 .NET 應用程式
 
@@ -31,7 +30,7 @@ ms.locfileid: "84600785"
 
 這個步驟包含檢閱應用程式的程式碼和設計，確保它可以輕鬆地當地語系化並識別當地語系化時可能發生的阻礙，以及確認應用程式的可執行碼與其資源分開。 如果全球化階段有效，則當地語系化能力檢閱將確認全球化期間所選擇的設計和編碼。 當地語系化能力階段也可能會找出任何其餘的問題，如此應用程式的原始程式碼就不需要在當地語系化階段進行修改。
 
-[Localization](localization.md)
+[當地語系化](localization.md)
 
 這個步驟包含自訂特定文化特性或地區的應用程式。 如果已正確執行全球化和當地語系化能力的步驟，則當地語系化的主要工作就是轉譯使用者介面。
 
@@ -53,13 +52,13 @@ ms.locfileid: "84600785"
 
 [.NET 全球化和 ICU](globalization-icu.md)
 
-描述 .NET 全球化如何使用[Unicode （ICU）的國際元件](http://site.icu-project.org/home)。
+描述 .NET 全球化如何 [針對 Unicode (ICU) 使用國際元件 ](http://site.icu-project.org/home)。
 
 [當地語系化可行性檢閱](localizability-review.md)
 
 討論建立當地語系化應用程式的第二個階段，包括識別當地語系化過程中可能遭遇到的阻礙。
 
-[Localization](localization.md)
+[當地語系化](localization.md)
 
 討論建立當地語系化應用程式的最後一個階段，包括自訂特定區域或文化特性的應用程式使用者介面。
 
@@ -85,10 +84,10 @@ ms.locfileid: "84600785"
 
    包含表示 ASCII、ANSI、Unicode 和其他字元編碼方式的類別。
 
-- [Resgen.exe （資源檔產生器）](../../framework/tools/resgen-exe-resource-file-generator.md)
+- [ 資源檔產生器Resgen.exe () ](../../framework/tools/resgen-exe-resource-file-generator.md)
 
    描述如何使用 Resgen.exe 來轉換 .txt 檔案和 XML 資源格式 (.resx) 檔案到通用語言執行平台二進位資源檔。
 
-- [Winres.exe .exe （Windows Forms 資源編輯器）](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres.exe (Windows Forms 資源編輯器) ](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    描述如何使用 Winres.exe 將 Windows Form 表單當地語系化。

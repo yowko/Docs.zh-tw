@@ -1,7 +1,6 @@
 ---
 title: 記憶體回收告知
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,20 +8,20 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285998"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831178"
 ---
 # <a name="garbage-collection-notifications"></a>記憶體回收告知
-在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。 這可能是特別針對處理大量要求的伺服器所引發的問題;在此情況下，長時間垃圾收集可能會導致要求超時。若要避免在關鍵期間發生完整收集，您可以收到通知，指出已接近完整垃圾收集，然後採取動作將工作負載重新導向至另一個伺服器實例。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
+在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。 這可能是處理大量要求的伺服器所產生的問題;在此情況下，長時間的垃圾收集可能會導致要求超時。若要防止在重要期間內進行完整集合，您可以收到完整垃圾收集的通知，然後採取動作將工作負載重新導向至另一個伺服器實例。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法會註冊一個當執行階段偵測到接近完整記憶體回收時要引發的通知。 通知有兩個部分：當接近完整記憶體回收時，以及當完整記憶體回收完成時。  
   
 > [!WARNING]
-> 只有進行封鎖的記憶體回收會引發通知。 [\<gcConcurrent>](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)啟用 configuration 元素時，背景垃圾收集不會引發通知。  
+> 只有進行封鎖的記憶體回收會引發通知。 啟用設定 [\<gcConcurrent>](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 元素時，背景垃圾收集將不會引發通知。  
   
  若要判斷引發通知的時機，請使用 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法。 一般來說，您會在 `while` 迴圈中使用這些方法，以持續取得可顯示通知狀態的 <xref:System.GCNotificationStatus> 列舉。 如果值為 <xref:System.GCNotificationStatus.Succeeded>，您可以執行以下動作：  
   
@@ -120,6 +119,6 @@ ms.locfileid: "84285998"
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [記憶體回收](index.md)

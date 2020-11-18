@@ -2,7 +2,6 @@
 title: 在 .NET 中處理 I/O 錯誤
 description: 瞭解如何在 .NET 中處理 i/o 錯誤。 將錯誤碼對應至例外狀況、處理 i/o 作業中的例外狀況，以及處理 IOException。
 ms.date: 08/27/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: fe6796be91d31e3f7bf69605f39a39f3db6b3e83
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188038"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830866"
 ---
 # <a name="handling-io-errors-in-net"></a>在 .NET 中處理 I/O 錯誤
 
@@ -84,7 +83,7 @@ ms.locfileid: "93188038"
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 .NET 中處理和擲回例外狀況](../exceptions/index.md)
 - [例外狀況處理 (工作平行程式庫) ](../parallel-programming/exception-handling-task-parallel-library.md)

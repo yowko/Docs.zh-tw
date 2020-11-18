@@ -1,17 +1,16 @@
 ---
 title: '如何：僅在 Windows (中 .NET Framework 和 Windows 執行階段資料流程之間轉換) '
 ms.date: 01/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 7833dd16cec8d6ef1cbdb51702ea72f50231c52d
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: ee36845f19ef4a7c3923b1032ab6eb45d2f60733
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187953"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830814"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>如何：僅在 Windows (中 .NET Framework 和 Windows 執行階段資料流程之間轉換) 
 
@@ -67,7 +66,7 @@ Windows 執行階段提供支援唯讀、唯寫或讀寫的資料流類型。 �
   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage2.xaml.cs)]
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage2.xaml.vb)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [快速入門：在 Windows) 中讀取和寫入檔案 (](/previous-versions/windows/apps/hh464978(v=win.10))  
 - [適用於 Windows 市集應用程式的 .NET 概觀](/previous-versions/windows/apps/br230302(v=vs.140))  

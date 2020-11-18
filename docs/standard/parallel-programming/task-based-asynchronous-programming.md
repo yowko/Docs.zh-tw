@@ -2,23 +2,22 @@
 title: 工作型非同步程式設計 - .NET
 description: 在本文中，透過工作平行程式庫 (TPL) 在 .NET 中瞭解以工作為基礎的非同步程式設計。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: a1abe474628cd88e0c24f4152d83bd8ed7ad7950
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925242"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830021"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
-工作平行程式庫 (TPL) 是以「工作」  (Task) 的概念為基礎，工作表示非同步作業。 在某些方面，工作類似執行緒或 <xref:System.Threading.ThreadPool> 工作項目，但是抽象等級較高。 「工作平行處理原則」  (Task Parallelism) 是指同時執行一個或多個獨立工作。 工作主要提供兩項優點：
+工作平行程式庫 (TPL) 是以「工作」(Task) 的概念為基礎，工作表示非同步作業。 在某些方面，工作類似執行緒或 <xref:System.Threading.ThreadPool> 工作項目，但是抽象等級較高。 「工作平行處理原則」(Task Parallelism) 是指同時執行一個或多個獨立工作。 工作主要提供兩項優點：
 
 - 更有效率且更靈活地使用系統資源。
 
@@ -90,7 +89,7 @@ ms.locfileid: "92925242"
 
 ## <a name="task-id"></a>工作識別碼
 
-每個工作都會得到一個整數 ID，這個 ID 負責在應用程式定義域中唯一識別該工作，且可以經由 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> 屬性來存取。 當要在 Visual Studio Debugger 的 [平行堆疊]  和 [工作]  視窗中檢閱工作資訊時，這個 ID 很有用。 ID 是採延遲建立的方式，也就是說，要等到收到要求後才會建立 ID。因此，每次執行程式時，工作都可能會有不同的 ID。 如需如何在偵錯工具中檢閱工作識別碼的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)和[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)。
+每個工作都會得到一個整數 ID，這個 ID 負責在應用程式定義域中唯一識別該工作，且可以經由 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> 屬性來存取。 當要在 Visual Studio Debugger 的 [平行堆疊] 和 [工作] 視窗中檢閱工作資訊時，這個 ID 很有用。 ID 是採延遲建立的方式，也就是說，要等到收到要求後才會建立 ID。因此，每次執行程式時，工作都可能會有不同的 ID。 如需如何在偵錯工具中檢閱工作識別碼的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)和[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)。
 
 ## <a name="task-creation-options"></a>工作建立選項
 
@@ -120,7 +119,7 @@ ms.locfileid: "92925242"
 
 ## <a name="creating-task-continuations"></a>建立工作接續
 
-<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法可讓您指定在「前項工作」(Antecedent Task)  完成時要啟動的工作。 前項工作的參考會傳遞給接續工作的委派，以便檢查前項工作的狀態，並可藉由擷取 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性的值，使用前項的輸出做為接續的輸入。
+<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法可讓您指定在「前項工作」(Antecedent Task) 完成時要啟動的工作。 前項工作的參考會傳遞給接續工作的委派，以便檢查前項工作的狀態，並可藉由擷取 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性的值，使用前項的輸出做為接續的輸入。
 
 在下面範例中，`getData` 工作是透過呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 方法來啟動。 當 `processData` 完成時，會自動啟動 `getData` 工作，而 `displayData` 完成時會啟動 `processData`。 `getData` 會產生整數陣列，`processData` 工作可透過 `getData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性存取該陣列。 `processData` 工作會處理該陣列並傳回結果，這個結果的類型是從傳遞給 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 方法之 Lambda 運算式的傳回類型推斷而來。 當 `displayData` 完成時，`processData` 工作會自動執行，而 <xref:System.Tuple%603> Lambda 運算式傳回的 `processData` 物件可供 `displayData` 工作透過 `processData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性來存取。 `displayData` 工作會接受 `processData` 工作的結果並且產生結果，這個結果的類型也是以類似方式推斷而來，且這個結果會放在 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性中讓程式取得。
 
@@ -138,7 +137,7 @@ ms.locfileid: "92925242"
 
 ## <a name="creating-detached-child-tasks"></a>建立中斷連結的子工作
 
-當在工作內執行的使用者程式碼建立新工作，卻未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項時，新的工作不會以任何特殊方式與父工作保持同步。 這種非同步處理的工作稱為「中斷連結的巢狀工作」  (Detached Nested Task) 或「中斷連結的子工作」  (Detached Child Task)。 下面範例會示範一個工作如何建立一個中斷連結的子工作。
+當在工作內執行的使用者程式碼建立新工作，卻未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項時，新的工作不會以任何特殊方式與父工作保持同步。 這種非同步處理的工作稱為「中斷連結的巢狀工作」(Detached Nested Task) 或「中斷連結的子工作」(Detached Child Task)。 下面範例會示範一個工作如何建立一個中斷連結的子工作。
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]
@@ -261,7 +260,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-|-|
 |[使用接續工作鏈結工作](chaining-tasks-by-using-continuation-tasks.md)|說明接續的運作方式。|
 |[附加與中斷連結的子工作](attached-and-detached-child-tasks.md)|說明附加的與中斷連結的子工作之間的差異。|
@@ -276,7 +275,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 |[資料平行處理](data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
 |[平行程式設計](index.md)|.NET Framework 平行程式設計的最上層節點。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](index.md)
 - [使用 .NET Core & 進行平行程式設計的範例 .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

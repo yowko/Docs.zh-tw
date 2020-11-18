@@ -2,7 +2,6 @@
 title: 在 .NET 中使用 StringBuilder 類別
 description: 瞭解如何在 .NET 中使用 StringBuilder 類別。 您可以使用這個類別來修改字串，而不需建立新的物件。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 1005da650c624b2b8f6616c163082ff95d7dc007
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c9337df864a01ec0fbdf7068051efea60b6c59aa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888954"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831295"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>在 .NET 中使用 StringBuilder 類別
 <xref:System.String> 物件不可變。 每次您使用 <xref:System.String?displayProperty=nameWithType> 類別的其中一個方法時，就會在記憶體中建立新的字串物件，這需要為該新物件配置新的空間。 在您需要重複修改字串的情況下，與建立新 <xref:System.String> 物件相關聯的額外負荷可能成本高昂。 當您想要修改字串，而不建立新物件時，可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別。 例如，在迴圈中將許多字串串連在一起時，可以使用 <xref:System.Text.StringBuilder> 類別來提升效能。  
@@ -61,7 +60,7 @@ ms.locfileid: "92888954"
 ## <a name="modifying-the-stringbuilder-string"></a>修改 StringBuilder 字串  
  下表列出您可用來修改 **StringBuilder** 內容的方法。  
   
-|方法名稱|用途|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|將資訊附加至目前 **StringBuilder** 的結尾。|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|將字串中傳遞的格式規範取代為格式化的文字。|  
@@ -69,7 +68,7 @@ ms.locfileid: "92888954"
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|從目前 **StringBuilder** 移除指定的字元數。|  
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|以另一個指定的字元或字串取代目前 **StringBuilder** 中所有出現的指定字元或字串。|  
   
-### <a name="append"></a>附加  
+### <a name="append"></a>Append  
  **Append** 方法可以用來將物件的文字或字串表示加入至目前 **StringBuilder** 所代表的字串結尾。 下列範例會將 **StringBuilder** 初始化為 "Hello World"，然後附加一些文字到物件的結尾。 會視需要自動配置空格。  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]

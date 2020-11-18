@@ -1,7 +1,6 @@
 ---
 title: 可當地語系化檢閱
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 6aa0588ea4baa00be476a05c335cf2abaa22aab4
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064154"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829839"
 ---
 # <a name="localizability-review"></a>當地語系化可行性檢閱
 
@@ -77,7 +76,7 @@ ms.locfileid: "93064154"
 
 如果您已遵循全球化建議開發應用程式、正確地處理區分文化特性的功能，而且找到並解決了測試期間發生的當地語系化問題，就可以繼續進行下一個步驟：[當地語系化](localization.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [全球化和當地語系化](index.md)
 - [當地語系化](localization.md)

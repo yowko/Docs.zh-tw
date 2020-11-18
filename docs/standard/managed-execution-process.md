@@ -1,7 +1,6 @@
 ---
 title: Managed 執行程序
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - source code language
 - code, managed execution process
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: bc455817d29d2427f3051e79145b535e3eeaccbb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 17494c3b5620ac649aeb3e6ef73085097517d1f5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161097"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830671"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：
@@ -105,11 +104,11 @@ ms.locfileid: "92161097"
 
  [回到頁首](#introduction)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [概觀](../framework/get-started/overview.md)
 - [語言獨立性以及與語言無關的元件](language-independence-and-language-independent-components.md)
-- [中繼資料和 Self-Describing 元件](metadata-and-self-describing-components.md)
+- [中繼資料和自我描述元件](metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL 組合器) ](../framework/tools/ilasm-exe-il-assembler.md)
 - [安全性](security/index.md)
 - [與 Unmanaged 程式碼互通](../framework/interop/index.md)

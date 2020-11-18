@@ -1,24 +1,23 @@
 ---
 title: 使用接續工作來連結工作
-description: 瞭解如何在 .NET 中使用接續工作來連鎖工作。 接續工作是由另一項工作所叫用的非同步工作。
+description: 瞭解如何使用 .NET 中的接續工作來連鎖工作。 接續工作是另一項工作所叫用的非同步工作。
 ms.date: 07/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: c7afbc1bb22a1743aed8e4ebd0a06c4f3fb57e86
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063831"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830606"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>使用接續工作來連結工作
 
-在非同步程式設計中，一個非同步作業在完成時通常會叫用第二個作業。 接續可讓 decedent 作業耗用第一項操作的結果。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 _「接續工作」_(continuation task) 提供相同的功能。 接續工作 (也稱為接續) 是由另一個工作所叫用的非同步工作，也就是在上一項工作完成時，稱為「 _antecedent_」。
+在非同步程式設計中，一個非同步作業（完成時）通常會叫用第二個作業。 接續可讓 decedent 作業取用第一項作業的結果。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 _「接續工作」_(continuation task) 提供相同的功能。 接續工作 (也稱為接續) 是由另一項工作所叫用的非同步工作，也就是在上一次完成時由另一 _項工作所_ 叫用。
 
 接續相對容易使用，但卻非常強大且有彈性。 例如，您可以：
 
@@ -37,7 +36,7 @@ ms.locfileid: "88063831"
 
 接續本身是 <xref:System.Threading.Tasks.Task> ，啟動時並不會封鎖執行緒。 呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法來封鎖，直到完成接續工作。
 
-## <a name="create-a-continuation-for-a-single-antecedent"></a>建立單一 antecedent 的接續
+## <a name="create-a-continuation-for-a-single-antecedent"></a>針對單一 antecedent 建立接續
 
 您可建立當前項藉由呼叫 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法完成時執行的接續。 下列範例顯示其基本模式 (為求清楚明瞭，省略例外狀況處理)。 它會執行前項工作 `taskA`，這會傳回表示今天是星期幾之名稱的 <xref:System.DayOfWeek> 物件。 當前項完成時，接續工作 `continuation` 由其前項傳遞，並顯示包含結果的字串。
 
@@ -48,11 +47,11 @@ ms.locfileid: "88063831"
 
 [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]
 
-## <a name="create-a-continuation-for-multiple-antecedents"></a>為多個前項建立接續
+## <a name="create-a-continuation-for-multiple-antecedents"></a>建立多個前項的接續
 
 您也可以建立會在任何或所有群組工作完成時執行的接續。 當所有前項工作都完成後，若要執行接續，您可以呼叫靜態`Shared` 方法 (在 Visual Basic 中為 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> ) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法。 當任何前項工作完成後，若要執行接續，您可以呼叫靜態`Shared` 方法 (在 Visual Basic 中為 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> 方法。
 
-和多載的呼叫 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 不會封鎖呼叫執行緒。 不過，您通常會呼叫除了和方法以外的所有， <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 以取出傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性，而這會封鎖呼叫執行緒。
+和多載的呼叫 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 不會封鎖呼叫執行緒。 不過，您通常會呼叫所有的 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 方法，以取出傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性，而此屬性會封鎖呼叫執行緒。
 
 下列範例會呼叫 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 方法來建立接續工作，這會反映其 10 個前項工作的結果。 每個前項工作計算介於 1 到 10 之間的索引值平方。 如果順利完成前項 (其 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性是 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>)，則接續的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性是每個前項所傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 值之陣列。 此範例會加入它們，以計算介於 1 到 10 之間所有數字的平方和。
 
@@ -130,7 +129,7 @@ ms.locfileid: "88063831"
 
 當您為使用 TPL 而轉換現有之使用 [非同步程式設計模型 (APM)](../asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的程式碼時，接續狀態會很有用。 在 APM 中，您通常會在 **Begin**_Method_ 方法中提供物件狀態，並在稍後使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 屬性存取該狀態。 藉由使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，當您轉換使用 APM 的程式碼為使用 TPL 時，您可以保留此狀態。
 
-當您使用 Visual Studio 偵錯工具中的 <xref:System.Threading.Tasks.Task> 物件時，接續狀態也相當有用。 例如，在 [平行工作] **** 視窗中，[工作] **** 資料行會顯示每項工作的狀態物件之字串表示。 如需 [平行工作]**** 視窗的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)。
+當您使用 Visual Studio 偵錯工具中的 <xref:System.Threading.Tasks.Task> 物件時，接續狀態也相當有用。 例如，在 [平行工作]  視窗中，[工作]  資料行會顯示每項工作的狀態物件之字串表示。 如需 [平行工作] 視窗的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)。
 
 下列範例示範如何使用接續狀態。 它會建立接續工作的鏈結。 每個工作會為 <xref:System.DateTime> 方法的 `state` 參數提供目前的時間，此為 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 物件。 每個 <xref:System.DateTime> 物件代表建立接續工作時的時間。 做為其結果，每一項工作會產生第二個 <xref:System.DateTime> 物件，表示工作完成時的時間。 所有工作都完成之後，此範例會顯示建立時間，以及顯示每個接續工作完成的時間。
 
@@ -140,16 +139,16 @@ ms.locfileid: "88063831"
 
 ## <a name="continuations-that-return-task-types"></a>傳回工作類型的接續
 
-有時候，您可能需要連結傳回類型的接續 <xref:System.Threading.Tasks.Task> 。 這些稱為「嵌套工作」，它們是常見的。 當父工作呼叫 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> ，並提供工作 `continuationFunction` 時，您會呼叫 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 來建立 proxy 工作，以代表 `<Task<Task<T>>>` 或 `Task(Of Task(Of T))` (Visual Basic) 的非同步作業。
+有時您可能需要鏈出會傳回型別的接續 <xref:System.Threading.Tasks.Task> 。 這些都稱為「嵌套工作」（nested task），而且很常見。 當父工作呼叫時 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> ，會提供一個工作，讓 `continuationFunction` 您呼叫 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 來建立代表 `<Task<Task<T>>>` 或 `Task(Of Task(Of T))` (Visual Basic) 之非同步作業的 proxy 工作。
 
-下列範例示範如何使用接續，以包裝額外的工作傳回函式。 每個接續都可以解除包裝，並公開已包裝的內部工作。
+下列範例會示範如何使用接續來包裝額外的工作傳回函式。 每個接續都可以解除包裝，以公開已包裝的內部工作。
 
 :::code language="csharp" source="snippets/cs/unwrap.cs":::
 :::code language="vb" source="snippets/vb/unwrap.vb":::
 
-如需使用的詳細資訊 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> ，請參閱[如何：解除包裝嵌套的工作](how-to-unwrap-a-nested-task.md)。
+如需使用的詳細資訊 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> ，請參閱 [如何：解除包裝嵌套的工作](how-to-unwrap-a-nested-task.md)。
 
-## <a name="handle-exceptions-thrown-from-continuations"></a>處理從接續擲回的例外狀況
+## <a name="handle-exceptions-thrown-from-continuations"></a>處理延續擲回的例外狀況
 
 前項與接續的關聯性並非父子式關聯性。 接續擲回的例外狀況並不會傳播至前項。 因此，就如同您在其他工作中一樣地處理接續所擲回的例外狀況，如下所示：
 
@@ -175,6 +174,6 @@ ms.locfileid: "88063831"
 
 - 如果接續是使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的附加子工作，則其父代會將例外狀況傳播回到呼叫的執行緒，如同任何附加之子系的情況。 如需詳細資訊，請參閱[附加與中斷連結的子工作](attached-and-detached-child-tasks.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工作平行程式庫 (TPL)](task-parallel-library-tpl.md)

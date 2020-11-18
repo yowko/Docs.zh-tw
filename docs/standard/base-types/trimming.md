@@ -2,7 +2,6 @@
 title: 在 .NET 中修剪和移除字串中的字元
 description: 瞭解如何從字串的開頭或結尾修剪空格，或從 .NET 中的字串中指定的位置移除任何數目的空格或字元。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,17 +15,17 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: d0057d503474f3f6ff886acda3ce1d72fb3ebe21
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 8bc2980aa887dc652485e135058b9f6f718e7b45
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888590"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831269"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>在 .NET 中修剪和移除字串中的字元
 如果您將句子剖析成個別文字，最後可能會得到許多文字，但文字任一端有空格 (也稱為空白字元)。 在這種情況下，您可以使用 **System.String** 類別中的其中一個 Trim 方法，從字串中的指定位置移除任意數目的空格或其他字元。 下表描述可用的 Trim 方法。  
   
-|方法名稱|用途|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|將字元陣列中字串開頭和結尾指定的空格或空白字元移除。|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|從字串尾端移除字元陣列中指定的字元。|  

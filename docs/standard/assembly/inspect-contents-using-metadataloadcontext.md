@@ -3,19 +3,18 @@ title: 如何：使用 MetadataLoadCoNtext 檢查元件內容
 description: 瞭解如何使用 MetadataLoadCoNtext，這是可讓您載入 .NET 元件以供檢查之用的 API。
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 7f90149a98632ea57e8d241a0ccdf4b50264ac5c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7205230986aa852813a651d2fcb7c5ef88ab18fe
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552020"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831347"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>如何：使用 MetadataLoadCoNtext 檢查元件內容
 
 .NET 中的反映 API 預設可讓開發人員檢查載入主要執行內容中的元件內容。 不過，有時您無法將元件載入執行內容，例如，因為它是針對另一個平臺或處理器架構所編譯，或是 [參考元件](reference-assemblies.md)。 <xref:System.Reflection.MetadataLoadContext?displayProperty=fullName>API 可讓您載入和檢查這類元件。 載入至的元件 <xref:System.Reflection.MetadataLoadContext> 只會被視為中繼資料，也就是說，您可以檢查元件中的類型，但無法執行其中包含的任何程式碼。 與主要執行內容不同的是， <xref:System.Reflection.MetadataLoadContext> 不會自動載入目前目錄中的相依性，而是會使用 <xref:System.Reflection.MetadataAssemblyResolver> 傳遞給它的自訂系結邏輯。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要使用 <xref:System.Reflection.MetadataLoadContext> ，請安裝 [MetadataLoadCoNtext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) NuGet 套件。 .NET Standard 符合2.0 規範的目標 framework （例如 .NET Core 2.0 或 .NET Framework 4.6.1）均可支援。
 

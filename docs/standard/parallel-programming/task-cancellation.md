@@ -2,7 +2,6 @@
 title: 工作取消
 description: 瞭解工作和工作 <TResult> 類別在 .net 中使用解除標記所支援的工作取消。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: dba2f2ad9733f8881276bdb2705a6c8457351f9c
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: deea3eaaa1e652d44a71e953975d776d4898a9b3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925294"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830008"
 ---
 # <a name="task-cancellation"></a>工作取消
 
@@ -40,7 +39,7 @@ ms.locfileid: "92925294"
   
  不過，在要求取消之後，工作仍有可能會繼續處理某些項目。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Managed 執行緒中的取消](../threading/cancellation-in-managed-threads.md)
 - [作法：取消工作及其子系](how-to-cancel-a-task-and-its-children.md)

@@ -1,7 +1,6 @@
 ---
 title: 全球化
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 055bdfa82ea0e1721a6125ba14d7b6340dc254b9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064167"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829865"
 ---
 # <a name="globalization"></a>全球化
 
@@ -336,9 +335,9 @@ ms.locfileid: "93064167"
 
 - .NET 支援取代文化特性 (Culture)。 這可讓您定義新的自訂文化特性，進而補充現有標準文化特性，或完全加以取代。
 
-- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言]  應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來判斷其是否反映這些使用者自訂。 一般來說，對於終端使用者應用程式，您應該考慮使用者喜好設定，讓使用者以預期的格式呈現資料。
+- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言] 應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來判斷其是否反映這些使用者自訂。 一般來說，對於終端使用者應用程式，您應該考慮使用者喜好設定，讓使用者以預期的格式呈現資料。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [全球化和當地語系化](index.md)
 - [使用字串的最佳作法](../base-types/best-practices-strings.md)

@@ -1,22 +1,21 @@
 ---
 title: 記憶體與延伸
 ms.date: 10/03/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Memory<T>
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: c60c08d27c0e41228a15e8acdf01a9af28a23762
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 4b0464cc81cf0908a907f8305ea4e35b716c18fb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201959"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830658"
 ---
 # <a name="memory--and-span-related-types"></a>記憶體與延伸相關類型
 
-從 .NET Core 2.1 開始，.NET 包含一些相互關聯的類型，代表任意記憶體的連續強型別區域。 這些包括：
+從 .NET Core 2.1 開始，.NET 包含一些相互關聯的類型，這些類型代表連續、強型別的任意記憶體區域。 它們包括：
 
 - <xref:System.Span%601?displayProperty=nameWithType>，此類型是用來存取連續記憶體區域。 <xref:System.Span%601> 執行個體可由類型 `T` 的陣列、<xref:System.String>、使用[stackalloc](../../csharp/language-reference/operators/stackalloc.md) 配置的緩衝區或非受控記憶體的指標來支持。 因為它必須在堆疊上配置，它有一些限制。 例如，類別中欄位的類型不能是 <xref:System.Span%601>，而且延伸也不能用於非同步作業中。
 
@@ -26,7 +25,7 @@ ms.locfileid: "84201959"
 
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>，這是 <xref:System.Memory%601> 結構的不可變版本。
 
-- <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>，它會從記憶體集區將強型別記憶體區塊配置給擁有者。 <xref:System.Buffers.IMemoryOwner%601> 執行個體可從集區租借，方式是呼叫 <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> 並透過呼叫 <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType> 釋放回集區。
+- <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>，可將記憶體集區中的強型別區塊配置給擁有者。 <xref:System.Buffers.IMemoryOwner%601> 執行個體可從集區租借，方式是呼叫 <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> 並透過呼叫 <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType> 釋放回集區。
 
 - <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>，這代表記憶體區塊擁有者並控制其生命週期管理。
 
@@ -43,7 +42,7 @@ ms.locfileid: "84201959"
 
 ## <a name="working-with-memory-and-span"></a>處理記憶體與延伸
 
-因為記憶體與延伸相關類型通常用於將資料存放在處理管線中，開發人員在使用<xref:System.Span%601>、<xref:System.Memory%601> 與相關類型時務必依照一組最佳作法執行。 這些最佳作法記載于[記憶體中 \<T> ，並跨越 \<T> 使用指導方針](memory-t-usage-guidelines.md)。
+因為記憶體與延伸相關類型通常用於將資料存放在處理管線中，開發人員在使用<xref:System.Span%601>、<xref:System.Memory%601> 與相關類型時務必依照一組最佳作法執行。 這些最佳作法記載于 [記憶體 \<T> 和範圍 \<T> 使用指導方針](memory-t-usage-guidelines.md)中。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -2,19 +2,18 @@
 title: I/o 管線-.NET
 description: 瞭解如何在 .NET 中有效率地使用 i/o 管線，並避免在您的程式碼中發生問題。
 ms.date: 08/27/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
 - Pipelines I/O
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 508ae0e2b854f81ee639a63063a8f6d73ae84863
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271980"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830632"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 中的 system.object
 
@@ -172,7 +171,7 @@ var pipe = new Pipe(options);
 * 第一個引數會決定所耗用的記憶體數量。
 * 第二個引數會決定所觀察到的緩衝區數量。
 
-將資料標示為已使用，表示管道可以將記憶體傳回至基礎緩衝集區。 將資料標示為觀察到的控制項下一次呼叫的方式 `PipeReader.ReadAsync` 。 將所有內容標示為已觀察，表示下一次的呼叫將 `PipeReader.ReadAsync` 不會傳回，直到有更多資料寫入管道為止。 任何其他值都會讓下一次呼叫 `PipeReader.ReadAsync` 立即傳回所觀察到*and*的未觀察到資料，但不是已取用的資料。
+將資料標示為已使用，表示管道可以將記憶體傳回至基礎緩衝集區。 將資料標示為觀察到的控制項下一次呼叫的方式 `PipeReader.ReadAsync` 。 將所有內容標示為已觀察，表示下一次的呼叫將 `PipeReader.ReadAsync` 不會傳回，直到有更多資料寫入管道為止。 任何其他值都會讓下一次呼叫 `PipeReader.ReadAsync` 立即傳回所觀察到 *and* 的未觀察到資料，但不是已取用的資料。
 
 ### <a name="read-streaming-data-scenarios"></a>讀取串流資料案例
 
@@ -239,7 +238,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 #### <a name="problematic-code"></a>有問題的程式碼
 
-❌**資料遺失**
+❌ **資料遺失**
 
 `ReadResult`當設定為時，可以傳回最後一個資料區段 `IsCompleted` `true` 。 若未在結束讀取迴圈之前讀取該資料，將會導致資料遺失。
 
@@ -280,7 +279,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-❌**記憶體不足 (OOM) **
+❌**記憶體不足 (OOM)**
 
 在下列情況下，下列程式碼會保留緩衝處理，直到 <xref:System.OutOfMemoryException> 發生為止：
 

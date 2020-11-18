@@ -1,7 +1,6 @@
 ---
 title: 使用 IAsyncResult 呼叫非同步方法
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - ending asynchronous operations
 - waiting for asynchronous operations
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - IAsyncResult interface, calling asynchronous methods
 - stopping asynchronous operations
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
-ms.openlocfilehash: 8e11f734410e266aa4c175551e8a3fbf5d9236c9
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 20aafd45c323a609b3cc7fb5a1a6378d43548fcb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888902"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830450"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>使用 IAsyncResult 呼叫非同步方法
 

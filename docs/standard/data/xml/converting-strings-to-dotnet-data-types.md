@@ -1,17 +1,16 @@
 ---
 title: 將字串轉換成 .NET 資料類型
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 28c84b04bde045643158d8d2b9fed44b74334e77
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688002"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830957"
 ---
 # <a name="convert-strings-to-net-data-types"></a>將字串轉換成 .NET 資料類型
 
@@ -23,7 +22,7 @@ ms.locfileid: "92688002"
   
 |.NET 類型|傳回的字串|  
 |-------------------------|---------------------|  
-|Boolean|"true"、"false"|  
+|布林值|"true"、"false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -34,7 +33,7 @@ ms.locfileid: "92688002"
 > [!NOTE]
 > 如果使用 **ToString** 方法將資料表中所列的任何 .net 類型轉換成字串，則傳回的字串不是基底類型，但是 XML 架構 (XSD) 字串類型。  
   
- **DateTime** 和 **Timespan** 數值型別的差別在於， **DateTime** 代表某一個時間，而 **TimeSpan** 代表時間間隔。 **DateTime** 和 **Timespan** 格式已指定於 XML 結構描述 (XSD) 資料型別規格中。 例如：  
+ **DateTime** 和 **Timespan** 數值型別的差別在於，**DateTime** 代表某一個時間，而 **TimeSpan** 代表時間間隔。 **DateTime** 和 **Timespan** 格式已指定於 XML 結構描述 (XSD) 資料型別規格中。 例如：  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -70,7 +69,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- 但是，如果您要將字串轉換成 **布林值** 、 **Single** 或 **Double** ，則傳回的 .net 型別與使用 **system.string 類別時** 所傳回的型別不同。  
+ 但是，如果您要將字串轉換成 **布林值**、 **Single** 或 **Double**，則傳回的 .net 型別與使用 **system.string 類別時** 所傳回的型別不同。  
   
 ## <a name="string-to-boolean"></a>字串轉成 Boolean  
  下列表格說明使用 **ToBoolean** 方法將字串轉換成 **Boolean** 時，給定的輸入字串會產生哪種型別。  
@@ -91,7 +90,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>
 ```  
   
- 這兩者都可由下列程式碼辨識，其中 **bvalue** 為 **System.Boolean.True** ：  
+ 這兩者都可由下列程式碼辨識，其中 **bvalue** 為 **System.Boolean.True**：  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -105,7 +104,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>字串轉成 Single  
- 下列表格說明使用 **ToSingle** 方法將字串轉換成 **Single** ，給定的輸入字串會產生哪些型別。  
+ 下列表格說明使用 **ToSingle** 方法將字串轉換成 **Single**，給定的輸入字串會產生哪些型別。  
   
 |有效的字串輸入參數|.NET 輸出類型|  
 |----------------------------------|--------------------------------|  
@@ -113,7 +112,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>字串轉成 Double  
- 下列表格說明使用 **ToDouble** 方法將字串轉換成 **Single** ，給定的輸入字串會產生哪些型別。  
+ 下列表格說明使用 **ToDouble** 方法將字串轉換成 **Single**，給定的輸入字串會產生哪些型別。  
   
 |有效的字串輸入參數|.NET 輸出類型|  
 |----------------------------------|--------------------------------|  

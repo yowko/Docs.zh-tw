@@ -1,14 +1,13 @@
 ---
 title: XML 文件和資料
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: 6d2a52567a1fc8bdbbb1d039ac583c889d77d4af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: db122d1f2fa4ad192bbcc92769873850916a4220
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540130"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830242"
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 

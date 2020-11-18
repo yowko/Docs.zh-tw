@@ -1,18 +1,17 @@
 ---
 title: 使用 XPathNavigator 修改 XML 資料
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 3b64bc8666274798ebaefc87ef3883fcec1ef6b1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 79bb23b77557a5a10f021e2167c9fa8ae3ee044a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288832"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830190"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組可用於修改 XML 文件中節點及值的方法。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -104,7 +103,7 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 #### <a name="the-effects-of-editing-strongly-typed-xml-data"></a>編輯強型別 XML 資料的影響  
- <xref:System.Xml.XPath.XPathNavigator>類別會使用 W3C XML 架構做為描述強型別 xml 的基礎。 根據對 W3C XML 結構描述文件的驗證，可為項目及屬性加上型別資訊附註。 可包含其他項目或屬性的項目稱為複雜型別，而那些僅包含文字內容的則稱為簡單型別。  
+ <xref:System.Xml.XPath.XPathNavigator>類別使用 W3C XML 架構做為描述強型別 XML 的基礎。 根據對 W3C XML 結構描述文件的驗證，可為項目及屬性加上型別資訊附註。 可包含其他項目或屬性的項目稱為複雜型別，而那些僅包含文字內容的則稱為簡單型別。  
   
 > [!NOTE]
 > 屬性僅可具有簡單型別。  
@@ -246,7 +245,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>儲存 XML 文件  
  儲存對 <xref:System.Xml.XmlDocument> 物件所進行的變更 (由本主題中說明的編輯方法所導致) 是使用 <xref:System.Xml.XmlDocument> 類別的方法來執行。 如需儲存 <xref:System.Xml.XmlDocument> 物件之變更的詳細資訊，請參閱[儲存與寫入文件](saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

@@ -2,7 +2,6 @@
 title: 規則運算式物件模型
 description: 請參閱 .NET 中的正則運算式物件模型。 使用正則運算式引擎，& 物件 & 與相符、群組、& 捕捉相關的集合。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: d6f85d74b40902037620d065f63f1d0ad6cfc205
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888642"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831282"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含下列區段：  
@@ -295,7 +294,7 @@ ms.locfileid: "92888642"
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
     |`Length`|0|  
   
-     下列範例提供一個實例。 在規則運算式模式 `aaa(bbb)*ccc` 中，第一個擷取群組 (子字串 "bbb") 可比對零或多次。 因為輸入字串 "aaaccc" 符合模式，所以擷取群組沒有相符項目。  
+     下列範例提供說明。 在規則運算式模式 `aaa(bbb)*ccc` 中，第一個擷取群組 (子字串 "bbb") 可比對零或多次。 因為輸入字串 "aaaccc" 符合模式，所以擷取群組沒有相符項目。  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
