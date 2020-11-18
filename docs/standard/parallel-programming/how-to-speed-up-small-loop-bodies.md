@@ -1,33 +1,32 @@
 ---
 title: 作法：加速小型迴圈主體
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
-ms.openlocfilehash: c91aecee226b52d9045f3bd95a05c234abac8c96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e6e32386992a5dc4ac4556bc9d0489d0fd9d289
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548308"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826823"
 ---
-# <a name="how-to-speed-up-small-loop-bodies"></a><span data-ttu-id="266c9-102">作法：加速小型迴圈主體</span><span class="sxs-lookup"><span data-stu-id="266c9-102">How to: Speed Up Small Loop Bodies</span></span>
-<span data-ttu-id="266c9-103">當 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 迴圈有小型的主體時，其執行速度可能會比同等的循序迴圈更慢，例如 C# 中的 [for](../../csharp/language-reference/keywords/for.md) 迴圈和 Visual Basic 中的 [For](/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) 迴圈。</span><span class="sxs-lookup"><span data-stu-id="266c9-103">When a <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> loop has a small body, it might perform more slowly than the equivalent sequential loop, such as the [for](../../csharp/language-reference/keywords/for.md) loop in C# and the [For](/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) loop in Visual Basic.</span></span> <span data-ttu-id="266c9-104">效能較慢的起因是分割資料時相關的負擔，以及在每次迴圈反覆運算上叫用委派的成本。</span><span class="sxs-lookup"><span data-stu-id="266c9-104">Slower performance is caused by the overhead involved in partitioning the data and the cost of invoking a delegate on each loop iteration.</span></span> <span data-ttu-id="266c9-105">為了解決這類情況，<xref:System.Collections.Concurrent.Partitioner> 類別提供 <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> 方法，可讓您提供循序迴圈給委派主體，讓每個資料分割只叫用一次委派，而不會每個反覆項目叫用一次。</span><span class="sxs-lookup"><span data-stu-id="266c9-105">To address such scenarios, the <xref:System.Collections.Concurrent.Partitioner> class provides the <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> method, which enables you to provide a sequential loop for the delegate body, so that the delegate is invoked only once per partition, instead of once per iteration.</span></span> <span data-ttu-id="266c9-106">如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](custom-partitioners-for-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="266c9-106">For more information, see [Custom Partitioners for PLINQ and TPL](custom-partitioners-for-plinq-and-tpl.md).</span></span>  
+# <a name="how-to-speed-up-small-loop-bodies"></a><span data-ttu-id="8a893-102">作法：加速小型迴圈主體</span><span class="sxs-lookup"><span data-stu-id="8a893-102">How to: Speed Up Small Loop Bodies</span></span>
+<span data-ttu-id="8a893-103">當 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 迴圈有小型的主體時，其執行速度可能會比同等的循序迴圈更慢，例如 C# 中的 [for](../../csharp/language-reference/keywords/for.md) 迴圈和 Visual Basic 中的 [For](/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) 迴圈。</span><span class="sxs-lookup"><span data-stu-id="8a893-103">When a <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> loop has a small body, it might perform more slowly than the equivalent sequential loop, such as the [for](../../csharp/language-reference/keywords/for.md) loop in C# and the [For](/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) loop in Visual Basic.</span></span> <span data-ttu-id="8a893-104">效能較慢的起因是分割資料時相關的負擔，以及在每次迴圈反覆運算上叫用委派的成本。</span><span class="sxs-lookup"><span data-stu-id="8a893-104">Slower performance is caused by the overhead involved in partitioning the data and the cost of invoking a delegate on each loop iteration.</span></span> <span data-ttu-id="8a893-105">為了解決這類情況，<xref:System.Collections.Concurrent.Partitioner> 類別提供 <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> 方法，可讓您提供循序迴圈給委派主體，讓每個資料分割只叫用一次委派，而不會每個反覆項目叫用一次。</span><span class="sxs-lookup"><span data-stu-id="8a893-105">To address such scenarios, the <xref:System.Collections.Concurrent.Partitioner> class provides the <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> method, which enables you to provide a sequential loop for the delegate body, so that the delegate is invoked only once per partition, instead of once per iteration.</span></span> <span data-ttu-id="8a893-106">如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](custom-partitioners-for-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="8a893-106">For more information, see [Custom Partitioners for PLINQ and TPL](custom-partitioners-for-plinq-and-tpl.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="266c9-107">範例</span><span class="sxs-lookup"><span data-stu-id="266c9-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8a893-107">範例</span><span class="sxs-lookup"><span data-stu-id="8a893-107">Example</span></span>  
  [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
  [!code-vb[TPL_Partitioners#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionercreate01.vb#01)]  
   
- <span data-ttu-id="266c9-108">在此範例中示範的方法適用於迴圈執行最少量工作的情況。</span><span class="sxs-lookup"><span data-stu-id="266c9-108">The approach demonstrated in this example is useful when the loop performs a minimal amount of work.</span></span> <span data-ttu-id="266c9-109">當工作變得更運算密集時，藉由使用 <xref:System.Threading.Tasks.Parallel.For%2A> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈與預設 Partitioner，您可能會取得相同或更高的效能。</span><span class="sxs-lookup"><span data-stu-id="266c9-109">As the work becomes more computationally expensive, you will probably get the same or better performance by using a <xref:System.Threading.Tasks.Parallel.For%2A> or <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop with the default partitioner.</span></span>  
+ <span data-ttu-id="8a893-108">在此範例中示範的方法適用於迴圈執行最少量工作的情況。</span><span class="sxs-lookup"><span data-stu-id="8a893-108">The approach demonstrated in this example is useful when the loop performs a minimal amount of work.</span></span> <span data-ttu-id="8a893-109">當工作變得更運算密集時，藉由使用 <xref:System.Threading.Tasks.Parallel.For%2A> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈與預設 Partitioner，您可能會取得相同或更高的效能。</span><span class="sxs-lookup"><span data-stu-id="8a893-109">As the work becomes more computationally expensive, you will probably get the same or better performance by using a <xref:System.Threading.Tasks.Parallel.For%2A> or <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop with the default partitioner.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="266c9-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="266c9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a893-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="8a893-110">See also</span></span>
 
-- [<span data-ttu-id="266c9-111">資料平行處理</span><span class="sxs-lookup"><span data-stu-id="266c9-111">Data Parallelism</span></span>](data-parallelism-task-parallel-library.md)
-- [<span data-ttu-id="266c9-112">PLINQ 和 TPL 的自訂 Partitioner</span><span class="sxs-lookup"><span data-stu-id="266c9-112">Custom Partitioners for PLINQ and TPL</span></span>](custom-partitioners-for-plinq-and-tpl.md)
-- [<span data-ttu-id="266c9-113">迭代器 (C#)</span><span class="sxs-lookup"><span data-stu-id="266c9-113">Iterators (C#)</span></span>](../../csharp/programming-guide/concepts/iterators.md)
-- [<span data-ttu-id="266c9-114">迭代器 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="266c9-114">Iterators (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/iterators.md)
-- [<span data-ttu-id="266c9-115">PLINQ 和 TPL 中的 Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="266c9-115">Lambda Expressions in PLINQ and TPL</span></span>](lambda-expressions-in-plinq-and-tpl.md)
+- [<span data-ttu-id="8a893-111">資料平行處理</span><span class="sxs-lookup"><span data-stu-id="8a893-111">Data Parallelism</span></span>](data-parallelism-task-parallel-library.md)
+- [<span data-ttu-id="8a893-112">PLINQ 和 TPL 的自訂 Partitioner</span><span class="sxs-lookup"><span data-stu-id="8a893-112">Custom Partitioners for PLINQ and TPL</span></span>](custom-partitioners-for-plinq-and-tpl.md)
+- [<span data-ttu-id="8a893-113">迭代器 (C#)</span><span class="sxs-lookup"><span data-stu-id="8a893-113">Iterators (C#)</span></span>](../../csharp/programming-guide/concepts/iterators.md)
+- [<span data-ttu-id="8a893-114">迭代器 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a893-114">Iterators (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/iterators.md)
+- [<span data-ttu-id="8a893-115">PLINQ 和 TPL 中的 Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="8a893-115">Lambda Expressions in PLINQ and TPL</span></span>](lambda-expressions-in-plinq-and-tpl.md)
