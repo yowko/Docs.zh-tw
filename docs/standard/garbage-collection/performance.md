@@ -2,17 +2,16 @@
 title: 記憶體回收和效能
 description: 瞭解垃圾收集和記憶體使用量的相關問題。 瞭解如何將垃圾收集對應用程式的影響降至最低。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 15ca3fd06bb607a4f0257b4c5cd62f9c935c6913
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93062967"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827538"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
@@ -100,7 +99,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 ### <a name="issue-the-process-uses-too-much-memory"></a>問題：處理序使用太多記憶體
 
-常見的假設是 Windows 工作管理員 [效能]  索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。
+常見的假設是 Windows 工作管理員 [效能] 索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。
 
 如果您判斷問題是 Managed 堆積所導致，您必須在一段時間內測量 Managed 堆積，以判斷任何模式。
 
@@ -228,9 +227,9 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   其中 **GcCondemnedGeneration** 設為所需的層代。 此命令需要私用符號。
 
-  如果回收層代 2 物件，以進行記憶體回收之後，執行了 **RestartEE** ，則此命令會強制中斷。
+  如果回收層代 2 物件，以進行記憶體回收之後，執行了 **RestartEE**，則此命令會強制中斷。
 
-  在伺服器記憶體回收中，只有一個執行緒呼叫 **RestartEE** ，因此中斷點只會在層代 2 記憶體回收期間發生一次。
+  在伺服器記憶體回收中，只有一個執行緒呼叫 **RestartEE**，因此中斷點只會在層代 2 記憶體回收期間發生一次。
 
 ## <a name="performance-check-procedures"></a>效能檢查程序
 
@@ -272,9 +271,9 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 - 檢查下列兩個記憶體效能計數器：
 
-  - **% Time IN GC** 。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。
+  - **% Time IN GC**。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。
 
-  - **認可的總位元組數** 。 顯示記憶體回收行程目前已認可的虛擬記憶體數目。 使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。
+  - **認可的總位元組數**。 顯示記憶體回收行程目前已認可的虛擬記憶體數目。 使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。
 
   大部分的記憶體效能計數器會在每次記憶體回收結束時更新。 因此，它們可能無法反映您要取得相關資訊的目前狀況。
 
@@ -282,7 +281,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>判斷記憶體不足例外狀況是否為 Managed
 
-1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 ( **pe** ) 命令：
+1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 (**pe**) 命令：
 
     **！ pe**
 
@@ -352,9 +351,9 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 1. 啟動 Windows 工作管理員。
 
-2. 在 [效能]  索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組]  中的 [認可 (KB)]  。)
+2. 在 [效能] 索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組] 中的 [認可 (KB)]。)
 
-    如果 [總計]  很接近 [限制]  ，則您的實體記憶體不足。
+    如果 [總計] 很接近 [限制]，則您的實體記憶體不足。
 
 <a name="ManagedHeapCommit"></a>
 
@@ -422,7 +421,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   **!dumpheap –stat**
 
-  如果 Managed 堆積很大， **dumpheap** 可能需要一些時間才能完成。
+  如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。
 
   您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如：
 
@@ -795,6 +794,6 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   如果 `% Time in GC` 值與處理序時間同時升高，則記憶體回收便造成高 CPU 使用量。 否則，請針對應用程式進行程式碼剖析，尋找發生高使用量的地方。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [記憶體回收](index.md)

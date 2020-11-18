@@ -1,17 +1,16 @@
 ---
 title: 使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 7bca8600468d3715b1d1cca46049eb07bb8e3d03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 582220f14b5b3800c6e04e2e01795686caace83c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287775"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829553"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理
 **XmlNodeChangedEventArgs** 會封裝傳入註冊在處理事件之 **XmlDocument** 物件上的事件處理常式之引數。 下列表格說明事件和引發事件的時機。  
@@ -204,8 +203,8 @@ public class Sample
 } // End class
 ```  
   
- 如需詳細資訊，請參閱 <xref:System.Xml.XmlNodeChangedEventArgs> 和 <xref:System.Xml.XmlNodeChangedEventHandler>。  
+ 如需詳細資訊，請參閱 <xref:System.Xml.XmlNodeChangedEventArgs> 與 <xref:System.Xml.XmlNodeChangedEventHandler>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

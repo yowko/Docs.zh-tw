@@ -1,8 +1,7 @@
 ---
 title: 例外狀況的最佳做法 - .NET
-description: 瞭解例外狀況的最佳作法，例如使用 try/catch/finally、處理不具例外狀況的常見條件，以及使用預先定義的 .NET 例外狀況類型。
+description: 瞭解例外狀況的最佳做法，例如使用 try/catch/finally、處理沒有例外狀況的一般情況，以及使用預先定義的 .NET 例外狀況類型。
 ms.date: 12/05/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 815dcc81cf41465bffd1515d366a66ff558304fa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447091"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828227"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -23,7 +22,7 @@ ms.locfileid: "84447091"
 
 ## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>使用 try/catch/finally 區塊從錯誤中復原或釋放資源
 
-在可能產生例外狀況的程式碼周圍使用 `try`/`catch` 區塊，「且」****** 您的程式碼即可從該例外狀況復原。 在 `catch` 區塊中，一律將例外狀況從最具衍生性的排列到最不具衍生性。 所有例外狀況皆衍生自 <xref:System.Exception>。 前有基底例外狀況類別 catch 子句的 catch 子句，不會處理最具衍生性的例外狀況。 當您的程式碼無法從例外狀況復原時，請不要攔截該例外狀況。 如果可能，請啟用方法讓呼叫堆疊盡可能修復。
+在可能產生例外狀況的程式碼周圍使用 `try`/`catch` 區塊，「且」您的程式碼即可從該例外狀況復原。 在 `catch` 區塊中，一律將例外狀況從最具衍生性的排列到最不具衍生性。 所有例外狀況皆衍生自 <xref:System.Exception>。 前有基底例外狀況類別 catch 子句的 catch 子句，不會處理最具衍生性的例外狀況。 當您的程式碼無法從例外狀況復原時，請不要攔截該例外狀況。 如果可能，請啟用方法讓呼叫堆疊盡可能修復。
 
 清除配置了 `using` 陳述式或 `finally` 區塊的資源。 擲回例外狀況時，偏好使用 `using` 陳述式來自動清除資源。 使用 `finally` 區塊清除不會實作 <xref:System.IDisposable> 的資源。 就算擲回例外狀況，也一律執行 `finally` 子句中的程式碼。
 
@@ -111,7 +110,7 @@ ms.locfileid: "84447091"
 
 使用者所看到的錯誤訊息，衍生自擲回的例外狀況之 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，而並非來自例外狀況類別的名稱。 一般來說，您要將值指派到 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，方法是將訊息字串傳遞到[例外狀況建構函式](xref:System.Exception.%23ctor%2A)的 `message` 引數。
 
-若是當地語系化的應用程式，則應對每個應用程式可能會擲回的例外狀況，該提供當地語系化的訊息字串。 您可使用資源檔，提供當地語系化的錯誤訊息。 如需當地語系化應用程式及取得當地語系化字串的詳細資訊，請參閱下列文章：
+若是當地語系化的應用程式，則應對每個應用程式可能會擲回的例外狀況，該提供當地語系化的訊息字串。 您可使用資源檔，提供當地語系化的錯誤訊息。 如需當地語系化應用程式和取得當地語系化字串的詳細資訊，請參閱下列文章：
 
 - [如何：使用當地語系化例外狀況訊息來建立使用者定義的例外狀況](how-to-create-localized-exception-messages.md)
 - [桌面應用程式中的資源](../../framework/resources/index.md)

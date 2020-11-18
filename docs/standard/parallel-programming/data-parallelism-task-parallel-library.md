@@ -2,22 +2,21 @@
 title: 資料平行處理原則 (工作平行程式庫)
 description: 瞭解工作平行程式庫 (TPL) 如何支援資料平行處理原則，以在 .NET 中的來源集合或陣列元素上同時進行相同的作業。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 617757581f6d2491098e1172072bdf0387c6852b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558910"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829371"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>資料平行處理原則 (工作平行程式庫)
-「資料平行處理原則」** 是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  
+「資料平行處理原則」是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  
   
  工作平行程式庫 (TPL) 會透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類別支援資料平行處理原則。 這個類別針對 [for](../../csharp/language-reference/keywords/for.md) 和 [foreach](../../csharp/language-reference/keywords/foreach-in.md) 迴圈 (在 Visual Basic 中為 `For` 和 `For Each`)，提供以方法為基礎的平行實作。 針對 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 迴圈撰寫迴圈邏輯的方式，和撰寫循序迴圈很像。 您不必建立執行緒或佇列工作項目。 在基本迴圈中，您不必採用鎖定。 TPL 會為您處理所有低階工作。 如需有關 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 之用途的深入資訊，請下載這份文件：[平行程式設計模式：了解及套用 .NET Framework 4 中的平行模式](https://www.microsoft.com/download/details.aspx?id=19222) \(英文\)。 下列程式碼範例顯示簡單的 `foreach` 迴圈及其平行對等項目。  
   
@@ -38,9 +37,9 @@ ms.locfileid: "90558910"
   
  PLINQ 可支援使用宣告式 (或類似查詢) 語法的資料平行處理原則。 如需詳細資訊，請參閱 [Parallel LINQ (PLINQ)](introduction-to-plinq.md)。  
   
-## <a name="related-topics"></a>[相關主題]  
+## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[作法：撰寫簡單的 Parallel.For 迴圈](how-to-write-a-simple-parallel-for-loop.md)|說明如何透過任何陣列或可建立索引的 <xref:System.Collections.Generic.IEnumerable%601> 來源集合，撰寫 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈。|  
 |[作法：撰寫簡單的 Parallel.ForEach 迴圈](how-to-write-a-simple-parallel-foreach-loop.md)|說明如何透過任何 <xref:System.Collections.Generic.IEnumerable%601> 來源集合，撰寫 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈。|  
@@ -52,6 +51,6 @@ ms.locfileid: "90558910"
 |[工作平行程式庫 (TPL)](task-parallel-library-tpl.md)|提供工作平行程式庫的概觀。|  
 |[平行程式設計](index.md)|介紹如何以 .NET Framework 進行平行程式設計。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](index.md)

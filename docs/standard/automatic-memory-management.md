@@ -1,7 +1,6 @@
 ---
 title: Automatic Memory Management
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, automatic memory management
 - memory, allocating
@@ -12,15 +11,15 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: a9b0e9a02d519eb18debe4249623df010e6f0e6d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: abb3133312893ba8a5584b4daa03faab6cf40974
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276188"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828981"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
-自動記憶體管理是 Common Language Runtime 在[Managed 執行](managed-execution-process.md)期間所提供的其中一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  
+自動記憶體管理是 Common Language Runtime 在 [Managed 執行](managed-execution-process.md)期間所提供的其中一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  
   
 ## <a name="allocating-memory"></a>配置記憶體  
  當您初始化新的處理序 (Process) 時，Runtime 會保留一塊連續的位址空間區域，供處理序使用。 這塊保留的位址空間稱為 Managed 堆積 (Heap)。 Managed 堆積會保留即將配置給堆積中下一個物件的位址指標。 剛開始會將這個指標設定為 Managed 堆積的基底位址 (Base Address)。 所有[參考類型](base-types/common-type-system.md)都是在 Managed 堆積上進行配置。 當應用程式建立第一個參考型別時，會為該型別配置 Managed 堆積基底位址的記憶體。 當應用程式建立第二個物件時，記憶體回收行程會為它配置緊接在第一個物件後面位址空間的記憶體。 只要有可供使用的位址空間，記憶體回收行程就會繼續用這種方式為新的物件配置空間。  
@@ -47,9 +46,9 @@ ms.locfileid: "84276188"
  在記憶體回收行程執行第 0 個層代的第一次回收，並將可取得的物件提升至第 1 個層代之後，它會考慮 Managed 堆積第 0 個層代的其他部分。 接著會繼續為新的物件配置第 0 個層代中的記憶體，直到第 0 個層代已滿而必須再執行另一次回收為止。 這時候，記憶體回收行程的最佳化引擎會判斷是否需要檢查較舊層代中的物件。 例如，如果第 0 個層代的回收沒有收回足夠的空間讓應用程式成功建立完新的物件，記憶體回收行程可以執行第 1 個層代的回收，然後再執行第 2 個層代的回收。 如果仍然沒有收回足夠的記憶體，記憶體回收行程可以再依序執行第 2、第 1 和第 0 個層代的回收。 在每一次回收之後，記憶體回收行程都會壓縮第 0 個層代中可取得的物件，並將其提升至第 1 個層代。 在回收之後存留下來的第 1 個層代物件則會提升至第 2 個層代。 由於記憶體回收行程只支援三個層代，因此回收之後存留下來的第 2 個層代物件仍然會留在第 2 個層代中，直到未來回收時判斷它們無法取得為止。  
   
 ## <a name="releasing-memory-for-unmanaged-resources"></a>釋放 Unmanaged 資源的記憶體  
- 對於應用程式所建立的大部分物件而言，您都可以依賴記憶體回收行程自動執行必要的記憶體管理工作。 但是，Unmanaged 資源需要明確清除。 最常見的 Unmanaged 資源類型就是包裝作業系統資源 (例如檔案控制代碼、視窗控制代碼或網路連接) 的物件。 雖然記憶體回收行程能夠追蹤封裝 Unmanaged 資源的 Managed 物件存留期，但是它並沒有關於如何清除資源的相關資訊。 當建立封裝 Unmanaged 資源的物件時，建議您提供必要的程式碼，在公用 **Dispose** 方法中清除 Unmanaged 資源。 您可以提供 **Dispose** 方法，讓物件的使用者在用完物件後，明確釋放出它所佔用的記憶體。 當您使用封裝 Unmanaged 資源的物件時，應留意 **Dispose** 的用法，並在必要時加以呼叫。 如需清除 Unmanaged 資源的詳細資訊，以及實作 **Dispose** 的設計模式範例，請參閱[記憶體回收](garbage-collection/index.md)。  
+ 對於應用程式所建立的大部分物件而言，您都可以依賴記憶體回收行程自動執行必要的記憶體管理工作。 但是，Unmanaged 資源需要明確清除。 最常見的 Unmanaged 資源類型就是包裝作業系統資源 (例如檔案控制代碼、視窗控制代碼或網路連接) 的物件。 雖然記憶體回收行程能夠追蹤封裝 Unmanaged 資源的 Managed 物件存留期，但是它並沒有關於如何清除資源的相關資訊。 當建立封裝 Unmanaged 資源的物件時，建議您提供必要的程式碼，在公用 **Dispose** 方法中清除 Unmanaged 資源。 您可以提供 **Dispose** 方法，讓物件的使用者在用完物件後，明確釋放出它所佔用的記憶體。 當您使用封裝 Unmanaged 資源的物件時，應留意 **Dispose** 的用法，並在必要時加以呼叫。 如需清除 Unmanaged 資源的詳細資訊，以及實作 **Dispose** 的設計模式範例，請參閱 [記憶體回收](garbage-collection/index.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.GC>
 - [記憶體回收](garbage-collection/index.md)

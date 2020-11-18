@@ -2,7 +2,6 @@
 title: 如何：執行生產者-取用者資料流程模式
 description: 瞭解如何在 .NET 中使用 TPL 資料流程程式庫來執行生產者-取用者資料流程模式。
 ms.date: 09/24/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,16 +10,16 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-ms.openlocfilehash: fc68d9e678dab88ec5008b6c15ef17a5d20f25ae
-ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
+ms.openlocfilehash: 3bc97cce2a063e7d5286ad886401cb6ae2ce3026
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91206376"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826927"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>如何：執行生產者-取用者資料流程模式
 
-在本文中，您將瞭解如何使用 TPL 資料流程程式庫來執行生產者-取用者模式。 在此模式中，「生產者」** 會將訊息傳送至訊息區塊，而「消費者」** 會從該區塊讀取訊息。
+在本文中，您將瞭解如何使用 TPL 資料流程程式庫來執行生產者-取用者模式。 在此模式中，「生產者」會將訊息傳送至訊息區塊，而「消費者」會從該區塊讀取訊息。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -42,6 +41,6 @@ ms.locfileid: "91206376"
 
  沒有可用資料時，<xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> 方法會回傳 `False`。 如果多個消費者必須同時存取來源區塊，這個機制就能確保在呼叫 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> 之後資料仍然可用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

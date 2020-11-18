@@ -1,7 +1,6 @@
 ---
 title: 作法：取消連結資料流程區塊
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: 8af978ca2ca237988dae8328656d70574dbc1f14
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a3565bb8f0d00773fc59853d68ca7c54de03ba2b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288052"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826798"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>作法：取消連結資料流程區塊
 本文件將說明如何解除目標資料流程區塊與其來源之間的連結。
@@ -32,6 +31,6 @@ ms.locfileid: "84288052"
   
  若要在其中一個對 `TrySolution` 的呼叫計算出值之後讓其餘呼叫結束，`TrySolution` 方法會採用 <xref:System.Threading.CancellationToken> 物件，該物件會在 `ReceiveFromAny(T)` 的呼叫傳回之後取消。 <xref:System.Threading.SpinWait.SpinUntil%2A> 方法會在這個 <xref:System.Threading.CancellationToken> 物件取消時傳回。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

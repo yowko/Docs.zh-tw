@@ -2,7 +2,6 @@
 title: 處理和引發事件
 description: 瞭解如何處理和引發以委派模型為基礎的 .NET 事件。 此模型可讓訂閱者註冊或接收來自提供者的通知。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064089"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828266"
 ---
 # <a name="handle-and-raising-events"></a>處理和引發事件
 
@@ -28,7 +27,7 @@ ms.locfileid: "93064089"
   
 ## <a name="events"></a>事件
 
-事件是由物件傳送的訊息，用以表示發生動作。 動作可能是使用者互動所造成，例如按一下按鈕，也可能是由其他程式邏輯所產生，例如變更屬性的值。 引發事件的物件稱為「事件發送者」  。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
+事件是由物件傳送的訊息，用以表示發生動作。 動作可能是使用者互動所造成，例如按一下按鈕，也可能是由其他程式邏輯所產生，例如變更屬性的值。 引發事件的物件稱為「事件發送者」。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
   
 若要定義事件，您可以 [`event`](../../csharp/language-reference/keywords/event.md) 在事件類別的簽章中使用 c # 或 Visual Basic [`Event`](../../visual-basic/language-reference/statements/event-statement.md) 關鍵字，並指定事件的委派類型。 委派將在下一節中描述。  
   
@@ -88,13 +87,13 @@ ms.locfileid: "93064089"
   
 ## <a name="related-articles"></a>相關文章
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[如何：引發和使用事件](how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
 |[如何：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
 |[觀察者設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

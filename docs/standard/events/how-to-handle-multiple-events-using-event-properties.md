@@ -2,7 +2,6 @@
 title: 如何：使用事件屬性處理多個事件
 description: 瞭解如何使用事件屬性處理多個事件。 定義委派集合、事件索引鍵、& 事件屬性。 執行 add & remove 存取子方法。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - event handling [.NET], with multiple events
 - events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: fa0bdc26eba872a62cd5f7a773df0d7a53c83975
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: c62073e26ff0831bb582c9e64c16b7ec7c05b26e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064232"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828371"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>如何：使用事件屬性處理多個事件
 為了要使用事件屬性，您會在引發事件的類別中定義事件屬性，然後在處理事件的類別中設定事件屬性的委派。 若要在類別中實作多個事件屬性，該類別內部必須儲存及維護為每個事件所定義的委派。 型的方法是實作以事件索引鍵編製索引的委派集合。  
@@ -46,7 +45,7 @@ ms.locfileid: "93064232"
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [事件](index.md)

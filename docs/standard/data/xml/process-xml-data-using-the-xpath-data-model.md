@@ -1,14 +1,13 @@
 ---
 title: 使用 XPath 資料模型處理 XML 資料
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-ms.openlocfilehash: d449fe19640b19b1417c41b3a1ac7bd3a4de907a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cc35b570c592557658cd3dda0c844847c8b23763
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291288"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829280"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>使用 XPath 資料模型處理 XML 資料
 <xref:System.Xml?displayProperty=nameWithType> 命名空間會使用 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別，以程式設計方式來表示 XML 文件、片段、節點或記憶體中的節點集。  
@@ -33,7 +32,7 @@ ms.locfileid: "84291288"
  [使用 XPathNavigator 進行結構描述驗證](schema-validation-using-xpathnavigator.md)  
  說明驗證 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中包含之 XML 內容的方式。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

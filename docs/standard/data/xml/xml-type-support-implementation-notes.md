@@ -1,14 +1,13 @@
 ---
 title: XML 型別支援實作注意事項
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-ms.openlocfilehash: 91a685f122ff846217ea7a8677b29df430b65363
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5087562753d20e5662522a57b22e2d7f3cc43613
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290275"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828786"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 型別支援實作注意事項
 本主題說明一些您想要知道的實作詳細資料。  
@@ -45,6 +44,6 @@ ms.locfileid: "84290275"
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI 及 System.Uri  
  當表示相對 URI 的 `xs:anyURI` 執行個體對應至 <xref:System.Uri> 時，<xref:System.Uri> 物件就不具有基底 URI。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [System.Xml 類別中的型別支援](type-support-in-the-system-xml-classes.md)

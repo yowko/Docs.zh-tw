@@ -1,19 +1,18 @@
 ---
 title: 開發世界性的應用程式的最佳作法
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - global applications, best practices
 - world-ready applications, best practices
 - globalization [.NET], best practices
 - international applications [.NET], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: 5b6fd468c40e42d25986cb79ca6402afca2d7a7d
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 3705fece48c136f73c4e31cd025e76dc570a142b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064011"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827135"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>開發世界性應用程式的最佳做法
 
@@ -99,7 +98,7 @@ ms.locfileid: "93064011"
 
 5. 請注意，uiCulture 值可設為瀏覽器所接受的語言。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [全球化和當地語系化](index.md)
 - [桌面應用程式中的資源](../../framework/resources/index.md)

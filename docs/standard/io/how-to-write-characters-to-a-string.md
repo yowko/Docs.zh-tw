@@ -1,7 +1,6 @@
 ---
 title: 如何：將字元寫入字串
 ms.date: 01/21/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: 5b0e20b911237739c143576d9a7be660f5da58c0
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: d4a6bbc77a9feb16293fc88e1598d124d8d2d75d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189221"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829722"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>如何：將字元寫入字串
 
@@ -34,12 +33,12 @@ ms.locfileid: "93189221"
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[StreamReaderWriter](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StringWriter>  
 - <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
 - <xref:System.Text.StringBuilder>  
-- [檔案和資料流 I/O](index.md)  
+- [檔案和資料流程 i/o](index.md)  
 - [非同步檔案 I/O](asynchronous-file-i-o.md)  
 - [如何：列舉目錄和檔案](how-to-enumerate-directories-and-files.md)  
 - [如何：讀取和寫入新建立的資料檔案](how-to-read-and-write-to-a-newly-created-data-file.md)  

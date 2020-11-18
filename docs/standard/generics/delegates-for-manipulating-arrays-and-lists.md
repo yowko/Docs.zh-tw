@@ -1,7 +1,6 @@
 ---
 title: 管理陣列和清單的泛型委派
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - delegates [.NET], generic delegates
 - chaining delegates
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: 2ee80acb51ab3c394a3c0b12fface93a9d541f30
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063198"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827278"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>管理陣列和清單的泛型委派
 本主題概略說明轉換、搜尋述詞以及要在陣列或集合的項目上採取之動作的泛型委派。  
@@ -39,7 +38,7 @@ ms.locfileid: "93063198"
 ### <a name="chaining-delegates"></a>變更委派  
  許多使用這些委派的方法都會傳回陣列或清單，該陣列或清單可以再傳遞至另一個方法。 例如，如果您想要選取陣列的特定項目、將這些項目轉換成新的類型，並將它們儲存在新的陣列中，您可以將 <xref:System.Array.FindAll%2A> 泛型方法傳回的陣列傳遞至 <xref:System.Array.ConvertAll%2A> 泛型方法。 如果新的項目類型沒有自然排序順序，您可以將 <xref:System.Array.ConvertAll%2A> 泛型方法傳回的陣列傳遞至 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> 泛型方法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

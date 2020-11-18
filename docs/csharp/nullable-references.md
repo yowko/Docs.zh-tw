@@ -3,28 +3,28 @@ title: 可為 Null 的參考型別
 description: '本文提供可為 null 的參考型別（在 c # 8.0 中新增）的總覽。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。'
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: cb9438db6364b6dc5d34f3a776d3ed7ec2e9978b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 8a86546ef4adfd7695d957f807a62972b00316dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440389"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829163"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
-C# 8.0 引進 **可為 Null 的參考型別** 及 **不可為 Null 的參考型別** ，可讓您針對參考型別變數的屬性撰寫相關重要陳述式：
+C# 8.0 引進 **可為 Null 的參考型別** 及 **不可為 Null 的參考型別**，可讓您針對參考型別變數的屬性撰寫相關重要陳述式：
 
-- **參考不應該是 null** 。 當變數不應該是 null 時，編譯器會強制執行規則，以確保能夠安全地取值這些變數，而不需要先檢查它是否為 null：
+- **參考不應該是 null**。 當變數不應該是 null 時，編譯器會強制執行規則，以確保能夠安全地取值這些變數，而不需要先檢查它是否為 null：
   - 變數必須初始化為非 Null 值。
   - 變數永遠不可指派 `null` 值。
-- **參考可能為 Null** 。 當變數可為 Null 時，編譯器會實施不同的規則，確保您已針對 Null 參考正確地進行檢查：
+- **參考可能為 Null**。 當變數可為 Null 時，編譯器會實施不同的規則，確保您已針對 Null 參考正確地進行檢查：
   - 只有在編譯器能保證該值並非為 Null 時，才能對該變數進行取值 (Dereference)。
   - 這些變數可使用預設的 `null` 值初始化，也可以在其他程式碼中指派 `null` 值。
 
 這項新功能提供了在舊版 c # 中處理參考變數的優點，而無法從變數宣告判斷設計意圖。 編譯器不針對參考型別的 Null 參考例外狀況提供安全：
 
-- **參考可為 Null** 。 當參考型別變數初始化為或之後指派時，編譯器不會發出警告 `null` `null` 。 當這些變數是在沒有 null 檢查的情況下進行取值時，編譯器會發出警告。
-- **參考已假設為並非 Null** 。 編譯器不會在對參考型別進行取值 (Dereference) 時發出任何警告。 如果變數設定為可能為 null 的運算式，則編譯器會發出警告。
+- **參考可為 Null**。 當參考型別變數初始化為或之後指派時，編譯器不會發出警告 `null` `null` 。 當這些變數是在沒有 null 檢查的情況下進行取值時，編譯器會發出警告。
+- **參考已假設為並非 Null**。 編譯器不會在對參考型別進行取值 (Dereference) 時發出任何警告。 如果變數設定為可能為 null 的運算式，則編譯器會發出警告。
 
 這些警告會在編譯時期發出。 編譯器不會在可為 null 的內容中新增任何 null 檢查或其他執行時間結構。 在執行時間，可為 null 的參考與不可為 null 的參考是相等的。
 
@@ -48,10 +48,10 @@ name!.Length;
 
 任何參考型別都可擁有四種「可 NULL 性」中的其中一種，其描述警告產生的時機：
 
-- *不可為 null* ： Null 無法指派給此類型的變數。 此型別的變數不需進行 Null 檢查即可進行取值 (Dereference)。
-- *Nullable* ： null 可以指派給這個型別的變數。 若沒有事先檢查是否為 `null` 即對此型別的變數進行取值 (Dereference)，即會產生警告。
-- *無警示* ：無警示是 C # 8.0 之前的狀態。 此型別的變數可進行取值或指派，且皆不會產生警告。
-- *未知* ：通常是因為類型參數的條件約束不會告訴編譯器，類型必須可 *為 null* 或 *不可為 null* 。
+- *不可為 null*： Null 無法指派給此類型的變數。 此型別的變數不需進行 Null 檢查即可進行取值 (Dereference)。
+- *Nullable*： null 可以指派給這個型別的變數。 若沒有事先檢查是否為 `null` 即對此型別的變數進行取值 (Dereference)，即會產生警告。
+- *無警示*：無警示是 C # 8.0 之前的狀態。 此型別的變數可進行取值或指派，且皆不會產生警告。
+- *未知*：通常是因為類型參數的條件約束不會告訴編譯器，類型必須可 *為 null* 或 *不可為 null*。
 
 變數宣告中型別的可 NULL 性會由宣告該變數的「可為 Null 內容」控制。
 
@@ -61,16 +61,16 @@ name!.Length;
 
 您可以使用 .csproj 檔案中的元素，為專案設定可為 null 的注釋內容和可為 null 的警告內容 `Nullable` 。 *.csproj* 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
 
-- `enable`：可為 null 注釋內容已 **啟用** 。 可為 Null 警告內容為 **啟用** 。
+- `enable`：可為 null 注釋內容已 **啟用**。 可為 Null 警告內容為 **啟用**。
   - 參考型別變數 (例如 `string`) 不可為 Null。  啟用所有可 NULL 性警告。
-- `warnings`：可為 null 注釋內容已 **停用** 。 可為 Null 警告內容為 **啟用** 。
+- `warnings`：可為 null 注釋內容已 **停用**。 可為 Null 警告內容為 **啟用**。
   - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
-- `annotations`：可為 null 注釋內容已 **啟用** 。 可為 Null 警告內容為 **停用** 。
+- `annotations`：可為 null 注釋內容已 **啟用**。 可為 Null 警告內容為 **停用**。
   - 例如，參考型別的變數不可以是 null。 停用所有可 NULL 性警告。
-- `disable`：可為 null 注釋內容已 **停用** 。 可為 Null 警告內容為 **停用** 。
+- `disable`：可為 null 注釋內容已 **停用**。 可為 Null 警告內容為 **停用**。
   - 參考型別變數為遺忘式，與先前版本的 C# 相似。 停用所有可 NULL 性警告。
 
-**範例** ：
+**範例**：
 
 ```xml
 <Nullable>enable</Nullable>
@@ -78,14 +78,14 @@ name!.Length;
 
 您也可以使用指示詞，在您專案中的任何位置設定相同內容：
 
-- `#nullable enable`：將可為 null 注釋內容和可為 null 的警告內容設定為 **已啟用** 。
-- `#nullable disable`：將可為 null 注釋內容和可為 null 警告內容設定為 **停用** 。
+- `#nullable enable`：將可為 null 注釋內容和可為 null 的警告內容設定為 **已啟用**。
+- `#nullable disable`：將可為 null 注釋內容和可為 null 警告內容設定為 **停用**。
 - `#nullable restore`：將可為 null 注釋內容和可為 null 警告內容還原至專案設定。
-- `#nullable disable warnings`：將可為 null 的警告內容設定為 **停用** 。
-- `#nullable enable warnings`：將可為 null 的警告內容設定為 **已啟用** 。
+- `#nullable disable warnings`：將可為 null 的警告內容設定為 **停用**。
+- `#nullable enable warnings`：將可為 null 的警告內容設定為 **已啟用**。
 - `#nullable restore warnings`：將可為 null 警告內容還原至專案設定。
-- `#nullable disable annotations`：將可為 null 注釋內容設定為 **停用** 。
-- `#nullable enable annotations`：將可為 null 注釋內容設定為 **已啟用** 。
+- `#nullable disable annotations`：將可為 null 注釋內容設定為 **停用**。
+- `#nullable enable annotations`：將可為 null 注釋內容設定為 **已啟用**。
 - `#nullable restore annotations`：將批註警告內容還原至專案設定。
 
 預設會 **停用** 可為 null 的注釋和警告內容，包括新的專案。 這表示您現有的程式碼在沒有變更的情況下進行編譯，而不會產生任何新的警告。
@@ -105,7 +105,7 @@ name!.Length;
 
 編譯器會在啟用的可為 Null 註釋內容中使用下列規則：
 
-- 參考型別的任何變數都是 **不可為 Null 參考** 。
+- 參考型別的任何變數都是 **不可為 Null 參考**。
 - 任何不可為 Null 參考都可安全地進行取值 (Dereference)。
 - 任何可為 Null 參考型別 (在變數宣告中的型別後方標註 `?`) 都可為 Null。 靜態分析會判斷值在取值時是否已知為非 null。 若否，則編譯器會警告您。
 - 您可以使用 Null 容許運算子來宣告可為 Null 參考並非為 Null。
@@ -114,7 +114,7 @@ name!.Length;
 
 ## <a name="nullable-warning-context"></a>可為 Null 警告內容
 
-可為 Null 警告內容與可為 Null 註釋內容不同。 即使停用新的註釋，仍可啟用警告。 編譯器會使用靜態分析來判斷任何參考的 **Null 狀態** 。 當並未「停用」 *可為 Null 警告內容* 時，Null 狀態不是 **並非為 Null** ，就是 **可能為 Null** 。 若您在編譯器已判斷其 **可能為 Null** 時對參考進行取值 (Dereference)，則編譯器會警告您。 除非編譯器可判斷下列兩個狀況的其中一種狀況，否則參考的狀態就會是 **可能為 Null** ：
+可為 Null 警告內容與可為 Null 註釋內容不同。 即使停用新的註釋，仍可啟用警告。 編譯器會使用靜態分析來判斷任何參考的 **Null 狀態**。 當並未「停用」*可為 Null 警告內容* 時，Null 狀態不是 **並非為 Null**，就是 **可能為 Null**。 若您在編譯器已判斷其 **可能為 Null** 時對參考進行取值 (Dereference)，則編譯器會警告您。 除非編譯器可判斷下列兩個狀況的其中一種狀況，否則參考的狀態就會是 **可能為 Null**：
 
 1. 已明確指派非 null 值給變數。
 1. 變數或運算式已在取值 (Dereference) 之前針對 Null 進行檢查。
@@ -205,7 +205,7 @@ public static class Program
 
 ## <a name="see-also"></a>請參閱
 
-- [草稿可為 null 的參考型別規格](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [草稿可為 null 的參考型別規格](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 - [可為 Null 參考教學課程簡介](tutorials/nullable-reference-types.md)
 - [將現有的程式碼基底遷移至可為 Null 參考](tutorials/upgrade-to-nullable-references.md)
 - [-可為 null (c # 編譯器選項) ](language-reference/compiler-options/nullable-compiler-option.md)

@@ -1,8 +1,7 @@
 ---
 title: 操作說明：使用 Try/Catch 區塊攔截例外狀況
-description: 使用 try 區塊來包含可能引發或擲回例外狀況的語句。 放置語句來處理一或多個 catch 區塊中的例外狀況。
+description: 您可以使用 try 區塊來包含可能引發或擲回例外狀況的語句。 放置語句，以處理一或多個 catch 區塊中的例外狀況。
 ms.date: 02/06/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-ms.openlocfilehash: 60ed213ea777fe35873fd1e67555b7506e3ca587
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: cfe5b2b304cdb9efe7f0d91059fe1c279b4fa2dd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768907"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828006"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 區塊攔截例外狀況
 
@@ -30,14 +29,14 @@ ms.locfileid: "84768907"
 
 通用語言執行平台 (CLR) 會攔截 `catch` 區塊未處理的例外狀況。 如果 CLR 攔截了例外狀況，可能會發生下列其中一種結果，視您的 CLR 組態而有所不同：
 
-- [偵錯]**** 對話方塊隨即出現。
+- [偵錯] 對話方塊隨即出現。
 - 程式停止執行，內容為例外狀況資訊的對話方塊隨即出現。
 - 錯誤會輸出至[標準錯誤輸出資料流](xref:System.Console.Error)。
 
 > [!NOTE]
 > 多數程式碼可以擲回例外狀況，而且某些例外狀況 (例如 <xref:System.OutOfMemoryException>) 可能在任何時間由 CLR 本身擲回。 雖然應用程式不必處理這些例外狀況，但是請在撰寫供他人使用的程式庫時注意其發生的可能性。 如需何時在 `try` 區塊中設定程式碼的建議，請參閱[例外狀況的最佳做法](best-practices-for-exceptions.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [例外狀況](index.md)
 - [在 .NET 中處理 I/O 錯誤](../io/handling-io-errors.md)

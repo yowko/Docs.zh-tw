@@ -2,7 +2,6 @@
 title: 撰寫自訂屬性
 description: 在 .NET 中設計您自己的自訂屬性。 自訂屬性基本上是直接或間接衍生自 System.object 的類別。
 ms.date: 07/17/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4c7051fa45dfc23a09b037b78030ff90af182a7d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889188"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829007"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
 若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType>的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  

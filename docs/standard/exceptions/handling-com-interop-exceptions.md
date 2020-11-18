@@ -1,7 +1,6 @@
 ---
 title: 處理 COM Interop 例外狀況
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - unmanaged code, exceptions
 - exceptions, unmanaged code
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-ms.openlocfilehash: 9c8eb374058ddbd2ba3d866079f0f40b292b69ea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 058fb6446f69c2e10cb136ce5b5ad73b14d82647
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286102"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828136"
 ---
 # <a name="handling-com-interop-exceptions"></a>處理 COM Interop 例外狀況
 Managed 和 Unmanaged 程式碼可一起運作來處理例外狀況。 如果方法在 Managed 程式碼擲回例外狀況，則 Common Language Runtime 可以傳遞 HRESULT 給 COM 物件。 如果在 Unmanaged 程式碼中的方法藉由傳回失敗 HRESULT 而失敗，則執行階段會擲回 Managed 程式碼可以攔截的例外狀況。  
@@ -28,6 +27,6 @@ Managed 和 Unmanaged 程式碼可一起運作來處理例外狀況。 如果方
   
  如果在 Unmanaged 程式碼中的方法失敗，則例外狀況可以傳遞至 Managed 程式碼區段。 本主題 [HRESULT 和例外狀況](../../framework/interop/how-to-map-hresults-and-exceptions.md)包含一個表格，顯示 HRESULT 如何對應至執行階段例外狀況物件。  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [例外狀況](index.md)

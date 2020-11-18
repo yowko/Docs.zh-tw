@@ -1,19 +1,18 @@
 ---
 title: 作法：處理 PLINQ 查詢中的例外狀況
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-ms.openlocfilehash: 4097d222b5fa51cc638a2d07d3fd2eddf5d9859c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aa583d8c31381d23e22f271db3d42d35e1fa14b2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278645"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826940"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>作法：處理 PLINQ 查詢中的例外狀況
 
@@ -22,7 +21,7 @@ ms.locfileid: "84278645"
 在某些 PLINQ 回復為循序執行且發生例外狀況的情況中，例外狀況可能會直接傳播，而不會包裝在 <xref:System.AggregateException> 中。 此外，<xref:System.Threading.ThreadAbortException> 一律會直接傳播。
 
 > [!NOTE]
-> 啟用 [Just My Code] 時，Visual Studio 會在擲回例外狀況的字行上中斷，並顯示錯誤訊息，指出「使用者程式碼未處理例外狀況」。 這個錯誤是良性的。 您可以按 F5 鍵繼續，並查看下面範例中示範的例外狀況處理行為。 若要防止 Visual Studio 在遇到第一個錯誤時就中斷，只要取消核取 [工具]、[選項]、[偵錯]、[一般]**** 下的 [Just My Code] 核取方塊即可。
+> 啟用 [Just My Code] 時，Visual Studio 會在擲回例外狀況的字行上中斷，並顯示錯誤訊息，指出「使用者程式碼未處理例外狀況」。 這個錯誤是良性的。 您可以按 F5 鍵繼續，並查看下面範例中示範的例外狀況處理行為。 若要防止 Visual Studio 在遇到第一個錯誤時就中斷，只要取消核取 [工具]、[選項]、[偵錯]、[一般] 下的 [Just My Code] 核取方塊即可。
 >
 > 這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。 如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](understanding-speedup-in-plinq.md)。
 
@@ -50,7 +49,7 @@ ms.locfileid: "84278645"
 
 除非您知道如何處理，否則請勿攔截例外狀況，這樣您才不會損毀您的程式狀態。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

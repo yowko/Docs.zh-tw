@@ -2,7 +2,6 @@
 title: 實作 Dispose 方法
 description: 在本文中，您將瞭解如何執行 Dispose 方法，以釋放您的程式碼在 .NET 中使用的非受控資源。
 ms.date: 09/08/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: c9b13b2aa77449809f149ea26681d75fea629b61
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022918"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827785"
 ---
 # <a name="implement-a-dispose-method"></a>實作 Dispose 方法
 
@@ -149,7 +148,7 @@ ms.locfileid: "90022918"
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>

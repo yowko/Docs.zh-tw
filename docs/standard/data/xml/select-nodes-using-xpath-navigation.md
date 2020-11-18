@@ -1,18 +1,17 @@
 ---
 title: 使用 XPath 巡覽選取節點
-description: 瞭解如何在 .NET 中選取 XML 節點。 使用檔物件模型（DOM）方法，可讓您使用 XML 路徑語言（XPath）導覽來查詢 DOM 資訊。
+description: 瞭解如何在 .NET 中選取 XML 節點。 使用檔物件模型 (DOM) 方法，可讓您使用 XML 路徑語言 (XPath) 流覽來查詢 DOM 資訊。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662507"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829241"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>使用 XPath 巡覽選取節點
 XML 文件物件模型 (DOM) 包含可讓您在 DOM 中使用 XML 路徑語言 (XPath) 巡覽查詢資訊的方法。 您可以使用 XPath 尋找單一特定節點，或是尋找符合某些準則的所有節點。  
@@ -161,6 +160,6 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 </bookstore>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

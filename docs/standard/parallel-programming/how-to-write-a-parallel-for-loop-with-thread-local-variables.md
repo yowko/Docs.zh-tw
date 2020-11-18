@@ -1,20 +1,19 @@
 ---
 title: 作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
-description: 請參閱如何在 .NET 中撰寫平行. For 迴圈的範例，其使用執行緒區域變數，這會在迴圈的每個個別工作中儲存和抓取狀態。
+description: 請參閱如何在 .NET 中使用執行緒區域變數撰寫 Parallel. For 迴圈的範例，該變數會在迴圈中的每個個別工作中儲存和取得狀態。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 9cff507757aab2e5676df2fabb02a237a2172c17
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599785"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826654"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
 此範例說明如何使用執行緒區域變數，儲存及擷取 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈所建立之每項工作的狀態。 使用執行緒區域資料，可讓您避免因同步處理大量的共用狀態存取而產生額外負荷。 您可以計算並儲存值，直到工作的所有反覆運算完成為止，而無須在每次反覆運算時寫入至共用資源。 接著，您可以將最終結果寫入至共用資源，或將其傳遞至其他方法。  

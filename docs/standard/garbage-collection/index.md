@@ -2,7 +2,6 @@
 title: .NET 垃圾收集
 description: 瞭解 .NET 中的垃圾收集。 .NET 垃圾收集行程會管理您應用程式的記憶體配置和釋放。
 ms.date: 04/21/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - memory, garbage collection
 - garbage collection, automatic memory management
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: 39b5bf62935054bd4b9be2d228cc42202aa89144
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8b1fad3420778c17656614994684930fcd1b62ca
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063185"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827772"
 ---
 # <a name="garbage-collection"></a>記憶體回收
 
@@ -32,17 +31,17 @@ ms.locfileid: "93063185"
   
 ## <a name="in-this-section"></a>本節內容
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[垃圾收集的基本概念](fundamentals.md)|描述記憶體回收運作方式、如何在 Managed 堆積上配置物件，以及其他核心概念。|  
 |[工作站和伺服器記憶體回收](workstation-server-gc.md)|描述用戶端應用程式的工作站垃圾收集與伺服器應用程式的伺服器垃圾收集之間的差異。|
 |[背景垃圾收集](background-gc.md)|描述背景垃圾收集，這是層代0和1物件的集合，而第2代收集正在進行中。|
 |[大型物件堆積](large-object-heap.md)|描述大型物件堆積 (LOH) 以及如何進行垃圾收集大型物件。|
 |[記憶體回收和效能](performance.md)|描述可用來診斷記憶體回收和效能問題的效能檢查。|  
-|[引發的回收](induced.md)|描述如何進行記憶體回收。|  
+|[引發的集合](induced.md)|描述如何進行記憶體回收。|  
 |[延遲模式](latency.md)|描述判斷記憶體回收干擾程度的模式。|  
 |[共用 Web 裝載的最佳化](optimization-for-shared-web-hosting.md)|描述如何最佳化伺服器上由數個小型網站所共用的記憶體回收。|  
-|[記憶體回收通知](notifications.md)|描述如何判斷何時接近完整的記憶體回收，以及何時已完成。|  
+|[垃圾收集通知](notifications.md)|描述如何判斷何時接近完整的記憶體回收，以及何時已完成。|  
 |[應用程式定義域資源監視](app-domain-resource-monitoring.md)|描述如何監視應用程式定義域的 CPU 和記憶體使用量。|  
 |[弱式參考](weak-references.md)|描述下列功能：允許記憶體回收行程回收物件，同時仍然允許應用程式存取該物件。|  
   
@@ -57,6 +56,6 @@ ms.locfileid: "93063185"
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
 - <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [清除非受控資源](unmanaged.md)

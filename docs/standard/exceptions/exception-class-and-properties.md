@@ -1,17 +1,16 @@
 ---
 title: Exception 類別和屬性
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 459dc15f136c98d4b889a420dbd863b16aca747c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708941"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828201"
 ---
 # <a name="exception-class-and-properties"></a>Exception 類別和屬性
 
@@ -37,6 +36,6 @@ ms.locfileid: "75708941"
 
 建議只擲回及攔截衍生自 <xref:System.Exception> 的物件，但您可以擲回任何衍生自 <xref:System.Object> 類別的物件作為例外狀況。 請注意，並非所有語言都能擲回及攔截不是衍生自 <xref:System.Exception> 的物件。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [異常](index.md)
+- [例外狀況](index.md)

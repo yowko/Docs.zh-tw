@@ -1,7 +1,6 @@
 ---
 title: 使用 AsyncCallback 委派和狀態物件
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-ms.openlocfilehash: e52ed550510253aba9401931c0f612211c7d1bf5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0a33c852d822e7d25d14ab17324459ec005853f9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276422"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829137"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>使用 AsyncCallback 委派和狀態物件
 當您使用 <xref:System.AsyncCallback> 委派以處理不同執行緒中非同步作業的結果，可以使用狀態物件傳遞回呼之間的資訊以擷取最終結果。 本主題透過展開[使用 AsyncCallback 委派結束非同步作業](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)中的範例來示範該做法。  
@@ -27,7 +26,7 @@ ms.locfileid: "84276422"
  [!code-csharp[AsyncDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/AsyncDelegateWithStateObject.cs#5)]
  [!code-vb[AsyncDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/AsyncDelegateWithStateObject.vb#5)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)
 - [事件架構非同步模式概觀](event-based-asynchronous-pattern-overview.md)

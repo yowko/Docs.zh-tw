@@ -2,7 +2,6 @@
 title: 觀察器設計模式
 description: 瞭解 .NET 中的觀察者設計模式。 這種模式可讓訂閱者向提供者註冊和接收通知。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1fda2b692d7bbaeedcf881801eb224f114da41e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064063"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828240"
 ---
 # <a name="observer-design-pattern"></a>觀察器設計模式
 
-觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」  (也稱為「主題」  或「可預見值」  )，以及零個、一個或多個「觀察者」  。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET 中，觀察者設計模式是藉由實作為泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和介面來套用 <xref:System.IObserver%601?displayProperty=nameWithType> 。 泛型型別參數代表提供通知資訊的類型。
+觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」(也稱為「主題」或「可預見值」)，以及零個、一個或多個「觀察者」。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET 中，觀察者設計模式是藉由實作為泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和介面來套用 <xref:System.IObserver%601?displayProperty=nameWithType> 。 泛型型別參數代表提供通知資訊的類型。
 
 ## <a name="applying-the-pattern"></a>套用模式
 
@@ -92,7 +91,7 @@ ms.locfileid: "93064063"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[觀察器設計模式最佳作法](observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|
 |[如何：執行提供者](how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|

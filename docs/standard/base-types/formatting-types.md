@@ -2,7 +2,6 @@
 title: 在 .NET 中格式化類型
 description: 瞭解如何在 .NET 中格式化類型。 瞭解如何使用或覆寫 ToString 方法。 瞭解區分文化特性、複合和自訂格式。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -26,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET]
 - strings [.NET], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: f100c1abcb32e907b92c42f8cfa460d2c1927803
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a23df3ecfd3042927636813cdb94eecbb71438f0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888491"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828955"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式類型
 
@@ -182,7 +181,7 @@ ms.locfileid: "92888491"
 
 - 支援等於 null 參考 (在 Visual Basic 中為`Nothing` ) 的格式規範。 等於 null 參考的格式規範應該要視為相當於 "G" 格式規範。
 
-例如， `Temperature` 類別可以在內部以攝氏儲存溫度，並透過格式規範以攝氏、華氏和開氏溫度來表示 `Temperature` 物件的值。 下列範例提供一個實例。
+例如， `Temperature` 類別可以在內部以攝氏儲存溫度，並透過格式規範以攝氏、華氏和開氏溫度來表示 `Temperature` 物件的值。 下列範例提供說明。
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]

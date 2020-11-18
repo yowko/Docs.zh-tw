@@ -2,18 +2,17 @@
 title: 將字串分隔成子字串
 description: 瞭解用來解壓縮字串元件的不同技術，包括字串、分割、正則運算式和字串。
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403607"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829645"
 ---
 # <a name="extract-substrings-from-a-string"></a>從字串中解壓縮子字串
 
@@ -44,7 +43,7 @@ ms.locfileid: "93403607"
 
 ## <a name="regular-expressions"></a>規則運算式
 
-如果您的字串符合固定模式，您可以使用正則運算式來解壓縮和處理其元素。 例如，如果字串的格式為「 *數位**運算元* ** 」，則您可以使用 [正則運算式](regular-expressions.md)來將字串的元素解壓縮並加以處理。 以下是範例：
+如果您的字串符合固定模式，您可以使用正則運算式來解壓縮和處理其元素。 例如，如果字串的格式為「*數位**運算元* **」，則您可以使用 [正則運算式](regular-expressions.md)來將字串的元素解壓縮並加以處理。 以下是範例：
 
 :::code language="csharp" source="snippets/parse-strings/csharp/regex.cs" id="1" interactive="try-dotnet":::
 :::code language="vb" source="snippets/parse-strings/vb/regex.vb" id="1":::

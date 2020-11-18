@@ -1,20 +1,19 @@
 ---
 title: Windows 中的 Managed 和 Unmanaged 執行緒處理
 ms.date: 10/24/2018
-ms.technology: dotnet-standard
-helpviewer_keywords:
+elpviewer_keywords:
 - threading [.NET], unmanaged
 - threading [.NET], managed
 - threading [.NET], managed
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 7b2eca1275aba5139bd19662674cd76d95e92fd0
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 67d8fdb5f2e49930b25328c1dfd30a6105fd636f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189156"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826322"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的受控與非受控執行緒處理
 
@@ -26,7 +25,7 @@ ms.locfileid: "93189156"
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>從 Win32 執行緒處理對應至受控執行緒處理
 
- 下表將 Win32 執行緒項目對應至其近似的執行階段對等項目。 請注意，此對應並不代表功能完全一樣。 例如， **TerminateThread** 不會執行 **finally** 子句或釋放資源，並且無法防止。 但是， <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會執行所有復原程式碼、回收所有資源，並且可使用 <xref:System.Threading.Thread.ResetAbort%2A>加以拒絕。 在揣測功能之前，請務必仔細閱讀相關文件。  
+ 下表將 Win32 執行緒項目對應至其近似的執行階段對等項目。 請注意，此對應並不代表功能完全一樣。 例如，**TerminateThread** 不會執行 **finally** 子句或釋放資源，並且無法防止。 但是， <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會執行所有復原程式碼、回收所有資源，並且可使用 <xref:System.Threading.Thread.ResetAbort%2A>加以拒絕。 在揣測功能之前，請務必仔細閱讀相關文件。  
   
 |在 Win32 中|在 Common Language Runtime 中|  
 |--------------|------------------------------------|  

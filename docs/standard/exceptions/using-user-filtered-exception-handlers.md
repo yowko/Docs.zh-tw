@@ -1,25 +1,24 @@
 ---
 title: 使用使用者篩選的例外狀況處理常式
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: 5537404178b746310f720c5b0c075c77287dda4c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d98412ed651886afc54e15b346a63dc0c549abd0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708449"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827980"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>使用使用者篩選的例外狀況處理常式
 
 目前，Visual Basic 支援使用者篩選的例外狀況。 使用者篩選例外狀況處理常式會依據您定義的例外狀況需求，攔截和處理例外狀況。 這些處理常式會使用 **Catch** 陳述式搭配 **When** 關鍵字。  
   
- 當特定例外狀況物件對應至多個錯誤時，這個技術非常有用。 在此情況下，物件通常會有一個屬性，其中包含與錯誤相關聯的特定錯誤碼。 您可以在運算式中使用錯誤碼屬性，只選取您想要在該 **Catch**子句中處理的特定錯誤。  
+ 當特定例外狀況物件對應至多個錯誤時，這個技術非常有用。 在此情況下，物件通常會有一個屬性，其中包含與錯誤相關聯的特定錯誤碼。 您可以在運算式中使用錯誤碼屬性，只選取您想要在該 **Catch** 子句中處理的特定錯誤。  
   
- 下列 Visual Basic 範例示範 **Catch/When**陳述式。  
+ 下列 Visual Basic 範例示範 **Catch/When** 陳述式。  
   
 ```vb
 Try  
@@ -44,6 +43,6 @@ Try
 End Try  
 ```  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [異常](index.md)
+- [例外狀況](index.md)

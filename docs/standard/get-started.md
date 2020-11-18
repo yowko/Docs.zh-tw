@@ -3,13 +3,12 @@ title: 開始使用 .NET 的教學課程
 description: 選擇學習 .NET 應用程式開發或其中一種 .NET 程式設計語言的教學課程。
 author: tdykstra
 ms.date: 09/30/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 3002b23dcae44b38c9e4dbc2679a2919f1a8d1ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755872"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827174"
 ---
 # <a name="tutorials-for-getting-started-with-net"></a>開始使用 .NET 的教學課程
 
@@ -53,7 +52,7 @@ ms.locfileid: "91755872"
 
 下列資源適用于開始開發 .NET 應用程式，但不是逐步教學課程：
 
-* [物聯網 (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [物聯網 (IoT) ](https://dotnet.microsoft.com/apps/iot)
 * [機器學習](../machine-learning/index.yml)
 
 ## <a name="next-steps"></a>後續步驟

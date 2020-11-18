@@ -1,17 +1,16 @@
 ---
 title: 觀察器設計模式最佳作法
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - observer design pattern [.NET], best practices
 - best practices [.NET], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: 8e75343e1ca1c7f69306ee45148f2dc0eec3585f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 48a9bb49be20bbedbaa19d622aabfd18affe39bd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064076"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828253"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
 
@@ -52,7 +51,7 @@ ms.locfileid: "93064076"
   
  雖然您可以將觀察者附加到多個提供者，但建議的模式是將 <xref:System.IObserver%601> 執行個體只附加到一個 <xref:System.IObservable%601> 執行個體。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [觀察者設計模式](observer-design-pattern.md)
 - [如何：執行觀察者](how-to-implement-an-observer.md)

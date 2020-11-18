@@ -2,7 +2,6 @@
 title: 如何：引發和使用事件
 description: 引發 & 在 .NET 中使用事件。 請參閱使用 EventHandler 委派、EventHandler <TEventArgs> 委派 & 自訂委派的範例。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - raising events
 - events [.NET], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: c9121c6b2635788ad8ad7abc6d2b5a58448049a6
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 9d068981694c212c5cb29a67ccd2fcb19dcc907b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064193"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828292"
 ---
 # <a name="how-to-raise-and-consume-events"></a>如何：引發和使用事件
 本主題中的範例將示範如何使用事件。 包括 <xref:System.EventHandler> 委派、<xref:System.EventHandler%601> 委派和自訂委派的範例，用以說明包含和不包含資料的事件。  
@@ -43,6 +42,6 @@ ms.locfileid: "93064193"
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [事件](index.md)

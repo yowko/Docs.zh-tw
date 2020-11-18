@@ -1,7 +1,6 @@
 ---
 title: 如何：使用 Finally 區塊
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - finally blocks
 - ArgumentOutOfRangeException class
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
-ms.openlocfilehash: 44fbb53437c4c8f19a424227a167e2e268b77057
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8bc36ce9a755762bb5159a27f9ef5699b2992f0e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708828"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828032"
 ---
 # <a name="how-to-use-finally-blocks"></a>如何使用 finally 區塊
 
@@ -30,6 +29,6 @@ ms.locfileid: "75708828"
 [!code-csharp[CodeTryCatchFinallyExample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/source2.cs#3)]
 [!code-vb[CodeTryCatchFinallyExample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/source2.vb#3)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [異常](index.md)
+- [例外狀況](index.md)

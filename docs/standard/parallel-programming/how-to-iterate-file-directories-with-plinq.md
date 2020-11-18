@@ -1,16 +1,15 @@
 ---
 title: 作法：使用 PLINQ 逐一查看檔案目錄
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 5033cc24fce5fc17a950e4797de1ef4071e2b98a
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 4e9e8e646594ce3cd8b8861cb270170bafc9afb8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925372"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826914"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>作法：使用 PLINQ 逐一查看檔案目錄
 
@@ -37,6 +36,6 @@ ms.locfileid: "92925372"
   
  如果 i/o 延遲是問題（例如透過網路上的檔案 i/o），請考慮使用 [TPL 和傳統 .Net 非同步程式設計](tpl-and-traditional-async-programming.md) 中所述的其中一項非同步 i/o 技術，以及這 [篇 blog 文章](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

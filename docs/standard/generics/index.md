@@ -2,7 +2,6 @@
 title: .NET 的泛型
 description: 瞭解 .NET 中的泛型。 定義 & 使用泛型、瞭解其優點 & 缺點、瞭解類別庫 & 語言支援等等。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063152"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827252"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -56,15 +55,15 @@ ms.locfileid: "93063152"
   
 - *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
   
-- *「泛型類型參數」* (Generic type parameter) 或 *「類型參數」* (type parameter)，是泛型類型或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數， `TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
+- *「泛型類型參數」*(Generic type parameter) 或 *「類型參數」*(type parameter)，是泛型類型或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數， `TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
   
-- *「建構的泛型類型」* (constructed generic type) 或 *「建構的類型」* (constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
+- *「建構的泛型類型」*(constructed generic type) 或 *「建構的類型」*(constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
   
 - *「泛型類型引數」* (generic type argument) 是要替換泛型類型參數的所有類型。  
   
-- 一般詞彙「泛型型別」  包括建構的型別和泛型型別定義兩者。  
+- 一般詞彙「泛型型別」包括建構的型別和泛型型別定義兩者。  
   
-- 泛型型別參數的「共變數」  和「反變數」  可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」  。 如需詳細資訊，請參閱 [Covariance and Contravariance](covariance-and-contravariance.md) (共變數和反變數 (C# 和 Visual Basic))。  
+- 泛型型別參數的「共變數」和「反變數」可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](covariance-and-contravariance.md) (共變數和反變數 (C# 和 Visual Basic))。  
   
 - *「條件約束」* (Constraint)，是在泛型類型參數上的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將型別參數限制為具有特定基底類別的型別，或是具有無參數建構函式的型別，或為參考型別或實值型別。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   
@@ -132,7 +131,7 @@ ms.locfileid: "93063152"
 
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[.NET 中的泛型集合](collections.md)|描述 .NET 中的泛型集合類別以及其他泛型類型。|  
 |[用於運算元組和清單的泛型委派](delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  

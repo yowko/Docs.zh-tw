@@ -1,19 +1,18 @@
 ---
 title: 應用程式定義域資源監視
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - monitoring managed memory use by application domain
 - application domains, memory use
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-ms.openlocfilehash: 12dfdd3ac6d75a3e2a33f93d8847c963ded912e8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c4644defa5a67d9d39c4faa89943a6aa5f763eae
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286089"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827824"
 ---
 # <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視
 
@@ -29,7 +28,7 @@ ARM 非常輕量，足以在即時應用程式中使用。 您可以使用 Windo
 
 ARM 一經啟用之後，就會立即開始收集處理序中所有應用程式定義域上的資料。如果應用程式定義域的建立時間是在啟用 ARM 之前，就會在啟用 ARM 時開始累積資料，而不是在應用程式定義域建立時。ARM 在啟用後即無法停用。
 
-- 您可以藉由將 [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) 元素新增至設定檔，並將屬性設定為，在 CLR 啟動時啟用 ARM `enabled` `true` 。 值為 `false` (預設值) 時，表示只有該 ARM 未在啟動時啟用；您可以稍後使用其中一個其他啟用機制來啟用它。
+- 您可以藉由將專案新增 [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) 至設定檔，並將屬性設定為，在 CLR 啟動時啟用 ARM `enabled` `true` 。 值為 `false` (預設值) 時，表示只有該 ARM 未在啟動時啟用；您可以稍後使用其中一個其他啟用機制來啟用它。
 
 - 主機可以藉由要求 [ICLRAppDomainResourceMonitor](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) 主控介面來啟用 ARM。 順利取得此介面之後，便會啟用 ARM。
 
@@ -57,7 +56,7 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
   - ETW 事件：`AppDomainMemAllocated` 事件、`Allocated` 欄位。
 
-- **應用程式定義域所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體 (單位為位元組)**：此數字只有在進行完整、阻斷式收集後才會精確。 （這與在背景中發生並不會封鎖應用程式的並行集合相反。）例如，方法多載 <xref:System.GC.Collect?displayProperty=nameWithType> 會導致完整的封鎖集合。
+- **應用程式定義域所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體 (單位為位元組)**：此數字只有在進行完整、阻斷式收集後才會精確。  (這與並行集合相反，這會在背景中發生，且不會封鎖應用程式 ) 。例如，方法多載 <xref:System.GC.Collect?displayProperty=nameWithType> 會導致完整的封鎖集合。
 
   - 受控 API：<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 屬性。
 
@@ -87,7 +86,7 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
 如果您使用非受控裝載 API，您的主機就必須將 [IHostGCManager](../../framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 介面實作傳遞給 CLR。 CLR 會在繼續執行發生收集時被暫止的執行緒時，呼叫 [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法。 CLR 會將已完成的收集世代以方法參數的形式傳遞，讓主機能夠判斷該收集是完整收集還是部分收集。 您的 [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法實作可以查詢未被回收的記憶體，以確定計數是在更新後所立即擷取的計數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [ICLRAppDomainResourceMonitor 介面](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)

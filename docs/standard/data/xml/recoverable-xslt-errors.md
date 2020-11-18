@@ -1,14 +1,13 @@
 ---
 title: 可復原的 XSLT 錯誤
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289092"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827577"
 ---
 # <a name="recoverable-xslt-errors"></a>可復原的 XSLT 錯誤
 ＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。 針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。 針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。  
@@ -50,8 +49,8 @@ ms.locfileid: "84289092"
 |`value` 的 `xsl:number` 屬性為 NAN、無限或小於 0.5|勘誤表 24|復原|  
 |文件函式的第二個引數節點集是空的，且 URI 參考是相對的。|勘誤表 14|復原|  
   
- <sup>*</sup>這種行為不同于 <xref:System.Xml.Xsl.XslTransform> 類別。 如需詳細資訊，請參閱 [XslTransform 類別中的 Discretionary 行為實作](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
+ <sup>*</sup> 這種行為與類別的行為不同 <xref:System.Xml.Xsl.XslTransform> 。 如需詳細資訊，請參閱 [XslTransform 類別中的 Discretionary 行為實作](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XSLT 轉換](xslt-transformations.md)

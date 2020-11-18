@@ -2,7 +2,6 @@
 title: 終結執行緒
 description: 當您需要在 .NET 中損毀執行緒時，請瞭解您的選項，例如合作式取消或執行緒。 Abort 方法。 瞭解如何處理 ThreadAbortException。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: caf7e29742bd7c0481badeeace91b7851520ad12
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: be31b0232889227fa5d4990c9481305eea343f11
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188363"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826478"
 ---
 # <a name="destroying-threads"></a>終結執行緒
 
@@ -66,7 +65,7 @@ catch (ThreadAbortException ex)
   
  您可以呼叫 <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> 方法來防止系統重新擲回例外狀況。 但是，只有當您自己的程式碼會造成 <xref:System.Threading.ThreadAbortException>，才應採取此作法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.ThreadAbortException>
 - <xref:System.Threading.Thread>

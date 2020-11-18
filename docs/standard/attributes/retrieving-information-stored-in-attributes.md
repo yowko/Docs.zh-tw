@@ -2,7 +2,6 @@
 title: 擷取儲存於屬性中的資訊
 description: 瞭解如何取出儲存在屬性中的資訊，例如針對屬性實例、相同範圍的許多實例，& 不同範圍的許多實例。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 710f3e3d1051bad4a61e59e330204d622b9fd683
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 8f58648f5cc73b911f0393f2a631b8976ac097b4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889201"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829020"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>擷取儲存於屬性中的資訊
 擷取自訂屬性是一個簡單的程序。 首先，對想要擷取的屬性宣告執行個體。 然後，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法將新屬性初始化為所要擷取之屬性的值。 在將新屬性 (Attribute) 初始化之後，只要使用其屬性 (Poperty) 即可取得值。  
@@ -49,7 +48,7 @@ The Level Attribute is: 42.
 The Reviewed Attribute is: True.  
 ```  
   
- 如果找不到屬性， **GetCustomAttribute** 方法會將 `MyAttribute` 初始化為 Null 值。 此範例會檢查 `MyAttribute` 是否有此類執行個體，並在找不到屬性時通知使用者。 如果在類別範圍中找不到 `DeveloperAttribute`，會在主控台顯示下列訊息。  
+ 如果找不到屬性，**GetCustomAttribute** 方法會將 `MyAttribute` 初始化為 Null 值。 此範例會檢查 `MyAttribute` 是否有此類執行個體，並在找不到屬性時通知使用者。 如果在類別範圍中找不到 `DeveloperAttribute`，會在主控台顯示下列訊息。  
   
 ```console  
 The attribute was not found.
@@ -59,7 +58,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>擷取套用至相同範圍的多個屬性執行個體  
- 在上述範例中，要檢查的類別和要尋找的特定屬性都會傳遞至 <xref:System.Attribute.GetCustomAttribute%2A>。 如果類別層級上只套用一個屬性執行個體，該程式碼可以運作良好。 不過，如果在相同的類別層級上套用多個屬性執行個體， **GetCustomAttribute** 方法不會擷取所有資訊。 在相同屬性的多個執行個體都套用至相同範圍的情況下，您可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 將屬性的所有執行個體放入陣列。 例如，如果在相同類別的類別層級上套用 `DeveloperAttribute` 的兩個執行個體，可修改 `GetAttribute` 方法以顯示在兩個屬性中找到的資訊。 請記住，若要在相同層級上套用多個屬性，屬性必須使用 <xref:System.AttributeUsageAttribute> 中設定為 **true** 的 **AllowMultiple** 屬性來定義。  
+ 在上述範例中，要檢查的類別和要尋找的特定屬性都會傳遞至 <xref:System.Attribute.GetCustomAttribute%2A>。 如果類別層級上只套用一個屬性執行個體，該程式碼可以運作良好。 不過，如果在相同的類別層級上套用多個屬性執行個體，**GetCustomAttribute** 方法不會擷取所有資訊。 在相同屬性的多個執行個體都套用至相同範圍的情況下，您可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 將屬性的所有執行個體放入陣列。 例如，如果在相同類別的類別層級上套用 `DeveloperAttribute` 的兩個執行個體，可修改 `GetAttribute` 方法以顯示在兩個屬性中找到的資訊。 請記住，若要在相同層級上套用多個屬性，屬性必須使用 <xref:System.AttributeUsageAttribute> 中設定為 **true** 的 **AllowMultiple** 屬性來定義。  
   
  下列程式碼範例會示範如何使用 **GetCustomAttributes** 方法，來建立會參考任何指定類別中所有 `DeveloperAttribute` 執行個體的陣列。 所有屬性的值隨即顯示在主控台。  
   
@@ -71,7 +70,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>擷取套用至不同範圍的多個屬性執行個體  
- <xref:System.Attribute.GetCustomAttributes%2A> 和 <xref:System.Attribute.GetCustomAttribute%2A> 方法不會搜尋整個類別，然後傳回該類別中屬性的所有執行個體。 而會一次只搜尋一個指定的方法或成員。 如果您有每個成員都套用相同屬性的類別，並想要擷取所有套用至那些成員的屬性值，就必須將每個方法或成員個別提供給 **GetCustomAttributes** 和 **GetCustomAttribute** 。  
+ <xref:System.Attribute.GetCustomAttributes%2A> 和 <xref:System.Attribute.GetCustomAttribute%2A> 方法不會搜尋整個類別，然後傳回該類別中屬性的所有執行個體。 而會一次只搜尋一個指定的方法或成員。 如果您有每個成員都套用相同屬性的類別，並想要擷取所有套用至那些成員的屬性值，就必須將每個方法或成員個別提供給 **GetCustomAttributes** 和 **GetCustomAttribute**。  
   
  下列程式碼範例會將類別視為參數，並在類別層級和該類別的每一個方法搜尋 `DeveloperAttribute` (先前所定義)。  
   

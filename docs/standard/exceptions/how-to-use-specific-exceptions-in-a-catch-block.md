@@ -1,7 +1,6 @@
 ---
 title: 如何：使用 Catch 區塊中的特定例外狀況
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
-ms.openlocfilehash: 48b450e579263876725f96e0adfc4c16aac1d869
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf4813e950b034cb807abebfe016c1e34487d594
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160153"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828019"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>如何使用 Catch 區塊中的特定例外狀況
 
@@ -30,6 +29,6 @@ ms.locfileid: "78160153"
 [!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]
 [!code-vb[CatchException#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception1.vb#2)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [異常](index.md)
+- [例外狀況](index.md)

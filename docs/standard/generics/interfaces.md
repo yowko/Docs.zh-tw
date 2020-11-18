@@ -1,19 +1,18 @@
 ---
 title: 泛型介面
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - generic interfaces [.NET]
 - equality comparisons [.NET]
 - generics [.NET], interfaces
 - ordering comparisons [.NET]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 6e107250cef38d532310cd193c9324d1d39c096a
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 429aa3c4d48fa6805b498206bcb699b56f522409
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064050"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827187"
 ---
 # <a name="generic-interfaces"></a>泛型介面
 
@@ -40,7 +39,7 @@ ms.locfileid: "93064050"
   
  <xref:System.Collections.Generic.IEnumerable%601> 泛型介面提供泛型列舉程式結構。 泛型列舉程式所實作的 <xref:System.Collections.Generic.IEnumerator%601> 泛型介面會繼承非泛型 <xref:System.Collections.IEnumerator> 介面；<xref:System.Collections.IEnumerator.MoveNext%2A> 和 <xref:System.Collections.IEnumerator.Reset%2A> 成員 (不相依於類型參數 `T`) 只會出現在泛型介面上。 這表示非泛型介面的任何消費者也都可以使用泛型介面。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

@@ -2,14 +2,15 @@
 title: SDK 樣式專案中的目標 framework-.NET
 description: 瞭解 .NET 應用程式和程式庫的目標 framework。
 ms.date: 11/06/2020
+ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a37634bc9f4cbee5f7901fcb085d3801a7452573
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441033"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827915"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 樣式專案中的目標 framework
 
@@ -29,8 +30,8 @@ ms.locfileid: "94441033"
 
 | 目標架構      | Latest <br/> 穩定版本 | 目標 framework 標記 (TFM)  | 已實作 <br/> .NET Standard 版本 |
 | :-: | :-: | :-: | :-: |
-| .NET 5                | 5.0                         | net 5。0                         | N/A                                     |
-| .NET Standard         | 2.1                         | netstandard 2。1                 | N/A                                     |
+| .NET 5                | 5.0                         | net 5。0                         | 不適用                                     |
+| .NET Standard         | 2.1                         | netstandard 2。1                 | 不適用                                     |
 | .NET Core             | 3.1                         | netcoreapp 3。1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -70,7 +71,7 @@ ms.locfileid: "94441033"
 
 下表顯示 .NET 5 Tfm 與舊版 .NET 版本 Tfm 的相容性。
 
-| TFM             | 相容于                                            | 備註 |
+| TFM             | 相容于                                            | 注意 |
 |-----------------|------------------------------------------------------------|-|
 | net 5。0          | net1..具有 NU1701 警告的 4 () <br />netcoreapp1..3.1 (參考 WinForms 或 WPF 時發出警告) <br />netstandard1..2.1 | |
 | net 5.0-android  | xamarin. android (再加上繼承自) 的其他專案 `net5.0` | |

@@ -1,16 +1,15 @@
 ---
 title: 引發的集合
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 36dff45587c6c28ba17fd7389dc3863893ff8f61
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286037"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827720"
 ---
 # <a name="induced-collections"></a>引發的集合
 大部分情況下，記憶體回收行程會判斷執行回收的最佳時間，請讓記憶體回收行程獨立執行。 在罕見的情況下，強制回收可能會改善您應用程式的效能。 在這些情況下，您可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法強制進行記憶體回收，來引發記憶體回收。  
@@ -34,7 +33,7 @@ ms.locfileid: "84286037"
 |<xref:System.GCCollectionMode.Forced> 或 <xref:System.GCCollectionMode.Default>|會盡快執行封鎖回收。 如果正在進行背景回收，而且層代是 0 或 1，則 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會立即觸發封鎖回收，並在回收完成時返回。 如果正在進行背景回收，而且 `generation` 參數是 2，則方法會等到背景回收完成，並觸發封鎖層代 2 回收，然後返回。|會盡快執行回收。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會要求背景集合，但不保證可取得。視情況而定，可能仍會執行封鎖集合。 如果已在進行背景回收，則這個方法會立即返回。|  
 |<xref:System.GCCollectionMode.Optimized>|可能會因記憶體回收行程和 `generation` 參數的狀態而執行封鎖集合。 記憶體回收行程會嘗試提供最佳效能。|根據記憶體回收行程的狀態，可能會執行回收。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會要求背景集合，但不保證可取得。視情況而定，可能仍會執行封鎖集合。 記憶體回收行程會嘗試提供最佳效能。 如果已在進行背景回收，則這個方法會立即返回。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [延遲模式](latency.md)
 - [記憶體回收](index.md)

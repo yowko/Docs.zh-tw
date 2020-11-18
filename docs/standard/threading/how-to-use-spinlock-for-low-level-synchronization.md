@@ -1,19 +1,18 @@
 ---
 title: 操作說明：使用 SpinLock 進行低階同步處理
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 8f81df527f83183804132ce09ae713fbbcf6f3ce
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 148ef5e9d5c570ef04bc6e716a884db5e688d91a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634242"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826387"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>操作說明：使用 SpinLock 進行低階同步處理
 
@@ -28,7 +27,7 @@ ms.locfileid: "94634242"
   
  請注意 `false` 在的呼叫中使用 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 。 這可提供最佳效能。 `true`在 IA64 架構上指定以使用記憶體隔離，這會清除寫入緩衝區，以確保鎖定現在可供其他執行緒進入。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行緒物件和功能](threading-objects-and-features.md)
 - [lock 陳述式 (C#)](../../csharp/language-reference/keywords/lock-statement.md)

@@ -1,14 +1,13 @@
 ---
 title: XslTransform 類別中的 Discretionary 行為實作
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7617970ead6c2d75b7ca9749578ba66efec311bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710800"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829410"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 類別中的 Discretionary 行為實作
 
@@ -54,7 +53,7 @@ W3C [XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-
 
 ## <a name="xslsort"></a>xsl:sort
 
-使用轉換進行排序時，W3C XSLT 1.0 版建議事項會進行某些觀察。 其中包括：
+使用轉換進行排序時，W3C XSLT 1.0 版建議事項會進行某些觀察。 包括：
 
 - 兩個 XSLT 處理器可以是一致的處理器，但仍可以不同地排序。
 
@@ -67,7 +66,7 @@ W3C [XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-
 |資料類型|排序行為|
 |---------------|----------------------|
 |Text|資料使用 Common Language Runtime (CLR) 字串進行排序。比較方法和文化地區設定 (Locale)。 當資料型別等於 "text" 時，<xref:System.Xml.Xsl.XslTransform> 類別中的排序行為會與 CLR 字串比較行為相同。|
-|Number|數值會視為 XML 路徑語言 (XPath) 數字，並會依據 W3C [XML 路徑語言 (XPath) 1.0 版建議事項 3.5 節](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers)中的詳細描述進行排序。|
+|數字|數值會視為 XML 路徑語言 (XPath) 數字，並會依據 W3C [XML 路徑語言 (XPath) 1.0 版建議事項 3.5 節](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers)中的詳細描述進行排序。|
 
 ## <a name="optional-features-supported"></a>支援的選擇性功能
 
@@ -77,7 +76,7 @@ W3C [XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-
 |-------------|------------------------|-----------|
 |`disable-output-escaping` 和 `<xsl:text...>` 標記上的 `<xsl:value-of...>` 屬性。|W3C XSLT 1.0 版建議事項，<br /><br /> 16.4 節|在 `disable-output-escaping`、`xsl:text` 或 `xsl:value-of` 項目中使用 `xsl:comment` 或 `xsl:processing-instruction` 項目時，會忽略 `xsl:attribute` 屬性。<br /><br /> 不支援包含文字且文字輸出已被逸出的結果樹狀結構片段。<br /><br /> 當轉換為 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 物件時，disable-output-escaping 屬性會被忽略。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

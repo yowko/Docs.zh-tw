@@ -1,17 +1,16 @@
 ---
 title: XslTransform 的 XmlDocument 輸入
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-ms.openlocfilehash: e990c8ca3bb2a7145157fcedd06da4ea769c6ad3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0afee2d706b95117971c02b57a5570427e0fbd3d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290249"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827551"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XslTransform 的 XmlDocument 輸入
 <xref:System.Xml.XmlDocument> 類別會提供 XML 文件的編輯功能。 如果在傳送到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法前必須先編輯或修改 XML，請將 XML 載入 <xref:System.Xml.XmlDocument> 並加以編輯，然後再將它傳送到 <xref:System.Xml.Xsl.XslTransform>。  
@@ -45,7 +44,7 @@ XmlReader rdr = trans.Transform(doc, null, null);
 while (rdr.Read()) {}  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)

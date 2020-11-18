@@ -2,7 +2,6 @@
 title: 作法：使用具名管道進行網路處理序間通訊
 description: 查看兩個使用具名管道進行管道伺服器之間的處理序間通訊，以及網路中一或多個管道用戶端的範例。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - impersonation [.NET], named pipes
 - full duplex communication [.NET], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: 8657597bee5855061bb5529d80d2fa5f0318e817
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: aad9ede3fb257899eec7bff95b6d77eaec5b97ca
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189312"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829735"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>作法：使用具名管道進行網路處理序間通訊
 
@@ -45,7 +44,7 @@ ms.locfileid: "93189312"
 ## <a name="robust-programming"></a>穩固程式設計  
  此範例中的用戶端和伺服器處理序要在相同的電腦上執行，因此，提供給 <xref:System.IO.Pipes.NamedPipeClientStream> 物件的伺服器名稱為 `"."`。 如果用戶端和伺服器處理序在不同的電腦上，`"."` 將會取代成執行伺服器處理序之電腦的網路名稱。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>

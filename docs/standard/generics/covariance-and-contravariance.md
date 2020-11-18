@@ -2,7 +2,6 @@
 title: 泛型中的共變數和反變數
 description: 瞭解共變數（可讓您使用更多衍生型別）和反變數（可讓您在 .NET 泛型中使用較不衍生的型別）。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1606238b22bd355b997b54cf94e0c28d16ec5cac
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063172"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827408"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 
@@ -59,7 +58,7 @@ ms.locfileid: "93063172"
   
  一般來說，Covariant 類型參數可以用來做為委派的傳回類型，而 Contravariant 類型參數可以用來做為參數類型。 例如，Covariant 類型參數可以用來做為介面方法的傳回類型，而 Contravariant 類型參數可以用來做為介面方法的參數類型。  
   
- 共變數和反變數合稱為「變異數」  。 未標示 Covariant 或 Contravariant 的泛型類型參數，稱為 *Invariant* 參數。 通用語言執行平台中變異數事實的簡短摘要。  
+ 共變數和反變數合稱為「變異數」。 未標示 Covariant 或 Contravariant 的泛型類型參數，稱為 *Invariant* 參數。 通用語言執行平台中變異數事實的簡短摘要。  
   
 - Variant 型別參數限制為泛型介面和泛型委派類型。  
   
@@ -171,7 +170,7 @@ Visual Basic 和 c # 都有關鍵詞，可讓您將介面和委派的泛型型�
 |<xref:System.Linq.IOrderedQueryable%601>|是||  
 |<xref:System.Linq.IQueryable%601>|是||  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [共變數和反變數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [共變數和反變數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

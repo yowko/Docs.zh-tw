@@ -1,25 +1,39 @@
 ---
-title: dotnet-追蹤工具-.NET Core
-description: 安裝和使用 dotnet 追蹤命令列工具。
-ms.date: 11/21/2019
-ms.openlocfilehash: 4a3694f6ed748779809ee4c4bfd941bb6f1ac490
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+title: dotnet-追蹤診斷工具-.NET CLI
+description: 瞭解如何安裝和使用 dotnet 追蹤 CLI 工具，以使用 .NET EventPipe 來收集執行中進程的 .NET 追蹤，而不使用原生 profiler。
+ms.date: 11/17/2020
+ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687625"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829306"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
 本文 **適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
-## <a name="install-dotnet-trace"></a>安裝 dotnet-追蹤
+## <a name="install"></a>安裝
 
-`dotnet-trace`使用[dotnet 工具安裝](../tools/dotnet-tool-install.md)命令安裝[NuGet 套件](https://www.nuget.org/packages/dotnet-trace)：
+有兩種方式可以下載和安裝 `dotnet-trace` ：
 
-```dotnetcli
-dotnet tool install --global dotnet-trace
-```
+- **dotnet global tool：**
+
+  若要安裝 `dotnet-trace` [NuGet 套件](https://www.nuget.org/packages/dotnet-trace)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-trace
+  ```
+
+- **直接下載：**
+
+  下載符合您平臺的工具可執行檔：
+
+  | OS  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \|[x64](https://aka.ms/dotnet-trace/win-x64) \|[arm](https://aka.ms/dotnet-trace/win-arm) \|[arm-x64](https://aka.ms/dotnet-trace/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \|[arm](https://aka.ms/dotnet-trace/linux-arm) \|[arm64](https://aka.ms/dotnet-trace/linux-arm64) \|[musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \|[musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>概要
 
@@ -27,7 +41,7 @@ dotnet tool install --global dotnet-trace
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet-trace`工具：
 
@@ -196,7 +210,8 @@ dotnet-trace list-profiles [-h|--help]
 
 ## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>啟動子應用程式，並使用 dotnet 從啟動中收集追蹤
 
-注意：這只適用于執行 .NET 5.0 或更新版本的應用程式。
+> [!IMPORTANT]
+> 這僅適用于執行 .NET 5.0 或更新版本的應用程式。
 
 有時候，從啟動時收集處理常式的追蹤可能會很有用。 針對執行 .NET 5.0 或更新版本的應用程式，您可以使用 dotnet 來執行這項作業。
 

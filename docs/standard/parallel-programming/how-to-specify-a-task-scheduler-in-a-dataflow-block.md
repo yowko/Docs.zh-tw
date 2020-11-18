@@ -1,7 +1,6 @@
 ---
 title: 作法：在資料流程區塊中指定工作排程器
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 76c9e75f787c28657af143b46bb22d08039e2dc4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288130"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826901"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>作法：在資料流程區塊中指定工作排程器
 此文件將示範當您在應用程式中使用資料流程時，如何與特定工作排程器產生關聯。 這個範例會使用 Windows Form 應用程式中的 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 類別顯示讀取器工作何時為使用中，以及寫入器工作何時為使用中。 另外還會使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法讓資料流程區塊在使用者介面執行緒上執行。
@@ -24,11 +23,11 @@ ms.locfileid: "84288130"
 
 ## <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
   
-1. 建立 Visual C# 或 Visual Basic **Windows Forms 應用程式**專案。 在下列步驟中，專案會命名為 `WriterReadersWinForms`。  
+1. 建立 Visual C# 或 Visual Basic **Windows Forms 應用程式** 專案。 在下列步驟中，專案會命名為 `WriterReadersWinForms`。  
   
-2. 在主要表單 Form1.cs (在 Visual Basic 中為 Form1.vb) 的表單設計工具上，新增四個 <xref:System.Windows.Forms.CheckBox> 控制項。 將 `checkBox1` 的 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為**讀取器 1**、`checkBox2` 的該屬性設為**讀取器 2**、`checkBox3` 的該屬性設為**讀取器 3**，以及 `checkBox4` 的該屬性設為**寫入器**。 將每個控制項的 <xref:System.Windows.Forms.Control.Enabled%2A> 屬性設為 `False`。  
+2. 在主要表單 Form1.cs (在 Visual Basic 中為 Form1.vb) 的表單設計工具上，新增四個 <xref:System.Windows.Forms.CheckBox> 控制項。 將 `checkBox1` 的 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為 **讀取器 1**、`checkBox2` 的該屬性設為 **讀取器 2**、`checkBox3` 的該屬性設為 **讀取器 3**，以及 `checkBox4` 的該屬性設為 **寫入器**。 將每個控制項的 <xref:System.Windows.Forms.Control.Enabled%2A> 屬性設為 `False`。  
   
-3. 將 <xref:System.Windows.Forms.Timer> 控制項加入表單。 將 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設為 `2500`。  
+3. 將 <xref:System.Windows.Forms.Timer> 控制項加入表單。 將 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設定為 `2500`。  
   
 ## <a name="adding-dataflow-functionality"></a>加入資料流程功能  
  本節將說明如何建立參與應用程式的資料流程區塊，以及如何將每個區塊與工作排程器產生關聯。  
@@ -79,6 +78,6 @@ ms.locfileid: "84288130"
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

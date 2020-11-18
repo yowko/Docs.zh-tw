@@ -2,19 +2,18 @@
 title: Managed 執行緒中的例外狀況
 description: 瞭解如何在 .NET 中處理未處理的例外狀況。 大部分未處理的執行緒例外狀況會自然地進行，並導致應用程式終止。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - unhandled exceptions,in managed threads
 - threading [.NET],unhandled exceptions
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: b7cf7e94156eedc82c7ec5c863ee013b75d22e73
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188324"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826465"
 ---
 # <a name="exceptions-in-managed-threads"></a>Managed 執行緒中的例外狀況
 
@@ -76,6 +75,6 @@ Common language runtime 允許執行緒中大部分未處理的例外狀況自�
 
 未受管理的主機可以使用裝載 API 中的 [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 介面，來覆寫 common language runtime 的預設未處理例外狀況原則。 [Iclrpolicymanager:: Setunhandledexceptionpolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函數用來設定未處理例外狀況的原則。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Managed 執行緒處理的基本概念](managed-threading-basics.md)
