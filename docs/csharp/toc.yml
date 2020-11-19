@@ -46,6 +46,8 @@
               href: tutorials/intro-to-csharp/introduction-to-classes.md
             - name: 物件導向程式設計
               href: tutorials/intro-to-csharp/object-oriented-programming.md
+    - name: 探索記錄類型
+      href: tutorials/exploration/records.md
     - name: 探索最上層陳述式
       href: tutorials/exploration/top-level-statements.md
     - name: 探索物件中的模式
