@@ -2,12 +2,12 @@
 title: 插入字串
 description: '瞭解內插字串，這是一種特殊形式的字串，可讓您直接在其中內嵌 F # 運算式。'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688596"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829683"
 ---
 # <a name="interpolated-strings"></a>插入字串
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>具類型的插入字串
 
-內插字串也可以有 F # 格式規範，以強制執行型別 safey。
+插入字串也可以有 F # 格式規範來強制執行型別安全。
 
 ```fsharp
 let name = "Phillip"
@@ -72,7 +72,7 @@ printfn $"""Name: {"Phillip"}, Age: %d{age}"""
 
 ## <a name="aligning-expressions-in-interpolated-strings"></a>對齊內插字串中的運算式
 
-您可以在插入字串內將運算式靠左對齊或靠右對齊 `|` ，以及指定多少空間。 下列插入字串會將左邊和右邊的運算式分別靠左和向右對齊7個空格。
+您可以在插入字串內將運算式靠左對齊或靠右對齊 `|` ，以及指定多少空間。 下列插入字串會將左邊和右邊的運算式分別靠左和向右對齊七個空格。
 
 ```fsharp
 printfn $"""|{"Left",-7}|{"Right",7}|"""
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-此外，您也可以透過類型注釋，將插入字串 typechecked 為 <xref:System.FormattableString> ：
+此外，您也可以透過類型注釋，將內插字串的類型檢查成 a <xref:System.FormattableString> ：
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString

@@ -2,12 +2,12 @@
 title: F# 程式碼格式方針
 description: '瞭解格式化 F # 程式碼的指導方針。'
 ms.date: 08/31/2020
-ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8f5e333c015f30ae8449c76a3075763370a98e4d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688250"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830515"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
@@ -102,7 +102,7 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>將參數放置在新的一行上以進行長定義
 
-如果您有非常長的函式定義，請將參數放在新行上，然後縮排它們，以符合後續參數的縮排層級。
+如果您有較長的函式定義，請將參數放在新行上，然後將它們縮排，以符合後續參數的縮排層級。
 
 ```fsharp
 module M =
@@ -308,7 +308,7 @@ type SchoolPerson =
 
 ### <a name="avoid-underscores-in-names"></a>避免名稱中有底線
 
-在過去，某些 F # 程式庫在名稱中使用底線。 不過，這不會再被廣泛接受，部分原因是它與 .NET 命名慣例相衝突。 話雖如此，某些 F # 程式設計人員會大量使用底線，部分基於歷史原因，而且容錯和尊重很重要。 不過，請注意，此樣式通常是由有關於是否使用它的其他人不喜歡。
+在過去，某些 F # 程式庫在名稱中使用底線。 不過，這不會再被廣泛接受，部分原因是它與 .NET 命名慣例相衝突。 話雖如此，某些 F # 程式設計人員會大量使用底線，部分基於歷史原因，而且容錯和尊重很重要。 不過，此樣式通常是由有關於是否使用它的其他人不喜歡。
 
 其中一個例外狀況包含與原生元件的互通性，其中的底線是通用的。
 
@@ -643,9 +643,9 @@ let daysOfWeek' includeWeekend =
 ## <a name="formatting-if-expressions"></a>格式化 if 運算式
 
 條件的縮排取決於構成它們的運算式大小和複雜度。
-在下列情況中，直接將它們寫入一行：
+當下列情況時，請將它們寫入一行：
 
-- `cond``e1`和 `e2` 很短
+- `cond`、 `e1` 和 `e2` 是簡短的
 - `e1` 和 `e2` 本身並非 `if/then/else` 運算式本身。
 
 ```fsharp
@@ -992,7 +992,7 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 
 ## <a name="formatting-computation-expression-operations"></a>格式化計算運算式作業
 
-建立 [計算運算式](../language-reference/computation-expressions.md) 的自訂作業時，建議使用 camelCase 命名：
+建立 [計算運算式](../language-reference/computation-expressions.md)的自訂作業時，建議使用 camelCase 命名：
 
 ```fsharp
 type MathBuilder () =
@@ -1031,5 +1031,5 @@ let myNumber =
     }
 ```
 
-使用的命名慣例最後應由正在模型化的網域所驅動。
+正在建立模型的網域最後應該會驅動命名慣例。
 如果慣用為使用不同的慣例，則應改用該慣例。
