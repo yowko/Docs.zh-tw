@@ -1,15 +1,15 @@
 ---
-title: 收集容器中的診斷
+title: 在容器中收集診斷
 description: 在本文中，您將瞭解如何在 Docker 容器中使用 .NET Core 診斷工具。
 ms.date: 09/01/2020
-ms.openlocfilehash: e57f3696433bbf6f35b2e3e5d1e72ae8b1e3eeb3
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451086"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916205"
 ---
-# <a name="collect-diagnostics-in-containers"></a>收集容器中的診斷
+# <a name="collect-diagnostics-in-containers"></a>在容器中收集診斷
 
 相同的診斷工具對於診斷其他案例中的 .NET Core 問題也適用于 Docker 容器。 不過，有些工具需要特殊的步驟才能在容器中工作。 本文涵蓋收集效能追蹤和收集傾印的工具，可用於 Docker 容器。
 
@@ -23,17 +23,17 @@ ms.locfileid: "91451086"
 
 ```dockerfile
 # In build stage
-# Install desired .NET CLI diagnostics tools
-RUN dotnet tool install --tool-path /tools dotnet-trace
-RUN dotnet tool install --tool-path /tools dotnet-counters
-RUN dotnet tool install --tool-path /tools dotnet-dump
+# Install desired .NET CLI diagnostics tools
+RUN dotnet tool install --tool-path /tools dotnet-trace
+RUN dotnet tool install --tool-path /tools dotnet-counters
+RUN dotnet tool install --tool-path /tools dotnet-dump
 
 ...
 
 # In final stage
-# Copy diagnostics tools
-WORKDIR /tools
-COPY --from=build /tools .
+# Copy diagnostics tools
+WORKDIR /tools
+COPY --from=build /tools .
 ```
 
 或者，您也可以視需要在容器中安裝 .NET Core SDK，以便安裝 CLI 工具。 請注意，安裝 .NET Core SDK 將會影響重新安裝 .NET Core 執行時間的副作用。 因此，請務必安裝符合容器中存在之執行時間的 SDK 版本。
@@ -49,7 +49,7 @@ COPY --from=build /tools .
 
 **此工具適用于：✔️** .net Core 2.1 和更新版本
 
-[`PerfCollect`](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/linux-performance-tracing.md)腳本有助於收集效能追蹤，而且是建議用來在 .Net Core 3.0 之前收集追蹤的工具。 如果 `PerfCollect` 在容器中使用，請記住下列需求：
+[`PerfCollect`](./trace-perfcollect-lttng.md)腳本有助於收集效能追蹤，而且是建議用來在 .Net Core 3.0 之前收集追蹤的工具。 如果 `PerfCollect` 在容器中使用，請記住下列需求：
 
 1. `PerfCollect`需要 ([ `SYS_ADMIN` 功能](https://man7.org/linux/man-pages/man7/capabilities.7.html)才能執行 `perf` 工具) ，因此請確定容器是[以該功能啟動](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)。
 2. `PerfCollect` 需要先設定某些環境變數，才能開始進行程式碼剖析。 這些可以在 [Dockerfile](https://docs.docker.com/engine/reference/builder/#env) 中或在 [啟動容器](https://docs.docker.com/engine/reference/run/#env-environment-variables)時設定。 因為這些變數不應該在一般生產環境中設定，所以在啟動將會進行分析的容器時，通常只需新增這些變數。 PerfCollect 所需的兩個變數如下：

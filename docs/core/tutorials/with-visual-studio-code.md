@@ -1,40 +1,40 @@
 ---
-title: 使用 Visual Studio Code 建立 .NET Core 主控台應用程式
-description: 瞭解如何使用 Visual Studio Code 和 .NET Core CLI 來建立 .NET Core 主控台應用程式。
-ms.date: 05/22/2020
-ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+title: 使用 Visual Studio Code 建立 .NET 主控台應用程式
+description: 瞭解如何使用 Visual Studio Code 和 .NET CLI 來建立 .NET 主控台應用程式。
+ms.date: 11/17/2020
+ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811922"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915865"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET Core 主控台應用程式
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET 主控台應用程式
 
-本教學課程說明如何使用 Visual Studio Code 和 .NET Core CLI 來建立和執行 .NET Core 主控台應用程式。 專案工作（例如建立、編譯和執行專案）是使用 .NET Core CLI 完成的。 您可以使用不同的程式碼編輯器來進行本教學課程，並在您想要的情況下在終端機中執行命令。
+本教學課程說明如何使用 Visual Studio Code 和 .NET CLI 來建立和執行 .NET 主控台應用程式。 專案工作（例如建立、編譯和執行專案）是使用 .NET CLI 來完成。 您可以使用不同的程式碼編輯器來進行本教學課程，並在您想要的情況下在終端機中執行命令。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝擴充功能的詳細資訊，請參閱 [VS Code 擴充功能 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
-2. [.Net Core 3.1 SDK 或更新版本](https://dotnet.microsoft.com/download)
+2. [.Net 5.0 SDK 或更新版本](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>建立應用程式
 
-建立名為 "HelloWorld" 的 .NET Core 主控台應用程式專案。
+建立名為 "HelloWorld" 的 .NET 主控台應用程式專案。
 
 1. 啟動 Visual Studio Code。
 
-1. **File**  >  從主功能表選取 [ **File**檔案**開啟資料夾** (檔案開啟  >  **...** ] macOS) 。
+1. **File**  >  從主功能表選取 [ **File** 檔案 **開啟資料夾** (檔案開啟  >  **...** ] macOS) 。
 
 1. 在 [ **開啟資料夾** ] 對話方塊中，建立 *HelloWorld* 資料夾，然後按一下 [ **選取資料夾** (在 macOS) **開啟** ]。
 
    資料夾名稱預設會變成專案名稱和命名空間名稱。 您稍後會在教學課程中假設專案命名空間為的程式碼中加入程式碼 `HelloWorld` 。
 
-1. 從主功能表中選取 [ **View**terminal]，以在 Visual Studio Code 中開啟**終端**機  >  **Terminal** 。
+1. 從主功能表中選取 [ **View** terminal]，以在 Visual Studio Code 中開啟 **終端** 機  >  **Terminal** 。
 
-   **終端**機會在*HelloWorld*資料夾中使用命令提示字元開啟。
+   **終端** 機會在 *HelloWorld* 資料夾中使用命令提示字元開啟。
 
-1. 在 **終端**機中，輸入下列命令：
+1. 在 **終端** 機中，輸入下列命令：
 
    ```dotnetcli
    dotnet new console
@@ -63,7 +63,7 @@ namespace HelloWorld
 
 ## <a name="run-the-app"></a>執行應用程式
 
-在 **終端**機中執行下列命令：
+在 **終端** 機中執行下列命令：
 
 ```dotnetcli
 dotnet run
@@ -87,7 +87,7 @@ dotnet run
 
    ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
 
-1. 以 `Main` 下列程式碼取代 *Program.cs*中的方法內容，這是呼叫的行 `Console.WriteLine` ：
+1. 以 `Main` 下列程式碼取代 *Program.cs* 中的方法內容，這是呼叫的行 `Console.WriteLine` ：
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
@@ -110,9 +110,9 @@ dotnet run
 
 1. 輸入名稱並按 <kbd>enter</kbd> 鍵，以回應提示。
 
-   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="具有已修改程式輸出的終端機視窗":::
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="已修改之程式輸出的終端視窗":::
 
-1. 按任意鍵以結束程式。
+1. 按任意鍵以結束該程式。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -120,7 +120,7 @@ dotnet run
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已建立 .NET Core 主控台應用程式。 在下一個教學課程中，您將會對應用程式進行偵錯工具。
+在本教學課程中，您已建立 .NET 主控台應用程式。 在下一個教學課程中，您將會對應用程式進行偵錯工具。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio Code 來對 .NET Core 主控台應用程式進行偵錯工具](debugging-with-visual-studio-code.md)
+> [使用 Visual Studio Code 來對 .NET 主控台應用程式進行偵錯工具](debugging-with-visual-studio-code.md)

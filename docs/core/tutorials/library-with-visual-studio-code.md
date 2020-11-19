@@ -1,24 +1,26 @@
 ---
-title: 使用 Visual Studio Code 建立 .NET Standard 類別庫
-description: 瞭解如何使用 Visual Studio Code 建立 .NET Standard 類別庫。
-ms.date: 06/08/2020
-ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: 使用 Visual Studio Code 建立 .NET 類別庫
+description: 瞭解如何使用 Visual Studio Code 建立 .NET 類別庫。
+ms.date: 11/18/2020
+ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495508"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916087"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET Standard 程式庫
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET 類別庫
 
-在本教學課程中，您會建立包含單一字串處理方法的簡單公用程式程式庫。 您可以將它實作為 [擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
+在本教學課程中，您會建立包含單一字串處理方法的簡單公用程式程式庫。
 
-「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 執行呼叫您的程式庫。 當您完成類別庫時，可以將它散發為協力廠商元件，或做為配套的元件，以及一或多個應用程式。
+「類別庫」會定義應用程式所呼叫的類型和方法。 如果程式庫以 .NET Standard 2.0 為目標，則可以由任何 .NET 執行 (，包括支援 .NET Standard 2.0 的 .NET Framework) 。 如果程式庫以 .NET 5 為目標，則可由任何目標為 .NET 5 的應用程式呼叫。 本教學課程說明如何以 .NET 5 為目標。
+
+當您建立類別庫時，可以將它散發為協力廠商元件，或做為配套的元件，以及一或多個應用程式。
 
 ## <a name="prerequisites"></a>先決條件
 
 1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝擴充功能的詳細資訊，請參閱 [VS Code 擴充功能 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
-2. [.Net Core 3.1 SDK 或更新版本](https://dotnet.microsoft.com/download)
+2. [.Net 5.0 SDK 或更新版本](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>建立方案
 
@@ -26,15 +28,15 @@ ms.locfileid: "89495508"
 
 1. 啟動 Visual Studio Code。
 
-1. **File**  >  從主功能表選取 [macOS) 上的 [開啟**資料夾**] (**開啟 ...**
+1. **File**  >  從主功能表選取 [macOS) 上的 [開啟 **資料夾**] (**開啟 ...**
 
 1. 在 [ **開啟資料夾** ] 對話方塊中，建立 *>classlibraryprojects* 資料夾，然後按一下 [ **選取資料夾** (在 macOS) **開啟** ]。
 
-1. 從主功能表中選取 [ **View**terminal]，以在 Visual Studio Code 中開啟**終端**機  >  **Terminal** 。
+1. 從主功能表中選取 [ **View** terminal]，以在 Visual Studio Code 中開啟 **終端** 機  >  **Terminal** 。
 
-   **終端**機會在 *>classlibraryprojects*資料夾中使用命令提示字元開啟。
+   **終端** 機會在 *>classlibraryprojects* 資料夾中使用命令提示字元開啟。
 
-1. 在 **終端**機中，輸入下列命令：
+1. 在 **終端** 機中，輸入下列命令：
 
    ```dotnetcli
    dotnet new sln
@@ -48,7 +50,7 @@ ms.locfileid: "89495508"
 
 ## <a name="create-a-class-library-project"></a>建立類別庫專案
 
-將名為 "StringLibrary" 的新 .NET Standard 類別庫專案加入至方案。
+將名為 "StringLibrary" 的新 .NET 類別庫專案加入至方案。
 
 1. 在終端機中執行下列命令，以建立程式庫專案：
 
@@ -81,15 +83,15 @@ ms.locfileid: "89495508"
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. 請檢查以確定程式庫的目標是正確的 .NET Standard 版本。 在 [ **Explorer**] 中，開啟 [ *StringLibrary]/[StringLibrary*]。
+1. 請檢查以確定程式庫以 .NET 5 為目標。 在 [ **Explorer**] 中，開啟 [ *StringLibrary]/[StringLibrary*]。
 
-   `TargetFramework`元素會顯示專案的目標為 .NET Standard 2.0。
+   `TargetFramework`元素會顯示專案的目標為 .net 5.0。
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
 
      <PropertyGroup>
-       <TargetFramework>netstandard2.0</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
      </PropertyGroup>
 
    </Project>
@@ -116,7 +118,7 @@ ms.locfileid: "89495508"
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
+     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\net5.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
        0 Error(s)
@@ -208,12 +210,11 @@ ms.locfileid: "89495508"
 
 ## <a name="additional-resources"></a>其他資源
 
-* [使用 .NET Core CLI 開發程式庫](libraries.md)
-* [.NET Standard 支援的版本和平臺](../../standard/net-standard.md)。
+* [使用 .NET CLI 開發程式庫](libraries.md)
 
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已建立解決方案、新增程式庫專案，並加入使用該程式庫的主控台應用程式專案。 在下一個教學課程中，您會將單元測試專案加入至方案。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 程式庫](testing-library-with-visual-studio-code.md)
+> [使用 Visual Studio Code 以 .NET 測試 .NET 類別庫](testing-library-with-visual-studio-code.md)

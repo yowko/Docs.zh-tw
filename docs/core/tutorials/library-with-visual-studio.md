@@ -1,29 +1,29 @@
 ---
-title: 使用 Visual Studio 建立 .NET Standard 類別庫
-description: 瞭解如何使用 Visual Studio 建立 .NET Standard 類別庫。
+title: 使用 Visual Studio 建立 .NET 類別庫
+description: 瞭解如何使用 Visual Studio 建立 .NET 類別庫。
 ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3af08b5a92c61f29a3700a3417043170f41407bc
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118256"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916114"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET Standard 程式庫
+# <a name="tutorial-create-a-net-class-library-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET 類別庫
 
 在本教學課程中，您會建立簡單的類別庫，其中包含單一字串處理方法。
 
-「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 執行呼叫您的程式庫。
+「類別庫」會定義應用程式所呼叫的類型和方法。 如果程式庫以 .NET Standard 2.0 為目標，則可以由任何 .NET 執行 (，包括支援 .NET Standard 2.0 的 .NET Framework) 。 如果程式庫以 .NET 5 為目標，則可由任何目標為 .NET 5 的應用程式呼叫。 本教學課程說明如何以 .NET 5 為目標。
 
-當您完成類別庫時，可以將它發佈為 NuGet 套件，或作為與使用它之應用程式配套的元件。
+當您建立類別庫時，可以將它發佈為 NuGet 套件，或作為與使用它之應用程式配套的元件。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 已安裝 **.Net Core 跨平臺開發**工作負載的[Visual Studio 2019 16.6 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET Core 3.1 SDK。
+- 已安裝 **.Net Core 跨平臺開發** 工作負載的 [Visual Studio 2019 16.8 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET 5.0 SDK。 本教學課程假設您已啟用在 **新的專案中顯示所有 .Net Core 範本**，如 [教學課程：使用 Visual Studio 建立 .net 主控台應用程式](with-visual-studio.md)中所示。
 
 ## <a name="create-a-solution"></a>建立方案
 
@@ -37,27 +37,27 @@ ms.locfileid: "89118256"
 
 3. 在 [ **建立新專案** ] 頁面的 [搜尋] 方塊中，輸入 [ **方案** ]。 選擇 [ **空白方案** ] 範本，然後選擇 [ **下一步]**。
 
-   ![Visual Studio 中的空白方案範本](media/library-with-visual-studio/blank-solution.png)
+   :::image type="content" source="media/library-with-visual-studio/blank-solution.png" alt-text="Visual Studio 中的空白方案範本":::
 
 4. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入 **>classlibraryprojects** 。 接著，選擇 [建立]  。
 
 ## <a name="create-a-class-library-project"></a>建立類別庫專案
 
-1. 將名為 "StringLibrary" 的新 .NET Standard 類別庫專案加入至方案。
+1. 將名為 "StringLibrary" 的新 .NET 類別庫專案加入至方案。
 
-   1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入**  >  **新專案**]。
+   1. 以滑鼠右鍵按一下 **方案總管** 中的方案，然後選取 [**加入**  >  **新專案**]。
 
-   1. 在 [ **加入新的專案** ] 頁面上，于 [搜尋] 方塊中輸入 **library** 。 從 [語言] 清單中選擇 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。 選擇 [ **類別庫] ( .NET Standard) ** 範本，然後選擇 **[下一步]**。
+   1. 在 [ **加入新的專案** ] 頁面上，于 [搜尋] 方塊中輸入 **library** 。 從 [語言] 清單中選擇 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。 選擇 [ **類別庫** ] 範本，然後選擇 [ **下一步]**。
 
-   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 然後，選擇 [ **建立**]。
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入 **StringLibrary** ，然後選擇 [**下一步]**。
 
-1. 請檢查以確定程式庫的目標是正確的 .NET Standard 版本。 以滑鼠右鍵按一下 **方案總管**中的程式庫專案，然後選取 [ **屬性**]。 [ **目標 Framework** ] 文字方塊會顯示專案的目標為 .NET Standard 2.0。
+   1. 在 [ **其他資訊** ] 頁面上，選取 [ **.Net 5.0 (目前的)**]，然後選擇 [ **建立**]。
 
-   ![類別庫的專案屬性](./media/library-with-visual-studio/library-project-properties.png)
+1. 請檢查以確定程式庫以正確的 .NET 版本為目標。 以滑鼠右鍵按一下 **方案總管** 中的程式庫專案，然後選取 [ **屬性**]。 [ **目標 Framework** ] 文字方塊會顯示專案的目標為 .net 5.0。
 
 1. 如果您是使用 Visual Basic，請清除 [ **根命名空間** ] 文字方塊中的文字。
 
-   ![類別庫的專案屬性](./media/library-with-visual-studio/vb/library-project-properties.png)
+   :::image type="content" source="./media/library-with-visual-studio/vb/library-project-properties.png" alt-text="類別庫的專案屬性":::
 
    Visual Basic 會針對每個專案自動建立對應至專案名稱的命名空間。 在本教學課程中，您會使用程式碼檔案中的關鍵字來定義最上層命名空間 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 。
 
@@ -70,21 +70,23 @@ ms.locfileid: "89118256"
 
    `StartsWithUpper` 會實作為 [擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ，如此您就可以呼叫它，就如同它是類別的成員一樣 <xref:System.String> 。
 
-1. 在功能表列上，選取 [**組建**  >  **組建方案**] 或按<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> ，確認專案編譯時沒有發生錯誤。
+1. 在功能表列上，選取 [**組建**  >  **組建方案**] 或按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> ，確認專案編譯時沒有發生錯誤。
 
 ## <a name="add-a-console-app-to-the-solution"></a>將主控台應用程式新增至解決方案
 
 加入使用類別庫的主控台應用程式。 應用程式會提示使用者輸入字串，並報告字串是否以大寫字元開頭。
 
-1. 將名為 "展示" 的新 .NET Core 主控台應用程式加入至方案。
+1. 將名為 "展示" 的新 .NET 主控台應用程式加入至方案。
 
-   1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入**  >  **新專案**]。
+   1. 以滑鼠右鍵按一下 **方案總管** 中的方案，然後選取 [**加入**  >  **新專案**]。
 
    1. 在 [ **新增專案** ] 頁面的 [搜尋] 方塊中，輸入 **主控台** 。 從 [語言] 清單中選擇 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。
 
-   1. 選擇 ** ( .Net Core) 範本的主控台應用程式 ** ，然後選擇 [ **下一步]**。
+   1. 選擇 [ **主控台應用程式** ] 範本，然後選擇 [ **下一步]**。
 
-   1. 在 [**設定您的新專案**] 頁面上，于 [**專案名稱**] 方塊中輸入**展示**。 接著，選擇 [建立]  。
+   1. 在 [**設定您的新專案**] 頁面上，于 [**專案名稱**] 方塊中輸入 **展示**。 然後選擇 [下一步]  。
+
+   1. 在 [**其他資訊**] 頁面上，選取 [**目標 Framework** ] 方塊中的 [ **.net 5.0 (目前)** 。 接著，選擇 [建立]  。
 
 1. 在 *Program.cs* 或 .vb 檔案的 *程式* 代碼視窗中，以下列程式碼取代所有程式碼。
 
@@ -99,23 +101,23 @@ ms.locfileid: "89118256"
 
 一開始，新的主控台應用程式專案沒有類別庫的存取權。 若要允許它呼叫類別庫中的方法，請建立類別庫專案的專案參考。
 
-1. 在**方案總管**中，以滑鼠右鍵按一下專案的 [相依性 `ShowCase` ] 節點，然後選取 [**加入專案參考** **]** 。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下專案的 [相依性 `ShowCase` ] 節點，然後選取 [**加入專案參考** **]** 。
 
-   ![在 Visual Studio 中新增參考內容功能表](media/library-with-visual-studio/add-reference-context-menu.png)
+   :::image type="content" source="media/library-with-visual-studio/add-reference-context-menu.png" alt-text="在 Visual Studio 中新增參考內容功能表":::
 
 1. 在 [ **參考管理員** ] 對話方塊中，選取 [ **StringLibrary** ] 專案，然後選取 **[確定]**。
 
-   ![已選取 StringLibrary 的 [參考管理員] 對話方塊](media/library-with-visual-studio/manage-project-references.png)
+   :::image type="content" source="media/library-with-visual-studio/manage-project-references.png" alt-text="已選取 StringLibrary 的 [參考管理員] 對話方塊":::
 
 ## <a name="run-the-app"></a>執行應用程式
 
-1. 在方案總管**** 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]****。
+1. 在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。
 
-   ![用來設定啟始專案的 Visual Studio 專案內容功能表](media/library-with-visual-studio/set-startup-project-context-menu.png)
+   :::image type="content" source="media/library-with-visual-studio/set-startup-project-context-menu.png" alt-text="用來設定啟始專案的 Visual Studio 專案內容功能表":::
 
 1. 按下<kbd>Ctrl</kbd> + <kbd>F5</kbd>以編譯並執行程式，而不需進行任何偵錯工具。
 
-   ![顯示 [調試] 按鈕 Visual Studio 專案工具列](media/library-with-visual-studio/visual-studio-project-toolbar.png)
+   :::image type="content" source="media/library-with-visual-studio/visual-studio-project-toolbar.png" alt-text="顯示 [調試] 按鈕 Visual Studio 專案工具列":::
 
 1. 輸入字串並按 <kbd>enter</kbd>鍵以嘗試程式，然後按 <kbd>enter</kbd> 鍵結束。
 
@@ -123,15 +125,14 @@ ms.locfileid: "89118256"
 
 ## <a name="additional-resources"></a>其他資源
 
-* [使用 .NET Core CLI 開發程式庫](libraries.md)
-* [.NET Standard 支援的版本和平臺](../../standard/net-standard.md)。
+* [使用 .NET CLI 開發程式庫](libraries.md)
 
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已建立類別庫。 在下一個教學課程中，您將瞭解如何對類別庫進行單元測試。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 對 .NET Standard 程式庫進行單元測試](testing-library-with-visual-studio.md)
+> [使用 Visual Studio 對 .NET 類別庫進行單元測試](testing-library-with-visual-studio.md)
 
 或者，您可以略過自動化單元測試，並瞭解如何藉由建立 NuGet 套件來共用程式庫：
 
@@ -141,4 +142,4 @@ ms.locfileid: "89118256"
 或瞭解如何發佈主控台應用程式。 如果您從本教學課程所建立的方案發佈主控台應用程式，類別庫會將它當作 *.dll* 檔來使用。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 發佈 .NET Core 主控台應用程式](publishing-with-visual-studio.md)
+> [使用 Visual Studio 發佈 .NET 主控台應用程式](publishing-with-visual-studio.md)

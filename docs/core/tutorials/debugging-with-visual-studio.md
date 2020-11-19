@@ -1,25 +1,25 @@
 ---
-title: 使用 Visual Studio 來對 .NET Core 主控台應用程式進行偵錯工具
-description: 瞭解如何使用 Visual Studio 來進行 .NET Core 主控台應用程式的偵錯工具。
+title: 使用 Visual Studio 來對 .NET 主控台應用程式進行偵錯工具
+description: 瞭解如何使用 Visual Studio 來進行 .NET 主控台應用程式的偵錯工具。
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 8a914dc6cf069c011ea5b077ada514bf8cec331d
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957221"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916182"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 對 .NET Core 主控台應用程式進行偵錯工具
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 來對 .NET 主控台應用程式進行偵錯工具
 
 本教學課程介紹 Visual Studio 中提供的調試工具。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于您 [使用 Visual Studio 建立 .Net Core 主控台應用程式](with-visual-studio.md)中所建立的主控台應用程式。
+- 本教學課程適用于您 [使用 Visual Studio 建立 .net 主控台應用程式](with-visual-studio.md)中所建立的主控台應用程式。
 
 ## <a name="use-debug-build-configuration"></a>使用 Debug build configuration
 
@@ -31,61 +31,61 @@ ms.locfileid: "88957221"
 
 1. 啟動 Visual Studio。
 
-1. 開啟您在 [使用 Visual Studio 建立 .Net Core 主控台應用程式](with-visual-studio.md)中建立的專案。
+1. 開啟您在 [使用 Visual Studio 建立 .net 主控台應用程式](with-visual-studio.md)中建立的專案。
 
    目前的組建組態會顯示在工具列上。 下列工具列影像顯示 Visual Studio 設定為編譯應用程式的偵錯工具版本：
 
-   ![醒目提示反白顯示的 Visual Studio 工具列](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png" alt-text="醒目提示反白顯示的 Visual Studio 工具列":::
 
 ## <a name="set-a-breakpoint"></a>設定中斷點
 
-「中斷點」** 會在含有中斷點的行執行「之前」，暫時中斷應用程式的執行。
+「中斷點」會在含有中斷點的行執行「之前」，暫時中斷應用程式的執行。
 
-1. 在顯示名稱、日期和時間的行上設定 *中斷點* ，方法是按一下該行程式碼視窗的左邊界。 左邊界是行號的左邊。  設定中斷點的其他方式是將游標放在程式程式碼，然後按<kbd>F9</kbd> ，或從功能表列選擇 [ **Debug**  >  **切換中斷點**]。
+1. 在顯示名稱、日期和時間的行上設定 *中斷點* ，方法是按一下該行程式碼視窗的左邊界。 左邊界是行號的左邊。  設定中斷點的其他方式是將游標放在程式程式碼，然後按 <kbd>F9</kbd> ，或從功能表列選擇 [ **Debug**  >  **切換中斷點**]。
 
    如下圖所示，Visual Studio 表示藉由反白顯示中斷點，並在左邊界中顯示紅點，來設定中斷點的行。
 
-   ![已設定中斷點的 Visual Studio 程式視窗](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/set-breakpoint-in-editor.png" alt-text="已設定中斷點的 Visual Studio 程式視窗":::
 
-1. 按下 <kbd>F5</kbd> 鍵，在「偵測模式」中執行程式。 啟動偵錯工具的另一種方式是從功能表中選擇 [ **Debug**  >  **開始調試**程式]。
+1. 按下 <kbd>F5</kbd> 鍵，在「偵測模式」中執行程式。 啟動偵錯工具的另一種方式是從功能表中選擇 [ **Debug**  >  **開始調試** 程式]。
 
 1. 當程式提示您輸入名稱時，在主控台視窗中輸入字串，然後按 <kbd>enter</kbd>鍵。
 
-1. 程式會在到達中斷點且在 `Console.WriteLine` 方法執行之前，停止執行。 [區域變數]**** 視窗會顯示目前正在執行的方法中所定義變數的值。
+1. 程式會在到達中斷點且在 `Console.WriteLine` 方法執行之前，停止執行。 [區域變數] 視窗會顯示目前正在執行的方法中所定義變數的值。
 
-   ![Visual Studio 中中斷點的螢幕擷取畫面](./media/debugging-with-visual-studio/breakpoint-hit.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-hit.png" alt-text="Visual Studio 中中斷點的螢幕擷取畫面":::
 
 ## <a name="use-the-immediate-window"></a>使用即時運算視窗
 
 [即時 **運算] 視窗** 可讓您與您要進行偵錯工具的應用程式互動。 您可以互動方式變更變數的值，以查看它對您的程式有何影響。
 
-1. 如果看**不到 [** 即時運算] 視窗，請選擇 [ **Debug**  >  **Windows**  >  **Immediate**] 來顯示。
+1. 如果看 **不到 [** 即時運算] 視窗，請選擇 [ **Debug**  >  **Windows**  >  **Immediate**] 來顯示。
 
-1. `name = "Gracie"`在 [即時**Immediate**運算] 視窗中輸入，然後按下<kbd>enter</kbd>鍵。
+1. `name = "Gracie"`在 [即時 **Immediate** 運算] 視窗中輸入，然後按下 <kbd>enter</kbd>鍵。
 
-1. `date = DateTime.Parse("2019-11-16T17:25:00Z").ToUniversalTime()`在 [即時**Immediate**運算] 視窗中輸入，然後按下<kbd>enter</kbd>鍵。
+1. `date = DateTime.Parse("2019-11-16T17:25:00Z").ToUniversalTime()`在 [即時 **Immediate** 運算] 視窗中輸入，然後按下 <kbd>enter</kbd>鍵。
 
    [即時 **運算] 視窗** 會顯示字串變數的值和值的屬性 <xref:System.DateTime> 。 此外，[ **區域變數** ] 視窗中的變數值也會更新。
 
-   ![Visual Studio 2019 中的區域變數和立即視窗](./media/debugging-with-visual-studio/locals-immediate-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/locals-immediate-window.png" alt-text="Visual Studio 2019 中的區域變數和立即視窗":::
 
 1. 按 <kbd>F5</kbd> 繼續執行程式。 另一個繼續的方法是從功能表中選擇 [ **Debug**  >  **continue** ]。
 
    [主控台] 視窗中顯示的值會對應到您在 [即時 **運算] 視窗** 中所做的變更。
 
-   ![顯示輸入值的主控台視窗](./media/debugging-with-visual-studio/console-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/console-window.png" alt-text="顯示輸入值的主控台視窗":::
 
 1. 按任意鍵以結束應用程式，並停止偵錯工具。
 
 ## <a name="set-a-conditional-breakpoint"></a>設定條件式中斷點
 
-程式會顯示使用者輸入的字串。 如果使用者未進行任何輸入時，會發生什麼情況？ 您可以使用稱為 *條件式中斷點*的實用調試功能來進行測試。
+程式會顯示使用者輸入的字串。 如果使用者未進行任何輸入時，會發生什麼情況？ 您可以使用稱為 *條件式中斷點* 的實用調試功能來進行測試。
 
 1. 在代表中斷點的紅點上按一下滑鼠右鍵。 在內容功能表中，選取 [ **條件** ] 以開啟 [ **中斷點設定** ] 對話方塊。 如果尚未選取 [ **條件** ] 方塊，請選取該方塊。
 
-   ![顯示中斷點設定面板的編輯器 - C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-settings.png" alt-text="顯示中斷點設定面板的編輯器 - C#":::
 
-1. 在 **條件運算式**的欄位中，輸入下列程式碼，以顯示測試是否為5的範例程式碼 `x` 。 如果未顯示您想要使用的語言，請變更頁面頂端的語言選取器。
+1. 在 **條件運算式** 的欄位中，輸入下列程式碼，以顯示測試是否為5的範例程式碼 `x` 。 如果未顯示您想要使用的語言，請變更頁面頂端的語言選取器。
 
    ```csharp
    String.IsNullOrEmpty(name)
@@ -109,7 +109,7 @@ ms.locfileid: "88957221"
 
 1. 選取 [ **區域變數** ] 視窗，此視窗會顯示目前正在執行之方法的本機變數值。 在此案例中， `Main` 是目前執行的方法。 注意到 `name` 變數的值會是 `""` 或 <xref:System.String.Empty?displayProperty=nameWithType>。
 
-1. **在 [即時**運算] 視窗中輸入下列語句，然後按<kbd>enter</kbd>，確認值為空字串。 結果為 `true`。
+1. **在 [即時** 運算] 視窗中輸入下列語句，然後按 <kbd>enter</kbd>，確認值為空字串。 結果為 `true`。
 
    ```csharp
    ? name == String.Empty
@@ -121,7 +121,7 @@ ms.locfileid: "88957221"
 
    問號會指示 [即時運算] 視窗 [評估運算式](/visualstudio/ide/reference/immediate-window#enter-commands)。
 
-   ![[即時運算視窗] 在執行陳述式之後傳回值 true - C#](./media/debugging-with-visual-studio/immediate-window-output.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/immediate-window-output.png" alt-text="[即時運算視窗] 在執行陳述式之後傳回值 true - C#":::
 
 1. 按 <kbd>F5</kbd> 繼續執行程式。
 
@@ -139,11 +139,11 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 一般�
 
    C#
 
-   ![Visual Studio 逐步執行方法 - C#](./media/debugging-with-visual-studio/step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-method.png" alt-text="Visual Studio 逐步執行方法 - C#":::
 
    Visual Basic
 
-   ![Visual Studio 逐步執行方法 - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-method.png" alt-text="Visual Studio 逐步執行方法 - Visual Basic":::
 
    此時，[ **區域變數** ] 視窗 `args` 會顯示陣列是空的，而且 `name` `date` 具有預設值。 此外，Visual Studio 已開啟一個空白主控台視窗。
 
@@ -151,11 +151,11 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 一般�
 
    C#
 
-   ![Visual Studio 逐步執行方法原始檔 - C#](./media/debugging-with-visual-studio/step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-source-method.png" alt-text="Visual Studio 逐步執行方法原始檔 - C#":::
 
    Visual Basic
 
-   ![Visual Studio 逐步執行方法原始檔 - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-source-method.png" alt-text="Visual Studio 逐步執行方法原始檔 - Visual Basic":::
 
 1. 按 <kbd>F11</kbd>鍵。 Visual Studio 會醒目提示包含 `name` 變數指派的陳述式。 [ **區域變數** ] 視窗 `name` 會顯示 `null` ，而主控台視窗則會顯示「您的名稱為何？」字串。
 
@@ -167,7 +167,7 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 一般�
 
 1. 按 <kbd>F11</kbd>鍵。 Visual Studio 會呼叫 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> 方法。 主控台視窗會顯示已格式化的字串。
 
-1. 選擇 [ **Debug**  >  **跳出**]。停止逐步執行的另一個方法是按<kbd>Shift</kbd> + <kbd>F11</kbd>。
+1. 選擇 [ **Debug**  >  **跳出**]。停止逐步執行的另一個方法是按 <kbd>Shift</kbd> + <kbd>F11</kbd>。
 
    主控台視窗會顯示訊息並等候您按下按鍵。
 
@@ -177,15 +177,15 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 一般�
 
 測試應用程式的偵錯工具版本之後，您應該也要編譯並測試發行版本。 發行版本會納入編譯器最佳化，這些最佳化有時會對應用程式的行為造成負面影響。 例如，針對改善效能而設計的編譯器優化，可能會在多執行緒應用程式中建立競爭條件。
 
-若要組置並測試您主控台應用程式的發行版本，請將工具列上的組建組態從 [偵錯]**** 變更為 [發行]****。
+若要組置並測試您主控台應用程式的發行版本，請將工具列上的組建組態從 [偵錯] 變更為 [發行]。
 
-![醒目提示 [偵錯] 的預設 Visual Studio 工具列](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
+:::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-release.png" alt-text="已反白顯示版本的預設 Visual Studio 工具列":::
 
-當您按下<kbd>F5</kbd> ，或從 [**組建**] 功能表選擇 [**組建方案**] 時，Visual Studio 會編譯應用程式的發行版本。 您可以進行測試，就像是執行調試版本一樣。
+當您按下 <kbd>F5</kbd> ，或從 [**組建**] 功能表選擇 [**組建方案**] 時，Visual Studio 會編譯應用程式的發行版本。 您可以進行測試，就像是執行調試版本一樣。
 
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已使用 Visual Studio 調試工具。 在下一個教學課程中，您將發行應用程式的可部署版本。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 發佈 .NET Core 主控台應用程式](publishing-with-visual-studio.md)
+> [使用 Visual Studio 發佈 .NET 主控台應用程式](publishing-with-visual-studio.md)

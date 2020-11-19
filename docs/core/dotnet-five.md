@@ -1,16 +1,16 @@
 ---
 title: .NET 5 的新功能
 description: 深入瞭解 .NET 5，這是一個跨平臺和開放原始碼的開發平臺，也就是 .NET Core 的下一次演進。
-ms.date: 11/16/2020
+ms.date: 11/18/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 04f72675744426f7dbc99e5978a9ea4bbb8015b1
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 077fb06db40519af2bf8ac2f659488acdf525aec
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687591"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916217"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -46,11 +46,23 @@ ASP.NET Core 5.0 是以 .NET 5.0 為基礎，但會保留 "Core" 的名稱，以
 
 沒有將下列技術從 .NET Framework 移植到 .NET 5.0 的計畫，但 .NET 5.0 中有替代方案：
 
-| 技術                             | 建議的替代方案                                                                         |
-|----------------------------------------|-------------------------------------------------------------------------------------------------|
-| Web Form                              | ASP.NET Core [Blazor](/aspnet/core/blazor) 或 [Razor Pages](/aspnet/core/tutorials/razor-pages) |
-| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                                                       |
-| Windows Workflow (WF)                   | [開放原始碼 CoreWF](https://github.com/UiPath-Open/corewf)                                     |
+| 技術            | 建議的替代方案                                                                         |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| Web Form             | ASP.NET Core [Blazor](/aspnet/core/blazor) 或 [Razor Pages](/aspnet/core/tutorials/razor-pages) |
+| Windows Workflow (WF)  | [開放原始碼 CoreWF](https://github.com/UiPath-Open/corewf)                                     |
+
+### <a name="windows-communication-foundation"></a>Windows Communication Foundation
+
+不過，只有在 Windows 上才支援 [Windows Communication Foundation (WCF) ](../framework/wcf/index.md) 的原始執行;您可以從 .NET Foundation 取得用戶端埠。 它是完全 [開放的原始](https://github.com/dotnet/wcf)碼、跨平臺，並受到 Microsoft 的支援。 核心 NuGet 套件如下所示：
+
+- [System.ServiceModel.Duplex](https://www.nuget.org/packages/System.ServiceModel.Duplex)
+- [System.servicemodel. 同盟](https://www.nuget.org/packages/System.ServiceModel.Federation)
+- [System.ServiceModel.Http](https://www.nuget.org/packages/System.ServiceModel.Http)
+- [System.ServiceModel.NetTcp](https://www.nuget.org/packages/System.ServiceModel.NetTcp)
+- [System.ServiceModel.Primitives](https://www.nuget.org/packages/System.ServiceModel.Primitives)
+- [System.servicemodel. 安全性](https://www.nuget.org/packages/System.ServiceModel.Security)
+
+此社區會維護伺服器元件，以補充上述的用戶端程式庫。 您可以在 [CoreWCF](https://github.com/CoreWCF/CoreWCF)找到 GitHub 存放庫。 Microsoft _未_ 正式支援伺服器元件。 如需 WCF 的替代方案，請考慮 [gRPC](/aspnet/core/grpc)。
 
 ## <a name="net-50-doesnt-replace-net-standard"></a>.NET 5.0 不會取代 .NET Standard
 

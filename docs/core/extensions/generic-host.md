@@ -4,18 +4,18 @@ author: IEvangelist
 description: 瞭解 .NET 泛型主機，其負責應用程式啟動和存留期管理。
 ms.author: dapine
 ms.date: 09/18/2020
-ms.openlocfilehash: a1f82f6c6b5d250d6e81351aa02e50e23636280b
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: d00a8aeae8b4de2cbcb091992fa739c47da6dafc
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608270"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916171"
 ---
 # <a name="net-generic-host"></a>.NET 泛型主機
 
 背景工作服務範本會建立 .NET 泛型主機 <xref:Microsoft.Extensions.Hosting.HostBuilder> 。 泛型主機可以與其他類型的 .NET 應用程式搭配使用，例如主控台應用程式。
 
-「主機」** 是封裝所有應用程式資源的物件，例如：
+「主機」是封裝所有應用程式資源的物件，例如：
 
 - 相依性插入 (DI)
 - 記錄
@@ -74,7 +74,7 @@ public class Program
   - EventLog (僅當在 Windows 上執行時)
 - 當環境為時，可啟用範圍驗證和相依性 [驗證](xref:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateOnBuild) `Development` 。
 
-`ConfigureServices`方法會公開將服務加入至實例的功能 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> 。 之後，這些服務可以從相依性插入中取得。
+`ConfigureServices`方法會公開將服務加入至實例的功能 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> 。 稍後，您可以從相依性插入最可用性這些服務。
 
 ## <a name="framework-provided-services"></a>架構提供的服務
 

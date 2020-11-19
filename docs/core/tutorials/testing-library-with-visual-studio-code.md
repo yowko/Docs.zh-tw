@@ -1,21 +1,21 @@
 ---
-title: 使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 類別庫
-description: 建立 .NET Core 類別庫的單元測試專案。 確認 .NET Core 類別庫可在單元測試中正確運作。
-ms.date: 06/08/2020
-ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: 使用 Visual Studio Code 測試 .NET 類別庫
+description: 瞭解如何使用 Visual Studio Code 和 .NET CLI 來建立和執行 .NET 類別庫的單元測試專案。
+ms.date: 11/17/2020
+ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180448"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915852"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 以 .NET Core 測試 .NET Standard 類別庫
+# <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 測試 .NET 類別庫
 
 本教學課程示範如何將測試專案加入至方案，以自動化單元測試。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于 [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中所建立的解決方案。
+- 本教學課程適用于 [使用 Visual Studio Code 建立 .net 類別庫](library-with-visual-studio-code.md)中所建立的方案。
 
 ## <a name="create-a-unit-test-project"></a>建立單元測試專案
 
@@ -23,7 +23,7 @@ ms.locfileid: "91180448"
 
 1. 啟動 Visual Studio Code。
 
-1. 開啟 `ClassLibraryProjects` 您在 [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中建立的方案。
+1. 開啟 `ClassLibraryProjects` 您在 [使用 Visual Studio Code 建立 .net 類別庫](library-with-visual-studio-code.md)中建立的方案。
 
 1. 建立名為 "StringLibraryTest" 的單元測試專案。
 
@@ -67,7 +67,7 @@ ms.locfileid: "91180448"
 
 若要讓測試專案使用 `StringLibrary` 類別，請在專案中加入專案的參考 `StringLibraryTest` `StringLibrary` 。
 
-1. 執行以下命令：
+1. 執行下列命令：
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -102,7 +102,7 @@ ms.locfileid: "91180448"
 
    方法中的大寫字元測試 `TestStartsWithUpper` 包含希臘文大寫字母 Alpha (u + 0391) 和斯拉夫文大寫字母 EM (U + 041C) 。 方法中的小寫字元測試 `TestDoesNotStartWithUpper` 包含希臘文小寫字母 Alpha (u + 03B1) 和斯拉夫文小寫字母 Ghe (U + 0433) 。
 
-1. 儲存變更。
+1. 儲存您的變更。
 
 1. 執行測試：
 
@@ -114,13 +114,9 @@ ms.locfileid: "91180448"
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
 
-   Test Run Successful.
-   Total tests: 3
-        Passed: 3
-    Total time: 5.1116 Seconds
+   Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 3 ms - StringLibraryTest.dll (net5.0)
    ```
 
 ## <a name="handle-test-failures"></a>處理測試失敗
@@ -144,20 +140,14 @@ ms.locfileid: "91180448"
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
-     X TestDoesNotStartWithUpper [283ms]
+     Failed TestDoesNotStartWithUpper [28 ms]
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
-   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
-   Test Run Failed.
-   Total tests: 3
-        Passed: 2
-        Failed: 1
-    Total time: 1.7825 Seconds
+   Failed!  - Failed:     1, Passed:     2, Skipped:     0, Total:     3, Duration: 31 ms - StringLibraryTest.dll (net5.0)
    ```
 
 1. 移除您在步驟1中新增的字串 "Error"。 重新執行測試和測試階段。
@@ -176,13 +166,13 @@ ms.locfileid: "91180448"
 
 ## <a name="debug-tests"></a>偵錯測試
 
-如果您使用 Visual Studio Code 作為 IDE，您可以使用在使用您的單元測試專案來對程式碼進行偵錯工具時，使用 Visual Studio Code 來將 [.Net Core 主控台應用程式的偵錯工具](debugging-with-visual-studio-code.md) 中所顯示的相同程式。 開啟*StringLibraryTest/UnitTest1*，然後選取 [執行行7和8之間的**所有測試**]，而不是啟動*展示*應用程式專案。 如果找不到，請按<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>開啟命令選擇區，然後輸入**重載視窗**。
+如果您使用 Visual Studio Code 作為 IDE，您可以使用在使用您的單元測試專案來進行程式碼的 [偵錯工具](debugging-with-visual-studio-code.md) 時，使用 Visual Studio Code 的相同程式。 開啟 *StringLibraryTest/UnitTest1*，然後選取 [執行行7和8之間的 **所有測試**]，而不是啟動 *展示* 應用程式專案。 如果找不到，請按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>開啟命令選擇區，然後輸入 **重載視窗**。
 
 Visual Studio Code 啟動已附加偵錯工具的測試專案。 執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。
 
 ## <a name="additional-resources"></a>其他資源
 
-* [.NET Core 與 .NET Standard 中的單元測試](../testing/index.md)
+* [.NET 中的單元測試](../testing/index.md)
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -199,4 +189,4 @@ Visual Studio Code 啟動已附加偵錯工具的測試專案。 執行將會在
 程式庫不需要以套件的形式散發。 它可以與使用它的主控台應用程式配套。 若要瞭解如何發佈主控台應用程式，請參閱本系列的先前教學課程：
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio Code 發佈 .NET Core 主控台應用程式](publishing-with-visual-studio-code.md)
+> [使用 Visual Studio Code 發佈 .NET 主控台應用程式](publishing-with-visual-studio-code.md)

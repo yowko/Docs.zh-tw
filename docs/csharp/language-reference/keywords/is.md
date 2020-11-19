@@ -8,25 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f5c67392705156d6ff05e6f140c7187f41b1d033
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134506"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915826"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
-`is` 運算子會檢查運算式的結果是否與指定的類型相容，或 (從 C# 7.0 開始) 根據模式來測試運算式。 如需型別測試 `is` 運算子的相關資訊，請參閱[型別測試和轉換運算子](../operators/type-testing-and-cast.md)一文的 [is 運算子](../operators/type-testing-and-cast.md#is-operator)小節。
+`is` 運算子會檢查運算式的結果是否與指定的類型相容，或 (從 C# 7.0 開始) 根據模式來測試運算式。 如需類型測試運算子的詳細資訊 `is` ，請參閱[型別測試和轉換運算子](../operators/type-testing-and-cast.md)一文的「[是運算子](../operators/type-testing-and-cast.md#is-operator)」一節。
 
 ## <a name="pattern-matching-with-is"></a>以 `is` 進行的模式比對
 
 從 C# 7.0 開始，`is` 和 [switch](switch.md) 陳述式支援模式比對。 `is` 關鍵字支援下列模式：
 
-- [類型模式](#type-pattern)，其能測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。
-
+- [類型模式](#type-pattern)，它會測試運算式是否可轉換為指定的型別，如果可以的話，會將變數轉換成該類型的變數。
 - [常數模式](#constant-pattern)，測試運算式是否評估為指定的常數值。
-
 - [var 模式](#var-pattern)，比對一定會成功，而且會將運算式的值繫結至新的區域變數。
 
 ### <a name="type-pattern"></a>類型模式
@@ -39,19 +37,16 @@ ms.locfileid: "89134506"
 
 其中 *expr* 是評估為某個型別實例的運算式， *type* 是要轉換 *expr* 結果的型別名稱，而 *varname* 則是當測試為時，會將 *expr* 的結果轉換成的物件 `is` `true` 。
 
-如果 *expr* 不是 `null`，且下列任何一個條件成立，則 `is` 運算式為 `true`：
+`is`運算式為 `true` ，如果 *expr* 不是 `null` ，且下列任何條件成立：
 
 - *expr* 是其類型與 *type* 相同的執行個體。
-
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
-
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」** 是定義於變數宣告的變數類型。 變數的「執行階段類型」** 是指派給該變數的執行個體類型。
-
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
 - *expr* 是實作 *type* 介面的類型執行個體。
 
 從 C# 7.1 開始，*expr* 可以擁有由泛型類型參數及其條件約束所定義的編譯時間類型。
 
-如果 *expr* 為 `true`，且 `is` 搭配 `if` 陳述式使用，則 *varname* 僅在 `if` 陳述式內指派。 *varname* 的範圍從 `is` 運算式到包含 `if` 陳述式的區塊結尾。 在任何其他位置使用 *varname*，會因使用尚未指派的變數而產生編譯時間錯誤。
+如果 *expr* 為 `true`，且 `is` 搭配 `if` 陳述式使用，則 *varname* 僅在 `if` 陳述式內指派。 *varname* 的範圍從 `is` 運算式到包含 `if` 陳述式的區塊結尾。 在任何其他位置使用 *varname* 會產生編譯時期錯誤，以使用尚未指派的變數。
 
 下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 方法的實作。
 
@@ -105,6 +100,8 @@ ms.locfileid: "89134506"
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
 
+參考型別與可為 null 的實值型別的運算式 `x is null` 計算方式不同。 針對可為 null 的實數值型別，它會使用 <xref:System.Nullable%601.HasValue?displayProperty=nameWithType> 。 若為參考型別，則會使用 `x == null` 。
+
 ### <a name="var-pattern"></a>var 模式
 
 模式的模式比對 `var` 一律會成功。 其語法如下：
@@ -113,7 +110,7 @@ ms.locfileid: "89134506"
    expr is var varname
 ```
 
-其中 *expr* 的值一律會指派給名為 *varname*的本機變數。 *varname* 是與 *運算式*編譯時間類型相同類型的變數。
+其中 *expr* 的值一律會指派給名為 *varname* 的本機變數。 *varname* 是與 *運算式* 編譯時間類型相同類型的變數。
 
 如果 *expr* 評估為 `null` ，則 `is` 運算式會產生 `true` 並指派 `null` 給 *varname*。 Var 模式是 `is` `true` 針對某個值產生的幾個用途之一 `null` 。
 
@@ -133,5 +130,5 @@ ms.locfileid: "89134506"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)
-- [C# 關鍵字](index.md)
+- [C # 關鍵字](index.md)
 - [型別測試和轉換運算子](../operators/type-testing-and-cast.md)
