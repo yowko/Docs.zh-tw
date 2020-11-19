@@ -1,37 +1,37 @@
 ---
-title: 使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 類別庫
-description: 建立 .NET Core 類別庫的單元測試專案。 確認 .NET Core 類別庫可在單元測試中正確運作。
-ms.date: 06/08/2020
-ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: 使用 Visual Studio Code 測試 .NET 類別庫
+description: 瞭解如何使用 Visual Studio Code 和 .NET CLI 來建立和執行 .NET 類別庫的單元測試專案。
+ms.date: 11/17/2020
+ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180448"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915852"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a><span data-ttu-id="1e28e-104">教學課程：使用 Visual Studio Code 以 .NET Core 測試 .NET Standard 類別庫</span><span class="sxs-lookup"><span data-stu-id="1e28e-104">Tutorial: Test a .NET Standard class library with .NET Core using Visual Studio Code</span></span>
+# <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a><span data-ttu-id="ee990-103">教學課程：使用 Visual Studio Code 測試 .NET 類別庫</span><span class="sxs-lookup"><span data-stu-id="ee990-103">Tutorial: Test a .NET class library using Visual Studio Code</span></span>
 
-<span data-ttu-id="1e28e-105">本教學課程示範如何將測試專案加入至方案，以自動化單元測試。</span><span class="sxs-lookup"><span data-stu-id="1e28e-105">This tutorial shows how to automate unit testing by adding a test project to a solution.</span></span>
+<span data-ttu-id="ee990-104">本教學課程示範如何將測試專案加入至方案，以自動化單元測試。</span><span class="sxs-lookup"><span data-stu-id="ee990-104">This tutorial shows how to automate unit testing by adding a test project to a solution.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="1e28e-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="1e28e-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="ee990-105">先決條件</span><span class="sxs-lookup"><span data-stu-id="ee990-105">Prerequisites</span></span>
 
-- <span data-ttu-id="1e28e-107">本教學課程適用于 [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中所建立的解決方案。</span><span class="sxs-lookup"><span data-stu-id="1e28e-107">This tutorial works with the solution that you create in [Create a .NET Standard library using Visual Studio Code](library-with-visual-studio-code.md).</span></span>
+- <span data-ttu-id="ee990-106">本教學課程適用于 [使用 Visual Studio Code 建立 .net 類別庫](library-with-visual-studio-code.md)中所建立的方案。</span><span class="sxs-lookup"><span data-stu-id="ee990-106">This tutorial works with the solution that you create in [Create a .NET class library using Visual Studio Code](library-with-visual-studio-code.md).</span></span>
 
-## <a name="create-a-unit-test-project"></a><span data-ttu-id="1e28e-108">建立單元測試專案</span><span class="sxs-lookup"><span data-stu-id="1e28e-108">Create a unit test project</span></span>
+## <a name="create-a-unit-test-project"></a><span data-ttu-id="ee990-107">建立單元測試專案</span><span class="sxs-lookup"><span data-stu-id="ee990-107">Create a unit test project</span></span>
 
-<span data-ttu-id="1e28e-109">單元測試能在開發與發佈期間提供自動化的軟體測試。</span><span class="sxs-lookup"><span data-stu-id="1e28e-109">Unit tests provide automated software testing during your development and publishing.</span></span> <span data-ttu-id="1e28e-110">您在本教學課程中使用的測試架構是 MSTest。</span><span class="sxs-lookup"><span data-stu-id="1e28e-110">The testing framework that you use in this tutorial is MSTest.</span></span> <span data-ttu-id="1e28e-111">[MSTest](https://github.com/Microsoft/testfx-docs) 是您可以從中選擇的三種測試架構之一。</span><span class="sxs-lookup"><span data-stu-id="1e28e-111">[MSTest](https://github.com/Microsoft/testfx-docs) is one of three test frameworks you can choose from.</span></span> <span data-ttu-id="1e28e-112">其他則為 [xUnit](https://xunit.net/) 和 [nUnit](https://nunit.org/)。</span><span class="sxs-lookup"><span data-stu-id="1e28e-112">The others are [xUnit](https://xunit.net/) and [nUnit](https://nunit.org/).</span></span>
+<span data-ttu-id="ee990-108">單元測試能在開發與發佈期間提供自動化的軟體測試。</span><span class="sxs-lookup"><span data-stu-id="ee990-108">Unit tests provide automated software testing during your development and publishing.</span></span> <span data-ttu-id="ee990-109">您在本教學課程中使用的測試架構是 MSTest。</span><span class="sxs-lookup"><span data-stu-id="ee990-109">The testing framework that you use in this tutorial is MSTest.</span></span> <span data-ttu-id="ee990-110">[MSTest](https://github.com/Microsoft/testfx-docs) 是您可以從中選擇的三種測試架構之一。</span><span class="sxs-lookup"><span data-stu-id="ee990-110">[MSTest](https://github.com/Microsoft/testfx-docs) is one of three test frameworks you can choose from.</span></span> <span data-ttu-id="ee990-111">其他則為 [xUnit](https://xunit.net/) 和 [nUnit](https://nunit.org/)。</span><span class="sxs-lookup"><span data-stu-id="ee990-111">The others are [xUnit](https://xunit.net/) and [nUnit](https://nunit.org/).</span></span>
 
-1. <span data-ttu-id="1e28e-113">啟動 Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="1e28e-113">Start Visual Studio Code.</span></span>
+1. <span data-ttu-id="ee990-112">啟動 Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="ee990-112">Start Visual Studio Code.</span></span>
 
-1. <span data-ttu-id="1e28e-114">開啟 `ClassLibraryProjects` 您在 [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中建立的方案。</span><span class="sxs-lookup"><span data-stu-id="1e28e-114">Open the `ClassLibraryProjects` solution you created in [Create a .NET Standard library using Visual Studio Code](library-with-visual-studio-code.md).</span></span>
+1. <span data-ttu-id="ee990-113">開啟 `ClassLibraryProjects` 您在 [使用 Visual Studio Code 建立 .net 類別庫](library-with-visual-studio-code.md)中建立的方案。</span><span class="sxs-lookup"><span data-stu-id="ee990-113">Open the `ClassLibraryProjects` solution you created in [Create a .NET class library using Visual Studio Code](library-with-visual-studio-code.md).</span></span>
 
-1. <span data-ttu-id="1e28e-115">建立名為 "StringLibraryTest" 的單元測試專案。</span><span class="sxs-lookup"><span data-stu-id="1e28e-115">Create a unit test project named "StringLibraryTest".</span></span>
+1. <span data-ttu-id="ee990-114">建立名為 "StringLibraryTest" 的單元測試專案。</span><span class="sxs-lookup"><span data-stu-id="ee990-114">Create a unit test project named "StringLibraryTest".</span></span>
 
    ```dotnetcli
    dotnet new mstest -o StringLibraryTest
    ```
 
-   <span data-ttu-id="1e28e-116">專案範本會使用下列程式碼建立 UnitTest1.cs 檔案：</span><span class="sxs-lookup"><span data-stu-id="1e28e-116">The project template creates a UnitTest1.cs file with the following code:</span></span>
+   <span data-ttu-id="ee990-115">專案範本會使用下列程式碼建立 UnitTest1.cs 檔案：</span><span class="sxs-lookup"><span data-stu-id="ee990-115">The project template creates a UnitTest1.cs file with the following code:</span></span>
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -49,154 +49,144 @@ ms.locfileid: "91180448"
    }
    ```
 
-   <span data-ttu-id="1e28e-117">單元測試範本建立的原始程式碼會執行下列動作︰</span><span class="sxs-lookup"><span data-stu-id="1e28e-117">The source code created by the unit test template does the following:</span></span>
+   <span data-ttu-id="ee990-116">單元測試範本建立的原始程式碼會執行下列動作︰</span><span class="sxs-lookup"><span data-stu-id="ee990-116">The source code created by the unit test template does the following:</span></span>
 
-   - <span data-ttu-id="1e28e-118">它會匯入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空間，其中包含用於單元測試的類型。</span><span class="sxs-lookup"><span data-stu-id="1e28e-118">It imports the <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> namespace, which contains the types used for unit testing.</span></span>
-   - <span data-ttu-id="1e28e-119">它會將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性套用至 `UnitTest1` 類別。</span><span class="sxs-lookup"><span data-stu-id="1e28e-119">It applies the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> attribute to the `UnitTest1` class.</span></span>
-   - <span data-ttu-id="1e28e-120">它會套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性來定義 `TestMethod1` 。</span><span class="sxs-lookup"><span data-stu-id="1e28e-120">It applies the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> attribute to define `TestMethod1`.</span></span>
+   - <span data-ttu-id="ee990-117">它會匯入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空間，其中包含用於單元測試的類型。</span><span class="sxs-lookup"><span data-stu-id="ee990-117">It imports the <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> namespace, which contains the types used for unit testing.</span></span>
+   - <span data-ttu-id="ee990-118">它會將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性套用至 `UnitTest1` 類別。</span><span class="sxs-lookup"><span data-stu-id="ee990-118">It applies the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> attribute to the `UnitTest1` class.</span></span>
+   - <span data-ttu-id="ee990-119">它會套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性來定義 `TestMethod1` 。</span><span class="sxs-lookup"><span data-stu-id="ee990-119">It applies the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> attribute to define `TestMethod1`.</span></span>
 
-   <span data-ttu-id="1e28e-121">執行單元測試時，會自動執行在標記為[[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)的測試類別中，以[[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)標記的每個方法。</span><span class="sxs-lookup"><span data-stu-id="1e28e-121">Each method tagged with [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) in a test class tagged with [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) is executed automatically when the unit test is run.</span></span>
+   <span data-ttu-id="ee990-120">執行單元測試時，會自動執行在標記為[[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)的測試類別中，以[[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)標記的每個方法。</span><span class="sxs-lookup"><span data-stu-id="ee990-120">Each method tagged with [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) in a test class tagged with [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) is executed automatically when the unit test is run.</span></span>
 
-1. <span data-ttu-id="1e28e-122">將測試專案加入至方案。</span><span class="sxs-lookup"><span data-stu-id="1e28e-122">Add the test project to the solution.</span></span>
+1. <span data-ttu-id="ee990-121">將測試專案加入至方案。</span><span class="sxs-lookup"><span data-stu-id="ee990-121">Add the test project to the solution.</span></span>
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-## <a name="add-a-project-reference"></a><span data-ttu-id="1e28e-123">新增專案參考</span><span class="sxs-lookup"><span data-stu-id="1e28e-123">Add a project reference</span></span>
+## <a name="add-a-project-reference"></a><span data-ttu-id="ee990-122">新增專案參考</span><span class="sxs-lookup"><span data-stu-id="ee990-122">Add a project reference</span></span>
 
-<span data-ttu-id="1e28e-124">若要讓測試專案使用 `StringLibrary` 類別，請在專案中加入專案的參考 `StringLibraryTest` `StringLibrary` 。</span><span class="sxs-lookup"><span data-stu-id="1e28e-124">For the test project to work with the `StringLibrary` class, add a reference in the `StringLibraryTest` project to the `StringLibrary` project.</span></span>
+<span data-ttu-id="ee990-123">若要讓測試專案使用 `StringLibrary` 類別，請在專案中加入專案的參考 `StringLibraryTest` `StringLibrary` 。</span><span class="sxs-lookup"><span data-stu-id="ee990-123">For the test project to work with the `StringLibrary` class, add a reference in the `StringLibraryTest` project to the `StringLibrary` project.</span></span>
 
-1. <span data-ttu-id="1e28e-125">執行以下命令：</span><span class="sxs-lookup"><span data-stu-id="1e28e-125">Run the following command:</span></span>
+1. <span data-ttu-id="ee990-124">執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="ee990-124">Run the following command:</span></span>
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
    ```
 
-## <a name="add-and-run-unit-test-methods"></a><span data-ttu-id="1e28e-126">加入並執行單元測試方法</span><span class="sxs-lookup"><span data-stu-id="1e28e-126">Add and run unit test methods</span></span>
+## <a name="add-and-run-unit-test-methods"></a><span data-ttu-id="ee990-125">加入並執行單元測試方法</span><span class="sxs-lookup"><span data-stu-id="ee990-125">Add and run unit test methods</span></span>
 
-<span data-ttu-id="1e28e-127">當 Visual Studio 執行單元測試時，它會執行每個以屬性標記之 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 類別中的屬性標記的方法  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 。</span><span class="sxs-lookup"><span data-stu-id="1e28e-127">When Visual Studio runs a unit test, it executes each method that is marked with the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> attribute in a class that is marked with the  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> attribute.</span></span> <span data-ttu-id="1e28e-128">當找到第一個失敗或方法中包含的所有測試都成功時，測試方法便會結束。</span><span class="sxs-lookup"><span data-stu-id="1e28e-128">A test method ends when the first failure is found or when all tests contained in the method have succeeded.</span></span>
+<span data-ttu-id="ee990-126">當 Visual Studio 執行單元測試時，它會執行每個以屬性標記之 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 類別中的屬性標記的方法  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 。</span><span class="sxs-lookup"><span data-stu-id="ee990-126">When Visual Studio runs a unit test, it executes each method that is marked with the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> attribute in a class that is marked with the  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> attribute.</span></span> <span data-ttu-id="ee990-127">當找到第一個失敗或方法中包含的所有測試都成功時，測試方法便會結束。</span><span class="sxs-lookup"><span data-stu-id="ee990-127">A test method ends when the first failure is found or when all tests contained in the method have succeeded.</span></span>
 
-<span data-ttu-id="1e28e-129">最常見的測試會呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 類別的成員。</span><span class="sxs-lookup"><span data-stu-id="1e28e-129">The most common tests call members of the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> class.</span></span> <span data-ttu-id="1e28e-130">許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。</span><span class="sxs-lookup"><span data-stu-id="1e28e-130">Many assert methods include at least two parameters, one of which is the expected test result and the other of which is the actual test result.</span></span> <span data-ttu-id="1e28e-131">`Assert`下表顯示某些類別最常呼叫的方法：</span><span class="sxs-lookup"><span data-stu-id="1e28e-131">Some of the `Assert` class's most frequently called methods are shown in the following table:</span></span>
+<span data-ttu-id="ee990-128">最常見的測試會呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 類別的成員。</span><span class="sxs-lookup"><span data-stu-id="ee990-128">The most common tests call members of the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> class.</span></span> <span data-ttu-id="ee990-129">許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。</span><span class="sxs-lookup"><span data-stu-id="ee990-129">Many assert methods include at least two parameters, one of which is the expected test result and the other of which is the actual test result.</span></span> <span data-ttu-id="ee990-130">`Assert`下表顯示某些類別最常呼叫的方法：</span><span class="sxs-lookup"><span data-stu-id="ee990-130">Some of the `Assert` class's most frequently called methods are shown in the following table:</span></span>
 
-| <span data-ttu-id="1e28e-132">Assert 方法</span><span class="sxs-lookup"><span data-stu-id="1e28e-132">Assert methods</span></span>     | <span data-ttu-id="1e28e-133">函式</span><span class="sxs-lookup"><span data-stu-id="1e28e-133">Function</span></span> |
+| <span data-ttu-id="ee990-131">Assert 方法</span><span class="sxs-lookup"><span data-stu-id="ee990-131">Assert methods</span></span>     | <span data-ttu-id="ee990-132">函式</span><span class="sxs-lookup"><span data-stu-id="ee990-132">Function</span></span> |
 | ------------------ | -------- |
-| `Assert.AreEqual`  | <span data-ttu-id="1e28e-134">驗證兩個值或物件相等。</span><span class="sxs-lookup"><span data-stu-id="1e28e-134">Verifies that two values or objects are equal.</span></span> <span data-ttu-id="1e28e-135">如果值或物件不相等，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-135">The assert fails if the values or objects aren't equal.</span></span> |
-| `Assert.AreSame`   | <span data-ttu-id="1e28e-136">驗證兩個物件變數參考相同的物件。</span><span class="sxs-lookup"><span data-stu-id="1e28e-136">Verifies that two object variables refer to the same object.</span></span> <span data-ttu-id="1e28e-137">如果變數參考不同的物件，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-137">The assert fails if the variables refer to different objects.</span></span> |
-| `Assert.IsFalse`   | <span data-ttu-id="1e28e-138">驗證條件為 `false`。</span><span class="sxs-lookup"><span data-stu-id="1e28e-138">Verifies that a condition is `false`.</span></span> <span data-ttu-id="1e28e-139">如果條件為 `true`，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-139">The assert fails if the condition is `true`.</span></span> |
-| `Assert.IsNotNull` | <span data-ttu-id="1e28e-140">確認物件不是 `null` 。</span><span class="sxs-lookup"><span data-stu-id="1e28e-140">Verifies that an object isn't `null`.</span></span> <span data-ttu-id="1e28e-141">如果物件為 `null`，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-141">The assert fails if the object is `null`.</span></span> |
+| `Assert.AreEqual`  | <span data-ttu-id="ee990-133">驗證兩個值或物件相等。</span><span class="sxs-lookup"><span data-stu-id="ee990-133">Verifies that two values or objects are equal.</span></span> <span data-ttu-id="ee990-134">如果值或物件不相等，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-134">The assert fails if the values or objects aren't equal.</span></span> |
+| `Assert.AreSame`   | <span data-ttu-id="ee990-135">驗證兩個物件變數參考相同的物件。</span><span class="sxs-lookup"><span data-stu-id="ee990-135">Verifies that two object variables refer to the same object.</span></span> <span data-ttu-id="ee990-136">如果變數參考不同的物件，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-136">The assert fails if the variables refer to different objects.</span></span> |
+| `Assert.IsFalse`   | <span data-ttu-id="ee990-137">驗證條件為 `false`。</span><span class="sxs-lookup"><span data-stu-id="ee990-137">Verifies that a condition is `false`.</span></span> <span data-ttu-id="ee990-138">如果條件為 `true`，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-138">The assert fails if the condition is `true`.</span></span> |
+| `Assert.IsNotNull` | <span data-ttu-id="ee990-139">確認物件不是 `null` 。</span><span class="sxs-lookup"><span data-stu-id="ee990-139">Verifies that an object isn't `null`.</span></span> <span data-ttu-id="ee990-140">如果物件為 `null`，判斷提示就會失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-140">The assert fails if the object is `null`.</span></span> |
 
-<span data-ttu-id="1e28e-142">您也可以 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> 在測試方法中使用方法，來指出預期會擲回的例外狀況類型。</span><span class="sxs-lookup"><span data-stu-id="1e28e-142">You can also use the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> method in a test method to indicate the type of exception it's expected to throw.</span></span> <span data-ttu-id="1e28e-143">如果未擲回指定的例外狀況，測試便會失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-143">The test fails if the specified exception isn't thrown.</span></span>
+<span data-ttu-id="ee990-141">您也可以 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> 在測試方法中使用方法，來指出預期會擲回的例外狀況類型。</span><span class="sxs-lookup"><span data-stu-id="ee990-141">You can also use the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> method in a test method to indicate the type of exception it's expected to throw.</span></span> <span data-ttu-id="ee990-142">如果未擲回指定的例外狀況，測試便會失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-142">The test fails if the specified exception isn't thrown.</span></span>
 
-<span data-ttu-id="1e28e-144">在測試 `StringLibrary.StartsWithUpper` 方法時，您想提供幾個以大寫字元開頭的字串。</span><span class="sxs-lookup"><span data-stu-id="1e28e-144">In testing the `StringLibrary.StartsWithUpper` method, you want to provide a number of strings that begin with an uppercase character.</span></span> <span data-ttu-id="1e28e-145">您預期此方法在這些情況下傳回 `true`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="1e28e-145">You expect the method to return `true` in these cases, so you can call the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="1e28e-146">同樣地，您想提供幾個開頭不是大寫字元的字串。</span><span class="sxs-lookup"><span data-stu-id="1e28e-146">Similarly, you want to provide a number of strings that begin with something other than an uppercase character.</span></span> <span data-ttu-id="1e28e-147">您預期此方法在這些情況下傳回 `false`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="1e28e-147">You expect the method to return `false` in these cases, so you can call the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="ee990-143">在測試 `StringLibrary.StartsWithUpper` 方法時，您想提供幾個以大寫字元開頭的字串。</span><span class="sxs-lookup"><span data-stu-id="ee990-143">In testing the `StringLibrary.StartsWithUpper` method, you want to provide a number of strings that begin with an uppercase character.</span></span> <span data-ttu-id="ee990-144">您預期此方法在這些情況下傳回 `true`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="ee990-144">You expect the method to return `true` in these cases, so you can call the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ee990-145">同樣地，您想提供幾個開頭不是大寫字元的字串。</span><span class="sxs-lookup"><span data-stu-id="ee990-145">Similarly, you want to provide a number of strings that begin with something other than an uppercase character.</span></span> <span data-ttu-id="ee990-146">您預期此方法在這些情況下傳回 `false`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="ee990-146">You expect the method to return `false` in these cases, so you can call the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="1e28e-148">因為您的程式庫方法會處理字串，您也想要確保它能成功處理 [空字串 (`String.Empty`) ](xref:System.String.Empty) 和和 `null` 字串。</span><span class="sxs-lookup"><span data-stu-id="1e28e-148">Since your library method handles strings, you also want to make sure that it successfully handles an [empty string (`String.Empty`)](xref:System.String.Empty) and a and a `null` string.</span></span> <span data-ttu-id="1e28e-149">空字串是指沒有任何字元且其 <xref:System.String.Length> 為0的字串。</span><span class="sxs-lookup"><span data-stu-id="1e28e-149">An empty string is one that has no characters and whose <xref:System.String.Length> is 0.</span></span> <span data-ttu-id="1e28e-150">`null`字串是指尚未初始化的字串。</span><span class="sxs-lookup"><span data-stu-id="1e28e-150">A `null` string is one that hasn't been initialized.</span></span> <span data-ttu-id="1e28e-151">您可以 `StartsWithUpper` 直接呼叫作為靜態方法，並傳遞單一 <xref:System.String> 引數。</span><span class="sxs-lookup"><span data-stu-id="1e28e-151">You can call `StartsWithUpper` directly as a static method and pass a single <xref:System.String> argument.</span></span> <span data-ttu-id="1e28e-152">或者，您可以 `StartsWithUpper` 在指派給的變數上呼叫做為擴充方法 `string` `null` 。</span><span class="sxs-lookup"><span data-stu-id="1e28e-152">Or you can call `StartsWithUpper` as an extension method on a `string` variable assigned to `null`.</span></span>
+<span data-ttu-id="ee990-147">因為您的程式庫方法會處理字串，您也想要確保它能成功處理 [空字串 (`String.Empty`) ](xref:System.String.Empty) 和和 `null` 字串。</span><span class="sxs-lookup"><span data-stu-id="ee990-147">Since your library method handles strings, you also want to make sure that it successfully handles an [empty string (`String.Empty`)](xref:System.String.Empty) and a and a `null` string.</span></span> <span data-ttu-id="ee990-148">空字串是指沒有任何字元且其 <xref:System.String.Length> 為0的字串。</span><span class="sxs-lookup"><span data-stu-id="ee990-148">An empty string is one that has no characters and whose <xref:System.String.Length> is 0.</span></span> <span data-ttu-id="ee990-149">`null`字串是指尚未初始化的字串。</span><span class="sxs-lookup"><span data-stu-id="ee990-149">A `null` string is one that hasn't been initialized.</span></span> <span data-ttu-id="ee990-150">您可以 `StartsWithUpper` 直接呼叫作為靜態方法，並傳遞單一 <xref:System.String> 引數。</span><span class="sxs-lookup"><span data-stu-id="ee990-150">You can call `StartsWithUpper` directly as a static method and pass a single <xref:System.String> argument.</span></span> <span data-ttu-id="ee990-151">或者，您可以 `StartsWithUpper` 在指派給的變數上呼叫做為擴充方法 `string` `null` 。</span><span class="sxs-lookup"><span data-stu-id="ee990-151">Or you can call `StartsWithUpper` as an extension method on a `string` variable assigned to `null`.</span></span>
 
-<span data-ttu-id="1e28e-153">您會定義三個方法，每個方法會 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 針對字串陣列中的每個元素呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="1e28e-153">You'll define three methods, each of which calls an <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> method for each element in a string array.</span></span> <span data-ttu-id="1e28e-154">您將呼叫方法多載，讓您指定在測試失敗時所要顯示的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="1e28e-154">You'll call a method overload that lets you specify an error message to be displayed in case of test failure.</span></span> <span data-ttu-id="1e28e-155">訊息會識別造成失敗的字串。</span><span class="sxs-lookup"><span data-stu-id="1e28e-155">The message identifies the string that caused the failure.</span></span>
+<span data-ttu-id="ee990-152">您會定義三個方法，每個方法會 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 針對字串陣列中的每個元素呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="ee990-152">You'll define three methods, each of which calls an <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> method for each element in a string array.</span></span> <span data-ttu-id="ee990-153">您將呼叫方法多載，讓您指定在測試失敗時所要顯示的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="ee990-153">You'll call a method overload that lets you specify an error message to be displayed in case of test failure.</span></span> <span data-ttu-id="ee990-154">訊息會識別造成失敗的字串。</span><span class="sxs-lookup"><span data-stu-id="ee990-154">The message identifies the string that caused the failure.</span></span>
 
-<span data-ttu-id="1e28e-156">建立測試方法：</span><span class="sxs-lookup"><span data-stu-id="1e28e-156">To create the test methods:</span></span>
+<span data-ttu-id="ee990-155">建立測試方法：</span><span class="sxs-lookup"><span data-stu-id="ee990-155">To create the test methods:</span></span>
 
-1. <span data-ttu-id="1e28e-157">開啟 *StringLibraryTest/UnitTest1* ，並將所有程式碼取代為下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="1e28e-157">Open *StringLibraryTest/UnitTest1.cs* and replace all of the code with the following code.</span></span>
+1. <span data-ttu-id="ee990-156">開啟 *StringLibraryTest/UnitTest1* ，並將所有程式碼取代為下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="ee990-156">Open *StringLibraryTest/UnitTest1.cs* and replace all of the code with the following code.</span></span>
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibraryTest/UnitTest1.cs":::
 
-   <span data-ttu-id="1e28e-158">方法中的大寫字元測試 `TestStartsWithUpper` 包含希臘文大寫字母 Alpha (u + 0391) 和斯拉夫文大寫字母 EM (U + 041C) 。</span><span class="sxs-lookup"><span data-stu-id="1e28e-158">The test of uppercase characters in the `TestStartsWithUpper` method includes the Greek capital letter alpha (U+0391) and the Cyrillic capital letter EM (U+041C).</span></span> <span data-ttu-id="1e28e-159">方法中的小寫字元測試 `TestDoesNotStartWithUpper` 包含希臘文小寫字母 Alpha (u + 03B1) 和斯拉夫文小寫字母 Ghe (U + 0433) 。</span><span class="sxs-lookup"><span data-stu-id="1e28e-159">The test of lowercase characters in the `TestDoesNotStartWithUpper` method includes the Greek small letter alpha (U+03B1) and the Cyrillic small letter Ghe (U+0433).</span></span>
+   <span data-ttu-id="ee990-157">方法中的大寫字元測試 `TestStartsWithUpper` 包含希臘文大寫字母 Alpha (u + 0391) 和斯拉夫文大寫字母 EM (U + 041C) 。</span><span class="sxs-lookup"><span data-stu-id="ee990-157">The test of uppercase characters in the `TestStartsWithUpper` method includes the Greek capital letter alpha (U+0391) and the Cyrillic capital letter EM (U+041C).</span></span> <span data-ttu-id="ee990-158">方法中的小寫字元測試 `TestDoesNotStartWithUpper` 包含希臘文小寫字母 Alpha (u + 03B1) 和斯拉夫文小寫字母 Ghe (U + 0433) 。</span><span class="sxs-lookup"><span data-stu-id="ee990-158">The test of lowercase characters in the `TestDoesNotStartWithUpper` method includes the Greek small letter alpha (U+03B1) and the Cyrillic small letter Ghe (U+0433).</span></span>
 
-1. <span data-ttu-id="1e28e-160">儲存變更。</span><span class="sxs-lookup"><span data-stu-id="1e28e-160">Save your changes.</span></span>
+1. <span data-ttu-id="ee990-159">儲存您的變更。</span><span class="sxs-lookup"><span data-stu-id="ee990-159">Save your changes.</span></span>
 
-1. <span data-ttu-id="1e28e-161">執行測試：</span><span class="sxs-lookup"><span data-stu-id="1e28e-161">Run the tests:</span></span>
+1. <span data-ttu-id="ee990-160">執行測試：</span><span class="sxs-lookup"><span data-stu-id="ee990-160">Run the tests:</span></span>
 
    ```dotnetcli
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   <span data-ttu-id="1e28e-162">終端機輸出顯示所有測試皆通過。</span><span class="sxs-lookup"><span data-stu-id="1e28e-162">The terminal output shows that all tests passed.</span></span>
+   <span data-ttu-id="ee990-161">終端機輸出顯示所有測試皆通過。</span><span class="sxs-lookup"><span data-stu-id="ee990-161">The terminal output shows that all tests passed.</span></span>
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
 
-   Test Run Successful.
-   Total tests: 3
-        Passed: 3
-    Total time: 5.1116 Seconds
+   Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 3 ms - StringLibraryTest.dll (net5.0)
    ```
 
-## <a name="handle-test-failures"></a><span data-ttu-id="1e28e-163">處理測試失敗</span><span class="sxs-lookup"><span data-stu-id="1e28e-163">Handle test failures</span></span>
+## <a name="handle-test-failures"></a><span data-ttu-id="ee990-162">處理測試失敗</span><span class="sxs-lookup"><span data-stu-id="ee990-162">Handle test failures</span></span>
 
-<span data-ttu-id="1e28e-164">如果您正在執行以測試為導向的開發 (TDD) ，您會先撰寫測試，並在您第一次執行時失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-164">If you're doing test-driven development (TDD), you write tests first and they fail the first time you run them.</span></span> <span data-ttu-id="1e28e-165">然後，將程式碼新增至應用程式，讓測試成功。</span><span class="sxs-lookup"><span data-stu-id="1e28e-165">Then you add code to the app that makes the test succeed.</span></span> <span data-ttu-id="1e28e-166">在本教學課程中，您已在撰寫應用程式程式碼驗證之後建立測試，因此您未看到測試失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-166">For this tutorial, you created the test after writing the app code that it validates, so you haven't seen the test fail.</span></span> <span data-ttu-id="1e28e-167">若要在預期測試失敗時驗證測試失敗，請將不正確值加入測試輸入。</span><span class="sxs-lookup"><span data-stu-id="1e28e-167">To validate that a test fails when you expect it to fail, add an invalid value to the test input.</span></span>
+<span data-ttu-id="ee990-163">如果您正在執行以測試為導向的開發 (TDD) ，您會先撰寫測試，並在您第一次執行時失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-163">If you're doing test-driven development (TDD), you write tests first and they fail the first time you run them.</span></span> <span data-ttu-id="ee990-164">然後，將程式碼新增至應用程式，讓測試成功。</span><span class="sxs-lookup"><span data-stu-id="ee990-164">Then you add code to the app that makes the test succeed.</span></span> <span data-ttu-id="ee990-165">在本教學課程中，您已在撰寫應用程式程式碼驗證之後建立測試，因此您未看到測試失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-165">For this tutorial, you created the test after writing the app code that it validates, so you haven't seen the test fail.</span></span> <span data-ttu-id="ee990-166">若要在預期測試失敗時驗證測試失敗，請將不正確值加入測試輸入。</span><span class="sxs-lookup"><span data-stu-id="ee990-166">To validate that a test fails when you expect it to fail, add an invalid value to the test input.</span></span>
 
-1. <span data-ttu-id="1e28e-168">修改 `TestDoesNotStartWithUpper` 方法中的 `words` 陣列，以包含字串「錯誤」。</span><span class="sxs-lookup"><span data-stu-id="1e28e-168">Modify the `words` array in the `TestDoesNotStartWithUpper` method to include the string "Error".</span></span>
+1. <span data-ttu-id="ee990-167">修改 `TestDoesNotStartWithUpper` 方法中的 `words` 陣列，以包含字串「錯誤」。</span><span class="sxs-lookup"><span data-stu-id="ee990-167">Modify the `words` array in the `TestDoesNotStartWithUpper` method to include the string "Error".</span></span>
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " };
    ```
 
-1. <span data-ttu-id="1e28e-169">執行測試：</span><span class="sxs-lookup"><span data-stu-id="1e28e-169">Run the tests:</span></span>
+1. <span data-ttu-id="ee990-168">執行測試：</span><span class="sxs-lookup"><span data-stu-id="ee990-168">Run the tests:</span></span>
 
    ```dotnetcli
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   <span data-ttu-id="1e28e-170">終端機輸出顯示一個測試失敗，並針對失敗的測試提供錯誤訊息：「IsFalse 失敗。</span><span class="sxs-lookup"><span data-stu-id="1e28e-170">The terminal output shows that one test fails, and it provides an error message for the failed test: "Assert.IsFalse failed.</span></span> <span data-ttu-id="1e28e-171">'Error' 的預期︰false；實際：True」。</span><span class="sxs-lookup"><span data-stu-id="1e28e-171">Expected for 'Error': false; actual: True".</span></span> <span data-ttu-id="1e28e-172">因為失敗，所以在測試 "Error" 之後，陣列中沒有任何字串。</span><span class="sxs-lookup"><span data-stu-id="1e28e-172">Because of the failure, no strings in the array after "Error" were tested.</span></span>
+   <span data-ttu-id="ee990-169">終端機輸出顯示一個測試失敗，並針對失敗的測試提供錯誤訊息：「IsFalse 失敗。</span><span class="sxs-lookup"><span data-stu-id="ee990-169">The terminal output shows that one test fails, and it provides an error message for the failed test: "Assert.IsFalse failed.</span></span> <span data-ttu-id="ee990-170">'Error' 的預期︰false；實際：True」。</span><span class="sxs-lookup"><span data-stu-id="ee990-170">Expected for 'Error': false; actual: True".</span></span> <span data-ttu-id="ee990-171">因為失敗，所以在測試 "Error" 之後，陣列中沒有任何字串。</span><span class="sxs-lookup"><span data-stu-id="ee990-171">Because of the failure, no strings in the array after "Error" were tested.</span></span>
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
-     X TestDoesNotStartWithUpper [283ms]
+     Failed TestDoesNotStartWithUpper [28 ms]
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
-   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
-   Test Run Failed.
-   Total tests: 3
-        Passed: 2
-        Failed: 1
-    Total time: 1.7825 Seconds
+   Failed!  - Failed:     1, Passed:     2, Skipped:     0, Total:     3, Duration: 31 ms - StringLibraryTest.dll (net5.0)
    ```
 
-1. <span data-ttu-id="1e28e-173">移除您在步驟1中新增的字串 "Error"。</span><span class="sxs-lookup"><span data-stu-id="1e28e-173">Remove the string "Error" that you added in step 1.</span></span> <span data-ttu-id="1e28e-174">重新執行測試和測試階段。</span><span class="sxs-lookup"><span data-stu-id="1e28e-174">Rerun the test and the tests pass.</span></span>
+1. <span data-ttu-id="ee990-172">移除您在步驟1中新增的字串 "Error"。</span><span class="sxs-lookup"><span data-stu-id="ee990-172">Remove the string "Error" that you added in step 1.</span></span> <span data-ttu-id="ee990-173">重新執行測試和測試階段。</span><span class="sxs-lookup"><span data-stu-id="ee990-173">Rerun the test and the tests pass.</span></span>
 
-## <a name="test-the-release-version-of-the-library"></a><span data-ttu-id="1e28e-175">測試程式庫的發行版本</span><span class="sxs-lookup"><span data-stu-id="1e28e-175">Test the Release version of the library</span></span>
+## <a name="test-the-release-version-of-the-library"></a><span data-ttu-id="ee990-174">測試程式庫的發行版本</span><span class="sxs-lookup"><span data-stu-id="ee990-174">Test the Release version of the library</span></span>
 
-<span data-ttu-id="1e28e-176">現在，在執行程式庫的偵錯工具時，所有測試都已通過，請針對程式庫的發行組建執行額外的測試。</span><span class="sxs-lookup"><span data-stu-id="1e28e-176">Now that the tests have all passed when running the Debug build of the library, run the tests an additional time against the Release build of the library.</span></span> <span data-ttu-id="1e28e-177">許多因素 (包括編譯器最佳化) 有時會在偵錯和發行組建之間導致不同的行為。</span><span class="sxs-lookup"><span data-stu-id="1e28e-177">A number of factors, including compiler optimizations, can sometimes produce different behavior between Debug and Release builds.</span></span>
+<span data-ttu-id="ee990-175">現在，在執行程式庫的偵錯工具時，所有測試都已通過，請針對程式庫的發行組建執行額外的測試。</span><span class="sxs-lookup"><span data-stu-id="ee990-175">Now that the tests have all passed when running the Debug build of the library, run the tests an additional time against the Release build of the library.</span></span> <span data-ttu-id="ee990-176">許多因素 (包括編譯器最佳化) 有時會在偵錯和發行組建之間導致不同的行為。</span><span class="sxs-lookup"><span data-stu-id="ee990-176">A number of factors, including compiler optimizations, can sometimes produce different behavior between Debug and Release builds.</span></span>
 
-1. <span data-ttu-id="1e28e-178">使用發行組建設定執行測試：</span><span class="sxs-lookup"><span data-stu-id="1e28e-178">Run the tests with the Release build configuration:</span></span>
+1. <span data-ttu-id="ee990-177">使用發行組建設定執行測試：</span><span class="sxs-lookup"><span data-stu-id="ee990-177">Run the tests with the Release build configuration:</span></span>
 
    ```dotnetcli
    dotnet test StringLibraryTest/StringLibraryTest.csproj --configuration Release
    ```
 
-   <span data-ttu-id="1e28e-179">所有測試皆通過。</span><span class="sxs-lookup"><span data-stu-id="1e28e-179">The tests pass.</span></span>
+   <span data-ttu-id="ee990-178">所有測試皆通過。</span><span class="sxs-lookup"><span data-stu-id="ee990-178">The tests pass.</span></span>
 
-## <a name="debug-tests"></a><span data-ttu-id="1e28e-180">偵錯測試</span><span class="sxs-lookup"><span data-stu-id="1e28e-180">Debug tests</span></span>
+## <a name="debug-tests"></a><span data-ttu-id="ee990-179">偵錯測試</span><span class="sxs-lookup"><span data-stu-id="ee990-179">Debug tests</span></span>
 
-<span data-ttu-id="1e28e-181">如果您使用 Visual Studio Code 作為 IDE，您可以使用在使用您的單元測試專案來對程式碼進行偵錯工具時，使用 Visual Studio Code 來將 [.Net Core 主控台應用程式的偵錯工具](debugging-with-visual-studio-code.md) 中所顯示的相同程式。</span><span class="sxs-lookup"><span data-stu-id="1e28e-181">If you're using Visual Studio Code as your IDE, you can use the same process shown in [Debug a .NET Core console application using Visual Studio Code](debugging-with-visual-studio-code.md) to debug code using your unit test project.</span></span> <span data-ttu-id="1e28e-182">開啟*StringLibraryTest/UnitTest1*，然後選取 [執行行7和8之間的**所有測試**]，而不是啟動*展示*應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="1e28e-182">Instead of starting the *ShowCase* app project, open *StringLibraryTest/UnitTest1.cs*, and select **Run All Tests** between lines 7 and 8.</span></span> <span data-ttu-id="1e28e-183">如果找不到，請按<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>開啟命令選擇區，然後輸入**重載視窗**。</span><span class="sxs-lookup"><span data-stu-id="1e28e-183">If you're unable to find it, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the command palette and enter **Reload Window**.</span></span>
+<span data-ttu-id="ee990-180">如果您使用 Visual Studio Code 作為 IDE，您可以使用在使用您的單元測試專案來進行程式碼的 [偵錯工具](debugging-with-visual-studio-code.md) 時，使用 Visual Studio Code 的相同程式。</span><span class="sxs-lookup"><span data-stu-id="ee990-180">If you're using Visual Studio Code as your IDE, you can use the same process shown in [Debug a .NET console application using Visual Studio Code](debugging-with-visual-studio-code.md) to debug code using your unit test project.</span></span> <span data-ttu-id="ee990-181">開啟 *StringLibraryTest/UnitTest1*，然後選取 [執行行7和8之間的 **所有測試**]，而不是啟動 *展示* 應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="ee990-181">Instead of starting the *ShowCase* app project, open *StringLibraryTest/UnitTest1.cs*, and select **Run All Tests** between lines 7 and 8.</span></span> <span data-ttu-id="ee990-182">如果找不到，請按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>開啟命令選擇區，然後輸入 **重載視窗**。</span><span class="sxs-lookup"><span data-stu-id="ee990-182">If you're unable to find it, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the command palette and enter **Reload Window**.</span></span>
 
-<span data-ttu-id="1e28e-184">Visual Studio Code 啟動已附加偵錯工具的測試專案。</span><span class="sxs-lookup"><span data-stu-id="1e28e-184">Visual Studio Code starts the test project with the debugger attached.</span></span> <span data-ttu-id="1e28e-185">執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。</span><span class="sxs-lookup"><span data-stu-id="1e28e-185">Execution will stop at any breakpoint you've added to the test project or the underlying library code.</span></span>
+<span data-ttu-id="ee990-183">Visual Studio Code 啟動已附加偵錯工具的測試專案。</span><span class="sxs-lookup"><span data-stu-id="ee990-183">Visual Studio Code starts the test project with the debugger attached.</span></span> <span data-ttu-id="ee990-184">執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。</span><span class="sxs-lookup"><span data-stu-id="ee990-184">Execution will stop at any breakpoint you've added to the test project or the underlying library code.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="1e28e-186">其他資源</span><span class="sxs-lookup"><span data-stu-id="1e28e-186">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="ee990-185">其他資源</span><span class="sxs-lookup"><span data-stu-id="ee990-185">Additional resources</span></span>
 
-* [<span data-ttu-id="1e28e-187">.NET Core 與 .NET Standard 中的單元測試</span><span class="sxs-lookup"><span data-stu-id="1e28e-187">Unit testing in .NET Core and .NET Standard</span></span>](../testing/index.md)
+* [<span data-ttu-id="ee990-186">.NET 中的單元測試</span><span class="sxs-lookup"><span data-stu-id="ee990-186">Unit testing in .NET</span></span>](../testing/index.md)
 
-## <a name="next-steps"></a><span data-ttu-id="1e28e-188">後續步驟</span><span class="sxs-lookup"><span data-stu-id="1e28e-188">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="ee990-187">後續步驟</span><span class="sxs-lookup"><span data-stu-id="ee990-187">Next steps</span></span>
 
-<span data-ttu-id="1e28e-189">在本教學課程中，您已對類別庫進行單元測試。</span><span class="sxs-lookup"><span data-stu-id="1e28e-189">In this tutorial, you unit tested a class library.</span></span> <span data-ttu-id="1e28e-190">您可以將程式庫以套件的形式發佈至 [NuGet](https://nuget.org) ，以將程式庫提供給其他人使用。</span><span class="sxs-lookup"><span data-stu-id="1e28e-190">You can make the library available to others by publishing it to [NuGet](https://nuget.org) as a package.</span></span> <span data-ttu-id="1e28e-191">若要深入瞭解，請遵循 NuGet 教學課程：</span><span class="sxs-lookup"><span data-stu-id="1e28e-191">To learn how, follow a NuGet tutorial:</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="1e28e-192">使用 dotnet CLI 建立及發佈套件</span><span class="sxs-lookup"><span data-stu-id="1e28e-192">Create and publish a package using the dotnet CLI</span></span>](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
-
-<span data-ttu-id="1e28e-193">如果您將程式庫發佈為 NuGet 套件，其他人可以安裝和使用它。</span><span class="sxs-lookup"><span data-stu-id="1e28e-193">If you publish a library as a NuGet package, others can install and use it.</span></span> <span data-ttu-id="1e28e-194">若要深入瞭解，請遵循 NuGet 教學課程：</span><span class="sxs-lookup"><span data-stu-id="1e28e-194">To learn how, follow a NuGet tutorial:</span></span>
+<span data-ttu-id="ee990-188">在本教學課程中，您已對類別庫進行單元測試。</span><span class="sxs-lookup"><span data-stu-id="ee990-188">In this tutorial, you unit tested a class library.</span></span> <span data-ttu-id="ee990-189">您可以將程式庫以套件的形式發佈至 [NuGet](https://nuget.org) ，以將程式庫提供給其他人使用。</span><span class="sxs-lookup"><span data-stu-id="ee990-189">You can make the library available to others by publishing it to [NuGet](https://nuget.org) as a package.</span></span> <span data-ttu-id="ee990-190">若要深入瞭解，請遵循 NuGet 教學課程：</span><span class="sxs-lookup"><span data-stu-id="ee990-190">To learn how, follow a NuGet tutorial:</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="1e28e-195">利用 dotnet CLI 安裝並使用套件</span><span class="sxs-lookup"><span data-stu-id="1e28e-195">Install and use a package using the dotnet CLI</span></span>](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+> [<span data-ttu-id="ee990-191">使用 dotnet CLI 建立及發佈套件</span><span class="sxs-lookup"><span data-stu-id="ee990-191">Create and publish a package using the dotnet CLI</span></span>](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-<span data-ttu-id="1e28e-196">程式庫不需要以套件的形式散發。</span><span class="sxs-lookup"><span data-stu-id="1e28e-196">A library doesn't have to be distributed as a package.</span></span> <span data-ttu-id="1e28e-197">它可以與使用它的主控台應用程式配套。</span><span class="sxs-lookup"><span data-stu-id="1e28e-197">It can be bundled with a console app that uses it.</span></span> <span data-ttu-id="1e28e-198">若要瞭解如何發佈主控台應用程式，請參閱本系列的先前教學課程：</span><span class="sxs-lookup"><span data-stu-id="1e28e-198">To learn how to publish a console app, see the earlier tutorial in this series:</span></span>
+<span data-ttu-id="ee990-192">如果您將程式庫發佈為 NuGet 套件，其他人可以安裝和使用它。</span><span class="sxs-lookup"><span data-stu-id="ee990-192">If you publish a library as a NuGet package, others can install and use it.</span></span> <span data-ttu-id="ee990-193">若要深入瞭解，請遵循 NuGet 教學課程：</span><span class="sxs-lookup"><span data-stu-id="ee990-193">To learn how, follow a NuGet tutorial:</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="1e28e-199">使用 Visual Studio Code 發佈 .NET Core 主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="1e28e-199">Publish a .NET Core console application using Visual Studio Code</span></span>](publishing-with-visual-studio-code.md)
+> [<span data-ttu-id="ee990-194">利用 dotnet CLI 安裝並使用套件</span><span class="sxs-lookup"><span data-stu-id="ee990-194">Install and use a package using the dotnet CLI</span></span>](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+
+<span data-ttu-id="ee990-195">程式庫不需要以套件的形式散發。</span><span class="sxs-lookup"><span data-stu-id="ee990-195">A library doesn't have to be distributed as a package.</span></span> <span data-ttu-id="ee990-196">它可以與使用它的主控台應用程式配套。</span><span class="sxs-lookup"><span data-stu-id="ee990-196">It can be bundled with a console app that uses it.</span></span> <span data-ttu-id="ee990-197">若要瞭解如何發佈主控台應用程式，請參閱本系列的先前教學課程：</span><span class="sxs-lookup"><span data-stu-id="ee990-197">To learn how to publish a console app, see the earlier tutorial in this series:</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="ee990-198">使用 Visual Studio Code 發佈 .NET 主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="ee990-198">Publish a .NET console application using Visual Studio Code</span></span>](publishing-with-visual-studio-code.md)
