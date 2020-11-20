@@ -3,12 +3,12 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437992"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982305"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -28,7 +28,7 @@ ms.locfileid: "91437992"
 
 [單元測試](../testing/index.md) 是持續整合和部署高品質軟體的重要元件。 單元測試的設計是要在您中斷某個項目時提前警告您。
 
-## <a name="collect-diagnostics-in-containers"></a>收集容器中的診斷
+## <a name="collect-diagnostics-in-containers"></a>在容器中收集診斷
 
 在非容器化 Linux 環境中使用的診斷工具，也可以用來 [收集容器中的診斷](diagnostics-in-containers.md)資訊。 為了確保工具在 Docker 容器中運作，只需要幾個使用方式變更。
 
@@ -62,6 +62,10 @@ ms.locfileid: "91437992"
 
 [dotnet-sos](dotnet-sos.md) 可用來將 [sos 偵錯工具擴充](../../framework/tools/sos-dll-sos-debugging-extension.md) 功能安裝在 Linux 或 MacOS (或 Windows 上（如果使用舊版偵錯工具) ）。
 
+### <a name="perfcollect"></a>PerfCollect
+
+[PerfCollect](trace-perfcollect-lttng.md) 是一種 bash 腳本，可讓您用來收集追蹤， `perf` 以及 `LTTng` 取得 Linux 發行版本上執行的 .net 應用程式更深入的效能分析。
+
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core 診斷教學課程
 
 ### <a name="debug-a-memory-leak"></a>針對記憶體流失進行偵錯
@@ -75,3 +79,7 @@ ms.locfileid: "91437992"
 ### <a name="debug-deadlock"></a>針對死結進行偵錯
 
 [教學課程： Debug 鎖死](debug-deadlock.md) 會示範如何使用 [dotnet](dotnet-dump.md) 傾印工具來調查執行緒和鎖定。
+
+### <a name="measure-performance-using-eventcounters"></a>使用 EventCounters 測量效能
+
+[教學課程：在 .net 中使用 EventCounters 測量效能](event-counter-perf.md) 說明如何使用 <xref:System.Diagnostics.Tracing.EventCounter> API 來測量 .net 應用程式中的效能。

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: f5c67392705156d6ff05e6f140c7187f41b1d033
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915826"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982390"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -100,7 +100,7 @@ ms.locfileid: "94915826"
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
 
-參考型別與可為 null 的實值型別的運算式 `x is null` 計算方式不同。 針對可為 null 的實數值型別，它會使用 <xref:System.Nullable%601.HasValue?displayProperty=nameWithType> 。 若為參考型別，則會使用 `x == null` 。
+參考型別與可為 null 的實值型別的運算式 `x is null` 計算方式不同。 針對可為 null 的實數值型別，它會使用 <xref:System.Nullable%601.HasValue?displayProperty=nameWithType> 。 若為參考型別，則會使用 `(object)x == null` 。
 
 ### <a name="var-pattern"></a>var 模式
 

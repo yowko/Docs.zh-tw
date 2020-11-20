@@ -18,12 +18,12 @@ helpviewer_keywords:
 - email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 0f6b8b19ae6047bc419ce949ab76288a24e00f74
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88ff326e16ede6a422e9403b71905845014c4c25
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821979"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982488"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何確認字串是否為有效的電子郵件格式
 
@@ -81,7 +81,7 @@ ms.locfileid: "94821979"
 > [!IMPORTANT]
 > 此正則運算式並非用來涵蓋有效電子郵件地址的每個層面。 它是一個範例，可讓您視需要擴充。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 規則運算式](regular-expressions.md)
 - [一個電子郵件地址驗證的距離為何？](https://softwareengineering.stackexchange.com/questions/78353/how-far-should-one-take-e-mail-address-validation#78363)

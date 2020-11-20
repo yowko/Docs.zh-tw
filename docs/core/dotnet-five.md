@@ -5,12 +5,12 @@ ms.date: 11/18/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 077fb06db40519af2bf8ac2f659488acdf525aec
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 1101e218f225eed2a2013ed9e19b60f4ece57738
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916217"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982297"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -53,7 +53,7 @@ ASP.NET Core 5.0 是以 .NET 5.0 為基礎，但會保留 "Core" 的名稱，以
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-不過，只有在 Windows 上才支援 [Windows Communication Foundation (WCF) ](../framework/wcf/index.md) 的原始執行;您可以從 .NET Foundation 取得用戶端埠。 它是完全 [開放的原始](https://github.com/dotnet/wcf)碼、跨平臺，並受到 Microsoft 的支援。 核心 NuGet 套件如下所示：
+只有在 Windows 上才支援 [Windows Communication Foundation (WCF) ](../framework/wcf/index.md) 的原始執行。 不過，.NET Foundation 有提供用戶端埠。 它是完全 [開放的原始](https://github.com/dotnet/wcf)碼、跨平臺，並受到 Microsoft 的支援。 核心 NuGet 套件如下所示：
 
 - [System.ServiceModel.Duplex](https://www.nuget.org/packages/System.ServiceModel.Duplex)
 - [System.servicemodel. 同盟](https://www.nuget.org/packages/System.ServiceModel.Federation)
@@ -120,7 +120,7 @@ let message = $"%s{name} is %d{age} years old."
 
 .NET 5 中沒有適用于 Visual Basic 的新語言功能。 不過，在 .NET 5 中，Visual Basic 支援延伸至：
 
-| 描述                            | `dotnet new` 參數 |
+| 說明                            | `dotnet new` 參數 |
 |----------------------------------------|------------------------|
 | 主控台應用程式                    | `console`              |
 | 類別庫                          | `classlib`             |

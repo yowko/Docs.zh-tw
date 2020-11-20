@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 5851492f075068337c60316664138dd09c97443b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: ef0b1c642db055c8c5d4f2275b02119d8ebee8f0
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552216"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982415"
 ---
 # <a name="how-to-project-an-anonymous-type-linq-to-xml"></a>如何將匿名型別投影 (LINQ to XML) 
 
 在某些情況下，您可能會想要將查詢投射至新的型別，但是查詢會是您只用于新型別的專案。 您可以投影至匿名型別，而不是建立型別。 匿名型別提供一個方便的方式，在物件中封裝一組唯讀屬性，而不需要先明確地定義型別。 如果您撰寫的查詢會在子句中建立匿名型別的物件 `select` ，則查詢會傳回 <xref:System.Collections.IEnumerable> 型別的。
 
-下列範例顯示如何建立匿名型別的物件，該物件是以兩個屬性（property） `Amount` 和來初始化 `Message` 。
+下列範例會示範如何建立匿名型別的物件，該物件是以兩個屬性（property）和來初始化 `Amount` `Message` 。
 
 ```csharp
 var v = new { Amount = 108, Message = "Hello" };

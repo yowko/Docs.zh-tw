@@ -2,12 +2,12 @@
 title: 應用程式效能管理-WCF 開發人員的 gRPC
 description: ASP.NET Core gRPC 應用程式的記錄、計量和追蹤。
 ms.date: 09/02/2019
-ms.openlocfilehash: bccb5ba92e2dc8fa2def4dc192b0ca58b332861a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165906"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982338"
 ---
 # <a name="application-performance-management"></a>應用程式效能管理
 
@@ -59,7 +59,7 @@ public class StockData : Stocks.StocksBase
 
 大部分的計量平臺都支援下列類型：
 
-| 度量類型 | 描述 |
+| 度量類型 | 說明 |
 | ----------- | ----------- |
 | 計數器     | 追蹤發生某件事的頻率，例如要求和錯誤。 |
 | 量測計       | 記錄會隨著時間而變更的單一值，例如使用中的連接。 |
@@ -98,7 +98,7 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="store-and-visualize-metrics-data"></a>儲存和視覺化度量資料
 
-儲存度量資料的最佳方式是在 *時間序列資料庫*中，這是專門用來記錄以時間戳記標記之數值資料數列的特殊資料存放區。 這些資料庫中最受歡迎的 [Prometheus](https://prometheus.io/) 和 [InfluxDB](https://www.influxdata.com/products/influxdb-overview/)。 Microsoft Azure 也會透過 [Azure 監視器](/azure/azure-monitor/overview) 服務提供專用的計量儲存體。
+儲存度量資料的最佳方式是在 *時間序列資料庫* 中，這是專門用來記錄以時間戳記標記之數值資料數列的特殊資料存放區。 這些資料庫中最受歡迎的 [Prometheus](https://prometheus.io/) 和 [InfluxDB](https://www.influxdata.com/products/influxdb-overview/)。 Microsoft Azure 也會透過 [Azure 監視器](/azure/azure-monitor/overview) 服務提供專用的計量儲存體。
 
 將計量資料視覺化的目前進入解決方案是 [Grafana](https://grafana.com)，可與各種不同的儲存提供者搭配運作。 下圖顯示範例 Grafana 儀表板，此儀表板會顯示執行 StockData 範例之 Linkerd 服務網格中的計量：
 
@@ -116,11 +116,11 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="how-distributed-tracing-works"></a>分散式追蹤的運作方式
 
-分散式追蹤是以 *範圍*的概念為基礎：命名為的計時作業，屬於單一 *追蹤*的一部分，這可能牽涉到在系統的多個節點上處理。 起始新的作業時，會使用唯一識別碼來建立追蹤。 針對每個子作業，會使用自己的識別碼和追蹤識別碼來建立範圍。 當要求在系統中傳遞時，不同的元件可以建立包含其*父系*識別碼的*子*範圍。 範圍具有 *內容*，其中包含追蹤和 span 識別碼，以及索引鍵/值組形式的有用資料 (稱為「 *行李*) 」。
+分散式追蹤是以 *範圍* 的概念為基礎：命名為的計時作業，屬於單一 *追蹤* 的一部分，這可能牽涉到在系統的多個節點上處理。 起始新的作業時，會使用唯一識別碼來建立追蹤。 針對每個子作業，會使用自己的識別碼和追蹤識別碼來建立範圍。 當要求在系統中傳遞時，不同的元件可以建立包含其 *父系* 識別碼的 *子* 範圍。 範圍具有 *內容*，其中包含追蹤和 span 識別碼，以及索引鍵/值組形式的有用資料 (稱為「 *行李*) 」。
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>分散式追蹤 `DiagnosticSource`
 
-.NET Core 的內部模組可適當地對應到分散式追蹤和範圍： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 除了提供簡單的方法，讓您在進程內產生和取用診斷， `DiagnosticSource` 模組也有 *活動*的概念。 活動實際上是分散式追蹤或追蹤內的範圍。 模組的內部負責處理父子式活動，包括配置識別碼。 如需使用此類型的詳細資訊 `Activity` ，請參閱 [GitHub 上的活動使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
+.NET Core 的內部模組可適當地對應到分散式追蹤和範圍： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 除了提供簡單的方法，讓您在進程內產生和取用診斷， `DiagnosticSource` 模組也有 *活動* 的概念。 活動實際上是分散式追蹤或追蹤內的範圍。 模組的內部負責處理父子式活動，包括配置識別碼。 如需使用此類型的詳細資訊 `Activity` ，請參閱 [GitHub 上的活動使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
 
 因為 `DiagnosticSource` 是核心架構的一部分，所以有數個核心元件支援。 這些包括 <xref:System.Net.Http.HttpClient> 、Entity Framework Core 和 ASP.NET Core，包括 gRPC 架構中的明確支援。 當 ASP.NET Core 收到要求時，它會檢查符合 [W3C 追蹤內容](https://www.w3.org/TR/trace-context) 標準的一對 HTTP 標頭。 如果找不到標頭，則會使用標頭中的識別值和內容來啟動活動。 如果找不到標頭，則會使用符合標準格式之產生的識別值啟動活動。 在此活動存留期間，架構或應用程式程式碼所產生的任何診斷都可以使用追蹤和 span 識別碼標記。 `HttpClient`此支援會藉由檢查每個要求的目前活動，以及自動將追蹤標頭新增至傳出要求，來進一步延伸此功能。
 

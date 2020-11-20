@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 2ed2a88b91f06bb02c72d3e310ae09d58637205f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2dda65f605ea9de616f01d6e52eb4e0e5def4db7
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197465"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982514"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 
@@ -94,7 +94,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此外，下列規則適用於 `DataRow.["columnName"]` Null 指派的執行個體：  
   
-1. 除了強型別 Null 資料行具有適當的強型別 Null 值之外，所有其他項目的預設 *default* 值都為 `DbNull.Value`。  
+1. 除了 *default* 強型別 `DbNull.Value` null 資料行是適當的強型別 null 值之外，所有的預設值都是。  
   
 2. 絕對不會在序列化到 XML 檔案期間寫出 Null 值 (就像 "xsi:nil")。  
   

@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 45286e18c41da7eb6717729360077b64539c3db5
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 896b88cbf1f7f31d2d26d69ec7d219da6b27ceff
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877724"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982290"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core 和 .NET 5 的版本和支援
 
@@ -18,7 +18,7 @@ Microsoft 針對 .NET 5.0 (和 .NET Core) 和更新版本推出了 (修補程式
 
 ## <a name="release-types"></a>版本類型
 
-每個版本的類型相關資訊會以 *主要. 次要 patch*格式的版本號碼編碼。
+每個版本的類型相關資訊會以 *主要. 次要 patch* 格式的版本號碼編碼。
 
 例如：
 
@@ -46,7 +46,7 @@ Microsoft 針對 .NET 5.0 (和 .NET Core) 和更新版本推出了 (修補程式
 
 ### <a name="runtime-roll-forward-and-compatibility"></a>執行時間向前復原和相容性
 
-主要和次要更新會與先前的版本並存安裝。 針對特定主要版本所建立的應用程式 *。次要* 版本會繼續使用該目標執行時間，即使已安裝較新的版本也一樣。 除非您加入宣告此行為，否則應用程式不會自動向前復原為使用較新的*主要版本。* 以 .NET Core 3.0 為目標所建立的應用程式不會在 .NET Core 3.1 上自動開始執行。 建議您先重建應用程式，並針對較新的主要或次要執行階段版本進行測試，再部署至生產環境。 如需詳細資訊，請參閱與 [Framework 相依的應用程式](versions/selection.md#framework-dependent-apps-roll-forward) 向前復原和獨立式 [部署執行時間向前](deploying/runtime-patch-selection.md)復原。
+主要和次要更新會與先前的版本並存安裝。 針對特定主要版本所建立的應用程式 *。次要* 版本會繼續使用該目標執行時間，即使已安裝較新的版本也一樣。 除非您加入宣告此行為，否則應用程式不會自動向前復原為使用較新的 *主要版本。* 以 .NET Core 3.0 為目標所建立的應用程式不會在 .NET Core 3.1 上自動開始執行。 建議您先重建應用程式，並針對較新的主要或次要執行階段版本進行測試，再部署至生產環境。 如需詳細資訊，請參閱與 [Framework 相依的應用程式](versions/selection.md#framework-dependent-apps-roll-forward) 向前復原和獨立式 [部署執行時間向前](deploying/runtime-patch-selection.md)復原。
 
 服務更新的處理方式與主要和次要版本不同。 根據預設，針對 .NET Core 3.1 所建立的應用程式會在3.1.0 執行時間上執行。 當安裝服務更新時，它會自動向前復原以使用較新的3.1.1 執行時間。 這是預設行為，因為我們希望安全性修正程式在安裝時立即使用，而不需要執行任何其他動作。 您可以退出宣告此預設向前復原行為。
 

@@ -1,17 +1,17 @@
 ---
-title: Debug Linux 傾印
+title: 對 Linux 傾印進行偵錯
 description: 在本文中，您將瞭解如何收集和分析來自 Linux 環境的傾印。
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 692d6228fae31de015412c23c4ec5317024faaab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598332"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982258"
 ---
-# <a name="debug-linux-dumps"></a>Debug Linux 傾印
+# <a name="debug-linux-dumps"></a>對 Linux 傾印進行偵錯
 
-本文**適用于：✔️** .net CORE 3.0 SDK 和更新版本
+本文 **適用于：✔️** .net CORE 3.0 SDK 和更新版本
 
 ## <a name="collect-dumps-on-linux"></a>在 Linux 上收集傾印
 
@@ -25,13 +25,13 @@ ms.locfileid: "89598332"
 
 建立僅限受控傾印的替代方案 `dotnet-dump` [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) 是在 Linux 上建立核心傾印的建議工具，其中包含原生和受管理的資訊。 其他工具（例如 gdb 或 gcore）也可以用來建立核心傾印，但可能會遺失 managed 偵錯工具所需的狀態，在分析期間導致「未知」類型或函式名稱。
 
-這些 `createdump` 工具會與 .Net Core 執行時間一起安裝，並可在 libcoreclr.so 的旁邊找到， (通常位於 "/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]" ) 。 此工具會採用處理序識別碼來收集傾印作為其主要引數，也可以使用選擇性參數來指定要收集的傾印類型 (使用堆積的小型傾印是預設) 。 選項包括：
+這些 `createdump` 工具會與 .Net Core 執行時間一起安裝，並可在 libcoreclr.so 的旁邊找到， (通常位於 "/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]" ) 。 此工具會採用處理序識別碼來收集傾印作為其主要引數，也可以使用選擇性參數來指定要收集的傾印類型 (使用堆積的小型傾印是預設) 。 這些選項包括：
 
 - **`<input-filename>`**
 
   要轉換的輸入追蹤檔案。 預設值為 *nettrace*。
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`-f|--name <output-filename>`**
 

@@ -4,12 +4,12 @@ author: IEvangelist
 description: 了解如何使用由 Microsoft.Extensions.Logging NuGet 套件提供的記錄架構。
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: d409d78698e4e85eaf9f2894ee1ed00cea0c0583
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 5a4d333368082389c4dfc134bb6a9a2e618d47e9
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888555"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982317"
 ---
 # <a name="logging-in-net"></a>.NET 中的記錄
 
@@ -22,7 +22,7 @@ ms.locfileid: "92888555"
 下列範例將：
 
 - 建立記錄器， `ILogger<Worker>` 這會使用類型完整名稱的記錄 *類別* `Worker` 。 記錄「類別」是與每個記錄關聯的字串。
-- 呼叫 <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> 層級的記錄 `Information` 。 記錄「層級」  指出已記錄事件的嚴重性。
+- 呼叫 <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> 層級的記錄 `Information` 。 記錄「層級」 指出已記錄事件的嚴重性。
 
 :::code language="csharp" source="snippets/configuration/worker-service/Worker.cs" range="9-24" highlight="12":::
 
@@ -64,7 +64,7 @@ ms.locfileid: "92888555"
 - 特定類別：例如， `Logging:LogLevel:Microsoft:Warning`
 - 所有提供者和所有類別： `Logging:LogLevel:Default:Warning`
 
-低於最低層級的所有記錄都是 * **而不** 是 _：
+低於最低層級的所有記錄都是 ***而不** 是 _：
 
 - 傳遞給提供者。
 - 記錄或顯示。
@@ -81,7 +81,7 @@ ms.locfileid: "92888555"
 
 - 類別和層級不是建議的值。 提供的範例會顯示所有預設的提供者。
 - 覆寫設定中的設定 `Logging.{ProviderName}.LogLevel` `Logging.LogLevel` 。 例如，中的層級會 `Debug.LogLevel.Default` 覆寫中的層級 `LogLevel.Default` 。
-- 使用每個提供者的 *別名* 。 每個提供者都會定義「別名」  ，可在設定中用來取代完整類型名稱。 內建提供者的別名如下：
+- 使用每個提供者的 *別名* 。 每個提供者都會定義「別名」，可在設定中用來取代完整類型名稱。 內建提供者的別名如下：
   - 主控台
   - 偵錯
   - EventSource
@@ -115,7 +115,7 @@ dotnet run
 setx Logging__LogLevel__Microsoft=Information /M
 ```
 
-在 [Azure App Service](https://azure.microsoft.com/services/app-service/)上，選取 [ **設定 > 設定** ] 頁面上的 [ **新增應用程式設定** ]。 Azure App Service 的應用程式設定如下：
+在 [Azure App Service](https://azure.microsoft.com/services/app-service/)上，選取 [**設定 > 設定**] 頁面上的 [**新增應用程式設定**]。 Azure App Service 的應用程式設定如下：
 
 - 靜態加密，並透過加密通道傳輸。
 - 公開為環境變數。
@@ -135,7 +135,7 @@ setx Logging__LogLevel__Microsoft=Information /M
 
 ## <a name="log-category"></a>記錄分類
 
-`ILogger`建立物件時，會指定 *類別* 。 該類別會包含在每個由該 `ILogger` 執行個體所產生的記錄訊息中。 類別目錄字串是任意的，但慣例是使用類別名稱。 例如，在服務定義類似下列物件的應用程式中，類別目錄可能是 `"Example.DefaultService"` ：
+`ILogger`建立物件時，會指定 *類別*。 該類別會包含在每個由該 `ILogger` 執行個體所產生的記錄訊息中。 類別目錄字串是任意的，但慣例是使用類別名稱。 例如，在服務定義類似下列物件的應用程式中，類別目錄可能是 `"Example.DefaultService"` ：
 
 ```csharp
 namespace Example
@@ -177,15 +177,15 @@ namespace Example
 
 下表列出這些 <xref:Microsoft.Extensions.Logging.LogLevel> 值、便利的 `Log{LogLevel}` 擴充方法，以及建議的使用方式：
 
-| LogLevel | 值 | 方法 | 描述 |
+| LogLevel | 值 | 方法 | 說明 |
 |--|--|--|--|
 | [追蹤](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | 包含最詳細的訊息。 這些訊息可能包含敏感性應用程式資料。 這些訊息預設為停用，且 **不** 應在生產環境中啟用 *。 |
 | [偵錯](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | 用於偵錯工具和開發。 在生產環境中，請謹慎使用，因為這是大量的磁片區。 |
 | [資訊](xref:Microsoft.Extensions.Logging.LogLevel) | 2 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> | 追蹤應用程式的一般流程。 可能具有長期值。 |
 | [警告](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | 針對異常或非預期的事件。 通常會包含不會導致應用程式失敗的錯誤或狀況。 |
 | [錯誤](xref:Microsoft.Extensions.Logging.LogLevel) | 4 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogError%2A> | 發生無法處理的錯誤和例外狀況。 這些訊息表示目前的作業或要求失敗，而不是整個應用程式的失敗。 |
-| [重大](xref:Microsoft.Extensions.Logging.LogLevel) | 5 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical%2A> | 發生需要立即注意的失敗。 範例：資料遺失情況、磁碟空間不足。 |
-| [無](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | 指定不應寫入任何訊息。 |
+| [嚴重](xref:Microsoft.Extensions.Logging.LogLevel) | 5 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical%2A> | 發生需要立即注意的失敗。 範例：資料遺失情況、磁碟空間不足。 |
+| [None](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | 指定不應寫入任何訊息。 |
 
 在上表中， `LogLevel` 是從最低到最高的嚴重性列出。
 
@@ -375,7 +375,7 @@ class Program
 
 ## <a name="log-scopes"></a>記錄範圍
 
- 「範圍」  可用來將邏輯作業組成群組。 此分組功能可用來將相同的資料附加到已建立為集合之一部分的每個記錄。 例如，在處理邀交易時建立的每個記錄都可以包括該交易識別碼。
+ 「範圍」可用來將邏輯作業組成群組。 此分組功能可用來將相同的資料附加到已建立為集合之一部分的每個記錄。 例如，在處理邀交易時建立的每個記錄都可以包括該交易識別碼。
 
 範圍：
 
@@ -526,7 +526,7 @@ class Program
 - 記錄層級 `Information` 和更新版本。
 - 開頭為的所有分類 `"Microsoft"` 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 中的記錄提供者](logging-providers.md)
 - [在 .NET 中執行自訂記錄提供者](custom-logging-provider.md)
