@@ -1,19 +1,21 @@
 ---
 title: '如何覆寫 ToString 方法-c # 程式設計手冊'
-description: '瞭解如何在 c # 中覆寫 ToString 方法。 每個類別或結構都會繼承物件，並取得 ToString，以傳回該物件的字串表示。'
+description: '瞭解如何在 c # 中覆寫 ToString 方法。 每個類別或結構都會繼承物件，並取得 ToString，傳回該物件的字串表示。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 65b34b485d4b90173a4c956dd0ebaaa590a0c7c9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: de56ea10ea15f497f9375c2449acbae1d0c8978a
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865004"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099259"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何覆寫 ToString 方法（c # 程式設計手冊）
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何覆寫 ToString 方法 (c # 程式設計手冊) 
 
 C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別。 因此，C# 中的每個物件都會取得 <xref:System.Object.ToString%2A> 方法，以傳回該物件的字串表示。 例如，所有 `int` 類型的變數都有 `ToString` 方法，並讓它們以字串傳回其內容︰  
   
@@ -52,5 +54,5 @@ C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別�
 - [字串](../strings/index.md)
 - [string](../../language-reference/builtin-types/reference-types.md)
 - [override](../../language-reference/keywords/override.md)
-- [虛擬](../../language-reference/keywords/virtual.md)
+- [virtual](../../language-reference/keywords/virtual.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)

@@ -2,12 +2,12 @@
 title: 對 Linux 傾印進行偵錯
 description: 在本文中，您將瞭解如何收集和分析來自 Linux 環境的傾印。
 ms.date: 08/27/2020
-ms.openlocfilehash: 692d6228fae31de015412c23c4ec5317024faaab
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982258"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099142"
 ---
 # <a name="debug-linux-dumps"></a>對 Linux 傾印進行偵錯
 
@@ -23,9 +23,9 @@ ms.locfileid: "94982258"
 
 ### <a name="core-dumps-with-createdump"></a>核心傾印 `createdump`
 
-建立僅限受控傾印的替代方案 `dotnet-dump` [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) 是在 Linux 上建立核心傾印的建議工具，其中包含原生和受管理的資訊。 其他工具（例如 gdb 或 gcore）也可以用來建立核心傾印，但可能會遺失 managed 偵錯工具所需的狀態，在分析期間導致「未知」類型或函式名稱。
+除了 `dotnet-dump` 建立僅限受控傾印之外，也是在 [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) Linux 上建立核心傾印的建議工具，其中包含原生和受控資訊。 其他工具（例如 gdb 或 gcore）也可以用來建立核心傾印，但可能會遺失 managed 偵錯工具所需的狀態，在分析期間導致「未知」類型或函式名稱。
 
-這些 `createdump` 工具會與 .Net Core 執行時間一起安裝，並可在 libcoreclr.so 的旁邊找到， (通常位於 "/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]" ) 。 此工具會採用處理序識別碼來收集傾印作為其主要引數，也可以使用選擇性參數來指定要收集的傾印類型 (使用堆積的小型傾印是預設) 。 這些選項包括：
+此 `createdump` 工具會與 .Net Core 執行時間一起安裝，並可在 libcoreclr.so 的旁邊找到， (通常位於 "/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]" ) 。 此工具會採用處理序識別碼來收集傾印作為其主要引數，也可以使用選擇性參數來指定要收集的傾印類型 (使用堆積的小型傾印是預設) 。 這些選項包括：
 
 - **`<input-filename>`**
 
@@ -57,13 +57,13 @@ ms.locfileid: "94982258"
 
   啟用診斷訊息。
 
-請注意，收集核心傾印需要 `SYS_PTRACE` 功能或 `createdump` 使用 sudo 或 su 來執行。
+收集核心傾印需要 `SYS_PTRACE` 功能或 `createdump` 使用 sudo 或 su 來執行。
 
 ## <a name="analyze-dumps-on-linux"></a>分析 Linux 上的傾印
 
 使用收集的管理傾印和收集的核心傾印，都 `dotnet-dump` `createdump` 可以 `dotnet-dump` 使用命令，利用工具進行分析 `dotnet-dump analyze` 。 需要分析傾印的 `dotnet dump` 環境與用來捕捉傾印的環境具有相同的作業系統和架構。
 
-或者，您也可以使用 [LLDB](https://lldb.llvm.org/) 來分析 Linux 上的核心傾印，以允許分析 managed 和原生框架。 LLDB 使用 SOS 擴充功能來進行 managed 程式碼的偵錯工具。 您 [`dotnet-sos`](dotnet-sos.md) 可以使用 CLI 工具來安裝包含 [許多實用命令](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) 的 SOS，以進行 managed 程式碼的偵錯工具。 為了分析 .NET Core 傾印，LLDB 和 SOS 需要下列 .NET Core 二進位檔，其來自于建立傾印的環境：
+或者，您也可以使用 [LLDB](https://lldb.llvm.org/) 來分析 Linux 上的核心傾印，以允許分析 managed 和原生框架。 LLDB 使用 SOS 擴充功能來進行 managed 程式碼的偵錯工具。 [`dotnet-sos`](dotnet-sos.md)CLI 工具可以用來安裝 SOS，其中有[許多實用的命令](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md)可供您用來對 managed 程式碼進行調試。 為了分析 .NET Core 傾印，LLDB 和 SOS 需要下列 .NET Core 二進位檔，其來自于建立傾印的環境：
 
 1. libmscordaccore.so
 2. libcoreclr.so

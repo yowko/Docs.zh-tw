@@ -26,16 +26,16 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827252"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098810"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
-泛型可讓您將方法、類別、結構或介面，修改成其發揮作用的精確資料類型。 例如，不使用 <xref:System.Collections.Hashtable> 類別，讓索引鍵和值可為任何類型；而改用 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，指定索引鍵所允許的類型以及值所允許的類型。 泛型的優點包括加強程式碼的重複使用程度以及類型安全性。  
+泛型可讓您將方法、類別、結構或介面，修改成其發揮作用的精確資料類型。 例如， <xref:System.Collections.Hashtable> 您可以使用 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，並指定索引鍵和值所允許的類型，而不是使用類別（可讓索引鍵和值成為任何類型）。 泛型的優點包括加強程式碼的重複使用程度以及類型安全性。  
 
 ## <a name="defining-and-using-generics"></a>定義和使用泛型
  泛型是指一些類別、結構、介面與方法，其具有所儲存或使用之一或多個類型的預留位置 (類型參數)。 泛型集合類別可能會針對所儲存的物件類型，使用類型參數做為預留位置；這些類型參數會顯示為其欄位的類型，和其方法的參數類型。 泛型方法可能會使用其類型參數，做為其傳回值的類型，或其型式參數之一的類型。 下列程式碼將會示範簡單的泛型類別定義。  
