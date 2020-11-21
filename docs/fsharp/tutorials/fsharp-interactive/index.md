@@ -4,12 +4,12 @@ description: '瞭解如何使用 F# 互動 (dotnet fsi) ，以互動方式在主
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 6f865483762e92964c8baa51498f07974c109691
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400862"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982501"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F 的互動式程式設計\#
 
@@ -76,7 +76,7 @@ let getOddSquares xs =
     |> List.filter (fun x -> x % 2 <> 0)
     |> List.map (fun x -> x * x)
 
-getOddSquares [1..10]
+printfn "%A" (getOddSquares [1..10])
 ```
 
 當您在電腦上建立這個檔案時，您可以使用來執行它， `dotnet fsi` 並直接在終端機視窗中查看輸出：
@@ -210,7 +210,7 @@ fsi
 
 `#r`先前看到的和指示詞 `#load` 只能在 F# 互動中使用。 只有 F# 互動有幾個指示詞可用：
 
-|指示詞|說明|
+|指示詞|Description|
 |---------|-----------|
 |`#r "nuget:..."`|從 NuGet 參考封裝|
 |`#r "assembly-name.dll"`|參考磁片上的元件|
@@ -235,9 +235,9 @@ fsi
 
 ## <a name="using-f-interactive-in-visual-studio"></a>在 Visual Studio 中使用 F# 互動
 
-若要透過 Visual Studio 執行 F# Interactive，您可以按一下標示為 **F# Interactive** 的合適工具列按鈕，或使用按鍵 **Ctrl+Alt+F** 。 如此會開啟互動式視窗，也就是執行 F# Interactive 工作階段的工具視窗。 您也可以選取要在互動式視窗中執行的一些程式碼，然後按按鍵組合 **Alt + Enter** 。 F# Interactive 會隨即在標示為 **F# Interactive** 的工具視窗中啟動。 當您使用這個按鍵組合時，請確定編輯器視窗具有焦點。
+若要透過 Visual Studio 執行 F# Interactive，您可以按一下標示為 **F# Interactive** 的合適工具列按鈕，或使用按鍵 **Ctrl+Alt+F**。 如此會開啟互動式視窗，也就是執行 F# Interactive 工作階段的工具視窗。 您也可以選取要在互動式視窗中執行的一些程式碼，然後按按鍵組合 **Alt + Enter**。 F# Interactive 會隨即在標示為 **F# Interactive** 的工具視窗中啟動。 當您使用這個按鍵組合時，請確定編輯器視窗具有焦點。
 
-不論是使用主控台還是否 Visual Studio，命令提示字元都會出現，表示解譯器在等待您輸入。 您可以如同在程式碼檔案中一樣輸入程式碼。 若要編譯並執行程式碼，請輸入兩個分號 ( **;;** ) 以終止一或數行的輸入。
+不論是使用主控台還是否 Visual Studio，命令提示字元都會出現，表示解譯器在等待您輸入。 您可以如同在程式碼檔案中一樣輸入程式碼。 若要編譯並執行程式碼，請輸入兩個分號 (**;;**) 以終止一或數行的輸入。
 
 F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程式碼，並列印它所編譯的類型與值的簽章。 如果發生錯誤，解譯器就會列印錯誤訊息。
 
@@ -245,7 +245,7 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 
 在 Visual Studio 中執行 F# Interactive 時，會與專案分開執行，因此，舉例來說，除非您將函式的程式碼複製到 [互動] 視窗，否則無法使用在 F# Interactive 中專案內所定義的建構。
 
-您可以調整設定， (選項) 來控制 F# 互動命令列引數。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive] 這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會決定您是否要執行專用的64位版本的 **fsi.exe** 或 **fsianycpu.exe** ，其使用電腦架構來判斷是否以32位或64位進程的形式執行。
+您可以調整設定， (選項) 來控制 F# 互動命令列引數。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive] 這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會決定您是否要執行專用的64位版本的 **fsi.exe** 或 **fsianycpu.exe**，其使用電腦架構來判斷是否以32位或64位進程的形式執行。
 
 ## <a name="related-articles"></a>相關文章
 
