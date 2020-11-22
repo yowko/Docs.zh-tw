@@ -2,26 +2,26 @@
 title: 'F # 5.0 中的新功能-F # 指南'
 description: '深入瞭解 F # 5.0 中可用的新功能。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982462"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098693"
 ---
-# <a name="whats-new-in-f-50"></a><span data-ttu-id="e0c4c-103">F # 5.0 的新功能</span><span class="sxs-lookup"><span data-stu-id="e0c4c-103">What's new in F# 5.0</span></span>
+# <a name="whats-new-in-f-50"></a><span data-ttu-id="55064-103">F # 5.0 的新功能</span><span class="sxs-lookup"><span data-stu-id="55064-103">What's new in F# 5.0</span></span>
 
-<span data-ttu-id="e0c4c-104">F # 5.0 在 F # 語言和 F# 互動中新增了幾項改進。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-104">F# 5.0 adds several improvements to the F# language and F# Interactive.</span></span> <span data-ttu-id="e0c4c-105">它是以 **.net 5** 發行。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-105">It is released with **.NET 5**.</span></span>
+<span data-ttu-id="55064-104">F # 5.0 在 F # 語言和 F# 互動中新增了幾項改進。</span><span class="sxs-lookup"><span data-stu-id="55064-104">F# 5.0 adds several improvements to the F# language and F# Interactive.</span></span> <span data-ttu-id="55064-105">它是以 **.net 5** 發行。</span><span class="sxs-lookup"><span data-stu-id="55064-105">It is released with **.NET 5**.</span></span>
 
-<span data-ttu-id="e0c4c-106">您可以從 [.net 下載頁面](https://dotnet.microsoft.com/download)下載最新的 .net SDK。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-106">You can download the latest .NET SDK from the [.NET downloads page](https://dotnet.microsoft.com/download).</span></span>
+<span data-ttu-id="55064-106">您可以從 [.net 下載頁面](https://dotnet.microsoft.com/download)下載最新的 .net SDK。</span><span class="sxs-lookup"><span data-stu-id="55064-106">You can download the latest .NET SDK from the [.NET downloads page](https://dotnet.microsoft.com/download).</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="e0c4c-107">開始使用</span><span class="sxs-lookup"><span data-stu-id="e0c4c-107">Get started</span></span>
+## <a name="get-started"></a><span data-ttu-id="55064-107">開始使用</span><span class="sxs-lookup"><span data-stu-id="55064-107">Get started</span></span>
 
-<span data-ttu-id="e0c4c-108">F # 5.0 適用于所有 .NET Core 散發套件和 Visual Studio 工具。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-108">F# 5.0 is available in all .NET Core distributions and Visual Studio tooling.</span></span> <span data-ttu-id="e0c4c-109">如需詳細資訊，請參閱 [F #](../get-started/index.md) 入門（英文）以深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-109">For more information, see [Get started with F#](../get-started/index.md) to learn more.</span></span>
+<span data-ttu-id="55064-108">F # 5.0 適用于所有 .NET Core 散發套件和 Visual Studio 工具。</span><span class="sxs-lookup"><span data-stu-id="55064-108">F# 5.0 is available in all .NET Core distributions and Visual Studio tooling.</span></span> <span data-ttu-id="55064-109">如需詳細資訊，請參閱 [F #](../get-started/index.md) 入門（英文）以深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="55064-109">For more information, see [Get started with F#](../get-started/index.md) to learn more.</span></span>
 
-## <a name="package-references-in-f-scripts"></a><span data-ttu-id="e0c4c-110">F # 腳本中的套件參考</span><span class="sxs-lookup"><span data-stu-id="e0c4c-110">Package references in F# scripts</span></span>
+## <a name="package-references-in-f-scripts"></a><span data-ttu-id="55064-110">F # 腳本中的套件參考</span><span class="sxs-lookup"><span data-stu-id="55064-110">Package references in F# scripts</span></span>
 
-<span data-ttu-id="e0c4c-111">F # 5 以語法提供 F # 腳本中封裝參考的支援 `#r "nuget:..."` 。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-111">F# 5 brings support for package references in F# scripts with `#r "nuget:..."` syntax.</span></span> <span data-ttu-id="e0c4c-112">例如，請考慮下列套件參考：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-112">For example, consider the following package reference:</span></span>
+<span data-ttu-id="55064-111">F # 5 以語法提供 F # 腳本中封裝參考的支援 `#r "nuget:..."` 。</span><span class="sxs-lookup"><span data-stu-id="55064-111">F# 5 brings support for package references in F# scripts with `#r "nuget:..."` syntax.</span></span> <span data-ttu-id="55064-112">例如，請考慮下列套件參考：</span><span class="sxs-lookup"><span data-stu-id="55064-112">For example, consider the following package reference:</span></span>
 
 ```fsharp
 #r "nuget: Newtonsoft.Json"
@@ -33,15 +33,15 @@ let o = {| X = 2; Y = "Hello" |}
 printfn "%s" (JsonConvert.SerializeObject o)
 ```
 
-<span data-ttu-id="e0c4c-113">您也可以在套件名稱之後提供明確的版本，如下所示：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-113">You can also supply an explicit version after the name of the package like this:</span></span>
+<span data-ttu-id="55064-113">您也可以在套件名稱之後提供明確的版本，如下所示：</span><span class="sxs-lookup"><span data-stu-id="55064-113">You can also supply an explicit version after the name of the package like this:</span></span>
 
 ```fsharp
 #r "nuget: Newtonsoft.Json,11.0.1"
 ```
 
-<span data-ttu-id="e0c4c-114">封裝參考支援具有原生相依性的套件，例如 ML.NET。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-114">Package references support packages with native dependencies, such as ML.NET.</span></span>
+<span data-ttu-id="55064-114">封裝參考支援具有原生相依性的套件，例如 ML.NET。</span><span class="sxs-lookup"><span data-stu-id="55064-114">Package references support packages with native dependencies, such as ML.NET.</span></span>
 
-<span data-ttu-id="e0c4c-115">封裝參考也支援封裝參考相依的特殊需求的封裝 `.dll` 。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-115">Package references also support packages with special requirements about referencing dependent `.dll`s.</span></span> <span data-ttu-id="e0c4c-116">例如， [FParsec](https://www.nuget.org/packages/FParsec/) 套件用來要求使用者在 `FParsecCS.dll` F# 互動中參考之前，先手動確定其相依的參考 `FParsec.dll` 。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-116">For example, the [FParsec](https://www.nuget.org/packages/FParsec/) package used to require that users manually ensure that its dependent `FParsecCS.dll` was referenced first before `FParsec.dll` was referenced in F# Interactive.</span></span> <span data-ttu-id="e0c4c-117">這已不再需要，您可以參考封裝，如下所示：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-117">This is no longer needed, and you can reference the package as follows:</span></span>
+<span data-ttu-id="55064-115">封裝參考也支援封裝參考相依的特殊需求的封裝 `.dll` 。</span><span class="sxs-lookup"><span data-stu-id="55064-115">Package references also support packages with special requirements about referencing dependent `.dll`s.</span></span> <span data-ttu-id="55064-116">例如， [FParsec](https://www.nuget.org/packages/FParsec/) 套件用來要求使用者在 `FParsecCS.dll` F# 互動中參考之前，先手動確定其相依的參考 `FParsec.dll` 。</span><span class="sxs-lookup"><span data-stu-id="55064-116">For example, the [FParsec](https://www.nuget.org/packages/FParsec/) package used to require that users manually ensure that its dependent `FParsecCS.dll` was referenced first before `FParsec.dll` was referenced in F# Interactive.</span></span> <span data-ttu-id="55064-117">這已不再需要，您可以參考封裝，如下所示：</span><span class="sxs-lookup"><span data-stu-id="55064-117">This is no longer needed, and you can reference the package as follows:</span></span>
 
 ```fsharp
 #r "nuget: FParsec"
@@ -56,11 +56,11 @@ let test p str =
 test pfloat "1.234"
 ```
 
-<span data-ttu-id="e0c4c-118">這項功能會實行 [F # 工具 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-118">This feature implements [F# Tooling RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md).</span></span> <span data-ttu-id="e0c4c-119">如需封裝參考的詳細資訊，請參閱 [F# 互動](../tutorials/fsharp-interactive/index.md) 教學課程。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-119">For more information on package references, see the [F# Interactive](../tutorials/fsharp-interactive/index.md) tutorial.</span></span>
+<span data-ttu-id="55064-118">這項功能會實行 [F # 工具 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-118">This feature implements [F# Tooling RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md).</span></span> <span data-ttu-id="55064-119">如需封裝參考的詳細資訊，請參閱 [F# 互動](../tutorials/fsharp-interactive/index.md) 教學課程。</span><span class="sxs-lookup"><span data-stu-id="55064-119">For more information on package references, see the [F# Interactive](../tutorials/fsharp-interactive/index.md) tutorial.</span></span>
 
-## <a name="string-interpolation"></a><span data-ttu-id="e0c4c-120">字串插補</span><span class="sxs-lookup"><span data-stu-id="e0c4c-120">String interpolation</span></span>
+## <a name="string-interpolation"></a><span data-ttu-id="55064-120">字串插補</span><span class="sxs-lookup"><span data-stu-id="55064-120">String interpolation</span></span>
 
-<span data-ttu-id="e0c4c-121">F # 插入字串與 c # 或 JavaScript 插入字串相當類似，因為它們可讓您在字串常值中的「漏洞」內撰寫程式碼。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-121">F# interpolated strings are fairly similar to C# or JavaScript interpolated strings, in that they let you write code in "holes" inside of a string literal.</span></span> <span data-ttu-id="e0c4c-122">以下是基本範例：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-122">Here's a basic example:</span></span>
+<span data-ttu-id="55064-121">F # 插入字串與 c # 或 JavaScript 插入字串相當類似，因為它們可讓您在字串常值中的「漏洞」內撰寫程式碼。</span><span class="sxs-lookup"><span data-stu-id="55064-121">F# interpolated strings are fairly similar to C# or JavaScript interpolated strings, in that they let you write code in "holes" inside of a string literal.</span></span> <span data-ttu-id="55064-122">以下是基本範例：</span><span class="sxs-lookup"><span data-stu-id="55064-122">Here's a basic example:</span></span>
 
 ```fsharp
 let name = "Phillip"
@@ -70,7 +70,7 @@ printfn $"Name: {name}, Age: {age}"
 printfn $"I think {3.0 + 0.14} is close to {System.Math.PI}!"
 ```
 
-<span data-ttu-id="e0c4c-123">不過，F # 插入字串也允許型別插補（就像函式一樣 `sprintf` ），以強制插入內容內的運算式符合特定的型別。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-123">However, F# interpolated strings also allow for typed interpolations, just like the `sprintf` function, to enforce that an expression inside of an interpolated context conforms to a particular type.</span></span> <span data-ttu-id="e0c4c-124">它會使用相同的格式規範。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-124">It uses the same format specifiers.</span></span>
+<span data-ttu-id="55064-123">不過，F # 插入字串也允許型別插補（就像函式一樣 `sprintf` ），以強制插入內容內的運算式符合特定的型別。</span><span class="sxs-lookup"><span data-stu-id="55064-123">However, F# interpolated strings also allow for typed interpolations, just like the `sprintf` function, to enforce that an expression inside of an interpolated context conforms to a particular type.</span></span> <span data-ttu-id="55064-124">它會使用相同的格式規範。</span><span class="sxs-lookup"><span data-stu-id="55064-124">It uses the same format specifiers.</span></span>
 
 ```fsharp
 let name = "Phillip"
@@ -82,9 +82,9 @@ printfn $"Name: %s{name}, Age: %d{age}"
 printfn $"Name: %s{age}, Age: %d{name}"
 ```
 
-<span data-ttu-id="e0c4c-125">在上述輸入的插補範例中， `%s` 需要插補是型別 `string` ，而 `%d` 需要插補是 `integer` 。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-125">In the preceding typed interpolation example, the `%s` requires the interpolation to be of type `string`, whereas the `%d` requires the interpolation to be an `integer`.</span></span>
+<span data-ttu-id="55064-125">在上述輸入的插補範例中， `%s` 需要插補是型別 `string` ，而 `%d` 需要插補是 `integer` 。</span><span class="sxs-lookup"><span data-stu-id="55064-125">In the preceding typed interpolation example, the `%s` requires the interpolation to be of type `string`, whereas the `%d` requires the interpolation to be an `integer`.</span></span>
 
-<span data-ttu-id="e0c4c-126">此外，任何任意的 F # 運算式 (或運算式) 都可以放在插補內容的側邊。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-126">Additionally, any arbitrary F# expression (or expressions) can be placed in side of an interpolation context.</span></span> <span data-ttu-id="e0c4c-127">您甚至可以撰寫更複雜的運算式，如下所示：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-127">It is even possible to write a more complicated expression, like so:</span></span>
+<span data-ttu-id="55064-126">此外，任何任意的 F # 運算式 (或運算式) 都可以放在插補內容的側邊。</span><span class="sxs-lookup"><span data-stu-id="55064-126">Additionally, any arbitrary F# expression (or expressions) can be placed in side of an interpolation context.</span></span> <span data-ttu-id="55064-127">您甚至可以撰寫更複雜的運算式，如下所示：</span><span class="sxs-lookup"><span data-stu-id="55064-127">It is even possible to write a more complicated expression, like so:</span></span>
 
 ```fsharp
 let str =
@@ -101,13 +101,13 @@ let str =
 """
 ```
 
-<span data-ttu-id="e0c4c-128">雖然我們不建議您這麼做，但我們不建議這麼做。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-128">Although we don't recommend doing this too much in practice.</span></span>
+<span data-ttu-id="55064-128">雖然我們不建議您這麼做，但我們不建議這麼做。</span><span class="sxs-lookup"><span data-stu-id="55064-128">Although we don't recommend doing this too much in practice.</span></span>
 
-<span data-ttu-id="e0c4c-129">這項功能會實行 [F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-129">This feature implements [F# RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md).</span></span>
+<span data-ttu-id="55064-129">這項功能會實行 [F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-129">This feature implements [F# RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md).</span></span>
 
-## <a name="support-for-nameof"></a><span data-ttu-id="e0c4c-130">對 nameof 的支援</span><span class="sxs-lookup"><span data-stu-id="e0c4c-130">Support for nameof</span></span>
+## <a name="support-for-nameof"></a><span data-ttu-id="55064-130">對 nameof 的支援</span><span class="sxs-lookup"><span data-stu-id="55064-130">Support for nameof</span></span>
 
-<span data-ttu-id="e0c4c-131">F # 5 支援 `nameof` 運算子，可解析其使用的符號，並在 F # 來源中產生其名稱。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-131">F# 5 supports the `nameof` operator, which resolves the symbol it's being used for and produces its name in F# source.</span></span> <span data-ttu-id="e0c4c-132">這在各種情況下都很有用，例如記錄，並可保護您的記錄免于原始程式碼中的變更。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-132">This is useful in various scenarios, such as logging, and protects your logging against changes in source code.</span></span>
+<span data-ttu-id="55064-131">F # 5 支援 `nameof` 運算子，可解析其使用的符號，並在 F # 來源中產生其名稱。</span><span class="sxs-lookup"><span data-stu-id="55064-131">F# 5 supports the `nameof` operator, which resolves the symbol it's being used for and produces its name in F# source.</span></span> <span data-ttu-id="55064-132">這在各種情況下都很有用，例如記錄，並可保護您的記錄免于原始程式碼中的變更。</span><span class="sxs-lookup"><span data-stu-id="55064-132">This is useful in various scenarios, such as logging, and protects your logging against changes in source code.</span></span>
 
 ```fsharp
 let months =
@@ -128,9 +128,9 @@ printfn "%s" (lookupMonth 1)
 printfn "%s" (lookupMonth 13)
 ```
 
-<span data-ttu-id="e0c4c-133">最後一行將會擲回例外狀況，且會在錯誤訊息中顯示「月份」。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-133">The last line will throw an exception and "month" will be shown in the error message.</span></span>
+<span data-ttu-id="55064-133">最後一行將會擲回例外狀況，且會在錯誤訊息中顯示「月份」。</span><span class="sxs-lookup"><span data-stu-id="55064-133">The last line will throw an exception and "month" will be shown in the error message.</span></span>
 
-<span data-ttu-id="e0c4c-134">您可以採用幾乎每個 F # 結構的名稱：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-134">You can take a name of nearly every F# construct:</span></span>
+<span data-ttu-id="55064-134">您可以採用幾乎每個 F # 結構的名稱：</span><span class="sxs-lookup"><span data-stu-id="55064-134">You can take a name of nearly every F# construct:</span></span>
 
 ```fsharp
 module M =
@@ -141,25 +141,25 @@ printfn "%s" (nameof M)
 printfn "%s" (nameof M.f)
 ```
 
-<span data-ttu-id="e0c4c-135">有三個最後的新增專案是運算子運作方式的變更：加入 `nameof<'type-parameter>` 泛型型別參數的表單，以及在模式比對運算式中做為模式使用的功能 `nameof` 。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-135">Three final additions are changes to how operators work: the addition of the `nameof<'type-parameter>` form for generic type parameters, and the ability to use `nameof` as a pattern in a pattern match expression.</span></span>
+<span data-ttu-id="55064-135">有三個最後的新增專案是運算子運作方式的變更：加入 `nameof<'type-parameter>` 泛型型別參數的表單，以及在模式比對運算式中做為模式使用的功能 `nameof` 。</span><span class="sxs-lookup"><span data-stu-id="55064-135">Three final additions are changes to how operators work: the addition of the `nameof<'type-parameter>` form for generic type parameters, and the ability to use `nameof` as a pattern in a pattern match expression.</span></span>
 
-<span data-ttu-id="e0c4c-136">採用運算子名稱可提供其來源字串。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-136">Taking a name of an operator gives its source string.</span></span> <span data-ttu-id="e0c4c-137">如果您需要編譯的表單，請使用運算子的編譯名稱：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-137">If you need the compiled form, use the compiled name of an operator:</span></span>
+<span data-ttu-id="55064-136">採用運算子名稱可提供其來源字串。</span><span class="sxs-lookup"><span data-stu-id="55064-136">Taking a name of an operator gives its source string.</span></span> <span data-ttu-id="55064-137">如果您需要編譯的表單，請使用運算子的編譯名稱：</span><span class="sxs-lookup"><span data-stu-id="55064-137">If you need the compiled form, use the compiled name of an operator:</span></span>
 
 ```fsharp
 nameof(+) // "+"
 nameof op_Addition // "op_Addition"
 ```
 
-<span data-ttu-id="e0c4c-138">採用型別參數的名稱需要稍微不同的語法：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-138">Taking the name of a type parameter requires a slightly different syntax:</span></span>
+<span data-ttu-id="55064-138">採用型別參數的名稱需要稍微不同的語法：</span><span class="sxs-lookup"><span data-stu-id="55064-138">Taking the name of a type parameter requires a slightly different syntax:</span></span>
 
 ```fsharp
 type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
 
-<span data-ttu-id="e0c4c-139">這與 `typeof<'T>` 和 `typedefof<'T>` 運算子類似。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-139">This is similar to the `typeof<'T>` and `typedefof<'T>` operators.</span></span>
+<span data-ttu-id="55064-139">這與 `typeof<'T>` 和 `typedefof<'T>` 運算子類似。</span><span class="sxs-lookup"><span data-stu-id="55064-139">This is similar to the `typeof<'T>` and `typedefof<'T>` operators.</span></span>
 
-<span data-ttu-id="e0c4c-140">F # 5 也加入了 `nameof` 可在運算式中使用的模式支援 `match` ：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-140">F# 5 also adds support for a `nameof` pattern that can be used in `match` expressions:</span></span>
+<span data-ttu-id="55064-140">F # 5 也加入了 `nameof` 可在運算式中使用的模式支援 `match` ：</span><span class="sxs-lookup"><span data-stu-id="55064-140">F# 5 also adds support for a `nameof` pattern that can be used in `match` expressions:</span></span>
 
 ```fsharp
 [<Struct; IsByRefLike>]
@@ -176,15 +176,15 @@ let deserialize (e: RecordedEvent) : MyEvent =
     | t -> failwithf "Invalid EventType: %s" t
 ```
 
-<span data-ttu-id="e0c4c-141">上述程式碼使用 ' nameof '，而不是比對運算式中的字串常值。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-141">The preceding code uses 'nameof' instead of the string literal in the match expression.</span></span>
+<span data-ttu-id="55064-141">上述程式碼使用 ' nameof '，而不是比對運算式中的字串常值。</span><span class="sxs-lookup"><span data-stu-id="55064-141">The preceding code uses 'nameof' instead of the string literal in the match expression.</span></span>
 
-<span data-ttu-id="e0c4c-142">這項功能會實行 [F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-142">This feature implements [F# RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md).</span></span>
+<span data-ttu-id="55064-142">這項功能會實行 [F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-142">This feature implements [F# RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md).</span></span>
 
-## <a name="open-type-declarations"></a><span data-ttu-id="e0c4c-143">開放式型別宣告</span><span class="sxs-lookup"><span data-stu-id="e0c4c-143">Open type declarations</span></span>
+## <a name="open-type-declarations"></a><span data-ttu-id="55064-143">開放式型別宣告</span><span class="sxs-lookup"><span data-stu-id="55064-143">Open type declarations</span></span>
 
-<span data-ttu-id="e0c4c-144">F # 5 也加入了對開放式型別宣告的支援。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-144">F# 5 also adds support for open type declarations.</span></span> <span data-ttu-id="e0c4c-145">開啟的型別宣告就像在 c # 中開啟靜態類別一樣，除了有些不同的語法和一些稍微不同的行為，以配合 F # 語義。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-145">An open type declaration is like opening a static class in C#, except with some different syntax and some slightly different behavior to fit F# semantics.</span></span>
+<span data-ttu-id="55064-144">F # 5 也加入了對開放式型別宣告的支援。</span><span class="sxs-lookup"><span data-stu-id="55064-144">F# 5 also adds support for open type declarations.</span></span> <span data-ttu-id="55064-145">開啟的型別宣告就像在 c # 中開啟靜態類別一樣，除了有些不同的語法和一些稍微不同的行為，以配合 F # 語義。</span><span class="sxs-lookup"><span data-stu-id="55064-145">An open type declaration is like opening a static class in C#, except with some different syntax and some slightly different behavior to fit F# semantics.</span></span>
 
-<span data-ttu-id="e0c4c-146">使用開放式型別宣告，您可以使用 `open` 任何類型來公開其內部的靜態內容。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-146">With open type declarations, you can `open` any type to expose static contents inside of it.</span></span> <span data-ttu-id="e0c4c-147">此外，您可以 `open` F # 定義的等位和記錄來公開其內容。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-147">Additionally, you can `open` F#-defined unions and records to expose their contents.</span></span> <span data-ttu-id="e0c4c-148">例如，如果您的模組中有定義聯集，而且想要存取其案例，但不想要開啟整個模組，這會很有用。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-148">For example, this can be useful if you have a union defined in a module and want to access its cases, but don't want to open the entire module.</span></span>
+<span data-ttu-id="55064-146">使用開放式型別宣告，您可以使用 `open` 任何類型來公開其內部的靜態內容。</span><span class="sxs-lookup"><span data-stu-id="55064-146">With open type declarations, you can `open` any type to expose static contents inside of it.</span></span> <span data-ttu-id="55064-147">此外，您可以 `open` F # 定義的等位和記錄來公開其內容。</span><span class="sxs-lookup"><span data-stu-id="55064-147">Additionally, you can `open` F#-defined unions and records to expose their contents.</span></span> <span data-ttu-id="55064-148">例如，如果您的模組中有定義聯集，而且想要存取其案例，但不想要開啟整個模組，這會很有用。</span><span class="sxs-lookup"><span data-stu-id="55064-148">For example, this can be useful if you have a union defined in a module and want to access its cases, but don't want to open the entire module.</span></span>
 
 ```fsharp
 open type System.Math
@@ -202,13 +202,13 @@ open type M.DU
 printfn "%A" A
 ```
 
-<span data-ttu-id="e0c4c-149">與 c # 不同的是，當您 `open type` 在兩種類型上公開具有相同名稱的成員時，最後一個型別中的成員會 `open` 遮蔽另一個名稱。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-149">Unlike C#, when you `open type` on two types that expose a member with the same name, the member from the last type being `open`ed shadows the other name.</span></span> <span data-ttu-id="e0c4c-150">這與已存在之遮蔽的 F # 語義一致。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-150">This is consistent with F# semantics around shadowing that exist already.</span></span>
+<span data-ttu-id="55064-149">與 c # 不同的是，當您 `open type` 在兩種類型上公開具有相同名稱的成員時，最後一個型別中的成員會 `open` 遮蔽另一個名稱。</span><span class="sxs-lookup"><span data-stu-id="55064-149">Unlike C#, when you `open type` on two types that expose a member with the same name, the member from the last type being `open`ed shadows the other name.</span></span> <span data-ttu-id="55064-150">這與已存在之遮蔽的 F # 語義一致。</span><span class="sxs-lookup"><span data-stu-id="55064-150">This is consistent with F# semantics around shadowing that exist already.</span></span>
 
-<span data-ttu-id="e0c4c-151">這項功能會實行 [F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-151">This feature implements [F# RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md).</span></span>
+<span data-ttu-id="55064-151">這項功能會實行 [F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-151">This feature implements [F# RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md).</span></span>
 
-## <a name="consistent-slicing-behavior-for-built-in-data-types"></a><span data-ttu-id="e0c4c-152">內建資料類型的一致切割行為</span><span class="sxs-lookup"><span data-stu-id="e0c4c-152">Consistent slicing behavior for built-in data types</span></span>
+## <a name="consistent-slicing-behavior-for-built-in-data-types"></a><span data-ttu-id="55064-152">內建資料類型的一致切割行為</span><span class="sxs-lookup"><span data-stu-id="55064-152">Consistent slicing behavior for built-in data types</span></span>
 
-<span data-ttu-id="e0c4c-153">配量內建 `FSharp.Core` 資料類型的行為 (陣列、清單、字串、2d 陣列、3d 陣列、4d 陣列) 在 F # 5 之前用來不一致。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-153">Behavior for slicing the built-in `FSharp.Core` data types (array, list, string, 2D array, 3D array, 4D array) used to not be consistent prior to F# 5.</span></span> <span data-ttu-id="e0c4c-154">某些邊緣案例行為擲回例外狀況，而有些則不會。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-154">Some edge-case behavior threw an exception and some wouldn't.</span></span> <span data-ttu-id="e0c4c-155">在 F # 5 中，所有內建類型現在都會針對無法產生的配量傳回空白配量：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-155">In F# 5, all built-in types now return empty slices for slices that are impossible to generate:</span></span>
+<span data-ttu-id="55064-153">配量內建 `FSharp.Core` 資料類型的行為 (陣列、清單、字串、2d 陣列、3d 陣列、4d 陣列) 在 F # 5 之前用來不一致。</span><span class="sxs-lookup"><span data-stu-id="55064-153">Behavior for slicing the built-in `FSharp.Core` data types (array, list, string, 2D array, 3D array, 4D array) used to not be consistent prior to F# 5.</span></span> <span data-ttu-id="55064-154">某些邊緣案例行為擲回例外狀況，而有些則不會。</span><span class="sxs-lookup"><span data-stu-id="55064-154">Some edge-case behavior threw an exception and some wouldn't.</span></span> <span data-ttu-id="55064-155">在 F # 5 中，所有內建類型現在都會針對無法產生的配量傳回空白配量：</span><span class="sxs-lookup"><span data-stu-id="55064-155">In F# 5, all built-in types now return empty slices for slices that are impossible to generate:</span></span>
 
 ```fsharp
 let l = [ 1..10 ]
@@ -228,27 +228,27 @@ let emptyArray = a.[-2..(-1)]
 let emptyString = s.[-2..(-1)]
 ```
 
-<span data-ttu-id="e0c4c-156">這項功能會實行 [F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-156">This feature implements [F# RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md).</span></span>
+<span data-ttu-id="55064-156">這項功能會實行 [F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-156">This feature implements [F# RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md).</span></span>
 
-## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a><span data-ttu-id="e0c4c-157">固定-Fsharp.core 中3D 和4D 陣列的索引配量</span><span class="sxs-lookup"><span data-stu-id="e0c4c-157">Fixed-index slices for 3D and 4D arrays in FSharp.Core</span></span>
+## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a><span data-ttu-id="55064-157">固定-Fsharp.core 中3D 和4D 陣列的索引配量</span><span class="sxs-lookup"><span data-stu-id="55064-157">Fixed-index slices for 3D and 4D arrays in FSharp.Core</span></span>
 
-<span data-ttu-id="e0c4c-158">F # 5.0 使用內建3D 和4D 陣列類型中具有固定索引的配量支援。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-158">F# 5.0 brings support for slicing with a fixed index in the built-in 3D and 4D array types.</span></span>
+<span data-ttu-id="55064-158">F # 5.0 使用內建3D 和4D 陣列類型中具有固定索引的配量支援。</span><span class="sxs-lookup"><span data-stu-id="55064-158">F# 5.0 brings support for slicing with a fixed index in the built-in 3D and 4D array types.</span></span>
 
-<span data-ttu-id="e0c4c-159">為了說明這一點，請考慮下列3D 陣列：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-159">To illustrate this, consider the following 3D array:</span></span>
+<span data-ttu-id="55064-159">為了說明這一點，請考慮下列3D 陣列：</span><span class="sxs-lookup"><span data-stu-id="55064-159">To illustrate this, consider the following 3D array:</span></span>
 
-<span data-ttu-id="e0c4c-160">*z = 0*</span><span class="sxs-lookup"><span data-stu-id="e0c4c-160">*z = 0*</span></span>
-| <span data-ttu-id="e0c4c-161">x\y</span><span class="sxs-lookup"><span data-stu-id="e0c4c-161">x\y</span></span>   | <span data-ttu-id="e0c4c-162">0</span><span class="sxs-lookup"><span data-stu-id="e0c4c-162">0</span></span> | <span data-ttu-id="e0c4c-163">1</span><span class="sxs-lookup"><span data-stu-id="e0c4c-163">1</span></span> |
+<span data-ttu-id="55064-160">*z = 0*</span><span class="sxs-lookup"><span data-stu-id="55064-160">*z = 0*</span></span>
+| <span data-ttu-id="55064-161">x\y</span><span class="sxs-lookup"><span data-stu-id="55064-161">x\y</span></span>   | <span data-ttu-id="55064-162">0</span><span class="sxs-lookup"><span data-stu-id="55064-162">0</span></span> | <span data-ttu-id="55064-163">1</span><span class="sxs-lookup"><span data-stu-id="55064-163">1</span></span> |
 |-------|---|---|
-| <span data-ttu-id="e0c4c-164">**0**</span><span class="sxs-lookup"><span data-stu-id="e0c4c-164">**0**</span></span> | <span data-ttu-id="e0c4c-165">0</span><span class="sxs-lookup"><span data-stu-id="e0c4c-165">0</span></span> | <span data-ttu-id="e0c4c-166">1</span><span class="sxs-lookup"><span data-stu-id="e0c4c-166">1</span></span> |
-| <span data-ttu-id="e0c4c-167">**1**</span><span class="sxs-lookup"><span data-stu-id="e0c4c-167">**1**</span></span> | <span data-ttu-id="e0c4c-168">2</span><span class="sxs-lookup"><span data-stu-id="e0c4c-168">2</span></span> | <span data-ttu-id="e0c4c-169">3</span><span class="sxs-lookup"><span data-stu-id="e0c4c-169">3</span></span> |
+| <span data-ttu-id="55064-164">**0**</span><span class="sxs-lookup"><span data-stu-id="55064-164">**0**</span></span> | <span data-ttu-id="55064-165">0</span><span class="sxs-lookup"><span data-stu-id="55064-165">0</span></span> | <span data-ttu-id="55064-166">1</span><span class="sxs-lookup"><span data-stu-id="55064-166">1</span></span> |
+| <span data-ttu-id="55064-167">**1**</span><span class="sxs-lookup"><span data-stu-id="55064-167">**1**</span></span> | <span data-ttu-id="55064-168">2</span><span class="sxs-lookup"><span data-stu-id="55064-168">2</span></span> | <span data-ttu-id="55064-169">3</span><span class="sxs-lookup"><span data-stu-id="55064-169">3</span></span> |
 
-<span data-ttu-id="e0c4c-170">*z = 1*</span><span class="sxs-lookup"><span data-stu-id="e0c4c-170">*z = 1*</span></span>
-| <span data-ttu-id="e0c4c-171">x\y</span><span class="sxs-lookup"><span data-stu-id="e0c4c-171">x\y</span></span>   | <span data-ttu-id="e0c4c-172">0</span><span class="sxs-lookup"><span data-stu-id="e0c4c-172">0</span></span> | <span data-ttu-id="e0c4c-173">1</span><span class="sxs-lookup"><span data-stu-id="e0c4c-173">1</span></span> |
+<span data-ttu-id="55064-170">*z = 1*</span><span class="sxs-lookup"><span data-stu-id="55064-170">*z = 1*</span></span>
+| <span data-ttu-id="55064-171">x\y</span><span class="sxs-lookup"><span data-stu-id="55064-171">x\y</span></span>   | <span data-ttu-id="55064-172">0</span><span class="sxs-lookup"><span data-stu-id="55064-172">0</span></span> | <span data-ttu-id="55064-173">1</span><span class="sxs-lookup"><span data-stu-id="55064-173">1</span></span> |
 |-------|---|---|
-| <span data-ttu-id="e0c4c-174">**0**</span><span class="sxs-lookup"><span data-stu-id="e0c4c-174">**0**</span></span> | <span data-ttu-id="e0c4c-175">4</span><span class="sxs-lookup"><span data-stu-id="e0c4c-175">4</span></span> | <span data-ttu-id="e0c4c-176">5</span><span class="sxs-lookup"><span data-stu-id="e0c4c-176">5</span></span> |
-| <span data-ttu-id="e0c4c-177">**1**</span><span class="sxs-lookup"><span data-stu-id="e0c4c-177">**1**</span></span> | <span data-ttu-id="e0c4c-178">6</span><span class="sxs-lookup"><span data-stu-id="e0c4c-178">6</span></span> | <span data-ttu-id="e0c4c-179">7</span><span class="sxs-lookup"><span data-stu-id="e0c4c-179">7</span></span> |
+| <span data-ttu-id="55064-174">**0**</span><span class="sxs-lookup"><span data-stu-id="55064-174">**0**</span></span> | <span data-ttu-id="55064-175">4</span><span class="sxs-lookup"><span data-stu-id="55064-175">4</span></span> | <span data-ttu-id="55064-176">5</span><span class="sxs-lookup"><span data-stu-id="55064-176">5</span></span> |
+| <span data-ttu-id="55064-177">**1**</span><span class="sxs-lookup"><span data-stu-id="55064-177">**1**</span></span> | <span data-ttu-id="55064-178">6</span><span class="sxs-lookup"><span data-stu-id="55064-178">6</span></span> | <span data-ttu-id="55064-179">7</span><span class="sxs-lookup"><span data-stu-id="55064-179">7</span></span> |
 
-<span data-ttu-id="e0c4c-180">如果您想要從陣列解壓縮配量，該怎麼辦 `[| 4; 5 |]` ？</span><span class="sxs-lookup"><span data-stu-id="e0c4c-180">What if you wanted to extract the slice `[| 4; 5 |]` from the array?</span></span> <span data-ttu-id="e0c4c-181">這現在很簡單！</span><span class="sxs-lookup"><span data-stu-id="e0c4c-181">This is now very simple!</span></span>
+<span data-ttu-id="55064-180">如果您想要從陣列解壓縮配量，該怎麼辦 `[| 4; 5 |]` ？</span><span class="sxs-lookup"><span data-stu-id="55064-180">What if you wanted to extract the slice `[| 4; 5 |]` from the array?</span></span> <span data-ttu-id="55064-181">這現在很簡單！</span><span class="sxs-lookup"><span data-stu-id="55064-181">This is now very simple!</span></span>
 
 ```fsharp
 // First, create a 3D array to slice
@@ -268,11 +268,11 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
-<span data-ttu-id="e0c4c-182">這項功能會實行 [F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-182">This feature implements [F# RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md).</span></span>
+<span data-ttu-id="55064-182">這項功能會實行 [F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-182">This feature implements [F# RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md).</span></span>
 
-## <a name="f-quotations-improvements"></a><span data-ttu-id="e0c4c-183">F # 引號的增強功能</span><span class="sxs-lookup"><span data-stu-id="e0c4c-183">F# quotations improvements</span></span>
+## <a name="f-quotations-improvements"></a><span data-ttu-id="55064-183">F # 引號的增強功能</span><span class="sxs-lookup"><span data-stu-id="55064-183">F# quotations improvements</span></span>
 
-<span data-ttu-id="e0c4c-184">F # 程式 [代碼引號](../language-reference/code-quotations.md) 現在能夠保留類型條件約束資訊。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-184">F# [code quotations](../language-reference/code-quotations.md) now have the ability to retain type constraint information.</span></span> <span data-ttu-id="e0c4c-185">請考慮下列範例：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-185">Consider the following example:</span></span>
+<span data-ttu-id="55064-184">F # 程式 [代碼引號](../language-reference/code-quotations.md) 現在能夠保留類型條件約束資訊。</span><span class="sxs-lookup"><span data-stu-id="55064-184">F# [code quotations](../language-reference/code-quotations.md) now have the ability to retain type constraint information.</span></span> <span data-ttu-id="55064-185">請考慮下列範例：</span><span class="sxs-lookup"><span data-stu-id="55064-185">Consider the following example:</span></span>
 
 ```fsharp
 open FSharp.Linq.RuntimeHelpers
@@ -285,17 +285,17 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-<span data-ttu-id="e0c4c-186">函數所產生的條件約束 `inline` 會保留在程式碼 qutoation 中。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-186">The constraint generated by the `inline` function is retained in the code qutoation.</span></span> <span data-ttu-id="e0c4c-187">`negate`現在可以評估函數的 quotated 表單。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-187">The `negate` function's quotated form can now be evaluated.</span></span>
+<span data-ttu-id="55064-186">函數所產生的條件約束 `inline` 會保留在程式碼引號中。</span><span class="sxs-lookup"><span data-stu-id="55064-186">The constraint generated by the `inline` function is retained in the code quotation.</span></span> <span data-ttu-id="55064-187">`negate`現在可以評估函式的引號形式。</span><span class="sxs-lookup"><span data-stu-id="55064-187">The `negate` function's quoted form can now be evaluated.</span></span>
 
-<span data-ttu-id="e0c4c-188">這項功能會實行 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-188">This feature implements [F# RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md).</span></span>
+<span data-ttu-id="55064-188">這項功能會實行 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-188">This feature implements [F# RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md).</span></span>
 
-## <a name="applicative-computation-expressions"></a><span data-ttu-id="e0c4c-189">Applicative 計算運算式</span><span class="sxs-lookup"><span data-stu-id="e0c4c-189">Applicative Computation Expressions</span></span>
+## <a name="applicative-computation-expressions"></a><span data-ttu-id="55064-189">Applicative 計算運算式</span><span class="sxs-lookup"><span data-stu-id="55064-189">Applicative Computation Expressions</span></span>
 
-<span data-ttu-id="e0c4c-190">目前使用的[計算運算式 (CEs) ](../language-reference/computation-expressions.md)來建立「內容計算」的模型，或以更多功能的程式設計易記術語 monadic 計算。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-190">[Computation expressions (CEs)](../language-reference/computation-expressions.md) are used today to model "contextual computations", or in more functional programming friendly terminology, monadic computations.</span></span>
+<span data-ttu-id="55064-190">目前使用的[計算運算式 (CEs) ](../language-reference/computation-expressions.md)來建立「內容計算」的模型，或以更多功能的程式設計易懂術語 monadic 計算。</span><span class="sxs-lookup"><span data-stu-id="55064-190">[Computation expressions (CEs)](../language-reference/computation-expressions.md) are used today to model "contextual computations", or in more functional programming-friendly terminology, monadic computations.</span></span>
 
-<span data-ttu-id="e0c4c-191">F # 5 引進了 applicative CEs，可提供不同的計算模型。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-191">F# 5 introduces applicative CEs, which offer a different computational model.</span></span> <span data-ttu-id="e0c4c-192">Applicative CEs 允許更有效率的計算，前提是每個計算都是獨立的，且其結果會在結尾累積。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-192">Applicative CEs allow for more efficient computations provided that every computation is independent, and their results are accumulated at the end.</span></span> <span data-ttu-id="e0c4c-193">當計算彼此獨立時，也會完整可並行，讓 CE 作者可以撰寫更有效率的程式庫。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-193">When computations are independent of one another, they are also trivially parallelizable, allowing CE authors to write more efficient libraries.</span></span> <span data-ttu-id="e0c4c-194">這項優點有一項限制，但不允許相依于先前計算值的計算。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-194">This benefit comes at a restriction, though: computations that depend on previously-computed values are not allowed.</span></span>
+<span data-ttu-id="55064-191">F # 5 引進了 applicative CEs，可提供不同的計算模型。</span><span class="sxs-lookup"><span data-stu-id="55064-191">F# 5 introduces applicative CEs, which offer a different computational model.</span></span> <span data-ttu-id="55064-192">Applicative CEs 允許更有效率的計算，前提是每個計算都是獨立的，且其結果會在結尾累積。</span><span class="sxs-lookup"><span data-stu-id="55064-192">Applicative CEs allow for more efficient computations provided that every computation is independent, and their results are accumulated at the end.</span></span> <span data-ttu-id="55064-193">當計算彼此獨立時，也會完整可並行，讓 CE 作者可以撰寫更有效率的程式庫。</span><span class="sxs-lookup"><span data-stu-id="55064-193">When computations are independent of one another, they are also trivially parallelizable, allowing CE authors to write more efficient libraries.</span></span> <span data-ttu-id="55064-194">這項優點有一項限制，但不允許相依于先前計算值的計算。</span><span class="sxs-lookup"><span data-stu-id="55064-194">This benefit comes at a restriction, though: computations that depend on previously computed values are not allowed.</span></span>
 
-<span data-ttu-id="e0c4c-195">下列範例顯示類型的基本 applicative CE `Result` 。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-195">The follow example shows a basic applicative CE for the `Result` type.</span></span>
+<span data-ttu-id="55064-195">下列範例顯示類型的基本 applicative CE `Result` 。</span><span class="sxs-lookup"><span data-stu-id="55064-195">The follow example shows a basic applicative CE for the `Result` type.</span></span>
 
 ```fsharp
 // First, define a 'zip' function
@@ -336,13 +336,13 @@ let printApplicatives () =
     run r1 (Error "failure!") r3
 ```
 
-<span data-ttu-id="e0c4c-196">如果您是目前在其程式庫中公開 CEs 的程式庫作者，還有一些需要注意的其他考慮事項。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-196">If you're a library author who exposes CEs in their library today, there are some additional considerations you'll need to be aware of.</span></span>
+<span data-ttu-id="55064-196">如果您是目前在其程式庫中公開 CEs 的程式庫作者，還有一些需要注意的其他考慮事項。</span><span class="sxs-lookup"><span data-stu-id="55064-196">If you're a library author who exposes CEs in their library today, there are some additional considerations you'll need to be aware of.</span></span>
 
-<span data-ttu-id="e0c4c-197">這項功能會實行 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-197">This feature implements [F# RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md).</span></span>
+<span data-ttu-id="55064-197">這項功能會實行 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-197">This feature implements [F# RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md).</span></span>
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a><span data-ttu-id="e0c4c-198">可以在不同的泛型具現化 implemeneted 介面</span><span class="sxs-lookup"><span data-stu-id="e0c4c-198">Interfaces can be implemeneted at different generic instantiations</span></span>
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a><span data-ttu-id="55064-198">介面可以在不同的泛型具現化中執行</span><span class="sxs-lookup"><span data-stu-id="55064-198">Interfaces can be implemented at different generic instantiations</span></span>
 
-<span data-ttu-id="e0c4c-199">您現在可以在不同的泛型具現化中執行相同的介面：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-199">You can now implement the same interface at different generic instantiations:</span></span>
+<span data-ttu-id="55064-199">您現在可以在不同的泛型具現化中執行相同的介面：</span><span class="sxs-lookup"><span data-stu-id="55064-199">You can now implement the same interface at different generic instantiations:</span></span>
 
 ```fsharp
 type IA<'T> =
@@ -362,13 +362,13 @@ iaInt.Get() // 1
 iaString.Get() // "hello"
 ```
 
-<span data-ttu-id="e0c4c-200">這項功能會實行 [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-200">This feature implements [F# RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md).</span></span>
+<span data-ttu-id="55064-200">這項功能會實行 [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-200">This feature implements [F# RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md).</span></span>
 
-## <a name="default-interface-member-consumption"></a><span data-ttu-id="e0c4c-201">預設介面成員耗用量</span><span class="sxs-lookup"><span data-stu-id="e0c4c-201">Default interface member consumption</span></span>
+## <a name="default-interface-member-consumption"></a><span data-ttu-id="55064-201">預設介面成員耗用量</span><span class="sxs-lookup"><span data-stu-id="55064-201">Default interface member consumption</span></span>
 
-<span data-ttu-id="e0c4c-202">F # 5 可讓您使用預設實作為 [介面](../../csharp/tutorials/default-interface-methods-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-202">F# 5 lets you consume [interfaces with default implementations](../../csharp/tutorials/default-interface-methods-versions.md).</span></span>
+<span data-ttu-id="55064-202">F # 5 可讓您使用預設實作為 [介面](../../csharp/tutorials/default-interface-methods-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-202">F# 5 lets you consume [interfaces with default implementations](../../csharp/tutorials/default-interface-methods-versions.md).</span></span>
 
-<span data-ttu-id="e0c4c-203">請考慮以 c # 定義的介面，如下所示：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-203">Consider an interface defined in C# like this:</span></span>
+<span data-ttu-id="55064-203">請考慮以 c # 定義的介面，如下所示：</span><span class="sxs-lookup"><span data-stu-id="55064-203">Consider an interface defined in C# like this:</span></span>
 
 ```csharp
 using System;
@@ -382,7 +382,7 @@ namespace CSharp
 }
 ```
 
-<span data-ttu-id="e0c4c-204">您可以使用 F # 來使用它來執行介面的任何標準方法：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-204">You can consume it in F# through any of the standard means of implementing an interface:</span></span>
+<span data-ttu-id="55064-204">您可以使用 F # 來使用它來執行介面的任何標準方法：</span><span class="sxs-lookup"><span data-stu-id="55064-204">You can consume it in F# through any of the standard means of implementing an interface:</span></span>
 
 ```fsharp
 open CSharp
@@ -401,13 +401,13 @@ let md' = { new MyDim }
 printfn "DIM from C# but via Object Expression: %d" md'.Z
 ```
 
-<span data-ttu-id="e0c4c-205">這可讓您安全地利用以新式 c # 撰寫的 c # 程式碼和 .NET 元件（當它們希望使用者能夠使用預設的實值）時。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-205">This lets you safely take advantage of C# code and .NET components written in modern C# when they expect users to be able to consume a default implementation.</span></span>
+<span data-ttu-id="55064-205">這可讓您安全地利用以新式 c # 撰寫的 c # 程式碼和 .NET 元件（當它們希望使用者能夠使用預設的實值）時。</span><span class="sxs-lookup"><span data-stu-id="55064-205">This lets you safely take advantage of C# code and .NET components written in modern C# when they expect users to be able to consume a default implementation.</span></span>
 
-<span data-ttu-id="e0c4c-206">這項功能會實行 [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-206">This feature implements [F# RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md).</span></span>
+<span data-ttu-id="55064-206">這項功能會實行 [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-206">This feature implements [F# RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md).</span></span>
 
-## <a name="simplified-interop-with-nullable-value-types"></a><span data-ttu-id="e0c4c-207">使用可為 null 的實數值型別簡化 interop</span><span class="sxs-lookup"><span data-stu-id="e0c4c-207">Simplified interop with nullable value types</span></span>
+## <a name="simplified-interop-with-nullable-value-types"></a><span data-ttu-id="55064-207">使用可為 null 的實數值型別簡化 interop</span><span class="sxs-lookup"><span data-stu-id="55064-207">Simplified interop with nullable value types</span></span>
 
-<span data-ttu-id="e0c4c-208">[可為 null 的 (值) 類型](https://docs.microsoft.com/dotnet/api/system.nullable-1) (稱為可為 null 的型別，在過去) 已經由 F # 所支援，但是與它們進行互動是因為您在 `Nullable` `Nullable<SomeType>` 每次想要傳遞值時都必須建立或包裝函式。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-208">[Nullable (value) types](https://docs.microsoft.com/dotnet/api/system.nullable-1) (called Nullable Types historically) have long been supported by F#, but interacting with them has traditionally been somewhat of a pain since you'd have to construct a `Nullable` or `Nullable<SomeType>` wrapper every time you wanted to pass a value.</span></span> <span data-ttu-id="e0c4c-209">現在， `Nullable<ThatValueType>` 如果目標型別相符，則編譯器會將實值型別隱含轉換成。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-209">Now the compiler will implicitly convert a value type into a `Nullable<ThatValueType>` if the target type matches.</span></span> <span data-ttu-id="e0c4c-210">現在可以執行下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-210">The following code is now possible:</span></span>
+<span data-ttu-id="55064-208">[可為 null 的 (值) 類型](https://docs.microsoft.com/dotnet/api/system.nullable-1) (稱為可為 null 的型別，在過去) 已經由 F # 所支援，但是與它們進行互動是因為您在 `Nullable` `Nullable<SomeType>` 每次想要傳遞值時都必須建立或包裝函式。</span><span class="sxs-lookup"><span data-stu-id="55064-208">[Nullable (value) types](https://docs.microsoft.com/dotnet/api/system.nullable-1) (called Nullable Types historically) have long been supported by F#, but interacting with them has traditionally been somewhat of a pain since you'd have to construct a `Nullable` or `Nullable<SomeType>` wrapper every time you wanted to pass a value.</span></span> <span data-ttu-id="55064-209">現在， `Nullable<ThatValueType>` 如果目標型別相符，則編譯器會將實值型別隱含轉換成。</span><span class="sxs-lookup"><span data-stu-id="55064-209">Now the compiler will implicitly convert a value type into a `Nullable<ThatValueType>` if the target type matches.</span></span> <span data-ttu-id="55064-210">現在可以執行下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="55064-210">The following code is now possible:</span></span>
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"
@@ -423,11 +423,11 @@ dateTimes.Append(DateTime.Parse("2019/01/01"))
 dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 ```
 
-<span data-ttu-id="e0c4c-211">這項功能會實行 [F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-211">This feature implements [F# RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md).</span></span>
+<span data-ttu-id="55064-211">這項功能會實行 [F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-211">This feature implements [F# RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md).</span></span>
 
-## <a name="preview-reverse-indexes"></a><span data-ttu-id="e0c4c-212">預覽：反向索引</span><span class="sxs-lookup"><span data-stu-id="e0c4c-212">Preview: reverse indexes</span></span>
+## <a name="preview-reverse-indexes"></a><span data-ttu-id="55064-212">預覽：反向索引</span><span class="sxs-lookup"><span data-stu-id="55064-212">Preview: reverse indexes</span></span>
 
-<span data-ttu-id="e0c4c-213">F # 5 也引進了允許反向索引的預覽。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-213">F# 5 also introduces a preview for allowing reverse indexes.</span></span> <span data-ttu-id="e0c4c-214">語法是 `^idx`。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-214">The syntax is `^idx`.</span></span> <span data-ttu-id="e0c4c-215">以下是您可以如何從清單結尾的元素1值：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-215">Here's how you can an element 1 value from the end of a list:</span></span>
+<span data-ttu-id="55064-213">F # 5 也引進了允許反向索引的預覽。</span><span class="sxs-lookup"><span data-stu-id="55064-213">F# 5 also introduces a preview for allowing reverse indexes.</span></span> <span data-ttu-id="55064-214">語法是 `^idx`。</span><span class="sxs-lookup"><span data-stu-id="55064-214">The syntax is `^idx`.</span></span> <span data-ttu-id="55064-215">以下是您可以如何從清單結尾的元素1值：</span><span class="sxs-lookup"><span data-stu-id="55064-215">Here's how you can an element 1 value from the end of a list:</span></span>
 
 ```fsharp
 let xs = [1..10]
@@ -444,13 +444,13 @@ let lastTwoNewStyle = xs.[^1..]
 lastTwoOldStyle = lastTwoNewStyle // true
 ```
 
-<span data-ttu-id="e0c4c-216">您也可以為自己的類型定義反向索引。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-216">You can also define reverse indexes for your own types.</span></span> <span data-ttu-id="e0c4c-217">若要這樣做，您必須執行下列方法：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-217">To do so, you'll need to implement the following method:</span></span>
+<span data-ttu-id="55064-216">您也可以為自己的類型定義反向索引。</span><span class="sxs-lookup"><span data-stu-id="55064-216">You can also define reverse indexes for your own types.</span></span> <span data-ttu-id="55064-217">若要這樣做，您必須執行下列方法：</span><span class="sxs-lookup"><span data-stu-id="55064-217">To do so, you'll need to implement the following method:</span></span>
 
 ```fsharp
 GetReverseIndex: dimension: int -> offset: int
 ```
 
-<span data-ttu-id="e0c4c-218">以下是此類型的範例 `Span<'T>` ：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-218">Here's an example for the `Span<'T>` type:</span></span>
+<span data-ttu-id="55064-218">以下是此類型的範例 `Span<'T>` ：</span><span class="sxs-lookup"><span data-stu-id="55064-218">Here's an example for the `Span<'T>` type:</span></span>
 
 ```fsharp
 open System
@@ -484,13 +484,13 @@ let run () =
 run() // Prints the same thing twice
 ```
 
-<span data-ttu-id="e0c4c-219">這項功能會實行 [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-219">This feature implements [F# RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md).</span></span>
+<span data-ttu-id="55064-219">這項功能會實行 [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-219">This feature implements [F# RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md).</span></span>
 
-## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a><span data-ttu-id="e0c4c-220">預覽：計算運算式中的自訂關鍵字多載</span><span class="sxs-lookup"><span data-stu-id="e0c4c-220">Preview: overloads of custom keywords in computation expressions</span></span>
+## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a><span data-ttu-id="55064-220">預覽：計算運算式中的自訂關鍵字多載</span><span class="sxs-lookup"><span data-stu-id="55064-220">Preview: overloads of custom keywords in computation expressions</span></span>
 
-<span data-ttu-id="e0c4c-221">計算運算式是程式庫和架構作者的強大功能。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-221">Computation expressions are a powerful feature for library and framework authors.</span></span> <span data-ttu-id="e0c4c-222">它們可讓您定義知名的成員，並形成您正在使用之網域的 DSL，以大幅提升元件的表達。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-222">They allow you to greatly improve the expressiveness of your components by letting you define well-known members and form a DSL for the domain you're working in.</span></span>
+<span data-ttu-id="55064-221">計算運算式是程式庫和架構作者的強大功能。</span><span class="sxs-lookup"><span data-stu-id="55064-221">Computation expressions are a powerful feature for library and framework authors.</span></span> <span data-ttu-id="55064-222">它們可讓您定義知名的成員，並形成您正在使用之網域的 DSL，以大幅提升元件的表達。</span><span class="sxs-lookup"><span data-stu-id="55064-222">They allow you to greatly improve the expressiveness of your components by letting you define well-known members and form a DSL for the domain you're working in.</span></span>
 
-<span data-ttu-id="e0c4c-223">F # 5 新增了在計算運算式中多載自訂作業的預覽支援。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-223">F# 5 adds preview support for overloading custom operations in Computation Expressions.</span></span> <span data-ttu-id="e0c4c-224">它允許寫入和使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="e0c4c-224">It allows the following code to be writen and consumed:</span></span>
+<span data-ttu-id="55064-223">F # 5 新增了在計算運算式中多載自訂作業的預覽支援。</span><span class="sxs-lookup"><span data-stu-id="55064-223">F# 5 adds preview support for overloading custom operations in Computation Expressions.</span></span> <span data-ttu-id="55064-224">它允許撰寫和使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="55064-224">It allows the following code to be written and consumed:</span></span>
 
 ```fsharp
 open System
@@ -556,6 +556,6 @@ let password =
     }
 ```
 
-<span data-ttu-id="e0c4c-225">在這項變更之前，您可以撰寫 `InputBuilder` 型別，但是您無法使用它在範例中使用的方式。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-225">Prior to this change, you could write the `InputBuilder` type as it is, but you couldn't use it the way it's used in the example.</span></span> <span data-ttu-id="e0c4c-226">因為可以使用多載、選擇性參數和現在的型別，所以一切都如同 `System.ParamArray` 預期般運作。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-226">Since overloads, optional parameters, and now `System.ParamArray` types are allowed, everything just works as you'd expect it to.</span></span>
+<span data-ttu-id="55064-225">在這項變更之前，您可以撰寫 `InputBuilder` 型別，但是您無法使用它在範例中使用的方式。</span><span class="sxs-lookup"><span data-stu-id="55064-225">Prior to this change, you could write the `InputBuilder` type as it is, but you couldn't use it the way it's used in the example.</span></span> <span data-ttu-id="55064-226">因為可以使用多載、選擇性參數和現在的型別，所以一切都如同 `System.ParamArray` 預期般運作。</span><span class="sxs-lookup"><span data-stu-id="55064-226">Since overloads, optional parameters, and now `System.ParamArray` types are allowed, everything just works as you'd expect it to.</span></span>
 
-<span data-ttu-id="e0c4c-227">這項功能會實行 [F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c4c-227">This feature implements [F# RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md).</span></span>
+<span data-ttu-id="55064-227">這項功能會實行 [F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)。</span><span class="sxs-lookup"><span data-stu-id="55064-227">This feature implements [F# RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md).</span></span>
