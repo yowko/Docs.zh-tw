@@ -37,8 +37,6 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: 型別提供者疑難排解
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: F# 互動
-      href: tutorials/fsharp-interactive/index.md
 - name: F# 的新功能
   items:
     - name: F# 5.0
@@ -266,6 +264,10 @@
       href: language-reference/verbose-syntax.md
     - name: 編譯器錯誤與警告
       href: language-reference/compiler-messages/index.md
+- name: F# 工具
+  items:
+    - name: F# 互動
+      href: tools/fsharp-interactive/index.md
 - name: F# 樣式指南
   href: style-guide/index.md
   items:

@@ -2,12 +2,12 @@
 title: 'F # 5.0 中的新功能-F # 指南'
 description: '深入瞭解 F # 5.0 中可用的新功能。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982462"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098693"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5.0 的新功能
 
@@ -285,13 +285,13 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-函數所產生的條件約束 `inline` 會保留在程式碼 qutoation 中。 `negate`現在可以評估函數的 quotated 表單。
+函數所產生的條件約束 `inline` 會保留在程式碼引號中。 `negate`現在可以評估函式的引號形式。
 
 這項功能會實行 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)。
 
 ## <a name="applicative-computation-expressions"></a>Applicative 計算運算式
 
-目前使用的[計算運算式 (CEs) ](../language-reference/computation-expressions.md)來建立「內容計算」的模型，或以更多功能的程式設計易記術語 monadic 計算。
+目前使用的[計算運算式 (CEs) ](../language-reference/computation-expressions.md)來建立「內容計算」的模型，或以更多功能的程式設計易懂術語 monadic 計算。
 
 F # 5 引進了 applicative CEs，可提供不同的計算模型。 Applicative CEs 允許更有效率的計算，前提是每個計算都是獨立的，且其結果會在結尾累積。 當計算彼此獨立時，也會完整可並行，讓 CE 作者可以撰寫更有效率的程式庫。 這項優點有一項限制，但不允許相依于先前計算值的計算。
 
@@ -340,7 +340,7 @@ let printApplicatives () =
 
 這項功能會實行 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)。
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>可以在不同的泛型具現化 implemeneted 介面
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>介面可以在不同的泛型具現化中執行
 
 您現在可以在不同的泛型具現化中執行相同的介面：
 
@@ -490,7 +490,7 @@ run() // Prints the same thing twice
 
 計算運算式是程式庫和架構作者的強大功能。 它們可讓您定義知名的成員，並形成您正在使用之網域的 DSL，以大幅提升元件的表達。
 
-F # 5 新增了在計算運算式中多載自訂作業的預覽支援。 它允許寫入和使用下列程式碼：
+F # 5 新增了在計算運算式中多載自訂作業的預覽支援。 它允許撰寫和使用下列程式碼：
 
 ```fsharp
 open System

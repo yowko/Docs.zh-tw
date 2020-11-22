@@ -1,25 +1,25 @@
 ---
 title: 配量
 description: '瞭解如何使用現有 F # 資料類型的配量，以及如何為其他資料類型定義您自己的配量。'
-ms.date: 12/23/2019
-ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.date: 11/20/2020
+ms.openlocfilehash: 9c072648ed46ae29871f2be5cc64b493f6a9b857
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557073"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098953"
 ---
 # <a name="slices"></a>配量
 
-在 F # 中，配量是任何資料類型的子集， `GetSlice` 在其定義中或在範圍內的 [類型延伸](type-extensions.md)中都有方法。 它最常用於 F # 陣列和清單。 本文說明如何從現有的 F # 類型取得配量，以及如何定義您自己的配量。
+本文說明如何從現有的 F # 類型取得配量，以及如何定義您自己的配量。
 
-配量類似于 [索引子](./members/indexed-properties.md)，但會產生多個值，而不是從基礎資料結構產生單一值。
+在 F # 中，配量是任何資料類型的子集。  配量類似于 [索引子](./members/indexed-properties.md)，但會產生多個值，而不是從基礎資料結構產生單一值。 配量使用 `..` 運算子語法來選取資料類型中指定之索引的範圍。 如需詳細資訊，請參閱 [迴圈運算式參考文章](./loops-for-in-expression.md)。
 
-F # 目前有配量字串、清單、陣列和2D 陣列的內部支援。
+F # 目前有配量字串、清單、陣列和多維度 (2D、3D、4D) 陣列的內建支援。 切割最常用於 F # 陣列和清單。 您可以使用類型定義中的方法，或在範圍內的 `GetSlice` [類型延伸](type-extensions.md)中，將配量新增至自訂資料類型。
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>使用 F # 清單和陣列的基本配量
+## <a name="slicing-f-lists-and-arrays"></a>切割 F # 清單和陣列
 
-最常見的資料類型為 F # 清單和陣列。 下列範例示範如何使用清單來執行這項操作：
+最常見的資料類型為 F # 清單和陣列。  下列範例示範如何配量清單：
 
 ```fsharp
 // Generate a list of 100 integers
@@ -89,8 +89,6 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F # 核心程式庫目前不會 `GetSlice` 針對3d 陣列定義。 如果您想要配量3D 陣列或其他維度陣列，請自行定義 `GetSlice` 成員。
-
 ## <a name="defining-slices-for-other-data-structures"></a>定義其他資料結構的配量
 
 F # 核心程式庫會定義一組有限類型的配量。 如果您想要定義更多資料類型的配量，可以在類型定義本身或類型延伸中進行。
@@ -151,9 +149,9 @@ printfn "%A" xs.[2..5] // Includes the 5th index
 
 ## <a name="built-in-f-empty-slices"></a>內建 F # 空白配量
 
-如果語法可能產生不存在的配量，則 F # 清單、陣列、序列、字串、2D 陣列、3D 陣列和4D 陣列都將會產生空的磁區。
+如果語法可能會產生不存在的配量，則 F # 清單、陣列、序列、字串、多維度 (2D、3D、4D) 陣列都將會產生空的磁區。
 
-請考慮下列事項：
+請考慮下列範例：
 
 ```fsharp
 let l = [ 1..10 ]
@@ -165,7 +163,8 @@ let emptyArray = a.[-2..(-1)]
 let emptyString = s.[-2..(-1)]
 ```
 
-C # 開發人員可能會預期這些會擲回例外狀況，而不是產生空白的配量。 這是以 F # 撰寫空白集合的事實設計決策。 空白的 F # 清單可以使用另一個 F # 清單來撰寫，空字串可以加入至現有的字串等等。 使用以參數形式傳遞的值，並可以藉由產生空集合以符合 F # 程式碼的複合本質，來取得配量，是很常見的情況。
+> [!IMPORTANT]
+> C # 開發人員可能會預期這些會擲回例外狀況，而不是產生空白的配量。 這是以 F # 撰寫空白集合的事實設計決策。 空白的 F # 清單可以使用另一個 F # 清單來撰寫，空字串可以加入至現有的字串等等。 使用以參數形式傳遞的值來取得配量是很常見的，並藉由產生空的集合來滿足 F # 程式碼的複合本質，進而容忍超出範圍 > 的能力。
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>固定-3D 和4D 陣列的索引配量
 
@@ -174,12 +173,14 @@ C # 開發人員可能會預期這些會擲回例外狀況，而不是產生空�
 為了說明這一點，請考慮下列3D 陣列：
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -203,7 +204,7 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
-最後一行 `y` `z` 會修正3d 陣列的和 indicies，並採用 `x` 對應至矩陣的其餘值。
+最後一行 `y` `z` 會修正3d 陣列的和索引，並採用 `x` 對應至矩陣的其餘值。
 
 ## <a name="see-also"></a>另請參閱
 
