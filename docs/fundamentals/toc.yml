@@ -180,7 +180,7 @@ items:
           - name: 概觀
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: 參考
+          - name: 參考資料
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -312,7 +312,7 @@ items:
             items:
               - name: 總覽
                 href: ../core/project-sdk/overview.md
-              - name: 參考
+              - name: 參考資料
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -376,6 +376,26 @@ items:
             href: ../core/diagnostics/eventpipe.md
           - name: 記錄和追蹤
             href: ../core/diagnostics/logging-tracing.md
+          - name: 執行階段事件
+            items:
+              - name: 概觀
+                href: ../fundamentals/diagnostics/runtime-events.md
+              - name: 爭用事件
+                href: ../fundamentals/diagnostics/runtime-contention-events.md
+              - name: 例外狀況事件
+                href: ../fundamentals/diagnostics/runtime-exception-events.md
+              - name: 記憶體回收事件
+                href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
+              - name: Interop 事件
+                href: ../fundamentals/diagnostics/runtime-interop-events.md
+              - name: 載入器及繫結器事件
+                href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
+              - name: 方法事件
+                href: ../fundamentals/diagnostics/runtime-method-events.md
+              - name: 執行緒集區事件
+                href: ../fundamentals/diagnostics/runtime-thread-events.md
+              - name: 型別系統事件
+                href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: 在容器中收集診斷
             href: ../core/diagnostics/diagnostics-in-containers.md
           - name: .NET Core CLI 全域工具
@@ -1592,8 +1612,6 @@ items:
                 href: ../standard/serialization/how-to-chunk-serialized-data.md
               - name: 作法：判斷是否可序列化 .NET Standard 物件
                 href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-              - name: 範例
-                href: ../standard/serialization/basic-serialization-technology-sample.md
           - name: XML 和 SOAP 序列化
             items:
               - name: 總覽
