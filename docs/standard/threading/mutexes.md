@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 811ee0d2d1068fc1fe8e44aa17f01e2dc243fb98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: aa5a13b5b1cfcd7305df39c1ff5005deb45eb4ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826231"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672171"
 ---
 # <a name="mutexes"></a>Mutex
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826231"
  如需程式碼範例，請參閱 <xref:System.Threading.Mutex.%23ctor%2A> 建構函式的參考文件。  
   
 ## <a name="using-mutexes"></a>使用 Mutex  
+
  執行緒會呼叫 Mutex 的 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法來要求擁有權。 該呼叫會封鎖起來，直到 Mutex 可供使用或直到選擇性的逾時間隔時間過去。 如果沒有任何執行緒擁有 Mutex，則 Mutex 的狀態為已發出訊號。  
   
  執行緒會藉由呼叫 Mutex 的 <xref:System.Threading.Mutex.ReleaseMutex%2A> 方法來釋放它。 Mutex 具有執行緒相似性；也就是說，Mutex 的釋放只能由擁有該 Mutex 的執行緒來執行。 如果執行緒釋放非它擁有的 Mutex，執行緒中就會擲回 <xref:System.ApplicationException>。  
@@ -30,11 +31,13 @@ ms.locfileid: "94826231"
  如果執行緒擁有 <xref:System.Threading.Mutex>，該執行緒就能在重複的等候要求呼叫中指定相同的 <xref:System.Threading.Mutex>，而不需封鎖其執行；但是，它也必須進行相同次數的 <xref:System.Threading.Mutex> 釋放作業，以釋放擁有權。  
   
 ## <a name="abandoned-mutexes"></a>遭到放棄的 Mutex  
+
  如果執行緒終止時未釋放 <xref:System.Threading.Mutex>，就表示已放棄 Mutex。 這通常代表程式在設計上有嚴重錯誤，因為 Mutex 所保護的資源可能仍處於不一致的狀態。 <xref:System.Threading.AbandonedMutexException>在下一個取得 mutex 的執行緒中擲回。
   
  如果是全系統 Mutex，遭到放棄的 Mutex 可能表示應用程式已意外終止 (例如，透過使用「Windows 工作管理員」)。  
   
 ## <a name="local-and-system-mutexes"></a>本機和系統 Mutex  
+
  Mutex 有兩種類型︰本機 Mutex 和具名的系統 Mutex。 如果您使用可接受名稱的建構函式來建立 <xref:System.Threading.Mutex> 物件，該物件便會與該名稱的作業系統物件相關聯。 具名的系統 Mutex 能在整個作業系統中看到，而且可用來同步處理處理序的活動。 您可以建立多個 <xref:System.Threading.Mutex> 物件來代表同一個具名系統 Mutex，而且可以使用 <xref:System.Threading.Mutex.OpenExisting%2A> 方法來開啟現有的具名系統 Mutex。  
   
  本機 Mutex只存在於您的處理序內。 在處理序內，只要是參考了本機 <xref:System.Threading.Mutex> 物件的執行緒，就可使用本機 Mutex。 每個 <xref:System.Threading.Mutex> 物件都是獨立的本機 Mutex。  
@@ -45,7 +48,7 @@ ms.locfileid: "94826231"
   
  如需適用於 Mutex 的存取控制安全性相關資訊，請參閱 <xref:System.Security.AccessControl.MutexSecurity> 和 <xref:System.Security.AccessControl.MutexAccessRule> 類別、<xref:System.Security.AccessControl.MutexRights> 列舉、<xref:System.Threading.Mutex.GetAccessControl%2A>、<xref:System.Threading.Mutex.SetAccessControl%2A>、<xref:System.Threading.Mutex> 類別的 <xref:System.Threading.Mutex.OpenExisting%2A> 方法，以及 <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> 建構函式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
 - <xref:System.Threading.Mutex.%23ctor%2A>

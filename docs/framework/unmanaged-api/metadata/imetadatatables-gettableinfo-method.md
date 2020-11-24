@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-ms.openlocfilehash: 7e60dd9535809ca13f3bbe6ac76f5ea1209df734
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 65943ac169106a95feaff7d44017444e65764b60
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501160"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672522"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 方法
+
 取得指定資料表的名稱、資料列大小、資料列數目、資料行數目和索引鍵資料行索引。  
   
 ## <a name="syntax"></a>語法  
@@ -39,30 +40,32 @@ HRESULT GetTableInfo (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ixTbl`  
- 在要傳回其屬性之資料表的識別碼。  
+ 在要傳回其屬性的資料表識別碼。  
   
  `pcbRow`  
- 脫銷資料表資料列大小（以位元組為單位）的指標。  
+ 擴展資料表資料列大小的指標，以位元組為單位。  
   
  `pcRows`  
- 脫銷資料表中的資料列數目指標。  
+ 擴展資料表中資料列數目的指標。  
   
  `pcCols`  
- 脫銷資料表中的資料行數目指標。  
+ 擴展資料表中之資料行數目的指標。  
   
  `piKey`  
- 脫銷索引鍵資料行之索引的指標，如果資料表沒有索引鍵資料行，則為-1。  
+ 擴展索引鍵資料行索引的指標; 如果資料表沒有索引鍵資料行，則為-1。  
   
  `ppName`  
- 脫銷指向資料表名稱之指標的指標。  
+ 擴展指向資料表名稱之指標的指標。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

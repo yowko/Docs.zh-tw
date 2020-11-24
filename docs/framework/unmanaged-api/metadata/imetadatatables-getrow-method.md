@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-ms.openlocfilehash: 13d514157382c75a2eb9799837f9355d0e469c99
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 01c4c1734aa0701f787a2b73787e9e4781901d42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489895"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672639"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow 方法
-在指定之資料表索引的資料表中，取得位於指定資料列索引處的資料列。  
+
+取得位於指定之資料表索引之資料表中指定之資料列索引處的資料列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,25 +37,27 @@ HRESULT GetRow (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ixTbl`  
- 在將從中抓取資料列的資料表索引。  
+ 在將從其中抓取資料列的資料表索引。  
   
  `rid`  
- 在要取得的資料列索引。  
+ 在要取得之資料列的索引。  
   
  `ppRow`  
- 脫銷資料列指標的指標。  
+ 擴展指向資料列之指標的指標。  
   
 ## <a name="remarks"></a>備註  
 
-  我們不建議使用這個方法，因為它不會傳回一致的結果。 如需 GUID 資料表的詳細資訊，請參閱通用語言基礎結構（CLI）檔，特別是「分割區 II：元資料定義和語法」。 檔可從線上取得;請參閱[ECMA c # 和通用語言基礎結構標準](../../../standard/components.md#applicable-standards)和[標準 ecma-335-通用語言基礎結構（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
+  我們不建議使用此方法，因為它不會傳回一致的結果。 如需有關 GUID 資料表的詳細資訊，請參閱通用語言基礎結構 (CLI) 檔，特別是「資料分割 II：元資料定義和語義」。 檔可在線上取得;請參閱 [ECMA c # 和通用語言基礎結構標準](../../../standard/components.md#applicable-standards) 以及 [標準 ECMA-335-通用語言基礎結構 (CLI) ](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

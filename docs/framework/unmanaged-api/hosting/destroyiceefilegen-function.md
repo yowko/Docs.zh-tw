@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-ms.openlocfilehash: ff7e7b299d185b8db263d2076c1e075b87b487fc
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 495d84470c559df13ea64b63dd00582f4335d4e3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616394"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673172"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen 函式
-終結[ICeeFileGen](iceefilegen-class.md)物件。  
+
+終結 [ICeeFileGen](iceefilegen-class.md) 物件。  
   
- 此函式在 .NET Framework 4 中已被取代。  
+ 此函式已在 .NET Framework 4 中被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +38,25 @@ HRESULT DestroyICeeFileGen (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ceeFileGen`  
  在要終結的 `ICeeFileGen` 物件。  
   
 ## <a name="return-value"></a>傳回值  
+
  這個方法會傳回標準 COM 錯誤碼。  
   
 ## <a name="remarks"></a>備註  
- `DestroyICeeFileGen`終結 `ICeeFileGen` [CreateICeeFileGen](createiceefilegen-function.md)函數所建立的物件。  
+
+ `DestroyICeeFileGen` 終結 `ICeeFileGen` [CreateICeeFileGen](createiceefilegen-function.md) 函數所建立的物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** ICeeFileGen。h  
   
- 連結**庫：** MSCorPE .dll  
+ 連結 **庫：** MSCorPE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

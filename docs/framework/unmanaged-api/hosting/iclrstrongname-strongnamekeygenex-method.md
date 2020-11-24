@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-ms.openlocfilehash: fb18b7b5ac73a1f270af6fae95a23e04b17ca5f1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 9ba50616b25f9c7c592f19947c82a890ae6b5a4a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763068"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671677"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx 方法
-產生具有指定金鑰大小的新公開/私密金鑰組，以供強式名稱使用。  
+
+使用指定的金鑰大小產生新的公開/私密金鑰組，以供強式名稱使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,39 +39,43 @@ HRESULT StrongNameKeyGenEx (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `wszKeyContainer`  
- 在要求的金鑰容器名稱。 `wszKeyContainer`必須是非空白字串或 null，才能產生暫存名稱。  
+ 在要求的金鑰容器名稱。 `wszKeyContainer` 必須為非空白字串或 null，才能產生暫存名稱。  
   
  `dwFlags`  
  在值，指定是否要保留註冊的金鑰。 支援下列值：  
   
-- 0x00000000-在為 null 時使用， `wszKeyContainer` 以產生暫存金鑰容器名稱。  
+- 0x00000000-當 `wszKeyContainer` 為 null 時，用來產生暫存金鑰容器名稱。  
   
-- 0x00000001 （ `SN_LEAVE_KEY` ）-指定應將金鑰保留為已註冊。  
+- 0x00000001 (`SN_LEAVE_KEY`) -指定應該將金鑰保持在註冊。  
   
  `dwKeySize`  
  在要求的金鑰大小（以位為單位）。  
   
  `ppbKeyBlob`  
- 脫銷傳回的公開/私密金鑰組。  
+ 擴展傳回的公開/私密金鑰組。  
   
  `pcbKeyBlob`  
- 脫銷的大小（以位元組為單位） `ppbKeyBlob` 。  
+ 擴展的大小（以位元組為單位） `ppbKeyBlob` 。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果方法已成功完成，則為，否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+
+ `S_OK` 如果方法成功完成，則為，否則，表示失敗 (的 HRESULT 值會看到清單) 的 [一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values) 。  
   
 ## <a name="remarks"></a>備註  
- .NET Framework 版本1.0 和1.1 需要 `dwKeySize` 1024 位以強式名稱簽署元件; 版本2.0 新增了支援的2048位金鑰。  
+
+ .NET Framework 版本1.0 和1.1 需要 `dwKeySize` 1024 位來簽署具有強式名稱的元件; 2.0 版新增了針對2048位金鑰支援的功能。  
   
- 在取得金鑰之後，您應該呼叫[ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)方法來釋放已配置的記憶體。  
+ 在抓取金鑰之後，您應該呼叫 [ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) 方法來釋放已配置的記憶體。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

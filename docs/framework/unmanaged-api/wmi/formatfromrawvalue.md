@@ -14,14 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7f3e4eef4a7e378529c2097a8fe1a753a98c961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e678aca5baf82c07ec9fc5c85cef22630af5ab0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672327"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函式
+
 將一個原始效能資料值轉換為指定的格式，或轉換為兩個原始效能資料值 (若格式轉換是以時間為基礎)。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +48,7 @@ int FormatFromRawValue (
 `dwFormat`\
 在要轉換原始效能資料的格式。 它可能是下列其中一個值：
 
-|常數  |值  |說明 |
+|常數  |值  |描述 |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 傳回作為雙精確度浮點數的計算值。 |
 | `PDH_FMT_LARGE` | 0x00000400 | 傳回做為64位整數的計算值。 |
@@ -55,7 +56,7 @@ int FormatFromRawValue (
 
 您可以使用下列其中一個調整旗標來 Or 運算先前的其中一個值：
 
-|常數  |值  |說明 |
+|常數  |值  |描述 |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | 請勿套用計數器的縮放比例因數。 |
 | `PDH_FMT_1000` | 0x00002000 | 將最終值乘以1000。 |
@@ -76,7 +77,7 @@ int FormatFromRawValue (
 
 此函數會傳回下列值：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | 函式呼叫成功。 |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 必要的引數遺失或不正確。 |
@@ -88,9 +89,9 @@ int FormatFromRawValue (
 
 ## <a name="requirements"></a>需求
 
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。
 
- 連結**庫：** PerfCounter.dll
+ 連結 **庫：** PerfCounter.dll
 
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-ms.openlocfilehash: 3b1a0cd9a1dfba6f33a20416f2a10c967f871a06
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 60e1d5d49f6f8c6fec060d8751e94410986aa3fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762665"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671378"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile 方法
-將指定的檔案對應到記憶體中。 這個方法已過時。  
+
+將指定的檔案對應到記憶體。 這個方法已過時。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +36,20 @@ HRESULT MapFile(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `hFile`  
  在要對應之檔案的控制碼。  
   
  `hMapAddress`  
- 脫銷要開始對應檔案的起始記憶體位址。  
+ 擴展開始對應檔的起始記憶體位址。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：** 1.0、1。1  
   

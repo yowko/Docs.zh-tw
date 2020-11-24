@@ -2,12 +2,12 @@
 title: 利用容器和協調器
 description: 利用 Azure 中的 Docker 容器和 Kubernetes 協調器
 ms.date: 05/31/2020
-ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877570"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672509"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和協調器
 
@@ -78,7 +78,7 @@ AKS 是以叢集為基礎的技術。 同盟虛擬機器或節點的集區會部
 
 ## <a name="what-are-the-scaling-benefits"></a>調整的優點為何？
 
-以容器為基礎的服務可利用協調流程工具（例如 Kubernetes）所提供的調整優勢。 設計容器只知道自己的身分。 當您有多個需要一起運作的容器時，您應該將它們組織在較高層級。 組織大量的容器及其共用的相依性（例如網路設定），就是協調流程工具在每天儲存的地方！ Kubernetes 會在容器群組之間建立抽象層，並將其 *組織成 pod*。 Pod 會在稱為 *節點*的背景工作電腦上執行。 此組織結構稱為「叢集」（ *cluster*）。 圖3-3 顯示 Kubernetes 群集的不同元件。
+以容器為基礎的服務可利用協調流程工具（例如 Kubernetes）所提供的調整優勢。 設計容器只知道自己的身分。 當您有多個需要一起運作的容器時，您應該將它們組織在較高層級。 組織大量的容器及其共用的相依性（例如網路設定），就是協調流程工具在每天儲存的地方！ Kubernetes 會在容器群組之間建立抽象層，並將其 *組織成 pod*。 Pod 會在稱為 *節點* 的背景工作電腦上執行。 此組織結構稱為「叢集」（ *cluster*）。 圖3-3 顯示 Kubernetes 群集的不同元件。
 
 ![Kubernetes 叢集元件。 ](./media/kubernetes-cluster-components.png)
 **圖 3-3**。 Kubernetes 叢集元件。
@@ -184,12 +184,12 @@ Visual Studio 支援 web 應用程式的 Docker 開發。 當您建立新的 ASP
 選取此選項時，會 `Dockerfile` 在其根目錄中建立專案，此專案可以用來在 Docker 容器中建立和裝載應用程式。 圖 3-6 中顯示的範例 Dockerfile
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3328a2c0-1e48-4a54-802a-9b474cf82c21
 topic_type:
 - apiref
-ms.openlocfilehash: 6fce9f61e222d0fc1763495de162a94a7fc22689
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 17d5367564ec1ec98efc264ad9a5794c0d04a947
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975975"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672132"
 ---
 # <a name="icordebugexceptionobjectcallstackenumnext-method"></a>ICorDebugExceptionObjectCallStackEnum::Next 方法
-取得指定的[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)實例數目，其中包含來自例外狀況物件之呼叫堆疊的資訊。  
+
+取得 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 實例的指定數目，其中包含來自例外狀況物件之呼叫堆疊的資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,19 +37,21 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `celt`  
- 在要抓取的[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)實例數目。  
+ 在要取出的 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 實例數目。  
   
  `values`  
- 脫銷指標陣列，其中每一個都會指向[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)物件。  
+ 擴展指標的陣列，每個指標都會指向 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 物件。  
   
  `pceltFetched`  
- 脫銷實際傳回之[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)實例數目的指標。  
+ 擴展實際傳回的 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 實例數目指標。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

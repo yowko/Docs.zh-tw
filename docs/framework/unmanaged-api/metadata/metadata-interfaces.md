@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-ms.openlocfilehash: 4d947388afb8d7f8f935ae3b8e8aff81efaf2ee4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d9b48df740668797a7c901219401e9ea304a8f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489586"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672877"
 ---
 # <a name="metadata-interfaces"></a>中繼資料介面
+
 本節描述 Unmanaged 介面，這會提供您由 .NET Framework 類型、方法、欄位等所公開之中繼資料的存取權。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [ICeeGen 介面](iceegen-interface.md)  
  提供動態程式碼編譯的方法。  
   
@@ -72,6 +74,7 @@ ms.locfileid: "84489586"
  提供驗證中繼資料簽章的方法。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [中繼資料全域靜態函式](metadata-global-static-functions.md)  
   
  [中繼資料列舉](metadata-enumerations.md)  

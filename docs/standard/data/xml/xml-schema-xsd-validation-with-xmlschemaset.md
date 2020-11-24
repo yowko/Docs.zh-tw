@@ -7,18 +7,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 9e1d4b7e8c805436c32d2ae7b340ee251741f4a1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 82944fd3fb97c3086ffd47fbd2ba1f3192e6deb4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824567"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672249"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>使用 XmlSchemaSet 進行 XML 架構 (XSD) 驗證
 
 可以根據 <xref:System.Xml.Schema.XmlSchemaSet> 中的 XML 結構描述定義語言 (XSD) 結構描述來驗證 XML 文件。  
   
 ## <a name="validate-xml-documents"></a>驗證 XML 檔  
+
  XML 文件是透過 <xref:System.Xml.XmlReader.Create%2A> 類別的 <xref:System.Xml.XmlReader> 方法來驗證的。 若要驗證 XML 文件，請建構 <xref:System.Xml.XmlReaderSettings> 物件，該物件包含可用於驗證 XML 文件的 XML 結構描述定義語言 (XSD) 結構描述。  
   
 > [!NOTE]
@@ -42,7 +43,7 @@ ms.locfileid: "94824567"
  [!code-csharp[XmlSchemaSetOverall Example #1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaSetOverall Example/CS/xmlschemasetexample.cs#1)]
  [!code-vb[XmlSchemaSetOverall Example #1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaSetOverall Example/VB/xmlschemasetexample.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
 - [使用 XML 結構描述](working-with-xml-schemas.md)

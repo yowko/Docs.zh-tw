@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider 介面
 ms.date: 03/30/2017
 ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
-ms.openlocfilehash: 25faad4f4bc67b57c339bc63d1a18ab4d275cd71
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ff1f39be3d3db43f70cfa4a0711a3f42c180bc1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672080"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider 介面
+
 提供可用來擷取偵錯符號資訊的方法。  
   
 ## <a name="methods"></a>方法  
@@ -34,7 +35,8 @@ ms.locfileid: "83379348"
 > 這個介面僅適用於 .NET 原生。 如果您在 .NET 原生之外針對 ICorDebug 案例實作這個介面，Common Language Runtime 會忽略這個介面。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -42,7 +44,7 @@ ms.locfileid: "83379348"
   
  **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)
 - [偵錯](index.md)
