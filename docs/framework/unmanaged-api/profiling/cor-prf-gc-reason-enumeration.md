@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-ms.openlocfilehash: 409a21238f172e5ecdaa8d5bfa237a9f3fe46345
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f41f00a9699d6fc135ca3b9c0b4b470ca0359279
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500904"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682376"
 ---
 # <a name="cor_prf_gc_reason-enumeration"></a>COR_PRF_GC_REASON 列舉
+
 指出正在發生之記憶體回收的原因。  
   
 ## <a name="syntax"></a>語法  
@@ -35,13 +36,14 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|垃圾收集是由 <xref:System.GC.Collect%2A> 方法引發。|  
-|`COR_PRF_GC_OTHER`|這是未指定的原因。|  
+|`COR_PRF_GC_INDUCED`|垃圾收集是由方法所引發 <xref:System.GC.Collect%2A> 。|  
+|`COR_PRF_GC_OTHER`|未指定原因。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

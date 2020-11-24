@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-ms.openlocfilehash: 0a4cb365ca8f7d52be505368a3d769a9728983bf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8daa84e3abbbc64c9a48d8957b4ad9c6756d0d8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502960"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682077"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread 方法
-取得可針對 ICorDebugThread 介面查詢的物件。 這個方法在 .NET Framework 版本2.0 中已過時。  
+
+取得可針對 ICorDebugThread 介面進行查詢的物件。 此方法在 .NET Framework 版本2.0 中已淘汰。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,14 +34,17 @@ HRESULT GetInprocInspectionIThisThread(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppicd`  
- [out](/cpp/atl/iunknown)物件，可查詢 `ICorDebugThread` 介面。  
+ 可針對介面進行查詢的[out](/cpp/atl/iunknown)物件 `ICorDebugThread` 。  
   
 ## <a name="remarks"></a>備註  
- Common language runtime （CLR）偵錯工具在 .NET Framework 版本1.0 中支援有限的同進程偵錯工具。 同進程的偵錯工具已啟用分析工具，以使用偵錯工具開發介面的檢查部分。 由於客戶意見反應的結果，已從版本2.0 中的 .NET Framework 中移除同進程的偵錯工具，並以一組與分析 API 更符合的功能來取代。  
+
+ Common language runtime (CLR) 偵錯工具在 .NET Framework 1.0 版中支援有限的同進程處理。 同進程的偵錯工具可讓分析工具使用偵錯工具 API 的檢查部分。 由於客戶的意見反應，已從2.0 版中的 .NET Framework 移除同進程的偵錯工具，並以一組與分析 API 更同行的功能取代。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 效能
 description: 本文說明 Windows Workflow Foundation 的主要修訂效能特性，這是 .NET Framework 4 的一部分。
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0a68548a8b5e521fccdb544e318c3091315814f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682337"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 
@@ -16,11 +16,11 @@ ms.locfileid: "90558338"
 
  WF3 與 WF4 之間個別工作流程元件效能提升的速度很快。  這會讓手動編碼 Windows Communication Foundation (WCF) 服務和 WCF 工作流程服務之間的差距保持很小。  在 WF4 中，工作流程延遲已大幅降低。  持續性效能已提升 2.5 至 3.0 倍。  透過工作流程追蹤進行健康監視的負荷已明顯減少。  這些都是移轉至 WF4 或在應用程式中採用 WF4 的絕佳理由。
 
-## <a name="terminology"></a>詞彙
+## <a name="terminology"></a>術語
 
  [!INCLUDE[wf1](../../../includes/wf1-md.md)]本主題其餘部分會將 .NET Framework 4 中引進的版本稱為 WF4。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 在 .NET Framework 3.0 中引進，並透過 .NET Framework 3.5 SP1 進行一些次要修訂。 本主題其餘部分的 .NET Framework 3.5 版的 Workflow Foundation 將稱為 WF3。 WF3 隨附于 .NET Framework 4 與 WF4 並存。 如需將 WF3 構件遷移至 WF4 的詳細資訊，請參閱： [Windows Workflow Foundation 4 遷移指南](migration-guidance.md)。
 
- Windows Communication Foundation (WCF) 是 Microsoft 的統一程式設計模型，用來建立服務導向應用程式。 它是以 .NET 3.0 的一部分與 WF3 一起引進，現在是 .NET Framework 的其中一個重要元件。
+ Windows Communication Foundation (WCF) 是 Microsoft 的統一程式設計模型，用來建立服務導向應用程式。 它是隨著 WF3 一起引進 .NET Framework 3.0 的一部分，現在是 .NET Framework 的其中一個重要元件。
 
  Windows Server AppFabric 是一組整合式技術，可讓您更輕鬆地建置、調整及管理 IIS 上執行的 Web 與複合應用程式。 它提供了監視及管理服務和工作流程的工具。 如需詳細資訊，請參閱 [Windows Server AppFabric 1.0](/previous-versions/appfabric/ff384253(v=azure.10))。
 
@@ -51,7 +51,7 @@ ms.locfileid: "90558338"
  應用程式針對長時間執行的封鎖作業 (例如 I/O) 或分散式運算作業採用非同步程式設計時，通常可展現較佳的效能和延展性。 WF4 會透過基礎活動型別 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供非同步支援。 執行階段原本即了解非同步活動，因此可以在非同步工作未處理完畢時，自動將執行個體放入不保存區域中。 您可以從這些類型衍生自訂活動，以執行非同步工作；如此就不會佔用工作流程排程器執行緒，也不會阻擋任何可平行執行的活動。
 
 ### <a name="messaging"></a>Messaging (傳訊)
- WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在 .NET 3.5 中，工作流程可以實作為 WCF 用戶端，或透過和公開為 WCF 服務 <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> 。 在 WF4 中，透過將 WCF 訊息邏輯緊密整合到 WF 中，更進一步強化了以工作流程為基礎的訊息程式設計概念。
+ WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在 .NET Framework 3.5 中，工作流程可以實作為 WCF 用戶端，或透過和公開為 WCF 服務 <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> 。 在 WF4 中，透過將 WCF 訊息邏輯緊密整合到 WF 中，更進一步強化了以工作流程為基礎的訊息程式設計概念。
 
  .NET 4 中 WCF 提供的統一訊息處理管線，可協助 WF4 服務提供比 WF3 更佳的效能和擴充性。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 如需詳細資訊，請參閱 [變更傳送活動的快取共用層級](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。
 
@@ -285,7 +285,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  即使是擁有多層深度和大量活動的複雜工作流程，其效能與本文前段所示的其他輸送量數字一致。  WF4 的輸送量增加的速度較快，而且必須在對數刻度上進行比較。
 
-### <a name="memory"></a>記憶體
+### <a name="memory"></a>Memory
  Windows Workflow Foundation 的記憶體負荷是從兩個重要的方面加以測量：工作流程複雜度和工作流程定義的數目。  記憶體測量作業是在 Windows 7 64 位元工作站上進行。  有許多方法可取得工作集大小的測量，例如監視效能計數器、輪詢環境工作集，或使用存取 vmmap 之類的工具（如 [存取 vmmap](/sysinternals/downloads/vmmap)所提供）。 您可以結合各種方式來取得和驗證每項測試的結果。
 
 ### <a name="workflow-complexity-test"></a>工作流程複雜度測試
@@ -452,5 +452,5 @@ public class Workflow1 : Activity
 
  直接透過 WF3 使用 Interop 在效能上有顯著提升。  不過，與 WF4 活動相較之下，這項提升就顯得微不足道。
 
-## <a name="summary"></a>[摘要]
+## <a name="summary"></a>摘要
  WF4 中對效能的大量投資已在許多重要的方面獲得成效。  在某些情況下，WF4 中個別工作流程元件的效能比 WF3 快上數百倍，因為 WF4 擁有較精簡的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段。  延遲數據同樣大為改善。  這表示，使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 而非手動編碼 WCF 協調流程服務的效能會受到影響，因為使用的額外優點很小 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 。  持續性效能已提升 2.5 至 3.0 倍。  現在透過工作流程追蹤進行健康監視的負荷已相當低。  若您考慮從 WF3 移至 WF4，我們提供了一套完整的移轉指南。  這些都將使 WF4 成為撰寫複雜應用程式的理想選擇。

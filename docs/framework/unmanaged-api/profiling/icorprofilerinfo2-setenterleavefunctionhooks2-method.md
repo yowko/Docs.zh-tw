@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3c26b3e7-f72b-48a5-bf8c-edc122523a4b
 topic_type:
 - apiref
-ms.openlocfilehash: 78489aae840ff17e68b10bd7593fb7be4dae1af7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f71d0b5c77d4a514001bcbe6904ed912be388d18
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496728"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681544"
 ---
 # <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a>ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 方法
-指定要在 managed 函式之 "enter"、"leave" 和 "tailcall" 勾點的更新版本上呼叫的分析工具所執行的函數。  
+
+指定要在 managed 函式的「輸入」、「離開」和「tailcall」的更新版本上呼叫的 profiler 型函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,24 +36,27 @@ HRESULT SetEnterLeaveFunctionHooks2(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pFuncEnter`  
- 在要當做[FunctionEnter2](functionenter2-function.md)回呼使用的實作為指標。  
+ 在要當做 [FunctionEnter2](functionenter2-function.md) 回呼使用的實作為指標。  
   
  `pFuncLeave`  
- 在要當做[FunctionLeave2](functionleave2-function.md)回呼使用的實作為指標。  
+ 在要當做 [FunctionLeave2](functionleave2-function.md) 回呼使用的實作為指標。  
   
  `pFuncTailcall`  
- 在要當做[FunctionTailcall2](functiontailcall2-function.md)回呼使用的實作為指標。  
+ 在要當做 [FunctionTailcall2](functiontailcall2-function.md) 回呼使用的實作為指標。  
   
 ## <a name="remarks"></a>備註  
- `SetEnterLeaveFunctionHooks2`方法類似于[ICorProfilerInfo：： SetEnterLeaveFunctionHooks](icorprofilerinfo-setenterleavefunctionhooks-method.md)方法。 使用前者來指定要當做較新版本的進入/離開/tailcall 回呼使用的函式，而後者則用來指定要當做較舊版本的進入/離開/tailcall 回呼使用的函數。  
+
+ `SetEnterLeaveFunctionHooks2`方法類似于[ICorProfilerInfo：： SetEnterLeaveFunctionHooks](icorprofilerinfo-setenterleavefunctionhooks-method.md)方法。 您可以使用前者來指定函式，以做為輸入/離開/tailcall 回呼的較新版本，而後者則指定要做為輸入/離開/tailcall 回呼的較舊版本使用的函數。  
   
- 一次只能有一組回呼處於作用中狀態。 因此，如果 profiler 同時呼叫 `ICorProfilerInfo::SetEnterLeaveFunctionHooks` 和 `SetEnterLeaveFunctionHooks2` ， `SetEnterLeaveFunctionHooks2` 則會使用。  
+ 一次只能有一組回呼處於作用中。 因此，如果 profiler 同時呼叫 `ICorProfilerInfo::SetEnterLeaveFunctionHooks` 和 `SetEnterLeaveFunctionHooks2` ， `SetEnterLeaveFunctionHooks2` 則會使用。  
   
- `SetEnterLeaveFunctionHooks2`只能從分析工具的[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)回呼呼叫方法。  
+ 您 `SetEnterLeaveFunctionHooks2` 只能從分析工具的 [ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md) 回呼呼叫此方法。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

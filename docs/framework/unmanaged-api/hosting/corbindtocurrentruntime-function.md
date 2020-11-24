@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 9c5d83b5f2ffb06c9fb14f715a3ea7ff12319086
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a8ab6e1aeedef5b821fc977387b8039f54edd64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547810"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682493"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函式
+
 使用儲存在 XML 檔案中的版本資訊，將 common language runtime (CLR) 載入至進程。 XML 檔案的格式是在標準應用程式佈建檔之後進行模型化。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../configure-apps/file-schema/index.md)。  
   
  此函式已在 .NET Framework 4 中被取代。 請參閱將 [Common Language Runtime 載入至進程](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))。  
@@ -39,6 +40,7 @@ HRESULT CorBindToCurrentRuntime (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pwszFileName`  
  在應用程式佈建檔的名稱，指定要載入的 CLR 版本。 如果檔案名不是完整名稱，則會假設該名稱與可執行檔的可執行檔位於相同的目錄中。  
   
@@ -56,11 +58,12 @@ HRESULT CorBindToCurrentRuntime (
  擴展傳回的介面指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll  
   
- 連結**庫：** MSCorEE.dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
