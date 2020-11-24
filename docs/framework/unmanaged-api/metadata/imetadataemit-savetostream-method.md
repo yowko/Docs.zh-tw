@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 87e00a69643b6bc403188fb0fdb6f9e3f3d82115
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3f8da08b96c47c90ecccae28dd1662a7abffaf1d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003869"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688558"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream 方法
+
 將目前範圍中的所有中繼資料儲存至指定的 `IStream` 。  
   
 ## <a name="syntax"></a>語法  
@@ -35,18 +36,20 @@ HRESULT SaveToStream (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pIStream`  
- 在要儲存的可寫入資料流程。  
+ 在要儲存到其中的可寫入資料流程。  
   
  `dwSaveFlags`  
  [in] 保留。 必須為零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MSCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

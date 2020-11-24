@@ -14,31 +14,33 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-ms.openlocfilehash: 976673a0caab4e041cc80e5536544c195fcf692a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7529ecd215d74eb0eedbec8b90eba367ed20d56f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805184"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687739"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 介面
+
 提供方法來取得垃圾收集系統的相關資訊，以及控制垃圾收集的某些層面。  
   
 > [!NOTE]
-> 針對新的開發，建議您改用[ICLRGCManager2](iclrgcmanager2-interface.md)介面。  
+> 針對新的開發，我們建議您改用 [ICLRGCManager2](iclrgcmanager2-interface.md) 介面。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx 方法](igchost2-setgcstartuplimitsex-method.md)|設定層代0的區段大小和大小上限。 啟用層代0和區段大小大於 `DWORD` 。|  
+|[SetGCStartupLimitsEx 方法](igchost2-setgcstartuplimitsex-method.md)|設定層代0的區段大小和大小上限。 啟用超出的層代0和區段大小 `DWORD` 。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** GCHost .idl，GCHost。h  
+ **標頭：** GCHost .idl、GCHost。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

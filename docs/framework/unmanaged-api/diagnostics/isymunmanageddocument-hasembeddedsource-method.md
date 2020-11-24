@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 385fc4d3-365c-4645-b7b0-6c4c5344b79f
 topic_type:
 - apiref
-ms.openlocfilehash: d654f6d57bd784063fc7f87dd9767bdc27ad2776
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 09bc0f87cd35f12a15566fb525c2ce42990ac69b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688194"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource 方法
-`true`如果檔的來源內嵌在偵錯工具符號中，則傳回，否則傳回 `false` 。  
+
+`true`如果檔具有內嵌在偵錯工具符號中的來源，則傳回，否則傳回 `false` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,11 +34,13 @@ HRESULT HasEmbeddedSource(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pRetVal`  
- 脫銷變數的指標，指出檔是否有內嵌在偵錯工具符號中的來源。  
+ 擴展變數的指標，指出檔是否有內嵌在偵錯工具符號中的來源。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK。  
+
+ 如果方法成功，則為 S_OK。  
   
 ## <a name="see-also"></a>另請參閱
 

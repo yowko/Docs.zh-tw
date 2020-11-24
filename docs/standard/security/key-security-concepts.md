@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831061"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687543"
 ---
 # <a name="key-security-concepts"></a>重要的安全性概念
 
@@ -49,6 +49,7 @@ ms.locfileid: "94831061"
 如需詳細資訊，請參閱[主體和身分識別物件](principal-and-identity-objects.md)。  
   
 ## <a name="authentication"></a>驗證  
+
 驗證是探索並確認主體身分識別的程序，它會檢查使用者的認證，並針對某授權單位來驗證那些認證。 在驗證期間取得的資訊可直接供是由您的程式碼使用。 您也可以使用 .NET 以角色為基礎的安全性來驗證目前使用者，並判斷是否允許該主體存取您的程式碼。 請參閱 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的多載，以取得如何針對特定角色來驗證主體的範例。 例如，您可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 多載來判斷目前使用者是否為系統管理員群組的成員。  
   
 現今使用各種不同的驗證機制，其中有許多可搭配 .NET 以角色為基礎的安全性使用。 部分最常用的機制有基本、摘要式、Passport、作業系統 (例如 NTLM 或 Kerberos) 或應用程式定義的機制。  
@@ -74,6 +75,6 @@ ms.locfileid: "94831061"
 
 授權是決定是否允許主體執行所要求動作的程序。 授權會在驗證之後進行，它會使用主體的身分識別和角色相關資訊來判斷主體可以存取哪些資源。 您可以使用 .NET 以角色為基礎的安全性來執行授權。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ASP.NET Core 安全性](/aspnet/core/security/)

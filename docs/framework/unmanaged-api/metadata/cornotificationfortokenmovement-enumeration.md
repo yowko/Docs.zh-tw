@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0f9cb8db35a1669cead6f9f26c9a89e063628dd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007594"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687667"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 列舉
-指定當權杖重新對應發生時，將傳送至中繼資料 API 用戶端的通知。  
+
+指定當權杖重新對應發生時將傳送至中繼資料 API 用戶端的通知。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,11 +62,11 @@ typedef enum CorNotificationForTokenMovement {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`MDNotifyDefault`|當 `mdTypeRef` 、 `mdMethodDef` 、 `mdMemberRef` 或 `mdFieldDef` 權杖移動時通知。|  
+|`MDNotifyDefault`|在 `mdTypeRef` 、 `mdMethodDef` 、 `mdMemberRef` 或 `mdFieldDef` 標記移動時通知。|  
 |`MDNotifyAll`|在任何權杖移動時通知。|  
-|`MDNotifyNone`|當令牌移動時不要通知。|  
+|`MDNotifyNone`|當令牌移動時不會通知。|  
 |`MDNotifyMethodDef`|在 `mdMethodDef` 權杖移動時通知。|  
 |`MDNotifyMemberRef`|在 `mdMemberRef` 權杖移動時通知。|  
 |`MDNotifyFieldDef`|在 `mdFieldDef` 權杖移動時通知。|  
@@ -88,10 +89,12 @@ typedef enum CorNotificationForTokenMovement {
 |`MDNotifyResource`|在 `mdManifestResource` 權杖移動時通知。|  
   
 ## <a name="remarks"></a>備註  
- 在中繼資料合併期間，權杖可能會重新對應（也就是移動）。  
+
+ 權杖可能會重新對應 (也就是在中繼資料合併期間移動) 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

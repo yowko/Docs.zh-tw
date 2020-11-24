@@ -1,6 +1,6 @@
 ---
-title: 獲取名稱功能（非託管 API 引用）
-description: GetNames 函數檢索物件屬性的名稱。
+title: 'GetNames 函式 (非受控 API 參考) '
+description: GetNames 函式會抓取物件的屬性名稱。
 ms.date: 11/06/2017
 api_name:
 - GetNames
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - GetNames function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 449f0ce9c291d4bbcad4947214e56ff46f55beed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd889158e61b86f42d88bcf86eda7d816277e6ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687654"
 ---
 # <a name="getnames-function"></a>GetNames 函式
+
 擷取物件屬性的子集合或所有名稱。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -42,70 +43,71 @@ HRESULT GetNames (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[在]此參數未使用。
+在此參數未使用。
 
 `ptr`  
-[在]指向[IWbem ClassObject 實例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標。
+在 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 實例的指標。
 
 `wszQualifierName`  
-[在]指向有效的`LPCWSTR`指標，用於指定作為篩選器一部分運行的限定詞名稱。 有關詳細資訊，請參閱[備註](#remarks)部分。 這個參數可以是 `null`。
+在有效的指標， `LPCWSTR` 指定做為篩選準則一部分運作的辨識符號名稱。 如需詳細資訊，請參閱「 [備註](#remarks) 」一節。 這個參數可以是 `null`。
 
 `lFlags`  
-[在]位欄位的組合。 有關詳細資訊，請參閱[備註](#remarks)部分。
+在位欄位的組合。 如需詳細資訊，請參閱「 [備註](#remarks) 」一節。
 
-`pQualifierValue`[在]指向初始化到篩選器`VARIANT`值的有效結構的指標。 這個參數可以是 `null`。
+`pQualifierValue` 在有效結構的指標，此 `VARIANT` 結構會初始化為篩選值。 這個參數可以是 `null`。
 
 `pstrNames`  
-[出]包含`SAFEARRAY`屬性名稱的結構。 在輸入時，此參數必須始終是指向`null`的指標。 有關詳細資訊，請參閱[備註](#remarks)部分。
+擴展 `SAFEARRAY` 包含屬性名稱的結構。 在輸入時，這個參數必須一律為的指標 `null` 。 如需詳細資訊，請參閱「 [備註](#remarks) 」一節。
 
 ## <a name="return-value"></a>傳回值
 
-此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
+這個函式所傳回的下列值是在 *WbemCli .h* 標頭檔中定義，您也可以在程式碼中將它們定義為常數：
 
-|持續性  |值  |描述  |
+|常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 出現了一個普遍的失敗。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一個或多個參數無效，或指定了不正確的標誌和參數組合。 |
+|`WBEM_E_FAILED` | 0x80041001 | 一般失敗。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一或多個參數無效，或指定了不正確的旗標和參數組合。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 可用的記憶體不足，無法完成作業。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
 
-此函數包裝對[IWbem ClassObject 的調用：：getNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames)方法。
+此函數會包裝對 [IWbemClassObject：： GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) 方法的呼叫。
 
-返回的命名由標誌和參數的組合控制。 例如，函數可以返回所有屬性的名稱，也可以僅返回鍵屬性的名稱。  主篩選器在`lFlags`參數中指定，其他參數因它而異。
+命名傳回的會由旗標和參數的組合來控制。 例如，函數可以傳回所有屬性的名稱，或只傳回索引鍵屬性的名稱。  主要篩選準則是在參數中指定 `lFlags` ，而其他參數則會根據它而有所不同。
 
-中`lFlags`的標誌值是位欄位
+中的旗標值 `lFlags` 為位欄位
 
-可以作為`lEnumFlags`參數傳遞的標誌是在*WbemCli.h*標標頭檔中定義的位欄位，也可以將它們定義為代碼中的常量。  您可以將每個組中的一個標誌與任何其他組的任何標誌合併。 但是，來自同一組的標誌是互斥的。
+可以做為引數傳遞的旗 `lEnumFlags` 標是 *WbemCli .h* 標頭檔中定義的位欄位，您也可以在程式碼中將它們定義為常數。  您可以結合每個群組中的一個旗標與任何其他群組的任何旗標。 不過，來自相同群組的旗標是互斥的。
 
-| 組 1 標誌 |值  |描述  |
+| 群組1旗標 |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | 返回所有屬性名稱。 `strQualifierName`未`pQualifierVal`使用。 |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 僅返回具有`strQualifierName`參數指定名稱限定詞的屬性。 如果使用此標誌，則必須指定`strQualifierName`。 |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  僅返回沒有`strQualifierName`參數指定名稱限定詞的屬性。 如果使用此標誌，則必須指定`strQualifierName`。 |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 僅返回具有`wszQualifierName`參數指定名稱限定詞且值與`pQualifierVal`結構指定的值相同的屬性。 如果使用此標誌，則必須同時指定 a`wszQualifierName`和 。 `pQualifierValue` |
+| `WBEM_FLAG_ALWAYS` | 0 | 傳回所有屬性名稱。 `strQualifierName` 和 `pQualifierVal` 都未使用。 |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 只傳回具有參數所指定名稱之限定詞的屬性 `strQualifierName` 。 如果使用此旗標，您必須指定 `strQualifierName` 。 |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  只傳回沒有參數所指定名稱之限定詞的屬性 `strQualifierName` 。 如果使用此旗標，您必須指定 `strQualifierName` 。 |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 只傳回具有參數所指定名稱之限定詞的屬性 `wszQualifierName` ，而且其值與結構所指定的值相同 `pQualifierVal` 。 如果使用此旗標，您必須同時指定 `wszQualifierName` 和 `pQualifierValue` 。 |
 
-| 組 2 標誌 |值  |描述  |
+| 群組2旗標 |值  |描述  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | 僅返回定義鍵的屬性的名稱。 |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | 僅返回作為物件引用的屬性名稱。 |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | 只傳回定義索引鍵之屬性的名稱。 |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | 只傳回物件參考的屬性名稱。 |
 
-| 組 3 標誌 |值  |描述  |
+| 群組3旗標 |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 僅返回屬於最派生類的屬性名稱。 從父類中排除屬性。 |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 僅返回屬於父類的屬性名稱。 |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 僅返回系統屬性的名稱。 |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 僅返回非系統屬性的名稱。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 只傳回屬於最衍生類別的屬性名稱。 排除父類別的屬性。 |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 只傳回屬於父類別的屬性名稱。 |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 只傳回系統屬性的名稱。 |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 只傳回非系統屬性的名稱。 |
 
-如果函數返回`SAFEARRAY``WBEM_S_NO_ERROR`，則始終分配新函數，並且`pstrNames`始終設置為指向它。 如果沒有與指定篩選器匹配的屬性，則返回的陣列可以具有 0 個元素。 如果函數返回的值，`WBM_S_NO_ERROR`則不返回新`SAFEARRAY`結構。
+函式一律會在傳回時配置新的 `SAFEARRAY` `WBEM_S_NO_ERROR` ，而且 `pstrNames` 一律設定為指向它。 如果沒有屬性符合指定的篩選準則，則傳回的陣列可以有0個元素。 如果函數傳回以外的值 `WBM_S_NO_ERROR` ， `SAFEARRAY` 則不會傳回新的結構。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

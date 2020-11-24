@@ -1,19 +1,20 @@
 ---
 title: 如何：停用強式名稱略過功能
-description: 強式名稱略過 .NET 中完全受信任的網域中的簽章驗證。 您可以針對單一應用程式或所有應用程式覆寫這項功能。
+description: 強式名稱略過在 .NET 的完全信任網域中略過簽章驗證。 您可以針對單一應用程式或所有應用程式覆寫這項功能。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
-ms.openlocfilehash: 1914997b322591d8deda13d00192bc5f60d81ca2
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2846efbbd76cf677a42a7031e53661d302c6c964
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687459"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>如何：停用強式名稱略過功能
+
 從 .NET Framework 3.5 版 Service Pack 1 (SP1) 開始，當組件載入到完全信任的 <xref:System.AppDomain> 物件 (例如適用於 `MyComputer` 區域的預設 <xref:System.AppDomain>) 時，不會驗證強式名稱簽章。 這是指強式名稱略過功能。 在完全信任環境中，不論簽章為何，已簽署、完全信任的組件要求 <xref:System.Security.Permissions.StrongNameIdentityPermission> 一律會成功。 唯一的限制是組件必須是完全受信任的，因為它的區域是完全信任的。 因為強式名稱不是這些情況下的決定因素，所以不需要進行驗證。 略過強式名稱簽章驗證可大幅提升效能。  
   
  略過功能適用於任何完全信任的組件，該組件非延遲簽署，且已從其 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性指定的目錄載入至所有完全信任的 <xref:System.AppDomain>。  
@@ -31,11 +32,11 @@ ms.locfileid: "83378487"
   
 - 在 64 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 和 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 機碼下，建立值為 0、名為 `AllowStrongNameBypass` 的 DWORD 項目。  
   
-## <a name="disable-the-strong-name-bypass-feature-for-a-single-application"></a>停用單一應用程式的強式名稱略過功能  
+## <a name="disable-the-strong-name-bypass-feature-for-a-single-application"></a>針對單一應用程式停用強式名稱略過功能  
   
 1. 開啟或建立應用程式組態檔。  
   
-    如需此檔案的詳細資訊，請參閱[設定應用](../../framework/configure-apps/index.md)程式中的應用程式佈建檔一節。  
+    如需此檔案的詳細資訊，請參閱 [設定應用](../../framework/configure-apps/index.md)程式中的應用程式佈建檔一節。  
   
 2. 新增下列項目：  
   
@@ -47,13 +48,13 @@ ms.locfileid: "83378487"
     </configuration>  
     ```  
   
- 您可以藉由移除設定檔設定或將屬性設定為，來還原應用程式的略過功能 `true` 。  
+ 您可以藉由移除設定檔設定或將屬性設為，來還原應用程式的略過功能 `true` 。  
   
 > [!NOTE]
 > 只有啟用電腦的略過功能，您才可以開啟或關閉應用程式的強式名稱驗證。 如已關閉電腦的略過功能，即會驗證所有應用程式的強式名稱，而您無法略過單一應用程式的驗證。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Sn.exe （強式名稱工具）](../../framework/tools/sn-exe-strong-name-tool.md)
-- [\<Bypasstrustedappstrongnames>> 元素](../../framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
+- [Sn.exe (強式名稱工具) ](../../framework/tools/sn-exe-strong-name-tool.md)
+- [\<bypassTrustedAppStrongNames> 元素](../../framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [建立和使用強式名稱的組件](create-use-strong-named.md)

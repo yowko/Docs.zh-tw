@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-ms.openlocfilehash: 711fccd65379bc3e5e178869e7220dd84fd07fbe
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 76b231f00651186518d3bccfafa5780f258c4f75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379708"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688181"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 方法
+
 取得 ICorDebugChainEnum 列舉值的介面指標，其中包含這個 ICorDebugThread 物件中的所有堆疊鏈。  
   
 ## <a name="syntax"></a>語法  
@@ -34,24 +35,27 @@ HRESULT EnumerateChains (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppChains`  
- 脫銷物件位址的指標 `ICorDebugChainEnum` ，允許在此執行緒中列舉所有堆疊鏈，從作用中（也就是最新的）鏈開始。  
+ 擴展物件位址的指標， `ICorDebugChainEnum` 該物件允許列舉這個執行緒中所有堆疊鏈的，從作用中的 (開始，也就是最新的) 鏈。  
   
 ## <a name="remarks"></a>備註  
- 堆疊鏈代表執行緒的實體呼叫堆疊。 下列情況會建立堆疊鏈界限：  
+
+ 堆疊鏈表示執行緒的實體呼叫堆疊。 下列情況會建立堆疊鏈界限：  
   
-- 受控對非受控或未受管理的轉換。  
+- 受控對非受控或非受控對管理的轉換。  
   
 - 內容切換。  
   
 - 使用者執行緒的偵錯工具劫持。  
   
- 在簡單的案例中，如果是在單一內容中執行純粹受控程式碼的執行緒，則執行緒與堆疊鏈之間會有一對一的對應關係。  
+ 在單一內容中執行單純 managed 程式碼的執行緒的簡單案例中，會線上程與堆疊鏈之間存在一對一的對應。  
   
- 偵錯工具可能會想要將所有線程的實體呼叫堆疊重新排列為邏輯呼叫堆疊。 這牽涉到以呼叫端/被呼叫端的關聯性來排序所有線程的鏈，並加以 regrouping。  
+ 偵錯工具可能會想要將所有線程的實體呼叫堆疊重新排列成邏輯呼叫堆疊。 這會牽涉到依呼叫端/被呼叫端關聯性排序所有線程的鏈，並加以 regrouping。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

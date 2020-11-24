@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-ms.openlocfilehash: fe378307ce2bda6e1a267e46433ead70a0e2299e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cd4e675b4ba50b47146428d204c28cc943c23c69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616513"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687999"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost Coclass
-提供介面，以管理由 common language runtime 執行的應用程式。  
+
+提供介面來管理 common language runtime 所執行的應用程式。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 coclass CorRuntimeHost {  
@@ -40,18 +41,19 @@ coclass CorRuntimeHost {
   
 |介面|描述|  
 |---------------|-----------------|  
-|[ICorConfiguration 介面](icorconfiguration-interface.md)|提供設定 common language runtime （CLR）的方法。|  
-|[ICorRuntimeHost 介面](icorruntimehost-interface.md)|提供的方法可讓主機明確啟動和停止 common language runtime、建立和設定應用程式域、存取預設網域，以及列舉在進程中執行的所有網域。|  
-|[IDebuggerInfo 介面](idebuggerinfo-interface.md)|提供方法來取得有關偵錯工具狀態的資訊。|  
+|[ICorConfiguration 介面](icorconfiguration-interface.md)|提供 (CLR) 設定 common language runtime 的方法。|  
+|[ICorRuntimeHost 介面](icorruntimehost-interface.md)|提供的方法可讓主機明確地啟動及停止 common language runtime、建立和設定應用程式域、存取預設網域，以及列舉在進程中執行的所有網域。|  
+|[IDebuggerInfo 介面](idebuggerinfo-interface.md)|提供方法，以取得有關偵錯工具狀態的資訊。|  
 |[IGCHost 介面](igchost-interface.md)|提供方法來取得垃圾收集系統的相關資訊，以及控制垃圾收集的某些層面。|  
-|IValidator|提供可移植可執行映射的驗證方法，以及驗證錯誤的詳細報告。|  
+|IValidator|提供驗證可攜式可執行檔映射和詳細報告驗證錯誤的方法。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll .idl  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

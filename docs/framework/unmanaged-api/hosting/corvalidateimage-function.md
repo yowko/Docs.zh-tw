@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d49a40610bd0e1a7629594e245bde9eacfcc06d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493431"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687973"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage 函式
-驗證受管理的模組映射，並在載入作業系統載入器之後通知它。  
+
+驗證受管理的模組映射，並在載入作業系統載入器之後通知作業系統載入器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,34 +35,37 @@ STDAPI _CorValidateImage (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ImageBase`  
- 在要驗證為 managed 程式碼之影像起始位置的指標。 映射必須已經載入記憶體中。  
+ 在要驗證為 managed 程式碼之影像的開始位置指標。 映射必須已經載入記憶體中。  
   
  `FileName`  
  在影像的檔案名。  
   
 ## <a name="return-value"></a>傳回值  
- 此函式會傳回標準值 `E_INVALIDARG` 、、 `E_OUTOFMEMORY` `E_UNEXPECTED` 和 `E_FAIL` ，以及下列值。  
+
+ 此函數會傳回標準值 `E_INVALIDARG` 、 `E_OUTOFMEMORY` 、 `E_UNEXPECTED` 和 `E_FAIL` ，以及下列值。  
   
-|傳回值|說明|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |`STATUS_INVALID_IMAGE_FORMAT`|映射無效。 此值具有 HRESULT 0xC000007BL。|  
-|`STATUS_SUCCESS`|此映射有效。 此值具有 HRESULT 0x00000000L。|  
+|`STATUS_SUCCESS`|映射是有效的。 此值具有 HRESULT 0x00000000L。|  
   
 ## <a name="remarks"></a>備註  
- 在 Windows XP 和更新版本中，作業系統載入器會藉由檢查通用物件檔案格式（COFF）標頭中的 COM 描述專案錄位來檢查受控模組。 設定的位表示受控模組。 如果載入器偵測到受管理的模組，它會載入 Mscoree.dll 並呼叫 `_CorValidateImage` ，這會執行下列動作：  
+
+ 在 Windows XP 和更新版本中，作業系統載入器會檢查 managed 模組，方法是檢查通用物件檔案格式的 COM 描述專案錄位 (COFF) 標頭。 設定位表示受控模組。 如果載入器偵測到受管理的模組，它會載入 MsCorEE.dll 和呼叫 `_CorValidateImage` ，以執行下列動作：  
   
 - 確認映射是有效的受控模組。  
   
-- 將影像中的進入點變更為 common language runtime （CLR）中的進入點。  
+- 將影像中的進入點變更為 common language runtime (CLR) 中的進入點。  
   
-- 若是64位版本的 Windows，請將記憶體中的影像從 PE32 轉換為 PE32 + 格式，以修改該映射。  
+- 若為64位版本的 Windows，請將記憶體中的映射從 PE32 轉換為 PE32 + format，以修改記憶體中的影像。  
   
 - 載入 managed 模組映射時，返回載入器。  
   
- 對於可執行映射，作業系統載入器會接著呼叫[_CorExeMain](corexemain-function.md)函式，而不論可執行檔中所指定的進入點為何。 對於 DLL 元件影像，載入器會呼叫[_CorDllMain](cordllmain-function.md)函式。  
+ 針對可執行檔映射，作業系統載入器接著會呼叫 [_CorExeMain](corexemain-function.md) 函式，而不論可執行檔中指定的進入點為何。 針對 DLL 元件映射，載入器會呼叫 [_CorDllMain](cordllmain-function.md) 函式。  
   
- `_CorExeMain`或會 `_CorDllMain` 執行下列動作：  
+ `_CorExeMain` 或 `_CorDllMain` 執行下列動作：  
   
 - 初始化 CLR。  
   
@@ -69,14 +73,15 @@ STDAPI _CorValidateImage (
   
 - 開始執行。  
   
- 當卸載受控模組映射時，載入器會呼叫[_CorImageUnloading](corimageunloading-function.md)函式。 不過，此函數不會執行任何動作;它只會傳回。  
+ 卸載 managed 模組映射時，載入器會呼叫 [_CorImageUnloading](corimageunloading-function.md) 函式。 不過，此函數不會執行任何動作;它只會傳回。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

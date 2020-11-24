@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b5535b87-9439-424e-b9b3-7d6fafb9819e
 topic_type:
 - apiref
-ms.openlocfilehash: f8fde4905c41dffde90c6361b5a8cdffa15deb4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2b6a2082d27fca4c78dcb15a13cfd87e8066e388
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503961"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687212"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator 方法
-要求 common language runtime （CLR）為主機建立反覆運算器，以用來判斷等候讀取器寫入器鎖定的一組工作。  
+
+要求 common language runtime (CLR) 為主機建立反覆運算器，以用來判斷等候讀取器寫入器鎖定的工作集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,40 +36,43 @@ HRESULT CreateRWLockOwnerIterator (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cookie`  
  在與所需讀取器寫入器鎖定相關聯的 cookie。  
   
  `pIterator`  
- 脫銷可傳遞至[GetRWLockOwnerNext](iclrsyncmanager-getrwlockownernext-method.md)和[DeleteRWLockOwnerIterator](iclrsyncmanager-deleterwlockowneriterator-method.md)方法之反覆運算器的指標。  
+ 擴展反覆運算器的指標，可傳遞至 [GetRWLockOwnerNext](iclrsyncmanager-getrwlockownernext-method.md) 和 [DeleteRWLockOwnerIterator](iclrsyncmanager-deleterwlockowneriterator-method.md) 方法。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockOwnerIterator`已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫超時。|  
+|S_OK|`CreateRWLockOwnerIterator` 傳回成功。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫已超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator`在目前正在執行 managed 程式碼的執行緒上呼叫。|  
+|HOST_E_ABANDONED|當封鎖的執行緒或光纖正在等候時，已取消事件。|  
+|E_FAIL|發生未知的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 在進程內將無法再使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` 在目前正在執行 managed 程式碼的執行緒上呼叫。|  
   
 ## <a name="remarks"></a>備註  
- 主機通常會 `CreateRWLockOwnerIterator` `DeleteRWLockOwnerIterator` `GetRWLockOwnerNext` 在偵測到鎖死時呼叫、和方法。 主機負責確保讀取器寫入器的鎖定仍然有效，因為 CLR 不會嘗試讓讀取器寫入器鎖定保持運作。 有數個策略可供主機使用，以確保鎖定的有效性：  
+
+ 主機通常會 `CreateRWLockOwnerIterator` `DeleteRWLockOwnerIterator` `GetRWLockOwnerNext` 在進行鎖死偵測期間呼叫、和方法。 主機會負責確保讀取器寫入器鎖定仍有效，因為 CLR 不會嘗試讓讀取器寫入器鎖定保持運作。 主機提供數種策略，以確保鎖定的有效性：  
   
-- 主機可以封鎖讀取器寫入器鎖定（例如， [IHostSemaphore：： ReleaseSemaphore](ihostsemaphore-releasesemaphore-method.md)）的發行呼叫，同時確保此區塊不會造成鎖死。  
+- 主機可以封鎖讀取器-寫入器鎖定上的發行呼叫 (例如， [IHostSemaphore：： ReleaseSemaphore](ihostsemaphore-releasesemaphore-method.md)) ，同時確保此區塊不會造成鎖死。  
   
-- 主機可以封鎖在與讀取器寫入器鎖定相關聯的事件物件上等待結束，再次確保此區塊不會造成鎖死。  
+- 主機可以封鎖離開與讀取器寫入器鎖定相關聯之事件物件的結束，再次確定這個區塊不會造成鎖死。  
   
 > [!NOTE]
-> `CreateRWLockOwnerIterator`必須只在目前執行非受控碼的執行緒上呼叫。  
+> `CreateRWLockOwnerIterator` 必須只在目前執行非受控碼的執行緒上呼叫。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

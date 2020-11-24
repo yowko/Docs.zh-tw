@@ -2,14 +2,15 @@
 title: 實體參考是可擴充且沒有保留
 ms.date: 03/30/2017
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-ms.openlocfilehash: a446ef35cc9e22660e66d71a9c9332f80117d1ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5a3c93807866c5925696f2d913dfc443d8ff12a4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687446"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>實體參考是可擴充且沒有保留
+
 當實體參考擴充並且由它所表示的文字所取代時，就不會建立 **XmlEntityReference** 節點。 相反的，實體宣告會剖析，而從宣告中之內容建立的節點會複製到 **XmlEntityReference** 的位置。 因此，在 `&publisher;` 範例中，不會儲存 `&publisher;`，但會建立 **XmlText** 節點。  
   
  ![擴充樹狀結構](media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
@@ -37,6 +38,6 @@ ms.locfileid: "94827668"
   
  如果您使用無法解析實體的讀取器，當 **Load** 方法遇到實體參考時，會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

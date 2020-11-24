@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1dd71dbe0ddb894cb5ed05c32e50429d27c66aa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689325"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile 方法
+
 為這個組件所參考的組件，建立包含其中繼資料的 `File` 中繼資料結構，並且傳回關聯的中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
@@ -38,6 +39,7 @@ HRESULT DefineFile (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `szName`  
  在要使用的檔案名。  
   
@@ -48,20 +50,22 @@ HRESULT DefineFile (
  在的大小（以位元組為單位） `pbHashValue` 。  
   
  `dwFileFlags`  
- 在值的位元組合 `FileFlags` ，這個組合會指定屬性設定。  
+ 在 `FileFlags` 指定屬性設定之值的位元組合。  
   
  `pmdf`  
- 脫銷傳回之標記的指標 `File` 。  
+ 擴展傳回之標記的指標 `File` 。  
   
 ## <a name="remarks"></a>備註  
- `File`在建立此元件時，必須針對屬於此元件的每個檔案定義一個元資料結構，但不包括包含中繼資料的檔案。  
+
+ `File`在建立此元件時，必須針對屬於這個元件的每個檔案定義一個元資料結構，但不包括包含中繼資料的檔案。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平臺：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -2,12 +2,12 @@
 title: 適用于 WCF 開發人員的 Docker gRPC
 description: 建立 ASP.NET Core gRPC 應用程式的 Docker 映射
 ms.date: 09/02/2019
-ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152711"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688441"
 ---
 # <a name="create-docker-images"></a>建立 Docker 映射
 
@@ -22,12 +22,12 @@ Microsoft 提供一系列基礎映射來建立和執行 .NET Core 應用程式�
 
 | 映像 | 描述 |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 用來建立應用程式 `docker build` 。 不要用在生產環境中。 |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 包含執行時間和 ASP.NET Core 相依性。 適用于生產環境。 |
+| [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/) | 用來建立應用程式 `docker build` 。 不要用在生產環境中。 |
+| [mcr.microsoft.com/dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) | 包含執行時間和 ASP.NET Core 相依性。 適用于生產環境。 |
 
 每個映射都有四個以不同 Linux 散發套件為基礎的變化，並依標記區分。
 
-| 影像標記 (s)  | Linux | 備註 |
+| 影像標記 (s)  | Linux | 備忘稿 |
 | --------- | ----- | ----- |
 | 3.0-buster、3。0 | Debian 10 | 如果未指定作業系統變數，則為預設映射。 |
 | 3.0-alpine | Alpine 3。9 | Alpine 基底映射遠小於 Debian 或 Ubuntu。 |
@@ -41,11 +41,11 @@ Alpine 基底映射大約是 100 MB，相較于 Debian 和 Ubuntu 映射的 200 
 
 ## <a name="create-a-docker-image"></a>建立 Docker 映像
 
-Docker 映射是由 *Dockerfile*所定義。 這是一個文字檔，其中包含建立應用程式所需的所有命令，並安裝建立或執行應用程式所需的任何相依性。 下列範例顯示 ASP.NET Core 3.0 應用程式的最簡單 Dockerfile：
+Docker 映射是由 *Dockerfile* 所定義。 這是一個文字檔，其中包含建立應用程式所需的所有命令，並安裝建立或執行應用程式所需的任何相依性。 下列範例顯示 ASP.NET Core 3.0 應用程式的最簡單 Dockerfile：
 
 ```dockerfile
 # Application build steps
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
 
 WORKDIR /src
 
@@ -56,7 +56,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
 
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
@@ -95,7 +95,7 @@ Dockerfile 有兩個部分：第一個是使用 `sdk` 基底映射來建立和�
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```

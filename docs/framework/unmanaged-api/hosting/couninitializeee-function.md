@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5f5a311a-839a-465f-89d9-ff1c74da9736
 topic_type:
 - apiref
-ms.openlocfilehash: fa6297e926d53c02bb0d1af7b59b45b8ee152399
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e6616392eaa23f8ba40247c5aabd12e4d530cea1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616459"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687843"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE 函式
-`CoUninitializeEE`已過時，不提供任何功能。  
+
+`CoUninitializeEE` 已淘汰，不提供任何功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +35,8 @@ void CoUninitializeEE (
 ```  
   
 ## <a name="remarks"></a>備註  
- 無法從進程中卸載 common language runtime 執行引擎。 若要關閉執行引擎呼叫[CorExitProcess](corexitprocess-function.md)。  
+
+ Common language runtime 執行引擎無法從進程中卸載。 若要關閉執行引擎呼叫 [CorExitProcess](corexitprocess-function.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
