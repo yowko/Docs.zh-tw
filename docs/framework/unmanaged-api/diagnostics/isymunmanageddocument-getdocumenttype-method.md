@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2d381ab1-7e7c-4281-af2b-e54d879b3ef8
 topic_type:
 - apiref
-ms.openlocfilehash: 5ec69aa06816b117fb05853001e59532629504c4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d30ee9318d76aaf3ad2cde789ae292aed54f457e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689676"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType 方法
+
 取得此檔的檔案類型。  
   
 ## <a name="syntax"></a>語法  
@@ -33,11 +34,13 @@ HRESULT GetDocumentType(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pRetVal`  
- 脫銷接收檔案類型之變數的指標。  
+ 擴展接收檔案類型之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK。  
+
+ 如果方法成功，則為 S_OK。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,24 +6,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: c09259afdc5ede32791ba895ca012cdc2a0a1c18
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: da42358007b887f6bab05c35e0f7542f1069abd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829943"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689806"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Forms 應用程式中使用資料流程
+
 本文鍵示範如何建立資料流程區塊網路，其可以在 Windows Forms 應用程式中執行映像處理。  
   
  這個範例會從指定的資料夾載入映像檔案、建立複合映像，以及顯示結果。 這個範例會使用資料流程模型，透過網路路由映像。 在資料流程模型中，程式的獨立元件會透過傳送訊息，彼此進行通訊。 當元件收到訊息時，它會執行某些動作，然後將結果傳遞給另一個元件。 比較資料流程模型與控制流程模型，在其中應用程式會使用控制項結構，例如，條件陳述式、迴圈等等，來控制程式中作業的順序。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
+
  在開始進行這個逐步解說之前，請先閱讀[資料流程](dataflow-task-parallel-library.md)。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="sections"></a>章節  
+
  本逐步解說包含下列各節：  
   
 - [建立 Windows Forms 應用程式](#winforms)  
@@ -35,7 +38,9 @@ ms.locfileid: "94829943"
 - [完整範例](#complete)  
   
 <a name="winforms"></a>
+
 ## <a name="creating-the-windows-forms-application"></a>建立 Windows Forms 應用程式  
+
  本節描述如何建立基本 Windows Forms 應用程式，並且將控制項新增至主要表單。  
   
 ### <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
@@ -51,7 +56,9 @@ ms.locfileid: "94829943"
 5. 將 <xref:System.Windows.Forms.PictureBox> 物件加入主要表單。 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
 <a name="network"></a>
+
 ## <a name="creating-the-dataflow-network"></a>建立資料流程網路  
+
  本節描述如何建立會執行映像處理的資料流程網路。  
   
 ### <a name="to-create-the-dataflow-network"></a>若要建立資料流程網路  
@@ -83,7 +90,7 @@ ms.locfileid: "94829943"
   
  下表描述網路的成員。  
   
-|member|類型|說明|  
+|member|類型|描述|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|採用資料夾路徑做為輸入，並且產生 <xref:System.Drawing.Bitmap> 物件的集合作為輸出。|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|採用 <xref:System.Drawing.Bitmap> 物件的集合做為輸入，並且產生複合點陣圖做為輸出。|  
@@ -101,7 +108,9 @@ ms.locfileid: "94829943"
  此範例使用共用取消權杖，而非設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性，因為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性會永久取消資料流程區塊的執行。 取消語彙基元可讓此範例重複使用相同的資料流程網路多次，即使使用者取消一或多個作業。 如需使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 以永久取消資料流程區塊執行的範例，請參閱[如何：取消資料流程區塊](how-to-cancel-a-dataflow-block.md)。  
   
 <a name="ui"></a>
+
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>連接資料流程網路與使用者介面  
+
  本節描述如何連接資料流程網路與使用者介面。 建立複合映像和取消作業是從 [選擇資料夾] 和 [取消] 按鈕起始。 當使用者選擇任一個按鈕時，會以非同步方式起始適當的動作。  
   
 ### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>若要連接資料流程網路與使用者介面  
@@ -119,7 +128,9 @@ ms.locfileid: "94829943"
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
 <a name="complete"></a>
+
 ## <a name="the-complete-example"></a>完整範例  
+
  下列範例將示範本逐步解說的完整程式碼。  
   
  [!code-csharp[TPLDataflow_CompositeImages#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#100)]  
@@ -128,6 +139,6 @@ ms.locfileid: "94829943"
   
  ![Windows Form 應用程式](media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

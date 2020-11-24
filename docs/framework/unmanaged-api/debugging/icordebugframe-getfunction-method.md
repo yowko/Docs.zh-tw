@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-ms.openlocfilehash: 7bf73266f0269cfcd5371c5155856800036cc066
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9f9a6238057f56459eb8dca2375da412c3cd569d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690313"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction 方法
-取得包含與此堆疊框架相關聯之程式碼的函式。  
+
+取得包含與這個堆疊框架相關聯之程式碼的函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT GetFunction (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppFunction`  
- 脫銷ICorDebugFunction 物件位址的指標，代表包含與此堆疊框架相關聯之程式碼的函式。  
+ 擴展ICorDebugFunction 物件位址的指標，該物件代表包含與這個堆疊框架相關聯之程式碼的函式。  
   
 ## <a name="remarks"></a>備註  
+
  `GetFunction`如果框架未與任何特定的函式相關聯，方法可能會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

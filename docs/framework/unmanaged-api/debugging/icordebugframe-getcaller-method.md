@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-ms.openlocfilehash: b29de0b70daa783197e78fe985d379d4124bc140
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b52499e509bf172b03b5e4d2b1e4c677dc800281
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205139"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690469"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller 方法
+
 取得目前鏈中呼叫此框架之 ICorDebugFrame 物件的指標。  
   
 ## <a name="syntax"></a>語法  
@@ -34,11 +35,13 @@ HRESULT GetCaller (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppFrame`  
- 脫銷物件位址的指標 `ICorDebugFrame` ，表示呼叫的框架。 如果被呼叫的框架是目前鏈中的最外層框架，則此值為 null。  
+ 擴展物件位址的指標 `ICorDebugFrame` ，該物件表示呼叫的框架。 如果所呼叫的框架是目前鏈中的最外層框架，則此值為 null。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

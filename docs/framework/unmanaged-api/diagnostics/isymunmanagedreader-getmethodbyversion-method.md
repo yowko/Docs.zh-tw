@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6ddb0631-4569-41b3-93e4-50fdfaa486dc
 topic_type:
 - apiref
-ms.openlocfilehash: 60fbccabd21fb8bee118689a524efa9031bb2124
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 64e6b9a1942e9a69e43de3d2f09564814328ec08
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614990"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689611"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion 方法
-取得符號讀取器方法，並指定方法權杖和編輯和複製版本號碼。 版本號碼從1開始，且每次方法因編輯和複製作業而變更時，都會遞增。  
+
+取得符號讀取器方法，指定方法 token 和編輯和複製版本號碼。 版本號碼從1開始，並在每次方法因為編輯和複製作業的結果而變更時遞增。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +36,23 @@ HRESULT GetMethodByVersion (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `token`  
- 在方法 token。  
+ 在方法標記。  
   
  `version`  
  在方法版本。  
   
  `pRetVal`  
- 脫銷傳回之介面的指標。  
+ 擴展傳回之介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64eb346ba57e9af9f5be0cc1b42398c4f539d4d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829969"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689897"
 ---
 # <a name="understanding-speedup-in-plinq"></a>認識 PLINQ 中的加速
+
 PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派，來加快 LINQ to Objects 查詢的執行速度。 當來源集合中每個元素的處理各自獨立，個別委派之間沒有涉及任何共用狀態時，PLINQ 能夠發揮最佳執行效能。 這類作業在 LINQ to Objects 和 PLINQ 中相當常見，通常稱為「令人愉快的平行」，因為它們很容易出借本身供多個執行緒上的排程使用。 不過，並非所有查詢都全部由令人愉快的平行作業所組成；在大多數情況下，查詢會涉及一些無法平行處理或是會拖慢平行執行速度的運算子。 而且，即使查詢是完全令人愉快的平行查詢，PLINQ 仍然必須分割資料來源並在執行緒上排定工作，通常還會在查詢完成時合併結果。 所有這些作業都會計入平行處理的計算成本中；這些添加平行處理的成本稱為「額外負荷」。 若要在 PLINQ 查詢中達到最佳效能，目標就是要將令人愉快的平行部分提升到最高，並將需要額外負荷的部分降到最低。 本文提供資訊來協助您撰寫儘可能發揮最高效率又仍然能產生正確結果的 PLINQ 查詢。  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>影響 PLINQ 查詢效能的因素  
+
  下列各節列出一些影響平行查詢效能的最重要因素。 這些是一般陳述，本身並不足以預測所有情況下的查詢效能。 如往常一般，請務必在電腦上使用一系列代表性設定和負載來測量特定查詢的實際效能。  
   
 1. 整體工作的計算成本。  
@@ -65,6 +67,7 @@ PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派�
      在某些情況下，在可編製索引之來源集合上執行的 PLINQ 查詢可能會導致工作負載不平衡。 當發生這種情況時，您或許能夠藉由建立自訂 Partitioner 來提升查詢效能。 如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](custom-partitioners-for-plinq-and-tpl.md)。  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>當 PLINQ 選擇循序模式時  
+
  PLINQ 會一律嘗試至少以和查詢循序執行時一樣快的速度來執行查詢。 雖然 PLINQ 並不會考慮使用者委派的計算成本有多高，或是輸入來源有多大，但確實會尋找特定的查詢「型態」。 具體而言，它會尋找通常造成查詢在平行執行模式下執行速度變慢的查詢運算子或運算子組合。 當 PLINQ 找到該型態時，預設會回復成循序模式。  
   
  不過，在測量特定查詢的效能之後，您可能會判斷出實際上以平行模式執行的速度較快。 在這類情況下，您可以透過 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法使用 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>旗標，來指示 PLINQ 平行處理查詢。 如需詳細資訊，請參閱[如何：在 PLINQ 中指定執行模式](how-to-specify-the-execution-mode-in-plinq.md)。  
@@ -81,6 +84,6 @@ PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派�
   
 - 包含 Reverse 的查詢 (但套用至可編製索引的資料來源時除外)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

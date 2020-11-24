@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a2081223-84ca-4331-a8d3-9352f422f3e7
 topic_type:
 - apiref
-ms.openlocfilehash: a2d2d6307136f0f8983e409d9f17fbcae1c55705
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 6046ff8486b356ca781a42a34a5a18bdae8c4c73
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690014"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a>ICorThreadpool::CorCallOrQueueUserWorkItem 方法
+
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CorCallOrQueueUserWorkItem (  
@@ -35,12 +36,13 @@ HRESULT CorCallOrQueueUserWorkItem (
 );  
 ```  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

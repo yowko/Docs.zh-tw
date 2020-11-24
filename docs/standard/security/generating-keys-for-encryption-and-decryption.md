@@ -14,17 +14,19 @@ helpviewer_keywords:
 - asymmetric keys [.NET]
 - cryptography [.NET], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: aa95204a90f2aee684cdd20095d1816e890a0306
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2af54cef4f233b7bcae5c476f1aa49fdbf7ef2fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831074"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689715"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
+
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  
   
 ## <a name="symmetric-keys"></a>對稱金鑰  
+
  .NET 所提供的對稱式加密類別需要 (IV) 的金鑰和新的初始化向量，才能加密和解密資料。 每當您使用無參數方法建立其中一個 managed 對稱式密碼編譯類別的新實例時 `Create()` ，就會自動建立新的金鑰和 IV。 您允許解密資料的任何人都必須擁有相同的金鑰和 IV，並使用相同的演算法。 一般而言，應該為每個工作階段建立新的金鑰和 IV，且金鑰和 IV 都不應該儲存以用於稍後的工作階段。  
   
  若要與遠端的一方溝通對稱金鑰和 IV，通常會使用非對稱加密來加密對稱金鑰。 在不安全的網路中傳送未加密的金鑰並不安全，因為任何人只要攔截金鑰和 IV，就可以解密您的資料。  
@@ -91,7 +93,7 @@ RSA rsa = RSA.Create();
 RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [加密資料](encrypting-data.md)
 - [解密資料](decrypting-data.md)
