@@ -5,12 +5,12 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: d98412ed651886afc54e15b346a63dc0c549abd0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4b85c2be0ed61af38eac1b65fb70f0ef1ea4405e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827980"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669038"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>使用使用者篩選的例外狀況處理常式
 
@@ -31,6 +31,7 @@ End Try
  不會以任何方式限制使用者篩選子句的運算式。 如果在使用者篩選運算式執行期間發生例外狀況，會捨棄該例外狀況，且篩選運算式會被視為必須評估為 false。 在此情況下，通用語言執行平台會繼續搜尋目前例外狀況的處理常式。  
   
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>結合特定例外狀況和使用者篩選的子句  
+
  Catch 陳述式可以包含特定例外狀況和使用者篩選的子句。 執行階段會先測試特定例外狀況。 如果特定例外狀況成功，則執行階段會執行使用者篩選。 一般篩選可以包含類別篩選中所宣告之變數的參考。 請注意，無法反轉兩個篩選子句的順序。  
   
  下列 Visual Basic 範例會顯示 **Catch** 陳述式中的特定例外狀況 `ClassLoadException`，以及使用 **When** 關鍵字的使用者篩選子句。  
@@ -43,6 +44,6 @@ Try
 End Try  
 ```  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [例外狀況](index.md)

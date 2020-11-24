@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 973b2c44-8dfc-40c1-9035-10f4846627e9
 topic_type:
 - apiref
-ms.openlocfilehash: 539a8edf6d7248235a6e672edc9464679a2eab82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 36a2a609e95740ffc45722635a7e1f09e0ed5601
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134504"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670780"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly 方法
+
 從全域組件快取卸載指定的元件。  
   
 ## <a name="syntax"></a>語法  
@@ -37,37 +38,39 @@ HRESULT UninstallAssembly (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `dwFlags`  
  在在融合 .idl 中定義的旗標。  
   
  `pszAssemblyName`  
- 在要卸載之元件的名稱。  
+ 在要卸載的元件名稱。  
   
  `pRefData`  
- 在包含元件之安裝資料的[FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)結構。  
+ 在包含元件安裝資料的 [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) 結構。  
   
  `pulDisposition`  
- [out，optional]在融合 .idl 中定義的其中一個配置值。 可能的值包括下列各項：  
+ [out，optional]在融合中定義的其中一個配置值。 可能的值如下：  
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED （1）  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)   
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE （2）  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)   
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED （3）  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)   
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING （4）  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)   
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES （5）  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)   
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND （6）  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)   
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** 融合。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IAssemblyCache 介面](iassemblycache-interface.md)

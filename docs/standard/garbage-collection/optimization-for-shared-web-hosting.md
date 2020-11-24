@@ -6,14 +6,15 @@ helpviewer_keywords:
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-ms.openlocfilehash: 6398c6749028827e5e3ee79a5511ac0879facbef
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: abab4ac451a70fbc81ac6d7c9da6f8d0123287a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824463"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669025"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>共用 Web 裝載的最佳化
+
 如果您是透過裝載數個小型 Web 站台所共用之伺服器的系統管理員，則可以將下列 `gcTrimCommitOnLowMemory` 設定加入 .NET 目錄中 Aspnet.config 檔案的 `runtime` 節點，以最佳化效能與增加站台的容量：  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
@@ -28,6 +29,7 @@ ms.locfileid: "94824463"
  當情況允許時，記憶體回收行程可以決定 `gcTrimCommitOnLowMemory` 設定不會協助目前的應用程式並忽略它。  
   
 ## <a name="example"></a>範例  
+
  下列 XML 片段會示範如何啟用 `gcTrimCommitOnLowMemory` 設定。 省略符號表示 `runtime` 節點中可能有的其他設定。  
   
 ```xml  
@@ -41,6 +43,6 @@ ms.locfileid: "94824463"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [記憶體回收](index.md)

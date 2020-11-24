@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8e0981415c03120cc30e6349daced51e79216938
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554797"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669961"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime 方法
+
 通知主機，該控制項會將 common language runtime 保留 (CLR) ，然後輸入從 managed 程式碼呼叫的非受控函式。  
   
 ## <a name="syntax"></a>語法  
@@ -44,14 +45,16 @@ HRESULT ReverseLeaveRuntime ();
 |E_OUTOFMEMORY|沒有足夠的記憶體可完成要求的資源配置。|  
   
 ## <a name="remarks"></a>備註  
+
  CLR 會呼叫， `ReverseLeaveRuntime` 以通知主機目前正在執行的工作正在將控制權傳回給非受控函式，而該函式則是透過平台叫用從 managed 程式碼呼叫。 每次呼叫都 `ReverseLeaveRuntime` 符合對應的 [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll  
   
- 連結**庫：** 以資源的形式包含在 MSCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
