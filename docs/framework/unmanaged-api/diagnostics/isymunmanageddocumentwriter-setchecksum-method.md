@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c7e99879-421f-43ce-b193-34733cf30085
 topic_type:
 - apiref
-ms.openlocfilehash: 06a331e24622e0a155d974ca869818a6532baa1f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 58055d9ea56d7928729d289198965752985d8e0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615536"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688896"
 ---
-# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="fdb35-102">ISymUnmanagedDocumentWriter::SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="fdb35-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
-<span data-ttu-id="fdb35-103">設定總和檢查碼資訊。</span><span class="sxs-lookup"><span data-stu-id="fdb35-103">Sets checksum information.</span></span>  
+# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="d1927-102">ISymUnmanagedDocumentWriter::SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="d1927-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
+
+<span data-ttu-id="d1927-103">設定總和檢查碼資訊。</span><span class="sxs-lookup"><span data-stu-id="d1927-103">Sets checksum information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fdb35-104">語法</span><span class="sxs-lookup"><span data-stu-id="fdb35-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1927-104">語法</span><span class="sxs-lookup"><span data-stu-id="d1927-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetCheckSum(  
@@ -34,22 +35,25 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fdb35-105">參數</span><span class="sxs-lookup"><span data-stu-id="fdb35-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d1927-105">參數</span><span class="sxs-lookup"><span data-stu-id="d1927-105">Parameters</span></span>  
+
  `algorithmId`  
- <span data-ttu-id="fdb35-106">在表示演算法識別碼的 GUID。</span><span class="sxs-lookup"><span data-stu-id="fdb35-106">[in] The GUID that represents the algorithm identifier.</span></span>  
+ <span data-ttu-id="d1927-106">在表示演算法識別碼的 GUID。</span><span class="sxs-lookup"><span data-stu-id="d1927-106">[in] The GUID that represents the algorithm identifier.</span></span>  
   
  `checkSumSize`  
- <span data-ttu-id="fdb35-107">在`ULONG32`，表示緩衝區的大小（以位元組為單位） `checkSum` 。</span><span class="sxs-lookup"><span data-stu-id="fdb35-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
+ <span data-ttu-id="d1927-107">在， `ULONG32` 表示緩衝區的大小（以位元組為單位） `checkSum` 。</span><span class="sxs-lookup"><span data-stu-id="d1927-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
   
  `checkSum`  
- <span data-ttu-id="fdb35-108">在儲存總和檢查碼資訊的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="fdb35-108">[in] The buffer that stores the checksum information.</span></span>  
+ <span data-ttu-id="d1927-108">在儲存總和檢查碼資訊的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="d1927-108">[in] The buffer that stores the checksum information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fdb35-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="fdb35-109">Return Value</span></span>  
- <span data-ttu-id="fdb35-110">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="fdb35-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="fdb35-111">需求</span><span class="sxs-lookup"><span data-stu-id="fdb35-111">Requirements</span></span>  
- <span data-ttu-id="fdb35-112">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="fdb35-112">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fdb35-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fdb35-113">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="d1927-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="d1927-109">Return Value</span></span>  
 
-- [<span data-ttu-id="fdb35-114">ISymUnmanagedDocumentWriter 介面</span><span class="sxs-lookup"><span data-stu-id="fdb35-114">ISymUnmanagedDocumentWriter Interface</span></span>](isymunmanageddocumentwriter-interface.md)
+ <span data-ttu-id="d1927-110">如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="d1927-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="d1927-111">需求</span><span class="sxs-lookup"><span data-stu-id="d1927-111">Requirements</span></span>  
+
+ <span data-ttu-id="d1927-112">**標頭：** CorSym .idl、CorSym。h</span><span class="sxs-lookup"><span data-stu-id="d1927-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="d1927-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d1927-113">See also</span></span>
+
+- [<span data-ttu-id="d1927-114">ISymUnmanagedDocumentWriter 介面</span><span class="sxs-lookup"><span data-stu-id="d1927-114">ISymUnmanagedDocumentWriter Interface</span></span>](isymunmanageddocumentwriter-interface.md)
