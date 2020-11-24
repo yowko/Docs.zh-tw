@@ -2,31 +2,31 @@
 title: SqlClient 資料流支援
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a396e3e172c63b0b71b085d4694184c42cc42f3e
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 7ff7feafb0501d5d98a0e692545e6b243c096e10
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609241"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678866"
 ---
-# <a name="sqlclient-streaming-support"></a><span data-ttu-id="b47fc-102">SqlClient 資料流支援</span><span class="sxs-lookup"><span data-stu-id="b47fc-102">SqlClient Streaming Support</span></span>
+# <a name="sqlclient-streaming-support"></a><span data-ttu-id="13298-102">SqlClient 資料流支援</span><span class="sxs-lookup"><span data-stu-id="13298-102">SqlClient Streaming Support</span></span>
 
-<span data-ttu-id="b47fc-103">SQL Server 和應用程式之間的串流支援 (.NET Framework 4.5 中的新功能) 支援伺服器上的非結構化資料 (檔、影像和媒體檔案) 。</span><span class="sxs-lookup"><span data-stu-id="b47fc-103">Streaming support between SQL Server and an application (new in .NET Framework 4.5) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="b47fc-104">SQL Server 資料庫可以將二進位大型物件儲存 (Blob) ，但抓取 BLOB 可能會使用大量的記憶體。</span><span class="sxs-lookup"><span data-stu-id="b47fc-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
+<span data-ttu-id="13298-103">SQL Server 和應用程式之間的串流支援 (.NET Framework 4.5 中的新功能) 支援伺服器上的非結構化資料 (檔、影像和媒體檔案) 。</span><span class="sxs-lookup"><span data-stu-id="13298-103">Streaming support between SQL Server and an application (new in .NET Framework 4.5) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="13298-104">SQL Server 資料庫可以將二進位大型物件儲存 (Blob) ，但抓取 BLOB 可能會使用大量的記憶體。</span><span class="sxs-lookup"><span data-stu-id="13298-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
 
-<span data-ttu-id="b47fc-105">SQL Server 的串流支援可簡化撰寫串流資料的應用程式，而不需要將資料完全載入至記憶體，進而減少記憶體溢位例外狀況。</span><span class="sxs-lookup"><span data-stu-id="b47fc-105">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
+<span data-ttu-id="13298-105">SQL Server 的串流支援可簡化撰寫串流資料的應用程式，而不需要將資料完全載入至記憶體，進而減少記憶體溢位例外狀況。</span><span class="sxs-lookup"><span data-stu-id="13298-105">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
 
-<span data-ttu-id="b47fc-106">尤其是在商務物件連接到 SQL Azure 以傳送、擷取及管理大型 BLOB 的情況下，資料流支援也可以讓中介層應用程式擴充得更好。</span><span class="sxs-lookup"><span data-stu-id="b47fc-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
+<span data-ttu-id="13298-106">尤其是在商務物件連接到 SQL Azure 以傳送、擷取及管理大型 BLOB 的情況下，資料流支援也可以讓中介層應用程式擴充得更好。</span><span class="sxs-lookup"><span data-stu-id="13298-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="b47fc-107">如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="b47fc-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
+> <span data-ttu-id="13298-107">如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="13298-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
 >
-> <span data-ttu-id="b47fc-108">加入以支援資料流的成員可用於擷取查詢中的資料，以及將參數傳遞至查詢及預存程序。</span><span class="sxs-lookup"><span data-stu-id="b47fc-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="b47fc-109">串流處理功能可解決基本的 OLTP 和資料移轉案例，而且適用于內部部署和外部部署資料移轉環境。</span><span class="sxs-lookup"><span data-stu-id="b47fc-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.</span></span>
+> <span data-ttu-id="13298-108">加入以支援資料流的成員可用於擷取查詢中的資料，以及將參數傳遞至查詢及預存程序。</span><span class="sxs-lookup"><span data-stu-id="13298-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="13298-109">串流處理功能可解決基本的 OLTP 和資料移轉案例，而且適用于內部部署和外部部署資料移轉環境。</span><span class="sxs-lookup"><span data-stu-id="13298-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.</span></span>
 
-## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="b47fc-110">SQL Server 的串流支援</span><span class="sxs-lookup"><span data-stu-id="b47fc-110">Streaming Support from SQL Server</span></span>
+## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="13298-110">SQL Server 的串流支援</span><span class="sxs-lookup"><span data-stu-id="13298-110">Streaming Support from SQL Server</span></span>
 
-<span data-ttu-id="b47fc-111">SQL Server 的串流支援在 <xref:System.Data.Common.DbDataReader> 和類別中引進新功能 <xref:System.Data.SqlClient.SqlDataReader> ，以取得 <xref:System.IO.Stream> 、 <xref:System.Xml.XmlReader> 和物件， <xref:System.IO.TextReader> 並對其做出反應。</span><span class="sxs-lookup"><span data-stu-id="b47fc-111">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="b47fc-112">這些類別用於從查詢中擷取資料。</span><span class="sxs-lookup"><span data-stu-id="b47fc-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="b47fc-113">因此，來自 SQL Server 的串流支援會解決 OLTP 案例，並套用至內部部署和外部部署環境。</span><span class="sxs-lookup"><span data-stu-id="b47fc-113">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premises and off-premises environments.</span></span>
+<span data-ttu-id="13298-111">SQL Server 的串流支援在 <xref:System.Data.Common.DbDataReader> 和類別中引進新功能 <xref:System.Data.SqlClient.SqlDataReader> ，以取得 <xref:System.IO.Stream> 、 <xref:System.Xml.XmlReader> 和物件， <xref:System.IO.TextReader> 並對其做出反應。</span><span class="sxs-lookup"><span data-stu-id="13298-111">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="13298-112">這些類別用於從查詢中擷取資料。</span><span class="sxs-lookup"><span data-stu-id="13298-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="13298-113">因此，來自 SQL Server 的串流支援會解決 OLTP 案例，並套用至內部部署和外部部署環境。</span><span class="sxs-lookup"><span data-stu-id="13298-113">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premises and off-premises environments.</span></span>
 
-<span data-ttu-id="b47fc-114">下列成員已加入至， <xref:System.Data.SqlClient.SqlDataReader> 以啟用來自 SQL Server 的串流支援：</span><span class="sxs-lookup"><span data-stu-id="b47fc-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="13298-114">下列成員已加入至， <xref:System.Data.SqlClient.SqlDataReader> 以啟用來自 SQL Server 的串流支援：</span><span class="sxs-lookup"><span data-stu-id="13298-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ ms.locfileid: "91609241"
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-<span data-ttu-id="b47fc-115">下列成員已加入至， <xref:System.Data.Common.DbDataReader> 以啟用來自 SQL Server 的串流支援：</span><span class="sxs-lookup"><span data-stu-id="b47fc-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="13298-115">下列成員已加入至， <xref:System.Data.Common.DbDataReader> 以啟用來自 SQL Server 的串流支援：</span><span class="sxs-lookup"><span data-stu-id="13298-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,37 +48,37 @@ ms.locfileid: "91609241"
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="b47fc-116">SQL Server 的串流支援</span><span class="sxs-lookup"><span data-stu-id="b47fc-116">Streaming Support to SQL Server</span></span>
+## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="13298-116">SQL Server 的串流支援</span><span class="sxs-lookup"><span data-stu-id="13298-116">Streaming Support to SQL Server</span></span>
 
-<span data-ttu-id="b47fc-117">SQL Server 的串流支援會在類別中引進新功能， <xref:System.Data.SqlClient.SqlParameter> 讓它能夠接受和回應 <xref:System.Xml.XmlReader> 、 <xref:System.IO.Stream> 和 <xref:System.IO.TextReader> 物件。</span><span class="sxs-lookup"><span data-stu-id="b47fc-117">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="b47fc-118"><xref:System.Data.SqlClient.SqlParameter> 用於將參數傳遞給查詢和預存程序。</span><span class="sxs-lookup"><span data-stu-id="b47fc-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
+<span data-ttu-id="13298-117">SQL Server 的串流支援會在類別中引進新功能， <xref:System.Data.SqlClient.SqlParameter> 讓它能夠接受和回應 <xref:System.Xml.XmlReader> 、 <xref:System.IO.Stream> 和 <xref:System.IO.TextReader> 物件。</span><span class="sxs-lookup"><span data-stu-id="13298-117">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="13298-118"><xref:System.Data.SqlClient.SqlParameter> 用於將參數傳遞給查詢和預存程序。</span><span class="sxs-lookup"><span data-stu-id="13298-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
 
-<span data-ttu-id="b47fc-119">您必須取消所有資料流作業，才能處置 <xref:System.Data.SqlClient.SqlCommand> 物件或呼叫 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>。</span><span class="sxs-lookup"><span data-stu-id="b47fc-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="b47fc-120">如果應用程式傳送 <xref:System.Threading.CancellationToken>，就不保證能取消。</span><span class="sxs-lookup"><span data-stu-id="b47fc-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
+<span data-ttu-id="13298-119">您必須取消所有資料流作業，才能處置 <xref:System.Data.SqlClient.SqlCommand> 物件或呼叫 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>。</span><span class="sxs-lookup"><span data-stu-id="13298-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="13298-120">如果應用程式傳送 <xref:System.Threading.CancellationToken>，就不保證能取消。</span><span class="sxs-lookup"><span data-stu-id="13298-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
 
-<span data-ttu-id="b47fc-121">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 類型將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.Stream>：</span><span class="sxs-lookup"><span data-stu-id="b47fc-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
+<span data-ttu-id="13298-121">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 類型將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.Stream>：</span><span class="sxs-lookup"><span data-stu-id="13298-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
 
-- <span data-ttu-id="b47fc-122">**二進位**</span><span class="sxs-lookup"><span data-stu-id="b47fc-122">**Binary**</span></span>
+- <span data-ttu-id="13298-122">**二進位**</span><span class="sxs-lookup"><span data-stu-id="13298-122">**Binary**</span></span>
 
-- <span data-ttu-id="b47fc-123">**長**</span><span class="sxs-lookup"><span data-stu-id="b47fc-123">**VarBinary**</span></span>
+- <span data-ttu-id="13298-123">**長**</span><span class="sxs-lookup"><span data-stu-id="13298-123">**VarBinary**</span></span>
 
-<span data-ttu-id="b47fc-124">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 類型將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.TextReader>：</span><span class="sxs-lookup"><span data-stu-id="b47fc-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
+<span data-ttu-id="13298-124">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 類型將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.TextReader>：</span><span class="sxs-lookup"><span data-stu-id="13298-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
 
-- <span data-ttu-id="b47fc-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="b47fc-125">**Char**</span></span>
+- <span data-ttu-id="13298-125">**字元**</span><span class="sxs-lookup"><span data-stu-id="13298-125">**Char**</span></span>
 
-- <span data-ttu-id="b47fc-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="b47fc-126">**NChar**</span></span>
+- <span data-ttu-id="13298-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="13298-126">**NChar**</span></span>
 
-- <span data-ttu-id="b47fc-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="b47fc-127">**NVarChar**</span></span>
+- <span data-ttu-id="13298-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="13298-127">**NVarChar**</span></span>
 
-- <span data-ttu-id="b47fc-128">**XML**</span><span class="sxs-lookup"><span data-stu-id="b47fc-128">**Xml**</span></span>
+- <span data-ttu-id="13298-128">**XML**</span><span class="sxs-lookup"><span data-stu-id="13298-128">**Xml**</span></span>
 
-<span data-ttu-id="b47fc-129">**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 類型會接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.Xml.XmlReader> 。</span><span class="sxs-lookup"><span data-stu-id="b47fc-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
+<span data-ttu-id="13298-129">**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 類型會接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.Xml.XmlReader> 。</span><span class="sxs-lookup"><span data-stu-id="13298-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
 
-<span data-ttu-id="b47fc-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> 可接受型別 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 的值。</span><span class="sxs-lookup"><span data-stu-id="b47fc-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
+<span data-ttu-id="13298-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> 可接受型別 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 的值。</span><span class="sxs-lookup"><span data-stu-id="13298-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
 
-<span data-ttu-id="b47fc-131"><xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 物件會被轉移到 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 所定義的值。</span><span class="sxs-lookup"><span data-stu-id="b47fc-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
+<span data-ttu-id="13298-131"><xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 物件會被轉移到 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 所定義的值。</span><span class="sxs-lookup"><span data-stu-id="13298-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
 
-## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="b47fc-132">範例--SQL Server 的串流</span><span class="sxs-lookup"><span data-stu-id="b47fc-132">Sample -- Streaming from SQL Server</span></span>
+## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="13298-132">範例--SQL Server 的串流</span><span class="sxs-lookup"><span data-stu-id="13298-132">Sample -- Streaming from SQL Server</span></span>
 
-<span data-ttu-id="b47fc-133">使用下列 Transact-sql 來建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="b47fc-133">Use the following Transact-SQL to create the sample database:</span></span>
+<span data-ttu-id="13298-133">使用下列 Transact-sql 來建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="13298-133">Use the following Transact-SQL to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo]
@@ -97,17 +97,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO
 ```
 
-<span data-ttu-id="b47fc-134">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="b47fc-134">The sample shows how to do the following:</span></span>
+<span data-ttu-id="13298-134">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="13298-134">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="b47fc-135">提供擷取大型檔案的非同步方法，避免封鎖使用者介面執行緒。</span><span class="sxs-lookup"><span data-stu-id="b47fc-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
+- <span data-ttu-id="13298-135">提供擷取大型檔案的非同步方法，避免封鎖使用者介面執行緒。</span><span class="sxs-lookup"><span data-stu-id="13298-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
 
-- <span data-ttu-id="b47fc-136">從 .NET Framework 4.5 中的 SQL Server 傳送大型文字檔。</span><span class="sxs-lookup"><span data-stu-id="b47fc-136">Transfer a large text file from SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="13298-136">從 .NET Framework 4.5 中的 SQL Server 傳送大型文字檔。</span><span class="sxs-lookup"><span data-stu-id="13298-136">Transfer a large text file from SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="b47fc-137">從 .NET Framework 4.5 中的 SQL Server 傳送大型 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="b47fc-137">Transfer a large XML file from SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="13298-137">從 .NET Framework 4.5 中的 SQL Server 傳送大型 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="13298-137">Transfer a large XML file from SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="b47fc-138">從 SQL Server 取出資料。</span><span class="sxs-lookup"><span data-stu-id="b47fc-138">Retrieve data from SQL Server.</span></span>
+- <span data-ttu-id="13298-138">從 SQL Server 取出資料。</span><span class="sxs-lookup"><span data-stu-id="13298-138">Retrieve data from SQL Server.</span></span>
 
-- <span data-ttu-id="b47fc-139">將大型檔案 (Blob) 從一個 SQL Server 資料庫傳輸到另一個資料庫，而不會用盡記憶體。</span><span class="sxs-lookup"><span data-stu-id="b47fc-139">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
+- <span data-ttu-id="13298-139">將大型檔案 (Blob) 從一個 SQL Server 資料庫傳輸到另一個資料庫，而不會用盡記憶體。</span><span class="sxs-lookup"><span data-stu-id="13298-139">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
 
 ```csharp
 using System;
@@ -131,7 +131,7 @@ namespace StreamingFromServer {
          Console.WriteLine("Done");
       }
 
-      // Application retrieving a large BLOB from SQL Server in .NET 4.5 using the new asynchronous capability
+      // Application retrieving a large BLOB from SQL Server in .NET Framework 4.5 using the new asynchronous capability
       private static async Task CopyBinaryValueToFile() {
          string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "binarydata.bin");
 
@@ -159,7 +159,7 @@ namespace StreamingFromServer {
          }
       }
 
-      // Application transferring a large Text File from SQL Server in .NET 4.5
+      // Application transferring a large Text File from SQL Server in .NET Framework 4.5
       private static async Task PrintTextValues() {
          using (SqlConnection connection = new SqlConnection(connectionString)) {
             await connection.OpenAsync();
@@ -194,7 +194,7 @@ namespace StreamingFromServer {
          }
       }
 
-      // Application transferring a large Xml Document from SQL Server in .NET 4.5
+      // Application transferring a large Xml Document from SQL Server in .NET Framework 4.5
       private static async Task PrintXmlValues() {
          using (SqlConnection connection = new SqlConnection(connectionString)) {
             await connection.OpenAsync();
@@ -237,7 +237,7 @@ namespace StreamingFromServer {
          }
       }
 
-      // Application transferring a large Xml Document from SQL Server in .NET 4.5
+      // Application transferring a large Xml Document from SQL Server in .NET Framework 4.5
       // This goes via NVarChar and TextReader to enable asynchronous reading
       private static async Task PrintXmlValuesViaNVarChar() {
          XmlReaderSettings xmlSettings = new XmlReaderSettings() {
@@ -298,9 +298,9 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="b47fc-140">範例--串流至 SQL Server</span><span class="sxs-lookup"><span data-stu-id="b47fc-140">Sample -- Streaming to SQL Server</span></span>
+## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="13298-140">範例--串流至 SQL Server</span><span class="sxs-lookup"><span data-stu-id="13298-140">Sample -- Streaming to SQL Server</span></span>
 
-<span data-ttu-id="b47fc-141">使用下列 Transact-sql 來建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="b47fc-141">Use the following Transact-SQL to create the sample database:</span></span>
+<span data-ttu-id="13298-141">使用下列 Transact-sql 來建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="13298-141">Use the following Transact-SQL to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -321,19 +321,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO
 ```
 
-<span data-ttu-id="b47fc-142">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="b47fc-142">The sample shows how to do the following:</span></span>
+<span data-ttu-id="13298-142">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="13298-142">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="b47fc-143">將大型 BLOB 傳輸至 .NET Framework 4.5 中的 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="b47fc-143">Transferring a large BLOB to SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="13298-143">將大型 BLOB 傳輸至 .NET Framework 4.5 中的 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="13298-143">Transferring a large BLOB to SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="b47fc-144">將大型文字檔傳送至 .NET Framework 4.5 中的 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="b47fc-144">Transferring a large text file to SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="13298-144">將大型文字檔傳送至 .NET Framework 4.5 中的 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="13298-144">Transferring a large text file to SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="b47fc-145">使用新的非同步功能傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="b47fc-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>
+- <span data-ttu-id="13298-145">使用新的非同步功能傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="13298-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="b47fc-146">使用新的非同步功能及 await 關鍵字傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="b47fc-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
+- <span data-ttu-id="13298-146">使用新的非同步功能及 await 關鍵字傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="13298-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="b47fc-147">正在取消傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="b47fc-147">Cancelling the transfer of a large BLOB.</span></span>
+- <span data-ttu-id="13298-147">正在取消傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="13298-147">Cancelling the transfer of a large BLOB.</span></span>
 
-- <span data-ttu-id="b47fc-148">使用新的非同步功能，從一個 SQL Server 串流至另一個。</span><span class="sxs-lookup"><span data-stu-id="b47fc-148">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
+- <span data-ttu-id="13298-148">使用新的非同步功能，從一個 SQL Server 串流至另一個。</span><span class="sxs-lookup"><span data-stu-id="13298-148">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
 
 ```csharp
 using System;
@@ -394,7 +394,7 @@ namespace StreamingToServer {
          }
       }
 
-      // Application transferring a large BLOB to SQL Server in .NET 4.5
+      // Application transferring a large BLOB to SQL Server in .NET Framework 4.5
       private static async Task StreamBLOBToServer() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -412,7 +412,7 @@ namespace StreamingToServer {
          }
       }
 
-      // Application transferring a large Text File to SQL Server in .NET 4.5
+      // Application transferring a large Text File to SQL Server in .NET Framework 4.5
       private static async Task StreamTextToServer() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -455,9 +455,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="b47fc-149">範例--從一個 SQL Server 串流至另一個 SQL Server</span><span class="sxs-lookup"><span data-stu-id="b47fc-149">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="13298-149">範例--從一個 SQL Server 串流至另一個 SQL Server</span><span class="sxs-lookup"><span data-stu-id="13298-149">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
 
-<span data-ttu-id="b47fc-150">此範例示範如何以非同步方式將大型 BLOB 從一個 SQL Server 串流至另一個，並支援取消。</span><span class="sxs-lookup"><span data-stu-id="b47fc-150">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
+<span data-ttu-id="13298-150">此範例示範如何以非同步方式將大型 BLOB 從一個 SQL Server 串流至另一個，並支援取消。</span><span class="sxs-lookup"><span data-stu-id="13298-150">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
 
 ```csharp
 using System;
@@ -522,6 +522,6 @@ namespace StreamingFromServerToAnother {
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="b47fc-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b47fc-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13298-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13298-151">See also</span></span>
 
-- [<span data-ttu-id="b47fc-152">在 ADO.NET 中傳送和修改資料</span><span class="sxs-lookup"><span data-stu-id="b47fc-152">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
+- [<span data-ttu-id="13298-152">在 ADO.NET 中傳送和修改資料</span><span class="sxs-lookup"><span data-stu-id="13298-152">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
