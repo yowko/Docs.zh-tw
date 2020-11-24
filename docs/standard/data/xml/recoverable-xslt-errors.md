@@ -2,17 +2,19 @@
 title: 可復原的 XSLT 錯誤
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686770"
 ---
 # <a name="recoverable-xslt-errors"></a>可復原的 XSLT 錯誤
+
 ＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。 針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。 針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。  
   
 ## <a name="discretionary-behaviors"></a>Discretionary 行為  
+
  下表會列出 XSLT 1.0 版建議事項所允許的每個 Discretionary 行為，以及 <xref:System.Xml.Xsl.XslCompiledTransform> 類別如何處理這些行為。  
   
 - 「復原」表示 <xref:System.Xml.Xsl.XslCompiledTransform> 類別將從此錯誤復原。 <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 事件可用於報告 XSLT 處理器的任何事件。  
@@ -38,7 +40,7 @@ ms.locfileid: "94827577"
 |具現化 `xsl:processing-instruction` 內容的結果包含字串 --，或以 - 為結尾。|7.4|復原|  
 |具現化 `xsl:comment` 內容的結果會建立非文字節點的節點。|7.4|錯誤*|  
 |變數繫結項目內的範本會傳回屬性節點或命名空間節點。|11.2|錯誤*|  
-|從傳遞至文件函式的 URI 上擷取資源時發生錯誤。|12.1|錯誤|  
+|從傳遞至文件函式的 URI 上擷取資源時發生錯誤。|12.1|Error|  
 |文件函式中的 URI 參考包含片段識別項，且處理片段識別項時發生錯誤。|12.1|復原*|  
 |有多個具有相同名稱、不同值的屬性，它們不是具有相同匯入優先順序之 `xsl:output` 中的具名 cdata-section 項目。|16|復原|  
 |處理器不支援 `xsl:output` 編碼屬性中的編碼。|16.1|復原|  
@@ -51,6 +53,6 @@ ms.locfileid: "94827577"
   
  <sup>*</sup> 這種行為與類別的行為不同 <xref:System.Xml.Xsl.XslTransform> 。 如需詳細資訊，請參閱 [XslTransform 類別中的 Discretionary 行為實作](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](xslt-transformations.md)

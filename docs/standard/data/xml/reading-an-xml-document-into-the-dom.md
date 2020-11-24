@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-ms.openlocfilehash: 40efccba86f1bca8af838961dccdc7f98f8c93c2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 61275e9232b3d9e516636869d7153f33133cbd03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820393"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686861"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>將 XML 文件讀取到 DOM
+
 從不同的格式將 XML 資訊讀取到記憶體。 可從字串、資料流、URL、文字讀取器或衍生自 <xref:System.Xml.XmlReader> 的類別讀取它。  
   
  <xref:System.Xml.XmlDocument.Load%2A> 方法將文件引入記憶體，並擁有可從各個不同格式取得資料的多載方法。 另外還有一個 <xref:System.Xml.XmlDocument.LoadXml%2A> 方法，可從字串讀取 XML。  
@@ -67,6 +68,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

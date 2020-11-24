@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 722a1e0adea41a13ca25829c53372c29187b80bd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ddb2d6eeb75a118a12f681b354f6feccd1231c64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500464"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685372"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished 方法
-通知分析工具，應用程式域已從進程中卸載。  
+
+通知分析工具，已從進程卸載應用程式域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +38,21 @@ HRESULT AppDomainShutdownFinished(
 
 - `appDomainId`
 
-  \[在中，識別用來儲存應用程式元件的網域。
+  \[in] 識別用來儲存應用程式元件的網域。
 
 - `hrStatus`
 
-  \[中的 HRESULT，指出是否已成功卸載應用程式域。
+  \[in] HRESULT，指出是否已成功卸載應用程式域。
 
 ## <a name="remarks"></a>備註  
- 在 `appDomainId` [ICorProfilerCallback：： AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md)方法傳回之後，的值對資訊要求而言是不正確。  
+
+ 在 `appDomainId` [ICorProfilerCallback：： AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) 方法傳回之後，的值對資訊要求而言是不正確。  
   
- 卸載應用程式域的某些部分可能會在回呼之後繼續進行 `AppDomainCreationFinished` 。 中的失敗 HRESULT `hrStatus` 表示失敗。 不過，中的成功 HRESULT `hrStatus` 只會指出卸載應用程式域的第一個部分已成功。  
+ 卸載應用程式域的部分可能會在回呼之後繼續進行 `AppDomainCreationFinished` 。 中的失敗 HRESULT `hrStatus` 表示失敗。 但是，中的成功 HRESULT `hrStatus` 只會指出卸載應用程式域的第一個部分已成功。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

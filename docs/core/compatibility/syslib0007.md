@@ -3,12 +3,12 @@ title: SYSLIB0007 警告
 description: 瞭解產生編譯時期警告 SYSLIB0007 的 obsoletions。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: db7150fa3e3c566adf110034734e068fac079c6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439935"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685015"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007：不支援密碼編譯演算法的預設執行
 
@@ -36,6 +36,6 @@ ms.locfileid: "94439935"
 
 [!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [密碼編譯的重大變更](cryptography.md#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported)
+- [不支援具現化密碼編譯抽象概念的預設實值](cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 017c8ab4-4c09-4754-9935-5b0b49cabecb
 topic_type:
 - apiref
-ms.openlocfilehash: 086448248364403b718408ad8bd32e48447742d0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ba694f485d5a51870a1283b6ccbcb7b042a14501
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685632"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>IMetaDataTables::GetNextBlob 方法
-取得資料表中下一個二進位大型物件（BLOB）的索引。  
+
+取得資料表中下一個二進位大型物件 (BLOB) 的索引。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +36,20 @@ HRESULT GetNextBlob (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ixBlob`  
  在從 Blob 的資料行傳回的索引。  
   
  `pNext`  
- 脫銷下一個 BLOB 之索引的指標。  
+ 擴展下一個 BLOB 的索引指標。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

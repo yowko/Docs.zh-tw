@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-ms.openlocfilehash: e8945d40a3761ec51a73a8ae90ddc1d84ccab651
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f72c987294d7768eacf112c622ab15494fb75e34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616862"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685782"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 函式
-呼叫在指定的程式庫中具有指定名稱和參數的函式。  
+
+呼叫函式，該函式在指定的程式庫中具有指定的名稱和參數。  
   
- 此函式在 .NET Framework 4 中已被取代。  
+ 此函式已在 .NET Framework 4 中被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,14 +41,15 @@ HRESULT CallFunctionShim (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `szDllName`  
- 在包含函數之程式庫的名稱。  
+ 在包含函數的程式庫名稱。  
   
  `szFunctionName`  
- 在函式的名稱。  
+ 在函數的名稱。  
   
  `lpvArgument1`  
- 在要傳遞至函式的第一個引數。  
+ 在要傳遞至函數的第一個引數。  
   
  `lpvArgument2`  
  在要傳遞至函式的第二個引數。  
@@ -59,11 +61,12 @@ HRESULT CallFunctionShim (
  在保留供日後使用。 在此參數中傳遞零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

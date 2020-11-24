@@ -2,14 +2,15 @@
 title: 處理記憶體中的 XML 資料
 ms.date: 03/30/2017
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 1b74e029bcda4476d166b83ddecb06e5d607fc3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 878e008f5c7c3a018389e8666263269162989812
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824685"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686913"
 ---
 # <a name="processing-xml-data-in-memory"></a>處理記憶體中的 XML 資料
+
 Microsoft .NET Framework 包含三種處理 XML 資料的模型：<xref:System.Xml.XmlDocument> 類別、<xref:System.Xml.XPath.XPathDocument> 類別，以及 [LINQ to XML (C#)](../../linq/linq-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md)。  
   
  <xref:System.Xml.XmlDocument> 類別會實作 W3C 文件物件模型 (DOM) 層級 1 核心及核心 DOM 層級 2 建議事項。 DOM 是 XML 文件的記憶體中 (快取) 樹狀結構表示。 透過 <xref:System.Xml.XmlDocument> 及其相關類別，您可以建構 XML 文件、載入並存取資料、修改資料，以及儲存變更。  
@@ -19,6 +20,7 @@ Microsoft .NET Framework 包含三種處理 XML 資料的模型：<xref:System.X
  [LINQ to XML](../../linq/linq-xml-overview.md) 是 .NET Framework 3.5 版中推出的模型，用來處理 XML 資料。 它是利用 [Language-Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md) 的記憶體內部模型。 LINQ 會擴充 C# 和 Visual Basic 的語言語法，以提供新的查詢功能。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [使用 DOM 模型處理 XML 資料](process-xml-data-using-the-dom-model.md)  
  討論如何使用 <xref:System.Xml.XmlDocument> 及其相關類別來處理 XML 資料。  
   
@@ -29,4 +31,5 @@ Microsoft .NET Framework 包含三種處理 XML 資料的模型：<xref:System.X
  提供 LINQ to XML 的簡短概觀，並提供 LINQ to XML 文件的連結。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [XML 文件和資料](index.md)

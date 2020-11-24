@@ -2,14 +2,15 @@
 title: 將實體宣告和實體參考讀入 DOM
 ms.date: 03/30/2017
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-ms.openlocfilehash: 01a90ac467bec5576005c16355617c03b6d38389
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8af9e4c1aedc588bcbf3b4f43e9e562fda2f3ce3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818709"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686822"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>將實體宣告和實體參考讀入 DOM
+
 實體是一種宣告，陳述 XML 中用來代替內容或標記的名稱。 實體有兩個部分。 首先，您必須使用實體宣告，將名稱繫結於取代內容。 實體宣告可透過文件類型定義 (DTD) 或 XML 結構描述中的 `<!ENTITY name "value">` 語法來建立。 第二，實體宣告中定義的名稱隨後會用於 XML。 用於 XML 時，它便稱為實體參考。 例如，下列實體宣告會宣告名稱 `publisher` 的實體，而此實體會與 "Microsoft Press" 的內容產生關聯。  
   
 ```xml  
@@ -51,6 +52,6 @@ ms.locfileid: "94818709"
   
  實體參考是否會擴充的差異在於記憶體中 DOM 樹狀結構中產生了哪些節點。 [保留實體參考](entity-references-are-preserved.md)和[實體參考已擴充且沒有保留](entity-references-are-expanded-and-not-preserved.md)主題會說明所產生之節點的差異。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

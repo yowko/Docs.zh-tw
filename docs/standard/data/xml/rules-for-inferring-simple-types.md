@@ -2,19 +2,21 @@
 title: 推斷簡單型別的規則
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686536"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推斷簡單型別的規則
+
 說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
   
  <xref:System.Xml.Schema.XmlSchemaInference> 類別會將屬性和項目的資料型別推斷為簡單型別。 本節將說明可能的推斷型別、多種不同的值如何調節為單一型別，以及如何處理結構描述定義的 `xsi` 屬性。  
   
 ## <a name="inferred-types"></a>推斷的型別  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 類別會將項目和屬性值推斷為簡單型別，並在產生的結構描述內包含型別屬性。 所有推斷的型別皆為簡單型別。 基底型別或 Facet 都不會納入結果結構描述中。  
   
  在 XML 文件中發現的值會個別進行檢查。 對某個值進行檢查時，即會推斷其型別。 若在推斷屬性或項目的型別後，發現該屬性或項目的值不符合目前推斷的型別，<xref:System.Xml.Schema.XmlSchemaInference> 類別就會針對每組規則提升型別。 這些規則將在本主題稍後的＜型別提升＞一節中討論。  
@@ -44,6 +46,7 @@ ms.locfileid: "94823546"
 |字串|一或多個 Unicode 字元。|  
   
 ## <a name="type-promotion"></a>類型提升  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 類別會逐一檢查屬性與項目的值。 若發現任何值，就會推斷最嚴格且不帶正負號的型別。 若在推斷屬性或項目的型別後，發現新的值不符合目前推斷的型別，則推斷的型別會提升為目前推斷型別與新值均適用的新型別。 <xref:System.Xml.Schema.XmlSchemaInference> 類別在提升推斷的型別時，會考量先前的值。  
   
  例如，請考量下列兩份 XML 文件中的 XML 片段：  
@@ -66,14 +69,14 @@ ms.locfileid: "94823546"
 
 下列結構描述定義的屬性會在結構描述推斷期間遭到忽略。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`xsi:type`|若發現項目指定了 `xsi:type`，則 `xsi:type` 將被忽略。|  
 |`xsi:nil`|若發現項目具有 `xsi:nil` 屬性，表示其推斷結構描述中的項目宣告具有 `nillable="true"` 值。 將 `xsi:nil` 屬性設為 `true` 的項目不能有子項目。|  
 |`xsi:schemaLocation`|如果發現 `xsi:schemaLocation`，則會加以忽略。|  
 |`xsi:noNamespaceSchemaLocation`|如果發現 `xsi:noNamespaceSchemaLocation`，則會加以忽略。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)
 - [從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)

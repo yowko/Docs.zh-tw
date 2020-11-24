@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685041"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>樣式表參數和擴充物件的 XsltArgumentList
+
 <xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 (XSLT) 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
   
 > [!NOTE]
@@ -31,14 +32,15 @@ ms.locfileid: "94818202"
 - 支援使用 <xref:System.Xml.XPath.XPathNodeIterator> 將結果樹狀結構片段傳遞給樣式表。  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 樣式表參數  
+
  XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 限定名稱和命名空間統一資源識別元 (URI) 會在此時與參數物件產生關聯。  
   
  參數物件應對應至全球資訊網協會 (W3C) 型別。 下表說明對應的 W3C 型別、對等的 .NET Framework 類別 (型別)，以及 W3C 型別是 XML 路徑語言 (XPath) 型別還是 XSLT 型別。  
   
 |W3C 型別|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |--------------|----------------------------------------------|-----------------------------|  
-|字串|System.String|XPath|  
-|布林值|System.Boolean|XPath|  
+|String|System.String|XPath|  
+|Boolean|System.Boolean|XPath|  
 |數字|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
@@ -54,6 +56,7 @@ ms.locfileid: "94818202"
 3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>範例  
+
  下列範例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法來建立參數，以保留計算的折扣日期。 折扣日期計算為從訂購日期起的 20 天。  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>輸入  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>XSLT 擴充物件  
+
  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，將 XSLT 擴充物件加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>。 限定名稱和命名空間 URI 於當時與擴充物件產生關聯。  
   
  加入物件時，<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 的呼叫端必須在安全性原則中完全受信任。 如果呼叫端並非完全受信任，則無法加入。  
@@ -195,6 +200,7 @@ public class Sample
 3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>範例  
+
  以下範例計算圓的圓周 (假設已經知道其半徑)。  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>輸入  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>輸出  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -361,6 +369,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

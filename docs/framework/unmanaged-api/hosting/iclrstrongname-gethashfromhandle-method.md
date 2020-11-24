@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-ms.openlocfilehash: e2d71f7c61b02273bdcaf182f6f79ca3c2a2c75f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 68bfdb2f66147b54c75b8f577a01278016e248b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762069"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685730"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle 方法
-使用指定的雜湊演算法，透過具有指定檔案控制代碼的檔案內容產生雜湊。  
+
+使用指定的雜湊演算法，產生具有指定檔案控制代碼之檔案內容的雜湊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +40,33 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `hFile`  
- 在要雜湊之檔案的控制碼。  
+ 在要雜湊處理之檔案的控制碼。  
   
  `piHashAlg`  
- [in、out]指定雜湊演算法的常數。 預設演算法使用零。  
+ [in，out]指定雜湊演算法的常數。 針對預設演算法使用零。  
   
  `pbHash`  
- 脫銷傳回的雜湊緩衝區。  
+ 擴展傳回的雜湊緩衝區。  
   
  `cchHash`  
  在要求的大小上限 `pbHash` 。  
   
  `pchHash`  
- 脫銷傳回之的大小（以位元組為單位） `pbHash` 。  
+ 擴展傳回之的大小（以位元組為單位） `pbHash` 。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果方法已成功完成，則為，否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+
+ `S_OK` 如果方法成功完成，則為，否則，表示失敗 (的 HRESULT 值會看到清單) 的 [一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values) 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

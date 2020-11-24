@@ -2,14 +2,15 @@
 title: 移除 DOM 中項目節點的屬性
 ms.date: 03/30/2017
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-ms.openlocfilehash: bd0e07f9587567de9f3023cdeda9dafde8ce7b26
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 53922c55295e852a1aa62d847313fbd657a42541
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823715"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686757"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>移除 DOM 中項目節點的屬性
+
 有許多方法可用來移除屬性。 其中一種技術是從屬性集合中移除它們。 若要如此做，請執行下列步驟：  
   
 1. 使用 `XmlAttributeCollection attrs = elem.Attributes;`，從項目取得屬性集合。  
@@ -36,6 +37,6 @@ ms.locfileid: "94823715"
   
  當使用 <xref:System.Xml.XmlAttribute> 呼叫時，<xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 方法會將屬性值設為 String.Empty，因為屬性一定要有值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

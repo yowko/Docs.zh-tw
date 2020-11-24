@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: 75afb19a551174b9386259ebff871d4a54b68f01
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1f6e8e1a048fcf7f8fd278eaac4988fa0e35791d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830801"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684989"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>作法：在隔離儲存區中建立檔案和目錄
 
@@ -33,12 +33,13 @@ ms.locfileid: "94830801"
  <xref:System.IO.IsolatedStorage.IsolatedStorageException>如果路徑包含的目錄不存在，則建立隔離儲存區檔案將會擲回。
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例說明如何在隔離存放區中建立檔案和目錄。  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>

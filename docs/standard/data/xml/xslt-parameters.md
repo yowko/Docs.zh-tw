@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: c203e17e327cf64690c2748c7f3a4e74b5306501
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64a62840594773270a658738120812c59b4896cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818293"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685210"
 ---
 # <a name="xslt-parameters"></a>XSLT 參數
+
 XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 限定名稱與命名空間 URI 會在此時與參數物件產生關聯。  
   
 ### <a name="to-use-an-xslt-parameter"></a>使用 XSLT 參數  
@@ -24,6 +25,7 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="parameter-types"></a>參數型別  
+
  參數物件應對應至 W3C 型別。 下表顯示對應的 W3C 型別、對等的 Microsoft .NET 類別 (型別)，以及 W3C 型別是 XPath 型別還是 XSLT 型別。  
   
 |W3C 類型|對等的 .NET 類別 (型別)|XPath 或 XSLT 型別|  
@@ -42,6 +44,7 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
  所有其他類型都會擲回錯誤。  
   
 ## <a name="example"></a>範例  
+
  下列範例將使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法，建立保留計算折扣日期的參數。 折扣日期計算為從訂購日期起的 20 天。  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
@@ -50,9 +53,11 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 ### <a name="input"></a>輸入  
   
 ##### <a name="orderxml"></a>order.xml  
+
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
 ##### <a name="discountxsl"></a>discount.xsl  
+
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
 ### <a name="output"></a>輸出  
@@ -65,6 +70,6 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 </order>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](xslt-transformations.md)

@@ -3,12 +3,12 @@ title: SYSLIB0011 警告
 description: 瞭解產生編譯時期警告 SYSLIB0011 的 obsoletions。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1b4f4c24c64148319f659b78573a4d80fd5b98a7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 99cdd9f5335f71eb9325039891db17972fb48532
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440011"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685002"
 ---
 # <a name="syslib0011-binaryformatter-serialization-is-obsolete"></a>SYSLIB0011： BinaryFormatter 序列化已淘汰
 
@@ -29,7 +29,7 @@ ms.locfileid: "94440011"
 
 [!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [解決 BinaryFormatter obsoletion 和停用錯誤](https://aka.ms/binaryformatter)
-- [ASP.NET apps 已淘汰且禁止 BinaryFormatter 序列化方法](corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
+- [ASP.NET apps 已淘汰且禁止 BinaryFormatter 序列化方法](core-libraries/5.0/binaryformatter-serialization-obsolete.md)

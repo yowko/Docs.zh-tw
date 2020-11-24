@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 61538656580878da775d4a42dac40165c7941eee
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 206a659656f1019af1540b9b2476ae7fe9ba93eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685106"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用  加入 XSLT 樣式表指令碼\<msxsl:script>
+
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
   
 > [!NOTE]
@@ -46,7 +47,7 @@ ms.locfileid: "94818267"
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
-|預設的命名空間|說明|  
+|預設的命名空間|描述|  
 |------------------------|-----------------|  
 |系統|系統類別。|  
 |System.Collection|集合類別。|  
@@ -63,8 +64,8 @@ ms.locfileid: "94818267"
   
 |類型|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |----------|----------------------------------------------|-----------------------------|  
-|字串|System.String|XPath|  
-|布林值|System.Boolean|XPath|  
+|String|System.String|XPath|  
+|Boolean|System.Boolean|XPath|  
 |數字|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
@@ -98,6 +99,7 @@ ms.locfileid: "94818267"
  這將擲回例外狀況，因為未逸出連字號。 會將這份文件載入為 XML，且對 `msxsl:script` 項目標記之間的文字並未採取特別的處置。  
   
 ## <a name="example"></a>範例  
+
  下列範例會使用內嵌指令碼來計算圓周 (假設已經知道其半徑)。  
   
 ```vb  
@@ -165,6 +167,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>輸入  
+
  number.xml  
   
 ```xml  
@@ -228,6 +231,6 @@ public class Sample
 </circles>
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

@@ -2,14 +2,15 @@
 title: 使用 XPath 資料模型處理 XML 資料
 ms.date: 03/30/2017
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-ms.openlocfilehash: cc35b570c592557658cd3dda0c844847c8b23763
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 840fb40cc650d8f65af533d4102f18132bce3f53
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829280"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686952"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>使用 XPath 資料模型處理 XML 資料
+
 <xref:System.Xml?displayProperty=nameWithType> 命名空間會使用 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別，以程式設計方式來表示 XML 文件、片段、節點或記憶體中的節點集。  
   
  <xref:System.Xml.XPath.XPathDocument> 類別會使用 XPath 資料模型，以快速且唯讀的方式來表示記憶體中的 XML 文件。 <xref:System.Xml.XmlDocument> 類別則會實作 W3C 文件物件模型 (DOM) 層級 1 核心及核心 DOM 層級 2，來呈現記憶體中可編輯的 XML 文件。 這兩個類別都會實作 <xref:System.Xml.XPath.IXPathNavigable> 介面，並傳回用於選取、評估、巡覽，以及可在某些情況下編輯基礎 XML 資料的 <xref:System.Xml.XPath.XPathNavigator> 物件。  
@@ -17,6 +18,7 @@ ms.locfileid: "94829280"
  下列各節將根據會傳回 <xref:System.Xml.XPath.XPathNavigator> 類別的類別來說明此類別的功能。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [使用 XPathDocument 及 XmlDocument 讀取 XML 資料](reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  說明如何建立唯讀 <xref:System.Xml.XPath.XPathDocument> 類別物件以讀取 XML 文件，以及如何建立可編輯的 <xref:System.Xml.XmlDocument> 類別物件以讀取及編輯 XML 文件。 本主題還說明如何從每個類別傳回 <xref:System.Xml.XPath.XPathNavigator> 物件，以巡覽及編輯 XML 文件。  
   
@@ -32,7 +34,7 @@ ms.locfileid: "94829280"
  [使用 XPathNavigator 進行結構描述驗證](schema-validation-using-xpathnavigator.md)  
  說明驗證 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中包含之 XML 內容的方式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829839"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686016"
 ---
 # <a name="localizability-review"></a>當地語系化可行性檢閱
 
@@ -35,11 +35,13 @@ ms.locfileid: "94829839"
 - [是否使用國際資料測試過您的應用程式？](#test)
 
 <a name="global"></a>
+
 ## <a name="implement-globalization-recommendations"></a>實作全球化建議
 
 如果您設計和開發應用程式時已將當地語系化納入考量，而且已遵循[全球化](globalization.md)一文中所討論的建議，可當地語系化檢閱主要會是一項品質保證的作業。 否則，在這個階段中，您應該檢查並執行 [全球化](globalization.md) 的建議，並修正原始程式碼中防止當地語系化的錯誤。
 
 <a name="culture"></a>
+
 ## <a name="handle-culture-sensitive-features"></a>處理區分文化特性 (Culture) 的功能
 
 .NET 在一些文化特性 (Culture) 差異較大的區域並未提供程式設計方面的支援。 在大部分情況下，您必須撰寫自訂程式碼來處理下列領域：
@@ -58,6 +60,7 @@ ms.locfileid: "94829839"
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
+
 ## <a name="test-your-application"></a>測試您的應用程式
 
 在您將應用程式當地語系化之前，應先使用國際版作業系統上的國際資料進行測試。 雖然大部分使用者介面此時並不會當地語系化，但是您將能夠偵測出問題所在，如下所示：
@@ -76,7 +79,7 @@ ms.locfileid: "94829839"
 
 如果您已遵循全球化建議開發應用程式、正確地處理區分文化特性的功能，而且找到並解決了測試期間發生的當地語系化問題，就可以繼續進行下一個步驟：[當地語系化](localization.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [全球化和當地語系化](index.md)
 - [當地語系化](localization.md)

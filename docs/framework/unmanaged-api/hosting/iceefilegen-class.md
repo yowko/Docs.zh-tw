@@ -14,22 +14,23 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 78de6f91cc5c9de41426ac2e3c200fe14b32ae96
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617005"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685743"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 類別
-提供建立原生可移植執行檔（PE）檔案的功能。 編譯器通常會使用此介面來產生其已編譯的輸出可執行檔。  
+
+提供用來建立原生可攜式可執行檔 (PE) 檔的功能。 編譯器通常會使用此介面來產生其已編譯的輸出可執行檔。  
   
 > [!NOTE]
-> `ICeeFileGen`支援 .NET Framework 的基礎結構，但不適合直接從您的程式碼使用。  
+> `ICeeFileGen` 支援 .NET Framework 基礎結構，而且不適合直接從程式碼使用。  
   
- 這個介面已被取代，將在未來的版本中移除。  
+ 此介面已被取代，並將在未來的版本中移除。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 class ICeeFileGen {  
@@ -235,7 +236,8 @@ public:
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** ICeeFileGen。h  
   
