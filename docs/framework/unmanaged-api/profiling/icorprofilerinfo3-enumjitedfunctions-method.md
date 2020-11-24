@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: e2847a36-f460-45e2-9b6c-b33b008f40d9
 topic_type:
 - apiref
-ms.openlocfilehash: 3ebf4a7706b3d3495e4a617b4f86a50281115436
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6227baaead518eae2de5913369b72de1072ac052
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681492"
 ---
 # <a name="icorprofilerinfo3enumjitedfunctions-method"></a>ICorProfilerInfo3::EnumJITedFunctions 方法
-傳回先前已進行 JIT 編譯之所有函式的列舉值。  
+
+傳回先前 JIT 編譯之所有函式的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,17 +33,20 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppEnum`  
- 脫銷[ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)列舉值的指標。  
+ 擴展 [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) 列舉值的指標。  
   
 ## <a name="remarks"></a>備註  
- 這個方法可能會與 `JITCompilation` 回呼（例如[ICorProfilerCallback：： JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)方法）重迭。 這個方法所傳回的列舉值不包含從 Ngen.exe 產生的原生映射載入的函式。  
+
+ 這個方法可能與 `JITCompilation` 回呼（例如 [ICorProfilerCallback：： JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) 方法）重迭。 這個方法所傳回的列舉值不包含從使用 Ngen.exe 產生的原生映射載入的函式。  
   
 > [!NOTE]
-> 傳回的列舉只包含 "0" 代表欄位的值 `COR_PRF_FUNCTION::reJitId` 。  如果您需要有效 `COR_PRF_FUNCTION::reJitId` 的值，請使用[ICorProfilerInfo4：： EnumJITedFunctions2](icorprofilerinfo4-enumjitedfunctions2-method.md)方法。  
+> 傳回的列舉只針對欄位的值包含 "0" `COR_PRF_FUNCTION::reJitId` 。  如果您需要有效 `COR_PRF_FUNCTION::reJitId` 的值，請使用 [ICorProfilerInfo4：： EnumJITedFunctions2](icorprofilerinfo4-enumjitedfunctions2-method.md) 方法。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - dates [.NET], milliseconds
 - milliseconds [.NET]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 333b41fe3d4fa68ce26ab5dbd7d5938dda220b9a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 722334c324f663ba46a3c861885d4221fc566b8d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822109"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681258"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>作法：在日期與時間值中顯示毫秒
+
 預設的日期和時間格式化方法 (例如 <xref:System.DateTime.ToString?displayProperty=nameWithType>) 包括時間值的小時、分鐘和秒，但不包括它的毫秒元件。 本主題說明如何將日期和時間的毫秒部分加入格式化的日期和時間字串。  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>顯示 DateTime 值的毫秒部分  
@@ -29,6 +30,7 @@ ms.locfileid: "94822109"
 2. 若要擷取時間毫秒元件的字串表示，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%2A> 方法，並單獨傳遞 `fff` 或 `FFF` 自訂格式模式，或是連同其他自訂格式規範作為 `format` 參數一併傳遞。  
   
 ## <a name="example"></a>範例  
+
  此範例會對主控台單獨顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值的毫秒元件，以及包含在較長的日期和時間字串中一併顯示。  
   
  [!code-csharp[Formatting.HowTo.Millisecond#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#1)]
@@ -49,7 +51,7 @@ ms.locfileid: "94822109"
 > [!NOTE]
 > 您可以使用非常小的小數單位來顯示秒，例如萬分之一秒或十萬分之一秒。 不過，這些值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 和更新版本以及 Windows Vista 作業系統上，時鐘的解析度大約是10-15 毫秒。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.DateTimeFormatInfo>
 - [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)

@@ -14,34 +14,37 @@ helpviewer_keywords:
 ms.assetid: dfec05bb-3cd7-4bd5-b396-a4f097c3a636
 topic_type:
 - apiref
-ms.openlocfilehash: 4e32a36a4cf751bf7c5a2c918fde0122f21b7878
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a06e7f13b6de9450aa2a81f28f591c0a3ce8db0f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501584"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680981"
 ---
 # <a name="ihostassemblymanager-interface"></a>IHostAssemblyManager 介面
-提供的方法可讓主機指定通用語言執行時間（CLR）或主機應載入的元件集。  
+
+提供的方法可讓主機指定 common language runtime (CLR) 或主機所載入的元件集。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetAssemblyStore 方法](ihostassemblymanager-getassemblystore-method.md)|取得[IHostAssemblyStore](ihostassemblystore-interface.md)的介面指標，表示主機所載入的元件清單。|  
-|[GetNonHostStoreAssemblies 方法](ihostassemblymanager-getnonhoststoreassemblies-method.md)|取得[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)的介面指標，表示主機預期 CLR 載入的元件清單。|  
+|[GetAssemblyStore 方法](ihostassemblymanager-getassemblystore-method.md)|取得 [IHostAssemblyStore](ihostassemblystore-interface.md) 的介面指標，該指標表示主機載入的元件清單。|  
+|[GetNonHostStoreAssemblies 方法](ihostassemblymanager-getnonhoststoreassemblies-method.md)|取得 [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) 的介面指標，該指標表示主機預期 CLR 載入的元件清單。|  
   
 ## <a name="remarks"></a>備註  
- 不需要主機來執行 `IHostAssemblyManager` 或 `IHostAssemblyStore` 。 如果主機確實執行 `IHostAssemblyManager` ，它也必須執行 `IHostAssemblyStore` 。  
+
+ 不需要主機來執行 `IHostAssemblyManager` 或 `IHostAssemblyStore` 。 如果主機確實執行 `IHostAssemblyManager` ，則它也必須執行 `IHostAssemblyStore` 。  
   
- 執行時間會 `IHostAssemblyManager` 在初始化時呼叫[IHostControl：： GetHostManager](ihostcontrol-gethostmanager-method.md) ，並使用 `IID` IID_IHostAssemblyManager 的來查詢。  
+ 執行時間會在 `IHostAssemblyManager` 初始化時呼叫 [IHostControl：： GetHostManager](ihostcontrol-gethostmanager-method.md) ，並使用 IID_IHostAssemblyManager 來查詢 `IID` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

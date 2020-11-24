@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-ms.openlocfilehash: e8cb1486ccea11ba6edcf7bbb781a9bf210b496d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 350af708456914c73929d2b8887173cf784d4294
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804908"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680550"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst 介面
-作為執行緒之重要區段的主機標記法。  
+
+作為執行緒的重要區段的主機標記法。  
   
 ## <a name="methods"></a>方法  
   
@@ -34,14 +35,16 @@ ms.locfileid: "83804908"
 |[TryEnter 方法](ihostcrst-tryenter-method.md)|嘗試進入重要區段，並立即報告成功或失敗。|  
   
 ## <a name="remarks"></a>備註  
- `IHostCrst`允許 common language runtime （CLR）直接與主控制項的重要區段表示進行通訊，而不是使用 Win32 函數，例如 `EnterCriticalSection` 或 `LeaveCriticalSection` 。  
+
+ `IHostCrst` 允許 common language runtime (CLR) 直接與主控制項的重要區段表示進行通訊，而不是使用 Win32 函數（例如或） `EnterCriticalSection` `LeaveCriticalSection` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

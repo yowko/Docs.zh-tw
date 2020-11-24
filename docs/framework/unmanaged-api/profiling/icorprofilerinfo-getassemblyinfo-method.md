@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: 41083b2fcd61a9a726e835c3d5710308aa634600
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff81da15b17ab0a7fbe62b08e358f65eed3edb71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498605"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680263"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo 方法
+
 接受組件識別碼，並傳回組件的名稱及其資訊清單模組的識別碼。  
   
 ## <a name="syntax"></a>語法  
@@ -39,6 +40,7 @@ HRESULT GetAssemblyInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `assemblyId`  
  [in] 組件的識別項。  
   
@@ -58,12 +60,14 @@ HRESULT GetAssemblyInfo(
  [out] 組件資訊清單模組的識別碼指標。  
   
 ## <a name="remarks"></a>備註  
+
  在此方法傳回之後，您必須確認 `szName` 緩衝區的大小足以包含組件的完整檔案名稱。 若要這樣做，請比對 `pcchName` 指向的值和 `cchName` 參數。 如果 `pcchName` 指向大於 `cchName` 的值，請配置較大的 `szName` 緩衝區，並以較大的大小來更新 `cchName`，然後再次呼叫 `GetAssemblyInfo`。  
   
  或者，您也可以先使用長度為零的 `szName` 緩衝區來呼叫 `GetAssemblyInfo`，以取得正確的緩衝區大小。 接著您就可以依據 `pcchName` 中傳回的值來調整緩衝區大小，並再次呼叫 `GetAssemblyInfo`。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

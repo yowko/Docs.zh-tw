@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: 613267549329d2f48dcd18ae341e47538e414ac0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a7edc6045969861679d1b80c0563e99f48932cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680244"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject 方法
-取得 `ClassID` 物件的，指定其 `ObjectID` 。  
+
+取得 `ClassID` 物件的 `ObjectID` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +35,20 @@ HRESULT GetClassFromObject(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `objectId`  
  在要取得之物件的識別碼 `ClassID` 。  
   
  `pClassId`  
- 脫銷傳回之的指標 `ClassID` 。  
+ 擴展傳回之的指標 `ClassID` 。  
   
 ## <a name="remarks"></a>備註  
- Null `pClassId` 表示 `objectId` 具有正在卸載的類型。  
+
+ Null `pClassId` 表示 `objectId` 具有正在卸載的型別。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
