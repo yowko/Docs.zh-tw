@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69c99e2facfcb9077c3fc4131186ba3882c7cef6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179406"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684833"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
-將巢狀型別指定為可匯出類型。 [匯出類型方法](exporttype-method.md)還可以匯出巢狀型別，但此方法更快。  
+
+將巢狀型別指定為可匯出。 [ExportType 方法](exporttype-method.md)也可以匯出巢狀型別，但這個方法更快。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,32 +41,35 @@ HRESULT ExportNestedType(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
- 要匯出的程式集的 ID。  
+ 要從中匯出之元件的識別碼。  
   
  `FileToken`  
- 檔權杖或檔程式集，用於定義要匯出的類型。  
+ 檔案的檔案 token 或元件，其定義要成為可匯出的型別。  
   
  `TypeToken`  
- 類型權杖，使可匯出。  
+ 要成為可匯出的型別權杖型別。  
   
  `ParentType`  
- 父類型的權杖。  
+ 父類型的標記。  
   
  `pszTypename`  
- 要匯出的完全限定類型名稱。  
+ 要匯出的完整型別名稱。  
   
  `dwFlags`  
- `ComType`標誌，如`tdPublic``tdNested`或 。 此值可以傳遞給[定義匯出類型方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType` 旗標，例如 `tdPublic` 或 `tdNested` 。 這個值可以傳遞給 [DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
  接收匯出類型的權杖。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則返回S_OK。  
+
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+
+ 需要 alink。h  
   
 ## <a name="see-also"></a>另請參閱
 

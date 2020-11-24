@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45adda6551e1cec994f59acbb0e8d2b5c56c4df6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438407"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684807"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 方法
+
 將巢狀型別的類型轉寄站加入至指定元件的類型資料表。  
   
 ## <a name="syntax"></a>語法  
@@ -39,32 +40,35 @@ HRESULT ExportNestedTypeForwarder(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
  要匯出之元件的識別碼。  
   
  `FileToken`  
- 定義類型之檔案的檔案標記或元件識別碼。  
+ 定義類型之檔案的檔案 token 或元件識別碼。  
   
  `TypeToken`  
- 類型的 Token。  
+ 類型的標記。  
   
  `ParentType`  
- 父類型的 Token。  
+ 父類型的標記。  
   
  `pszTypename`  
- 要匯出的完整類型名稱。  
+ 要匯出的完整型別名稱。  
   
  `dwFlags`  
- `ComType` 旗標，例如 `tdPublic` 或 `tdNested`。  
+ `ComType` 旗標，例如 `tdPublic` 或 `tdNested` 。  
   
  `pType`  
- 接收匯出類型的 token。 這只有在發出巢狀型別時才需要。  
+ 接收匯出類型的標記。 只有發出巢狀型別時，才需要這麼做。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+
+ 需要 alink。h  
   
 ## <a name="see-also"></a>另請參閱
 

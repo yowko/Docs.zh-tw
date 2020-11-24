@@ -15,27 +15,29 @@ helpviewer_keywords:
 ms.assetid: 67985a22-88a2-4c54-8d99-4bcde9d6213e
 topic_type:
 - apiref
-ms.openlocfilehash: 63719d0c6e13768e9dc7ed80e52e2a293e32a8a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 554bd32ae965b21a88a09577749bbd7975f5ec7e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449351"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684742"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 函式
-尋找並載入訊息 DLL。 如果無法找到或載入訊息 DLL，則傳回0。 訊息 DLL 應位於名稱為語言識別項的子目錄中，或在目前的目錄中。  
+
+尋找並載入訊息 DLL。 如果無法找到或載入訊息 DLL，則傳回0。 訊息 DLL 應該在名稱為語言識別項或目前目錄中的子目錄中。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** alink。h  
   
- 連結**庫**： alink .dll  
+ 連結 **庫**： alink.dll  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)
+- [Al.exe (元件連結器) ](../../tools/al-exe-assembly-linker.md)

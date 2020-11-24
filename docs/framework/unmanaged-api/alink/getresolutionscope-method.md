@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5b48ca60-dacd-44b2-9979-4a5122f00812
 topic_type:
 - apiref
-ms.openlocfilehash: f2b78b35db6306c82e389955c4824875bcf25334
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6318890dd6f0259d8d6a7675380684a129c14c8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447233"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684667"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 方法
-抓取給定類型的範圍。  
+
+抓取給定型別的範圍。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,6 +37,7 @@ HRESULT GetResolutionScope(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
  元件的識別碼。  
   
@@ -43,18 +45,20 @@ HRESULT GetResolutionScope(
  需要參考的檔案。  
   
  `TargetFile`  
- 類型定義于中的檔案 Token，通常會使用[ImportFile 方法](importfile-method.md)來抓取。  
+ 在中定義類型之檔案的標記，通常是使用 [ImportFile 方法](importfile-method.md)來取出。  
   
  `pScope`  
  接收元件或模組參考。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
+
  需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

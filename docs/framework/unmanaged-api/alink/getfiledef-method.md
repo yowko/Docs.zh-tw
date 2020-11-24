@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 42935813579d7f1d55a9f1daf9d8c6c1241f85be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426044"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684703"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
-抓取中繼資料中使用的實際 FileDef token （而不是由 ALink 指派的 token）。  
+
+抓取中繼資料 (中使用的實際 FileDef token，而不是由 ALink) 所指派的權杖。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +36,23 @@ HRESULT GetFileDef(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
  元件的識別碼。  
   
  `TargetFile`  
- 從 AddFile 方法或 AddImport 方法抓取之已加入檔案的 Token。  
+ 從 AddFile 方法或 AddImport 方法取出的已新增檔案的標記。  
   
  `pScope`  
  接收 FileDef token。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+
+ 需要 alink。h  
   
 ## <a name="see-also"></a>另請參閱
 

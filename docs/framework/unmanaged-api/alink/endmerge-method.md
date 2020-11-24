@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1d03bb15-a2c8-4a04-8fc6-b126c89c3778
 topic_type:
 - apiref
-ms.openlocfilehash: cacf7eab1e53f590ad46fd98ed2f5dcbd14cd30a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ed4ac7b12caa0dd78b79554258de62b8752553e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434415"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684924"
 ---
 # <a name="endmerge-method"></a>EndMerge 方法
-表示所有自訂屬性已合併至發出範圍。  
+
+指出所有自訂屬性都已合併到發出範圍中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT EndMerge(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
  元件的識別碼。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+
+ 需要 alink。h  
   
 ## <a name="see-also"></a>另請參閱
 
