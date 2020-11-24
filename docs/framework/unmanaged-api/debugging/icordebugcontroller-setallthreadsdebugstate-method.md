@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdda4bd7-4743-4d58-a22b-8067e967db95
 topic_type:
 - apiref
-ms.openlocfilehash: c2e8aaa2774e3e2699a73c40804391ca245047b1
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: d8375948be5820aaf6e879b82bcfde6471cccf3f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976586"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679893"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState 方法
+
 設定進程中所有 managed 執行緒的偵錯工具狀態。  
   
 ## <a name="syntax"></a>語法  
@@ -35,17 +36,20 @@ HRESULT SetAllThreadsDebugState (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `state`  
- 在"CorDebugThreadState" 列舉的值，指定要進行偵錯工具的執行緒狀態。  
+ 在"CorDebugThreadState" 列舉值，這個值會指定要進行偵錯工具之執行緒的狀態。  
   
  `pExceptThisThread`  
- 在"ICorDebugThread" 物件的指標，代表要從 debug 狀態設定中豁免的執行緒。 如果此值為 null，則不會豁免任何執行緒。  
+ 在"ICorDebugThread" 物件的指標，代表要從「偵測狀態」設定中豁免的執行緒。 如果這個值為 null，則不會豁免任何執行緒。  
   
 ## <a name="remarks"></a>備註  
- 方法可能會影響不是透過[EnumerateThreads 方法](icordebugcontroller-enumeratethreads-method.md)顯示的執行緒，因此使用`SetAllThreadsDebugState`方法暫停的執行緒將需要使用`SetAllThreadsDebugState`方法繼續。 `SetAllThreadsDebugState`  
+
+ 此 `SetAllThreadsDebugState` 方法可能會影響不會透過 [EnumerateThreads 方法](icordebugcontroller-enumeratethreads-method.md)顯示的執行緒，因此使用該方法暫停的執行緒必須 `SetAllThreadsDebugState` 以方法繼續執行 `SetAllThreadsDebugState` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

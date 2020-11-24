@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: 841af546cc3586529fe290c69e686438f634b90d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 9b17a179745af65bde05527bd0157f3ce06c12c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678658"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID 方法
-取得在這個執行緒上執行之工作的識別碼。  
+
+取得在此執行緒上執行之工作的識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT GetTaskID (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pTaskId`  
- 脫銷在這個 ICorDebugThread2 物件所代表的執行緒上執行之工作的識別碼指標。  
+ 擴展在這個 ICorDebugThread2 物件所代表的執行緒上執行之工作的識別碼指標。  
   
 ## <a name="remarks"></a>備註  
- 工作只有線上程與連接相關聯時，才可以線上程上執行。 `GetTaskID``pTaskId`如果執行緒與連接沒有關聯，則會在中傳回零。  
+
+ 如果執行緒與連接相關聯，則工作只能線上程上執行。 `GetTaskID``pTaskId`如果執行緒沒有與連接相關聯，則會傳回零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

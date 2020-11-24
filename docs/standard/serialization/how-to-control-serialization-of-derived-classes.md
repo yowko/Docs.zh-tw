@@ -1,19 +1,20 @@
 ---
 title: HOW TO：控制衍生類別的序列化
-description: 您可以從現有的類別衍生類別，並指示 XmlSerializer 實例如何序列化新的類別，以自訂 XML 資料流程。
+description: 您可以自訂 XML 資料流程，方法是從現有的類別衍生一個類別，並指示 XmlSerializer 實例如何序列化新的類別。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 08900f9e5b735065f97ef705dccd899eebe3bfe0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 72568f897db80f2beb7ed980e850a7b2e13f5ae1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289612"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678944"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>HOW TO：控制衍生類別的序列化
+
 使用 **XmlElementAttribute** 屬性變更 XML 項目的名稱並非自訂物件序列化的唯一方法。 您可從現有類別衍生以自訂化 XML 資料流並指示 <xref:System.Xml.Serialization.XmlSerializer> 執行個體如何序列化新類別。  
   
  例如，指定 `Book` 類別，您可從其中衍生並建立擁有更多屬性的 `ExpandedBook` 類別。 然而，您必須指示 **XmlSerializer** 在序列化或還原序列化時，接受衍生類型。 做法是建立 <xref:System.Xml.Serialization.XmlElementAttribute> 執行個體並設定其 **Type** 屬性為衍生類別類型。 將 **XmlElementAttribute** 新增至 <xref:System.Xml.Serialization.XmlAttributes> 執行個體。 然後，將 **XmlAttributes** 新增至 <xref:System.Xml.Serialization.XmlAttributeOverrides> 執行個體，並指定要覆寫的類型以及接受衍生類別的成員名稱。 下列範例會顯示這一點。  
@@ -241,4 +242,4 @@ public class Run
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - [HOW TO：序列化物件](how-to-serialize-an-object.md)
-- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [HOW TO：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

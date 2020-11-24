@@ -17,14 +17,15 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 94bd79bab1e7982ea39b5aa5872a6674033f9ccf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 36fe8015187833e03c4cc3fc1609ec647daf7278
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830359"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677995"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>作法：使用支援事件架構非同步模式的元件
+
 許多元件可讓您選擇以非同步方式執行其工作。 例如，<xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 元件可讓您「在背景」載入音效和影像，同時主執行緒會繼續執行而不中斷。  
   
  對支援 [事件架構非同步模式概觀](event-based-asynchronous-pattern-overview.md)的類別使用非同步方法，就像處理其他任何事件一樣簡單，只要將事件處理常式附加到元件的 _MethodName_**Completed** 事件即可。 當您呼叫 _MethodName_**Async** 方法時，應用程式將會繼續執行而不中斷，直到引發 _MethodName_**Completed** 事件為止。 在事件處理常式中，您可以檢查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 參數來判斷非同步作業已成功完成或已取消。  
@@ -59,7 +60,7 @@ ms.locfileid: "94830359"
   
      在進行影像下載時，您可以隨意移動表單、將它縮至最小以及最大化。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [作法：在背景執行作業](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [事件架構非同步模式概觀](event-based-asynchronous-pattern-overview.md)

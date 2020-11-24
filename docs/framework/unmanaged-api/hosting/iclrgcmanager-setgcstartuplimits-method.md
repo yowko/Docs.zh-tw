@@ -15,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: 0dce86a12ed3e93983ee62620fa0ddf7dfbc48f5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 169d344975762b97f89e8dc32d72f2b9c95fea11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616940"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678164"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits 方法
-設定垃圾收集區段的大小，以及垃圾收集系統層代0的大小上限。  
+
+設定垃圾收集區段的大小，以及垃圾收集系統之層代0的大小上限。  
   
 > [!IMPORTANT]
-> 從 .NET Framework 4.5 開始，您可以 `DWORD` 使用[ICLRGCManager2：： SetGCStartupLimitsEx](iclrgcmanager2-setgcstartuplimitsex-method.md)方法，將區段大小和最大層代0的大小設定為大於的值。  
+> 從 .NET Framework 4.5 開始，您可以 `DWORD` 使用 [ICLRGCManager2：： SetGCStartupLimitsEx](iclrgcmanager2-setgcstartuplimitsex-method.md) 方法，將區段大小和最大層代0大小設定為大於的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,10 +39,11 @@ HRESULT SetGCStartupLimits (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `SegmentSize`  
- 在垃圾收集區段的指定大小。  
+ 在指定的垃圾收集區段大小。  
   
- 最社區段大小為 4 MB。 區段可以增加 1 MB 或更大的增量。  
+ 最社區段大小為 4 MB。 區段可以 1 MB 或更大的遞增方式增加。  
   
  `MaxGen0Size`  
  在層代0的指定大小上限。  
@@ -50,24 +52,26 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits`已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫超時。|  
+|S_OK|`SetGCStartupLimits` 傳回成功。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫已超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|當封鎖的執行緒或光纖正在等候時，已取消事件。|  
+|E_FAIL|發生未知的嚴重失敗。 在方法傳回 E_FAIL 之後，就無法在進程中使用 CLR。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 設定的值 `SetGCStartupLimits` 只能指定一次。 稍後對 `SetGCStartupLimits` 的呼叫會被忽略。  
+
+ 設定的值只能 `SetGCStartupLimits` 指定一次。 稍後的呼叫 `SetGCStartupLimits` 會被忽略。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

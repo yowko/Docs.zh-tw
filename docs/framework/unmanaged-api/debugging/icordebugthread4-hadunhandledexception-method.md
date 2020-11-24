@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: 4d954057c519263da49f8aaeeeef6ab9402b6956
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4e368b2c63e8e43b5c392bec4b79daac8bae249d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678528"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException 方法
+
 指出執行緒是否曾經有未處理的例外狀況。  
   
 ## <a name="syntax"></a>語法  
@@ -34,22 +35,26 @@ HRESULT GetBlockingObjects (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppBlockingObjectEnum`  
- 脫銷[CorDebugBlockingObject](cordebugblockingobject-structure.md)結構的已排序列舉之位址的指標。  
+ 擴展 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 結構之已排序列舉的位址指標。  
   
 ## <a name="return-value"></a>傳回值  
+
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|執行緒在建立之後有未處理的例外狀況。|  
-|S_FALSE|執行緒從未發生未處理的例外狀況。|  
+|S_FALSE|執行緒永遠沒有未處理的例外狀況。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法會指出執行緒是否曾經有未處理的例外狀況。 在觸發未處理的例外狀況回呼或起始原生 JIT 附加時，會保證此方法會傳回 S_OK。 不保證[ICorDebugThread 的 GetCurrentException](icordebugthread-getcurrentexception-method.md)方法會傳回未處理的例外狀況;不過，如果在取得未處理的例外狀況回呼或原生 JIT 附加之後，進程尚未繼續，就會發生此情況。 此外，觸發原生 JIT 附加時，有可能（但不太可能）有一個以上的執行緒具有未處理的例外狀況。 在這種情況下，無法判斷哪個例外狀況觸發了 JIT 附加。  
+
+ 這個方法會指出執行緒是否曾經有未處理的例外狀況。 在觸發未處理的例外狀況回呼或初始化原生 JIT 附加時，此方法保證會傳回 S_OK。 不保證 [ICorDebugThread. GetCurrentException](icordebugthread-getcurrentexception-method.md) 方法會傳回未處理的例外狀況;但是，如果在取得未處理的例外狀況回呼或原生 JIT 附加之後，進程還沒有繼續，就會發生此情況。 此外，雖然不太可能) 在觸發原生 JIT 附加時，有一個以上的執行緒具有未處理的例外狀況，但也可能 (。 在這種情況下，無法判斷哪個例外狀況觸發了 JIT 附加。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -57,7 +62,7 @@ HRESULT GetBlockingObjects (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugThread4 介面](icordebugthread4-interface.md)
 - [偵錯介面](debugging-interfaces.md)

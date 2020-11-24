@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 02d1ea1ef12fa158ce7ec94aeca4356ac54d4e5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503480"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679087"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 介面
+
 提供從可攜式執行檔 (PE) 或其他來源匯入及管理現有中繼資料的方法，例如類型程式庫或獨立的執行階段中繼資料二進位檔。  
   
 ## <a name="methods"></a>方法  
@@ -92,6 +93,7 @@ ms.locfileid: "84503480"
 |[ResolveTypeRef 方法](imetadataimport-resolvetyperef-method.md)|取得指定 TypeRef 語彙基元所參考類型的類型資訊。|  
   
 ## <a name="remarks"></a>備註  
+
  `IMetaDataImport` 介面的設計主要是讓工具和服務使用，這些會匯入類型資訊 (例如開發工具) 或管理已部署的元件 (例如解析/啟用服務)。 `IMetaDataImport` 中的方法可分成下列工作分類：  
   
 - 列舉中繼資料範圍內的項目集合。  
@@ -102,12 +104,13 @@ ms.locfileid: "84503480"
   
 - Get 方法是專門用來傳回中繼資料項目的單一值屬性。 當屬性為另一個項目的參考時，則會傳回該項目的語彙基元。 任何指標輸入類型都可以是 NULL，表示未要求特定的值。 若要取得基本上是集合物件的屬性 (例如類別實作的介面集合)，請使用列舉方法。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

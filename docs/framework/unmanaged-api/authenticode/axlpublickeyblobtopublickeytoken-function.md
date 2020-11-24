@@ -8,14 +8,15 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
-ms.openlocfilehash: 33b8f47813a3bf43bd69741c9febb150fa3a92e3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 989e99198efd1519f607a2e3164ff4de584e88af
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099899"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679880"
 ---
-# <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken Function
+# <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken 函式
+
 從 CSP PUBLICKEYBLOB 格式運算強式名稱公開金鑰語彙基元。  
   
 ## <a name="syntax"></a>語法  
@@ -28,6 +29,7 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pCspPublicKeyBlob`  
  [in] CSP 公開金鑰 Blob。  
   
@@ -35,8 +37,9 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  [out] WCHAR * 的指標，可接收十六進位編碼公開金鑰雜湊。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果函式成功，會傳回 `S_OK`，否則會傳回 `S_FALSE`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Authenticode](index.md)

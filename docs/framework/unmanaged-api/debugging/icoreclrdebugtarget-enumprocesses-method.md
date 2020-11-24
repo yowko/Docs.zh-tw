@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 0c1b18f24fd30b5f6d5e85633fc0c25839aba6df
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7e0219ae0d7d474812865f01e4e2fcfe2e4da991
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396413"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679360"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 方法
+
 列舉在遠端電腦上執行的處理序。  
   
 ## <a name="syntax"></a>語法  
@@ -37,13 +38,15 @@ HRESULT EnumProcesses (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pcProcs`  
  [out] `ppProcs` 中傳回的處理序數目。 這個值可以是 0 (零)。  
   
  `ppProcs`  
- 脫銷[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)結構的陣列，代表在遠端電腦上執行的處理常式。  
+ 擴展 [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) 結構的陣列，代表在遠端電腦上執行的處理常式。  
   
 ## <a name="return-value"></a>傳回值  
+
  S_OK  
  成功。  
   
@@ -54,17 +57,19 @@ HRESULT EnumProcesses (
  其他失敗。  
   
 ## <a name="remarks"></a>備註  
- 若要釋放這個方法所配置的記憶體，請呼叫[ICoreClrDebugTarget：： FreeMemory](icoreclrdebugtarget-freememory-method.md)方法。  
+
+ 若要釋放由這個方法所配置的記憶體，請呼叫 [ICoreClrDebugTarget：： FreeMemory](icoreclrdebugtarget-freememory-method.md) 方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   
- 連結**庫：** mscordbi_macx86 .dll  
+ 連結 **庫：** mscordbi_macx86.dll  
   
  **.NET Framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICoreClrDebugTarget 介面](icoreclrdebugtarget-interface.md)

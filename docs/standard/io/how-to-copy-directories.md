@@ -12,12 +12,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: b81723b9ed7067826692e8383bf64058d4295f0c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dfe45d8529eb927a6b174a7bb411afa8072035f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830827"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679061"
 ---
 # <a name="how-to-copy-directories"></a>如何：複製目錄
 
@@ -28,6 +28,7 @@ ms.locfileid: "94830827"
 此範例會將 `DirectoryCopy` 方法的 `copySubDirs` 設定為 `true` 來複製子目錄。 `DirectoryCopy` 方法會以遞迴方式複製子目錄，方法是在每個子目錄上呼叫其本身，直到沒有其他要複製的子目錄為止。  
   
 ## <a name="example"></a>範例  
+
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
@@ -38,6 +39,6 @@ ms.locfileid: "94830827"
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
-- [檔案和資料流程 i/o](index.md)
+- [檔案和資料流 I/O](index.md)
 - [一般 I/O 工作](common-i-o-tasks.md)
 - [非同步檔案 I/O](asynchronous-file-i-o.md)

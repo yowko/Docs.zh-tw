@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-ms.openlocfilehash: e064a7db131a671adc4d0b6df522f3456e3a31d5
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2d5674d6b5962ca539de02cda1e5658daed83622
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377158"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678746"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions 方法
-取得此執行緒每個框架中作用中函式的相關資訊。  
+
+取得此執行緒的每個框架中作用中函式的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +38,27 @@ HRESULT GetActiveFunctions (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cFunctions`  
  [in] `pFunctions` 陣列的大小。  
   
  `pcFunctions`  
- 脫銷陣列中傳回之物件數目的指標 `pFunctions` 。 傳回的物件數目將等於堆疊上的受控框架數目。  
+ 擴展陣列中傳回的物件數目指標 `pFunctions` 。 傳回的物件數目會等於堆疊上的 managed 框架數目。  
   
  `pFunctions`  
- [in、out]COR_ACTIVE_FUNCTION 物件的陣列，其中每一個都包含此執行緒框架中作用中函式的相關資訊。  
+ [in，out]COR_ACTIVE_FUNCTION 物件的陣列，其中每個物件都包含此執行緒框架中作用中函式的相關資訊。  
   
- 第一個元素將用於分葉框架，依此類推到堆疊的根目錄。  
+ 第一個元素會用於分葉框架，然後回到堆疊的根目錄。  
   
 ## <a name="remarks"></a>備註  
+
  如果 `pFunctions` 輸入上的是 null，則 `GetActiveFunctions` 只會傳回堆疊上的函式數目。 也就是說，如果 `pFunctions` 輸入上的是 null，則 `GetActiveFunctions` 只會在中傳回值 `pcFunctions` 。  
   
- `GetActiveFunctions`方法的目的是要在堆疊追蹤中從框架取得相同資訊的優化，而且只會包含在完整堆疊追蹤中已有 ICorDebugILFrame 物件的框架。  
+ `GetActiveFunctions`方法的目的是要從堆疊追蹤中的框架取得相同資訊的優化，而且只包含在完整堆疊追蹤中具有 ICorDebugILFrame 物件的框架。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

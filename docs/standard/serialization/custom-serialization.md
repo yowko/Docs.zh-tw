@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 4ca78c71f464a914c07583825d4a7027ebb11bf6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679035"
 ---
 # <a name="custom-serialization"></a>自訂序列化
 
@@ -51,6 +51,7 @@ ms.locfileid: "93281790"
  除此之外，當加入新欄位至現有可序列化型別時，即對欄位套用 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 屬性。 在處理遺漏新欄位的資料流時，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 及 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 會忽略缺少的欄位。  
   
 ## <a name="implementing-the-iserializable-interface"></a>實作 ISerializable 介面  
+
  控制序列化的另一個方法是實作物件上的 <xref:System.Runtime.Serialization.ISerializable> 介面。 不過請注意，前一節的方法會取代此方法來控制序列化。  
   
  此外，對於標記為 [Serializable](xref:System.SerializableAttribute) 屬性且在類別層級或其建構函式上擁有宣告式或命令式安全性的類別，不應使用預設序列化。 取代的做法是讓這些類別實作 <xref:System.Runtime.Serialization.ISerializable> 介面。  
@@ -118,7 +119,7 @@ End Class
   
  如果私用欄位儲存機密資訊，您應該要求 **GetObjectData** 的適當權限以保護資料。 請記住，擁有已指定 **SerializationFormatter** 旗標之 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) 授權的程式碼，可以檢視與變更儲存在私用欄位的資料。 已授與此 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) 的惡意呼叫者，可檢視資料 (例如隱藏的目錄位置或授與的權限) 並以資料利用電腦上的安全性弱點。 如需可指定的安全性權限旗標完整清單，請參閱 [SecurityPermissionFlag 列舉](xref:System.Security.Permissions.SecurityPermissionFlag)。  
   
- 特別要強調的是，將 <xref:System.Runtime.Serialization.ISerializable> 新增至類別時，您必須同時實作 **GetObjectData** 以及特殊的建構函式。 如果遺漏 **GetObjectData** ，編譯器會警告您。 然而，因為不可能強制實作建構函式，因此若缺少建構函式時並不會發出警告，若試圖對無建構函式的類別還原序列化時會擲出例外狀況。  
+ 特別要強調的是，將 <xref:System.Runtime.Serialization.ISerializable> 新增至類別時，您必須同時實作 **GetObjectData** 以及特殊的建構函式。 如果遺漏 **GetObjectData**，編譯器會警告您。 然而，因為不可能強制實作建構函式，因此若缺少建構函式時並不會發出警告，若試圖對無建構函式的類別還原序列化時會擲出例外狀況。  
   
  目前設計在避開潛在安全性與版本設定問題上，較 <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> 方法更受歡迎。 例如，若 `SetObjectData` 方法定義為介面的一部分，就必須為公用，因此使用者必須撰寫程式碼避免多次呼叫 **SetObjectData** 方法。 否則，對執行作業程序中物件呼叫 **SetObjectData** 方法的惡意應用程式，就可能造成潛在的問題。  
   

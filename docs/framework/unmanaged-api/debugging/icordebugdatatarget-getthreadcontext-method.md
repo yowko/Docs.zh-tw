@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 79708aa5a2abcb8d7465f82a8beb918484c193b9
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: faacea6a2f04ef20025fd33adb4ce76eaf54f32c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679737"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 方法
-傳回指定之執行緒的目前線程內容。  
+
+傳回指定執行緒目前的執行緒內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,23 +37,26 @@ HRESULT GetThreadContext(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `dwThreadID`  
- 在要抓取其內容之執行緒的識別碼。 識別碼是由作業系統所定義。  
+ 在要取出其內容之執行緒的識別碼。 此識別碼是由作業系統定義。  
   
  `contextFlags`  
- 在平臺相依旗標的位元組合，表示應該讀取內容的哪個部分。  
+ 在平臺相依旗標的位元組合，表示應讀取內容的哪些部分。  
   
  `contextSize`  
  [in] `pContext` 的大小。  
   
  `pContext`  
- 脫銷將儲存執行緒內容的緩衝區。  
+ 擴展將儲存執行緒內容的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- 在 Windows 平臺上`pContext` ，必須是`CONTEXT`適用于[ICorDebugDataTarget：： GetPlatform](icordebugdatatarget-getplatform-method.md)方法所指定之電腦類型的結構（定義于 WinNT. h）。 `contextFlags`必須具有與`ContextFlags` `CONTEXT`結構的欄位相同的值。 結構`CONTEXT`是處理器特定的;如需詳細資訊，請參閱 WinNT. h 檔案。  
+
+ 在 Windows 平臺上， `pContext` 必須是 `CONTEXT` 在 WinNT. h) 中定義的結構 (，適用于 [ICorDebugDataTarget：： GetPlatform](icordebugdatatarget-getplatform-method.md) 方法所指定的電腦類型。 `contextFlags` 的值必須與 `ContextFlags` 結構的欄位相同 `CONTEXT` 。 `CONTEXT`結構是處理器特定的; 如需詳細資料，請參閱 WinNT .h 檔案。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
