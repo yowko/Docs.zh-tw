@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-ms.openlocfilehash: b29de0b70daa783197e78fe985d379d4124bc140
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b52499e509bf172b03b5e4d2b1e4c677dc800281
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205139"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690469"
 ---
-# <a name="icordebugframegetcaller-method"></a><span data-ttu-id="87aed-102">ICorDebugFrame::GetCaller 方法</span><span class="sxs-lookup"><span data-stu-id="87aed-102">ICorDebugFrame::GetCaller Method</span></span>
-<span data-ttu-id="87aed-103">取得目前鏈中呼叫此框架之 ICorDebugFrame 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="87aed-103">Gets a pointer to the ICorDebugFrame object in the current chain that called this frame.</span></span>  
+# <a name="icordebugframegetcaller-method"></a><span data-ttu-id="c5565-102">ICorDebugFrame::GetCaller 方法</span><span class="sxs-lookup"><span data-stu-id="c5565-102">ICorDebugFrame::GetCaller Method</span></span>
+
+<span data-ttu-id="c5565-103">取得目前鏈中呼叫此框架之 ICorDebugFrame 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="c5565-103">Gets a pointer to the ICorDebugFrame object in the current chain that called this frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87aed-104">語法</span><span class="sxs-lookup"><span data-stu-id="87aed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5565-104">語法</span><span class="sxs-lookup"><span data-stu-id="c5565-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCaller (  
@@ -33,15 +34,17 @@ HRESULT GetCaller (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="87aed-105">參數</span><span class="sxs-lookup"><span data-stu-id="87aed-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5565-105">參數</span><span class="sxs-lookup"><span data-stu-id="c5565-105">Parameters</span></span>  
+
  `ppFrame`  
- <span data-ttu-id="87aed-106">脫銷物件位址的指標 `ICorDebugFrame` ，表示呼叫的框架。</span><span class="sxs-lookup"><span data-stu-id="87aed-106">[out] A pointer to the address of an `ICorDebugFrame` object that represents the calling frame.</span></span> <span data-ttu-id="87aed-107">如果被呼叫的框架是目前鏈中的最外層框架，則此值為 null。</span><span class="sxs-lookup"><span data-stu-id="87aed-107">This value is null if the called frame is the outermost frame in the current chain.</span></span>  
+ <span data-ttu-id="c5565-106">擴展物件位址的指標 `ICorDebugFrame` ，該物件表示呼叫的框架。</span><span class="sxs-lookup"><span data-stu-id="c5565-106">[out] A pointer to the address of an `ICorDebugFrame` object that represents the calling frame.</span></span> <span data-ttu-id="c5565-107">如果所呼叫的框架是目前鏈中的最外層框架，則此值為 null。</span><span class="sxs-lookup"><span data-stu-id="c5565-107">This value is null if the called frame is the outermost frame in the current chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87aed-108">需求</span><span class="sxs-lookup"><span data-stu-id="87aed-108">Requirements</span></span>  
- <span data-ttu-id="87aed-109">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="87aed-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5565-108">需求</span><span class="sxs-lookup"><span data-stu-id="c5565-108">Requirements</span></span>  
+
+ <span data-ttu-id="c5565-109">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c5565-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87aed-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="87aed-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c5565-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c5565-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="87aed-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="87aed-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c5565-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5565-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="87aed-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87aed-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c5565-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5565-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
