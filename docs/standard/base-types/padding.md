@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 9931db1e76e3737ab3803400928169b30c3ecbda
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8dbea862acb87c1db2d23b11bac597eaa27d6b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822941"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683780"
 ---
 # <a name="padding-strings-in-net"></a>在 .NET 中填補字串
 
@@ -30,6 +30,7 @@ ms.locfileid: "94822941"
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|以指定總長度的後置字元填補字串。|  
   
 ## <a name="padleft"></a>PadLeft  
+
  <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 方法會將足夠的前置填補字元串連到原始字串，以達到指定的總長度，藉以建立新的字串。 <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> 方法會使用空白字元作為填補字元，而 <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> 方法可讓您指定自己的填補字元。  
   
  下列程式碼範例會使用 <xref:System.String.PadLeft%2A> 方法來建立長度為 20 個字元的新字串。 此範例會在主控台顯示 "`--------Hello World!`"。  
@@ -39,6 +40,7 @@ ms.locfileid: "94822941"
  [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
   
 ## <a name="padright"></a>PadRight  
+
  <xref:System.String.PadRight%2A?displayProperty=nameWithType> 方法會將足夠的後置填補字元串連到原始字串，以達到指定的總長度，藉以建立新的字串。 <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> 方法會使用空白字元作為填補字元，而 <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> 方法可讓您指定自己的填補字元。  
   
  下列程式碼範例會使用 <xref:System.String.PadRight%2A> 方法來建立長度為 20 個字元的新字串。 此範例會在主控台顯示 "`Hello World!--------`"。  
@@ -47,6 +49,6 @@ ms.locfileid: "94822941"
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
  [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基底字元串作業](basic-string-operations.md)

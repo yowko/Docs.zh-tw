@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-ms.openlocfilehash: db1721fed6414310556ceac493275e069a781ac8
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e1c8d94a90092b1497267c78d5fadf5a6e6de707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397136"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684326"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next 方法
-從列舉中取得指定數目的 "ICorDebugValue" 實例，從目前位置開始。  
+
+從目前位置開始，取得列舉中指定的 "ICorDebugValue" 實例數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +38,19 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `celt`  
- 在要抓取的 `ICorDebugValue` 實例數目。  
+ 在 `ICorDebugValue` 要取出的實例數目。  
   
  `values`  
- 脫銷指標陣列，其中每一個都會指向一個 `ICorDebugValue` 物件。  
+ 擴展指標的陣列，每個指標都會指向一個 `ICorDebugValue` 物件。  
   
  `pceltFetched`  
- 脫銷實際傳回之實例數目的指標 `ICorDebugValue` 。 如果是一個，這個值可能會是 null `celt` 。  
+ 擴展實際傳回之實例數目的指標 `ICorDebugValue` 。 如果是1，則這個值可能是 null `celt` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: ed3c841c34b71b30f740117899353aa289e478d5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e417854f5f82ba2e0f16848f53b2b605dccf9eb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683455"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 方法
+
 定義單一全域變數。  
   
 ## <a name="syntax"></a>語法  
@@ -39,6 +40,7 @@ HRESULT DefineGlobalVariable2(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `name`  
  在全域變數名稱。  
   
@@ -61,9 +63,11 @@ HRESULT DefineGlobalVariable2(
  在參數規格的第三個位址。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** CorSym .idl  
   
 ## <a name="see-also"></a>另請參閱

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-ms.openlocfilehash: 6efc9d407bb95f75a79252b2dfad85b396d2164a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fe07270989df897c3dbf689305784f9f0af65742
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500074"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684040"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished 方法
-通知分析工具已完成先前使用原生映射產生器（Ngen.exe）編譯之函式的搜尋。  
+
+通知分析工具，在先前使用原生映射產生器 ( # A0) 編譯的函式已完成搜尋。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,13 +42,15 @@ HRESULT JITCachedFunctionSearchFinished(
 
 - `result`
 
-  \[in] 表示搜尋結果之[COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md)列舉的值。
+  \[in] [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) 列舉的值，表示搜尋的結果。
 
 ## <a name="remarks"></a>備註  
- 在 .NET Framework 版本2.0 中，不會對一般 NGen 影像中的所有函式進行[ICorProfilerCallback：： JITCachedFunctionSearchStarted](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)和 `JITCachedFunctionSearchFinished` 回呼。 只有針對 profiler 優化的 NGen 影像才會針對影像中的所有函式產生回呼。 不過，由於額外的負擔，分析工具應該只在想要使用這些回呼來強制編譯函式（JIT）時，才要求 profiler 優化的 NGen 影像。 否則，分析工具應該使用延遲策略來收集函數資訊。  
+
+ 在 .NET Framework 2.0 版中，不會對一般 NGen 影像中的所有函式進行 [ICorProfilerCallback：： JITCachedFunctionSearchStarted](icorprofilercallback-jitcachedfunctionsearchstarted-method.md) 和 `JITCachedFunctionSearchFinished` 回呼。 只有針對分析工具優化的 NGen 映射才會產生影像中所有函式的回呼。 不過，由於額外的額外負荷，分析工具應該只在想要使用這些回呼來強制將函式編譯為即時 (JIT) 時，才要求 profiler 優化的 NGen 映射。 否則，分析工具應該使用延遲策略來收集函數資訊。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -9,24 +9,26 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: c9abccd6c93bad89cc737822fce3990c77b1b96e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821940"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683793"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>規則運算式中的其他建構
+
 .NET 中的規則運算式包含三個其他語言建構。 其中一個可讓您在規則運算式模式的中間，啟用或停用特定比對選項。 其餘兩個可讓您在規則運算式中包含註解。  
   
 ## <a name="inline-options"></a>內嵌選項  
+
  您可以使用下列語法，設定或停用部分規則運算式的特定模式比對選項  
   
 `(?imnsx-imnsx)`  
   
  您在問號之後列出要啟用的選項，並在減號之後列出要停用的選項。 下表會說明每個選項。 如需每個選項的詳細資訊，請參閱[規則運算式選項](regular-expression-options.md)。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`i`|不區分大小寫的比對。|  
 |`m`|多行模式。|  
@@ -56,6 +58,7 @@ ms.locfileid: "94821940"
 |`\b`|比對字邊界。|  
   
 ## <a name="inline-comment"></a>內嵌註解  
+
  `(?#`*批註* `)` 結構可讓您在正則運算式中包含內嵌批註。 規則運算式引擎不會在模式比對中使用註解的任一部分，不過，會將註解包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法所傳回的字串中。 註解會在第一個右括號結束。  
   
  下列範例會重複上一節範例中的第一個規則運算式模式。 它會將兩個內嵌註解加入規則運算式，以指出比較是否區分大小寫。 規則運算式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 定義如下。  
@@ -75,6 +78,7 @@ ms.locfileid: "94821940"
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>行結尾註解  
+
  數字符號 (`#`) 會標記 x 模式註解，從規則運算式模式結尾中未逸出的 # 字元開始，並持續到該行結尾。 若要使用此建構，您必須在將 <xref:System.Text.RegularExpressions.Regex> 物件具現化或呼叫靜態 <xref:System.Text.RegularExpressions.Regex> 方法時，啟用 `x` 選項 (透過內嵌選項)，或將 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 值提供給 `option` 參數。  
   
  下列範例說明行結尾註解建構。 它會判斷字串是否為至少包含一個格式項目的複合格式字串。 下表說明規則運算式模式中的建構：  
@@ -96,6 +100,6 @@ ms.locfileid: "94821940"
   
  請注意，除了在規則運算式中提供 `(?x)` 建構，也可以藉由呼叫 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法，並將 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 列舉值傳遞給此方法，來辨識註解。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

@@ -12,17 +12,18 @@ api_type:
 ms.assetid: f854b68f-009c-4ffb-89cd-ca874d1c0fb7
 topic_type:
 - apiref
-ms.openlocfilehash: 758e5b71443b127c80c820eb8531056530e81b13
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 81509db178b0ab1a524dcc4b00f39264e87a220d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495693"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682779"
 ---
 # <a name="icorprofilerinfo5geteventmask2-method"></a>ICorProfilerInfo5::GetEventMask2 方法
+
 [.NET Framework 4.5.2 與更新版本提供支援]  
   
- 取得分析工具想要從 Common Language Runtime (CLR) 接收通知的目前事件分類。  它提供了[ICorProfilerInfo：： GetEventMask](icorprofilerinfo-geteventmask-method.md)方法未提供的功能。  
+ 取得分析工具想要從 Common Language Runtime (CLR) 接收通知的目前事件分類。  它提供 [ICorProfilerInfo：： GetEventMask](icorprofilerinfo-geteventmask-method.md) 方法未提供的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,19 +35,22 @@ HRESULT GetEventMask2(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pdwEventsLow`  
- [out] 指定事件分類的 4 位元組值的指標。 每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉中會描述位。  
+ [out] 指定事件分類的 4 位元組值的指標。 每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉中會說明這些位。  
   
  `pdwEventsHigh`  
- [out] 指定事件分類的 4 位元組值的指標。  每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md)列舉中會描述位。  
+ [out] 指定事件分類的 4 位元組值的指標。  每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md)列舉中會說明這些位。  
   
 ## <a name="remarks"></a>備註  
- `GetEventMask2` 方法可用於判斷分析工具已訂閱哪些回呼。 一般來說，您會執行和值的邏輯 `pdwEventsLow` OR `pdwEventsHigh` 和您想要設定的任何新位，然後再呼叫[SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)方法。  
+
+ `GetEventMask2` 方法可用於判斷分析工具已訂閱哪些回呼。 一般來說，您會執行和值的邏輯 OR， `pdwEventsLow` `pdwEventsHigh` 以及您想要設定的任何新位，然後呼叫 [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) 方法。  
   
- 這是[GetEventMask](icorprofilerinfo-geteventmask-method.md)方法的建議替代方法。  
+ 這是 [GetEventMask](icorprofilerinfo-geteventmask-method.md) 方法的建議替代方法。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

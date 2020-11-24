@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ef002890-4a7b-4a5d-abbf-16c60083f794
 topic_type:
 - apiref
-ms.openlocfilehash: 87d611a7b6e12a9238b00131326e8205778769e6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 6f5d99e6dc4290ef69c0a0748fe15ae538e83558
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396596"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684222"
 ---
 # <a name="icordebugvariablehomegetcode-method"></a>ICorDebugVariableHome：： GetCode 方法
-取得包含這個[ICorDebugVariableHome](icordebugvariablehome-interface.md)物件的 "ICorDebugCode" 實例。  
+
+取得包含這個 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 物件的 "ICorDebugCode" 實例。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetCode(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppCode`  
- 脫銷包含這個[ICorDebugVariableHome](icordebugvariablehome-interface.md)物件之 "ICorDebugCode" 實例位址的指標。  
+ 擴展包含此 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 物件之 "ICorDebugCode" 實例的位址指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -46,6 +49,6 @@ HRESULT GetCode(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugVariableHome 介面](icordebugvariablehome-interface.md)

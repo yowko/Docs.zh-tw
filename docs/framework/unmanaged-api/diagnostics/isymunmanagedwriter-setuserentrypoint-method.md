@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d4dcc575-3ac8-4453-9be1-2b24f47363d7
 topic_type:
 - apiref
-ms.openlocfilehash: 8b51a9dc3a968c6bd2f5f9b149f13f88dc6a1e05
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a1c3506758221c3a2b578d93488a4377c1b86a21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683494"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 方法
-指定使用者定義的方法，這是此模組的進入點。 例如，這個進入點可能是使用者的 main 方法，而不是編譯器在 main 之前產生的 stub。  
+
+指定使用者定義的方法，此為此模組的進入點。 例如，這個進入點可能是使用者的 main 方法，而不是 main 之前編譯器產生的存根。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,14 +34,17 @@ HRESULT SetUserEntryPoint(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `entryMethod`  
- 在使用者進入點之方法的元資料標記。  
+ 在方法的元資料標記，這是使用者進入點。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,21 +2,21 @@
 title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f37938b603d0eec53a37e4f146376e3202f13d7a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558429"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684131"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 .NET Framework 4.5 中的 Windows Workflow Foundation (WF) 引進許多新功能，包括工作流程設計工具體驗的數項增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。
 
 > [!NOTE]
-> 如需 .NET Framework 4.5 中引進的所有新 Windows Workflow Foundation (WF) 功能的清單，包括與設計工具重新裝載無關的功能，請參閱 [.net 4.5 中 Windows Workflow Foundation 的新](whats-new-in-wf-in-dotnet.md)功能。
+> 如需 .NET Framework 4.5 中引進的所有新 Windows Workflow Foundation (WF) 功能的清單，包括與設計工具重新裝載無關的功能，請參閱 [Windows Workflow Foundation 4.5 中 .NET Framework 的新](whats-new-in-wf-in-dotnet.md)功能。
 
 ## <a name="activities"></a>活動
- 內建活動程式庫包含新的活動及現有活動的新功能。 重新裝載的設計工具支援所有新活動。 如需這些新活動的詳細資訊，請參閱[.net 4.5 中 Windows Workflow Foundation 新功能](whats-new-in-wf-in-dotnet.md)的「[活動](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)」一節。
+ 內建活動程式庫包含新的活動及現有活動的新功能。 重新裝載的設計工具支援所有新活動。 如需這些新活動的詳細資訊，請參閱[.NET Framework 4.5 中 Windows Workflow Foundation 的新功能](whats-new-in-wf-in-dotnet.md)的「[活動](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)」一節。
 
 ## <a name="c-expressions"></a>C# 運算式
  在 .NET Framework 4.5 之前，工作流程中的所有運算式只能以 Visual Basic 撰寫。 在 .NET Framework 4.5 中，Visual Basic 的運算式只會用於使用 Visual Basic 所建立的專案。 Visual C# 專案現在使用 C# 來撰寫運算式。 在 Visual Studio 2012 撰寫工作流程時，會提供功能完整的 c # 運算式編輯器，例如文法反白顯示和 intellisense。 在舊版中使用 Visual Basic 運算式建立的 C# 工作流程專案仍可繼續運作。
@@ -103,43 +103,43 @@ ms.locfileid: "90558429"
  在 .NET Framework 4 中，在工作流程專案的組建期間，工作流程驗證錯誤不會視為組建錯誤。 這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。 在 .NET Framework 4.5 中，工作流程驗證錯誤會導致組建失敗。
 
 > [!WARNING]
-> 重新裝載的設計工具不支援建置階段驗證。  
-  
-### <a name="design-time-background-validation"></a>設計階段背景驗證  
- 在 .NET Framework 4 中，工作流程是以前景進程的形式進行驗證，這可能會在複雜或耗時的驗證過程中封鎖 UI。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。  
-  
- 重新裝載的設計工具支援設計階段背景驗證。  
-  
-### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>檢視狀態在 XAML 檔案中的獨立位置  
- 在 .NET Framework 4 中，工作流程的檢視狀態資訊會儲存在多個不同位置的 XAML 檔案中。 對於想要直接讀取 XAML 或撰寫程式碼來移除檢視狀態資訊的開發人員來說，這樣很不方便。 在 .NET Framework 4.5 中，會將 XAML 檔案中的檢視狀態資訊序列化為 XAML 檔案中的個別元素。  開發人員可以輕鬆地尋找和編輯活動的檢視狀態資訊，或完全移除檢視狀態。  
-  
- 重新裝載的工作流程設計工具支援此功能。  
-  
-### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>在重新裝載設計工具中，選擇使用 Workflow 4.5 功能  
- 為了維持回溯相容性，重新裝載 designer 預設不會啟用 .NET Framework 4.5 中包含的一些新功能。 這是為了確保現有的應用程式 (使用重新裝載設計工具) 不會因為更新至最新版本而中斷。 若要在重新裝載的設計工具中啟用新功能，請將 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 設為 ".Net Framework 4.5"，或者設定 <xref:System.Activities.Presentation.DesignerConfigurationService> 的個別成員以啟用個別功能。  
-  
-## <a name="new-workflow-development-models"></a>新的工作流程開發模型  
- 除了流程圖和循序工作流程開發模型外，此版本還包括狀態機器工作流程和合約優先工作流程服務。  
-  
-### <a name="state-machine-workflows"></a>狀態機器工作流程  
- 狀態機器工作流程是在 [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)的 .NET Framework 4.0.1 中引進的一部分。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動已針對 .NET Framework 4.5 進行更新。 更新包括：  
-  
-1. 可設定狀態中斷點的功能  
-  
-2. 可在工作流程設計工具中複製和貼上轉換的功能  
-  
-3. 設計工具支援建立共用的觸發程序轉換  
-  
-4. 用來建立狀態機器工作流程的活動包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>  
-  
- 下列螢幕擷取畫面顯示 [消費者入門教學](getting-started-tutorial.md) 課程步驟 [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)中的已完成狀態機器工作流程。  
-  
- ![顯示已完成狀態機器工作流程的圖例。](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
-  
- 如需建立狀態機器工作流程的詳細資訊，請參閱 [狀態機器工作流程](state-machine-workflows.md)。 重新裝載的設計工具支援狀態機器工作流程。  
-  
-### <a name="contract-first-workflow-development"></a>合約優先工作流程開發  
- 合約優先工作流程開發工具可讓開發人員在 code first 中設計合約，然後在 Visual Studio 中按幾下滑鼠，就會在 [工具箱] 中自動產生代表每個作業的活動範本。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需有關合約優先工作流程服務開發的詳細資訊，請參閱 [如何：建立使用現有服務合約的工作流程服務](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
-  
+> 重新裝載的設計工具不支援建置階段驗證。
+
+### <a name="design-time-background-validation"></a>設計階段背景驗證
+ 在 .NET Framework 4 中，工作流程是以前景進程的形式進行驗證，這可能會在複雜或耗時的驗證過程中封鎖 UI。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。
+
+ 重新裝載的設計工具支援設計階段背景驗證。
+
+### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>檢視狀態在 XAML 檔案中的獨立位置
+ 在 .NET Framework 4 中，工作流程的檢視狀態資訊會儲存在多個不同位置的 XAML 檔案中。 對於想要直接讀取 XAML 或撰寫程式碼來移除檢視狀態資訊的開發人員來說，這樣很不方便。 在 .NET Framework 4.5 中，會將 XAML 檔案中的檢視狀態資訊序列化為 XAML 檔案中的個別元素。  開發人員可以輕鬆地尋找和編輯活動的檢視狀態資訊，或完全移除檢視狀態。
+
+ 重新裝載的工作流程設計工具支援此功能。
+
+### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>在重新裝載設計工具中，選擇使用 Workflow 4.5 功能
+ 為了維持回溯相容性，重新裝載 designer 預設不會啟用 .NET Framework 4.5 中包含的一些新功能。 這是為了確保現有的應用程式 (使用重新裝載設計工具) 不會因為更新至最新版本而中斷。 若要在重新裝載的設計工具中啟用新功能，請將 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 設為 ".Net Framework 4.5"，或者設定 <xref:System.Activities.Presentation.DesignerConfigurationService> 的個別成員以啟用個別功能。
+
+## <a name="new-workflow-development-models"></a>新的工作流程開發模型
+ 除了流程圖和循序工作流程開發模型外，此版本還包括狀態機器工作流程和合約優先工作流程服務。
+
+### <a name="state-machine-workflows"></a>狀態機器工作流程
+ 狀態機器工作流程是在 [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)的 .NET Framework 4.0.1 中引進的一部分。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動已針對 .NET Framework 4.5 進行更新。 更新包括：
+
+1. 可設定狀態中斷點的功能
+
+2. 可在工作流程設計工具中複製和貼上轉換的功能
+
+3. 設計工具支援建立共用的觸發程序轉換
+
+4. 用來建立狀態機器工作流程的活動包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>
+
+ 下列螢幕擷取畫面顯示 [消費者入門教學](getting-started-tutorial.md) 課程步驟 [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)中的已完成狀態機器工作流程。
+
+ ![顯示已完成狀態機器工作流程的圖例。](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)
+
+ 如需建立狀態機器工作流程的詳細資訊，請參閱 [狀態機器工作流程](state-machine-workflows.md)。 重新裝載的設計工具支援狀態機器工作流程。
+
+### <a name="contract-first-workflow-development"></a>合約優先工作流程開發
+ 合約優先工作流程開發工具可讓開發人員在 code first 中設計合約，然後在 Visual Studio 中按幾下滑鼠，就會在 [工具箱] 中自動產生代表每個作業的活動範本。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需有關合約優先工作流程服務開發的詳細資訊，請參閱 [如何：建立使用現有服務合約的工作流程服務](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。
+
 > [!WARNING]
 > 工作流程設計工具不支援合約優先工作流程開發。

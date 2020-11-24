@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-ms.openlocfilehash: ac7559bd5431f45b266602404ddde9081aa2944d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cdbb09d25f51e479a8a8ddfc23348305ba7c0a71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683416"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 方法
-在目前的語彙範圍中定義單一變數。 這個方法可以針對相同名稱的變數多次呼叫，其具有整個範圍中的多個家庭。 不過，在此情況下， `startOffset` 和參數的值不能重 `endOffset` 迭。  
+
+在目前的語彙範圍中定義單一變數。 您可以針對相同名稱的變數多次呼叫這個方法，該變數在整個範圍中有多個主主。 但是在此情況下，和參數的值 `startOffset` 不能重 `endOffset` 迭。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,11 +42,12 @@ HRESULT DefineLocalVariable2(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `name`  
  在本機變數名稱。  
   
  `attributes`  
- 在區域變數屬性。  
+ 在本機變數屬性。  
   
  `sigToken`  
  在簽章的元資料標記。  
@@ -63,15 +65,17 @@ HRESULT DefineLocalVariable2(
  在參數規格的第三個位址。  
   
  `startOffset`  
- 在變數的開始位移。 此為選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
+ 在變數的起始位移。 這是選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
   
  `endOffset`  
- 在變數的結束位移。 此為選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
+ 在變數的結束位移。 這是選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** CorSym .idl  
   
 ## <a name="see-also"></a>另請參閱

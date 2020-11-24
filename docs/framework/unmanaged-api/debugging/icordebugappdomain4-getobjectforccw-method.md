@@ -2,14 +2,15 @@
 title: ICorDebugAppDomain4::GetObjectForCCW 方法
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-ms.openlocfilehash: a175a6b6c91c284348580e1d9dc9ef0c5f5fc5df
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f3e64def16fb2817244ef7669ff4bb7fef0bd07c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895123"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684444"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW 方法
+
 從 COM 可呼叫包裝函式 (CCW) 指標取得 Managed 物件。  
   
 ## <a name="syntax"></a>語法  
@@ -22,16 +23,18 @@ HRESULT GetObjectForCCW(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ccwPointer`  
  [in] COM 可呼叫包裝函式 (CCW) 指標。  
   
  `ppManagedObject`  
- 脫銷"ICorDebugValue" 物件位址的指標，表示對應至指定 CCW 指標的 managed 物件。  
+ 擴展"ICorDebugValue" 物件位址的指標，代表對應至指定 CCW 指標的 managed 物件。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

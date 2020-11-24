@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-ms.openlocfilehash: 481fc2c40331e31f6a018d012fb2b2543d4fd9b5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a29507ca56cac4ab800845e3a88706dc7a25379
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683988"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished 方法
-通知 profiler 模組已完成載入。  
+
+通知分析工具模組已完成載入。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,6 +35,7 @@ HRESULT ModuleLoadFinished(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `moduleId`  
  在已完成載入之模組的識別碼。  
   
@@ -41,12 +43,14 @@ HRESULT ModuleLoadFinished(
  在HRESULT，指出模組是否已成功載入。  
   
 ## <a name="remarks"></a>備註  
- 在 `moduleId` 呼叫方法之前，的值對資訊要求而言是不正確 `ModuleLoadFinished` 。  
+
+ 在呼叫方法之前，的值對 `moduleId` 資訊要求而言是不正確 `ModuleLoadFinished` 。  
   
- 載入模組的某些部分可能會在回呼之後繼續進行 `ModuleLoadFinished` 。 中的失敗 HRESULT `hrStatus` 表示失敗。 不過，中的成功 HRESULT `hrStatus` 只會指出載入模組的第一個部分已成功。  
+ 載入模組的某些部分可能會在回呼之後繼續進行 `ModuleLoadFinished` 。 中的失敗 HRESULT `hrStatus` 表示失敗。 但是，中的成功 HRESULT `hrStatus` 只會指出載入模組的第一個部分已成功。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

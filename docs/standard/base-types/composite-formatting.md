@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 588efff637359586630554decf57072597365d32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683949"
 ---
 # <a name="composite-formatting"></a>複合格式
 
@@ -43,6 +43,7 @@ ms.locfileid: "94823091"
 - <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，將告知性方法寫入至追蹤接聽項。  
   
 ## <a name="composite-format-string"></a>複合格式字串  
+
  複合格式字串和物件清單會當做支援複合格式功能之方法的引數來使用。 複合格式字串是由零個或更多段與一個或多個格式項目混合的固定文字所組成， 固定文字是您選擇的任何文字，而每個格式項目都會對應到清單內的一個物件或 boxed 結構。 複合格式功能將會傳回新的結果字串，其中每一個格式項目都會由清單內對應物件的字串表示來取代。  
   
  請考量下列 <xref:System.String.Format%2A> 程式碼片段。  
@@ -53,6 +54,7 @@ ms.locfileid: "94823091"
  固定文字是 "`Name =`" 和 "`, hours =`"。 格式項目為 "`{0}`" (其索引為 0，且對應至物件 `name`) 及 "`{1:hh}`" (其索引為 1，且對應至物件 `DateTime.Now`)。  
   
 ## <a name="format-item-syntax"></a>格式項目語法  
+
  每個格式項目都會使用下列格式，並由下列元件所組成：  
   
  `{`*索引*[ `,` *對齊*] [ `:` *格式字串*]`}`  
@@ -60,6 +62,7 @@ ms.locfileid: "94823091"
  成對的大括號 ("{" 和 "}") 是必要的。  
   
 ### <a name="index-component"></a>索引元件  
+
  強制的 *index* 元件 (也稱為參數規範) 是用以識別物件清單中對應項目的數字 (從 0 開始)。 也就是說，參數規範為 0 的格式項目會格式化清單中的第一個物件，而參數規範為 1 的格式項目會格式化清單中的第二個物件，依此類推。 下列範例包含四個參數規範 (編號為 0 到 3)，以表示小於 10 的質數：  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
@@ -73,6 +76,7 @@ ms.locfileid: "94823091"
  每個格式項目皆可參考清單內的任何物件。 例如，如果有三個物件，您可以指定複合格式字串（如下所示）來格式化第二個、第一個和第三個物件： " {1} {0} {2} "。 不是格式項目所參考的物件會被忽略。 <xref:System.FormatException>如果參數規範指定超出物件清單範圍的專案，則會在執行時間擲回。  
   
 ### <a name="alignment-component"></a>對齊元件  
+
  選擇性 *alignment* 元件為帶正負號的整數，表示慣用的格式化欄位寬度。 如果 *alignment* 的值小於格式化字串的長度，則會忽略 *alignment* 並使用格式化字串的長度當做欄位寬度。 如果 *alignment* 為正數，欄位中的格式化資料會靠右對齊；如果 *alignment* 為負數，則會靠左對齊。 如果填補有必要，則會使用泛空白字元 (White Space)。 如果指定了 *alignment*，則需要逗號。  
   
  下列範例會定義兩個陣列，一個包含員工的名稱，另一個包含他們在兩週內的工作時數。 複合格式字串會在 20 個字元的欄位中，將名稱靠左對齊，並且在 5 個字元的欄位中，將其工作時數靠右對齊。 請注意，"N1" 標準格式字串也會用來格式化具有一個小數位數的時數。  
@@ -81,6 +85,7 @@ ms.locfileid: "94823091"
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>格式字串元件  
+
  選擇性 *formatString* 元件是一個格式字串，適用於將格式化的物件類型。 如果對應的物件為數值，指定標準或自訂的數值格式字串；如果對應的物件為 <xref:System.DateTime> 物件，指定標準或自訂的日期和時間格式字串；或者，如果對應的物件為列舉值，指定[列舉格式字串](enumeration-format-strings.md)。 如果未指定 *formatString*，則會使用數值、日期和時間或列舉類型的一般 ("G") 格式規範。 如果指定 *formatString*，則需要冒號。  
   
  下表列出 .NET 類別庫中支援一組預先定義格式字串的類型或類別類型，並提供列出所支援格式字串之主題的連結。 請注意，字串格式是一種可延伸機制，可讓為所有現有類型定義新的格式字串，以及定義一組應用程式定義類型所支援的格式字串。 如需詳細資訊，請參閱 <xref:System.IFormattable> 和 <xref:System.ICustomFormatter> 介面主題。  
@@ -94,6 +99,7 @@ ms.locfileid: "94823091"
 |<xref:System.TimeSpan>|[標準 TimeSpan 格式字串](standard-timespan-format-strings.md)<br /><br /> [自訂 TimeSpan 格式字串](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>逸出大括號  
+
  左右大括號會被解譯成格式項目的開頭與結尾。 因此，您必須使用逸出序列 (Escape Sequence)，才能顯示字面上的左右大括號。 請在固定文字中指定兩個左邊的大括號 ("{{")，以顯示一個左邊的大括號 ("{")，或者指定兩個右邊的大括號 ("}}") 來顯示一個右邊的大括號 ("}")。 格式項目中的括號會以它們出現的順序依序解譯， 但是不支援解譯巢狀大括號。  
   
  解譯逸出括號的方式，可能會造成無法預期的結果。 例如，格式項目 "{{{0:D}}}" 原本是要顯示一個左邊大括號、一個格式化為十進位的數值和一個右邊大括號。 然而，格式項目實際會以下列方式來解譯：  
@@ -114,6 +120,7 @@ ms.locfileid: "94823091"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>處理順序  
+
  如果對複合格式方法的呼叫包含的 <xref:System.IFormatProvider> 引數其值不是 `null`，則執行階段會呼叫其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法要求 <xref:System.ICustomFormatter> 實作。 如果該方法能夠傳回 <xref:System.ICustomFormatter> 實作，它會快取長達複合格式方法的呼叫持續時間。
   
  參數清單中每個對應於格式項目的值都會轉換為字串，如下所示：  
@@ -135,6 +142,7 @@ ms.locfileid: "94823091"
  對齊會在已經執行前面的步驟之後套用。  
   
 ## <a name="code-examples"></a>程式碼範例  
+
  下列範例顯示一個使用複合格式建立的字串，以及另一個使用物件的 `ToString` 方法建立的字串。 這兩個類型的格式化產生相等結果。  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
@@ -157,7 +165,7 @@ ms.locfileid: "94823091"
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

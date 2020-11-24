@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定義多容器應用程式
 description: 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539303"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682662"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -187,7 +187,7 @@ Compose 預設會讀取兩個檔案、docker-compose.yml 和選擇性 docker-com
 - *>docker-compose.yml. yml* -用來撰寫微服務
 - *>docker-compose.yml. yml* -用來設定微服務環境
 
-您可以使用任何編輯器 (如 Visual Studio Code 或 Sublime) 來編輯 docker-compose 檔案，並使用 docker-compose-up 命令來執行應用程式。
+您可以使用任何編輯器 (如 Visual Studio Code 或 Sublime) 來編輯 docker-compose 檔案，並使用 docker-compose up 命令來執行應用程式。
 
 依照慣例，docker compose.yml 檔案會包含基底組態和其他靜態設定。 這表示根據您設為目標的部署環境，服務組態不應該變更。
 
@@ -388,7 +388,7 @@ services:
 
 在此範例中，開發覆寫組態會向主機公開一些連接埠、使用重新導向 URL 來定義環境變數，並指定用於開發環境的連接字串。 這些設定全部都只適用於開發環境。
 
-當您執行 `docker-compose up` (或從 Visual Studio 啟動它) 時，此命令會自動讀取覆寫，就像它要合併兩個檔案一樣。
+當您執行 `docker-compose up` (或從 Visual Studio 啟動它) 時，此命令會自動讀取覆寫，就像它要合併兩個檔案一樣。
 
 假設您想要讓生產環境具有不同的設定值、埠或連接字串的另一個撰寫檔。 您可以建立另一個覆寫檔案，例如名為 `docker-compose.prod.yml` 且具有不同設定和環境變數的檔案。 該檔案可能儲存在不同的 Git 存放庫中，或是由不同的小組進行管理和保護。
 
@@ -437,7 +437,7 @@ Docker 撰寫會預期 env 檔案中的每一行都採用格式 \<variable\> = \
 如果您要在網際網路上探索來源上的 Docker 和 .NET Core，則會發現 Dockerfiles，以將您的來源複製至容器來示範建置 Docker 映像的簡單性。 這些範例建議透過使用簡單組態，您可以擁有具有與您應用程式一起封裝之環境的 Docker 映像。 下列範例示範類似的簡單 Dockerfile。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -450,7 +450,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Kubernetes 和 Azure Service Fabric) 只會建立映像的新執行個體。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 請勿在執行時間使用和 CLI 命令來還原和編譯， `dotnet restore` `dotnet build` 您可能會在有關 .net Core 和 Docker 的 blog 文章中看到。
 
-.NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 *dotnet/core*的 Docker Hub 登錄中加以發佈：
+.NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 *dotnet/core* 的 Docker Hub 登錄中加以發佈：
 
 1. **開發**：優先順序是能夠快速逐一查看和偵測變更，且大小為次要。
 
@@ -458,12 +458,12 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **生產**：焦點是快速部署和啟動容器，因此這些映射僅限於執行應用程式所需的二進位檔和內容。
 
-.NET 小組在 Docker Hub) 的 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (中提供四種基本變化：
+.NET 小組在 Docker Hub) 的 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) (中提供四種基本變化：
 
 1. **sdk**：適用於開發與建置環節
 1. **aspnet**：ASP.NET 生產環境案例
 1. **aspnet**：.NET 生產環境案例
-1. **執行時間-d**：適用于[獨立應用程式](../../../core/deploying/index.md#publish-self-contained)的生產案例
+1. **執行時間-d**：適用于 [獨立應用程式](../../../core/deploying/index.md#publish-self-contained)的生產案例
 
 為了啟動更快，執行階段映像也會將 spnetcore\_urls 自動設定為連接埠 80，並使用 Ngen 建立組件的原生映像快取。
 

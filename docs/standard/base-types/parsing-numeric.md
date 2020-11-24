@@ -11,17 +11,19 @@ helpviewer_keywords:
 - enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 6054456b50c48ecee61e95851aee095a4227b176
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1339301786ed0f7ddd41565ca3fc64c2a859b3f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821920"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683754"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>在 .NET 中剖析數值字串
+
 所有數值類型皆有兩個靜態剖析方法：`Parse` 和 `TryParse`，可將數字的字串表示轉換成數值類型。 這些方法可讓您剖析使用[標準數值格式字串](standard-numeric-format-strings.md)和[自訂數值格式字串](custom-numeric-format-strings.md)中記錄的格式字串所產生的字串。 根據預設，`Parse` 和 `TryParse` 方法只能將包含十進位數字的字串成功轉換為整數值。 它們可以將包含整數和小數的十進位數字、群組分隔符號，以及小數分隔符號的字串，成功轉換為浮點值。 如果作業失敗，即 `TryParse` 方法傳回 `false`，則 `Parse` 方法會擲回例外狀況。  
   
 ## <a name="parsing-and-format-providers"></a>剖析和格式提供者  
+
  數值的字串表示通常會隨文化特性而不同。 數值字串的元素都會因文化特性而有所不同，包括貨幣符號、群組 (或千分位) 分隔符號以及小數分隔符號。 剖析方法會隱含或明確使用能夠辨識這些特定文化特性變化的格式提供者。 如果 `Parse` 或 `TryParse` 方法的呼叫中未指定格式提供者，則會使用與目前執行緒文化特性相關聯的格式提供者 (<xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> 屬性所傳回的 <xref:System.Globalization.NumberFormatInfo> 物件)。  
   
  格式提供者會由 <xref:System.IFormatProvider> 實作來代表。 此介面具有單一成員 (<xref:System.IFormatProvider.GetFormat%2A> 方法)，它的單一參數是表示要格式化之類型的 <xref:System.Type> 物件。 此方法會傳回提供格式設定資訊的物件。 .NET 支援下列兩個可用來剖析數值字串的 <xref:System.IFormatProvider> 實作：  
@@ -36,6 +38,7 @@ ms.locfileid: "94821920"
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>剖析和 NumberStyles 值  
+
  剖析作業可處理的樣式元素 (例如空白字元、群組分隔符號和小數分隔符號)，會由 <xref:System.Globalization.NumberStyles> 列舉值來定義。 根據預設，代表整數值的字串會使用 <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> 值進行剖析，這僅允許數字、前置和後置空白字元，以及前置正負號。 表示浮點值的字串會使用 <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> 和 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 值的組合進行剖析，此複合樣式允許十進位數字，以及前置和後置空白字元、前置正負號、小數分隔符號、群組分隔符號和指數。 您可以藉由呼叫包含 <xref:System.Globalization.NumberStyles> 類型參數之 `Parse` 或 `TryParse` 方法的多載，並設定一或多個 <xref:System.Globalization.NumberStyles> 旗標，來控制可在字串中顯示的樣式元素，使剖析作業得以成功進行。  
   
  例如，包含群組分隔符號的字串無法使用 <xref:System.Int32> 方法轉換為 <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType> 值。 然而，如果您使用 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 旗標，則轉換會成功，如下列範例所示。  
@@ -74,6 +77,7 @@ ms.locfileid: "94821920"
 |<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|包含 <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>、<xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> 和 <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> 樣式。|  
   
 ## <a name="parsing-and-unicode-digits"></a>剖析和 Unicode 數字  
+
  Unicode 標準會定義各種書寫系統中數字的字碼指標。 例如，U+0030 到 U+0039 的字碼指標表示基本拉丁文數字 0 到 9，U+09E6 到 U+09EF 字碼指標表示孟加拉文數字 0 到 9，而 U+FF10 到 U+FF19 字碼指數表示全形數字 0 到 9。 不過，剖析方法唯一認識的數字是基本拉丁文數字 0-9 與 U+0030 到 U+0039 字碼指標。 如果將包含任何其他數字的字串傳遞給數值剖析方法，則該方法會擲回 <xref:System.FormatException>。  
   
  下列範例會使用 <xref:System.Int32.Parse%2A?displayProperty=nameWithType> 方法，來剖析以不同書寫系統的數字組成的字串。 如範例的輸出所示，嘗試剖析基本拉丁文數字會成功，而嘗試剖析全型、阿拉伯-印度文和孟加拉文數字則會失敗。  
@@ -81,7 +85,7 @@ ms.locfileid: "94821920"
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.NumberStyles>
 - [剖析字串](parsing-strings.md)
