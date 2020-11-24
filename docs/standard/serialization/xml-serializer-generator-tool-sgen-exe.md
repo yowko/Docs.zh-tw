@@ -3,18 +3,18 @@ title: XML 序列化程式產生器工具 (Sgen.exe)
 description: XML 序列化程式產生器會為元件中的類型建立 XML 序列化元件，以改善 XmlSerializer 的啟動效能。
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 80295a9a54b6f9b1970fb65dacdee43b2e938070
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: c2f33236e39f61638118f45f0d5ab5385df27ac3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282350"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676513"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML 序列化程式產生器工具 (Sgen.exe)
 
 XML 序列化程式產生器會針對指定元件中的類型建立 XML 序列化元件。 序列化元件在序列化或還原序列化 <xref:System.Xml.Serialization.XmlSerializer> 指定類型的物件時，會改善的啟動效能。
   
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 從命令列執行工具。
   
@@ -32,7 +32,7 @@ sgen [options]
 |**/a \[ ssembly \] ：**_filename_|為組件中包含的所有類型或 *filename* 所指定的可執行檔產生序列化程式碼。 只能提供一個檔名。 如果重複使用這個引數，則會使用最後一個檔名。|  
 |**/c \[ 譯器 \] ：**_options_|指定要傳遞至 C# 編譯器的選項。 所有 csc.exe 選項都受到支援，可以傳遞至編譯器。 這個選項可以用來指定組件必須經過簽署，並指定金鑰檔。|  
 |**/d \[ ebug\]**|產生可以與偵錯工具搭配使用的影像。|  
-|**/f \[ orce\]**|強制覆寫現有的同名組件。 預設值為 **false** 。|  
+|**/f \[ orce\]**|強制覆寫現有的同名組件。 預設值為 **false**。|  
 |**/help 或/？**|顯示工具的命令語法和選項。|  
 |**/k \[ 保留\]**|將產生的原始程式檔 (Source File) 和其他暫存檔案編譯成序列化組件之後，隱藏刪除這些檔案的動作。 這個選項可以用來判斷工具是否正在為特定的型別產生序列化程式碼。|  
 |**/n \[ ologo\]**|隱藏顯示 Microsoft 程式啟始資訊。|  
@@ -45,6 +45,7 @@ sgen [options]
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
+
  如果未使用 XML 序列化程式產生器，則每當應用程式執行時，<xref:System.Xml.Serialization.XmlSerializer> 便會為每個型別產生序列化程式碼和序列化組件。 若要改善 XML 序列化啟動的效能，請使用 Sgen.exe 工具預先產生這些元件。 然後，這些組件便可以與應用程式一起部署。  
   
  XML 序列化程式產生器也可以改善用戶端使用 XML Web Service Proxy 與伺服器進行通訊的效能，因為在第一次載入型別時，序列化處理序並不會影響到效能。  
@@ -54,6 +55,7 @@ sgen [options]
  如果含有要序列化之型別的組件名稱為 MyType.dll，關聯的序列化組件名稱就會是 MyType.XmlSerializers.dll。  
   
 ## <a name="examples"></a>範例  
+
  下列命令會建立名為 Data.XmlSerializers.dll 的組件，用以序列化 Data.dll 組件中所包含的所有型別。  
   
 ```console  

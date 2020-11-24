@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbe5db75ded15f32a6ff3564e1116d40a745a65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b85b2576660f77eb901c504d398e8bc7909882f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446530"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676370"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
-建立元件。 在關閉所有其他檔案（元件檔案除外）之後，呼叫這個方法。 產生未系結的模組時，請勿呼叫此方法。  
+
+建立元件。 在所有其他檔案都關閉之後（元件檔除外），請呼叫這個方法。 請勿在產生未系結的模組時呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT EmitAssembly(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
  元件的識別碼。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+
+ 需要 alink。h  
   
 ## <a name="see-also"></a>另請參閱
 

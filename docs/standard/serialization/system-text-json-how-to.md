@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1e8c46e11d3a82ca0bce29f9cb7bbc749c219198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440812"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676721"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -116,6 +116,7 @@ using System.Text.Json.Serialization;
 使用以字串為基礎的方法，序列化為 UTF-8 的速度大約是5-10%。 差異是因為 (為 UTF-8 的位元組) 不需要轉換成字串 (UTF-16) 。
 
 ## <a name="serialization-behavior"></a>序列化行為
+
 ::: zone pivot="dotnet-5-0"
 
 * 依預設，所有公用屬性都會進行序列化。 您可以 [指定要忽略的屬性](#ignore-properties)。
@@ -495,7 +496,7 @@ JSON 屬性命名原則：
 |---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 總結| null|
+| 摘要| null|
 
 ```json
 {
@@ -765,7 +766,7 @@ JSON 屬性命名原則：
 |---------|---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | JSON)  (區分大小寫不符 `temperatureCelsius` ，因此未設定屬性。 |
-| 總結 | 經常性存取層 ||
+| 摘要 | 經常性存取層 ||
 | ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性是一個額外的，並且會成為字典中的索引鍵/值組。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|
 | |SummaryWords:<br>非經常性<br>風<br>潮濕 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|

@@ -2,14 +2,15 @@
 title: XML 節點的型別
 ms.date: 03/30/2017
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: 97458fc26b3c63dd6d7882c180192aef63109e1a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: edf47246782e86cf134ea88d41381bed9ff16f69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824593"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675629"
 ---
 # <a name="types-of-xml-nodes"></a>XML 節點的型別
+
 當 XML 文件讀入記憶體作為節點的樹狀時，節點建立時即會決定節點型別。 XML 文件物件模型 (DOM) 有許多種節點型別，由全球資訊網協會 (W3C) 決定並列示於＜1.1.1 DOM 架構模型＞(英文) 一節中。 下列表格會列出節點型別、指派給該節點類型的物件，以及每個節點型別的簡要說明。  
   
 |DOM 節點型別|Object|描述|  
@@ -18,11 +19,11 @@ ms.locfileid: "94824593"
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|包含一或多個節點，而沒有樹狀的暫存封包。|  
 |DocumentType|<xref:System.Xml.XmlDocumentType>|表示 `<!DOCTYPE…>` 節點。|  
 |EntityReference|<xref:System.Xml.XmlEntityReference>|表示未擴充的實體參考文字。|  
-|項目|<xref:System.Xml.XmlElement>|表示項目節點。|  
+|元素|<xref:System.Xml.XmlElement>|表示項目節點。|  
 |Attr|<xref:System.Xml.XmlAttribute>|是項目的屬性。|  
 |ProcessingInstruction|<xref:System.Xml.XmlProcessingInstruction>|是處理的指示節點。|  
 |註解|<xref:System.Xml.XmlComment>|註解節點。|  
-|Text|<xref:System.Xml.XmlText>|屬於項目或屬性的文字。|  
+|文字|<xref:System.Xml.XmlText>|屬於項目或屬性的文字。|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|表示 CDATA。|  
 |實體|<xref:System.Xml.XmlEntity>|表示 XML 文件中的 `<!ENTITY…>` 宣告，可能來自內部文件類型定義 (DTD) 子集，或來自外部 DTD 和參數實體。|  
 |表示法|<xref:System.Xml.XmlNotation>|表示 DTD 中宣告的標記法。|  
@@ -43,6 +44,6 @@ ms.locfileid: "94824593"
   
  如需節點型別的物件階層架構和其對等的物件名稱之詳細資訊，請參閱 [XML 文件物件模型 (DOM) 階層架構](xml-document-object-model-dom-hierarchy.md)。 如需在節點樹狀結構中建立之物件的詳細資訊，請參閱[將物件階層架構對應至 XML 資料](mapping-the-object-hierarchy-to-xml-data.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

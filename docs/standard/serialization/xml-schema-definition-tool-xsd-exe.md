@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML 序列化程式產生器會針對指定元件中的類型建立 XML 序列化元件，以改善 XmlSerializer 的啟動效能。
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281752"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676604"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -17,7 +17,7 @@ XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從�
 XML 架構定義工具 ( # A0) 通常可以在下列路徑中找到： \
 _C： \\ Program Files (x86) \\ Microsoft sdk \\ Windows \\ {version} \\ Bin \\ NETFX {version} Tools\\_
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 從命令列執行工具。
 
@@ -50,6 +50,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/p \[ arameters \] ：** _file.xml_|從指定的 .xml 檔案，讀取各種作業模式的選項。 簡短形式為 `/p:`。 如需詳細資訊，請參閱「 [備註](#remarks) 」一節。|
 
 ## <a name="xsd-file-options"></a>XSD 檔案選項
+
  您只能為 .xsd 檔指定下列其中一個選項：
 
 |選項|描述|
@@ -130,7 +131,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 您只能為 `<generateSchemas>` 項目指定下列其中一個選項。
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |\<assembly>|指定要產生結構描述的組件。|
 |\<type>|指定在組件中找到的型別，以用於產生結構描述。|
@@ -149,7 +150,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
  您可以對 `<generateClasses>` 項目設定的選項包括下列各項。
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |\<element>|指定要產生程式碼之 .xsd 檔案中的項目。|
 |\<schemaImporterExtensions>|指定衍生自 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 類別的型別。|
@@ -174,7 +175,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 您可以對 `<generateDataSet>` 項目設定的選項包括下列各項。
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |\<schema>|指定用於產生程式碼的 XML 結構描述檔案。 您可以使用多個元素來指定多個 XML 架構檔案 \<schema> 。|
 
@@ -205,6 +206,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |help|顯示工具的命令語法和選項。 設為 `true` 或 `false`。|
 
 ## <a name="examples"></a>範例
+
  下列命令會從 `myFile.xdr` 產生 XML 結構描述，並將它儲存到目前的目錄。
 
 ```console

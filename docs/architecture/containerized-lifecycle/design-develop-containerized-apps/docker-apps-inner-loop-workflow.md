@@ -2,12 +2,12 @@
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 瞭解 Docker 應用程式的「內部迴圈」開發工作流程。
 ms.date: 08/06/2020
-ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539758"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676526"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -107,7 +107,7 @@ Microsoft 提供的 Visual Studio Code 是 Windows、Linux 和 macOS 上所支�
 
 **圖 4-24**： 使用 [ **將 docker 檔案新增至工作區** ] 命令新增的 docker 檔案
 
-當您新增 DockerFile 時，您會指定要使用的基底 Docker 映射 (例如使用 `FROM mcr.microsoft.com/dotnet/core/aspnet`) 。 您通常會在基底映像之上建置自訂映像，該基底映像可從 [Docker Hub登錄](https://hub.docker.com/)的任何官方存放庫取得 (例如 [.NET Core 的映像](https://hub.docker.com/_/microsoft-dotnet-core/)或 [Node.js](https://hub.docker.com/_/node/) 的映像)。
+當您新增 DockerFile 時，您會指定要使用的基底 Docker 映射 (例如使用 `FROM mcr.microsoft.com/dotnet/aspnet`) 。 您通常會在基底映像之上建置自訂映像，該基底映像可從 [Docker Hub登錄](https://hub.docker.com/)的任何官方存放庫取得 (例如 [.NET Core 的映像](https://hub.docker.com/_/microsoft-dotnet/)或 [Node.js](https://hub.docker.com/_/node/) 的映像)。
 
 > [!TIP]
 > 您必須針對應用程式中的每個專案重複此程式。 不過，此延伸模組會要求您在第一次之後覆寫產生的 docker 撰寫檔案。 您應回復不覆寫它，讓擴充功能建立個別的 docker 組成檔案，您可以在執行 docker 撰寫之前，手動合併這些檔案。
@@ -119,12 +119,12 @@ Microsoft 提供的 Visual Studio Code 是 Windows、Linux 和 macOS 上所支�
 下列是 .NET Core 容器的範例 DockerFile：
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,7 +141,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-在此情況下，映射是以正式 ASP.NET Core Docker 映射的3.1 版為基礎， (多架構的 Linux 和 Windows) （依據這一行） `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` 。 (如需本主題的詳細資訊，請參閱 [ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)頁面及 [.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)頁面)。
+在此情況下，映射是以正式 ASP.NET Core Docker 映射的3.1 版為基礎， (多架構的 Linux 和 Windows) （依據這一行） `FROM mcr.microsoft.com/dotnet/aspnet:3.1` 。 (如需本主題的詳細資訊，請參閱 [ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-aspnet/)頁面及 [.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet/)頁面)。
 
 在 DockerFile 中，您也可以指示 Docker 接聽您將在執行時間使用的 TCP 埠 (例如埠80或 443) 。
 
@@ -154,9 +154,9 @@ ENTRYPOINT ["dotnet", "WebApi.dll"]
 
 **使用多架構映像存放庫**
 
-存放庫中的單一映像名稱可以包含多種平台變化，例如 Linux 映像和 Windows 映像。 這項功能可讓 Microsoft (基底映像建立者) 等廠商建立單一存放庫以涵蓋多個平台 (即 Linux 和 Windows)。 例如，Docker Hub 登錄提供的 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 存放庫，會使用相同的映像名稱提供 Linux 和 Windows Nano Server 支援。
+存放庫中的單一映像名稱可以包含多種平台變化，例如 Linux 映像和 Windows 映像。 這項功能可讓 Microsoft (基底映像建立者) 等廠商建立單一存放庫以涵蓋多個平台 (即 Linux 和 Windows)。 例如，Docker Hub 登錄提供的 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 存放庫，會使用相同的映像名稱提供 Linux 和 Windows Nano Server 支援。
 
-從 Windows 主機提取 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 映像會提取 Windows 變化，而從 Linux 主機提取相同的映像名稱則會提取 Linux 變化。
+從 Windows 主機提取 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 映像會提取 Windows 變化，而從 Linux 主機提取相同的映像名稱則會提取 Linux 變化。
 
 **_從頭開始建立您的基底映射_**
 
@@ -242,7 +242,7 @@ services:
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>步驟5：建立並執行您的 Docker 應用程式
 
-如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」__ 該應用程式。 讓我們看看不同的選項。
+如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」該應用程式。 讓我們看看不同的選項。
 
 **_選項 A：執行單一容器或服務_**
 

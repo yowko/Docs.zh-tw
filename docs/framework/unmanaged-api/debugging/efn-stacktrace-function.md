@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-ms.openlocfilehash: a725aa2c0f1fdea523bbf7cba880bc805f855782
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 9b7624c2902d17e437cda9a0a84ddf288323b577
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860742"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676175"
 ---
-# <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace 函式
+# <a name="_efn_stacktrace-function"></a>\_EFN \_ StackTrace 函式
+
 提供 Managed 堆疊追蹤以及 `CONTEXT` 記錄之陣列的文字表示，再各提供一個文字表示給 Unmanaged 和 Managed 程式碼之間的每個轉換。  
   
 ## <a name="syntax"></a>語法  
@@ -39,41 +40,43 @@ HRESULT CALLBACK _EFN_StackTrace(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `Client`  
  在正在進行調試的用戶端。  
   
  `wszTextOut`  
- 脫銷堆疊追蹤的文字表示。  
+ 擴展堆疊追蹤的文字標記法。  
   
  `puiTextLength`  
- 脫銷中`wszTextOut`的字元數指標。  
+ 擴展中字元數的指標 `wszTextOut` 。  
   
  `pTransitionContexts`  
- 脫銷轉換內容的陣列。  
+ 擴展轉換內容的陣列。  
   
  `puiTransitionContextCount`  
- 脫銷陣列中轉換內容數目的指標。  
+ 擴展陣列中轉換內容數目的指標。  
   
  `uiSizeOfContext`  
  在內容結構的大小。  
   
  `Flags`  
- 在設定為0或 SOS_STACKTRACE_SHOWADDRESSES （0x01）以顯示 EBP 暫存器，以及每`module!functionname`一行前面的輸入堆疊指標（ESP）。  
+ 在設定為0或 SOS_STACKTRACE_SHOWADDRESSES (0x01) 以顯示 EBP 暫存器，以及每一行前面的 [輸入堆疊指標] (ESP) `module!functionname` 。  
   
 ## <a name="remarks"></a>備註  
- 您`_EFN_StackTrace`可以從 WinDbg 程式設計介面呼叫結構。 參數的使用方式如下：  
+
+ 您 `_EFN_StackTrace` 可以從 WinDbg 程式設計介面呼叫此結構。 參數的使用方式如下：  
   
-- 如果`wszTextOut`為 null 且`puiTextLength`不是 null，則函式會傳回中`puiTextLength`的字串長度。  
+- 如果 `wszTextOut` 是 null，且不 `puiTextLength` 是 null，則函數會在中傳回字串長度 `puiTextLength` 。  
   
-- 如果`wszTextOut`不是 null，函式會將文字`wszTextOut`儲存在所指定的位置`puiTextLength`。 如果緩衝區中有足夠的空間，它會傳回成功，如果緩衝區不夠長，則會傳回 E_OUTOFMEMORY。  
+- 如果不 `wszTextOut` 是 null，則函式會將文字儲存 `wszTextOut` 到所指定的位置 `puiTextLength` 。 如果緩衝區有足夠的空間，則會成功傳回，如果緩衝區的長度不夠長，則會傳回 E_OUTOFMEMORY。  
   
-- 如果`pTransitionContexts`和`puiTransitionContextCount`都是 null，則會忽略函數的轉換部分。 在此情況下，函式會為呼叫端提供只有函數名稱的文字輸出。  
+- 如果 `pTransitionContexts` 和 `puiTransitionContextCount` 都是 null，則會忽略函數的轉換部分。 在此情況下，函式只會提供具有函式名稱之文字輸出的呼叫端。  
   
-- 如果`pTransitionContexts`為 null 且`puiTransitionContextCount`不是 null，則函式會傳回中`puiTransitionContextCount`所需的內容專案數目。  
+- 如果 `pTransitionContexts` 是 null，且不 `puiTransitionContextCount` 是 null，則函式會在中傳回所需的內容專案數目 `puiTransitionContextCount` 。  
   
-- 如果`pTransitionContexts`不是 null，函式會將它視為長度`puiTransitionContextCount`的結構陣列。 結構大小是由`uiSizeOfContext`所提供，而且必須是[SimpleCoNtext](stacktrace-simplecontext-structure.md)或`CONTEXT`架構的大小。  
+- 如果不 `pTransitionContexts` 是 null，則函式會將它視為長度結構的陣列 `puiTransitionContextCount` 。 結構大小是由所提供 `uiSizeOfContext` ，且必須是 [SimpleCoNtext](stacktrace-simplecontext-structure.md) 或架構的大小 `CONTEXT` 。  
   
-- `wszTextOut`會以下列格式寫入：  
+- `wszTextOut` 會以下列格式寫入：  
   
     ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -82,23 +85,24 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
-- 如果 hex 中的位移是0x0，則不會寫入位移。  
+- 如果十六進位的位移為0x0，則不會寫入位移。  
   
-- 如果目前在內容中的執行緒上沒有 managed 程式碼，此函數會傳回 SOS_E_NOMANAGEDCODE。  
+- 如果目前在內容中的執行緒上沒有 managed 程式碼，函數會傳回 SOS_E_NOMANAGEDCODE。  
   
-- `Flags`參數為0或 SOS_STACKTRACE_SHOWADDRESSES，以查看每`module!functionname`一行前面的 EBP 和 ESP。 根據預設，它是0。  
+- `Flags`參數可以是0或 SOS_STACKTRACE_SHOWADDRESSES，以查看每一行前面的 EBP 和 ESP `module!functionname` 。 依預設，它是0。  
   
     ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** SOS_Stacktrace。h  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯全域靜態函式](debugging-global-static-functions.md)

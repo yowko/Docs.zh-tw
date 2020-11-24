@@ -2,14 +2,15 @@
 title: ICorDebugStaticFieldSymbol::GetName 方法
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-ms.openlocfilehash: 75f5324296f9b42406157d06351f7e680a749444
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6284a27921e0ba5bd3cedf07ef9f62348460ad06
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378755"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677229"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName 方法
+
 取得靜態欄位的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -23,6 +24,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cchName`  
  [in] `szName` 緩衝區中的字元數。  
   
@@ -38,7 +40,8 @@ HRESULT GetName(
 > 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -46,7 +49,7 @@ HRESULT GetName(
   
  **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugStaticFieldSymbol 介面](icordebugstaticfieldsymbol-interface.md)
 - [偵錯介面](debugging-interfaces.md)

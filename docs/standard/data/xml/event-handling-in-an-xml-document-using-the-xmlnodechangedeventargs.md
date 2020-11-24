@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 582220f14b5b3800c6e04e2e01795686caace83c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 78984c74b6e7eedf4214506dec36509ece7ae48d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829553"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676682"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理
+
 **XmlNodeChangedEventArgs** 會封裝傳入註冊在處理事件之 **XmlDocument** 物件上的事件處理常式之引數。 下列表格說明事件和引發事件的時機。  
   
 |事件|引發|  
@@ -205,6 +206,6 @@ public class Sample
   
  如需詳細資訊，請參閱 <xref:System.Xml.XmlNodeChangedEventArgs> 與 <xref:System.Xml.XmlNodeChangedEventHandler>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

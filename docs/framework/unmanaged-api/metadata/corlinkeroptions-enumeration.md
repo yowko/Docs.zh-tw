@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-ms.openlocfilehash: fe5ffbab93df7168015e2a31d6e32ec45dce0960
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 188301d31b2fcfaf7b1c6139111e8f1296ccf7e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007685"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677225"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 列舉
+
 指定旗標，以選取中繼資料連結器的選項。  
   
 ## <a name="syntax"></a>語法  
@@ -35,13 +36,14 @@ typedef enum CorLinkerOptions {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`MDAssembly`|不會保留私用類型和全域函式。|  
-|`MDNetModule`|會保留私用類型和全域函式。|  
+|`MDAssembly`|私用類型和全域函式並不會保留。|  
+|`MDNetModule`|私用類型和全域函式會保留下來。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

@@ -8,18 +8,19 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 0e4e84ea7e11b2e7a00c852d4a2075747c71267e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9d94ed7c2558b1d60efb8b3cdbaac1ea1f0087b5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676656"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
+
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。
 
-XML 架構定義工具（Xsd.exe）通常可以在下列路徑中找到： \
-_C： \\ Program Files （x86） \\ Microsoft sdk \\ Windows \\ {version} \\ Bin \\ NETFX {version} 工具\\_
+XML 架構定義工具 ( # A0) 通常可以在下列路徑中找到： \
+_C： \\ Program Files (x86) \\ Microsoft sdk \\ Windows \\ {version} \\ Bin \\ NETFX {version} Tools\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>產生符合特定結構描述的類別  
   
@@ -61,7 +62,7 @@ _C： \\ Program Files （x86） \\ Microsoft sdk \\ Windows \\ {version} \\ Bin
 - <xref:System.Data.DataSet>
 - [XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化簡介](introducing-xml-serialization.md)
-- [XML 架構定義工具（Xsd.exe）](xml-schema-definition-tool-xsd-exe.md)
+- [XML 架構定義工具 ( # A0) ](xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [HOW TO：序列化物件](how-to-serialize-an-object.md)
-- [如何：還原序列化物件](how-to-deserialize-an-object.md)
+- [HOW TO：還原序列化物件](how-to-deserialize-an-object.md)

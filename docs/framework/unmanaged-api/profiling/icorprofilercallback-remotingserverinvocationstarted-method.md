@@ -15,24 +15,26 @@ helpviewer_keywords:
 ms.assetid: 86051a11-ad8e-4ace-9a11-ff0f982a5e11
 topic_type:
 - apiref
-ms.openlocfilehash: 3725b73ab55f6e4dc789a1fde8d1224695a174d7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 630efefde2a90eca0b40643ea8d7ffe08efdc763
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499931"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676825"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>ICorProfilerCallback::RemotingServerInvocationStarted 方法
-通知分析工具，進程正在叫用方法以回應遠端方法調用要求。  
+
+通知分析工具，進程正在叫用方法來回應遠端方法調用要求。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT RemotingServerInvocationStarted();  
 ```  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

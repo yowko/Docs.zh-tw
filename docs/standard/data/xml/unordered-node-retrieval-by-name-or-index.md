@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: e0b3b167dc43710e97a5f67fb0eb54c4742e1572
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c3358f6cca27fbe61ba2b59fe6f2eb5df81c91ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819327"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675642"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>根據名稱或索引擷取的未排序節點
+
 根據全球資訊網協會 (W3C) 規格中的說明，**XmlNamedNodeMap** 是一種 NamedNodeMap，若要處理的是未排序節點集，則必須使用它，因為它可以根據名稱或索引而參考節點。 存取 **XmlNamedNodeMap** 的唯一方法，是當 **XmlNamedNodeMap** 經由方法或屬性傳回時。 有三種方法或屬性會傳回 **XmlNamedNodeMap**：  
   
 - XmlElement.Attributes  
@@ -116,6 +117,6 @@ class test {
   
  若要查看會顯示從 **AttributeCollection** 移除屬性的其他程式碼範例，請參閱 [XmlNamedNodeMap.RemoveNamedItem 方法](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)。 如需方法和屬性的詳細資訊，請參閱 [XmlNamedNodeMap 成員](xref:System.Xml.XmlNamedNodeMap)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

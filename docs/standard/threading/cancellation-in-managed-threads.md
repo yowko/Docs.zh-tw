@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e73be220f3f04ec6bd05b1193d4188825f1b8e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819951"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676500"
 ---
 # <a name="cancellation-in-managed-threads"></a>Managed 執行緒中的取消作業
 
@@ -51,9 +51,10 @@ ms.locfileid: "94819951"
 - 接聽程式可以收到取消要求，藉由輪詢、回呼註冊，或等候等候控制代碼。  
   
 ## <a name="cancellation-types"></a>取消類型  
+
  取消架構被實作為一組相關的類型，這些會在下表中列出。  
   
-|類型名稱|說明|  
+|類型名稱|描述|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|建立取消權杖，並發出取消要求給該權杖所有複本的物件。|  
 |<xref:System.Threading.CancellationToken>|輕量型的實值類型通常做為方法參數傳遞至一或多個接聽程式。 接聽程式會監控權杖中 `IsCancellationRequested` 屬性的值，藉由輪詢、回呼，或等候控制代碼。|  
@@ -62,6 +63,7 @@ ms.locfileid: "94819951"
  取消模型已整合至 .NET 中的數種類型。 最重要的部分包括 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>。 我們建議您針對所有新的程式庫和應用程式程式碼使用此合作式取消模型。  
   
 ## <a name="code-example"></a>程式碼範例  
+
  在下列範例中，要求的物件會建立 <xref:System.Threading.CancellationTokenSource> 物件，然後傳遞其 <xref:System.Threading.CancellationTokenSource.Token%2A> 屬性給可取消作業。 接收要求的作業會藉由輪詢來監視權杖之 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性的值。 當此值變成 `true`  時，接聽程式能夠以任何合適的方式來結束。 在此範例中，方法只會結束，就如同在許多情況下所要求的。  
   
 > [!NOTE]
@@ -71,6 +73,7 @@ ms.locfileid: "94819951"
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>作業取消與物件取消  
+
  在合作式取消架構中，取消指的是作業，而不是物件。 取消要求意味著作業應該在任何必要的清除執行之後盡快停止。 一個取消權杖所指的應該是一個「可取消作業」，但是該作業可能會在程式中實作。 在權杖的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性已設定為 `true` 之後，無法被重設為 `false`。 因此，取消權杖在被取消之後無法重複使用。  
   
  如果您需要物件取消機制，您可以藉由呼叫 <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType> 方法來根據其作業取消機制，如下列範例所示。  
@@ -81,6 +84,7 @@ ms.locfileid: "94819951"
  如果物件支援多個並行的可取消作業，會將個別的權杖做為輸入傳遞給每個不同的可取消作業。 如此一來，可以取消一項作業而不會對其他造成影響。  
   
 ## <a name="listening-and-responding-to-cancellation-requests"></a>接聽並回應取消要求  
+
  在使用者委派，可取消作業的實作器會決定如何終止作業以取消要求的回應。 在許多情況下，使用者委派可以只執行任何必要的清除作業，然後立即傳回。  
   
  不過，在更複雜的情況下，使用者委派可能需要通知程式庫程式碼已發生取消。 在這種情況下，終止作業的正確方式是委派要呼叫會導致擲回 <xref:System.OperationCanceledException> 的 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法。 程式庫程式碼可以在使用者委派執行緒上攔截此例外狀況，並檢查例外狀況的權杖來判斷此例外狀況是否表示合作式取消或一些其他的例外狀況。  
@@ -88,6 +92,7 @@ ms.locfileid: "94819951"
  <xref:System.Threading.Tasks.Task> 類別以這種方式控制 <xref:System.OperationCanceledException> 。 如需詳細資訊，請參閱[工作取消](../parallel-programming/task-cancellation.md)。  
   
 ### <a name="listening-by-polling"></a>透過輪詢接聽  
+
  針對長時間執行計算的迴圈或遞迴，您可以透過定期輪詢 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> 屬性的值來接聽取消要求。 如果其值為 `true` ，方法應該清除並盡快結束。 最佳的輪詢頻率取決於應用程式的類型。 其由開發人員決定任何指定程式的最佳輪詢頻率。 輪詢本身不會大幅影響效能。 下列範例會示範一個輪詢的可行方法。  
   
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
@@ -96,6 +101,7 @@ ms.locfileid: "94819951"
  如需更完整的範例，請參閱[如何：透過輪詢接聽取消要求](how-to-listen-for-cancellation-requests-by-polling.md)。  
   
 ### <a name="listening-by-registering-a-callback"></a>藉由註冊回呼來接聽  
+
  某些作業可能會被封鎖，原因是它們無法及時檢查取消權杖的值。 在這些情況下，您可以註冊一個會在收到取消要求時解鎖該方法的回呼方法。  
   
  <xref:System.Threading.CancellationToken.Register%2A> 方法會傳回一個專門用於此用途的 <xref:System.Threading.CancellationTokenRegistration> 物件。 下列範例示範如何使用 <xref:System.Threading.CancellationToken.Register%2A> 方法來取消非同步的 Web 要求。  
@@ -116,6 +122,7 @@ ms.locfileid: "94819951"
  如需更完整的範例，請參閱[如何：註冊用於取消要求的回呼](how-to-register-callbacks-for-cancellation-requests.md)。  
   
 ### <a name="listening-by-using-a-wait-handle"></a>使用等候控制代碼來接聽  
+
  當可取消的作業等候同步處理基本類型，例如 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 或 <xref:System.Threading.Semaphore?displayProperty=nameWithType>，而可以封鎖可取消作業時，您可以使用 <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> 屬性，來啟用事件以等候前述兩種事件以及取消要求。 取消權杖的等候控制代碼會被通知以回應取消要求，而且方法可以使用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法被傳回的值，以判斷它是否是被通知的取消權杖。 作業可以就在那時結束，或在適當的情況擲回 <xref:System.OperationCanceledException> 。  
   
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
@@ -129,6 +136,7 @@ ms.locfileid: "94819951"
  如需更完整的範例，請參閱[如何：透過等候處理來接聽取消要求](how-to-listen-for-cancellation-requests-that-have-wait-handles.md)。  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>同時接聽多個權杖  
+
  在某些情況下，接聽程式可能必須同時接聽多個取消權杖。 例如，可取消的作業可能需要監視內部的取消權杖，除了在外部做為引數傳遞至方法參數的權杖。 若要達成此目的，建立連結的權杖來源，它可以將兩個或多個權杖聯結到一個權杖，如下列範例所示。  
   
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
@@ -137,6 +145,7 @@ ms.locfileid: "94819951"
  請注意，當您完成聯結後，必須在連結的權杖來源上呼叫 `Dispose` 。 如需更完整的範例，請參閱[如何：接聽多個取消要求](how-to-listen-for-multiple-cancellation-requests.md)。  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>程式庫程式碼和使用者程式碼之間的合作  
+
  統一的取消架構可讓程式庫程式碼取消使用者程式碼，並且讓使用者程式碼以合作方式取消程式庫程式碼。 平滑合作取決於每一邊都遵循下列方針：  
   
 - 如果程式庫程式碼提供取消作業，它也應該提供一個接受外部取消權杖而進一步讓使用者程式碼可以要求取消的公用方法。  
@@ -147,6 +156,6 @@ ms.locfileid: "94819951"
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 是遵循這些指導方針之類別的範例。 如需詳細資訊，請參閱工作 [取消](../parallel-programming/task-cancellation.md) 和 [如何：取消 PLINQ 查詢](../parallel-programming/how-to-cancel-a-plinq-query.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Managed 執行緒處理的基本概念](managed-threading-basics.md)

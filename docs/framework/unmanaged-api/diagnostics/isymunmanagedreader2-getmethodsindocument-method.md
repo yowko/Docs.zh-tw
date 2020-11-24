@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 68a0f9ec8793d465a6fa3b1cb6936eddd7be4c8f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2e7eb183200c6e6de8ee18b58aab457c7e7bf2eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615406"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675746"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 方法
-取得提供的檔中具有行資訊的每一個方法。  
+
+取得在提供的檔中有行資訊的每個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +38,26 @@ HRESULT GetMethodsInDocument(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `document`  
  在檔的指標。  
   
  `cMethod`  
- 在`ULONG32`，指出陣列的大小 `pRetVal` 。  
+ 在 `ULONG32` ，指出陣列的大小  `pRetVal` 。  
   
  `pcMethod`  
- 脫銷的指標 `ULONG32` ，接收包含方法所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含方法所需的緩衝區大小。  
   
  `pRetVal`  
- 脫銷接收方法之緩衝區的指標。  
+ 擴展接收方法之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

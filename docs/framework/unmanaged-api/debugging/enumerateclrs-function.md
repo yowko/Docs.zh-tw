@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 8fe0df3ee08f9915ed43990b6f9686e25b183a0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676097"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 函式
+
 提供在處理程序中列舉 CLRs 的機制。  
   
 ## <a name="syntax"></a>語法  
@@ -38,6 +39,7 @@ HRESULT EnumerateCLRs (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `debuggeePID`  
  [in] 將列舉從 CLRs 載入之程序的處理序識別碼。  
   
@@ -51,6 +53,7 @@ HRESULT EnumerateCLRs (
  [out] DWORD 指標，其中包含大小相等的 `ppHandleArrayOut` 和 `pdwArrayLengthOut` 長度。  
   
 ## <a name="return-value"></a>傳回值  
+
  S_OK  
  已成功確定處理序中的 CLR 數目，並且已正確填入對應的控制代碼和路徑陣列。  
   
@@ -64,19 +67,21 @@ HRESULT EnumerateCLRs (
  無法列舉載入的 CLRs。  
   
 ## <a name="remarks"></a>備註  
+
  所識別之目標處理序 `debuggeePID`，此函式會傳回路徑的陣列，`ppStringArrayOut`，至 CLRs 載入到處理序；事件控制代碼陣列 `ppHandleArrayOut`，其中可能包含在相同的索引為 CLR 的繼續啟動事件；以及陣列的大小，`pdwArrayLengthOut`，指定 CLRs 載入的數目。  
   
  在 Windows 作業系統上，`debuggeePID` 對應至 OS 處理序識別碼。  
   
- 記憶體 `ppHandleArrayOut` 和 `ppStringArrayOut` 由此函式所配置。 若要釋放配置的記憶體，您必須呼叫[CloseCLREnumeration](closeclrenumeration-function.md)函式。  
+ 記憶體 `ppHandleArrayOut` 和 `ppStringArrayOut` 由此函式所配置。 若要釋放配置的記憶體，您必須呼叫 [CloseCLREnumeration 函數](closeclrenumeration-function.md)。  
   
  參數設定為 null 的兩個陣列都可以呼叫此函式，以傳回目標處理序中的 CLRs 計數。 從這個計數，呼叫端可以推斷將建立的緩衝區大小：`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** dbgshim。h  
   
- 連結**庫：** dbgshim  
+ 連結 **庫：** dbgshim.dll  
   
  **.NET Framework 版本：** 3.5 SP1

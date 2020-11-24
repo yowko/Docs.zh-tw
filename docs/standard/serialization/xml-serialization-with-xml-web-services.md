@@ -18,21 +18,23 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 5c986162de19c2cb27edf19ff8e9e80798f36117
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 64b5911ca110ae4ef08f9003898bb817d8b8dd79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676539"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>以 XML Web 服務進行 XML 序列化
 
 XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:System.Xml.Serialization.XmlSerializer> 類別執行。 若要控制 XML Web Service 產生的 XML，可將列在[控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)和[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)中的屬性，套用至用來建立 XML Web Service (.asmx) 之檔案的類別、傳回值、參數以及欄位。 如需建立 XML Web Service 的詳細資訊，請參閱 [使用 ASP.NET 的 Xml web](/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))service。  
   
 ## <a name="literal-and-encoded-styles"></a>常值與編碼樣式  
+
  XML Web Service 產生的 XML 可使用常值或編碼的其中一種方式格式化，如 [自訂 SOAP 訊息格式設定](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))所述。 因此有兩組屬性控制 XML 序列化。 列在[控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)中的屬性設計用來控制常值樣式 XML。 列在[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)中的屬性則可控制編碼樣式。 您可選擇性地套用這些屬性，自訂應用程式傳回其中一種或同時兩種樣式。 除此之外，可將這些屬性套用至傳回值和參數 (如果適合的話)。  
   
 ### <a name="example-of-using-both-styles"></a>同時使用兩種樣式的範例  
+
  當您建立 XML Web 服務，可同時使用方法上的兩組屬性。 在下列程式碼範例中，名為 的類別包含兩個 XML Web 服務方法： 及 。 兩種方法都執行相同功能：傳回 `Order` 類別的執行個體。 在 `Order` 類別中，<xref:System.Xml.Serialization.XmlTypeAttribute> 以及 <xref:System.Xml.Serialization.SoapTypeAttribute> 屬性 (attribute) 都套用至 `OrderID` 欄位，而且兩個屬性 (attribute) 的 `ElementName` 屬性 (property) 都設為不同值。  
   
  若要執行這個範例，請將程式碼貼至副檔名為 .asmx 的檔案中，並將該檔置於 Internet Information Services (IIS) 管理的虛擬目錄中。 從 Internet Explorer 這類 HTML 瀏覽器中，輸入電腦、虛擬目錄及檔案的名稱。  
@@ -124,6 +126,7 @@ public class MyService {
 ```  
   
 ### <a name="applying-attributes-to-return-values"></a>套用屬性至傳回值  
+
  您也可以套用屬性至傳回值以控制命名空間、項目名稱等等。 下列程式碼範例套用 `XmlElementAttribute` 屬性至 `MyLiteralMethod` 方法的傳回值。 這樣做可以讓您控制命名空間與項目名稱。  
   
 ```vb  
@@ -163,6 +166,7 @@ public Order MyLiteralMethod(){
 ```  
   
 ### <a name="attributes-applied-to-parameters"></a>套用至參數的屬性  
+
  您也可以套用屬性至參數以指定命名空間、項目名稱等等。 下列程式碼範例加入參數至 `MyLiteralMethodResponse` 方法，並套用 `XmlAttributeAttribute` 屬性至參數。 項目名稱與命名空間都針對參數設定。  
   
 ```vb  
@@ -204,6 +208,7 @@ Namespace="http://www.microsoft.com")] string ID){
 ```  
   
 ### <a name="applying-attributes-to-classes"></a>套用屬性至類別  
+
  若您需要控制類別相互關聯之項目的命名空間，可在適當的情況下套用 `XmlTypeAttribute`、`XmlRootAttribute` 及 `SoapTypeAttribute`。 下列程式碼範例將三者全套用至 `Order` 類別。  
   
 ```vb  

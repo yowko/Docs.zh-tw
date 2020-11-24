@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: ec00fbdd-6451-4888-ac6f-08e1e2d9b2fd
 topic_type:
 - apiref
-ms.openlocfilehash: e31522ffcf5dd61c1643a8c60e7573c87b834e6a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: df909b4479f70b27a5385ebd7ecce51b963f0e91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788766"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677375"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a>ICorDebugEditAndContinueSnapshot::SetPESymbolBytes 方法
-`SetPESymbolBytes` 已經過時。 請勿呼叫此方法。  
+
+`SetPESymbolBytes` 已經過時。 請不要呼叫此方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)

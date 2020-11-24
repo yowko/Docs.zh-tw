@@ -2,14 +2,15 @@
 title: System.Xml 類別中的型別支援
 ms.date: 03/30/2017
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: 8e4ef15980f488c473129f4f7c02be1778bcafea
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6fe55c64bc9bd17d5416eebf77060f2be27b81bb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824619"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675655"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml 類別中的型別支援
+
 在 .NET Framework 2.0 版中，核心 XML 類別已增強為包括類型支援功能。 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 及 <xref:System.Xml.XPath.XPathNavigator> 類別包含類型支援功能，包括在 XML 結構描述類型與 Common Language Runtime (CLR) 類型之間轉換的能力。  
   
  在 .NET Framework 2.0 版中，<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 及 <xref:System.Xml.XPath.XPathNavigator> 類別已增強為包括類型支援功能。  
@@ -26,6 +27,7 @@ ms.locfileid: "94824619"
 > 在 .NET Framework 1.0 版中，需要 <xref:System.Xml.XmlConvert> 類別以在 XML 結構描述與 CLR 類型之間進行轉換。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [將 XML 資料型別對應至 CLR 型別](mapping-xml-data-types-to-clr-types.md)  
  說明 XML 資料類型與 CLR 類型的預設對應。  
   
@@ -36,4 +38,5 @@ ms.locfileid: "94824619"
  說明如何使用 <xref:System.Xml.XmlConvert> 類別在 XML 結構描述與 CLR 類型之間進行轉換。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [使用 XPathNavigator 存取強型別 XML 資料](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c1f519dd539a266d61945ad221bccceaa1361779
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818501"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675616"
 ---
 # <a name="user-defined-functions-and-variables"></a>使用者定義函式和變數
+
 <xref:System.Xml.XPath.XPathNavigator> 類別會提供一組可用來與 <xref:System.Xml.XPath.XPathDocument> 資料互動的方法。 您可以透過實作擴充函式和變數供 XPath 查詢運算式使用，提供標準 XPath 函式。 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 方法可以接受衍生自 <xref:System.Xml.Xsl.XsltContext> 的使用者定義內容。 使用者定義函式是由自訂內容解析。  
   
  擴充函式和變數在防範 XML 插入式攻擊時可能很有用。 在這些案例中，使用者輸入會指派給自訂變數並由擴充函式處理，而非與處理指示串連的原始輸入。 擴充函式和變數包含使用者輸入，因此它只會依照設計者的預期方式針對 XML 資料運作。  

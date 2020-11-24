@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: ebdff88e9fdf499b809d56c4c29a906dbef9ec40
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f8334cb44042e21c086bc05c723e99b0c079fa2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008972"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677059"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列舉
-表示在組件資訊清單中編碼的資源可見度。  
+
+指出組件資訊清單中已編碼之資源的可見度。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,14 +39,15 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`mrVisibilityMask`|已保留。|  
-|`mrPublic`|資源是公用的。|  
-|`mrPrivate`|資源是私用的。|  
+|`mrVisibilityMask`|保留的。|  
+|`mrPublic`|這些資源是公用的。|  
+|`mrPrivate`|這些資源是私用的。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
