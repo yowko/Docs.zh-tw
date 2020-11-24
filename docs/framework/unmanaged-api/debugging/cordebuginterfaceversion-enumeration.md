@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: ae65c60440a90959006cd8db94dda479e80613d4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795803"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675304"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列舉
+
 指定介面、.NET Framework 版本，或是已引進介面的 .NET Framework 版本。  
   
 ## <a name="syntax"></a>語法  
@@ -131,9 +132,10 @@ typedef enum CorDebugInterfaceVersion {
 ```  
   
 ## <a name="members"></a>成員  
+
  下表提供從每個列舉值到對應介面的連結。 此外，該資料表也會指出支援介面的第一個 .NET Framework 版本。  
   
-|member|指定|.NET Framework 版本|  
+|成員|指定|.NET Framework 版本|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|.NET Framework 版本無效。|-|  
 |`CorDebugVersion_1_0`|.NET Framework 的版本 (包括其所有 Service Pack) 為 1.0。|1.0|  
@@ -220,9 +222,11 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|.NET Framework 的版本 (包括其所有 Service Pack) 為最新版本。|-|  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具可以在`CorDebugInterfaceVersion` [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md)函式中使用列舉，以指定偵錯工具支援的最高版本 .NET Framework。  
+
+ 偵錯工具可以在 CreateDebuggingInterfaceFromVersion 函式 `CorDebugInterfaceVersion` 中[CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md)使用列舉，以指定偵錯工具支援的最高 .NET Framework 版本。  
   
 ## <a name="interface-names"></a>介面名稱  
+
  在偵錯 API (例如，`ICorDebugThread3` 中的 "3") 中，出現在介面名稱結尾的號碼是指定介面版本，而不是 .NET Framework 的版本。 偵錯 API 中的所有介面名稱都有包含版本號碼，但 .NET Framework 第 1 版中導入的介面除外。 介面版本號碼與 .NET Framework 版本號碼之間的任何對應都是巧合。  
   
 - .NET Framework 1.0 版中導入的介面沒有包含號碼，因為全都隱含為第 1 版。  
@@ -233,10 +237,11 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework 3.0 和 3.5 版使用現有的 .NET Framework 2.0 介面，而且沒有導入任何新介面。  
   
-- .NET Framework 4 引進了介面版本的混合。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 .NET Framework 4 也引進介面的第一個版本`ICorDebugStackWalk`和第二個版本的`ICorDebugNativeFrame`介面（`ICorDebugNativeFrame2`）。  
+- .NET Framework 4 引進了混合的介面版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 .NET Framework 4 也引進了介面的第一個版本 `ICorDebugStackWalk` ， () 的第二個 `ICorDebugNativeFrame` 介面版本 `ICorDebugNativeFrame2` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -244,6 +249,6 @@ typedef enum CorDebugInterfaceVersion {
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)

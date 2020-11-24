@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5683c10938873821cbe998dbf13937a6a7d24d7c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675083"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
-定義不在方法內的單一變數。 這個方法會用於類別、位欄位等等的某些欄位。  
+
+定義不在方法內的單一變數。 這個方法用於類別、位欄位等的某些欄位。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,8 +42,9 @@ HRESULT DefineField(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `parent`  
- 在元資料類型或方法 token。  
+ 在元資料類型或方法標記。  
   
  `name`  
  在功能變數名稱。  
@@ -54,7 +56,7 @@ HRESULT DefineField(
  在， `ULONG32` 這是包含欄位簽章所需的緩衝區大小（以字元為單位）。  
   
  `signature`  
- 在欄位簽章的陣列。  
+ 在欄位特徵標記的陣列。  
   
  `addrKind`  
  在網址類別型。  
@@ -69,10 +71,12 @@ HRESULT DefineField(
  在欄位規格的第三個位址。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

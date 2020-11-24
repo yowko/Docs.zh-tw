@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: Dotnet pack 命令會建立 .NET 專案的 NuGet 套件。
 ms.date: 04/28/2020
-ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674797"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -118,7 +118,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`-s|--serviceable`**
 
-  在套件中設定可提供服務的旗標。 如需詳細資訊，請參閱 [.NET 部落格︰.NET 4.5.1 支援適用於 .NET NuGet 程式庫的 Microsoft 安全性更新 (英文)](https://aka.ms/nupkgservicing)。
+  在套件中設定可提供服務的旗標。 如需詳細資訊，請參閱 [.Net Blog： .NET Framework 4.5.1 支援適用于 .Net NuGet 程式庫的 Microsoft 安全性更新](https://aka.ms/nupkgservicing)。
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -185,7 +185,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
   ```
 
   如需如何使用、和的詳細資訊 `NuspecFile` `NuspecBasePath` `NuspecProperties` ，請參閱下列資源：
-  
+
   - [使用 .nuspec 封裝](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [用來建立自訂套件的 Advanced 擴充點](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
   - [全域屬性](/visualstudio/msbuild/msbuild-properties#global-properties)

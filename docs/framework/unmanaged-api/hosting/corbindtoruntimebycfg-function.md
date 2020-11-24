@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504429"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673770"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 函式
-使用從 XML 檔案讀取的版本資訊，將 common language runtime （CLR）載入進程中。  
+
+使用從 XML 檔案讀取的版本資訊，將 common language runtime (CLR) 載入處理常式。  
   
- 此函式在 .NET Framework 4 中已被取代。  
+ 此函式已在 .NET Framework 4 中被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,33 +41,36 @@ HRESULT CorBindToRuntimeByCfg (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pCfgStream`  
- 在讀取 XML 檔案之 `IStream` 物件的指標。  
+ 在 `IStream` 物件的指標，該物件會讀取 XML 檔案。  
   
  `reserved`  
- 在保留供日後使用。 使用0（零）作為值。  
+ 在保留供日後使用。 使用 0 (零) 作為值。  
   
  `startupFlags`  
- 在[STARTUP_FLAGS](startup-flags-enumeration.md)列舉的值，指定 CLR 的啟動行為。  
+ 在 [STARTUP_FLAGS](startup-flags-enumeration.md) 列舉值，指定 CLR 的啟動行為。  
   
  `rclsid`  
- 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在Coclass 的， `CLSID` 可執行 [ICorRuntimeHost](icorruntimehost-interface.md) 或 [ICLRRuntimeHost](iclrruntimehost-interface.md) 介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- 在`IID` `ICorRuntimeHost` 或 `ICLRRuntimeHost` 介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
+ 在 `IID` `ICorRuntimeHost` 或 `ICLRRuntimeHost` 介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- 脫銷傳回之介面位址的指標。  
+ 擴展傳回之介面的位址指標。  
   
 ## <a name="remarks"></a>備註  
- XML 檔案的格式會在標準應用程式佈建檔案之後進行模型化。 如需 XML 檔案的詳細資訊，請參閱[設定檔案架構](../../configure-apps/file-schema/index.md)。  
+
+ XML 檔案的格式是在標準應用程式佈建檔之後進行模型化。 如需 XML 檔案的詳細資訊，請參閱 [設定檔案架構](../../configure-apps/file-schema/index.md)。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

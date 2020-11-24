@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-ms.openlocfilehash: 9f785eafa8925324e3bd269ca08a3b1367b74c44
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 99972c5840645c95b7b349daf2d8ea7173d0cc03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893581"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674719"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction 方法
-取得與這個 "ICorDebugCode" 相關聯的 "ICorDebugFunction"。  
+
+取得與此 "ICorDebugCode" 相關聯的 "ICorDebugFunction"。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT GetFunction (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppFunction`  
- 脫銷函式位址的指標。  
+ 擴展函數位址的指標。  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugCode`和`ICorDebugFunction`會維護一對一關聯性。  
+
+ `ICorDebugCode` 並 `ICorDebugFunction` 維護一對一的關聯性。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

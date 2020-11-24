@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: 0a433ccb81ef62ac92a4553a838a2c98a04fc7c1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 18416954517c3cac09d013b8075bd097305a1dca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673952"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory 方法
+
 將資料寫入此進程中的記憶體區域。  
   
 ## <a name="syntax"></a>語法  
@@ -36,8 +37,9 @@ HRESULT WriteMemory(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `address`  
- 在`CORDB_ADDRESS`值，這是寫入資料之記憶體區域的基底位址。 在資料傳輸之前，系統會確認可存取指定大小的記憶體區域（從基底位址開始），以便進行寫入。 如果無法存取，方法就會失敗。  
+ 在 `CORDB_ADDRESS` 值，這個值是寫入資料的記憶體區域基底位址。 在進行資料傳輸之前，系統會先確認指定大小的記憶體區域（從基底位址開始）可以進行寫入。 如果無法存取，方法將會失敗。  
   
  `size`  
  在要寫入記憶體區域的位元組數目。  
@@ -46,15 +48,17 @@ HRESULT WriteMemory(
  在包含要寫入之資料的緩衝區。  
   
  `written`  
- 脫銷變數的指標，這個變數會接收寫入此進程中記憶體區域的位元組數目。 如果 `written` 為 Null，則會忽略這個參數。  
+ 擴展變數的指標，此變數會接收此進程中寫入記憶體區域的位元組數目。 如果 `written` 是 Null，則會忽略這個參數。  
   
 ## <a name="remarks"></a>備註  
- 資料會在任何中斷點之後自動寫入。 在 .NET Framework 版本2.0 中，原生偵錯工具不應該使用這個方法將中斷點插入指令資料流程中。 請改用[ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) 。  
+
+ 資料會自動寫入任何中斷點後方。 在 .NET Framework 2.0 版中，原生偵錯工具不應該使用這個方法將中斷點插入指令資料流程中。 請改用 [ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) 。  
   
- `WriteMemory`方法只能在 managed 程式碼外部使用。 如果未正確使用，這個方法可能會損毀執行時間。  
+ `WriteMemory`方法只能在 managed 程式碼之外使用。 如果使用不正確，此方法可能會損毀執行時間。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

@@ -2,19 +2,21 @@
 title: 使用 XML 結構描述
 ms.date: 03/30/2017
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-ms.openlocfilehash: adad77eaefd85abf111a25180b7289af997a7222
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0290cd31d9477d2c5a30a6efa907263fed137258
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675486"
 ---
 # <a name="working-with-xml-schemas"></a>使用 XML 結構描述
+
 若要定義 XML 文件的結構及其項目關聯性、資料類型及內容條件約束，可以使用文件類型定義 (DTD) 或 XML 結構描述定義語言 (XSD) 結構描述。 儘管當 XML 文件滿足全球資訊網協會 (W3C) 可延伸標記語言 (XML) 1.0 版建議事項定義的所有語法要求時，會將其視為格式正確，但是它必須格式正確且符合由其 DTD 或結構描述所定義的條件約束才會被視為有效。 因此，儘管所有有效 XML 文件的格式都正確，但是並非所有格式正確的 XML 文件都有效。  
   
  如需 XML 的詳細資訊，請參閱 [W3C XML 1.0 建議事項](https://www.w3.org/TR/REC-xml/) (英文)。 如需 XML 結構描述的詳細資訊，請參閱 [W3C XML 結構描述第一部：結構建議事項](https://www.w3.org/TR/xmlschema-1/)及 [W3C XML 結構描述第二部：資料型別建議事項](https://www.w3.org/TR/xmlschema-2/)的建議。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)  
  討論 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的結構描述物件模型 (SOM)，其提供了一組類別，可讓您從檔案讀取結構描述定義語言 (XSD) 結構描述，或以程式設計方式建立記憶體中結構描述。  
   
@@ -28,9 +30,11 @@ ms.locfileid: "94818410"
  討論如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件的結構推斷 XSD 結構描述。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
   
 ## <a name="related-sections"></a>相關章節  
+
  [驗證 DOM 中的 XML 文件](validating-an-xml-document-in-the-dom.md)  
  討論如何驗證文件物件模型 (DOM) 中的 XML。 您可以在將 XML 載入至 DOM 時進行驗證，或者驗證 DOM 中先前未驗證的 XML 文件。  
   

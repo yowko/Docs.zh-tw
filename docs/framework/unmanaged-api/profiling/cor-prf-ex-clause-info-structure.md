@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-ms.openlocfilehash: 5c764031f709eefe61022d0662f37bc5d3f3e281
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e8dd9f21803021975f4651ba3e6e5f4d3da0ea82
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500997"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674992"
 ---
 # <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO 結構
+
 儲存特定例外狀況子句執行個體及其關聯框架的相關資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -37,17 +38,18 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
-|`clauseType`|[COR_PRF_CLAUSE_TYPE](cor-prf-clause-type-enumeration.md)列舉的值，指定程式碼剛剛輸入或離開的例外狀況子句類型。|  
-|`programCounter`|子句處理常式的原生進入點，例如 X86 EIP 暫存器的內容。|  
-|`framePointer`|子句處理常式邏輯框架的指標，例如，X86 EBP 暫存器的內容。|  
-|`shadowStackPointer`|陰影堆疊的指標。 這個值是 BSP 暫存器的內容，只適用于 IA64。|  
+|`clauseType`|[COR_PRF_CLAUSE_TYPE](cor-prf-clause-type-enumeration.md)列舉值，這個值會指定程式碼剛剛輸入或留下的例外狀況子句類型。|  
+|`programCounter`|子句處理常式的原生進入點，例如 X86 EIP 註冊的內容。|  
+|`framePointer`|子句處理常式的邏輯框架指標，例如 X86 EBP 暫存器的內容。|  
+|`shadowStackPointer`|陰影堆疊的指標。 此值是 BSP 註冊的內容，而且只適用于 IA64。|  
   
 ## <a name="remarks"></a>備註  
- 收到例外狀況通知時，可以使用[ICorProfilerInfo2：： GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)來取得 `catch` / `finally` 即將執行或剛執行的 exception 子句（/filter）的原生位址和框架資訊。  
+
+ 收到例外狀況通知時，可以使用[ICorProfilerInfo2：： GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)來取得例外狀況子句的原生位址和框架資訊， (`catch` / `finally` 即將執行或剛剛執行的/篩選) 。  
   
- 執行 exception 子句牽涉到來自 common language runtime （CLR）的這些回呼：  
+ 例外狀況子句的執行牽涉到 (CLR) 的 common language runtime 回呼：  
   
 - [ICorProfilerCallback：： ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)  
   
@@ -61,10 +63,11 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 - [ICorProfilerCallback：： ExceptionSearchFilterLeave](icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Corprof.idl .idl  
+ **標頭：** Corprof.h .idl  
   
  **程式庫：** CorGuids.lib  
   

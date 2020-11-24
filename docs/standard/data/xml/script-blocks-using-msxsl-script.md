@@ -5,23 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: 3cb65142243d1f910ffd0fb85750ba62786d79f0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 57608ef143e6efd7f59d12d808274fa17961c483
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673471"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的指令碼區塊
+
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別支援使用 `msxsl:script` 項目的內嵌指令碼。 載入樣式表時，程式碼文件物件模型 (CodeDOM) 會將任何已定義的函式編譯成 Microsoft Intermediate Language (MSIL)，並在執行階段期間執行。 從內嵌指令碼區塊產生的組件不同於為樣式表產生的組件。  
   
 ## <a name="enable-xslt-script"></a>啟用 XSLT 指令碼  
+
  內嵌指令碼支援是 <xref:System.Xml.Xsl.XslCompiledTransform> 類別上的選擇性 XSLT 設定。 預設會停用指令碼支援。 若要啟用指令碼支援，請建立 <xref:System.Xml.Xsl.XsltSettings> 物件 (將 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> 屬性設為 `true`)，並將該物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法。  
   
 > [!NOTE]
 > 僅當需要指令碼支援且在完全受信任的環境中運作時，才應啟用 XSLT 指令碼。  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 項目定義  
+
  `msxsl:script` 項目是 XSLT 1.0 版建議事項的 Microsoft 擴充功能，其定義如下：  
   
 ```xml  
@@ -46,6 +49,7 @@ ms.locfileid: "94824690"
 ```  
   
 ## <a name="script-functions"></a>指令碼函式  
+
  函式可在 `msxsl:script` 項目內進行宣告。 宣告函式時，函式是包含在指令碼區塊內。 樣式表可以包含多個指令碼區塊，而每一個都會各自獨立運作。 這表示如果您在指令碼區塊內執行，您無法呼叫在另一個指令碼區塊內所定義的函式，除非它被宣告成有相同的命名空間和相同的指令碼語言。 因為每一個指令碼區塊都可以使用本身的語言，且這些區塊是根據該語言剖析器的文法規則進行剖析，建議您針對使用中的語言使用正確的語法。 例如，如果是 Microsoft C# 指令碼區塊，請使用 C# 註解語法。  
   
  提供給函式的引數及傳回值可具有任何類型。 因為 W3C XPath 類型是 Common Language Runtime (CLR) 類型的子集，所以當系統認為某類型不是 XPath 類型時，便會進行類型轉換。 下表顯示對應的 W3C 類型與對等的 CLR 類型。  
@@ -63,9 +67,11 @@ ms.locfileid: "94824690"
  所有其他類型都會擲回錯誤。  
   
 ### <a name="importing-namespaces-and-assemblies"></a>匯入命名空間及組件  
+
  <xref:System.Xml.Xsl.XslCompiledTransform> 類別會預先定義一組預設 `msxsl:script` 項目所支援的命名空間及組件。 不過，透過將組件及命名空間匯入 `msxsl:script` 區塊，也可以使用屬於不在預先定義清單上之命名空間的類別及成員。  
   
 #### <a name="assemblies"></a>組件  
+
  預設會參考下列兩個組件：  
   
 - System.dll  
@@ -89,6 +95,7 @@ ms.locfileid: "94824690"
  `name` 屬性包含組件名稱，而 `href` 屬性則包含組件的路徑。 組件名稱可為完整名稱 (如 "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089") 或簡短名稱 (如 "System.Web")。  
   
 #### <a name="namespaces"></a>命名空間  
+
  預設會包含下列命名空間：  
   
 - 系統  
@@ -119,15 +126,18 @@ ms.locfileid: "94824690"
 ```  
   
 ## <a name="example"></a>範例  
+
  下列範例會使用內嵌指令碼來計算圓周 (假設已經知道其半徑)。  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
   
 #### <a name="numberxml"></a>number.xml  
+
  [!code-xml[XSLT_Script#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/number.xml#2)]  
   
 #### <a name="calcxsl"></a>calc.xsl  
+
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
 ### <a name="output"></a>輸出  
@@ -145,7 +155,7 @@ ms.locfileid: "94824690"
 </circles>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](xslt-transformations.md)
 - [動態原始程式碼的產生和編譯](../../../framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

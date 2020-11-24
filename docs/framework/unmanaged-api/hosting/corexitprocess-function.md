@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: a60805e1fd78cb14835957a7afc14fe279cb20fb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f6d8114732a3b7c15d0a0258a28a362d661b030a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616563"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673619"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 函式
-關閉目前的非受控進程。  
+
+關閉目前未受管理的進程。  
   
- 此函式在 .NET Framework 4 中已被取代。 請改用[ICLRMetaHost：： ExitProcess](iclrmetahost-exitprocess-method.md)方法。  
+ 此函式已在 .NET Framework 4 中被取代。 請改用 [ICLRMetaHost：： ExitProcess](iclrmetahost-exitprocess-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,20 +40,22 @@ void STDMETHODCALLTYPE CorExitProcess (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `exitCode`  
  指定進程結束代碼的整數。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始， `CorExitProcess` 會在進程中結束每個已啟動的執行時間，而不只是舊版 api 已系結的執行時間。  
+> 從 .NET Framework 4 開始， `CorExitProcess` 會在處理常式中結束每個啟動的執行時間，而不只是舊版 api 所系結的執行時間。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

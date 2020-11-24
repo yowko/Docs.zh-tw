@@ -2,14 +2,15 @@
 title: 常見資料類型 (Unmanaged API 參考)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c00ff6d0947b5d847a9622dce02bd310491818c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132444"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673978"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常見資料類型 (Unmanaged API 參考)
+
 本主題針對 C/C++ `typedef` 陳述式所定義的 .NET Framework，列出 Unmanaged API 所使用的簡單資料類型。 這些資料類型通常是 C/C++ 基本資料類型的別名。 一般而言，這些資料類型的值為不透明；因此，會由特定函式或方法傳回這些值，如此一來就能在未經修改的情況下將這些值傳遞至其他函式或方法。  
   
 |資料類型|定義|定義於|描述|  
@@ -28,8 +29,8 @@ ms.locfileid: "73132444"
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU 註冊的值。|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|函式或方法的識別項。|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|記憶體回收處理常式。|  
-|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|方法定義 token。|
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|元資料標記（中繼資料資料表中的一列）。|  
+|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|方法定義標記。|
+|mdToken|`typedef UINT32 mdToken;`|corprof.h|元資料標記 (中繼資料資料表中的資料列) 。|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|組件模組的識別項。|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|物件的識別項。|  
 |PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|cordebug.h|成員或中繼資料簽章的指標。|
@@ -39,6 +40,6 @@ ms.locfileid: "73132444"
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|[ICLRTask](./hosting/iclrtask-interface.md)實例的識別碼。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Managed 執行緒的識別項。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Unmanaged API 參考](index.md)
+- [非受控 API 參考](index.md)

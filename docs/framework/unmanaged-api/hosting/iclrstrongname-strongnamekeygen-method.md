@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ac5c1245-9acf-4271-9c08-3d9b7c670df3
 topic_type:
 - apiref
-ms.openlocfilehash: 69ba58cc8c5235a15749281b3107481be9528f84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 42a9fc1a05e97bbd893f0a2e77087e6524ad844f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503974"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674537"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen 方法
+
 建立將供強式名稱使用的新公開/私密金鑰組。  
   
 ## <a name="syntax"></a>語法  
@@ -37,34 +38,38 @@ HRESULT StrongNameKeyGen (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `wszKeyContainer`  
- 在要求的金鑰容器名稱。 `wszKeyContainer`必須是非空白字串或 null，才能產生暫存名稱。  
+ 在要求的金鑰容器名稱。 `wszKeyContainer` 必須為非空白字串或 null，才能產生暫存名稱。  
   
  `dwFlags`  
  在值，指定是否要保留註冊的金鑰。 支援下列值：  
   
-- 0x00000000-在為 null 時使用， `wszKeyContainer` 以產生暫存金鑰容器名稱。  
+- 0x00000000-當 `wszKeyContainer` 為 null 時，用來產生暫存金鑰容器名稱。  
   
-- 0x00000001 （ `SN_LEAVE_KEY` ）-指定應將金鑰保留為已註冊。  
+- 0x00000001 (`SN_LEAVE_KEY`) -指定應該將金鑰保持在註冊。  
   
  `ppbKeyBlob`  
- 脫銷傳回的公開/私密金鑰組。  
+ 擴展傳回的公開/私密金鑰組。  
   
  `pcbKeyBlob`  
- 脫銷的大小（以位元組為單位） `ppbKeyBlob` 。  
+ 擴展的大小（以位元組為單位） `ppbKeyBlob` 。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果方法已成功完成，則為，否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+
+ `S_OK` 如果方法成功完成，則為，否則，表示失敗 (的 HRESULT 值會看到清單) 的 [一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values) 。  
   
 ## <a name="remarks"></a>備註  
- [ICLRStrongName：： StrongNameKeyGen](iclrstrongname-strongnamekeygen-method.md)方法會建立1024位金鑰。 在取得金鑰之後，您應該呼叫[ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)方法來釋放已配置的記憶體。  
+
+ [ICLRStrongName：： StrongNameKeyGen](iclrstrongname-strongnamekeygen-method.md)方法會建立1024位的金鑰。 在抓取金鑰之後，您應該呼叫 [ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) 方法來釋放已配置的記憶體。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

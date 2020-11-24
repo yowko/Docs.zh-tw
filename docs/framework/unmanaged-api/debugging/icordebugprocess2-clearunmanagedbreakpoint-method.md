@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b228383c3b393fe43f60d39e59cca37af36233f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a713fd006f1e9ad8fe7109651c2cda5025da3566
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212486"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673939"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint 方法
-移除先前在指定位址上設定的中斷點。  
+
+在指定的位址上移除先前設定的中斷點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,18 +35,21 @@ HRESULT ClearUnmanagedBreakpoint (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `address`  
- 在`CORDB_ADDRESS`值，指定設定中斷點的位址。  
+ 在 `CORDB_ADDRESS` 值，指定設定中斷點的位址。  
   
 ## <a name="remarks"></a>備註  
- 先前呼叫[ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)之前已設定指定的中斷點。  
+
+ 先前呼叫 [ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)之前已設定指定的中斷點。  
   
- `ClearUnmanagedBreakpoint`當正在進行調試的進程正在執行時，可以呼叫方法。  
+ `ClearUnmanagedBreakpoint`當正在執行的進程正在執行時，可以呼叫方法。  
   
- `ClearUnmanagedBreakpoint`如果偵錯工具是以僅限 managed 模式連接，或如果指定的位址沒有中斷點存在，則方法會傳回失敗代碼。  
+ `ClearUnmanagedBreakpoint`如果偵錯工具是以僅限 managed 模式連接，或在指定的位址沒有中斷點存在，則此方法會傳回失敗碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
