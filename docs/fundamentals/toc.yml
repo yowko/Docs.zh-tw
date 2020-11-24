@@ -180,7 +180,7 @@ items:
           - name: 概觀
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: 參考資料
+          - name: 參考
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -312,7 +312,7 @@ items:
             items:
               - name: 總覽
                 href: ../core/project-sdk/overview.md
-              - name: 參考資料
+              - name: 參考
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -414,6 +414,8 @@ items:
                 href: ../core/diagnostics/dotnet-sos.md
           - name: .NET Core 診斷教學課程
             items:
+              - name: 使用 PerfCollect 收集 Linux 中的效能追蹤
+                href: ../core/diagnostics/trace-perfcollect-lttng.md
               - name: 使用 EventCounters 取得效能計量
                 href: ../core/diagnostics/event-counter-perf.md
               - name: 針對記憶體流失進行偵錯
