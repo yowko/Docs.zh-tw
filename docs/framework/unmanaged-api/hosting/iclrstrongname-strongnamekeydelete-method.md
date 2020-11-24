@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0163412f-f617-4428-89e0-03992fec31e8
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6f2445d88d608d51be4e6fe1e064efbb58325d
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 46345ae570673c9c9c0c58fb6edea1464ba8dd91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763094"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671690"
 ---
-# <a name="iclrstrongnamestrongnamekeydelete-method"></a><span data-ttu-id="4b634-102">ICLRStrongName::StrongNameKeyDelete 方法</span><span class="sxs-lookup"><span data-stu-id="4b634-102">ICLRStrongName::StrongNameKeyDelete Method</span></span>
-<span data-ttu-id="4b634-103">刪除指定的金鑰容器。</span><span class="sxs-lookup"><span data-stu-id="4b634-103">Deletes the specified key container.</span></span>  
+# <a name="iclrstrongnamestrongnamekeydelete-method"></a><span data-ttu-id="b8dc6-102">ICLRStrongName::StrongNameKeyDelete 方法</span><span class="sxs-lookup"><span data-stu-id="b8dc6-102">ICLRStrongName::StrongNameKeyDelete Method</span></span>
+
+<span data-ttu-id="b8dc6-103">刪除指定的金鑰容器。</span><span class="sxs-lookup"><span data-stu-id="b8dc6-103">Deletes the specified key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4b634-104">語法</span><span class="sxs-lookup"><span data-stu-id="4b634-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8dc6-104">語法</span><span class="sxs-lookup"><span data-stu-id="b8dc6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT StrongNameKeyDelete (  
@@ -33,26 +34,30 @@ HRESULT StrongNameKeyDelete (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4b634-105">參數</span><span class="sxs-lookup"><span data-stu-id="4b634-105">Parameters</span></span>  
- `wszKeyContainer`  
- <span data-ttu-id="4b634-106">在要刪除的金鑰容器名稱。</span><span class="sxs-lookup"><span data-stu-id="4b634-106">[in] The name of the key container to delete.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="4b634-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="4b634-107">Return Value</span></span>  
- <span data-ttu-id="4b634-108">`S_OK`如果方法已成功完成，則為，否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。</span><span class="sxs-lookup"><span data-stu-id="4b634-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](/windows/win32/seccrypto/common-hresult-values) for a list).</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="4b634-109">備註</span><span class="sxs-lookup"><span data-stu-id="4b634-109">Remarks</span></span>  
- <span data-ttu-id="4b634-110">使用[ICLRStrongName：： StrongNameKeyInstall](iclrstrongname-strongnamekeyinstall-method.md)方法，將公開/私密金鑰組匯入容器。</span><span class="sxs-lookup"><span data-stu-id="4b634-110">Use the [ICLRStrongName::StrongNameKeyInstall](iclrstrongname-strongnamekeyinstall-method.md) method to import a public/private key pair into a container.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="4b634-111">規格需求</span><span class="sxs-lookup"><span data-stu-id="4b634-111">Requirements</span></span>  
- <span data-ttu-id="4b634-112">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4b634-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="4b634-113">**標頭：** MetaHost。h</span><span class="sxs-lookup"><span data-stu-id="4b634-113">**Header:** MetaHost.h</span></span>  
-  
- <span data-ttu-id="4b634-114">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="4b634-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="4b634-115">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b634-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="4b634-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4b634-116">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="b8dc6-105">參數</span><span class="sxs-lookup"><span data-stu-id="b8dc6-105">Parameters</span></span>  
 
-- [<span data-ttu-id="4b634-117">StrongNameKeyInstall 方法</span><span class="sxs-lookup"><span data-stu-id="4b634-117">StrongNameKeyInstall Method</span></span>](iclrstrongname-strongnamekeyinstall-method.md)
-- [<span data-ttu-id="4b634-118">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="4b634-118">ICLRStrongName Interface</span></span>](iclrstrongname-interface.md)
+ `wszKeyContainer`  
+ <span data-ttu-id="b8dc6-106">在要刪除的金鑰容器名稱。</span><span class="sxs-lookup"><span data-stu-id="b8dc6-106">[in] The name of the key container to delete.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="b8dc6-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="b8dc6-107">Return Value</span></span>  
+
+ <span data-ttu-id="b8dc6-108">`S_OK` 如果方法成功完成，則為，否則，表示失敗 (的 HRESULT 值會看到清單) 的 [一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values) 。</span><span class="sxs-lookup"><span data-stu-id="b8dc6-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](/windows/win32/seccrypto/common-hresult-values) for a list).</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="b8dc6-109">備註</span><span class="sxs-lookup"><span data-stu-id="b8dc6-109">Remarks</span></span>  
+
+ <span data-ttu-id="b8dc6-110">使用 [ICLRStrongName：： StrongNameKeyInstall](iclrstrongname-strongnamekeyinstall-method.md) 方法，將公開/私密金鑰組匯入至容器。</span><span class="sxs-lookup"><span data-stu-id="b8dc6-110">Use the [ICLRStrongName::StrongNameKeyInstall](iclrstrongname-strongnamekeyinstall-method.md) method to import a public/private key pair into a container.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="b8dc6-111">需求</span><span class="sxs-lookup"><span data-stu-id="b8dc6-111">Requirements</span></span>  
+
+ <span data-ttu-id="b8dc6-112">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b8dc6-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="b8dc6-113">**標頭：** MetaHost。h</span><span class="sxs-lookup"><span data-stu-id="b8dc6-113">**Header:** MetaHost.h</span></span>  
+  
+ <span data-ttu-id="b8dc6-114">連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中</span><span class="sxs-lookup"><span data-stu-id="b8dc6-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="b8dc6-115">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8dc6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b8dc6-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8dc6-116">See also</span></span>
+
+- [<span data-ttu-id="b8dc6-117">StrongNameKeyInstall 方法</span><span class="sxs-lookup"><span data-stu-id="b8dc6-117">StrongNameKeyInstall Method</span></span>](iclrstrongname-strongnamekeyinstall-method.md)
+- [<span data-ttu-id="b8dc6-118">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="b8dc6-118">ICLRStrongName Interface</span></span>](iclrstrongname-interface.md)
