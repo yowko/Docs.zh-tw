@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: fb3b89d25b4c2e23c3980b167db4279246c4d27b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dd45703540f8dc41b746ca03b4f09d74186aa9aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609296"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690937"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 結構
-提供相關資訊給符號處理常式，而這些方法是因編輯結果而移動。  
+
+提供有關方法的符號處理常式資訊，這些方法是在編輯時移動的。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,12 +37,13 @@ typedef struct _SYMLINEDELTA
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`mdMethod`|方法的元資料標記。|  
-|`delta`|方法已移動的行數。|  
+|`delta`|移動方法的行數。|  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** CorSym .idl  
   
 ## <a name="see-also"></a>另請參閱

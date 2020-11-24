@@ -6,21 +6,22 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 2b91a74f7dbb31ee47535dbed7cf5fa5243e364c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 79ffea3831d5f56d73c6974fdf7265c9b00ab8ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820435"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691262"
 ---
 # <a name="post-schema-compilation-infoset"></a>後結構描述編譯資訊集
+
 [全球資訊網協會 (W3C) XML 結構描述建議事項](https://www.w3.org/XML/Schema) (英文) 中討論為了進行前置結構描述驗證和後置結構描述編譯所必須公開的資訊集 (infoset)。 XML 結構描述物件模型 (SOM) 會在呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法之前及之後，檢視此公開資訊集。  
   
  前結構描述驗證資訊集建置於結構描述的編輯期間。 後結構描述編譯資訊集是在結構描述的編譯期間，並於呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法之後產生的，而且會公開為屬性。  
   
  SOM 是表示前結構描述驗證及後結構描述編譯資訊集的物件模型，它是由 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別組成。 <xref:System.Xml.Schema> 命名空間中類別的所有讀取及寫入屬性都屬於前結構描述驗證資訊集，而 <xref:System.Xml.Schema> 命名空間中類別的所有唯讀屬性都屬於後結構描述編譯資訊集。 下列屬性是此規則的例外，它們同時屬於前結構描述驗證資訊集及後結構描述編譯資訊集的屬性。  
   
-|執行個體|屬性|  
+|類別|屬性|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
@@ -37,6 +38,6 @@ ms.locfileid: "94820435"
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)

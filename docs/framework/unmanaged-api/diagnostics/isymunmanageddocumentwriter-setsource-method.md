@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ea5b9d9f-ff06-4bd3-8de5-6435343aba59
 topic_type:
 - apiref
-ms.openlocfilehash: 06c6f9b05d34ea98dde437393ded289cbab2f61d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 31475b08b569b925aab9cab869545f0912c4ecf8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691587"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource 方法
-為正在寫入的檔設定內嵌來源。  
+
+設定所寫入檔的內嵌來源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +35,20 @@ HRESULT SetSource(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `sourceSize`  
- 在`ULONG32`包含緩衝區大小的 `source` 。  
+ 在 `ULONG32` ，其中包含緩衝區的大小 `source` 。  
   
  `source`  
  在儲存內嵌來源的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

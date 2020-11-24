@@ -12,14 +12,15 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: b9d27c3e3cd42039aeefcb517ecc81eadeb5c183
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7e9cf760ec609786804a05177349ee2eacd79eaf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557420"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692237"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 列舉
+
 [.NET Framework 4.5.2 與更新版本提供支援]  
   
  提供值，指定偵錯工具是否能夠存取分析工具 ReJIT 檢測中加入的區域變數或程式碼。  
@@ -41,10 +42,12 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|偵錯工具有權存取 ReJIT 檢測的資訊。|  
   
 ## <a name="remarks"></a>備註  
+
  列舉的成員 `ILCodeKind` 可以傳遞至 [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) 和 [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) 方法，以判斷偵錯工具是否可以存取在 profiler ReJIT 檢測中加入的變數，以及至 [GetCodeEx](icordebugilframe4-getcodeex-method.md) 方法來判斷偵錯工具是否可以存取已檢測的 IL。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -56,4 +59,4 @@ typedef enum ILCodeKind {
 
 - [偵錯列舉](debugging-enumerations.md)
 - [ICorDebugILFrame4 介面](icordebugilframe4-interface.md)
-- [ReJIT：操作指南](/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT： How-To 指南](/archive/blogs/davbr/rejit-a-how-to-guide)
