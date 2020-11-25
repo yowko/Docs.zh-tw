@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b0d25f76-0bd5-4aa6-96cf-bfec0e1de28b
 topic_type:
 - apiref
-ms.openlocfilehash: 1263202c1fe524c924a88b9356e5ab9116cea553
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4ba404692bef84c0522a799c61f07eac341eaab4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502856"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703840"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration 方法
-取得堆積的區段，其中包含指定的物件。  
+
+取得包含指定物件之堆積的區段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +35,20 @@ HRESULT GetObjectGeneration(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `objectId`  
  在物件的識別碼。  
   
  `range`  
- 脫銷[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)結構的指標，描述正在進行垃圾收集的層代內的記憶體範圍（也就是區塊）。 此範圍包含指定的物件。  
+ 擴展 [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) 結構的指標，其描述範圍 (也就是在產生中進行垃圾收集的區塊) 記憶體。 此範圍包含指定的物件。  
   
 ## <a name="remarks"></a>備註  
- `GetObjectGeneration`如果垃圾收集不在進行中，則可以從任何 profiler 回呼呼叫方法。 也就是說，除了在[ICorProfilerCallback2：： GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)和[ICorProfilerCallback2：： GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)之間發生的回呼以外，它可能會從任何回撥呼叫。  
+
+ `GetObjectGeneration`如果垃圾收集不在進行中，則可以從任何分析工具回呼呼叫方法。 也就是說，它可以從任何回呼呼叫，除了 [ICorProfilerCallback2：： GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) 和 [ICorProfilerCallback2：： GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)之間發生的回呼。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

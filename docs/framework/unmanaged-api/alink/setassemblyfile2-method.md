@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 131f5d951e524ef48f2cfe1e3e88ef80ac21c452
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445594"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703677"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 方法
-設定新元件的名稱和選項。 當您產生未系結的模組時，請勿呼叫此方法。  
+
+設定新元件的和選項的名稱。 當您產生未系結的模組時，請勿呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,22 +37,25 @@ HRESULT SetAssemblyFile2(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pszFilename`  
  資訊清單檔的名稱。  
   
  `pEmitter`  
- 此檔案的[IMetaDataEmit2 介面](../metadata/imetadataemit2-interface.md)介面。  
+ 這個檔案的[IMetaDataEmit2 介面](../metadata/imetadataemit2-interface.md)介面。  
   
  `afFlags`  
- [AssemblyFlags 列舉](../metadata/assemblyflags-enumeration.md)所表示的選項。  
+ [AssemblyFlags 列舉](../metadata/assemblyflags-enumeration.md)所代表的選項。  
   
  `pAssemblyID`  
- 接收所結構化元件的唯一識別碼。  
+ 接收所要建立之元件的唯一識別碼。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
+
  需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
