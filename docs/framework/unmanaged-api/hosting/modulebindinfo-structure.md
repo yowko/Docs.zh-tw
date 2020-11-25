@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-ms.openlocfilehash: 31be0525c637e50c1161129277d651b56dadfaa3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 505015877985492edab4b761b379f33f1e5c6660
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006749"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729976"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 結構
-提供參考模組和包含它之元件的詳細資訊。  
+
+提供參考的模組和包含它的元件的詳細資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +37,23 @@ typedef struct _ModuleBindInfo {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`dwAppDomainId`|`IStream`呼叫[IHostAssemblyStore：:P rovidemodule](ihostassemblystore-providemodule-method.md)方法時所傳回的唯一識別碼，參考的模組會從中載入。|  
+|`dwAppDomainId`|的唯一識別碼 `IStream` ，它是由呼叫 [IHostAssemblyStore：:P rovidemodule](ihostassemblystore-providemodule-method.md) 方法所傳回，該方法是要從中載入參考的模組。|  
 |`lpAssemblyIdentity`|包含參考模組之元件的唯一識別碼。|  
 |`lpModuleName`|參考模組的名稱。|  
   
 ## <a name="remarks"></a>備註  
- `ModuleBindInfo`會當做參數傳遞至 `IHostAssemblyStore::ProvideModule` 。 主機會提供唯一識別碼 `dwAppDomainId` 給 common language runtime （CLR）。 呼叫[IHostAssemblyStore：:P rovideassembly](ihostassemblystore-provideassembly-method.md)方法之後，執行時間會使用識別碼來判斷的內容是否 `IStream` 已對應。 若是如此，執行時間就會載入現有的複本，而不是重新對應資料流程。 執行時間也會使用這個識別碼做為從呼叫方法所傳回之資料流程的查閱索引鍵 `IHostAssemblyStore::ProvideAssembly` 。 因此，識別碼在模組要求和元件要求中都必須是唯一的。  
+
+ `ModuleBindInfo` 以參數形式傳遞至 `IHostAssemblyStore::ProvideModule` 。 主機會將唯一識別碼提供 `dwAppDomainId` 給 common language runtime (CLR) 。 在呼叫 [IHostAssemblyStore：:P rovideassembly](ihostassemblystore-provideassembly-method.md) 方法之後，執行時間會使用此識別碼來判斷的內容是否已 `IStream` 對應。 如果是，執行時間會載入現有的複本，而不是重新對應資料流程。 執行時間也會使用這個識別碼做為呼叫方法所傳回之資料流程的查閱索引鍵 `IHostAssemblyStore::ProvideAssembly` 。 因此，識別碼對於模組要求以及元件要求都必須是唯一的。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll .idl  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

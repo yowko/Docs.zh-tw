@@ -7,14 +7,15 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf8aad5d79e659ad9a767c2b0992eb9ee05fd531
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828682"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730938"
 ---
 # <a name="sealing"></a>密封
+
 物件導向架構的其中一項功能，就是開發人員可以使用架構設計工具無法預期的方式來擴充和自訂它們。 這是可延伸設計的強大功能和風險。 當您設計您的架構時，請務必在需要時仔細設計擴充性，並且在具風險時限制擴充性。
 
  防止擴充性的強大機制是密封的。 您可以密封類別或個別成員。 密封類別可防止使用者繼承自類別。 密封成員可以防止使用者覆寫特定的成員。
@@ -45,7 +46,7 @@ ms.locfileid: "94828682"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [擴充性設計](designing-for-extensibility.md)

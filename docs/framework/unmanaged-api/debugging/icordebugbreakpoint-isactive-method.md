@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 06e583d6-d88a-4ff5-bb95-5c48618a461c
 topic_type:
 - apiref
-ms.openlocfilehash: 64a30ca85a75ebd11918ff630daffbb85c97f6dc
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 064f9727b221dd64a58f8cd5e103271e37020786
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894715"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730171"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>ICorDebugBreakpoint::IsActive 方法
-取得值，指出這個`ICorDebugBreakpoint`是否為使用中。  
+
+取得值，這個值表示這是否 `ICorDebugBreakpoint` 為使用中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT IsActive (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pbActive`  
- 脫銷`true`如果此中斷點為使用中，則為，否則為`false`。  
+ [out] `true` 如果這個中斷點作用中;否則為 `false` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

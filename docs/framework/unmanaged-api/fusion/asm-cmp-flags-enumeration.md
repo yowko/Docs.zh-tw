@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fea06a3e6d06aeff56ba7e20e8e64f0a6feb5e69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731055"
 ---
 # <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS 列舉
-指示要由[IAssemblyname：：isEqual](iassemblyname-isequal-method.md)方法比較的兩個程式集的版本、生成、區域性、簽名等。  
+
+指出 [IAssemblyName：： IsEqual](iassemblyname-isequal-method.md) 方法要比較之兩個元件的版本、組建、文化特性、簽章等等。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -66,13 +67,14 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 融合.h  
+ **標頭：** 融合。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

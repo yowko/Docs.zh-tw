@@ -9,14 +9,15 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 985f6e5057a06ac9dcadc0e2c1e4d7743d96f035
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535855"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730223"
 ---
 # <a name="runtime-callable-wrapper"></a>執行階段可呼叫包裝函式
+
 Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。 雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。  
   
  不論 COM 物件上存在著多少參考，執行階段都會針對每個 COM 物件各建立一個 RCW。 執行階段會針對每個物件的每個處理序各維護一個 RCW。  如果您在一個應用程式定義域或 Apartment 中建立 RCW，然後將參考傳遞至另一個應用程式定義域或 Apartment，將會使用第一個物件的 Proxy。  如下圖所示，任何數目的 Managed 用戶端都可以保存公開 INew 和 INewer 介面之 COM 物件的參考。  
@@ -32,6 +33,7 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
  標準包裝函式會強制執行內建的封送處理規則。 例如，當 .NET 用戶端將字串類型當做引數的一部分傳遞至 Unmanaged 物件時，包裝函式會將字串轉換成 BSTR 類型。 如果 COM 物件將 BSTR 傳回至其 Managed 呼叫端，該呼叫端會收到一個字串。 用戶端和伺服器都會傳送及接收其熟悉的資料。 其他類型則不需轉換。 比方說，標準包裝函式一律會在 Managed 與 Unmanaged 程式碼之間傳遞 4 位元組的整數，而不會轉換類型。  
   
 ## <a name="marshaling-selected-interfaces"></a>封送處理選取的介面  
+
  [執行階段可呼叫包裝函式](runtime-callable-wrapper.md) (RCW) 的主要目標，是要隱藏 Managed 與 Unmanaged 程式設計模型之間的差異。 為了建立無縫轉換，RCW 會使用所選取的 COM 介面，而不會將其公開給 .NET 用戶端，如下圖所示。
 
  下圖顯示 COM 介面與執行階段可呼叫包裝函式：

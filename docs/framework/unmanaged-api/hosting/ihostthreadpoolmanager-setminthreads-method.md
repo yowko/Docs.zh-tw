@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 10409db9-9fd2-4e4d-b8cd-cf6fec0afaa2
 topic_type:
 - apiref
-ms.openlocfilehash: c5b150b161acba3820ced367049f08153dd091aa
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: d6f56f689a35fa025a924be0db67c893f160fc7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842426"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730730"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads 方法
-設定主機必須在要求中維持的最小閒置執行緒數目。  
+
+設定主機必須在預期的要求中維持的最小閒置執行緒數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,30 +35,33 @@ HRESULT SetMinThreads (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `MinThreads`  
- 在主機必須維護的新執行緒最小數目。  
+ 在主機必須維持的新執行緒數目下限。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads`已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫超時。|  
+|S_OK|`SetMinThreads` 傳回成功。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫已超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_NOTIMPL|主機未提供的執行 `SetMinThreads` 。|  
+|HOST_E_ABANDONED|當封鎖的執行緒或光纖正在等候時，已取消事件。|  
+|E_FAIL|發生未知的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 在進程內將無法再使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_NOTIMPL|主機未提供的實作為 `SetMinThreads` 。|  
   
 ## <a name="remarks"></a>備註  
- 不需要主機來提供的執行 `SetMinThreads` 。 在此情況下，它應該會傳回 E_NOTIMPL 的 HRESULT 值。  
+
+ 主機不需要提供的實作為 `SetMinThreads` 。 在此情況下，它應該會傳回 E_NOTIMPL 的 HRESULT 值。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

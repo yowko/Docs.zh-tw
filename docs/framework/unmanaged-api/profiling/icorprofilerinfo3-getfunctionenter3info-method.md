@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-ms.openlocfilehash: 876ae07a432bfa36a7d9f43ae6c32ec03d7d3289
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4e240743894e0a7076e593b55966307d304ebd28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731185"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info 方法
-提供[FunctionEnter3WithInfo](functionenter3withinfo-function.md)函式向分析工具報告之函式的堆疊框架和引數資訊。 只能在 `FunctionEnter3WithInfo` 回呼期間呼叫這個方法。  
+
+提供由 [FunctionEnter3WithInfo](functionenter3withinfo-function.md) 函式回報給 profiler 的函式之堆疊框架和引數資訊。 只能在 `FunctionEnter3WithInfo` 回呼期間呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,26 +39,29 @@ HRESULT GetFunctionEnter3Info(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `functionId`  
  [in] 正在輸入之函式的 `FunctionID`。  
   
  `eltInfo`  
- [in] 代表特定堆疊框架之資訊的不透明控制代碼。 分析工具應該提供 FunctionEnter3WithInfo 函式所指定的相同 `eltInfo` 功能[FunctionEnter3WithInfo](functionenter3withinfo-function.md) 。  
+ [in] 代表特定堆疊框架之資訊的不透明控制代碼。 分析工具應提供 FunctionEnter3WithInfo 函數所提供的相同 `eltInfo` 。 [FunctionEnter3WithInfo](functionenter3withinfo-function.md)  
   
  `pFrameInfo`  
  [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `GetFunctionEnter3Info` 方法的 `FunctionEnter3WithInfo` 回呼中有效。  
   
  `pcbArgumentInfo`  
- [in、out][COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md)結構（再加上所指向之引數範圍的任何其他[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)結構）的總大小（以位元組為單位）的指標 `pArgumentInfo` 。 如果指定的大小不足，會傳回 ERROR_INSUFFICIENT_BUFFER，且預期大小會儲存在 `pcbArgumentInfo`。 若要呼叫 `GetFunctionEnter3Info` 以擷取預期的 `*pcbArgumentInfo` 值，請設定 `*pcbArgumentInfo`= 0 和 `pArgumentInfo`= NULL。  
+ [in，out] [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 結構的大小總計（以位元組為單位） (再加上) 所指向之引數範圍的任何其他 [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 結構 `pArgumentInfo` 。 如果指定的大小不足，會傳回 ERROR_INSUFFICIENT_BUFFER，且預期大小會儲存在 `pcbArgumentInfo`。 若要呼叫 `GetFunctionEnter3Info` 以擷取預期的 `*pcbArgumentInfo` 值，請設定 `*pcbArgumentInfo`= 0 和 `pArgumentInfo`= NULL。  
   
  `pArgumentInfo`  
- 脫銷[COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md)結構的指標，描述函式的引數在記憶體中的位置（以左至右順序）。  
+ 擴展 [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 結構的指標，此結構描述函式引數在記憶體中的位置（由左至右的順序）。  
   
 ## <a name="remarks"></a>備註  
+
  程式碼剖析工具必須配置足夠的空間供檢查中之函式的 `COR_PRF_FUNCTION_ARGUMENT_INFO` 結構使用，且必須在 `pcbArgumentInfo` 參數指出大小。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

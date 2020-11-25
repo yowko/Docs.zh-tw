@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-ms.openlocfilehash: e3cdb648397ca4f4aa2326e4f2349a5a14c3edcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cde25a9507006c89ef6490c13ae82033f04c2931
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178297"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731029"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 列舉
-指示由[比較裝配標識](compareassemblyidentity-function.md)函數確定的兩個程式集標識的等效性。  
+
+指出兩個元件身分識別的相等（由 [CompareAssemblyIdentity](compareassemblyidentity-function.md) 函式所決定）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,27 +48,28 @@ typedef enum _tagAssemblyComparisonResult {
   
 |成員名稱|描述|  
 |-----------------|-----------------|  
-|`ACR_EquivalentFullMatch`|指示比較中的所有程式集欄位匹配。|  
-|`ACR_EquivalentFXUnified`|指示基於 .NET Framework 版本 2.0 中程式集版本 2.0 中程式集版本編號的通用語言執行階段版本 （CLR） 統一，將程式集視為等效。|  
-|`ACR_EquivalentPartialFXUnified`|指示基於 .NET 框架 2.0 中程式集版本號的 CLR 統一的程式集的部分匹配。|  
-|`ACR_EquivalentPartialMatch`|指示程式集的部分匹配。|  
-|`ACR_EquivalentPartialUnified`|指示基於版本號的舊統一的程式集的部分匹配。|  
-|`ACR_EquivalentPartialWeakNamed`|指示簡單命名程式集的部分匹配。|  
-|`ACR_EquivalentUnified`|指示基於 .NET Framework 舊版本中版本號的 CLR 統一，將程式集視為等效。|  
-|`ACR_EquivalentWeakNamed`|指示兩個簡單命名的程式集之間的匹配，其版本號被忽略。|  
-|`ACR_NonEquivalent`|指示兩個程式集之間沒有匹配。|  
-|`ACR_NonEquivalentPartialVersion`|指示兩個程式集匹配，但版本號除外，只有部分匹配。|  
-|`ACR_NonEquivalentVersion`|指示兩個程式集匹配，但版本號不匹配。|  
-|`ACR_Unknown`|指示非等價的原因尚不清楚。|  
+|`ACR_EquivalentFullMatch`|表示比較中的所有元件欄位都相符。|  
+|`ACR_EquivalentFXUnified`|表示根據 common language runtime 版本 (CLR) .NET Framework 2.0 版中的元件版本號碼統一，來將元件視為相等。|  
+|`ACR_EquivalentPartialFXUnified`|根據 .NET Framework 2.0 中元件版本號碼的 CLR 統一，表示元件的部分相符。|  
+|`ACR_EquivalentPartialMatch`|表示元件的部分相符。|  
+|`ACR_EquivalentPartialUnified`|表示以舊版統一的版本號碼為基礎的元件部分相符。|  
+|`ACR_EquivalentPartialWeakNamed`|表示單純命名元件的部分相符。|  
+|`ACR_EquivalentUnified`|表示根據舊版 .NET Framework 中的版本號碼 CLR 統一，將元件視為相同。|  
+|`ACR_EquivalentWeakNamed`|表示兩個簡單命名的元件（其版本號碼已被忽略）之間的相符項。|  
+|`ACR_NonEquivalent`|指出兩個元件之間沒有相符的結果。|  
+|`ACR_NonEquivalentPartialVersion`|指出兩個元件的版本號碼除外，但只有部分相符。|  
+|`ACR_NonEquivalentVersion`|指出兩個元件的版本號碼除外，但不符。|  
+|`ACR_Unknown`|指出不知道非等位的原因。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 融合.h  
+ **標頭：** 融合。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

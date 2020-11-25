@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9e359384-0d3d-451c-807e-5d7fcebf2be7
 topic_type:
 - apiref
-ms.openlocfilehash: c99607bfe5fda01eb1abfd7771cb3907ddabeec5
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: f8f67edde7f99878429ca0bbd89aaf52336aa79c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703784"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730444"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>ICLRMetaHost::EnumerateInstalledRuntimes 方法
-傳回列舉，其中包含電腦上所安裝之每個 common language runtime （CLR）版本的有效[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面。  
+
+傳回列舉，其中包含安裝在電腦上之每個 common language runtime (CLR) 的有效 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,23 +34,26 @@ HRESULT EnumerateInstalledRuntimes (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppEnumerator`  
- 脫銷對應至電腦上所安裝之每個 CLR 版本的[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面列舉。  
+ 擴展 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 介面的列舉，對應于電腦上安裝的每個 CLR 版本。  
   
 ## <a name="return-value"></a>傳回值  
+
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`ppEnumerator` 為 null。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 941093b9a0856c2b716ba359c854473f3c9ea26a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: a8a57cfcaf36949d4d10c6ec267a5f55a2aee5eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006515"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729924"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 結構
-儲存發生的溢位類型，以及因溢位而擲回之例外狀況的資訊。  
+
+儲存發生溢位的型別，以及因為溢位所擲回之例外狀況的資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +36,22 @@ typedef struct _StackOverflowInfo {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`soType`|指定溢位類型的[StackOverflowType](stackoverflowtype-enumeration.md)列舉值。|  
-|`pExceptionInfo`|Win32 物件的指標 `EXCEPTION_POINTERS` ，其中包含例外狀況記錄，其中含有與電腦無關的例外狀況描述，以及具有在例外狀況時的處理器內容之電腦相依描述的內容記錄。|  
+|`soType`|[StackOverflowType](stackoverflowtype-enumeration.md)列舉的值，這個值會指定溢位的型別。|  
+|`pExceptionInfo`|Win32 物件的指標 `EXCEPTION_POINTERS` ，其中包含例外狀況記錄與電腦無關的例外狀況記錄，以及在發生例外狀況時，具有電腦相依描述的內容記錄。|  
   
 ## <a name="remarks"></a>備註  
- `StackOverflowInfo`物件會傳遞至事件的[IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md)方法 `Event_StackOverflow` 。  
+
+ `StackOverflowInfo`物件會傳遞給事件的[IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md)方法 `Event_StackOverflow` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll .idl  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

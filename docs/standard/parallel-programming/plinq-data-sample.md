@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: cdbecc0c7483ec189c7c19f19d75ababeb20989f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830567"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730548"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 資料範例
+
 此範例包含 .csv 格式的範例資料，以及將它轉換成記憶體中客戶、產品、訂單及訂單詳細資料集合的方法。 若要使用 PLINQ 進一步實驗，您可以將其他主題中的程式碼範例貼到本主題的程式碼中，並從 `Main` 方法叫用它。 您也可以搭配您自己的 PLINQ 查詢使用這項資料。  
   
  此資料代表 Northwind 資料庫的子集。 其中包含五十 (50) 筆客戶記錄，但不包含所有欄位。 其中包含每位客戶的訂單和對應之 Order_Detail 資料的資料列子集。 其中包含所有產品。  
@@ -859,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

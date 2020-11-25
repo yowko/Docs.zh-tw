@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828734"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730964"
 ---
 # <a name="property-design"></a>屬性設計
+
 雖然屬性在技術上與方法非常類似，但它們在使用案例方面是相當不同的。 它們應該會被視為智慧型欄位。 它們具有欄位的呼叫語法，以及方法的彈性。
 
  如果呼叫端應該無法變更屬性的值，則✔️建立僅取得屬性。
@@ -38,6 +39,7 @@ ms.locfileid: "94828734"
  屬性 getter 應該是簡單的作業，而且不應該有任何前置條件。 如果 getter 可能會擲回例外狀況，則應該重新設計成方法。 請注意，此規則不適用於索引子，因為驗證引數的結果會是例外狀況。
 
 ### <a name="indexed-property-design"></a>索引屬性設計
+
  索引屬性是一個特殊的屬性，它可以有參數，而且可以使用類似于陣列索引的特殊語法來呼叫。
 
  索引屬性通常稱為索引子。 索引子只能在提供邏輯集合中專案存取權的 Api 中使用。 例如，字串是字元的集合，而中的索引子 <xref:System.String?displayProperty=nameWithType> 已加入來存取其字元。
@@ -69,6 +71,7 @@ ms.locfileid: "94828734"
  C # 編譯器會強制執行這項功能。
 
 ### <a name="property-change-notification-events"></a>屬性變更通知事件
+
  有時提供事件，以通知使用者屬性值的變更，會很有用。 例如， `System.Windows.Forms.Control` `TextChanged` 在屬性的值變更之後引發事件 `Text` 。
 
  ✔️考慮當高階 Api 中的屬性值 (通常會修改) 的設計工具元件時引發變更通知事件。
@@ -85,7 +88,7 @@ ms.locfileid: "94828734"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [成員設計方針](member.md)
 - [架構設計指導方針](index.md)

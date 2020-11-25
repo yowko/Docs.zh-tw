@@ -6,17 +6,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework], hosting
 - hosting [.NET Framework], using the unmanaged API
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
-ms.openlocfilehash: 550b663ec7fc41309c000d7c616d94c846b0cb40
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2abb23e53284440b68e139c6807007fad10f20c9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555688"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730642"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>裝載 (Unmanaged API 參考)
+
 裝載應用程式開發介面可讓 Unmanaged 主應用程式將 Common Language Runtime (CLR) 整合至其應用程式中。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [裝載 Coclass](hosting-coclasses.md)  
  描述裝載應用程式開發介面使用的 Unmanaged Coclass。  
   
@@ -33,5 +35,6 @@ ms.locfileid: "90555688"
  描述裝載應用程式開發介面使用的 Unmanaged 結構。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [執行階段主應用程式](/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
  描述 .NET Framework 隨附的執行階段主應用程式。
