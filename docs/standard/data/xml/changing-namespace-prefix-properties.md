@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: 14a59a9fdc602e63822a62c102cbffa32d6ba850
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a4ba378620d0c5ec01aaa5d87020c33fdbffcf01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830268"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725348"
 ---
 # <a name="changing-namespace-prefix-properties"></a>變更命名空間前置詞屬性
+
 **XmlNode** 類別可以讓您變更與指定之節點關聯的命名空間前置詞。 例如，下列程式碼顯示要變更之項目的前置詞。  
   
 ```vb  
@@ -63,6 +64,6 @@ Console.WriteLine(doc.InnerXml);
   
  樹狀結構保留於字串做為 **doc.InnerXml** 的呼叫結果時，會加入 `xmlns:a='123'` 屬性以保留 `test` 項目的命名空間。 它原本是 `'123'`，且仍保留為 `'123'`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

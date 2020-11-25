@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: 822396e28d000a5309738680fec502e1aeacd67c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6a8765bfd62a2e6543661804ab8d009ce19f8813
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616212"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724308"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 列舉
-包含值，指出電腦上的可用實體記憶體數量。 這些值會以邏輯方式對應至 Windows API 中的函式所傳回之高和低記憶體的事件 `CreateMemoryResourceNotification` 。  
+
+包含值，指出電腦上可用的實體記憶體數量。 這些值會以邏輯方式對應至 Windows API 中的函式所傳回之高和低記憶體的事件 `CreateMemoryResourceNotification` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +37,23 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`eMemoryAvailableHigh`|有足夠的實體記憶體可供使用。|  
-|`eMemoryAvailableLow`|有極少的實體記憶體可供使用。|  
-|`eMemoryAvailableNeutral`|可用的實體記憶體是中性的。|  
+|`eMemoryAvailableLow`|有極少的實體記憶體可用。|  
+|`eMemoryAvailableNeutral`|可用的實體記憶體是中立的。|  
   
 ## <a name="remarks"></a>備註  
- 此值會透過呼叫[ICLRMemoryNotificationCallback：： OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md)方法，由主機傳遞至 common language RUNTIME （CLR）。  
+
+ 使用 [ICLRMemoryNotificationCallback：： OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md) 方法的呼叫，此值會由主機傳遞給 common language RUNTIME (CLR) 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

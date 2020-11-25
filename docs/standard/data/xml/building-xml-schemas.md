@@ -6,20 +6,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: bb011a8b81d9808c7517ebc2517529af7c4b975a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725374"
 ---
 # <a name="building-xml-schemas"></a>建置 XML 結構描述
+
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別會對應至全球資訊網協會 (W3C) XML 結構描述建議事項中定義的結構，並可用於建置記憶體中的 XML 結構描述。  
   
 ## <a name="building-an-xml-schema"></a>建置 XML 結構描述  
+
  在下面的程式碼範例中，會使用 SOM API 建置記憶體中的客戶 XML 結構描述。  
   
 ### <a name="creating-element-and-attributes"></a>建立項目及屬性  
+
  程式碼範例會從下往上建置客戶結構描述，首先建立項目子系、屬性及其對應的型別，然後再建立最上層項目。  
   
  在下列程式碼範例中，會使用 SOM 的 `FirstName` 及 `LastName` 類別，建立 `CustomerId` 及 <xref:System.Xml.Schema.XmlSchemaElement> 項目，以及客戶結構描述的 <xref:System.Xml.Schema.XmlSchemaAttribute> 屬性。 除了 <xref:System.Xml.Schema.XmlSchemaElement.Name%2A> 及 <xref:System.Xml.Schema.XmlSchemaElement> 類別的 <xref:System.Xml.Schema.XmlSchemaAttribute> 屬性 (其對應至 XML 結構描述中 `<xs:element />` 及 `<xs:attribute />` 項目的 name 屬性 (Attribute))，結構描述所允許的所有其他屬性 (`defaultValue`、`fixedValue` 及 `form` 等)，在 <xref:System.Xml.Schema.XmlSchemaElement> 及 <xref:System.Xml.Schema.XmlSchemaAttribute> 類別中都有對應的屬性 (Property)。  
@@ -29,6 +32,7 @@ ms.locfileid: "94819367"
  [!code-vb[XmlSchemaCreateExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#2)]  
   
 ### <a name="creating-schema-types"></a>建立結構描述型別  
+
  項目及屬性的內容是由其型別來定義。 若要建立其型別為其中一個內建結構描述型別的項目及屬性 (Attribute)，請使用 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 類別，以內建型別之對應的限定名稱設定 <xref:System.Xml.Schema.XmlSchemaElement> 或 <xref:System.Xml.Schema.XmlSchemaAttribute> 類別的 <xref:System.Xml.XmlQualifiedName> 屬性 (Property)。 若要建立項目及屬性的使用者定義型別，請使用 <xref:System.Xml.Schema.XmlSchemaSimpleType> 或 <xref:System.Xml.Schema.XmlSchemaComplexType> 類別，建立新的簡單或複雜型別。  
   
 > [!NOTE]
@@ -46,6 +50,7 @@ ms.locfileid: "94819367"
  [!code-vb[XmlSchemaCreateExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#3)]  
   
 ### <a name="creating-and-compiling-schemas"></a>建立及編譯結構描述  
+
  此時，已使用 SOM API 在記憶體中建立項目子系及屬性、其對應的型別，以及最上層 `Customer` 項目。 在下列程式碼範例中，會使用 <xref:System.Xml.Schema.XmlSchema> 類別建立結構描述項目，使用 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 屬性將最上層項目及型別加入其中，並使用 <xref:System.Xml.Schema.XmlSchemaSet> 類別編譯完整的結構描述，然後寫入主控台。  
   
  [!code-cpp[XmlSchemaCreateExample#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#4)]
@@ -85,7 +90,7 @@ ms.locfileid: "94819367"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
 - [讀取及寫入 XML 結構描述](reading-and-writing-xml-schemas.md)

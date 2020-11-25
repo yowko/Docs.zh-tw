@@ -7,12 +7,12 @@ helpviewer_keywords:
 - event wait handles [.NET]
 - threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 5e448397e4aabe0acb4144abe1469af6a631aeaa
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 078bda2354a6f0aec2215b0c5da2a021f53ff922
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819912"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723780"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 
@@ -24,6 +24,7 @@ ms.locfileid: "94819912"
  本機和具名事件等候控制代碼都會使用系統同步處理作業物件，<xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包裝函式會保護這些物件以確保資源被釋出。 當您已使用完物件時，可以使用 <xref:System.Threading.WaitHandle.Dispose%2A> 方法來立即釋出資源。  
   
 ## <a name="event-wait-handles-that-reset-automatically"></a>自動重設的事件等候控制代碼  
+
  您可以在建立 <xref:System.Threading.EventWaitHandle> 物件時指定 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>，來建立自動重設事件。 正如其名，此同步處理事件在收到訊號並釋出一個等候執行緒之後，就會自動重設。 請呼叫事件的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法來對事件發出訊號。  
   
  自動重設事件通常用來一次為一個執行緒提供資源的獨佔存取權。 執行緒會透過呼叫 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法來要求資源。 如果沒有任何其他執行緒持有等候控制代碼，該方法就會傳回 `true`，而發出呼叫的執行緒就會擁有資源的控制權。  
@@ -34,6 +35,7 @@ ms.locfileid: "94819912"
  如果自動重設事件在沒有任何執行緒處於等候狀態時收到訊號，它會維持收到訊號的狀態，直到有執行緒嘗試等候它為止。 此事件會釋出執行緒並立即重設，以阻斷後續的執行緒。  
   
 ## <a name="event-wait-handles-that-reset-manually"></a>手動重設的事件等候控制代碼  
+
  您可以在建立 <xref:System.Threading.EventWaitHandle> 物件時指定 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>，來建立手動重設事件。 正如其名，您必須在此同步處理事件收到訊號之後，以手動方式重設它。 在此事件被重設之前，等候事件控制代碼的執行緒可藉由呼叫其 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法來立即繼續進行而不受阻斷。  
   
  手動重設事件就像圍欄的閘門一樣。 當事件沒有收到訊號時，等候它的執行緒會被阻斷，就像圍欄中的馬一樣。 當事件收到訊號時，只要呼叫其 <xref:System.Threading.EventWaitHandle.Set%2A> 方法，所有等候中的執行緒便可自由繼續進行。 事件會維持收到訊號的狀態，直到其 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法被呼叫為止。 這使得手動重設事件成為一種理想的方式，來攔住必須等候某個執行緒完成工作的執行緒。  
@@ -41,11 +43,13 @@ ms.locfileid: "94819912"
  與離開圍欄的馬一樣，作業系統需要時間來排定釋出的執行緒並讓它們繼續執行。 如果在所有執行緒繼續執行之前呼叫 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法，剩餘的執行緒就會再次遭到阻斷。 哪些執行緒會繼續執行及哪些執行緒會遭到阻斷，取決於系統上的負載、等候排程器的執行緒數量等隨機因素。 如果向事件發出訊號的執行緒在發出訊號後結束，這就不成問題，這也是最常見的使用模式。 如果您想要讓向事件發出訊號的執行緒在所有等候中執行緒都繼續執行之後開始新的工作，就必須阻斷它，直到所有等候中執行緒都已繼續執行為止。 否則，會發生競爭情形，而無法預測您的程式碼行為。  
   
 ## <a name="features-common-to-automatic-and-manual-events"></a>自動和手動事件的常見功能  
+
  通常 <xref:System.Threading.EventWaitHandle> 上會有一或多個執行緒被阻斷，直到未遭阻斷的執行緒呼叫 <xref:System.Threading.EventWaitHandle.Set%2A> 方法為止，這會釋出其中一個等候中的執行緒 (在自動重設事件的案例中) 或所有等候中的執行緒 (在手動重設事件的案例中)。 執行緒可以藉由呼叫靜態 <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> 方法，向 <xref:System.Threading.EventWaitHandle> 發出訊號，然後被阻斷，整個作業一氣呵成。  
   
  <xref:System.Threading.EventWaitHandle> 物件可以與靜態的 <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> 方法搭配使用。 由於 <xref:System.Threading.EventWaitHandle> 和 <xref:System.Threading.Mutex> 類別都衍生自 <xref:System.Threading.WaitHandle>，因此您可以將這兩個類別與這些方法搭配使用。  
   
 ### <a name="named-events"></a>具名事件  
+
  Windows 作業系統允許事件等候控制代碼擁有名稱。 具名事件是全系統性的。 也就是說，一旦建立具名事件，所有處理序中的所有執行緒都可看到它。 因此，具名事件既可用來同步處理執行緒，也可用來同步處理處理序的活動。  
   
  您可以使用其中一個指定名稱的建構函式，來建立代表具名系統事件的 <xref:System.Threading.EventWaitHandle> 物件。  

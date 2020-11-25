@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: e474cac6437413565a1ebddfa88c3e228fe59d41
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e676547d20dc9535241150d24b65e1fbaf9e89ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556345"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725101"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列舉
+
 包含在開啟資訊清單檔案時控制中繼資料行為的旗標值。  
   
 ## <a name="syntax"></a>語法  
@@ -65,7 +66,8 @@ typedef enum CorOpenFlags
 |`ofReserved`|保留供內部使用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

@@ -3,12 +3,12 @@ title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6303c16e914c86f3a431a9e5367e6feb8ff88c9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654818"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724738"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -34,19 +34,19 @@ ms.locfileid: "91654818"
 
 容器登錄是映像存放庫的集合。 您可以使用登錄映像作為映像的基礎。 您可以在登錄中直接從映像建立容器。 在[進行容器化應用程式或微服務的架構設計及建置](../../architecture/microservices/architect-microservice-container-applications/index.md)時，[Docker 容器、映像和登錄之間的關係](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)是相當重要的概念。 此作法能大幅縮短開發和部署之間的時間。
 
-Docker 擁有公用登錄，已裝載於 [Docker Hub](https://hub.docker.com/) \(英文\) 供您使用。 Docker Hub 會列出 [.NET core 相關映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
+Docker 擁有公用登錄，已裝載於 [Docker Hub](https://hub.docker.com/) \(英文\) 供您使用。 Docker Hub 會列出 [.NET core 相關映像](https://hub.docker.com/_/microsoft-dotnet/) \(英文\)。
 
-[Microsoft Container Registry (MCR) ](/azure/container-registry)是 microsoft 所提供容器映射的官方來源。 MCR 建置在 Azure CDN 上，用來提供全域複寫的映像。 不過，MCR 並沒有公開網站，因此了解 Microsoft 所提供容器映像的主要方式是透過 [Microsoft Docker Hub 頁面](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
+[Microsoft Container Registry (MCR) ](/azure/container-registry)是 microsoft 所提供容器映射的官方來源。 MCR 建置在 Azure CDN 上，用來提供全域複寫的映像。 不過，MCR 並沒有公開網站，因此了解 Microsoft 所提供容器映像的主要方式是透過 [Microsoft Docker Hub 頁面](https://hub.docker.com/_/microsoft-dotnet/) \(英文\)。
 
 ### <a name="dockerfile"></a>Dockerfile
 
-**Dockerfile** 是一個檔案，定義了一組建立映像的指示。 **Dockerfile** 中的每個指示都會在映像中建立一個圖層。 大部分的情況下，當您重建映射時，只會重建已變更的圖層。 **Dockerfile**可散發給其他人，並可讓他們以您建立的相同方式重新建立新的映射。 雖然這可讓您散發映像建立方式的*指示*，但散發映像的主要方式是將它發行至登錄。
+**Dockerfile** 是一個檔案，定義了一組建立映像的指示。 **Dockerfile** 中的每個指示都會在映像中建立一個圖層。 大部分的情況下，當您重建映射時，只會重建已變更的圖層。 **Dockerfile** 可散發給其他人，並可讓他們以您建立的相同方式重新建立新的映射。 雖然這可讓您散發映像建立方式的 *指示*，但散發映像的主要方式是將它發行至登錄。
 
 ## <a name="net-core-images"></a>.NET Core 映像
 
-官方 .NET Core Docker 映像會發佈至 Microsoft 容器登錄 (MCR)，並且可在 [Microsoft.NET Core Docker Hub 存放庫](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\) 中找到。 每個存放庫都包含您可以使用的 .NET (SDK 或執行階段) 與作業系統不同組合的映像。
+官方 .NET Core Docker 映像會發佈至 Microsoft 容器登錄 (MCR)，並且可在 [Microsoft.NET Core Docker Hub 存放庫](https://hub.docker.com/_/microsoft-dotnet/) \(英文\) 中找到。 每個存放庫都包含您可以使用的 .NET (SDK 或執行階段) 與作業系統不同組合的映像。
 
-Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET Core 存放庫](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) \(英文\) 可提供為了在生產環境中執行 ASP.NET Core 應用程式而建置的映像。
+Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET Core 存放庫](https://hub.docker.com/_/microsoft-dotnet-aspnet/) \(英文\) 可提供為了在生產環境中執行 ASP.NET Core 應用程式而建置的映像。
 
 ## <a name="azure-services"></a>Azure 服務
 

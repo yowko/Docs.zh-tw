@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7051aeb8cdc25518f99fe093045e7e769ae7f6f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822824"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725413"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 存取強型別 XML 資料
+
 以 XPath 2.0 資料模型的實例 <xref:System.Xml.XPath.XPathNavigator> 而言，類別可包含對應到 common language runtime (CLR) 類型的強型別資料。 根據 XPath 2.0 資料模型，只有元素和屬性可以包含強型別資料。 <xref:System.Xml.XPath.XPathNavigator>類別提供的機制可讓您以強型別資料的形式存取或物件中的資料，以及 <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> 將資料類型轉換成另一種資料類型的機制。  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>XPathNavigator 公開的型別資訊  
+
  就技術而言，XML 1.0 資料沒有型別，除非它是透過 DTD、XML 結構描述定義語言 (XSD) 結構描述或其他機制予以處理。 某些類別的型別資訊，可以與 XML 項目或屬性相關聯。  
   
 - 簡單 CLR 型別：任何 XML 結構描述語言都無法直接支援 Common Language Runtime (CLR) 型別。 由於將簡單項目及屬性內容視為最適當的 CLR 型別很有用，因此在沒有結構描述資訊的情況下，所有的簡單內容都可以具有 <xref:System.String> 型別，並且任何加入的結構描述資訊都可能會將這個內容調整為更適當的型別。 您可以利用 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 屬性，找到與簡單項目及屬性內容最相符的 CLR 型別。 如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](type-support-in-the-system-xml-classes.md)。  
@@ -29,9 +31,10 @@ ms.locfileid: "94822824"
 - 結構描述語言特定的型別反映：在其他情況下，您可能要取得套用至 XML 文件之結構描述特定型別更詳細的資料。 例如，在讀取 XML 檔案時，可能要擷取 XML 文件中每個有效節點的 `maxOccurs` 屬性，以執行部份自訂計算。 因為此資訊只會透過結構描述驗證來予以設定，所以它會透過 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 屬性來進行存取。 如需詳細資訊，請參閱下面的＜後結構描述驗證資訊集 (PSVI)＞一節。  
   
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator 具型別存取子  
+
  下表顯示可用於存取節點相關型別資訊之 <xref:System.Xml.XPath.XPathNavigator> 類別的各種屬性及方法。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|包含有效節點的 XML 結構描述型別資訊。|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|包含驗證後加入之節點的後結構描述驗證資訊集。 包含 XML 結構描述型別資訊，以及有效性資訊。|  
@@ -47,6 +50,7 @@ ms.locfileid: "94822824"
  如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](type-support-in-the-system-xml-classes.md)。  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>後結構描述驗證資訊集 (PSVI)  
+
  XML 結構描述處理器接受使用 XML 資訊集做為輸入，並將其轉換為後結構描述驗證資訊集 (PSVI)。 PSVI 為原始輸入 XML 資訊集，內含在現有資訊項目中加入新的資訊項目及新屬性。 有三大資訊類別會加入至 PSVI 中的 XML 資訊集，並且這些資訊是由 <xref:System.Xml.XPath.XPathNavigator> 公開。  
   
 1. 驗證結果：是否已成功驗證項目或屬性的相關資訊。 由 <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> 類別之 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 屬性的 <xref:System.Xml.XPath.XPathNavigator> 屬性公開。  
@@ -137,6 +141,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 ```  
   
 ## <a name="obtain-typed-values-using-valueas-properties"></a>使用 ValueAs 屬性取得具型別值  
+
  節點的具型別值可藉由存取 <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> 的 <xref:System.Xml.XPath.XPathNavigator> 屬性來擷取。 在某些情況下，您可能要將節點的具型別值轉換為不同的型別。 常見的範例是從 XML 節點取得數值。 例如，請考量下列未經驗證且不具型別的 XML 文件。  
   
 ```xml  
@@ -182,7 +187,7 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](type-support-in-the-system-xml-classes.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

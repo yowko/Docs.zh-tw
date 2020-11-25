@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d3bbdea3b2f23ddd2207ff2a036f32978cd837e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442133"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725127"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay 介面
-提供方法，顯示有關執行中應用程式的目前系結資訊。  
+
+提供方法來顯示有關執行中應用程式的目前系結資訊。  
   
 ## <a name="methods"></a>方法  
   
@@ -32,11 +33,12 @@ ms.locfileid: "83442133"
 |[InitializeForProcess 方法](ibindingdisplay-initializeforprocess-method.md)|初始化 `IBindingDisplay` 物件。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** BindingDisplay。h  
   
- 連結**庫：** BindingDisplay .idl  
+ 連結 **庫：** BindingDisplay .idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

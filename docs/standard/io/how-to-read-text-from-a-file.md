@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48b862ff77bf4ace48a5481fe9bedcf354b5654b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823364"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725335"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：從檔案讀取文字
 
@@ -27,6 +27,7 @@ ms.locfileid: "94823364"
 > 這些程式碼範例不適用於通用 Windows (UWP) 應用程式，因為 Windows 執行階段提供不同的串流類型來讀取和寫入檔案。 如需顯示如何在 UWP 應用程式中從檔案讀取文字的範例，請參閱 [快速入門：讀取和寫入](/previous-versions/windows/apps/hh758325(v=win.10))檔案。 如需示範如何在 .NET Framework 資料流程和 Windows 執行階段資料流程之間轉換的範例，請參閱 [如何：在 .NET Framework 資料流程和 Windows 執行階段資料流程之間進行轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>範例：在主控台應用程式中同步讀取  
+
 下列範例將示範在主控台應用程式內的同步讀取作業。 此範例會使用資料流讀取器開啟文字檔、將內容複製到字串，並將字串輸出至主控台。  
   
 > [!IMPORTANT]
@@ -36,6 +37,7 @@ ms.locfileid: "94823364"
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
   
 ## <a name="example-asynchronous-read-in-a-wpf-app"></a>範例： WPF 應用程式中的非同步讀取
+
  下列範例將示範 Windows Presentation Foundation (WPF) 應用程式內的非同步讀取作業。  
   
 > [!IMPORTANT]
@@ -44,7 +46,7 @@ ms.locfileid: "94823364"
 :::code language="csharp" source="snippets/how-to-read-text-from-a-file/csharp/async-wpf/MainWindow.xaml.cs":::
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/async-wpf/MainWindow.xaml.vb":::
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StreamReader>  
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
@@ -58,4 +60,4 @@ ms.locfileid: "94823364"
 - [如何：將文字寫入檔案](how-to-write-text-to-a-file.md)  
 - [如何：從字串讀取字元](how-to-read-characters-from-a-string.md)  
 - [如何：將字元寫入字串](how-to-write-characters-to-a-string.md)  
-- [檔案和資料流程 i/o](index.md)
+- [檔案和資料流 I/O](index.md)

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 14942680a79c4d1fcc69092a4f752738db1fb0b0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b0f8c7e6d2acf4d4c080cc147bf6d42bf13cb51b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008909"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723827"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 列舉
-指定初始化 common language runtime 時， [CoUninitializeEE](../hosting/couninitializeee-function.md)所使用的常數。  
+
+指定初始化 common language runtime 時， [CoUninitializeEE](../hosting/couninitializeee-function.md) 所使用的常數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,17 +37,18 @@ typedef enum tagCOUNINITEE
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|表示預設解除初始化模式。|  
+|`COUNINITEE_DEFAULT`|表示預設的解除初始化模式。|  
 |`COUNINITEE_DLL`|表示卸載元件的解除初始化模式。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

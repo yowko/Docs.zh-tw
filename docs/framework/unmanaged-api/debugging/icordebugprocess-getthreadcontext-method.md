@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-ms.openlocfilehash: 2bdbf373144e2fb49074cfd035e7b0ffe3c8c291
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3be689e5c1474bcbfbca72a14a298762dc2e7a90
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212881"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724542"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext 方法
+
 取得這個進程中指定執行緒的內容。  
   
 ## <a name="syntax"></a>語法  
@@ -36,24 +37,27 @@ HRESULT GetThreadContext(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `threadID`  
- 在要為其取得內容的執行緒識別碼。  
+ 在要取得其內容之執行緒的識別碼。  
   
  `contextSize`  
  [in] `context` 陣列的大小。  
   
  `context`  
- [in、out]描述執行緒內容的位元組陣列。  
+ [in，out]描述執行緒內容的位元組陣列。  
   
- 內容會指定執行緒在其上執行的處理器架構。  
+ 內容會指定執行緒執行所在的處理器架構。  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具應該呼叫這個方法，而不是 Win32 `GetThreadContext` 方法，因為執行緒實際上可能處於「遭劫持」狀態，而其內容已暫時變更。 只有線上程是機器碼時，才應該使用這個方法。 針對 managed 程式碼中的執行緒使用[ICorDebugRegisterSet](icordebugregisterset-interface.md) 。  
+
+ 偵錯工具應該呼叫這個方法，而不是 Win32 `GetThreadContext` 方法，因為執行緒實際上可能會處於「被攔截」狀態，而其內容已暫時變更。 只有當執行緒在機器碼中時，才應該使用這個方法。 在 managed 程式碼中針對執行緒使用 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 。  
   
- 傳回的資料是目前平臺的內容結構。 就像 Win32 方法一樣 `GetThreadContext` ，呼叫者應該在 `context` 呼叫這個方法之前先初始化參數。  
+ 傳回的資料是目前平臺的內容結構。 就像使用 Win32 `GetThreadContext` 方法一樣，呼叫端應該先初始化 `context` 參數，然後再呼叫這個方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

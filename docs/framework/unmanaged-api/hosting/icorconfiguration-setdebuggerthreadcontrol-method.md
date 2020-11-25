@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1ded7639-dacb-4db1-961c-d1ceaec01959
 topic_type:
 - apiref
-ms.openlocfilehash: d02b834b22ba7897e4939de88bc3c61c62ac2b0e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 05df50d80c6b8962b3bdfe2708d5f9d30c58aaea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723918"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>ICorConfiguration::SetDebuggerThreadControl 方法
-設定偵錯工具將呼叫的回呼介面，做為 common language runtime （CLR）執行緒被封鎖並解除封鎖以進行偵錯工具。  
+
+設定偵錯工具將呼叫的回呼介面，作為 common language runtime (CLR) 執行緒遭到封鎖和解除封鎖以進行調試。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +35,17 @@ HRESULT SetDebuggerThreadControl (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pDebuggerThreadControl`  
- 在[IDebuggerThreadControl](idebuggerthreadcontrol-interface.md)物件的指標，會通知主機有關偵錯工具的執行緒封鎖和解除封鎖。  
+ 在 [IDebuggerThreadControl](idebuggerthreadcontrol-interface.md) 物件的指標，該物件會通知主機有關偵錯工具的執行緒封鎖和解除封鎖。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

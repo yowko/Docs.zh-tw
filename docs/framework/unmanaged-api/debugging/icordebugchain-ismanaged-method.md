@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-ms.openlocfilehash: 55036fcdbd186f91c0e94fb05f3023cf614751f7
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: cfe884c3d26e7a52618eb9945f0af9a167132f05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894256"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724373"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged 方法
-取得值，指出這個鏈是否正在執行 managed 程式碼。  
+
+取得值，這個值表示此鏈是否正在執行 managed 程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT IsManaged (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pManaged`  
- 脫銷`true`如果這個鏈正在執行 managed 程式碼，則為，否則為`false`。  
+ [out] `true` 如果此鏈正在執行 managed 程式碼，否則為 `false` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

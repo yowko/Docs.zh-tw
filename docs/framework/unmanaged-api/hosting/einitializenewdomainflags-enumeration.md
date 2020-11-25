@@ -12,15 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-ms.openlocfilehash: 7ff10f84d8d270d31c5d560fb3c9bd3c81cf3e24
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8350b507609e63c060cda08514200d386c37a6b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724321"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 列舉
-讓主機為執行時間提供初始化應用程式域的相關資訊。  
+
+讓主機提供執行時間的相關資訊，以初始化應用程式域的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,20 +34,22 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`eInitializeNewDomainFlags_None`|沒有旗標。|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|通知 common language runtime （CLR），主機不會對方法中應用程式域的安全性狀態進行變更 <xref:System.AppDomainManager.InitializeNewDomain%2A> 。|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|通知 common language runtime (CLR) 主機將不會變更方法中應用程式域的安全性狀態 <xref:System.AppDomainManager.InitializeNewDomain%2A> 。|  
   
 ## <a name="remarks"></a>備註  
+
  [ICLRDomainManager：： SetAppDomainManagerType](iclrdomainmanager-setappdomainmanagertype-method.md)方法接受型別為的參數 `EInitializeNewDomainFlags` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

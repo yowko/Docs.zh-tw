@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-ms.openlocfilehash: a3018d8477d5abd7d03ad8675503624d2e44e8f4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ca3c7fe813f22d3beab3087414100b3d8e5814ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504130"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725595"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent 方法
-將先前註冊的回呼指標取消註冊到指定的事件。  
+
+針對指定的事件，取消註冊先前註冊的回呼指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,29 +36,31 @@ HRESULT UnregisterActionOnEvent (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `event`  
- 在其中一個[EClrEvent](eclrevent-enumeration.md)值，表示要取消註冊所描述之回呼指標的事件 `pAction` 。  
+ 在其中一個 [EClrEvent](eclrevent-enumeration.md) 值，表示要取消註冊所描述之回呼指標的事件 `pAction` 。  
   
  `pAction`  
- 在當做參數傳遞至[RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法的[IActionOnCLREvent](iactiononclrevent-interface.md)物件指標。  
+ 在 [IActionOnCLREvent](iactiononclrevent-interface.md) 物件的指標，該物件會以參數形式傳遞給 [RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) 方法。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`UnregisterActionOnEvent`已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫超時。|  
+|S_OK|`UnregisterActionOnEvent` 傳回成功。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫已超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|當封鎖的執行緒或光纖正在等候時，已取消事件。|  
+|E_FAIL|發生未知的嚴重失敗。 在方法傳回 E_FAIL 之後，就無法在進程中使用 CLR。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 72e38e61-3d56-4ae3-b8f6-0ab7922aaf11
 topic_type:
 - apiref
-ms.openlocfilehash: 7874424150e0f4e1818ad9c72e31fd584e016829
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 28b012bbe3f8c11ecd0afb8b5905336bd99c349c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762392"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724022"
 ---
 # <a name="icorconfigurationsetgcthreadcontrol-method"></a>ICorConfiguration::SetGCThreadControl 方法
-設定回呼介面，用於針對非執行時間工作排程執行緒，否則會封鎖垃圾收集。  
+
+設定回呼介面，以排程非執行時間工作的執行緒，否則將會遭到封鎖，以進行垃圾收集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,18 +35,21 @@ HRESULT SetGCThreadControl (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pGCThreadControl`  
- 在[IGCThreadControl](igcthreadcontrol-interface.md)物件的指標，會通知主機有關非執行時間工作的執行緒暫停。  
+ 在 [IGCThreadControl](igcthreadcontrol-interface.md) 物件的指標，該物件會通知主機有關非執行時間工作的執行緒擱置。  
   
 ## <a name="remarks"></a>備註  
- 主機可以在[IGCThreadControl：： ThreadIsBlockingForSuspension](igcthreadcontrol-threadisblockingforsuspension-method.md)回呼中選擇是否要重新排定執行緒。  
+
+ 主機可以在 [IGCThreadControl：： ThreadIsBlockingForSuspension](igcthreadcontrol-threadisblockingforsuspension-method.md) 回呼中選擇是否要重新排程執行緒。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

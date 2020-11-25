@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-ms.openlocfilehash: 4b44a16d143c1daea1ea6c36eb096ab9a937b272
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f24d49189ee81a80397b94ee4113c9514c083dbc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210037"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723983"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule 方法
-通知偵錯工具已卸載通用語言執行時間模組（DLL）。  
+
+通知偵錯工具， (DLL) 的 common language runtime 模組已卸載。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +36,20 @@ HRESULT UnloadModule (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pAppDomain`  
- 在代表包含模組之應用程式域的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，代表包含模組的應用程式域。  
   
  `pModule`  
  在代表模組之 ICorDebugModule 物件的指標。  
   
 ## <a name="remarks"></a>備註  
- 此呼叫之後，不應使用此模組。  
+
+ 此呼叫之後不應使用模組。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -53,7 +57,7 @@ HRESULT UnloadModule (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LoadModule 方法](icordebugmanagedcallback-loadmodule-method.md)
 - [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: fa22c17ed7d5bcd689f21d2d855d9be7a6a8e164
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c3120a0dd859f581e6356fc260043cb83250ae9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724828"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers 方法
-取得在目前執行時間可呼叫包裝函式（RCW）上快取的原始介面指標。  
+
+取得在目前執行時間可呼叫包裝函式上快取的原始介面指標 (RCW) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,22 +35,24 @@ HRESULT GetCachedInterfacePointers(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `bIInspectableOnly`  
- 在值，指出此方法是否只會傳回 Windows 執行階段介面（`IInspectable`介面），或由執行時間可呼叫包裝函式（RCW）所快取的所有 COM 介面。  
+ 在值，這個值會指出方法是否只會傳回 Windows 執行階段介面 (`IInspectable` 介面) 或由執行時間可呼叫包裝函式快取的所有 COM 介面 (RCW) 。  
   
  `celt`  
- 在要抓取其位址的物件數目。  
+ 在要取出其位址的物件數目。  
   
  `pceltFetched`  
- 脫銷中`CORDB_ADDRESS` `ptrs`實際傳回之值數目的指標。  
+ 擴展實際傳回的值數目指標 `CORDB_ADDRESS` `ptrs` 。  
   
  `ptrs`  
- `CORDB_ADDRESS`值陣列的起始位址指標，其中包含快取介面物件的位址。  
+ 值陣列的起始位址指標 `CORDB_ADDRESS` ，其中包含快取介面物件的位址。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

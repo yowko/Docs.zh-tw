@@ -17,12 +17,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: ce6afc6438060b88e8740eab24ace960f3b78fa3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e2ba53a285649f8081c4836661ad3d70739aa64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830528"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725322"
 ---
 # <a name="types-of-isolation"></a>隔離的類型
 
@@ -54,7 +54,9 @@ ms.locfileid: "94830528"
 > 隔離儲存區不適用於 Windows 8. x 儲存區應用程式。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10))。  
   
 <a name="UserAssembly"></a>
+
 ## <a name="isolation-by-user-and-assembly"></a>依使用者和組件隔離  
+
  當使用資料存放區的組件必須從任何應用程式的網域存取時，則適用依使用者和組件隔離。 在此情況下，隔離儲存區通常用來儲存適用於多個應用程式，且未繫結至任何特定應用程式的資料，例如使用者的名稱或授權資訊。 若要存取依使用者和組件隔離的儲存區，程式碼必須受到信任，才能在應用程式之間傳輸資訊。 依使用者和組件隔離通常可以在內部網路上進行，但無法在網際網路上進行。 呼叫靜態 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> 方法，並傳入使用者和組件 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 會傳回具有這種隔離的儲存區。  
   
  下列程式碼範例會擷取依使用者和組件隔離的存放區。 您可以透過 `isoFile` 物件存取這個存放區。  
@@ -72,7 +74,9 @@ ms.locfileid: "94830528"
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
 <a name="UserDomainAssembly"></a>
+
 ## <a name="isolation-by-user-domain-and-assembly"></a>依使用者、網域和組件隔離  
+
  如果您的應用程式使用需要私人資料存放區的協力廠商組件，您可以使用隔離儲存區來儲存私人資料。 依使用者、網域和組件隔離可確保只有指定之組件中的程式碼可以存取資料，而且只有在組件由建立存放區時所執行的應用程式使用的情況下，以及只有在建立存放區之使用者執行應用程式的情況下，才可以存取。 依使用者、網域和組件隔離可防止協力廠商組件向其他應用程式洩漏資料。 如果您知道您想要使用隔離儲存區，但不確定要使用哪一種隔離，這種隔離類型應該是預設選擇。 呼叫 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 的靜態 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 方法，並傳入使用者、網域和組件 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 會傳回具有這種隔離的儲存區。  
   
  下列程式碼範例會擷取依使用者、網域和組件隔離的存放區。 您可以透過 `isoFile` 物件存取這個存放區。  
@@ -88,7 +92,9 @@ ms.locfileid: "94830528"
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>
+
 ## <a name="isolated-storage-and-roaming"></a>隔離儲存區和漫遊  
+
  漫遊使用者設定檔是 Windows 的一個功能，可讓使用者設定網路上的身分識別，並使用該身分識別登入任何網路電腦，讓所有個人化設定繼續存在。 使用隔離儲存區的組件可以指定使用者的隔離儲存區應該隨著漫遊使用者設定檔移動。 漫遊可以搭配依使用者和組件隔離，或依使用者、網域和組件隔離使用。 如果未使用漫遊範圍，即使使用漫遊使用者設定檔，存放區也將不會漫遊。  
   
  下列程式碼範例會擷取依使用者和組件隔離的漫遊存放區。 您可以透過 `isoFile` 物件存取這個存放區。  
@@ -103,7 +109,7 @@ ms.locfileid: "94830528"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [隔離儲存區](isolated-storage.md)

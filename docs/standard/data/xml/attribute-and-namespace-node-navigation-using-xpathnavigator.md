@@ -2,17 +2,19 @@
 title: 使用 XPathNavigator 巡覽屬性及命名空間節點
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725387"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>使用 XPathNavigator 巡覽屬性及命名空間節點
+
 <xref:System.Xml.XPath.XPathNavigator> 類別提供兩組巡覽方法，第一組 (可在 [使用 XPathNavigator 巡覽節點集](node-set-navigation-using-xpathnavigator.md)主題中找到) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的 *節點集*。 第二組 (在本主題中說明) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的「屬性及命名空間節點」。  
   
 ## <a name="attribute-node-navigation"></a>屬性節點巡覽  
+
  屬性 (Attribute) 是項目的屬性 (Property)，而不是項目的子系。 這個差別是很重要的，因為這關係到用來巡覽同層級節點、父節點及子節點之 <xref:System.Xml.XPath.XPathNavigator> 類別的方法。  
   
  例如，<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 及 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 方法無法用來從項目巡覽到屬性，或在屬性之間巡覽。 應改用不同的方法來巡覽屬性。  
@@ -31,6 +33,7 @@ ms.locfileid: "94819405"
 > 當 <xref:System.Xml.XPath.XPathNavigator> 物件定位於屬性或命名空間節點上時，<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 方法一律會傳回 `false`，且對 <xref:System.Xml.XPath.XPathNavigator> 的位置毫無影響。 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 及 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> 方法則例外。  
   
 ## <a name="namespace-node-navigation"></a>命名空間節點巡覽  
+
  每個項目都有一組相關聯的命名空間節點，一個用於每個與此項目範圍內命名空間 URI 繫結的個別命名空間前置詞 (包括繫結至 `http://www.w3.org/XML/1998/namespace` 命名空間的 XML 前置詞，其在每個 XML 文件中隱含宣告)，另一個用於預設命名空間 (若命名空間節點位於此項目的範圍內)。 此項目為上述每個命名空間節點的父代；但命名空間節點並非其父項目的子系。  
   
  與屬性一樣，<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 及 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 方法無法用來從項目巡覽到命名空間節點，或在命名空間節點之間巡覽。 而是命名空間節點具有不同的巡覽方法。  
@@ -49,6 +52,7 @@ ms.locfileid: "94819405"
 > 當 <xref:System.Xml.XPath.XPathNavigator> 物件定位於屬性或命名空間節點上時，<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 方法一律會傳回 `false`，且對 <xref:System.Xml.XPath.XPathNavigator> 的位置毫無影響。 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 及 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> 方法則例外。  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>XPathNamespaceScope 列舉型別  
+
  巡覽命名空間節點時，可使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 參數呼叫 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 及 <xref:System.Xml.XPath.XPathNamespaceScope> 方法。 這些方法的行為模式，與其不使用參數呼叫的對應方法不同。 <xref:System.Xml.XPath.XPathNamespaceScope> 列舉型別具有值 <xref:System.Xml.XPath.XPathNamespaceScope.All>、<xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> 或 <xref:System.Xml.XPath.XPathNamespaceScope.Local>。  
   
  下列範例顯示在 XML 文件的不同範圍由 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 及 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法傳回的命名空間。  
@@ -93,7 +97,7 @@ ms.locfileid: "94819405"
 > [!NOTE]
 > <xref:System.Xml.XPath.XPathNavigator> 類別會以反向的文件順序傳回命名空間節點。 因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 實際上會移至目前範圍中的最後一個命名空間節點。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

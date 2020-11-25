@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-ms.openlocfilehash: 1c795ee536483a7def9c0339efae66a013898a77
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 3f41dd969e25f7a42308ff0b7b2d617344284b38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725244"
 ---
 # <a name="call_id-structure"></a>CALL_ID 結構
-提供有關所呼叫函式之偵錯工具的資訊。 如需詳細資訊，請參閱[INotifySink2](inotifysink2-interface.md)介面。  
+
+提供有關正在呼叫的函式之偵錯工具的資訊。 如需詳細資訊，請參閱 [INotifySink2](inotifysink2-interface.md) 介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,16 +41,17 @@ typedef struct tagCALL_ID
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`szMachine`|識別正在進行呼叫的電腦。|  
-|`dwPid`|識別機器處理器。|  
+|`dwPid`|識別電腦處理器。|  
 |`pUserThread`|識別正在執行呼叫的執行緒。|  
 |`addrStackPointer`|指定呼叫堆疊的位址。|  
 |`szEntryPoint`|指定呼叫的位址。|  
-|`szDestinationMachine`|識別將執行呼叫的電腦。|  
+|`szDestinationMachine`|識別要執行呼叫的電腦。|  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另請參閱

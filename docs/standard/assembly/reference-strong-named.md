@@ -12,14 +12,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 919e4f4cf467e8fc28c3d007963393dad134ab57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687695"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724048"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱的元件
+
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
   
 當您向編譯器指出要編譯的元件明確參考另一個元件時，就會發生編譯時間參考。 當您使用編譯時間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將它放在所編譯組件的組件參考中。
@@ -33,7 +34,7 @@ ms.locfileid: "92687695"
 
 \<*compiler command*>**/reference：**\<*assembly name*>  
 
-在這個命令中，「編譯器命令」  是您所使用語言的編譯器命令，而「組件名稱」  是所參考的強式名稱組件的名稱。 您也可以使用其他編譯器選項，例如 **/t:library** 選項來建立程式庫組件。  
+在這個命令中，「編譯器命令」是您所使用語言的編譯器命令，而「組件名稱」是所參考的強式名稱組件的名稱。 您也可以使用其他編譯器選項，例如 **/t:library** 選項來建立程式庫組件。  
 
 下列範例會建立名為 *myAssembly.dll* 的元件，該元件會參考名為 *myAssembly.cs* 的程式碼模組 *myLibAssembly.dll* 的強式名稱元件。  
 
@@ -80,6 +81,6 @@ Dim myDll As Assembly = _
 
 **sn-tp \<** *public key file* **>**  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立和使用強式名稱的組件](create-use-strong-named.md)

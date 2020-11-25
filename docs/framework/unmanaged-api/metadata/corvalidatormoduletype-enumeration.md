@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: 038e2ec20e5fd01edf9835080e0f7a15ec862fd9
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2fb7f11677870f7d53439f1867f167fabe70b22a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008933"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723840"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 列舉
+
 指定模組的類型。  
   
 ## <a name="syntax"></a>語法  
@@ -41,22 +42,23 @@ typedef enum
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|模組是不正確類型。|  
 |`ValidatorModuleTypeMin`|列舉的最小值 `CorValidatorModuleType` 。|  
-|`ValidatorModuleTypePE`|此模組是可移植的可執行檔（PE）。|  
-|`ValidatorModuleTypeObj`|模組是 .obj 檔案。|  
-|`ValidatorModuleTypeEnc`|模組是「編輯後繼續」偵錯工具會話。|  
-|`ValidatorModuleTypeIncr`|模組是以累加方式建立的模組。|  
+|`ValidatorModuleTypePE`|模組是可移植的可執行檔， (PE) 檔。|  
+|`ValidatorModuleTypeObj`|模組是 .obj 檔。|  
+|`ValidatorModuleTypeEnc`|模組是編輯後繼續的偵錯工具會話。|  
+|`ValidatorModuleTypeIncr`|模組是一種以累加方式建立的模組。|  
 |`ValidatorModuleTypeMax`|列舉的最大值 `CorValidatorModuleType` 。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
