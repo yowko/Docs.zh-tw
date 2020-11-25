@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-ms.openlocfilehash: bdf027f94c8416d052cb807d04be76a39868ccf7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 359db27878ea4adf794bcd6221d4b5387026e5c0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212928"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710307"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging 方法
-控制即時（JIT）編譯器是否保留此模組內之方法的偵錯工具資訊。  
+
+控制及時 (JIT) 編譯器是否保留此模組內方法的偵錯工具資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +36,20 @@ HRESULT EnableJITDebugging(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `bTrackJITInfo`  
- 在將此值設定為 `true` 可讓 JIT 編譯程式在此模組中，保留 Microsoft 中繼語言（MSIL）版本與 JIT 編譯版本的每個方法之間的對應資訊。  
+ 在將此值設為，可 `true` 讓 JIT 編譯程式保留 Microsoft 中繼語言 (MSIL) 版本與此課程模組中每個方法的 JIT 編譯版本之間的對應資訊。  
   
  `bAllowJitOpts`  
- 在將此值設定為 `true` ，讓 JIT 編譯程式能夠使用特定 JIT 特定優化來產生程式碼以進行偵錯工具。  
+ 在將此值設為，可 `true` 讓 JIT 編譯程式產生具有特定 JIT 特定優化的程式碼以進行調試。  
   
 ## <a name="remarks"></a>備註  
- 當偵錯工具作用中時，所有載入的模組預設會啟用 JIT 偵錯程式。 以程式設計方式啟用或停用設定會覆寫全域設定。  
+
+ 當偵錯工具作用中時，所有載入的模組預設都會啟用 JIT 偵錯程式。 以程式設計方式啟用或停用設定會覆寫全域設定。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

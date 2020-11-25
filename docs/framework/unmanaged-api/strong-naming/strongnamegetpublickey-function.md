@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-ms.openlocfilehash: fcdd4a3f07b4499fd2388b5d165c409da9150466
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c97cc0c1d4c022583d0823abeff998e2ed5f719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176925"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710970"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 函式
-從私密/公開金鑰組取得公開金鑰。 金鑰組可以作為加密服務提供者 （CSP） 中的金鑰容器名稱提供，也可以作為位元組的原創組合提供。  
+
+從私密/公開金鑰組取得公開金鑰。 金鑰組可以在密碼編譯服務提供者中提供作為金鑰容器名稱， (CSP) 或原始的位元組集合。  
   
- 此函數已被棄用。 改用[ICLR 強式名稱：：強式名稱GetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md)方法。  
+ 此函數已被取代。 請改用 [ICLRStrongName：： StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,41 +41,45 @@ BOOLEAN StrongNameGetPublicKey (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `szKeyContainer`  
- [在]包含公開金鑰/私密金鑰對的金鑰容器的名稱。 如果`pbKeyBlob`為 null，`szKeyContainer`則必須在 CSP 中指定有效的容器。 在這種情況下，`StrongNameGetPublicKey`從容器中存儲的金鑰組中提取公開金鑰。  
+ 在包含公開/私密金鑰組的金鑰容器名稱。 如果 `pbKeyBlob` 是 null，則 `szKeyContainer` 必須在 CSP 內指定有效的容器。 在此情況下，請 `StrongNameGetPublicKey` 從儲存在容器中的金鑰組解壓縮公開金鑰。  
   
- 如果`pbKeyBlob`不是空，則假定金鑰組包含在金鑰二進位大型物件 （BLOB） 中。  
+ 如果不 `pbKeyBlob` 是 null，則會假設金鑰組包含在 (BLOB) 的金鑰二進位大型物件中。  
   
- 金鑰必須是 1024 位裡維斯-沙米爾-阿德爾曼 （RSA） 簽名金鑰。 目前不支援其他類型的金鑰。  
+ 金鑰必須是 1024-bit Rivest-Shamir-Adleman (RSA) 簽署金鑰。 目前不支援其他類型的金鑰。  
   
  `pbKeyBlob`  
- [在]指向公開金鑰/私密金鑰對的指標。 此對採用 Win32`CryptExportKey`函數創建的格式。 如果`pbKeyBlob`為 null，則假定 指定的`szKeyContainer`鍵容器包含金鑰組。  
+ 在公開/私密金鑰組的指標。 此配對的格式是 Win32 函數所建立的格式 `CryptExportKey` 。 如果 `pbKeyBlob` 是 null，則會假設指定的金鑰容器 `szKeyContainer` 包含金鑰組。  
   
  `cbKeyBlob`  
- [在]的大小（以位元組為單位）的大小`pbKeyBlob`。  
+ 在的大小（以位元組為單位） `pbKeyBlob` 。  
   
  `ppbPublicKeyBlob`  
- [出]返回的公開金鑰 BLOB。 參數`ppbPublicKeyBlob`由通用語言運行時分配並返回到調用方。 調用方必須使用[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函數釋放記憶體。  
+ 擴展傳回的公開金鑰 BLOB。 `ppbPublicKeyBlob`參數是由 common language runtime 所配置，並傳回給呼叫端。 呼叫端必須使用 [StrongNameFreeBuffer](strongnamefreebuffer-function.md) 函數釋放記憶體。  
   
  `pcbPublicKeyBlob`  
- [出]返回的公開金鑰 BLOB 的大小。  
+ 擴展傳回之公開金鑰 BLOB 的大小。  
   
 ## <a name="return-value"></a>傳回值  
- `true`成功完成;否則， `false`.  
+
+ `true` 成功完成時;否則為 `false` 。  
   
 ## <a name="remarks"></a>備註  
- 公開金鑰包含在[PublicKeyBlob](publickeyblob-structure.md)結構中。  
+
+ 公開金鑰包含在 [PublicKeyBlob](publickeyblob-structure.md) 結構中。  
   
- 如果`StrongNameGetPublicKey`函數未成功完成，請調用[StrongNameErrorInfo 函數](strongnameerrorinfo-function.md)以檢索上次生成的錯誤。  
+ 如果函式 `StrongNameGetPublicKey` 未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式來取出最後產生的錯誤。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 強式名稱.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

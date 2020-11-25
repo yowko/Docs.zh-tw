@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26a82815-1982-4eb7-92d1-5c3d318d5be4
 topic_type:
 - apiref
-ms.openlocfilehash: 9270afa1d8c8ddd74cfe6dd05e39c1480f5767e6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4562318c87b79fba5f3d99860ee438c0144e9aae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206940"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710242"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress 方法
+
 取得模組的基底位址。  
   
 ## <a name="syntax"></a>語法  
@@ -34,14 +35,17 @@ HRESULT GetBaseAddress(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pAddress`  
- 脫銷`CORDB_ADDRESS`指定模組基底位址的。  
+ 擴展 `CORDB_ADDRESS` ，指定模組的基底位址。  
   
 ## <a name="remarks"></a>備註  
- 如果模組是原生映射（也就是，如果模組是由原生映射產生器（Ngen.exe）所產生），其基底位址會是零。  
+
+ 如果模組是原生映射 (也就是，如果模組是由原生映射產生器所產生，則 NGen.exe) ，其基底位址將會是零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
