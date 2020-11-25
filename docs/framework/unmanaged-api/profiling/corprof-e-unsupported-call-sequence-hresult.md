@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: d6cba2ec3e82c07ce60f0f2b2199cc97e31a000b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a75b51b57bdf2923ca6386f42c19c0b2f44fd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555545"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717470"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 
@@ -72,6 +72,7 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT 是在 .NET Framework 2.0 版中引�
  如需詳細資訊，請參閱 [我們](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) 在 CLR 分析 API 中 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 的專案。  
   
 ## <a name="triggering-garbage-collections"></a>觸發垃圾收集  
+
  此案例牽涉到在回呼方法內執行的分析工具 (例如，其中一個會 `ICorProfilerCallback` 禁止垃圾收集的方法) 。 如果分析工具嘗試呼叫參考方法 (例如，) 介面上的方法 `ICorProfilerInfo` 可能會觸發垃圾收集，則參考方法會失敗，並出現 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
   
  下表顯示禁止垃圾收集的回呼方法，以及可能會觸發垃圾收集的資訊方法。 如果分析工具是在其中一個所列出的回呼方法內執行，並呼叫其中一個列出的參考方法，該資訊方法會失敗並顯示 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  

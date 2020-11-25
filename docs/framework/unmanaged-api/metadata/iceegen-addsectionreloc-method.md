@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 87a5224247c2d94613de482fbaa34bf978198bf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008894"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715533"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc 方法
+
 將 reloc 指令新增至程式碼基底。  
   
- 這個方法已過時，不應使用。  
+ 這個方法已經過時，不應該使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,8 +40,9 @@ HRESULT AddSectionReloc (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `section`  
- 在要加入 reloc 指令的記憶體內部程式碼區段。  
+ 在要加入 reloc 指令之記憶體中程式碼的區段。  
   
  `offset`  
  在區段的位移。  
@@ -49,14 +51,15 @@ HRESULT AddSectionReloc (
  在參考的區段 `offset` 。  
   
  `relocType`  
- 在其中一個[CeeSectionRelocType](ceesectionreloctype-enumeration.md)值，表示要新增的 reloc 指令類型。  
+ 在其中一個 [CeeSectionRelocType](ceesectionreloctype-enumeration.md) 值，表示要加入的 reloc 指令類型。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

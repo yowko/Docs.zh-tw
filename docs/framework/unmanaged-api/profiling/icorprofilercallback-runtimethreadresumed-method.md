@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-ms.openlocfilehash: d3949189a72583ebb50b67a270694a31f1eb23dc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0996d7eb5b7354a67106ec7aa8818d5e4d46232e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717229"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed 方法
-通知分析工具，指定的執行緒在暫止後已繼續。  
+
+通知分析工具，指定的執行緒在暫止之後已繼續。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,11 +34,13 @@ HRESULT RuntimeThreadResumed(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `threadId`  
  在已繼續之執行緒的識別碼。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

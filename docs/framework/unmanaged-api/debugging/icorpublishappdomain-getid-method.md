@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-ms.openlocfilehash: 36c5c674f3cdf867107b9ee85a5befadc9246d78
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: ab331145a8147e8830cb9b158a1975bc748c7cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396310"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716859"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID 方法
-取得此[ICorPublishAppDomain](icorpublishappdomain-interface.md)的唯一識別碼。  
+
+取得此 [ICorPublishAppDomain](icorpublishappdomain-interface.md)的唯一識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,21 +35,24 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `puId`  
- 脫銷應用程式域的識別碼指標。  
+ 擴展應用程式域的識別碼指標。  
   
 ## <a name="remarks"></a>備註  
- 只有在包含進程的範圍內，識別碼是唯一的。  
+
+ 只有在包含進程的範圍中，識別碼才是唯一的。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorPub .idl，CorPub。h  
+ **標頭：** CorPub .idl、CorPub。h  
   
  **程式庫：** CorGuids.lib  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorPublishAppDomain 介面](icorpublishappdomain-interface.md)

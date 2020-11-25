@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cff6707496c7d9657796deb8bf6fa9165ff295a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446672"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717080"
 ---
 # <a name="addfile2-method"></a>AddFile2 方法
+
 將檔案加入至元件。 也可以用來建立未系結的模組。  
   
 ## <a name="syntax"></a>語法  
@@ -38,25 +39,28 @@ HRESULT AddFile2(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
- 要加入檔案之元件的識別碼。  
+ 要加入檔案的元件識別碼。  
   
  `pszFilename`  
  要加入的檔案名。  
   
  `dwFlags`  
- COM + `FileDef` 旗標，例如 `ffContainsNoMetaData` 和 `ffWriteable`。 `dwFlags` 會傳遞至[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
+ COM + `FileDef` 旗標 `ffContainsNoMetaData` ，例如和 `ffWriteable` 。 `dwFlags` 會傳遞至 [DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pEmitter`  
- 介面至[IMetaDataEmit2 介面](../metadata/imetadataemit2-interface.md)介面。  
+ 介面 [IMetaDataEmit2 介面](../metadata/imetadataemit2-interface.md) 介面。  
   
  `pFileToken`  
  接收要加入之檔案的識別碼。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
+
  需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱

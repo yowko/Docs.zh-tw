@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bc389b7247a6b1d6ce16cb3cf350f1672213b2e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615198"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716417"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 方法
+
 定義單一全域變數。  
   
 ## <a name="syntax"></a>語法  
@@ -40,6 +41,7 @@ HRESULT DefineGlobalVariable(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `name`  
  在的指標 `WCHAR` ，定義全域變數名稱。  
   
@@ -47,7 +49,7 @@ HRESULT DefineGlobalVariable(
  在全域變數屬性。  
   
  `cSig`  
- 在， `ULONG32` 指出緩衝區的大小（以字元為單位） `signature` 。  
+ 在， `ULONG32` 表示緩衝區的大小（以字元為單位） `signature` 。  
   
  `signature`  
  在全域變數簽章。  
@@ -65,10 +67,12 @@ HRESULT DefineGlobalVariable(
  在參數規格的第三個位址。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

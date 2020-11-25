@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2d5daa5-b990-4ae5-bf2a-c0862fe58bd7
 topic_type:
 - apiref
-ms.openlocfilehash: a3d5527fc34ad7292974c005179e9d9cad210c94
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3593b07759b4d6feee239042e5aabaf0876fdd1c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503116"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716300"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags 方法
-設定[COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md)列舉中的一或多個旗標，以控制即時（JIT）重新編譯函式的程式碼產生。  
+
+從 [COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md) 列舉設定一或多個旗標，以控制及時 (JIT) 重新編譯函式的程式碼產生。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,16 +34,19 @@ HRESULT SetCodegenFlags(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `flags`  
- 在來自[COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md)列舉的一或多個旗標。  
+ 在 [COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md) 列舉中的一或多個旗標。  
   
 ## <a name="remarks"></a>備註  
- 分析工具會透過[ICorProfilerCallback4：： GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md)回呼來取得此介面的實例。 `SetCodegenFlags`可讓 profiler 控制重新編譯函式的程式碼產生。 如同所有其他 JIT 重新編譯參數，程式碼產生旗標適用于函式的所有實例。  
+
+ Profiler 會透過 [ICorProfilerCallback4：： GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md) 回呼取得這個介面的實例。 `SetCodegenFlags` 允許 profiler 控制重新編譯函式的程式碼產生。 如同所有其他 JIT 重新編譯參數，程式碼產生旗標適用于函式的所有實例。  
   
- 在編譯函式時，JIT 編譯程式會考慮這些編譯旗標以及其他來源所指定的其他旗標。  其他來源則包括偵錯工具、在啟動時由 profiler 設定的全域旗標，其方式是使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法（搭配值 `COR_PRF_DISABLE_INLINING` 和 `COR_PRF_DISABLE_OPTIMIZATIONS` ），以及 profiler 的[ICorProfilerCallback：： JITInlining](icorprofilercallback-jitinlining-method.md)回呼。  JIT 編譯程式會優先于要求最少量優化的來源。  例如，如果分析工具指定 `COR_PRF_DISABLE_INLINING` 啟動，但未 `COR_PRF_CODEGEN_DISABLE_INLINING` 在[ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md)回呼中指定，則內嵌仍會停用。  同樣地，如果分析工具未 `COR_PRF_CODEGEN_DISABLE_INLINING` 在中指定 `SetCodegenFlags` ，然後使用[ICorProfilerCallback：： JITInlining](icorprofilercallback-jitinlining-method.md)回呼來停用內嵌，則會停用內嵌功能。  
+ 編譯函式時，JIT 編譯程式會考慮這些編譯旗標以及其他來源所指定的其他旗標。  其他來源包括偵錯工具、使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md) 方法在啟動時設定的全域旗標 (與值 `COR_PRF_DISABLE_INLINING` 和 `COR_PRF_DISABLE_OPTIMIZATIONS`) ，以及分析工具的 [ICorProfilerCallback：： JITInlining](icorprofilercallback-jitinlining-method.md) 回呼。  JIT 編譯程式優先于要求最少量優化的來源。  例如，如果分析工具 `COR_PRF_DISABLE_INLINING` 在啟動時指定，但是未 `COR_PRF_CODEGEN_DISABLE_INLINING` 在 [ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 回呼中指定，則仍會停用內嵌。  同樣地，如果分析工具未 `COR_PRF_CODEGEN_DISABLE_INLINING` 在中指定 `SetCodegenFlags` ，但接著使用 [ICorProfilerCallback：： JITInlining](icorprofilercallback-jitinlining-method.md) 回呼停用內嵌，則會停用內嵌。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

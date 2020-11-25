@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-ms.openlocfilehash: 70255a89cee13abfe63b01351f8ffba51e54665a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 297f672097dd6561a971608f368369c623532907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716911"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses 方法
+
 取得在這部電腦上執行之 managed 進程的列舉值。  
   
 ## <a name="syntax"></a>語法  
@@ -35,26 +36,29 @@ HRESULT EnumProcesses (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `Type`  
- [COR_PUB_ENUMPROCESS](cor-pub-enumprocess-enumeration.md)列舉的值，指定要抓取的進程類型。 在目前的版本中，只有 COR_PUB_MANAGEDONLY 有效。  
+ [COR_PUB_ENUMPROCESS](cor-pub-enumprocess-enumeration.md)列舉值，這個值會指定要抓取的進程類型。 在目前的版本中，只有 COR_PUB_MANAGEDONLY 有效。  
   
  `ppIEnum`  
- [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)實例位址的指標，這是進程的列舉值。  
+ [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)實例的位址指標，這個實例是進程的列舉值。  
   
 ## <a name="remarks"></a>備註  
- 列舉值的進程集合是以呼叫方法時執行的進程快照集為基礎 `EnumProcesses` 。 列舉值不會包含在呼叫之前或開始之前終止的任何進程 `EnumProcesses` 。  
+
+ 列舉值的處理常式集合是以呼叫方法時正在執行之進程的快照集為基礎 `EnumProcesses` 。 列舉值將不會包含在呼叫之後終止或啟動的任何處理程式 `EnumProcesses` 。  
   
- 可以 `EnumProcesses` 在這個[ICorPublish](icorpublish-interface.md)實例上多次呼叫方法，以建立新的最新進程集合。 方法的後續呼叫將不會影響現有的集合 `EnumProcesses` 。  
+ 可以 `EnumProcesses` 在這個 [ICorPublish](icorpublish-interface.md) 實例上多次呼叫方法，以建立新的最新處理常式集合。 後續的方法呼叫將不會影響現有的集合 `EnumProcesses` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorPub .idl，CorPub。h  
+ **標頭：** CorPub .idl、CorPub。h  
   
  **程式庫：** CorGuids.lib  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorPublish 介面](icorpublish-interface.md)

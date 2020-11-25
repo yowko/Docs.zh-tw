@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6185c5dda69a0cf7e9847ddc021448612a426b19
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132273"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716053"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason 列舉
+
 指出呼叫鏈結初始化的原因。  
   
 ## <a name="syntax"></a>語法  
@@ -44,9 +45,9 @@ typedef enum CorDebugChainReason {
 } CorDebugChainReason;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |`CHAIN_NONE`|未起始任何呼叫鏈結。|  
 |`CHAIN_CLASS_INIT`|鏈結是由建構函式所起始。|  
@@ -63,17 +64,19 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|鏈結是由函式評估所起始。|  
   
 ## <a name="remarks"></a>備註  
- 請使用[ICorDebugChain：： GetReason](icordebugchain-getreason-method.md)方法來確定起始呼叫鏈的原因。  
+
+ 使用 [ICorDebugChain：： GetReason](icordebugchain-getreason-method.md) 方法，以確定起始呼叫鏈的原因。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)

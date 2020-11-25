@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 功能內容
 description: 本文說明 .NET Framework 4 新增至 Windows Workflow Foundation 的新功能，以及這些功能可能會很有用的案例。
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6c508e184aee0e4aa0634d128de94ac45ef78f45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554602"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716287"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 
@@ -114,7 +114,7 @@ WCF 設定架構很複雜，可為使用者提供許多難以找到的功能。 
 
 ## <a name="data-contract-resolver"></a>資料合約解析程式
 
-在 .NET 3.5 中，已知型別的設計具有一些限制：
+在 .NET Framework 3.5 中，已知類型的設計有一些限制：
 
 - 您無法在序列化或還原序列化期間，以動態方式加入已知型別。
 
@@ -122,7 +122,7 @@ WCF 設定架構很複雜，可為使用者提供許多難以找到的功能。 
 
 - 使用者無法指定想要顯示在 Wire 上的 xsi:type，以便降低 Wire 上序列化執行個體的大小。
 
-[DataContractResolver](../wcf/samples/datacontractresolver.md)在 .net 4.5 中解決了這些問題。
+[DataContractResolver](../wcf/samples/datacontractresolver.md)在 .NET Framework 4.5 中解決了這些問題。
 
 ### <a name="getting-started"></a>開始使用
 
@@ -144,7 +144,7 @@ WCF 設定架構很複雜，可為使用者提供許多難以找到的功能。 
 
 ## <a name="flowchart"></a>流程圖
 
-流程圖是已知的開發架構，可以視覺化方式表示網域問題。 這是我們在 .NET 4 中引進的新控制流程樣式。 流程圖的核心特性在於，一次只能執行一項活動。 流程圖可以表達迴圈和替代的結果，但本身無法表示同時執行的多個節點。
+流程圖是已知的開發架構，可以視覺化方式表示網域問題。 這是我們在 .NET Framework 4 中引進的新控制流程樣式。 流程圖的核心特性在於，一次只能執行一項活動。 流程圖可以表達迴圈和替代的結果，但本身無法表示同時執行的多個節點。
 
 ### <a name="getting-started"></a>開始使用
 
@@ -264,7 +264,7 @@ WCF 設定架構很複雜，可為使用者提供許多難以找到的功能。 
 
 ## <a name="wcf-routing-service"></a>WCF 路由服務
 
-路由服務設計為一般軟體路由器，可讓您控制 WCF 訊息在用戶端與服務之間流動的方式。 路由服務可讓您將用戶端與服務分離，如此可讓您更自由地使用可支援的設定，以及考慮如何裝載服務的彈性。 在 .NET 3.5 中，用戶端與服務緊密結合;用戶端必須知道它需要與其交談的所有服務，以及它們所在的位置。 此外，.NET Framework 3.5 中的 WCF 有下列限制：
+路由服務設計為一般軟體路由器，可讓您控制 WCF 訊息在用戶端與服務之間流動的方式。 路由服務可讓您將用戶端與服務分離，如此可讓您更自由地使用可支援的設定，以及考慮如何裝載服務的彈性。 在 .NET Framework 3.5 中，用戶端與服務緊密結合;用戶端必須知道它需要與其交談的所有服務，以及它們所在的位置。 此外，.NET Framework 3.5 中的 WCF 有下列限制：
 
 - 錯誤處理很複雜，因為此邏輯必須透過硬式編碼寫入用戶端。
 
@@ -338,7 +338,7 @@ WCF 探索是一種架構技術，可讓您將探索機制併入您的應用程�
 
     1. 系統會使用預設設定檔。
 
-    2. 開啟 [事件檢視器]，並在下列節點中啟用分析通道： **事件檢視器**、 **應用程式和服務記錄**檔、 **Microsoft**、 **Windows**、 **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下 [ **分析** ]，然後選取 [ **啟用記錄**]。
+    2. 開啟 [事件檢視器]，並在下列節點中啟用分析通道： **事件檢視器**、 **應用程式和服務記錄** 檔、 **Microsoft**、 **Windows**、 **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下 [ **分析** ]，然後選取 [ **啟用記錄**]。
 
     3. 執行工作流程服務。
 
