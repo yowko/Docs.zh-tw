@@ -3,11 +3,11 @@ title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 了解如何使用 Azure Kubernetes Service 部署應用程式。
 ms.date: 08/06/2020
 ms.openlocfilehash: ba9887c0a4837c16a60ebeb006416c0fa8c105e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163592"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032199"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>部署到 Azure Kubernetes Service (AKS)
 

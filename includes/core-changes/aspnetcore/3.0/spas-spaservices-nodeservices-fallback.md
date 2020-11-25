@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e5355387d5cb6d9e6de89f5b85e64bc100b32ae1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522674"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032436"
 ---
 ### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>Spa： SpaServices 和 NodeServices 不會再切換回主控台記錄器
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!--
 

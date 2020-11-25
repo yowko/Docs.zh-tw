@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394465"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032425"
 ---
 ### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR： UseSignalR 和 UseConnections 方法已標記為過時
 

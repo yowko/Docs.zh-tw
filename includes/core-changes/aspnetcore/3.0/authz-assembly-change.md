@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74100760"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032337"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授權： AddAuthorization 多載移至不同的元件
 

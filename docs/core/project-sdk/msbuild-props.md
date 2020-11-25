@@ -4,12 +4,12 @@ description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 14603ba98f00d46d0f167652500979f94de0ec9a
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687467"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031685"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
@@ -81,10 +81,24 @@ ms.locfileid: "94687467"
 
 ## <a name="publish-properties-and-items"></a>發佈屬性和專案
 
+- [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
+
+`CopyLocalLockFileAssemblies`屬性適用于具有其他程式庫相依性的外掛程式專案。 如果您將此屬性設定為 `true` ，任何 NuGet 套件相依性都會複製到輸出目錄。 這表示您可以使用的輸出， `dotnet build` 在任何電腦上執行您的外掛程式。
+
+```xml
+<PropertyGroup>
+  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+</PropertyGroup>
+```
+
+> [!TIP]
+> 或者，您可以使用 `dotnet publish` 來發行類別庫。 如需詳細資訊，請參閱 [dotnet publish](../tools/dotnet-publish.md)。
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ac5a3c4f3aefbb59418ad92b2d795f36916f877f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393910"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032431"
 ---
 ### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>Spa： SpaServices 和 NodeServices 已標示為過時
 
@@ -29,7 +29,7 @@ ms.locfileid: "72393910"
 
 #### <a name="old-behavior"></a>舊的行為
 
-已淘汰的封裝和 npm 模組旨在將 ASP.NET Core 與各種單一頁面應用程式整合 (SPA) 架構。 這類架構包含了 Redux 的角度、反應和反應。
+已淘汰的封裝和 npm 模組旨在將 ASP.NET Core 與各種 Single-Page 應用程式 (SPA) 架構整合。 這類架構包含了 Redux 的角度、反應和反應。
 
 #### <a name="new-behavior"></a>新的行為
 
@@ -37,7 +37,7 @@ ms.locfileid: "72393910"
 
 #### <a name="reason-for-change"></a>變更的原因
 
-ASP.NET Core 支援與各種單一頁面應用程式整合 (SPA) 架構，包括 Redux 的角度、反應和反應。 一開始，與這些架構的整合是透過處理案例的 ASP.NET Core 特定元件來完成，例如伺服器端預先呈現和與 Webpack 的整合。 隨著時間的進展，產業標準也有所改變。 每個 SPA 架構都會發行自己的標準命令列介面。 例如，「角度」 CLI 和「建立-回應」應用程式。
+ASP.NET Core 支援與各種 Single-Page 應用程式 (SPA) 架構的整合，包括 Redux 的角度、反應和反應。 一開始，與這些架構的整合是透過處理案例的 ASP.NET Core 特定元件來完成，例如伺服器端預先呈現和與 Webpack 的整合。 隨著時間的進展，產業標準也有所改變。 每個 SPA 架構都會發行自己的標準命令列介面。 例如，「角度」 CLI 和「建立-回應」應用程式。
 
 當 ASP.NET Core 2.1 在5月2018日發行時，小組會回應標準的變更。 提供更簡單且更簡單的方法來與 SPA 架構本身的工具鏈整合。 新的整合機制存在於封裝中 `Microsoft.AspNetCore.SpaServices.Extensions` ，並會在 ASP.NET Core 2.1 之後，保持角度和回應專案範本的基礎。
 

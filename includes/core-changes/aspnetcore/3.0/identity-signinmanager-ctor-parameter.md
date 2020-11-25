@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ed5a90063b8963d79f412ec1c5c0b9030f980f83
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275035"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032372"
 ---
 ### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Identity：使用函式接受新的參數
 

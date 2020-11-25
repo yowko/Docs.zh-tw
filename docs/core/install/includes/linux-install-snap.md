@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 83808f2f3a05333ed5d9e3809cbc2fd6e230d02c
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506894"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031752"
 ---
 
 [您可以從「貼齊」存放區使用 .NET Core。](https://snapcraft.io/dotnet-sdk)
@@ -15,7 +15,7 @@ ms.locfileid: "94506894"
 
 ### <a name="install-the-sdk"></a>安裝 SDK
 
-適用于 .NET SDK 的嵌入式管理套件都會在相同的識別碼下發布： `dotnet-sdk` 。 您可以藉由指定通道來安裝特定版本的 SDK。 SDK 包含 coresponding 執行時間。 下表列出通道：
+適用于 .NET SDK 的嵌入式管理套件都會在相同的識別碼下發布： `dotnet-sdk` 。 您可以藉由指定通道來安裝特定版本的 SDK。 SDK 包含對應的執行時間。 下表列出這些通道：
 
 | .NET 版本 | 貼齊套件             |
 |--------------|--------------------------|
@@ -76,7 +76,7 @@ Running 'dotnet restore' on /home/myhome/test/test.csproj...
 /snap/dotnet-sdk/27/sdk/2.2.103/NuGet.targets(114,5): error :   The remote certificate is invalid according to the validation procedure. [/home/myhome/test/test.csproj]
 ```
 
-若要解決此問題，請設定一些環境變數：
+若要解決此問題，請設定幾個環境變數：
 
 ```bash
 export SSL_CERT_FILE=[path-to-certificate-file]

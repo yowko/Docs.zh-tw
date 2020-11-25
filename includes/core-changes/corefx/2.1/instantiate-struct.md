@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: b55de00188d92623c493dfc5f9aca915890ae5df
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021447"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032005"
 ---
-### <a name="private-fields-added-to-built-in-struct-types"></a>新增到內建結構型態的私有欄位
+### <a name="private-fields-added-to-built-in-struct-types"></a>加入至內建結構類型的私用欄位
 
-私有欄位已加入[參考程式集](../../../../docs/standard/assembly/reference-assemblies.md)[中的某些結構型態](#affected-apis)。 因此,在 C# 中,必須始終使用[新運算符](../../../../docs/csharp/language-reference/operators/new-operator.md)或[預設文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)實例化這些結構類型。
+私用欄位已加入至[參考元件](../../../../docs/standard/assembly/reference-assemblies.md)中的[某些結構類型](#affected-apis)。 因此，在 c # 中，這些結構類型一律必須使用 [new 運算子](../../../../docs/csharp/language-reference/operators/new-operator.md) 或 [default 常值](../../../../docs/csharp/language-reference/operators/default.md#default-literal)具現化。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 2.0 和早期版本中,某些提供<xref:System.ConsoleKeyInfo>結構類型(例如`new`,)可以在不使用 運算符或[C# 中的預設文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)的情況下實例化。 這是因為 C# 編譯器使用的[引用程式集](../../../../docs/standard/assembly/reference-assemblies.md)不包含結構的私有欄位。 .NET 結構類型的所有專用欄位都添加到從 .NET Core 2.1 開始的引用程式集中。
+在 .NET Core 2.0 和舊版本中，某些提供的結構類型（例如）可以具現 <xref:System.ConsoleKeyInfo> 化，而不需要 `new` 在 c # 中使用運算子或 [預設常值](../../../../docs/csharp/language-reference/operators/default.md#default-literal) 。 這是因為 c # 編譯器所使用的 [參考元件](../../../../docs/standard/assembly/reference-assemblies.md) 不包含結構的私用欄位。 .NET 結構類型的所有私用欄位都會加入至 .NET Core 2.1 開始的參考元件中。
 
-例如,以下 C# 代碼在 .NET Core 2.0 中編譯,但在 .NET Core 2.1 中編譯:
+例如，下列 c # 程式碼會在 .NET Core 2.0 中編譯，但不會在 .NET Core 2.1 中進行編譯：
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,15 +25,15 @@ if (key.ToString() == "y")
 }
 ```
 
-在 .NET Core 2.1 中,前面的代碼會導致以下編譯器錯誤 **:CS0165 - 使用未分配的局部變數"鍵"**
+在 .NET Core 2.1 中，先前的程式碼會導致下列編譯器錯誤： **CS0165-使用未指派的區域變數 ' key '**
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 2.1
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用`new`運算子或[預設文本](../../../../docs/csharp/language-reference/operators/default.md#default-literal)實例化結構類型。
+使用 `new` 運算子或 [預設常值](../../../../docs/csharp/language-reference/operators/default.md#default-literal)具現化結構類型。
 
 例如：
 
@@ -53,7 +53,7 @@ if (key.ToString() == "y")
 
 #### <a name="category"></a>類別
 
-核心 .NET 函式庫
+Core .NET 程式庫
 
 #### <a name="affected-apis"></a>受影響的 API
 

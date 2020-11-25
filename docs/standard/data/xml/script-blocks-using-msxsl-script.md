@@ -5,14 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: 57608ef143e6efd7f59d12d808274fa17961c483
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1a2d1f0972bc610cb4943dacc74c1bae8c54012b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673471"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032212"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的指令碼區塊
+
+> [!NOTE]
+> 只有 .NET Framework 才支援腳本區塊。 .NET Core 或 .NET 5.0 或更新版本 _不_ 支援這些版本。
 
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別支援使用 `msxsl:script` 項目的內嵌指令碼。 載入樣式表時，程式碼文件物件模型 (CodeDOM) 會將任何已定義的函式編譯成 Microsoft Intermediate Language (MSIL)，並在執行階段期間執行。 從內嵌指令碼區塊產生的組件不同於為樣式表產生的組件。  
   

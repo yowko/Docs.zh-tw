@@ -3,12 +3,12 @@ title: 產生 Self-Signed 憑證總覽
 description: 概述 Microsoft dotnet dev 憑證工具，其可為 .NET Core 和 ASP.NET Core 專案新增功能，以及其他使用自我簽署憑證的選項。
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: 15bbe3997ca34b503074595fa027bc6dfff1c0a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b5bf4b719495c2d6ec248e8592367ac452be91c1
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760606"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032173"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>使用 .NET CLI 產生自我簽署憑證
 
@@ -16,25 +16,25 @@ ms.locfileid: "95760606"
 
 然後，您可以使用範例（例如容器中裝載的 [ASP.NET Core 應用程式](https://github.com/dotnet/dotnet-docker/blob/master/samples/run-aspnetcore-https-development.md) ）來驗證憑證是否會載入。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-在範例中，您可以使用 `.netcore 3.1` 或 `.net 5` 。
+在範例中，您可以使用 .NET Core 3.1 或 .NET 5。
 
-針對 `dotnet dev-certs` ，請務必安裝適當的版本 `dotnet` ：
+針對 `dotnet dev-certs` ，請務必安裝適當版本的 .net：
 
-* [在 Windows 上安裝 dotnet](../install/windows.md)
-* [在 Linux 上安裝 dotnet](../install/linux.md)
-* [在 macOS 上安裝 dotnet](../install/macos.md)
+* [在 Windows 上安裝 .NET](../install/windows.md)
+* [在 Linux 上安裝 .NET](../install/linux.md)
+* [在 macOS 上安裝 .NET](../install/macos.md)
 
 此範例需要 docker [17.06](https://docs.docker.com/release-notes/docker-ce) 或更新版本的 [docker 用戶端](https://www.docker.com/products/docker)。
 
 ## <a name="prepare-sample-app"></a>準備範例應用程式
 
-您必須根據想要用於測試的執行時間來準備範例應用程式。
+您必須根據想要用於測試的執行時間（ [.Net Core 3.1](#net-core-31-sample-app) 或 [.net 5](#net-5-sample-app)）來準備範例應用程式。
 
 在本指南中，您將使用 [範例應用程式](https://hub.docker.com/_/microsoft-dotnet-samples) ，並在適當的位置進行變更。
 
-### <a name="prepare-net-core-31-sample-app"></a>準備 .NET Core 3.1 範例應用程式
+### <a name="net-core-31-sample-app"></a>.NET Core 3.1 範例應用程式
 
 取得範例應用程式。
 
@@ -61,7 +61,7 @@ git clone https://github.com/dotnet/dotnet-docker/
 </Project>
 ```
 
-請修改 Dockerfile，以確定執行時間指向. netcore 3.1：
+修改 Dockerfile，以確保執行時間指向 .NET Core 3.1：
 
 ```Dockerfile
 # https://hub.docker.com/_/microsoft-dotnet-core
@@ -97,13 +97,13 @@ cd .\dotnet-docker\samples\aspnetapp
 docker build -t aspnetapp:my-sample -f Dockerfile .
 ```
 
-### <a name="prepare-net-5-sample-app"></a>準備 .NET 5 範例應用程式
+### <a name="net-5-sample-app"></a>.NET 5 範例應用程式
 
-在本指南中，您應該檢查 .net 5 的 [範例 aspnetapp](https://hub.docker.com/_/microsoft-dotnet-samples) 。
+在本指南中，您應該檢查 .NET 5 的 [範例 aspnetapp](https://hub.docker.com/_/microsoft-dotnet-samples) 。
 
 檢查範例應用程式 [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile) 是否使用 .net 5。
 
-視主機作業系統而定，aspnet 執行時間可能需要更新。 例如， `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` 在 Dockerfile 中變更為，將有助於以適當的 Windows 執行時間為目標。
+視主機作業系統而定，可能需要更新 ASP.NET 執行時間。 例如， `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` 在 Dockerfile 中變更為，將有助於以適當的 Windows 執行時間為目標。
 
 例如，這將有助於在 Windows 上測試憑證：
 
@@ -147,7 +147,7 @@ ENTRYPOINT ["aspnetapp"]
 ```
 
 > [!NOTE]
-> 如果您想要使用 dotnet publish 參數來 *修剪* 部署，您應該確保包含適當的相依性以支援 SSL 憑證。
+> 如果您想要使用 `dotnet publish` 參數來 *修剪* 部署，請確定已包含支援 SSL 憑證的適當相依性。
 更新 [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) ，以確定容器中包含適當的元件。 如需參考，請參閱在針對獨立式部署使用修剪時，如何更新 .csproj 檔案以 [支援 ssl 憑證](../deploying/trim-self-contained.md#support-for-ssl-certificates) 。
 
 請確定您是指向範例應用程式。
@@ -162,7 +162,15 @@ cd .\dotnet-docker\samples\aspnetapp
 docker build -t aspnetapp:my-sample -f Dockerfile .
 ```
 
-## <a name="create-a-self-signed-certificate-with-dotnet-dev-certs"></a>使用 dotnet dev 憑證建立自我簽署憑證
+## <a name="create-a-self-signed-certificate"></a>建立自我簽署憑證
+
+您可以建立自我簽署的憑證：
+
+- [使用 dotnet dev 憑證](#with-dotnet-dev-certs)
+- [透過 PowerShell](#with-powershell)
+- [使用 OpenSSL](#with-openssl)
+
+### <a name="with-dotnet-dev-certs"></a>使用 dotnet dev 憑證
 
 您可以使用 `dotnet dev-certs` 來處理自我簽署憑證。 此範例會使用 PowerShell 主控台。
 
@@ -191,7 +199,7 @@ docker run --rm -it -p 8000:80 -p 8001:443 -e ASPNETCORE_URLS="https://+;http://
 
 應用程式啟動之後，請 `https://localhost:8001` 在您的網頁瀏覽器中流覽至。
 
-### <a name="clean-up"></a>清除
+#### <a name="clean-up"></a>清除
 
 如果秘密和憑證不在使用中，請務必將其清除。
 
@@ -200,7 +208,7 @@ dotnet user-secrets remove "Kestrel:Certificates:Development:Password" -p aspnet
 dotnet dev-certs https --clean
 ```
 
-## <a name="create-a-self-signed-certificate-with-powershell"></a>使用 PowerShell 建立自我簽署憑證
+### <a name="with-powershell"></a>透過 PowerShell
 
 您可以使用 PowerShell 來產生自我簽署憑證。 [PKI 用戶端](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserver-view=true)可以用來產生自我簽署憑證。
 
@@ -238,7 +246,7 @@ docker run --rm -it -p 8000:80 -p 8001:443 -e ASPNETCORE_URLS="https://+;http://
 
 請確定主項目目已更新，以便 `contoso.com` 在適當的 ip 位址上接聽 (例如 127.0.0.1) 。 如果無法辨識憑證，請確定主機上的容器所載入的憑證也受信任，而且有適當的 SAN/DNS 專案 `contoso.com` 。
 
-### <a name="clean-up"></a>清除
+#### <a name="clean-up"></a>清除
 
 ```powershell
 $cert | Remove-Item
@@ -246,7 +254,7 @@ Get-ChildItem $certFilePath | Remove-Item
 $rootCert | Remove-item
 ```
 
-## <a name="create-a-self-signed-certificate-with-openssl"></a>使用 OpenSSL 建立自我簽署憑證
+### <a name="with-openssl"></a>使用 OpenSSL
 
 您可以使用 [OpenSSL](https://www.openssl.org/) 來建立自我簽署憑證。 此範例將搭配使用 WSL/Ubuntu 和 bash shell `OpenSSL` 。
 
@@ -336,7 +344,7 @@ docker run --rm -it -p 8000:80 -p 8001:443 -e ASPNETCORE_URLS="https://+;http://
 
 請確定主項目目已更新，以便 `contoso.com` 在適當的 ip 位址上接聽 (例如 127.0.0.1) 。 如果無法辨識憑證，請確定主機上的容器所載入的憑證也受信任，而且有適當的 SAN/DNS 專案 `contoso.com` 。
 
-### <a name="clean-up"></a>清除
+#### <a name="clean-up"></a>清除
 
 完成測試之後，請務必清除自我簽署的憑證。
 

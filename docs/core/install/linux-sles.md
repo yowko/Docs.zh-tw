@@ -4,12 +4,12 @@ description: 示範在 SLES 上安裝 .NET SDK 和 .NET 執行時間的各種方
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 558574116aac2a3c755481069641e81a435a2a43
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: f351a9b11ab16910963a1db88d88b6949b56ae11
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506866"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031796"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>在 SLES 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -35,6 +35,10 @@ SLES 支援 .NET。 本文說明如何在 SLES 上安裝 .NET。
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>移除預覽版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
@@ -84,7 +88,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 - libicu
 - libopenssl1_1
 
-如果目標執行時間環境的 OpenSSL 版本是1.1 或更新版本，您必須安裝 **相容性 compat-openssl10** 。
+如果目標執行時間環境的 OpenSSL 版本是1.1 或更新版本，您必須安裝 **相容性 compat-openssl10**。
 
 如需相依性的詳細資訊，請參閱 [獨立的 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
 

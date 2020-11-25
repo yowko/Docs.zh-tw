@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: cd13e7560ee98e0c862c5e2293521c6aaa273455
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344287"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032406"
 ---
 ### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor：執行時間編譯已移至封裝
 

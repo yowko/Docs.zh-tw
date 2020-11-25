@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539575"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032321"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP：瀏覽器 SameSite 變更會影響驗證
 
@@ -22,7 +22,7 @@ ms.locfileid: "90539575"
 
 #### <a name="new-behavior"></a>新的行為
 
-Google 提議新的草稿標準，但無法回溯相容。 標準會將預設模式變更為 `Lax` ，並加入新的專案 `None` 以退出宣告。 `Lax` 尾碼大部分的應用程式 cookie，不過它會破壞跨網站案例，例如 OpenID Connect 和 WS-同盟登入。 大部分的 OAuth 登入不會受到影響，因為要求流程的不同之處。 新的 `None` 參數會造成與先前 draft 標準 (的用戶端相容性問題，例如 iOS 12) 。 Chrome 80 將包含這些變更。 請參閱 Chrome 產品啟動時間軸的 [SameSite 更新](https://www.chromium.org/updates/same-site) 。
+Google 提議新的草稿標準，但無法回溯相容。 標準會將預設模式變更為 `Lax` ，並加入新的專案 `None` 以退出宣告。 `Lax` 尾碼大部分的應用程式 cookie，不過它會破壞跨網站案例，例如 OpenID Connect 和 WS-Federation 登入。 大部分的 OAuth 登入不會受到影響，因為要求流程的不同之處。 新的 `None` 參數會造成與先前 draft 標準 (的用戶端相容性問題，例如 iOS 12) 。 Chrome 80 將包含這些變更。 請參閱 Chrome 產品啟動時間軸的 [SameSite 更新](https://www.chromium.org/updates/same-site) 。
 
 ASP.NET Core 3.1 已更新為可執行新的 `SameSite` 行為。 更新會重新定義發出的行為 `SameSiteMode.None` `SameSite=None` ，並新增值 `SameSiteMode.Unspecified` 以省略 `SameSite` 屬性。 所有 cookie Api 現在都會預設為 `Unspecified` ，不過，某些使用 cookie 的元件會針對其案例（例如 OpenID Connect 相互關聯和 nonce cookie）更明確地設定值。
 
@@ -78,7 +78,7 @@ Electron 的版本包括舊版的 Chromium。 例如，Microsoft 小組所使用
 
 2016 `SameSite` 標準規定將未知值視為 `SameSite=Strict` 值。 因此，當任何支援原始標準的舊版瀏覽器看到 `SameSite` 具有值的屬性時，都可能會中斷 `None` 。 如果 Web 應用程式想要支援這些舊的瀏覽器，則必須執行瀏覽器探查。 ASP.NET Core 不會為您執行瀏覽器探查，因為 `User-Agent` 要求標頭值的高度不穩定，而且每週都有變更。 相反地，cookie 原則中的擴充點可讓您新增 `User-Agent` 特定的邏輯。
 
-在 *Startup.cs*中，新增下列程式碼：
+在 *Startup.cs* 中，新增下列程式碼：
 
 ```csharp
 private void CheckSameSite(HttpContext httpContext, CookieOptions options)

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b0e1d6d720a1c9b827fb4585606e64b545d395d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394375"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032384"
 ---
 ### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel：要求尾端標頭移至新集合
 

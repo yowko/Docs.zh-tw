@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e77312605ee367c159171e305d8f69429f9ac58b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539573"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032369"
 ---
 ### <a name="identity-adddefaultui-method-overload-removed"></a>Identity： AddDefaultUI 方法多載已移除
 

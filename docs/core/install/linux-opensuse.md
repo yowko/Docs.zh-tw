@@ -4,12 +4,12 @@ description: 示範在 openSUSE 上安裝 .NET SDK 和 .NET 執行時間的各�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506895"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031861"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>在 openSUSE 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -36,6 +36,10 @@ OpenSUSE 支援 .NET。 本文說明如何在 openSUSE 上安裝 .NET。
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>移除預覽版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
@@ -79,7 +83,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 - libicu
 - libopenssl1_0_0
 
-如果目標執行時間環境的 OpenSSL 版本是1.1 或更新版本，您必須安裝 **相容性 compat-openssl10** 。
+如果目標執行時間環境的 OpenSSL 版本是1.1 或更新版本，您必須安裝 **相容性 compat-openssl10**。
 
 如需相依性的詳細資訊，請參閱 [獨立的 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
 

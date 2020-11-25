@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: de06825f1031d05bc83183a83bae165e2f9512ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901918"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032419"
 ---
 ### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>SignalR：已移除 HubConnection ResetSendPing 和 ResetTimeout 方法
 

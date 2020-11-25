@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 75945e7ff26c1c6db891d12cef4c16ed210da6af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394403"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032397"
 ---
 ### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC：已移除 Web API 相容性填充碼
 

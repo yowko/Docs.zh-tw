@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 06d5f48566c239e37355496c3f27163d952602c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901915"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032377"
 ---
 ### <a name="kestrel-connection-adapters-removed"></a>Kestrel：已移除連接配接器
 

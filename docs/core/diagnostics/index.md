@@ -3,12 +3,12 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982305"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031913"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -27,6 +27,10 @@ ms.locfileid: "94982305"
 ## <a name="unit-testing"></a>單元測試
 
 [單元測試](../testing/index.md) 是持續整合和部署高品質軟體的重要元件。 單元測試的設計是要在您中斷某個項目時提前警告您。
+
+## <a name="dumps"></a>傾印
+
+傾 [印是一種檔案](./dumps.md) ，其中包含建立時進程的快照集。 這些可能有助於檢查應用程式的狀態，以進行偵測。
 
 ## <a name="collect-diagnostics-in-containers"></a>在容器中收集診斷
 

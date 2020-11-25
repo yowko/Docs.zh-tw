@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f6e4c3d5c5fd020562e48515554136e0f8b6785c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440417"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032345"
 ---
 ### <a name="data-protection-dataprotectionblobs-uses-new-azure-storage-apis"></a>資料保護： DataProtection 會使用新的 Azure 儲存體 Api
 
@@ -50,7 +50,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!-- 
 

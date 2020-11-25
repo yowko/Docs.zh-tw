@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901762"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032424"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR： JavaScript 用戶端套件名稱已變更
 
 在 ASP.NET Core 3.0 Preview 7 中，SignalR JavaScript 用戶端套件名稱已從變更 `@aspnet/signalr` 為 `@microsoft/signalr` 。 名稱變更反映了 Azure SignalR Service，而不只是 ASP.NET Core 的應用程式，SignalR 會很有用。
 
-若要回應這項變更，請在檔案*package.json* 、 `require` 語句和 ECMAScript 語句上變更package.js中的參考 `import` 。 此重新命名過程中不會變更任何 API。
+若要回應這項變更，請在檔案 *package.json* 、 `require` 語句和 ECMAScript 語句上變更package.js中的參考 `import` 。 此重新命名過程中不會變更任何 API。
 
 如需討論，請參閱 [dotnet/aspnetcore # 11637](https://github.com/dotnet/aspnetcore/issues/11637)。
 
@@ -40,7 +40,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!-- 
 

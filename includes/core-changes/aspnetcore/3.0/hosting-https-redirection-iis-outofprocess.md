@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: eb3fa768a491f6c0ff4b15479beabd71b0670338
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937266"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032352"
 ---
 ### <a name="hosting-https-redirection-enabled-for-iis-out-of-process-apps"></a>裝載：針對 IIS 跨進程應用程式啟用 HTTPS 重新導向
 

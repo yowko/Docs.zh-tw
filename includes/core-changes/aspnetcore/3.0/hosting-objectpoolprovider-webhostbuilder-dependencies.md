@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901641"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032356"
 ---
 ### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>裝載： ObjectPoolProvider 已從 >webhostbuilder 相依性中移除
 
@@ -38,7 +38,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!-- 
 

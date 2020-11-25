@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 05aec429e28ef74515ef6988d5b064e6d16b7c1b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90680031"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032430"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR：已取代 HandshakeProtocol SuccessHandshakeData
 
@@ -28,7 +28,7 @@ ms.locfileid: "90680031"
 
 #### <a name="recommended-action"></a>建議的動作
 
-無。 此類型不是設計用來從使用者程式碼使用。 這是 `public` 可以在 SignalR 伺服器和用戶端之間共用的。 它也可以由以 .NET 撰寫的客戶 SignalR 用戶端使用。 SignalR 的**使用者**應該不會受到這項變更的影響。
+無。 此類型不是設計用來從使用者程式碼使用。 這是 `public` 可以在 SignalR 伺服器和用戶端之間共用的。 它也可以由以 .NET 撰寫的客戶 SignalR 用戶端使用。 SignalR 的 **使用者** 應該不會受到這項變更的影響。
 
 #### <a name="category"></a>類別
 

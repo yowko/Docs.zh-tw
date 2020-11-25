@@ -4,12 +4,12 @@ description: 示範在 Ubuntu 上安裝 .NET SDK 和 .NET 執行時間的各種�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507012"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031838"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>在 Ubuntu 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -35,7 +35,7 @@ Ubuntu 支援 .NET。 本文說明如何在 Ubuntu 上安裝 .NET。 當 Ubuntu 
 | ❌[19.04](#1904-)       | ✔️2。1        | ✔️3。1        | ❌ 5.0 |
 | ❌[18.10](#1810-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
 | ✔️ [18.04 (LTS) ](#1804-) | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ❌ [17.10](#1710-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
+| ❌[17.10](#1710-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
 | ❌ [17.04](#1704-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
 | ❌[16.10](#1610-)       | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
 | ✔️ [16.04 (LTS) ](#1604-) | ✔️2。1        | ✔️3。1        | ✔️5。0 |
@@ -46,15 +46,27 @@ Ubuntu 支援 .NET。 本文說明如何在 Ubuntu 上安裝 .NET。 當 Ubuntu 
 - 2.2
 - 2.0
 
+## <a name="remove-preview-versions"></a>移除預覽版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
+
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="2010-"></a>20.10 ✔️
 
-適用于 Ubuntu 20.10 的 .NET 5 和 .NET Core 3.1 套件摘要目前有問題。 如需有關此問題的詳細資訊，請參閱 [GitHub 問題 dotnet/核心 # 5549](https://github.com/dotnet/core/issues/5549)。 當問題解決時，將會更新本文。
+> [!IMPORTANT]
+> 套件摘要中尚無法使用 .NET Core 2.1。
 
-若要在 Ubuntu 20.10 上安裝 .NET 5 或 .NET Core 3.1，請遵循 [20.04](#2004-)的指示。
+[!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+```
+
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="2004-"></a>20.04 ✔️
 

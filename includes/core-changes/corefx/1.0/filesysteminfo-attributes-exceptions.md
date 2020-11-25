@@ -1,30 +1,30 @@
 ---
 ms.openlocfilehash: 2ea9abca7578c2ddf92712a1c597f8f1ff4a5c0c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021802"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032004"
 ---
-### <a name="unauthorizedaccessexception-thrown-by-filesysteminfoattributes"></a>檔案系統資訊.屬性引發的未經授權的存取異常
+### <a name="unauthorizedaccessexception-thrown-by-filesysteminfoattributes"></a>FileSystemInfo 擲回的 System.unauthorizedaccessexception。屬性
 
-在 .NET<xref:System.UnauthorizedAccessException>Core 中,當呼叫者嘗試設定檔屬性值但沒有寫入權限時,將引發 。
+在 .NET Core 中， <xref:System.UnauthorizedAccessException> 當呼叫端嘗試設定檔案屬性值但沒有寫入權限時，就會擲回。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Framework<xref:System.ArgumentException>中,當呼叫者<xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType>嘗試在 中設定檔屬性值但沒有寫入權限時,將引發 。 在 .NET<xref:System.UnauthorizedAccessException>核心 中,將改為引發 。 (在 .NET<xref:System.ArgumentException>Core 中,如果呼叫者嘗試設定無效的檔案屬性,仍將引發 。
+在 .NET Framework 中， <xref:System.ArgumentException> 當呼叫端嘗試在中設定檔案屬性值， <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> 但沒有寫入權限時，就會擲回。 在 .NET Core 中， <xref:System.UnauthorizedAccessException> 會改為擲回。 在 .NET Core 中 (， <xref:System.ArgumentException> 如果呼叫端嘗試設定不正確檔案屬性，仍會擲回。 ) 
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 1.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-根據需要修改`catch`任何敘述以捕捉<xref:System.UnauthorizedAccessException>而不是或<xref:System.ArgumentException>新增 。
+`catch`視需要修改任何語句，以捕捉 <xref:System.UnauthorizedAccessException> instead of 或以外的 <xref:System.ArgumentException> 。
 
 #### <a name="category"></a>類別
 
-核心 .NET 函式庫
+Core .NET 程式庫
 
 #### <a name="affected-apis"></a>受影響的 API
 

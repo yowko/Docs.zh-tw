@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d1ddba72ce25c5e01025d916d52f785b5a1a9e71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901820"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032349"
 ---
 ### <a name="hosting-generic-host-restricts-startup-constructor-injection"></a>裝載：泛型主機限制啟動的函式插入
 
@@ -46,7 +46,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!-- 
 
