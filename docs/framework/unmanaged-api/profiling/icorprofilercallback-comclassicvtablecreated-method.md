@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 6c9ec6af90cc47c3c01621563a9813789c25aa1d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c4d1f2467927e64ae08c0e7d8067c2ce96b95522
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500334"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700206"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated 方法
-通知分析工具，指定之 IID 和類別的 COM Interop vtable 已建立。  
+
+通知分析工具已建立所指定 IID 和類別的 COM interop vtable。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,11 +40,11 @@ HRESULT COMClassicVTableCreated(
 
 - `wrappedClasId`
 
-  \[in] 已建立 vtable 之類別的識別碼。
+  \[in] 已建立 vtable 的類別識別碼。
 
 - `implementedIID`
 
-  \[in] 類別所實作為介面的識別碼。 如果介面僅供內部用，這個值可能會是 Null。
+  \[in] 類別所執行之介面的識別碼。 如果介面是內部介面，這個值可能是 Null。
 
 - `pVTable`
 
@@ -54,12 +55,14 @@ HRESULT COMClassicVTableCreated(
   \[in] vtable 中的插槽數目。
 
 ## <a name="remarks"></a>備註  
- 分析工具不應在此方法的執行中封鎖，因為堆疊可能不是處於允許垃圾收集的狀態，因此無法啟用「搶先垃圾收集」。 如果分析工具在此處封鎖並嘗試垃圾收集，執行時間將會封鎖，直到這個回呼傳回為止。  
+
+ 分析工具不應該在其實作為此方法的實中封鎖，因為堆疊可能不是處於允許垃圾收集的狀態，因此無法啟用搶先式垃圾收集。 如果分析工具在此封鎖並嘗試垃圾收集，則執行時間會封鎖，直到回呼傳回為止。  
   
- 分析工具的此方法的執行不應呼叫 managed 程式碼，或以任何方式進行，以造成 managed 記憶體配置。  
+ 分析工具在執行此方法時，不應呼叫 managed 程式碼，或以任何方式造成受控記憶體配置。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

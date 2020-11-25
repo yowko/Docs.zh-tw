@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 80054a8292c69b957664cb3573b0a8694c7f9fd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: bb7dade1ccd46cb9e13d45468c2ca2a8b451b70b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500399"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700297"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted 方法
+
 通知分析工具元件正在卸載。  
   
 ## <a name="syntax"></a>語法  
@@ -36,13 +37,15 @@ HRESULT AssemblyUnloadStarted(
 
 - `assemblyId`
 
-  \[在中，識別要卸載的元件。
+  \[in] 識別正在卸載的元件。
 
 ## <a name="remarks"></a>備註  
- 在方法傳回之後，的值 `assemblyId` 對資訊要求無效 `AssemblyUnloadStarted` ，這是分析工具的最後機會取得此元件的相關資訊。  
+
+ 在方法傳回之後，的值對 `assemblyId` 資訊要求而言是不正確 `AssemblyUnloadStarted` ，這是 profiler 取得此元件相關資訊的最後機會。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

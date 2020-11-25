@@ -15,25 +15,27 @@ helpviewer_keywords:
 ms.assetid: 09238b9b-9359-4780-89dc-2f5e4f57920e
 topic_type:
 - apiref
-ms.openlocfilehash: c2c9ed848984d36ddf10d32d120deda76a4d47cc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 273c3cefa2e67a7d8c429982b4da4126168b2830
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500282"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699959"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerenter-method"></a>ICorProfilerCallback::ExceptionOSHandlerEnter 方法
+
 未實作。 需要非受控例外狀況資訊的 profiler 必須透過其他方式取得此資訊。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT ExceptionOSHandlerEnter(  
     [in] UINT_PTR __unused);  
 ```  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

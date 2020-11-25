@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 114d5d58d0d9098944299aefd0cb99a70c5da09d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700258"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 方法
+
 通知分析工具，類別已完成卸載。  
   
 ## <a name="syntax"></a>語法  
@@ -37,17 +38,19 @@ HRESULT ClassUnloadFinished(
 
 - `classId`
 
-  \[在中，識別已卸載的類別。
+  \[in] 識別已卸載的類別。
 
 - `hrStatus`
 
-  \[in] 表示是否已成功卸載類別的 HRESULT。
+  \[in] HRESULT，指出是否已成功卸載類別。
   
 ## <a name="remarks"></a>備註  
- 卸載類別的某些部分可能會在回呼之後繼續進行 `ClassUnloadFinished` 。 中的失敗 HRESULT `hrStatus` 表示失敗。 不過，中的成功 HRESULT `hrStatus` 只會指出卸載類別的第一個部分已成功。  
+
+ 卸載類別的部分可能會在回呼之後繼續 `ClassUnloadFinished` 。 中的失敗 HRESULT `hrStatus` 表示失敗。 但是，中的成功 HRESULT `hrStatus` 只會指出卸載類別的第一個部分已成功。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
