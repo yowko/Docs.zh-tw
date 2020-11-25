@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-ms.openlocfilehash: d715f5842bb7f75da5311d34bf7d4596f0801a92
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d17179dbeb9564b16c0c95a43502a53a67d3b9b8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210276"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703157"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument 方法
-取得此 Microsoft 中繼語言（MSIL）堆疊框架中指定之引數的值。  
+
+取得此 Microsoft 中繼語言 (MSIL) 堆疊框架中指定之引數的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +36,20 @@ HRESULT GetArgument (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `dwIndex`  
- 在這個 MSIL 堆疊框架中引數的索引。  
+ 在這個 MSIL 堆疊框架中的引數索引。  
   
  `ppValue`  
  [out] 代表擷取值之 ICorDebugValue 物件的位置指標。  
   
 ## <a name="remarks"></a>備註  
- `GetArgument`方法可以在 MSIL 堆疊框架或即時（JIT）編譯的框架中使用。  
+
+ `GetArgument`方法可以在 MSIL 堆疊框架中或在即時 (JIT) 編譯的框架中使用。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

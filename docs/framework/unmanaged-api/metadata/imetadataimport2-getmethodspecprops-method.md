@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2eba599c0f7d47ab78c1b158129f03877a4a5d9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490441"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702611"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps 方法
+
 取得指定的 MethodSpec token 所參考之方法的中繼資料簽章。  
   
 ## <a name="syntax"></a>語法  
@@ -37,24 +38,26 @@ HRESULT GetMethodSpecProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `mi`  
- 在一個 MethodSpec token，代表方法的具現化。  
+ 在代表方法具現化的 MethodSpec token。  
   
  `tkParent`  
- 脫銷MethodDef 或 MethodRef token 的指標，表示方法定義。  
+ 擴展代表方法定義之 MethodDef 或 MethodRef token 的指標。  
   
  `ppvSigBlob`  
- 脫銷方法之二進位中繼資料簽章的指標。  
+ 擴展方法的二進位中繼資料簽章指標。  
   
  `pcbSigBlob`  
- 脫銷的大小（以位元組為單位） `ppvSigBlob` 。  
+ 擴展的大小（以位元組為單位） `ppvSigBlob` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

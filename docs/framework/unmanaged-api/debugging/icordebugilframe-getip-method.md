@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-ms.openlocfilehash: 3890cb4236f113bc6efc23bfb606d19a525ec234
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 314d2a06c8e246a42b315690dc9fe4b507db285a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703167"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP 方法
+
 取得指令指標的值，以及描述如何取得指令指標值的位組合值。  
   
 ## <a name="syntax"></a>語法  
@@ -35,19 +36,22 @@ HRESULT GetIP (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pnOffset`  
- 脫銷指令指標的值。  
+ 擴展指令指標的值。  
   
  `pMappingResult`  
- 脫銷CorDebugMappingResult 列舉值的位元組合指標，描述如何取得指令指標的值。  
+ 擴展CorDebugMappingResult 列舉值的位元組合指標，描述如何取得指令指標的值。  
   
 ## <a name="remarks"></a>備註  
- 指令指標的值是函式的 Microsoft 中繼語言（MSIL）程式碼的堆疊框架位移。 如果堆疊框架作用中，此位址就是下一個要執行的指令。 如果堆疊框架不在使用中，此位址就是在堆疊框架重新開機時要執行的下一個指令。  
+
+ 指令指標的值為函式之 Microsoft 中繼語言 (MSIL) 程式碼的堆疊框架位移。 如果堆疊框架為使用中，則此位址是下一個要執行的指令。 如果堆疊框架不在使用中，此位址是在堆疊框架重新開機時要執行的下一個指令。  
   
- 如果此框架是即時（JIT）編譯的框架，則指令指標的值將由從實際的原生指令指標向後對應來決定，因此值可能只是近似值。  
+ 如果這個框架是即時 (JIT) 編譯的框架，指令指標的值將會由從實際的原生指令指標反向對應來決定，因此值可能只是近似。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

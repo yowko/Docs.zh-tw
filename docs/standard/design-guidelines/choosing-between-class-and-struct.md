@@ -12,14 +12,15 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 05ba9abbc9495d927b7f58ebb06f152c0c15772f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821472"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701246"
 ---
 # <a name="choosing-between-class-and-struct"></a>在類別和結構之間選擇
+
 每個 framework 設計工具都有臉部的其中一個基本設計決策，就是要將類型設計為類別 (參考型別) 或作為結構 () 數值型別。 若要對參考型別和實值型別行為的差異有很大的瞭解，對進行這項選擇是很重要的。
 
  參考型別和實值型別之間的第一個差異是，參考型別是在堆積上配置和垃圾收集，而實值型別則是在堆疊上配置，或是在堆疊回溯或其包含型別解除配置時解除配置。 因此，實值型別的配置和取消配置，通常比參考型別的配置和取消配置還便宜。
@@ -52,7 +53,7 @@ ms.locfileid: "94821472"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [型別設計方針](type.md)
 - [架構設計指導方針](index.md)

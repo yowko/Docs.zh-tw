@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830957"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701467"
 ---
 # <a name="convert-strings-to-net-data-types"></a>將字串轉換成 .NET 資料類型
 
@@ -22,7 +22,7 @@ ms.locfileid: "94830957"
   
 |.NET 類型|傳回的字串|  
 |-------------------------|---------------------|  
-|布林值|"true"、"false"|  
+|Boolean|"true"、"false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  但是，如果您要將字串轉換成 **布林值**、 **Single** 或 **Double**，則傳回的 .net 型別與使用 **system.string 類別時** 所傳回的型別不同。  
   
 ## <a name="string-to-boolean"></a>字串轉成 Boolean  
+
  下列表格說明使用 **ToBoolean** 方法將字串轉換成 **Boolean** 時，給定的輸入字串會產生哪種型別。  
   
 |有效的字串輸入參數|.NET 輸出類型|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>字串轉成 Single  
+
  下列表格說明使用 **ToSingle** 方法將字串轉換成 **Single**，給定的輸入字串會產生哪些型別。  
   
 |有效的字串輸入參數|.NET 輸出類型|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>字串轉成 Double  
+
  下列表格說明使用 **ToDouble** 方法將字串轉換成 **Single**，給定的輸入字串會產生哪些型別。  
   
 |有效的字串輸入參數|.NET 輸出類型|  
@@ -131,7 +134,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 資料型別轉換](conversion-of-xml-data-types.md)
 - [將 .NET 類型轉換成字串](converting-dotnet-types-to-strings.md)

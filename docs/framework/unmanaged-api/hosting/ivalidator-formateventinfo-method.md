@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-ms.openlocfilehash: 0c60631b5e034bc46d74412440d35d526359d043
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c5c89e0eda6e93e34775c00d5ec8fb4ff0940707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008569"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701012"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo 方法
-取得對應于指定驗證錯誤的錯誤訊息。  
+
+取得對應到指定之驗證錯誤的錯誤訊息。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,26 +39,28 @@ HRESULT FormatEventInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `hVECode`  
- 在已傳遞至驗證錯誤處理常式的 HRESULT 值。  
+ 在傳遞給驗證錯誤處理常式的 HRESULT 值。  
   
  `Context`  
- 在`VEContext`實例，其中包含有關驗證錯誤的內容資訊。  
+ 在 `VEContext` 實例，其中包含有關驗證錯誤的內容資訊。  
   
  `msg`  
- [in、out]包含傳回之錯誤訊息的字串。  
+ [in，out]包含傳回之錯誤訊息的字串。  
   
  `ulMaxLength`  
  在錯誤訊息的最大長度。  
   
  `psa`  
- 在安全陣列，其中包含描述錯誤的其他參數。  
+ 在安全陣列，包含描述錯誤的其他參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** IValidator .idl，IValidator。h  
+ **標頭：** IValidator .idl、IValidator。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

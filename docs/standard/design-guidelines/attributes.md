@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c02c41244fa74b686277c2f3c3940405fe2d95ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821615"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701363"
 ---
 # <a name="attributes"></a>屬性
+
 <xref:System.Attribute?displayProperty=nameWithType> 是用來定義自訂屬性的基類。
 
  屬性是可以加入至程式設計專案（例如元件、類型、成員和參數）的附注。 它們會儲存在元件的中繼資料中，並可在執行時間使用反映 Api 來存取。 例如，架構會定義可套用 <xref:System.ObsoleteAttribute> 至類型或成員的，以表示類型或成員已被取代。
@@ -47,7 +48,7 @@ ms.locfileid: "94821615"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [使用指導方針](usage-guidelines.md)

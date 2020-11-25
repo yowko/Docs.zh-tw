@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-ms.openlocfilehash: 7e97b2d4ad1fec4675d1484959b115a4d4b87e90
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 16f69d571ffed87a2e848124ce16ac942d319c37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702676"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 方法
-取得與指定標記所表示的泛型參數相關聯的中繼資料。  
+
+取得與指定標記所表示之泛型參數相關聯的中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,36 +42,38 @@ HRESULT GetGenericParamProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `gp`  
- 在Token，代表要傳回中繼資料的泛型參數。  
+ 在代表要傳回中繼資料之泛型參數的 token。  
   
  `pulParamSeq`  
- 脫銷`Type`父函數或方法中參數的序數位置。  
+ 擴展 `Type` 參數在父函式或方法中的序數位置。  
   
  `pdwParamFlags`  
- 脫銷[CorGenericParamAttr](corgenericparamattr-enumeration.md)列舉的值，描述 `Type` 泛型參數的。  
+ 擴展描述泛型參數之的 [CorGenericParamAttr](corgenericparamattr-enumeration.md) 列舉值 `Type` 。  
   
  `ptOwner`  
- 脫銷表示參數擁有者的 TypeDef 或 MethodDef token。  
+ 擴展代表參數擁有者的 TypeDef 或 MethodDef token。  
   
  `reserved`  
- 脫銷保留以供未來擴充性之用。  
+ 擴展保留供未來擴充性之用。  
   
  `wzName`  
- 脫銷泛型參數的名稱。  
+ 擴展泛型參數的名稱。  
   
  `cchName`  
  在緩衝區的大小 `wzName` 。  
   
  `pchName`  
- 脫銷傳回的名稱大小（以寬字元為單位）。  
+ 擴展傳回的名稱大小（以寬字元為單位）。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

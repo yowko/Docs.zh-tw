@@ -6,22 +6,24 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: 1a9781fa1b4b608152faa7d5edc80bd4866f0c81
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8956a09cf76aa54452e8c020239e650e55d8a0d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868131"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701610"
 ---
 # <a name="profiling-enumerations"></a>分析列舉
+
 本節描述分析 API 所使用的 Unmanaged 列舉。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
+
  [COR_PRF_CLAUSE_TYPE 列舉](cor-prf-clause-type-enumeration.md)  
  指出剛輸入或留下的程式碼的 exception 子句類型。  
   
  [COR_PRF_CODEGEN_FLAGS 列舉](cor-prf-codegen-flags-enumeration.md)  
- 定義可使用[ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md)方法設定的程式碼產生旗標。  
+ 定義可使用 [ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 方法設定的程式碼產生旗標。  
   
  [COR_PRF_FINALIZER_FLAGS 列舉](cor-prf-finalizer-flags-enumeration.md)  
  描述物件的完成項。  
@@ -36,10 +38,10 @@ ms.locfileid: "76868131"
  指出記憶體回收行程根目錄的屬性。  
   
  [COR_PRF_GC_ROOT_KIND 列舉](cor-prf-gc-root-kind-enumeration.md)  
- 表示[ICorProfilerCallback2：： RootReferences2](icorprofilercallback2-rootreferences2-method.md)回呼所公開的垃圾收集行程根種類。  
+ 表示 [ICorProfilerCallback2：： RootReferences2](icorprofilercallback2-rootreferences2-method.md) 回呼所公開的垃圾收集行程根類型。  
   
  [COR_PRF_HIGH_MONITOR 列舉](cor-prf-high-monitor-enumeration.md)  
- 除了在[ICorProfilerInfo5：： SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)方法載入時，分析工具可以指定的標記[COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)以外，還提供旗標。  
+ 除了在[ICorProfilerInfo5：： SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)方法載入時，分析工具可指定的標記[COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)之外，還提供旗標。  
   
  [COR_PRF_JIT_CACHE 列舉](cor-prf-jit-cache-enumeration.md)  
  指出快取的函式搜尋結果。  
@@ -69,6 +71,7 @@ ms.locfileid: "76868131"
  指出從 Managed 程式碼轉換為 Unmanaged 程式碼 (反之亦然) 的原因。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [分析概觀](profiling-overview.md)  
   
  [分析介面](profiling-interfaces.md)  

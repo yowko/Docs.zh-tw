@@ -9,17 +9,19 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e416a8346952a41d9c89f526bfce990dfc277fc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821524"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701259"
 ---
 # <a name="capitalization-conventions"></a>大小寫慣例
+
 本章中的指導方針會配置簡單的方法，以使用案例，在一致地套用時，讓類型、成員和參數的識別碼易於讀取。
 
 ## <a name="capitalization-rules-for-identifiers"></a>識別碼的大小寫規則
+
  若要區分識別碼中的單字，請將識別碼中每個單字的第一個字母大寫。 請勿使用底線來區分單字，或在識別碼中的任何位置區分單字。 有兩個適當的方式可將識別碼大寫，視識別碼的使用方式而定：
 
 - PascalCasing
@@ -60,6 +62,7 @@ ms.locfileid: "94821524"
 |參數|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>將複合單字和一般詞彙全部大寫
+
  大部分的複合詞匯都會被視為單一單字，以做為大小寫的用途。
 
  ❌ 請勿將所謂的封閉表單複合字中的每個單字全部大寫。
@@ -95,6 +98,7 @@ ms.locfileid: "94821524"
 |`Writable`|`writable`|`Writeable`|
 
 ## <a name="case-sensitivity"></a>區分大小寫
+
  可以在 CLR 上執行的語言不需要支援區分大小寫，但有一些可支援區分大小寫。 即使您的語言支援它，其他可能存取架構的語言也不會。 因此，可從外部存取的任何 Api 都不能單獨依賴大小寫來區別相同內容中的兩個名稱。
 
  ❌ 請勿假設所有程式設計語言都有區分大小寫。 但它們並不相等。 名稱不能單獨以大小寫不同。
@@ -103,7 +107,7 @@ ms.locfileid: "94821524"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [命名指導方針](naming-guidelines.md)

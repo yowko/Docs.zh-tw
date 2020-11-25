@@ -5,14 +5,15 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e49b79609a2d16a79a80727295d53bb36ec5943
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821589"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701311"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>實作抽象的基底類別
+
 嚴格來說，當另一個類別衍生自類別時，類別會變成基類。 但基於本節的目的，基類是設計來提供通用抽象概念的類別，或讓其他類別透過繼承重複使用一些預設的執行。 基類通常位於繼承階層的中間，在階層根目錄的抽象概念和底部的數個自訂實體系之間。
 
  它們是做為執行抽象概念的實作為協助程式。 例如，其中一個已排序之專案集合的架構抽象概念是 <xref:System.Collections.Generic.IList%601> 介面。 其實 <xref:System.Collections.Generic.IList%601> 作並不簡單，因此架構會提供數個基類，例如 <xref:System.Collections.ObjectModel.Collection%601> 和 <xref:System.Collections.ObjectModel.KeyedCollection%602> ，作為協助程式來執行自訂集合。
@@ -31,7 +32,7 @@ ms.locfileid: "94821589"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [擴充性設計](designing-for-extensibility.md)

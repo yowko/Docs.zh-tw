@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: 8feba8e67f3a90dd48fd957065a9c166c204b87c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8858e692d66f7b34a66334bd4e8b906dd12962ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492729"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701987"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps 方法
-針對指定之標記所參考的泛型參數定義，設定屬性值。  
+
+設定指定之標記所參考之泛型參數定義的屬性值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +39,29 @@ HRESULT SetGenericParamProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `gp`  
- 在要為其設定值之泛型參數定義的 token。  
+ 在要設定其值之泛型參數定義的標記。  
   
  `dwParamFlags`  
- 在[CorGenericParamAttr](corgenericparamattr-enumeration.md)列舉的值，描述泛型參數的類型。  
+ 在描述泛型參數之類型的 [CorGenericParamAttr](corgenericparamattr-enumeration.md) 列舉值。  
   
  `szName`  
- [in] 選用。 要設定值的參數名稱。  
+ [in] 選用。 要設定其值的參數名稱。  
   
  `reserved`  
- 在保留以供未來擴充性之用。  
+ 在保留供未來擴充性之用。  
   
  `rtkConstraints`  
- [in] 選用。 類型條件約束之以零結束的陣列。 陣列成員必須是 `mdTypeDef` 、 `mdTypeRef` 或 `mdTypeSpec` 元資料標記。  
+ [in] 選用。 以零結束的型別條件約束陣列。 陣列成員必須是 `mdTypeDef` 、 `mdTypeRef` 或 `mdTypeSpec` 元資料標記。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

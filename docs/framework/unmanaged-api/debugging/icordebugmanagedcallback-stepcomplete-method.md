@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-ms.openlocfilehash: 89b010706222ad44bccabd94191c42a888584944
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8de0858abe7db9ae1225f449083e417e13507b3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212655"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703033"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete 方法
+
 通知偵錯工具已完成步驟。  
   
 ## <a name="syntax"></a>語法  
@@ -37,23 +38,26 @@ HRESULT StepComplete (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pAppDomain`  
- 在ICorDebugAppDomain 物件的指標，代表包含步驟已完成之執行緒的應用程式域。  
+ 在ICorDebugAppDomain 物件的指標，該物件代表包含步驟已完成之執行緒的應用程式域。  
   
  `pThread`  
- 在ICorDebugThread 物件的指標，代表步驟已完成的執行緒。  
+ 在ICorDebugThread 物件的指標，該物件表示步驟已完成的執行緒。  
   
  `pStepper`  
- 在ICorDebugStepper 物件的指標，表示程式碼執行中的步驟。  
+ 在ICorDebugStepper 物件的指標，代表程式碼執行中的步驟。  
   
  `reason`  
- 在CorDebugStepReason 列舉的值，指出個別步驟的結果。  
+ 在CorDebugStepReason 列舉的值，表示個別步驟的結果。  
   
 ## <a name="remarks"></a>備註  
- 如有需要，您可以使用分檔器來繼續逐步執行，除非調試終止。  
+
+ 如果需要，可以使用分檔器繼續逐步執行，除非偵錯工具已終止。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -61,6 +65,6 @@ HRESULT StepComplete (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

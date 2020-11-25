@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-ms.openlocfilehash: 499e1fd859a66bb6992c6d02a46e38c514503bd8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3a9ef06f312126319875544caf272903b9f7c716
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205591"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701025"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>ICorDebugProcess5::GetTypeID 方法
-將物件位址轉換成[COR_TYPEID](cor-typeid-structure.md)識別碼。  
+
+將物件位址轉換成 [COR_TYPEID](cor-typeid-structure.md) 識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +38,18 @@ HRESULT GetTypeID(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `obj`  
  在物件位址。  
   
  `pId`  
- 識別物件之[COR_TYPEID](cor-typeid-structure.md)值的指標。  
+ 識別物件之 [COR_TYPEID](cor-typeid-structure.md) 值的指標。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -54,7 +57,7 @@ HRESULT GetTypeID(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugProcess5 介面](icordebugprocess5-interface.md)
 - [偵錯介面](debugging-interfaces.md)
