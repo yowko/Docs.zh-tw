@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: d9e2236b944137de82bb056820f81014febfcc5f
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 821eae8ea5b4147408e9fe60d1e5b70c7936959e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696241"
 ---
 # <a name="icordebugassembly-interface"></a>ICorDebugAssembly 介面
 
@@ -30,10 +30,10 @@ ms.locfileid: "82894902"
 |方法|描述|  
 |------------|-----------------|  
 |[EnumerateModules 方法](icordebugassembly-enumeratemodules-method.md)|取得元件中所含模組的列舉值。|  
-|[GetAppDomain 方法](icordebugassembly-getappdomain-method.md)|取得包含這個`ICorDebugAssembly`實例之應用程式域的介面指標。|  
-|[GetCodeBase 方法](icordebugassembly-getcodebase-method.md)|未在目前的 .NET Framework 版本中執行。|  
+|[GetAppDomain 方法](icordebugassembly-getappdomain-method.md)|取得包含此實例之應用程式域的介面指標 `ICorDebugAssembly` 。|  
+|[GetCodeBase 方法](icordebugassembly-getcodebase-method.md)|未在目前版本的 .NET Framework 中執行。|  
 |[GetName 方法](icordebugassembly-getname-method.md)|取得組件名稱。|  
-|[GetProcess 方法](icordebugassembly-getprocess-method.md)|取得元件正在其中執行的 ICorDebugProcess 實例。|  
+|[GetProcess 方法](icordebugassembly-getprocess-method.md)|取得元件執行所在的 ICorDebugProcess 實例。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -41,7 +41,8 @@ ms.locfileid: "82894902"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

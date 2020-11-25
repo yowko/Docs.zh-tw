@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-ms.openlocfilehash: e542145e888049231a6c5e4cccbb4ee96c62f98b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9aee95c554afad5b2ea3cf157fc9e62c9b7e40e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213253"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696111"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken 方法
+
 取得此函式的元資料標記。  
   
 ## <a name="syntax"></a>語法  
@@ -34,11 +35,13 @@ HRESULT GetToken (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pMethodDef`  
- 脫銷參考此函式之 `mdMethodDef` 中繼資料的 token 指標。  
+ 擴展參考此函式之 `mdMethodDef` 中繼資料的權杖指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
