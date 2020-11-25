@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c22f0701cfda4523f595366a97435ef8da08b0cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132689"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724464"
 ---
-# <a name="getcachepath-function"></a><span data-ttu-id="2f4f0-102">GetCachePath 函式</span><span class="sxs-lookup"><span data-stu-id="2f4f0-102">GetCachePath Function</span></span>
-<span data-ttu-id="2f4f0-103">使用指定的旗標，取得快取元件的路徑。</span><span class="sxs-lookup"><span data-stu-id="2f4f0-103">Gets the path to the cached assembly, using the specified flags.</span></span>  
+# <a name="getcachepath-function"></a><span data-ttu-id="8fc87-102">GetCachePath 函式</span><span class="sxs-lookup"><span data-stu-id="8fc87-102">GetCachePath Function</span></span>
+
+<span data-ttu-id="8fc87-103">使用指定的旗標，取得快取元件的路徑。</span><span class="sxs-lookup"><span data-stu-id="8fc87-103">Gets the path to the cached assembly, using the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f4f0-104">語法</span><span class="sxs-lookup"><span data-stu-id="2f4f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8fc87-104">語法</span><span class="sxs-lookup"><span data-stu-id="8fc87-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCachePath (  
@@ -36,24 +37,26 @@ HRESULT GetCachePath (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2f4f0-105">參數</span><span class="sxs-lookup"><span data-stu-id="2f4f0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8fc87-105">參數</span><span class="sxs-lookup"><span data-stu-id="8fc87-105">Parameters</span></span>  
+
  `dwCacheFlags`  
- <span data-ttu-id="2f4f0-106">在[ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)值，表示快取元件的來源。</span><span class="sxs-lookup"><span data-stu-id="2f4f0-106">[in] An [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) value that indicates the source of the cached assembly.</span></span>  
+ <span data-ttu-id="8fc87-106">在 [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) 值，表示快取元件的來源。</span><span class="sxs-lookup"><span data-stu-id="8fc87-106">[in] An [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) value that indicates the source of the cached assembly.</span></span>  
   
  `pwzCachePath`  
- <span data-ttu-id="2f4f0-107">脫銷傳回到路徑的指標。</span><span class="sxs-lookup"><span data-stu-id="2f4f0-107">[out] The returned pointer to the path.</span></span>  
+ <span data-ttu-id="8fc87-107">擴展傳回的路徑指標。</span><span class="sxs-lookup"><span data-stu-id="8fc87-107">[out] The returned pointer to the path.</span></span>  
   
  `pcchPath`  
- <span data-ttu-id="2f4f0-108">[in、out]要求的最大長度 `pwzCachePath`，並在傳回時，`pwzCachePath`的實際長度。</span><span class="sxs-lookup"><span data-stu-id="2f4f0-108">[in, out] The requested maximum length of `pwzCachePath`, and upon return, the actual length of `pwzCachePath`.</span></span>  
+ <span data-ttu-id="8fc87-108">[in，out]要求的最大長度， `pwzCachePath` 以及傳回時的實際長度 `pwzCachePath` 。</span><span class="sxs-lookup"><span data-stu-id="8fc87-108">[in, out] The requested maximum length of `pwzCachePath`, and upon return, the actual length of `pwzCachePath`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2f4f0-109">需求</span><span class="sxs-lookup"><span data-stu-id="2f4f0-109">Requirements</span></span>  
- <span data-ttu-id="2f4f0-110">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2f4f0-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="2f4f0-111">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="2f4f0-111">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="2f4f0-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f4f0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2f4f0-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="2f4f0-113">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="8fc87-109">需求</span><span class="sxs-lookup"><span data-stu-id="8fc87-109">Requirements</span></span>  
 
-- [<span data-ttu-id="2f4f0-114">ASM_CACHE_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="2f4f0-114">ASM_CACHE_FLAGS Enumeration</span></span>](asm-cache-flags-enumeration.md)
-- [<span data-ttu-id="2f4f0-115">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="2f4f0-115">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+ <span data-ttu-id="8fc87-110">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8fc87-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="8fc87-111">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="8fc87-111">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="8fc87-112">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fc87-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="8fc87-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8fc87-113">See also</span></span>
+
+- [<span data-ttu-id="8fc87-114">ASM_CACHE_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="8fc87-114">ASM_CACHE_FLAGS Enumeration</span></span>](asm-cache-flags-enumeration.md)
+- [<span data-ttu-id="8fc87-115">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="8fc87-115">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
