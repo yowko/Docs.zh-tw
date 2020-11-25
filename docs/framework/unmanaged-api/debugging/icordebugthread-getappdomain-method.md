@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-ms.openlocfilehash: 52efebf8a2786afaabe87b96b35a13c5fa1eb578
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 882176f381a7c5bc4a0297021b89a96948a1cea8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379785"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728065"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain 方法
+
 取得此 ICorDebugThread 目前執行所在之應用程式域的介面指標。  
   
 ## <a name="syntax"></a>語法  
@@ -34,11 +35,13 @@ HRESULT GetAppDomain (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppAppDomain`  
- 脫銷ICorDebugAppDomain 物件的指標，代表這個執行緒目前執行所在的應用程式域。  
+ 擴展ICorDebugAppDomain 物件的指標，代表這個執行緒目前執行所在的應用程式域。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

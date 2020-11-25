@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: f9594a7e-cb0c-4c48-accb-29f762aa0c21
 topic_type:
 - apiref
-ms.openlocfilehash: 08337a118a80d213f16e2a16f744b96f5dde2e7f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b0d94f5004da85caf0460e8f1d1b2d964944b045
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496993"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727064"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo 方法
-取得 `catch` / `finally` / `filter` 即將執行或剛執行的例外狀況子句（）的原生位址和框架資訊。  
+
+取得例外狀況子句的原生位址和框架資訊， (`catch` / `finally` / `filter` 即將執行或剛剛執行的) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,16 +34,19 @@ HRESULT GetNotifiedExceptionClauseInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pinfo`  
- 脫銷描述目前例外狀況子句實例和其相關聯框架之[COR_PRF_EX_CLAUSE_INFO](cor-prf-ex-clause-info-structure.md)結構的指標。  
+ 擴展描述目前的例外狀況子句實例及其關聯框架的 [COR_PRF_EX_CLAUSE_INFO](cor-prf-ex-clause-info-structure.md) 結構指標。  
   
 ## <a name="remarks"></a>備註  
- 收到例外狀況通知時， `GetNotifiedExceptionClauseInfo` 可以用來取得即將執行之例外狀況子句（）的原生位址和框架資訊（ `catch` / `finally` / `filter` [ICorProfilerCallback：： ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)、 [ICorProfilerCallback：： ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)，或分析工具會收到 ICorProfilerCallback [：： ExceptionSearchFilterEnter](icorprofilercallback-exceptionsearchfilterenter-method.md)回呼），或剛剛執行（[ICorProfilerCallback：： ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md)， [ICorProfilerCallback：： ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)，或[ICorProfilerCallback：： ExceptionSearchFilterLeave](icorprofilercallback-exceptionsearchfilterleave-method.md)回呼是由分析工具接收）。  
+
+ 收到例外狀況通知時， `GetNotifiedExceptionClauseInfo` 可以用來取得例外狀況子句的原生位址和框架資訊 (`catch` / `finally` / `filter` 要執行的)  ([ICorProfilerCallback：： ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)、 [ICorProfilerCallback：： ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)或[ICorProfilerCallback：： ExceptionSearchFilterEnter](icorprofilercallback-exceptionsearchfilterenter-method.md)回呼是由分析工具接收) 或剛剛執行 ([ICorProfilerCallback：： ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md)、 [ICorProfilerCallback：： ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)或[ICorProfilerCallback：： ExceptionSearchFilterLeave](icorprofilercallback-exceptionsearchfilterleave-method.md)回呼是由分析工具) 所接收。  
   
- 在上述其中一個 Enter 回呼之後，您可以隨時執行此呼叫，直到收到相符的離開回呼，或在目前的子句中擲回嵌套的例外狀況為止，在此情況下，該子句不會有任何離開通知。 請注意，所擲回的例外狀況不可能會將 `filter` exception 子句轉義，因此在這種情況下一律會有「離開」通知。  
+ 您可以在上述其中一個輸入回呼之後的任何時間進行此呼叫，直到收到相符的離開回呼或在目前子句中擲回嵌套例外狀況為止，在這種情況下，不會有該子句的離開通知。 請注意，擲回的例外狀況無法對 `filter` 例外狀況子句進行 escape，因此在此情況下一律會有離開通知。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

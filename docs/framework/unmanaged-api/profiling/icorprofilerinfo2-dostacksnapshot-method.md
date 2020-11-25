@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 10cc9dedfa34cd5235df721d7010bbd928fbc3ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547789"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727233"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
+
 引導堆疊上指定執行緒的 managed 框架，並透過回呼將資訊傳送至分析工具。  
   
 ## <a name="syntax"></a>語法  
@@ -38,6 +39,7 @@ HRESULT DoStackSnapshot(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `thread`  
  在目標執行緒的識別碼。  
   
@@ -65,6 +67,7 @@ HRESULT DoStackSnapshot(
  在 `CONTEXT` 參數所參考之結構的大小 `context` 。  
   
 ## <a name="remarks"></a>備註  
+
  傳遞 null 以 `thread` 產生目前線程的快照集。 只有在目標執行緒暫止時，才可以建立其他執行緒的快照集。  
   
  當分析工具想要引導堆疊時，它會呼叫 `DoStackSnapshot` 。 在 CLR 從該呼叫傳回之前，會呼叫您 `StackSnapshotCallback` 數次，每個 managed 框架 (或執行堆疊上) 非受控框架。 當遇到非受控框架時，您必須自行引導。  
@@ -76,11 +79,13 @@ HRESULT DoStackSnapshot(
  堆疊逐步解說可以是同步或非同步，如下列各節所述。  
   
 ## <a name="synchronous-stack-walk"></a>同步堆疊逐步解說  
+
  同步堆疊的逐步解說牽涉到目前線程的堆疊，以回應回呼。 它不需要植入或暫停。  
   
  當您呼叫其中一個分析工具的 ICorProfilerCallback (或[ICorProfilerCallback2](icorprofilercallback2-interface.md)) 方法時，您會呼叫以逐步執行目前線程的堆疊，以回應 CLR 呼叫其中一個 Profiler 的[ICorProfilerCallback](icorprofilercallback-interface.md) `DoStackSnapshot` 。 當您想要查看堆疊在 [ICorProfilerCallback：： ObjectAllocated](icorprofilercallback-objectallocated-method.md)之類的通知時，這會很有用。 您只需要在 `DoStackSnapshot` 方法中呼叫 `ICorProfilerCallback` ， `context` 並在和參數中傳遞 null `thread` 。  
   
 ## <a name="asynchronous-stack-walk"></a>非同步堆疊逐步解說  
+
  非同步堆疊的逐步解說需要離開不同執行緒的堆疊，或將目前線程的堆疊移至目前線程的堆疊，而不是回應回呼，但藉由劫持目前線程的指令指標。 如果堆疊的頂端是非受控程式碼，而不是平台叫用的一部分 (PInvoke) 或 COM 呼叫，但是 CLR 本身的 helper 程式碼，則非同步逐步解說需要種子。 例如，執行即時 (JIT) 編譯或垃圾收集的程式碼是 helper 程式碼。  
   
  您可以直接暫停目標執行緒，並自行進行堆疊來取得種子，直到您找到最上層的 managed 框架為止。 在目標執行緒暫止之後，取得目標執行緒的目前註冊內容。 接下來，藉由呼叫 [ICorProfilerInfo：： GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) ，判斷註冊內容是否指向非受控程式碼，如果它傳回 `FunctionID` 等於零，則框架為非受控碼。 現在，請先進入堆疊，直到到達第一個 managed 框架，然後根據該框架的註冊內容來計算種子內容。  
@@ -98,7 +103,8 @@ HRESULT DoStackSnapshot(
  如果您從分析工具所建立的執行緒呼叫， `DoStackSnapshot` 讓您可以逐步解說不同的目標執行緒，也會有鎖死的風險。 當您第一次建立的執行緒進入特定 `ICorProfilerInfo*` 方法 (包括 `DoStackSnapshot`) 時，clr 會在該執行緒上執行每個執行緒的 clr 特定初始化。 如果您的分析工具已暫止您嘗試進行堆疊的目標執行緒，而且如果該目標執行緒擁有執行此每個執行緒初始化所需的鎖定，就會發生鎖死。 若要避免這個鎖死，請從分析工具建立的執行緒進行初始呼叫 `DoStackSnapshot` ，以逐步執行個別的目標執行緒，但不要先暫停目標執行緒。 這個初始呼叫可確保每個執行緒的初始化都能在沒有鎖死的情況下完成。 如果 `DoStackSnapshot` 成功並報告至少一個框架，則在該時間點之後，該分析工具建立的執行緒將可安全地暫停任何目標執行緒，並呼叫 `DoStackSnapshot` 以取得該目標執行緒的堆疊。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

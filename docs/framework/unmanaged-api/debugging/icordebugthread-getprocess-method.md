@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 163816e7-0739-4566-b3df-cd256be8b8a4
 topic_type:
 - apiref
-ms.openlocfilehash: 76dfc10b9d9069f6d53cd292f241ae3080c6443a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d3697bd8a3f32c802ab2e335f89c84efaf3e4db0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379800"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727987"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess 方法
-取得此 ICorDebugThread 構成元件之進程的介面指標。  
+
+取得這個 ICorDebugThread 形成元件之進程的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetProcess (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppProcess`  
- 脫銷代表進程之 ICorDebugProcess 介面物件的位址指標。  
+ 擴展代表進程之 ICorDebugProcess 介面物件的位址指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

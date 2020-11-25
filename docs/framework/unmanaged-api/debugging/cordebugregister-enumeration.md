@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 19d0dcf8a5633371765861fcc29df4ef8c91ebc4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795712"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726050"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 列舉
+
 指定與給定處理器架構相關聯的暫存器。  
   
 ## <a name="syntax"></a>語法  
@@ -114,7 +115,7 @@ typedef enum CorDebugRegister {
   
 ## <a name="members"></a>成員  
   
-|member|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|處理器上的指令指標暫存器。|  
 |`REGISTER_STACK_POINTER`|處理器上的堆疊指標暫存器。|  
@@ -190,6 +191,7 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_LR`|ARM 處理器上的連結暫存器 (R14)。|  
   
 ## <a name="remarks"></a>備註  
+
  IA-64 處理器上共有 128 個一般用途的資料暫存器，以及 128 個浮點資料暫存器，但只會提供值 `REGISTER_IA64_R0` 與 `REGISTER_IA64_F0`。 其他值可以透過下列方法指定：  
   
 - 將值 `REGISTER_IA64_R0` 到 `REGISTER_IA64_R1` (對應到 IA-64 處理器上的資料暫存器 #1 到 #127) 的暫存器號碼加入 `REGISTER_IA64_R127`。  
@@ -199,7 +201,8 @@ typedef enum CorDebugRegister {
  例如，若您需要指定 IA-64 處理器上的 #83 資料暫存器，可使用 `REGISTER_IA64_R0` + 83。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -207,6 +210,6 @@ typedef enum CorDebugRegister {
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)

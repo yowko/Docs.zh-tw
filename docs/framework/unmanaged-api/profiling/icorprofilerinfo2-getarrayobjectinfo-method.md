@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 368b8f270797beb525e0745a29990667913f4071
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a1e321e141059ccf1da7292d28e7099418a5134e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727194"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 方法
+
 取得陣列物件的詳細資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -37,26 +38,29 @@ HRESULT GetArrayObjectInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `objectId`  
  在有效陣列物件的識別碼。  
   
  `cDimensions`  
- 在陣列的順位（維度數目）。  
+ 在陣列) 維度的排名 (數目。  
   
  `pDimensionSizes`  
- 脫銷包含整數的陣列，每個都代表陣列的維度大小。  
+ 擴展包含整數的陣列，每個都代表陣列的維度大小。  
   
  `pDimensionLowerBounds`  
- 脫銷包含整數的陣列，每個都代表陣列維度的下限。  
+ 擴展包含整數的陣列，每個都代表陣列的維度下限。  
   
  `ppData`  
- 脫銷陣列的原始緩衝區位址指標，根據 c + + 慣例配置。  
+ 擴展陣列的原始緩衝區位址指標，會根據 c + + 慣例進行配置。  
   
 ## <a name="remarks"></a>備註  
- `pDimensionSizes`和 `pDimensionLowerBounds` 是平行陣列，因此位於每個陣列中相同索引的元素都是相同實體的特性。  
+
+ `pDimensionSizes`和 `pDimensionLowerBounds` 都是平行陣列，因此位於每個陣列中相同索引的元素都是相同實體的特性。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

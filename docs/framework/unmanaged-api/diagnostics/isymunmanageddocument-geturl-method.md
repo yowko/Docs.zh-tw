@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-ms.openlocfilehash: 3685707f1983ffec413e9cea2df5034ac53f643a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c862b6d3bfa415b622b68898db1ff30c6759e8f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615588"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726934"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
-傳回此檔的統一資源定位器（URL）。  
+
+傳回此檔 (URL) 的統一資源定位器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +36,19 @@ HRESULT GetURL(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cchUrl`  
  在緩衝區的大小（以字元為單位） `szURL` 。  
   
  `pcchUrl`  
- 脫銷接收 URL 大小之變數的指標，包括 null 終止。  
+ 擴展變數的指標，此變數會接收 URL 的大小，包括 null 終止。  
   
  `szUrl`  
- 脫銷包含 URL 的緩衝區。  
+ 擴展包含 URL 的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，錯誤碼為。  
+
+ 如果方法成功，則為 S_OK;否則為錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 

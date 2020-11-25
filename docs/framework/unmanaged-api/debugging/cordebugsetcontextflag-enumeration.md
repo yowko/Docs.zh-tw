@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: a3214fc4e52918716f183720c7c616b1fff74bdb
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 078dfefc70704eaadb9cf3c06cfe58f276f7dfce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795673"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726011"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 列舉
+
 指出內容是來自堆疊的作用中 (或分葉) 框架，還是藉由從其他框架回溯而計算出來的。  
   
 ## <a name="syntax"></a>語法  
@@ -36,16 +37,18 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>成員  
   
-|member|說明|  
+|member|描述|  
 |------------|-----------------|  
-|SET_CONTEXT_FLAG_ACTIVE_FRAME|內容是執行緒的現用內容。|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|已從另一個框架回溯來計算內容。|  
+|SET_CONTEXT_FLAG_ACTIVE_FRAME|內容是執行緒的使用中內容。|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|內容已透過從另一個框架回溯進行計算。|  
   
 ## <a name="remarks"></a>備註  
- `CorDebugSetContextFlag`提供[ICorDebugStackWalk：： SetCoNtext](icordebugstackwalk-setcontext-method.md)方法所使用的值。  
+
+ `CorDebugSetContextFlag` 提供 [ICorDebugStackWalk：： SetCoNtext](icordebugstackwalk-setcontext-method.md) 方法所使用的值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -53,7 +56,7 @@ typedef enum CorDebugSetContextFlag
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)
 - [偵錯](index.md)

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-ms.openlocfilehash: 630b67a64716f26577bbc376970e4f76216f4da5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff39a688132112e88438bc192d7c1ab61f169400
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497346"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727155"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 方法
-取得當指定的實值型別已被裝箱時，其所在位置的相關資訊。  
+
+取得當指定之實值型別在已裝箱時所在位置的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +35,20 @@ HRESULT GetBoxClassLayout(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `classId`  
- 在類別的識別碼，描述已裝箱的實值型別。  
+ 在類別的識別碼，描述已封裝的實值型別。  
   
  `pBufferOffset`  
- 脫銷整數，其為相對於實數值型別之已裝箱物件識別碼指標的位移。  
+ 擴展整數，這是數值型別的相對於已封裝物件識別碼指標的位移。  
   
 ## <a name="remarks"></a>備註  
- `pBufferOffset`值是方塊內實數值型別的位置。 `pBufferOffset`將套用至已裝箱的物件之後，實數值型別的類別配置就可以用來解讀物件的值。  
+
+ `pBufferOffset`值是方塊內的數值型別位置。 套用 `pBufferOffset` 至已封裝的物件之後，就可以使用實值型別的類別配置來解讀物件的值。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

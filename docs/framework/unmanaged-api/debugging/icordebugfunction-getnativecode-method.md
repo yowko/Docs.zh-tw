@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c8a34916-0eef-4987-8d29-c8bcb4be9cf6
 topic_type:
 - apiref
-ms.openlocfilehash: 98aee38415709974d84873df50c39263490f2f23
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e34dff2ebdb6e1ea56c2682b351c3e17a44416f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726310"
 ---
 # <a name="icordebugfunctiongetnativecode-method"></a>ICorDebugFunction::GetNativeCode 方法
-取得此 ICorDebugFunction 實例所表示之函式的原生程式碼。  
+
+取得此 ICorDebugFunction 實例所表示之函式的機器碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT GetNativeCode (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppCode`  
- 脫銷ICorDebugCode 實例的指標，表示此函式的機器碼，如果此函式是不是一次性（JIT）編譯的 Microsoft 中繼語言（MSIL）程式碼，則為 null。  
+ 擴展ICorDebugCode 實例的指標，表示此函式的原生程式碼，如果此函式是 Microsoft 中繼語言 (MSIL) 程式碼未及時 (JIT) 編譯，則為 null。  
   
 ## <a name="remarks"></a>備註  
- 如果這個實例所表示的函 `ICorDebugFunction` 式已多次進行 JIT 編譯，則在泛型型別的情況下，會傳回 `GetNativeCode` 隨機機器碼物件。  
+
+ 如果這個實例所表示的函式已進行 `ICorDebugFunction` JIT 編譯多次，如同泛型型別，則會傳回 `GetNativeCode` 隨機的機器碼物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

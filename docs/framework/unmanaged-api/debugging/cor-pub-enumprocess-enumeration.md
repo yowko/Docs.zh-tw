@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d3ada6e-feea-47da-a7ed-b664107c137f
 topic_type:
 - apiref
-ms.openlocfilehash: f789105751ae2d498740ab60f326f9c0597483b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 30a522fbf96aebaa96f33f4a1dc381683f183871
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099204"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726414"
 ---
 # <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 列舉
+
 識別所要列舉的類型。  
   
 ## <a name="syntax"></a>語法  
@@ -32,24 +33,26 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員名稱|描述|  
 |-----------------|-----------------|  
 |`COR_PUB_MANAGEDONLY`|Managed 進程。|  
   
 ## <a name="remarks"></a>備註  
- 目前版本的非受控偵錯工具開發介面只會列舉受管理的進程。  
+
+ 目前版本的未受管理的偵錯工具 API 只會列舉 managed 進程。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorPub .idl，CorPub。h  
+ **標頭：** CorPub .idl、CorPub。h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)

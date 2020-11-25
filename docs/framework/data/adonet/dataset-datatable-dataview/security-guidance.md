@@ -3,12 +3,12 @@ title: DataSet 和 DataTable 安全性指引
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726063"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 和 DataTable 安全性指引
 
@@ -18,7 +18,7 @@ ms.locfileid: "90679451"
 * .NET Core 和更新版本
 * .NET 5.0 和更新版本
 
-[DataSet](/dotnet/api/system.data.dataset)和[DataTable](/dotnet/api/system.data.datatable)類型是舊版 .net 元件，可將資料集表示為 managed 物件。 這些元件是在 .NET 1.0 中引進，作為原始 [ADO.NET 基礎結構](./index.md)的一部分。 其目標是要提供關聯式資料集的 managed 視圖，並將資料的基礎來源抽象化為 XML、SQL 或其他技術。
+[DataSet](/dotnet/api/system.data.dataset)和[DataTable](/dotnet/api/system.data.datatable)類型是舊版 .net 元件，可將資料集表示為 managed 物件。 這些元件是在 .NET Framework 1.0 中引進，作為原始 [ADO.NET 基礎結構](./index.md)的一部分。 其目標是要提供關聯式資料集的 managed 視圖，並將資料的基礎來源抽象化為 XML、SQL 或其他技術。
 
 如需 ADO.NET 的詳細資訊，包括更多新式資料檢視範例，請參閱 [ADO.NET 檔](../index.md)。
 
@@ -34,13 +34,9 @@ ms.locfileid: "90679451"
 
 如果傳入的 XML 資料包含的物件類型不在此清單中：
 
-* 擲回例外狀況，並顯示下列訊息和堆疊追蹤。  
-錯誤訊息：  
-這裡不允許 InvalidOperationException： Type ' \<Type Name\> 、Version = \<n.n.n.n\> 、Culture = \<culture\> 、PublicKeyToken = \<token value\> '。 如需詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) 。  
-堆疊追蹤：  
-在 TypeLimiter. EnsureTypeIsAllowed (類型 type、TypeLimiter capturedLimiter)   
-UpdateColumnType (Type type，StorageType typeCode)   
-在 set_DataType (類型值)   
+* 擲回例外狀況，並顯示下列訊息和堆疊追蹤。
+此處不允許錯誤訊息： System. InvalidOperationException： Type ' \<Type Name\> ，Version = \<n.n.n.n\> ，Culture = \<culture\> ，PublicKeyToken = \<token value\> '。 如需詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) 。
+堆疊追蹤：在 TypeLimiter. EnsureTypeIsAllowed (類型 type、TypeLimiter capturedLimiter) 的 (Type type、UpdateColumnType StorageType) at System.Data.DataColumn.set_DataType (Type value) 
 
 * 還原序列化作業失敗。
 
@@ -72,7 +68,7 @@ table.ReadXml(xmlReader); // this call will succeed
 
 ### <a name="extend-the-list-of-allowed-types"></a>擴充允許類型的清單
 
-除了上述內建類型之外，應用程式還可以擴充允許的類型清單，以包含自訂類型。 如果擴充允許的類型清單，則變更會_all_影響 `DataSet` `DataTable` 應用程式內的所有和實例。 類型無法從內建的允許類型清單中移除。
+除了上述內建類型之外，應用程式還可以擴充允許的類型清單，以包含自訂類型。 如果擴充允許的類型清單，則變更會 _all_ 影響 `DataSet` `DataTable` 應用程式內的所有和實例。 類型無法從內建的允許類型清單中移除。
 
 #### <a name="extend-through-configuration-net-framework-40---48"></a>擴充到 configuration ( .NET Framework 4.0-4.8) 
 
@@ -157,7 +153,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 > [!WARNING]
 > 在「audit 模式」中執行應用程式應該只是用於測試的暫時量值。 啟用稽核模式時， `DataSet` `DataTable` 不會強制執行類型限制，這可能會在您的應用程式中引進安全性漏洞。 如需詳細資訊，請參閱標題為移除[不受信任輸入](#swr)之[所有類型限制](#ratr)和安全性的章節。
 
-您可以透過 _App.config_啟用 Audit 模式：
+您可以透過 _App.config_ 啟用 Audit 模式：
 
 * 請參閱本檔中的「 [透過設定延伸](#etc) 」一節，以取得要為元素放置之適當值的相關資訊 `<configSections>` 。
 * 使用 `<allowedTypes auditOnly="true">` 啟用 audit 模式，如下列標記所示。
@@ -178,7 +174,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 </configuration>
 ```
 
-啟用稽核模式之後，您就可以使用_App.config_ ，將您偏好的內 `TraceListener` `DataSet` `TraceSource.` 建追蹤來源的名稱_System.Data.DataSet_連接到 system.string。 下列範例示範如何將追蹤事件寫入主控台 _和_ 磁片上的記錄檔。
+啟用稽核模式之後，您就可以使用 _App.config_ ，將您偏好的內 `TraceListener` `DataSet` `TraceSource.` 建追蹤來源的名稱 _System.Data.DataSet_ 連接到 system.string。 下列範例示範如何將追蹤事件寫入主控台 _和_ 磁片上的記錄檔。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -224,7 +220,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 
 `AppContext` `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` 當設為時，參數會 `true` 從和移除所有類型限制 `DataSet` 限制 `DataTable` 。
 
-在 .NET Framework 中，可以透過 _App.config_啟用此參數，如下列設定所示：
+在 .NET Framework 中，可以透過 _App.config_ 啟用此參數，如下列設定所示：
 
 ```xml
 <configuration>
@@ -235,7 +231,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 </configuration>
 ```
 
-在 ASP.NET 中， `<AppContextSwitchOverrides>` 無法使用元素。 相反地，您可以透過 _Web.config_啟用交換器，如下列設定所示：
+在 ASP.NET 中， `<AppContextSwitchOverrides>` 無法使用元素。 相反地，您可以透過 _Web.config_ 啟用交換器，如下列設定所示：
 
 ```xml
 <configuration>
@@ -248,7 +244,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 
 如需詳細資訊，請參閱 [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素。
 
-在 .NET Core、.NET 5 和 ASP.NET Core 中，此設定是由 _runtimeconfig.js_來控制，如下列 JSON 所示：
+在 .NET Core、.NET 5 和 ASP.NET Core 中，此設定是由 _runtimeconfig.js_ 來控制，如下列 JSON 所示：
 
 ```json
 {
@@ -293,7 +289,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 
 ## <a name="safety-with-regard-to-untrusted-input"></a>不受信任輸入的安全性
 
-雖然 `DataSet` 和 `DataTable` 的確會針對在還原序列化 XML 承載時允許出現的型別強加預設限制， __ `DataSet` 而且 `DataTable` 在填入未受信任的輸入時__，也不安全。 以下是 `DataSet` 或 `DataTable` 實例可能讀取未受信任之輸入的非詳盡清單。
+雖然 `DataSet` 和 `DataTable` 的確會針對在還原序列化 XML 承載時允許出現的型別強加預設限制， __`DataSet` 而且 `DataTable` 在填入未受信任的輸入時__，也不安全。 以下是 `DataSet` 或 `DataTable` 實例可能讀取未受信任之輸入的非詳盡清單。
 
 * `DataAdapter`參考資料庫，並 `DataAdapter.Fill` 使用方法來填入 `DataSet` 資料庫查詢的內容。
 * `DataSet.ReadXml`或 `DataTable.ReadXml` 方法是用來讀取包含資料行和資料列資訊的 XML 檔案。
@@ -479,9 +475,9 @@ public class MyClass
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>透過 BinaryFormatter 還原序列化資料集或 DataTable
 
-開發人員絕不能使用 `BinaryFormatter` 、 `NetDataContractSerializer` 、 `SoapFormatter` 或相關的 ***unsafe*** 格式子， `DataSet` `DataTable` 從不受信任的承載還原序列化或實例：
+開發人員絕不能使用 `BinaryFormatter` 、 `NetDataContractSerializer` 、 `SoapFormatter` 或相關的 ***unsafe** _ 格式器， `DataSet` `DataTable` 從不受信任的承載還原序列化或實例：
 
-* 這很容易受到完整的遠端程式碼執行攻擊。
+_ 這很容易受到完整的遠端程式碼執行攻擊。
 * 使用自訂 `SerializationBinder` 並不足以防止這類攻擊。
 
 ## <a name="safe-replacements"></a>安全取代

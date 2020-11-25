@@ -1,18 +1,18 @@
 ---
 title: 過時的成員 - .NET Framework
-description: 請參閱 .NET 4.5 和更新版本中已過時的類型成員清單。 類型成員會依元件分組。 已淘汰之類型的成員會在此排除。
+description: 請參閱 .NET Framework 4.5 和更新版本中已過時的類型成員清單。 類型成員會依元件分組。 已淘汰之類型的成員會在此排除。
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35dc67e80a47ba3e61db3d27f44f6c6ee45464ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558520"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726453"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework 中過時的成員
 
@@ -134,7 +134,7 @@ ms.locfileid: "90558520"
 > |<xref:System.Security.HostSecurityManagerOptions?displayProperty=nameWithType>|<xref:System.Security.HostSecurityManagerOptions.HostPolicyLevel>|AppDomain 原則層級已經過時，將在未來的 .NET Framework 版本中移除。|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.ConvertPermissionSet%2A>|這個方法已經過時，不應再使用。|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.Deny%2A>|<xref:System.Security.PermissionSet.Deny%2A> 已經過時，將在未來的 .NET Framework 版本中移除。|
-> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> 僅用於 .NET 2.0 透明度相容性。|
+> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> 僅用於 .NET Framework 2.0 透明度相容性。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.CheckExecutionRights%2A>|由於無法再關閉執行權限檢查，因此 <xref:System.Security.SecurityManager.CheckExecutionRights%2A> 屬性不再具有任何作用。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.IsGranted%2A>|<xref:System.Security.SecurityManager.IsGranted%2A> 已經過時，將在未來的 .NET Framework 版本中移除。 請改用 <xref:System.AppDomain.PermissionSet%2A?displayProperty=nameWithType> 屬性或 <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType> 屬性。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A>|這個方法已經過時，將在未來的 .NET Framework 版本中移除。|
@@ -381,7 +381,7 @@ ms.locfileid: "90558520"
 > |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.OnBehaviorAttached%2A>|建議的替代做法是 <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>。|
 > |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.SetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯，請公開屬性中的範本資料 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> ，並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
 > |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.GetTemplateContainerDataSource%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯，請公開屬性中的範本資料 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> ，並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
-> |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.OnAutoFormat%2A>|由於 [自動格式設定]**** 對話方塊是由設計工具主應用程式啟動，因此不建議使用這個方法。 <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType> 屬性會公開可用的自動格式設定清單。|
+> |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.OnAutoFormat%2A>|由於 [自動格式設定] 對話方塊是由設計工具主應用程式啟動，因此不建議使用這個方法。 <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType> 屬性會公開可用的自動格式設定清單。|
 > |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.CreateTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯，請公開屬性中的範本資料 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> ，並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
 > |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetCachedTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯，請公開屬性中的範本資料 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> ，並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
 > |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContainerDataItemProperty%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯，請公開屬性中的範本資料 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> ，並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|

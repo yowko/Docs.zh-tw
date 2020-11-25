@@ -14,12 +14,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 3265417d806104f9c4de96cb98de2330d62d1e48
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2cb63fd91b1aeb51c762975103ea665e0d8539b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820159"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726674"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>作法：使用數位簽章簽署 XML 文件
 
@@ -95,6 +95,7 @@ ms.locfileid: "94820159"
      [!code-vb[HowToSignXMLDocumentRSA#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#13)]  
   
 ## <a name="example"></a>範例  
+
  這個範例假設名為 `test.xml` 的檔案已存在於和編譯程式相同的目錄中。  您可以將下列 XML 放入稱為 `test.xml` 的檔案，並使用它搭配此範例。  
   
 ```xml  
@@ -123,7 +124,7 @@ ms.locfileid: "94820159"
   
 絕對不要直接將私密金鑰內嵌在您的原始程式碼。  您可以使用 [Ildasm.exe (IL ](../../framework/tools/ildasm-exe-il-disassembler.md) 解譯器) 或在文字編輯器（例如 [記事本]）中開啟元件，輕鬆地從元件讀取內嵌的金鑰。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: ee36845f19ef4a7c3923b1032ab6eb45d2f60733
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c2ab384b6d84a14d5e8f4cfe66281a26b14421f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726960"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>如何：僅在 Windows (中 .NET Framework 和 Windows 執行階段資料流程之間轉換) 
 
@@ -19,6 +19,7 @@ UWP 應用程式的 .NET Framework 是完整 .NET Framework 的子集。 由於 
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 類別包含可簡化這些轉換的方法。 不過，.NET Framework 與 Windows 執行階段資料流之間的基本差異將會影響使用這些方法的結果，下列各節會加以說明：
 
 ## <a name="convert-from-a-windows-runtime-to-a-net-framework-stream"></a>從 Windows 執行階段轉換為 .NET Framework 資料流
+
 若要從 Windows 執行階段資料流轉換為 .NET Framework 資料流，請使用下列其中一個 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 方法：
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> 會將 Windows 執行階段中的隨機存取資料流轉換成 .NET 中適用於 UWP 應用程式的受控資料流。
@@ -32,6 +33,7 @@ Windows 執行階段提供支援唯讀、唯寫或讀寫的資料流類型。 �
 最佳作法是使用符合您要轉換之 Windows 執行階段資料流程功能的轉換方法。 不過，因為 <xref:Windows.Storage.Streams.IRandomAccessStream> 可讀取和寫入 (它會同時實作 <xref:Windows.Storage.Streams.IOutputStream> 和 <xref:Windows.Storage.Streams.IInputStream>)，所以轉換方法會保留原始資料流的功能。 例如，使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> 轉換 <xref:Windows.Storage.Streams.IRandomAccessStream> 不會將轉換後的 .NET Framework 資料流限制為唯讀。 它也可寫入。
 
 ## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>範例：將 Windows 執行階段隨機存取轉換成 .NET Framework 資料流程
+
 若要從 Windows 執行階段隨機存取資料流轉換成 .NET Framework 資料流，請使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> 方法。
 
 下列程式碼範例會提示您選取一個檔案、使用 Windows 執行階段 API 將其開啟，然後將其轉換為 .NET Framework 資料流。 它會讀取資料流，並將其輸出至文字區塊。 您通常會在輸出結果之前，使用 .NET Framework API 管理資料流。
@@ -42,6 +44,7 @@ Windows 執行階段提供支援唯讀、唯寫或讀寫的資料流類型。 �
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage1.xaml.vb)]
 
 ## <a name="convert-from-a-net-framework-to-a-windows-runtime-stream"></a>從 .NET Framework 轉換為 Windows 執行階段資料流
+
 若要從 .NET Framework 資料流轉換為 Windows 執行階段資料流，請使用下列其中一個 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 方法：
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> 會將 .NET 中適用於 UWP 應用程式的受控資料流轉換成 Windows 執行階段中的輸入資料流。
@@ -66,7 +69,7 @@ Windows 執行階段提供支援唯讀、唯寫或讀寫的資料流類型。 �
   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage2.xaml.cs)]
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage2.xaml.vb)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [快速入門：在 Windows) 中讀取和寫入檔案 (](/previous-versions/windows/apps/hh464978(v=win.10))  
 - [適用於 Windows 市集應用程式的 .NET 概觀](/previous-versions/windows/apps/br230302(v=vs.140))  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5944edd1-0914-4efa-aba0-d5a277c38b1a
 topic_type:
 - apiref
-ms.openlocfilehash: 21f90e06b3b02ebc6c97610b6edc35697601f0ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b16feb1af0d4975411876e78940d21096750d2ae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132293"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726581"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject 結構
-定義封鎖執行緒的物件，以及執行緒遭到封鎖的特定原因。  
+
+定義封鎖執行緒的物件，以及封鎖執行緒的特定原因。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,26 +36,27 @@ CorDebugBlockingReason blockingReason;
 }  CorDebugBlockingObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`pBlockingObject`|執行緒封鎖所在的物件。 這個物件只在目前已同步處理狀態的持續時間內有效。 如果兩個執行緒在相同物件的已同步處理狀態下封鎖，您可能會預期[ICorDebugValue：： GetAddress](icordebugvalue-getaddress-method.md)方法傳回相同的值。 不過，介面不一定是對等的指標。|  
-|`dwTimeout`|封鎖作業超時前的毫秒數，或無限值，表示不會超時。超時值會指定封鎖作業的總時間長度，而不是仍然剩餘的時間。|  
-|`blockingReason`|此物件上封鎖執行緒的原因。|  
+|`pBlockingObject`|執行緒封鎖所在的物件。 只有在目前已同步處理狀態的持續時間內，此物件才有效。 如果兩個執行緒在相同物件的相同同步處理狀態中封鎖，您可能會預期 [ICorDebugValue：： GetAddress](icordebugvalue-getaddress-method.md) 方法會傳回相同的值。 不過，介面可能會或可能不是指標相等。|  
+|`dwTimeout`|封鎖作業超時之前的毫秒數，或值無限，表示不會超時。超時值指定封鎖作業的總時間長度，而不是剩餘的時間。|  
+|`blockingReason`|此物件封鎖執行緒的原因。|  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cordebug.h .idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯結構](debugging-structures.md)
 - [偵錯](index.md)

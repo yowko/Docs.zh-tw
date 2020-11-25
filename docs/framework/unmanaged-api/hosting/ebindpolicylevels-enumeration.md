@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 94d2ec12309249afbecdc4130f8fe20c927b0a9b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a0992ca8ac4bfffef681c74de455a0eeb627a042
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726843"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 列舉
-提供旗標，以指定要套用或修改元件原則的層級。  
+
+提供旗標來指定要套用或修改元件原則的層級。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,26 +42,28 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|指定應該在系統管理員層級套用原則。|  
-|`ePolicyLevelApp`|指定應該在應用層級套用原則。|  
-|`ePolicyLevelHost`|指定應該在主機層級套用原則。|  
-|`ePolicyLevelNone`|不指定原則層級旗標。|  
-|`ePolicyLevelPublisher`|指定應該在發行者層級套用原則。|  
+|`ePolicyLevelAdmin`|指定應在系統管理員層級套用原則。|  
+|`ePolicyLevelApp`|指定應在應用層級套用原則。|  
+|`ePolicyLevelHost`|指定應在主機層級套用原則。|  
+|`ePolicyLevelNone`|未指定原則層級旗標。|  
+|`ePolicyLevelPublisher`|指定應在發行者層級套用原則。|  
 |`ePolicyLevelRetargetable`|指定原則應該適用于變數層級。|  
-|`ePolicyPortability`|指定原則應該支援 .NET Framework 元件的執行之間的可攜性。 請參閱[ \< supportportability>>](../../configure-apps/file-schema/runtime/supportportability-element.md)設定檔元素。|  
-|`ePolicyUnifiedToCLR`|指定應該與 common language runtime （CLR）的原則一致。|  
+|`ePolicyPortability`|指定原則應該支援 .NET Framework 元件的執行之間的可攜性。 請參閱 [\<supportPortability>](../../configure-apps/file-schema/runtime/supportportability-element.md) 設定檔元素。|  
+|`ePolicyUnifiedToCLR`|指定原則應該與 common language runtime (CLR) 整合。|  
   
 ## <a name="remarks"></a>備註  
- 此列舉會傳遞給[ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md)介面的方法，以指定應用程式原則中的變更。  
+
+ 此列舉會傳遞給 [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) 介面的方法，以指定應用程式原則的變更。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

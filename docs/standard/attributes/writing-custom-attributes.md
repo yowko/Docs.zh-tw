@@ -16,14 +16,15 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 4c7051fa45dfc23a09b037b78030ff90af182a7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e3c97f28a05f2e5396872fe808cae0d48d5a4824
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829007"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726999"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
+
 若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType>的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
   
  正確設計自訂屬性的主要步驟如下：  
@@ -39,6 +40,7 @@ ms.locfileid: "94829007"
  本節會一一說明每個步驟，並於結尾提供 [自訂屬性範例](#custom-attribute-example)。  
   
 ## <a name="applying-the-attributeusageattribute"></a>套用 AttributeUsageAttribute  
+
  自訂屬性宣告的開頭為 <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>，它定義您屬性類別的一些主要特性。 例如，您可以指定屬性是否可由其他類別繼承或指定屬性可以套用至哪一個項目。 下列程式碼片段示範如何使用 <xref:System.AttributeUsageAttribute>。  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
@@ -48,6 +50,7 @@ ms.locfileid: "94829007"
  <xref:System.AttributeUsageAttribute> 有三個建立自訂屬性所需的重要成員： [AttributeTargets](#attributetargets-member)、 [Inherited](#inherited-property)和 [AllowMultiple](#allowmultiple-property)。  
   
 ### <a name="attributetargets-member"></a>AttributeTargets 成員  
+
  在上述範例中，指定了 <xref:System.AttributeTargets.All?displayProperty=nameWithType> ，指出此屬性可以套用到所有程式元素。 或者，您也可以指定 <xref:System.AttributeTargets.Class?displayProperty=nameWithType>，指出您的屬性可以套用到類別，或指定 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>，指出屬性只能套用至方法。 所有的程式項目都可以用這種方式透過自訂屬性標示為描述。  
   
  您也可以傳遞多個 <xref:System.AttributeTargets> 值。 下列程式碼片段指定自訂屬性可以套用至任何類別或方法。  
@@ -57,6 +60,7 @@ ms.locfileid: "94829007"
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
 ### <a name="inherited-property"></a>Inherited 屬性  
+
  <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 屬性會指出，衍生自套用您屬性之類別的類別，是否可繼承您的屬性。 此屬性會接受 `true` (預設值) 或 `false` 旗標。 在下列範例中，`MyAttribute` 的預設 <xref:System.AttributeUsageAttribute.Inherited%2A> 值為 `true`，而 `YourAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 值為 `false`。  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
@@ -76,6 +80,7 @@ ms.locfileid: "94829007"
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
 ### <a name="allowmultiple-property"></a>AllowMultiple 屬性  
+
  <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> 屬性會指出項目上是否可以有您屬性的多個執行個體。 如果設定為 `true`，則允許多個執行個體；如果設定為 `false` (預設值)，則只允許一個執行個體。  
   
  在下列範例中，`MyAttribute` 有預設的 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 值 `false`，而 `YourAttribute` 有 `true` 的值。  
@@ -93,6 +98,7 @@ ms.locfileid: "94829007"
  如果 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 屬性和 <xref:System.AttributeUsageAttribute.Inherited%2A> 屬性都設定為 `true`，繼承自另一個類別的類別可以繼承屬性，並在同一個子類別中套用同一屬性的另一個執行個體。 如果 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 設定為 `false`，父類別中任何屬性的值，都會被子類別中相同屬性的新執行個體覆寫。  
   
 ## <a name="declaring-the-attribute-class"></a>宣告屬性類別  
+
  在套用 <xref:System.AttributeUsageAttribute>之後，您可以開始定義屬性的細節。 如下列程式碼所示，屬性類別的宣告看起來類似傳統類別的宣告。  
   
  [!code-cpp[Conceptual.Attributes.Usage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#14)]
@@ -110,6 +116,7 @@ ms.locfileid: "94829007"
 - 在 Microsoft Visual Basic 中，所有自訂屬性的類別都必須有 <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 屬性。  
   
 ## <a name="declaring-constructors"></a>宣告建構函式  
+
  屬性使用建構函式進行初始化的方式，與傳統的類別相同。 下列程式碼片段說明典型的屬性建構函式。 這個公用建構函式會接受一個參數並將其值設定為等於成員變數。  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
@@ -125,6 +132,7 @@ ms.locfileid: "94829007"
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>宣告屬性  
+
  如果您想要定義具名的參數或提供簡單的方式，來傳回屬性所儲存的值，請宣告 [屬性](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 屬性的屬性應該宣告為公用實體，並具有將傳回之資料類型的描述。 定義會保存您屬性值的變數，並將其與 **get** 和 **set** 方法建立關聯。 下列程式碼範例示範如何在您的屬性中實作簡單的屬性。  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
@@ -132,6 +140,7 @@ ms.locfileid: "94829007"
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
 ## <a name="custom-attribute-example"></a>自訂屬性範例  
+
  本節包含先前的資訊，並說明如何設計簡單的屬性，記錄某一段程式碼的作者相關資訊。 此範例中的屬性儲存程式設計人員的名字和層級，以及此程式碼是否經過審閱。 它會使用三個私用變數來儲存要儲存的實際值。 每個變數都會以取得和設定值的公用屬性來表示。 最後，建構函式會以兩個必要參數來定義。  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]
@@ -146,7 +155,7 @@ ms.locfileid: "94829007"
   
  第一個範例示範只套用了必要具名參數的屬性，而第二個範例則示範同時套用了必要和選擇性參數的屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>

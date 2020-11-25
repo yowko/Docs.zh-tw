@@ -1,6 +1,6 @@
 ---
-title: NextMethod 函數（非託管 API 引用）
-description: NextMethod 函數檢索枚舉中的下一個方法。
+title: 'NextMethod 函式 (非受控 API 參考) '
+description: NextMethod 函式會捕獲列舉中的下一個方法。
 ms.date: 11/06/2017
 api_name:
 - NextMethod
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - NextMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 36acd6135110a8865bd8efdda628c352c01b4f26
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a0466aee47b0a6142870640c78b43f49e221ac2b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174923"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726765"
 ---
 # <a name="nextmethod-function"></a>NextMethod 函式
-檢索枚舉中的下一個方法，該方法以調用[BeginMethodEa）](beginmethodenumeration.md)開頭。  
+
+以呼叫 [BeginMethodEnumeration](beginmethodenumeration.md)的開頭，抓取列舉中的下一個方法。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -42,49 +43,50 @@ HRESULT NextMethod (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[在]此參數未使用。
+在此參數未使用。
 
 `ptr`  
-[在]指向[IWbem ClassObject 實例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標。
+在 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 實例的指標。
 
 `lFlags`  
-[in] 保留。 此參數必須為 0。
+[in] 保留。 此參數必須為0。
 
 `pName`  
-[出]指向調用`null`之前的指標。 當函數返回時，包含方法名稱的新位址`BSTR`。
+擴展指向呼叫之前的指標 `null` 。 當函式傳回時，為包含方法名稱之新的位址 `BSTR` 。
 
 `ppSignatureIn`  
-[出]接收指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標的指標，其中包含方法的`in`參數。
+擴展指標，接收包含方法參數之 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 的指標 `in` 。
 
 `ppSignatureOut`  
-[出]接收指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標的指標，其中包含方法的`out`參數。
+擴展指標，接收包含方法參數之 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 的指標 `out` 。
 
 ## <a name="return-value"></a>傳回值
 
-此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
+這個函式所傳回的下列值是在 *WbemCli .h* 標頭檔中定義，您也可以在程式碼中將它們定義為常數：
 
-|持續性  |值  |描述  |
+|常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101d | 沒有調用該[`BeginEnumeration`](beginenumeration.md)函數。 |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 沒有函數的呼叫 [`BeginEnumeration`](beginenumeration.md) 。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | 枚舉中沒有更多的屬性。 |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列舉中沒有其他屬性。 |
   
 ## <a name="remarks"></a>備註
 
-此函數包裝對[IWbemClassObject：：NextMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)的調用。
+此函數會包裝對 [IWbemClassObject：： NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) 方法的呼叫。
 
-調用方通過調用[BeginMethod 枚舉](beginmethodenumeration.md)函數來開始枚舉序列，然後調用 [NextMethod] 函數，直到函數返回`WBEM_S_NO_MORE_DATA`。 或者，調用方通過調用[EndMethod 枚舉](endmethodenumeration.md)來完成序列。 調用方可以隨時調用[EndMethodEa 枚舉](endmethodenumeration.md)，從而提前終止枚舉。
+呼叫端會藉由呼叫 [BeginMethodEnumeration](beginmethodenumeration.md) 函式來開始列舉序列，然後呼叫 [NextMethod] 函式，直到函式傳回為止 `WBEM_S_NO_MORE_DATA` 。 （選擇性）呼叫端會藉由呼叫 [EndMethodEnumeration](endmethodenumeration.md)來完成序列。 呼叫端可以在任何時間呼叫 [EndMethodEnumeration](endmethodenumeration.md) ，提早終止列舉。
 
 ## <a name="example"></a>範例
 
-有關C++示例，請參閱[IWbemClassObject：：NextMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)。
+如需 c + + 範例，請參閱 [IWbemClassObject：： NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) 方法。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

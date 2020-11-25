@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-ms.openlocfilehash: ff97e419c5309fa7cb820cb7e82db96fee34f30c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 32f32625ee40d50249ce3e009add543c4137b196
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501270"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726466"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 方法
-取得位於指定之資料行索引處之二進位大型物件（BLOB）的指標。  
+
+取得在指定的資料行索引上 (BLOB) 之二進位大型物件的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +37,23 @@ HRESULT GetBlob (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ixBlob`  
  在要從中取得的記憶體位址 `ppData` 。  
   
  `pcbData`  
- 脫銷大小的指標，以位元組為單位 `ppData` 。  
+ 擴展大小的指標，以位元組為單位 `ppData` 。  
   
  `ppData`  
- 脫銷所抓取之二進位資料指標的指標。  
+ 擴展已抓取之二進位資料指標的指標。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

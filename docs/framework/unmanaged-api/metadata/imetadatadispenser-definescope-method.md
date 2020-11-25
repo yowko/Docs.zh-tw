@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 87a39350986cb7bb62f76b0d9a6a9aae8f82e2f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726089"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 方法
+
 在記憶體中建立新的區域，您可以在其中建立新的中繼資料。  
   
 ## <a name="syntax"></a>語法  
@@ -37,8 +38,9 @@ HRESULT DefineScope (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `rclsid`  
- 在要建立之元資料結構版本的 CLSID。 .NET Framework 2.0 版的這個值必須是 CLSID_CorMetaDataRuntime。  
+ 在要建立之元資料結構版本的 CLSID。 此值必須是 .NET Framework 2.0 版的 CLSID_CorMetaDataRuntime。  
   
  `dwCreateFlags`  
  在指定選項的旗標。 .NET Framework 2.0 的這個值必須是零。  
@@ -49,19 +51,21 @@ HRESULT DefineScope (
  的值 `riid` 必須指定其中一個「發出」介面。 有效的值為 IID_IMetaDataEmit、IID_IMetaDataAssemblyEmit 或 IID_IMetaDataEmit2。  
   
  `ppIUnk`  
- 脫銷傳回之介面的指標。  
+ 擴展傳回之介面的指標。  
   
 ## <a name="remarks"></a>備註  
- `DefineScope`建立一組記憶體中的中繼資料資料表、產生中繼資料的唯一 GUID （模組版本識別碼或 MVID），並在模組資料表中為所發出的編譯單位建立專案。  
+
+ `DefineScope` 建立一組記憶體中的中繼資料資料表、產生唯一 GUID (模組版本識別碼，或中繼資料的 MVID) ，然後在模組資料表中為所發出的編譯單位建立一個專案。  
   
- 您可以視需要使用[IMetaDataEmit：： SetModuleProps](imetadataemit-setmoduleprops-method.md)或[IMetaDataEmit：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)方法，將屬性附加至中繼資料範圍。  
+ 您可以視需要使用 [IMetaDataEmit：： SetModuleProps](imetadataemit-setmoduleprops-method.md) 或 [IMetaDataEmit：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md) 方法，將屬性附加至整個中繼資料範圍。  
   
-## <a name="requirements"></a>規格需求  
- **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平臺：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

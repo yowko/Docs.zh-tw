@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: b0dd786e1922d75edcb0326cc9e98037c6e4945c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2ae1c514185152dd709fe06018df513fb54b874b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830320"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726713"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interop 與其他非同步模式和類型
 
@@ -28,6 +28,7 @@ ms.locfileid: "94830320"
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>工作與非同步程式設計模型 (APM)
 
 ### <a name="from-apm-to-tap"></a>從 APM 到 TAP  
+
  由於 [非同步程式設計模型 (APM) ](asynchronous-programming-model-apm.md) 模式是結構化的，因此很容易就能建立包裝函式，以將 apm 執行公開為點一下執行。 .NET Framework 4 和更新版本會以方法多載的形式包含 helper 常式 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> ，以提供這項轉譯。  
   
  請考慮 <xref:System.IO.Stream> 類別以及其 <xref:System.IO.Stream.BeginRead%2A> 與 <xref:System.IO.Stream.EndRead%2A> 方法，此類方法代表同步 <xref:System.IO.Stream.Read%2A> 方法的 APM 對應項目：  
@@ -50,6 +51,7 @@ ms.locfileid: "94830320"
  [!code-vb[Conceptual.AsyncInterop#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap2.vb#5)]  
   
 ### <a name="from-tap-to-apm"></a>從 TAP 到 APM  
+
  如果您現有的基礎結構預期 APM 模式，則您也需進行 TAP 實作，並在預期 APM 實作的位置加以使用。  由於可以組成工作，並且 <xref:System.Threading.Tasks.Task> 類別會實作 <xref:System.IAsyncResult>，因此您可以使用簡單的 Helper 函式來完成這項作業。 下列程式碼會使用 <xref:System.Threading.Tasks.Task%601> 類別的擴充功能，但是您可以針對非泛型工作使用幾乎完全相同的函式。  
   
  [!code-csharp[Conceptual.AsyncInterop#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM1.cs#6)]
@@ -73,6 +75,7 @@ ms.locfileid: "94830320"
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>工作與事件架構非同步模式 (EAP)  
+
  包裝 [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md) 實作會比包裝 APM 模式更為複雜，原因是 EAP 模式擁有較多的變化，結構也不如 APM 模式嚴謹。  供示範所用，下列程式碼包裝了 `DownloadStringAsync` 方法。  `DownloadStringAsync` 會接受 URI、在下載時引發 `DownloadProgressChanged` 事件，以報告多個進行中的統計資料，然後在完成時引發 `DownloadStringCompleted` 。  最終結果是字串，其中包含指定之 URI 頁面的內容。  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
@@ -81,6 +84,7 @@ ms.locfileid: "94830320"
 ## <a name="tasks-and-wait-handles"></a>工作與等候控制代碼  
   
 ### <a name="from-wait-handles-to-tap"></a>從等候控制代碼到 TAP  
+
  雖然等候控制代碼不會實作非同步模式，但進階開發人員可能會在等候控制代碼設定完成後，使用 <xref:System.Threading.WaitHandle> 類別與 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法，用於非同步通知。  您可以包裝 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 方法，以啟用等候控制代碼上任何同步等候的工作式替代方案：  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
@@ -94,12 +98,13 @@ ms.locfileid: "94830320"
  您也可以建置非同步的旗號，而該旗號不會依賴等候控制代碼，並會完全與工作一同合作。 若要這樣做，您可以使用像是 [Consuming the Task-based Asynchronous Pattern](consuming-the-task-based-asynchronous-pattern.md) 中所討論的技術，用以在 <xref:System.Threading.Tasks.Task>。  
   
 ### <a name="from-tap-to-wait-handles"></a>從 TAP 到等候控制代碼  
+
  如先前所述， <xref:System.Threading.Tasks.Task> 類別會實作 <xref:System.IAsyncResult>，且該實作會公開 <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> 屬性，而該屬性會傳回 <xref:System.Threading.Tasks.Task> 完成時將進行設定的等候控制代碼。  您可以取得 <xref:System.Threading.WaitHandle> 的 <xref:System.Threading.Tasks.Task> ，如下所示：  
   
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]
  [!code-vb[Conceptual.AsyncInterop#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#14)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [以工作為基礎的非同步模式 (TAP)](task-based-asynchronous-pattern-tap.md)
 - [實作以工作為基礎的非同步模式](implementing-the-task-based-asynchronous-pattern.md)

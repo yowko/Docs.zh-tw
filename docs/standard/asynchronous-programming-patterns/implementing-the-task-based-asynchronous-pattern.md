@@ -11,28 +11,32 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 7613d93e1ca2ac9594759434966745a238ba166e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888772"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726726"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>實作以工作為基礎的非同步模式
+
 您可以採用三種方式實作工作式非同步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 編譯器、手動，或是透過編譯器和手動方法的組合。 下列章節詳細討論每一種方法。 您可以使用 TAP 方法實作計算繫結和 I/O 繫結的非同步作業。 [工作負載](#workloads)一節討論每種作業類型。
 
 ## <a name="generating-tap-methods"></a>產生 TAP 方法
 
 ### <a name="using-the-compilers"></a>使用編譯器
+
 從 .NET Framework 4.5 開始，屬性具有 `async` 關鍵字 (在 Visual Basic 中為 `Async`) 的任何方法都會視為非同步方法，而 C# 和 Visual Basic 編譯器會使用 TAP 執行必要的轉換，藉此透過非同步的方式實作這個方法。 非同步方法應該傳回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 物件。 若是後者，函式主體應該會傳回 `TResult`，而編譯器會確保這個結果是透過產生的工作物件提供。 同樣地，方法主體內未處理的任何例外狀況會封送處理至輸出工作，並導致產生的工作在 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 狀態結束。 這項規則的例外狀況是當 <xref:System.OperationCanceledException> (或衍生型別) 未處理時，產生的工作會以狀態結束 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 。
 
 ### <a name="generating-tap-methods-manually"></a>以手動方式產生 TAP 方法
+
 您可以手動實作 TAP 模式，以便更有效控制實作。 編譯器會依賴從 <xref:System.Threading.Tasks?displayProperty=nameWithType> 命名空間公開的公用表面區域，和 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中的支援類型。 若要自行實作 TAP，請建立 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件、執行非同步作業，並完成之後呼叫 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> 方法，或其中一個方法的 `Try` 版本。 當您以手動方式實作 TAP 方法時，您必須在代表的非同步作業完成時，完成產生的工作。 例如：
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
 
 ### <a name="hybrid-approach"></a>混合式方法
+
  您可能會發現以手動方式實作 TAP 模式，但將實作的核心邏輯委派給編譯器很實用。 例如，當您想要驗證編譯器產生的非同步方法之外的引數時，您可能會想要使用混合式方法，讓例外狀況可以 escape 至方法的直接呼叫端，而不是透過 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 物件公開：
 
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
@@ -41,9 +45,11 @@ ms.locfileid: "92888772"
  這類委派的另一種實用情況是在您實作快速路徑最佳化，而且想要傳回快取工作之時。
 
 ## <a name="workloads"></a>工作負載
+
 您可以將計算繫結和 I/O 繫結的非同步作業都實作為 TAP 方法。 不過，當 TAP 方法從程式庫公開時，它們只應該提供給牽涉到 I/O 繫結操作 (它們可能也牽涉到計算，但不應該完全只有計算) 的工作負載。 如果是單純的計算繫結方法，則只可將它當做同步實作公開。 使用該方法的程式碼就可以選擇是否在工作中包裝該同步方法的引動過程，以便將工作卸載至另一個執行緒或實現平行處理。 而且，如果是 I/O 繫結方法，則只可將它當作非同步實作公開。
 
 ### <a name="compute-bound-tasks"></a>計算繫結工作
+
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別非常適合代表耗用大量運算資源的作業。 根據預設，它會利用 <xref:System.Threading.ThreadPool> 類別內的特殊支援提供有效率的執行，而且它也提供對要於何時、何處、及如何執行非同步計算的重大控制。
 
 您可以以下列方式產生計算繫結工作：
@@ -74,6 +80,7 @@ ms.locfileid: "92888772"
 如果在工作主體中未處理另一個例外狀況，則工作會在 <xref:System.Threading.Tasks.TaskStatus.Faulted> 狀態結束，且任何等待該工作或存取其結果的嘗試都會造成擲回例外狀況。
 
 ### <a name="io-bound-tasks"></a>I/O 繫結工作
+
 若要建立不該在整個執行緒執行期間直接支援的工作，請使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 類型。 這個類型會公開 <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> 屬性，此屬性傳回相關的 <xref:System.Threading.Tasks.Task%601> 執行個體。 此工作的生命週期是由 <xref:System.Threading.Tasks.TaskCompletionSource%601> 方法所控制，例如 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> 及其 `TrySet` 變體。
 
 我們假設您想要建立在指定的一段時間後才會完成的工作。 例如，您可能想要延遲使用者介面中的活動。 <xref:System.Threading.Timer?displayProperty=nameWithType> 類別已提供在一段指定的時間之後以非同步方式叫用委派的功能，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 將 <xref:System.Threading.Tasks.Task%601> 置於計時器之前，例如：
@@ -92,6 +99,7 @@ ms.locfileid: "92888772"
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
 
 ### <a name="mixed-compute-bound-and-io-bound-tasks"></a>混合計算繫結和 I/O 繫結工作
+
 非同步方法並不限於只有計算繫結或 I/O 繫結作業，而是可能出現兩者的混合。 事實上，經常會將多個非同步作業結合成較大的混合作業。 例如，在上述範例中的 `RenderAsync` 方法會執行密集運算的作業，以某些輸入的 `imageData` 為基礎呈現影像。 這個 `imageData` 可能來自您以非同步的方式存取的 Web 服務：
 
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
@@ -99,7 +107,7 @@ ms.locfileid: "92888772"
 
 這個範例也示範單一取消語彙基元如何透過多個非同步作業進行執行緒處理。 如需詳細資訊，請參閱[使用以工作為基礎的非同步模式](consuming-the-task-based-asynchronous-pattern.md)的取消使用方式一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [以工作為基礎的非同步模式 (TAP)](task-based-asynchronous-pattern-tap.md)
 - [使用以工作為基礎的非同步模式](consuming-the-task-based-asynchronous-pattern.md)

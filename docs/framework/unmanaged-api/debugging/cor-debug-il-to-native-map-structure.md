@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 61544d0dfe876f35fdfbe5afa945fad0620c0eb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132371"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726648"
 ---
 # <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 結構
+
 包含用來將 Microsoft 中繼語言 (MSIL) 程式碼對應至機器碼的位移。  
   
 ## <a name="syntax"></a>語法  
@@ -34,24 +35,25 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |`ilOffset`|MSIL 程式碼的位移。|  
-|`nativeStartOffset`|機器碼開頭的位移。|  
-|`nativeEndOffset`|機器碼結尾的位移。|  
+|`nativeStartOffset`|原生程式碼開頭的位移。|  
+|`nativeEndOffset`|原生程式碼結尾的位移。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Corprof.idl .idl，Cordebug.h .idl  
+ **標頭：** Corprof.h .idl，Cordebug.h .idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [GetILToNativeMapping 方法](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
 - [GetILToNativeMapping 方法](icordebugcode-getiltonativemapping-method.md)

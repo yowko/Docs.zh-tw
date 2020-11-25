@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged global static functions [.NET Framework], metadata
 - metadata global static functions [.NET Framework]
 ms.assetid: d3bbc8a7-b1c7-494f-b1cc-d71cf2ecb1bc
-ms.openlocfilehash: 861f283d350310ab159b2d6f15339292e0d42b94
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d1fe0c19c1b6ac1a40cc2890d81c659aeefe97a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489582"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727480"
 ---
 # <a name="metadata-global-static-functions"></a>中繼資料全域靜態函式
-從 .NET Framework 4 開始，適用 `_Cor*` 于裝載的、、和函式的檔 `CoInitialize*` `CoUninitialize*` `CoEEShutDownCOM` 位於已[淘汰的 CLR 裝載](../hosting/deprecated-clr-hosting-functions.md)函式中。 沒有與中繼資料相關的全域靜態函式。  
+
+從 .NET Framework 4 開始，適用 `_Cor*` 于裝載的、、和函式檔 `CoInitialize*` `CoUninitialize*` `CoEEShutDownCOM` 位於已被 [取代的 CLR 裝載](../hosting/deprecated-clr-hosting-functions.md)函式中。 沒有與中繼資料相關的全域靜態函式。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [中繼資料介面](metadata-interfaces.md)  
   
  [中繼資料列舉](metadata-enumerations.md)  

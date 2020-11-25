@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: 6f4764f016360a2ec0ab054b7a89ccb3f86aeb43
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b79dbdd64ac171d1bc4cd30b96ee76b4a853afb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490220"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727246"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString 方法
+
 取得目前資料表資料行中下一個字串的索引。  
   
 ## <a name="syntax"></a>語法  
@@ -35,18 +36,20 @@ HRESULT GetNextString (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ixString`  
  在字串資料表資料行中的索引值。  
   
  `pNext`  
- 脫銷資料行中下一個字串之索引的指標。  
+ 擴展資料行中下一個字串的索引指標。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-ms.openlocfilehash: 16aafa439fc81c3606f98ca2ba860316ec46e0db
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5debd09f3ca0b4562f62913f9530cc4fa6f9110b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728026"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle 方法
+
 取得此 ICorDebugThread 之使用中部分的目前控制碼。  
   
 ## <a name="syntax"></a>語法  
@@ -34,16 +35,19 @@ HRESULT GetHandle (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `phThreadHandle`  
- 脫銷HTHREAD 的指標，這是這個執行緒之作用中部分的控制碼。  
+ 擴展HTHREAD 的指標，該指標是此執行緒之使用中部分的控制碼。  
   
 ## <a name="remarks"></a>備註  
- 控制碼可能會在進程執行時變更，而且可能會因為執行緒的不同部分而有所不同。  
+
+ 當程式執行時，控制碼可能會變更，而執行緒的不同部分可能會有不同的控制碼。  
   
- 這個控制碼是由偵錯工具 API 所擁有。 偵錯工具在使用它之前，應該先複製它。  
+ 這個控制碼是由偵錯工具 API 所擁有。 偵錯工具應該在使用之前複製它。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

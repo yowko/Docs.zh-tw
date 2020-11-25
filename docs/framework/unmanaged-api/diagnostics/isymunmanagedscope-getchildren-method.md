@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8f3c83a7a89553ba600f3e0e368eec0ddd0350e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614860"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727604"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren 方法
+
 取得此範圍的子系。  
   
 ## <a name="syntax"></a>語法  
@@ -36,20 +37,23 @@ HRESULT GetChildren(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cChildren`  
- 在`ULONG32`，指出陣列的大小 `children` 。  
+ 在 `ULONG32` ，指出陣列的大小 `children` 。  
   
  `pcChildren`  
- 脫銷的指標 `ULONG32` ，接收包含子系所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含子系所需的緩衝區大小。  
   
  `children`  
- 脫銷傳回的子係數組。  
+ 擴展傳回的子係數組。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

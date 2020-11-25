@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 4521a3f15ec358a4d786a4533efb6b99d0e1c1cc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f2470cd7112adff35ef49c21a155072fcd4008be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492378"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727279"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 方法
-取得列舉中指定的列舉值所抓取的元素數目。  
+
+取得列舉中由指定列舉值抓取的元素數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,21 +36,24 @@ HRESULT CountEnum (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `hEnum`  
  在列舉值的控制碼。  
   
  `pulCount`  
- 脫銷列舉的元素數目。  
+ 擴展列舉的元素數目。  
   
 ## <a name="remarks"></a>備註  
- 所指定的控制碼 `hEnum` 是從先前的 `Enum` *名稱*呼叫取得（例如， [IMetaDataImport：： EnumTypeDefs](imetadataimport-enumtypedefs-method.md)）。  
+
+ 指定的控制碼 `hEnum` 是從先前的 `Enum` *名稱* 呼叫取得 (例如， [IMetaDataImport：： EnumTypeDefs](imetadataimport-enumtypedefs-method.md)) 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

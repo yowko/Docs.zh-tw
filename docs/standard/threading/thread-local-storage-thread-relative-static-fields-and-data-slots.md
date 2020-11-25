@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727519"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
 
@@ -27,6 +27,7 @@ ms.locfileid: "94819626"
 您可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 類別，建立在第一次取用物件時延遲初始化的執行緒區域物件。 如需詳細資訊，請參閱[延遲初始化](../../framework/performance/lazy-initialization.md)。  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>受控 TLS 中資料的唯一性  
+
  無論您使用的是執行緒相關靜態欄位或資料插槽，受控 TLS 中的資料對執行緒和應用程式定義域的組合都是唯一的。  
   
 - 在應用程式定義域內，一個執行緒無法修改另一個執行緒的資料，即使這兩個執行緒使用同一個欄位或插槽也一樣。  
@@ -38,6 +39,7 @@ ms.locfileid: "94819626"
  同樣地，當執行緒取得兩個不同應用程式定義域中相同的具名資料插槽時，第一個應用程式定義域中的資料會維持獨立，與第二個應用程式定義域中的資料無關。  
   
 ## <a name="thread-relative-static-fields"></a>執行緒相關靜態欄位  
+
  如果您知道某份資料對執行緒和應用程式定義域組合而言一定是唯一的，請將 <xref:System.ThreadStaticAttribute> 屬性套用到靜態欄位。 像使用任何其他靜態欄位一樣使用此欄位。 欄位中的資料對使用它的每個執行緒而言都是唯一的。  
   
  執行緒相關靜態欄位提供比資料插槽更好的效能，並具備編譯時期型別檢查的優點。  
@@ -56,7 +58,7 @@ ms.locfileid: "94819626"
   
  具名插槽很方便，因為當您需要擷取該插槽時，您可以透過將其名稱傳遞至 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法來完成，而不需維護未命名插槽的參考。 不過，如果另一個元件針對其執行緒相關儲存區使用相同名稱，而且執行緒會執行來自您的元件和另一個元件的程式碼，則這兩個元件可能會損毀彼此的資料 (此案例假設這兩個元件正在相同的應用程式定義域中執行，而且它們並未設計來共用相同資料)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ContextStaticAttribute>
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>

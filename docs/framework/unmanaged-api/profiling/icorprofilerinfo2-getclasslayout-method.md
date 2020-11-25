@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-ms.openlocfilehash: ac35b18ce8c45c95bb2fb8e820423470ca1b75bf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a2bac05e7471a0df8d624bf5dfbe2aa58c25cf4c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497149"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727168"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout 方法
+
 取得在記憶體中指定類別所定義欄位的配置相關資訊。 也就是說，這個方法會取得此類別的欄位之位移。  
   
 ## <a name="syntax"></a>語法  
@@ -37,11 +38,12 @@ HRESULT GetClassLayout(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `classID`  
  [in] 要擷取配置的類別 ID。  
   
  `rFieldOffset`  
- [in、out][COR_FIELD_OFFSET](../metadata/cor-field-offset-structure.md)結構的陣列，其中每一個都包含類別欄位的標記和位移。  
+ [in，out] [COR_FIELD_OFFSET](../metadata/cor-field-offset-structure.md) 結構的陣列，其中每個結構都包含類別欄位的標記和位移。  
   
  `cFieldOffset`  
  [in] `rFieldOffset` 陣列的大小。  
@@ -53,16 +55,18 @@ HRESULT GetClassLayout(
  [out] 位置指標，其中包含此類別的大小，以位元組為單位。  
   
 ## <a name="remarks"></a>備註  
+
  `GetClassLayout` 方法僅傳回類別本身所定義的欄位。 如果類別的父類別也已經定義欄位，則分析工具必須呼叫父類別上的 `GetClassLayout` 來取得那些欄位。  
   
- 如果您搭配字串類別使用 `GetClassLayout`，則該方法會失敗，伴隨錯誤碼 E_INVALIDARG。 使用[ICorProfilerInfo2：： GetStringLayout](icorprofilerinfo2-getstringlayout-method.md)取得字串配置的相關資訊。 以陣列類別呼叫 `GetClassLayout` 時也會失敗。  
+ 如果您搭配字串類別使用 `GetClassLayout`，則該方法會失敗，伴隨錯誤碼 E_INVALIDARG。 使用 [ICorProfilerInfo2：： GetStringLayout](icorprofilerinfo2-getstringlayout-method.md) 取得字串配置的相關資訊。 以陣列類別呼叫 `GetClassLayout` 時也會失敗。  
   
  `GetClassLayout` 傳回之後，您必須確認 `rFieldOffset` 緩衝區夠大，可以包含所有可用的 `COR_FIELD_OFFSET` 結構。 若要這樣做，比對 `pcFieldOffset` 指向的值和 `rFieldOffset` 的大小除以 `COR_FIELD_OFFSET` 的結構大小。 如果 `rFieldOffset` 不夠大，則請配置一個更大的 `rFieldOffset` 緩衝區，以新的、較大的大小來更新 `cFieldOffset`，然後再呼叫 `GetClassLayout` 一次。  
   
  或者，您也可以先使用長度為零的 `rFieldOffset` 緩衝區來呼叫 `GetClassLayout`，以取得正確的緩衝區大小。 接著您就可以將緩衝區大小設定為 `pcFieldOffset` 中傳回的值，並再次呼叫 `GetClassLayout`。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

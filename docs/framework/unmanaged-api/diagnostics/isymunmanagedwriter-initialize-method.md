@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c702aa32e8c8d6d5c137f7968d1578715102180f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614769"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726857"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 方法
-設定此寫入器將與之關聯的中繼資料發射器介面，並設定要寫入偵錯工具符號的輸出檔名稱。  
+
+設定與這個寫入器相關聯的中繼資料發射器介面，並設定將用來寫入偵錯工具符號的輸出檔名稱。  
   
- 這個方法只能呼叫一次，而且必須在任何其他寫入器方法之前呼叫。 某些寫入器可能需要檔案名。 不過，您一律可以將檔案名傳遞給這個方法，而不會對不使用檔案名的寫入器產生負面影響。  
+ 這個方法只能呼叫一次，而且必須在任何其他寫入器方法之前呼叫。 有些寫入器可能需要檔案名。 不過，您一律可以將檔案名傳遞給這個方法，而不會對不使用檔案名的寫入器產生任何負面影響。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +39,26 @@ HRESULT Initialize(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `emitter`  
- 在中繼資料發射器介面的指標。  
+ 在中繼資料的發射器介面指標。  
   
  `filename`  
- 在要在其中寫入調試符號的檔案名。 如果檔案名稱是指定給不使用檔案名稱的寫入器，則這個參數會被忽略。  
+ 在要寫入調試符號的檔案名。 如果檔案名稱是指定給不使用檔案名稱的寫入器，則這個參數會被忽略。  
   
  `pIStream`  
- 在如果指定，符號寫入器會將符號發出至指定的， <xref:System.Runtime.InteropServices.ComTypes.IStream> 而不是參數中指定的檔案 `filename` 。 `pIStream` 是選用參數。  
+ 在如果有指定，符號寫入器會將符號發出至指定的， <xref:System.Runtime.InteropServices.ComTypes.IStream> 而不是在參數中指定的檔案 `filename` 。 `pIStream` 是選用參數。  
   
  `fFullBuild`  
- [in] `true`如果這是完整重建，則為，`false`如果這是累加式編譯，則為。  
+ [in] `true` 如果這是完整重建， `false` 如果這是累加式編譯，則為。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

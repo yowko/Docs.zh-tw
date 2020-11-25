@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-ms.openlocfilehash: 257cf24fa476c75d6ec949e17a5b83fc015b8d43
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d141a78a953d4e0ab922535ad2363c79f2e18ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496776"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727038"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 方法
-取得字串物件配置的相關資訊。 這個方法在 .NET Framework 4 中已被取代，而且會被[ICorProfilerInfo3：： GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md)方法所取代。  
+
+取得字串物件配置的相關資訊。 在 .NET Framework 4 中，這個方法已被取代，並已由 [ICorProfilerInfo3：： GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md) 方法取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +36,22 @@ HRESULT GetStringLayout(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pBufferLengthOffset`  
- 脫銷相對於指標的位置位移指標 `ObjectID` ，儲存字串的長度。 長度會儲存為 `DWORD` 。  
+ 擴展相對於指標的位置位移指標， `ObjectID` 儲存字串的長度。 長度會儲存為 `DWORD` 。  
   
 > [!NOTE]
-> 這個參數會傳回字串本身的長度，而不是緩衝區的長度。 緩衝區長度已無法再使用。  
+> 此參數會傳回字串本身的長度，而不是緩衝區的長度。 緩衝區的長度已無法再使用。  
   
  `PStringLengthOffset`  
- 脫銷相對於指標之位置位移的指標 `ObjectID` ，會儲存字串本身的長度。 長度會儲存為 `DWORD` 。  
+ 擴展相對於指標的位置位移指標， `ObjectID` 會儲存字串本身的長度。 長度會儲存為 `DWORD` 。  
   
  `pBufferOffset`  
- 脫銷相對於指標的緩衝區位移指標， `ObjectID` 儲存寬字元的字串。  
+ 擴展相對於指標的緩衝區位移指標， `ObjectID` 該指標會儲存寬字元字串。  
   
 ## <a name="remarks"></a>備註  
- `GetStringLayout`方法會取得下列位置的位移（相對於 `ObjectID` 指標）：  
+
+ `GetStringLayout`方法 `ObjectID` 會取得儲存下列位置之位置的位移（相對於指標）：  
   
 - 字串緩衝區的長度。  
   
@@ -58,8 +61,9 @@ HRESULT GetStringLayout(
   
  字串可能是以 null 結束。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
