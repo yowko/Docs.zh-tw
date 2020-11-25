@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 1b973cdeaffbec0dad1f2d082c44e8001647fdcc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cb0b763059c787b8f3e93e6c46b0e7fb2f8f8b2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718458"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 方法
-通知分析工具，應用程式域正在從進程中卸載。  
+
+通知分析工具正在從進程卸載應用程式域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +37,15 @@ HRESULT AppDomainShutdownStarted(
 
 - `appDomainId`
 
-  \[在中，識別用來儲存應用程式元件的網域。
+  \[in] 識別用來儲存應用程式元件的網域。
 
 ## <a name="remarks"></a>備註  
- 在方法傳回之後，的值 `appDomainId` 對任何資訊要求而言都是不正確 `AppDomainShutdownStarted` ，這是 profiler 取得此應用程式域相關資訊的最後機會。  
+
+ 在方法傳回之後，的值對 `appDomainId` 任何資訊要求而言是不正確 `AppDomainShutdownStarted` ，這是 profiler 取得此應用程式域相關資訊的最後機會。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

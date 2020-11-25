@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-ms.openlocfilehash: 9fb2f960098e970b4d3d9f0be499f4d9fda6558e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1db2c9b5e65ae150f05242172f5ea16db433bbb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893901"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717821"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus 方法
-針對類別的每個方法，設定一個值，指出此方法是否為使用者定義的程式碼。  
+
+針對類別的每個方法，設定一個值，指出方法是否為使用者定義的程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,16 +35,19 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `bIsJustMyCode`  
- 在將設定`true`為，表示該方法是使用者定義的程式碼;否則，請將`false`設定為。  
+ 在設定為， `true` 表示方法是使用者定義的程式碼，否則設定為 `false` 。  
   
 ## <a name="remarks"></a>備註  
- 只有 my code （JMC）分檔器會略過非使用者定義的程式碼。 使用者定義的程式碼必須是可偵錯工具代碼的子集。  
+
+ My code (JMC) 的分檔器將會略過非使用者定義的程式碼。 使用者定義的程式碼必須是可偵錯工具代碼的子集。  
   
- `SetJMCStatus`如果無法設定任何方法的值，則會傳回 S_FALSE 的 HRESULT 值，即使它成功設定所有其他方法的值也一樣。  
+ `SetJMCStatus` 如果無法設定任何方法的值，則會傳回 S_FALSE 的 HRESULT 值，即使它成功設定所有其他方法的值也是如此。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

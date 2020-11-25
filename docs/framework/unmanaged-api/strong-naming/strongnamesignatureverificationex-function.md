@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-ms.openlocfilehash: ca428d680df1710d8e74441d9945d4c3545b0482
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 27417c379411e242c48d6d9b0c99de833f7ede8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121151"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719264"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函式
+
 取得指出位於指定路徑的組件資訊清單是否包含強式名稱簽章的值。  
   
- 這個函數已被取代。 請改用[ICLRStrongName：： StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法。  
+ 此函數已被取代。 請改用 [ICLRStrongName：： StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,31 +39,35 @@ BOOLEAN StrongNameSignatureVerificationEx (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `wszFilePath`  
- 在要驗證之元件的可攜式可執行檔（.exe 或 .dll）的路徑。  
+ 在可攜式可執行檔的路徑 ( .exe 或 .dll) 檔，以供要驗證的元件。  
   
  `fForceVerification`  
- [in] `true` 執行驗證，即使需要覆寫登錄設定也一樣。否則，`false`。  
+ [in] `true` 即使需要覆寫登錄設定，還是要執行驗證;否則為 `false` 。  
   
  `pfWasVerified`  
- [out] `true` 是否已驗證強式名稱簽章;否則，`false`。 如果驗證因為登錄設定而成功，`pfWasVerified` 也會設定為 `false`。  
+ [out] `true` 如果已驗證強式名稱簽章，否則為 `false` 。 `pfWasVerified``false`如果驗證因為登錄設定而成功，則也會設定為。  
   
 ## <a name="return-value"></a>傳回值  
- 如果驗證成功，則 `true`;否則，`false`。  
+
+ `true` 如果驗證成功，則為，否則為 `false` 。  
   
 ## <a name="remarks"></a>備註  
- `StrongNameSignatureVerificationEx` 提供類似[StrongNameSignatureVerification](strongnamesignatureverification-function.md)函數的功能。 不過，`StrongNameSignatureVerificationEx` 的第二個輸入參數和輸出參數是 `BOOLEAN` 類型，而不是 `DWORD`。  
+
+ `StrongNameSignatureVerificationEx` 提供類似于 [StrongNameSignatureVerification](strongnamesignatureverification-function.md) 函數的功能。 但是，的第二個輸入參數和的輸出參數 `StrongNameSignatureVerificationEx` 是類型， `BOOLEAN` 而不是 `DWORD` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Stackexchange.redis.strongname。h  
   
- 連結**庫：** 包含為 mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 mscoree.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [StrongNameSignatureVerificationEx 方法](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
 - [StrongNameSignatureVerification 方法](../hosting/iclrstrongname-strongnamesignatureverification-method.md)

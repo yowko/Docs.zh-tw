@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 65bbae614c8872ab5d78b3855b56ceaf2aad50da
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 84eea78b9c2e73e24238a5ecbc9442f3d63dbd4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558182"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719784"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
+
 傳回類型程式庫的完整路徑，以解析其簡單名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -37,6 +38,7 @@ HRESULT ResolveTypeLib(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `bstrSimpleName`  
  在包含類型程式庫之簡單名稱的 [BSTR](/previous-versions/windows/desktop/automat/bstr) 。  
   
@@ -59,16 +61,18 @@ HRESULT ResolveTypeLib(
  擴展 [BSTR](/previous-versions/windows/desktop/automat/bstr) 的指標，其中包含參數中所命名類型程式庫的完整路徑 `bstrSimpleName` 。  
   
 ## <a name="remarks"></a>備註  
+
  在 `ResolveTypeLib` [Tlbexp.exe (型別程式庫匯出工具) ](../../tools/tlbexp-exe-type-library-exporter.md)處理期間， [LoadTypeLibWithResolver](loadtypelibwithresolver-function.md)函式會呼叫方法。  
   
  此介面的自訂實作為必須傳回 [BSTR](/previous-versions/windows/desktop/automat/bstr) ，其中包含參數中所命名類型程式庫的完整路徑 `bstrSimpleName` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** TlbRef .idl、TlbRef。h  
   
- 連結**庫：** TlbRef .lib  
+ 連結 **庫：** TlbRef .lib  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -1,6 +1,6 @@
 ---
-title: 獲取物件文本功能（非託管 API 引用）
-description: GetObjectText 函數在 MOF 語法中返回物件的文本呈現。
+title: 'GetObjectText 函式 (非受控 API 參考) '
+description: GetObjectText 函式會以 MOF 語法傳回物件的文字呈現。
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 6881125760e0f1dc38e6b01917d5829edc95e3ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6ad2b29202222d594cc7976a13929002164314a7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718367"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 函式
-在管理物件格式 （MOF） 語法中返回物件的文本呈現。
+
+以受控物件格式 (MOF) 語法傳回物件的文字呈現。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -40,46 +41,47 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[在]此參數未使用。
+在此參數未使用。
 
 `ptr`  
-[在]指向[IWbem ClassObject 實例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標。
+在 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 實例的指標。
 
 `lFlags`  
-[在]通常為 0。 如果`WBEM_FLAG_NO_FLAVORS`指定 （或 0x1），則包含限定詞而不包含傳播或風味資訊。
+在通常是0。 如果 `WBEM_FLAG_NO_FLAVORS` 指定了 (或 0x1) ，則不會包含任何傳播或類別資訊的限定詞。
 
-`pstrObjectText`[出]指向上條目的`null`指標。 返回時，包含物件的`BSTR`MOF 語法呈現的新分配。  
+`pstrObjectText` 擴展On 專案的指標 `null` 。 傳回時，為新配置 `BSTR` 的，包含物件的 MOF 語法轉譯。  
 
 ## <a name="return-value"></a>傳回值
 
-此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
+這個函式所傳回的下列值是在 *WbemCli .h* 標頭檔中定義，您也可以在程式碼中將它們定義為常數：
 
-|持續性  |值  |描述  |
+|常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 出現了一個普遍的失敗。 |
+|`WBEM_E_FAILED` | 0x80041001 | 一般失敗。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 可用的記憶體不足，無法完成作業。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
 
-此函數將調用包起來到[IWbem ClassObject：：getObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext)方法。
+此函數會包裝對 [IWbemClassObject：： GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) 方法的呼叫。
 
-返回的 MOF 文本不包含有關物件的所有資訊，但僅包含足夠的資訊，以便 MOF 編譯器能夠重新創建原始物件。 例如，不包含傳播的限定詞或父類屬性。
+傳回的 MOF 文字未包含物件的所有相關資訊，但只有足夠的資訊可讓 MOF 編譯器能夠重新建立原始物件。 例如，不包含任何傳播的限定詞或父類別屬性。
 
-以下演算法用於重建方法參數的文本：
+下列演算法用來重建方法參數的文字：
 
-1. 參數按其識別碼值的順序重新排序。
-1. 指定為`[in]`並`[out]`組合到單個參數的參數。
+1. 參數的 resequenced 順序為其識別碼值。
+1. 以和指定的參數 `[in]` `[out]` 會結合為單一參數。
 
-`pstrObjectText`調用函數時必須指向`null`的 指標;它不得指向方法調用之前有效的字串，因為指標不會被處理。
+`pstrObjectText` 當呼叫函式時，必須是指向的指標 `null` ; 因為指標不會解除配置，所以它不能指向方法呼叫之前的有效字串。
 
 ## <a name="requirements"></a>需求  
-**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

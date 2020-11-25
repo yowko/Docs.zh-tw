@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d7061343-d0a3-4fd5-b312-61974f98bd62
 topic_type:
 - apiref
-ms.openlocfilehash: 11529ce896f265f2b200fa6e511d4b913e9147c8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b4db3b115517f0a146aeab469f091008d31efc86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008218"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718224"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken 方法
-表示將會處理指定的元資料標記。  
+
+指出將會處理指定的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,18 +35,21 @@ HRESULT MarkToken (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `tk`  
  在要處理的元資料標記。  
   
 ## <a name="remarks"></a>備註  
- 一般而言，您想要在中繼資料範圍內處理權杖。 `MarkToken`方法會透過[IMetaDataEmit：： SetHandler](imetadataemit-sethandler-method.md)方法傳遞至中繼資料引擎。  
+
+ 通常，您會想要在中繼資料範圍內處理權杖。 `MarkToken`方法會透過[IMetaDataEmit：： SetHandler](imetadataemit-sethandler-method.md)方法傳遞給中繼資料引擎。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

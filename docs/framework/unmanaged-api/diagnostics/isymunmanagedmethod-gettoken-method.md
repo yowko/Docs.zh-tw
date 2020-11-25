@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0803f0b55f19b779f5b6608a9f8200d2b085b504
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 76134a2447cbc40b5c97304540d9907648bc89e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615153"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719914"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken 方法
+
 傳回這個方法的中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
@@ -33,14 +34,17 @@ HRESULT GetToken(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pToken`  
- 脫銷的指標， `mdMethodDef` 接收包含中繼資料所需的緩衝區大小（以字元為單位）。  
+ 擴展的指標， `mdMethodDef` 會接收包含中繼資料所需的緩衝區大小（以字元為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

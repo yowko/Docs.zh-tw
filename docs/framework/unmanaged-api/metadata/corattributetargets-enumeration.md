@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007919"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718965"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列舉
+
 指定有效套用屬性的應用程式項目。  
   
 ## <a name="syntax"></a>語法  
@@ -60,10 +61,10 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |`catAssembly`|屬性可以套用至組件。|  
-|`catModule`|屬性可以套用至可移植的可執行檔（.dll 或 .exe）模組。|  
+|`catModule`|屬性可以套用至可攜式可執行檔 ( .dll 或 .exe) 模組。|  
 |`catClass`|屬性可以套用至類別。|  
 |`catStruct`|屬性可以套用至結構，也就是實值型別 (Value Type)。|  
 |`catEnum`|屬性可以套用至列舉型別。|  
@@ -80,12 +81,14 @@ typedef enum CorAttributeTargets
 |`catClassMembers`|屬性可以套用至類別的成員。|  
   
 ## <a name="remarks"></a>備註  
+
  `CorAttributeTargets`列舉值可以與位 or 運算結合，以取得慣用的組合。  
   
- 會與 `CorAttributeTargets` managed 列舉並列在一起 <xref:System.AttributeTargets?displayProperty=nameWithType> 。  
+ 會將 `CorAttributeTargets` managed <xref:System.AttributeTargets?displayProperty=nameWithType> 列舉平行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

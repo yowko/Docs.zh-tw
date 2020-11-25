@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cc507cb0-df2e-49c2-b32e-0c3271a8df9a
 topic_type:
 - apiref
-ms.openlocfilehash: f9b00d5e34300f1ed16eaddff3bf8e877219f910
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c796e3782a498c798c9b47f028ef05c2de00f54d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893792"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717665"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress 方法
-取得此「ICorDebugCode」介面所代表之程式碼區段的相對虛擬位址（RVA）。  
+
+取得這個 "ICorDebugCode" 介面所代表之程式碼區段 (RVA) 的相對虛擬位址。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetAddress (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pStart`  
- 脫銷程式碼區段之 RVA 的指標。  
+ 擴展程式碼區段 RVA 的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

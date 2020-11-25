@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-ms.openlocfilehash: d3d081e389e29833f24063ba75289f3db8c5504a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d6f22d6185f4063078463043a6ffd46e56289267
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504273"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719849"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection 方法
+
 移除工作清單與識別碼和易記名稱之間的關聯。  
   
 ## <a name="syntax"></a>語法  
@@ -34,33 +35,36 @@ HRESULT EndConnection (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `dwConnectionId`  
- 在連接的主機特定識別碼，以及 common language runtime （CLR）工作的相關聯清單。  
+ 在連接的主機特定識別碼以及 common language runtime (CLR) 工作的相關清單。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`EndConnection`已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫超時。|  
+|S_OK|`EndConnection` 傳回成功。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫已超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_INVALIDARG|[BeginConnection](iclrdebugmanager-beginconnection-method.md)從未使用呼叫 `dwConnectionId` ，或為 `dwConnectionId` 零。|  
+|HOST_E_ABANDONED|當封鎖的執行緒或光纖正在等候時，已取消事件。|  
+|E_FAIL|發生未知的嚴重失敗。 在方法傳回 E_FAIL 之後，就無法在進程中使用 CLR。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_INVALIDARG|[BeginConnection](iclrdebugmanager-beginconnection-method.md) 從未使用 `dwConnectionId` 或 `dwConnectionId` 為零來呼叫。|  
   
 ## <a name="remarks"></a>備註  
- [ICLRDebugManager](iclrdebugmanager-interface.md)提供三種方法： `BeginConnection` 、 [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)和 `EndConnection` ，用於關聯工作清單與識別碼和易記名稱。  
+
+ [ICLRDebugManager](iclrdebugmanager-interface.md) 提供三種方法：、 `BeginConnection` [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)和 `EndConnection` ，以便將工作清單與識別碼和易記名稱產生關聯。  
   
 > [!IMPORTANT]
-> 這三種方法都必須以特定順序針對每一組工作進行呼叫。 `BeginConnection`會先呼叫以建立新的連接。 `SetConnectionTasks`接下來會呼叫，以提供與該連接相關聯的工作集合。 `EndConnection`最後會呼叫，以移除工作清單與識別碼和易記名稱之間的關聯。不過，可以嵌套不同連接的呼叫。  
+> 您必須針對每一組工作以特定順序呼叫這三種方法。 `BeginConnection` 先呼叫，以建立新的連接。 `SetConnectionTasks` 會在旁邊呼叫，以提供與該連接相關聯的工作集。 `EndConnection` 最後會呼叫，以移除工作清單與識別碼和易記名稱之間的關聯。不過，可以嵌套不同連接的呼叫。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

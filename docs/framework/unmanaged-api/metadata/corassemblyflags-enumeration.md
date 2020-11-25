@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 615c4ac95ab777e8081e630cafb6671e64dea78a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007932"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718978"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 列舉
+
 包含值，這些值描述套用至組件編譯的中繼資料。  
   
 ## <a name="syntax"></a>語法  
@@ -55,29 +56,30 @@ typedef enum CorAssemblyFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`afPublicKey`|表示元件參考包含完整、未經過雜湊的公開金鑰。|  
-|`afPA_None`|表示未指定處理器架構。|  
-|`afPA_MSIL`|表示處理器架構為中性（PE32）。|  
-|`afPA_x86`|指出處理器架構為 x86 （PE32）。|  
-|`afPA_IA64`|指出處理器架構為 Itanium （PE32 +）。|  
-|`afPA_AMD64`|指出處理器架構是 AMD X64 （PE32 +）。|  
-|`afPA_ARM`|指出處理器架構為 ARM （PE32）。|  
-|`afPA_NoPlatform`|表示元件是參考元件;也就是說，它會套用至任何架構，但無法在任何架構上執行。 因此，旗標與相同 `afPA_Mask` 。|  
-|`afPA_Specified`|指出處理器架構旗標應該傳播至 `AssemblyRef` 記錄。|  
+|`afPublicKey`|指出元件參考包含完整、未雜湊的公開金鑰。|  
+|`afPA_None`|指出未指定處理器架構。|  
+|`afPA_MSIL`|表示處理器架構為中性 (PE32) 。|  
+|`afPA_x86`|指出處理器架構為 x86 (PE32) 。|  
+|`afPA_IA64`|指出處理器架構為 Itanium (PE32 +) 。|  
+|`afPA_AMD64`|指出處理器架構為 AMD X64 (PE32 +) 。|  
+|`afPA_ARM`|指出處理器架構為 ARM (PE32) 。|  
+|`afPA_NoPlatform`|表示元件為參考元件;也就是說，它會套用至任何架構，但無法在任何架構上執行。 因此，旗標與相同 `afPA_Mask` 。|  
+|`afPA_Specified`|指出處理器架構旗標應傳播至 `AssemblyRef` 記錄。|  
 |`afPA_Mask`|描述處理器架構的遮罩。|  
-|`afPA_FullMask`|指定包含處理器架構的描述。|  
-|`afPA_Shift`|表示在處理器架構旗標中與索引之間的位移計數。|  
-|`afEnableJITcompileTracking`|表示的對應值 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> 。|  
-|`afDisableJITcompileOptimizer`|表示的對應值 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> 。|  
-|`afRetargetable`|表示元件可以在執行時間重定目標，使其成為來自不同發行者的元件。|  
+|`afPA_FullMask`|指定包含處理器架構描述。|  
+|`afPA_Shift`|指出處理器架構旗標中與索引之間的移位元數目。|  
+|`afEnableJITcompileTracking`|指出的對應值 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> 。|  
+|`afDisableJITcompileOptimizer`|指出的對應值 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> 。|  
+|`afRetargetable`|表示元件在執行時間可以從不同發行者的元件重定目標。|  
 |`afContentType_Mask`|描述內容類型的遮罩。|  
 |`afContentType_Default`|表示預設內容類型。|  
-|`afContentType_WindowsRuntime`|表示 Windows 執行階段內容類型。|  
+|`afContentType_WindowsRuntime`|指出 Windows 執行階段的內容類型。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

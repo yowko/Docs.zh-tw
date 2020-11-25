@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f165200e-3a91-47f7-88fc-13ff10c8babc
 topic_type:
 - apiref
-ms.openlocfilehash: 3681106bca94f1fefb2f24a1aa4254eb2b1b0531
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b2b0af36f84bd6623792fe0a987eaf40f2717f46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499736"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718184"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences 方法
+
 報告非壓縮記憶體回收造成的堆積中物件配置。  
   
 ## <a name="syntax"></a>語法  
@@ -37,6 +38,7 @@ HRESULT SurvivingReferences(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cSurvivingObjectIDRanges`  
  [in] 非壓縮記憶體回收後未被回收的連續物件區塊數目。 也就是說，`cSurvivingObjectIDRanges` 的值是 `objectIDRangeStart` 和 `cObjectIDRangeLength` 陣列的大小，會為每個物件區塊分別存放 `ObjectID` 和長度。  
   
@@ -53,7 +55,7 @@ HRESULT SurvivingReferences(
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]
-> 對於在 64 位元平台上大於 4 GB 的物件，這個方法會報告大小為 `MAX_ULONG`。 對於大於 4 GB 的物件，請改用[ICorProfilerCallback4：： SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md)方法。  
+> 對於在 64 位元平台上大於 4 GB 的物件，這個方法會報告大小為 `MAX_ULONG`。 若為大於 4 GB 的物件，請改用 [ICorProfilerCallback4：： SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md) 方法。  
   
  `objectIDRangeStart` 和 `cObjectIDRangeLength` 陣列的項目應解譯如下，以判斷物件是否未被記憶體回收。 假定 `ObjectID` 的值 (`ObjectID`) 位於下列範圍內：  
   
@@ -61,16 +63,17 @@ HRESULT SurvivingReferences(
   
  針對任何位於下列範圍內的 `i` 之值，該物件尚未被記憶體回收：  
   
- 0 <=`i` < `cSurvivingObjectIDRanges`  
+ 0 <= `i` < `cSurvivingObjectIDRanges`  
   
  非壓縮記憶體回收會回收「無作用」物件所佔用的記憶體，但是不會壓縮該釋放的空間。 因此，記憶體會傳回到堆積，但沒有移動「即時」物件。  
   
- 針對非壓縮記憶體回收，Common Language Runtime (CLR) 會呼叫 `SurvivingReferences`。 針對壓縮垃圾收集，會改為呼叫[ICorProfilerCallback：： MovedReferences](icorprofilercallback-movedreferences-method.md) 。 單一記憶體回收可以為了某個層代而壓縮，但另一個則不壓縮。 對於在任何特定層代上的記憶體回收，分析工具將接收 `SurvivingReferences` 回呼或 `MovedReferences` 回呼，但不可同時接收。  
+ 針對非壓縮記憶體回收，Common Language Runtime (CLR) 會呼叫 `SurvivingReferences`。 針對壓縮垃圾收集，會改為呼叫 [ICorProfilerCallback：： MovedReferences](icorprofilercallback-movedreferences-method.md) 。 單一記憶體回收可以為了某個層代而壓縮，但另一個則不壓縮。 對於在任何特定層代上的記憶體回收，分析工具將接收 `SurvivingReferences` 回呼或 `MovedReferences` 回呼，但不可同時接收。  
   
  因為有限的內部緩衝區、在伺服器記憶體回收期間以及其他原因的多重執行緒報告，在特定記憶體回收期間可能接收多重 `SurvivingReferences` 回呼。 在記憶體回收期間多個回呼的情況下，資訊是累計的；在任何 `SurvivingReferences` 回呼中被報告的所有參考不會被記憶體回收。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

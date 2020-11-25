@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: 8b3785955ec138bbf898e84aa4deb5ed2a6e6b53
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 028395b1c8677d07d4a6481740ecdc7ebb48c180
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500945"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718510"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 結構
+
 代表記憶體中由左至右連續儲存的函式引數區塊。  
   
 ## <a name="syntax"></a>語法  
@@ -35,15 +36,16 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |-------------|-----------------|  
 |`startAddress`|區塊的起始位址。|  
 |`length`|連續區塊的長度。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Corprof.idl .idl  
+ **標頭：** Corprof.h .idl  
   
  **程式庫：** CorGuids.lib  
   

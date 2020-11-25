@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: bc4288b6-3331-4ae3-990d-e1d6e62ecb67
 topic_type:
 - apiref
-ms.openlocfilehash: 75cc729a3d0ffa7ac67b29be2defb84b05cc6bb0
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a3f02af1a0de9fcd7b3db1e49ef0d78af3395d2f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894465"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719654"
 ---
 # <a name="icordebugchaingetregisterset-method"></a>ICorDebugChain::GetRegisterSet 方法
-取得此連鎖之使用中部分的暫存器集。  
+
+取得此鏈之使用中部分的註冊集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetRegisterSet (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppRegisters`  
- 脫銷[ICorDebugRegisterSet](icordebugregisterset-interface.md)物件位址的指標，表示此鏈中使用中部分的暫存器集。  
+ 擴展 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 物件位址的指標，該物件代表此鏈之使用中部分的註冊集。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

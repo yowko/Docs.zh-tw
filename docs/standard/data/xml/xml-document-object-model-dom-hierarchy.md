@@ -2,14 +2,15 @@
 title: XML 文件物件模型 (DOM) 階層架構
 ms.date: 03/30/2017
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-ms.openlocfilehash: 2a8bbd4f7cb3feb2a555af9862632a2fa493be32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 24ef51a18392fe3034e64bd585d879941fca4b95
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718354"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML 文件物件模型 (DOM) 階層架構
+
 下圖顯示 XML 文件物件模型 (DOM) 的類別階層架構，括弧中有全球資訊網協會 (W3C) 名稱和相關的類別名稱。  
   
  ![XML 檔物件模型 &#40;DOM&#41; 階層](media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
@@ -35,6 +36,6 @@ XML 文件物件模型 (DOM) 階層
   
  **XmlLinkedNode** 類別繼承自 **XmlNode**。 其目的在於覆寫 **XmlNode** 的兩個方法：**PreviousSibling** 與 **NextSibling** 方法。 這些覆寫的方法會由擁有之前同層級和之後同層級的類別 **XmlCharacterData**、**XmlDeclaration**、**XmlDocumentType**、**XmlElement**、**XmlEntityReference** 和 **XmlProcessingInstruction** 繼承和使用。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52f4af3f-e02b-4c20-9fd9-e8e4f4d6fc31
 topic_type:
 - apiref
-ms.openlocfilehash: 66387c686182cb24d8d4d2a445e0e7424d50d5e2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 92134396d9f9d869866a73cdd31278f4ac1e6355
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719017"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl 方法
+
 這個方法尚未實作。  
   
 ## <a name="syntax"></a>語法  
@@ -34,21 +35,23 @@ HRESULT SetDacl (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pacl`  
- 在存取控制清單（ACL）的指標。  
+ 在ACL)  (存取控制清單的指標。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |E_NOTIMPL|此方法尚未實作。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

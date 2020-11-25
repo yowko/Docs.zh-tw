@@ -7,16 +7,16 @@ ms.date: 10/09/2020
 f1_keywords:
 - NETSDK1005
 - NETSDK1047
-ms.openlocfilehash: 6c22fd8c79c2ac6e024b46b4f67e08011d42efc6
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 207c8b0274c13e7af594e05cfac2a95907f85b81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717899"
 ---
 # <a name="netsdk1005-and-netsdk1047-asset-file-is-missing-target"></a>NETSDK1005 和 NETSDK1047：資產檔案遺失目標
 
-本文**適用于：** ✔️ .NET 2.1.100 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.1.100 SDK 和更新版本
 
 當 .NET SDK 發出錯誤 NETSDK1005 或 NETSDK1047 時，專案的資產檔案就會遺失其中一個目標 framework 的相關資訊。 通常可以藉由確保執行還原，而遺漏的目標值包含在專案的屬性中，來修正此問題 `TargetFrameworks` 。
 

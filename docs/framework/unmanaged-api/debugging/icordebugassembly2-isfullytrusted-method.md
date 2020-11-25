@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-ms.openlocfilehash: dd82709064fe7f7d912d93f4b3f0248769f02b9e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8a2a6be0db76f5ee2c7fa67c2038e0a5c845bd0f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894891"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719706"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted 方法
-取得值，指出執行時間安全性系統是否已授與元件完全信任。  
+
+取得值，這個值會指出是否已將執行時間安全性系統授與元件完全信任。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT IsFullyTrusted(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pbFullyTrusted`  
- 脫銷`true`如果元件已被授與執行時間安全性系統的完全信任，則為，否則為`false`。  
+ [out] `true` 如果元件已被執行時間安全性系統授與完全信任，則為，否則為 `false` 。  
   
 ## <a name="remarks"></a>備註  
- 如果尚未解析元件的安全性原則（也就是尚未執行元件中的程式碼），這個方法會傳回 CORDBG_E_NOTREADY 的 HRESULT。  
+
+ 如果尚未解析元件的安全性原則，則這個方法會傳回 CORDBG_E_NOTREADY 的 HRESULT，也就是如果元件中沒有任何程式碼已經執行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 55c36ea6313bfd3000b1d8502d4eda7c552e08cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281986"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717925"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>控制 XML 序列化的屬性
+
 您可以將下表中的屬性套用到類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別之執行個體的方式。 若要了解這些屬性如何控制 XML 序列化，請參閱[使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。  
   
  這些屬性也可用來控制 XML Web Service 產生的常值樣式 SOAP 訊息。 如需將這些屬性套用至 XML Web Service 方法的詳細資訊，請參閱[以 XML Web Service 進行 XML 序列化](xml-serialization-with-xml-web-services.md)。  
@@ -40,7 +41,7 @@ ms.locfileid: "93281986"
 |<xref:System.Xml.Serialization.XmlTextAttribute>|公用屬性與欄位。|屬性或欄位應序列化成 XML 文字。|  
 |<xref:System.Xml.Serialization.XmlTypeAttribute>|公用類別宣告|XML 型別的名稱與命名空間。|  
   
- 除了這些在 <xref:System.Xml.Serialization> 命名空間都找得到的屬性之外，您也可以對欄位套用 <xref:System.ComponentModel.DefaultValueAttribute> 屬性。 如果未指定任何值， **DefaultValueAttribute** 會設定將自動指派給成員的值。  
+ 除了這些在 <xref:System.Xml.Serialization> 命名空間都找得到的屬性之外，您也可以對欄位套用 <xref:System.ComponentModel.DefaultValueAttribute> 屬性。 如果未指定任何值，**DefaultValueAttribute** 會設定將自動指派給成員的值。  
   
  若要控制編碼的 SOAP XML 序列化，請參閱[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)。  
   

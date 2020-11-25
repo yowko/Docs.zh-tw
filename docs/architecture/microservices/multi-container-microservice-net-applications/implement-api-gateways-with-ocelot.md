@@ -2,12 +2,12 @@
 title: 使用 Ocelot 實作 API 閘道
 description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以容器為基礎的環境中使用 Ocelot。
 ms.date: 03/02/2020
-ms.openlocfilehash: 5cee56e6b68bc08f9e1de41605951989a55dc0df
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679223"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718094"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -88,7 +88,7 @@ HTTP 要求最終會執行該類型的 C# 程式碼來存取微服務資料庫�
 關於微服務 URL，當容器部署在您的本機開發電腦 (本機 Docker 主機) 時，每個微服務的容器一律會有內部埠 (通常會在其 dockerfile 中指定埠 80) ，如下列 dockerfile 所示：
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -521,7 +521,7 @@ services.AddAuthentication(options =>
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>使用 Kubernetes 輸入加上 Ocelot API 閘道
 
-使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過*Nginx*的[Kubernetes 輸入層](https://kubernetes.io/docs/concepts/services-networking/ingress/)來統一所有 HTTP 要求。
+使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過 *Nginx* 的 [Kubernetes 輸入層](https://kubernetes.io/docs/concepts/services-networking/ingress/)來統一所有 HTTP 要求。
 
 在 Kubernetes 中，如果您未使用任何輸入方法，則您的服務和 pod 只能透過叢集網路路由 Ip。
 
@@ -543,7 +543,7 @@ API 閘道是前端或外觀只會呈現服務，而不會呈現通常不在其�
 
 **圖 6-41**。 部署至 Kubernetes 時之 eShopOnContainers 中的輸入層
 
-Kubernetes 輸入扮演著所有對應用程式流量的反向 Proxy 角色，其中包括通常不在 API 閘道範圍內的 Web 應用程式。 當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」__ 公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
+Kubernetes 輸入扮演著所有對應用程式流量的反向 Proxy 角色，其中包括通常不在 API 閘道範圍內的 Web 應用程式。 當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
 
 - `/` 代表用戶端 SPA Web 應用程式
 - `/webmvc` 代表用戶端 MVC Web 應用程式

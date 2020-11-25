@@ -6,16 +6,16 @@ ms.topic: error-reference
 ms.date: 10/9/2020
 f1_keywords:
 - NETSDK1013
-ms.openlocfilehash: bcaed878b663f8bc957e8469ffd78caa9babf710
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 915ac22ad822d17c082498b469acbfb3f1a93efc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445747"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717863"
 ---
 # <a name="netsdk1013-the-targetframework-value-was-not-recognized"></a>NETSDK1013：無法辨識 TargetFramework 值
 
-本文 **適用于：** ✔️ .NET 3.1.100 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 3.1.100 SDK 和更新版本
 
 SDK 會嘗試將專案檔中所提供的值，或剖析為 `<TargetFramework>` `<TargetFrameworks>` 已知的值。  如果無法辨識值， `TargetFrameworkIdentifier` 或 `TargetFrameworkVersion` 值可以設定為空字串或 `Unsupported` 。
 

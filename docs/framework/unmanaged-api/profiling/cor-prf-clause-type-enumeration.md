@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: a308017dc80dd973cbf108ba9df824193775f5ff
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3058229a3c2b3c529136dad70fea35a23708a33
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501049"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718653"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE 列舉
+
 指出剛輸入或留下的程式碼的 exception 子句類型。  
   
 ## <a name="syntax"></a>語法  
@@ -37,15 +38,16 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|例外狀況子句無效。|  
-|`COR_PRF_CLAUSE_FILTER`|Exception 子句是一個篩選條件運算式。|  
+|`COR_PRF_CLAUSE_FILTER`|Exception 子句是篩選運算式。|  
 |`COR_PRF_CLAUSE_CATCH`|Exception 子句是 `catch` 語句。|  
 |`COR_PRF_CLAUSE_FINALLY`|Exception 子句是 `finally` 語句。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
