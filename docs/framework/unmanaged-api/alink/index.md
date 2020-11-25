@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - ALink API
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
-ms.openlocfilehash: f44482d0be70a8c5651bf440a264468a4446f009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d018ae41bd9bf0360bd3a0e492a88e911699ef27
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74445659"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705016"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API (Unmanaged API 參考)
+
 支援建立 .NET Framework 組件和未繫結的模組。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [AssemblyAttributesGoHere](assemblyattributesgohere.md)  
   
  [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)  
@@ -39,4 +41,4 @@ ms.locfileid: "74445659"
   
 ## <a name="see-also"></a>另請參閱
 
-- [非託管 API 引用](../index.md)
+- [非受控 API 參考](../index.md)

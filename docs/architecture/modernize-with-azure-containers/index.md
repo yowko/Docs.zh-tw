@@ -2,24 +2,20 @@
 title: 利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 description: 了解如何利用這本電子書，將現有的應用程式原形移轉到 Azure 雲端及容器並加以現代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172251"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705328"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 
 ![將 .NET 應用程式現代化指南的封面影像。](./media/index/web-application-guide-cover-image.png)
 
-發行者  
-Microsoft Corporation  
-Microsoft Press 及 Microsoft DevDiv 部門  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+由 Microsoft 按下 Microsoft Corporation 的 microsoft DevDiv 部門和 Microsoft 部門發佈，並由 microsoft 部門華盛頓州華盛頓98052-6399 州雷德蒙德
 
-Microsoft Corporation 的著作權©2020  
+Microsoft Corporation 的著作權©2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
 
@@ -37,12 +33,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 > **Cesar de La Torre**、SR-IOV、.Net 產品小組、Microsoft Corp。
 
 參與者和檢閱者：
-> **Scott Hunter**，Microsoft .NET 小組合夥人暨 PM 主管  
-> **Paul Yuknewicz**，Microsoft Visual Studio Tools 小組首席 PM 經理  
-> **Lisa Guthrie**，Microsoft Visual Studio Tools 小組資深專案經理  
-> **Ankit Asthana**，Microsoft .NET 小組 PM 總經理  
-> **Unai Zorrilla**，Plain Concepts 開發人員主管  
-> **Javier Valero**，Grupo Solutio 營運長  
+> **Scott Hunter**、合作夥伴總監 PM、.net 小組、Microsoft **Paul YUKNEWICZ**、首席 pm 經理、Visual Studio Tools 團隊、microsoft **Lisa Guthrie**、Sr-iov、Visual Studio Tools 團隊、Microsoft **Ankit Asthana**、首席 Pm 經理、.Net 團隊、Microsoft **Unai Zorrilla**、開發人員、一般概念 **Javier Valero**、Grupo Solutio 的首席操作人員
 
 ## <a name="introduction"></a>簡介
 
@@ -66,11 +57,11 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 將應用程式移轉到雲端並沒有一體適用的策略。 適合您的移轉策略取決於組織的需求與優先順序，以及所要移轉的應用程式種類。 並非所有應用程式都適合移至平台即服務 ([PaaS](https://azure.microsoft.com/overview/what-is-paas/)) 模型，或是開發[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式模型。 在許多情況下，您可以根據業務需求，使用分階或累進式方法將資產移至雲端。
 
-對於組織中，可以長期保持敏捷度與價值的現代應用程式，投資*雲端原生*應用程式架構可能會對您有所助益； 但對於現有或舊版資產的應用程式，其關鍵在於如何花最少的時間與金錢，將這些應用程式移至雲端 (不重新建構或變更程式碼)，以從中獲取最大的利益。
+對於組織中，可以長期保持敏捷度與價值的現代應用程式，投資 *雲端原生* 應用程式架構可能會對您有所助益； 但對於現有或舊版資產的應用程式，其關鍵在於如何花最少的時間與金錢，將這些應用程式移至雲端 (不重新建構或變更程式碼)，以從中獲取最大的利益。
 
 圖 1-1 呈現了您採取累進方式將現有的 .NET 應用程式移至雲端時，可以採用的路徑。
 
- ![現有 .NET 應用程式及服務的現代化路徑](./media/image1-1.png)
+ ![現有 .NET 應用程式及服務的現代化路徑](./media/image1-1.png)
 
 **圖 1-1**。 現有 .NET 應用程式及服務的現代化路徑
 
@@ -103,7 +94,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>依成熟度等級分階的主要技術及架構
 
-.NET Framework 應用程式最初從 2001 年年底推出的 .NET Framework 1.0 版開始。 之後，公司移往了更新的版本 (例如 2.0、3.5 及 .NET 4.x)。 這些應用程式大多在 Windows Server 及 Internet Information Server (IIS) 上執行，而且使用像是 SQL Server、Oracle、MySQL 或任何其他 RDBMS 一類的關聯式資料庫。
+.NET Framework 應用程式最初從 2001 年年底推出的 .NET Framework 1.0 版開始。 然後，公司移至較新的版本 (例如2.0、3.5 和 .NET Framework 4.x) 。 這些應用程式大多在 Windows Server 及 Internet Information Server (IIS) 上執行，而且使用像是 SQL Server、Oracle、MySQL 或任何其他 RDBMS 一類的關聯式資料庫。
 
 如今，大多數現有的 .NET 應用程式可能以 .NET Framework 4.x 甚至是 .NET Framework 3.5 為基礎，且使用 ASP.NET MVC、ASP.NET Web Forms、ASP.NET Web API、Windows Communication Foundation (WCF)、ASP.NET SignalR 及 ASP.NET Web Pages 等 Web 架構。 這些已建立的 .NET Framework 技術相依於 Windows。 若您只是想移轉舊版應用程式，而且希望將對應用程式基礎結構產生的變更降至最低，該相依性是重要的考慮因素。
 
@@ -202,4 +193,4 @@ GitHub 上的 [eShopModernizing](https://github.com/dotnet-architecture/eShopMod
 本指南的目的在協助您了解改進及現代化現有 .NET Web 應用程式時的選項。 本指南與相關範例應用程式將會不斷更新。 歡迎您提供寶貴的意見！ 如果您有關于本指南可能更有説明的意見，請將其傳送至 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) 。
 
 >[!div class="step-by-step"]
->[下一個](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
+>[下一步](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-ms.openlocfilehash: 6b9fd62102056a8d5f859ac913f4786f04c1df7e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9590d19f4e5f5890af53a108492bd1b6d130fb72
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617239"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704496"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion 函式
-取得所需的 common language runtime （CLR）版本號碼。  
+
+取得所需的 common language runtime (CLR) 版本號碼。  
   
- 此函式在 .NET Framework 4 中已被取代。  
+ 此函式已在 .NET Framework 4 中被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +38,23 @@ HRESULT GetCORRequiredVersion (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pbuffer`  
- 脫銷包含指定版本號碼之字串的緩衝區。  
+ 擴展包含指定版本號碼之字串的緩衝區。  
   
  `cchBuffer`  
  在緩衝區的大小（以位元組為單位）。  
   
  `dwLength`  
- 脫銷緩衝區中傳回的位元組數目。  
+ 擴展緩衝區中傳回的位元組數目。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

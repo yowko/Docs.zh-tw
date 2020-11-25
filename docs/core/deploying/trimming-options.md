@@ -4,12 +4,12 @@ description: 瞭解如何控制獨立應用程式的修剪。
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515828"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704652"
 ---
 # <a name="trimming-options"></a>修剪選項
 
@@ -140,11 +140,11 @@ SDK 也可以使用屬性來停用偵錯工具支援 `DebuggerSupport` 。 停�
 
 - `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
 
-    移除 BinaryFormatter 序列化支援。 如需詳細資訊，請參閱 [BinaryFormatter 序列化方法已過時](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)。
+    移除 BinaryFormatter 序列化支援。 如需詳細資訊，請參閱 [BinaryFormatter 序列化方法已過時](../compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete.md)。
 
 - `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
 
-    移除不安全的 UTF-7 編碼程式碼。 如需詳細資訊，請參閱 [utf-7 程式碼路徑已淘汰](../compatibility/corefx.md#utf-7-code-paths-are-obsolete)。
+    移除不安全的 UTF-7 編碼程式碼。 如需詳細資訊，請參閱 [utf-7 程式碼路徑已淘汰](../compatibility/core-libraries/5.0/utf-7-code-paths-obsolete.md)。
 
 - `<EventSourceSupport>false</EventSourceSupport>`
 

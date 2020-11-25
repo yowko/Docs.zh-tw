@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 6398fa2962b347a260e23e4fed8cf272a2916a9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704613"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next 方法
-取得指定的[COR_SEGMENT](cor-segment-structure.md)實例數目，其中包含 managed 堆積的記憶體區域相關資訊。  
+
+取得指定數目的 [COR_SEGMENT](cor-segment-structure.md) 實例，其中包含 managed 堆積之記憶體區域的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,19 +36,21 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  celt  
- 在要抓取的區段數目。  
+ 在要取出的區段數目。  
   
  區段  
- 脫銷指標的陣列，其中每一個都會指向一個[COR_SEGMENT](cor-segment-structure.md)物件，以提供受控堆積中的記憶體區域相關資訊。  
+ 擴展指標的陣列，每個指標都會指向 [COR_SEGMENT](cor-segment-structure.md) 物件，該物件會提供 managed 堆積中的記憶體區域相關資訊。  
   
  pceltFetched  
- 脫銷中實際傳回之[COR_SEGMENT](cor-segment-structure.md)物件數目的指標 `segments` 。 如果 `celt` 為 1，則這個值可能是 `null`。  
+ 擴展實際傳回的 [COR_SEGMENT](cor-segment-structure.md) 物件數目的指標 `segments` 。 如果 `celt` 為 1，則這個值可能是 `null`。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

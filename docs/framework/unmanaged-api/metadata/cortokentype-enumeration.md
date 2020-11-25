@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007490"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705471"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 列舉
-表示元資料標記的類型。  
+
+表示元資料標記的型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,40 +62,42 @@ typedef enum CorTokenType {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`mdtModule`|`mdModule`Token。|  
-|`mdtTypeRef`|`mdTypeRef`Token。|  
-|`mdtTypeDef`|`mdTypeDef`Token。|  
-|`mdtFieldDef`|`mdFieldDef`Token。|  
-|`mdtMethodDef`|`mdMethodDef`Token。|  
-|`mdtParamDef`|`mdParamDef`Token。|  
-|`mdtInterfaceImpl`|`mdInterfaceImpl`Token。|  
-|`mdtMemberRef`|`mdMemberRef`Token。|  
-|`mdtCustomAttribute`|`mdCustomAttribute`Token。|  
-|`mdtPermission`|`mdPermission`Token。|  
-|`mdtSignature`|`mdSignature`Token。|  
-|`mdtEvent`|`mdEvent`Token。|  
-|`mdtProperty`|`mdProperty`Token。|  
-|`mdtModuleRef`|`mdModuleRef`Token。|  
-|`mdtTypeSpec`|`mdTypeSpec`Token。|  
-|`mdtAssembly`|`mdAssembly`Token。|  
-|`mdtAssemblyRef`|`mdAssemblyRef`Token。|  
-|`mdtFile`|`mdFile`Token。|  
-|`mdtExportedType`|`mdExportedType`Token。|  
-|`mdtManifestResource`|`mdManifestResource`Token。|  
-|`mdtGenericParam`|`mdGenericParam`Token。|  
-|`mdtMethodSpec`|`mdMethodSpec`Token。|  
-|`mdtGenericParamConstraint`|`mdGenericParamConstraint`Token。|  
-|`mdtString`|`mdString`Token。|  
-|`mdtName`|`mdName`Token。|  
+|`mdtModule`|`mdModule`標記。|  
+|`mdtTypeRef`|`mdTypeRef`標記。|  
+|`mdtTypeDef`|`mdTypeDef`標記。|  
+|`mdtFieldDef`|`mdFieldDef`標記。|  
+|`mdtMethodDef`|`mdMethodDef`標記。|  
+|`mdtParamDef`|`mdParamDef`標記。|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl`標記。|  
+|`mdtMemberRef`|`mdMemberRef`標記。|  
+|`mdtCustomAttribute`|`mdCustomAttribute`標記。|  
+|`mdtPermission`|`mdPermission`標記。|  
+|`mdtSignature`|`mdSignature`標記。|  
+|`mdtEvent`|`mdEvent`標記。|  
+|`mdtProperty`|`mdProperty`標記。|  
+|`mdtModuleRef`|`mdModuleRef`標記。|  
+|`mdtTypeSpec`|`mdTypeSpec`標記。|  
+|`mdtAssembly`|`mdAssembly`標記。|  
+|`mdtAssemblyRef`|`mdAssemblyRef`標記。|  
+|`mdtFile`|`mdFile`標記。|  
+|`mdtExportedType`|`mdExportedType`標記。|  
+|`mdtManifestResource`|`mdManifestResource`標記。|  
+|`mdtGenericParam`|`mdGenericParam`標記。|  
+|`mdtMethodSpec`|`mdMethodSpec`標記。|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint`標記。|  
+|`mdtString`|`mdString`標記。|  
+|`mdtName`|`mdName`標記。|  
 |`mdtBaseType`|未使用。|  
   
 ## <a name="remarks"></a>備註  
+
  每個值都等於對應的元資料標記中的最上層位元組值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

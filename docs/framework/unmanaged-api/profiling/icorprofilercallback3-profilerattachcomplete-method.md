@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 257d6076-06e0-4d93-bb33-651fbb2b92d7
 topic_type:
 - apiref
-ms.openlocfilehash: bcc938ff9322fca4f45366fdc695e0c3901484b5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16e77619ec85ebdf47a2b821309bbb3af63282b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499658"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705315"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete 方法
-由 common language runtime （CLR）呼叫，表示分析工具現在可以呼叫[ICorProfilerInfo3：： EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md)和[ICorProfilerInfo3：： EnumModules](icorprofilerinfo3-enummodules-method.md) catch 方法。  
+
+由 common language runtime (CLR) 呼叫，以指出分析工具現在可以呼叫 [ICorProfilerInfo3：： EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) 和 [ICorProfilerInfo3：： EnumModules](icorprofilerinfo3-enummodules-method.md) catch 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +33,8 @@ HRESULT ProfilerAttachComplete ();
 ```  
   
 ## <a name="remarks"></a>備註  
- `ProfilerAttachComplete`回呼會在呼叫[ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)方法之後發出。 這表示：  
+
+ `ProfilerAttachComplete`呼叫[ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)方法之後，就會發出回呼。 這表示：  
   
 - `InitializeForAttach` 中分析工具所要求的回呼已啟動。  
   
@@ -40,8 +42,9 @@ HRESULT ProfilerAttachComplete ();
   
  CLR 會忽略這個回呼的傳回值。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

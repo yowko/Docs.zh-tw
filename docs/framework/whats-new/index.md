@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 3421afee304125413f4fcade6b20df990e922f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557242"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704795"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework 的新功能
 
@@ -26,10 +26,10 @@ ms.locfileid: "94557242"
 - [.NET Framework 4.7.1](#v471)
 - [.NET Framework 4.7](#v47)
 - [.NET Framework 4.6.2](#v462)
-- [.NET Framework 4.6。1](#v461)
+- [.NET Framework 4.6.1](#v461)
 - [.NET 2015 與 .NET Framework 4.6](#v46)
 - [.NET Framework 4.5.2](#v452)
-- [.NET Framework 4.5。1](#v451)
+- [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
 此文章並不會提供每一個新功能的完整資料，且內容可能會隨時變更。 如需 .NET Framework 的一般資訊，請參閱 [消費者入門](../get-started/index.md)。 若要了解支援的平台，請參閱[系統需求](../get-started/system-requirements.md)。 如需下載連結和安裝指示，請參閱[安裝指南](../install/guide-for-developers.md)。
@@ -71,7 +71,7 @@ ms.locfileid: "94557242"
 
 #### <a name="base-classes"></a>基底類別
 
-**降低對密碼編譯的 FIPS 影響** 。 在舊版 .NET Framework 中，受管理的密碼編譯提供者類別（例如在「 <xref:System.Security.Cryptography.SHA256Managed> <xref:System.Security.Cryptography.CryptographicException> FIPS 模式」中設定系統密碼編譯程式庫時，會擲回）。 擲回這些例外狀況的原因是受控密碼編譯提供者類別版本不像系統密碼編譯程式庫一樣已通過 FIPS (聯邦資訊處理標準) 140-2 認證。 因為一些提供者將其開發機器設定為 FIPS 模式，在生產系統中通常會擲回該例外狀況。
+**降低對密碼編譯的 FIPS 影響**。 在舊版 .NET Framework 中，受管理的密碼編譯提供者類別（例如在「 <xref:System.Security.Cryptography.SHA256Managed> <xref:System.Security.Cryptography.CryptographicException> FIPS 模式」中設定系統密碼編譯程式庫時，會擲回）。 擲回這些例外狀況的原因是受控密碼編譯提供者類別版本不像系統密碼編譯程式庫一樣已通過 FIPS (聯邦資訊處理標準) 140-2 認證。 因為一些提供者將其開發機器設定為 FIPS 模式，在生產系統中通常會擲回該例外狀況。
 
 根據預設，在以 .NET Framework 4.8 為目標的應用程式中，下列受控密碼編譯類別在此案例中已不會再擲回 a <xref:System.Security.Cryptography.CryptographicException>：
 
@@ -190,11 +190,11 @@ ms.locfileid: "94557242"
 
 .NET Framework 4.8 中的執行階段包括下列變更與改良功能：
 
-**JIT 編譯器的改良功能** 。 .NET Framework 4.8 中的 Just-In-Time (JIT) 編譯器是以 .NET Core 2.1 中的 JIT 編譯器為基礎。 .NET Framework 4.8 JIT 編譯器中包括對 .NET Core 2.1 JIT 編譯器進行的許多最佳化與所有錯誤 (Bug) 修正。
+**JIT 編譯器的改良功能**。 .NET Framework 4.8 中的 Just-In-Time (JIT) 編譯器是以 .NET Core 2.1 中的 JIT 編譯器為基礎。 .NET Framework 4.8 JIT 編譯器中包括對 .NET Core 2.1 JIT 編譯器進行的許多最佳化與所有錯誤 (Bug) 修正。
 
-**NGEN 改良功能** 。 執行階段已針對 [Native Image Generator](../tools/ngen-exe-native-image-generator.md) (NGEN) 映像改良其記憶體管理，以便從 NGEN 映像對應的資料不會常駐在記憶體中。 這有效減少受攻擊面，以防止攻擊者嘗試透過修正將執行的記憶體來執行任意程式碼。
+**NGEN 改良功能**。 執行階段已針對 [Native Image Generator](../tools/ngen-exe-native-image-generator.md) (NGEN) 映像改良其記憶體管理，以便從 NGEN 映像對應的資料不會常駐在記憶體中。 這有效減少受攻擊面，以防止攻擊者嘗試透過修正將執行的記憶體來執行任意程式碼。
 
-**所有組件的反惡意程式碼軟體掃描** 。 在舊版 .NET Framework 中，執行時間會使用 Windows Defender 或協力廠商反惡意程式碼軟體來掃描從磁片載入的所有元件。 不過，不會掃描從其他來源 (例如透過 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 方法) 載入的組件，因此這些組件可能包含未經偵測的惡意程式碼。 從在 Windows 10 上執行的 .NET Framework 4.8 開始，執行階段會觸發由實作[反惡意程式碼掃描介面 (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) 之反惡意程式碼解決方案進行的掃描。
+**所有組件的反惡意程式碼軟體掃描**。 在舊版 .NET Framework 中，執行時間會使用 Windows Defender 或協力廠商反惡意程式碼軟體來掃描從磁片載入的所有元件。 不過，不會掃描從其他來源 (例如透過 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 方法) 載入的組件，因此這些組件可能包含未經偵測的惡意程式碼。 從在 Windows 10 上執行的 .NET Framework 4.8 開始，執行階段會觸發由實作[反惡意程式碼掃描介面 (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) 之反惡意程式碼解決方案進行的掃描。
 
 <a name="v472"></a>
 
@@ -720,11 +720,11 @@ _ *物件* 快取擴充性*
 
 從 .NET Framework 4.7 開始，ASP.NET 加入一組新的 API 讓開發人員取代預設的 ASP.NET 實作以快取記憶體內部物件和監視記憶體。 如果 ASP.NET 實作不適用，開發人員現在可以取代下列三個元件當中的任何一個元件︰
 
-- **物件快取存放區** 。 開發人員可以使用新的 **ICacheStoreProvider** 介面，透過新的快取提供者組態區段，為 ASP.NET 應用程式插入新的物件快取實作。
+- **物件快取存放區**。 開發人員可以使用新的 **ICacheStoreProvider** 介面，透過新的快取提供者組態區段，為 ASP.NET 應用程式插入新的物件快取實作。
 
-- **記憶體監視** 。 ASP.NET 中的預設記憶體監視器會在應用程式執行到接近針對處理序所設定的私用位元組上限時，或在電腦可用的總實體 RAM 不足時，通知應用程式。 接近這些限制時，就會引發通知。 對於某些應用程式，通知在太接近設定的限制時才引發，將無法提供有用的反應。 開發人員現在可以使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 屬性來撰寫自己的記憶體監視器，以取代預設的監視器。
+- **記憶體監視**。 ASP.NET 中的預設記憶體監視器會在應用程式執行到接近針對處理序所設定的私用位元組上限時，或在電腦可用的總實體 RAM 不足時，通知應用程式。 接近這些限制時，就會引發通知。 對於某些應用程式，通知在太接近設定的限制時才引發，將無法提供有用的反應。 開發人員現在可以使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 屬性來撰寫自己的記憶體監視器，以取代預設的監視器。
 
-- **記憶體限制反應** 。 ASP.NET 預設會在快達到私用位元組處理限制時，嘗試修剪物件快取並定期呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType>。 就某些應用程式而言，呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 的頻率或所修剪的快取量會沒有效率。 開發人員現在可以向應用程式的記憶體監視器訂閱 **IObserver** 實作來取代或補充預設行為。
+- **記憶體限制反應**。 ASP.NET 預設會在快達到私用位元組處理限制時，嘗試修剪物件快取並定期呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType>。 就某些應用程式而言，呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 的頻率或所修剪的快取量會沒有效率。 開發人員現在可以向應用程式的記憶體監視器訂閱 **IObserver** 實作來取代或補充預設行為。
 
 <a name="wcf47"></a>
 
@@ -1585,9 +1585,9 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
     使用一致的參數格式很有幫助，因為它們是程式庫公開的正式合約。 以下是兩種明顯的格式。
 
-    - *參數*. *命名空間*. *參數名稱*
+    - *參數*.*命名空間*.*參數名稱*
 
-    - *參數*. *程式庫*. *參數名稱*
+    - *參數*.*程式庫*.*參數名稱*
 
   - **以工作為基礎的非同步模式 (TAP) 的變更**
 
@@ -1623,7 +1623,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
   - **HDPI 改進**
 
-    WPF 中的 HDPI 支援現在更適合 .NET Framework 4.6。 已變更版面配置進位，以減少含邊界之控制項中的裁剪執行個體。 根據預設，這項功能只有當您將<xref:System.Runtime.Versioning.TargetFrameworkAttribute> 設為 .NET 4.6 時才會啟用。  以舊版 framework 為目標但在 .NET Framework 4.6 上執行的應用程式，可以藉由將下列這一行新增至 app.config 檔的區段，以加入宣告新的行為 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) ：
+    WPF 中的 HDPI 支援現在更適合 .NET Framework 4.6。 已變更版面配置進位，以減少含邊界之控制項中的裁剪執行個體。 依預設，只有當您 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 的設定為 .NET Framework 4.6 時，才會啟用這項功能。  以舊版 framework 為目標但在 .NET Framework 4.6 上執行的應用程式，可以藉由將下列這一行新增至 app.config 檔的區段，以加入宣告新的行為 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) ：
 
     ```xml
     <AppContextSwitchOverrides
@@ -1843,7 +1843,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
 ## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1 中的新功能
 
-**2014 年 4 月更新** ：
+**2014 年 4 月更新**：
 
 - [Visual Studio 2013 Update 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) 包含可攜式類別庫範本的更新，以便針對下列情況提供支援：
 
@@ -1967,7 +1967,7 @@ Managed 特性指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組
 
 ### <a name="parallel-computing"></a>平行運算
 
-.NET Framework 4.5 針對平行計算提供了數個新功能和增強功能。 這些功能包括提升效能、增強控制、改善非同步程式設計的支援、全新的資料流程程式庫，以及改善平行偵錯與效能分析的支援。 請參閱使用 .NET blog 進行平行程式設計時，.NET 4.5 中平行處理原則的 [新功能](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) 。
+.NET Framework 4.5 針對平行計算提供了數個新功能和增強功能。 這些功能包括提升效能、增強控制、改善非同步程式設計的支援、全新的資料流程程式庫，以及改善平行偵錯與效能分析的支援。 請參閱使用 .NET blog 進行平行程式設計中， [.NET Framework 4.5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) 中的平行處理原則的新專案。
 
 <a name="web"></a>
 

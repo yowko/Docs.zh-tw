@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02bc53676dd5afb0222a1ea366a8f2bd1f94f62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446978"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705224"
 ---
 # <a name="importfile2-method"></a>ImportFile2 方法
-匯入元件和解除系結模組。 這個方法就像[ImportFile 方法](importfile-method.md)，但即使匯入的檔案不存在於磁片上，也會運作。  
+
+匯入元件和未系結的模組。 此方法就像 [ImportFile 方法](importfile-method.md)，但即使正在匯入的檔案不存在於磁片上也一樣。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,14 +40,15 @@ HRESULT ImportFile2(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pszFilename`  
- 要匯入之檔案的名稱。  
+ 要匯入的檔案名。  
   
  `pszTargetName`  
- 選擇性的輸出檔案名，可以在檔案連結至元件時用來重新命名檔案。  
+ 選擇性的輸出檔案名，可在檔案連結至元件時用來重新命名檔案。  
   
  `pAssemblyScopeIn`  
- 選擇性範圍[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。  
+ 選擇性範圍 [IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md) 介面。  
   
  `fSmartImport`  
  若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。  
@@ -55,15 +57,17 @@ HRESULT ImportFile2(
  接收檔案或元件的識別碼。  
   
  `ppAssemblyScope`  
- 接收[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。 如果檔案不是元件，則為 Null。  
+ 接收 [IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md) 介面。 如果檔案不是元件，則為 Null。  
   
  `pdwCountOfScopes`  
- 接收已匯入的檔案和/或範圍的。  
+ 接收到已匯入的檔案和/或範圍。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
+
  需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
