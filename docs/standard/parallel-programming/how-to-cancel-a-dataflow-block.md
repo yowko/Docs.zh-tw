@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825854"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713349"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>作法：取消資料流程區塊
+
 本文件示範如何在您的應用程式中啟用取消作業。 此範例會使用 Windows Forms 來顯示工作項目在資料流程管線中的作用位置，以及取消作業的效果。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,6 +35,7 @@ ms.locfileid: "94825854"
 5. 將四個 <xref:System.Windows.Forms.ToolStripProgressBar> 物件加入 <xref:System.Windows.Forms.ToolStrip> 控制項。  
   
 ## <a name="creating-the-dataflow-pipeline"></a>建立資料流程管線  
+
  本節說明如何建立資料流程管線，以處理工作項目並更新進度列。  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>建立資料流程管線  
@@ -65,6 +67,7 @@ ms.locfileid: "94825854"
  此範例在它建構管線成員時會設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性。 因為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性會永久取消資料流程區塊執行，所以必須在使用者取消此作業，而後想要將更多工作項目新增至管線之後，重新建立整個管線。 如需示範取消資料流程區塊的替代方式，以便在取消作業後執行其他工作的範例，請參閱[逐步解說︰在 Windows Forms 應用程式中使用資料流程](walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>將資料流程管線連接至使用者介面  
+
  本節說明如何將資料流程管線連接至使用者介面。 建立管線以及將工作項目新增至管線都是由 [新增工作項目] 按鈕的事件處理常式所控制。 取消作業是由 [取消] 按鈕所起始。 當使用者按一下任一個按鈕時，會以非同步方式起始適當的動作。  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>將資料流程管線連接至使用者介面  
@@ -84,6 +87,7 @@ ms.locfileid: "94825854"
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>範例  
+
  下列範例顯示 Form1.cs (在 Visual Basic 中為 Form1.vb) 的完整程式碼。  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]
@@ -93,6 +97,6 @@ ms.locfileid: "94825854"
   
  ![Windows Form 應用程式](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

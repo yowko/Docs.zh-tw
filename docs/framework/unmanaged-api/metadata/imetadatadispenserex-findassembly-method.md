@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-ms.openlocfilehash: 50aebb09924b93a622e5b7d84e65e41ee91f6018
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c11a4498610c3e82590a0ff9be1247173e70be76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006190"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713388"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly 方法
-這個方法尚未實作。 如果呼叫，它會傳回 E_NOTIMPL。  
+
+這個方法尚未實作。 如果呼叫，則會傳回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,6 +41,7 @@ HRESULT FindAssembly(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `szAppBase`  
  在未使用。  
   
@@ -53,20 +55,21 @@ HRESULT FindAssembly(
  在要尋找的元件。  
   
  `szName`  
- 脫銷元件的簡單名稱。  
+ 擴展元件的簡單名稱。  
   
  `cchName`  
  在的大小（以位元組為單位） `szName` 。  
   
  `pcName`  
- 脫銷中實際傳回的字元數 `szName` 。  
+ 擴展實際傳回的字元數 `szName` 。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平臺：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

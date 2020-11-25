@@ -1,19 +1,19 @@
 ---
-title: Visual Basic 的重大變更
-description: 列出 Visual Basic 與 .NET Core 搭配使用的重大變更。
+title: Visual Basic 重大變更
+description: 列出與 .NET Core 3.0 搭配使用 Visual Basic 中的重大變更。
 ms.date: 09/20/2019
-ms.openlocfilehash: f6dd25586b9da173a4809cd4721bf2a39c9e0401
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: b814edbf3a3a58d37b0a2b66a0e1c4f680f14b57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555901"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713141"
 ---
-# <a name="visual-basic-breaking-changes"></a>Visual Basic 的重大變更
+# <a name="visual-basic-breaking-changes-in-net-core-30"></a>.NET Core 3.0 中的 Visual Basic 重大變更
 
 以下是 Visual Basic 中的重大變更清單：
 
-- [VbNewLine 已過時。](#microsoftvisualbasicconstantsvbnewline-is-obsolete)
+- [VbNewLine 已被淘汰](#microsoftvisualbasicconstantsvbnewline-is-obsolete)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

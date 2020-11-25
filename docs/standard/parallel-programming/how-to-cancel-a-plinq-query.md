@@ -8,14 +8,15 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: ea30cafc998b8691321bf5e2b9b4bcc897878200
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f8ca723ca3b9b9428c95651ebe2fa7d92e48ebbb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713284"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>作法：取消 PLINQ 查詢
+
 下列範例說明取消 PLINQ 查詢的兩種方式。 第一個範例示範如何取消大部分由資料周遊所組成的查詢。 第二個範例示範如何取消包含需要大量計算之使用者函式的查詢。
 
 > [!NOTE]
@@ -49,7 +50,7 @@ PLINQ 架構不會將單一 <xref:System.OperationCanceledException> 累計到 <
 
 當處置列舉值時（例如，當程式碼針對每個在反覆運算查詢結果的 Visual Basic) 迴圈中）中斷 foreach (時，會取消查詢，但不會擲回例外狀況。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

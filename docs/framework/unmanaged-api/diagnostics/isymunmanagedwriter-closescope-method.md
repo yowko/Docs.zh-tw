@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dade525-7770-4cb4-bafd-4bb995ad0d87
 topic_type:
 - apiref
-ms.openlocfilehash: e2e911fb1d737ebb6b2106c89ac11335788ace4f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 561a6348b9976789b02961fadb37d9127f5a6a13
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713037"
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>ISymUnmanagedWriter::CloseScope 方法
+
 關閉目前的語彙範圍。  
   
 ## <a name="syntax"></a>語法  
@@ -33,19 +34,23 @@ HRESULT CloseScope(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `endOffset`  
- 在在詞法範圍中最後一個指令的結尾處，點開頭的位移（以位元組為單位）。  
+ 在從詞法範圍中最後一個指令結尾的點方法開頭的位移（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="remarks"></a>備註  
- 關閉範圍之後，就無法在其中定義更多變數。  
+
+ 一旦關閉範圍，就不能在其中定義任何變數。  
   
- [ISymUnmanagedWriter：： OpenScope](isymunmanagedwriter-openscope-method.md)會傳回不透明的範圍識別碼，可與[ISymUnmanagedWriter：： SetScopeRange](isymunmanagedwriter-setscoperange-method.md)搭配使用，稍後定義範圍的開始和結束位移。 在這種情況下，傳遞到 `ISymUnmanagedWriter::OpenScope` 和 `ISymUnmanagedWriter::CloseScope` 的位移會被忽略。 範圍識別碼只在目前的方法中有效。  
+ [ISymUnmanagedWriter：： OpenScope](isymunmanagedwriter-openscope-method.md) 會傳回不透明的範圍識別碼，這個識別碼可以搭配 [ISymUnmanagedWriter：： SetScopeRange](isymunmanagedwriter-setscoperange-method.md) 使用，以便於稍後定義範圍的起始和結束位移。 在這種情況下，傳遞到 `ISymUnmanagedWriter::OpenScope` 和 `ISymUnmanagedWriter::CloseScope` 的位移會被忽略。 範圍識別碼只有在目前方法中才有效。  
   
-## <a name="requirements"></a>規格需求  
- **標頭：** CorSym .idl，CorSym。h  
+## <a name="requirements"></a>需求  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
