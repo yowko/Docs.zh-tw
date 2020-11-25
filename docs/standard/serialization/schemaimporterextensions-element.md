@@ -7,18 +7,18 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 35626618a8dd7c63a7008d10bc3568484836a488
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 6b644ed1112b748be4dd301d6fa6f2a6416dc67e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722137"
 ---
-# <a name="schemaimporterextensions-element"></a><span data-ttu-id="72821-103">\<schemaImporterExtensions> 項目</span><span class="sxs-lookup"><span data-stu-id="72821-103">\<schemaImporterExtensions> element</span></span>
+# <a name="schemaimporterextensions-element"></a><span data-ttu-id="266e1-103">\<schemaImporterExtensions> 項目</span><span class="sxs-lookup"><span data-stu-id="266e1-103">\<schemaImporterExtensions> element</span></span>
 
-<span data-ttu-id="72821-104">包含用來將 <xref:System.Xml.Serialization.XmlSchemaImporter> XSD 類型對應至 .net 類型的類型。</span><span class="sxs-lookup"><span data-stu-id="72821-104">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET types.</span></span> <span data-ttu-id="72821-105">如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../framework/configure-apps/file-schema/index.md)。</span><span class="sxs-lookup"><span data-stu-id="72821-105">For more information about configuration files, see [Configuration File Schema](../../framework/configure-apps/file-schema/index.md).</span></span>  
+<span data-ttu-id="266e1-104">包含用來將 <xref:System.Xml.Serialization.XmlSchemaImporter> XSD 類型對應至 .net 類型的類型。</span><span class="sxs-lookup"><span data-stu-id="266e1-104">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET types.</span></span> <span data-ttu-id="266e1-105">如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../framework/configure-apps/file-schema/index.md)。</span><span class="sxs-lookup"><span data-stu-id="266e1-105">For more information about configuration files, see [Configuration File Schema](../../framework/configure-apps/file-schema/index.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72821-106">語法</span><span class="sxs-lookup"><span data-stu-id="72821-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="266e1-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="266e1-106">Syntax</span></span>  
   
 ```xml  
 <schemaImporterExtensions>  
@@ -26,20 +26,21 @@ ms.locfileid: "93282272"
 </schemaImporterExtensions>  
 ```  
   
-## <a name="child-elements"></a><span data-ttu-id="72821-107">子元素</span><span class="sxs-lookup"><span data-stu-id="72821-107">Child Elements</span></span>  
+## <a name="child-elements"></a><span data-ttu-id="266e1-107">子元素</span><span class="sxs-lookup"><span data-stu-id="266e1-107">Child Elements</span></span>  
   
-|<span data-ttu-id="72821-108">項目</span><span class="sxs-lookup"><span data-stu-id="72821-108">Element</span></span>|<span data-ttu-id="72821-109">描述</span><span class="sxs-lookup"><span data-stu-id="72821-109">Description</span></span>|  
+|<span data-ttu-id="266e1-108">元素</span><span class="sxs-lookup"><span data-stu-id="266e1-108">Element</span></span>|<span data-ttu-id="266e1-109">描述</span><span class="sxs-lookup"><span data-stu-id="266e1-109">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="72821-110">\<add> 的元素 \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="72821-110">\<add> Element for \<schemaImporterExtensions></span></span>](add-element-for-schemaimporterextensions.md)|<span data-ttu-id="72821-111">新增 <xref:System.Xml.Serialization.XmlSchemaImporter> 所使用的類型來建立對應。</span><span class="sxs-lookup"><span data-stu-id="72821-111">Adds types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> to create mappings.</span></span>|  
+|[<span data-ttu-id="266e1-110">\<add> 的元素 \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="266e1-110">\<add> Element for \<schemaImporterExtensions></span></span>](add-element-for-schemaimporterextensions.md)|<span data-ttu-id="266e1-111">新增 <xref:System.Xml.Serialization.XmlSchemaImporter> 所使用的類型來建立對應。</span><span class="sxs-lookup"><span data-stu-id="266e1-111">Adds types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> to create mappings.</span></span>|  
   
-## <a name="parent-elements"></a><span data-ttu-id="72821-112">父項目</span><span class="sxs-lookup"><span data-stu-id="72821-112">Parent Elements</span></span>  
+## <a name="parent-elements"></a><span data-ttu-id="266e1-112">父項目</span><span class="sxs-lookup"><span data-stu-id="266e1-112">Parent Elements</span></span>  
   
-|<span data-ttu-id="72821-113">項目</span><span class="sxs-lookup"><span data-stu-id="72821-113">Element</span></span>|<span data-ttu-id="72821-114">描述</span><span class="sxs-lookup"><span data-stu-id="72821-114">Description</span></span>|  
+|<span data-ttu-id="266e1-113">元素</span><span class="sxs-lookup"><span data-stu-id="266e1-113">Element</span></span>|<span data-ttu-id="266e1-114">描述</span><span class="sxs-lookup"><span data-stu-id="266e1-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="72821-115">\<system.xml.serialization> 元素</span><span class="sxs-lookup"><span data-stu-id="72821-115">\<system.xml.serialization> Element</span></span>](system-xml-serialization-element.md)|<span data-ttu-id="72821-116">用來控制 XML 序列化的最上層項目。</span><span class="sxs-lookup"><span data-stu-id="72821-116">The top-level element for controlling XML serialization.</span></span>|  
+|[<span data-ttu-id="266e1-115">\<system.xml.serialization> 元素</span><span class="sxs-lookup"><span data-stu-id="266e1-115">\<system.xml.serialization> Element</span></span>](system-xml-serialization-element.md)|<span data-ttu-id="266e1-116">用來控制 XML 序列化的最上層項目。</span><span class="sxs-lookup"><span data-stu-id="266e1-116">The top-level element for controlling XML serialization.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="72821-117">範例</span><span class="sxs-lookup"><span data-stu-id="72821-117">Example</span></span>  
- <span data-ttu-id="72821-118">下列程式碼範例說明如何 <xref:System.Xml.Serialization.XmlSchemaImporter> 在將 XSD 類型對應至 .net 類型時，加入所使用的類型。</span><span class="sxs-lookup"><span data-stu-id="72821-118">The following code example illustrates how to add types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET types.</span></span>  
+## <a name="example"></a><span data-ttu-id="266e1-117">範例</span><span class="sxs-lookup"><span data-stu-id="266e1-117">Example</span></span>  
+
+ <span data-ttu-id="266e1-118">下列程式碼範例說明如何 <xref:System.Xml.Serialization.XmlSchemaImporter> 在將 XSD 類型對應至 .net 類型時，加入所使用的類型。</span><span class="sxs-lookup"><span data-stu-id="266e1-118">The following code example illustrates how to add types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET types.</span></span>  
   
 ```xml  
 <system.xml.serialization>  
@@ -52,11 +53,11 @@ ms.locfileid: "93282272"
 </system.xml.serialization>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72821-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72821-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="266e1-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="266e1-119">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [<span data-ttu-id="72821-120">設定檔架構</span><span class="sxs-lookup"><span data-stu-id="72821-120">Configuration File Schema</span></span>](../../framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="72821-121">\<dateTimeSerialization> 元素</span><span class="sxs-lookup"><span data-stu-id="72821-121">\<dateTimeSerialization> Element</span></span>](datetimeserialization-element.md)
-- [<span data-ttu-id="72821-122">\<add> 的元素 \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="72821-122">\<add> Element for \<schemaImporterExtensions></span></span>](add-element-for-schemaimporterextensions.md)
-- [<span data-ttu-id="72821-123">\<system.xml.serialization> 元素</span><span class="sxs-lookup"><span data-stu-id="72821-123">\<system.xml.serialization> Element</span></span>](system-xml-serialization-element.md)
+- [<span data-ttu-id="266e1-120">設定檔架構</span><span class="sxs-lookup"><span data-stu-id="266e1-120">Configuration File Schema</span></span>](../../framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="266e1-121">\<dateTimeSerialization> 元素</span><span class="sxs-lookup"><span data-stu-id="266e1-121">\<dateTimeSerialization> Element</span></span>](datetimeserialization-element.md)
+- [<span data-ttu-id="266e1-122">\<add> 的元素 \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="266e1-122">\<add> Element for \<schemaImporterExtensions></span></span>](add-element-for-schemaimporterextensions.md)
+- [<span data-ttu-id="266e1-123">\<system.xml.serialization> 元素</span><span class="sxs-lookup"><span data-stu-id="266e1-123">\<system.xml.serialization> Element</span></span>](system-xml-serialization-element.md)
