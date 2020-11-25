@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1eefd1ee5597ded269c56c05eec118b11294dd8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732130"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 列舉
-指示程式集的版本、生成、區域性、簽名等，其顯示名稱將由[IAssemblyname：getDisplayName](iassemblyname-getdisplayname-method.md)方法檢索。  
+
+指出 [IAssemblyName：： GetDisplayName](iassemblyname-getdisplayname-method.md) 方法將抓取其顯示名稱的元件版本、組建、文化特性、簽章等等。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,16 +51,18 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>備註  
- `ASM_DISPLAYF_FULL`反映對[IAssemblyName](iassemblyname-interface.md)物件版本所做的任何更改。 不要假定返回的值是不可變的。  
+
+ `ASM_DISPLAYF_FULL` 反映對 [IAssemblyName](iassemblyname-interface.md) 物件版本所做的任何變更。 請勿假設傳回的值是不可變的。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 融合.h  
+ **標頭：** 融合。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

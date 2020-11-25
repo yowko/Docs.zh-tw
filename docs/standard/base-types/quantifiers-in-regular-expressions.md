@@ -14,17 +14,18 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 46f780dff948d290ee7906f8de7e74b03a404cc5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75d37527507b596d6017171279e84b8348489831
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831035"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733577"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
+
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
   
-|Greedy (窮盡) 數量詞|Lazy (最少) 數量詞|說明|  
+|Greedy (窮盡) 數量詞|Lazy (最少) 數量詞|描述|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|比對零或多次。|  
 |`+`|`+?`|比對一或多次。|  
@@ -39,12 +40,14 @@ ms.locfileid: "94831035"
 > 巢狀數量詞 (如規則運算式模式 `(a*)*` 所做) 會增加規則運算式引擎必須執行的比較次數，如輸入字串中的字元數指數函數一樣。 如需此行為與其因應措施的詳細資訊，請參閱[回溯](backtracking-in-regular-expressions.md)。  
   
 ## <a name="regular-expression-quantifiers"></a>規則運算式量詞  
+
  下列章節會列出 .NET 規則運算式支援的數量詞。  
   
 > [!NOTE]
 > 如果規則運算式模式中同時出現 *、+、?、{ 和 } 字元，除非它們包含在[字元類別](character-classes-in-regular-expressions.md)中，否則，規則運算式引擎會將它們解譯為數量詞或數量詞建構的一部分。 若要在字元類別外將這些字元解譯為常值字元，您必須在它們前面加上反斜線以逸出字元。 例如，會將規則運算式模式中的字串 `\*` 解譯為常值星號 ("\*") 字元。  
   
 ### <a name="match-zero-or-more-times-"></a>比對零或多次：*  
+
  `*` 數量詞會比對前置元素零次或多次。 它相當於 `{0,}` 數量詞。 `*` 是 Greedy (窮盡) 數量詞，其 Lazy (最少) 對等項目是 `*?`。  
   
  下例會示範此規則運算式。 在輸入字串中的九個數字群組中，五個符合模式和四個 (`95` 、、 `929` `9219` 和) 不符合 `9919` 。  
@@ -62,6 +65,7 @@ ms.locfileid: "94831035"
 |`\b`|在字邊界結束。|  
   
 ### <a name="match-one-or-more-times-"></a>比對一或多次：+  
+
  `+` 數量詞會比對前置元素一或多次。 它相當於 `{1,}`。 `+` 是 Greedy (窮盡) 數量詞，其 Lazy (最少) 對等項目是 `+?`。  
   
  例如，規則運算式 `\ban+\w*?\b` 會嘗試比對以字母 `a` 開頭、接著一或多個字母 `n` 的單字。 下例會示範此規則運算式。 規則運算式會比對出單字 `an`、`annual`、`announcement` 和 `antique`，而不會比對出 `autumn` 和 `all`。  
@@ -79,6 +83,7 @@ ms.locfileid: "94831035"
 |`\b`|在字邊界結束。|  
   
 ### <a name="match-zero-or-one-time-"></a>比對零或一次：?  
+
  `?` 數量詞會比對前置元素零或一次。 它相當於 `{0,1}`。 `?` 是 Greedy (窮盡) 數量詞，其 Lazy (最少) 對等項目是 `??`。  
   
  例如，規則運算式 `\ban?\b` 會嘗試比對以字母 `a` 開頭、接著零或一個字母 `n` 的單字。 換言之，它會嘗試比對單字 `a` 和 `an`。 下例會示範此規則運算式。  
@@ -95,6 +100,7 @@ ms.locfileid: "94831035"
 |`\b`|在字邊界結束。|  
   
 ### <a name="match-exactly-n-times-n"></a>確實比對 n 次：{n}  
+
  `{` *N* `}` 數量詞會比對前置元素剛好 *n* 次，其中 *n* 是任何整數。 `{`*n* `}` 是延遲等同于 n 的貪婪數量詞 `{` *n* `}?` 。  
   
  例如，規則運算式 `\b\d+\,\d{3}\b` 會嘗試比對出字邊界、接著一或多個十進位數字、再接三個十進位數字、接著字邊界的項目。 下例會示範此規則運算式。  
@@ -113,6 +119,7 @@ ms.locfileid: "94831035"
 |`\b`|在字邊界結束。|  
   
 ### <a name="match-at-least-n-times-n"></a>至少比對 n 次：{n,}  
+
  `{` *N* `,}` 數量詞會比對前置元素至少 *n* 次，其中 *n* 是任何整數。 `{`*n* `,}` 是延遲等同于 n 的貪婪數量詞 `{` *n* `,}?` 。  
   
  例如，規則運算式 `\b\d{2,}\b\D+` 會嘗試比對出字邊界、接著至少兩個數字、再接字邊界、然後非數字字元的項目。 下例會示範此規則運算式。 此規則運算式無法比對出片語 `"7 days"`，因為它只包含一個十進位數字，但會成功比對出片語 `"10 weeks and 300 years"`。  
@@ -130,6 +137,7 @@ ms.locfileid: "94831035"
 |`\D+`|至少比對一個非十進位數字。|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>比對 n 到 m 次：{n,m}  
+
  `{` *N* `,` *m* `}` 數量詞會比對前置元素至少 *n* 次，但不超過 *m* 次，其中 *n* 和 *m* 是整數。 `{`*n* `,`*m* `}` 是一種貪婪的數量詞，其延遲等同于 `{` *n* `,` *m* `}?` 。  
   
  在下例中，規則運算式 `(00\s){2,4}` 會嘗試比對 2 至 4 次兩個數字零後接空格的項目。 請注意，輸入字串有此模式的最後部分出現了五次，而非上限四次。 但只有這個子字串的初始部分 (最多到空格和第五對零) 符合規則運算式模式。  
@@ -138,6 +146,7 @@ ms.locfileid: "94831035"
  [!code-vb[RegularExpressions.Quantifiers#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#6)]  
   
 ### <a name="match-zero-or-more-times-lazy-match-"></a>比對零或多次 (Lazy (忽略優先) 比對)：*?  
+
  `*?` 數量詞會比對前置元素零或多次，但次數越少越好。 它是 Greedy (窮盡) 數量詞 `*` 的對應 Lazy (最少)。  
   
  在下例中，規則運算式 `\b\w*?oo\w*?\b` 會比對包含字串 `oo` 的所有文字。  
@@ -156,6 +165,7 @@ ms.locfileid: "94831035"
 |`\b`|在字邊界結束。|  
   
 ### <a name="match-one-or-more-times-lazy-match-"></a>比對零或多次 (Lazy (忽略優先) 比對)：+?  
+
  `+?` 數量詞會比對前置元素一或多次，但次數越少越好。 它是 Greedy (窮盡) 數量詞 `+` 的對應 Lazy (最少)。  
   
  例如，規則運算式 `\b\w+?\b` 會比對一或多個以字邊界分隔的字元。 下例會示範此規則運算式。  
@@ -164,6 +174,7 @@ ms.locfileid: "94831035"
  [!code-vb[RegularExpressions.Quantifiers#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#8)]  
   
 ### <a name="match-zero-or-one-time-lazy-match-"></a>比對零或一次 (Lazy (忽略優先) 比對)：??  
+
  `??` 數量詞會比對前置元素零或一次，但次數越少越好。 它是 Greedy (窮盡) 數量詞 `?` 的對應 Lazy (最少)。  
   
  例如，規則運算式 `^\s*(System.)??Console.Write(Line)??\(??` 會嘗試比對字串 "Console.Write" 或 "Console.WriteLine"。 字串也可以在 "Console" 前包含 "System."， 後面也可以是左括號。 字串必須位在行的開頭，雖然前面可以是空格。 下例會示範此規則運算式。  
@@ -183,6 +194,7 @@ ms.locfileid: "94831035"
 |`\(??`|比對出現零或一次的左括號。|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>確實比對 n 次 (Lazy (忽略優先) 比對)：{n}?  
+
  `{` *N* `}?` 數量詞會精確地比對前置元素 `n` ，其中 *n* 是任何整數。 它是貪婪數量詞 n 的延遲對應項 `{` *n* `}` 。  
   
  下例會使用規則運算式 `\b(\w{3,}?\.){2}?\w{3,}?\b` 來識別網站位址。 請注意它會比對 "www.microsoft.com" 和 "msdn.microsoft.com"，但不比對 "mywebsite" 或 "mycompany.com"。  
@@ -200,11 +212,13 @@ ms.locfileid: "94831035"
 |`\b`|結束字邊界比對。|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>至少比對 n 次 (Lazy (忽略優先) 比對)：{n,}?  
+
  `{` *N* `,}?` 數量詞至少會比對前置元素 `n` ，其中 *n* 是任何整數，但次數越少越好。 它是貪婪數量詞 n 的延遲對應項 `{` *n* `,}` 。  
   
  如需詳細說明，請參閱 `{` *n* `}?` 上一節中 n 數量詞的範例。 該範例中的正則運算式會使用 `{` *n* `,}` 數量詞來比對至少有三個字元且後面接著句號的字串。  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>比對 n 到 m 次 (Lazy (忽略優先) 比對)：{n,m}?  
+
  `{` *N* `,` *m* `}?` 數量詞會比對前置元素 `n` 與 `m` 時間，其中 *n* 和 *m* 是整數，但次數愈少越好。 它是貪婪數量詞 `{` *n* `,` *m* 的延遲對應項 `}` 。  
   
  在下例中，規則運算式 `\b[A-Z](\w*?\s*?){1,10}[.!?]` 會比對包含一到十個單字的句子。 它會比對輸入字串中的所有句子，除了包含 18 個字的句子。  
@@ -223,7 +237,9 @@ ms.locfileid: "94831035"
 |`[.!?]`|比對任一標點符號字元 "."、"!" 或 "?"。|  
   
 <a name="Greedy"></a>
+
 ## <a name="greedy-and-lazy-quantifiers"></a>Greedy (匹配優先) 與 Lazy (忽略優先) 量詞  
+
  數個數量詞有兩種版本︰  
   
 - Greedy (窮盡) 版本。  
@@ -249,6 +265,7 @@ ms.locfileid: "94831035"
  在大部分情況下，有 Greedy (窮盡) 和 Lazy (最少) 數量詞的規則運算式會傳回相同的結果。 它們與萬用字元 (`.`) 中繼字元一起使用時最常傳回不同的結果，它會比對任何字元。  
   
 ## <a name="quantifiers-and-empty-matches"></a>量詞和空白比對  
+
  `*` `+` `{` *n* `,` *m* `}` 當找到最小的捕獲數目時，數量詞、和 n m 和其延遲的對應專案絕不會在空的相符專案之後重複。 當可能群組擷取的最大數目是無限或接近無限時，此規則可防止數量詞在碰到空白子運算式比對時進入無限迴圈。  
   
  例如，下列程式碼顯示以會比對零或一個 "a" 字元零或多次的規則運算式模式 `(a?)*` 呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法的結果。 請注意，單一擷取群組會擷取每個 "a" 以及 <xref:System.String.Empty?displayProperty=nameWithType>，但不會有第二個空白比對，因為第一個空白比對就會導致數量詞停止重複。  
@@ -269,7 +286,7 @@ ms.locfileid: "94831035"
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)
 - [回溯](backtracking-in-regular-expressions.md)

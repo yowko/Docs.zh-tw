@@ -8,26 +8,28 @@ api_location:
 api_type:
 - COM
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
-ms.openlocfilehash: fba57a88cd3af582b4edf0e5bdbf6ac48020c9f7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b3aed97e19694675fd5e0c1070dbbf6d9321eedd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733837"
 ---
 # <a name="icorprofilerinfo6-interface"></a>ICorProfilerInfo6 介面
+
 [在 .NET Framework 4.6 和更新版本中支援]  
   
- [ICorProfilerInfo5](icorprofilerinfo5-interface.md)的子類別，可為指定 NGen 模組中定義的所有方法提供列舉值，並內嵌指定的方法。  
+ [ICorProfilerInfo5](icorprofilerinfo5-interface.md)的子類別，提供指定之 NGen 模組中定義之所有方法的列舉值，並內嵌指定的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法](icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|針對屬於給定 NGen 模組並內嵌在指定方法主體中的所有方法，傳回列舉值。|  
+|[ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法](icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|針對屬於指定之 NGen 模組的所有方法，以及在指定方法主體內內嵌的所有方法，傳回列舉值。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

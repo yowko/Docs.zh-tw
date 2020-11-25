@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-ms.openlocfilehash: 1cb84b94b37a2e9e8dd4d20d09cbca82db290c0f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 561b4d68a574a2859286fb5f2e2d950518a9d29d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009443"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732771"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列舉
-包含描述元件執行時間功能的值。  
+
+包含值，這些值會描述元件的執行時間功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +39,25 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|指定匯出的類型定義在組成元件的檔案中是隱含的。 在 .NET Framework 版本1.0 和1.1 中，一律假設已設定此值。|  
-|`afImplicitResources`|指定資源定義在組成元件的檔案中是隱含的。 在 .NET Framework 1.0 和1.1 中，一律假設已設定此值。|  
-|`afNonSideBySideAppDomain`|指定如果元件在相同的應用程式域中執行，則無法與其他版本一起執行。|  
-|`afNonSideBySideProcess`|指定如果元件在相同的進程中執行，則無法與其他版本一起執行。|  
-|`afNonSideBySideMachine`|指定如果元件在同一部電腦上執行，則無法與其他版本一起執行。|  
+|`afImplicitExportedTypes`|指定匯出的型別定義在組成元件的檔案內是隱含的。 在 .NET Framework 1.0 和1.1 版中，一律會假設設定這個值。|  
+|`afImplicitResources`|指定資源定義在組成元件的檔案內是隱含的。 在 .NET Framework 1.0 和1.1 中，一律會假設設定這個值。|  
+|`afNonSideBySideAppDomain`|指定元件在相同的應用程式域中執行時，無法與其他版本一起執行。|  
+|`afNonSideBySideProcess`|指定當元件在相同的進程中執行時，無法與其他版本一起執行。|  
+|`afNonSideBySideMachine`|指定元件在同一部電腦上執行時，無法與其他版本一起執行。|  
   
 ## <a name="remarks"></a>備註  
- 0x0010 和0x0070 之間的值（含）是用來描述所參考元件的並存相容性功能。 如果未設定這些值，則會假設元件與並存相容。  
+
+ 0x0010 和0x0070 （含）之間的值是用來描述參考元件的並存相容性功能。 如果未設定這些值，則會假設元件並存相容。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

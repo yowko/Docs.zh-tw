@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493314"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733694"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 列舉
-包含值，表示由[ICLRTask](iclrtask-interface.md)或[IHostTask](ihosttask-interface.md)介面代表的工作類型。  
+
+包含值，這些值表示由 [ICLRTask](iclrtask-interface.md) 或 [IHostTask](ihosttask-interface.md) 介面表示的工作類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,26 +45,27 @@ typedef enum ETaskType {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|介面代表應用程式域卸載工作。|  
 |`TT_DEBUGGERHELPER`|介面代表偵錯工具 helper 工作。|  
 |`TT_FINALIZER`|介面代表完成項工作。|  
 |`TT_GC`|介面代表垃圾收集工作。|  
 |`TT_THREADPOOL_GATE`|介面代表閘道執行緒工作。|  
-|`TT_THREADPOOL_IOCOMPLETION`|介面代表 i/o 執行緒工作或完成通訊埠執行緒工作。|  
+|`TT_THREADPOOL_IOCOMPLETION`|介面代表 i/o 執行緒工作或完成埠執行緒工作。|  
 |`TT_THREADPOOL_TIMER`|介面代表計時器執行緒工作。|  
 |`TT_THREADPOOL_WAIT`|介面代表等候執行緒工作。|  
 |`TT_THREADPOOL_WORKER`|介面代表工作者執行緒工作。|  
-|`TT_UNKNOWN`|工作不明。|  
+|`TT_UNKNOWN`|工作未知。|  
 |`TT_USER`|介面代表使用者工作。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

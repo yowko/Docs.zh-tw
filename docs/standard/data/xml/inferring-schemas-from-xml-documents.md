@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 1f7b8c8b3cf51aa707a17b3a9e58c6a8c0d3d833
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4540e1706cbd3dad9490f100d7e8fa58e80a9206
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733434"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>從 XML 文件推斷結構描述
+
 本主題說明如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件結構推斷 XML 結構描述定義語言 (XSD) 結構描述。  
   
 ## <a name="the-schema-inference-process"></a>結構描述推斷程序  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 命名空間的 <xref:System.Xml.Schema?displayProperty=nameWithType> 類別，可用來從 XML 文件結構產生一或多個 XML 結構描述定義語言 (XSD) 結構描述。 產生的結構描述可用來驗證原始的 XML 文件。  
   
  由於 XML 文件是由 <xref:System.Xml.Schema.XmlSchemaInference> 類別所處理，因此 <xref:System.Xml.Schema.XmlSchemaInference> 類別會對可說明 XML 文件中之項目和屬性的結構描述元件進行假設。 <xref:System.Xml.Schema.XmlSchemaInference> 類別也可藉由推斷特定項目或屬性的最嚴格型別，以條件約束的方式推斷結構描述元件。 當收集到較多 XML 文件的相關資訊時，就會推斷較不嚴格的型別，而放寬這些條件約束。 `xs:string` 是推斷為最不嚴格的型別。  
@@ -34,6 +36,7 @@ ms.locfileid: "94830229"
  在上述範例中，`attribute1` 處理序發現 `6` 屬性的值為 <xref:System.Xml.Schema.XmlSchemaInference> 時，會假設此屬性的型別為 `xs:unsignedByte`。 `parent` 處理序發現第二個 <xref:System.Xml.Schema.XmlSchemaInference> 項目時，即會將型別修改為 `xs:string` 而放寬條件約束，因為 `attribute1` 屬性的值此時為 `A`。 同樣地，所有 `minOccurs` 項目中在結構描述內進行推斷的 `child` 屬性，也會放寬為 `minOccurs="0"`，因為第二個父項目沒有項目子系。  
   
 ## <a name="inferring-schemas-from-xml-documents"></a>從 XML 文件推斷結構描述  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 類別可使用兩種多載 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法，從 XML 文件推斷結構描述。  
   
  第一種 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> 方法可根據 XML 文件建立結構描述。 第二種 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> 方法用來推斷可說明多個 XML 文件的結構描述。 例如，您可以逐一將多個 XML 文件傳送給 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> 方法，以產生可說明完整 XML 文件集的結構描述。  
@@ -65,6 +68,7 @@ ms.locfileid: "94830229"
  [!code-xml[XmlSchemaInferenceExamples#16](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema2.xml#16)]  
   
 ## <a name="inline-schemas"></a>內嵌結構描述  
+
  如果在 <xref:System.Xml.Schema.XmlSchemaInference> 處理序期間發現內嵌 XML 結構描述定義語言 (XSD) 結構描述，則會擲回 <xref:System.Xml.Schema.XmlSchemaInferenceException>。 例如，下列內嵌結構描述會擲回 <xref:System.Xml.Schema.XmlSchemaInferenceException>。  
   
 ```xml  
@@ -77,9 +81,10 @@ ms.locfileid: "94830229"
 ```  
   
 ## <a name="schemas-that-cannot-be-refined"></a>無法進一步調整的結構描述  
+
  有些 W3C XML 結構描述建構在指定要調整的型別時會擲回例外狀況，則 XML 結構描述定義語言 (XSD) 結構描述 <xref:System.Xml.Schema.XmlSchemaInference> 處理序無法處理這類的結構描述。 最上層建構元不屬於序列的複雜型別即是一例。 在結構描述物件模型 (SOM) 中，它會對應至 <xref:System.Xml.Schema.XmlSchemaComplexType> 屬性不屬於 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 之執行個體的 <xref:System.Xml.Schema.XmlSchemaSequence>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)

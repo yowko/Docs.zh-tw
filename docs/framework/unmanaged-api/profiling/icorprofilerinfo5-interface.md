@@ -10,17 +10,18 @@ api_type:
 ms.assetid: 7bd48c34-37ed-4230-9eec-39a17280f05d
 topic_type:
 - apiref
-ms.openlocfilehash: 82f6262c2c576b49be4e7fcaa14043950df4c67a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a6206e35280e073df2abfb7ae46aa84d34b30208
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733798"
 ---
 # <a name="icorprofilerinfo5-interface"></a>ICorProfilerInfo5 介面
+
 [.NET Framework 4.5.2 與更新版本提供支援]  
   
- [ICorProfilerInfo4](icorprofilerinfo4-interface.md)的子類別，提供程式碼分析工具用來與 common language RUNTIME （CLR）通訊以控制事件監視的方法。  
+ [ICorProfilerInfo4](icorprofilerinfo4-interface.md)的子類別，可提供程式碼分析工具用來與 common language runtime 進行通訊的方法， (CLR) 來控制事件監視。  
   
 ## <a name="methods"></a>方法  
   
@@ -30,10 +31,12 @@ ms.locfileid: "84495623"
 |[SetEventMask2 方法](icorprofilerinfo5-seteventmask2-method.md)|設定一個值，以指定分析工具想要從 CLR 接收事件通知的事件類型。|  
   
 ## <a name="remarks"></a>備註  
- 此介面上可用的方法是用來取代[ICorProfilerInfo：： GetEventMask](icorprofilerinfo-geteventmask-method.md)和[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法。  
+
+ 此介面上可用的方法是用來取代 [ICorProfilerInfo：： GetEventMask](icorprofilerinfo-geteventmask-method.md) 和 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md) 方法。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

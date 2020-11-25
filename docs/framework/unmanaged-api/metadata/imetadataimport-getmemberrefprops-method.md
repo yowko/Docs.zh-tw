@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3237b67f8f711e9ef213d6fc66f1513c534fbdeb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733200"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 方法
+
 取得與指定語彙基元所參考成員相關聯的中繼資料。  
   
 ## <a name="syntax"></a>語法  
@@ -40,33 +41,35 @@ HRESULT GetMemberRefProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `mr`  
- 在要為其傳回相關聯中繼資料的 MemberRef token。  
+ 在要傳回相關聯中繼資料的 MemberRef 標記。  
   
  `ptk`  
- 脫銷TypeDef 或 TypeRef 或 TypeSpec token，代表宣告成員的類別，或是代表宣告成員之模組類別的 ModuleRef token，或代表該成員的 MethodDef。  
+ 擴展TypeDef 或 TypeRef 或 TypeSpec token，表示宣告成員的類別，或代表宣告成員之模組類別的 ModuleRef token，或代表成員的 MethodDef。  
   
  `szMember`  
- 脫銷成員名稱的字串緩衝區。  
+ 擴展成員名稱的字串緩衝區。  
   
  `cchMember`  
- 在所要求的大小（以寬字元為單位） `szMember` 。  
+ 在要求的大小（以寬字元為單位） `szMember` 。  
   
  `pchMember`  
- 脫銷傳回的大小（以寬字元為單位） `szMember` 。  
+ 擴展傳回的大小（以寬字元為單位） `szMember` 。  
   
  `ppvSibBlob`  
- 脫銷成員之二進位中繼資料簽章的指標。  
+ 擴展成員的二進位中繼資料簽章指標。  
   
  `pbSig`  
- 脫銷的大小（以位元組為單位） `ppvSigBlob` 。  
+ 擴展的大小（以位元組為單位） `ppvSigBlob` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

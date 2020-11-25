@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: b85a7893cf5271c65bc842bb6ea598c825225376
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b80de5e0e03f6b3a424ac59a099e361dd6c50c86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733811"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 方法
+
 將指定函式的所有執行個體還原成其原始版本。  
   
 ## <a name="syntax"></a>語法  
@@ -36,6 +37,7 @@ HRESULT RequestRevert (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cFunctions`  
  [in] 要還原的函式數目。  
   
@@ -49,19 +51,20 @@ HRESULT RequestRevert (
  [out] HRESULT 的陣列 (列於本主題稍後的＜狀態 HRESULT＞一節)。 每個 HRESULT 會指出嘗試還原平行陣列 `moduleIds` 和 `methodIds` 中所指定的每個函式是成功或失敗。  
   
 ## <a name="return-value"></a>傳回值  
+
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|嘗試還原所有要求；不過，必須檢查傳回的狀態陣列，以判斷哪些函式成功還原。|  
-|CORPROF_E_CALLBACK4_REQUIRED|分析工具必須執行[ICorProfilerCallback4](icorprofilercallback4-interface.md)介面，才能支援此呼叫。|  
-|CORPROF_E_REJIT_NOT_ENABLED|尚未啟用 JIT 重新編譯。 在初始化期間，您必須使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定旗標，以啟用 JIT 重新編譯 `COR_PRF_ENABLE_REJIT` 。|  
+|CORPROF_E_CALLBACK4_REQUIRED|分析工具必須執行 [ICorProfilerCallback4](icorprofilercallback4-interface.md) 介面，才能支援此呼叫。|  
+|CORPROF_E_REJIT_NOT_ENABLED|尚未啟用 JIT 重新編譯。 您必須在初始化期間啟用 JIT 重新編譯，方法是使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md) 方法來設定 `COR_PRF_ENABLE_REJIT` 旗標。|  
 |E_INVALIDARG|`cFunctions` 為 0，或者 `moduleIds` 或 `methodIds` 為 `NULL`。|  
 |E_OUTOFMEMORY|CLR 無法完成要求，因為記憶體不足。|  
   
 ## <a name="status-hresults"></a>狀態 HRESULT  
   
-|狀態陣列 HRESULT|說明|  
+|狀態陣列 HRESULT|描述|  
 |--------------------------|-----------------|  
 |S_OK|已成功還原對應的函式。|  
 |E_INVALIDARG|`moduleID` 或 `methodDef` 參數為 `NULL`。|  
@@ -71,10 +74,12 @@ HRESULT RequestRevert (
 |其他|作業系統會傳回在 CLR 的控制項外發生的失敗。 例如，如果變更記憶體分頁之存取保護的系統呼叫失敗，則會顯示作業系統錯誤。|  
   
 ## <a name="remarks"></a>備註  
+
  下次呼叫已還原的任何函式執行個體時，便會執行函式的原始版本。 如果函式已在執行中，則會結束執行正在執行的版本。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

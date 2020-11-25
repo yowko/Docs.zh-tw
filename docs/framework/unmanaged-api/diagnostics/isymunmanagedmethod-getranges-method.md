@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8ed492b573215736c82ab6c231cc5f2e188ea013
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615172"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732147"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 方法
-指定檔中的位置時，會傳回開始和結束位移組的陣列，其對應于此方法內的位置所涵蓋的 Microsoft 中繼語言（MSIL）範圍。 陣列是整數的陣列，其格式為 [開始]、[結束]、[開始]、[結束]。 範圍配對的數目是陣列的長度除以2。  
+
+在檔中指定位置時，會傳回一組開始和結束位移組的陣列，其對應至該位置在此方法內所涵蓋的 Microsoft 中繼語言 (MSIL) 範圍。 陣列是整數的陣列，其格式為 [start，end，start，end]。 範圍配對的數目是陣列的長度除以2。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,6 +40,7 @@ HRESULT GetRanges(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `document`  
  在要求位移的檔。  
   
@@ -52,16 +54,18 @@ HRESULT GetRanges(
  [in] `ranges` 陣列的大小。  
   
  `pcRanges`  
- 脫銷的指標 `ULONG32` ，接收包含範圍所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含範圍所需的緩衝區大小。  
   
  `ranges`  
- 脫銷接收範圍之緩衝區的指標。  
+ 擴展接收範圍之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

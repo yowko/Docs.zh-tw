@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1b992837bcb32537f24643ef4781b6d170a058d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831243"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733551"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
+
 集合類型是資料集合 (例如雜湊表、佇列、堆疊、封包、字典和清單) 最常見的一些呈現方式。  
   
  集合取決於 <xref:System.Collections.ICollection> 介面、<xref:System.Collections.IList> 介面、<xref:System.Collections.IDictionary> 介面或其泛型對應項目。 <xref:System.Collections.IList> 介面和 <xref:System.Collections.IDictionary> 介面都衍生自 <xref:System.Collections.ICollection> 介面；因此，所有集合都直接或間接地以 <xref:System.Collections.ICollection> 介面為依據。 在以介面為基礎的集合中 <xref:System.Collections.IList> (例如 <xref:System.Array> 、 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>) ，或直接在 <xref:System.Collections.ICollection> 介面上 (例如 <xref:System.Collections.Queue> 、 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 、 <xref:System.Collections.Stack> 、 <xref:System.Collections.Concurrent.ConcurrentStack%601> 或 <xref:System.Collections.Generic.LinkedList%601>) ，每個元素只包含一個值。 在依據 <xref:System.Collections.IDictionary> 介面的集合中 (例如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 類別、<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別)，或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別中，每個項目都包含索引鍵和值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 類別的獨特之處在於它是將索引鍵內嵌於值的值清單，因此它的行為類似於清單和字典。  
@@ -32,7 +33,7 @@ ms.locfileid: "94831243"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[集合和資料結構](index.md)|討論 .NET 中可用的各種集合類型，包括堆疊、佇列、清單、陣列和字典。|  
 |[Hashtable 和 Dictionary 集合類型](hashtable-and-dictionary-collection-types.md)|說明泛型和非泛型雜湊字典類型的功能。|  
@@ -40,6 +41,7 @@ ms.locfileid: "94831243"
 |[泛型](../generics/index.md)|描述泛型功能，包括 .NET 所提供的泛型集合、委派和介面。 提供 C#、Visual Basic 和 Visual C++ 功能說明文件的連結，以及支援技術 (例如反映) 的連結。|  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

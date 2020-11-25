@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f7aa9699e9929608c90020c6b2d66c301fc11955
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006024"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732706"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列舉
-提供值，以影響 `reloc` 呼叫[ICeeGen：： AddSectionReloc](iceegen-addsectionreloc-method.md)時所發出的指令類型。  
+
+提供值，以影響 `reloc` [ICeeGen：： AddSectionReloc](iceegen-addsectionreloc-method.md)呼叫中發出的指令類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,30 +51,31 @@ typedef enum  {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`srRelocAbsolute`|只產生區段相對，不傳送 `reloc` 任何內容到 reloc 區段。|  
-|`srRelocHighLow`|產生 `reloc` 指標大小位置的。 這會根據平臺轉換成 BASED_HIGHLOW 或 BASED_DIR64。|  
-|`srRelocHighAdj`|`reloc`為32位數位的前16位產生，其中的下16位會包含在 reloc 資料表的下一個單字中。|  
-|`srRelocMapToken`|會產生標記對應重新配置，而不傳送任何內容到 reloc 區段。|  
-|`srRelocRelative`|表示此值是相對位址修復。|  
-|`srRelocFilePos`|只產生區段相對，不傳送 `reloc` 任何內容到 reloc 區段。 這 `reloc` 是相對於區段的檔案位置，而不是區段的虛擬位址。|  
-|`srRelocCodeRelative`|指定程式碼相對位址修復。|  
-|`srRelocIA64Imm64`|`reloc`在 ia64 指示中產生64位位址的 `movl` 。|  
+|`srRelocAbsolute`|只產生區段相關，不傳送 `reloc` 任何內容至 reloc 區段。|  
+|`srRelocHighLow`|`reloc`針對指標大小位置產生。 這會轉換成 BASED_HIGHLOW 或 BASED_DIR64，視平臺而定。|  
+|`srRelocHighAdj`|`reloc`針對32位數位的前16位產生，其中的下16位會包含在 reloc 資料表的下一個單字中。|  
+|`srRelocMapToken`|產生權杖對應重新配置，將 nothing 傳送至 reloc 區段。|  
+|`srRelocRelative`|指出值是相對位址修復。|  
+|`srRelocFilePos`|只產生區段相關，不傳送 `reloc` 任何內容至 reloc 區段。 這 `reloc` 是相對於區段的檔案位置，而不是區段的虛擬位址。|  
+|`srRelocCodeRelative`|指定與程式碼相關的位址修復。|  
+|`srRelocIA64Imm64`|`reloc`針對 ia64 指令中的64位位址產生 `movl` 。|  
 |`srRelocDir64`|產生 `reloc` 64 位位址的。|  
-|`srRelocIA64PcRel25`|`reloc`在 ia64 指示中，為25位電腦的相對位址產生 `br.call` 。|  
-|`srRelocIA64PcRel64`|`reloc`在 ia64 指示中，產生64位電腦相對位址的 `brl.call` 。|  
-|`srRelocAbsoluteTagged`|產生與標記指標值相關的30位區段相對 `reloc` 。|  
-|`srRelocSentinel`|Sentinel 值，可協助確保此列舉的任何新增專案都會反映到內部 `reloc` 名稱陣列。|  
+|`srRelocIA64PcRel25`|`reloc`在 ia64 指令中為25位的電腦相對位址產生 `br.call` 。|  
+|`srRelocIA64PcRel64`|`reloc`針對 ia64 指令中的64位電腦相對位址產生 `brl.call` 。|  
+|`srRelocAbsoluteTagged`|產生與標記指標值相關的30位區段 `reloc` 。|  
+|`srRelocSentinel`|Sentinel 值，可協助確保此列舉的任何新增專案都會反映在內部 `reloc` 名稱陣列中。|  
 |`srNoBaseReloc`|指定不發出基底 `reloc` 。|  
-|`srRelocPtr`|值，表示記憶體的修復前內容是指標，而不是區段位移。|  
+|`srRelocPtr`|值，表示記憶體的預先修復內容是指標，而不是區段位移。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

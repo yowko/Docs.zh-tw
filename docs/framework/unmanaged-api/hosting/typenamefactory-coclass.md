@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-ms.openlocfilehash: 7245a4c222e2ad3ef1854f3c9e2d0abe37e0650a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 257761d32ff37782e01167bbbc9b12664a9d586d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009479"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732854"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory Coclass
-提供介面來管理類型名稱的解構。  
+
+提供介面來管理型別名稱的解構。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 coclass TypeNameFactory {  
@@ -39,11 +40,12 @@ coclass TypeNameFactory {
 |[ITypeNameFactory 介面](itypenamefactory-interface.md)|此介面支援 .NET Framework 結構而且並非設計直接從程式碼使用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll .idl  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733512"
 ---
 # <a name="collections-and-data-structures"></a>集合和資料結構
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823845"
 從 .NET Framework 4 開始，命名空間中的集合 <xref:System.Collections.Concurrent> 提供了有效率的安全線程作業，可從多個執行緒存取集合專案。 <xref:System.Collections.Immutable>命名空間 ([NuGet 套件](https://www.nuget.org/packages/System.Collections.Immutable)) 中的不可變集合類別，原本就是安全線程，因為作業是在原創組合的複本上執行，而且無法修改原創組合。
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>常見集合功能
 
 所有集合都會提供方法來加入、移除或尋找集合中的專案。 此外，直接或間接實作 <xref:System.Collections.ICollection> 介面或 <xref:System.Collections.Generic.ICollection%601> 介面的所有集合，都可共用這些功能：
@@ -57,6 +58,7 @@ ms.locfileid: "94823845"
     <xref:System.Collections> 命名空間中的非泛型集合類型，提供一些同步處理的執行緒安全性；通常會透過 <xref:System.Collections.ICollection.SyncRoot%2A> 和 <xref:System.Collections.ICollection.IsSynchronized%2A> 成員公開。 這些集合不是預設的安全執行緒。 如果您需要可調整且有效地以多執行緒存取集合，請使用 <xref:System.Collections.Concurrent> 命名空間中的其中一個類別，或考慮使用不可變的集合。 如需詳細資訊，請參閱[安全執行緒集合](thread-safe/index.md)。
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>選擇集合
 
 一般情況下，您應該使用泛型集合。 下表說明一些常見的集合案例，以及您可以為這些案例使用的集合類別。 如果您是泛型集合的新手，此表格可協助您選擇最適合您工作的泛型集合。
@@ -94,9 +96,10 @@ ms.locfileid: "94823845"
 此外， `SortedSet<T>` 的複雜性與相同 `ImmutableSortedSet<T>` 。 這是因為它們都使用二進位樹狀結構。 當然，主要的差異在於 `ImmutableSortedSet<T>` 使用不可變的二進位樹狀目錄。 因為 `ImmutableSortedSet<T>` 也提供可 <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> 允許變動的類別，所以您可以同時擁有永久性和效能。
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>相關主題
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[選取集合類別](selecting-a-collection-class.md)|說明不同的集合，並協助您選取用於您案例的集合。|
 |[常用的集合類型](commonly-used-collection-types.md)|說明常用的泛型與非泛型集合類型，例如 <xref:System.Array?displayProperty=nameWithType>、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。|
@@ -108,7 +111,9 @@ ms.locfileid: "94823845"
 |System.Collections.Immutable|介紹不可變的集合並提供集合類型的連結。|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>參考
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

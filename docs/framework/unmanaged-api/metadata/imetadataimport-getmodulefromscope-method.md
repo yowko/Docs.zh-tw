@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: add68d3f-45fd-4bef-af94-eb5273f26b11
 topic_type:
 - apiref
-ms.openlocfilehash: 4e2b2501b6b7117cefcfa43511ef20f25106bb42
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2eddd7a80c2b9c1b71f3e7fc5b1e4686ba11bccd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503578"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733161"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope 方法
+
 取得目前中繼資料範圍中所參考之模組的元資料標記。  
   
 ## <a name="syntax"></a>語法  
@@ -34,15 +35,17 @@ HRESULT GetModuleFromScope (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pmd`  
- 脫銷Token 的指標，代表目前中繼資料範圍中參考的模組。  
+ 擴展Token 的指標，代表目前中繼資料範圍中所參考的模組。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 60b7d77542a5065fb1e09a98e659cac17fb093e9
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 1b944034251b34350057866b2a52e63e934d72d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860849"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733343"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 函式
+
 從目標處理序中的 Common Language Runtime (CLR) 路徑來建立版本字串。  
   
 ## <a name="syntax"></a>語法  
@@ -40,6 +41,7 @@ HRESULT CreateVersionStringFromModule (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pidDebuggee`  
  [in] 已載入目標 CLR 之處理序的識別碼。  
   
@@ -56,6 +58,7 @@ HRESULT CreateVersionStringFromModule (
  [out] `pBuffer` 傳回之版本字串的長度。  
   
 ## <a name="return-value"></a>傳回值  
+
  S_OK  
  目標 CLR 的版本字串已成功傳回 `pBuffer` 中。  
   
@@ -72,15 +75,17 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` 未參考有效的處理序，或其他失敗。  
   
 ## <a name="remarks"></a>備註  
- 此函式可接受 `pidDebuggee` 識別的 CLR 處理序，以及 `szModuleName` 所指定的字串路徑。 版本字串傳回在 `pBuffer` 所指向的緩衝區中。 此字串對函式使用者是不透明的，也就是說，版本字串本身沒有內建意義。 它只會在此函式和[CreateDebuggingInterfaceFromVersion](createdebugginginterfacefromversion-function-for-silverlight.md)函式的內容中使用。  
+
+ 此函式可接受 `pidDebuggee` 識別的 CLR 處理序，以及 `szModuleName` 所指定的字串路徑。 版本字串傳回在 `pBuffer` 所指向的緩衝區中。 此字串對函式使用者是不透明的，也就是說，版本字串本身沒有內建意義。 它只會在此函式和 [CreateDebuggingInterfaceFromVersion](createdebugginginterfacefromversion-function-for-silverlight.md)函式的內容中使用。  
   
  應該要呼叫此函式兩次。 當您第一次呼叫此函式時，針對 `pBuffer` 和 `cchBuffer` 都傳遞 null。 當您這麼做時，`pBuffer` 所需的緩衝區大小將會傳回 `pdwLength` 中。 然後您可以呼叫此函式第二次，並且在 `pBuffer` 中傳遞緩衝區，在 `cchBuffer` 中傳遞其大小。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** dbgshim。h  
   
- 連結**庫：** dbgshim  
+ 連結 **庫：** dbgshim.dll  
   
  **.NET Framework 版本：** 3.5 SP1

@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5f9bc3034ec2ae77578db985240e586dd22bd69f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823390"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732199"
 ---
 # <a name="common-io-tasks"></a>一般 I/O 工作
+
 <xref:System.IO> 命名空間 (Namespace) 提供了幾個允許可在檔案、目錄和資料流上執行各種動作 (例如讀取和寫入) 的類別。 如需詳細資訊，請參閱檔案 [和資料流程 i/o](index.md)。  
   
 ## <a name="common-file-tasks"></a>一般檔案工作  
@@ -51,8 +52,8 @@ ms.locfileid: "94823390"
 |尋找目錄的大小|<xref:System.IO.Directory?displayProperty=nameWithType> 類別|  
 |判斷目錄是否存在|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> 方法|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [檔案和資料流 I/O](index.md)
+- [檔案和資料流程 i/o](index.md)
 - [撰寫資料流](composing-streams.md)
 - [非同步檔案 i/o](asynchronous-file-i-o.md)

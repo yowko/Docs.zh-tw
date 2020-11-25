@@ -3,14 +3,15 @@ title: XML 處理選項
 description: 檢查 XML 處理的選項，其中包括 LINQ to XML、XmlReader、XmlWriter、XslCompiledTransform、XPathNavigator、XmlLite 和 MSXML。
 ms.date: 03/30/2017
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-ms.openlocfilehash: a0b3c6295874e891c1271b373fb012b5f191bcfb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4388b815625a7ca4b26c35518fa4a58a97bc67d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829397"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733031"
 ---
 # <a name="xml-processing-options"></a>XML 處理選項
+
 請參閱下表，以取得您可以用來處理 XML 資料的 Microsoft 技術清單。  
   
 ## <a name="net-framework-options"></a>.NET Framework 選項  
@@ -31,7 +32,7 @@ ms.locfileid: "94829397"
 |[XmlLite](/previous-versions/windows/desktop/ms752872(v=vs.85))|-   一種快速、安全、非快取、順向的 XML 剖析器，可幫助您建置高效能的 XML 應用程式。<br />-   可搭配可使用動態連結程式庫 (DLL) 的任何語言一起使用；我們建議使用 C++。|  
 |[MSXML](/previous-versions/windows/desktop/ms763742(v=vs.85))|-   COM 架構的技術，用於處理 Windows 作業系統隨附的 XML。<br />-   提供 DOM 的原始實作 (包含對於 XPath 和 XSLT 的支援)。<br />-   包含 SAX2 事件架構剖析器。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 DOM 模型處理 XML 資料](process-xml-data-using-the-dom-model.md)
 - [使用 XPath 資料模型處理 XML 資料](process-xml-data-using-the-xpath-data-model.md)

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-ms.openlocfilehash: ee5dd611888ec52e360ef45fab4c01e9c5b2d6bb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 74256f35804ff59f04952a1ac20ac7866e8f5683
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009442"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732810"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 函式指標
-指向函式，該函式會通知主機等候控制碼（ <xref:System.Threading.WaitHandle> ）已發出信號或超時。  
+
+指向函式，該函式會通知主機等候控制碼 (<xref:System.Threading.WaitHandle>) 已發出信號或已超時。  
   
- 這個函式指標在 .NET Framework 4 中已被取代。  
+ 在 .NET Framework 4 中，此函式指標已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +37,24 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `lpParameter`  
- 在物件的指標，其中包含主機所定義的資訊。  
+ 在物件的指標，該物件包含主機所定義的資訊。  
   
  `TimerOrWaitFired`  
- [in] `true`如果等候控制碼超時，則為， `false` 如果已收到信號，則為。  
+ [in] `true` 如果等候控制碼超時，或 `false` 已收到信號。  
   
 ## <a name="remarks"></a>備註  
- 點的函式 `WAITORTIMERCALLBACK` 是回呼函式，必須由主控應用程式的寫入器來執行。  
+
+ 指向函式的函式 `WAITORTIMERCALLBACK` 是回呼函式，而且必須由主控應用程式的寫入器實作為。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscorwks.dll .dll  
+ 連結 **庫：** MSCorWks.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

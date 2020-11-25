@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-ms.openlocfilehash: 4bfad8b985a8ef059031464e99a8004842b276c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b0de5f9759491f1303edc978b1548e91214daf8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445581"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733746"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 方法
-指派元件層級的屬性。  
+
+指派元件層級屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +37,12 @@ HRESULT SetAssemblyProps(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `AssemblyID`  
  元件的識別碼。  
   
  `FileToken`  
- 定義屬性的檔案。 如果 `AssemblyID` 未指出未系結的 .netmodule，則可以是 Null。  
+ 定義屬性的檔案。 如果未指出未系結 `AssemblyID` 的 .netmodule，則可以是 Null。  
   
  `Option`  
  表示要修改的選項。  
@@ -49,12 +51,14 @@ HRESULT SetAssemblyProps(
  選項的新值。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
+
  需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

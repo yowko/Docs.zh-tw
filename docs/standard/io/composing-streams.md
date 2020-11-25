@@ -12,14 +12,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: c50a372ee3434fcd7f72ad707ca82c5c9ad8a5c8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d848a989378ed40df794554f3a0a9a7f135fbd4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732186"
 ---
 # <a name="compose-streams"></a>撰寫資料流
+
 *備份存放區* 是一種儲存媒體，例如磁片或記憶體。 每個不同的備份存放區都會實作自己的資料流，作為 <xref:System.IO.Stream> 類別的實作。
 
 每個資料流類型都會在其指定的備份存放區中讀取和寫入位元組。 連接至備份存放區的資料流程稱為「 *基底資料流程*」。 基底資料流具有建構函式，其中包含將資料流連線至備份存放區所需的參數。 例如，<xref:System.IO.FileStream> 的建構函式會指定路徑參數，此參數可指定處理程序共用檔案的方式。  
@@ -32,12 +33,14 @@ ms.locfileid: "94823377"
 >範例假設名為 *MyFile.txt* 的檔案已與應用程式存在於相同的資料夾中。  
 
 ## <a name="example-use-streamreader"></a>範例：使用 StreamReader
+
 下列範例會建立一個 <xref:System.IO.StreamReader> 來讀取 **FileStream** 中的字元，之後再傳遞至 **StreamReader** 作為其建構函式引數。 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> 接著會一直讀取，直到 <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> 找不到其他字元。  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
 ## <a name="example-use-binaryreader"></a>範例：使用 BinaryReader
+
 下列範例會建立一個 <xref:System.IO.BinaryReader> 來讀取 **FileStream** 中的位元組，之後再傳遞至 **BinaryReader** 作為其建構函式引數。 <xref:System.IO.BinaryReader.ReadByte%2A> 接著會一直讀取，直到 <xref:System.IO.BinaryReader.PeekChar%2A> 找不到其他位元組。  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

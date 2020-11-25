@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae224312d147f3ec68b75824d90e5df40d886e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733733"
 ---
 # <a name="task-based-asynchronous-pattern"></a>以工作為基礎的非同步模式
 
@@ -35,6 +35,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  如需說明 TAP 語法與舊有非同步程式設計模式 (例如非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)) 的語法之間差異的範例，請參閱[非同步程式設計模式](index.md)。  
   
 ## <a name="initiating-an-asynchronous-operation"></a>啟始非同步作業  
+
  以 TAP 為基礎的非同步方法可以先同步處理少量供作，例如驗證引數和啟始非同步作業，再傳回產生的工作。 同步工作量應盡量維持最少，這樣非同步方法才可以快速傳回。 快速退回的原因包括：  
   
 - 非同步方法可能是從使用者介面 (UI) 執行緒叫用，而任何長時間執行的同步工作都可能影響應用程式的回應。  
@@ -44,19 +45,23 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  在某些情況下，完成作業所需的工作量會比以非同步方式啟動作業所需的工作量還少。 若資料流中的讀取作業可以藉由已在記憶體中緩衝的資料獲得滿足，則從該資料流進行讀取就是這類情境的範例。 在這類情況下，作業會同步完成，而且可能會傳回已完成的工作。  
   
 ## <a name="exceptions"></a>例外狀況  
+
  非同步方法應只有在回應使用方式錯誤時，才引發從非同步方法呼叫擲回例外狀況。 使用方式錯誤一律不應發生在實際執行程式碼中。 例如，如果 `Nothing` 在 Visual Basic) 中傳遞 null 參考 (，因為其中一個方法的引數會導致 (通常以例外狀況) 表示的錯誤狀態 <xref:System.ArgumentNullException> ，所以您可以修改呼叫程式碼，以確保永遠不會傳遞 null 參考。 對於所有其他錯誤，非同步方法執行時發生的例外狀況應該指派給傳回的工作，即使非同步方法剛好在工作傳回前同步完成也一樣。 通常，工作最多只能包含一個例外狀況。 不過，如果工作表示多項作業 (例如 <xref:System.Threading.Tasks.Task.WhenAll%2A>)，則可能會有多個例外狀況與單一工作相關聯。  
   
 ## <a name="target-environment"></a>目標環境  
+
  當您實作 TAP 方法時，可以判斷非同步執行發生的位置。 您可以選擇線上程集區上執行工作負載、使用非同步 (i/o 來執行工作負載，而不需系結至大部分作業執行) 的執行緒、在特定 (執行緒上執行（例如 UI 執行緒) ），或使用任意數量的可能內容。 TAP 方法甚至可能沒有可執行的項目，而且可能只傳回 <xref:System.Threading.Tasks.Task>，指出系統中其他位置發生的情形 (例如，代表資料的工作抵達佇列的資料結構)。
 
  TAP 方法的呼叫端可能會透過同步等待產生的工作來阻止等待 TAP 方法完成，或是在非同步作業完成時執行其他 (接續) 程式碼。 接續程式碼 (Continuation Code) 的建立者可以控制執行程式碼的位置。 您可以明確建立接續程式碼、透過 <xref:System.Threading.Tasks.Task> 類別的方法建立 (例如 <xref:System.Threading.Tasks.Task.ContinueWith%2A>)，或使用建置於接續之上的語言支援以隱含方式建立 (例如 C# 中的 `await`、Visual Basic 中的 `Await`，或 F# 中的 `AwaitValue`)。  
   
 ## <a name="task-status"></a>工作狀態  
+
  <xref:System.Threading.Tasks.Task> 類別會提供非同步作業的生命週期，而該週期是以 <xref:System.Threading.Tasks.TaskStatus> 列舉表示。 為了支援從 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 衍生的類型隱密案例，以及支援分隔建構與排程，<xref:System.Threading.Tasks.Task> 類別會公開 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 由公用 <xref:System.Threading.Tasks.Task> 建構函式所建立的工作稱為「靜止工作」(Cold Task)，因為這類工作的生命週期是從非排程的 <xref:System.Threading.Tasks.TaskStatus.Created> 狀態開始，而且只有在這些執行個體上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 時才會排程。
 
  所有其他工作都是從作用狀態開始其生命週期，也就是說，它們所代表的非同步作業已啟始，而且其工作狀態是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的列舉值。 從 TAP 方法傳回的所有工作都必須為啟用狀態。 **如果分流方法在內部使用工作的函式，將要傳回的工作具現化，則在傳回 <xref:System.Threading.Tasks.Task.Start%2A> 物件之前，請先在物件上呼叫該方法 <xref:System.Threading.Tasks.Task> 。** TAP 方法的消費者可以安全地假設傳回的工作為作用中，並且不應嘗試在任何從 TAP 方法傳回的 <xref:System.Threading.Tasks.Task.Start%2A> 上呼叫 <xref:System.Threading.Tasks.Task>。 在作用中工作上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 會導致 <xref:System.InvalidOperationException> 例外狀況。  
   
 ## <a name="cancellation-optional"></a>取消 (選擇性)  
+
  在 TAP 中，取消對於非同步方法實作者和非同步方法消費者而言都是選擇性的。 如果作業允許取消，則會公開可接受取消語彙基元 (<xref:System.Threading.CancellationToken> 執行個體) 的非同步方法多載。 依照慣例，參數會命名為 `cancellationToken`。  
   
  [!code-csharp[Conceptual.TAP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#1)]
@@ -69,6 +74,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  若是想要公開取消的非同步方法，您不需要提供不接受解除標記的多載。 對於無法取消的方法，請不要提供接受取消語彙基元的多載，這樣有助於向呼叫端表明目標方法實際上是否可以取消。  不需要取消的消費者程式碼可以呼叫接受 <xref:System.Threading.CancellationToken> 的方法，並且提供 <xref:System.Threading.CancellationToken.None%2A> 做為引數值。 <xref:System.Threading.CancellationToken.None%2A> 在功能上相當於預設的 <xref:System.Threading.CancellationToken>。  
   
 ## <a name="progress-reporting-optional"></a>進度報告 (選擇性)  
+
  某些非同步作業會因為提供進度通知而受益，這些通知通常用來更新使用者介面並提供有關非同步作業進度的資訊。
 
  在 TAP 中，進度是透過 <xref:System.IProgress%601> 介面處理，並且做為通常名為 `progress` 的參數傳遞至非同步方法。  在呼叫非同步方法時提供進度介面，有助於排除不當使用所造成的競爭情形 (也就是說，事件處理常式在作業啟動後才註冊是不正確的，而這樣可能導致遺失更新)。  更重要的是，進度介面支援各種不同的進度實作，取決於使用的程式碼。  例如，使用的程式碼可能只在意最新的進度更新，或是想要緩衝所有更新，也可能想要對每一個更新叫用一個動作，或是想要控制是否要將引動過程封送處理置特定執行緒。 您可以使用不同的介面執行方式來達成這些選項，並根據特定取用者的需求加以自訂。  就像處理取消一樣，TAP 實作應只在 API 支援進度通知時才提供 <xref:System.IProgress%601> 參數。
@@ -93,6 +99,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  如果分路處理提供接受參數的多載 `progress` ，則必須允許引數為 `null` ，在此情況下不會報告任何進度。 點擊 [執行] 應該會以同步方式報告物件的進度，如此可 <xref:System.Progress%601> 讓非同步方法快速提供進度。 它也可讓進度的取用者判斷最適合處理資訊的方式和位置。 例如，進度執行個體可以選擇在擷取的同步處理內容上封送處理回呼並引發事件。  
   
 ## <a name="iprogresst-implementations"></a>IProgress 的 \<T> 實施  
+
 .NET 提供可執行檔 <xref:System.Progress%601> 類別 <xref:System.IProgress%601> 。 <xref:System.Progress%601> 類別的宣告方式如下：  
   
 ```csharp  
@@ -108,6 +115,7 @@ public class Progress<T> : IProgress<T>
  <xref:System.Progress%601> 執行個體會公開 <xref:System.Progress%601.ProgressChanged> 事件，該事件是在每次非同步作業報告進度更新時引發。 <xref:System.Progress%601.ProgressChanged> 事件是在具現化 <xref:System.Threading.SynchronizationContext> 執行個體時所擷取的 <xref:System.Progress%601> 物件上引發。 如果沒有可用的同步處理內容，則會使用以執行緒集區為目標的預設內容。 處理常式可能會向這個事件註冊。 為了方便起見，您也可以對 <xref:System.Progress%601> 建構函式提供單一處理常式，該處理常式的行為就像是 <xref:System.Progress%601.ProgressChanged> 事件的事件處理常式。 進度更新會以非同步方式引發，以避免在事件處理常式執行時延遲非同步作業。 另一個 <xref:System.IProgress%601> 實作可以選擇套用不同的語意。  
   
 ## <a name="choosing-the-overloads-to-provide"></a>選擇要提供的多載  
+
  如果 TAP 實作同時使用了選擇性的 <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> 和選擇性的 <xref:System.IProgress%601> 參數，則最多可能會需要四個多載：  
   
 ```csharp  
@@ -180,7 +188,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-articles"></a>相關文章
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[非同步程式設計模式](index.md)|介紹執行非同步作業的三種模式：工作式非同步模式 (TAP)、非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|  
 |[實作以工作為基礎的非同步模式](implementing-the-task-based-asynchronous-pattern.md)|描述三種實作工作式非同步模式 (TAP) 的方式：使用 Visual Studio 中的 C# 和 Visual Basic 編譯器、手動，或是透過編譯器和手動方法的組合。|  

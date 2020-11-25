@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4cce59e1-80b9-4fc4-b3aa-126f1c5876bc
 topic_type:
 - apiref
-ms.openlocfilehash: 0a7ecd475a8031fedb2c8474593b45045fcc6fb9
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 1d684c14f14fcc93040798ae4ee3b8bb1df5354d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610128"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733252"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>ISymUnmanagedWriter::Close 方法
+
 將符號認可到符號存放區之後，關閉符號寫入器。  
   
 ## <a name="syntax"></a>語法  
@@ -32,13 +33,16 @@ HRESULT Close();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="remarks"></a>備註  
- 在此呼叫之後，符號寫入器會變成無效，以便進行進一步的更新。 若要關閉符號寫入器而不認可符號，請改用[ISymUnmanagedWriter：： Abort](isymunmanagedwriter-abort-method.md)方法。  
+
+ 在這個呼叫之後，符號寫入器會變成無效，以供進一步的更新。 若要在不認可符號的情況下關閉符號寫入器，請改用 [ISymUnmanagedWriter：： Abort](isymunmanagedwriter-abort-method.md) 方法。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

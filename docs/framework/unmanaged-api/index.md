@@ -7,17 +7,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559300"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732745"
 ---
 # <a name="unmanaged-api-reference"></a>Unmanaged API 參考
+
 本節包含與 Managed 程式碼相關之應用程式 (例如執行階段主機、編譯器、反組譯工具、模糊化工具、偵錯工具和分析工具) 可用的 Unmanaged API 的資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [常見資料類型](common-data-types-unmanaged-api-reference.md)  
  列出使用的一般資料類型 (特別是用於 Unmanaged 分析及偵錯 API 中)。  
   
@@ -42,7 +44,7 @@ ms.locfileid: "90559300"
  [融合](./fusion/index.md)  
  描述融合 API，其可讓執行階段主機存取應用程式資源的屬性，以為應用程式找出這些資源的正確版本。  
   
- [Hosting](./hosting/index.md)  
+ [裝載](./hosting/index.md)  
  描述裝載 API，其可讓 Unmanaged 主機將 CLR 整合至其應用程式。  
   
  [中繼資料](./metadata/index.md)  
@@ -61,4 +63,5 @@ ms.locfileid: "90559300"
  描述組件轉換至類型程式庫的程序期間，類型程式庫匯出工具 (Tlbexp.exe) 所使用的兩個 Helper 函式和介面。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [開發指南](../development-guide.md)

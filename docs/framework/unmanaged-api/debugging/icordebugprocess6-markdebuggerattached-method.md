@@ -2,14 +2,15 @@
 title: ICorDebugProcess6::MarkDebuggerAttached 方法
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-ms.openlocfilehash: c83d6e892b89e6e50779abf9a71a2cbe9093af2c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c6543a89a375d4a2887dbe8cff56d66a15650811
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212840"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732589"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached 方法
+
 變更偵錯項目的內部狀態，讓 .NET Framework 類別庫中的 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> 方法傳回 `true`。  
   
 ## <a name="syntax"></a>語法  
@@ -21,10 +22,12 @@ HRESULT MarkDebuggerAttached(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `fIsAttached`  
  如果 `true` 方法應該指出已附加偵錯工具，則為 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>；否則為 `false`。  
   
 ## <a name="return-value"></a>傳回值  
+
  這個方法會傳回下表所列的值。  
   
 |傳回值|描述|  
@@ -39,7 +42,8 @@ HRESULT MarkDebuggerAttached(
 > 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -47,7 +51,7 @@ HRESULT MarkDebuggerAttached(
   
  **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugProcess6 介面](icordebugprocess6-interface.md)
 - [偵錯介面](debugging-interfaces.md)

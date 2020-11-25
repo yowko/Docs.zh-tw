@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e4d40568710498df811954c86bb36382d93057a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733538"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合內的比較和排序
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823858"
 集合通常會利用等號比較子和 (或) 排序比較子。 比較會使用兩個建構。
 
 <a name="BKMK_Checkingforequality"></a>
+
 ## <a name="check-for-equality"></a>檢查是否相等
 
 例如， `Contains`、 <xref:System.Collections.IList.IndexOf%2A>、 <xref:System.Collections.Generic.List%601.LastIndexOf%2A>和 `Remove` 方法會為集合元素使用相等比較子。 如果集合為泛型，則會根據下列方針，比較專案是否相等：
@@ -37,6 +38,7 @@ ms.locfileid: "94823858"
 此外，有些字典集合的建構函式多載可接受用來比較索引鍵是否相等的 <xref:System.Collections.Generic.IEqualityComparer%601> 實作。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> 。
 
 <a name="BKMK_Determiningsortorder"></a>
+
 ## <a name="determine-sort-order"></a>決定排序次序
 
 例如，方法 `BinarySearch` 和 `Sort` 會為集合元素使用排序比較子。 比較可以在集合的元素之間進行，或在元素和指定的值之間進行。 若為比較物件，會有 `default comparer` 和 `explicit comparer`的概念。
@@ -54,6 +56,7 @@ ms.locfileid: "94823858"
 系統目前的文化特性設定，會影響集合內的比較和排序。 依預設， **Collections** 類別中的比較和排序會區分文化特性。 若要略過文化特性設定，並因而取得一致的比較和排序結果，請使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 搭配接受 <xref:System.Globalization.CultureInfo>的成員多載。 如需詳細資訊，請參閱 [Performing Culture-Insensitive String Operations in Collections](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 與 [Performing Culture-Insensitive String Operations in Arrays](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)。
 
 <a name="BKMK_Equalityandsortexample"></a>
+
 ## <a name="equality-and-sort-example"></a>相等和排序範例
 
 下列程式碼示範簡單商務物件上的 <xref:System.IEquatable%601> 和 <xref:System.IComparable%601> 實作。 此外，當物件儲存在清單中且經過排序時，您會發現呼叫 <xref:System.Collections.Generic.List%601.Sort> 方法時，會為 `Part` 類型使用預設比較子，並使用匿名方法實作 <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> 方法。

@@ -2,12 +2,12 @@
 title: WCF 簡化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: d582c075377cf53d75ddf1bb9f37764e24e486ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545073"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732914"
 ---
 # <a name="wcf-simplification-features"></a>WCF 簡化功能
 
@@ -88,7 +88,7 @@ WCF 會在寫入 WCF 服務時提供 ASP.NET 相容模式，將 ASP.NET HTTP 管
 
 - WCF 已新增對非同步資料流的支援。 若要啟用非同步資料流，請將 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 端點行為加入至服務主機，並將其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 屬性設定為 `true`。 當服務將已進行資料流處理的訊息傳送到多個用戶端，而這些用戶端的讀取速度緩慢時，這個做法可以提高延展性。 WCF 不再針對個別用戶端封鎖執行緒，並且會釋放執行緒以服務另一個用戶端。
 
-- 已移除訊息緩衝在服務由 IIS 裝載時的限制。 在舊版 WCF 中，當收到使用資料流訊息傳輸之 IIS 裝載服務的訊息時，ASP.NET 在傳送訊息到 WCF 之前會緩衝整個訊息。 這將導致大量記憶體消耗。 這種緩衝處理已在 .NET 4.5 中移除，現在 IIS 裝載的 WCF 服務可以在接收到整個訊息之前處理傳入資料流，藉此啟用真實的資料流處理。 這允許 WCF 立即對訊息做出回應，並使效能有所提升。 此外，您不再需要指定 `maxRequestLength` (ASP.NET 對傳入要求的大小限制) 的值。 如果設定這個屬性，則會將其忽略。 如需詳細資訊， `maxRequestLength` 請參閱[ \<httpRuntime> configuration 元素](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))。 您仍然需要設定 maxAllowedContentLength。如需詳細資訊，請參閱 [IIS 要求限制](/previous-versions/iis/settings-schema/ms689462(v=vs.90))。
+- 已移除訊息緩衝在服務由 IIS 裝載時的限制。 在舊版 WCF 中，當收到使用資料流訊息傳輸之 IIS 裝載服務的訊息時，ASP.NET 在傳送訊息到 WCF 之前會緩衝整個訊息。 這將導致大量記憶體消耗。 此緩衝已在 .NET Framework 4.5 中移除，而現在由 IIS 裝載的 WCF 服務可以在接收到整個訊息之前開始處理傳入的資料流程，藉此啟用真正的串流處理。 這允許 WCF 立即對訊息做出回應，並使效能有所提升。 此外，您不再需要指定 `maxRequestLength` (ASP.NET 對傳入要求的大小限制) 的值。 如果設定這個屬性，則會將其忽略。 如需詳細資訊， `maxRequestLength` 請參閱[ \<httpRuntime> configuration 元素](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))。 您仍然需要設定 maxAllowedContentLength。如需詳細資訊，請參閱 [IIS 要求限制](/previous-versions/iis/settings-schema/ms689462(v=vs.90))。
 
 ## <a name="new-transport-default-values"></a>新的傳輸預設值
 

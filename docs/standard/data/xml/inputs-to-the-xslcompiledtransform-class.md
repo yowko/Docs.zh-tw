@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-ms.openlocfilehash: 06427097e1e242171abe84ea557cdbb108d98a9d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: af529f1c6ccfe3abe761c7707772d6f9697c179d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733421"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸入
+
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法可接受來源文件的三種輸入型別：實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的物件、讀取來源文件的 <xref:System.Xml.XmlReader> 物件，或是字串 URI。  
   
 > [!NOTE]
 > 依預設，<xref:System.Xml.Xsl.XslCompiledTransform> 類別會保留泛空白字元。 這符合 [W3C XSLT 1.0 版建議事項的 3.4 節](https://www.w3.org/TR/xslt.html#strip) \(英文\)。  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable 介面  
+
  <xref:System.Xml.XPath.IXPathNavigable> 介面是在 <xref:System.Xml.XmlNode> 及 <xref:System.Xml.XPath.XPathDocument> 類別中實作的。 這些類別代表 XML 資料的記憶體中快取。  
   
 - <xref:System.Xml.XmlNode> 類別是以 W3C 文件物件模型 (DOM) 為基礎，並包含編輯功能。  
@@ -34,6 +36,7 @@ ms.locfileid: "94830216"
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
   
 ## <a name="xmlreader-object"></a>XmlReader 物件  
+
  <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法會從 <xref:System.Xml.XmlReader> 的目前節點載入，並套用至其所有子系節點。 如此您就能夠利用文件中的某些部份做為內容文件。 傳回 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法後，<xref:System.Xml.XmlReader> 便定位於內容文件結尾之後的下一節點。 如果到達文件結尾，則 <xref:System.Xml.XmlReader> 會定位於檔案結尾 (EOF)。  
   
  下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 本主題中可找到 books.xml 和 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
@@ -42,6 +45,7 @@ ms.locfileid: "94830216"
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
   
 ## <a name="string-uri"></a>字串 URI  
+
  您也可以將來源文件 URI 指定為 XSLT 輸入。 <xref:System.Xml.XmlResolver> 可用於解析 URI。 您可以藉由將要使用的 <xref:System.Xml.XmlResolver> 傳遞給 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法，來對其進行指定。 若未指定 <xref:System.Xml.XmlResolver>，則 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法會使用不含認證的預設 <xref:System.Xml.XmlUrlResolver>。  
   
  下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 本主題中可找到 books.xml 和 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
@@ -51,6 +55,6 @@ ms.locfileid: "94830216"
   
  如需詳細資訊，請參閱 [XSLT 處理期間解析外部資源](resolving-external-resources-during-xslt-processing.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](xslt-transformations.md)

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501647"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733629"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 介面
-提供基本的全域靜態函式，以強式名稱簽署元件。 所有 `ICLRStrongName` 方法都會傳回標準 COM hresult。  
+
+提供基本的全域靜態函式來簽署具有強式名稱的元件。 所有 `ICLRStrongName` 方法都會傳回標準 COM hresult。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,7 +36,7 @@ ms.locfileid: "84501647"
 |[GetHashFromFileW 方法](iclrstrongname-gethashfromfilew-method.md)|產生以 Unicode 字串指定之檔案內容的雜湊。|  
 |[GetHashFromHandle 方法](iclrstrongname-gethashfromhandle-method.md)|使用指定的雜湊演算法產生以指定檔案控制代碼指定之檔案的雜湊。|  
 |[StrongNameCompareAssemblies 方法](iclrstrongname-strongnamecompareassemblies-method.md)|判斷兩個組件是否只有強制名稱簽章不同。|  
-|[StrongNameFreeBuffer 方法](iclrstrongname-strongnamefreebuffer-method.md)|釋放先前呼叫強式名稱方法所配置的記憶體，例如[StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)或[StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)。|  
+|[StrongNameFreeBuffer 方法](iclrstrongname-strongnamefreebuffer-method.md)|釋放先前呼叫強式名稱方法（例如 [StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)或 [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)）所配置的記憶體。|  
 |[StrongNameGetBlob 方法](iclrstrongname-strongnamegetblob-method.md)|使用位於所指定位址之可執行檔的二進位表示法填滿指定的緩衝區。|  
 |[StrongNameGetBlobFromImage 方法](iclrstrongname-strongnamegetblobfromimage-method.md)|取得位於所指定記憶體位置之組件影像的二進位表示法。|  
 |[StrongNameGetPublicKey 方法](iclrstrongname-strongnamegetpublickey-method.md)|從私密/公開金鑰組取得公開金鑰。|  
@@ -55,18 +56,20 @@ ms.locfileid: "84501647"
 |[StrongNameTokenFromPublicKey 方法](iclrstrongname-strongnametokenfrompublickey-method.md)|取得代表公開金鑰的權杖。|  
   
 ## <a name="remarks"></a>備註  
- 您可以 `ICLRStrongName` 使用和做為參數來呼叫[ICLRRuntimeInfo：： GetInterface](iclrruntimeinfo-getinterface-method.md)方法，以取得的實例 `CLSID_CLRStrongName` `IID_ICLRStrongName` 。  
+
+ 您可以 `ICLRStrongName` 使用和做為參數來呼叫 [ICLRRuntimeInfo：： GetInterface](iclrruntimeinfo-getinterface-method.md) 方法，以取得的實例 `CLSID_CLRStrongName` `IID_ICLRStrongName` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - [裝載介面](hosting-interfaces.md)
-- [Hosting](index.md)
+- [裝載](index.md)
