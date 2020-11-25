@@ -15,33 +15,37 @@ helpviewer_keywords:
 ms.assetid: 3ede8fb5-f655-4088-8e19-9c53812588a8
 topic_type:
 - apiref
-ms.openlocfilehash: 9ffba23e3821c48c9b0708e4b6b617db4ddc5959
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 07c41e9d80b1703e86ae06525d64bf166ef2cf8e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83611259"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717548"
 ---
-# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="2d13f-102">ISymUnmanagedScope::GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="2d13f-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
-<span data-ttu-id="2d13f-103">取得在此範圍內定義的區域變數計數。</span><span class="sxs-lookup"><span data-stu-id="2d13f-103">Gets a count of the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="12824-102">ISymUnmanagedScope::GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="12824-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
+
+<span data-ttu-id="12824-103">取得在此範圍內定義的區域變數計數。</span><span class="sxs-lookup"><span data-stu-id="12824-103">Gets a count of the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d13f-104">語法</span><span class="sxs-lookup"><span data-stu-id="2d13f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="12824-104">語法</span><span class="sxs-lookup"><span data-stu-id="12824-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2d13f-105">參數</span><span class="sxs-lookup"><span data-stu-id="2d13f-105">Parameters</span></span>  
- `pRetVal`  
- <span data-ttu-id="2d13f-106">脫銷`ULONG32`接收本機變數計數的指標。</span><span class="sxs-lookup"><span data-stu-id="2d13f-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="2d13f-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="2d13f-107">Return Value</span></span>  
- <span data-ttu-id="2d13f-108">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="2d13f-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="2d13f-109">需求</span><span class="sxs-lookup"><span data-stu-id="2d13f-109">Requirements</span></span>  
- <span data-ttu-id="2d13f-110">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="2d13f-110">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2d13f-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d13f-111">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="12824-105">參數</span><span class="sxs-lookup"><span data-stu-id="12824-105">Parameters</span></span>  
 
-- [<span data-ttu-id="2d13f-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="2d13f-112">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
+ `pRetVal`  
+ <span data-ttu-id="12824-106">擴展的指標，可 `ULONG32` 接收區域變數的計數。</span><span class="sxs-lookup"><span data-stu-id="12824-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="12824-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="12824-107">Return Value</span></span>  
+
+ <span data-ttu-id="12824-108">如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="12824-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="12824-109">需求</span><span class="sxs-lookup"><span data-stu-id="12824-109">Requirements</span></span>  
+
+ <span data-ttu-id="12824-110">**標頭：** CorSym .idl、CorSym。h</span><span class="sxs-lookup"><span data-stu-id="12824-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="12824-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="12824-111">See also</span></span>
+
+- [<span data-ttu-id="12824-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="12824-112">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
