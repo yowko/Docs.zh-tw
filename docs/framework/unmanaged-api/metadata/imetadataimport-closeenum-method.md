@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 727819d5-1dab-4ebb-ac25-950b4111dc72
 topic_type:
 - apiref
-ms.openlocfilehash: 5de62db4180a6a9160193053fe42e39cebc34d0e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f418b48f1b62ae8093197d64ca44b2ef659990a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701714"
 ---
-# <a name="imetadataimportcloseenum-method"></a><span data-ttu-id="1cf95-102">IMetaDataImport::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="1cf95-102">IMetaDataImport::CloseEnum Method</span></span>
-<span data-ttu-id="1cf95-103">關閉指定之控制碼所識別的列舉值。</span><span class="sxs-lookup"><span data-stu-id="1cf95-103">Closes the enumerator that is identified by the specified handle.</span></span>  
+# <a name="imetadataimportcloseenum-method"></a><span data-ttu-id="c5135-102">IMetaDataImport::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="c5135-102">IMetaDataImport::CloseEnum Method</span></span>
+
+<span data-ttu-id="c5135-103">關閉指定之控制碼所識別的列舉值。</span><span class="sxs-lookup"><span data-stu-id="c5135-103">Closes the enumerator that is identified by the specified handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1cf95-104">語法</span><span class="sxs-lookup"><span data-stu-id="1cf95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5135-104">語法</span><span class="sxs-lookup"><span data-stu-id="c5135-104">Syntax</span></span>  
   
 ```cpp  
 void CloseEnum (  
@@ -33,23 +34,26 @@ void CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1cf95-105">參數</span><span class="sxs-lookup"><span data-stu-id="1cf95-105">Parameters</span></span>  
- `hEnum`  
- <span data-ttu-id="1cf95-106">在要關閉之枚舉器的控制碼。</span><span class="sxs-lookup"><span data-stu-id="1cf95-106">[in] The handle for the enumerator to close.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="1cf95-107">備註</span><span class="sxs-lookup"><span data-stu-id="1cf95-107">Remarks</span></span>  
- <span data-ttu-id="1cf95-108">所指定的控制碼 `hEnum` 是從先前的 `Enum` *名稱*呼叫取得（例如， [IMetaDataImport：： EnumTypeDefs](imetadataimport-enumtypedefs-method.md)）。</span><span class="sxs-lookup"><span data-stu-id="1cf95-108">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](imetadataimport-enumtypedefs-method.md)).</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="1cf95-109">規格需求</span><span class="sxs-lookup"><span data-stu-id="1cf95-109">Requirements</span></span>  
- <span data-ttu-id="1cf95-110">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1cf95-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="1cf95-111">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="1cf95-111">**Header:** Cor.h</span></span>  
-  
- <span data-ttu-id="1cf95-112">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="1cf95-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
-  
- <span data-ttu-id="1cf95-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1cf95-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="1cf95-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1cf95-114">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="c5135-105">參數</span><span class="sxs-lookup"><span data-stu-id="c5135-105">Parameters</span></span>  
 
-- [<span data-ttu-id="1cf95-115">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="1cf95-115">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
-- [<span data-ttu-id="1cf95-116">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="1cf95-116">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)
+ `hEnum`  
+ <span data-ttu-id="c5135-106">在要關閉之列舉值的控制碼。</span><span class="sxs-lookup"><span data-stu-id="c5135-106">[in] The handle for the enumerator to close.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="c5135-107">備註</span><span class="sxs-lookup"><span data-stu-id="c5135-107">Remarks</span></span>  
+
+ <span data-ttu-id="c5135-108">指定的控制碼 `hEnum` 是從先前的 `Enum` *名稱* 呼叫取得 (例如， [IMetaDataImport：： EnumTypeDefs](imetadataimport-enumtypedefs-method.md)) 。</span><span class="sxs-lookup"><span data-stu-id="c5135-108">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](imetadataimport-enumtypedefs-method.md)).</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="c5135-109">需求</span><span class="sxs-lookup"><span data-stu-id="c5135-109">Requirements</span></span>  
+
+ <span data-ttu-id="c5135-110">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c5135-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="c5135-111">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="c5135-111">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="c5135-112">連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中</span><span class="sxs-lookup"><span data-stu-id="c5135-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="c5135-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5135-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c5135-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c5135-114">See also</span></span>
+
+- [<span data-ttu-id="c5135-115">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="c5135-115">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
+- [<span data-ttu-id="c5135-116">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="c5135-116">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)

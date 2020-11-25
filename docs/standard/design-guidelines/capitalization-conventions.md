@@ -9,64 +9,67 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e416a8346952a41d9c89f526bfce990dfc277fc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821524"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701259"
 ---
-# <a name="capitalization-conventions"></a><span data-ttu-id="78b6b-104">大小寫慣例</span><span class="sxs-lookup"><span data-stu-id="78b6b-104">Capitalization Conventions</span></span>
-<span data-ttu-id="78b6b-105">本章中的指導方針會配置簡單的方法，以使用案例，在一致地套用時，讓類型、成員和參數的識別碼易於讀取。</span><span class="sxs-lookup"><span data-stu-id="78b6b-105">The guidelines in this chapter lay out a simple method for using case that, when applied consistently, make identifiers for types, members, and parameters easy to read.</span></span>
+# <a name="capitalization-conventions"></a><span data-ttu-id="b4c1f-104">大小寫慣例</span><span class="sxs-lookup"><span data-stu-id="b4c1f-104">Capitalization Conventions</span></span>
 
-## <a name="capitalization-rules-for-identifiers"></a><span data-ttu-id="78b6b-106">識別碼的大小寫規則</span><span class="sxs-lookup"><span data-stu-id="78b6b-106">Capitalization Rules for Identifiers</span></span>
- <span data-ttu-id="78b6b-107">若要區分識別碼中的單字，請將識別碼中每個單字的第一個字母大寫。</span><span class="sxs-lookup"><span data-stu-id="78b6b-107">To differentiate words in an identifier, capitalize the first letter of each word in the identifier.</span></span> <span data-ttu-id="78b6b-108">請勿使用底線來區分單字，或在識別碼中的任何位置區分單字。</span><span class="sxs-lookup"><span data-stu-id="78b6b-108">Do not use underscores to differentiate words, or for that matter, anywhere in identifiers.</span></span> <span data-ttu-id="78b6b-109">有兩個適當的方式可將識別碼大寫，視識別碼的使用方式而定：</span><span class="sxs-lookup"><span data-stu-id="78b6b-109">There are two appropriate ways to capitalize identifiers, depending on the use of the identifier:</span></span>
+<span data-ttu-id="b4c1f-105">本章中的指導方針會配置簡單的方法，以使用案例，在一致地套用時，讓類型、成員和參數的識別碼易於讀取。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-105">The guidelines in this chapter lay out a simple method for using case that, when applied consistently, make identifiers for types, members, and parameters easy to read.</span></span>
 
-- <span data-ttu-id="78b6b-110">PascalCasing</span><span class="sxs-lookup"><span data-stu-id="78b6b-110">PascalCasing</span></span>
+## <a name="capitalization-rules-for-identifiers"></a><span data-ttu-id="b4c1f-106">識別碼的大小寫規則</span><span class="sxs-lookup"><span data-stu-id="b4c1f-106">Capitalization Rules for Identifiers</span></span>
 
-- <span data-ttu-id="78b6b-111">>camelcasing</span><span class="sxs-lookup"><span data-stu-id="78b6b-111">camelCasing</span></span>
+ <span data-ttu-id="b4c1f-107">若要區分識別碼中的單字，請將識別碼中每個單字的第一個字母大寫。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-107">To differentiate words in an identifier, capitalize the first letter of each word in the identifier.</span></span> <span data-ttu-id="b4c1f-108">請勿使用底線來區分單字，或在識別碼中的任何位置區分單字。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-108">Do not use underscores to differentiate words, or for that matter, anywhere in identifiers.</span></span> <span data-ttu-id="b4c1f-109">有兩個適當的方式可將識別碼大寫，視識別碼的使用方式而定：</span><span class="sxs-lookup"><span data-stu-id="b4c1f-109">There are two appropriate ways to capitalize identifiers, depending on the use of the identifier:</span></span>
 
- <span data-ttu-id="78b6b-112">PascalCasing 慣例（用於參數名稱以外的所有識別碼）會將每個字組的第一個字元設為大寫 (包括長度超過兩個字母的縮寫) ，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="78b6b-112">The PascalCasing convention, used for all identifiers except parameter names, capitalizes the first character of each word (including acronyms over two letters in length), as shown in the following examples:</span></span>
+- <span data-ttu-id="b4c1f-110">PascalCasing</span><span class="sxs-lookup"><span data-stu-id="b4c1f-110">PascalCasing</span></span>
+
+- <span data-ttu-id="b4c1f-111">>camelcasing</span><span class="sxs-lookup"><span data-stu-id="b4c1f-111">camelCasing</span></span>
+
+ <span data-ttu-id="b4c1f-112">PascalCasing 慣例（用於參數名稱以外的所有識別碼）會將每個字組的第一個字元設為大寫 (包括長度超過兩個字母的縮寫) ，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="b4c1f-112">The PascalCasing convention, used for all identifiers except parameter names, capitalizes the first character of each word (including acronyms over two letters in length), as shown in the following examples:</span></span>
 
  `PropertyDescriptor`
  `HtmlTag`
 
- <span data-ttu-id="78b6b-113">在兩個字母的縮寫中，這兩個字母都是大寫的特殊案例，如下列識別碼所示：</span><span class="sxs-lookup"><span data-stu-id="78b6b-113">A special case is made for two-letter acronyms in which both letters are capitalized, as shown in the following identifier:</span></span>
+ <span data-ttu-id="b4c1f-113">在兩個字母的縮寫中，這兩個字母都是大寫的特殊案例，如下列識別碼所示：</span><span class="sxs-lookup"><span data-stu-id="b4c1f-113">A special case is made for two-letter acronyms in which both letters are capitalized, as shown in the following identifier:</span></span>
 
  `IOStream`
 
- <span data-ttu-id="78b6b-114">>camelcasing 慣例（僅用於參數名稱）會將每個單字的第一個字元設為大寫，但不包括第一個單字，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="78b6b-114">The camelCasing convention, used only for parameter names, capitalizes the first character of each word except the first word, as shown in the following examples.</span></span> <span data-ttu-id="78b6b-115">如範例中所示，兩個字母的縮寫（開頭為 camel 大寫字母的識別碼）都是小寫。</span><span class="sxs-lookup"><span data-stu-id="78b6b-115">As the example also shows, two-letter acronyms that begin a camel-cased identifier are both lowercase.</span></span>
+ <span data-ttu-id="b4c1f-114">>camelcasing 慣例（僅用於參數名稱）會將每個單字的第一個字元設為大寫，但不包括第一個單字，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-114">The camelCasing convention, used only for parameter names, capitalizes the first character of each word except the first word, as shown in the following examples.</span></span> <span data-ttu-id="b4c1f-115">如範例中所示，兩個字母的縮寫（開頭為 camel 大寫字母的識別碼）都是小寫。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-115">As the example also shows, two-letter acronyms that begin a camel-cased identifier are both lowercase.</span></span>
 
  `propertyDescriptor`
  `ioStream`
  `htmlTag`
 
- <span data-ttu-id="78b6b-116">✔️將 PascalCasing 用於包含多個單字的所有公用成員、類型和命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="78b6b-116">✔️ DO use PascalCasing for all public member, type, and namespace names consisting of multiple words.</span></span>
+ <span data-ttu-id="b4c1f-116">✔️將 PascalCasing 用於包含多個單字的所有公用成員、類型和命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-116">✔️ DO use PascalCasing for all public member, type, and namespace names consisting of multiple words.</span></span>
 
- <span data-ttu-id="78b6b-117">✔️請將 >camelcasing 用於參數名稱。</span><span class="sxs-lookup"><span data-stu-id="78b6b-117">✔️ DO use camelCasing for parameter names.</span></span>
+ <span data-ttu-id="b4c1f-117">✔️請將 >camelcasing 用於參數名稱。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-117">✔️ DO use camelCasing for parameter names.</span></span>
 
- <span data-ttu-id="78b6b-118">下表描述不同類型之識別碼的大小寫規則。</span><span class="sxs-lookup"><span data-stu-id="78b6b-118">The following table describes the capitalization rules for different types of identifiers.</span></span>
+ <span data-ttu-id="b4c1f-118">下表描述不同類型之識別碼的大小寫規則。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-118">The following table describes the capitalization rules for different types of identifiers.</span></span>
 
-|<span data-ttu-id="78b6b-119">識別碼</span><span class="sxs-lookup"><span data-stu-id="78b6b-119">Identifier</span></span>|<span data-ttu-id="78b6b-120">大小寫</span><span class="sxs-lookup"><span data-stu-id="78b6b-120">Casing</span></span>|<span data-ttu-id="78b6b-121">範例</span><span class="sxs-lookup"><span data-stu-id="78b6b-121">Example</span></span>|
+|<span data-ttu-id="b4c1f-119">識別碼</span><span class="sxs-lookup"><span data-stu-id="b4c1f-119">Identifier</span></span>|<span data-ttu-id="b4c1f-120">大小寫</span><span class="sxs-lookup"><span data-stu-id="b4c1f-120">Casing</span></span>|<span data-ttu-id="b4c1f-121">範例</span><span class="sxs-lookup"><span data-stu-id="b4c1f-121">Example</span></span>|
 |----------------|------------|-------------|
-|<span data-ttu-id="78b6b-122">命名空間</span><span class="sxs-lookup"><span data-stu-id="78b6b-122">Namespace</span></span>|<span data-ttu-id="78b6b-123">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-123">Pascal</span></span>|`namespace System.Security { ... }`|
-|<span data-ttu-id="78b6b-124">類型</span><span class="sxs-lookup"><span data-stu-id="78b6b-124">Type</span></span>|<span data-ttu-id="78b6b-125">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-125">Pascal</span></span>|`public class StreamReader { ... }`|
-|<span data-ttu-id="78b6b-126">介面</span><span class="sxs-lookup"><span data-stu-id="78b6b-126">Interface</span></span>|<span data-ttu-id="78b6b-127">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-127">Pascal</span></span>|`public interface IEnumerable { ... }`|
-|<span data-ttu-id="78b6b-128">方法</span><span class="sxs-lookup"><span data-stu-id="78b6b-128">Method</span></span>|<span data-ttu-id="78b6b-129">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-129">Pascal</span></span>|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|<span data-ttu-id="78b6b-130">屬性</span><span class="sxs-lookup"><span data-stu-id="78b6b-130">Property</span></span>|<span data-ttu-id="78b6b-131">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-131">Pascal</span></span>|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|<span data-ttu-id="78b6b-132">事件</span><span class="sxs-lookup"><span data-stu-id="78b6b-132">Event</span></span>|<span data-ttu-id="78b6b-133">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-133">Pascal</span></span>|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
-|<span data-ttu-id="78b6b-134">欄位</span><span class="sxs-lookup"><span data-stu-id="78b6b-134">Field</span></span>|<span data-ttu-id="78b6b-135">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-135">Pascal</span></span>|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
-|<span data-ttu-id="78b6b-136">列舉值</span><span class="sxs-lookup"><span data-stu-id="78b6b-136">Enum value</span></span>|<span data-ttu-id="78b6b-137">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-137">Pascal</span></span>|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|<span data-ttu-id="78b6b-138">參數</span><span class="sxs-lookup"><span data-stu-id="78b6b-138">Parameter</span></span>|<span data-ttu-id="78b6b-139">Camel</span><span class="sxs-lookup"><span data-stu-id="78b6b-139">Camel</span></span>|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|<span data-ttu-id="b4c1f-122">命名空間</span><span class="sxs-lookup"><span data-stu-id="b4c1f-122">Namespace</span></span>|<span data-ttu-id="b4c1f-123">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-123">Pascal</span></span>|`namespace System.Security { ... }`|
+|<span data-ttu-id="b4c1f-124">類型</span><span class="sxs-lookup"><span data-stu-id="b4c1f-124">Type</span></span>|<span data-ttu-id="b4c1f-125">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-125">Pascal</span></span>|`public class StreamReader { ... }`|
+|<span data-ttu-id="b4c1f-126">介面</span><span class="sxs-lookup"><span data-stu-id="b4c1f-126">Interface</span></span>|<span data-ttu-id="b4c1f-127">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-127">Pascal</span></span>|`public interface IEnumerable { ... }`|
+|<span data-ttu-id="b4c1f-128">方法</span><span class="sxs-lookup"><span data-stu-id="b4c1f-128">Method</span></span>|<span data-ttu-id="b4c1f-129">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-129">Pascal</span></span>|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|<span data-ttu-id="b4c1f-130">屬性</span><span class="sxs-lookup"><span data-stu-id="b4c1f-130">Property</span></span>|<span data-ttu-id="b4c1f-131">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-131">Pascal</span></span>|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|<span data-ttu-id="b4c1f-132">事件</span><span class="sxs-lookup"><span data-stu-id="b4c1f-132">Event</span></span>|<span data-ttu-id="b4c1f-133">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-133">Pascal</span></span>|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|<span data-ttu-id="b4c1f-134">欄位</span><span class="sxs-lookup"><span data-stu-id="b4c1f-134">Field</span></span>|<span data-ttu-id="b4c1f-135">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-135">Pascal</span></span>|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
+|<span data-ttu-id="b4c1f-136">列舉值</span><span class="sxs-lookup"><span data-stu-id="b4c1f-136">Enum value</span></span>|<span data-ttu-id="b4c1f-137">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-137">Pascal</span></span>|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
+|<span data-ttu-id="b4c1f-138">參數</span><span class="sxs-lookup"><span data-stu-id="b4c1f-138">Parameter</span></span>|<span data-ttu-id="b4c1f-139">Camel</span><span class="sxs-lookup"><span data-stu-id="b4c1f-139">Camel</span></span>|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
-## <a name="capitalizing-compound-words-and-common-terms"></a><span data-ttu-id="78b6b-140">將複合單字和一般詞彙全部大寫</span><span class="sxs-lookup"><span data-stu-id="78b6b-140">Capitalizing Compound Words and Common Terms</span></span>
- <span data-ttu-id="78b6b-141">大部分的複合詞匯都會被視為單一單字，以做為大小寫的用途。</span><span class="sxs-lookup"><span data-stu-id="78b6b-141">Most compound terms are treated as single words for purposes of capitalization.</span></span>
+## <a name="capitalizing-compound-words-and-common-terms"></a><span data-ttu-id="b4c1f-140">將複合單字和一般詞彙全部大寫</span><span class="sxs-lookup"><span data-stu-id="b4c1f-140">Capitalizing Compound Words and Common Terms</span></span>
 
- <span data-ttu-id="78b6b-142">❌ 請勿將所謂的封閉表單複合字中的每個單字全部大寫。</span><span class="sxs-lookup"><span data-stu-id="78b6b-142">❌ DO NOT capitalize each word in so-called closed-form compound words.</span></span>
+ <span data-ttu-id="b4c1f-141">大部分的複合詞匯都會被視為單一單字，以做為大小寫的用途。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-141">Most compound terms are treated as single words for purposes of capitalization.</span></span>
 
- <span data-ttu-id="78b6b-143">這些是撰寫成單一單字的複合字，例如端點。</span><span class="sxs-lookup"><span data-stu-id="78b6b-143">These are compound words written as a single word, such as endpoint.</span></span> <span data-ttu-id="78b6b-144">基於大小寫方針的目的，請將封閉形式的複合字視為單一單字。</span><span class="sxs-lookup"><span data-stu-id="78b6b-144">For the purpose of casing guidelines, treat a closed-form compound word as a single word.</span></span> <span data-ttu-id="78b6b-145">使用目前的字典來判斷是否以封閉形式寫入複合字組。</span><span class="sxs-lookup"><span data-stu-id="78b6b-145">Use a current dictionary to determine if a compound word is written in closed form.</span></span>
+ <span data-ttu-id="b4c1f-142">❌ 請勿將所謂的封閉表單複合字中的每個單字全部大寫。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-142">❌ DO NOT capitalize each word in so-called closed-form compound words.</span></span>
 
-|<span data-ttu-id="78b6b-146">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="78b6b-146">Pascal</span></span>|<span data-ttu-id="78b6b-147">Camel</span><span class="sxs-lookup"><span data-stu-id="78b6b-147">Camel</span></span>|<span data-ttu-id="78b6b-148">否</span><span class="sxs-lookup"><span data-stu-id="78b6b-148">Not</span></span>|
+ <span data-ttu-id="b4c1f-143">這些是撰寫成單一單字的複合字，例如端點。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-143">These are compound words written as a single word, such as endpoint.</span></span> <span data-ttu-id="b4c1f-144">基於大小寫方針的目的，請將封閉形式的複合字視為單一單字。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-144">For the purpose of casing guidelines, treat a closed-form compound word as a single word.</span></span> <span data-ttu-id="b4c1f-145">使用目前的字典來判斷是否以封閉形式寫入複合字組。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-145">Use a current dictionary to determine if a compound word is written in closed form.</span></span>
+
+|<span data-ttu-id="b4c1f-146">帕斯卡</span><span class="sxs-lookup"><span data-stu-id="b4c1f-146">Pascal</span></span>|<span data-ttu-id="b4c1f-147">Camel</span><span class="sxs-lookup"><span data-stu-id="b4c1f-147">Camel</span></span>|<span data-ttu-id="b4c1f-148">否</span><span class="sxs-lookup"><span data-stu-id="b4c1f-148">Not</span></span>|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -94,16 +97,17 @@ ms.locfileid: "94821524"
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|
 |`Writable`|`writable`|`Writeable`|
 
-## <a name="case-sensitivity"></a><span data-ttu-id="78b6b-149">區分大小寫</span><span class="sxs-lookup"><span data-stu-id="78b6b-149">Case Sensitivity</span></span>
- <span data-ttu-id="78b6b-150">可以在 CLR 上執行的語言不需要支援區分大小寫，但有一些可支援區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="78b6b-150">Languages that can run on the CLR are not required to support case-sensitivity, although some do.</span></span> <span data-ttu-id="78b6b-151">即使您的語言支援它，其他可能存取架構的語言也不會。</span><span class="sxs-lookup"><span data-stu-id="78b6b-151">Even if your language supports it, other languages that might access your framework do not.</span></span> <span data-ttu-id="78b6b-152">因此，可從外部存取的任何 Api 都不能單獨依賴大小寫來區別相同內容中的兩個名稱。</span><span class="sxs-lookup"><span data-stu-id="78b6b-152">Any APIs that are externally accessible, therefore, cannot rely on case alone to distinguish between two names in the same context.</span></span>
+## <a name="case-sensitivity"></a><span data-ttu-id="b4c1f-149">區分大小寫</span><span class="sxs-lookup"><span data-stu-id="b4c1f-149">Case Sensitivity</span></span>
 
- <span data-ttu-id="78b6b-153">❌ 請勿假設所有程式設計語言都有區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="78b6b-153">❌ DO NOT assume that all programming languages are case sensitive.</span></span> <span data-ttu-id="78b6b-154">但它們並不相等。</span><span class="sxs-lookup"><span data-stu-id="78b6b-154">They are not.</span></span> <span data-ttu-id="78b6b-155">名稱不能單獨以大小寫不同。</span><span class="sxs-lookup"><span data-stu-id="78b6b-155">Names cannot differ by case alone.</span></span>
+ <span data-ttu-id="b4c1f-150">可以在 CLR 上執行的語言不需要支援區分大小寫，但有一些可支援區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-150">Languages that can run on the CLR are not required to support case-sensitivity, although some do.</span></span> <span data-ttu-id="b4c1f-151">即使您的語言支援它，其他可能存取架構的語言也不會。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-151">Even if your language supports it, other languages that might access your framework do not.</span></span> <span data-ttu-id="b4c1f-152">因此，可從外部存取的任何 Api 都不能單獨依賴大小寫來區別相同內容中的兩個名稱。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-152">Any APIs that are externally accessible, therefore, cannot rely on case alone to distinguish between two names in the same context.</span></span>
 
- <span data-ttu-id="78b6b-156">*部分©2005、2009 Microsoft Corporation。保留的擁有權限。*</span><span class="sxs-lookup"><span data-stu-id="78b6b-156">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>
+ <span data-ttu-id="b4c1f-153">❌ 請勿假設所有程式設計語言都有區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-153">❌ DO NOT assume that all programming languages are case sensitive.</span></span> <span data-ttu-id="b4c1f-154">但它們並不相等。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-154">They are not.</span></span> <span data-ttu-id="b4c1f-155">名稱不能單獨以大小寫不同。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-155">Names cannot differ by case alone.</span></span>
 
- <span data-ttu-id="78b6b-157">獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。</span><span class="sxs-lookup"><span data-stu-id="78b6b-157">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>
+ <span data-ttu-id="b4c1f-156">*部分©2005、2009 Microsoft Corporation。保留的擁有權限。*</span><span class="sxs-lookup"><span data-stu-id="b4c1f-156">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="78b6b-158">請參閱</span><span class="sxs-lookup"><span data-stu-id="78b6b-158">See also</span></span>
+ <span data-ttu-id="b4c1f-157">獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。</span><span class="sxs-lookup"><span data-stu-id="b4c1f-157">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>
 
-- [<span data-ttu-id="78b6b-159">架構設計指導方針</span><span class="sxs-lookup"><span data-stu-id="78b6b-159">Framework Design Guidelines</span></span>](index.md)
-- [<span data-ttu-id="78b6b-160">命名指導方針</span><span class="sxs-lookup"><span data-stu-id="78b6b-160">Naming Guidelines</span></span>](naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="b4c1f-158">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4c1f-158">See also</span></span>
+
+- [<span data-ttu-id="b4c1f-159">架構設計指導方針</span><span class="sxs-lookup"><span data-stu-id="b4c1f-159">Framework Design Guidelines</span></span>](index.md)
+- [<span data-ttu-id="b4c1f-160">命名指導方針</span><span class="sxs-lookup"><span data-stu-id="b4c1f-160">Naming Guidelines</span></span>](naming-guidelines.md)

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: da6a1123-871d-4492-9d35-3bdb49f94c93
 topic_type:
 - apiref
-ms.openlocfilehash: ad0c93dfcb4dc630793a6735ab00de9da6166e9a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d03d1c3fccf0be7e8d8a79477fc5b48a565cf2a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130959"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703066"
 ---
-# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="efd6a-102">ICorDebugILFrame::GetStackDepth 方法</span><span class="sxs-lookup"><span data-stu-id="efd6a-102">ICorDebugILFrame::GetStackDepth Method</span></span>
-<span data-ttu-id="efd6a-103">尚未實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="efd6a-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="04a0d-102">ICorDebugILFrame::GetStackDepth 方法</span><span class="sxs-lookup"><span data-stu-id="04a0d-102">ICorDebugILFrame::GetStackDepth Method</span></span>
+
+<span data-ttu-id="04a0d-103">尚未實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="04a0d-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efd6a-104">語法</span><span class="sxs-lookup"><span data-stu-id="efd6a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04a0d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="04a0d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStackDepth (  
@@ -33,5 +34,6 @@ HRESULT GetStackDepth (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="efd6a-105">需求</span><span class="sxs-lookup"><span data-stu-id="efd6a-105">Requirements</span></span>  
- <span data-ttu-id="efd6a-106">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="efd6a-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="04a0d-105">需求</span><span class="sxs-lookup"><span data-stu-id="04a0d-105">Requirements</span></span>  
+
+ <span data-ttu-id="04a0d-106">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="04a0d-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
