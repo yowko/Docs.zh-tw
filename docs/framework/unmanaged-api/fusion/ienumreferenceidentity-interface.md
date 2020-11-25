@@ -14,33 +14,35 @@ helpviewer_keywords:
 ms.assetid: a17b3155-7216-4e16-8c9f-abce21f549e7
 topic_type:
 - apiref
-ms.openlocfilehash: 1305b9ebe3cd87ba002ee87610ff309d015a44e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bea357fe9a154ffb8f69228c7332c026dc2759e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131740"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728964"
 ---
-# <a name="ienumreferenceidentity-interface"></a><span data-ttu-id="0594c-102">IEnumReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="0594c-102">IEnumReferenceIdentity Interface</span></span>
-<span data-ttu-id="0594c-103">作為 `IReferenceIdentity` 物件集合的列舉值。</span><span class="sxs-lookup"><span data-stu-id="0594c-103">Serves as an enumerator for a collection of `IReferenceIdentity` objects.</span></span>  
-  
-## <a name="methods"></a><span data-ttu-id="0594c-104">方法</span><span class="sxs-lookup"><span data-stu-id="0594c-104">Methods</span></span>  
-  
-|<span data-ttu-id="0594c-105">方法</span><span class="sxs-lookup"><span data-stu-id="0594c-105">Method</span></span>|<span data-ttu-id="0594c-106">描述</span><span class="sxs-lookup"><span data-stu-id="0594c-106">Description</span></span>|  
-|------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|<span data-ttu-id="0594c-107">取得新 `IEnumReferenceIdentity` 的介面指標，其中包含與此 `IEnumReferenceIdentity`相同的成員。</span><span class="sxs-lookup"><span data-stu-id="0594c-107">Gets an interface pointer to a new `IEnumReferenceIdentity` that contains the same members as this `IEnumReferenceIdentity`.</span></span>|  
-|`IEnumReferenceIdentity::Next`|<span data-ttu-id="0594c-108">從目前位置開始，取得指定的 `IReferenceIdentity` 物件數目。</span><span class="sxs-lookup"><span data-stu-id="0594c-108">Gets the specified number of `IReferenceIdentity` objects, starting at the current position.</span></span>|  
-|`IEnumReferenceIdentity::Reset`|<span data-ttu-id="0594c-109">將指令指標移至這個 `IEnumReferenceIdentity`的開頭。</span><span class="sxs-lookup"><span data-stu-id="0594c-109">Moves the instruction pointer to the beginning of this `IEnumReferenceIdentity`.</span></span>|  
-|`IEnumReferenceIdentity::Skip`|<span data-ttu-id="0594c-110">從目前位置開始，將指令指標向下移動指定的專案數。</span><span class="sxs-lookup"><span data-stu-id="0594c-110">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
-  
-## <a name="requirements"></a><span data-ttu-id="0594c-111">需求</span><span class="sxs-lookup"><span data-stu-id="0594c-111">Requirements</span></span>  
- <span data-ttu-id="0594c-112">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0594c-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="0594c-113">**標頭：** 隔離。h</span><span class="sxs-lookup"><span data-stu-id="0594c-113">**Header:** Isolation.h</span></span>  
-  
- <span data-ttu-id="0594c-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0594c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="0594c-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="0594c-115">See also</span></span>
+# <a name="ienumreferenceidentity-interface"></a><span data-ttu-id="61b70-102">IEnumReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="61b70-102">IEnumReferenceIdentity Interface</span></span>
 
-- [<span data-ttu-id="0594c-116">融合介面</span><span class="sxs-lookup"><span data-stu-id="0594c-116">Fusion Interfaces</span></span>](fusion-interfaces.md)
-- [<span data-ttu-id="0594c-117">IReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="0594c-117">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)
+<span data-ttu-id="61b70-103">作為物件集合的列舉值 `IReferenceIdentity` 。</span><span class="sxs-lookup"><span data-stu-id="61b70-103">Serves as an enumerator for a collection of `IReferenceIdentity` objects.</span></span>  
+  
+## <a name="methods"></a><span data-ttu-id="61b70-104">方法</span><span class="sxs-lookup"><span data-stu-id="61b70-104">Methods</span></span>  
+  
+|<span data-ttu-id="61b70-105">方法</span><span class="sxs-lookup"><span data-stu-id="61b70-105">Method</span></span>|<span data-ttu-id="61b70-106">描述</span><span class="sxs-lookup"><span data-stu-id="61b70-106">Description</span></span>|  
+|------------|-----------------|  
+|`IEnumReferenceIdentity::Clone`|<span data-ttu-id="61b70-107">取得新的介面指標， `IEnumReferenceIdentity` 其中包含與這個相同的成員 `IEnumReferenceIdentity` 。</span><span class="sxs-lookup"><span data-stu-id="61b70-107">Gets an interface pointer to a new `IEnumReferenceIdentity` that contains the same members as this `IEnumReferenceIdentity`.</span></span>|  
+|`IEnumReferenceIdentity::Next`|<span data-ttu-id="61b70-108">`IReferenceIdentity`從目前位置開始取得指定數目的物件。</span><span class="sxs-lookup"><span data-stu-id="61b70-108">Gets the specified number of `IReferenceIdentity` objects, starting at the current position.</span></span>|  
+|`IEnumReferenceIdentity::Reset`|<span data-ttu-id="61b70-109">將指令指標移至這個的開頭 `IEnumReferenceIdentity` 。</span><span class="sxs-lookup"><span data-stu-id="61b70-109">Moves the instruction pointer to the beginning of this `IEnumReferenceIdentity`.</span></span>|  
+|`IEnumReferenceIdentity::Skip`|<span data-ttu-id="61b70-110">從目前位置開始，將指令指標向下移動指定數目的元素。</span><span class="sxs-lookup"><span data-stu-id="61b70-110">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+  
+## <a name="requirements"></a><span data-ttu-id="61b70-111">需求</span><span class="sxs-lookup"><span data-stu-id="61b70-111">Requirements</span></span>  
+
+ <span data-ttu-id="61b70-112">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="61b70-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="61b70-113">**標頭：** 隔離。h</span><span class="sxs-lookup"><span data-stu-id="61b70-113">**Header:** Isolation.h</span></span>  
+  
+ <span data-ttu-id="61b70-114">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61b70-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="61b70-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="61b70-115">See also</span></span>
+
+- [<span data-ttu-id="61b70-116">融合介面</span><span class="sxs-lookup"><span data-stu-id="61b70-116">Fusion Interfaces</span></span>](fusion-interfaces.md)
+- [<span data-ttu-id="61b70-117">IReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="61b70-117">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)

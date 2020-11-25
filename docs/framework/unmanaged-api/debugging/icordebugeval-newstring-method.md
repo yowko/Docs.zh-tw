@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-ms.openlocfilehash: b263fed7db5cb2ef687da45f8cbc99a02e1e3ea2
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: c2d29a0cc344539bf515793c071fe839aa441ebc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976131"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729716"
 ---
-# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="40577-102">ICorDebugEval::NewString 方法</span><span class="sxs-lookup"><span data-stu-id="40577-102">ICorDebugEval::NewString Method</span></span>
-<span data-ttu-id="40577-103">使用指定的內容，配置新的字串實例。</span><span class="sxs-lookup"><span data-stu-id="40577-103">Allocates a new string instance with the specified contents.</span></span>  
+# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="809b2-102">ICorDebugEval::NewString 方法</span><span class="sxs-lookup"><span data-stu-id="809b2-102">ICorDebugEval::NewString Method</span></span>
+
+<span data-ttu-id="809b2-103">使用指定的內容配置新的字串實例。</span><span class="sxs-lookup"><span data-stu-id="809b2-103">Allocates a new string instance with the specified contents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40577-104">語法</span><span class="sxs-lookup"><span data-stu-id="40577-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="809b2-104">語法</span><span class="sxs-lookup"><span data-stu-id="809b2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT NewString (  
@@ -33,18 +34,21 @@ HRESULT NewString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40577-105">參數</span><span class="sxs-lookup"><span data-stu-id="40577-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="809b2-105">參數</span><span class="sxs-lookup"><span data-stu-id="809b2-105">Parameters</span></span>  
+
  `string`  
- <span data-ttu-id="40577-106">在字串內容的指標。</span><span class="sxs-lookup"><span data-stu-id="40577-106">[in] Pointer to the contents for the string.</span></span>  
+ <span data-ttu-id="809b2-106">在字串內容的指標。</span><span class="sxs-lookup"><span data-stu-id="809b2-106">[in] Pointer to the contents for the string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="40577-107">備註</span><span class="sxs-lookup"><span data-stu-id="40577-107">Remarks</span></span>  
- <span data-ttu-id="40577-108">此字串一律會線上程目前執行所在的應用程式域中建立。</span><span class="sxs-lookup"><span data-stu-id="40577-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="809b2-107">備註</span><span class="sxs-lookup"><span data-stu-id="809b2-107">Remarks</span></span>  
+
+ <span data-ttu-id="809b2-108">字串一律會建立線上程目前執行所在的應用程式域中。</span><span class="sxs-lookup"><span data-stu-id="809b2-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40577-109">需求</span><span class="sxs-lookup"><span data-stu-id="40577-109">Requirements</span></span>  
- <span data-ttu-id="40577-110">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40577-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="809b2-109">需求</span><span class="sxs-lookup"><span data-stu-id="809b2-109">Requirements</span></span>  
+
+ <span data-ttu-id="809b2-110">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="809b2-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40577-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="40577-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="809b2-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="809b2-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="40577-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40577-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="809b2-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="809b2-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="40577-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40577-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="809b2-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="809b2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
