@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-ms.openlocfilehash: 97d79f70097bef7768316907887cea2c38dd81e1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a90bba4a4dc9ca92ccdc4af1636d194f92fd7373
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212824"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695719"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue 方法
-取得儲存在這個原生框架之指定暫存器中的引數或區域變數的值。  
+
+取得在這個原生框架的指定暫存器中儲存之引數或區域變數的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +38,26 @@ HRESULT GetLocalRegisterValue (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `reg`  
- 在"CorDebugRegister" 列舉的值，指定包含值的暫存器。  
+ 在"CorDebugRegister" 列舉值，指定包含值的暫存器。  
   
  `cbSigBlob`  
- 在整數，指定參數所參考的二進位中繼資料簽章大小 `pvSigBlob` 。  
+ 在整數，指定參數所參考之二進位中繼資料簽章的大小 `pvSigBlob` 。  
   
  `pvSigBlob`  
- 在`PCCOR_SIGNATURE`值，指向數值型別的二進位中繼資料簽章。  
+ 在 `PCCOR_SIGNATURE` 指向值型別之二進位中繼資料簽章的值。  
   
  `ppValue`  
- 脫銷"ICorDebugValue" 物件位址的指標，代表儲存在指定之暫存器中的已抓取值。  
+ 擴展"ICorDebugValue" 物件位址的指標，代表儲存在指定之暫存器中的已抓取值。  
   
 ## <a name="remarks"></a>備註  
- `GetLocalRegisterValue`方法可以在原生框架或即時（JIT）編譯的框架中使用。  
+
+ `GetLocalRegisterValue`方法可以在原生框架中使用，或在即時 (JIT) 編譯的框架中使用。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

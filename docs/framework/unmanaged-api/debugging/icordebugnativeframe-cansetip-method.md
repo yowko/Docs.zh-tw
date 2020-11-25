@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 13258ac6-f4e4-4f66-8fc3-f1244417a3c3
 topic_type:
 - apiref
-ms.openlocfilehash: 21890f8130ec677cb88f2f5d7ef648aa19e67e71
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 194065e53d550c9bbd0486de54462309a4d9ffa1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695734"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>ICorDebugNativeFrame::CanSetIP 方法
-取得 HRESULT，指出是否可以安全地將指令指標（IP）設定為機器碼中的指定位移位置。  
+
+取得 HRESULT，指出是否可以安全地將指令指標 (的 IP) 設定為原生程式碼中的指定位移位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,17 @@ HRESULT CanSetIP (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `nOffset`  
  在指令指標所需的設定。  
   
 ## <a name="remarks"></a>備註  
- `CanSetIP`呼叫[ICorDebugNativeFrame：： SetIP](icordebugnativeframe-setip-method.md)方法之前，請先使用方法。 如果傳回 `CanSetIP` 除了 S_OK 以外的任何 HRESULT，您仍然可以叫用 `ICorDebugNativeFrame::SetIP` ，但不保證偵錯工具會繼續執行所要調試之程式碼的安全和正確執行。  
+
+ 在 `CanSetIP` 呼叫 [ICorDebugNativeFrame：： SetIP](icordebugnativeframe-setip-method.md) 方法之前，請先使用方法。 如果傳回 `CanSetIP` S_OK 以外的任何 HRESULT，您仍然可以叫用 `ICorDebugNativeFrame::SetIP` ，但不保證偵錯工具會繼續執行正在進行程式碼的安全且正確的執行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

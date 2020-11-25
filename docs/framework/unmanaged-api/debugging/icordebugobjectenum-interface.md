@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 0594caf53a889d51ea78e2ee9d6fff4d30f7cff2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9400c4fa3ddcefef923d7bcfaae80e2cef62dc7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205284"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695461"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum 介面
 
-會執行 ICorDebugEnum 方法，並依其相對虛擬位址（Rva）來列舉物件陣列。  
+會執行 ICorDebugEnum 方法，並依 (Rva) 的相對虛擬位址來列舉物件的陣列。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[下一個方法](icordebugobjectenum-next-method.md)|從目前的位置開始，取得列舉中指定數目之物件的 Rva。|  
+|[下一個方法](icordebugobjectenum-next-method.md)|從目前位置開始，取得列舉中指定之物件數目的 Rva。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -37,7 +37,8 @@ ms.locfileid: "83205284"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -45,6 +46,6 @@ ms.locfileid: "83205284"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)

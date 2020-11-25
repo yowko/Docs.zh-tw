@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b0ba8453-fa7e-4c14-93e5-335409cd4a47
 topic_type:
 - apiref
-ms.openlocfilehash: 8cd40ffb60bf837a9aa3b0db34892350a05964d7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 65d9c3688f3a41312a17e6058f73596fc2503dd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694980"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID 方法
-取得進程的作業系統（OS）識別碼。  
+
+取得進程的作業系統 (OS) 識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,11 +33,13 @@ HRESULT GetID([out] DWORD *pdwProcessId);
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pdwProcessId`  
- 脫銷進程的唯一識別碼。  
+ 擴展進程的唯一識別碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
