@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-ms.openlocfilehash: b270a6691d4e4ee4a5d0b42f424694eb7993e4e7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d65191e515db9c302cef669a824ffd08327faf34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504143"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713986"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding 方法
-傳回介面，代表舊版啟用原則已系結的執行時間，例如，藉由使用 `useLegacyV2RuntimeActivationPolicy` [ \<startup> 元素](../../configure-apps/file-schema/startup/startup-element.md)設定檔案專案上的屬性、直接使用舊版啟用 Api，或呼叫[ICLRRuntimeInfo：： BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md)方法。  
+
+傳回介面，這個介面表示舊版啟用原則已系結的執行時間，例如，藉由使用 `useLegacyV2RuntimeActivationPolicy` 專案設定檔案[ \<startup> ](../../configure-apps/file-schema/startup/startup-element.md)專案上的屬性、直接使用舊版啟用 api，或藉由呼叫[ICLRRuntimeInfo：： BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,16 +35,18 @@ HRESULT QueryLegacyV2RuntimeBinding (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `riid`  
- 在必要。目前唯一適用于此參數的值為 `IID_ICLRRuntimeInfo` 。  
+ 在必要項。此參數目前唯一有效的值為 `IID_ICLRRuntimeInfo` 。  
   
  `ppUnk`  
- [out] 必要項。 當這個方法傳回時，會包含[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面的指標，代表已系結到舊版啟用原則的執行時間。  
+ [out] 必要項。 當此方法傳回時，會包含 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 介面的指標，該介面表示已系結到舊版啟用原則的執行時間。  
   
 ## <a name="return-value"></a>傳回值  
+
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|這個方法順利完成，且傳回已繫結到舊版啟用原則的執行階段。|  
 |S_FALSE|這個方法順利完成，但是尚未已繫結舊版執行階段。|  
@@ -52,15 +55,16 @@ HRESULT QueryLegacyV2RuntimeBinding (
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - [ICLRMetaHost 介面](iclrmetahost-interface.md)
-- [Hosting](index.md)
+- [裝載](index.md)

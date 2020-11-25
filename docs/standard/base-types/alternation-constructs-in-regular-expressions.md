@@ -14,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0a1b46443d5cd9f8a19f4cfb9f9b07a5e33e719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825295"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714688"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 
@@ -30,6 +30,7 @@ ms.locfileid: "94825295"
 - [根據有效的已捕獲群組進行條件式比對](#Conditional_Group)
 
 <a name="Either_Or"></a>
+
 ## <a name="pattern-matching-with-124"></a>以 &#124; 進行的模式比對
 
 您可以使用分隔號 (`|`) 字元來比對其中任一系列的模式，且 `|` 字元會分隔每一個模式。
@@ -62,6 +63,7 @@ ms.locfileid: "94825295"
 |`\b`|結束字緣比對。|  
   
 <a name="Conditional_Expr"></a>
+
 ## <a name="conditional-matching-with-an-expression"></a>使用運算式進行的條件式比對
 
 這個語言項目會嘗試比對兩個模式的其中一個是否符合初始模式。 其語法如下：  
@@ -93,6 +95,7 @@ ms.locfileid: "94825295"
 |`\b`|比對字邊界。|  
 
 <a name="Conditional_Group"></a>
+
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>依據有效擷取群組進行的條件式比對
 
 這個語言項目會嘗試根據它是否已經比對指定的擷取群組，比對兩種模式的其中一種。 其語法如下：
@@ -128,6 +131,6 @@ ms.locfileid: "94825295"
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

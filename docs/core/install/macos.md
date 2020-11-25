@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 macOS 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 983c5d2c04b87759b898f449bc092161b03c8ace
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594452"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715130"
 ---
 # <a name="install-net-on-macos"></a>在 macOS 上安裝 .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "94594452"
 >
 > - [在 Windows 上安裝](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [在 Linux 上安裝](linux.md)
+> - [安裝在 Linux 上](linux.md)
 
 在本文中，您將瞭解如何在 macOS 上安裝 .NET。 .NET 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET 應用程式，且不一定會包含在應用程式中。 SDK 是用來建立 .NET 應用程式和程式庫。 .NET 執行時間一律會與 SDK 一起安裝。
 
@@ -74,7 +74,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 同時�
 > [!NOTE]
 > `+`符號表示最小版本。
 
-| .NET Core 版本 | macOS                 | 架構 | 詳細資訊    |
+| .NET Core 版本 | macOS                 | 架構 | 其他資訊    |
 | ----------------- | --------------------- | --------------| --- |
 | 5.0               | 高塞拉里昂 (10.13 +)   | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
 | 3.1               | 高塞拉里昂 (10.13 +)   | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
@@ -124,7 +124,7 @@ macOS 具有可用於安裝 .NET 5.0 SDK 的獨立安裝程式：
 
 若要將執行時間解壓縮，並讓 .NET CLI 命令可在終端機上使用，請先下載 .NET 二進位版本。 然後，開啟終端機，並從儲存檔案的目錄執行下列命令。 保存檔案名稱可能會因您所下載的內容而有所不同。
 
-**使用下列命令，將執行時間解壓縮** ：
+**使用下列命令，將執行時間解壓縮**：
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-osx-x64.tar.gz -C "$HOME/dotnet"
@@ -132,7 +132,7 @@ export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
 
-**使用下列命令將 SDK 解壓縮** ：
+**使用下列命令將 SDK 解壓縮**：
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-osx-x64.tar.gz -C "$HOME/dotnet"
@@ -145,9 +145,9 @@ export PATH=$PATH:$HOME/dotnet
 >
 > 您可以編輯 shell 設定檔，以永久新增命令。 Linux 有一些不同的 shell 可用，而且每個都有不同的設定檔。 例如：
 >
-> - **Bash Shell** ： *~/.bash_profile* ， *~/.bashrc*
-> - **Korn Shell** ： *~/.kshrc* 或 *. profile*
-> - **Z Shell** ： *~/.zshrc* 或 *. zprofile*
+> - **Bash Shell**： *~/.bash_profile*， *~/.bashrc*
+> - **Korn Shell**： *~/.kshrc* 或 *. profile*
+> - **Z Shell**： *~/.zshrc* 或 *. zprofile*
 >
 > 編輯您 shell 的適當原始程式檔，並新增 `:$HOME/dotnet` 至現有語句的結尾 `PATH` 。 如果未 `PATH` 包含任何語句，請使用加入新的一行 `export PATH=$PATH:$HOME/dotnet` 。
 >
@@ -181,7 +181,7 @@ Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，�
 
 [Dotnet 安裝腳本](../tools/dotnet-install-script.md)是用於執行時間的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載腳本。
 
-腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net 3.1。 您可以藉由指定參數來選擇特定版本 `current` 。 包含 `runtime` 參數以安裝執行時間。 否則，腳本會安裝 [SDK](./windows.md)。
+腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net Core 3.1。 您可以藉由指定參數來選擇特定版本 `current` 。 包含 `runtime` 參數以安裝執行時間。 否則，腳本會安裝 [SDK](./windows.md)。
 
 ```bash
 ./dotnet-install.sh --channel 5.0 --runtime aspnetcore

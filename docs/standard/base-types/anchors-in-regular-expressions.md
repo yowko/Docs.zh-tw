@@ -15,17 +15,18 @@ helpviewer_keywords:
 - .NET regular expressions, anchors
 - .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: 5f40270baa70c2b72d768cf0f5c4f8305f8bae7a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 37b6426581dc705264cd1403c979e95b1f4cfa5d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714480"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
+
 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
   
-|錨點|說明|  
+|錨點|描述|  
 |------------|-----------------|  
 |`^`|根據預設，比對必須發生在字串的開頭；在多行模式中，它必須發生在一行的開頭。 如需詳細資訊，請參閱 [字串開頭或行首](#start-of-string-or-line-)。|  
 |`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾，或一行結尾的 `\n` 之前。 如需詳細資訊，請參閱 [字串結尾或行尾](#end-of-string-or-line-)。|  
@@ -37,6 +38,7 @@ ms.locfileid: "94825269"
 |`\B`|比對不可發生在字邊界上。 如需詳細資訊，請參閱 [非字邊界](#non-word-boundary-b)。|  
 
 ## <a name="start-of-string-or-line-"></a>字串開頭或行首：^  
+
  根據預設，`^` 錨點可讓您指定下列模式必須從字串的第一個字元位置開始。 如果您將 `^` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用 (請參閱[規則運算式選項](regular-expression-options.md))，則比對必須發生在每一行的行首。  
   
  下列範例會在規則運算式中使用 `^` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。 此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法的兩個多載：  
@@ -63,6 +65,7 @@ ms.locfileid: "94825269"
 |<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|比對出現一或多次的下列項目：空格、四個十進位數字、出現零或一次的連字號 (該連字號後面接著四個十進位數字或字串 "present")，以及零或一個逗號。 這是第五個擷取群組。|
 
 ## <a name="end-of-string-or-line-"></a>字串結尾或行尾：$  
+
  `$` 錨點指定前述的模式必須發生在輸入字串的結尾，或輸入字串結尾的 `\n` 之前。  
   
  如果您將 `$` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用，則該比對也會在行尾發生。 請注意， `$` 會比對 `\n` ，但不會比對 `\r\n` (歸位字元與新行字元的組合，亦即 CR/LF)。 若要比對 CR/LF 字元組合，請在規則運算式模式中包含 `\r?$` 。  
@@ -73,6 +76,7 @@ ms.locfileid: "94825269"
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]
 
 ## <a name="start-of-string-only-a"></a>僅字串開頭：\A  
+
  `\A` 錨點指定比對必須發生在輸入字串的開頭。 它與 `^` 錨點相同，不同處在於 `\A` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 因此，它可以只比對多行輸入字串中第一行的行首。  
   
  下列範例是類似於 `^` 和 `$` 錨點的範例。 它會在規則運算式中使用 `\A` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。 輸入字串包含五行。 在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法的呼叫只會尋找其中的第一個子字串。 如範例所示，<xref:System.Text.RegularExpressions.RegexOptions.Multiline> 選項不會有任何作用。  
@@ -81,6 +85,7 @@ ms.locfileid: "94825269"
  [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]
 
 ## <a name="end-of-string-or-before-ending-newline-z"></a>字串結尾或結束新行之前：\Z  
+
  `\Z` 錨點指定比對必須發生在輸入字串的結尾，或在輸入字串結尾的 `\n` 之前。 它與 `$` 錨點相同，不同處在於 `\Z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 因此在多行字串中，它只會比對最後一行的結尾，或 `\n`前的上一行。  
   
  請注意， `\Z` 會比對 `\n` ，但不會比對 `\r\n` (CR/LF 字元組合)。 若要比對 CR/LF，請將 `\r?\Z` 包含在規則運算式模式中。  
@@ -91,6 +96,7 @@ ms.locfileid: "94825269"
  [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]
 
 ## <a name="end-of-string-only-z"></a>僅字串結尾：\z  
+
  `\z` 錨點指定比對必須發生在輸入字串的結尾。 與 `$` 語言項目相同， `\z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 不像 `\Z` 語言項目， `\z` 不會比對字串結尾處的 `\n` 字元。 因此，它可以只比對輸入字串的最後一行。  
   
  下列範例會在規則運算式中使用 `\z` 錨點，該規則運算式與上一節中的範例不同，它會擷取與某些職業棒球隊存在期間年份相關的資訊。 這個範例會將字串陣列中的五個項目與規則運算模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z` 進行比對。 有兩個字串以歸位字元與換行字元結尾，一個字串以換行字元結尾，以及兩個字串不以歸位字元也不以換行字元結尾。 如輸出所示，只有不含歸位字元或換行字元的字串會符合模式。  
@@ -99,6 +105,7 @@ ms.locfileid: "94825269"
  [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]
 
 ## <a name="contiguous-matches-g"></a>連續比對：\G  
+
  `\G` 錨點指定比對必須發生在上一個比對結束的點。 當您將此錨點配合 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法使用時，它可確保所有相符項目是連續的。  
   
  下列範例會使用規則運算式從逗點分隔的字串中擷取齧齒動物物種的名稱。  
@@ -118,6 +125,7 @@ ms.locfileid: "94825269"
 |`,?`|比對出現零次或一次的常值逗號字元。|
 
 ## <a name="word-boundary-b"></a>字邊界：\b  
+
  `\b` 錨點指定比對必須發生在文字字元 ( `\w` 語言項目) 和非文字字元 ( `\W` 語言項目) 之間的邊界上。 文字字元由英數字元及底線所組成；非文字字元是非英數字元或底線的任何字元。  (如需詳細資訊，請參閱 [字元類別](character-classes-in-regular-expressions.md)。 ) 相符項也可能會發生在字串開頭或結尾的字邊界上。  
   
  `\b` 錨點經常用來確保子運算式會比對整個字組，而非只比對字組的開頭或結尾。 在下列範例中的規則運算式 `\bare\w*\b` 說明這個的使用方式。 它會比對任何以子字串 "are" 為開頭的字組。 範例的輸出也說明了 `\b` 會比對輸入字串的開頭和結尾。  
@@ -135,6 +143,7 @@ ms.locfileid: "94825269"
 |`\b`|結束字緣比對。|  
 
 ## <a name="non-word-boundary-b"></a>非字邊界：\B  
+
  `\B` 錨點指定比對不得發生在字邊界上。 這和 `\b` 錨點相反。  
   
  下列範例使用 `\B` 錨點來尋找在字組中出現的子字串 "qu"。 規則運算式模式 `\Bqu\w+` 會比對以 "qu" 開頭的子字串，其中字組開頭並非 "qu"，並且會繼續比對到字組的結尾。  
@@ -150,7 +159,7 @@ ms.locfileid: "94825269"
 |`qu`|比對子字串 "qu"。|  
 |`\w+`|比對一個或多個文字字元。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)
 - [正則運算式選項](regular-expression-options.md)

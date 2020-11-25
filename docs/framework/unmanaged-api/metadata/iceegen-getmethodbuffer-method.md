@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-ms.openlocfilehash: 99eef11c294dbb17b30b2ef28e65999d4d60f817
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e9c2dab9f30be6e5eea8f6570b297f8df11b6fe6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008311"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715325"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer 方法
-取得在指定的相對虛擬位址上，方法之適當大小的緩衝區。  
+
+取得指定的相對虛擬位址之方法適當大小的緩衝區。  
   
- 這個方法已過時，不應使用。  
+ 這個方法已經過時，不應該使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,18 +38,20 @@ HRESULT GetMethodBuffer (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `RVA`  
- 在要傳回緩衝區之方法的相對虛擬位址。  
+ 在傳回緩衝區之方法的相對虛擬位址。  
   
  `lpBuffer`  
- 脫銷傳回之緩衝區的指標。  
+ 擴展傳回之緩衝區的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

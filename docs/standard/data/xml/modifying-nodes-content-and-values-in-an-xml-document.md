@@ -2,14 +2,15 @@
 title: 修改 XML 文件中的節點、內容和值
 ms.date: 03/30/2017
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-ms.openlocfilehash: 13fb18208831356e34301bc22715b68fda1f671f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c3f3f4a279f3bcb967e018abafbd2e1f7a0af473
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830177"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714467"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>修改 XML 文件中的節點、內容和值
+
 有許多方法可以修改文件中的節點及內容。 您可以：  
   
 - 使用 <xref:System.Xml.XmlNode.Value%2A> 屬性變更節點的值。  
@@ -30,7 +31,7 @@ ms.locfileid: "94830177"
 |CDATASection|CDATASection 的內容。|  
 |註解|註解的內容。|  
 |ProcessingInstruction|內容 (目標除外)。|  
-|Text|文字的內容。|  
+|文字|文字的內容。|  
 |XmlDeclaration|宣告的內容 (`<?xml` 及 `?>` 標記除外)。|  
 |空白|泛空白字元的值。 該值可以設為四個可以辨識的 XML 空白字元其中之一：空格、定位字元、CR 或 LF。|  
 |SignificantWhitespace|顯著泛空白字元的值。 該值可以設為四個可以辨識的 XML 空白字元其中之一：空格、定位字元、CR 或 LF。|  
@@ -43,6 +44,6 @@ ms.locfileid: "94830177"
   
  在可編輯之節點中加入或移除唯讀子節點有效。 不過，嘗試修改唯讀節點本身會擲回 <xref:System.InvalidOperationException>。 修改 <xref:System.Xml.XmlEntityReference> 節點的子節點便是一個範例。 子節點是唯讀的，而且無法修改。 對其進行修改的任何嘗試，都會擲回 <xref:System.InvalidOperationException>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1eb5e57f5cc1065f1b8510e4fb0a980a85abca29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827356"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714207"
 ---
 # <a name="weak-references"></a>弱式參考
+
 在應用程式碼可以存取使用中物件時，記憶體回收行程無法透過應用程式回收該物件。 應用程式即具有物件的強式參考。  
   
  弱式參考允許記憶體回收行程回收物件，同時仍然允許應用程式存取物件。 沒有強式參考時，除非回收物件，否則弱式參考僅在時間量不定期間才有效。 當您使用弱式參考時，應用程式仍然可以取得物件的強式參考，以防止回收該物件。 不過，記憶體回收行程在重新建立強式參考之前之前先取得物件，一定有其風險。  
@@ -29,6 +30,7 @@ ms.locfileid: "94827356"
  若要建立物件的弱式參考，請使用要追蹤之物件的執行個體來建立 <xref:System.WeakReference>。 接著將 <xref:System.WeakReference.Target%2A> 屬性設定為該物件，並將物件的原始參考設定為 `null`。 如需程式碼範例，請參閱類別庫中的 <xref:System.WeakReference>。  
   
 ## <a name="short-and-long-weak-references"></a>簡短和完整弱式參考  
+
  您可以建立簡短弱式參考或完整弱式參考︰  
   
 - Short  
@@ -44,12 +46,13 @@ ms.locfileid: "94827356"
  若要建立強式參考，並再次使用物件，請將 <xref:System.WeakReference> 的 <xref:System.WeakReference.Target%2A> 屬性轉換為物件的類型。 如果 <xref:System.WeakReference.Target%2A> 屬性傳回 `null`，則已回收物件；否則，您可以繼續使用物件，因為應用程式已重新取得其強式參考。  
   
 ## <a name="guidelines-for-using-weak-references"></a>使用弱式參考的指導方針  
+
  只在物件狀態於完成之後無法預期時，才會在必要時使用完整弱式參考。  
   
  請避免使用小型物件的弱式參考，因為指標本身可能一樣大或較大。  
   
  請避免使用弱式參考作為記憶體管理問題的自動解決方案。 相反地，開發有效的快取原則來處理您的應用程式物件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [記憶體回收](index.md)

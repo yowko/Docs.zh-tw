@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 Windows 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594531"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715117"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安裝 .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "94594531"
 >
 > - [在 Windows 上安裝](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [在 Linux 上安裝](linux.md)
+> - [安裝在 Linux 上](linux.md)
 
 在本文中，您將瞭解如何在 Windows 上安裝 .NET。 .NET 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET 應用程式，且不一定會包含在應用程式中。 SDK 是用來建立 .NET 應用程式和程式庫。 .NET 執行時間一律會與 SDK 一起安裝。
 
@@ -204,7 +204,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 
 [Dotnet 安裝腳本](../tools/dotnet-install-script.md)適用于執行時間的 CI 自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載腳本。
 
-腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net 3.1。 您可以藉由指定參數來選擇特定版本 `Channel` 。 包含 `Runtime` 參數以安裝執行時間。 否則，腳本會安裝 SDK。
+腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net Core 3.1。 您可以藉由指定參數來選擇特定版本 `Channel` 。 包含 `Runtime` 參數以安裝執行時間。 否則，腳本會安裝 SDK。
 
 ```powershell
 dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore
@@ -243,7 +243,7 @@ Visual Studio 可以安裝最新的 .NET SDK 和執行時間。
 
 安裝或修改 Visual Studio 時，請根據您所建立的應用程式類型，選取下列一或多個工作負載：
 
-- [ **其他工具** 組] 區段中的 **.net Core 跨平臺開發** 工作負載。
+- [**其他工具** 組] 區段中的 **.net Core 跨平臺開發** 工作負載。
 - **Web & Cloud** 區段中的 **ASP.NET 和 網頁程式開發** 工作負載。
 - **Web & Cloud** 區段中的 **Azure 開發** 工作負載。
 - Desktop 中的 **.net 桌面開發** 工作負載 **& Mobile** 區段。
