@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830034"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734812"
 ---
 # <a name="operator-overloads"></a>運算子多載
+
 運算子多載可讓架構類型顯示為內建的語言基本類型。
 
  雖然在某些情況下允許且很有用，但應該謹慎使用運算子多載。 在許多情況下，運算子多載已被濫用，例如，當架構設計工具開始使用運算子進行應該是簡單方法的作業時。 下列指導方針可協助您決定何時及如何使用運算子多載。
@@ -85,9 +86,11 @@ ms.locfileid: "94830034"
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>多載運算子 = =
+
  多載 `operator ==` 相當複雜。 運算子的語法必須與其他數個成員相容，例如 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。
 
 ### <a name="conversion-operators"></a>轉換運算子
+
  轉換運算子是一元運算子，可允許從某個類型轉換成另一個類型。 運算子必須定義為運算元或傳回型別上的靜態成員。 轉換運算子有兩種類型：隱含和明確。
 
  ❌ 如果終端使用者無法明確地預期這類轉換，請不要提供轉換運算子。
@@ -110,7 +113,7 @@ ms.locfileid: "94830034"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [成員設計方針](member.md)
 - [架構設計指導方針](index.md)

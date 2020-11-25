@@ -7,14 +7,15 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: 82c1df01197e04d14436b6e5b3b2c6aaa249add2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c63a88cb4e500504f993352a03478f40cad58400
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734725"
 ---
 # <a name="events-and-callbacks"></a>事件和回呼
+
 回呼是延伸點，可讓架構透過委派回呼使用者程式碼。 這些委派通常會透過方法的參數傳遞至架構。
 
  事件是回呼的特殊案例，可支援方便且一致的語法，以 (事件處理常式) 提供委派。 此外，Visual Studio 的語句完成和設計工具會在使用事件型 Api 時提供協助。  (查看 [事件設計](event.md)。 ) 
@@ -41,7 +42,7 @@ ms.locfileid: "94821225"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [擴充性設計](designing-for-extensibility.md)
 - [架構設計指導方針](index.md)

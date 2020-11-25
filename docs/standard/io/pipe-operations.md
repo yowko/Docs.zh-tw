@@ -8,14 +8,15 @@ helpviewer_keywords:
 - interprocess communication [.NET], pipes
 - I/O [.NET], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 3ec4ee61bfd3a0a82eb0a0884b89c19a9300b078
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bb8804c32b9f2b54b05298779bddae117c10dcf5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734799"
 ---
 # <a name="pipe-operations-in-net"></a>.NET 中的管道作業
+
 管道會提供一種處理序間通訊的方法。 管道有兩種類型：  
   
 - 匿名管道。  
@@ -34,8 +35,8 @@ ms.locfileid: "94819093"
   
      請參閱[操作說明：使用具名管道進行網路處理序間通訊](how-to-use-named-pipes-for-network-interprocess-communication.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [檔案和資料流 I/O](index.md)
+- [檔案和資料流程 i/o](index.md)
 - [作法：使用匿名管道進行本機處理序間通訊](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
 - [作法：使用具名管道進行網路處理序間通訊](how-to-use-named-pipes-for-network-interprocess-communication.md)

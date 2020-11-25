@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70343851ba73af9041014e8654f5df82d8389c39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831178"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734773"
 ---
 # <a name="garbage-collection-notifications"></a>記憶體回收告知
+
 在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。 這可能是處理大量要求的伺服器所產生的問題;在此情況下，長時間的垃圾收集可能會導致要求超時。若要防止在重要期間內進行完整集合，您可以收到完整垃圾收集的通知，然後採取動作將工作負載重新導向至另一個伺服器實例。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法會註冊一個當執行階段偵測到接近完整記憶體回收時要引發的通知。 通知有兩個部分：當接近完整記憶體回收時，以及當完整記憶體回收完成時。  
@@ -32,6 +33,7 @@ ms.locfileid: "94831178"
  <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法是設計來搭配使用。 僅使用其中一個可能會產生不定的結果。  
   
 ## <a name="full-garbage-collection"></a>完整記憶體回收  
+
  當下列任何案例都成立時，執行階段會導致完整記憶體回收：  
   
 - 足夠的記憶體已升階至層代 2，導致下一個層代 2 回收。  
@@ -49,9 +51,10 @@ ms.locfileid: "94831178"
  第三個案例也會造成您收到通知之時間的不確定性。 雖然這不是一種保證，但是透過在這段期間將要求重新導向或在更能容納的時候自行引發，確實已證明這是一種減輕不適當的完整記憶體回收之效果的有用方法。  
   
 ## <a name="notification-threshold-parameters"></a>通知閾值參數  
+
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法有兩個參數來指定層代 2 物件和大型物件堆積的閾值。 當符合那些值時，應該會引發記憶體回收通知。 下列表格描述這些參數。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|範圍從 1 到 99 的數字，指定何時應根據層代 2 中所升階的物件來引發通知。|  
 |`largeObjectHeapThreshold`|範圍從 1 到 99 的數字，指定何時應根據大型物件堆積中所配置的物件來引發通知。|  
@@ -63,6 +66,7 @@ ms.locfileid: "94831178"
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
+
  在下列範例中，一組伺服器會處理傳入的 Web 要求。 若要模擬處理要求的工作負載，請將位元組陣列加入至 <xref:System.Collections.Generic.List%601> 集合。 每部伺服器都會註冊記憶體回收通知，然後在 `WaitForFullGCProc` 使用者方法上啟動執行緒以持續監視 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法所傳回的 <xref:System.GCNotificationStatus> 列舉。  
   
  當引發通知時，<xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法會呼叫各自的事件處理使用者方法：  
@@ -119,6 +123,6 @@ ms.locfileid: "94831178"
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [記憶體回收](index.md)

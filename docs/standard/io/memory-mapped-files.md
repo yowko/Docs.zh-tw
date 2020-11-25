@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: dc0da9842df7b0a827293c42d80ccdd418a043b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4a179bff7ec7988c5b7410fa99eab346d4add1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734825"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
 
@@ -31,6 +31,7 @@ ms.locfileid: "94819197"
      非持續性檔案是與磁碟上的檔案沒有關聯的記憶體對應檔案。 當最後一個處理序完成檔案處理時，資料就會遺失，而且該檔案會由記憶體回收進行回收。 這些檔案適合為處理序間通訊 (IPC) 建立共用記憶體。  
   
 ## <a name="processes-views-and-managing-memory"></a>處理序、檢視和管理記憶體  
+
  記憶體對應檔案可以跨多個處理序共用。 處理序可以使用建立檔案之處理序所指派的一般名稱，對應至相同的記憶體對應檔案。  
   
  若要處理記憶體對應檔案，您必須建立整個或部分記憶體對應檔案的檢視。 您也可以對記憶體對應檔案的相同部分建立多個檢視，藉此建立並行記憶體。 若要讓兩個檢視維持並行，必須從相同的記憶體對應檔案建立這兩個檢視。  
@@ -48,9 +49,10 @@ ms.locfileid: "94819197"
  ![將檢視顯示為記憶體對應檔案的螢幕擷取畫面。](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>使用記憶體對應檔案進行程式設計  
+
  下表提供使用記憶體對應檔案物件及其成員的指南。  
   
-|工作|要使用的方法或屬性|  
+|Task|要使用的方法或屬性|  
 |----------|----------------------------------|  
 |從磁碟上的檔案取得表示持續性記憶體對應檔案的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType> 方法。|  
 |取得表示非持續性記憶體對應檔案 (與磁碟上的檔案沒有關聯) 的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType> 方法。<br /><br /> - 或 -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType> 方法。|  
@@ -61,6 +63,7 @@ ms.locfileid: "94819197"
 |延遲配置記憶體，直到建立檢視 (僅限非持續性檔案) 為止 <br /><br /> (若要判斷目前的系統頁面大小，請使用 <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> 屬性)。|具有 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> 值的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 方法。<br /><br /> - 或 -<br /><br /> 將 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> 列舉當作參數的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法。|  
   
 ### <a name="security"></a>安全性  
+
  使用下列採用 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 列舉作為參數的方法建立記憶體對應檔案時，您可以套用存取權限：  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -78,6 +81,7 @@ ms.locfileid: "94819197"
 ## <a name="examples"></a>範例  
   
 ### <a name="persisted-memory-mapped-files"></a>持續性記憶體對應檔案  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> 方法會從磁碟上現有的檔案建立記憶體對應檔案。  
   
  下列範例會針對極大檔案的一部分建立記憶體對應檢視，及操作其中的一部分。  
@@ -93,6 +97,7 @@ ms.locfileid: "94819197"
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>非持續性記憶體對應檔案  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 和 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法會建立非對應至磁碟上現有檔案的記憶體對應檔案。  
   
  下列範例包含三個不同的處理序 (主控台應用程式)，這些處理序會將布林值寫入記憶體對應檔案。 發生下列順序的動作：  
@@ -146,6 +151,6 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [檔案和資料流 I/O](index.md)
+- [檔案和資料流程 i/o](index.md)
