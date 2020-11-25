@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b8025e04-f0e5-40c8-849c-8cd51323420e
 topic_type:
 - apiref
-ms.openlocfilehash: fdf24bb8533da7914128f9477987c427442383bb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fcf250f10baf4c65cd1c8c918655e4b9f4f5cc4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610115"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731731"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod 方法
-關閉目前的方法。 關閉方法後，就不能在其中定義更多符號。  
+
+關閉目前的方法。 關閉方法之後，就無法在其中定義任何符號。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,10 +33,12 @@ HRESULT CloseMethod();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

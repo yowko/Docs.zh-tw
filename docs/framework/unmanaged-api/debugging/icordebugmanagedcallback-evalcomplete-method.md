@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-ms.openlocfilehash: 0431b54997c9889e2b3206392e86e4dcde45ffb3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e95874447528989af68f5c97825691532195889f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212447"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731796"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>ICorDebugManagedCallback::EvalComplete 方法
+
 通知偵錯工具已完成評估。  
   
 ## <a name="syntax"></a>語法  
@@ -36,17 +37,19 @@ HRESULT EvalComplete (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pAppDomain`  
- 在ICorDebugAppDomain 物件的指標，代表執行評估所在的應用程式域。  
+ 在ICorDebugAppDomain 物件的指標，代表執行評估的應用程式域。  
   
  `pThread`  
- 在ICorDebugThread 物件的指標，代表執行評估的執行緒。  
+ 在代表執行評估之執行緒的 ICorDebugThread 物件指標。  
   
  `pEval`  
- 在ICorDebugEval 物件的指標，代表執行評估的程式碼。  
+ 在代表執行評估之程式碼的 ICorDebugEval 物件指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -54,6 +57,6 @@ HRESULT EvalComplete (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

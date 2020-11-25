@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-ms.openlocfilehash: 1591a055200618f3e4951b5f6cf860dd3e71b44b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11515bbb5717222a0030c1953b4eab4eb1b83bb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554341"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731640"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime 方法
+
 通知主機未受管理方法的呼叫（例如平台叫用方法），會將執行控制權傳回給 common language runtime (CLR) 。  
   
 ## <a name="syntax"></a>語法  
@@ -44,17 +45,19 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|沒有足夠的記憶體可完成要求的配置。|  
   
 ## <a name="remarks"></a>備註  
+
  `EnterRuntime` 會呼叫，以通知主機未受管理的函式，其中先前對 [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md) 方法的呼叫已完成執行，並將執行控制項傳回給執行時間。  
   
 > [!NOTE]
 > 呼叫[ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)時，會呼叫，以通知主機先前呼叫的非受控函式 `LeaveRuntime` 正在對 managed 程式碼進行呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll  
   
- 連結**庫：** 以資源的形式包含在 MSCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

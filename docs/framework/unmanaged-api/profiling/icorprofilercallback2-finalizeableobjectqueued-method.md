@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: e2e01c396a67614464e3d4ca50de992388961463
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4429524b5f3baff3251acbd7ef7954d30a3e0093
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499815"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731944"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued 方法
-通知程式碼分析工具，具有完成項的物件已排入執行器執行緒的佇列，以執行其 `Finalize` 方法。  
+
+通知程式碼分析工具，具有完成項的物件已排入完成項執行緒，以執行其 `Finalize` 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,16 @@ HRESULT FinalizeableObjectQueued(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `finalizerFlags`  
- 在描述完成項各個層面之[COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md)列舉的值。  
+ 在描述完成項之層面的 [COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md) 列舉值。  
   
  `objectID`  
  在已排入佇列之物件的識別碼。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -15,24 +15,26 @@ helpviewer_keywords:
 ms.assetid: 973dbcc5-bce8-43a7-9a66-d9a1db7cc5b7
 topic_type:
 - apiref
-ms.openlocfilehash: a4b530afd615f68c5455d1926bfc616d15a819aa
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f5a63de0c5871454de132473d4a5d0d2b21741ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731419"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>ICorProfilerObjectEnum::Reset 方法
+
 將這個列舉值的資料指標移至序列的開始位置。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

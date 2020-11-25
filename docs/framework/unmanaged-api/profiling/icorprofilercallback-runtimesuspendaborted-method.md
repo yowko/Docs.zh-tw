@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5a8a4277-345b-448b-a028-fc8cff9998aa
 topic_type:
 - apiref
-ms.openlocfilehash: a3fb5c398b8ccd7caba0b005bcf03e64ecef4ba5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4b6eb59dd771e4013106e6a77fc7475b77b2b007
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503246"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732017"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>ICorProfilerCallback::RuntimeSuspendAborted 方法
-通知分析工具，執行時間已中止發生的運行時暫停。  
+
+通知分析工具，執行時間已中止發生的執行時間暫止。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,14 +33,16 @@ HRESULT RuntimeSuspendAborted();
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果兩個執行緒同時嘗試暫停執行時間，則運行時暫停可能會中止。  
+
+ 如果兩個執行緒同時嘗試暫停執行時間，則執行時間暫止可能會中止。  
   
  [ICorProfilerCallback：： RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md)回呼或 `RuntimeSuspendAborted` 回呼會在[ICorProfilerCallback：： RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md)回呼之後的單一執行緒上發生。  
   
  `RuntimeSuspendAborted`回呼保證會在與回呼相同的執行緒上發生 `RuntimeSuspendStarted` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 365c21c6ea35683d7d3fad777cab3527103903c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687594"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731510"
 ---
 # <a name="assembly-manifest"></a>資訊清單
 
-每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 您可以將組件資訊清單儲存在 PE 檔中， ( *.exe* 或 *.Dll* ) 搭配 MICROSOFT 中繼語言 (MSIL) 程式碼，或只包含組件資訊清單資訊的獨立 PE 檔案中。  
+每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 您可以將組件資訊清單儲存在 PE 檔中， (*.exe* 或 *.Dll*) 搭配 MICROSOFT 中繼語言 (MSIL) 程式碼，或只包含組件資訊清單資訊的獨立 PE 檔案中。  
   
  下圖所示為儲存資訊清單的不同方式。  
   
@@ -39,6 +39,7 @@ ms.locfileid: "92687594"
 - 轉譯組件的自我描述  
   
 ## <a name="assembly-manifest-contents"></a>組件資訊清單內容  
+
  下表所示為組件資訊清單中包含的資訊。 前四個專案：元件名稱、版本號碼、文化特性和強式名稱資訊組成元件的身分識別。  
   
 |資訊|描述|  
@@ -53,7 +54,7 @@ ms.locfileid: "92687594"
   
  您可以在程式碼中使用組件屬性在組件資訊清單中加入或變更某些資訊。 您可以變更版本資訊和資訊屬性，包括商標、著作權、產品、公司和資訊版本。 如需元件屬性的完整清單，請參閱 [設定元件屬性](set-attributes.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [組件內容](contents.md)
 - [組件版本控制](versioning.md)

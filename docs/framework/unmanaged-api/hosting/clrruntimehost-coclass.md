@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-ms.openlocfilehash: 40766ce5837053493f2e3f1f25fe7d1d63ec695f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7c77cb2e89cb8fd87bf219780b9460649de19c9d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616797"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731751"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass
-提供介面，以供運行時間管理程式碼執行。  
+
+提供介面來管理執行時間所執行的程式碼。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 coclass CLRRuntimeHost {  
@@ -38,14 +39,15 @@ coclass CLRRuntimeHost {
 |介面|描述|  
 |---------------|-----------------|  
 |[ICLRRuntimeHost 介面](iclrruntimehost-interface.md)|提供方法來控制執行時間的應用程式執行。|  
-|[ICLRValidator 介面](iclrvalidator-interface.md)|提供可移植可執行映射的驗證方法，以及詳細的驗證錯誤報表。|  
+|[ICLRValidator 介面](iclrvalidator-interface.md)|提供驗證可攜式可執行檔映射和詳細報告驗證錯誤的方法。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll .idl  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

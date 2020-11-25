@@ -4,12 +4,12 @@ description: 了解用來描述並包含 .NET 應用程式和程式庫的 .NET �
 author: richlander
 ms.date: 08/20/2019
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b1de3f46f04f24dd4bbb2f695de8741feb29f226
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822187"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731536"
 ---
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
@@ -17,7 +17,7 @@ ms.locfileid: "94822187"
 
 > 每個 CLI 元件都會攜帶該元件特定宣告、實作和參考的中繼資料。 因此，元件特定中繼資料是指元件中繼資料，而且產生的元件即為來自 ECMA 335 I.9.1 的自我描述元件和組件。
 
-格式會依 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 來完整指定並標準化。 所有 .NET 編譯器和執行階段都會使用這種格式。 所記載且不常更新的二進位格式目前狀態，已是互通性的主要優點 (即需求)。 這種格式上次在 2005 年進行重大更新 (.NET 2.0)，可容納泛型和處理器架構。
+格式會依 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 來完整指定並標準化。 所有 .NET 編譯器和執行階段都會使用這種格式。 所記載且不常更新的二進位格式目前狀態，已是互通性的主要優點 (即需求)。 此格式在 2005 ( .NET Framework 2.0) ，以配合泛型和處理器架構，最後會以實體方式更新。
 
 格式為 CPU 並且無作業系統無關。 它已用作將目標設為許多晶片和 CPU 之 .NET 實作的一部分。 雖然格式本身具有 Windows 傳承，但是可在任何作業系統上實作。 為達 OS 互通性，大部分的值皆以位元組由小到大的格式儲存，這可說是最重大的選擇。 它沒有電腦指標大小 (例如，32 位元、64 位元) 的特定同質性。
 

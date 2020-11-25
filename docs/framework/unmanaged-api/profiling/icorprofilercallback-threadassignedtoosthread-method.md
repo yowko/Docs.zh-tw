@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: f9671e5a-7b14-4f5b-8404-58136422c8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 182a82300183046ccb4a93a79af0dd8f23848c20
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d6f34d88dd79fe350f1c018e3afa55e5b180c46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503168"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731997"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread 方法
-使用特定的作業系統執行緒，通知分析工具正在執行的受控執行緒。  
+
+通知分析工具正在使用特定的作業系統執行緒來執行 managed 執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,6 +35,7 @@ HRESULT ThreadAssignedToOSThread(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `managedThreadId`  
  在Managed 執行緒的識別碼。  
   
@@ -41,10 +43,12 @@ HRESULT ThreadAssignedToOSThread(
  在作業系統執行緒的識別碼。  
   
 ## <a name="remarks"></a>備註  
- `ThreadAssignedToOSThread`回呼存在，讓分析工具能夠在作業系統執行緒的纖程與受控執行緒之間維持精確的對應。  
+
+ `ThreadAssignedToOSThread`回呼已存在，讓分析工具可以在作業系統執行緒的纖程和 managed 執行緒之間保持精確的對應。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

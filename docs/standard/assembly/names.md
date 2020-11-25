@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731445"
 ---
 # <a name="assembly-names"></a>組件名稱
 
@@ -48,6 +48,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > 繫結至組件時，執行階段會將組件名稱視為不區分大小寫，但會保留組件名稱中所使用的大小寫。 Windows SDK 中的數個工具會以區分大小寫的方式處理組件名稱。 為了獲得最佳結果，請如同其區分大小寫一樣地管理組件名稱。
 
 ## <a name="name-application-components"></a>命名應用程式元件
+
  判斷組件的身分識別時，執行階段不會考慮檔案名稱。 執行階段必須知道包含組件名稱、版本、文化特性和強式名稱的組件身分識別。
 
  例如，如果您有一個稱為 *myAssembly.exe* 的元件，而該元件參考稱為 *myAssembly.dll* 的元件，則系結會在您執行 *myAssembly.exe* 時正確進行。 但是，如果另一個應用程式使用方法執行 *myAssembly.exe* <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> ，則運行 `myAssembly` 時間會判斷當 *myAssembly.exe* 要求系結至時，已經載入 `myAssembly` 。 在此情況下，絕對不會載入 *myAssembly.dll* 。 因為 *myAssembly.exe* 不包含所要求的型別，所以 <xref:System.TypeLoadException> 會發生。
@@ -55,9 +56,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
  若要避免這個問題，請確定構成應用程式的組件沒有相同的組件名稱，或將同名的組件放在不同的目錄中。
 
 > [!NOTE]
-> 在 .NET Framework 中，如果您將強式名稱的元件放在全域組件快取中，元件的檔案名必須符合元件名稱，而不包含副檔名，例如 *.exe* 或 *.dll* 。 例如，如果元件的檔案名是 *myAssembly.dll* ，元件名稱必須是 `myAssembly` 。 只有在根應用程式目錄中部署的私用組件才能具有與檔案名稱不同的組件名稱。
+> 在 .NET Framework 中，如果您將強式名稱的元件放在全域組件快取中，元件的檔案名必須符合元件名稱，而不包含副檔名，例如 *.exe* 或 *.dll*。 例如，如果元件的檔案名是 *myAssembly.dll*，元件名稱必須是 `myAssembly` 。 只有在根應用程式目錄中部署的私用組件才能具有與檔案名稱不同的組件名稱。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：決定元件的完整名稱](find-fully-qualified-name.md)
 - [建立組件](create.md)

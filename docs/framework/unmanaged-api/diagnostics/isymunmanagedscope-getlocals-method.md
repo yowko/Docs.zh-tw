@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-ms.openlocfilehash: 0acd31d85504688427cace0222a657885035c537
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3a2045466340f92dd8421090c74a442068e8bfaf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615380"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731406"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 方法
-取得在此範圍內定義的區域變數。  
+
+取得在此範圍內定義的本機變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +37,23 @@ HRESULT GetLocals(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cLocals`  
- 在`ULONG32`，指出陣列的大小 `locals` 。  
+ 在 `ULONG32` ，指出陣列的大小 `locals` 。  
   
  `pcLocals`  
- 脫銷的指標 `ULONG32` ，接收包含區域變數所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含區域變數所需的緩衝區大小。  
   
  `locals`  
- 脫銷接收本機變數的陣列。  
+ 擴展接收本機變數的陣列。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
