@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4f34fdf9a0eeb47e027cc874afee5bd04f5bd9bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210237"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712387"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame 介面
 
-表示 Microsoft 中繼語言（MSIL）程式碼的堆疊框架。 這個介面是 ICorDebugFrame 介面的子類別。  
+表示 Microsoft 中繼語言 (MSIL) 程式碼的堆疊框架。 此介面是 ICorDebugFrame 介面的子類別。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[CanSetIP 方法](icordebugilframe-cansetip-method.md)|取得值，指出是否可以安全地將指令指標設定為指定的位移位置。|  
+|[CanSetIP 方法](icordebugilframe-cansetip-method.md)|取得值，這個值會指出是否可以安全地將指令指標設定為指定的位移位置。|  
 |[EnumerateArguments 方法](icordebugilframe-enumeratearguments-method.md)|取得此框架中引數的列舉值。|  
-|[EnumerateLocalVariables 方法](icordebugilframe-enumeratelocalvariables-method.md)|取得此框架中區域變數的列舉值。|  
+|[EnumerateLocalVariables 方法](icordebugilframe-enumeratelocalvariables-method.md)|取得這個框架中區域變數的列舉值。|  
 |[GetArgument 方法](icordebugilframe-getargument-method.md)|取得這個 MSIL 堆疊框架中指定之引數的值。|  
 |[GetIP 方法](icordebugilframe-getip-method.md)|取得指令指標的值，以及描述如何取得指令指標值的位組合值。|  
 |[GetLocalVariable 方法](icordebugilframe-getlocalvariable-method.md)|取得這個 MSIL 堆疊框架中指定之區域變數的值。|  
@@ -40,13 +40,15 @@ ms.locfileid: "83210237"
 |[SetIP 方法](icordebugilframe-setip-method.md)|將指令指標設定為 MSIL 程式碼中指定的位移位置。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugILFrame`介面是特製化的 ICorDebugFrame 介面。 它可用於 MSIL 程式碼框架或即時（JIT）編譯的框架。 JIT 編譯的框架會同時執行 `ICorDebugILFrame` 介面和 ICorDebugNativeFrame 介面。  
+
+ `ICorDebugILFrame`介面是特製化的 ICorDebugFrame 介面。 它可用於 MSIL 程式碼框架，或適用于即時 (JIT) 編譯的框架。 JIT 編譯的框架會同時執行 `ICorDebugILFrame` 介面和 ICorDebugNativeFrame 介面。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -54,6 +56,6 @@ ms.locfileid: "83210237"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)

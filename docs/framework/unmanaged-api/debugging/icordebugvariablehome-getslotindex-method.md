@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 0bffd2db0a4a061a8629ff50a03a319feec6d836
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4b071bd8e9d96084848c1553385eec5f8beca624
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396557"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711724"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome：： GetSlotIndex 方法
+
 取得本機變數的 managed 位置索引。  
   
 ## <a name="syntax"></a>語法  
@@ -34,22 +35,26 @@ HRESULT GetSlotIndex(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pSlotIndex`  
- 脫銷本機變數位置索引的指標。  
+ 擴展區域變數之位置索引的指標。  
   
 ## <a name="return-value"></a>傳回值  
+
  方法會傳回下列值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|`S_OK`|方法呼叫會傳回中的位置索引值 `pSlotIndex` 。|  
-|`E_FAIL`|目前的[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例代表函式引數。|  
+|`S_OK`|方法呼叫傳回中的位置索引值 `pSlotIndex` 。|  
+|`E_FAIL`|目前的 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 實例表示函式引數。|  
   
 ## <a name="remarks"></a>備註  
- 位置索引可以用來抓取此區域變數的中繼資料。  
+
+ 位置索引可以用來取得此區域變數的中繼資料。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -57,6 +62,6 @@ HRESULT GetSlotIndex(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugVariableHome 介面](icordebugvariablehome-interface.md)

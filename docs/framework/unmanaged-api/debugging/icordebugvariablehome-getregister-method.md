@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-ms.openlocfilehash: 6cf66774209bd07426872c29c15b2225421c2b4d
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7f912f4b13620b567f5aa097604e98112d85f02d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396825"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711750"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome：： GetRegister 方法
-取得包含位置類型為之變數的暫存器 `VLT_REGISTER` ，以及位置類型為之變數的基底暫存器 `VLT_REGISTER_RELATIVE` 。  
+
+取得暫存器，其中包含位置類型為的變數 `VLT_REGISTER` ，以及位置類型為之變數的基底暫存器 `VLT_REGISTER_RELATIVE` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,19 +35,22 @@ HRESULT GetRegister(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pRegister`  
- 脫銷CorDebugRegister 列舉值，指出位置類型為之變數的暫存器 `VLT_REGISTER` ，以及位置類型為之變數的基底暫存器 `VLT_REGISTER_RELATIVE` 。  
+ 擴展CorDebugRegister 列舉值，這個值會指出的位置型別為之變數的註冊 `VLT_REGISTER` ，以及位置型別為之變數的基底暫存器 `VLT_REGISTER_RELATIVE` 。  
   
 ## <a name="return-value"></a>傳回值  
+
  方法會傳回下列值：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`S_OK`|變數位於引數所指示的暫存器中 `pRegister` 。|  
-|`E_FAIL`|變數不在暫存器或暫存器相對位置。|  
+|`E_FAIL`|變數不在暫存器或暫存器的相對位置。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -54,7 +58,7 @@ HRESULT GetRegister(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [VariableLocationType 列舉](variablelocationtype-enumeration.md)
 - [ICorDebugVariableHome 介面](icordebugvariablehome-interface.md)

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: b7a38d28b55842e9358bd9c7019b84c529526613
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6c16b02a5ae323ba80d44937f322810022dfa9f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617161"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711633"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 函式
-取得指定的應用程式所要求的 common language runtime （CLR）版本號碼。 如果未安裝該版本，會取得所要求版本之前所安裝的最新版本。  
+
+取得指定的應用程式所要求之 common language runtime (CLR) 的版本號碼。 如果未安裝該版本，則會取得在要求的版本之前安裝的最新版本。  
   
- 此函式在 .NET Framework 4 中已被取代。  
+ 此函式已在 .NET Framework 4 中被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,33 +40,36 @@ HRESULT GetRequestedRuntimeVersion (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pExe`  
  在應用程式的名稱。  
   
  `pVersion`  
- 脫銷一個緩衝區，其中包含成功完成時的版本號碼字串。  
+ 擴展在成功完成時包含版本號碼字串的緩衝區。  
   
  `cchBuffer`  
  在版本緩衝區的長度。  
   
  `pdwLength`  
- 脫銷版本號碼字串長度的指標。  
+ 擴展版本號碼字串的長度指標。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回標準元件物件模型（COM）錯誤碼（如 Winerror.h 中所定義），以及下列值。  
+
+ 除了下列值以外，這個方法會傳回 (COM) 錯誤碼（如 Winerror.h 中所定義）的標準元件物件模型。  
   
-|傳回碼|說明|  
+|傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |ERROR_INSUFFICIENT_BUFFER|版本緩衝區不夠大，無法儲存版本字串。|  
 |E_POINTER|`pdwLength` 為 null。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
