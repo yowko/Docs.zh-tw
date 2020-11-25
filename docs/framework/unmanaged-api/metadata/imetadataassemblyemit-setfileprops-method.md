@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 9990daea1b097532de53684921d3f10c520a3b1a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9cf5f3d926c1e742dd9134e7bf292df53e1a4909
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008062"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720174"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps 方法
+
 修改指定的 `File` 中繼資料結構。  
   
 ## <a name="syntax"></a>語法  
@@ -37,6 +38,7 @@ HRESULT SetFileProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `file`  
  在元資料標記，指定 `File` 要修改的元資料結構。  
   
@@ -47,17 +49,19 @@ HRESULT SetFileProps (
  在的大小（以位元組為單位） `pbHashValue` 。  
   
  `dwFileFlags`  
- 在[CorFileFlags](corfileflags-enumeration.md)值的位元組合，這個組合會指定檔案的各種屬性。  
+ 在 [CorFileFlags](corfileflags-enumeration.md) 值的位元組合，指定檔案的各種屬性。  
   
 ## <a name="remarks"></a>備註  
- 若要建立 `File` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efinefile](imetadataassemblyemit-definefile-method.md)方法。  
+
+ 若要建立 `File` 元資料結構，請使用 [IMetaDataAssemblyEmit：:D efinefile](imetadataassemblyemit-definefile-method.md) 方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-ms.openlocfilehash: a82a2150f32b1b335da083ca235ed9d2966a0b6e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58809f12e4dd4419b754caafc3f8b883b8bc5089
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494198"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721162"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc 方法
 
-嘗試為新的 Microsoft 中繼語言（MSIL）函數主體配置指定的記憶體數量。
+嘗試為新的 Microsoft 中繼語言 (MSIL) 函數主體配置指定的記憶體數量。
 
 ## <a name="syntax"></a>語法
 
@@ -41,12 +41,13 @@ PVOID Alloc (
 
 ## <a name="remarks"></a>備註
 
- 配置的記憶體會從大於與此配置器相關聯之模組基底位址的位址開始。 換句話說，每個配置器都會針對特定模組建立，並會嘗試在其基底位址的正位移上配置記憶體。 如果 `Alloc` 無法在大於模組基底位址的位址上配置要求的位元組數目，則會傳回 E_OUTOFMEMORY，不論實際的記憶體空間量為何。
+ 配置的記憶體會從大於與此配置器相關聯之模組基底位址的位址開始。 換句話說，每個配置器都是針對特定模組所建立，並會嘗試在其基底位址的正位移上配置記憶體。 如果 `Alloc` 無法在大於模組基底位址的位址配置要求的位元組數目，則會傳回 E_OUTOFMEMORY，不論實際可用的記憶體空間量為何。
 
- `Alloc`方法應該與[ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)方法搭配使用。
+ `Alloc`方法應該搭配[ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)方法使用。
 
-## <a name="requirements"></a>規格需求
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。
 
  **標頭：** CorProf.idl、CorProf.h
 

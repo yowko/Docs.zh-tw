@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-ms.openlocfilehash: 5fa3bafd35912a7729833896f7e6f0bb2ff9b121
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 56ec7c56b167c29c9951638c5eee159e1d3c7ffb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212382"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721292"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread 方法
+
 通知偵錯工具執行緒已開始執行 managed 程式碼。  
   
 ## <a name="syntax"></a>語法  
@@ -35,17 +36,20 @@ HRESULT CreateThread (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pAppDomain`  
- 在ICorDebugAppDomain 物件的指標，表示包含執行緒的應用程式域。  
+ 在ICorDebugAppDomain 物件的指標，代表包含執行緒的應用程式域。  
   
  `thread`  
  在代表執行緒之 ICorDebugThread 物件的指標。  
   
 ## <a name="remarks"></a>備註  
+
  執行緒將定位於要執行的第一個 managed 程式碼指令。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -53,6 +57,6 @@ HRESULT CreateThread (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

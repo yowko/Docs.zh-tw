@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: fbaf45da0902ded8a2f7bf0d470aaed3b5f531aa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: da0d159da6eef7745c1fa7f7320d5e1355f6e413
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617122"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721877"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 函式
-取得與指定的進程控制碼相關聯之 common language runtime （CLR）的版本號碼。  
+
+取得與所指定進程控制碼相關聯之 common language runtime (CLR) 的版本號碼。  
   
- 此函式在 .NET Framework 4 中已被取代。  
+ 此函式已在 .NET Framework 4 中被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,34 +40,37 @@ HRESULT GetVersionFromProcess (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `hProcess`  
  在進程的控制碼。  
   
  `pVersion`  
- 脫銷一個緩衝區，其中包含成功完成方法時的版本號碼字串。  
+ 擴展在成功完成方法時包含版本號碼字串的緩衝區。  
   
  `cchBuffer`  
  在版本緩衝區的長度。  
   
  `pdwLength`  
- 脫銷版本號碼字串長度的指標。  
+ 擴展版本號碼字串的長度指標。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回標準元件物件模型（COM）錯誤碼（如 Winerror.h 中所定義），以及下列值。  
+
+ 除了下列值以外，這個方法會傳回 (COM) 錯誤碼（如 Winerror.h 中所定義）的標準元件物件模型。  
   
-|傳回碼|說明|  
+|傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`pVersion`是 null 且不 `cchBuffer` 是 null，反之亦然。<br /><br /> -或-<br /><br /> `hProcess`不是處理常式的有效控制碼。<br /><br /> -或-<br /><br /> 未載入 CLR。|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`為 null 或小於版本字串的長度。|  
-|E_NOTIMPL|這個方法無法在 Microsoft Windows 95、Microsoft Windows 98 或 Microsoft Windows Millennium Edition 作業系統上使用。|  
+|E_INVALIDARG|`pVersion` 為 null 且不 `cchBuffer` 是 null，反之亦然。<br /><br /> -或-<br /><br /> `hProcess` 不是有效的進程控制碼。<br /><br /> -或-<br /><br /> CLR 尚未載入。|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` 為 null 或小於版本字串的長度。|  
+|E_NOTIMPL|Microsoft Windows 95、Microsoft Windows 98 或 Microsoft Windows Millennium Edition 作業系統上無法使用此方法。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

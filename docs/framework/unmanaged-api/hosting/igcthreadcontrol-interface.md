@@ -14,30 +14,32 @@ helpviewer_keywords:
 ms.assetid: 3ff04d75-85ac-4df9-886d-dbaa037c0552
 topic_type:
 - apiref
-ms.openlocfilehash: 78e667acf1573769a1a67b4c964d7801f11838fe
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 02facbb0ff1c0f8978d4f4f720ab370f70f07fe2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805120"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721682"
 ---
 # <a name="igcthreadcontrol-interface"></a>IGCThreadControl 介面
-提供方法來參與執行緒的排程，否則會封鎖垃圾收集。  
+
+提供方法來參與執行緒的排程，而這些執行緒會被封鎖，以進行垃圾收集。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
 |[SuspensionEnding 方法](igcthreadcontrol-suspensionending-method.md)|通知主機執行時間在垃圾收集或其他暫停之後繼續執行緒。|  
-|[SuspensionStarting 方法](igcthreadcontrol-suspensionstarting-method.md)|通知主機執行時間正在中止垃圾收集或其他暫停的執行緒。|  
-|[ThreadIsBlockingForSuspension 方法](igcthreadcontrol-threadisblockingforsuspension-method.md)|通知主機發出呼叫的執行緒即將封鎖，可能是因為垃圾收集或其他暫停。|  
+|[SuspensionStarting 方法](igcthreadcontrol-suspensionstarting-method.md)|通知主機執行時間正在等待垃圾收集或其他暫止的執行緒暫停。|  
+|[ThreadIsBlockingForSuspension 方法](igcthreadcontrol-threadisblockingforsuspension-method.md)|通知主機發出呼叫的執行緒即將封鎖，或許是針對垃圾收集或其他擱置。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

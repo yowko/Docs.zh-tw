@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 39767ea2603018d088aaefc5da32879aaf49fee6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1e5b92d99d8ae52c88f1517f9c3d7db8e70598ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720798"
 ---
 # <a name="icordebugcode2-interface"></a>ICorDebugCode2 介面
 
@@ -30,7 +30,7 @@ ms.locfileid: "82893477"
 |方法|描述|  
 |------------|-----------------|  
 |[GetCodeChunks 方法](icordebugcode2-getcodechunks-method.md)|取得此程式碼物件所組成的程式碼區塊。|  
-|[GetCompilerFlags 方法](icordebugcode2-getcompilerflags-method.md)|取得指定條件的旗標，此程式碼物件是使用原生映射產生器（Ngen.exe）編譯或產生的即時（JIT）。|  
+|[GetCompilerFlags 方法](icordebugcode2-getcompilerflags-method.md)|取得旗標，指定此程式碼物件是使用原生映射產生器 ( # A0) 編譯或產生的即時 (JIT) 。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -38,7 +38,8 @@ ms.locfileid: "82893477"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

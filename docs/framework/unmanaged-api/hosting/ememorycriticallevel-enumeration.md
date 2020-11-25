@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ca8a7a2-7b54-4ba3-8e73-277c7df485f3
 topic_type:
 - apiref
-ms.openlocfilehash: 359dd84032fce920892631dda2615f63aa54fa6b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3b9ad4b40ce94420f2ab5fc25335c41dec15dc09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720545"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 列舉
+
 包含值，指出當要求特定記憶體配置但無法滿足時，失敗的影響。  
   
 ## <a name="syntax"></a>語法  
@@ -36,21 +37,23 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
-|`eAppDomainCritical`|表示在要求配置的網域中執行 managed 程式碼時，配置是非常重要的。 如果無法配置記憶體，CLR 就無法保證該網域仍然可用。 主機會決定無法滿足配置時要採取的動作。 它可以指示 CLR `AppDomain` 自動中止，或藉由在[ICLRPolicyManager](iclrpolicymanager-interface.md)上呼叫方法，讓它繼續運作。|  
-|`eProcessCritical`|表示配置對於進程中的 managed 程式碼執行而言非常重要。 這個值會在啟動期間和執行完成項時使用。 如果無法配置記憶體，CLR 就無法在進程中運作。 如果配置失敗，CLR 會有效地停用。 所有對 CLR 的後續呼叫都會失敗，並 HOST_E_CLRNOTAVAILABLE。|  
-|`eTaskCritical`|指出配置對於執行已要求配置的工作而言非常重要。 如果無法配置記憶體，CLR 就無法保證可以執行工作。 發生失敗時，CLR 會在 <xref:System.Threading.ThreadAbortException> 實體作業系統執行緒上引發。|  
+|`eAppDomainCritical`|指出在已要求配置的網域中執行 managed 程式碼時，配置是不可或缺的。 如果無法配置記憶體，則 CLR 無法保證網域仍可使用。 主機決定無法滿足配置時要採取的動作。 它可以指示 CLR 中止 `AppDomain` 自動，或在 [ICLRPolicyManager](iclrpolicymanager-interface.md)上呼叫方法來讓它繼續執行。|  
+|`eProcessCritical`|表示配置對於進程中的 managed 程式碼執行而言是不可或缺的。 在啟動和執行完成項時，會使用這個值。 如果無法配置記憶體，則 CLR 無法在進程中操作。 如果配置失敗，則會有效停用 CLR。 對 CLR 的所有後續呼叫都會失敗並 HOST_E_CLRNOTAVAILABLE。|  
+|`eTaskCritical`|表示執行已要求配置的工作時，配置是不可或缺的。 如果無法配置記憶體，則 CLR 無法保證可以執行此工作。 發生失敗時，CLR 會 <xref:System.Threading.ThreadAbortException> 在實體作業系統執行緒上引發。|  
   
 ## <a name="remarks"></a>備註  
- [IHostMemoryManager](ihostmemorymanager-interface.md)和[IHostMAlloc](ihostmalloc-interface.md)介面中定義的記憶體配置方法會採用此類型的參數。 視失敗的嚴重性而定，主機可以決定是否要立即讓配置要求失敗，或等到它可以滿足為止。  
+
+ [IHostMemoryManager](ihostmemorymanager-interface.md)和[IHostMAlloc](ihostmalloc-interface.md)介面中定義的記憶體配置方法會採用此類型的參數。 根據失敗的嚴重性而定，主機可以決定是否要立即讓配置要求失敗，或等到可以滿足此要求為止。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結 **庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

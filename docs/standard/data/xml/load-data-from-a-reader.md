@@ -2,14 +2,15 @@
 title: 從讀取器載入資料
 ms.date: 03/30/2017
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 345b6e35c84fe531e131d27bd09fbd8a87b4521a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720135"
 ---
 # <a name="load-data-from-a-reader"></a>從讀取器載入資料
+
 使用 <xref:System.Xml.XmlDocument.Load%2A> 方法及 <xref:System.Xml.XmlReader> 的參數載入 XML 文件所發生的行為，與從其他格式載入資料的行為相比會有所不同。 如果讀取器處於其初始狀態，則 <xref:System.Xml.XmlDocument.Load%2A> 會使用讀取器的整個內容，並利用讀取器中的所有資料建置 XML 文件物件模型 (DOM)。  
   
  如果已將讀取器置於文件中某處的節點上，而且隨後將讀取器傳遞至 <xref:System.Xml.XmlDocument.Load%2A> 方法，則 <xref:System.Xml.XmlDocument.Load%2A> 會嘗試將目前節點及其所有同層級節點 (直到關閉目前深度的結束標記) 讀取至記憶體。 嘗試進行的 <xref:System.Xml.XmlDocument.Load%2A> 是否能夠成功，取決於嘗試載入時讀取器所在的節點，因為 <xref:System.Xml.XmlDocument.Load%2A> 會驗證來自讀取器的 XML 格式是否正確。 如果 XML 的格式不正確，則 <xref:System.Xml.XmlDocument.Load%2A> 會擲回例外狀況。 例如，下列節點集包含兩個根層級的項目，XML 的格式不正確，並且 <xref:System.Xml.XmlDocument.Load%2A> 會擲回例外狀況。  
@@ -26,6 +27,6 @@ ms.locfileid: "94822668"
   
  依預設，<xref:System.Xml.XmlDocument.Load%2A> 不會使用文件類型定義 (DTD) 或結構描述驗證，來驗證 XML 是否有效。 它只會驗證 XML 的格式是否正確。 為了執行驗證，您需要使用 <xref:System.Xml.XmlReader> 類別來建立 <xref:System.Xml.XmlReaderSettings>。 <xref:System.Xml.XmlReader> 類別可以使用 DTD 或結構描述定義語言 (XSD) 結構描述來強制執行驗證。 <xref:System.Xml.ValidationType> 類別上的 <xref:System.Xml.XmlReaderSettings> 屬性可以決定 <xref:System.Xml.XmlReader> 執行個體是否能夠強制執行驗證。 如需驗證 XML 資料的詳細資訊，請參閱 <xref:System.Xml.XmlReader> 參考頁面的＜備註＞一節。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-ms.openlocfilehash: 73b6bb9eac3f706df5cb1fd63b2f67c9791c8ed2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 657c16f6e96633e568903ca4a55b4c68c1a49fa5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720317"
 ---
 # <a name="ialink-interface"></a>IALink 介面
-有助於 .NET Framework 元件的建立。 除此之外，介面包含的方法可協助您撰寫多模組元件的組件資訊清單、以強式名稱簽署元件，以及建立 .netmodule。  
+
+有助於建立 .NET Framework 元件。 除此之外，介面包含的方法可協助撰寫多模組元件的組件資訊清單、使用強式名稱簽署元件，以及建立 netmodule。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [AddFile 方法](addfile-method.md)  
   
  [AddImport 方法](addimport-method.md)  
@@ -77,4 +79,4 @@ ms.locfileid: "74441813"
 
 - [ALink API](index.md)
 - [IALink2 介面](ialink2-interface.md)
-- [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)
+- [Al.exe (元件連結器) ](../../tools/al-exe-assembly-linker.md)

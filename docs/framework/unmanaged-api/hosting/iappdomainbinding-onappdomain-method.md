@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b419dcc9-e8aa-484b-af0d-0f40358edb99
 topic_type:
 - apiref
-ms.openlocfilehash: 2d5dbd003d0ea5decae0025d47e6bd5c1fb1ed4a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 65f6be8c12ce057422ad178c759affed170e44ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617070"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721708"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>IAppDomainBinding::OnAppDomain 方法
-由 common language runtime （CLR）呼叫，以通知主機已建立應用程式域。  
+
+由 common language runtime (CLR) 呼叫，以通知主機已建立應用程式域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +35,17 @@ HRESULT OnAppDomain (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pAppdomain`  
- 在[IUnknown](/cpp/atl/iunknown)介面物件的指標，代表新的應用程式域。  
+ 在 [IUnknown](/cpp/atl/iunknown) 介面物件的指標，代表新的應用程式域。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

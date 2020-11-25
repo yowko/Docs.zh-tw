@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 75754c2f-38c7-4707-85fe-559db4542729
 topic_type:
 - apiref
-ms.openlocfilehash: 0da18c6850f393808d05dff8b1f19ac12b05bb86
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: daf211fcc496f63ef71575abf6a28655004db264
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720239"
 ---
 # <a name="iclrtask2beginpreventasyncabort-method"></a>ICLRTask2::BeginPreventAsyncAbort 方法
-延遲在目前線程上導致執行緒中止的新執行緒中止要求。  
+
+延遲新的執行緒中止要求，導致執行緒在目前線程上中止。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,28 +33,31 @@ HRESULT BeginPreventAsyncAbort();
 ```  
   
 ## <a name="return-value"></a>傳回值  
+
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|Description|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|HOST_E_INVALIDOPERATION|在不是目前線程的執行緒上呼叫方法。|  
+|HOST_E_INVALIDOPERATION|方法是在不是目前線程的執行緒上呼叫。|  
   
 ## <a name="remarks"></a>備註  
+
  呼叫這個方法會將目前線程的延遲線程中止計數器遞增一。  
   
- `BeginPreventAsyncAbort`可以嵌套呼叫和[ICLRTask2：： EndPreventAsyncAbort](iclrtask2-endpreventasyncabort-method.md) 。 只要計數器大於零，就會延遲目前線程的執行緒中止。 如果此呼叫未與方法的呼叫配對 `EndPreventAsyncAbort` ，則可能會到達無法將執行緒中止傳遞至目前線程的狀態。  
+ `BeginPreventAsyncAbort`和[ICLRTask2：： EndPreventAsyncAbort](iclrtask2-endpreventasyncabort-method.md)的呼叫可以嵌套。 只要計數器大於零，目前線程的執行緒中止就會延遲。 如果此呼叫未與方法的呼叫配對 `EndPreventAsyncAbort` ，則可能會達到無法將執行緒中止傳遞給目前線程的狀態。  
   
- 中斷本身的執行緒不會接受延遲。  
+ 中止本身的執行緒不會接受延遲。  
   
- 這項功能所公開的功能會在虛擬機器（VM）內部使用。 誤用這些方法可能會導致 VM 中未指定的行為。 例如，在 `EndPreventAsyncAbort` 沒有第一次呼叫的情況下呼叫， `BeginPreventAsyncAbort` 可能會在 VM 先前已遞增時，將計數器設定為零。 同樣地，內部計數器也不會檢查溢位。 如果它超過其整數限制，因為它是由主機和 VM 增加，則會未指定所產生的行為。  
+ 虛擬機器 (VM) 會在內部使用這項功能所公開的功能。 誤用這些方法可能會導致 VM 未指定的行為。 例如，呼叫 `EndPreventAsyncAbort` 時若未先呼叫， `BeginPreventAsyncAbort` 就可以在 VM 先前遞增計數器時，將計數器設定為零。 同樣地，不會檢查內部計數器是否有溢位。 如果它超過整數限制，因為它會同時由主機和 VM 遞增，則會未指定產生的行為。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

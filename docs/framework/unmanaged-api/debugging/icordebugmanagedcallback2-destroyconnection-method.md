@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: a3093f33f2220b22b7b4b373f6d79a341abf8c9c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d725cbe89e0631630affb6b0540a7d5f57ab6b89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501933"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720109"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection 方法
+
 通知偵錯工具已終止指定的連接。  
   
 ## <a name="syntax"></a>語法  
@@ -35,17 +36,20 @@ HRESULT DestroyConnection (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pProcess`  
- 在ICorDebugProcess 物件的指標，表示包含已終結之連接的進程。  
+ 在ICorDebugProcess 物件的指標，代表包含已終結之連接的進程。  
   
  `dwConnectionId`  
- 在已損毀之連接的識別碼。  
+ 在已終結之連接的識別碼。  
   
 ## <a name="remarks"></a>備註  
- `DestroyConnection`當主機呼叫[裝載 API](../hosting/index.md)中的[ICLRDebugManager：： EndConnection](../hosting/iclrdebugmanager-endconnection-method.md)時，將會引發回呼。  
+
+ `DestroyConnection`當主機在[裝載 API](../hosting/index.md)中呼叫[ICLRDebugManager：： EndConnection](../hosting/iclrdebugmanager-endconnection-method.md)時，將會引發回呼。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

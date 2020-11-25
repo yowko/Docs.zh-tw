@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d9d7600e-a8f5-443a-96de-67d26e130f2d
 topic_type:
 - apiref
-ms.openlocfilehash: f81ef3f5959e279b3fbbd94d6c5e8a2d86a38e7f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 9049cd42e9c10cdcff62b005094b56c9df9ce975
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442016"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719992"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit 方法
-會在結束呼叫時叫用。  
+
+在結束呼叫時叫用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +38,22 @@ HRESULT OnSyncCallExit
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `in_CallID`  
- 在即將結束的呼叫識別碼。 請參閱[CALL_ID 結構](call-id-structure.md)。  
+ 在要結束之呼叫的識別碼。 請參閱 [CALL_ID 結構](call-id-structure.md)。  
   
  `out_ppBuffer`  
- 脫銷呼叫緩衝區。  
+ 擴展呼叫緩衝區。  
   
  `out_pBufferSize`  
- 脫銷呼叫緩衝區的大小，以位元組為單位。  
+ 擴展呼叫緩衝區的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK。  
+
+ 如果方法成功，則為 S_OK。  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另請參閱

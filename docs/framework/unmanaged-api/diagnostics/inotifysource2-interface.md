@@ -14,23 +14,25 @@ helpviewer_keywords:
 ms.assetid: f432fb85-5c78-43d1-8302-53b8fc605c97
 topic_type:
 - apiref
-ms.openlocfilehash: ffdeb452534de3308e77493c09d54e073a576bd0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: efb7ca77b2468bf05b8973d80c2c20b85a64faf6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441977"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719966"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 介面
-宣告用於設定通知篩選準則的方法。  
+
+宣告用來設定通知篩選準則的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[SetNotifyFilter 方法](inotifysource2-setnotifyfilter-method.md)|指派要與此來源搭配使用的通知篩選準則。|  
+|[SetNotifyFilter 方法](inotifysource2-setnotifyfilter-method.md)|指派要用於此來源的通知篩選。|  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另請參閱

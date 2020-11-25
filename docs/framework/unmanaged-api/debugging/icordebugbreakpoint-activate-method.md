@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: e30c29f7-3f19-4081-b572-a731aa14cd44
 topic_type:
 - apiref
-ms.openlocfilehash: 24dc55cc9a49c3602829ca627d584c761b4088ce
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 70a07f0ce7f1fa4c904fde594dcf82c5149616fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894740"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721526"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate 方法
-設定這個`ICorDebugBreakpoint`的作用中狀態。  
+
+設定這個的作用中狀態 `ICorDebugBreakpoint` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT Activate (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `bActive`  
- 在將此值設定`true`為，以將狀態指定為作用中;否則，請將此值`false`設定為。  
+ 在將此值設定為，以將狀態指定為作用中 `true` ; 否則，請將此值設定為 `false` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

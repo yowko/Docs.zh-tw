@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: cd8320071f1de15d503c94c138c02cab5742685c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a1542c0800f9042e27a4b0806d717c58d7783c79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818429"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720837"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>轉換中的 XPathNodeIterator
+
 <xref:System.Xml.XPath.XPathNodeIterator> 所提供的方法可讓您重複處理建立為 XML 路徑語言 (XPath) 查詢結果的節點集，或是利用節點集方法轉換成節點集的 Result Tree Fragment。 <xref:System.Xml.XPath.XPathNodeIterator> 可讓您重複處理該節點集內的節點。 擷取節點集之後，<xref:System.Xml.XPath.XPathNodeIterator> 類別即會提供唯讀且順向的資料指標給選取的節點集。 節點集以文件順序建立，因此呼叫這個方法將移至文件順序中的下一個節點。 <xref:System.Xml.XPath.XPathNodeIterator> 不會在節點集內建置所有節點的節點樹狀。 而是將單一節點視窗提供到資料內，讓您在樹狀中移動時，公開它所指到的基礎節點。 因使用 <xref:System.Xml.XPath.XPathNodeIterator> 類別而成為可用的方法與屬性，可讓您取得目前節點的相關資訊。 如需可用方法和屬性的清單，請參閱 <xref:System.Windows.Forms.ToolBar>。  
   
  <xref:System.Xml.XPath.XPathNodeIterator> 會在 XPath 查詢所建立的節點集上移動，且只能順向移動，因此必須使用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 方法來移動。 這種方法傳回的型別是 `Boolean`，若它移到下一個選取的節點則傳回 `true`，若沒有其他選取的節點則傳回 `false`。 如果它傳回 `true`，下列清單顯示可用的屬性：  
@@ -155,6 +156,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

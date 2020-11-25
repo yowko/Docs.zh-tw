@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-ms.openlocfilehash: d42c86a458661d3559f99235a6d5b208c82d1963
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: df0e66c8563404d7de4f1e11f41483f2f61f519c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721552"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads 方法
-傳回列舉值，提供逐步逐一查看已分析進程中所有 managed 執行緒集合的方法。  
+
+傳回列舉值，這個列舉值會提供方法，以依序逐一查看已分析進程中所有 managed 執行緒的集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,13 +34,15 @@ HRESULT EnumThreads([out]
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppEnum`  
- 脫銷指向[ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md)介面的指標。  
+ 擴展 [ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md) 介面的指標。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

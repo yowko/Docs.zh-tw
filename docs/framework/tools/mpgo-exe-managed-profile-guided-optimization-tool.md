@@ -9,40 +9,40 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 714715968388325713a12027fb0ab89415e1d60c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f8830b13cb64c737525f5399beb244aeb6d9817f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544280"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721890"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Managed 特性指引最佳化工具)
 
-Managed 特性指引最佳化工具 (Mpgo.exe) 是一項命令列工具，它會使用常見的使用者情節最佳化[原生映像產生器 (Ngen.exe)](ngen-exe-native-image-generator.md) 所建立的原生映像組件。 此工具可讓您執行產生分析資料的訓練情節。 [原生映像產生器 (Ngen.exe)](ngen-exe-native-image-generator.md) 會使用這項資料最佳化其產生的原生映像應用程式組件。 訓練情節是指嘗試執行應用程式的預期使用方式。 Mpgo.exe 會隨 Visual Studio Ultimate 2012 (含) 以後版本提供。 從 Visual Studio 2013 開始，您也可以使用 Mpgo.exe 將 Windows 8 x 商店應用程式優化。  
-  
-特性指引最佳化會從訓練情節收集資料並使用該資料最佳化原生映像的配置，藉此改善應用程式啟動時間、記憶體使用率 (工作組大小) 以及輸送量。  
-  
-當 Intermediate Language (IL) 組件的啟動時間和工作組大小發生效能問題時，建議您先使用 Ngen.exe 消除 Just-in-Time (JIT) 編譯成本和促進程式碼共用。 如果您需要進一步改進，可以使用 Mpgo.exe 進一步最佳化您的應用程式。 您可以使用非最佳化原生映像組件的效能資料做為評估效能改善的基準。 使用 Mpgo.exe 能夠縮短冷啟動時間和縮小工作組大小。 Mpgo.exe 會將資訊加入至 Ngen.exe 用來建立最佳化原生映像組件的 IL 組件。 如需詳細資訊，請參閱 .NET 部落格中的 [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/) (改善桌面應用程式的啟動效能) 文章。  
-  
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請透過系統管理員認證使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])，然後在命令提示字元中鍵入下列內容。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
-  
-針對桌面應用程式：  
-  
-```console  
-mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]  
-```  
-  
-針對 Windows 8. x 商店應用程式：  
-  
-## <a name="syntax"></a>語法  
-  
-```console  
-mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
-```  
-  
-## <a name="parameters"></a>參數  
- Mpgo.exe 的所有引數都不區分大小寫。 命令前面會加上虛線。  
-  
+Managed 特性指引最佳化工具 (Mpgo.exe) 是一項命令列工具，它會使用常見的使用者情節最佳化[原生映像產生器 (Ngen.exe)](ngen-exe-native-image-generator.md) 所建立的原生映像組件。 此工具可讓您執行產生分析資料的訓練情節。 [原生映像產生器 (Ngen.exe)](ngen-exe-native-image-generator.md) 會使用這項資料最佳化其產生的原生映像應用程式組件。 訓練情節是指嘗試執行應用程式的預期使用方式。 Mpgo.exe 會隨 Visual Studio Ultimate 2012 (含) 以後版本提供。 從 Visual Studio 2013 開始，您也可以使用 Mpgo.exe 將 Windows 8 x 商店應用程式優化。
+
+特性指引最佳化會從訓練情節收集資料並使用該資料最佳化原生映像的配置，藉此改善應用程式啟動時間、記憶體使用率 (工作組大小) 以及輸送量。
+
+當 Intermediate Language (IL) 組件的啟動時間和工作組大小發生效能問題時，建議您先使用 Ngen.exe 消除 Just-in-Time (JIT) 編譯成本和促進程式碼共用。 如果您需要進一步改進，可以使用 Mpgo.exe 進一步最佳化您的應用程式。 您可以使用非最佳化原生映像組件的效能資料做為評估效能改善的基準。 使用 Mpgo.exe 能夠縮短冷啟動時間和縮小工作組大小。 Mpgo.exe 會將資訊加入至 Ngen.exe 用來建立最佳化原生映像組件的 IL 組件。 如需詳細資訊，請參閱 .NET 部落格中的 [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/) (改善桌面應用程式的啟動效能) 文章。
+
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請透過系統管理員認證使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])，然後在命令提示字元中鍵入下列內容。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
+
+針對桌面應用程式：
+
+```console
+mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]
+```
+
+針對 Windows 8. x 商店應用程式：
+
+## <a name="syntax"></a>語法
+
+```console
+mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
+```
+
+## <a name="parameters"></a>參數
+ Mpgo.exe 的所有引數都不區分大小寫。 命令前面會加上虛線。
+
 > [!NOTE]
 > 您可以使用 `–Scenario` 或 `–Import` 做為必要的命令，但兩者不能同時使用。 如果您指定 `–Reset` 選項，將不會使用任何必要參數。
 
@@ -74,60 +74,60 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  建議您只對大型 Managed 應用程式使用 Ngen.exe 和 Mpgo.exe，因為預先編譯原生映像的優點通常是在執行階段消除大量 JIT 編譯時才會看見。 在不會耗用太多工作組的 "Hello World" 樣式應用程式上執行 Mpgo.exe 不會提供任何好處，Mpgo.exe 甚至可能無法成功收集分析資料。
 
 > [!NOTE]
-> 不建議您將 Ngen.exe 和 Mpgo.exe 用於 ASP.NET 應用程式和 Windows Communication Foundation (WCF) 服務。  
-  
-## <a name="to-use-mpgoexe"></a>若要使用 Mpgo.exe  
-  
-1. 使用已安裝 Visual Studio Ultimate 2012 和您的應用程式的電腦。  
-  
-2. 以系統管理員身分執行 Mpgo.exe 及必要的參數。  請參閱下一節了解範例命令。  
-  
-     最佳化中繼語言 (IL) 組件會建立在 `–OutDir` 參數所指定的資料夾中 (在範例中，此為 `C:\Optimized` 資料夾)。  
-  
-3. 將 Ngen.exe 使用的 IL 組件取代為新的 IL 組件，該組件包含 `–OutDir` 所指定之目錄中的設定檔資訊。  
-  
-4. 應用程式設定 (使用 Mpgo.exe 提供的映像) 將安裝最佳化的原生映像。  
-  
-## <a name="suggested-workflow"></a>建議的工作流程  
-  
-1. 使用 Mpgo.exe 與 `–Scenario` 參數建立一組最佳化的 IL 組件。  
-  
-2. 將最佳化的 IL 組件簽入原始檔控制中。  
-  
-3. 在建置流程中，呼叫 Mpgo.exe 並使用 `–Import` 參數做為建置後步驟，以產生要傳遞至 Ngen.exe 的最佳化 IL 映像。  
-  
- 這個程序可確保所有組件都擁有最佳化資料。 如果您經常簽入更新的最佳化組件 (步驟 1 和 2)，則產品開發期間的整體效能數字將會更一致。  
-  
-## <a name="using-mpgoexe-from-visual-studio"></a>從 Visual Studio 使用 Mpgo.exe  
- 您可以從 Visual Studio 執行 Mpgo.exe (請參閱[如何：指定建置事件 (C#)](/visualstudio/ide/how-to-specify-build-events-csharp) 一文)，但有下列限制：  
-  
-- 因為 Visual Studio 巨集預設也會使用結尾斜線標記，所以您無法使用前後加上引號且包含結尾斜線標記的路徑  例如， (`–OutDir "C:\Output Folder\"` 無效。 ) 若要解決這項限制，您可以將尾端斜線 escape。 (例如，請改用 `-OutDir "$(OutDir)\"`。)  
-  
-- 根據預設，Mpgo.exe 不在 Visual Studio 組建路徑上。 您必須將路徑加入至 Visual Studio，或是在 Mpgo 命令列上指定完整路徑。 您可以在 Visual Studio 的建置後事件中使用 `–Scenario` 或 `–Import` 參數。 但一般的處理序會從 Visual Studio 開發人員命令提示字元中使用一次 `–Scenario`，然後在每次建置之後，再使用 `–Import` 更新最佳化組件；例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
-  
+> 不建議您將 Ngen.exe 和 Mpgo.exe 用於 ASP.NET 應用程式和 Windows Communication Foundation (WCF) 服務。
+
+## <a name="to-use-mpgoexe"></a>若要使用 Mpgo.exe
+
+1. 使用已安裝 Visual Studio Ultimate 2012 和您的應用程式的電腦。
+
+2. 以系統管理員身分執行 Mpgo.exe 及必要的參數。  請參閱下一節了解範例命令。
+
+     最佳化中繼語言 (IL) 組件會建立在 `–OutDir` 參數所指定的資料夾中 (在範例中，此為 `C:\Optimized` 資料夾)。
+
+3. 將 Ngen.exe 使用的 IL 組件取代為新的 IL 組件，該組件包含 `–OutDir` 所指定之目錄中的設定檔資訊。
+
+4. 應用程式設定 (使用 Mpgo.exe 提供的映像) 將安裝最佳化的原生映像。
+
+## <a name="suggested-workflow"></a>建議的工作流程
+
+1. 使用 Mpgo.exe 與 `–Scenario` 參數建立一組最佳化的 IL 組件。
+
+2. 將最佳化的 IL 組件簽入原始檔控制中。
+
+3. 在建置流程中，呼叫 Mpgo.exe 並使用 `–Import` 參數做為建置後步驟，以產生要傳遞至 Ngen.exe 的最佳化 IL 映像。
+
+ 這個程序可確保所有組件都擁有最佳化資料。 如果您經常簽入更新的最佳化組件 (步驟 1 和 2)，則產品開發期間的整體效能數字將會更一致。
+
+## <a name="using-mpgoexe-from-visual-studio"></a>從 Visual Studio 使用 Mpgo.exe
+ 您可以從 Visual Studio 執行 Mpgo.exe (請參閱[如何：指定建置事件 (C#)](/visualstudio/ide/how-to-specify-build-events-csharp) 一文)，但有下列限制：
+
+- 因為 Visual Studio 巨集預設也會使用結尾斜線標記，所以您無法使用前後加上引號且包含結尾斜線標記的路徑  例如， (`–OutDir "C:\Output Folder\"` 無效。 ) 若要解決這項限制，您可以將尾端斜線 escape。 (例如，請改用 `-OutDir "$(OutDir)\"`。)
+
+- 根據預設，Mpgo.exe 不在 Visual Studio 組建路徑上。 您必須將路徑加入至 Visual Studio，或是在 Mpgo 命令列上指定完整路徑。 您可以在 Visual Studio 的建置後事件中使用 `–Scenario` 或 `–Import` 參數。 但一般的處理序會從 Visual Studio 開發人員命令提示字元中使用一次 `–Scenario`，然後在每次建置之後，再使用 `–Import` 更新最佳化組件；例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。
+
 <a name="samples"></a>
-## <a name="examples"></a>範例  
- Visual Studio 開發人員命令提示字元中的下列 Mpgo.exe 命令會最佳化稅務應用程式：  
-  
-```console  
-mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  
-```  
-  
- 下列 Mpgo.exe 命令會最佳化音效應用程式：  
-  
-```console  
-mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" –AssemblyList transcode.dll –OutDir C:\Optimized –TimeOut 15  
-```  
-  
- 下列 Mpgo.exe 命令會使用先前最佳化組件的資料最佳化新版的組件：  
-  
-```console  
-mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
-```  
-  
+## <a name="examples"></a>範例
+ Visual Studio 開發人員命令提示字元中的下列 Mpgo.exe 命令會最佳化稅務應用程式：
+
+```console
+mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15
+```
+
+ 下列 Mpgo.exe 命令會最佳化音效應用程式：
+
+```console
+mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" –AssemblyList transcode.dll –OutDir C:\Optimized –TimeOut 15
+```
+
+ 下列 Mpgo.exe 命令會使用先前最佳化組件的資料最佳化新版的組件：
+
+```console
+mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized
+```
+
 ## <a name="see-also"></a>另請參閱
 
 - [Ngen.exe (原生映射產生器) ](ngen-exe-native-image-generator.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)
 - [改善桌面應用程式的啟動效能](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)
-- [An Overview of Performance Improvements in .NET 4.5](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5) (.NET 4.5 的效能改進概觀)
+- [.NET Framework 4.5 的效能改進總覽](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

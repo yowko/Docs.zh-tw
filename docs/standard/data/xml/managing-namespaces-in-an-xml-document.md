@@ -3,18 +3,21 @@ title: 管理 XML 文件中的命名空間
 description: 瞭解如何管理 XML 檔中的命名空間。 XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和預定的 URI。
 ms.date: 03/30/2017
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: ab9dceed66e65ea74d0996071ab3a17057e43fc3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 120493de430c2372f3f71d1d1498ba880feda3d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822616"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720148"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文件中的命名空間
+
 XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和預定的 URI。 若要建立這些關聯，請為命名空間 URI 定義前置詞，並使用這些前置詞來限定 XML 資料中的元素與屬性名稱。 命名空間可用來避免元素和屬性名稱發生衝突，並讓相同名稱的元素和屬性以不同方式處理和驗證。  
   
 <a name="declare"></a>
+
 ## <a name="declaring-namespaces"></a>宣告命名空間  
+
  若要在元素上宣告命名空間，請使用 `xmlns:` 屬性：  
   
  `xmlns:<name>=<"uri">`  
@@ -32,7 +35,9 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
  若要表示某元素是特定命名空間的一部分，請將命名空間前置詞加到其中。 例如，如果 `Author` 元素屬於 `mybook` 命名空間，便會將它宣告為 `<mybook:Author>`。  
   
 <a name="scope"></a>
+
 ## <a name="declaration-scope"></a>宣告範圍  
+
  命名空間的有效範圍，是從宣告點至宣告該命名空間之元素的結尾。 在此範例中，於 `BOOK` 元素中定義的命名空間並不適用於 `BOOK` 元素以外的元素，如 `Publisher` 元素：  
   
 ```xml  
@@ -59,6 +64,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
 ```  
   
 ## <a name="managing-namespaces"></a>管理命名空間  
+
  <xref:System.Xml.XmlNamespaceManager> 類別會保存命名空間 URI 和其前置詞的集合，並讓您從這個集合查詢、加入及移除命名空間。 某些內容中需要使用這個類別，才能改善 XML 處理效能。 例如，<xref:System.Xml.Xsl.XsltContext> 類別會使用 <xref:System.Xml.XmlNamespaceManager>，以提供 XPath 支援。  
   
  命名空間管理員不會在命名空間上執行任何驗證，而是會假設前置詞和命名空間已經過驗證並且符合 [W3C 命名空間](https://www.w3.org/TR/REC-xml-names/)規格。  
@@ -80,7 +86,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
 |檢查前置詞是否定義於目前範圍中|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 方法|  
 |取得用來查詢前置詞與 URI 的名稱資料表|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 屬性|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [XML 文件和資料](index.md)

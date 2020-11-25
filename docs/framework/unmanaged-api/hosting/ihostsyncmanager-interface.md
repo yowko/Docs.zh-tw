@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: fd3c941d89fbd93f30fc1af235f6310b23758973
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8a5fc42191634a2e5a441baecc4b78212ffad687
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501452"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720486"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager 介面
-提供的方法可讓 common language runtime （CLR）藉由呼叫主機來建立同步處理原始物件，而不是使用 Win32 同步處理函式。  
+
+提供方法，讓 common language runtime (CLR) 透過呼叫主機而非使用 Win32 同步處理函式來建立同步處理原始物件。  
   
 ## <a name="methods"></a>方法  
   
@@ -30,23 +31,25 @@ ms.locfileid: "84501452"
 |------------|-----------------|  
 |[CreateAutoEvent 方法](ihostsyncmanager-createautoevent-method.md)|建立自動重設事件物件。|  
 |[CreateCrst 方法](ihostsyncmanager-createcrst-method.md)|建立同步處理的重要區段物件。|  
-|[CreateCrstWithSpinCount 方法](ihostsyncmanager-createcrstwithspincount-method.md)|使用微調計數來建立重要區段物件，以進行同步處理。|  
+|[CreateCrstWithSpinCount 方法](ihostsyncmanager-createcrstwithspincount-method.md)|使用微調計數來建立重要區段物件以進行同步處理。|  
 |[CreateManualEvent 方法](ihostsyncmanager-createmanualevent-method.md)|建立手動重設事件物件。|  
 |[CreateMonitorEvent 方法](ihostsyncmanager-createmonitorevent-method.md)|建立受監視的自動重設事件物件。|  
 |[CreateRWLockReaderEvent 方法](ihostsyncmanager-createrwlockreaderevent-method.md)|建立手動重設的事件物件，以執行讀取器鎖定。|  
 |[CreateRWLockWriterEvent 方法](ihostsyncmanager-createrwlockwriterevent-method.md)|建立自動重設事件物件，以執行寫入器鎖定。|  
-|[CreateSemaphore 方法](ihostsyncmanager-createsemaphore-method.md)|建立[IHostSemaphore](ihostsemaphore-interface.md)物件，以供 CLR 用來做為等候事件的信號。|  
-|[SetCLRSyncManager 方法](ihostsyncmanager-setclrsyncmanager-method.md)|設定要與目前實例相關聯的[ICLRSyncManager](iclrsyncmanager-interface.md)實例 `IHostSyncManager` 。|  
+|[CreateSemaphore 方法](ihostsyncmanager-createsemaphore-method.md)|建立 [IHostSemaphore](ihostsemaphore-interface.md) 物件，讓 CLR 用來作為等候事件的信號。|  
+|[SetCLRSyncManager 方法](ihostsyncmanager-setclrsyncmanager-method.md)|設定要與目前實例相關聯的 [ICLRSyncManager](iclrsyncmanager-interface.md) 實例 `IHostSyncManager` 。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會藉 `IHostSyncManager` 由使用 IID_IHostSyncManager 的來呼叫[IHostControl：： GetHostManager](ihostcontrol-gethostmanager-method.md)方法，以探索主機的執行 `IID` 。  
+
+ CLR 會藉 `IHostSyncManager` 由呼叫 [IHostControl：： GetHostManager](ihostcontrol-gethostmanager-method.md) 方法和 IID_IHostSyncManager 來探索主機的實 `IID` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

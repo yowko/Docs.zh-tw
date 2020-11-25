@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-ms.openlocfilehash: b5f6d7d40274972438a01313bc6aaec475b8e0c6
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 39834ba868a21ead3113f2f0d9157cd210d9798c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805081"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721643"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>IGCThreadControl::ThreadIsBlockingForSuspension 方法
-通知主機正在進行呼叫的執行緒即將封鎖，可能是因為垃圾收集或其他暫停。  
+
+通知主機正在進行呼叫的執行緒即將封鎖，或許是針對垃圾收集或其他擱置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,14 +33,16 @@ HRESULT ThreadIsBlockingForSuspension ( );
 ```  
   
 ## <a name="remarks"></a>備註  
- 主機可以在回呼中選擇 `ThreadIsBlockingForSuspension` 是否要重新排定執行緒。  
+
+ 主機可以在回呼中選擇 `ThreadIsBlockingForSuspension` 是否要重新排程執行緒。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

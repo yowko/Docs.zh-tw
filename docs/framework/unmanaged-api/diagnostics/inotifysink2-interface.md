@@ -14,26 +14,28 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 255fe51f86157842a5807145bf7c58ae1ff5ba8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442055"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720018"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 介面
-宣告接收器通知的方法。  
+
+宣告接收通知的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
 |[OnSyncCallEnter 方法](inotifysink2-onsynccallenter-method.md)|在輸入呼叫時叫用。|  
-|[OnSyncCallExit 方法](inotifysink2-onsynccallexit-method.md)|會在結束呼叫時叫用。|  
-|[OnSyncCallOut 方法](inotifysink2-onsynccallout-method.md)|當呼叫完成時，就會叫用。|  
+|[OnSyncCallExit 方法](inotifysink2-onsynccallexit-method.md)|在結束呼叫時叫用。|  
+|[OnSyncCallOut 方法](inotifysink2-onsynccallout-method.md)|在呼叫超時時叫用。|  
 |[OnSyncCallReturn 方法](inotifysink2-onsynccallreturn-method.md)|當呼叫傳回時，就會叫用。|  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另請參閱

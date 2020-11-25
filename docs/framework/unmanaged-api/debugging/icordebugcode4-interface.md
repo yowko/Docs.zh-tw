@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 870ac1e62363493989fe638483ea474d648c8c69
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8a373afdf41590ec44a7cbac7360719a12faa82e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893311"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720720"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 介面
-提供一種方法，可讓偵錯工具列舉函式中的區域變數和引數。  
+
+提供方法，此方法可讓偵錯工具列舉函數中的區域變數和引數。  
   
 ## <a name="methods"></a>方法  
   
@@ -36,7 +37,8 @@ ms.locfileid: "82893311"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

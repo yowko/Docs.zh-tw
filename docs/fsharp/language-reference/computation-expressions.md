@@ -4,12 +4,12 @@ description: '瞭解如何建立方便的語法，以 F # 撰寫可使用控制�
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812155"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705302"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -181,7 +181,7 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 `return`關鍵字會在對應至計算運算式的型別中包裝一個值。 除了使用的計算運算式之外 `yield` ，它也用來「完成」計算運算式：
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 `return!`關鍵字會知道計算運算式的值，並將結果包裝為對應于計算運算式的型別：
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }
@@ -234,7 +234,7 @@ F # 核心程式庫會定義三個內建的計算運算式： [順序運算式](
 
 下表說明可在工作流程產生器類別中使用的方法。
 
-|**方法**|**一般簽章 (s) **|**說明**|
+|**方法**|**一般簽章 (s)**|**描述**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|`let!` `do!` 在計算運算式中呼叫和。|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|將計算運算式包裝為函數。|
@@ -262,7 +262,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 在上述程式碼中， `Run` `Delay` 如果未在計算運算式產生器類別中定義，則會省略和的呼叫。 計算運算式的主體（在此表示為 `{| cexpr |}` ）會轉譯成包含產生器類別之方法的呼叫，並遵循下表所述的翻譯。 計算運算式 `{| cexpr |}` 會根據這些轉譯以遞迴方式定義，其中 `expr` 是 F # 運算式且 `cexpr` 為計算運算式。
 
-|運算是|翻譯|
+|運算式|翻譯|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -410,7 +410,7 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-計算運算式具有運算式傳回的基礎類型。 基礎類型可能代表可執行檔計算結果或延遲計算，或可能提供逐一查看某些類型集合的方法。 在上述範例中， **最後**是基礎類型。 若為序列運算式，基礎類型為 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 。 若為查詢運算式，基礎類型為 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 。 如果是非同步工作流程，基礎類型為 [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) 。 `Async`物件代表要執行以計算結果的工作。 例如，您可以呼叫 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) 來執行計算，並傳回結果。
+計算運算式具有運算式傳回的基礎類型。 基礎類型可能代表可執行檔計算結果或延遲計算，或可能提供逐一查看某些類型集合的方法。 在上述範例中， **最後** 是基礎類型。 若為序列運算式，基礎類型為 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 。 若為查詢運算式，基礎類型為 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 。 如果是非同步工作流程，基礎類型為 [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) 。 `Async`物件代表要執行以計算結果的工作。 例如，您可以呼叫 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) 來執行計算，並傳回結果。
 
 ## <a name="custom-operations"></a>自訂作業
 

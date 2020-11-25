@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: 1a56c3ebe4b1c528f9c6555bdfbf1270a438410d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e3031bf123ff9107b4cebc0723f1be0d423bdaec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617109"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721747"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback 方法
-在單元中執行指定的函式。  
+
+在公寓內執行指定的函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +36,20 @@ HRESULT _stdcall DoCallback(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pFunc`  
  在要在單元內執行之函式的指標。  
   
  `pData`  
- 在函式引數的指標。  
+ 在函數之引數的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

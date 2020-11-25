@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: e4d0d9ed07c707e51e5833483b71079f2c330505
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27bbb1aac376866be7458a3737af9d89bf761411
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496525"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721604"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 方法
-提供[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)函式向分析工具報告之函式的堆疊框架。 只能在 `FunctionTailcall3WithInfo` 回呼期間呼叫這個方法。  
+
+提供由 [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) 函式回報給 profiler 的函式的堆疊框架。 只能在 `FunctionTailcall3WithInfo` 回呼期間呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,11 +36,12 @@ HRESULT GetFunctionTailcall3Info(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `functionId`  
  在傳回之函式的 `FunctionID` 。  
   
  `eltInfo`  
- [in] 代表特定堆疊框架之資訊的不透明控制代碼。 分析工具應提供函式所 `eltInfo` 指定給 profiler 的相同 `FunctionTailcall3WithInfo` 。  
+ [in] 代表特定堆疊框架之資訊的不透明控制代碼。 程式碼剖析工具應提供函數所提供的相同程式碼剖析 `eltInfo` 器 `FunctionTailcall3WithInfo` 。  
   
  `pFrameInfo`  
  [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `GetFunctionTailcall3Info` 方法的 `FunctionTailcall3WithInfo` 回呼中有效。  
@@ -47,7 +49,8 @@ HRESULT GetFunctionTailcall3Info(
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

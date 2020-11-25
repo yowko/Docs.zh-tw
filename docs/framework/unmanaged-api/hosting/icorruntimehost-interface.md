@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 420f22a242a20f8bdf5d5b84f47a297a2f503db0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546017"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720616"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 介面
+
 提供的方法可讓主機明確地啟動及停止 common language runtime (CLR) 、建立和設定應用程式域、存取預設網域，以及列舉在進程中執行的所有網域。  
   
  在 .NET Framework 2.0 版中，此介面會被 [ICLRRuntimeHost](iclrruntimehost-interface.md)取代。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[CloseEnum 方法](icorruntimehost-closeenum-method.md)|將網域列舉值重設回定義域清單的開頭。|  
 |[CreateDomain 方法](icorruntimehost-createdomain-method.md)|建立應用程式域。 呼叫端會收到型別實例的型別介面指標 <xref:System._AppDomain> <xref:System.AppDomain?displayProperty=nameWithType> 。|  
@@ -51,18 +52,19 @@ ms.locfileid: "90546017"
 |[UnloadDomain 方法](icorruntimehost-unloaddomain-method.md)|從目前的進程卸載指定的應用程式域。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll  
   
- 連結**庫：** 以資源的形式包含在 MSCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：** 1.0、1。1  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.AppDomain>
-- [Hosting](index.md)
+- [裝載](index.md)
 - [ICLRRuntimeHost 介面](iclrruntimehost-interface.md)
 - [執行階段主應用程式](/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
 - [裝載介面](hosting-interfaces.md)

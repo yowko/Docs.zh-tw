@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 652ebf1be6a58e08da27aaed5b2e84a8f2aee98a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3021124184ab0491337a07144e6f77b5bfea3681
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503766"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721968"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures 方法
+
 列舉代表目前範圍中獨立簽章的簽章語彙基元。  
   
 ## <a name="syntax"></a>語法  
@@ -37,34 +38,37 @@ HRESULT EnumSignatures (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `phEnum`  
- [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
+ [in，out]列舉值的指標。 此方法的第一個呼叫必須是 Null。  
   
  `rSignatures`  
- 脫銷用來儲存簽章標記的陣列。  
+ 擴展用來儲存簽章標記的陣列。  
   
  `cMax`  
  [in] `rSignatures` 陣列的大小上限。  
   
  `pcSignatures`  
- 脫銷在中傳回的簽章權杖數目 `rSignatures` 。  
+ 擴展傳回的簽章權杖數目 `rSignatures` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures`已成功傳回。|  
+|`S_OK`|`EnumSignatures` 傳回成功。|  
 |`S_FALSE`|沒有要列舉的權杖。 在此情況下， `pcSignatures` 是零。|  
   
 ## <a name="remarks"></a>備註  
- 簽章權杖是由[IMetaDataEmit：： GetTokenFromSig](imetadataemit-gettokenfromsig-method.md)方法所建立。  
+
+ 簽章標記是由 [IMetaDataEmit：： GetTokenFromSig](imetadataemit-gettokenfromsig-method.md) 方法所建立。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

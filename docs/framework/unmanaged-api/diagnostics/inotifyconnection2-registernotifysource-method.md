@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-ms.openlocfilehash: b7fa777466e2c7edd7b3110dd91e776785c63c58
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 1286dd970e437af0a8b607ed050ab4838f73a41f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442068"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720044"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 方法
+
 安裝指定的通知來源。  
   
 ## <a name="syntax"></a>語法  
@@ -36,16 +37,19 @@ HRESULT RegisterNotifySource
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `in_pNotifySource`  
  在指定要當做通知來源使用的物件。  
   
  `out_ppNotifySink`  
- 脫銷接收要當做通知接收使用的物件。  
+ 擴展接收要當做通知接收使用的物件。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK。  
+
+ 如果方法成功，則為 S_OK。  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另請參閱

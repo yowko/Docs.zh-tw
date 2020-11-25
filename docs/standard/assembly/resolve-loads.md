@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: edd101e57793668d71d44db08f191ae412c6d998
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687271"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720902"
 ---
 # <a name="resolve-assembly-loads"></a>解析組件負載
 
@@ -28,6 +28,7 @@ ms.locfileid: "92687271"
 > 若要解析僅限反映內容中的組件載入，請改為使用 <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> 事件。  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>System.appdomain.assemblyresolve 事件的運作方式  
+
  當您註冊 <xref:System.AppDomain.AssemblyResolve> 事件的處理常式時，只要執行階段無法依名稱繫結至組件，就會叫用處理常式。 例如，從使用者程式碼呼叫下列方法可能會引發 <xref:System.AppDomain.AssemblyResolve> 事件：  
   
 - 第一個引數是字串的 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，可代表要載入之組件的顯示名稱 (即 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 屬性所傳回的字串)。  
@@ -39,6 +40,7 @@ ms.locfileid: "92687271"
 - 執行個體化另一個應用程式定義域中物件的 <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 方法多載。  
   
 ### <a name="what-the-event-handler-does"></a>事件處理常式的作用  
+
  <xref:System.AppDomain.AssemblyResolve> 事件的處理常式會在 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 屬性中接收要載入之組件的顯示名稱。 如果處理常式無法辨識元件名稱，則會傳回 `null` (c # ) 、 `Nothing` (Visual Basic) 或 (Visual C++) `nullptr` 。  
   
  如果處理常式可辨識組件名稱，則可以載入並傳回滿足要求的組件。 下列清單描述一些範例情節。  
@@ -69,6 +71,7 @@ ms.locfileid: "92687271"
  相同組件的多個版本可以載入相同的應用程式定義域。 不建議這種做法，因為它可能會導致類型指派問題。 請參閱 [元件載入的最佳做法](../../framework/deployment/best-practices-for-assembly-loading.md)。  
   
 ### <a name="what-the-event-handler-should-not-do"></a>事件處理常式不應採取的動作  
+
 處理 <xref:System.AppDomain.AssemblyResolve> 事件的主要規則是您不應該嘗試傳回無法辨識的組件。 當您撰寫處理常式時，應該知道哪些組件可能會引發此事件。 針對其他組件，您的處理常式應該傳回 Null。  
 
 > [!IMPORTANT]
@@ -198,7 +201,7 @@ End Class
 'Process is terminated due to StackOverflowException.
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [元件載入的最佳做法](../../framework/deployment/best-practices-for-assembly-loading.md)
 - [使用應用程式域](../../framework/app-domains/use.md)

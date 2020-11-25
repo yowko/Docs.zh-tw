@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4030da31400b7075952d146e5d6740306863e9ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721084"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 方法
+
 取得總和檢查碼。  
   
 ## <a name="syntax"></a>語法  
@@ -35,17 +36,19 @@ HRESULT GetCheckSum(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cData`  
  在參數所提供的緩衝區長度 `data`  
   
  `pcData`  
- 脫銷總和檢查碼的大小和長度（以位元組為單位）。  
+ 擴展總和檢查碼的大小和長度（以位元組為單位）。  
   
  `data`  
- 脫銷接收總和檢查碼的緩衝區。  
+ 擴展接收總和檢查碼的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，錯誤碼為。  
+
+ 如果方法成功，則為 S_OK;否則為錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 

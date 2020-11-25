@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5c2880ac07f0317bc36ff4bbde68cd3a25febf52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008751"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721981"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-設定或更新先前呼叫[IMetaDataEmit：:D efineevent](imetadataemit-defineevent-method.md)所定義之事件的指定功能。  
+
+設定或更新由先前呼叫 [IMetaDataEmit：:D efineevent](imetadataemit-defineevent-method.md)所定義之事件的指定功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,14 +41,15 @@ HRESULT SetEventProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ev`  
- 在事件 token。  
+ 在事件標記。  
   
  `dwEventFlags`  
  在事件旗標。 這是值的位元遮罩 `CorEventAttr` 。  
   
  `tkEventType`  
- 在事件類別的 token。 這可能是 `mdTypeDef` 或 `mdTypeRef` 權杖。  
+ 在事件類別的 token。 這可能是 `mdTypeDef` 或 `mdTypeRef` 標記。  
   
  `mdAddOn`  
  在用來訂閱事件的方法，或 null。  
@@ -56,17 +58,18 @@ HRESULT SetEventProps (
  在用來取消訂閱事件的方法，或 null。  
   
  `mdFire`  
- 在用來引發事件的方法（由衍生類別）。  
+ 在衍生類別 (使用的方法) 來引發事件。  
   
  `rmdOtherMethods[]`  
- 在與事件相關聯之其他方法的權杖陣列。 陣列的最後一個元素必須是 `mdMethodDefNil` 。  
+ 在與事件相關聯之其他方法的標記陣列。 陣列的最後一個元素必須是 `mdMethodDefNil` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MSCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

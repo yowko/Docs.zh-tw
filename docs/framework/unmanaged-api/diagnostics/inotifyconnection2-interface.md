@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5a8cece5ad72588b564890c8f21dabb6792a5641
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442081"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720057"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 介面
+
 宣告註冊和取消註冊連接通知來源的方法。  
   
 ## <a name="methods"></a>方法  
@@ -32,6 +33,7 @@ ms.locfileid: "83442081"
 |[UnregisterNotifySource 方法](inotifyconnection2-unregisternotifysource-method.md)|從連接中移除指定的通知來源物件。|  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另請參閱

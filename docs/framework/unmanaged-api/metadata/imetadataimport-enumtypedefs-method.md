@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: cdfd4e10236d546af2555b125d44233172849a21
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4545f5f8d78e588c655a72340210a785b0feb619
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503727"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720408"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs 方法
+
 列舉代表目前範圍內的所有類型的 TypeDef 語彙基元。  
   
 ## <a name="syntax"></a>語法  
@@ -37,8 +38,9 @@ HRESULT EnumTypeDefs (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `phEnum`  
- 脫銷新枚舉器的指標。 第一次呼叫此方法時，此值必須為 Null。  
+ 擴展新列舉值的指標。 此方法的第一個呼叫必須是 Null。  
   
  `rTypeDefs`  
  在用來儲存 TypeDef 標記的陣列。  
@@ -47,24 +49,26 @@ HRESULT EnumTypeDefs (
  [in] `rTypeDefs` 陣列的大小上限。  
   
  `pcTypeDefs`  
- 脫銷在中傳回的 TypeDef 標記數目 `rTypeDefs` 。  
+ 擴展傳回的 TypeDef 標記數目 `rTypeDefs` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`已成功傳回。|  
+|`S_OK`|`EnumTypeDefs` 傳回成功。|  
 |`S_FALSE`|沒有要列舉的權杖。 在此情況下， `pcTypeDefs` 是零。|  
   
 ## <a name="remarks"></a>備註  
- TypeDef token 代表類別或介面等類型，以及透過擴充性機制新增的任何類型。  
+
+ TypeDef token 代表型別，例如類別或介面，以及透過擴充性機制加入的任何型別。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

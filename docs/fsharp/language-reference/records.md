@@ -2,12 +2,12 @@
 title: 記錄
 description: '瞭解 F # 記錄如何代表簡單的命名值匯總，並選擇性地包含成員。'
 ms.date: 08/15/2020
-ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812350"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682025"
 ---
 # <a name="records"></a>記錄
 
@@ -34,7 +34,7 @@ type [accessibility-modifier] typename =
 
 當每個標籤都在不同的行上時，分號是選擇性的。
 
-您可以在稱為 *記錄運算式*的運算式中設定值。 如果標籤與其他記錄類型) 的不同，則編譯器會從所使用的標籤推斷類型 (。 括弧 ( {} ) 括住記錄運算式。 下列程式碼會顯示記錄運算式，該運算式會使用具有標籤和的三個 float 元素來初始化記錄 `x` `y` `z` 。
+您可以在稱為 *記錄運算式* 的運算式中設定值。 如果標籤與其他記錄類型) 的不同，則編譯器會從所使用的標籤推斷類型 (。 括弧 ( {} ) 括住記錄運算式。 下列程式碼會顯示記錄運算式，該運算式會使用具有標籤和的三個 float 元素來初始化記錄 `x` `y` `z` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -157,7 +157,7 @@ type Person =
     member this.WeirdToString() =
         this.Name + this.Address + string this.Age
 
-let p = { Name = "a"; Age = 12; Address = "abc123 }
+let p = { Name = "a"; Age = 12; Address = "abc123" }
 let weirdString = p.WeirdToString()
 ```
 
@@ -179,7 +179,7 @@ The records are equal.
 
 如果您需要記錄的參考相等，請在 `[<ReferenceEquality>]` 記錄上方加入屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [F# 類型](fsharp-types.md)
 - [類別](classes.md)

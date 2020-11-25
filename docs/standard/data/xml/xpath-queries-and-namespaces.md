@@ -6,19 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74dbe6b84c8d9400790f763f811da5542c732892
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818384"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720876"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查詢及命名空間
+
 XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。 使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  
   
  例如，如果前置詞 `books` 對應命名空間 `http://www.contoso.com/books`，則下列 XPath 查詢 `/books:books/books:book` 只會選取命名空間 `book` 中的那些 `http://www.contoso.com/books` 項目。  
   
 ## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
+
  若要在 XPath 查詢中使用命名空間，需使用要包含在該 XPath 查詢中的命名空間 URI 及前置詞，建構自 <xref:System.Xml.IXmlNamespaceResolver> 介面衍生的物件，如 <xref:System.Xml.XmlNamespaceManager> 類別。  
   
  可以透過下列每一種方式將 <xref:System.Xml.XmlNamespaceManager> 物件用於查詢中。  
@@ -36,6 +38,7 @@ XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前�
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>預設命名空間  
+
  在下面的 XML 文件中，會使用具有空前置詞的預設命名空間來宣告 `http://www.contoso.com/books` 命名空間。  
   
 ```xml  
@@ -76,7 +79,7 @@ query.SetContext(manager);
 XPathNodeIterator nodes = navigator.Select(query);  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

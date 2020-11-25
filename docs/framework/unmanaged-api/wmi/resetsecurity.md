@@ -1,6 +1,6 @@
 ---
-title: 重置安全功能（非託管 API 引用）
-description: 重置安全功能將類比權杖分配給當前執行緒。
+title: 'ResetSecurity 函式 (非受控 API 參考) '
+description: ResetSecurity 函式會將模擬 token 指派給目前的執行緒。
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: ce74494455c6cc7fe382a4ea4ef2ff0c4e98c61b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 259bef74356f16221f1453dd4086e2fbb26faa83
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721110"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 函式
+
 將提供的模擬權杖指派給目前的執行緒。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -37,20 +38,21 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>參數
 
 `token`  
-[在]要與當前執行緒關聯的類比權杖。 其值可以是 `null`。
+在要與目前線程相關聯的模擬權杖。 其值可以是 `null`。
 
 ## <a name="return-value"></a>傳回值
 
-如果函數成功，則傳回值為`S_OK`（0）。
+如果函式成功，則傳回值為 `S_OK` (0) 。
 
-如果函數失敗，傳回值是非零錯誤代碼。 要獲取擴展的錯誤資訊，請致電[GetErrorInfo](geterrorinfo.md)函數。
+如果函式失敗，則傳回值為非零的錯誤碼。 若要取得延伸錯誤資訊，請呼叫 [GetErrorInfo](geterrorinfo.md) 函數。
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

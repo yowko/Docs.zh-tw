@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: ea4fc8ab39d616415106150f56f4b7afd5f68237
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 26df1599af247bd08d3702d4ef3c5aa2f648620c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500100"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720369"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 方法
-呼叫以在每次啟動新的 common language runtime （CLR）應用程式時初始化程式碼分析工具。  
+
+每當新的 common language runtime (CLR) 應用程式啟動時呼叫，就會將程式碼分析工具初始化。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +37,15 @@ HRESULT Initialize(
 
 - `pICorProfilerInfoUnk`
 
-  \[in] [IUnknown](/cpp/atl/iunknown)介面的指標，分析工具必須查詢[ICorProfilerInfo](icorprofilerinfo-interface.md)介面指標。  
+  \[in] 程式碼剖析工具必須查詢[ICorProfilerInfo](icorprofilerinfo-interface.md)介面指標的[IUnknown](/cpp/atl/iunknown)介面指標。  
 
 ## <a name="remarks"></a>備註  
- `Initialize`呼叫是啟用（或停用）不變回呼的唯一機會。 一旦呼叫啟用回呼 `Initialize` ，稍後將無法使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)予以停用。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉的 COR_PRF_MONITOR_IMMUTABLE 值會指出哪些事件是不可變的。  
+
+ `Initialize`呼叫是啟用 (或停用不可變) 回呼的唯一機會。 一旦呼叫啟用回呼 `Initialize` ，之後就無法使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)停用回呼。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉的 COR_PRF_MONITOR_IMMUTABLE 值指出哪些事件是不可變的。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

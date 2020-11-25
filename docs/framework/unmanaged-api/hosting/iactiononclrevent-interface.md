@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b5f9b41e-7301-429c-911f-21d5422292b3
 topic_type:
 - apiref
-ms.openlocfilehash: f577e9252d97ec188ff1076fd8340336b16c8257
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ca4bb1fe35451f95f752a4e71f5f0b541b55e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721773"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent 介面
-提供[IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md)方法，它會在使用[ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法呼叫註冊的事件上執行回呼。  
+
+提供 [IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md) 方法，該方法會在已使用 [ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) 方法呼叫註冊的事件上執行回呼。  
   
 ## <a name="methods"></a>方法  
   
@@ -30,12 +31,13 @@ ms.locfileid: "84504325"
 |------------|-----------------|  
 |[OnEvent 方法](iactiononclrevent-onevent-method.md)|針對已註冊的事件執行回呼。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
