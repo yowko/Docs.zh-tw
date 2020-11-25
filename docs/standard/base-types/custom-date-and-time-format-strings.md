@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70e68de3ce736bc4935dea80e37cc805068b0bc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824450"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722462"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
@@ -630,6 +630,7 @@ ms.locfileid: "94824450"
 ## <a name="date-and-time-separator-specifiers"></a>日期和時間分隔符號規範
 
 ### <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a> "：" 自訂格式規範
+
 ":" 自訂格式規範表示時間分隔符號，用於區別時、分、秒。 適當的當地語系化時間分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 屬性。
 
 > [!NOTE]
@@ -682,7 +683,7 @@ ms.locfileid: "94824450"
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>注意
+## <a name="notes"></a>備忘稿
 
 ### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a> 使用單一自訂格式規範
 
@@ -721,7 +722,7 @@ ms.locfileid: "94824450"
 
 許多自訂日期和時間格式規範所產生的結果字串，也取決於目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性。 您的應用程式可以變更對應的 <xref:System.Globalization.DateTimeFormatInfo> 屬性，藉此改變某些自訂日期和時間格式規範所產生的結果。 例如，"ddd" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 字串陣列中找到的縮寫星期幾名稱加入至結果字串。 同樣地，"MMMM" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 字串陣列中找到的完整月份名稱加到結果字串。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

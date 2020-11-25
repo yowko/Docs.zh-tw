@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8c27c1ca61356b36183bb74b8360e41f5324d25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826901"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722436"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>作法：在資料流程區塊中指定工作排程器
+
 此文件將示範當您在應用程式中使用資料流程時，如何與特定工作排程器產生關聯。 這個範例會使用 Windows Form 應用程式中的 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 類別顯示讀取器工作何時為使用中，以及寫入器工作何時為使用中。 另外還會使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法讓資料流程區塊在使用者介面執行緒上執行。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,6 +31,7 @@ ms.locfileid: "94826901"
 3. 將 <xref:System.Windows.Forms.Timer> 控制項加入表單。 將 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設定為 `2500`。  
   
 ## <a name="adding-dataflow-functionality"></a>加入資料流程功能  
+
  本節將說明如何建立參與應用程式的資料流程區塊，以及如何將每個區塊與工作排程器產生關聯。  
   
 ### <a name="to-add-dataflow-functionality-to-the-application"></a>若要將資料流程功能加入至應用程式  
@@ -73,11 +75,12 @@ ms.locfileid: "94826901"
  這個範例也會使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 類別讓某些資料流程區塊同時執行，以及讓另一個資料流程區塊相對於同一個 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 物件上執行的所有資料流程區塊獨佔執行。 當多個資料流程區塊共用某一項資源，而其中有些區塊需要獨佔存取該資源時，這項技術會很有用，因為它能讓您不必手動同步處理該資源的存取權。 不必手動同步處理可讓程式碼更有效率。  
   
 ## <a name="example"></a>範例  
+
  下列範例顯示 Form1.cs (在 Visual Basic 中為 Form1.vb) 的完整程式碼。  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

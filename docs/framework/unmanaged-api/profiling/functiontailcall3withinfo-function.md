@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: f076044b44859cc39d90be528ee6648f5eaa626c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c23c791197c9925038f71e70409e4ca3ebabb23e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500581"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722854"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 函式
-通知分析工具，目前正在執行的函式即將對另一個函式執行 tail 呼叫，並提供可傳遞給[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md)的控制碼，以取得堆疊框架。  
+
+通知分析工具，目前正在執行的函式即將執行另一個函式的 tail 呼叫，並提供可傳遞至 [ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md) 的控制碼，以取得堆疊框架。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,27 +41,29 @@ void __stdcall FunctionTailcall3WithInfo(
 
 - `eltInfo`
 
-  \[in] 不透明的控制碼，代表指定之堆疊框架的相關資訊。 這個控制碼只有在傳遞它的回呼期間才有效。
+  \[in] 不透明的控制碼，表示指定之堆疊框架的相關資訊。 這個控制碼只有在傳遞的回呼期間有效。
 
 ## <a name="remarks"></a>備註  
- `FunctionTailcall3WithInfo`回呼方法會在呼叫函式時通知分析工具，並允許分析工具使用[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md)來檢查堆疊框架。 若要存取堆疊框架資訊，必須 `COR_PRF_ENABLE_FRAME_INFO` 設定旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md)來設定事件旗標，然後使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)來註冊此函式的實作為。  
+
+ `FunctionTailcall3WithInfo`回呼方法會在呼叫函式時通知分析工具，並允許 profiler 使用[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md)來檢查堆疊框架。 若要存取堆疊框架資訊，必須 `COR_PRF_ENABLE_FRAME_INFO` 設定旗標。 分析工具可以使用 [ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md) 來設定事件旗標，然後使用 [ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) 來註冊此函式的實作為。  
   
- 函式 `FunctionTailcall3WithInfo` 是回呼; 您必須加以執行。 此執行必須使用 `__declspec(naked)` 儲存類別屬性。  
+ `FunctionTailcall3WithInfo`函數是回呼; 您必須加以執行。 實作為必須使用 `__declspec(naked)` 儲存類別屬性。  
   
  在呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
-- 輸入時，您必須儲存您所使用的所有暫存器，包括浮點單位（FPU）中的暫存器。  
+- 輸入時，您必須儲存使用的所有暫存器，包括浮點數單位中的所有暫存器 (FPU) 。  
   
-- 結束時，您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
+- 在結束時，您必須藉由關閉呼叫端所推送的所有參數來還原堆疊。  
   
- 的執行 `FunctionTailcall3WithInfo` 不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到傳回為止 `FunctionTailcall3WithInfo` 。  
+ 的執行 `FunctionTailcall3WithInfo` 不應封鎖，因為它會延遲垃圾收集。 因為堆疊可能不是處於垃圾收集的狀態，所以不應該嘗試執行垃圾收集。 如果嘗試垃圾收集，則執行時間會封鎖直到傳回為止 `FunctionTailcall3WithInfo` 。  
   
- 此外，FunctionTailcall3WithInfo 函式不能呼叫 managed 程式碼，或以任何方式造成 managed 記憶體配置。  
+ 此外，FunctionTailcall3WithInfo 函式不能呼叫 managed 程式碼，或以任何方式造成受控記憶體配置。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Corprof.idl .idl  
+ **標頭：** Corprof.h .idl  
   
  **程式庫：** CorGuids.lib  
   

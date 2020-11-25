@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0eed759f-cce8-405d-88dc-9ee293a38928
 topic_type:
 - apiref
-ms.openlocfilehash: 18c3b6e840ec1f6cb1481c8d752e6399dcdae077
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c7f01d2e462ad1cb0532be6f369c3118a4deb6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722488"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken 方法
-取得函式的識別碼。 這個方法在 .NET Framework 版本2.0 中已過時。 請改用[ICorProfilerInfo2：： GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)方法。  
+
+取得函數的識別碼。 此方法在 .NET Framework 版本2.0 中已淘汰。 請改用 [ICorProfilerInfo2：： GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,10 +36,12 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="remarks"></a>備註  
- 方法不適用於泛型函式或泛型型別中的函式， `GetFunctionFromToken` 它現在已過時。 用於 `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` 所有函式。  
+
+ `GetFunctionFromToken`方法不適用於泛型函式或泛型型別中的函式，它現在已過時。 用於 `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` 所有函數。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

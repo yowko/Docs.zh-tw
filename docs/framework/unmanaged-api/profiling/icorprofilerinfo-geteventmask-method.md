@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec34cc13-45a3-4695-abc3-b3347d4e6fc2
 topic_type:
 - apiref
-ms.openlocfilehash: 7faa4a5f7b1ca1fbf165c40eb3a3cb32a42a21a4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 16bd8b09d5118171e669e9c428fb444384b5867d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498332"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722560"
 ---
 # <a name="icorprofilerinfogeteventmask-method"></a>ICorProfilerInfo::GetEventMask 方法
+
 取得分析工具想要從 Common Language Runtime (CLR) 接收事件通知的目前事件分類。  
   
 ## <a name="syntax"></a>語法  
@@ -33,16 +34,18 @@ HRESULT GetEventMask(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pdwEvents`  
- [out] 指定事件分類的 4 位元組值的指標。 每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉中會描述位。  
+ [out] 指定事件分類的 4 位元組值的指標。 每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉中會說明這些位。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
-> 您應該呼叫[GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)方法，而不是這個方法。 雖然此 `SetEventMask` 方法會繼續受到支援，但[GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)會提供額外的功能。  
+> 您應呼叫 [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) 方法，而不是此方法。 雖然此 `SetEventMask` 方法會繼續受到支援，但 [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) 會提供額外的功能。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

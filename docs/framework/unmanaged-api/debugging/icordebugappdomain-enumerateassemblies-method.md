@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7add64f9-19a8-46a9-be62-905d5e7d1bd8
 topic_type:
 - apiref
-ms.openlocfilehash: 880c234462ac369ead06578730f3c14532c466e9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 386913f8c81ff3c8b98bb0cab4ffc101a4f6085f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895292"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723320"
 ---
 # <a name="icordebugappdomainenumerateassemblies-method"></a>ICorDebugAppDomain::EnumerateAssemblies 方法
+
 取得應用程式域中元件的列舉值。  
   
 ## <a name="syntax"></a>語法  
@@ -34,11 +35,13 @@ HRESULT EnumerateAssemblies (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppAssemblies`  
- 脫銷ICorDebugAssemblyEnum 物件位址的指標，這是應用程式域中元件的列舉值。  
+ 擴展ICorDebugAssemblyEnum 物件位址的指標，該物件是應用程式域中元件的列舉值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

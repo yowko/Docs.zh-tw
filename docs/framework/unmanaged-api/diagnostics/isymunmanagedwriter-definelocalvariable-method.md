@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614821"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723021"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable 方法
-在目前的語彙範圍中定義單一變數。 這個方法可以針對相同名稱的變數多次呼叫，其具有整個範圍中的多個家庭。 不過，在此情況下， `startOffset` 和參數的值不能重 `endOffset` 迭。  
+
+在目前的語彙範圍中定義單一變數。 您可以針對相同名稱的變數多次呼叫這個方法，該變數在整個範圍中有多個主主。 但是在此情況下，和參數的值 `startOffset` 不能重 `endOffset` 迭。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,17 +43,18 @@ HRESULT DefineLocalVariable(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `name`  
- 在`WCHAR`的指標，定義本機變數名稱。  
+ 在的指標 `WCHAR` ，定義本機變數名稱。  
   
  `attributes`  
- 在區域變數屬性。  
+ 在本機變數屬性。  
   
  `cSig`  
- 在`ULONG32`，表示緩衝區的大小（以位元組為單位） `signature` 。  
+ 在， `ULONG32` 表示緩衝區的大小（以位元組為單位） `signature` 。  
   
  `signature`  
- 在區域變數簽章。  
+ 在本機變數簽章。  
   
  `addrKind`  
  在網址類別型。  
@@ -67,16 +69,18 @@ HRESULT DefineLocalVariable(
  在參數規格的第三個位址。  
   
  `startOffset`  
- 在變數的開始位移。 此為選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
+ 在變數的起始位移。 這是選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
   
  `endOffset`  
- 在變數的結束位移。 此為選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
+ 在變數的結束位移。 這是選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

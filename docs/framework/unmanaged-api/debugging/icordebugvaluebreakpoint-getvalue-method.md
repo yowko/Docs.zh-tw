@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 52a73654-bc47-48b6-b2b1-a4456b10140c
 topic_type:
 - apiref
-ms.openlocfilehash: cc4e1a236f429894fe7ec304b9ccfd3bf717c188
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 8b0ab22d4a782bb21e09d29c9121ef83782a4571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397005"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722319"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a>ICorDebugValueBreakpoint::GetValue 方法
-取得代表設定中斷點之物件值的 "ICorDebugValue" 物件的介面指標。  
+
+取得 "ICorDebugValue" 物件的介面指標，該物件表示設定中斷點的物件值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetValue (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppValue`  
- 脫銷物件位址的指標 `ICorDebugValue` 。  
+ 擴展物件位址的指標 `ICorDebugValue` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

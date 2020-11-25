@@ -15,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0f80be2d1da43341f8e2af6f32580be2e01289dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823182"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723216"
 ---
 # <a name="common-type-system"></a>一般型別系統
 
@@ -170,14 +170,16 @@ ms.locfileid: "94823182"
 - 型別中每一個成員的定義  
   
 ### <a name="attributes"></a>屬性  
+
  屬性提供了其他的使用者定義中繼資料。 最常見的屬性用法是，用來將關於型別的其他資訊儲存在組件中，或者在設計階段或執行階段環境中修改型別成員的行為。  
   
  屬性本身都是繼承自 <xref:System.Attribute?displayProperty=nameWithType> 的類別。 每一種支援使用屬性的語言都有自己的語法，用於將屬性套用至語言項目。 屬性可以幾乎套用至所有語言項目，而可以套用屬性的特定項目是由套用到該屬性類別的 <xref:System.AttributeUsageAttribute> 定義。  
   
 ### <a name="type-accessibility"></a>類型存取範圍  
+
  所有型別都具有修飾詞 (Modifier)，負責控制其他型別的存取範圍。 下表說明執行階段所支援的型別存取範圍。  
   
-|協助工具選項|說明|  
+|Accessibility|描述|  
 |-------------------|-----------------|  
 |public|型別可供所有組件存取|  
 |組件|型別只能在本身的組件中存取|  
@@ -197,6 +199,7 @@ ms.locfileid: "94823182"
 - 如果 `M` 的宣告存取範圍是 `private`，`M` 的存取範圍領域就是 `T` 的程式文字。  
   
 ### <a name="type-names"></a>類型名稱  
+
  一般型別系統對於名稱只有兩項限制：  
   
 - 所有名稱都是以 Unicode (16 位元) 字元字串的方式編碼。  
@@ -208,6 +211,7 @@ ms.locfileid: "94823182"
  雖然型別可能會參考其他模組和組件中的型別，但是型別必須在一個 .NET 模組中完整定義 不過 (根據編譯器支援，它可以分割成多個原始程式碼檔。只有在命名空間中，) 類型名稱必須是唯一的。 若要能完整辨認型別，必須以包含型別實作的命名空間來限定型別名稱。  
   
 ### <a name="base-types-and-interfaces"></a>基底類型及介面  
+
  型別可繼承其他型別的數值和行為。 一般型別系統不允許型別繼承一個以上的基底型別。  
   
  型別可實作任意數目的介面。 若要實作介面，型別必須實作該介面的所有虛擬成員。 虛擬方法可由衍生型別 (Derived Type) 實作，並且可以用靜態或動態方式叫用 (Invoke)。  
@@ -278,7 +282,7 @@ ms.locfileid: "94823182"
 
  一般型別系統允許型別成員具有各種特性，但是所使用的語言並不需要支援所有特性。 下表將描述成員特性。  
   
-|特性|適用於|說明|  
+|特性|適用於|描述|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、屬性和事件|型別不提供方法的實作。 繼承或實作抽象方法的型別必須提供方法的實作。 唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。 所有抽象方法都是虛擬的。|  
 |private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
@@ -291,19 +295,21 @@ ms.locfileid: "94823182"
 |virtual|方法、屬性和事件|方法可由衍生型別實作，而且可以用靜態或動態方式叫用。 如果使用動態引動，在執行時期進行呼叫的執行個體型別會決定呼叫哪一個方法實作，而不是由編譯時間得知的型別決定。 若要用靜態方式叫用虛擬方法，可能必須將變數轉型為使用方法所需版本的型別。|  
   
 ### <a name="overloading"></a>多載化  
+
  每一個型別成員都具有唯一 (Unique) 的簽章。 方法簽章包含方法名稱和參數清單 (方法引數的順序和型別)。 只要簽章不相同，就可以在型別中定義具有相同名稱的多個方法。 定義兩個或多個具有相同名稱的方法時，就說這個方法是多載。 例如在 <xref:System.Char?displayProperty=nameWithType> 中，會多載 <xref:System.Char.IsDigit%2A> 方法。 其中一個方法採用 <xref:System.Char>， 另一個方法則採用 <xref:System.String> 與 <xref:System.Int32>。  
   
 > [!NOTE]
 > 傳回型別並不會視為方法簽章的一部分。 換言之，如果這些方法的差異只在於傳回型別，就不能多載這些方法。  
   
 ### <a name="inherit-override-and-hide-members"></a>繼承、覆寫及隱藏成員  
+
  衍生型別會繼承其基底型別的所有成員；也就是說，在衍生型別上會定義這些成員，並供衍生型別使用。 繼承成員的行為或品質可用下列兩種方式來修改：  
   
 - 衍生型別可用相同的簽章定義新的成員，如此便可隱藏繼承的成員。 您可以將原先為 public 的成員設為 private 成員，或是為標記為 `final` 的繼承方法定義新的行為。  
   
 - 衍生型別可覆寫繼承的虛擬方法。 覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。 只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET API 瀏覽器](../../../api/index.md)
 - [Common Language Runtime](../clr.md)

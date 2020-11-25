@@ -11,14 +11,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a6e2ed06e92adffa6c8a61b27bbff994370e8b34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824437"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722735"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同步程式設計模型 (APM)
+
 使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，一種名為 `BeginOperationName`，另一種名為 `EndOperationName`，這兩種方法分別負責開始和結束非同步作業 *OperationName*。 例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。 這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ ms.locfileid: "94824437"
  呼叫 `BeginOperationName` 之後，應用程式可以繼續對進行呼叫的執行緒執行指令，而非同步作業會在不同的執行緒上執行。 每次呼叫 `BeginOperationName` 後，應用程式也要呼叫 `EndOperationName` 才能取得作業的結果。  
   
 ## <a name="beginning-an-asynchronous-operation"></a>開始非同步作業  
+
  `BeginOperationName` 方法開始非同步作業 *OperationName*，並傳回實作 <xref:System.IAsyncResult> 介面的物件。 <xref:System.IAsyncResult> 物件會儲存非同步作業的相關資訊。 下表顯示非同步作業的相關資訊。  
   
 |member|描述|  
@@ -41,6 +43,7 @@ ms.locfileid: "94824437"
  `BeginOperationName` 會立即將控制權傳回呼叫的執行緒。 如果 `BeginOperationName` 方法擲回例外狀況，則例外狀況會在非同步作業啟動之前擲回。 如果 `BeginOperationName` 方法擲回例外狀況，則不會叫用回呼方法。  
   
 ## <a name="ending-an-asynchronous-operation"></a>結束非同步作業  
+
  `EndOperationName` 方法會結束非同步作業 *OperationName*。 `EndOperationName` 方法的傳回值型別與其同步版本所傳回的型別相同，而且是非同步作業專屬。 例如， <xref:System.IO.FileStream.EndRead%2A> 方法會傳回從 <xref:System.IO.FileStream> 讀取的位元組數目，而 <xref:System.Net.Dns.EndGetHostByName%2A> 方法會傳回包含主機電腦相關資訊的 <xref:System.Net.IPHostEntry> 物件。 `EndOperationName` 方法會使用在此方法同步版本簽章中所宣告的任何 out 或 ref 參數。 除了同步方法中的參數外，`EndOperationName` 方法還包括 <xref:System.IAsyncResult> 參數。 呼叫者必須傳遞 `BeginOperationName` 的對應呼叫所傳回的執行個體。  
   
  如果呼叫 `EndOperationName` 時，<xref:System.IAsyncResult> 物件所代表的非同步作業還沒有完成，`EndOperationName` 就會封鎖呼叫執行緒，直到非同步作業完成為止。 非同步作業所擲回的例外狀況都是從 `EndOperationName` 方法擲回。 使用相同的 `EndOperationName` 多次呼叫 <xref:System.IAsyncResult> 方法的效果尚未定義。 使用並非由相關 Begin 方法所傳回的 <xref:System.IAsyncResult> 呼叫 `EndOperationName` 方法的方式，也同樣尚未定義。  
@@ -63,7 +66,7 @@ ms.locfileid: "94824437"
   
 - 使用 <xref:System.AsyncCallback> 委派指定作業完成時要叫用的方法。 如需說明這項技巧的範例，請參閱 [Using an AsyncCallback Delegate to End an Asynchronous Operation](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)
 - [以非同步的方式呼叫同步方法](calling-synchronous-methods-asynchronously.md)

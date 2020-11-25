@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: 585287f63f57f55e877c94684820833b6d1add60
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a8326f95286ef05dd370797a531417f81ed5c65b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616533"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723151"
 ---
 # <a name="_corimageunloading-function"></a>_CorImageUnloading 函式
-卸載受管理的模組映射時，通知載入器。  
+
+卸載受控模組映射時，通知載入器。  
   
- 此函數並未實作。 如果呼叫，它會傳回 E_NOTIMPL。  
+ 此函數並未實作。 如果呼叫，則會傳回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +36,17 @@ STDAPI (VOID) _CorImageUnloading(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ImageBase`  
- 在要卸載之影像起始位置的指標。  
+ 在要卸載之映射的起始位置指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

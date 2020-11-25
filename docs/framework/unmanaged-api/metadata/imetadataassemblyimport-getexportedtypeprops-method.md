@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 32224431051b958a3f01ffeb15cdb6db1dae2657
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722098"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 方法
-取得具有指定的中繼資料簽章之已匯出類型的屬性集。  
+
+取得具有指定中繼資料簽章之匯出型別的屬性集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,33 +41,35 @@ HRESULT GetExportedTypeProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `mdct`  
- 在`mdExportedType`表示已匯出類型的元資料標記。  
+ 在 `mdExportedType` 表示匯出之類型的元資料標記。  
   
  `szName`  
- 脫銷匯出之類型的名稱。  
+ 擴展匯出之類型的名稱。  
   
  `cchName`  
  在的大小（以寬字元為單位） `szName` 。  
   
  `pchName`  
- 脫銷實際傳回的寬字元數`szName`  
+ 擴展實際傳回的寬字元數 `szName`  
   
  `ptkImplementation`  
- 脫銷`mdFile`、 `mdAssemblyRef` 或 `mdExportedType` 元資料標記，其中包含或允許存取已匯出類型的屬性。  
+ 擴展 `mdFile`、 `mdAssemblyRef` 或 `mdExportedType` 元資料標記，其中包含或允許存取匯出型別的屬性。  
   
  `ptkTypeDef`  
- 脫銷`mdTypeDef`標記的指標，表示檔案中的類型。  
+ 擴展 `mdTypeDef` 標記的指標，表示檔案中的類型。  
   
  `pdwExportedTypeFlags`  
- 脫銷旗標的指標，描述套用至已匯出類型的中繼資料。 Flags 值可以是一或多個[CorTypeAttr](cortypeattr-enumeration.md)值。  
+ 擴展旗標的指標，這些旗標描述套用至匯出型別的中繼資料。 旗標值可以是一個或多個 [CorTypeAttr](cortypeattr-enumeration.md) 值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-ms.openlocfilehash: b8c4b4e585bba4df39a743273221f38ce14a9b9d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: c135c051637858682c22db58d562e1d50eea562b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723697"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 方法
-設定目標進程中指定之執行緒的目前內容。 這個方法是由 common language runtime （CLR）資料存取服務呼叫。  
+
+在目標進程中，設定指定之執行緒的目前內容。 Common language runtime (CLR) 資料存取服務會呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,6 +38,7 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `threadID`  
  在目標進程中線程的作業系統識別碼。  
   
@@ -46,20 +48,22 @@ HRESULT SetThreadContext (
  `context`  
  在包含內容之緩衝區的指標。  
   
- `context`緩衝區中的資料將會採用 Win32 `CONTEXT`結構的格式。 內容會指定處理器特定的暫存器資料，因此 Win32 `CONTEXT`結構的定義取決於處理器的架構。 如需 Win32 `CONTEXT`結構的定義，請參閱 WinNT 標頭檔。  
+ 緩衝區中的資料 `context` 將採用 Win32 結構的格式 `CONTEXT` 。 內容會指定處理器特定的登錄資料，因此 Win32 結構的定義 `CONTEXT` 取決於處理器的架構。 請參閱 WinNT 標頭檔中的 Win32 `CONTEXT` 結構定義。  
   
 ## <a name="remarks"></a>備註  
+
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** ClrData .idl，ClrData。h  
+ **標頭：** ClrData .idl、ClrData。h  
   
  **程式庫：** CorGuids.lib  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICLRDataTarget 介面](iclrdatatarget-interface.md)

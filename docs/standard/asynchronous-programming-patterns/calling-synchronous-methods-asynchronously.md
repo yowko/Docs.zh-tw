@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 668ac7552289a9d1015b62ed9e68f53415dd6211
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8d12ab2904b336f38e56387c8aaf2a851a46007e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830437"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722722"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>以非同步的方式呼叫同步方法
 
@@ -55,6 +55,7 @@ ms.locfileid: "94830437"
 > 不論您使用哪一種技術，請務必呼叫 `EndInvoke` 完成非同步呼叫。
 
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>定義測試方法和非同步委派
+
  以下程式碼範例示範非同步呼叫同一個長時間執行之方法 `TestMethod`的各種方式。 `TestMethod` 方法會顯示主控台訊息，告訴您它已經開始處理、睡眠數秒鐘，然後結束。 `TestMethod` 具有 `out` 參數，以示範這類參數加入 `BeginInvoke` 和 `EndInvoke`簽章的方法。 您可以用類似方式處理 `ref` 參數。
 
  下列程式碼範例顯示 `TestMethod` 的定義及名為 `AsyncMethodCaller` 且可用來非同步呼叫 `TestMethod` 的委派。 若要編譯程式碼範例，您必須包含 `TestMethod` 的定義和 `AsyncMethodCaller` 委派。
@@ -64,6 +65,7 @@ ms.locfileid: "94830437"
  [!code-vb[AsyncDelegateExamples#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-endinvoke"></a>使用 EndInvoke 等候非同步呼叫
+
  以非同步方式執行方法最簡單的方式，就是以呼叫委派的 `BeginInvoke` 方法來開始執行方法，在主執行緒上執行相同的工作，然後呼叫委派的 `EndInvoke` 方法。 `EndInvoke` 有可能會封鎖呼叫執行緒，因為它在非同赴呼叫完成之前都不會傳回。 這個技術非常適合運用於檔案或網路作業。
 
 > [!IMPORTANT]
@@ -74,6 +76,7 @@ ms.locfileid: "94830437"
  [!code-vb[AsyncDelegateExamples#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/EndInvoke.vb#2)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-waithandle"></a>使用 WaitHandle 等候非同步呼叫
+
  您可以使用取得 <xref:System.Threading.WaitHandle> 所傳回之 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 的 <xref:System.IAsyncResult> 屬性，取得 `BeginInvoke` 非同步呼叫完成時， <xref:System.Threading.WaitHandle> 會收到信號，且您可以呼叫 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法來等候它。
 
  如果您使用 <xref:System.Threading.WaitHandle>，您可以在非同步呼叫完成之前或之後，且在呼叫 `EndInvoke` 擷取結果之前，執行其他的處理。
@@ -86,6 +89,7 @@ ms.locfileid: "94830437"
  [!code-vb[AsyncDelegateExamples#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/WaitHandle.vb#3)]
 
 ## <a name="polling-for-asynchronous-call-completion"></a>輪詢是否完成非同步呼叫
+
  您可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 所傳回之 <xref:System.IAsyncResult> 的 `BeginInvoke` 屬性，找出非同步呼叫完成的時間。 從服役於使用者介面的執行緒進行非同步呼叫時，您有可能會執行這項操作。 輪詢完成這個動作，可在非同步呼叫於 <xref:System.Threading.ThreadPool> 執行緒上執行的同時，讓呼叫執行緒能夠繼續執行。
 
  [!code-cpp[AsyncDelegateExamples#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/polling.cpp#4)]
@@ -93,6 +97,7 @@ ms.locfileid: "94830437"
  [!code-vb[AsyncDelegateExamples#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/polling.vb#4)]
 
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>當非同步呼叫完成時執行回呼方法
+
  如果起始非同步呼叫的執行緒不一定非是處理結果的執行緒時，您可以在呼叫完成時執行回呼方法。 回呼方法是在 <xref:System.Threading.ThreadPool> 執行緒上執行的。
 
  若要使用回呼方法，您必須對 `BeginInvoke` 傳遞表示回呼方法的 <xref:System.AsyncCallback> 委派。 您也可以傳遞物件，包含回呼方法所使用的資訊。 在回呼方法中，您可以將 <xref:System.IAsyncResult>這個回呼方法唯一的參數，轉換成 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 物件。 接著可以再使用 <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> 屬性來取得委派，用來起使呼叫，以便您呼叫 `EndInvoke`。
@@ -109,7 +114,7 @@ ms.locfileid: "94830437"
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
  [!code-vb[AsyncDelegateExamples#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Delegate>
 - [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)

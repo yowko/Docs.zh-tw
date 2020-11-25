@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: a197d260c55d24f906da7d7f2768bb7ba1ad751f
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 97a4a464d3dfb7b333f44ac4206bd880fd171e16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723411"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler 方法
+
 指定 managed 事件的事件處理常式物件。  
   
 ## <a name="syntax"></a>語法  
@@ -34,16 +35,19 @@ HRESULT SetManagedHandler (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pCallback`  
- 在[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)物件的指標，這是事件處理常式物件。  
+ 在 [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) 物件的指標，也就是事件處理常式物件。  
   
 ## <a name="remarks"></a>備註  
- `SetManagedHandler`必須在建立時呼叫。  
+
+ `SetManagedHandler` 必須在建立時呼叫。  
   
- 如果`ICorDebugManagedCallback`執行中未包含足夠的介面來處理正在進行調試之應用程式的事件， `SetManagedHandler`則會傳回 E_NOINTERFACE 的 HRESULT。  
+ 如果 `ICorDebugManagedCallback` 執行不包含足夠的介面來處理正在進行偵錯工具的偵錯工具，就會傳回 `SetManagedHandler` E_NOINTERFACE 的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

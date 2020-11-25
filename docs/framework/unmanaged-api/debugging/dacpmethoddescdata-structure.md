@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860812"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723060"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 結構
 
-為方法的執行時間資訊定義傳輸緩衝區。
+定義方法執行時間資訊的傳輸緩衝區。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -56,35 +56,36 @@ struct DacpMethodDescData
 
 | member                       | 描述                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | 指出執行時間是否具有原生程式碼，可用於指定的方法具現化。 |
-| `bIsDynamic`                 | 指出此方法是否透過輕量程式碼產生動態產生。           |
-| `wSlotNumber`                | 方法資料表中的方法位置編號。                                                   |
+| `bHasNativeCode`             | 指出執行時間是否有原生程式碼可用於方法的指定具現化。 |
+| `bIsDynamic`                 | 指出方法是否透過輕量程式碼產生動態產生。           |
+| `wSlotNumber`                | 方法資料表中的方法位置號碼。                                                   |
 | `NativeCodeAddr`             | 方法的初始原生位址。                                                            |
 | `data`                       | 執行時間內部使用之緩衝區的指標。                                             |
-| `MethodDescPtr`              | 執行時間中`MethodDesc`的指標。                                                     |
-| `nativeCodeInfo`             | 執行時間內部用來追蹤方法之緩衝區的指標。                            |
-| `moduleInfo`                 | 執行時間內部用來取得模組資訊之緩衝區的指標。                      |
+| `MethodDescPtr`              | 執行時間中的指標 `MethodDesc` 。                                                     |
+| `nativeCodeInfo`             | 執行時間在內部用來追蹤方法的緩衝區指標。                            |
+| `moduleInfo`                 | 執行時間用於模組資訊的緩衝區指標。                      |
 | `MDToken`                    | 與指定方法相關聯的 Token。                                                         |
-| `payloadGC`                  | 執行時間內部使用之垃圾收集緩衝區的指標。                          |
-| `payloadGC2`                 | 執行時間內部使用之垃圾收集緩衝區的指標。                          |
-| `managedDynamicMethodObject` | 如果方法是動態的，則執行時間會在內部使用此緩衝區進行資訊追蹤。     |
-| `requestedIP`                | 當指定原生程式碼位址時，用來填入每個要求的結構。                    |
-| `rejitDataCurrent`           | 方法的最新檢測版本的相關資訊。                                   |
+| `payloadGC`                  | 執行時間內部使用的垃圾收集緩衝區指標。                          |
+| `payloadGC2`                 | 執行時間內部使用的垃圾收集緩衝區指標。                          |
+| `managedDynamicMethodObject` | 如果是動態方法，則執行時間會在內部使用此緩衝區來追蹤資訊。     |
+| `requestedIP`                | 在指定機器碼位址時，用來填入每個要求的結構。                    |
+| `rejitDataCurrent`           | 方法最新檢測版本的相關資訊。                                   |
 | `rejitDataRequested`         | Rejit 所要求之原生位址的資訊。                                             |
 | `cJittedRejitVersions`       | 透過檢測 rejitted 方法的次數。                           |
 
 ## <a name="remarks"></a>備註
 
-這個結構存在於執行時間中，而且不會透過任何標頭或程式庫檔案來公開。 若要使用它，請依照上面的指定定義結構。
+此結構存在於執行時間內，且不會透過任何標頭或程式庫檔案來公開。 若要使用它，請依照上述指定的方式定義結構。
 
 ## <a name="requirements"></a>需求
-**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
-**標頭：** 無  
-連結**庫：** 無  
+
+**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
+**標頭：** 沒有  
+連結 **庫：** 沒有  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)
 - [偵錯結構](debugging-structures.md)
-- [一般資料類型](../common-data-types-unmanaged-api-reference.md)
+- [常見資料類型](../common-data-types-unmanaged-api-reference.md)

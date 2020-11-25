@@ -9,19 +9,21 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: a3565bb8f0d00773fc59853d68ca7c54de03ba2b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e981d1b9b3adc638a84de1c119ad849ec533d16e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826798"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722359"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>作法：取消連結資料流程區塊
+
 本文件將說明如何解除目標資料流程區塊與其來源之間的連結。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>範例  
+
  下列範例會建立三個 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，每一個 `TrySolution` 方法都會計算一個值。 這個範例只要求來自第一次呼叫 `TrySolution` 的結果必須完成。  
   
  [!code-csharp[TPLDataflow_ReceiveAny#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_receiveany/cs/dataflowreceiveany.cs#1)]
@@ -31,6 +33,6 @@ ms.locfileid: "94826798"
   
  若要在其中一個對 `TrySolution` 的呼叫計算出值之後讓其餘呼叫結束，`TrySolution` 方法會採用 <xref:System.Threading.CancellationToken> 物件，該物件會在 `ReceiveFromAny(T)` 的呼叫傳回之後取消。 <xref:System.Threading.SpinWait.SpinUntil%2A> 方法會在這個 <xref:System.Threading.CancellationToken> 物件取消時傳回。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料流程](dataflow-task-parallel-library.md)

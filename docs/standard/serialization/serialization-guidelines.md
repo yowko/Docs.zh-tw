@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 32d71aba5d8a650293a4d8653fb2a2e383b8a800
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 110efce0bd7fae1a4f39f5d879496bf541ffe667
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722150"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 
@@ -24,7 +24,7 @@ ms.locfileid: "93282383"
 
  .NET 提供已針對多個序列化案例最佳化的三個主要序列化技術。 下表列出這些技術以及與這些技術相關的主要 .NET 類型。
 
-|技術|相關類別|注意|
+|技術|相關類別|備忘稿|
 |----------------|----------------------|-----------|
 |資料合約序列化|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|一般持續性<br /><br /> Web 服務<br /><br /> JSON|
 |XML 序列化|<xref:System.Xml.Serialization.XmlSerializer>|XML 格式 <br />(具有完全控制)|
@@ -39,6 +39,7 @@ ms.locfileid: "93282383"
   對任何型別而言，序列化都是重要的設計考量，因為程式可能需要保存或傳輸該型別的執行個體。
 
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>選擇要支援的正確序列化技術
+
  任何給定型別都可以支援零個、一個或多個序列化技術。
 
 - 如果可能需要在 Web 服務中持續保存或使用類型的執行個體，請考慮支援「資料合約序列化」。
@@ -52,6 +53,7 @@ ms.locfileid: "93282383"
 - 請避免針對一般持續性理由來支援執行階段序列化或 XML 序列化。 請改用資料合約序列化。
 
 #### <a name="data-contract-serialization"></a>資料合約序列化
+
  類型可以將 <xref:System.Runtime.Serialization.DataContractAttribute> 套用至類型，並將 <xref:System.Runtime.Serialization.DataMemberAttribute> 套用至類型的成員 (欄位和屬性) 來支援資料合約序列化。
 
  [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
@@ -96,6 +98,7 @@ ms.locfileid: "93282383"
      如需詳細資訊，請參閱[向前相容資料合約](../../framework/wcf/feature-details/forward-compatible-data-contracts.md)。
 
 #### <a name="xml-serialization"></a>XML 序列化
+
  資料合約序列化是 .NET Framework 中的主要 (預設) 序列化技術，但有資料合約序列化不支援的序列化案例。 例如，它無法讓您完全控制序列化程式所產生或使用之 XML 的形狀。 如果需要這樣的精確控制，必須使用「XML 序列化」，而且您需要設計您的類型來支援這項序列化技術。
 
 1. 請避免專門為了 XML 序列化來設計型別，除非您有非常強烈的理由為了控制所產生之 XML 的形狀。 這項序列化技術已經由前一節所討論的資料合約序列化所取代。
@@ -108,6 +111,7 @@ ms.locfileid: "93282383"
 2. <xref:System.Xml.Serialization.IXmlSerializable>如果您想要對序列化 xml 的形狀有更多的控制，而不是套用 XML 序列化屬性所提供的，請考慮執行此介面。 介面的兩個方法 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 可讓您完全控制序列化的 XML 資料流程。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。
 
 #### <a name="runtime-serialization"></a>執行時間序列化
+
  「執行階段序列化」是 .NET 遠端處理所使用的技術。 如果您認為您的型別會使用 .NET 遠端處理傳輸，請確定它們支援執行時間序列化。
 
  「執行階段序列化」的基本支援可以藉由套用 <xref:System.SerializableAttribute> 屬性來提供，而更進階的案例則牽涉到實作簡單的「執行階段可序列化模式」(實作 -<xref:System.Runtime.Serialization.ISerializable> 並提供序列化建構函式)。

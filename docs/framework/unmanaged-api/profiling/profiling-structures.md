@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: c3bbc66079e05abf494ad112b8aa0ac68e3c3e2f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3f832850fac918a568d02e9ef2f1e5b140ffc04f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868105"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722748"
 ---
 # <a name="profiling-structures"></a>分析結構
+
 本節說明分析 API 所使用的 Unmanaged 結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
+
  [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](cor-prf-assembly-reference-info-structure.md)  
  提供在執行組件參考結束查核時，所應考量的參考組件相關資訊給通用語言執行平台。  
   
@@ -39,6 +41,7 @@ ms.locfileid: "76868105"
  說明正在進行記憶體回收的記憶體範圍 (亦即區塊)。  
   
 ## <a name="related-sections"></a>相關章節  
+
  COR_DEBUG_IL_TO_NATIVE_MAP  
   
  COR_IL_MAP  

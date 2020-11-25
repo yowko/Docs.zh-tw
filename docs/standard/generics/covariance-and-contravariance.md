@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d5d5b27fb77500aa5f6deff3fcb1c739ba8b094
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827408"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722657"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 
@@ -71,6 +71,7 @@ ms.locfileid: "94827408"
 - 從 c # 9 開始，支援協變數傳回類型。 覆寫方法可以宣告它所覆寫的方法更衍生的傳回型別，而覆寫的唯讀屬性可以宣告更多衍生的型別。
 
 <a name="InterfaceCovariantTypeParameters"></a>
+
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>具有協變數型別參數的泛型介面
 
 數個泛型介面具有協變數型別參數，例如，、、 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.IEnumerator%601> <xref:System.Linq.IQueryable%601> 和 <xref:System.Linq.IGrouping%602> 。 這些介面的所有類型參數都是共變數，因此類型參數只能用於成員的傳回類型。  
@@ -170,7 +171,7 @@ Visual Basic 和 c # 都有關鍵詞，可讓您將介面和委派的泛型型�
 |<xref:System.Linq.IOrderedQueryable%601>|是||  
 |<xref:System.Linq.IQueryable%601>|是||  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [共變數和反變數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [共變數和反變數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

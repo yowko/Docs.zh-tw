@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-ms.openlocfilehash: 5c69a35497feced92a05e124307d3be584ab86b7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5eb8e7826dd132fd46f6f476335416e7dd03269
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829436"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722683"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>作法：轉換節點片段
+
 當您轉換包含於 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 物件的資料時，XSLT 轉換會套用至整個文件。 換言之，如果您要傳入的節點不是文件的根節點，則不會阻止轉換程序取得已載入文件中的所有節點。 若要轉換節點片段，您必須建立僅含有該節點片段的單獨物件，再將該物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="procedures"></a>程序  
@@ -28,6 +29,7 @@ ms.locfileid: "94829436"
 4. 將該節點片段傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="example"></a>範例  
+
  下列範例會轉換節點片段，並將結果輸出至主控台。  
   
  [!code-csharp[XSLT_NodeFrag#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_NodeFrag/CS/xslt_frag.cs#1)]
@@ -36,14 +38,17 @@ ms.locfileid: "94829436"
 ### <a name="input"></a>輸入  
   
 ##### <a name="booksxml"></a>books.xml  
+
  [!code-xml[XML_Core_Files#1](../../../../samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xml#1)]  
   
 ##### <a name="singlexsl"></a>single.xsl  
+
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
 ### <a name="output"></a>輸出  
+
  書名為《The Confidence Man》。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 XslCompiledTransform 類別](using-the-xslcompiledtransform-class.md)

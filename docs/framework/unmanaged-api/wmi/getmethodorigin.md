@@ -1,6 +1,6 @@
 ---
-title: 獲取方法源函數（非託管 API 引用）
-description: GetMethodOrigin 函數確定聲明方法的類。
+title: 'GetMethodOrigin 函式 (非受控 API 參考) '
+description: GetMethodOrigin 函式會判斷宣告方法的類別。
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 5b4609b6649be875aea7dfcf52ba36b1e98ab7bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 434392ffb4d9124e319bcd9c42fdd340d3fec5b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176795"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722774"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 函式
+
 判斷方法在其中宣告的類別。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -40,41 +41,42 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[在]此參數未使用。
+在此參數未使用。
 
 `ptr`  
-[在]指向[IWbem ClassObject 實例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標。
+在 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 實例的指標。
 
 `wszMethodName`  
-[在]正在請求其擁有類的物件的方法的名稱。
+在要求其擁有類別之物件的方法名稱。
 
 `pstrClassName`  
-[出]接收擁有 方法的類的名稱。
+擴展接收擁有方法之類別的名稱。
 
 ## <a name="return-value"></a>傳回值
 
-此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
+這個函式所傳回的下列值是在 *WbemCli .h* 標頭檔中定義，您也可以在程式碼中將它們定義為常數：
 
-|持續性  |值  |描述  |
+|常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0 x80041002 | 找不到指定的方法。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一個或多個參數無效。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的方法。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一或多個參數無效。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
 
-此函數包裝對[IWbem ClassObject 的調用：：獲取方法原點](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)方法。
+此函數會包裝對 [IWbemClassObject：： GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) 方法的呼叫。
 
-由於類可以從一個或多個基類繼承方法，因此開發人員通常希望確定在其中定義給定方法的類。
+因為類別可以繼承一或多個基類的方法，所以開發人員通常會想要判斷指定方法定義所在的類別。
 
-在`pstrClassName`調用函數之前，參數不能指向`BSTR`有效，因為這是一個`out`參數;因此，參數在調用函數之前，不能指向該參數。函數返回後，此指標不會處理。
+`pstrClassName`參數必須在呼叫函式之前，不能指向有效的， `BSTR` 因為這是參數，在函式傳回 `out` 之後，這個指標不會解除配置。
 
 ## <a name="requirements"></a>需求  
-**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

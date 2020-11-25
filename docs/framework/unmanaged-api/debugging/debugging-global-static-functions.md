@@ -6,17 +6,19 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-ms.openlocfilehash: c20d8719b63cb40074dc740506ae4a3c0fc3a251
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 04906322e311b580abddeca7744cf3e75d471e05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722982"
 ---
 # <a name="debugging-global-static-functions"></a>偵錯全域靜態函式
+
 本節說明偵錯 API 所使用的 Unmanaged 全域靜態函式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
+
  [_EFN_GetManagedExcepStack 函式](efn-getmanagedexcepstack-function.md)  
  給予 Managed 例外狀況物件位址後，會傳回內部包含堆疊追蹤版本的字串。  
   
@@ -36,6 +38,7 @@ ms.locfileid: "76793773"
  指向由 CLR 資料存取服務所呼叫的函式，以建立指定的介面物件給指定的目標處理序。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [偵錯 Coclass](debugging-coclasses.md)  
   
  [偵錯介面](debugging-interfaces.md)  

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3c4f6b54-5ce7-4a2a-83e1-6dec16441f50
 topic_type:
 - apiref
-ms.openlocfilehash: 79af7b5679598ffa82471dcb69adabc2394b13fa
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6fc6cf9b7333dd4caad3c5a4b081fecb060c8f86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009297"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722085"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>IMetaDataEmit::DeletePinvokeMap 方法
-為指定之標記所參考的物件，終結 PInvoke 對應中繼資料。  
+
+終結指定標記所參考物件的 PInvoke 對應中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +35,17 @@ HRESULT DeletePinvokeMap (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `tk`  
- 在`mdFieldDef`或 `mdMethodDef` token，表示要刪除 PInvoke 對應中繼資料的物件。  
+ 在 `mdFieldDef` 或 `mdMethodDef` token，表示要刪除 PInvoke 對應中繼資料的物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MSCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

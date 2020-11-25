@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: cda42dbc88d73eadf04720c0faaf98151d371127
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3eec3b7e8cc76ee171d88a7886b4983000848084
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825555"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722618"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>作法：解除包裝巢狀工作
+
 您可以從方法傳回工作，接著等待或繼續該工作，如下列範例所示：  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -35,12 +36,13 @@ ms.locfileid: "94825555"
  使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 方法可以將任何 `Task<Task>` 或 `Task<Task<TResult>>` (Visual Basic 中為 `Task(Of Task)` 或 `Task(Of Task(Of TResult))`) 轉換為 `Task` 或 `Task<TResult>` (Visual Basic 中為 `Task(Of TResult)`)。 新的工作完全代表內部巢狀工作，並包含取消狀態及所有例外狀況。  
   
 ## <a name="example"></a>範例  
+
  下列範例示範如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 擴充方法。  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]
  [!code-vb[TPL_UnWrap#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippet04.vb#04)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
 - [以工作為基礎的非同步程式設計](task-based-asynchronous-programming.md)

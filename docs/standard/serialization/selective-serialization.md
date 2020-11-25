@@ -8,14 +8,15 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 74113979f0ebe77319ae308c2a669e91d8cb4209
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3c99a3be92beb992ff20188b02ff33a92f196baf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84278411"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722176"
 ---
 # <a name="selective-serialization"></a>選擇式序列化
+
 類別經常包含不應序列化的欄位。 例如，假設類別在成員變數中儲存執行緖 ID。 當類別還原序列化時，類別在序列化時儲存識別碼的執行緒可能已不再執行，因此序列化此值就沒有意義。 您可以使用 [NonSerialized](xref:System.NonSerializedAttribute) 屬性標示成員變數，避免成員變數遭到序列化，如下所示。  
   
 ```csharp  

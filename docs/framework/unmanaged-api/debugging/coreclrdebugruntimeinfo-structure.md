@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 2c41e7db32ee8557a6c03217b95fd5b040655c70
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 3cc9a1cfb26a784c32d66168bb01d41f91dd5f66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860936"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722365"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo 結構
+
 代表載入遠端電腦上之處理序的 Common Language Runtime (CLR) 執行個體。  
   
 ## <a name="syntax"></a>語法  
@@ -41,10 +42,11 @@ struct  CoreClrDebugRuntimeInfo {
 |`m_dwInternalID`|在目標電腦上執行之遠端偵錯 Proxy 所指派的執行階段識別項。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   
- 連結**庫：** mscordbi_macx86 .dll  
+ 連結 **庫：** mscordbi_macx86.dll  
   
  **.NET Framework 版本：** 3.5 SP1

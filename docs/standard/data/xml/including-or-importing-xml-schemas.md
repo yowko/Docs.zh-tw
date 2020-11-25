@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: f382165ca8e2b972c47a080244a3d0054b5eb604
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2feb14e304c8ba7ecc19b2e79b943204044da05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722670"
 ---
 # <a name="including-or-importing-xml-schemas"></a>併入或匯入 XML 結構描述
+
 XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。 這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 (SOM) API 中的這些項目。  
   
 ## <a name="including-or-importing-an-xml-schema"></a>併入或匯入 XML 結構描述  
+
  下列程式碼範例會為[建置 XML 結構描述](building-xml-schemas.md)主題中建立的客戶結構描述補充位址結構描述。 為客戶結構描述補充位址結構描述，可讓位址型別在客戶結構描述中使用。  
   
  您可使用 `<xs:include />` 或 `<xs:import />` 項目加入位址結構描述，以按原樣使用位址結構描述的元件，或使用 `<xs:redefine />` 項目，修改其中任何元件以滿足客戶結構描述需要。 因為位址結構描述與客戶結構描述的 `targetNamespace` 不同，所以會使用 `<xs:import />` 項目及匯入語意。  
@@ -96,7 +98,7 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
   
  如需 `<xs:import />`、`<xs:include />` 及 `<xs:redefine />` 項目與 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別的詳細資訊，請參閱 [W3C XML 結構描述](https://www.w3.org/XML/Schema) (英文) 及 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間類別參考文件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
 - [讀取及寫入 XML 結構描述](reading-and-writing-xml-schemas.md)

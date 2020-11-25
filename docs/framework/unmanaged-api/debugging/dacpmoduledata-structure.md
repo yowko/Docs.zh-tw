@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e10d1792a8dc0b57ddd121ec09854e8e1824cade
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 5d27ba2de9ff6ed184b6ddf50a517d0dae7715f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860796"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723047"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpMethodData 結構
 
@@ -45,21 +45,22 @@ struct DacpModuleData
 | member    | 描述                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | 模組物件的位址。                                           |
-| `File`    | 可移植執行檔（PE）的指標。                       |
-| `ilBase`  | 載入影像基底的位址。                                 |
+| `File`    | 可攜式可執行檔的指標， (PE) 檔。                       |
+| `ilBase`  | 已載入映射基底的位址。                                 |
 | `payLoad` | 執行時間所使用之其他模組資訊的承載緩衝區。 |
 
 ## <a name="remarks"></a>備註
 
-這個結構存在於執行時間中，而且不會透過任何標頭或程式庫檔案來公開。 若要使用它，請依照上面的指定定義結構。
+此結構存在於執行時間內，且不會透過任何標頭或程式庫檔案來公開。 若要使用它，請依照上述指定的方式定義結構。
 
 ## <a name="requirements"></a>需求
-**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
-**標頭：** 無  
-連結**庫：** 無  
+
+**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
+**標頭：** 沒有  
+連結 **庫：** 沒有  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)
 - [偵錯結構](debugging-structures.md)

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-ms.openlocfilehash: eb6efc738b270f8f76d7130a12af4927fb6220ce
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: da3b0acefa68be3506567ad4742784943f4ec5ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722514"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo 方法
+
 取得與指定函式識別碼相關聯的機器碼範圍。  
   
- 這個方法已過時。 請改用[ICorProfilerInfo2：： GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md)方法。  
+ 這個方法已過時。 請改用 [ICorProfilerInfo2：： GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,6 +38,7 @@ HRESULT GetCodeInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `functionId`  
  [in] 與機器碼關聯的函式識別碼。  
   
@@ -47,12 +49,14 @@ HRESULT GetCodeInfo(
  [out] 整數的指標，此整數指定機器碼的大小，以位元組為單位。  
   
 ## <a name="remarks"></a>備註  
+
  為了最佳化效能，.NET Framework 2.0 版中的執行階段會將先行編譯的函式機器碼分割成多個區域。 因此，`GetCodeInfo` 方法在 .NET Framework 2.0 中已過時，因為它無法處理函式機器碼的範圍。 分析工具應改為使用較為通用的 `ICorProfilerInfo2::GetCodeInfo2` 方法。  
   
  這個函式會使用呼叫端配置的緩衝區。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

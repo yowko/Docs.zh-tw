@@ -12,15 +12,16 @@ api_type:
 ms.assetid: 66076ed5-f05c-4114-9788-94cb143abb8a
 topic_type:
 - apiref
-ms.openlocfilehash: 3e73d0fc48dcfeafb3fe2f23ec07cdc04a561a9e
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 87065b83e0b28eafdf5099f99fd188e2e21e7a12
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723619"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord 方法
-由通用語言執行平台 (CLR) 資料存取服務呼叫，用於擷取與目標處理序相關聯的內容記錄。 例如，針對傾印目標，這等同于透過`ExceptionParam`引數傳遞至 Windows Debug Help Library （DbgHelp）中[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)函數的內容記錄。  
+
+由通用語言執行平台 (CLR) 資料存取服務呼叫，用於擷取與目標處理序相關聯的內容記錄。 例如，針對傾印目標，這相當於透過 `ExceptionParam` Windows Debug Help Library 中 [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) 函式的引數傳入的內容記錄 (DbgHelp) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,6 +34,7 @@ HRESULT GetExceptionContextRecord(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `bufferSize`  
  [in] 輸入緩衝區大小 (位元組)。 這必須夠大，以容納內容記錄。  
   
@@ -40,9 +42,10 @@ HRESULT GetExceptionContextRecord(
  [out] `ULONG32` 類型的指標，此類型會接收實際寫入緩衝區的位元組數目。  
   
  `buffer`  
- [out] 接收內容記錄複本之記憶體緩衝區的指標。 例外狀況記錄會以[內容](/windows/win32/api/winnt/ns-winnt-arm64_nt_context)類型的形式傳回。  
+ [out] 接收內容記錄複本之記憶體緩衝區的指標。 例外狀況記錄會以 [內容](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 類型的形式傳回。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果成功，傳回值為 `S_OK`，如果失敗，則傳回失敗 `HRESULT` 程式碼。 `HRESULT` 程式碼可以包括 (但不限於) 下列項目：  
   
 |傳回碼|描述|  
@@ -52,20 +55,22 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|輸入緩衝區大小不夠大，無法容納內容記錄。|  
   
 ## <a name="remarks"></a>備註  
- 「內容」（ [CONTEXT](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) ）是在 Windows SDK 所提供的標頭中定義的平臺特定結構。  
+
+ [內容](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 是在 Windows SDK 所提供的標頭中定義的平臺特定結構。  
   
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** ClrData .idl，ClrData。h  
+ **標頭：** ClrData .idl、ClrData。h  
   
  **程式庫：** CorGuids.lib  
   
  **.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICLRDataTarget3 介面](iclrdatatarget3-interface.md)
 - [GetExceptionRecord 方法](iclrdatatarget3-getexceptionrecord-method.md)

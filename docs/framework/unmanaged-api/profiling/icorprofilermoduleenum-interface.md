@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d0fcfa-1601-4fba-868f-da8c97303467
 topic_type:
 - apiref
-ms.openlocfilehash: fe11c0bbe273ae07cdae43f681a558e07a291ffb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 98b64289b7d512c4e73cf4d40e89319532c6704a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494887"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722813"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum 介面
+
 提供方法，以循序逐一查看由應用程式或分析工具所載入的模組集合。  
   
 ## <a name="methods"></a>方法  
@@ -35,10 +36,12 @@ ms.locfileid: "84494887"
 |[Skip 方法](icorprofilermoduleenum-skip-method.md)|將列舉值的資料指標位置前移，以略過指定數目的項目。|  
   
 ## <a name="remarks"></a>備註  
+
  `ICorProfilerModuleEnum` 介面是列舉值。 它可讓陣列的接收端以適合接收端的速率，從傳送端提取項目。 換句話說，接收端能夠明確控制陣列項目的流程，因此可避免與傳遞大型陣列做為方法參數相關的問題發生。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

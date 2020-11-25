@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-ms.openlocfilehash: ff888d3e2b86efeea3f4e3d33528f731d85886bf
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 13746c4ac6322a401e547c1c7acc99c0eda9accf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723333"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 方法
+
 取得這個變數的第三個位址欄位。 其意義取決於位址的種類。  
   
 ## <a name="syntax"></a>語法  
@@ -33,14 +34,17 @@ HRESULT GetAddressField3(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pRetVal`  
- 脫銷`ULONG32`接收第三個位址欄位之的指標。  
+ 擴展 `ULONG32` 接收第三個位址欄位之的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 5916511187741c703cb39a5c168e542e124ab26b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4501f3dde8d402bd318332dfe9b2209b3febea71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825919"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723359"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用於結構描述編譯的 XmlSchemaSet
+
 說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  
   
 ## <a name="the-xmlschemaset-class"></a>XmlSchemaSet 類別  
+
  <xref:System.Xml.Schema.XmlSchemaSet> 是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  
   
  在 <xref:System.Xml?displayProperty=nameWithType> 1.0 版中，已將 XML 結構描述載入 <xref:System.Xml.Schema.XmlSchemaCollection> 類別，做為結構描述程式庫。 在 <xref:System.Xml?displayProperty=nameWithType> 2.0 版中，<xref:System.Xml.XmlValidatingReader> 及 <xref:System.Xml.Schema.XmlSchemaCollection> 類別已過時，並已分別由 <xref:System.Xml.XmlReader.Create%2A> 方法及 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。  
@@ -32,6 +34,7 @@ ms.locfileid: "94825919"
 |特定目標命名空間在集合中只可以有一個結構描述。|只要不存在型別衝突，就可以為相同的目標命名空間加入多個結構描述。|  
   
 ## <a name="migrating-to-the-xmlschemaset"></a>移轉至 XmlSchemaSet  
+
  下列程式碼範例提供從過時的 <xref:System.Xml.Schema.XmlSchemaSet> 類別到新 <xref:System.Xml.Schema.XmlSchemaCollection> 類別的移轉指南。 該程式碼範例會說明兩種類別之間的下列主要差異。  
   
 - 不同於 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 類別的 <xref:System.Xml.Schema.XmlSchemaCollection> 方法，當呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法時，不會編譯結構描述。 在範例程式碼中，會明確呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法。  
@@ -95,6 +98,7 @@ foreach(XmlSchema schema in schemaSet.Schemas())
 ```  
   
 ## <a name="adding-and-retrieving-schemas"></a>加入及擷取結構描述  
+
  使用 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法，可將結構描述加入至 <xref:System.Xml.Schema.XmlSchemaSet>。 將結構描述加入至 <xref:System.Xml.Schema.XmlSchemaSet> 後，便會與目標命名空間 URI 關聯。 目標命名空間 URI 可指定為 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法的參數，或如果未指定任何目標命名空間，則 <xref:System.Xml.Schema.XmlSchemaSet> 會使用結構描述中定義的目標命名空間。  
   
  使用 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 屬性，可從 <xref:System.Xml.Schema.XmlSchemaSet> 擷取結構描述。 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 屬性可讓您重複處理 <xref:System.Xml.Schema.XmlSchema> 中包含的 <xref:System.Xml.Schema.XmlSchemaSet> 物件。 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 屬性會傳回 <xref:System.Xml.Schema.XmlSchema> 中包含的所有 <xref:System.Xml.Schema.XmlSchemaSet> 物件，或如果給定目標命名空間參數，則會傳回屬於目標命名空間的所有 <xref:System.Xml.Schema.XmlSchema> 物件。 如果將 `null` 指定為目標命名空間參數，則 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 屬性會傳回所有結構描述但無命名空間。  
@@ -127,6 +131,7 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  如需在 <xref:System.Xml.Schema.XmlSchemaSet> 物件中加入及擷取結構描述的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法及 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 屬性參考文件。  
   
 ## <a name="compiling-schemas"></a>編譯結構描述  
+
  透過 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法，可將 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述編譯成一個邏輯結構描述。  
   
 > [!NOTE]
@@ -154,6 +159,7 @@ schemaSet.Compile();
  如需編譯 <xref:System.Xml.Schema.XmlSchemaSet> 中結構描述的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法參考文件。  
   
 ## <a name="reprocessing-schemas"></a>重新處理結構描述  
+
  當呼叫 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法時，重新處理 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述會執行對結構描述執行的所有前置處理步驟。 如果 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 方法呼叫成功，則 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 屬性會設為 `false`。  
   
  在 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 執行編譯之後，如果已修改 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述，則應使用 <xref:System.Xml.Schema.XmlSchemaSet> 方法。  
@@ -189,11 +195,13 @@ schemaSet.Reprocess(schema);
  如需重新處理 <xref:System.Xml.Schema.XmlSchemaSet> 中結構描述的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 方法參考文件。  
   
 ## <a name="checking-for-a-schema"></a>檢查結構描述  
+
  您可以使用 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法，檢查結構描述是否包含在 <xref:System.Xml.Schema.XmlSchemaSet> 中。 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 方法允許檢查目標命名空間或 <xref:System.Xml.Schema.XmlSchema> 物件。 如果結構描述包含在 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 中，則在這兩種情況下，`true` 方法都會傳回 <xref:System.Xml.Schema.XmlSchemaSet>；否則，傳回 `false`。  
   
  如需檢查結構描述的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 方法參考文件。  
   
 ## <a name="removing-schemas"></a>移除結構描述  
+
  使用 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> 及 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法，可將結構描述從 <xref:System.Xml.Schema.XmlSchemaSet> 中移除。 <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> 方法會從 <xref:System.Xml.Schema.XmlSchemaSet> 移除指定的結構描述，而 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法會移除指定的結構描述及其從 <xref:System.Xml.Schema.XmlSchemaSet> 匯入的所有結構描述。  
   
  下列範例說明如何將多個結構描述加入至 <xref:System.Xml.Schema.XmlSchemaSet>，然後使用 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法移除其中一個結構描述及其匯入的所有結構描述。  
@@ -233,6 +241,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  如需從 <xref:System.Xml.Schema.XmlSchemaSet> 移除結構描述的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> 及 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法參考文件。  
   
 ## <a name="schema-resolution-and-xsimport"></a>結構描述解析及 xs:import  
+
  下列範例說明當 <xref:System.Xml.Schema.XmlSchemaSet> 中存在某個指定命名空間的多個結構描述時，匯入結構描述的 <xref:System.Xml.Schema.XmlSchemaSet> 行為。  
   
  例如，設想一個 <xref:System.Xml.Schema.XmlSchemaSet>，假設其中有 `http://www.contoso.com` 命名空間的多個結構描述。 具有下列 `xs:import` 指示詞的結構描述會加入至 <xref:System.Xml.Schema.XmlSchemaSet>。  
@@ -244,11 +253,12 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet> 會嘗試匯入 `http://www.contoso.com` 命名空間的結構描述，方法是從 `http://www.contoso.com/schema.xsd` URL 將其載入。 即使在 `http://www.contoso.com` 中存在 <xref:System.Xml.Schema.XmlSchemaSet> 命名空間的其他結構描述文件，也只有在結構描述文件中宣告的結構描述宣告及型別才可在匯入結構描述中使用。 如果在 `schema.xsd` URL 處找不到 `http://www.contoso.com/schema.xsd` 檔案，則不會將 `http://www.contoso.com` 命名空間的任何結構描述匯入到匯入結構描述中。  
   
 ## <a name="validating-xml-documents"></a>驗證 XML 文件  
+
  您可根據 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述來驗證 XML 文件。 驗證 XML 文件的方法是將結構描述加入至 <xref:System.Xml.XmlReaderSettings> 物件的 <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> 屬性，或將 <xref:System.Xml.Schema.XmlSchemaSet> 加入至 <xref:System.Xml.XmlReaderSettings> 物件的 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 屬性。 然後，<xref:System.Xml.XmlReaderSettings> 類別的 <xref:System.Xml.XmlReader.Create%2A> 方法會使用 <xref:System.Xml.XmlReader> 物件來建立 <xref:System.Xml.XmlReader> 物件並驗證 XML 文件。  
   
  如需有關使用 <xref:System.Xml.Schema.XmlSchemaSet> 驗證 XML 文件的詳細資訊，請參閱 [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](xml-schema-xsd-validation-with-xmlschemaset.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>

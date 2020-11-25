@@ -14,14 +14,15 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 9a80c0b5522113e704336cda29362a0406077931
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5da4eaa459c515689b822e4cb537380245e800e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553671"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722761"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo 函式
+
 從上一個函式呼叫擷取錯誤資訊。  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,7 +42,8 @@ IErrorInfo* GetErrorInfo();
 此函數會包裝對 [IComThreadingInfo：： GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) 方法的呼叫。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils .def  
   

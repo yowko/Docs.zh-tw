@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: e7fe5cbe27c0771a71e4c03d14ab68ada7d0741a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e64d644b511f7c3249c48b9642bfd3163142af3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004162"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722007"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
+
 將指定的匯入範圍加入要合併的範圍清單。  
   
 ## <a name="syntax"></a>語法  
@@ -36,24 +37,27 @@ HRESULT Merge (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pImport`  
- 在[IMetaDataImport](imetadataimport-interface.md)物件的指標，識別要合併的匯入範圍。  
+ 在 [IMetaDataImport](imetadataimport-interface.md) 物件的指標，該物件會識別要合併的匯入範圍。  
   
  `pIMap`  
- 在指定標記重新對應之[IMapToken](imaptoken-interface.md)物件的指標。  
+ 在 [IMapToken](imaptoken-interface.md) 物件的指標，該物件會指定重新對應的標記。  
   
  `pHandler`  
- 在指定錯誤之[IUnknown](/cpp/atl/iunknown)物件的指標。  
+ 在指定錯誤之 [IUnknown](/cpp/atl/iunknown) 物件的指標。  
   
 ## <a name="remarks"></a>備註  
- 呼叫[IMetaDataEmit：： MergeEnd](imetadataemit-mergeend-method.md)以觸發將中繼資料合併到單一範圍中。  
+
+ 呼叫 [IMetaDataEmit：： MergeEnd](imetadataemit-mergeend-method.md) ，以觸發將中繼資料合併到單一範圍中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MSCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
