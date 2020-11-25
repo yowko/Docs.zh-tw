@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e08308d2-7397-4616-b7a6-f81b7686fed6
 topic_type:
 - apiref
-ms.openlocfilehash: 528a385657721298772693809dd696531c6a4e8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7114ab301c1c5eeb517a7658dc1035650e0ca150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719862"
 ---
-# <a name="iassemblyenumreset-method"></a><span data-ttu-id="a305b-102">IAssemblyEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="a305b-102">IAssemblyEnum::Reset Method</span></span>
-<span data-ttu-id="a305b-103">將這個[IAssemblyEnum](iassemblyenum-interface.md)物件重設為其開始位置。</span><span class="sxs-lookup"><span data-stu-id="a305b-103">Resets this [IAssemblyEnum](iassemblyenum-interface.md) object to its starting position.</span></span>  
+# <a name="iassemblyenumreset-method"></a><span data-ttu-id="1578e-102">IAssemblyEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="1578e-102">IAssemblyEnum::Reset Method</span></span>
+
+<span data-ttu-id="1578e-103">將這個 [IAssemblyEnum](iassemblyenum-interface.md) 物件重設為其開始位置。</span><span class="sxs-lookup"><span data-stu-id="1578e-103">Resets this [IAssemblyEnum](iassemblyenum-interface.md) object to its starting position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a305b-104">語法</span><span class="sxs-lookup"><span data-stu-id="a305b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1578e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1578e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset (  
@@ -33,13 +34,14 @@ HRESULT Reset (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a305b-105">需求</span><span class="sxs-lookup"><span data-stu-id="a305b-105">Requirements</span></span>  
- <span data-ttu-id="a305b-106">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a305b-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="a305b-107">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="a305b-107">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="a305b-108">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a305b-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a305b-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="a305b-109">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="1578e-105">需求</span><span class="sxs-lookup"><span data-stu-id="1578e-105">Requirements</span></span>  
 
-- [<span data-ttu-id="a305b-110">IAssemblyEnum 介面</span><span class="sxs-lookup"><span data-stu-id="a305b-110">IAssemblyEnum Interface</span></span>](iassemblyenum-interface.md)
+ <span data-ttu-id="1578e-106">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1578e-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="1578e-107">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="1578e-107">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="1578e-108">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1578e-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="1578e-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1578e-109">See also</span></span>
+
+- [<span data-ttu-id="1578e-110">IAssemblyEnum 介面</span><span class="sxs-lookup"><span data-stu-id="1578e-110">IAssemblyEnum Interface</span></span>](iassemblyenum-interface.md)
