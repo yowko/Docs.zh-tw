@@ -9,14 +9,15 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: 1ac2f9f5e10149027b79cd67e5077ec6bc17f9c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bc0aee32b5cc1d40afdd9cce8260d5b5341a687d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706394"
 ---
 # <a name="nested-types"></a>巢狀類型
+
 巢狀型別是在另一個類型的範圍內定義的類型，稱為封入類型。 巢狀型別可以存取其封入類型的所有成員。 例如，它可以存取在封入型別中定義的私用欄位，以及在封入類型的所有祖先中定義之受保護欄位的存取權。
 
  一般情況下，應該謹慎使用巢狀型別。 這有幾個原因。 有些開發人員並沒有完全熟悉此概念。 例如，這些開發人員可能會遇到宣告巢狀型別變數的語法問題。 巢狀型別也與它們的封入型別緊密結合，因此不適合做為一般用途類型。
@@ -43,7 +44,7 @@ ms.locfileid: "94820809"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [型別設計方針](type.md)
 - [架構設計指導方針](index.md)

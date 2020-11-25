@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: df945803f2d56d04ccc68f314eb55665579ed7fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705978"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 列舉
+
 包含值，可用來在中繼資料產生期間影響行為。  
   
 ## <a name="syntax"></a>語法  
@@ -44,19 +45,20 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |`MDSetENCOn`|已過時。|  
 |`MDSetENCOff`|已過時。|  
-|`MDUpdateENC`|表示中繼資料可以更新，而無法移動權杖。|  
-|`MDUpdateFull`|表示權杖可在更新期間移動。|  
-|`MDUpdateExtension`|指出更新只能包含新增專案。 無法移動權杖。|  
-|`MDUpdateIncremental`|表示編譯是累加的。|  
-|`MDUpdateDelta`|指出只應儲存已變更的中繼資料。|  
+|`MDUpdateENC`|指出中繼資料可以更新，而無法移動 token。|  
+|`MDUpdateFull`|指出權杖可以在更新期間移動。|  
+|`MDUpdateExtension`|表示更新只能包含新增專案。 無法移動標記。|  
+|`MDUpdateIncremental`|表示編譯為累加式。|  
+|`MDUpdateDelta`|指出只應儲存變更的中繼資料。|  
 |`MDUpdateMask`|包含 `MDUpdateENC` 、 `MDUpdateFull` 和 `MDUpdateIncremental` 。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

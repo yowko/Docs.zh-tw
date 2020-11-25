@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 22a7f87a5803dc185052a5ce7ed427eff9f8fb18
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 81d47a3e4d72f991dc15924e7ff1ecc8df2e7322
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009180"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706047"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 列舉
+
 包含值，這些值表示在查詢儲存作業的大小時所需的精確度等級。  
   
 ## <a name="syntax"></a>語法  
@@ -36,18 +37,19 @@ typedef enum CorSaveSize {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |`cssAccurate`|指定傳回值應該是精確的。|  
-|`cssQuick`|指定應估計傳回值。|  
-|`cssDiscardTransientCAs`|指定應該移除可捨棄類型。|  
+|`cssQuick`|指定應估計的傳回值。|  
+|`cssDiscardTransientCAs`|指定應移除 discardable 類型。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

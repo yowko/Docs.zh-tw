@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: cde574be6d4fadb78805548cff1b42ee354bf36f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 17a303cde5fa51cd940b0375d2c6657fcd354dc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706323"
 ---
 # <a name="com-wrappers"></a>COM 包裝函式
+
 COM 與 .NET 執行階段物件模型在數個重要方面不同：  
   
 - COM 物件用戶端必須管理這些物件的存留期；Common Language Runtime 會管理其環境中物件的存留期。  

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-ms.openlocfilehash: 98a9b285323bc3ad94b4f555e72a4b3242519801
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 6e6ea5e42c5e1b1943a080ae02e1dbf6d702bebc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976285"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705848"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort 方法
-中止此 ICorDebugEval 物件目前正在執行的計算。  
+
+中止這個 ICorDebugEval 物件目前正在執行的計算。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,10 +33,12 @@ HRESULT Abort ();
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果評估是嵌套的，而且不是最新的，則`Abort`方法可能會失敗。  
+
+ 如果評估是嵌套的，而且不是最新的，則 `Abort` 方法可能會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

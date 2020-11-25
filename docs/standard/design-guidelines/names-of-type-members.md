@@ -12,17 +12,19 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 409e881198a359fa28356e22ea73d5b724742a0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820909"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706472"
 ---
 # <a name="names-of-type-members"></a>類型成員名稱
+
 類型由成員組成：方法、屬性、事件、建構函式及欄位。 下列各節會描述為類型成員命名的方針。
 
 ## <a name="names-of-methods"></a>方法的名稱
+
  因為方法是採取動作的手段，所以設計方針會要求方法名稱為動詞或動詞片語。 遵循此方針也能用來區別方法名稱與屬性和類型名稱，後兩者為名詞或形容詞。
 
  ✔️確實提供的方法名稱為動詞或動詞片語。
@@ -36,6 +38,7 @@ public class String {
 ```
 
 ## <a name="names-of-properties"></a>屬性的名稱
+
  不同於其他成員，屬性應有名詞片語或形容詞名稱。 這是因為屬性會參考資料，而屬性的名稱則會反映這點。 PascalCasing 總是會用作屬性名稱。
 
  ✔️使用名詞、名詞片語或形容詞來命名屬性。
@@ -62,6 +65,7 @@ public class Control {
 ```
 
 ## <a name="names-of-events"></a>事件的名稱
+
  事件一律會參考某些動作，不論該動作正在發生或已發生。 因此，如同方法一般，事件應以動詞為名，且應使用動詞時態來指出事件發生的時間。
 
  ✔️使用動詞或動詞片語來命名事件。
@@ -85,6 +89,7 @@ public class Control {
  ✔️使用 "EventArgs" 尾碼來命名事件引數類別。
 
 ## <a name="names-of-fields"></a>欄位的名稱
+
  欄位命名方針適用於靜態公開和保護的欄位。 方針並未涵蓋內部與私人的欄位，且[成員設計方針](member.md)並不允許公開或保護的執行個體欄位。
 
  ✔️在功能變數名稱中使用 PascalCasing。
@@ -99,7 +104,7 @@ public class Control {
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [命名指導方針](naming-guidelines.md)

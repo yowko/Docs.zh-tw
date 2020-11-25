@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-ms.openlocfilehash: 5ac015f958d9504bbd14a66ead86548b8df32764
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 19731f34d259757e6de62dd4b4f0d4735d1c2e61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706160"
 ---
 # <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS 列舉
-包含表示 common language runtime （CLR）應如何解析的值 `CLSID` 。  
+
+包含值，指出 common language runtime (CLR) 應該如何解析 `CLSID` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +36,16 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|表示預設行為。|  
-|`CLSID_RESOLUTION_REGISTERED`|表示執行時間會搜尋登錄並套用填充碼原則。|  
+|`CLSID_RESOLUTION_REGISTERED`|指出執行時間會搜尋登錄並套用填充碼原則。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

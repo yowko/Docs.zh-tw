@@ -14,19 +14,21 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 38632c5a1f462c3a7b537978fde81424916746da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188675"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706290"
 ---
 # <a name="applying-interop-attributes"></a>套用 Interop 屬性
+
 <xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。  
   
  如果您不熟悉將屬性套用至 Managed 程式碼的工作，請參閱[使用屬性擴充中繼資料](../attributes/index.md)。 就像其他自訂屬性一樣，您可以將 Interop 專屬屬性 (attribute) 套用至類型、方法、屬性 (property)、參數、欄位和其他成員。  
   
 ## <a name="design-time-attributes"></a>設計階段屬性  
+
  您可以使用設計階段屬性來調整 COM Interop 工具和 API 所執行的轉換處理結果。 下表描述您可以套用到 Managed 原始程式碼的屬性。 COM Interop 工具偶爾也會套用下表所述的屬性。  
   
 |屬性|描述|  
@@ -55,6 +57,7 @@ ms.locfileid: "93188675"
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|控制類別欄位的實體配置。<br /><br /> COM Interop 工具可以套用這個屬性。|  
   
 ## <a name="conversion-tool-attributes"></a>轉換工具屬性  
+
  下表描述 COM Interop 工具在轉換處理期間套用的屬性。 您不會在設計階段套用這些屬性。  
   
 |屬性|描述|  
@@ -63,9 +66,9 @@ ms.locfileid: "93188675"
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|表示類別或介面的相關資訊在從型別程式庫匯入組件時遺失。|  
 |<xref:System.Runtime.InteropServices.ComEventInterfaceAttribute>|識別實作事件介面方法的來源介面和類別。|  
 |<xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>|表示這個組件原來是從 COM 類型程式庫匯入的。 這個屬性含有原來型別程式庫的型別程式庫定義。|  
-|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|含有原來針對這個函式從 COM 類型程式庫匯入的 **FUNCFLAGS** 。|  
-|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|含有原來針對這個類型從 COM 型別程式庫匯入的 **TYPEFLAGS** 。|  
-|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS** 。|  
+|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|含有原來針對這個函式從 COM 類型程式庫匯入的 **FUNCFLAGS**。|  
+|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|含有原來針對這個類型從 COM 型別程式庫匯入的 **TYPEFLAGS**。|  
+|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS**。|  
   
 ## <a name="see-also"></a>另請參閱
 

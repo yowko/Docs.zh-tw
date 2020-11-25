@@ -14,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 7c5359ddf2c021f77ad1ea0a8579316c3c773fd5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cfa0950ca2ef4e969258c147b762fa95e52a82e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705809"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue 介面
 
-套用至所有值之 "ICorDebugValue" 的子類別。 這個介面提供值的 Get 和 Set 方法。  
+適用于所有值的 "ICorDebugValue" 子類別。 這個介面提供值的 Get 和 Set 方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
 |[GetValue 方法](icordebuggenericvalue-getvalue-method.md)|將值複製到指定的緩衝區。|  
-|[SetValue 方法](icordebuggenericvalue-setvalue-method.md)|從指定的緩衝區複製新的值。|  
+|[SetValue 方法](icordebuggenericvalue-setvalue-method.md)|從指定的緩衝區複製新值。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugGenericValue`是子介面，因為它無法遠端處理。  
+
+ `ICorDebugGenericValue` 是子介面，因為它無法遠端處理。  
   
- 對於參考型別，此值為參考，而不是參考的內容。  
+ 若為參考型別，則此值為參考，而不是參考的內容。  
   
  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
@@ -43,7 +44,8 @@ ms.locfileid: "83209782"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -51,6 +53,6 @@ ms.locfileid: "83209782"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)
