@@ -4,46 +4,50 @@ description: 示範在 Debian 上安裝 .NET SDK 和 .NET 執行時間的各種�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 683d0a9c47edf3cf9c47426d659e778eeb6f84df
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506970"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031887"
 ---
-# <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a><span data-ttu-id="087f7-103">在 Debian 上安裝 .NET SDK 或 .NET 執行時間</span><span class="sxs-lookup"><span data-stu-id="087f7-103">Install the .NET SDK or the .NET Runtime on Debian</span></span>
+# <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a><span data-ttu-id="8c0a3-103">在 Debian 上安裝 .NET SDK 或 .NET 執行時間</span><span class="sxs-lookup"><span data-stu-id="8c0a3-103">Install the .NET SDK or the .NET Runtime on Debian</span></span>
 
-<span data-ttu-id="087f7-104">本文說明如何在 Debian 上安裝 .NET。</span><span class="sxs-lookup"><span data-stu-id="087f7-104">This article describes how to install .NET on Debian.</span></span> <span data-ttu-id="087f7-105">當 Debian 版本不受支援時，就不再支援該版本的 .NET。</span><span class="sxs-lookup"><span data-stu-id="087f7-105">When a Debian version falls out of support, .NET is no longer supported with that version.</span></span> <span data-ttu-id="087f7-106">不過，這些指示可協助您讓 .NET 在這些版本上執行，即使它不受支援也是一樣。</span><span class="sxs-lookup"><span data-stu-id="087f7-106">However, these instructions may help you to get .NET running on those versions, even though it isn't supported.</span></span>
+<span data-ttu-id="8c0a3-104">本文說明如何在 Debian 上安裝 .NET。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-104">This article describes how to install .NET on Debian.</span></span> <span data-ttu-id="8c0a3-105">當 Debian 版本不受支援時，就不再支援該版本的 .NET。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-105">When a Debian version falls out of support, .NET is no longer supported with that version.</span></span> <span data-ttu-id="8c0a3-106">不過，這些指示可協助您讓 .NET 在這些版本上執行，即使它不受支援也是一樣。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-106">However, these instructions may help you to get .NET running on those versions, even though it isn't supported.</span></span>
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
-## <a name="supported-distributions"></a><span data-ttu-id="087f7-107">支援的發行版本</span><span class="sxs-lookup"><span data-stu-id="087f7-107">Supported distributions</span></span>
+## <a name="supported-distributions"></a><span data-ttu-id="8c0a3-107">支援的發行版本</span><span class="sxs-lookup"><span data-stu-id="8c0a3-107">Supported distributions</span></span>
 
-<span data-ttu-id="087f7-108">下表列出目前支援的 .NET 版本，以及其支援的 Debian 版本。</span><span class="sxs-lookup"><span data-stu-id="087f7-108">The following table is a list of currently supported .NET releases and the versions of Debian they're supported on.</span></span> <span data-ttu-id="087f7-109">除非 .Net 的版本 [達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Debian 的版本 [達到生命週期結束](https://wiki.debian.org/DebianReleases)，否則仍支援這些版本。</span><span class="sxs-lookup"><span data-stu-id="087f7-109">These versions remain supported until either the version of [.NET reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of [Debian reaches end-of-life](https://wiki.debian.org/DebianReleases).</span></span>
+<span data-ttu-id="8c0a3-108">下表列出目前支援的 .NET 版本，以及其支援的 Debian 版本。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-108">The following table is a list of currently supported .NET releases and the versions of Debian they're supported on.</span></span> <span data-ttu-id="8c0a3-109">除非 .Net 的版本 [達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Debian 的版本 [達到生命週期結束](https://wiki.debian.org/DebianReleases)，否則仍支援這些版本。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-109">These versions remain supported until either the version of [.NET reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of [Debian reaches end-of-life](https://wiki.debian.org/DebianReleases).</span></span>
 
-- <span data-ttu-id="087f7-110">✔️表示仍支援 Debian 或 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="087f7-110">A ✔️ indicates that the version of Debian or .NET is still supported.</span></span>
-- <span data-ttu-id="087f7-111">❌指出該 Debian 版本不支援 Debian 或 .net 版本。</span><span class="sxs-lookup"><span data-stu-id="087f7-111">A ❌ indicates that the version of Debian or .NET isn't supported on that Debian release.</span></span>
-- <span data-ttu-id="087f7-112">當版本的 Debian 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。</span><span class="sxs-lookup"><span data-stu-id="087f7-112">When both a version of Debian and a version of .NET have ✔️, that OS and .NET combination is supported.</span></span>
+- <span data-ttu-id="8c0a3-110">✔️表示仍支援 Debian 或 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-110">A ✔️ indicates that the version of Debian or .NET is still supported.</span></span>
+- <span data-ttu-id="8c0a3-111">❌指出該 Debian 版本不支援 Debian 或 .net 版本。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-111">A ❌ indicates that the version of Debian or .NET isn't supported on that Debian release.</span></span>
+- <span data-ttu-id="8c0a3-112">當版本的 Debian 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-112">When both a version of Debian and a version of .NET have ✔️, that OS and .NET combination is supported.</span></span>
 
-| <span data-ttu-id="087f7-113">Debian</span><span class="sxs-lookup"><span data-stu-id="087f7-113">Debian</span></span>                   | <span data-ttu-id="087f7-114">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="087f7-114">.NET Core 2.1</span></span> | <span data-ttu-id="087f7-115">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="087f7-115">.NET Core 3.1</span></span> | <span data-ttu-id="087f7-116">.NET 5。0</span><span class="sxs-lookup"><span data-stu-id="087f7-116">.NET 5.0</span></span> |
+| <span data-ttu-id="8c0a3-113">Debian</span><span class="sxs-lookup"><span data-stu-id="8c0a3-113">Debian</span></span>                   | <span data-ttu-id="8c0a3-114">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-114">.NET Core 2.1</span></span> | <span data-ttu-id="8c0a3-115">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-115">.NET Core 3.1</span></span> | <span data-ttu-id="8c0a3-116">.NET 5。0</span><span class="sxs-lookup"><span data-stu-id="8c0a3-116">.NET 5.0</span></span> |
 |--------------------------|---------------|---------------|----------------|
-| <span data-ttu-id="087f7-117">✔️ [10](#debian-10-)</span><span class="sxs-lookup"><span data-stu-id="087f7-117">✔️ [10](#debian-10-)</span></span>     | <span data-ttu-id="087f7-118">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="087f7-118">✔️ 2.1</span></span>        | <span data-ttu-id="087f7-119">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="087f7-119">✔️ 3.1</span></span>        | <span data-ttu-id="087f7-120">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="087f7-120">✔️ 5.0</span></span> |
-| <span data-ttu-id="087f7-121">✔️ [9](#debian-9-)</span><span class="sxs-lookup"><span data-stu-id="087f7-121">✔️ [9](#debian-9-)</span></span>       | <span data-ttu-id="087f7-122">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="087f7-122">✔️ 2.1</span></span>        | <span data-ttu-id="087f7-123">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="087f7-123">✔️ 3.1</span></span>        | <span data-ttu-id="087f7-124">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="087f7-124">✔️ 5.0</span></span> |
-| <span data-ttu-id="087f7-125">❌ [8](#debian-8-)</span><span class="sxs-lookup"><span data-stu-id="087f7-125">❌ [8](#debian-8-)</span></span>       | <span data-ttu-id="087f7-126">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="087f7-126">✔️ 2.1</span></span>        | <span data-ttu-id="087f7-127">❌ 3.1</span><span class="sxs-lookup"><span data-stu-id="087f7-127">❌ 3.1</span></span>        | <span data-ttu-id="087f7-128">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="087f7-128">❌ 5.0</span></span> |
+| <span data-ttu-id="8c0a3-117">✔️ [10](#debian-10-)</span><span class="sxs-lookup"><span data-stu-id="8c0a3-117">✔️ [10](#debian-10-)</span></span>     | <span data-ttu-id="8c0a3-118">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-118">✔️ 2.1</span></span>        | <span data-ttu-id="8c0a3-119">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-119">✔️ 3.1</span></span>        | <span data-ttu-id="8c0a3-120">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="8c0a3-120">✔️ 5.0</span></span> |
+| <span data-ttu-id="8c0a3-121">✔️ [9](#debian-9-)</span><span class="sxs-lookup"><span data-stu-id="8c0a3-121">✔️ [9](#debian-9-)</span></span>       | <span data-ttu-id="8c0a3-122">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-122">✔️ 2.1</span></span>        | <span data-ttu-id="8c0a3-123">✔️3。1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-123">✔️ 3.1</span></span>        | <span data-ttu-id="8c0a3-124">✔️5。0</span><span class="sxs-lookup"><span data-stu-id="8c0a3-124">✔️ 5.0</span></span> |
+| <span data-ttu-id="8c0a3-125">❌ [8](#debian-8-)</span><span class="sxs-lookup"><span data-stu-id="8c0a3-125">❌ [8](#debian-8-)</span></span>       | <span data-ttu-id="8c0a3-126">✔️2。1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-126">✔️ 2.1</span></span>        | <span data-ttu-id="8c0a3-127">❌ 3.1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-127">❌ 3.1</span></span>        | <span data-ttu-id="8c0a3-128">❌ 5.0</span><span class="sxs-lookup"><span data-stu-id="8c0a3-128">❌ 5.0</span></span> |
 
-<span data-ttu-id="087f7-129">不再支援下列 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="087f7-129">The following versions of .NET are no longer supported.</span></span> <span data-ttu-id="087f7-130">這些內容的下載仍會保持發佈：</span><span class="sxs-lookup"><span data-stu-id="087f7-130">The downloads for these still remain published:</span></span>
+<span data-ttu-id="8c0a3-129">不再支援下列 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-129">The following versions of .NET are no longer supported.</span></span> <span data-ttu-id="8c0a3-130">這些內容的下載仍會保持發佈：</span><span class="sxs-lookup"><span data-stu-id="8c0a3-130">The downloads for these still remain published:</span></span>
 
-- <span data-ttu-id="087f7-131">3.0</span><span class="sxs-lookup"><span data-stu-id="087f7-131">3.0</span></span>
-- <span data-ttu-id="087f7-132">2.2</span><span class="sxs-lookup"><span data-stu-id="087f7-132">2.2</span></span>
-- <span data-ttu-id="087f7-133">2.0</span><span class="sxs-lookup"><span data-stu-id="087f7-133">2.0</span></span>
+- <span data-ttu-id="8c0a3-131">3.0</span><span class="sxs-lookup"><span data-stu-id="8c0a3-131">3.0</span></span>
+- <span data-ttu-id="8c0a3-132">2.2</span><span class="sxs-lookup"><span data-stu-id="8c0a3-132">2.2</span></span>
+- <span data-ttu-id="8c0a3-133">2.0</span><span class="sxs-lookup"><span data-stu-id="8c0a3-133">2.0</span></span>
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="087f7-134">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="087f7-134">How to install other versions</span></span>
+## <a name="remove-preview-versions"></a><span data-ttu-id="8c0a3-134">移除預覽版本</span><span class="sxs-lookup"><span data-stu-id="8c0a3-134">Remove preview versions</span></span>
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
+
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="8c0a3-135">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="8c0a3-135">How to install other versions</span></span>
 
 [!INCLUDE [hack-pkgname](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="debian-10-"></a><span data-ttu-id="087f7-135">Debian 10 ✔️</span><span class="sxs-lookup"><span data-stu-id="087f7-135">Debian 10 ✔️</span></span>
+## <a name="debian-10-"></a><span data-ttu-id="8c0a3-136">Debian 10 ✔️</span><span class="sxs-lookup"><span data-stu-id="8c0a3-136">Debian 10 ✔️</span></span>
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -54,7 +58,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
-## <a name="debian-9-"></a><span data-ttu-id="087f7-136">Debian 9 ✔️</span><span class="sxs-lookup"><span data-stu-id="087f7-136">Debian 9 ✔️</span></span>
+## <a name="debian-9-"></a><span data-ttu-id="8c0a3-137">Debian 9 ✔️</span><span class="sxs-lookup"><span data-stu-id="8c0a3-137">Debian 9 ✔️</span></span>
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -69,7 +73,7 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 [!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
-## <a name="debian-8-"></a><span data-ttu-id="087f7-137">Debian 8 ❌</span><span class="sxs-lookup"><span data-stu-id="087f7-137">Debian 8 ❌</span></span>
+## <a name="debian-8-"></a><span data-ttu-id="8c0a3-138">Debian 8 ❌</span><span class="sxs-lookup"><span data-stu-id="8c0a3-138">Debian 8 ❌</span></span>
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-debian.md)]
 
@@ -86,24 +90,24 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 [!INCLUDE [linux-apt-install-21](includes/linux-install-21-apt.md)]
 
-## <a name="apt-update-sdk-or-runtime"></a><span data-ttu-id="087f7-138">APT 更新 SDK 或執行時間</span><span class="sxs-lookup"><span data-stu-id="087f7-138">APT update SDK or runtime</span></span>
+## <a name="apt-update-sdk-or-runtime"></a><span data-ttu-id="8c0a3-139">APT 更新 SDK 或執行時間</span><span class="sxs-lookup"><span data-stu-id="8c0a3-139">APT update SDK or runtime</span></span>
 
-<span data-ttu-id="087f7-139">當 .NET 有新的修補程式版本時，您可以使用下列命令透過 APT 升級：</span><span class="sxs-lookup"><span data-stu-id="087f7-139">When a new patch release is available for .NET, you can simply upgrade it through APT with the following commands:</span></span>
+<span data-ttu-id="8c0a3-140">當 .NET 有新的修補程式版本時，您可以使用下列命令透過 APT 升級：</span><span class="sxs-lookup"><span data-stu-id="8c0a3-140">When a new patch release is available for .NET, you can simply upgrade it through APT with the following commands:</span></span>
 
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-## <a name="apt-troubleshooting"></a><span data-ttu-id="087f7-140">APT 疑難排解</span><span class="sxs-lookup"><span data-stu-id="087f7-140">APT troubleshooting</span></span>
+## <a name="apt-troubleshooting"></a><span data-ttu-id="8c0a3-141">APT 疑難排解</span><span class="sxs-lookup"><span data-stu-id="8c0a3-141">APT troubleshooting</span></span>
 
-<span data-ttu-id="087f7-141">本節提供使用 APT 來安裝 .NET 時，您可能會遇到的常見錯誤的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="087f7-141">This section provides information on common errors you may get while using APT to install .NET.</span></span>
+<span data-ttu-id="8c0a3-142">本節提供使用 APT 來安裝 .NET 時，您可能會遇到的常見錯誤的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-142">This section provides information on common errors you may get while using APT to install .NET.</span></span>
 
-### <a name="unable-to-find-package"></a><span data-ttu-id="087f7-142">找不到套件</span><span class="sxs-lookup"><span data-stu-id="087f7-142">Unable to find package</span></span>
+### <a name="unable-to-find-package"></a><span data-ttu-id="8c0a3-143">找不到套件</span><span class="sxs-lookup"><span data-stu-id="8c0a3-143">Unable to find package</span></span>
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
-### <a name="unable-to-locate--some-packages-could-not-be-installed"></a><span data-ttu-id="087f7-143">找不到 \\ 某些套件無法安裝</span><span class="sxs-lookup"><span data-stu-id="087f7-143">Unable to locate \\ Some packages could not be installed</span></span>
+### <a name="unable-to-locate--some-packages-could-not-be-installed"></a><span data-ttu-id="8c0a3-144">找不到 \\ 某些套件無法安裝</span><span class="sxs-lookup"><span data-stu-id="8c0a3-144">Unable to locate \\ Some packages could not be installed</span></span>
 
 [!INCLUDE [package-manager-failed-to-find-deb](includes/package-manager-failed-to-find-deb.md)]
 
@@ -121,45 +125,45 @@ sudo apt-get update; \
   sudo apt-get install -y {dotnet-package}
 ```
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="087f7-144">無法提取</span><span class="sxs-lookup"><span data-stu-id="087f7-144">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="8c0a3-145">無法提取</span><span class="sxs-lookup"><span data-stu-id="8c0a3-145">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a><span data-ttu-id="087f7-145">單元</span><span class="sxs-lookup"><span data-stu-id="087f7-145">Snap</span></span>
+## <a name="snap"></a><span data-ttu-id="8c0a3-146">單元</span><span class="sxs-lookup"><span data-stu-id="8c0a3-146">Snap</span></span>
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
-## <a name="dependencies"></a><span data-ttu-id="087f7-146">相依性</span><span class="sxs-lookup"><span data-stu-id="087f7-146">Dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="8c0a3-147">相依性</span><span class="sxs-lookup"><span data-stu-id="8c0a3-147">Dependencies</span></span>
 
-<span data-ttu-id="087f7-147">當您使用套件管理員進行安裝時，系統會為您安裝這些程式庫。</span><span class="sxs-lookup"><span data-stu-id="087f7-147">When you install with a package manager, these libraries are installed for you.</span></span> <span data-ttu-id="087f7-148">但是，如果您手動安裝 .NET Core 或發行獨立應用程式，則必須確定已安裝這些程式庫：</span><span class="sxs-lookup"><span data-stu-id="087f7-148">But, if you manually install .NET Core or you publish a self-contained app, you'll need to make sure these libraries are installed:</span></span>
+<span data-ttu-id="8c0a3-148">當您使用套件管理員進行安裝時，系統會為您安裝這些程式庫。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-148">When you install with a package manager, these libraries are installed for you.</span></span> <span data-ttu-id="8c0a3-149">但是，如果您手動安裝 .NET Core 或發行獨立應用程式，則必須確定已安裝這些程式庫：</span><span class="sxs-lookup"><span data-stu-id="8c0a3-149">But, if you manually install .NET Core or you publish a self-contained app, you'll need to make sure these libraries are installed:</span></span>
 
-- <span data-ttu-id="087f7-149">libc6</span><span class="sxs-lookup"><span data-stu-id="087f7-149">libc6</span></span>
-- <span data-ttu-id="087f7-150">libgcc1</span><span class="sxs-lookup"><span data-stu-id="087f7-150">libgcc1</span></span>
-- <span data-ttu-id="087f7-151">libgssapi-krb5.keytab-2</span><span class="sxs-lookup"><span data-stu-id="087f7-151">libgssapi-krb5-2</span></span>
-- <span data-ttu-id="087f7-152">適用于 8.x) 的 libicu52 (</span><span class="sxs-lookup"><span data-stu-id="087f7-152">libicu52 (for 8.x)</span></span>
-- <span data-ttu-id="087f7-153">libicu57 (for 2.x) </span><span class="sxs-lookup"><span data-stu-id="087f7-153">libicu57 (for 9.x)</span></span>
-- <span data-ttu-id="087f7-154">libicu63 (for 2.x) </span><span class="sxs-lookup"><span data-stu-id="087f7-154">libicu63 (for 10.x)</span></span>
-- <span data-ttu-id="087f7-155">適用于 11. x) 的 libicu67 (</span><span class="sxs-lookup"><span data-stu-id="087f7-155">libicu67 (for 11.x)</span></span>
-- <span data-ttu-id="087f7-156">適用于 8.x) 的 libssl1.0.0 1.0.0 (</span><span class="sxs-lookup"><span data-stu-id="087f7-156">libssl1.0.0 (for 8.x)</span></span>
-- <span data-ttu-id="087f7-157">libssl1.0.0 1.1 (for 2.x-11. x) </span><span class="sxs-lookup"><span data-stu-id="087f7-157">libssl1.1 (for 9.x-11.x)</span></span>
-- <span data-ttu-id="087f7-158">libstdc + + 6</span><span class="sxs-lookup"><span data-stu-id="087f7-158">libstdc++6</span></span>
-- <span data-ttu-id="087f7-159">zlib1g</span><span class="sxs-lookup"><span data-stu-id="087f7-159">zlib1g</span></span>
+- <span data-ttu-id="8c0a3-150">libc6</span><span class="sxs-lookup"><span data-stu-id="8c0a3-150">libc6</span></span>
+- <span data-ttu-id="8c0a3-151">libgcc1</span><span class="sxs-lookup"><span data-stu-id="8c0a3-151">libgcc1</span></span>
+- <span data-ttu-id="8c0a3-152">libgssapi-krb5.keytab-2</span><span class="sxs-lookup"><span data-stu-id="8c0a3-152">libgssapi-krb5-2</span></span>
+- <span data-ttu-id="8c0a3-153">適用于 8.x) 的 libicu52 (</span><span class="sxs-lookup"><span data-stu-id="8c0a3-153">libicu52 (for 8.x)</span></span>
+- <span data-ttu-id="8c0a3-154">libicu57 (for 2.x) </span><span class="sxs-lookup"><span data-stu-id="8c0a3-154">libicu57 (for 9.x)</span></span>
+- <span data-ttu-id="8c0a3-155">libicu63 (for 2.x) </span><span class="sxs-lookup"><span data-stu-id="8c0a3-155">libicu63 (for 10.x)</span></span>
+- <span data-ttu-id="8c0a3-156">適用于 11. x) 的 libicu67 (</span><span class="sxs-lookup"><span data-stu-id="8c0a3-156">libicu67 (for 11.x)</span></span>
+- <span data-ttu-id="8c0a3-157">適用于 8.x) 的 libssl1.0.0 1.0.0 (</span><span class="sxs-lookup"><span data-stu-id="8c0a3-157">libssl1.0.0 (for 8.x)</span></span>
+- <span data-ttu-id="8c0a3-158">libssl1.0.0 1.1 (for 2.x-11. x) </span><span class="sxs-lookup"><span data-stu-id="8c0a3-158">libssl1.1 (for 9.x-11.x)</span></span>
+- <span data-ttu-id="8c0a3-159">libstdc + + 6</span><span class="sxs-lookup"><span data-stu-id="8c0a3-159">libstdc++6</span></span>
+- <span data-ttu-id="8c0a3-160">zlib1g</span><span class="sxs-lookup"><span data-stu-id="8c0a3-160">zlib1g</span></span>
 
-<span data-ttu-id="087f7-160">若為使用 system.string 元件的 .NET Core *應用程式，* 您也需要下列相依性：</span><span class="sxs-lookup"><span data-stu-id="087f7-160">For .NET Core apps that use the *System.Drawing.Common* assembly, you also need the following dependency:</span></span>
+<span data-ttu-id="8c0a3-161">若為使用 system.string 元件的 .NET Core *應用程式，* 您也需要下列相依性：</span><span class="sxs-lookup"><span data-stu-id="8c0a3-161">For .NET Core apps that use the *System.Drawing.Common* assembly, you also need the following dependency:</span></span>
 
-- <span data-ttu-id="087f7-161">libgdiplus (6.0.1 版或更新版本) </span><span class="sxs-lookup"><span data-stu-id="087f7-161">libgdiplus (version 6.0.1 or later)</span></span>
+- <span data-ttu-id="8c0a3-162">libgdiplus (6.0.1 版或更新版本) </span><span class="sxs-lookup"><span data-stu-id="8c0a3-162">libgdiplus (version 6.0.1 or later)</span></span>
 
   > [!WARNING]
-  > <span data-ttu-id="087f7-162">您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 *libgdiplus* 。</span><span class="sxs-lookup"><span data-stu-id="087f7-162">You can install a recent version of *libgdiplus* by adding the Mono repository to your system.</span></span> <span data-ttu-id="087f7-163">如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。</span><span class="sxs-lookup"><span data-stu-id="087f7-163">For more information, see <https://www.mono-project.com/download/stable/>.</span></span>
+  > <span data-ttu-id="8c0a3-163">您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 *libgdiplus* 。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-163">You can install a recent version of *libgdiplus* by adding the Mono repository to your system.</span></span> <span data-ttu-id="8c0a3-164">如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。</span><span class="sxs-lookup"><span data-stu-id="8c0a3-164">For more information, see <https://www.mono-project.com/download/stable/>.</span></span>
 
-## <a name="scripted-install"></a><span data-ttu-id="087f7-164">腳本式安裝</span><span class="sxs-lookup"><span data-stu-id="087f7-164">Scripted install</span></span>
+## <a name="scripted-install"></a><span data-ttu-id="8c0a3-165">腳本式安裝</span><span class="sxs-lookup"><span data-stu-id="8c0a3-165">Scripted install</span></span>
 
 [!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
 
-## <a name="manual-install"></a><span data-ttu-id="087f7-165">手動安裝</span><span class="sxs-lookup"><span data-stu-id="087f7-165">Manual install</span></span>
+## <a name="manual-install"></a><span data-ttu-id="8c0a3-166">手動安裝</span><span class="sxs-lookup"><span data-stu-id="8c0a3-166">Manual install</span></span>
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a><span data-ttu-id="087f7-166">後續步驟</span><span class="sxs-lookup"><span data-stu-id="087f7-166">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="8c0a3-167">後續步驟</span><span class="sxs-lookup"><span data-stu-id="8c0a3-167">Next steps</span></span>
 
-- [<span data-ttu-id="087f7-167">教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="087f7-167">Tutorial: Create a console application with .NET SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)
+- [<span data-ttu-id="8c0a3-168">教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="8c0a3-168">Tutorial: Create a console application with .NET SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)

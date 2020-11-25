@@ -1,35 +1,35 @@
 ---
 ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901776"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032365"
 ---
-### <a name="http-synchronous-io-disabled-in-all-servers"></a><span data-ttu-id="8ee02-101">HTTP：所有伺服器中的同步 IO 已停用</span><span class="sxs-lookup"><span data-stu-id="8ee02-101">HTTP: Synchronous IO disabled in all servers</span></span>
+### <a name="http-synchronous-io-disabled-in-all-servers"></a><span data-ttu-id="05862-101">HTTP：所有伺服器中的同步 IO 已停用</span><span class="sxs-lookup"><span data-stu-id="05862-101">HTTP: Synchronous IO disabled in all servers</span></span>
 
-<span data-ttu-id="8ee02-102">從 ASP.NET Core 3.0 開始，預設會停用同步伺服器作業。</span><span class="sxs-lookup"><span data-stu-id="8ee02-102">Starting with ASP.NET Core 3.0, synchronous server operations are disabled by default.</span></span>
+<span data-ttu-id="05862-102">從 ASP.NET Core 3.0 開始，預設會停用同步伺服器作業。</span><span class="sxs-lookup"><span data-stu-id="05862-102">Starting with ASP.NET Core 3.0, synchronous server operations are disabled by default.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="8ee02-103">變更描述</span><span class="sxs-lookup"><span data-stu-id="8ee02-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="05862-103">變更描述</span><span class="sxs-lookup"><span data-stu-id="05862-103">Change description</span></span>
 
-<span data-ttu-id="8ee02-104">`AllowSynchronousIO` 是每部伺服器中的選項，可啟用或停用同步 IO Api `HttpRequest.Body.Read` ，例如、 `HttpResponse.Body.Write` 和 `Stream.Flush` 。</span><span class="sxs-lookup"><span data-stu-id="8ee02-104">`AllowSynchronousIO` is an option in each server that enables or disables synchronous IO APIs like `HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush`.</span></span> <span data-ttu-id="8ee02-105">這些 Api 很久就是執行緒耗盡的來源，而應用程式會停止回應。</span><span class="sxs-lookup"><span data-stu-id="8ee02-105">These APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="8ee02-106">從 ASP.NET Core 3.0 Preview 3 開始，預設會停用這些同步作業。</span><span class="sxs-lookup"><span data-stu-id="8ee02-106">Starting in ASP.NET Core 3.0 Preview 3, these synchronous operations are disabled by default.</span></span>
+<span data-ttu-id="05862-104">`AllowSynchronousIO` 是每部伺服器中的選項，可啟用或停用同步 IO Api `HttpRequest.Body.Read` ，例如、 `HttpResponse.Body.Write` 和 `Stream.Flush` 。</span><span class="sxs-lookup"><span data-stu-id="05862-104">`AllowSynchronousIO` is an option in each server that enables or disables synchronous IO APIs like `HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush`.</span></span> <span data-ttu-id="05862-105">這些 Api 很久就是執行緒耗盡的來源，而應用程式會停止回應。</span><span class="sxs-lookup"><span data-stu-id="05862-105">These APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="05862-106">從 ASP.NET Core 3.0 Preview 3 開始，預設會停用這些同步作業。</span><span class="sxs-lookup"><span data-stu-id="05862-106">Starting in ASP.NET Core 3.0 Preview 3, these synchronous operations are disabled by default.</span></span>
 
-<span data-ttu-id="8ee02-107">受影響的伺服器：</span><span class="sxs-lookup"><span data-stu-id="8ee02-107">Affected servers:</span></span>
+<span data-ttu-id="05862-107">受影響的伺服器：</span><span class="sxs-lookup"><span data-stu-id="05862-107">Affected servers:</span></span>
 
-- <span data-ttu-id="8ee02-108">Kestrel</span><span class="sxs-lookup"><span data-stu-id="8ee02-108">Kestrel</span></span>
-- <span data-ttu-id="8ee02-109">HttpSys</span><span class="sxs-lookup"><span data-stu-id="8ee02-109">HttpSys</span></span>
-- <span data-ttu-id="8ee02-110">IIS 同進程</span><span class="sxs-lookup"><span data-stu-id="8ee02-110">IIS in-process</span></span>
-- <span data-ttu-id="8ee02-111">TestServer</span><span class="sxs-lookup"><span data-stu-id="8ee02-111">TestServer</span></span>
+- <span data-ttu-id="05862-108">Kestrel</span><span class="sxs-lookup"><span data-stu-id="05862-108">Kestrel</span></span>
+- <span data-ttu-id="05862-109">HttpSys</span><span class="sxs-lookup"><span data-stu-id="05862-109">HttpSys</span></span>
+- <span data-ttu-id="05862-110">IIS 同進程</span><span class="sxs-lookup"><span data-stu-id="05862-110">IIS in-process</span></span>
+- <span data-ttu-id="05862-111">TestServer</span><span class="sxs-lookup"><span data-stu-id="05862-111">TestServer</span></span>
 
-<span data-ttu-id="8ee02-112">預期的錯誤如下：</span><span class="sxs-lookup"><span data-stu-id="8ee02-112">Expect errors similar to:</span></span>
+<span data-ttu-id="05862-112">預期的錯誤如下：</span><span class="sxs-lookup"><span data-stu-id="05862-112">Expect errors similar to:</span></span>
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-<span data-ttu-id="8ee02-113">每一部伺服器都有一個 `AllowSynchronousIO` 選項，可控制這個行為，而所有的預設值都是 `false` 。</span><span class="sxs-lookup"><span data-stu-id="8ee02-113">Each server has an `AllowSynchronousIO` option that controls this behavior and the default for all of them is now `false`.</span></span>
+<span data-ttu-id="05862-113">每一部伺服器都有一個 `AllowSynchronousIO` 選項，可控制這個行為，而所有的預設值都是 `false` 。</span><span class="sxs-lookup"><span data-stu-id="05862-113">Each server has an `AllowSynchronousIO` option that controls this behavior and the default for all of them is now `false`.</span></span>
 
-<span data-ttu-id="8ee02-114">也可以根據每個要求覆寫此行為，以暫時降低風險。</span><span class="sxs-lookup"><span data-stu-id="8ee02-114">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span> <span data-ttu-id="8ee02-115">例如：</span><span class="sxs-lookup"><span data-stu-id="8ee02-115">For example:</span></span>
+<span data-ttu-id="05862-114">也可以根據每個要求覆寫此行為，以暫時降低風險。</span><span class="sxs-lookup"><span data-stu-id="05862-114">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span> <span data-ttu-id="05862-115">例如：</span><span class="sxs-lookup"><span data-stu-id="05862-115">For example:</span></span>
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -39,35 +39,35 @@ if (syncIOFeature != null)
 }
 ```
 
-<span data-ttu-id="8ee02-116">如果您 `TextWriter` 在中有或另一個呼叫同步 API 的資料流程遇到問題 `Dispose` ，請改為呼叫新的 `DisposeAsync` api。</span><span class="sxs-lookup"><span data-stu-id="8ee02-116">If you have trouble with a `TextWriter` or another stream calling a synchronous API in `Dispose`, call the new `DisposeAsync` API instead.</span></span>
+<span data-ttu-id="05862-116">如果您 `TextWriter` 在中有或另一個呼叫同步 API 的資料流程遇到問題 `Dispose` ，請改為呼叫新的 `DisposeAsync` api。</span><span class="sxs-lookup"><span data-stu-id="05862-116">If you have trouble with a `TextWriter` or another stream calling a synchronous API in `Dispose`, call the new `DisposeAsync` API instead.</span></span>
 
-<span data-ttu-id="8ee02-117">如需討論，請參閱 [dotnet/aspnetcore # 7644](https://github.com/dotnet/aspnetcore/issues/7644)。</span><span class="sxs-lookup"><span data-stu-id="8ee02-117">For discussion, see [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).</span></span>
+<span data-ttu-id="05862-117">如需討論，請參閱 [dotnet/aspnetcore # 7644](https://github.com/dotnet/aspnetcore/issues/7644)。</span><span class="sxs-lookup"><span data-stu-id="05862-117">For discussion, see [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="8ee02-118">引進的版本</span><span class="sxs-lookup"><span data-stu-id="8ee02-118">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="05862-118">引進的版本</span><span class="sxs-lookup"><span data-stu-id="05862-118">Version introduced</span></span>
 
-<span data-ttu-id="8ee02-119">3.0</span><span class="sxs-lookup"><span data-stu-id="8ee02-119">3.0</span></span>
+<span data-ttu-id="05862-119">3.0</span><span class="sxs-lookup"><span data-stu-id="05862-119">3.0</span></span>
 
-#### <a name="old-behavior"></a><span data-ttu-id="8ee02-120">舊的行為</span><span class="sxs-lookup"><span data-stu-id="8ee02-120">Old behavior</span></span>
+#### <a name="old-behavior"></a><span data-ttu-id="05862-120">舊的行為</span><span class="sxs-lookup"><span data-stu-id="05862-120">Old behavior</span></span>
 
-<span data-ttu-id="8ee02-121">`HttpRequest.Body.Read``HttpResponse.Body.Write` `Stream.Flush` 預設允許、和。</span><span class="sxs-lookup"><span data-stu-id="8ee02-121">`HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush` were allowed by default.</span></span>
+<span data-ttu-id="05862-121">`HttpRequest.Body.Read``HttpResponse.Body.Write` `Stream.Flush` 預設允許、和。</span><span class="sxs-lookup"><span data-stu-id="05862-121">`HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush` were allowed by default.</span></span>
 
-#### <a name="new-behavior"></a><span data-ttu-id="8ee02-122">新的行為</span><span class="sxs-lookup"><span data-stu-id="8ee02-122">New behavior</span></span>
+#### <a name="new-behavior"></a><span data-ttu-id="05862-122">新的行為</span><span class="sxs-lookup"><span data-stu-id="05862-122">New behavior</span></span>
 
-<span data-ttu-id="8ee02-123">預設不允許這些同步的 Api：</span><span class="sxs-lookup"><span data-stu-id="8ee02-123">These synchronous APIs are disallowed by default:</span></span>
+<span data-ttu-id="05862-123">預設不允許這些同步的 Api：</span><span class="sxs-lookup"><span data-stu-id="05862-123">These synchronous APIs are disallowed by default:</span></span>
 
-<span data-ttu-id="8ee02-124">預期的錯誤如下：</span><span class="sxs-lookup"><span data-stu-id="8ee02-124">Expect errors similar to:</span></span>
+<span data-ttu-id="05862-124">預期的錯誤如下：</span><span class="sxs-lookup"><span data-stu-id="05862-124">Expect errors similar to:</span></span>
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-#### <a name="reason-for-change"></a><span data-ttu-id="8ee02-125">變更的原因</span><span class="sxs-lookup"><span data-stu-id="8ee02-125">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="05862-125">變更的原因</span><span class="sxs-lookup"><span data-stu-id="05862-125">Reason for change</span></span>
 
-<span data-ttu-id="8ee02-126">這些同步 Api 很久就是執行緒耗盡的來源，而應用程式會停止回應。</span><span class="sxs-lookup"><span data-stu-id="8ee02-126">These synchronous APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="8ee02-127">從 ASP.NET Core 3.0 Preview 3 開始，同步作業預設為停用。</span><span class="sxs-lookup"><span data-stu-id="8ee02-127">Starting in ASP.NET Core 3.0 Preview 3, the synchronous operations are disabled by default.</span></span>
+<span data-ttu-id="05862-126">這些同步 Api 很久就是執行緒耗盡的來源，而應用程式會停止回應。</span><span class="sxs-lookup"><span data-stu-id="05862-126">These synchronous APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="05862-127">從 ASP.NET Core 3.0 Preview 3 開始，同步作業預設為停用。</span><span class="sxs-lookup"><span data-stu-id="05862-127">Starting in ASP.NET Core 3.0 Preview 3, the synchronous operations are disabled by default.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="8ee02-128">建議的動作</span><span class="sxs-lookup"><span data-stu-id="8ee02-128">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="05862-128">建議的動作</span><span class="sxs-lookup"><span data-stu-id="05862-128">Recommended action</span></span>
 
-<span data-ttu-id="8ee02-129">使用方法的非同步版本。</span><span class="sxs-lookup"><span data-stu-id="8ee02-129">Use the asynchronous versions of the methods.</span></span> <span data-ttu-id="8ee02-130">也可以根據每個要求覆寫此行為，以暫時降低風險。</span><span class="sxs-lookup"><span data-stu-id="8ee02-130">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span>
+<span data-ttu-id="05862-129">使用方法的非同步版本。</span><span class="sxs-lookup"><span data-stu-id="05862-129">Use the asynchronous versions of the methods.</span></span> <span data-ttu-id="05862-130">也可以根據每個要求覆寫此行為，以暫時降低風險。</span><span class="sxs-lookup"><span data-stu-id="05862-130">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span>
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -77,11 +77,11 @@ if (syncIOFeature != null)
 }
 ```
 
-#### <a name="category"></a><span data-ttu-id="8ee02-131">類別</span><span class="sxs-lookup"><span data-stu-id="8ee02-131">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="05862-131">類別</span><span class="sxs-lookup"><span data-stu-id="05862-131">Category</span></span>
 
-<span data-ttu-id="8ee02-132">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="8ee02-132">ASP.NET Core</span></span>
+<span data-ttu-id="05862-132">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="05862-132">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="8ee02-133">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="8ee02-133">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="05862-133">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="05862-133">Affected APIs</span></span>
 
 - <xref:System.IO.Stream.Flush%2A?displayProperty=nameWithType>
 - <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType>
