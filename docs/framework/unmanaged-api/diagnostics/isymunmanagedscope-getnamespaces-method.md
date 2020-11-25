@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-ms.openlocfilehash: 6f11a69671864ba4627c2bb8c86e0c9beb27eeb1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 026ba35044bc7573dc54617dcade9cf3918a76ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83611116"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725920"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces 方法
+
 取得在此範圍內使用的命名空間。  
   
 ## <a name="syntax"></a>語法  
@@ -37,20 +38,23 @@ HRESULT GetNamespaces(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cNameSpaces`  
  [in] `namespaces` 陣列的大小。  
   
  `pcNameSpaces`  
- 脫銷的指標 `ULONG32` ，接收包含命名空間所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含命名空間所需的緩衝區大小。  
   
  `namespaces`  
- 脫銷接收命名空間的陣列。  
+ 擴展接收命名空間的陣列。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

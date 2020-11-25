@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 340d2de09562ea9b767203a7fa839cdc6b729b3b
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: eccdfcb60b2d2b5d652ccac948c01c16e7cb828d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860898"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725972"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 函式
-建立偵錯工具介面（[ICorDebug](icordebug-interface.md)），以提供在遠端進程上具現化 managed 偵錯工具的功能。  
+
+建立偵錯工具介面 ([ICorDebug](icordebug-interface.md)) ，以提供在遠端進程上具現化 managed 偵錯工具的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +37,15 @@ HRESULT CordbCreateObject (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `iDebuggerVersion`  
  [in] 目標處理序的偵錯工具版本。 這個參數必須是 CorDebugVersion_2_0，才能進行遠端偵錯。  
   
  `ppCordb`  
- 脫銷指向物件指標的指標，將轉換成[ICorDebug](icordebug-interface.md)介面並傳回。  
+ 擴展指向物件指標的指標，該物件將會轉換成 [ICorDebug](icordebug-interface.md) 介面並傳回。  
   
 ## <a name="return-value"></a>傳回值  
+
  S_OK  
  已成功確定處理序中的 CLR 數目，並且已正確填入對應的控制代碼和路徑陣列。  
   
@@ -56,13 +59,15 @@ HRESULT CordbCreateObject (
  其他失敗。  
   
 ## <a name="remarks"></a>備註  
- 在[ICorDebug](icordebug-interface.md)中`ppCordb`傳回的 ICorDebug 介面是所有 managed 偵錯工具的最上層偵錯工具介面。  
+
+ 中傳回的 [ICorDebug](icordebug-interface.md) 介面 `ppCordb` 是所有 managed 偵錯工具的最上層偵錯工具介面。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   
- 連結**庫：** mscordbi_macx86 .dll  
+ 連結 **庫：** mscordbi_macx86.dll  
   
  **.NET Framework 版本：** 3.5 SP1
