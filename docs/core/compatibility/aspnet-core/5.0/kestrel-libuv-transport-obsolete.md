@@ -1,0 +1,72 @@
+---
+title: 重大變更： Kestrel： Libuv 傳輸標示為已淘汰
+description: 瞭解 ASP.NET Core 5.0 的重大變更，標題為 Kestrel： Libuv 傳輸標示為已淘汰
+author: scottaddie
+ms.author: scaddie
+ms.date: 10/01/2020
+ms.openlocfilehash: f66b9b646671e07957e6d30a95333d392eb29617
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95760702"
+---
+# <a name="kestrel-libuv-transport-marked-as-obsolete"></a><span data-ttu-id="ad6a7-103">Kestrel： Libuv 傳輸標示為已淘汰</span><span class="sxs-lookup"><span data-stu-id="ad6a7-103">Kestrel: Libuv transport marked as obsolete</span></span>
+
+<span data-ttu-id="ad6a7-104">舊版 ASP.NET Core 使用 Libuv 作為非同步輸入和輸出執行方式的執行詳細資料。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-104">Earlier versions of ASP.NET Core used Libuv as an implementation detail of how asynchronous input and output was performed.</span></span> <span data-ttu-id="ad6a7-105">在 ASP.NET Core 2.0 中，開發了替代的 <xref:System.Net.Sockets.Socket> 型傳輸。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-105">In ASP.NET Core 2.0, an alternative, <xref:System.Net.Sockets.Socket>-based transport was developed.</span></span> <span data-ttu-id="ad6a7-106">在 ASP.NET Core 2.1 中，Kestrel 預設會切換為使用以 `Socket` 傳輸為基礎的傳輸。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-106">In ASP.NET Core 2.1, Kestrel switched to using the `Socket`-based transport by default.</span></span> <span data-ttu-id="ad6a7-107">基於相容性考慮，已維持 Libuv 支援。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-107">Libuv support was maintained for compatibility reasons.</span></span>
+
+<span data-ttu-id="ad6a7-108">到目前為止，使用以 `Socket` 傳輸為基礎的傳輸比 Libuv 傳輸更為普遍。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-108">At this point, use of the `Socket`-based transport is far more common than the Libuv transport.</span></span> <span data-ttu-id="ad6a7-109">因此，Libuv 支援在 .NET 5.0 中會標示為已淘汰，而且將完全在 .NET 6.0 中移除。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-109">Consequently, Libuv support is marked as obsolete in .NET 5.0 and will be removed entirely in .NET 6.0.</span></span>
+
+<span data-ttu-id="ad6a7-110">作為這項變更的一部分，Libuv 支援新的作業系統平臺 (例如 Windows ARM64) 不會加入 .NET 5.0 時間範圍中。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-110">As part of this change, Libuv support for new operating system platforms (like Windows ARM64) won't be added in the .NET 5.0 timeframe.</span></span>
+
+<span data-ttu-id="ad6a7-111">如需封鎖需要使用 Libuv 傳輸之問題的討論，請參閱 GitHub 在 [dotnet/aspnetcore # 23409](https://github.com/dotnet/aspnetcore/issues/23409)的問題。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-111">For discussion on blocking issues that require the use of the Libuv transport, see the GitHub issue at [dotnet/aspnetcore#23409](https://github.com/dotnet/aspnetcore/issues/23409).</span></span>
+
+## <a name="version-introduced"></a><span data-ttu-id="ad6a7-112">引進的版本</span><span class="sxs-lookup"><span data-stu-id="ad6a7-112">Version introduced</span></span>
+
+<span data-ttu-id="ad6a7-113">5.0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="ad6a7-113">5.0 Preview 8</span></span>
+
+## <a name="old-behavior"></a><span data-ttu-id="ad6a7-114">舊的行為</span><span class="sxs-lookup"><span data-stu-id="ad6a7-114">Old behavior</span></span>
+
+<span data-ttu-id="ad6a7-115">Libuv Api 未標示為已淘汰。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-115">The Libuv APIs aren't marked as obsolete.</span></span>
+
+## <a name="new-behavior"></a><span data-ttu-id="ad6a7-116">新的行為</span><span class="sxs-lookup"><span data-stu-id="ad6a7-116">New behavior</span></span>
+
+<span data-ttu-id="ad6a7-117">Libuv Api 會標示為已淘汰。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-117">The Libuv APIs are marked as obsolete.</span></span>
+
+## <a name="reason-for-change"></a><span data-ttu-id="ad6a7-118">變更的原因</span><span class="sxs-lookup"><span data-stu-id="ad6a7-118">Reason for change</span></span>
+
+<span data-ttu-id="ad6a7-119">以 `Socket` 傳輸為基礎的預設值。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-119">The `Socket`-based transport is the default.</span></span> <span data-ttu-id="ad6a7-120">繼續使用 Libuv 傳輸沒有任何吸引人的理由。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-120">There aren't any compelling reasons to continue using the Libuv transport.</span></span>
+
+## <a name="recommended-action"></a><span data-ttu-id="ad6a7-121">建議的動作</span><span class="sxs-lookup"><span data-stu-id="ad6a7-121">Recommended action</span></span>
+
+<span data-ttu-id="ad6a7-122">不再使用 [Libuv 封裝](https://www.nuget.org/packages/Libuv) 和擴充方法。</span><span class="sxs-lookup"><span data-stu-id="ad6a7-122">Discontinue use of the [Libuv package](https://www.nuget.org/packages/Libuv) and extension methods.</span></span>
+
+## <a name="affected-apis"></a><span data-ttu-id="ad6a7-123">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="ad6a7-123">Affected APIs</span></span>
+
+- [<span data-ttu-id="ad6a7-124">>webhostbuilderlibuvextensions.uselibuv</span><span class="sxs-lookup"><span data-stu-id="ad6a7-124">WebHostBuilderLibuvExtensions</span></span>](/dotnet/api/microsoft.aspnetcore.hosting.webhostbuilderlibuvextensions?view=aspnetcore-3.0)
+- [<span data-ttu-id="ad6a7-125">>webhostbuilderlibuvextensions.uselibuv. >webhostbuilderlibuvextensions.uselibuv</span><span class="sxs-lookup"><span data-stu-id="ad6a7-125">WebHostBuilderLibuvExtensions.UseLibuv</span></span>](/dotnet/api/microsoft.aspnetcore.hosting.webhostbuilderlibuvextensions.uselibuv?view=aspnetcore-3.0)
+- [<span data-ttu-id="ad6a7-126">AspNetCore. Kestrel. Libuv. LibuvTransportOptions</span><span class="sxs-lookup"><span data-stu-id="ad6a7-126">Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions</span></span>](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions?view=aspnetcore-3.0)
+- [<span data-ttu-id="ad6a7-127">AspNetCore. Kestrel. Libuv. LibuvTransportOptions. ThreadCount</span><span class="sxs-lookup"><span data-stu-id="ad6a7-127">Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.ThreadCount</span></span>](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions.threadcount?view=aspnetcore-3.0)
+- [<span data-ttu-id="ad6a7-128">AspNetCore. Kestrel. Libuv. LibuvTransportOptions. NoDelay</span><span class="sxs-lookup"><span data-stu-id="ad6a7-128">Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.NoDelay</span></span>](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions.nodelay?view=aspnetcore-3.0)
+- [<span data-ttu-id="ad6a7-129">AspNetCore. Kestrel. Libuv. LibuvTransportOptions. MaxWriteBufferSize</span><span class="sxs-lookup"><span data-stu-id="ad6a7-129">Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.MaxWriteBufferSize</span></span>](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions.maxwritebuffersize?view=aspnetcore-3.0)
+- [<span data-ttu-id="ad6a7-130">AspNetCore. Kestrel. Libuv. LibuvTransportOptions. MaxReadBufferSize</span><span class="sxs-lookup"><span data-stu-id="ad6a7-130">Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.MaxReadBufferSize</span></span>](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions.maxreadbuffersize?view=aspnetcore-3.0)
+- `Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.Backlog`
+
+<!--
+
+### Category
+
+ASP.NET Core
+
+### Affected APIs
+
+- `T:Microsoft.AspNetCore.Hosting.WebHostBuilderLibuvExtensions`
+- `Overload:Microsoft.AspNetCore.Hosting.WebHostBuilderLibuvExtensions.UseLibuv`
+- `T:Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions`
+- `P:Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.ThreadCount`
+- `P:Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.NoDelay`
+- `P:Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.MaxWriteBufferSize`
+- `P:Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.MaxReadBufferSize`
+- `P:Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.LibuvTransportOptions.Backlog`
+
+-->
