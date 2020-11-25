@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9dd973fe3e0802c49c220db51a21c223730e5aec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490792"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729158"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps 方法
-傳回指定之 TypeDef token 所表示之的中繼資料資訊 <xref:System.Type> 。  
+
+傳回指定之 TypeDef token 所表示的中繼資料資訊 <xref:System.Type> 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +40,32 @@ HRESULT GetTypeDefProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `td`  
- 在TypeDef token，表示要傳回中繼資料的類型。  
+ 在表示傳回中繼資料之類型的 TypeDef 標記。  
   
  `szTypeDef`  
- 脫銷包含型別名稱的緩衝區。  
+ 擴展包含型別名稱的緩衝區。  
   
  `cchTypeDef`  
  在的大小（以寬字元為單位） `szTypeDef` 。  
   
  `pchTypeDef`  
- 脫銷在中傳回的寬字元數 `szTypeDef` 。  
+ 擴展傳回的寬字元數 `szTypeDef` 。  
   
  `pdwTypeDefFlags`  
- 脫銷任何修改類型定義之旗標的指標。 這個值是[CorTypeAttr](cortypeattr-enumeration.md)列舉中的位元遮罩。  
+ 擴展任何修改類型定義之旗標的指標。 這個值是 [CorTypeAttr](cortypeattr-enumeration.md) 列舉的位元遮罩。  
   
  `ptkExtends`  
- 脫銷TypeDef 或 TypeRef 元資料標記，代表所要求之類型的基底類型。  
+ 擴展TypeDef 或 TypeRef 元資料標記，代表所要求之型別的基底型別。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

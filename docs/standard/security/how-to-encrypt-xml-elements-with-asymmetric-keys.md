@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 7254079c12926dbe055ea58f045862afd17bab1e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 29fe7c229664b08c9e1563413525818f2e883198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729339"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>作法：使用非對稱金鑰加密 XML 元素
 
@@ -112,6 +112,7 @@ ms.locfileid: "94820263"
      [!code-vb[HowToEncryptXMLElementAsymmetric#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#16)]  
   
 ## <a name="example"></a>範例  
+
  這個範例假設名為 `"test.xml"` 的檔案已存在於和編譯程式相同的目錄中。  它同時也假設 `"test.xml"` 包含 `"creditcard"` 元素。  您可以將下列 XML 放入稱為 `test.xml` 的檔案，並使用它搭配此範例。  
   
 ```xml  
@@ -142,7 +143,7 @@ ms.locfileid: "94820263"
   
 當您使用完密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  偵錯工具有時可以從記憶體讀取密碼編譯金鑰，或是在記憶體位置被分頁至磁碟的情況下從硬碟機讀取。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

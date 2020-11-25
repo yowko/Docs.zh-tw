@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123074"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728559"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 函式
-取得值，指出指定的元件是否為 managed。  
+
+取得值，這個值會指出指定的元件是否為 managed。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +37,12 @@ HRESULT IsFrameworkAssembly (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pwzAssemblyReference`  
- 在要檢查之元件的名稱。  
+ 在要檢查的元件名稱。  
   
  `pbIsFrameworkAssembly`  
- 脫銷布林值，指出元件是否受管理。  
+ 擴展指出元件是否受管理的布林值。  
   
  `pwzFrameworkAssemblyIdentity`  
  在Uncanonicalized 字串，其中包含元件的唯一識別。  
@@ -49,15 +51,17 @@ HRESULT IsFrameworkAssembly (
  [in] `pwzFrameworkAssemblyIdentity` 的大小。  
   
 ## <a name="remarks"></a>備註  
- `pwzAssemblyReference` 參數是字元字串的指標，其中包含元件的名稱。  
+
+ `pwzAssemblyReference`參數是包含元件名稱的字元字串指標。  
   
- 如果這個元件是 .NET Framework 的一部分，`pbIsFrameworkAssembly` 參數將會包含 `true`的布林值。  
+ 如果這個元件是 .NET Framework 的一部分， `pbIsFrameworkAssembly` 參數將包含的布林值 `true` 。  
   
- 如果命名元件不是 .NET Framework 的一部分，或如果 `pwzAssemblyReference` 參數未命名元件，`pbIsFrameworkAssembly` 會包含 `false`的布林值。  
+ 如果命名的元件不是 .NET Framework 的一部分，或如果參數未 `pwzAssemblyReference` 命名元件， `pbIsFrameworkAssembly` 將會包含的布林值 `false` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [融合全域靜態函式](fusion-global-static-functions.md)

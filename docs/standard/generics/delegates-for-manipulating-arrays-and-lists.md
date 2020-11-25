@@ -9,17 +9,19 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827278"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728507"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>管理陣列和清單的泛型委派
+
 本主題概略說明轉換、搜尋述詞以及要在陣列或集合的項目上採取之動作的泛型委派。  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>管理陣列和清單的泛型委派  
+
  <xref:System.Action%601> 泛型委派表示在指定類型項目上執行某些動作的方法。 您可以建立一個在項目上執行所需動作的方法、建立 <xref:System.Action%601> 委派的執行個體來表示該方法，然後將陣列和委派傳遞至 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 靜態泛型方法。 針對陣列的每個項目，都會呼叫該方法。  
   
  <xref:System.Collections.Generic.List%601> 泛型類別也有提供一個使用 <xref:System.Action%601> 委派的 <xref:System.Collections.Generic.List%601.ForEach%2A> 方法。 這不是泛型方法。  
@@ -36,9 +38,10 @@ ms.locfileid: "94827278"
  <xref:System.Converter%602> 泛型委派可讓您定義兩個類型之間的轉換，並可將一種類型的陣列轉換成另一種類型的陣列，或是將一種類型的清單轉換成另一種類型的清單。 建立一個方法，以將現有清單中的項目轉換成新的類型、建立委派執行個體來表示方法，並使用 <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> 泛型靜態方法，從原始的陣列產生新的類型陣列，或是使用 <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> 泛型執行個體方法，從原始清單產生新類型的清單。  
   
 ### <a name="chaining-delegates"></a>變更委派  
+
  許多使用這些委派的方法都會傳回陣列或清單，該陣列或清單可以再傳遞至另一個方法。 例如，如果您想要選取陣列的特定項目、將這些項目轉換成新的類型，並將它們儲存在新的陣列中，您可以將 <xref:System.Array.FindAll%2A> 泛型方法傳回的陣列傳遞至 <xref:System.Array.ConvertAll%2A> 泛型方法。 如果新的項目類型沒有自然排序順序，您可以將 <xref:System.Array.ConvertAll%2A> 泛型方法傳回的陣列傳遞至 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> 泛型方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

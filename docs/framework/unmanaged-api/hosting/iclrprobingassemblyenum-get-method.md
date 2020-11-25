@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-ms.openlocfilehash: ea66c142afc097d1003df4e7f5f5b960a91e2ab0
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 9a6145ff2874890f052f18a7e537e20ff259933c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703394"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728936"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get 方法
-取得指定索引處的元件識別。  
+
+取得位於指定索引處的元件識別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,39 +37,42 @@ HRESULT Get (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `dwIndex`  
- 在要傳回之元件身分識別的以零為起始的索引。  
+ 在要傳回的元件識別之以零為基底的索引。  
   
  `pwzBuffer`  
- 脫銷包含元件識別資料的緩衝區。  
+ 擴展包含元件身分識別資料的緩衝區。  
   
  `pcchBufferSize`  
- [in、out]緩衝區的大小 `pwzBuffer` 。  
+ [in，out]緩衝區的大小 `pwzBuffer` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`Get`已成功傳回。|  
+|S_OK|`Get` 傳回成功。|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` 太小了。|  
-|ERROR_NO_MORE_ITEMS|列舉不包含其他專案。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫超時。|  
+|ERROR_NO_MORE_ITEMS|列舉中不包含任何專案。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫已超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 如果方法傳回 E_FAIL，就無法在進程內使用 CLR。 對任何裝載方法的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|當封鎖的執行緒或光纖正在等候時，已取消事件。|  
+|E_FAIL|發生未知的嚴重失敗。 如果方法傳回 E_FAIL，則 CLR 在進程內將無法再使用。 對任何裝載方法的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 位於索引0的識別是處理器架構特有的身分識別。 位於索引1的識別是 Microsoft 中繼語言（MSIL）的架構中立元件。 位於索引2的識別不包含架構資訊。  
+
+ 位於索引0的身分識別是處理器架構特有的身分識別。 位於索引1的識別是 Microsoft 中繼語言 (MSIL) 的架構中性元件。 位於索引2的識別未包含任何架構資訊。  
   
- `Get`通常會呼叫兩次。 第一個呼叫會為提供 null 值 `pwzBuffer` ，並將設定 `pcchBufferSize` 為適合的大小 `pwzBuffer` 。 第二個呼叫會提供適當的大小 `pwzBuffer` ，並在完成時包含標準的元件識別資料。  
+ `Get` 通常會呼叫兩次。 第一個呼叫會提供的 null 值 `pwzBuffer` ，並將設定 `pcchBufferSize` 為適合的大小 `pwzBuffer` 。 第二個呼叫會提供適當大小 `pwzBuffer` ，並在完成時包含標準的元件身分識別資料。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

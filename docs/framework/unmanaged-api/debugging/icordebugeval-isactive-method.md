@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-ms.openlocfilehash: 4ee055812eb8dce2dc86f834dde92d7de5e1fdf9
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 5ac221b0b5837175b8073ab29f94c1f28078d3e4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976209"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729768"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive 方法
-取得值，指出這個 ICorDebugEval 物件目前是否正在執行。  
+
+取得值，這個值會指出這個 ICorDebugEval 物件目前是否正在執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT IsActive (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pbActive`  
- 脫銷指出此評估是否作用中的值指標。  
+ 擴展指出此評估是否為作用中之值的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

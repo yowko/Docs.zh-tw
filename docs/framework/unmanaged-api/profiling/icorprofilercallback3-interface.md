@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-ms.openlocfilehash: db07e2afa64ea2bf80416e6ab8cba5a4dcdc8dcf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd482bfe8e95a53cafd1530c88f09df146a1b150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499671"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729430"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 介面
-提供公用語言執行時間（CLR）用來將附加和卸離狀態資訊傳達給分析工具的回呼方法。  
+
+提供 common language runtime (CLR) 用來將附加和卸離狀態資訊傳達給 profiler 的回呼方法。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,7 +36,8 @@ ms.locfileid: "84499671"
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

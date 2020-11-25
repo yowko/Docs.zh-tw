@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 026f5efe195cdb34999b65c5f47de6f68d30e11a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3729f06097fa4dce6de009307183d5e97c24479b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008125"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728299"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource 方法
+
 為指定的資訊清單資源，建立包含其中繼資料的 `ManifestResource` 結構，並且傳回關聯的中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
@@ -38,30 +39,33 @@ HRESULT DefineManifestResource (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `szName`  
  在資源的名稱。  
   
  `tkImplementation`  
- 在類型為或的元資料標記 `mdtFile` `mdtAssemblyRef` ，其對應至資源提供者。 Null 值表示內嵌中繼資料的檔案是資源提供者。  
+ 在 `mdtFile` 或 `mdtAssemblyRef` 對應至資源提供者之類型的元資料標記。 Null 值表示內嵌中繼資料的檔案是資源提供者。  
   
  `dwOffset`  
- 在檔案內資源開頭的位移。 對於獨立檔案中的資源，這一律會是零。 如果資源內嵌在 PE （可移植的可執行檔）檔案中，這就是資源 BLOB 的位移，它會從 cor 標頭檔中指定的位置開始。  
+ 在檔案內資源開頭的位移。 針對獨立檔案中的資源，這一律會是零。 如果資源內嵌于 PE (可攜式可執行檔) 檔案中，這就是資源 BLOB 的位移，它會從 cor .h 標頭檔中指定的位置開始。  
   
  `dwResourceFlags`  
- 在旗標值的位元組合，這個組合會指定資源定義的屬性設定。  
+ 在旗標值的位元組合，這些值會指定資源定義的屬性設定。  
   
  `pmdmr`  
- 脫銷傳回之元資料標記的指標。  
+ 擴展傳回之元資料標記的指標。  
   
 ## <a name="remarks"></a>備註  
- 您必須針對每個元件檔案中所實作為的 `ManifestResource` 每個資源，定義一個元資料結構。  
+
+ 您 `ManifestResource` 必須為每個元件檔案中所執行的每個資源定義一個元資料結構。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平臺：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

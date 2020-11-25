@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a59e70257064220e8138f9d267a815fcdbf3929
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729027"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 結構
-包含有關程式集中單個屬性的資訊，並且由三`DWORD`個 s 組成。 每個`DWORD`都是`CurrentIntoBuffer`[IEnumIDENTITY_ATTRIBUTE介面方法](ienumidentity-attribute-interface.md)生成的字元緩衝區的偏移量  
+
+包含元件中單一屬性的相關資訊，由三個組成 `DWORD` 。 每個 `DWORD` 都是 `CurrentIntoBuffer` [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) 介面的方法所產生之字元緩衝區的位移。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,20 +41,21 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |member|描述|  
 |------------|-----------------|  
-|`ofsNamespace`|字元緩衝區中的第一個偏移量。 此偏移後不跟屬性的命名空間，而是一系列空字元。 因此，不使用它。|  
-|`ofsName`|字元緩衝區中的第二個偏移量。 此位置標記屬性名稱的開始。|  
-|`ofsValue`|字元緩衝區中的第三個偏移量。 此位置標記屬性值的開始。|  
+|`ofsNamespace`|字元緩衝區的第一個位移。 這個位移後面沒有屬性的命名空間，而是由一系列的 null 字元所組成。 因此，它不會使用。|  
+|`ofsName`|字元緩衝區的第二個位移。 這個位置會標示屬性名稱的開頭。|  
+|`ofsValue`|字元緩衝區的第三個位移。 這個位置會標示屬性值的開頭。|  
   
 ## <a name="sample"></a>範例  
- 下面的示例說明了幾個基本步驟，這些步驟最終導致填充`IDENTITY_ATTRIBUTE_BLOB`結構：  
+
+ 下列範例說明幾個基本步驟，最後會產生已填入的 `IDENTITY_ATTRIBUTE_BLOB` 結構：  
   
-1. 獲取程式集的[IReference 標識](ireferenceidentity-interface.md)。  
+1. 取得元件的 [IReferenceIdentity](ireferenceidentity-interface.md) 。  
   
-2. 調用`IReferenceIdentity::EnumAttributes`方法，並獲取[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
+2. 呼叫 `IReferenceIdentity::EnumAttributes` 方法，並取得 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
   
-3. 創建字元緩衝區，並將其轉換為`IDENTITY_ATTRIBUTE_BLOB`結構。  
+3. 建立字元緩衝區，並將其轉換成 `IDENTITY_ATTRIBUTE_BLOB` 結構。  
   
-4. 調用`IEnumIDENTITY_ATTRIBUTE`介面`CurrentIntoBuffer`的方法。 此方法將屬性`Namespace`、`Name`和`Value`複製到字元緩衝區中。 這些字串的三個偏移將在`IDENTITY_ATTRIBUTE_BLOB`結構中可用。  
+4. 呼叫 `CurrentIntoBuffer` 介面的方法 `IEnumIDENTITY_ATTRIBUTE` 。 這個方法會將屬性 `Namespace` 、 `Name` 和複製 `Value` 到字元緩衝區。 這些字串的三個位移將會出現在 `IDENTITY_ATTRIBUTE_BLOB` 結構中。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -220,25 +222,28 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>執行範例  
- C：>EnumAssemblyattributes.exe\\ C：_WINDOWS_微軟.NET_Framework_v2.0.50727_System.dll  
+
+ C： \\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>範例輸出  
- 文化 = 中性  
+
+ 文化特性 = 中性  
   
  名稱 = 系統  
   
- 處理器架構 = MSIL  
+ processorArchitecture = MSIL  
   
- 公開金鑰權杖 = b77a5c561934e089  
+ PublicKeyToken = b77a5c561934e089  
   
- 版本 = 2.0.0.0  
+ Version = 2.0.0。0  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 隔離.h  
+ **標頭：** 隔離。h  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

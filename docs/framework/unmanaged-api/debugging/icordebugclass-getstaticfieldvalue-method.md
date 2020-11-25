@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: d4a254853256e1a1440f5588418b94e39eabcc9a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd1608badf553650b05b7de98d9bbcd76b2f3edf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894101"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728429"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue 方法
-取得指定靜態欄位的值。  
+
+取得指定之靜態欄位的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,22 +37,25 @@ HRESULT GetStaticFieldValue (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `fieldDef`  
- 在參考要`Def`抓取之欄位的欄位 token。  
+ 在 `Def` 參考要取出之欄位的欄位標記。  
   
  `pFrame`  
- 在ICorDebugFrame 物件的指標，代表要用來區分執行緒、內容或應用程式域靜態變數的框架。  
+ 在ICorDebugFrame 物件的指標，表示用來區分執行緒、內容或應用程式域靜態的框架。  
   
- 如果靜態欄位是相對於執行緒、內容或應用程式域，則此框架會決定適當的值。  
+ 如果靜態欄位相對於執行緒、內容或應用程式域，框架將會決定適當的值。  
   
  `ppValue`  
- 脫銷ICorDebugValue 物件位址的指標，表示靜態欄位的值。  
+ 擴展ICorDebugValue 物件位址的指標，該物件表示靜態欄位的值。  
   
 ## <a name="remarks"></a>備註  
- 針對參數化型別，靜態欄位的值是相對於特定具現化。 因此，如果類別的函式接受類型<xref:System.Type>的參數，請呼叫[ICorDebugType：： GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) ，而不是。 `ICorDebugClass::GetStaticFieldValue`  
+
+ 若為參數化型別，靜態欄位的值會相對於特定具現化。 因此，如果類別的函式採用型別的參數 <xref:System.Type> ，請呼叫 [ICorDebugType：： GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) 而不是 `ICorDebugClass::GetStaticFieldValue` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

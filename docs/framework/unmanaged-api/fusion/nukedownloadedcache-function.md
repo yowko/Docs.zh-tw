@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: fac2b1c6-6fa3-4818-805b-b63972024c86
 topic_type:
 - apiref
-ms.openlocfilehash: 8f97614412eb2d49b202e86bdabc727159deb5d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ae0a887d666a150b717d495848c8a411d030a09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728572"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 函式
-刪除 common language runtime （CLR）下載快取。  
+
+刪除 common language runtime (CLR) 下載快取。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,21 +34,24 @@ HRESULT NukeDownloadedCache();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回標準 COM 錯誤碼（如 Winerror.h 中所定義）。  
+
+ 這個方法會傳回標準 COM 錯誤碼，如 Winerror.h 中所定義。  
   
 ## <a name="remarks"></a>備註  
- CLR 下載快取是用來儲存從 URL 下載之強式名稱元件的區域，以供重複使用。  
+
+ CLR 下載快取是為了可能重複使用而儲存從 URL 下載之強式名稱元件的區域。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** 融合。h  
   
- 連結**庫：** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
+ 連結 **庫：** Fusion.dll 和 Mscorwks.dll。 使用 Fusion.dll 而不是 Mscorwks.dll，以確保您以正確的 .NET Framework 版本為目標。  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CreateHistoryReader 函式](createhistoryreader-function.md)
 - [GetHistoryFileDirectory 函式](gethistoryfiledirectory-function.md)

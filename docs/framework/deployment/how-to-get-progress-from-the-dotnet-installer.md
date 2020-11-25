@@ -1,6 +1,6 @@
 ---
-title: 如何：取得 .NET Framework 4.5 安裝程式的進度
-description: 瞭解如何從 .NET 4.5 安裝程式取得進度。 如果您為此 .NET 版本開發應用程式，您可以在應用程式的安裝程式中包含（連鎖） .NET 4.5 安裝程式。
+title: 作法：取得 .NET Framework 4.5 安裝程式的進度
+description: 瞭解如何從 .NET Framework 4.5 安裝程式取得進度。 如果您為此 .NET 版本開發應用程式，您可以在應用程式的安裝程式中包含 (鏈) .NET Framework 4.5 安裝程式。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 7e21a376c5a7551ecadeaa70c0a70968dc5752fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904256"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729118"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：取得 .NET Framework 4.5 安裝程式的進度
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>作法：取得 .NET Framework 4.5 安裝程式的進度
 
 .NET Framework 4.5 是可轉散發的執行階段。 如果您要開發這個 .NET Framework 版本的應用程式，可以在應用程式安裝程式中納入 (鏈結) .NET Framework 4.5 安裝程式作為必要條件。 若要呈現自訂或整合的安裝體驗，您可能要以無訊息模式啟動 .NET Framework 4.5 安裝程式並追蹤其進度，同時顯示應用程式的安裝進度。 若要啟用無訊息追蹤，.NET Framework 4.5 安裝程式 (您可加以監看) 會使用記憶體對應 I/O (MMIO) 區段定義通訊協定，以便與您的安裝程式 (監控程式或 Chainer) 進行通訊。 此通訊協定會定義一種方式讓 Chainer 獲得進度資訊、取得詳細結果、回應訊息，以及取消 .NET Framework 4.5 安裝程式。
 
@@ -25,7 +25,7 @@ ms.locfileid: "84904256"
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
-        其中，*區段名稱*是您想要用來識別應用程式的任何名稱。 .NET Framework 安裝程式會以非同步方式讀寫 MMIO 區段，所以您可能會覺得在這段期間使用事件和訊息很方便。 在範例中，.NET Framework 安裝程序是由配置 MMIO 區段 (`TheSectionName`) 及定義事件 (`TheEventName`) 的建構函式所建立：
+        其中 *區段名稱* 是您想要用來識別應用程式的任何名稱。 .NET Framework 安裝程式會以非同步方式讀寫 MMIO 區段，所以您可能會覺得在這段期間使用事件和訊息很方便。 在範例中，.NET Framework 安裝程序是由配置 MMIO 區段 (`TheSectionName`) 及定義事件 (`TheEventName`) 的建構函式所建立：
 
         ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
@@ -33,9 +33,9 @@ ms.locfileid: "84904256"
 
         請用對您安裝程式而言的唯一名稱來取代這些名稱。
 
-    2. 讀取 MMIO 區段。 在 .NET Framework 4.5 中，下載和安裝作業會同時進行：在下載另一個元件時，可能會安裝 .NET Framework 的其中一個部分。 因此，傳回 (也就是寫入) 至 MMIO 區段的進度是從 0 遞增到 255 的兩個數字 (`m_downloadSoFar` 和 `m_installSoFar`)。 當 255 寫入而 .NET Framework 結束時，安裝即已完成。
+    2. 讀取 MMIO 區段。 在 .NET Framework 4.5 中，下載和安裝作業會同時執行：當另一個元件正在下載時，可能會安裝 .NET Framework 的一個部分。 因此，傳回 (也就是寫入) 至 MMIO 區段的進度是從 0 遞增到 255 的兩個數字 (`m_downloadSoFar` 和 `m_installSoFar`)。 當 255 寫入而 .NET Framework 結束時，安裝即已完成。
 
-- 結束**代碼**。 呼叫 .NET Framework 4.5 可轉散發程式命令中的下列結束代碼會指出安裝成功或失敗：
+- 結束 **代碼**。 呼叫 .NET Framework 4.5 可轉散發程式命令中的下列結束代碼會指出安裝成功或失敗：
 
   - 0 - 安裝順利完成。
 

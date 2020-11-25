@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3adcfa98f4004f283b24bcd31dc243c18c2644c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826654"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729365"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+
 此範例說明如何使用執行緒區域變數，儲存及擷取 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈所建立之每項工作的狀態。 使用執行緒區域資料，可讓您避免因同步處理大量的共用狀態存取而產生額外負荷。 您可以計算並儲存值，直到工作的所有反覆運算完成為止，而無須在每次反覆運算時寫入至共用資源。 接著，您可以將最終結果寫入至共用資源，或將其傳遞至其他方法。  
   
 ## <a name="example"></a>範例  
+
  下列範例呼叫 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 方法，以計算含有一百萬個項目之陣列中的值總和。 每個項目的值等於其索引。  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]
@@ -42,7 +44,7 @@ Function() new MyClass()
   
  如需如何使用 Lambda 運算式的詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料平行處理](data-parallelism-task-parallel-library.md)
 - [平行程式設計](index.md)

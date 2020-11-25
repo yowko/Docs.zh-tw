@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795855"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729105"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 列舉
+
 表示可以攔截這類型的程式碼 (也就是逐步執行)。  
   
 ## <a name="syntax"></a>語法  
@@ -40,7 +41,7 @@ typedef enum CorDebugIntercept {
   
 ## <a name="members"></a>成員  
   
-|member|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`INTERCEPT_NONE`|無法攔截任何程式碼。|  
 |`INTERCEPT_CLASS_INIT`|可以攔截建構函式。|  
@@ -51,10 +52,12 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_ALL`|可以攔截所有的程式碼。|  
   
 ## <a name="remarks"></a>備註  
- 請使用[ICorDebugStepper：： SetInterceptMask](icordebugstepper-setinterceptmask-method.md)方法來建立可攔截的程式碼類型。  
+
+ 您可以使用 [ICorDebugStepper：： SetInterceptMask](icordebugstepper-setinterceptmask-method.md) 方法來建立可攔截的程式碼類型。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -62,6 +65,6 @@ typedef enum CorDebugIntercept {
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)

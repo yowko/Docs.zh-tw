@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826335"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728442"
 ---
 # <a name="managed-threading"></a>受控執行緒
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826335"
 > 從 .NET Framework 4 開始，多執行緒程式設計已透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和類別大幅簡化 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 、 [平行 LINQ (PLINQ) ](../parallel-programming/introduction-to-plinq.md)、命名空間中的並行集合類別 <xref:System.Collections.Concurrent?displayProperty=nameWithType> ，以及以工作（而非執行緒）概念為基礎的程式設計模型。 如需詳細資訊，請參閱 [平行程式設計](../parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [Managed 執行緒處理的基本概念](managed-threading-basics.md)  
  提供 Managed 執行緒處理的概觀，並討論何時使用多個執行緒。  
   
@@ -34,6 +35,7 @@ ms.locfileid: "94826335"
  描述可用來同步執行緒活動的 Managed 類別，以及在不同執行緒上存取的物件資料，並提供執行緒集區執行緒的概觀。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.Threading>  
  包含使用和同步 Managed 執行緒的類別。  
   
@@ -44,6 +46,7 @@ ms.locfileid: "94826335"
  包含建立和排程並行處理工作的類別。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [應用程式定義域](../../framework/app-domains/application-domains.md)  
  提供應用程式定義域的概觀及通用語言基礎結構如何使用它們。  
   

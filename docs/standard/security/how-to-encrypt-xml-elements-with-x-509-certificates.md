@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a336997a8cb81f1838d9c5b1ec82bbb04326ed0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820185"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729326"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>作法：使用 X.509 憑證加密 XML 元素
 
@@ -36,7 +36,7 @@ ms.locfileid: "94820185"
 
 若要執行此範例，您必須建立測試憑證，並將它儲存在憑證存放區中。 這項工作的指示僅提供給 Windows [憑證建立工具 ( # A0) ](/windows/desktop/SecCrypto/makecert)。
 
-1. 使用 [Makecert.exe](/windows/desktop/SecCrypto/makecert) 產生測試 x.509 憑證，並將它放在本機使用者存放區中。 您必須產生交換金鑰，且必須使金鑰可以匯出。 執行下列命令：  
+1. 使用 [Makecert.exe](/windows/desktop/SecCrypto/makecert) 產生測試 x.509 憑證，並將它放在本機使用者存放區中。 您必須產生交換金鑰，且必須使金鑰可以匯出。 執行以下命令：  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
@@ -93,6 +93,7 @@ ms.locfileid: "94820185"
      [!code-vb[HowToEncryptXMLElementX509#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#11)]  
   
 ## <a name="example"></a>範例  
+
  這個範例假設名為 `"test.xml"` 的檔案已存在於和編譯程式相同的目錄中。  它同時也假設 `"test.xml"` 包含 `"creditcard"` 元素。  您可以將下列 XML 放入稱為 `test.xml` 的檔案，並使用它搭配此範例。  
   
 ```xml  
@@ -119,7 +120,7 @@ ms.locfileid: "94820185"
   
 此範例中使用的 X.509 憑證僅供測試使用。  應用程式應該使用由受信任的憑證授權單位單位所產生的 x.509 憑證。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

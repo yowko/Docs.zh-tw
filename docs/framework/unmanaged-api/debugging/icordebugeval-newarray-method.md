@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: 496a6a7e01dec8aa90ba4e849c431ccd499ef53d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: ef6cbe2cef3c52d9a4b47ff77e8aeb5159e89c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729755"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray 方法
-配置指定之元素類型和維度的新陣列。  
+
+配置指定元素類型和維度的新陣列。  
   
- 這個方法在 .NET Framework 版本2.0 中已過時。 請改用[ICorDebugEval2：： NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) 。  
+ 此方法在 .NET Framework 版本2.0 中已淘汰。 請改用 [ICorDebugEval2：： NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,26 +41,29 @@ HRESULT NewArray (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `elementType`  
- 在CorElementType 列舉的值，指定陣列的元素類型。  
+ 在CorElementType 列舉的值，這個值會指定陣列的元素類型。  
   
  `pElementClass`  
- 在ICorDebugClass 物件的指標，指定元素的類別。 如果元素類型是基本類型，這個值可能是 null。  
+ 在ICorDebugClass 物件的指標，該物件會指定元素的類別。 如果元素類型是基本類型，則這個值可能是 null。  
   
  `rank`  
  在陣列的維度數目。 在 .NET Framework 2.0 中，此值必須是1。  
   
  `dims`  
- 在陣列的每個維度大小（以位元組為單位）。  
+ 在陣列每個維度的大小（以位元組為單位）。  
   
  `lowBounds`  
- [in] 選用。 陣列的每個維度下限。 如果省略此值，則會假設每個維度的下限為零。  
+ [in] 選用。 陣列的每個維度下限。 如果省略此值，則會針對每個維度採用零下限。  
   
 ## <a name="remarks"></a>備註  
+
  陣列一律會建立線上程目前執行所在的應用程式域中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

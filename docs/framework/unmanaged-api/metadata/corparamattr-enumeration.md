@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-ms.openlocfilehash: e8afcb972cab9757458c7032c3678d45c6418fac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6f5d022a96fa021cb28dbbb67d0b53e08f77498c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007568"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729277"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 列舉
+
 包含值，這些值描述方法參數的中繼資料。  
   
 ## <a name="syntax"></a>語法  
@@ -44,18 +45,19 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`pdIn`|指定參數會傳遞至方法呼叫中。|  
+|`pdIn`|指定將參數傳遞至方法呼叫中。|  
 |`pdOut`|指定從方法傳回傳遞參數。|  
 |`pdOptional`|指定參數為選擇項。|  
-|`pdReservedMask`|保留供 common language runtime 內部使用。|  
+|`pdReservedMask`|保留給 common language runtime 內部使用。|  
 |`pdHasDefault`|指定此參數具有預設值。|  
 |`pdHasFieldMarshal`|指定參數具有封送處理資訊。|  
 |`pdUnused`|未使用的。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   

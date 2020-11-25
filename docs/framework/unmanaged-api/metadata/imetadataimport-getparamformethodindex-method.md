@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ec3bfa95-1920-4511-932e-3ff23d76fcb8
 topic_type:
 - apiref
-ms.openlocfilehash: 21a83e404405ca9cfe301b76cb1e1591d69e747c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d4d3ba5713398876b55c072f0cda7eb5d599c4d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491117"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729276"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex 方法
-取得權杖，表示指定的 MethodDef token 所表示之方法的指定參數。  
+
+取得 token，表示指定之 MethodDef token 所代表之方法的指定參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +37,23 @@ HRESULT GetParamForMethodIndex (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `md`  
- 在Token，表示要為其傳回參數 token 的方法。  
+ 在表示傳回參數標記之方法的 token。  
   
  `ulParamSeq`  
- 在參數清單中要求的參數發生所在的序數位置。 參數是從1開始編號，且方法的傳回值位於位置零。  
+ 在參數清單中的序數位置，其中出現要求的參數。 參數的編號是從1開始，而方法的傳回值是在位置零。  
   
  `ppd`  
- 脫銷ParamDef token 的指標，表示要求的參數。  
+ 擴展ParamDef token 的指標，代表所要求的參數。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

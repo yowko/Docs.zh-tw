@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: de53cc8ef728ddc40bc8e1138a1d649e5c3e600b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 67ace547fc539ab0a2d7affb339f908eb9670a29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820302"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729352"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>作法：使用對稱金鑰解密 XML 元素
 
@@ -53,6 +53,7 @@ ms.locfileid: "94820302"
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
 ## <a name="example"></a>範例  
+
  這個範例假設名為 `"test.xml"` 的檔案已存在於和編譯程式相同的目錄中。  它同時也假設 `"test.xml"` 包含 `"creditcard"` 元素。  您可以將下列 XML 放入稱為 `test.xml` 的檔案，並使用它搭配此範例。  
   
 ```xml  
@@ -81,7 +82,7 @@ ms.locfileid: "94820302"
   
 當您完成使用對稱密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [密碼編譯模型](cryptography-model.md)
 - [密碼編譯服務](cryptographic-services.md)

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-ms.openlocfilehash: 7a089831c39c36b0f8a0c7746e95a96e4ddfc5d9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 40cb59a2ad0539764702369b13d632eddbab8174
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209392"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728156"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass 方法
-取得 ICorDebugClass 物件，代表此函式為其成員的類別。  
+
+取得 ICorDebugClass 物件，這個物件表示此函式所屬的類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetClass (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppClass`  
- 脫銷表示類別之物件位址的指標 `ICorDebugClass` ，如果此函式不是類別的成員，則為 null。  
+ 擴展代表類別之物件位址的指標 `ICorDebugClass` ，如果此函式不是類別的成員，則為 null。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

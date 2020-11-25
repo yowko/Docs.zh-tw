@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-ms.openlocfilehash: 58ab9ee9381fce4d7af1910df6c8d3bb813bcf13
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b4e7209c357f21a3f0de5770b483b673d5a5570b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490887"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729209"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA 方法
-取得指定標記所代表之方法或欄位的相對虛擬位址（RVA）和執行旗標。  
+
+取得 (RVA) 的相對虛擬位址，以及指定標記所代表之方法或欄位的實旗標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +37,23 @@ HRESULT GetRVA (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `tk`  
- 在MethodDef 或 FieldDef 元資料標記，代表要為其傳回 RVA 的程式碼物件。 如果權杖是 FieldDef，此欄位必須是全域變數。  
+ 在MethodDef 或 FieldDef 元資料標記，代表要傳回 RVA 的程式碼物件。 如果 token 是 FieldDef，則欄位必須是全域變數。  
   
  `pulCodeRVA`  
- 脫銷標記所表示之程式碼物件的相對虛擬位址的指標。  
+ 擴展標記所代表之程式碼物件的相對虛擬位址的指標。  
   
  `pdwImplFlags`  
- 脫銷方法之執行旗標的指標。 這個值是[CorMethodImpl](cormethodimpl-enumeration.md)列舉中的位元遮罩。 `pdwImplFlags`只有當是 MethodDef token 時，的值才有效 `tk` 。  
+ 擴展方法之實旗標的指標。 這個值是 [CorMethodImpl](cormethodimpl-enumeration.md) 列舉的位元遮罩。 `pdwImplFlags`只有當是 MethodDef 標記時，的值才有效 `tk` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

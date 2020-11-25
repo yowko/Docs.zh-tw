@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c85bba9a5d913820b69cbc214275b733a53197ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729443"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach 方法
+
 由 Common Language Runtime (CLR) 呼叫，讓分析工具在附加作業之後有機會初始化其狀態。  
   
 ## <a name="syntax"></a>語法  
@@ -35,20 +36,23 @@ HRESULT InitializeForAttach(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pCorProfilerInfoUnk`  
  [in] `ICorProfilerInfo*` 介面的介面指標。  
   
  `pvClientData`  
- 在傳遞給[IClrProfiling：： AttachProfiler](iclrprofiling-attachprofiler-method.md)方法在其參數中的資料指標 `pvClientData` 。 如果這個參數為 null，則 `cbClientData` 將會是 0 (零)。 從 `InitializeForAttach` 傳回時，CLR 會釋放這個記憶體。  
+ 在在其參數中傳遞至 [IClrProfiling：： AttachProfiler](iclrprofiling-attachprofiler-method.md) 方法的資料指標 `pvClientData` 。 如果這個參數為 null，則 `cbClientData` 將會是 0 (零)。 從 `InitializeForAttach` 傳回時，CLR 會釋放這個記憶體。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的資料大小 (以位元組為單位)。  
   
 ## <a name="remarks"></a>備註  
+
  CLR 會呼叫 `InitializeForAttach`，讓分析工具有機會要求回呼。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0a4b47ee-02f6-4a98-864e-a6f11ca3f2d9
 topic_type:
 - apiref
-ms.openlocfilehash: 6b9eca3f2f0267870866874ea27dc65812795f41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0feb180befd575dce20a83ddc89ebf13f87f3810
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728546"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly 函式
+
 從指定的組件檔案建立強式名稱權杖。  
   
- 這個函數已被取代。 請改用[ICLRStrongName：： StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)方法。  
+ 此函數已被取代。 請改用 [ICLRStrongName：： StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,35 +38,39 @@ BOOLEAN StrongNameTokenFromAssembly (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `wszFilePath`  
- 在元件的可移植執行檔（PE）路徑。  
+ 在元件的可攜式可執行檔 (PE) 檔的路徑。  
   
  `ppbStrongNameToken`  
- 脫銷傳回的強式名稱 token。  
+ 擴展傳回的強式名稱 token。  
   
  `pcbStrongNameToken`  
- 脫銷強式名稱 token 的大小（以位元組為單位）。  
+ 擴展強式名稱權杖的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 成功完成時 `true`;否則，`false`。  
+
+ `true` 成功完成時;否則為 `false` 。  
   
 ## <a name="remarks"></a>備註  
- 強式名稱 token 是公用金鑰的縮寫格式。 Token 是從用來簽署元件的公開金鑰所建立的64位雜湊。 Token 是元件強式名稱的一部分，而且可以從元件中繼資料讀取。  
+
+ 強式名稱權杖是公開金鑰的縮寫形式。 權杖是從用來簽署元件的公開金鑰建立的64位雜湊。 權杖是元件強式名稱的一部分，而且可以從元件中繼資料讀取。  
   
- 建立權杖之後，您應該呼叫[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函式以釋放已配置的記憶體。  
+ 建立權杖之後，您應該呼叫 [StrongNameFreeBuffer](strongnamefreebuffer-function.md) 函式來釋放已配置的記憶體。  
   
- 如果 `StrongNameTokenFromAssembly` 函式未順利完成，請呼叫[StrongNameErrorInfo](strongnameerrorinfo-function.md)函式，以取出最後產生的錯誤。  
+ 如果函式 `StrongNameTokenFromAssembly` 未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式來取出最後產生的錯誤。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Stackexchange.redis.strongname。h  
   
- 連結**庫：** 包含為 mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 mscoree.dll 中  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [StrongNameTokenFromAssembly 方法](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
 - [StrongNameTokenFromAssemblyEx 方法](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)

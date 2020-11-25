@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9e907450b4ae985ee30d9958eec8baba797b495a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728598"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 方法
-取得本機變數。  
+
+取得區域變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +38,26 @@ HRESULT GetLocalVariables(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `mdMethodToken`  
  在方法的元資料標記。  
   
  `cLocals`  
- 在`ULONG`，表示參數的大小 `rgLocals` 。  
+ 在 `ULONG` ，指出參數的大小 `rgLocals` 。  
   
  `rgLocals`  
- 脫銷[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)實例的傳回陣列。  
+ 擴展傳回的 [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) 實例陣列。  
   
  `pceltFetched`  
- 脫銷的指標 `ULONG` ，接收 `rgLocals` 包含區域變數所需的緩衝區大小。  
+ 擴展的指標 `ULONG` ，會接收 `rgLocals` 包含區域變數所需的緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

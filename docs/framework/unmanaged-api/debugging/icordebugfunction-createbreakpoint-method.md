@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ffd0f708-0d21-4fae-a395-63b6c45828fa
 topic_type:
 - apiref
-ms.openlocfilehash: 5d7e83c6aa494f2363698d0220bbfe724b54e612
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2d1846acae51f416471404389dd1dbcfb2383760
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209431"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728169"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>ICorDebugFunction::CreateBreakpoint 方法
-在此函式的開頭建立中斷點。  
+
+在此函數的開頭建立中斷點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppBreakpoint`  
- 脫銷ICorDebugFunctionBreakpoint 物件位址的指標，表示函數的新中斷點。  
+ 擴展ICorDebugFunctionBreakpoint 物件位址的指標，該物件表示函式的新中斷點。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-ms.openlocfilehash: 273922e00c3e5319d5a03652cc77b69f4479ea67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d98481d7934b4c96178aaa32fb0f9378eb359fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503519"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729161"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps 方法
-取得與指定的 TypeRef 標記所參考之相關聯的中繼資料 <xref:System.Type> 。  
+
+取得與指定的 TypeRef 標記所參考的中繼資料相關聯的中繼資料 <xref:System.Type> 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +39,29 @@ HRESULT GetTypeRefProps (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `tr`  
- 在表示要傳回中繼資料之類型的 TypeRef token。  
+ 在表示傳回中繼資料之類型的 TypeRef 標記。  
   
  `ptkResolutionScope`  
- 脫銷做為參考之範圍的指標。 這個值是 AssemblyRef 或 ModuleRef token。  
+ 擴展進行參考之範圍的指標。 此值為 AssemblyRef 或 ModuleRef token。  
   
  `szName`  
- 脫銷包含型別名稱的緩衝區。  
+ 擴展包含型別名稱的緩衝區。  
   
  `cchName`  
- 在所要求的大小（以寬字元為單位） `szName` 。  
+ 在要求的大小（以寬字元為單位） `szName` 。  
   
  `pchName`  
- 脫銷傳回的大小（以寬字元為單位） `szName` 。  
+ 擴展傳回的大小（以寬字元為單位） `szName` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

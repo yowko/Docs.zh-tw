@@ -8,20 +8,22 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-ms.openlocfilehash: 37f42ad4de2d468cd14a916ab4e35e6577f8e375
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e5ec32d486dd5eafc8c456c5a4b0b3297f043499
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819769"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728520"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>作法：接聽多個取消要求
+
 此範例顯示如何同時接聽兩個取消權杖，讓您可以在其中一個權杖要求作業時將作業取消。  
   
 > [!NOTE]
 > 啟用 [Just My Code] 時，Visual Studio 在某些情況下會在擲回例外狀況的字行上中斷，並顯示錯誤訊息，指出「使用者程式碼未處理例外狀況」。 這個錯誤是良性的。 您可以按 F5 鍵繼續，並查看下面範例中示範的例外狀況處理行為。 若要防止 Visual Studio 在遇到第一個錯誤時就中斷，只要取消核取 [工具]、[選項]、[偵錯]、[一般] 下的 [Just My Code] 核取方塊即可。  
   
 ## <a name="example"></a>範例  
+
  在下列範例中，<xref:System.Threading.CancellationTokenSource.CreateLinkedTokenSource%2A> 方法是用來將兩個權杖聯結為一個權杖。 這可將權杖傳遞給僅採取一個取消權杖作為引數的方法。 此範例示範一個常見的案例，其中方法必須同時觀察從類別外部傳入的權杖，以及類別內部產生的權杖。  
   
  [!code-csharp[Cancellation#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#13)]
@@ -31,6 +33,6 @@ ms.locfileid: "94819769"
   
  在此範例中，應該永遠不會擲回 <xref:System.AggregateException>，但是卻在這裡攔截到它，是因為在真實案例中，<xref:System.OperationCanceledException> 以外從工作委派擲回的任何其他例外狀況，都會包裝在 <xref:System.AggregateException> 中。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Managed 執行緒中的取消](cancellation-in-managed-threads.md)

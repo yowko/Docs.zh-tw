@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-ms.openlocfilehash: 09c6431ec885c8b797dc9bb5f5c3ffe21890ccc7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3872a2b03d3b22d695af1c104e9ae8ba8856990
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107945"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729001"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 介面
-作為 `IDefinitionIdentity` 物件集合的列舉值。  
+
+作為物件集合的列舉值 `IDefinitionIdentity` 。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 IEnumDefinitionIdentity : IUnknown {  
@@ -53,19 +54,20 @@ IEnumDefinitionIdentity : IUnknown {
   
 |方法|描述|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|取得新 `IEnumDefinitionIdentity` 物件的介面指標，其中包含與此 `IEnumDefinitionIdentity`相同的成員。|  
-|`IEnumDefinitionIdentity::Next`|從目前位置開始，取得指定的 `IDefinitionIdentity` 物件數目。|  
-|`IEnumDefinitionIdentity::Reset`|將指令指標移至這個 `IEnumDefinitionIdentity`的開頭。|  
-|`IEnumDefinitionIdentity::Skip`|從目前位置開始，將指令指標向下移動指定的專案數。|  
+|`IEnumDefinitionIdentity::Clone`|取得新物件的介面指標 `IEnumDefinitionIdentity` ，該物件包含與這個相同的成員 `IEnumDefinitionIdentity` 。|  
+|`IEnumDefinitionIdentity::Next`|`IDefinitionIdentity`從目前位置開始取得指定數目的物件。|  
+|`IEnumDefinitionIdentity::Reset`|將指令指標移至這個的開頭 `IEnumDefinitionIdentity` 。|  
+|`IEnumDefinitionIdentity::Skip`|從目前位置開始，將指令指標向下移動指定數目的元素。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** 隔離。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [融合介面](fusion-interfaces.md)
 - [IDefinitionIdentity 介面](idefinitionidentity-interface.md)

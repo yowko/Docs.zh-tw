@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-ms.openlocfilehash: 39343ffc88fc9b421b916e33e3e75e4e34fc233d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 24ee37a36e34c74258e1c750ba424640c0496f0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728247"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties 方法
+
 列舉 PropertyDef 語彙基元，其代表指定的 TypeDef 語彙基元所參考的類型屬性。  
   
 ## <a name="syntax"></a>語法  
@@ -38,34 +39,36 @@ HRESULT EnumProperties (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `phEnum`  
- [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
+ [in，out]列舉值的指標。 此方法的第一個呼叫必須是 Null。  
   
  `td`  
- 在TypeDef token，代表具有要列舉之屬性的類型。  
+ 在表示具有要列舉屬性之類型的 TypeDef 標記。  
   
  `rProperties`  
- 脫銷用來儲存 PropertyDef 標記的陣列。  
+ 擴展用來儲存 PropertyDef 標記的陣列。  
   
  `cMax`  
  [in] `rProperties` 陣列的大小上限。  
   
  `pcProperties`  
- 脫銷在中傳回的 PropertyDef token 數目 `rProperties` 。  
+ 擴展傳回的 PropertyDef 權杖數目 `rProperties` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties`已成功傳回。|  
+|`S_OK`|`EnumProperties` 傳回成功。|  
 |`S_FALSE`|沒有要列舉的權杖。 在此情況下， `pcProperties` 是零。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

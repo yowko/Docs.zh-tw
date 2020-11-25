@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 41e13e20a1cf5a7000907b1cc7d8d2af5174ceba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728965"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 方法
-設定指定之作業的超時值，並指定當作業發生時，common language runtime （CLR）應採取的原則動作。  
+
+設定指定之作業的超時值，並指定 common language runtime (CLR) 在作業發生時應採取的原則動作。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,8 +37,9 @@ HRESULT SetTimeoutAndAction (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `operation`  
- 在其中一個[EClrOperation](eclroperation-enumeration.md)值，表示要設定其超時和原則的作業 `action` 。 支援下列值：  
+ 在其中一個 [EClrOperation](eclroperation-enumeration.md) 值，表示要設定其 timeout 和原則的作業 `action` 。 支援下列值：  
   
 - OPR_AppDomainUnload  
   
@@ -48,35 +50,37 @@ HRESULT SetTimeoutAndAction (
 - OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
- 在新的超時值（以毫秒為單位）。 無限值會導致 `operation` 永遠不會超時。  
+ 在新的超時值（以毫秒為單位）。 無限期的值會導致 `operation` 永遠沒有時間。  
   
  `action`  
- 在其中一個[EPolicyAction](epolicyaction-enumeration.md)值，表示 CLR 在發生時應採取的原則動作 `operation` 。  
+ 在其中一個 [EPolicyAction](epolicyaction-enumeration.md) 值，表示 CLR 在發生時應採取的原則動作 `operation` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction`已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫超時。|  
+|S_OK|`SetTimeoutAndAction` 傳回成功。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫已超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_INVALIDARG|無法為指定的設定超時 `operation` ，或為提供了不正確值 `action` 。|  
+|HOST_E_ABANDONED|當封鎖的執行緒或光纖正在等候時，已取消事件。|  
+|E_FAIL|發生未知的嚴重失敗。 在方法傳回 E_FAIL 之後，就無法在進程中使用 CLR。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_INVALIDARG|無法針對指定的設定 timeout `operation` ，或為提供的值無效 `action` 。|  
   
 ## <a name="remarks"></a>備註  
- `SetTimeoutAndAction`封裝[ICLRPolicyManager：： SetTimeout](iclrpolicymanager-settimeout-method.md)和[ICLRPolicyManager：： SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md)方法的功能，而且可以呼叫這兩個方法的連續呼叫來取代。  
+
+ `SetTimeoutAndAction` 封裝 [ICLRPolicyManager：： SetTimeout](iclrpolicymanager-settimeout-method.md) 和 [ICLRPolicyManager：： SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) 方法的功能，並可呼叫這兩個方法來取代順序呼叫。  
   
 > [!IMPORTANT]
-> 並非所有的原則動作值都可以指定為 CLR 作業的超時行為。 如需有效值的這兩個方法，請參閱主題的「備註」小節。  
+> 並非所有的原則動作值都可以指定為 CLR 作業的超時行為。 請參閱這兩個方法中有效值的備註章節。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

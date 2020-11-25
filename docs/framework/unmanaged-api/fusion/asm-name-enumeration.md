@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a34cdf92df345041cb94e9069bcc4d489e3cf5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178304"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728624"
 ---
 # <a name="asm_name-enumeration"></a>ASM_NAME 列舉
-指示程式集的版本、生成、區域性、簽名等，其屬性將由[IAssemblyName](iassemblyname-interface.md)方法檢索或設置。  
+
+表示元件的版本、組建、文化特性、簽章等，其屬性將由 [IAssemblyName](iassemblyname-interface.md) 方法抓取或設定。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -63,13 +64,14 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 融合.h  
+ **標頭：** 融合。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
