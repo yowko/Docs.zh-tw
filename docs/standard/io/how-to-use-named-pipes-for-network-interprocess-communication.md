@@ -15,12 +15,12 @@ helpviewer_keywords:
 - impersonation [.NET], named pipes
 - full duplex communication [.NET], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: aad9ede3fb257899eec7bff95b6d77eaec5b97ca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 421fe06ce24fe8d78c7f8306db6a32ae83da694a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829735"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734539"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>作法：使用具名管道進行網路處理序間通訊
 
@@ -29,6 +29,7 @@ ms.locfileid: "94829735"
  若要實作具名管道，請使用 <xref:System.IO.Pipes.NamedPipeServerStream> 和 <xref:System.IO.Pipes.NamedPipeClientStream> 類別。  
   
 ## <a name="example"></a>範例  
+
  下列範例示範如何使用 <xref:System.IO.Pipes.NamedPipeServerStream> 類別建立具名管道。 在此範例中，伺服器處理序會建立四個執行緒。 每個執行緒都可以接受用戶端連線。 接著，連線的用戶端處理序會提供具有檔案名稱的伺服器。 如果用戶端有足夠的權限，伺服器處理序就會開啟檔案，並將其內容傳回用戶端。  
   
  [!code-cpp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cpp/program.cpp#01)]
@@ -36,15 +37,17 @@ ms.locfileid: "94829735"
  [!code-vb[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/vb/program.vb#01)]  
   
 ## <a name="example"></a>範例  
+
  下列範例示範使用 <xref:System.IO.Pipes.NamedPipeClientStream> 類別的用戶端處理序。 用戶端會連線至伺服器處理序，並將檔案名稱傳送至伺服器。 此範例會使用模擬，因此，執行用戶端應用程式的身分識別必須擁有存取該檔案的權限。 接著，伺服器會將檔案的內容傳回用戶端。 檔案內容隨即顯示到主控台。  
   
  [!code-csharp[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/vb/program.vb#01)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  此範例中的用戶端和伺服器處理序要在相同的電腦上執行，因此，提供給 <xref:System.IO.Pipes.NamedPipeClientStream> 物件的伺服器名稱為 `"."`。 如果用戶端和伺服器處理序在不同的電腦上，`"."` 將會取代成執行伺服器處理序之電腦的網路名稱。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>

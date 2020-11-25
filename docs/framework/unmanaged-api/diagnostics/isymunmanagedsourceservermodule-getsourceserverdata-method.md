@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: 9a3a6c07a9cace0ac9834cdb05925a301285204c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c76c8b23e707b530cbf1c28d03fbf2f84d424482
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615315"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734006"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData 方法
-傳回模組的來源伺服器資料。 呼叫端必須使用來釋放資源 `CoTaskMemFree` 。  
+
+傳回模組的來源伺服器資料。 呼叫端必須使用釋放資源 `CoTaskMemFree` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +35,20 @@ HRESULT GetSourceServerData(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pDataByteCount`  
- 脫銷的指標， `ULONG32` 接收來源伺服器資料的大小（以位元組為單位）。  
+ 擴展的指標， `ULONG32` 會接收來源伺服器資料的大小（以位元組為單位）。  
   
  `ppData`  
- 脫銷傳回值的指標 `pDataByteCount` 。  
+ 擴展傳回值的指標 `pDataByteCount` 。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

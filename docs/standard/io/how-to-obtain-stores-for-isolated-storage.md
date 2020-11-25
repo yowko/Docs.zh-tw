@@ -12,14 +12,15 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-ms.openlocfilehash: a3803f50c99b8c31030c6afe756e209c9350137f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ac53432374b546a46417e9d3b9de342a7ea2ef81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830736"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734617"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>作法：取得隔離儲存區的存放區
+
 隔離存放區會公開資料區間內的虛擬檔案系統。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別提供多種與隔離存放區互動的方法。 若要建立和擷取存放區，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供三種靜態方法：  
   
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> 會傳回使用者和組件所隔離的儲存區。  
@@ -45,6 +46,7 @@ ms.locfileid: "94830736"
  沒有任何機制可防止程式碼將 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 物件傳遞至沒有足夠存取權可取得存放區本身的程式碼。 只有在取得 <xref:System.IO.IsolatedStorage.IsolatedStorage> 物件的參考 (通常是在 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 或 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 方法中) 時，才會檢查網域和組件的身分識別和隔離儲存區權限。 因此，保護 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 物件的參考是使用這些參考之程式碼的責任。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼可針對取得使用者和組件所隔離之存放區的類別，提供簡單的範例。 您可以變更程式碼，以便透過將 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> 新增至 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 方法所傳遞的引數，擷取使用者、網域和組件隔離的存放區。  
   
  執行程式碼之後，您可以確認已透過在命令列中輸入 **StoreAdm /LIST** 來建立存放區。 如此會執行[隔離儲存區工具 (Storeadm.exe)](../../framework/tools/storeadm-exe-isolated-storage-tool.md) ，並列出目前使用者的所有隔離存放區。  
@@ -53,7 +55,7 @@ ms.locfileid: "94830736"
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
  [!code-vb[Conceptual.IsolatedStorage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#7)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>

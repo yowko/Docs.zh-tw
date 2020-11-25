@@ -16,12 +16,12 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: ebd2ae6684e7b3390b29aeebeb2552b4616a69f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 43685a6ecb92510ad8d80c472a1c774d46cbb5f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830723"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734630"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>作法：尋找隔離儲存區中的現有檔案和目錄
 
@@ -32,13 +32,14 @@ ms.locfileid: "94830723"
  這些都不是遞迴方法。<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別不會提供任何方法來列出存放區中的所有目錄或檔案。 不過，遞迴方法會顯示在下列程式碼範例中。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例說明如何在隔離存放區中建立檔案和目錄。 首先，系統會擷取針對使用者、網域和組件所隔離的存放區，並放置在 `isoStore` 變數中。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> 方法用來設定幾個不同的目錄，而 <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> 建構函式會在這些目錄中建立一些檔案。 接著，此程式碼會在 `GetAllDirectories` 方法的結果中執行迴圈。 此方法會使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> 尋找目前目錄中的所有目錄名稱。 這些名稱會儲存在陣列中，然後 `GetAllDirectories` 會呼叫其本身，進而傳入所找到的每個目錄。 因此，陣列中會傳回所有目錄名稱。 接下來，此程式碼會呼叫 `GetAllFiles` 方法。 此方法會呼叫 `GetAllDirectories` 來找出所有目錄的名稱，然後使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> 方法檢查每個目錄中的檔案。 陣列中會傳回結果以供顯示。  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [隔離儲存區](isolated-storage.md)

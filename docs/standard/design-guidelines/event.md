@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821329"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734409"
 ---
 # <a name="event-design"></a>事件設計
+
 事件是最常用的回呼形式 (結構，可讓架構呼叫使用者程式碼) 。 其他回呼機制包括取得委派、虛擬成員和以介面為基礎之外掛程式的成員。可用性研究中的資料表示大部分的開發人員使用事件比使用其他回呼機制更熟悉。 事件與 Visual Studio 和許多語言緊密整合。
 
  請務必注意，有兩個事件群組：在系統狀態變更之前引發的事件（稱為「前置事件」）和狀態變更之後引發的事件（稱為「後續事件」）。 在 `Form.Closing` 關閉表單之前，會引發預先事件的範例。 後續事件的範例是 `Form.Closed` ，在關閉表單之後引發。
@@ -52,6 +53,7 @@ ms.locfileid: "94821329"
  使用 <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> 或其子類別做為事件引數，以允許終端使用者取消事件。
 
 ### <a name="custom-event-handler-design"></a>自訂事件處理常式設計
+
  有些情況下 `EventHandler<T>` 無法使用，例如，當架構需要使用舊版 CLR 時，不支援泛型。 在這種情況下，您可能需要設計及開發自訂事件處理常式委派。
 
  ✔️針對事件處理常式使用 void 的傳回型別。
@@ -68,7 +70,7 @@ ms.locfileid: "94821329"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [成員設計方針](member.md)
 - [架構設計指導方針](index.md)

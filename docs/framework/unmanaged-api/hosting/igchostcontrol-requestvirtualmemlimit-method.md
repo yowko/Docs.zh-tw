@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-ms.openlocfilehash: d4814e44b1a5311cf6800c804df7a7e11000cbab
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: bbcabdec45945b969230a40b85a62e24e323ccc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805141"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733928"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit 方法
+
 要求主機變更虛擬記憶體的限制。  
   
 ## <a name="syntax"></a>語法  
@@ -35,18 +36,20 @@ HRESULT RequestVirtualMemLimit (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `sztMaxVirtualMemMB`  
- 在要配置的要求記憶體大小。  
+ 在要配置的記憶體大小要求。  
   
  `psztNewMaxVirtualMemMB`  
- [in、out]配置的實際記憶體大小的指標。  
+ [in，out]所配置記憶體實際大小的指標。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

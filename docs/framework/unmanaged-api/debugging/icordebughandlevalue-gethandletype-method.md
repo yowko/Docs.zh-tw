@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d5e7b12d-835a-4e86-ae2f-d658d4f1c67c
 topic_type:
 - apiref
-ms.openlocfilehash: 6eb76ddd6ee8b2a00aac3af9ebf815338d29f194
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 72ef9a0fe4cd08ce67594600375953c249243d4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212161"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734149"
 ---
 # <a name="icordebughandlevaluegethandletype-method"></a>ICorDebugHandleValue::GetHandleType 方法
-取得值，指出這個 ICorDebugHandleValue 物件所參考的控制碼種類。  
+
+取得值，這個值表示這個 ICorDebugHandleValue 物件所參考的控制碼類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetHandleType (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pType`  
- 脫銷CorDebugHandleType 列舉值的指標，指出這個控制碼的類型。  
+ 擴展CorDebugHandleType 列舉值的指標，指出這個控制碼的型別。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

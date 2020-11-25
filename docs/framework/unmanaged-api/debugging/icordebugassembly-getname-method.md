@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-ms.openlocfilehash: daf5319f5d57f44cb20ce9f28d3c7b84c7015ff6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 3794a3b308bd5c96a38337d8b81e61167e4dc988
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894910"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734045"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName 方法
-取得這個`ICorDebugAssembly`實例所表示之元件的名稱。  
+
+取得這個實例所表示之元件的名稱 `ICorDebugAssembly` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +37,23 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cchName`  
  [in] `szName` 陣列的大小。  
   
  `pcchName`  
- 脫銷整數的指標，指定名稱的實際長度。  
+ 擴展指定名稱實際長度的整數指標。  
   
  `szName`  
- 脫銷儲存名稱的陣列。  
+ 擴展儲存名稱的陣列。  
   
 ## <a name="remarks"></a>備註  
- `GetName`方法會傳回元件的完整路徑和檔案名。  
+
+ 方法會傳回 `GetName` 元件的完整路徑和檔案名。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

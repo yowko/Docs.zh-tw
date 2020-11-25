@@ -14,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2be1c5273a5450ce0f793ffa1fc10746e2f1161f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805343"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733941"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool 介面
+
 提供存取執行緒集區的方法。  
   
 > [!NOTE]
-> 此介面僅保留供內部使用。  
+> 此介面已保留供內部使用。  
   
 ## <a name="methods"></a>方法  
   
@@ -43,12 +44,13 @@ ms.locfileid: "83805343"
 |[CorGetMaxThreads 方法](icorthreadpool-corgetmaxthreads-method.md)|已保留供內部使用。|  
 |[CorGetAvailableThreads 方法](icorthreadpool-corgetavailablethreads-method.md)|已保留供內部使用。|  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

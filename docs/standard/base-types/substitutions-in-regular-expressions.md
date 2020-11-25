@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 0f2fbe7e8b9c13d811a2fe50db0709405dfa1da7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1cab01e7a6ee48bd01f65d4cc8a8a540fbabc61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734201"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 
@@ -26,7 +26,7 @@ ms.locfileid: "94818813"
   
  .NET 會定義下表列出的替代項目。  
   
-|Substitution|說明|  
+|Substitution|描述|  
 |------------------|-----------------|  
 |$ *number*|包括在取代字串中與 *數字* 所指定之擷取群組相符的最後一個子字串，其中 *數字* 是十進位值。 如需詳細資訊，請參閱 [替代編號群組](#substituting-a-numbered-group)。|  
 |${ *name* }|包含由 `(?<` 取代字串中的 *名稱* 所指定之指定群組所比對的最後一個子字串 `> )` 。 如需詳細資訊，請參閱 [替代具名群組](#substituting-a-named-group)。|  
@@ -38,6 +38,7 @@ ms.locfileid: "94818813"
 |$\_|取代字串中包括整個輸入字串。 如需詳細資訊，請參閱 [替代整個輸入字串](#substituting-the-entire-input-string)。|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>替代項目和取代模式  
+
  替代是取代模式中唯一能夠辨認的特殊建構。 不支援其他規則運算式語言項目，包括逸出字元和符合任何字元的句號 (`.`)。 同樣的，替代語言項目只有在取代模式中才能辨識，而且在規則運算式模式中永遠無效。  
   
  唯一能夠在規則運算式模式或替代中出現的字元是 `$` 字元，不過它在這兩種內容中的意義不同。 在規則運算式模式中， `$` 是比對字串結尾的錨點。 在取代模式中， `$` 表示替代開頭。  
@@ -46,6 +47,7 @@ ms.locfileid: "94818813"
 > 如需規則運算式內類似取代模式的功能，請使用反向參考。 如需反向參考的詳細資訊，請參閱 [反向參考結構](backreference-constructs-in-regular-expressions.md)。  
 
 ## <a name="substituting-a-numbered-group"></a>替代編號群組  
+
  `$`*數位* 語言專案包括取代字串中的 *數位* 捕獲群組所比對的最後一個子字串，其中 *number* 是捕獲群組的索引。 例如，取代模式 `$1` 表示第一個擷取的群組將取代相符的子字串。 如需編號擷取群組的詳細資訊，請參閱 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)。  
   
  `$` 後面接著的所有數字都會解譯為屬於 *數字* 群組。 如果這不是您的目的，可以改為替代具名群組。 例如，您可以使用取代字串 `${1}1` 而非 `$11` ，將取代字串定義為第一個擷取之群組的值連同數字 "1"。 如需詳細資訊，請參閱 [替代具名群組](#substituting-a-named-group)。  
@@ -71,6 +73,7 @@ ms.locfileid: "94818813"
 |`(\s?\d+[.,]?\d*)`|比對空白字元後面接著一個或多個十進位數字，再接零個或一個句號或逗號，最後再接零個或多個十進位數字。 這是第一個擷取群組。 由於取代模式為 `$1`，因此呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法會將整個相符的子字串取代為這個擷取的群組。|  
 
 ## <a name="substituting-a-named-group"></a>替代具名群組  
+
  `${`*名稱* `}` 語言專案會以 *名稱* 捕捉群組取代最後一個子字串，其中 *name* 是 `(?<` *名稱* 語言專案所定義之捕獲群組的名稱 `>)` 。 如需具名擷取群組的詳細資訊，請參閱 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)。  
   
  如果 *名稱* 未指定規則運算式模式中定義的有效具名擷取群組，而包含數字，則 `${`*名稱*`}` 會解譯為編號的群組。  
@@ -94,6 +97,7 @@ ms.locfileid: "94818813"
 |`(?<amount>\s?\d[.,]?\d*)`|比對空白字元，後面接著一個或多個十進位數字，再接零個或一個句號或逗號，最後再接零個或多個十進位數字。 這是名為 `amount`的擷取群組。 由於取代模式為 `${amount}`，因此呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法會將整個相符的子字串取代為這個擷取的群組。|  
 
 ## <a name="substituting-a--character"></a>替代 "$" 字元  
+
  `$$` 替代會在取代的字串中插入常值 "$" 字元。  
   
  下列範例會使用 <xref:System.Globalization.NumberFormatInfo> 物件決定目前文化特性的貨幣符號，以及它在貨幣字串中的位置。 然後，它會動態建置規則運算式模式和取代模式。 如果這個範例是在目前文化特性為 zh-TW 的電腦上執行，則會產生規則運算式模式 `\b(\d+)(\.(\d+))?` 以及取代模式 `$$ $1$2`。 取代模式會將相符的文字取代為貨幣符號和空格，後面接著第一個和第二個擷取群組。  
@@ -112,6 +116,7 @@ ms.locfileid: "94818813"
 |`(\.(\d+))?`|比對零個或一個句號，後面接著一個或多個十進位數字。 這是第二個擷取群組。|  
 
 ## <a name="substituting-the-entire-match"></a>替代整個相符項目  
+
  `$&` 替代會在取代字串中包含整個相符項目。 通常，它會用來將子字串加入至相符字串的開頭或結尾。 例如，`($&)` 取代模式會在每個相符項目的開頭和結尾加上括號。 如果沒有相符項目， `$&` 替代就不會有任何作用。  
   
  下列範例會使用 `$&` 替代，在字串陣列中所儲存的書名開頭和結尾加上引號。  
@@ -130,6 +135,7 @@ ms.locfileid: "94818813"
  `"$&"` 取代模式會在每個相符項目的開頭和結尾加上常值引號。  
 
 ## <a name="substituting-the-text-before-the-match"></a>替代相符項目前的文字  
+
  ``$` `` 替代會將相符的字串取代為相符項目前的整個輸入字串。 也就是說，它在移除相符文字的同時，也會複製輸入字串直到相符項目前。 在結果字串中，相符文字後面接著的任何文字都會保持不變。 如果在輸入字串中有多個相符項目，取代文字就會衍生自原始輸入字串，而非其中文字已經由先前的相符項目取代的字串  \(此範例提供圖例。 \) 如果沒有相符的，則 ``$` `` 替代沒有任何作用。  
   
  下列範例會使用規則運算式模式 `\d+` ，比對輸入字串中的一或多個十進位數字序列。 取代字串 ``$` `` 會以相符文字前的文字取代這些數字。  
@@ -148,6 +154,7 @@ ms.locfileid: "94818813"
 |5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee **aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>替代相符項目後的文字  
+
  `$'` 替代會以相符項目後的整個輸入字串取代相符的字串。 也就是說，它在移除相符文字的同時，也會在相符項目後複製輸入字串。 在結果字串中，相符文字之前的任何文字都會保持不變。 如果沒有相符項目，  `$'` 替代就不會有任何作用。  
   
  下列範例會使用規則運算式模式 `\d+` ，比對輸入字串中的一或多個十進位數字序列。 取代字串 `$'` 會以相符項目後的文字取代這些數字。  
@@ -166,6 +173,7 @@ ms.locfileid: "94818813"
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>替代最後擷取的群組  
+
  `$+` 替代會以最後擷取的群組取代相符的字串。 如果沒有擷取的群組，或者最後一個擷取群組的值是 <xref:System.String.Empty?displayProperty=nameWithType>， `$+` 替代就不會有任何作用。  
   
  下列範例會識別字串中的重複文字，並使用 `$+` 替代將這些文字取代為出現的單一文字。 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項是用來確保只有大小寫不同的相同單字，都會視為重複項目。  
@@ -184,6 +192,7 @@ ms.locfileid: "94818813"
 |`\b`|結束字緣比對。|  
 
 ## <a name="substituting-the-entire-input-string"></a>替代整個輸入字串  
+
  `$_` 替代會將相符的字串取代整個輸入字串。 也就是說，它會移除相符的文字，並會以整個字串來取代，包括相符的文字。  
   
  下列範例會比對輸入字串中的一個或多個十進位數字。 它會使用 `$_` 替代，以整個輸入字串來取代它們。  
@@ -198,6 +207,6 @@ ms.locfileid: "94818813"
 |1|3|123|ABC **ABC123DEF456** DEF456|  
 |2|5|456|ABCABC123DEF456DEF **ABC123DEF456**|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

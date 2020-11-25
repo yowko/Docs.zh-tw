@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734240"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 
@@ -47,13 +47,14 @@ ms.locfileid: "94831308"
 |"G"|一般長格式|這個規範一律會輸出天數和七個小數。 它會區分文化特性，並採用 `[-]d':'hh':'mm':'ss.fffffff` 格式。<br /><br /> 詳細資訊：[一般長 ("G") 格式規範](#the-general-long-g-format-specifier)。|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>常數 ("c") 格式規範  
+
  "c" 格式規範會以下列形式傳回 <xref:System.TimeSpan> 值的字串表示：  
   
  [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 句號 (.) 和冒號 (:) 是常值的符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -73,13 +74,14 @@ ms.locfileid: "94831308"
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>一般短 ("g") 格式規範  
+
  "g" <xref:System.TimeSpan> 格式規範會以壓縮形式傳回 <xref:System.TimeSpan> 值的字串表示，而且只包括必要的項目。 它有下列形式：  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -97,13 +99,14 @@ ms.locfileid: "94831308"
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
 
 ## <a name="the-general-long-g-format-specifier"></a>一般長 ("G") 格式規範  
+
  "G" <xref:System.TimeSpan> 格式規範會以長形式傳回 <xref:System.TimeSpan> 值的字串表示，而此形式一律會同時包含日數和小數秒數。 從 "G" 標準格式規範產生的字串具有下列形式：  
   
  [-]*d*：*hh*：*mm*：*ss*。*fffffff*  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|天數，沒有前置的零。|  
@@ -120,7 +123,7 @@ ms.locfileid: "94831308"
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [格式化類型](formatting-types.md)
 - [自訂 TimeSpan 格式字串](custom-timespan-format-strings.md)

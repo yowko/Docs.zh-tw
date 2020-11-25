@@ -8,14 +8,15 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-ms.openlocfilehash: 8f4930e0bc1fca51164d1108b169d35c8e73987d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a10b5d01d308af3c808404608e6be1d77e6be8e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818735"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734162"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>規則運算式中的執行緒安全
+
 <xref:System.Text.RegularExpressions.Regex> 類別本身為不變 (唯讀) 的安全執行緒。 也就是說，您可以在任何執行緒上建立 **Regex** 物件，並在執行緒之間共用；您也可以從任何執行緒呼叫比對方法，而不會變更任何全域狀態。  
   
  不過，**Regex** 傳回的結果物件 (**Match** 和 **MatchCollection**) 只可在單一執行緒上使用。 雖然這當中有許多物件在邏輯上是不可變的，但它們的實作可能會延遲某些結果的計算來提升效能，因此，呼叫端必須進行序列化存取。  
@@ -24,6 +25,6 @@ ms.locfileid: "94818735"
   
  列舉程式是唯一的例外狀況。 應用程式必須將集合列舉程式的呼叫序列化。 規則是，如果某個集合可以在多個執行緒上同時列舉，您就應該在列舉程式所周遊之集合的根物件位置，同步處理列舉程式方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

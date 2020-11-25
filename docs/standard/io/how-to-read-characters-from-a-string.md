@@ -13,30 +13,32 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: ef545ddd1bebf993db32b1ec450b38defd567f65
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: beb3f4f38a5c28d19eff6fece5a6bb3c4e7a9c48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830684"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734565"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>如何：從字串讀取字元
 
 下列程式碼範例會示範如何以同步或非同步的方式，從字串讀取字元。  
   
 ## <a name="example-read-characters-synchronously"></a>範例：同步讀取字元
+
  此範例會以同步方式，從字串讀取 13 個字元、將其儲存在陣列中，然後顯示它們。 接著讀取字串中剩餘的字元、從陣列的第六個元素開始儲存這些字元，然後顯示陣列的內容。  
   
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
  [!code-vb[Conceptual.StringReader#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source.vb#1)]  
   
 ## <a name="example-read-characters-asynchronously"></a>範例：以非同步方式讀取字元  
+
  下一個範例是 WPF 應用程式背後的程式碼。 在載入視窗時，此範例會以非同步方式，從 <xref:System.Windows.Controls.TextBox> 控制項讀取所有字元，然後將其儲存在陣列中。 接著會以非同步方式將每個字母或空格字元寫入 <xref:System.Windows.Controls.TextBlock> 控制項的個別行。  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
@@ -47,4 +49,4 @@ ms.locfileid: "94830684"
 - [如何：從檔案讀取文字](how-to-read-text-from-a-file.md)  
 - [如何：將文字寫入檔案](how-to-write-text-to-a-file.md)  
 - [如何：將字元寫入字串](how-to-write-characters-to-a-string.md)  
-- [檔案和資料流程 i/o](index.md)
+- [檔案和資料流 I/O](index.md)

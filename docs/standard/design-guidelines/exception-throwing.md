@@ -6,14 +6,15 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 6f22878a9ddfb394f6705a335930ef2cc270895f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d41467b971e43ca9b22c59e3b64bdd45d16c740b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821264"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734396"
 ---
 # <a name="exception-throwing"></a>擲回例外狀況
+
 本節所述的例外狀況擲回指導方針，需要執行失敗意義的良好定義。 每當成員無法執行其設計來執行的作業時，就會發生執行失敗 (成員名稱表示) 。 例如，如果 `OpenFile` 方法無法將開啟的檔案控制代碼傳回給呼叫者，則會被視為執行失敗。
 
  大部分的開發人員都已熟悉使用例外狀況來處理使用錯誤，例如零除或 null 參考。 在架構中，會針對所有錯誤狀況（包括執行錯誤）使用例外狀況。
@@ -62,7 +63,7 @@ ms.locfileid: "94821264"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [例外狀況的設計方針](exceptions.md)

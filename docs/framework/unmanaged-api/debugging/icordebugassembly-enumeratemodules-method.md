@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-ms.openlocfilehash: 12dc5466d5be73b327f171c389c41c55901f2915
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6d00d17a5876dd7454b9f89ffa916bc62efb3d0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894947"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734123"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>ICorDebugAssembly::EnumerateModules 方法
-取得包含在中之模組的列舉值`ICorDebugAssembly`。  
+
+取得所包含之模組的列舉值 `ICorDebugAssembly` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT EnumerateModules (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppModules`  
- 脫銷做為列舉值之 ICorDebugModuleEnum 介面位址的指標。  
+ 擴展ICorDebugModuleEnum 介面的位址指標，該介面為列舉值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

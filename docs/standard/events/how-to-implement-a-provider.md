@@ -9,14 +9,15 @@ helpviewer_keywords:
 - providers [.NET], in observer design pattern
 - observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: c58d4b79c9f722889352587c2cb1313fc1595319
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b63666a581959f7a6c6a30ca8763f9c22067f32a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828344"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734331"
 ---
 # <a name="how-to-implement-a-provider"></a>如何：實作提供者
+
 觀察者設計模式需要提供者和一個或多個觀察者之間的分區，其中提供者會監視資料並傳送通知，而觀察者會接收來自提供者的通知 (回呼)。 本主題討論如何建立提供者。 相關主題為[操作說明：實作觀察器](how-to-implement-an-observer.md)，討論如何建立觀察者。  
   
 ### <a name="to-create-a-provider"></a>建立提供者  
@@ -52,12 +53,13 @@ ms.locfileid: "94828344"
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
 ## <a name="example"></a>範例  
+
  下列範例包含定義 <xref:System.IObservable%601> 溫度監視應用程式實作的完整原始程式碼。 它包含 `Temperature` 結構，這是傳送給觀察者的資料，以及 `TemperatureMonitor` 類別，這是 <xref:System.IObservable%601> 實作。  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IObservable%601>
 - [觀察者設計模式](observer-design-pattern.md)

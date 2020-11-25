@@ -3,12 +3,12 @@ title: .NET Portability Analyzer - .NET
 description: 了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性，包括 .NET Core、.NET Standard、UWP 和 Xamarin。
 ms.date: 09/13/2019
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 048ff916d309f4159fe78177e093a58d731c2e11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734279"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -47,6 +47,7 @@ ApiPort.exe analyze -r DGML -f [directory or file]
 ![DGML 分析的螢幕擷取畫面。](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>分析可攜性
+
 若要在 Visual Studio 中分析整個專案，在 [方案總管] 中以滑鼠右鍵按一下您的專案，然後選取 [分析組件可攜性]。 否則，請移至 [分析] 功能表，然後選取 [Analyze Assembly Portability] (分析組件可攜性)。 從該處選取專案的可執行檔或 DLL。
 
 ![方案總管的可攜性分析器螢幕擷取畫面。](./media/portability-analyzer/portability-solution-explorer.png)

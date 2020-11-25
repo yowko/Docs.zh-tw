@@ -2,14 +2,15 @@
 title: 擴充方法
 ms.date: 10/22/2008
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-ms.openlocfilehash: d48651e9621beecd3c9a0665ca4be26894b50c45
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02a421c9a4b73c779474a392e77104d4ccfbb109
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821134"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734708"
 ---
 # <a name="extension-methods"></a>擴充方法
+
 擴充方法是一種語言功能，可讓您使用實例方法呼叫語法來呼叫靜態方法。 這些方法必須至少要有一個參數，代表方法要操作的實例。
 
  定義這類擴充方法的類別稱為「贊助商」類別，必須宣告為靜態。 若要使用擴充方法，必須匯入定義贊助商類別的命名空間。
@@ -44,7 +45,7 @@ ms.locfileid: "94821134"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [成員設計方針](member.md)
 - [架構設計指導方針](index.md)

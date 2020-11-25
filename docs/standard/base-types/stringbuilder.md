@@ -16,17 +16,19 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: c9337df864a01ec0fbdf7068051efea60b6c59aa
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 54878f737faaedf4c9a176719f4ff83813a80201
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831295"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734214"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>在 .NET 中使用 StringBuilder 類別
+
 <xref:System.String> 物件不可變。 每次您使用 <xref:System.String?displayProperty=nameWithType> 類別的其中一個方法時，就會在記憶體中建立新的字串物件，這需要為該新物件配置新的空間。 在您需要重複修改字串的情況下，與建立新 <xref:System.String> 物件相關聯的額外負荷可能成本高昂。 當您想要修改字串，而不建立新物件時，可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別。 例如，在迴圈中將許多字串串連在一起時，可以使用 <xref:System.Text.StringBuilder> 類別來提升效能。  
   
 ## <a name="importing-the-systemtext-namespace"></a>匯入 System.Text 命名空間  
+
  <xref:System.Text.StringBuilder> 類別位於 <xref:System.Text> 命名空間。  為了避免在程式碼中提供完整的類型名稱，您可以匯入 <xref:System.Text> 命名空間：  
   
  [!code-cpp[Conceptual.StringBuilder#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#11)]
@@ -34,6 +36,7 @@ ms.locfileid: "94831295"
  [!code-vb[Conceptual.StringBuilder#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#11)]  
   
 ## <a name="instantiating-a-stringbuilder-object"></a>具現化 StringBuilder 物件  
+
  您可以使用其中一個多載建構函式方法來將變數初始化，以建立 <xref:System.Text.StringBuilder> 類別的新執行個體，如下列範例所示。  
   
  [!code-cpp[Conceptual.StringBuilder#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#1)]
@@ -41,6 +44,7 @@ ms.locfileid: "94831295"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>設定容量和長度  
+
  雖然 <xref:System.Text.StringBuilder> 是一個動態物件，可讓您擴充其封裝之字串中的字元數，但您可以指定它能容納的字元數上限值。 這個值稱為物件的容量，不應該與目前 <xref:System.Text.StringBuilder> 保存的字串長度混淆。 例如，您可以用字串 "Hello" 建立 <xref:System.Text.StringBuilder> 類別的新執行個體，其長度為 5，而您可能會將物件的最大容量指定為 25。 當您修改 <xref:System.Text.StringBuilder> 時，在到達容量上限之前，它不會重新配置自己的大小。 發生這種情況時，會自動配置新的空間，而且容量加倍。 您可以使用其中一個多載建構函式來指定 <xref:System.Text.StringBuilder> 類別的容量。 下列範例會指定 `myStringBuilder` 物件可以擴展到最多 25 個空格。  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
@@ -58,6 +62,7 @@ ms.locfileid: "94831295"
  也可以檢視或設定 <xref:System.Text.StringBuilder.Length%2A> 屬性。 如果您將 **Length** 屬性的值設成大於 **Capacity** 屬性的值，則 **Capacity** 屬性會自動變更為與 **Length** 屬性相同的值。 若將 **Length** 屬性的值設成小於目前 **StringBuilder** 內字串長度的值，則會縮短該字串。  
   
 ## <a name="modifying-the-stringbuilder-string"></a>修改 StringBuilder 字串  
+
  下表列出您可用來修改 **StringBuilder** 內容的方法。  
   
 |方法名稱|使用|  
@@ -69,6 +74,7 @@ ms.locfileid: "94831295"
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|以另一個指定的字元或字串取代目前 **StringBuilder** 中所有出現的指定字元或字串。|  
   
 ### <a name="append"></a>Append  
+
  **Append** 方法可以用來將物件的文字或字串表示加入至目前 **StringBuilder** 所代表的字串結尾。 下列範例會將 **StringBuilder** 初始化為 "Hello World"，然後附加一些文字到物件的結尾。 會視需要自動配置空格。  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
@@ -76,6 +82,7 @@ ms.locfileid: "94831295"
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
+
  <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法會將文字加入至 <xref:System.Text.StringBuilder> 物件的結尾。 它藉由呼叫要格式化之一或多個物件的 <xref:System.IFormattable> 實作，來支援複合格式功能 (如需詳細資訊，請參閱[複合格式](composite-formatting.md))。 因此，它接受數值、日期和時間，以及列舉值的標準格式字串，數值及日期和時間的自訂格式字串，以及為自訂類型定義的格式字串。  (如需格式化的詳細資訊，請參閱 [格式化類型](formatting-types.md)。 ) 您可以使用這個方法來自訂變數的格式，並將這些值附加至 <xref:System.Text.StringBuilder> 。 下列範例使用 <xref:System.Text.StringBuilder.AppendFormat%2A> 方法，將格式化為貨幣值的整數值放到 <xref:System.Text.StringBuilder> 物件的結尾。  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
@@ -83,6 +90,7 @@ ms.locfileid: "94831295"
  [!code-vb[Conceptual.StringBuilder#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#5)]  
   
 ### <a name="insert"></a>插入  
+
  <xref:System.Text.StringBuilder.Insert%2A> 方法會將字串或物件加入至目前 <xref:System.Text.StringBuilder> 物件中的指定位置。 下列範例會使用這個方法，在 <xref:System.Text.StringBuilder> 物件的第六個位置插入一個字組。  
   
  [!code-cpp[Conceptual.StringBuilder#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#6)]
@@ -90,6 +98,7 @@ ms.locfileid: "94831295"
  [!code-vb[Conceptual.StringBuilder#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#6)]  
   
 ### <a name="remove"></a>移除  
+
  您可以使用 **Remove** 方法，從目前 <xref:System.Text.StringBuilder> 物件移除指定的字元數 (從指定之以零為基礎的索引開始)。 下列範例會使用 **Remove** 方法來縮短 <xref:System.Text.StringBuilder> 物件。  
   
  [!code-cpp[Conceptual.StringBuilder#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#7)]
@@ -97,6 +106,7 @@ ms.locfileid: "94831295"
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
 ### <a name="replace"></a>取代  
+
  **Replace** 方法可以用來將 <xref:System.Text.StringBuilder> 物件內的字元取代為另一個指定的字元。 下列範例會使用 **Replace** 方法，來搜尋 <xref:System.Text.StringBuilder> 物件中所有的驚嘆號字元 (!) 執行個體，並取代為問號字元 (?)。  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
@@ -104,12 +114,13 @@ ms.locfileid: "94831295"
  [!code-vb[Conceptual.StringBuilder#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#8)]  
   
 ## <a name="converting-a-stringbuilder-object-to-a-string"></a>將 StringBuilder 物件轉換為字串  
+
  您必須先將 <xref:System.Text.StringBuilder> 物件轉換成 <xref:System.String> 物件，才能將 <xref:System.Text.StringBuilder> 物件所代表的字串傳遞給具有 <xref:System.String> 參數的方法，或在使用者介面中加以顯示。 您可以呼叫 <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> 方法來執行這項轉換。 下列範例會呼叫一些 <xref:System.Text.StringBuilder> 方法，然後呼叫 <xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType> 方法來顯示字串。  
   
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
 - [基底字元串作業](basic-string-operations.md)

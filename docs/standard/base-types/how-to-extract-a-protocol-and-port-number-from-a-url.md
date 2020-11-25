@@ -12,19 +12,21 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: e6cf86d08ed971876f76413e0145c62b73d0d4a5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ba512fbe4ebc7ec35ca590541fe5bf94d07c465d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825087"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734513"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>作法：從 URL 擷取通訊協定和連接埠號碼
+
 下列範例會從 URL 擷取通訊協定和連接埠號碼。  
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="example"></a>範例  
+
  此範例會使用 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法來傳回通訊協定和連接埠號碼 (中間以冒號隔開)。  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
@@ -48,6 +50,6 @@ ms.locfileid: "94825087"
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

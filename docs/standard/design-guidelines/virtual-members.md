@@ -6,14 +6,15 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7727ea7fcfdbbecf2e53ddd7a44b4cf907211f80
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828396"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734344"
 ---
 # <a name="virtual-members"></a>虛擬成員
+
 您可以覆寫虛擬成員，進而變更子類別的行為。 它們在提供的擴充性方面相當類似回呼，但它們在執行效能和記憶體耗用量方面更好。 此外，在需要建立特殊種類的現有類型 (特製化) 的案例中，虛擬成員會覺得更自然。
 
  虛擬成員的執行效能優於回呼和事件，但效能不如非虛擬方法更好。
@@ -36,7 +37,7 @@ ms.locfileid: "94828396"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [擴充性設計](designing-for-extensibility.md)

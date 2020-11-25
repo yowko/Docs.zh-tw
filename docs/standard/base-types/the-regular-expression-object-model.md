@@ -35,14 +35,15 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 996a8cca8222e3de6517ee6fa7cef3c4f44fc5a9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831282"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734179"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
+
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含下列區段：  
   
 - [正則運算式引擎](#Engine)  
@@ -58,7 +59,9 @@ ms.locfileid: "94831282"
 - [個別的捕獲](#the_individual_capture)  
   
 <a name="Engine"></a>
+
 ## <a name="the-regular-expression-engine"></a>規則運算式引擎  
+
  .NET 的規則運算式引擎會以 <xref:System.Text.RegularExpressions.Regex> 類別表示。 規則運算式引擎負責剖析和編譯規則運算式，以及執行規則運算式模式與輸入字串的比對作業。 引擎是 .NET 規則運算式物件模型的中心元件。  
   
  規則運算式引擎有兩種使用方式：  
@@ -82,6 +85,7 @@ ms.locfileid: "94831282"
  下面各節將會說明這些作業。  
   
 ### <a name="matching-a-regular-expression-pattern"></a>比對規則運算式模式  
+
  如果字串符合模式，<xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法會傳回 `true`，如果不符合，則傳回 `false`。 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法常用來驗證字串輸入。 例如，下列程式碼可確保字串符合美國境內有效的社會安全號碼。  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
@@ -100,6 +104,7 @@ ms.locfileid: "94831282"
 |`$`|比對輸入字串的結尾。|  
   
 ### <a name="extracting-a-single-match-or-the-first-match"></a>擷取單一相符項目或第一個相符項目  
+
  <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法會傳回 <xref:System.Text.RegularExpressions.Match> 物件，其中包含符合規則運算式模式之第一個子字串的相關資訊。 如果 `Match.Success` 屬性傳回 `true`，指出已找到相符項目，您就可以呼叫 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法來擷取後續相符項目的相關資訊。 這些方法呼叫可以一直持續到 `Match.Success` 屬性傳回 `false`。 例如，下列程式碼會使用 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法來尋找字串中第一次出現的重複文字。 然後會呼叫 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法來尋找所出現的任何其他重複文字。 此範例會在每次方法呼叫之後檢查 `Match.Success` 屬性，以判定目前比對是否成功，以及後面是否應該接著呼叫 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法。  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match1.cs#2)]
@@ -116,12 +121,14 @@ ms.locfileid: "94831282"
 |`\b`|結束字邊界比對。|  
   
 ### <a name="extracting-all-matches"></a>擷取所有相符項目  
+
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，其中包含規則運算式引擎在輸入字串中找到之所有相符項目的相關資訊。 例如，您可以將上一個範例重寫為呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 方法，而不是 <xref:System.Text.RegularExpressions.Regex.Match%2A> 和 <xref:System.Text.RegularExpressions.Match.NextMatch%2A> 方法。  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matches1.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matches1.vb#3)]  
   
 ### <a name="replacing-a-matched-substring"></a>取代相符的子字串  
+
  <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法會將符合規則運算式模式的每個子字串，取代為指定的字串或規則運算式模式，並傳回含有取代項目的整個輸入字串。 例如，下列程式碼會在字串中的十進位數字前面加上美國貨幣符號。  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/replace1.cs#4)]
@@ -145,6 +152,7 @@ ms.locfileid: "94831282"
 |`$&`|整個相符子字串。|  
   
 ### <a name="splitting-a-single-string-into-an-array-of-strings"></a>將單一字串分割成字串陣列  
+
  <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 方法會在規則運算式比對所定義的位置分割輸入字串。 例如，下列程式碼會將編號清單中的項目放在字串陣列中。  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/split1.cs#5)]
@@ -160,11 +168,15 @@ ms.locfileid: "94831282"
 |`\s`|比對空白字元。|  
   
 <a name="Match_and_MCollection"></a>
+
 ## <a name="the-matchcollection-and-match-objects"></a>MatchCollection 和 Match 物件  
+
  Regex 方法會傳回兩個屬於規則運算式物件模型的物件：<xref:System.Text.RegularExpressions.MatchCollection> 物件和 <xref:System.Text.RegularExpressions.Match> 物件。  
   
 <a name="the_match_collection"></a>
+
 ### <a name="the-match-collection"></a>比對集合  
+
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，其中包含 <xref:System.Text.RegularExpressions.Match> 物件，這些物件代表規則運算式引擎找到的所有相符項目，並按照其於輸入字串中出現的順序排列。 如果沒有相符項目，該方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，但不含成員。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性可讓您依索引存取集合的個別成員，從零到 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 屬性的值減一。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> 是集合的索引子 (在 C# 中) 和預設屬性 (在 Visual Basic 中)。  
   
  依預設，呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法時會使用延遲評估來填入 <xref:System.Text.RegularExpressions.MatchCollection> 物件。 若要存取需要完整填入集合的屬性，例如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性，可能會導致效能傷害。 因此，建議您使用 <xref:System.Collections.IEnumerator> 方法傳回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 物件來存取集合。 個別語言會提供包裝集合之 <xref:System.Collections.IEnumerator> 介面的建構 (例如 Visual Basic 中的 `For Each`，以及 C# 中的 `foreach`)。  
@@ -175,7 +187,9 @@ ms.locfileid: "94831282"
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
 <a name="the_match"></a>
+
 ### <a name="the-match"></a>比對  
+
  <xref:System.Text.RegularExpressions.Match> 類別代表單一規則運算式比對的結果。 您可以用兩個方式來存取 <xref:System.Text.RegularExpressions.Match> 物件：  
   
 - 從 <xref:System.Text.RegularExpressions.MatchCollection> 方法傳回的 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 物件中擷取。 若要擷取個別 <xref:System.Text.RegularExpressions.Match> 物件，請使用 `foreach` (在 C# 中) 或 `For Each`...`Next` (在 Visual Basic 中) 的建構來逐一查看集合，或是使用 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性來依據索引或名稱擷取特定的 <xref:System.Text.RegularExpressions.Match> 物件。 您也可以依索引 (從零到集合中的物件數減一) 從集合擷取個別 <xref:System.Text.RegularExpressions.Match> 物件。 不過，此方法不會利用延遲評估，因為它會存取 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 屬性。  
@@ -229,7 +243,9 @@ ms.locfileid: "94831282"
  [回到頁首](#introduction)  
   
 <a name="GroupCollection"></a>
+
 ## <a name="the-group-collection"></a>群組集合  
+
  <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.RegularExpressions.GroupCollection> 物件，其中包含單一比對中代表擷取群組的 <xref:System.Text.RegularExpressions.Group> 物件。 集合中的第一個 <xref:System.Text.RegularExpressions.Group> 物件 (索引位置為 0) 代表整個比對。 後面接續的每個物件各代表單一擷取群組的結果。  
   
  您可以使用 <xref:System.Text.RegularExpressions.Group> 屬性，擷取集合中的個別 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType> 物件。 您可以依集合中的序數位置來擷取未具名群組，以及依名稱或依序數位置來擷取具名群組。 未具名擷取會先出現在集合中，並依其出現在規則運算式模式中的順序，由左至右編排索引。 具名擷取的索引會依其出現在規則運算式模式中的順序，由左至右編排在未具名擷取之後。 若要判定特定規則運算式比對方法傳回的集合中，有哪些編號群組可用，您可以呼叫執行個體 <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> 方法。 若要判定集合中有哪些具名群組可用，您可以呼叫執行個體 <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType> 方法。 在用來分析任何規則運算式找到之相符項目的一般用途常式中，這兩種方法都特別好用。  
@@ -260,7 +276,9 @@ ms.locfileid: "94831282"
  [回到頁首](#introduction)  
   
 <a name="the_captured_group"></a>
+
 ## <a name="the-captured-group"></a>擷取群組  
+
  <xref:System.Text.RegularExpressions.Group> 類別代表單一擷取群組的結果。 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 屬性傳回之 <xref:System.Text.RegularExpressions.GroupCollection> 物件的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 屬性，會傳回代表規則運算式中定義之擷取群組的群組物件。 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 屬性是 <xref:System.Text.RegularExpressions.Group> 類別的索引子 (在 C# 中) 及預設屬性 (在 Visual Basic 中)。 您也可以使用 `foreach` 或 `For Each` 建構，逐一查看集合來擷取個別成員。 如需範例，請參閱上一節。  
   
  下列範例會使用巢狀群組建構，將子字串擷取至群組中。 規則運算式模式 `(a(b))c` 會相符字串 "abc"。 它會將子字串 "ab" 指派給第一個擷取群組，並將子字串 "b" 指派給第二個擷取群組。  
@@ -307,7 +325,9 @@ ms.locfileid: "94831282"
  [回到頁首](#introduction)  
   
 <a name="CaptureCollection"></a>
+
 ## <a name="the-capture-collection"></a>擷取集合  
+
  <xref:System.Text.RegularExpressions.Group> 物件只包含最後一個擷取的相關資訊。 不過，您仍可從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件，取得擷取群組所建立的一整組擷取。 集合的每個成員都是 <xref:System.Text.RegularExpressions.Capture> 物件，代表擷取群組所建立的擷取，並依照擷取的順序排列 (因此，順序為在輸入字串中比對擷取群組的順序，由左至右排列)。 您可以從集合擷取個別 <xref:System.Text.RegularExpressions.Capture> 物件，有兩種方式：  
   
 - 使用 `foreach` (在 C# 中) 或 `For Each` (在 Visual Basic 中) 之類的建構逐一查看集合。  
@@ -329,7 +349,9 @@ ms.locfileid: "94831282"
  [回到頁首](#introduction)  
   
 <a name="the_individual_capture"></a>
+
 ## <a name="the-individual-capture"></a>個別擷取  
+
  <xref:System.Text.RegularExpressions.Capture> 類別包含單一子運算式擷取的結果。 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> 屬性包含相符的文字，而 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 屬性指出輸入字串中以零起始的位置，也就是相符的子字串開始的位置。  
   
  下列範例會針對所選城市的氣溫剖析輸入字串。 逗號 (",") 用來分隔城市及其氣溫，而分號 (";") 用來分隔每個城市的資料。 整個輸入字串代表單一比對。 在規則運算式模式 `((\w+(\s\w+)*),(\d+);)+` (用來剖析字串) 中，城市名稱指派給第二個擷取群組，而氣溫指派給第四個擷取群組。  
@@ -349,7 +371,7 @@ ms.locfileid: "94831282"
 |`;`|比對分號。|  
 |`((\w+(\s\w+)*),(\d+);)+`|一或多次比對文字的模式，該文字後面接任何其他文字，後面再接逗號、一或多個數字和分號。 這是第一個擷取群組。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Text.RegularExpressions>
 - [.NET 規則運算式](regular-expressions.md)

@@ -2,20 +2,20 @@
 title: 比較 .NET 5 + 上的字串時的行為變更
 description: 瞭解 Windows 上 .NET 5 和更新版本中的字串比較行為變更。
 ms.date: 11/04/2020
-ms.openlocfilehash: 49be2169bb165b8fe0205800415542bea7bf9787
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403609"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734227"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>比較 .NET 5 + 上的字串時的行為變更
 
-.NET 5.0 引進了執行時間行為變更，其中的全球化 Api 預設會在所有支援的平臺上 [使用 ICU](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows) 。 這是舊版 .NET Core 和 .NET Framework 中的一項服務，它會在 Windows 上執行時，利用作業系統的國家語言支援 (NLS) 功能。 如需這些變更的詳細資訊，包括可還原行為變更的相容性參數，請參閱 [.net 全球化和 ICU](../globalization-localization/globalization-icu.md)。
+.NET 5.0 引進了執行時間行為變更，其中的全球化 Api 預設會在所有支援的平臺上 [使用 ICU](../../core/compatibility/globalization/5.0/icu-globalization-api.md) 。 這是舊版 .NET Core 和 .NET Framework 中的一項服務，它會在 Windows 上執行時，利用作業系統的國家語言支援 (NLS) 功能。 如需這些變更的詳細資訊，包括可還原行為變更的相容性參數，請參閱 [.net 全球化和 ICU](../globalization-localization/globalization-icu.md)。
 
 ## <a name="reason-for-change"></a>變更的原因
 
-這是為了統一而引進的變更。在所有支援的作業系統上的淨全球化行為。 它也能讓應用程式組合自己的全球化程式庫，而不需要依賴作業系統的內建程式庫。 如需詳細資訊，請參閱 [重大變更通知](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)。
+這是為了統一而引進的變更。在所有支援的作業系統上的淨全球化行為。 它也能讓應用程式組合自己的全球化程式庫，而不需要依賴作業系統的內建程式庫。 如需詳細資訊，請參閱 [重大變更通知](../../core/compatibility/globalization/5.0/icu-globalization-api.md)。
 
 ## <a name="behavioral-differences"></a>行為差異
 
@@ -45,7 +45,7 @@ Console.WriteLine(idx);
 
 程式[代碼分析器](../../fundamentals/code-analysis/overview.md)可以偵測到可能有錯誤的呼叫網站。 為了防止任何令人驚訝的行為，建議您 [將 __CodeAnalysis 將 microsoft.codeanalysis.fxcopanalyzers__ NuGet 套件](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) 安裝到您的專案中。 此封裝包含程式碼分析規則 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) 和 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)，可協助您旗標可能會在可能預期的序數比較子中使用語言比較子的程式碼。
 
-例如︰
+例如：
 
 ```cs
 //
@@ -141,7 +141,7 @@ list.Sort(StringComparer.Ordinal);
 
 *序數* (也稱為 *非語言* 的) 搜尋和比較分解將字串轉換成個別的 `char` 元素，並執行逐字元搜尋或比較。 例如，在比較子 `"dog"` 下，字串和 `"dog"` 比較為 *相等* `Ordinal` ，因為兩個字串包含的字元順序完全相同。 但是， `"dog"` 和 `"Dog"` 比較 *不等於* 比較子 `Ordinal` ，因為它們不是由相同的字元序列所組成。 也就是說，大寫的程式碼 `'D'` 點 `U+0044` 會在小寫 `'d'` 的程式碼點之前發生 `U+0064` ，因此會 `"dog"` 先排序 `"Dog"` 。
 
-`OrdinalIgnoreCase`比較子的運作方式仍是逐字元，但是在執行作業時，它會消除大小寫差異。 在比較子下 `OrdinalIgnoreCase` ，char 組 `'d'` 和 `'D'` 比較為 *相等* ，與 char 配對 `'á'` 和 `'Á'` 。 但是非重音字元 `'a'` 會比較為 *不等於* 重音字元 `'á'` 。
+`OrdinalIgnoreCase`比較子的運作方式仍是逐字元，但是在執行作業時，它會消除大小寫差異。 在比較子下 `OrdinalIgnoreCase` ，char 組 `'d'` 和 `'D'` 比較為 *相等*，與 char 配對 `'á'` 和 `'Á'` 。 但是非重音字元 `'a'` 會比較為 *不等於* 重音字元 `'á'` 。
 
 下表提供一些範例：
 
@@ -187,7 +187,7 @@ Console.WriteLine("re\u0301sume\u0301".IndexOf("E", StringComparison.OrdinalIgno
 
 請再次考慮字串 `"résumé"` 和其四種不同的標記法。 下表顯示每個標記法細分為其定序元素。
 
-| 字串 | 作為定序元素 |
+| String | 作為定序元素 |
 |---|---|
 | `"r\u00E9sum\u00E9"` | `"r" + "\u00E9" + "s" + "u" + "m" + "\u00E9"` |
 | `"r\u00E9sume\u0301"` | `"r" + "\u00E9" + "s" + "u" + "m" + "e\u0301"` |
@@ -210,7 +210,7 @@ Console.WriteLine("\u00E9".IndexOf("e\u00E9")); // prints '0'
 
 例如， [在匈牙利文的字母中](https://en.wikipedia.org/wiki/Hungarian_alphabet)，當兩個字元 \<dz\> 再次出現時，它們會被視為與或不同的唯一字母 \<d\> \<z\> 。 這表示 \<dz\> 在字串中看到時，匈牙利文文化特性感知比較子會將它視為單一定序元素。
 
-| 字串 | 作為定序元素 | 備註 |
+| String | 作為定序元素 | 備註 |
 |---|---|---|
 | `"endz"` | `"e" + "n" + "d" + "z"` | 使用標準語言比較子的 ()  |
 | `"endz"` | `"e" + "n" + "dz"` |  (使用匈牙利文化特性感知比較子)  |
@@ -232,7 +232,7 @@ Console.WriteLine("endz".EndsWith("z")); // Prints 'True'
 > - 行為：語言和文化特性感知的比較子可能會在一段時間後進行行為調整。 ICU 和舊版 Windows NLS 設備都會更新，以說明世界語言的變化。 如需詳細資訊，請參閱 [ (文化特性) 資料](/archive/blogs/shawnste/locale-culture-data-churn)變換的 Blog 文章地區設定。 *序數* 比較子的行為永遠不會變更，因為它會執行精確的位搜尋和比較。 不過， *OrdinalIgnoreCase* 比較子的行為可能會隨著 Unicode 的成長而改變，以包含更多的字元集並修正現有大小寫資料中的遺漏。
 > - 使用方式：比較子 `StringComparison.InvariantCulture` 和 `StringComparison.InvariantCultureIgnoreCase` 是不感知文化特性的語言比較子。 也就是說，這些比較子可瞭解概念，像是日有多個可能基礎標記法的重音字元，而且所有這類標記法都應該視為相等。 但是，非文化特性感知的語言比較子不會包含 \<dz\> 與或不同的特殊處理 \<d\> \<z\> ，如上所示。 它們也不會有像德文 Eszett (ß) 這類特殊字元。
 
-.NET 也提供不 *變的全球化模式* 。 這個加入宣告模式會停用處理語言搜尋和比較常式的程式碼路徑。 在此模式中，所有作業都會使用 *序數* 或 *OrdinalIgnoreCase* 行為，不論呼叫端提供的是什麼 `CultureInfo` 或 `StringComparison` 引數。 如需詳細資訊，請參閱全球化和[.Net Core 全球化不變模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)[的執行時間設定選項](../../core/run-time-config/globalization.md)。
+.NET 也提供不 *變的全球化模式*。 這個加入宣告模式會停用處理語言搜尋和比較常式的程式碼路徑。 在此模式中，所有作業都會使用 *序數* 或 *OrdinalIgnoreCase* 行為，不論呼叫端提供的是什麼 `CultureInfo` 或 `StringComparison` 引數。 如需詳細資訊，請參閱全球化和[.Net Core 全球化不變模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)[的執行時間設定選項](../../core/run-time-config/globalization.md)。
 
 如需詳細資訊，請參閱 [在 .net 中比較字串的最佳做法](best-practices-strings.md)。
 
@@ -317,7 +317,7 @@ ReadOnlySpan<char> span = s.AsSpan();
 if (span.StartsWith("Hello", StringComparison.Ordinal)) { /* do something */ } // ordinal comparison
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [全球化重大變更](../../core/compatibility/globalization.md)
 - [在 .NET 中比較字串的最佳作法](best-practices-strings.md)

@@ -7,20 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: d04f90e9c763c8ddba5ba07b650ffb878869ff3a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc03802c960c0926380d7b7fa44fdf436b8fea89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825464"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734253"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>作法：撰寫自訂 PLINQ 彙總函式
+
 此範例示範如何使用 <xref:System.Linq.ParallelEnumerable.Aggregate%2A> 方法，將自訂彙總函式套用至來源序列。  
   
 > [!WARNING]
 > 這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。 如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](understanding-speedup-in-plinq.md)。  
   
 ## <a name="example"></a>範例  
+
  下列範例會計算整數序列的標準差。  
   
  [!code-csharp[PLINQ#31](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#31)]
@@ -30,7 +32,7 @@ ms.locfileid: "94825464"
   
  請注意，當 lambda 運算式主體包含單一運算式時，<xref:System.Func%602?displayProperty=nameWithType> 委派的傳回值即為運算式的值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
 - [平行 LINQ (PLINQ)](introduction-to-plinq.md)

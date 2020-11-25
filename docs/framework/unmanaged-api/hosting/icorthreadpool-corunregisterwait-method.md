@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 42c933f1-30a8-4011-bdea-e117f3c3265e
 topic_type:
 - apiref
-ms.openlocfilehash: e3655f77a94da25f65bada2cd4067ef53550e778
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 38b3655da75750ffc3ea1c7983ce3b549d76f087
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733967"
 ---
 # <a name="icorthreadpoolcorunregisterwait-method"></a>ICorThreadpool::CorUnregisterWait 方法
+
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CorUnregisterWait (  
@@ -35,12 +36,13 @@ HRESULT CorUnregisterWait (
 );  
 ```  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
