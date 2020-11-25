@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7fbbac42-b966-406d-9ae9-67bf3aea74ce
 topic_type:
 - apiref
-ms.openlocfilehash: cda30f3c73bf75c37ff79fc415e02382b053807e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7e26c272ee1ecf03f7d2a347cf7ca2cc3efa2122
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614483"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699556"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>ISymUnmanagedMethod::GetNamespace 方法
-取得在其中定義這個方法的命名空間。  
+
+取得在其中定義此方法的命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,14 +34,17 @@ HRESULT GetNamespace(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pRetVal`  
- 脫銷設定為所傳回[ISymUnmanagedNamespace](isymunmanagednamespace-interface.md)介面的指標。  
+ 擴展設定為傳回之 [ISymUnmanagedNamespace](isymunmanagednamespace-interface.md) 介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

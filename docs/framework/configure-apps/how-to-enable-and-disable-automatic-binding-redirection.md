@@ -1,42 +1,42 @@
 ---
 title: 啟用或停用自動產生的系結重新導向
-description: 閱讀如何啟用或停用自動系結重新導向。 這項功能會影響以 .NET 4.5.1 或更新版本為目標的桌面應用程式和 web 應用程式。
+description: 請參閱如何啟用或停用自動系結重新導向。 這項功能會影響以 .NET Framework 4.5.1 或更新版本為目標的桌面應用程式和 web 應用程式。
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b099ab4958b1cf41b76884243e252e19a7a951b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105389"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698828"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>作法：啟用和停用自動繫結重新導向
 
-當您在以 .NET Framework 4.5.1 和更新版本為目標的 Visual Studio 中編譯應用程式時，可能會自動將系結重新導向新增至應用程式佈建檔，以覆寫元件統一。 如果您的應用程式或其元件參考相同組件的多個版本，即使您在應用程式的組態檔中手動指定繫結重新導向，仍會加入繫結重新導向。 自動系結重新導向功能會影響以 .NET Framework 4.5.1 或更新版本為目標的桌面應用程式和 web 應用程式，雖然 web 應用程式的行為稍有不同。 如果您現有的應用程式是以舊版 .NET Framework 為目標，您可以啟用自動系結重新導向，如果您想要手動編寫系結重新導向，可以停用這項功能。
+當您在 Visual Studio 中編譯以 .NET Framework 4.5.1 和更新版本為目標的應用程式時，可能會自動將系結重新導向新增至應用程式佈建檔，以覆寫元件統一。 如果您的應用程式或其元件參考相同組件的多個版本，即使您在應用程式的組態檔中手動指定繫結重新導向，仍會加入繫結重新導向。 自動系結重新導向功能會影響以 .NET Framework 4.5.1 或更新版本為目標的桌面應用程式和 web 應用程式，雖然 web 應用程式的行為稍有不同。 如果您現有的應用程式是以舊版 .NET Framework 為目標，則可以啟用自動系結重新導向，或者，如果您想要手動撰寫系結重新導向，則可以停用這項功能。
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>在桌面應用程式中停用自動系結重新導向
 
-針對以 .NET Framework 4.5.1 和更新版本為目標的 Windows 桌面應用程式，預設會啟用自動系結重新導向。 當編譯應用程式時，會將系結重新導向新增至輸出設定（**app.config**）檔案，並覆寫可能會發生的元件統一。 不會修改來源**app.config**檔案。 您可以藉由修改應用程式的專案檔，或在 Visual Studio 的專案屬性中取消勾選核取方塊，來停用這項功能。
+針對以 .NET Framework 4.5.1 和更新版本為目標的 Windows 桌面應用程式，預設會啟用自動系結重新導向。 系結重新導向會在應用程式進行編譯時，新增至輸出設定 (**app.config**) 檔中，並覆寫可能進行的元件統一。 來源 **app.config** 檔案不會被修改。 您可以藉由修改應用程式的專案檔，或在 Visual Studio 的專案屬性中取消勾選核取方塊，來停用這項功能。
 
 ### <a name="disable-through-project-properties"></a>透過專案屬性停用
 
-如果您有 Visual Studio 2017 15.7 版或更新版本，您可以輕鬆地在專案的屬性頁中停用自動產生的系結重新導向。
+如果您有 Visual Studio 2017 15.7 版或更新版本，您可以在專案的屬性頁中輕鬆地停用自動產生的系結重新導向。
 
-1. 以滑鼠右鍵按一下**方案總管**中的專案，然後選取 [**屬性**]。
+1. 以滑鼠右鍵按一下 **方案總管** 中的專案，然後選取 [ **屬性**]。
 
-2. 在 [**應用程式**] 頁面上，取消核取 [**自動產生**系結重新導向] 選項。
+2. 在 [ **應用程式** ] 頁面上，取消核取 [ **自動產生** 系結重新導向] 選項。
 
-3. 按**Ctrl** + **S**以儲存變更。
+3. 按 **Ctrl** + **S** 以儲存變更。
 
 ### <a name="disable-manually-in-the-project-file"></a>在專案檔中手動停用
 
 1. 使用下列其中一種方法開啟專案檔進行編輯：
 
-   - 在 Visual Studio 中，選取**方案總管**中的專案，然後從快捷方式功能表選擇 [**在檔案瀏覽器中開啟資料夾**]。 在 [檔案管理器] 中，尋找專案（.csproj 或. vbproj）檔案，然後在 [記事本] 中開啟。
-   - 在 Visual Studio 的**方案總管**中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再次以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]**。
+   - 在 Visual Studio 中，選取 **方案總管** 中的專案，然後從快捷方式功能表選擇 [ **在檔案總管中開啟資料夾** ]。 在檔案總管中，尋找 ( .csproj 或 vbproj) 檔中的專案，並在 [記事本] 中開啟該專案。
+   - 在 Visual Studio 的 **方案總管** 中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]**。
 
 2. 在專案檔中尋找下列屬性項目：
 
@@ -52,14 +52,14 @@ ms.locfileid: "85105389"
 
 ## <a name="enable-automatic-binding-redirects-manually"></a>手動啟用自動系結重新導向
 
-您可以在以舊版 .NET Framework 為目標的現有應用程式中啟用自動系結重新導向，或在不會自動提示您加入重新導向的情況下進行。 如果您的目標是較新版本的 framework，但未自動提示您加入重新導向，您可能會取得建議您重新對應元件的組建輸出。
+您可以在現有的應用程式中啟用自動系結重新導向（以舊版 .NET Framework 為目標），或在未自動提示您新增重新導向的情況下啟用。 如果您的目標是較新版本的架構，但不會自動提示您加入重新導向，您可能會收到建議您重新對應元件的組建輸出。
 
 1. 使用下列其中一種方法開啟專案檔進行編輯：
 
-   - 在 Visual Studio 中，選取**方案總管**中的專案，然後從快捷方式功能表選擇 [**在檔案瀏覽器中開啟資料夾**]。 在 [檔案管理器] 中，尋找專案（.csproj 或. vbproj）檔案，然後在 [記事本] 中開啟。
-   - 在 Visual Studio 的**方案總管**中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再次以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]**。
+   - 在 Visual Studio 中，選取 **方案總管** 中的專案，然後從快捷方式功能表選擇 [ **在檔案總管中開啟資料夾** ]。 在檔案總管中，尋找 ( .csproj 或 vbproj) 檔中的專案，並在 [記事本] 中開啟該專案。
+   - 在 Visual Studio 的 **方案總管** 中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]**。
 
-2. 將下列元素新增至第一個設定屬性群組（在 \<PropertyGroup> 標記底下）：
+2. 將下列元素新增至標記) 底下的第一個設定屬性群組 (\<PropertyGroup> ：
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -86,21 +86,21 @@ ms.locfileid: "85105389"
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>在 web 應用程式中啟用自動系結重新導向
 
-在 Web 應用程式中，自動繫結重新導向是以不同的方式實作。 因為必須修改 web 應用程式的來源設定（**web.config**）檔案，所以不會自動將系結重新導向新增至設定檔。 不過，如果發生繫結衝突，Visual Studio 會通知您，那麼您就可以加入繫結重新導向來解決衝突。 由於系統一律會提示您加入系結重新導向，因此您不需要明確停用 web 應用程式的這項功能。
+在 Web 應用程式中，自動繫結重新導向是以不同的方式實作。 因為必須針對 web 應用程式修改來源設定 (**web.config**) 檔案，所以不會自動將系結重新導向新增至設定檔。 不過，如果發生繫結衝突，Visual Studio 會通知您，那麼您就可以加入繫結重新導向來解決衝突。 由於系統一律會提示您新增系結重新導向，因此您不需要針對 web 應用程式明確停用此功能。
 
-若要將系結重新導向新增至**web.config**檔案：
+若要將系結重新導向新增至 **web.config** 檔案：
 
 1. 在 Visual Studio 中編譯應用程式，並檢查是否有建置警告。
 
    ![為組件參考衝突建置警告](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
-2. 如果有組件繫結衝突，則會出現警告。 按兩下警告，或選取警告，然後按**enter**鍵。
+2. 如果有組件繫結衝突，則會出現警告。 按兩下警告，或選取警告，然後按 **enter** 鍵。
 
-   這個對話方塊可讓您自動將必要的系結重新導向新增至來源**web.config**檔案。
+   此對話方塊可讓您自動將必要的系結重新導向加入至來源 **web.config** 檔。
 
    ![[繫結重新導向] 權限對話方塊](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>另請參閱
 
-- [\<bindingRedirect>元素](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect> 元素](./file-schema/runtime/bindingredirect-element.md)
 - [重新導向組件版本](redirect-assembly-versions.md)

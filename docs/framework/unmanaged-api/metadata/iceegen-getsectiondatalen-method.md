@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: 1855c73849c35bf709b0af261a88e6cd7a40abfb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b45b0a59a29a27e7b0a395f3928215959450f9a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008296"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698464"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen 方法
+
 取得指定區段的長度。  
   
- 這個方法已過時，不應使用。  
+ 這個方法已經過時，不應該使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +38,24 @@ HRESULT GetSectionDataLen (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `section`  
- 在將取得其長度的資料區段。  
+ 在將取出其長度的資料區段。  
   
  `dataLen`  
- 脫銷所指定區段的傳回長度。  
+ 擴展指定區段的傳回長度。  
   
 ## <a name="remarks"></a>備註  
- `GetSectionDataLen`只有當您有其他方法未處理的特殊區段需求時，才需要呼叫。  
+
+ `GetSectionDataLen`只有當您有不是由其他方法處理的特殊區段需求時，才需要呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

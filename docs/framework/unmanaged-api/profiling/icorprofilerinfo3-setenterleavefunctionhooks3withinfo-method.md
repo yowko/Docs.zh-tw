@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ca8ea534-e441-47b8-be85-466410988c0a
 topic_type:
 - apiref
-ms.openlocfilehash: d40cb424306535cc502d930dd61e6a1e254667da
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2ae4b35feb2441fdd66fb68ba9bb3649269a983c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496174"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697814"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a>ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 方法
-指定將在 managed 函式的[FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)和[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)勾點上呼叫的分析工具所執行的函數。  
+
+指定將在 managed 函式的 [FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)和 [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) 勾點上呼叫的程式碼剖析工具所執行的函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,24 +36,27 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pFuncEnter3`  
- 在要當做回呼使用的實作為指標 `FunctionEnter3WithInfo` 。  
+ 在要當做回呼使用之實的指標 `FunctionEnter3WithInfo` 。  
   
  `pFuncLeave3`  
- 在要當做回呼使用的實作為指標 `FunctionLeave3WithInfo` 。  
+ 在要當做回呼使用之實的指標 `FunctionLeave3WithInfo` 。  
   
  `pFuncTailcall3`  
- 在要當做回呼使用的實作為指標 `FunctionTailcall3WithInfo` 。  
+ 在要當做回呼使用之實的指標 `FunctionTailcall3WithInfo` 。  
   
 ## <a name="remarks"></a>備註  
- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)和[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)勾點提供了堆疊框架和引數檢查。 若要存取該資訊， `COR_PRF_ENABLE_FUNCTION_ARGS` `COR_PRF_ENABLE_FUNCTION_RETVAL` 必須設定、和（或） `COR_PRF_ENABLE_FRAME_INFO` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標，然後使用 `SetEnterLeaveFunctionHooks3WithInfo` 方法來註冊此函式的實作為。  
+
+ [FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)和[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)勾點提供堆疊框架和引數檢查。 若要存取該資訊， `COR_PRF_ENABLE_FUNCTION_ARGS` `COR_PRF_ENABLE_FUNCTION_RETVAL` 必須設定、和/或 `COR_PRF_ENABLE_FRAME_INFO` 旗標。 分析工具可以使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md) 方法來設定事件旗標，然後使用 `SetEnterLeaveFunctionHooks3WithInfo` 方法來註冊此函式的實作為。  
   
- 一次只能有一組回呼處於作用中狀態，而最新的版本會優先使用。 因此，如果 profiler 同時呼叫[SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)和 `SetEnterLeaveFunctionHooks3WithInfo` ， `SetEnterLeaveFunctionHooks3WithInfo` 則會使用。  
+ 一次只能有一個作用中的回呼集合，而且最新的版本會優先使用。 因此，如果 profiler 同時呼叫 [SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) 和 `SetEnterLeaveFunctionHooks3WithInfo` ， `SetEnterLeaveFunctionHooks3WithInfo` 則會使用。  
   
- `SetEnterLeaveFunctionHooks3WithInfo`只能從分析工具的[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)回呼呼叫方法。  
+ 您 `SetEnterLeaveFunctionHooks3WithInfo` 只能從分析工具的 [ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md) 回呼呼叫此方法。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

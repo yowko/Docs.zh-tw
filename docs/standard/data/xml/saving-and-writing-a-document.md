@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823494"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697554"
 ---
 # <a name="saving-and-writing-a-document"></a>儲存與寫入文件
+
 載入及儲存 <xref:System.Xml.XmlDocument> 時，儲存的文件與原始文件在下列方面可能不同：  
   
 - 如果在呼叫 <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> 方法之前將 `true` 屬性設為 <xref:System.Xml.XmlDocument.Save%2A>，則在輸出中會保留文件中的泛空白字元；如果此屬性為 `false`，則 <xref:System.Xml.XmlDocument> 會自動縮排輸出。  
@@ -30,6 +31,7 @@ ms.locfileid: "94823494"
 - 如果您要將 <xref:System.Xml.XmlDocument> 寫入檔案或資料流，則寫出的輸出與文件的內容相同。 換言之，唯有當文件中已包含一個 <xref:System.Xml.XmlDeclaration> 時，才會將其寫出，而且寫出文件時所使用的編碼與宣告節點中指定的編碼相同。  
   
 ## <a name="writing-an-xmldeclaration"></a>寫入 XmlDeclaration  
+
  除了 <xref:System.Xml.XmlDocument> 及 <xref:System.Xml.XmlDeclaration> 的 <xref:System.Xml.XmlNode.OuterXml%2A> 方法之外，<xref:System.Xml.XmlNode.InnerXml%2A>、<xref:System.Xml.XmlNode.WriteTo%2A> 及 <xref:System.Xml.XmlDocument> 的<xref:System.Xml.XmlDocument.Save%2A> 及 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 成員也會建立 XML 宣告。  
   
  對於 <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlNode.OuterXml%2A> 與 <xref:System.Xml.XmlDocument.InnerXml%2A>、<xref:System.Xml.XmlDocument.Save%2A> 及 <xref:System.Xml.XmlDocument.WriteTo%2A> 方法的 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 屬性，XML 宣告中寫出的編碼取自 <xref:System.Xml.XmlDeclaration> 節點。 如果沒有任何 <xref:System.Xml.XmlDeclaration> 節點， <xref:System.Xml.XmlDeclaration> 則不會寫出。如果節點中沒有編碼，則 <xref:System.Xml.XmlDeclaration> 不會在 XML 宣告中寫出編碼。  
@@ -55,6 +57,7 @@ doc.Save(tw);
  若為 <xref:System.Xml.XmlDeclaration> 、和的成員， <xref:System.Xml.XmlNode.OuterXml%2A> <xref:System.Xml.XmlDeclaration.WriteTo%2A> <xref:System.Xml.XmlNode.InnerXml%2A> 如果 <xref:System.Xml.XmlDeclaration.Encoding%2A> 未設定屬性，則不會寫出編碼。否則，在 XML 宣告中寫出的編碼與在屬性中找到的編碼相同 <xref:System.Xml.XmlDeclaration.Encoding%2A> 。  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>使用 OuterXml 屬性寫入文件內容  
+
  <xref:System.Xml.XmlNode.OuterXml%2A> 屬性是全球資訊網協會 (W3C) XML 文件物件模型 (DOM) 標準的 Microsoft 擴充程式。 <xref:System.Xml.XmlNode.OuterXml%2A> 屬性可用於取得整個 XML 文件的標記，或僅取得單一節點及其子節點的標記。 <xref:System.Xml.XmlNode.OuterXml%2A> 會傳回表示給定節點及其所有子節點的標記。  
   
  下列程式碼範例顯示如何將整個文件儲存為字串。  
@@ -87,6 +90,6 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  相反地，如果您需要子節點的內容，則可使用 <xref:System.Xml.XmlNode.InnerText%2A> 屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

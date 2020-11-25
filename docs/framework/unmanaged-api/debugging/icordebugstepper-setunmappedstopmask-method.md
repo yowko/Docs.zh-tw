@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b1211981-e90c-4e05-8def-fa18d85ad9ab
 topic_type:
 - apiref
-ms.openlocfilehash: ef458fda8e8b7e75f92a4b3c06eabec106180d23
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 50fad8b38a6b33d0ddbb2f0f20676296c3d66737
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379256"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698724"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask 方法
-設定值，指定執行將暫停的未對應程式碼類型。  
+
+設定值，這個值會指定要在其中停止執行的未對應程式碼類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,18 +35,21 @@ HRESULT SetUnmappedStopMask (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `mask`  
- 在CorDebugUnmappedStop 列舉的值，指定偵錯工具將在其中停止執行的未對應程式碼類型。  
+ 在CorDebugUnmappedStop 列舉的值，這個值會指定偵錯工具將在其中停止執行的未對應程式碼類型。  
   
- 預設值為 STOP_OTHER_UNMAPPED。 STOP_UNMANAGED 的值僅適用于 interop 調試。  
+ 預設值為 STOP_OTHER_UNMAPPED。 值 STOP_UNMANAGED 僅適用于 interop 的偵錯工具。  
   
 ## <a name="remarks"></a>備註  
- 當偵錯工具發現沒有對應到 Microsoft 中繼語言（MSIL）的即時（JIT）編譯時，如果指定該類型之未對應程式碼的旗標已設定，就會停止執行。否則，逐步執行會以透明方式繼續進行。  
+
+ 當偵錯工具找不到與 Microsoft 中繼語言 (MSIL) 對應的即時 (JIT) 編譯時，如果已設定未對應程式碼類型的旗標，則會中止執行;否則，會以透明的方式繼續執行。  
   
- 如果偵錯工具未使用分檔器來輸入方法，則不一定會跳過未對應的程式碼。  
+ 如果偵錯工具未使用分檔器來輸入方法，則不一定不會跳過未對應的程式碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

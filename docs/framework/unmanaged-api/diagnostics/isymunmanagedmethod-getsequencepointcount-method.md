@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-ms.openlocfilehash: a44f81deb2d57b49f1fd0650fa52c06383210352
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 44472c7beff72d24853b7fb9865071a9b15ef0e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614431"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699426"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount 方法
-取得這個方法內的序列點計數。  
+
+取得此方法內的序列點計數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,14 +34,17 @@ HRESULT GetSequencePointCount(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pRetVal`  
- 脫銷的指標 `ULONG32` ，接收包含序列點所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含序列點所需的緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

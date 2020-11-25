@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 9e6134d39096c4ab157aa545646d83339f92a0b8
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5ec67758e3174493cbd5cec1de0dcce30013ac43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441028"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698581"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine 方法
-如果本檔中的行不一定是序列點，則傳回最接近序列點的行。  
+
+如果本檔中不一定是序列點的行，則傳回最接近序列點的行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,16 @@ HRESULT FindClosestLine(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `line`  
- 在本檔中的一行。  
+ 在這份檔中有一行。  
   
  `pRetVal`  
- 脫銷接收該行之變數的指標。  
+ 擴展接收該行之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，錯誤碼為。  
+
+ 如果方法成功，則為 S_OK;否則為錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 

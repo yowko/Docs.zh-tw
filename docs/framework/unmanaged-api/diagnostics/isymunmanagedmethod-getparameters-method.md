@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c66fd810ae4976bc0b5e04572b899465cebe4bbb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699504"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 方法
-取得這個方法的參數。 參數會依照其在方法簽章中定義的順序傳回。  
+
+取得這個方法的參數。 參數會依照其在方法簽章中的定義順序傳回。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +37,23 @@ HRESULT GetParameters(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cParams`  
  [in] `params` 陣列的大小。  
   
  `pcParams`  
- 在的指標 `ULONG32` ，接收包含參數所需的緩衝區大小。  
+ 在的指標 `ULONG32` ，會接收包含參數所需的緩衝區大小。  
   
  `params`  
- 脫銷接收參數之緩衝區的指標。  
+ 擴展接收參數之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

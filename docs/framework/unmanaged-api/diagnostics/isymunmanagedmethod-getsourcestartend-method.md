@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f53afa5f87f1502f287b25e3d9756f9a54ad6869
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699283"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd 方法
-取得這個方法之來源的開始和結束檔位置。 第一個陣列位置是 start，而第二個數組位置是結尾。  
+
+取得此方法之來源的開始和結束檔位置。 第一個陣列位置是開始，而第二個數組位置是結尾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,23 +37,26 @@ HRESULT GetSourceStartEnd(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `docs`  
  在開始和結束的來源文件。  
   
  `lines`  
- 在對應來源文件中的開始和結束行。  
+ 在對應來源文件中的起始和結束行。  
   
  `columns`  
  在對應來源文件中的開始和結束資料行。  
   
  `pRetVal`  
- [out] `true`如果已定義位置，則為，否則為 `false` 。  
+ [out] `true` 如果已定義位置，則為，否則為 `false` 。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

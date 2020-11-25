@@ -3,18 +3,18 @@ title: Discard - C# 指南
 description: 說明 C# 的 discard 支援，這是未指派且可捨棄的變數，並說明 discard 的使用方式。
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869321"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698802"
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
 
-從 C# 7.0 開始，C# 支援 discard，這是應用程式程式碼中刻意未使用的暫存虛擬變數。 Discard 相當於未指派的變數，不具有任何值。 因為只有一個 discard 變數，而且該變數可能甚至未配置儲存空間，所以 discard 可減少記憶體配置。 這些變數讓您的程式碼意圖更清楚，因而提高其可讀性和可維護性。
+從 c # 7.0 開始，c # 支援捨棄，也就是在應用程式程式碼中刻意未使用的預留位置變數。 Discard 相當於未指派的變數，不具有任何值。 因為只有一個 discard 變數，而且該變數可能甚至未配置儲存空間，所以 discard 可減少記憶體配置。 這些變數讓您的程式碼意圖更清楚，因而提高其可讀性和可維護性。
 
-指定變數為 discard 的方式是在其名稱中指派底線 (`_`)。 例如，下列方法呼叫會傳回 3 Tuple，其中第一個和第二個值會被捨棄，而*area* 是先前宣告的變數，要設定為 *GetCityInformation* 所傳回的第三個對應元件：
+指定變數為 discard 的方式是在其名稱中指派底線 (`_`)。 例如，下列方法呼叫會傳回 3 Tuple，其中第一個和第二個值會被捨棄，而 *area* 是先前宣告的變數，要設定為 *GetCityInformation* 所傳回的第三個對應元件：
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
@@ -47,7 +47,7 @@ ms.locfileid: "90869321"
 
 ## <a name="pattern-matching-with-switch-and-is"></a>以 `switch` 和 `is` 進行的模式比對
 
-「捨棄模式」** 可用於以 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 關鍵字進行的模式比對。 每個運算式一律會比對捨棄模式。
+「捨棄模式」可用於以 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 關鍵字進行的模式比對。 每個運算式一律會比對捨棄模式。
 
 下列範例會定義 `ProvidesFormatInfo` 方法，該方法使用 [is](language-reference/keywords/is.md) 陳述式來判斷物件是否提供 <xref:System.IFormatProvider> 實作，並測試物件是否為 `null`。 它也會使用捨棄模式來處理任何其他類型的非 Null 物件。
 

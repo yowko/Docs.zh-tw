@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-ms.openlocfilehash: 88e81779fc9c20c506f3b0aa11ac2da3958dfe86
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 25a90965dc5466b7cf1a07140705424cf2ba4cd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616693"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699231"
 ---
 # <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS 結構
-包含有關垃圾收集的每個執行緒統計資料。  
+
+包含與垃圾收集相關的每個執行緒統計資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +36,22 @@ typedef struct _COR_GC_THREAD_STATS {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|member|描述|  
 |------------|-----------------|  
 |`PerThreadAllocation`|在與目前實例相關聯的執行緒上配置的記憶體位元組數目 `COR_GC_THREAD_STATS` 。 每次發生層代零垃圾收集時，這個數位就會清除為零。|  
-|`Flags`|在最近一次垃圾收集時，升級至較高層代的位元組數目。|  
+|`Flags`|在最近的垃圾收集上提升為較高世代的位元組數目。|  
   
 ## <a name="remarks"></a>備註  
- [ICLRTask：： GetMemStats](iclrtask-getmemstats-method.md)接受類型的輸出參數 `COR_GC_THREAD_STATS` 。  
+
+ [ICLRTask：： GetMemStats](iclrtask-getmemstats-method.md) 接受型別為的 output 參數 `COR_GC_THREAD_STATS` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** GCHost .idl  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ 連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

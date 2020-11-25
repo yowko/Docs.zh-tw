@@ -1,21 +1,21 @@
 ---
-title: .NET 4.5 中 Windows Workflow Foundation 的新功能
+title: .NET Framework 4.5 中 Windows Workflow Foundation 的新功能
 description: .NET Framework 4.5 中的 Windows Workflow Foundation 引進許多新功能，例如新的活動、設計工具功能和工作流程開發模型。
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556612"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697905"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中 Windows Workflow Foundation 的新功能
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>.NET Framework 4.5 中 Windows Workflow Foundation 的新功能
 
-.NET Framework 4.5 中 Windows Workflow Foundation (WF) 引進許多新功能，例如新的活動、設計工具功能和工作流程開發模型。 重新裝載的工作流程設計工具支援在 .NET Framework 4.5 中引進的許多新工作流程功能。 如需有關支援之新功能的詳細資訊，請參閱 [重新裝載工作流程設計工具中新的 Workflow Foundation 4.5 功能支援](wf-features-in-the-rehosted-workflow-designer.md)。 如需有關將 .NET 3.0 和 .NET 3.5 工作流程應用程式遷移為使用最新版本的詳細資訊，請參閱 [遷移指引](migration-guidance.md)。 本主題概要說明 .NET Framework 4.5 中引進的新工作流程功能。
+.NET Framework 4.5 中 Windows Workflow Foundation (WF) 引進許多新功能，例如新的活動、設計工具功能和工作流程開發模型。 重新裝載的工作流程設計工具支援在 .NET Framework 4.5 中引進的許多新工作流程功能。 如需有關支援之新功能的詳細資訊，請參閱 [重新裝載工作流程設計工具中新的 Workflow Foundation 4.5 功能支援](wf-features-in-the-rehosted-workflow-designer.md)。 如需將 .NET Framework 3.0 和 .NET Framework 3.5 工作流程應用程式遷移為使用最新版本的詳細資訊，請參閱 [遷移指引](migration-guidance.md)。 本文概述 .NET Framework 4.5 中引進的新工作流程功能。
 
 > [!WARNING]
-> 以舊版 Framework 為目標的專案無法使用 .NET Framework 4.5 中引進的新 Windows Workflow Foundation 功能。 如果以 .NET Framework 4.5 為目標的專案重新設定為舊版架構，則可能會發生數個問題。
+> 以舊版 Framework 為目標的專案無法使用 .NET Framework 4.5 中引進的新 Windows Workflow Foundation 功能。 如果以 .NET Framework 4.5 為目標的專案被覆位為舊版架構，則可能會發生數個問題。
 >
 > - C # 運算式將在設計工具中取代，並在 **XAML 中設定訊息值**。
 > - 會出現許多建置錯誤，包括下列錯誤。

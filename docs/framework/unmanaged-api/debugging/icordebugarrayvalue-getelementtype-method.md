@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed71961e-ae9b-4dfc-9554-06637696d697
 topic_type:
 - apiref
-ms.openlocfilehash: 8b5a6f4447730ebc6e4b23d3cd06df85b2d7fee6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1deadef7517772460adc96cd0dd630d85cb21c9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894998"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698150"
 ---
 # <a name="icordebugarrayvaluegetelementtype-method"></a>ICorDebugArrayValue::GetElementType 方法
+
 取得值，指出陣列中元素的簡單類型。  
   
 ## <a name="syntax"></a>語法  
@@ -34,11 +35,13 @@ HRESULT GetElementType (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pType`  
- 脫銷指出類型之 CorElementType 列舉值的指標。  
+ 擴展CorElementType 列舉值的指標，指出型別。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

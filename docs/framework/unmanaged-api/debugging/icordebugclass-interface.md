@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: d7417e8dc193172c77d23fe3fa72c8298d802b5c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894047"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699621"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass 介面
 
@@ -29,20 +29,22 @@ ms.locfileid: "82894047"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetModule 方法](icordebugclass-getmodule-method.md)|取得定義此類別的模組。|  
-|[GetStaticFieldValue 方法](icordebugclass-getstaticfieldvalue-method.md)|取得指定靜態欄位的值。|  
-|[GetToken 方法](icordebugclass-gettoken-method.md)|取得這個`TypeDef`類別的元資料標記。|  
+|[GetModule 方法](icordebugclass-getmodule-method.md)|取得定義這個類別的模組。|  
+|[GetStaticFieldValue 方法](icordebugclass-getstaticfieldvalue-method.md)|取得指定之靜態欄位的值。|  
+|[GetToken 方法](icordebugclass-gettoken-method.md)|取得 `TypeDef` 這個類別的元資料標記。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugClass`介面代表未具現化的泛型型別。 ICorDebugType 介面代表具現化的泛型型別。 例如， `Hashtable<K, V>`會以表示`ICorDebugClass`，而`Hashtable<Int32, String>`會以表示。 `ICorDebugType`  
+
+ `ICorDebugClass`介面代表未具現化的泛型型別。 ICorDebugType 介面代表具現化的泛型型別。 例如，會 `Hashtable<K, V>` 以表示 `ICorDebugClass` ，而則會以 `Hashtable<Int32, String>` 表示 `ICorDebugType` 。  
   
- 非泛型型別是以`ICorDebugClass`和`ICorDebugType`表示。 第二個介面是在 .NET Framework 版本2.0 中引進，以處理類型具現化。  
+ 非泛型型別是由 `ICorDebugClass` 和表示 `ICorDebugType` 。 第二個介面是在 .NET Framework 版本2.0 中引進，以處理型別具現化。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-ms.openlocfilehash: 631da8936873b57040f1c60e8db6867ea2eed2c8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 958d36ee4d51d2975139acb9997cc19fb51a00c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617044"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698451"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone 方法
+
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
 ## <a name="syntax"></a>語法  

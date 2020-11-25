@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 1779bb51267af3c2f50ec03112f3c45199390333
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef7363cd1c5161217fa4cf74dbfae9dee86fa76f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830424"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697736"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
 
@@ -51,6 +51,7 @@ ms.locfileid: "94830424"
  若要將本主題中的程式碼複製成單一清單，請參閱[如何：實作事件架構非同步模式的用戶端](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="creating-the-component"></a>建立元件  
+
  第一步是建立將會實作「事件架構非同步模式」的元件。  
   
 ### <a name="to-create-the-component"></a>建立元件  
@@ -58,6 +59,7 @@ ms.locfileid: "94830424"
 - 建立一個名為 `PrimeNumberCalculator` 且會從 <xref:System.ComponentModel.Component> 繼承的類別。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定義公用非同步事件和委派  
+
  您的元件會使用事件與用戶端進行通訊。 _MethodName_**Completed** 事件會對用戶端發出已完成非同步工作的警示，而 _MethodName_**ProgressChanged** 事件則是會通知用戶端非同步工作的進度。  
   
 ### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>為元件的用戶端定義非同步事件：  
@@ -83,6 +85,7 @@ ms.locfileid: "94830424"
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#6)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -99,6 +102,7 @@ ms.locfileid: "94830424"
      在下一節中將會清除這些警告。  
   
 ## <a name="defining-private-delegates"></a>定義私用委派  
+
  實作 `PrimeNumberCalculator` 元件的非同步層面時，會在內部使用稱為 <xref:System.Threading.SendOrPostCallback> 的特殊委派來實作。 <xref:System.Threading.SendOrPostCallback> 代表在 <xref:System.Threading.ThreadPool> 執行緒上執行的回呼方法。 此回呼方法必須具有會採用 <xref:System.Object> 類型之單一參數的簽章，這意謂著您將必須在包裝函式類別中傳遞委派之間的狀態。 如需詳細資訊，請參閱<xref:System.Threading.SendOrPostCallback>。  
   
 ### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>實作元件的內部非同步行為：  
@@ -130,6 +134,7 @@ ms.locfileid: "94830424"
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#23)]  
   
 ## <a name="implementing-public-events"></a>實作公用事件  
+
  實作「事件架構非同步模式」的元件會使用事件與用戶端進行通訊。 叫用這些事件時，會在 <xref:System.ComponentModel.AsyncOperation> 類別的協助下，在適當的執行緒上叫用。  
   
 ### <a name="to-raise-events-to-your-components-clients"></a>向元件的用戶端引發事件：  
@@ -140,6 +145,7 @@ ms.locfileid: "94830424"
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#24)]  
   
 ## <a name="implementing-the-completion-method"></a>實作完成方法  
+
  完成委派是當非同步作業以成功完成、發生錯誤或取消作為結束時，基礎無限制執行緒非同步行為將叫用的方法。 此引動過程會在任意的執行緒上發生。  
   
  從唯一用戶端權杖的內部集合移除用戶端工作識別碼時，就是在此方法中進行。 此方法也會藉由呼叫對應之 <xref:System.ComponentModel.AsyncOperation> 上的 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 方法，來結束特定非同步作業的存留期。 此呼叫會在適用於應用程式模型的執行緒上引發完成事件。 在呼叫 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 方法之後，即無法再使用這個 <xref:System.ComponentModel.AsyncOperation> 執行個體，後續所有嘗試使用它的行為都會擲回例外狀況。  
@@ -154,6 +160,7 @@ ms.locfileid: "94830424"
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#26)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -169,6 +176,7 @@ ms.locfileid: "94830424"
      在下一節中將會解決此警告。  
   
 ## <a name="implementing-the-worker-methods"></a>實作背景工作方法  
+
  到目前為止，您已經為 `PrimeNumberCalculator` 元件實作提供支援的非同步程式碼。 現在，您可以實作執行實際工作的程式碼。 您將實作三個方法：`CalculateWorker``BuildPrimeNumberList` 及 `IsPrime`。 `BuildPrimeNumberList` 與 `IsPrime` 一起會構成稱為「埃拉托斯特尼篩法」(Sieve of Eratosthenes) 的著名演算法，此演算法可藉由尋找所有質數，最大可到測試數字的平方根為止，來判斷數字是否為質數。 如果到該點為止未發現任何除數，即表示該測試數字為質數。  
   
  如果此元件的撰寫目的是要發揮最高效率，它就會記住不同測試數字的各種引動過程所探索到的所有質數。 此外，它也會檢查是否有平凡除數，例如 2、3 及 5。 此範例的目的是要示範如何以非同步方式執行耗時的作業，不過，也因此這些最佳化會留給您作為練習。  
@@ -208,6 +216,7 @@ ms.locfileid: "94830424"
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#29)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -217,6 +226,7 @@ ms.locfileid: "94830424"
      剩下要撰寫的只有用來開始和取消非同步作業的方法 `CalculatePrimeAsync` 和 `CancelAsync`。  
   
 ## <a name="implementing-the-start-and-cancel-methods"></a>實作開始和取消方法  
+
  開始背景工作方法的方式，是在背景工作方法自己的執行緒上，呼叫包裝它之委派上的 `BeginInvoke`。 若要管理特定非同步作業的存留期，您需呼叫 <xref:System.ComponentModel.AsyncOperationManager> 協助程式類別上的 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> 方法。 這會傳回 <xref:System.ComponentModel.AsyncOperation> 以將用戶端事件處理常式上的呼叫封送處理至適當的執行緒或內容。  
   
  取消特定擱置中作業的方式，是呼叫其對應之 <xref:System.ComponentModel.AsyncOperation> 上的 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>。 這會結束該作業，後續對其 <xref:System.ComponentModel.AsyncOperation> 發出的呼叫都會擲回例外狀況。  
@@ -234,6 +244,7 @@ ms.locfileid: "94830424"
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#4)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -245,13 +256,14 @@ ms.locfileid: "94830424"
  如需使用 `PrimeNumberCalculator` 元件的範例用戶端，請參閱[如何：實作事件架構非同步模式的用戶端](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="next-steps"></a>後續步驟  
+
  您可以撰寫 `CalculatePrime` (`CalculatePrimeAsync` 方法的對等同步方法) 來填寫此範例。 這將可讓 `PrimeNumberCalculator` 元件完全符合「事件架構非同步模式」的規範。  
   
  您可以藉由保留不同測試數字的各種引動過程所探索到的所有質數清單，來改善此範例。 使用此做法時，每個工作都可從先前工作所完成的工作受益。 請使用 `lock` 區域來小心保護此清單，如此才能將不同執行緒對此清單的存取序列化。  
   
  您也可以針對平凡除數 (例如 2、3 及 5) 進行測試來改善此範例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [作法：在背景執行作業](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [事件架構非同步模式概觀](event-based-asynchronous-pattern-overview.md)

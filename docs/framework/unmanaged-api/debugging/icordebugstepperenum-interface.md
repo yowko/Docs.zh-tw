@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: 988718c1-1a4a-40f2-a04c-7d67e5cfe1e2
 topic_type:
 - apiref
-ms.openlocfilehash: c39c047cce97db7c98f1fad403bd16d0e6a2c0fe
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: facea5cd7f0b0e0e6c0b1049e87a2355f1d3965a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379446"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697164"
 ---
 # <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum 介面
-會執行 ICorDebugEnum 方法，並列舉 ICorDebugStepper 陣列。  
+
+會實 ICorDebugEnum 方法，並列舉 ICorDebugStepper 陣列。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[下一個方法](icordebugstepperenum-next-method.md)|`ICorDebugStepper`從列舉中取得指定的實例數目，從目前位置開始。|  
+|[下一個方法](icordebugstepperenum-next-method.md)|`ICorDebugStepper`從目前位置開始，取得列舉的指定實例數目。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -36,7 +37,8 @@ ms.locfileid: "83379446"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -44,6 +46,6 @@ ms.locfileid: "83379446"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)
