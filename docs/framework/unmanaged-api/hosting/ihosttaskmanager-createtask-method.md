@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7fdf25d44bdf630e306cf0f5dcb3387a3b0f7c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501413"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731679"
 ---
-# <a name="ihosttaskmanagercreatetask-method"></a><span data-ttu-id="8ea4f-102">IHostTaskManager::CreateTask 方法</span><span class="sxs-lookup"><span data-stu-id="8ea4f-102">IHostTaskManager::CreateTask Method</span></span>
-<span data-ttu-id="8ea4f-103">要求主機建立新的工作。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-103">Requests that the host create a new task.</span></span>  
+# <a name="ihosttaskmanagercreatetask-method"></a><span data-ttu-id="81148-102">IHostTaskManager::CreateTask 方法</span><span class="sxs-lookup"><span data-stu-id="81148-102">IHostTaskManager::CreateTask Method</span></span>
+
+<span data-ttu-id="81148-103">要求主機建立新的工作。</span><span class="sxs-lookup"><span data-stu-id="81148-103">Requests that the host create a new task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ea4f-104">語法</span><span class="sxs-lookup"><span data-stu-id="8ea4f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81148-104">語法</span><span class="sxs-lookup"><span data-stu-id="81148-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateTask (  
@@ -36,46 +37,49 @@ HRESULT CreateTask (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8ea4f-105">參數</span><span class="sxs-lookup"><span data-stu-id="8ea4f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81148-105">參數</span><span class="sxs-lookup"><span data-stu-id="81148-105">Parameters</span></span>  
+
  `stacksize`  
- <span data-ttu-id="8ea4f-106">在要求之堆疊的要求大小（以位元組為單位），或預設大小為0（零）。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-106">[in] The requested size, in bytes, of the requested stack, or 0 (zero) for the default size.</span></span>  
+ <span data-ttu-id="81148-106">在要求的堆疊所要求的大小（以位元組為單位），或預設大小為 0 (零) 。</span><span class="sxs-lookup"><span data-stu-id="81148-106">[in] The requested size, in bytes, of the requested stack, or 0 (zero) for the default size.</span></span>  
   
  `pStartAddress`  
- <span data-ttu-id="8ea4f-107">在工作要執行之函式的指標。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-107">[in] A pointer to the function the task is to execute.</span></span>  
+ <span data-ttu-id="81148-107">在工作要執行之函式的指標。</span><span class="sxs-lookup"><span data-stu-id="81148-107">[in] A pointer to the function the task is to execute.</span></span>  
   
  `pParameter`  
- <span data-ttu-id="8ea4f-108">在要傳遞至函式之使用者資料的指標，如果函數不接受任何參數，則為 null。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-108">[in] A pointer to the user data to be passed to the function, or null if the function takes no parameters.</span></span>  
+ <span data-ttu-id="81148-108">在要傳遞至函式之使用者資料的指標，如果函式不接受任何參數，則為 null。</span><span class="sxs-lookup"><span data-stu-id="81148-108">[in] A pointer to the user data to be passed to the function, or null if the function takes no parameters.</span></span>  
   
  `ppTask`  
- <span data-ttu-id="8ea4f-109">脫銷主機所建立之[IHostTask](ihosttask-interface.md)實例的位址指標，如果無法建立工作，則為 null。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-109">[out] A pointer to the address of an [IHostTask](ihosttask-interface.md) instance created by the host, or null if the task cannot be created.</span></span> <span data-ttu-id="8ea4f-110">工作會維持在暫停狀態，直到呼叫[IHostTask：： Start](ihosttask-start-method.md)明確啟動為止。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-110">The task remains in a suspended state until it is explicitly started by a call to [IHostTask::Start](ihosttask-start-method.md).</span></span>  
+ <span data-ttu-id="81148-109">擴展主機所建立之 [IHostTask](ihosttask-interface.md) 實例位址的指標，如果無法建立工作，則為 null。</span><span class="sxs-lookup"><span data-stu-id="81148-109">[out] A pointer to the address of an [IHostTask](ihosttask-interface.md) instance created by the host, or null if the task cannot be created.</span></span> <span data-ttu-id="81148-110">工作會保持暫停狀態，直到 [IHostTask：： Start](ihosttask-start-method.md)的呼叫明確啟動為止。</span><span class="sxs-lookup"><span data-stu-id="81148-110">The task remains in a suspended state until it is explicitly started by a call to [IHostTask::Start](ihosttask-start-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8ea4f-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="8ea4f-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="81148-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="81148-111">Return Value</span></span>  
   
-|<span data-ttu-id="8ea4f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8ea4f-112">HRESULT</span></span>|<span data-ttu-id="8ea4f-113">說明</span><span class="sxs-lookup"><span data-stu-id="8ea4f-113">Description</span></span>|  
+|<span data-ttu-id="81148-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="81148-112">HRESULT</span></span>|<span data-ttu-id="81148-113">描述</span><span class="sxs-lookup"><span data-stu-id="81148-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8ea4f-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="8ea4f-114">S_OK</span></span>|<span data-ttu-id="8ea4f-115">`CreateTask`已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-115">`CreateTask` returned successfully.</span></span>|  
-|<span data-ttu-id="8ea4f-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8ea4f-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8ea4f-117">Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="8ea4f-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8ea4f-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8ea4f-119">呼叫超時。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-119">The call timed out.</span></span>|  
-|<span data-ttu-id="8ea4f-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8ea4f-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8ea4f-121">呼叫端沒有擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="8ea4f-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8ea4f-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8ea4f-123">已封鎖的執行緒或光纖在等候時取消了事件。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="8ea4f-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8ea4f-124">E_FAIL</span></span>|<span data-ttu-id="8ea4f-125">發生不明的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8ea4f-126">當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8ea4f-127">對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="8ea4f-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="8ea4f-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="8ea4f-129">沒有足夠的記憶體可用來建立要求的工作。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-129">Not enough memory was available to create the requested task.</span></span>|  
+|<span data-ttu-id="81148-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="81148-114">S_OK</span></span>|<span data-ttu-id="81148-115">`CreateTask` 傳回成功。</span><span class="sxs-lookup"><span data-stu-id="81148-115">`CreateTask` returned successfully.</span></span>|  
+|<span data-ttu-id="81148-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="81148-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="81148-117">Common language runtime (CLR) 尚未載入至進程，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="81148-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="81148-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="81148-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="81148-119">呼叫已超時。</span><span class="sxs-lookup"><span data-stu-id="81148-119">The call timed out.</span></span>|  
+|<span data-ttu-id="81148-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="81148-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="81148-121">呼叫端沒有擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="81148-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="81148-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="81148-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="81148-123">當封鎖的執行緒或光纖正在等候時，已取消事件。</span><span class="sxs-lookup"><span data-stu-id="81148-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="81148-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="81148-124">E_FAIL</span></span>|<span data-ttu-id="81148-125">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="81148-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="81148-126">當方法傳回 E_FAIL 時，CLR 在進程內將無法再使用。</span><span class="sxs-lookup"><span data-stu-id="81148-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="81148-127">對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="81148-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="81148-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="81148-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="81148-129">沒有足夠的記憶體可用來建立要求的工作。</span><span class="sxs-lookup"><span data-stu-id="81148-129">Not enough memory was available to create the requested task.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8ea4f-130">備註</span><span class="sxs-lookup"><span data-stu-id="8ea4f-130">Remarks</span></span>  
- <span data-ttu-id="8ea4f-131">CLR 會呼叫 `CreateTask` 來要求主機建立新的工作。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-131">The CLR calls `CreateTask` to request that the host create a new task.</span></span> <span data-ttu-id="8ea4f-132">主機會將介面指標傳回到 `IHostTask` 實例。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-132">The host returns an interface pointer to an `IHostTask` instance.</span></span> <span data-ttu-id="8ea4f-133">傳回的工作必須保持暫止狀態，直到呼叫明確啟動為止 `IHostTask::Start` 。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-133">The returned task must remain suspended until it is explicitly started by a call to `IHostTask::Start`.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="8ea4f-134">規格需求</span><span class="sxs-lookup"><span data-stu-id="8ea4f-134">Requirements</span></span>  
- <span data-ttu-id="8ea4f-135">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8ea4f-135">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="8ea4f-136">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="8ea4f-136">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="8ea4f-137">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="8ea4f-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="8ea4f-138">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ea4f-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8ea4f-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ea4f-139">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="81148-130">備註</span><span class="sxs-lookup"><span data-stu-id="81148-130">Remarks</span></span>  
 
-- [<span data-ttu-id="8ea4f-140">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="8ea4f-140">ICLRTask Interface</span></span>](iclrtask-interface.md)
-- [<span data-ttu-id="8ea4f-141">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="8ea4f-141">ICLRTaskManager Interface</span></span>](iclrtaskmanager-interface.md)
-- [<span data-ttu-id="8ea4f-142">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="8ea4f-142">IHostTask Interface</span></span>](ihosttask-interface.md)
-- [<span data-ttu-id="8ea4f-143">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="8ea4f-143">IHostTaskManager Interface</span></span>](ihosttaskmanager-interface.md)
+ <span data-ttu-id="81148-131">CLR 會呼叫 `CreateTask` 以要求主機建立新的工作。</span><span class="sxs-lookup"><span data-stu-id="81148-131">The CLR calls `CreateTask` to request that the host create a new task.</span></span> <span data-ttu-id="81148-132">主機會傳回實例的介面指標 `IHostTask` 。</span><span class="sxs-lookup"><span data-stu-id="81148-132">The host returns an interface pointer to an `IHostTask` instance.</span></span> <span data-ttu-id="81148-133">傳回的工作必須保持暫止，直到呼叫明確啟動為止 `IHostTask::Start` 。</span><span class="sxs-lookup"><span data-stu-id="81148-133">The returned task must remain suspended until it is explicitly started by a call to `IHostTask::Start`.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="81148-134">需求</span><span class="sxs-lookup"><span data-stu-id="81148-134">Requirements</span></span>  
+
+ <span data-ttu-id="81148-135">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="81148-135">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="81148-136">**標頭：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="81148-136">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="81148-137">連結 **庫：** 以資源的形式包含在 MSCorEE.dll 中</span><span class="sxs-lookup"><span data-stu-id="81148-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="81148-138">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81148-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="81148-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="81148-139">See also</span></span>
+
+- [<span data-ttu-id="81148-140">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="81148-140">ICLRTask Interface</span></span>](iclrtask-interface.md)
+- [<span data-ttu-id="81148-141">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="81148-141">ICLRTaskManager Interface</span></span>](iclrtaskmanager-interface.md)
+- [<span data-ttu-id="81148-142">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="81148-142">IHostTask Interface</span></span>](ihosttask-interface.md)
+- [<span data-ttu-id="81148-143">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="81148-143">IHostTaskManager Interface</span></span>](ihosttaskmanager-interface.md)
