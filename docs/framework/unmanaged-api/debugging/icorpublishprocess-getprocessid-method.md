@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f31185e0-f01d-463a-b392-42163e39bfe9
 topic_type:
 - apiref
-ms.openlocfilehash: 95a4ef3ab77b33c67c63be2c22647075f2f95ce8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b0defd0a9c4197cf91fde1625794ff0d77c83ea0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421107"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693134"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID 方法
+
 取得此進程的作業系統識別碼。  
   
 ## <a name="syntax"></a>語法  
@@ -34,13 +35,15 @@ HRESULT GetProcessID (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pid`  
- 脫銷這個[ICorPublishProcess](icorpublishprocess-interface.md)物件所表示之進程的識別碼指標。  
+ 擴展這個 [ICorPublishProcess](icorpublishprocess-interface.md) 物件所表示之進程的識別碼指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorPub .idl，CorPub。h  
+ **標頭：** CorPub .idl、CorPub。h  
   
  **程式庫：** CorGuids.lib  
   

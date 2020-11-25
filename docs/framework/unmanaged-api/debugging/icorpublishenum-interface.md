@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: acbc37d0f49af21c60ff6989932c5d341673512b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 492d4b727ce507340fec47d30a791aa49d0cecb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421172"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693342"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum 介面
-做為列舉值的抽象基底介面，這些列舉值是用來發行進程和應用程式域的相關資訊。  
+
+作為列舉值的抽象基底介面，用於發行有關處理常式和應用程式域的資訊。  
   
 ## <a name="methods"></a>方法  
   
@@ -30,20 +31,22 @@ ms.locfileid: "83421172"
 |------------|-----------------|  
 |[Clone 方法](icorpublishenum-clone-method.md)|建立這個 `ICorPublishEnum` 物件的複本。|  
 |[GetCount 方法](icorpublishenum-getcount-method.md)|取得列舉中的專案數。|  
-|[Reset 方法](icorpublishenum-reset-method.md)|將的資料指標移至列舉的開頭。|  
-|[Skip 方法](icorpublishenum-skip-method.md)|在列舉中，將資料指標向後移動指定的專案數。|  
+|[Reset 方法](icorpublishenum-reset-method.md)|將游標移至列舉的開頭。|  
+|[Skip 方法](icorpublishenum-skip-method.md)|依指定的專案數將游標向前移動至列舉。|  
   
 ## <a name="remarks"></a>備註  
- 下列枚舉器衍生自 `ICorPublishEnum` ：  
+
+ 下列列舉值衍生自 `ICorPublishEnum` ：  
   
 - [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)  
   
 - [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorPub .idl，CorPub。h  
+ **標頭：** CorPub .idl、CorPub。h  
   
  **程式庫：** CorGuids.lib  
   
