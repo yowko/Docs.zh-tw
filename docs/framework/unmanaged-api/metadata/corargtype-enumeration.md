@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-ms.openlocfilehash: ac822dda30d697cbbbcacf19eb6a57d1e5fb4c3b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6388d804df43964866073d7c3b32dca84fb2d06f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007945"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720421"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="a53ab-102">CorArgType 列舉</span><span class="sxs-lookup"><span data-stu-id="a53ab-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="a53ab-103">包含值，這些值描述執行階段控制代碼的原生類型。</span><span class="sxs-lookup"><span data-stu-id="a53ab-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="50084-102">CorArgType 列舉</span><span class="sxs-lookup"><span data-stu-id="50084-102">CorArgType Enumeration</span></span>
+
+<span data-ttu-id="50084-103">包含值，這些值描述執行階段控制代碼的原生類型。</span><span class="sxs-lookup"><span data-stu-id="50084-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a53ab-104">語法</span><span class="sxs-lookup"><span data-stu-id="a53ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50084-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="50084-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -44,13 +45,14 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a53ab-105">需求</span><span class="sxs-lookup"><span data-stu-id="a53ab-105">Requirements</span></span>  
- <span data-ttu-id="a53ab-106">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a53ab-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="a53ab-107">**標頭：** Corhdr.h。h</span><span class="sxs-lookup"><span data-stu-id="a53ab-107">**Header:** CorHdr.h</span></span>  
-  
- <span data-ttu-id="a53ab-108">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a53ab-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a53ab-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a53ab-109">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="50084-105">需求</span><span class="sxs-lookup"><span data-stu-id="50084-105">Requirements</span></span>  
 
-- [<span data-ttu-id="a53ab-110">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="a53ab-110">Metadata Enumerations</span></span>](metadata-enumerations.md)
+ <span data-ttu-id="50084-106">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="50084-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="50084-107">**標頭：** Corhdr.h。h</span><span class="sxs-lookup"><span data-stu-id="50084-107">**Header:** CorHdr.h</span></span>  
+  
+ <span data-ttu-id="50084-108">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50084-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="50084-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="50084-109">See also</span></span>
+
+- [<span data-ttu-id="50084-110">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="50084-110">Metadata Enumerations</span></span>](metadata-enumerations.md)

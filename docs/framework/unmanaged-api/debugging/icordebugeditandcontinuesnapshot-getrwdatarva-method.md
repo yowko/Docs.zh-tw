@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3e07b233-dd41-45ba-a4f9-662e4b006f1f
 topic_type:
 - apiref
-ms.openlocfilehash: 4fb19e10c3c1e7775d52496e7e7a9c07e0f2b33c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9b4e830836ae088b96589a8b01e5fd22ef861b93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788795"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721383"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="14473-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA 方法</span><span class="sxs-lookup"><span data-stu-id="14473-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="14473-103">`GetRwDataRVA` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="14473-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="14473-104">請勿呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="14473-104">Do not call this method.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="14473-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="14473-105">See also</span></span>
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="14270-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA 方法</span><span class="sxs-lookup"><span data-stu-id="14270-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
 
-- [<span data-ttu-id="14473-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="14473-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+<span data-ttu-id="14270-103">`GetRwDataRVA` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="14270-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="14270-104">請不要呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="14270-104">Do not call this method.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="14270-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="14270-105">See also</span></span>
+
+- [<span data-ttu-id="14270-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="14270-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
