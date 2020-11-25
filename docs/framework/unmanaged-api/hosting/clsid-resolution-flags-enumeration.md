@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-ms.openlocfilehash: 5ac015f958d9504bbd14a66ead86548b8df32764
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 19731f34d259757e6de62dd4b4f0d4735d1c2e61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706160"
 ---
-# <a name="clsid_resolution_flags-enumeration"></a><span data-ttu-id="abe9e-102">CLSID_RESOLUTION_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="abe9e-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
-<span data-ttu-id="abe9e-103">包含表示 common language runtime （CLR）應如何解析的值 `CLSID` 。</span><span class="sxs-lookup"><span data-stu-id="abe9e-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
+# <a name="clsid_resolution_flags-enumeration"></a><span data-ttu-id="0ea52-102">CLSID_RESOLUTION_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="0ea52-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
+
+<span data-ttu-id="0ea52-103">包含值，指出 common language runtime (CLR) 應該如何解析 `CLSID` 。</span><span class="sxs-lookup"><span data-stu-id="0ea52-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abe9e-104">語法</span><span class="sxs-lookup"><span data-stu-id="abe9e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ea52-104">語法</span><span class="sxs-lookup"><span data-stu-id="0ea52-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,20 +34,21 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="abe9e-105">成員</span><span class="sxs-lookup"><span data-stu-id="abe9e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0ea52-105">成員</span><span class="sxs-lookup"><span data-stu-id="0ea52-105">Members</span></span>  
   
-|<span data-ttu-id="abe9e-106">成員</span><span class="sxs-lookup"><span data-stu-id="abe9e-106">Member</span></span>|<span data-ttu-id="abe9e-107">說明</span><span class="sxs-lookup"><span data-stu-id="abe9e-107">Description</span></span>|  
+|<span data-ttu-id="0ea52-106">member</span><span class="sxs-lookup"><span data-stu-id="0ea52-106">Member</span></span>|<span data-ttu-id="0ea52-107">描述</span><span class="sxs-lookup"><span data-stu-id="0ea52-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="abe9e-108">表示預設行為。</span><span class="sxs-lookup"><span data-stu-id="abe9e-108">Indicates the default behavior.</span></span>|  
-|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="abe9e-109">表示執行時間會搜尋登錄並套用填充碼原則。</span><span class="sxs-lookup"><span data-stu-id="abe9e-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
+|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="0ea52-108">表示預設行為。</span><span class="sxs-lookup"><span data-stu-id="0ea52-108">Indicates the default behavior.</span></span>|  
+|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="0ea52-109">指出執行時間會搜尋登錄並套用填充碼原則。</span><span class="sxs-lookup"><span data-stu-id="0ea52-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="abe9e-110">需求</span><span class="sxs-lookup"><span data-stu-id="abe9e-110">Requirements</span></span>  
- <span data-ttu-id="abe9e-111">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="abe9e-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="abe9e-112">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="abe9e-112">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="abe9e-113">**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abe9e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="abe9e-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="abe9e-114">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="0ea52-110">需求</span><span class="sxs-lookup"><span data-stu-id="0ea52-110">Requirements</span></span>  
 
-- [<span data-ttu-id="abe9e-115">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="abe9e-115">Hosting Enumerations</span></span>](hosting-enumerations.md)
+ <span data-ttu-id="0ea52-111">**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0ea52-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="0ea52-112">**標頭：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="0ea52-112">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="0ea52-113">**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ea52-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0ea52-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0ea52-114">See also</span></span>
+
+- [<span data-ttu-id="0ea52-115">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="0ea52-115">Hosting Enumerations</span></span>](hosting-enumerations.md)
