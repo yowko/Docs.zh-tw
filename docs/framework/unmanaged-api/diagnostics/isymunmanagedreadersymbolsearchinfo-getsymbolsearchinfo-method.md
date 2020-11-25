@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40fcdbc5-3bb2-41e9-b995-40984c209a7f
 topic_type:
 - apiref
-ms.openlocfilehash: 2b5a42c89e0e3efed61b1b471c227e0df85a51aa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 69e05fc33b3489f535f1d051da0294fe59e11e00
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614899"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708955"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo 方法
+
 取得符號搜尋資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -36,20 +37,23 @@ HRESULT GetSymbolSearchInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cSearchInfo`  
- 在`ULONG32`，指出的大小 `rgpSearchInfo` 。  
+ 在 `ULONG32` ，表示的大小 `rgpSearchInfo` 。  
   
  `pcSearchInfo`  
- 脫銷的指標 `ULONG32` ，接收包含搜尋資訊所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含搜尋資訊所需的緩衝區大小。  
   
  `rgpSearchInfo`  
- 脫銷設定為所傳回[ISymUnmanagedSymbolSearchInfo](isymunmanagedsymbolsearchinfo-interface.md)介面的指標。  
+ 擴展設定為傳回之 [ISymUnmanagedSymbolSearchInfo](isymunmanagedsymbolsearchinfo-interface.md) 介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

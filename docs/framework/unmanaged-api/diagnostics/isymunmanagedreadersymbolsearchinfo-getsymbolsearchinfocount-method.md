@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-ms.openlocfilehash: a81a5afeec8f97864e1772347c6575b9d09cb176
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5883b35bb3f1fec24ec108c9839501f0e81881fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708864"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 方法
+
 取得符號搜尋資訊的計數。  
   
 ## <a name="syntax"></a>語法  
@@ -33,14 +34,17 @@ HRESULT GetSymbolSearchInfoCount(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pcSearchInfo`  
- ] [out] 指標，其 `ULONG32` 接收包含搜尋資訊所需的緩衝區大小。  
+ ]）的指標 `ULONG32` ，該指標會接收包含搜尋資訊所需的緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

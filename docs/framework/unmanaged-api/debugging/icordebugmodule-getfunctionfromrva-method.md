@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f5a34517-2422-484f-be89-2ce0b4bce195
 topic_type:
 - apiref
-ms.openlocfilehash: 6245942f0b5cedd478ba0704acc1fef7251b8211
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85f368eaa024e7792e5feefeb08f0bac1b59494d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710125"
 ---
 # <a name="icordebugmodulegetfunctionfromrva-method"></a>ICorDebugModule::GetFunctionFromRVA 方法
+
 這個方法尚未在目前的 .NET Framework 版本中執行。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetFunctionFromRVA(  
@@ -35,6 +36,7 @@ HRESULT GetFunctionFromRVA(
 ```  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** CorDebug.idl、CorDebug.h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

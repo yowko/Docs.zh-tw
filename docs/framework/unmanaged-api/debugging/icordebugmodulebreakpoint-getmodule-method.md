@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ffd5d9ec-4564-4200-b625-b306eec0ebd7
 topic_type:
 - apiref
-ms.openlocfilehash: 714819504099ea978ed31d471b4ceb9fc17a6552
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b6363ef901d5297862ca46e685bb783aaaeb4123
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212291"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709604"
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a>ICorDebugModuleBreakpoint::GetModule 方法
-取得 "ICorDebugModule" 的介面指標，其參考此中斷點設定所在的模組。  
+
+取得 "ICorDebugModule" 的介面指標，該指標會參考設定此中斷點的模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetModule (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppModule`  
- 脫銷介面位址的指標 `ICorDebugModule` ，參考已設定中斷點的模組。  
+ 擴展介面位址的指標 `ICorDebugModule` ，該介面參考中斷點設定所在的模組。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

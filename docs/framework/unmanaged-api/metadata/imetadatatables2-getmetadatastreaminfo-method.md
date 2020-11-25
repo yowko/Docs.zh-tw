@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-ms.openlocfilehash: 7d39d089c348b7320651ed21ea14ba07d7877fd4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 21fc79f62dba4b16a7a067dff8fb9dcc795c9d35
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708721"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo 方法
-取得指定索引處中繼資料資料流程的名稱、大小和內容。  
+
+取得位於指定索引處之中繼資料資料流程的名稱、大小和內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +38,26 @@ HRESULT GetMetaDataStreamInfo (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ix`  
- 在要求之中繼資料資料流程的索引。  
+ 在要求的中繼資料資料流程的索引。  
   
  `ppchName`  
- 脫銷資料流程名稱的指標。  
+ 擴展資料流程名稱的指標。  
   
  `ppv`  
- 脫銷中繼資料資料流程的指標。  
+ 擴展中繼資料資料流程的指標。  
   
  `pcb`  
- 脫銷的大小（以位元組為單位） `ppv` 。  
+ 擴展的大小（以位元組為單位） `ppv` 。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ 連結 **庫：** 當做 MsCorEE.dll 中的資源使用  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

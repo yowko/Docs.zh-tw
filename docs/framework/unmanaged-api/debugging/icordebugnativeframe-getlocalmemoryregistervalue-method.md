@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 33a19f6e-1029-4d53-af64-19591c6e58ee
 topic_type:
 - apiref
-ms.openlocfilehash: 91f0a75f127afcff89c2b92bf3ed67466b205081
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 15485ac94ed9074baacc4fd2662a04bdcefcf1e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213045"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709317"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue 方法
-取得引數或區域變數的值，其中的 low 單字和 high 單字會分別儲存在這個原生框架的指定暫存器和記憶體位置中。  
+
+取得引數或區域變數的值，此值會在這個原生框架分別儲存在指定的暫存器和記憶體位置中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +39,25 @@ HRESULT GetLocalMemoryRegisterValue (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `highWordAddress`  
- 在`CORDB_ADDRESS`值，指定包含值高位字的記憶體位置。  
+ 在 `CORDB_ADDRESS` 值，指定包含值的最高文字的記憶體位置。  
   
  `lowWordRegister`  
- 在"CorDebugRegister" 列舉的值，指定包含值之低字的暫存器。  
+ 在"CorDebugRegister" 列舉值，指定包含值低字的暫存器。  
   
  `cbSigBlob`  
- 在整數，指定參數所參考的二進位中繼資料簽章大小 `pvSigBlob` 。  
+ 在整數，指定參數所參考之二進位中繼資料簽章的大小 `pvSigBlob` 。  
   
  `pvSigBlob`  
- 在`PCCOR_SIGNATURE`值，指向數值型別的二進位中繼資料簽章。  
+ 在 `PCCOR_SIGNATURE` 指向值型別之二進位中繼資料簽章的值。  
   
  `ppValue`  
- 脫銷"ICorDebugValue" 物件位址的指標，代表儲存在指定的暫存器和記憶體位置的已抓取值。  
+ 擴展"ICorDebugValue" 物件位址的指標，表示儲存在指定的暫存器和記憶體位置中的已抓取值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212538"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710025"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 方法
+
 取得模組的檔案名。  
   
 ## <a name="syntax"></a>語法  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cchname`  
  [in] `szName` 陣列的大小。  
   
@@ -43,13 +45,15 @@ HRESULT GetName(
  在傳回之名稱長度的指標。  
   
  `szName`  
- 脫銷儲存傳回名稱的陣列。  
+ 擴展儲存傳回名稱的陣列。  
   
 ## <a name="remarks"></a>備註  
- `GetName`如果模組的檔案名與磁片上的名稱相符，則此方法會傳回 S_OK HRESULT。 `GetName`如果已製作名稱，則會傳回 S_FALSE HRESULT，例如動態或記憶體中模組。  
+
+ `GetName`如果模組的檔案名與磁片上的名稱相符，則方法會傳回 S_OK HRESULT。 `GetName` 如果已製造名稱，例如，針對動態或記憶體中的模組，則會傳回 S_FALSE HRESULT。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

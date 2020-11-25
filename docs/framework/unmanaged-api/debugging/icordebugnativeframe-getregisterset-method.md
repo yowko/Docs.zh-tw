@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6f309b5f-5556-4f1e-b1dd-4fe97fc81d01
 topic_type:
 - apiref
-ms.openlocfilehash: e2055098c85c5a2e4619b9b0ddc8d602256bd16b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 945a398d32b50efc81ba45e705ed9d4161ed1524
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209717"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709267"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>ICorDebugNativeFrame::GetRegisterSet 方法
-取得這個堆疊框架的暫存器集。  
+
+取得這個堆疊框架的註冊集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +35,13 @@ HRESULT GetRegisterSet (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppRegisters`  
- 脫銷[ICorDebugRegisterSet](icordebugregisterset-interface.md)物件位址的指標，代表此堆疊框架的緩存集。  
+ 擴展 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 物件位址的指標，該物件代表此堆疊框架的註冊集。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
