@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: aa38efd4-de7e-4482-a5d3-adc152093460
 topic_type:
 - apiref
-ms.openlocfilehash: 351bb2a1eb03684a0498fba35270e1bda44a93c0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 2d927b02b7deebecb53a2218e2ec0275a07307b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706953"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream 方法
-假設中繼資料介面和包含符號存放區的資料流程，會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)結構，以便從指定的符號存放區讀取偵錯工具符號。  
+
+指定中繼資料介面和包含符號存放區的資料流程時，會傳回正確的 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 結構，以便從指定的符號存放區讀取偵錯工具符號。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,6 +36,7 @@ HRESULT GetReaderFromStream(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `importer`  
  在中繼資料匯入介面的指標。  
   
@@ -42,13 +44,15 @@ HRESULT GetReaderFromStream(
  在包含符號存放區之資料流程的指標。  
   
  `pRetVal`  
- 脫銷設定為所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面的指標。  
+ 擴展設定為傳回之 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,18 +1,18 @@
 ---
 title: .NET Framework 中的過時類型
-description: 查看 .NET Framework 4.5 和 .NET 4.6 中已過時的類型清單，並依元件進行組織。 也會列出建議的替代方案。
+description: 查看 .NET Framework 4.5 中已過時的類型清單，以及依元件組織的 .NET Framework 4.6。 也會列出建議的替代方案。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ccf39283152ecdc6b7827f2185de215c17ecc845
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558533"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707911"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
 
@@ -134,8 +134,8 @@ ms.locfileid: "90558533"
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>。|
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> 僅用於 .NET 2.0 透明度相容性。|
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> 僅用於 .NET 2.0 透明度相容性。 請改用 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>。|
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> 僅用於 .NET Framework 2.0 透明度相容性。|
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> 僅用於 .NET Framework 2.0 透明度相容性。 請改用 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>。|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|這個型別已經過時，將在未來的 .NET Framework 發行版本中移除。|
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|組件層級宣告式安全性已過期，CLR 預設不再強制使用。|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|這個型別已經過時，將在未來的 .NET Framework 發行版本中移除。|

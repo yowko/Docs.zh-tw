@@ -8,14 +8,15 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: 16e84f06ec388fe7e3c221f35c3e970b9b483ba5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe8bf23a04e6684564d3d7e287c2a009e0817732
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820965"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706628"
 ---
 # <a name="member-overloading"></a>成員多載
+
 成員多載表示在相同類型上建立兩個或多個成員，而這些成員只在參數的數目或類型不同，但具有相同的名稱。 例如，在下列範例中， `WriteLine` 方法會超載：
 
 ```csharp
@@ -55,7 +56,7 @@ public static class Console {
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [成員設計方針](member.md)
 - [架構設計指導方針](index.md)

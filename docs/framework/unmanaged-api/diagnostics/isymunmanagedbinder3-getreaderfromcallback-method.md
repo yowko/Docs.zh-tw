@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d48c2bdd55e487038048f432c5586d49f393118c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441652"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706940"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback 方法
-可讓使用者透過回呼來執行或提供， `IID_IDiaReadExeAtRVACallback` 或 `IID_IDiaReadExeAtOffsetCallback` 從記憶體取得 debug 目錄資訊。  
+
+允許使用者透過回呼或 `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` 從記憶體中取得 debug 目錄資訊來執行或提供。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,6 +39,7 @@ HRESULT GetReaderFromCallback(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `importer`  
  在中繼資料匯入介面的指標。  
   
@@ -48,18 +50,20 @@ HRESULT GetReaderFromCallback(
  在搜尋路徑的指標。  
   
  `searchPolicy`  
- 在[CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md)列舉的值，指定搜尋符號讀取器時要使用的原則。  
+ 在 [CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md) 列舉的值，這個值會指定在搜尋符號讀取器時要使用的原則。  
   
  `callback`  
- 在回呼函式的指標。  
+ 在回呼函數的指標。  
   
  `pRetVal`  
- 脫銷設定為所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面的指標。  
+ 擴展設定為傳回之 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
+
  **標頭：** CorSym .idl  
   
 ## <a name="see-also"></a>另請參閱

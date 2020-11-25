@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: a19d875b8fb81f2af3821e69452f0f0ed591cd22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708474"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize 函式
-傳回強式名稱簽章的大小。 `StrongNameSignatureSize`編譯器通常用於確定在創建延遲簽名程式集時檔中保留的空間。  
+
+傳回強式名稱簽章的大小。 `StrongNameSignatureSize` 在建立延遲簽署的元件時，編譯器通常會用來決定要在檔案中保留多少空間。  
   
- 此函數已被棄用。 改用[ICLR 強式名稱：：強式名稱簽名大小](../hosting/iclrstrongname-strongnamesignaturesize-method.md)方法。  
+ 此函數已被取代。 請改用 [ICLRStrongName：： StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,29 +38,33 @@ BOOLEAN StrongNameSignatureSize (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `pbPublicKeyBlob`  
- [在][公共金鑰Blob](publickeyblob-structure.md)類型的結構，其中包含用於生成強式名稱簽名的金鑰組的公共部分。  
+ 在 [PublicKeyBlob](publickeyblob-structure.md) 類型的結構，其中包含用來產生強式名稱簽章之金鑰組的公開部分。  
   
  `cbPublicKeyBlob`  
- [在]的大小（以位元組為單位）的大小`pbPublicKeyBlob`。  
+ 在的大小（以位元組為單位） `pbPublicKeyBlob` 。  
   
  `pcbSize`  
- [在]存儲強式名稱簽名所需的位元組數。  
+ 在儲存強式名稱簽章所需的位元組數目。  
   
 ## <a name="return-value"></a>傳回值  
- `true`成功完成;否則， `false`.  
+
+ `true` 成功完成時;否則為 `false` 。  
   
 ## <a name="remarks"></a>備註  
- 如果`StrongNameSignatureSize`函數未成功完成，請調用[StrongNameErrorInfo 函數](strongnameerrorinfo-function.md)以檢索上次生成的錯誤。  
+
+ 如果函式 `StrongNameSignatureSize` 未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式來取出最後產生的錯誤。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 強式名稱.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

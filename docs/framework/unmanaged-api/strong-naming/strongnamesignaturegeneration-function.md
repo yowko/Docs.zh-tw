@@ -13,17 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - StrongNameSignatureGeneration function [.NET Framework strong naming]
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
-ms.openlocfilehash: d7f481e5c61ec65d2e7414bd47227866f3435028
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a89c07b9a7ddbccee9716de37c96d23635f87b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176899"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708521"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration 函式
+
 產生指定組件的強式名稱簽章。  
   
- 此函數已被棄用。 改用[ICLR 強式名稱：：強式名稱簽名生成](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)方法。  
+ 此函數已被取代。 請改用 [ICLRStrongName：： StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,50 +40,54 @@ BOOLEAN StrongNameSignatureGeneration (
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `wszFilePath`  
- [在]包含將為其生成強式名稱簽名的組件資訊清單的檔的路徑。  
+ 在檔案的路徑，該檔案包含將產生強式名稱簽章之元件的資訊清單。  
   
  `wszKeyContainer`  
- [在]包含公開金鑰/私密金鑰對的金鑰容器的名稱。  
+ 在包含公開/私密金鑰組的金鑰容器名稱。  
   
- 如果`pbKeyBlob`為 null，`wszKeyContainer`則必須在加密服務提供者 （CSP） 中指定有效的容器。 在這種情況下，存儲在容器中的金鑰組用於對檔進行簽名。  
+ 如果 `pbKeyBlob` 是 null，則 `wszKeyContainer` 必須在密碼編譯服務提供者中指定有效的容器， (CSP) 。 在此情況下，會使用儲存在容器中的金鑰組來簽署檔案。  
   
- 如果`pbKeyBlob`不是空，則假定金鑰組包含在金鑰二進位大型物件 （BLOB） 中。  
+ 如果不 `pbKeyBlob` 是 null，則會假設金鑰組包含在 (BLOB) 的金鑰二進位大型物件中。  
   
- 金鑰必須是 1024 位裡維斯-沙米爾-阿德爾曼 （RSA） 簽名金鑰。 目前不支援其他類型的金鑰。  
+ 金鑰必須是 1024-bit Rivest-Shamir-Adleman (RSA) 簽署金鑰。 目前不支援其他類型的金鑰。  
   
  `pbKeyBlob`  
- [在]指向公開金鑰/私密金鑰對的指標。 此對採用 Win32`CryptExportKey`函數創建的格式。 如果`pbKeyBlob`為 null，則假定 指定的`wszKeyContainer`鍵容器包含金鑰組。  
+ 在公開/私密金鑰組的指標。 此配對的格式是 Win32 函數所建立的格式 `CryptExportKey` 。 如果 `pbKeyBlob` 是 null，則會假設指定的金鑰容器 `wszKeyContainer` 包含金鑰組。  
   
  `cbKeyBlob`  
- [在]的大小（以位元組為單位）的大小`pbKeyBlob`。  
+ 在的大小（以位元組為單位） `pbKeyBlob` 。  
   
  `ppbSignatureBlob`  
- [出]指向公共語言運行時返回簽名的位置的指標。 如果`ppbSignatureBlob`為 null，運行時將簽名存儲在 指定的`wszFilePath`檔中。  
+ 擴展Common language runtime 傳回簽章之位置的指標。 如果 `ppbSignatureBlob` 是 null，則執行時間會將簽章儲存在所指定的檔案中 `wszFilePath` 。  
   
- 如果`ppbSignatureBlob`為 null，則通用語言運行時會分配用於返回簽名的空間。 調用方必須使用[強式名稱自由緩衝區](strongnamefreebuffer-function.md)函數釋放此空間。  
+ 如果不 `ppbSignatureBlob` 是 null，則 common language runtime 會配置要傳回簽章的空間。 呼叫端必須使用 [StrongNameFreeBuffer](strongnamefreebuffer-function.md) 函式釋放此空間。  
   
  `pcbSignatureBlob`  
- [出]返回的簽名的大小（以位元組為單位）。  
+ 擴展所傳回簽章的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- `true`成功完成;否則， `false`.  
+
+ `true` 成功完成時;否則為 `false` 。  
   
 ## <a name="remarks"></a>備註  
- 指定 null`wszFilePath`以計算簽名的大小而不創建簽名。  
+
+ 針對計算簽章的 `wszFilePath` 大小而不建立簽章，請指定 null。  
   
- 簽名可以直接存儲在檔中，也可以返回到調用方。  
+ 簽章可以直接儲存在檔案中，或傳回給呼叫端。  
   
- 如果`StrongNameSignatureGeneration`函數未成功完成，請調用[StrongNameErrorInfo 函數](strongnameerrorinfo-function.md)以檢索上次生成的錯誤。  
+ 如果函式 `StrongNameSignatureGeneration` 未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式來取出最後產生的錯誤。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 強式名稱.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結 **庫：** 以資源的形式包含在 MsCorEE.dll 中  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

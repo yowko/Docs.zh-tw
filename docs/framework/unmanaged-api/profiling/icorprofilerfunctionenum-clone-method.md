@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0c3d4835-e111-4e82-af6d-53f140b8f2c9
 topic_type:
 - apiref
-ms.openlocfilehash: d6f348eb781efdef89926ec1bc267281bf3a5004
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 092c3b328887b7d36ead77c64d31310b614b616a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503103"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707525"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>ICorProfilerFunctionEnum::Clone 方法
-取得此[ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)介面之複本的介面指標。  
+
+取得這個 [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) 介面複本的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,11 +33,13 @@ HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `ppEnum`  
- 脫銷介面指標的指標，接著指向這個[ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)介面的複本。 列舉值的複本會與此列舉值分開維護自己的列舉狀態。 不過，複本的初始游標位置與此列舉值的目前資料指標位置相同。  
+ 擴展指向介面指標的指標，再指向這個 [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) 介面的複本。 列舉值的複本會從這個列舉值分開維護自己的列舉狀態。 不過，複本的初始游標位置與此列舉值的目前資料指標位置相同。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

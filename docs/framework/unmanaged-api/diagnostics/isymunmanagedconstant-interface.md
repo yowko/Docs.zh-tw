@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0d0c1462bc1c19f47bfbdcfa9694988da9acd9d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706862"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant 介面
+
 提供非受控常數的存取權。  
   
 ## <a name="methods"></a>方法  
@@ -33,7 +34,8 @@ ms.locfileid: "83441410"
 |[GetValue 方法](isymunmanagedconstant-getvalue-method.md)|取得常數的值。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

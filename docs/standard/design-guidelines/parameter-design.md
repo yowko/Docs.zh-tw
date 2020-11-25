@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 815075198f34c0c045603b9d377b9d5fbdf1a91d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828799"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707876"
 ---
 # <a name="parameter-design"></a>參數設計
 
@@ -40,6 +40,7 @@ ms.locfileid: "94828799"
  這會更妥善地傳達方法之間的關聯性。
 
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>選擇列舉和布林值參數  
+
  如果成員另有兩個或多個布林值參數，✔️請使用列舉。
 
  ❌ 除非您絕對確定永遠不需要兩個以上的值，否則請勿使用布林值。
@@ -49,6 +50,7 @@ ms.locfileid: "94828799"
  ✔️考慮將布林值用於真正是雙狀態值的函式參數，而且只是用來初始化布林值屬性。
 
 ### <a name="validating-arguments"></a>驗證引數
+
  ✔️確實會驗證傳遞給公用、受保護或明確執行之成員的引數。 <xref:System.ArgumentException?displayProperty=nameWithType>如果驗證失敗，則擲回或其中一個子類別。
 
  請注意，實際的驗證不一定要在公用或受保護成員本身發生。 它可能會在某個私用或內部常式的較低層級發生。 主要點是公開給終端使用者的整個介面區會檢查引數。
@@ -66,6 +68,7 @@ ms.locfileid: "94828799"
  如果成員具有安全性敏感性，建議您建立複本，然後驗證並處理引數。
 
 ### <a name="parameter-passing"></a>參數傳遞
+
  從架構設計工具的觀點來看，有三個主要的參數群組：傳值參數、 `ref` 參數和 `out` 參數。
 
  當引數透過傳值參數傳遞時，該成員會收到傳入的實際引數複本。 如果引數是實值型別，則會將引數的複本放在堆疊上。 如果引數是參考型別，則會在堆疊上放置參考的複本。 最熱門 CLR 語言（例如 c #、VB.NET 和 c + +）預設為以傳值方式傳遞參數。
@@ -83,6 +86,7 @@ ms.locfileid: "94828799"
  規則有一些有限的例外狀況，例如可用來交換參考的方法。
 
 ### <a name="members-with-variable-number-of-parameters"></a>具有可變參數數目的成員
+
  可採用可變數目引數的成員會藉由提供陣列參數來表示。 例如， <xref:System.String> 提供下列方法：
 
 ```csharp
@@ -140,6 +144,7 @@ public class String {
  某些 CLR 語言（例如 c + +）支援傳遞變數參數清單（稱為方法）的替代慣例 `varargs` 。 慣例不應用於架構，因為它不符合 CLS 標準。
 
 ### <a name="pointer-parameters"></a>指標參數
+
  一般而言，指標不應該出現在設計完善之 managed 程式碼架構的公用介面區中。 大部分的情況下，都應該封裝指標。 不過，在某些情況下，基於互通性原因需要指標，而在這種情況下使用指標是適當的。
 
  因為指標不符合 CLS 規範，所以✔️確實提供任何採用指標引數之成員的替代方法。
@@ -154,7 +159,7 @@ public class String {
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [成員設計方針](member.md)
 - [架構設計指導方針](index.md)

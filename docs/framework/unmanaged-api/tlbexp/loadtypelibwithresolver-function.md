@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6497dd3e720874e47de9dfda74e483a642cbb181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540501"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708227"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
+
 載入類型程式庫，並使用提供的 [ITypeLibResolver 介面](itypelibresolver-interface.md) 來解析任何內部參考的類型程式庫。  
   
 ## <a name="syntax"></a>語法  
@@ -35,6 +36,7 @@ HRESULT LoadTypeLibWithResolver(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `szFile`  
  在類型程式庫的檔案路徑。  
   
@@ -54,6 +56,7 @@ HRESULT LoadTypeLibWithResolver(
  擴展正在載入之類型程式庫的參考。  
   
 ## <a name="return-value"></a>傳回值  
+
  下表所列的其中一個 HRESULT 值。  
   
 |傳回值|意義|  
@@ -68,6 +71,7 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|無法載入類型程式庫或 DLL。|  
   
 ## <a name="remarks"></a>備註  
+
  [Tlbexp.exe (型別程式庫匯出工具) ](../../tools/tlbexp-exe-type-library-exporter.md)在 `LoadTypeLibWithResolver` 元件對類型程式庫轉換程式期間呼叫函數。  
   
  此函式會以最基本的登錄存取權載入指定的類型程式庫。 然後，此函式會檢查內部參考類型程式庫的類型程式庫，而且每個類型程式庫都必須載入並新增至父型別程式庫。  
@@ -83,11 +87,12 @@ HRESULT LoadTypeLibWithResolver(
  如果您 `LoadTypeLibWithResolver` 直接呼叫，則必須提供自己的 [ITypeLibResolver 介面](itypelibresolver-interface.md) 執行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** TlbRef。h  
   
- 連結**庫：** TlbRef .lib  
+ 連結 **庫：** TlbRef .lib  
   
  **.NET Framework 版本：** 3.5、3.0、2。0  
   

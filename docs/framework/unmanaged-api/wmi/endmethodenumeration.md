@@ -1,6 +1,6 @@
 ---
-title: 結束方法枚舉函數（非託管 API 引用）
-description: EndMethodEee）計數函數終止方法枚舉序列。
+title: 'EndMethodEnumeration 函式 (非受控 API 參考) '
+description: EndMethodEnumeration 函式會終止方法列舉序列。
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 63667d0668f905ded2aedd961be0d1831faf838c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 82f50530967699427d8a00b1c9f518b639273626
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175001"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708058"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 函式
-終止以調用[BeginMethodEee 計算函數](beginmethodenumeration.md)開始的枚舉序列。  
+
+終止透過呼叫 [BeginMethodEnumeration](beginmethodenumeration.md)函式開始的列舉序列。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -38,32 +39,33 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[在]此參數未使用。
+在此參數未使用。
 
 `ptr`  
-[在]指向[IWbem ClassObject 實例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標。
+在 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 實例的指標。
 
 ## <a name="return-value"></a>傳回值
 
-此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
+這個函式所傳回的下列值是在 *WbemCli .h* 標頭檔中定義，您也可以在程式碼中將它們定義為常數：
 
-|持續性  |值  |描述  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 發生內部錯誤。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
 
-此函數將調用包起來到[IWbemClassObject：：結束方法枚舉](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)方法。
+此函數會包裝對 [IWbemClassObject：： EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) 方法的呼叫。
 
-調用方使用[BeginMethodEee 枚舉函數](beginmethodenumeration.md)開始枚舉序列，然後調用[NextMethod 函數](nextmethod.md )，直到`WBEM_S_NO_MORE_DATA`方法返回 。 調用方通過調用`EndMethodEnumeration`完成序列。 調用方可能通過隨時調用`EndMethodEnumeration`來提前終止枚舉。
+呼叫端會使用 [BeginMethodEnumeration](beginmethodenumeration.md)函式來開始列舉順序，然後在方法傳回之前呼叫 [NextMethod 函數](nextmethod.md ) `WBEM_S_NO_MORE_DATA` 。 呼叫端會選擇性地完成序列 `EndMethodEnumeration` 。 呼叫端可以在任何時間呼叫，提早終止列舉 `EndMethodEnumeration` 。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: Docker 術語
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
 ms.date: 01/30/2020
-ms.openlocfilehash: 16aaaa2df0f68434b766d4d1cc96974e83449953
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199894"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707760"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -29,13 +29,13 @@ docker build
 
 **標記**：您可以套用至映像的標記或標籤，以便識別相同映像的不同映像版本 (視版本號碼或目標環境而定)。
 
-**多階段建置**：這是 Docker 17.05 或更高版本中的功能，可協助減少最終映像的大小。 在一些句子中，使用多階段組建，您可以使用包含 SDK 的大型基底映射，以編譯和發行應用程式，然後使用發佈資料夾搭配小型的僅限執行時間基底映射，以產生更小的最終影像。
+**多階段建置**：這是 Docker 17.05 或更高版本中的功能，可協助減少最終映像的大小。 在幾個句子中，有了多階段組建，您就可以使用包含 SDK 的大型基底映射，以編譯及發佈應用程式，然後使用發佈資料夾搭配僅限執行時間的基底映射，以產生更小的最終映射。
 
-**存放庫 (Repository 或 Repo)**：相關的 Docker 映像集合，已加上標記指出映像版本。 某些存放庫包含特定映射的多個變體，例如包含 Sdk （較粗）的影像、僅包含執行時間（更輕量）等的影像。這些變體可以標記標記。 一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。
+**存放庫 (Repository 或 Repo)**：相關的 Docker 映像集合，已加上標記指出映像版本。 某些存放庫包含特定映射的多個變體，例如包含 Sdk 的映射 (更大的) 、僅包含執行時間 (較淺) 等的影像。您可以使用標記標記這些變數。 一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映射**：針對多結構，這項功能可根據 Docker 執行所在的平臺，簡化適當映射的選取。 例如，當 Dockerfile 從登錄要求**mcr.microsoft.com/dotnet/core/sdk:3.1**的基底映射時，它實際上會取得**3.1-sdk-nanoserver-1909**、 **3.1-sdk-nanoserver-1809**或**3.1-sdk-buster-超薄**，視執行 Docker 的作業系統和版本而定。
+**多架構映射**：在多重架構中，這是一項功能，可根據 Docker 執行所在的平臺，簡化選取適當的映射。 例如，當 Dockerfile 從登錄要求 **mcr.microsoft.com/dotnet/sdk:3.1** 的基底映射時，它實際上會取得 **3.1-sdk-nanoserver-1909**、 **3.1-sdk-nanoserver-1809** 或 **3.1-sdk-buster-超薄**，視執行 Docker 的作業系統和版本而定。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 
@@ -54,5 +54,5 @@ docker build
 **協調器**：可簡化叢集和 Docker 主機管理的工具。 協調器可讓您透過命令列介面 (CLI) 或圖形化 UI 來管理其映像、容器和主機。 您可以管理容器網路功能、組態、負載平衡、服務探索、高可用性、Docker 主機組態等等。 協調器會負責跨節點集合執行、散發、擴充及修復工作負載。 一般而言，協調器產品與提供叢集基礎結構的產品相同，例如在市場中其他供應項目之間的 Kubernetes 和 Azure Service Fabric。
 
 >[!div class="step-by-step"]
->[上一頁](docker-defined.md)
->[下一頁](docker-containers-images-registries.md)
+>[上一個](docker-defined.md) 
+>[下一步](docker-containers-images-registries.md)

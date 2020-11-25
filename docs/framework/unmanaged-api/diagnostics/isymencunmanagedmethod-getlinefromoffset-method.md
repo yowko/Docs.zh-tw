@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-ms.openlocfilehash: d9a7b18e90a3038c1ffb634ccc7315143875c809
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 196993df9058d3eb8167e0144255c5fe366c54f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441912"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707356"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset 方法
-取得與位移相關聯的線條資訊。 如果 offset 參數（ `dwOffset` ）不是序列點，這個方法會取得與上一個位移相關聯的行資訊。  
+
+取得與位移相關聯的行資訊。 如果 (`dwOffset`) 不是序列點的 offset 參數，這個方法會取得與先前位移相關聯的行資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,29 +39,32 @@ HRESULT GetLineFromOffset(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `dwOffset`  
- 在`ULONG32`包含位移的。  
+ 在 `ULONG32` 包含位移的。  
   
  `pline`  
- 脫銷接收行之的指標 `ULONG32` 。  
+ 擴展接收該行之的指標 `ULONG32` 。  
   
  `pcolumn`  
- 脫銷接收資料行之的指標 `ULONG32` 。  
+ 擴展接收資料行之的指標 `ULONG32` 。  
   
  `pendLine`  
- 脫銷`ULONG32`接收結束行之的指標。  
+ 擴展 `ULONG32` 接收結束行之的指標。  
   
  `pendColumn`  
- 脫銷接收結束資料行之的指標 `ULONG32` 。  
+ 擴展的指標 `ULONG32` ，會接收 end 資料行。  
   
  `pdwStartOffset`  
- 脫銷`ULONG32`接收相關聯序列點之的指標。  
+ 擴展的指標 `ULONG32` ，會接收相關聯的序列點。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,14 +2,15 @@
 title: 集合方針
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821082"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706667"
 ---
 # <a name="guidelines-for-collections"></a>集合方針
+
 任何專為操作一組具有一般特性的物件而設計的型別，都可以被視為一個集合。 這類型別幾乎一律適合用來執行 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> ，所以在本節中，我們只會考慮將這些介面的其中一個或兩個都實作為集合的類型。
 
  ❌ 請勿在公用 Api 中使用弱式型別集合。
@@ -31,6 +32,7 @@ ms.locfileid: "94821082"
  ❌ 請勿同時 `IEnumerator<T>` `IEnumerable<T>` 在相同的類型上執行和。 這同樣適用于非泛型介面 `IEnumerator` 和 `IEnumerable` 。
 
 ## <a name="collection-parameters"></a>集合參數
+
  ✔️請盡可能使用最少的特製化型別作為參數類型。 大部分採用集合做為參數的成員都會使用 `IEnumerable<T>` 介面。
 
  ❌ 請避免使用 <xref:System.Collections.Generic.ICollection%601> 或 <xref:System.Collections.ICollection> 作為參數，只是用來存取 `Count` 屬性。
@@ -38,6 +40,7 @@ ms.locfileid: "94821082"
  相反地，請考慮使用 `IEnumerable<T>` 或 `IEnumerable` ，以動態方式檢查物件是否為 `ICollection<T>` 或 `ICollection` 。
 
 ## <a name="collection-properties-and-return-values"></a>集合屬性和傳回值
+
  ❌ 請勿提供可設定的集合屬性。
 
  使用者可以先清除集合，然後加入新的內容，以取代集合的內容。 如果將整個集合取代為常見的案例，請考慮在 `AddRange` 集合上提供方法。
@@ -69,6 +72,7 @@ ms.locfileid: "94821082"
  一般規則是 null 和空白 (0 專案) 集合或陣列應視為相同。
 
 ### <a name="snapshots-versus-live-collections"></a>快照集與即時集合
+
  代表某個時間點狀態的集合稱為快照集集合。 例如，包含資料庫查詢所傳回之資料列的集合將會是快照集。 一律代表目前狀態的集合稱為即時集合。 例如， `ComboBox` 專案集合是即時集合。
 
  ❌ 請勿從屬性傳回快照集集合。 屬性應該會傳回即時集合。
@@ -80,6 +84,7 @@ ms.locfileid: "94821082"
  一般來說，代表共用資源的所有集合 (例如，目錄) 中的檔案都是暫時性的。 這類集合很難或無法實作為即時集合，除非實作為僅向前的列舉值。
 
 ## <a name="choosing-between-arrays-and-collections"></a>在陣列和集合之間進行選擇
+
  ✔️會偏好陣列的集合。
 
  集合可讓您更充分掌控內容、可以隨時間演進，而且更容易使用。 此外，不建議針對唯讀案例使用陣列，因為複製陣列的成本很高。 可用性研究顯示某些開發人員更熟悉使用以集合為基礎的 Api。
@@ -93,6 +98,7 @@ ms.locfileid: "94821082"
  ❌ 如果屬性必須傳回新陣列 (例如，在每次呼叫屬性 getter 時) 內部陣列的複本，請不要使用屬性的陣列。
 
 ## <a name="implementing-custom-collections"></a>執行自訂集合
+
  ✔️ `Collection<T>` `ReadOnlyCollection<T>` `KeyedCollection<TKey,TItem>` 在設計新的集合時，請考慮從、或進行繼承。
 
  ✔️ `IEnumerable<T>` 在設計新的集合時，就會執行。 請考慮採用 `ICollection<T>` 或甚至 `IList<T>` 是有意義的地方。
@@ -106,6 +112,7 @@ ms.locfileid: "94821082"
  ❌ 請勿繼承自非泛型基底集合，例如 `CollectionBase` 。 請改用 `Collection<T>`、`ReadOnlyCollection<T>` 和 `KeyedCollection<TKey,TItem>`。
 
 ### <a name="naming-custom-collections"></a>命名自訂集合
+
  因為有 `IEnumerable` 兩個原因，所以會建立實) 的集合 (類型： (1) 以結構專屬的作業建立新的資料結構，而且通常與現有的資料結構有不同的效能特性 (例如、  <xref:System.Collections.Generic.List%601> 、 <xref:System.Collections.Generic.LinkedList%601> 、 <xref:System.Collections.Generic.Stack%601>) 和 (2) 建立特殊集合來保存一組特定的專案 (例如，  <xref:System.Collections.Specialized.StringCollection>) 。 資料結構最常用於應用程式和程式庫的內部執行。 特殊化的集合主要是在 Api 中公開 (作為屬性和參數類型) 。
 
  ✔️請在執行或的抽象概念名稱中使用 "Dictionary" 尾碼 `IDictionary` `IDictionary<TKey,TValue>` 。
@@ -126,7 +133,7 @@ ms.locfileid: "94821082"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構設計指導方針](index.md)
 - [使用指導方針](usage-guidelines.md)

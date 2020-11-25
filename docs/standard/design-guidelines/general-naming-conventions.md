@@ -14,18 +14,19 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60832e823ed2f51fdd13c467dbbef4378de27885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821095"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706706"
 ---
 # <a name="general-naming-conventions"></a>一般命名慣例
 
 本節說明與 word 選項相關的一般命名慣例、使用縮寫和縮略字的指導方針，以及如何避免使用特定語言名稱的建議。
 
 ## <a name="word-choice"></a>單字選擇
+
  ✔️選擇容易讀取的識別碼名稱。
 
  例如，名為的屬性 `HorizontalAlignment` 比更容易閱讀英文 `AlignmentHorizontal` 。
@@ -43,6 +44,7 @@ ms.locfileid: "94821095"
  根據 Common Language Specification (CLS) 的規則4，所有符合規範的語言都必須提供一種機制，以允許存取使用該語言關鍵字做為識別碼的命名專案。 例如，在此情況下，c # 會使用 @ 符號作為 escape 機制。 不過，最好避免常見的關鍵字，因為使用具有 escape 序列的方法比沒有它的方法更為困難。
 
 ## <a name="using-abbreviations-and-acronyms"></a>使用縮寫和縮寫
+
  ❌ 請勿使用縮寫或縮寫做為識別碼名稱的一部分。
 
  例如，使用 `GetWindow` 而不是 `GetWin` 。
@@ -50,6 +52,7 @@ ms.locfileid: "94821095"
  ❌ 請勿使用任何未被廣泛接受的縮寫，即使它們是，也可以在必要時使用。
 
 ## <a name="avoiding-language-specific-names"></a>避免 Language-Specific 名稱
+
  ✔️會使用語義上有趣的名稱，而不是類型名稱的特定語言關鍵字。
 
  例如，的 `GetLength` 名稱比更好 `GetInt` 。
@@ -78,6 +81,7 @@ ms.locfileid: "94821095"
  ✔️使用一般名稱（例如 `value` 或 `item` ），而不是重複型別名稱，但在少數情況下，當識別碼沒有語義意義，且參數的類型不重要時。
 
 ## <a name="naming-new-versions-of-existing-apis"></a>命名現有 Api 的新版本
+
  ✔️在建立現有 API 的新版本時，請使用類似舊 API 的名稱。
 
  這有助於強調 Api 之間的關聯性。
@@ -98,7 +102,7 @@ ms.locfileid: "94821095"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Framework 設計方針](index.md)
 - [命名方針](naming-guidelines.md)

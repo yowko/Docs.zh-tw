@@ -26,18 +26,19 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: f361e0e250368694d7afa078183b1e5cb7ef1464
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098810"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707863"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
 泛型可讓您將方法、類別、結構或介面，修改成其發揮作用的精確資料類型。 例如， <xref:System.Collections.Hashtable> 您可以使用 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，並指定索引鍵和值所允許的類型，而不是使用類別（可讓索引鍵和值成為任何類型）。 泛型的優點包括加強程式碼的重複使用程度以及類型安全性。  
 
 ## <a name="defining-and-using-generics"></a>定義和使用泛型
+
  泛型是指一些類別、結構、介面與方法，其具有所儲存或使用之一或多個類型的預留位置 (類型參數)。 泛型集合類別可能會針對所儲存的物件類型，使用類型參數做為預留位置；這些類型參數會顯示為其欄位的類型，和其方法的參數類型。 泛型方法可能會使用其類型參數，做為其傳回值的類型，或其型式參數之一的類型。 下列程式碼將會示範簡單的泛型類別定義。  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -51,6 +52,7 @@ ms.locfileid: "95098810"
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
 
 ### <a name="generics-terminology"></a>泛型術語  
+
  下列詞彙會用於討論在 .NET 中的泛型：  
   
 - *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
@@ -80,6 +82,7 @@ ms.locfileid: "95098810"
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
 ## <a name="advantages-and-disadvantages-of-generics"></a>泛型的優缺點
+
  使用泛型集合和委派有許多優點：  
   
 - 類型安全。 泛型會將類型安全的負擔轉移給編譯器。 並不需要撰寫程式碼以測試是否為正確的資料類型，因為它在編譯時期會強制執行。 降低了類型轉換的需求以及執行階段錯誤的可能性。  
@@ -112,6 +115,7 @@ ms.locfileid: "95098810"
      如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A>中的「巢狀類型」。  
 
 ## <a name="class-library-and-language-support"></a>類別庫和語言支援  
+
  .NET 在下列命名空間中提供數個泛型集合類別：  
   
 - <xref:System.Collections.Generic> 命名空間包含 .NET 所提供的大部分泛型集合類型，例如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別。  
@@ -127,11 +131,12 @@ ms.locfileid: "95098810"
  Visual C++、C# 和 Visual Basic 均提供定義及使用泛型的完整支援。 如需語言支援的詳細資訊，請參閱 [Visual Basic 中的泛型型別](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型簡介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)。
 
 ## <a name="nested-types-and-generics"></a>巢狀類型和泛型  
+
  泛型類型中的巢狀類型，可取決於封入泛型類型的類型參數。 Common Language Runtime 會將巢狀類型視為泛型，即使它們沒有自己的泛型類型參數。 當您建立巢狀類型的執行個體時，必須為所有封入泛型類型指定類型引數。  
 
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[.NET 中的泛型集合](collections.md)|描述 .NET 中的泛型集合類別以及其他泛型類型。|  
 |[用於運算元組和清單的泛型委派](delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  
@@ -145,6 +150,7 @@ ms.locfileid: "95098810"
 |[Visual C++ 中的泛型總覽](/cpp/windows/overview-of-generics-in-visual-cpp)|描述 C++ 使用者的泛型功能，包括泛型和範本之間的差異。|  
 
 ## <a name="reference"></a>參考  
+
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

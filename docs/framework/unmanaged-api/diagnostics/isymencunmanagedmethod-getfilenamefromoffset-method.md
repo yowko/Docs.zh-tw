@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: ad9631039c8d032e7ffdba1e6098b66398f82277
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441925"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707382"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset 方法
-取得與位移相關聯之行的檔案名。  
+
+取得與位移相關聯之線條的檔案名。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +38,26 @@ HRESULT GetFileNameFromOffset(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `dwOffset`  
- 在`ULONG32`包含位移的。  
+ 在 `ULONG32` 包含位移的。  
   
  `cchName`  
- 在`ULONG32`，表示緩衝區的大小 `szName` 。  
+ 在 `ULONG32` 指出緩衝區大小的 `szName` 。  
   
  `pcchName`  
- 脫銷的指標， `ULONG32` 接收包含檔案名所需的緩衝區大小（以字元為單位）。  
+ 擴展的指標， `ULONG32` 會接收包含檔案名的緩衝區大小（以字元為單位）。  
   
  `szName`  
- 脫銷包含檔案名的緩衝區。  
+ 擴展包含檔案名的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::SetValue Method
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3ef9b9b9a095d6d6026ffc38873661355d660488
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397081"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707837"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue Method
+
 指派位元組陣列的值給變數。  
   
 ## <a name="syntax"></a>語法  
@@ -26,6 +27,7 @@ HRESULT SetValue(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `offset`  
  [in] 變數中要設定該值的開始位移。 寫入物件中的成員欄位時，會使用這個參數。  
   
@@ -50,7 +52,8 @@ HRESULT SetValue(
 > 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -58,7 +61,7 @@ HRESULT SetValue(
   
  **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugVariableSymbol 介面](icordebugvariablesymbol-interface.md)
 - [偵錯介面](debugging-interfaces.md)

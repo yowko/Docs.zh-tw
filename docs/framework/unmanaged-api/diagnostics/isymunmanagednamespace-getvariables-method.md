@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f554fa95f552285ad92d9f780a8d77f53e6890b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615081"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707694"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables 方法
-傳回在此命名空間內全域範圍中定義的所有變數。  
+
+傳回在此命名空間內的全域範圍中定義的所有變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +37,23 @@ HRESULT GetVariables(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `cVars`  
- 在`ULONG32`，指出陣列的大小 `pVars` 。  
+ 在 `ULONG32` ，指出陣列的大小 `pVars` 。  
   
  `pcVars`  
- 脫銷的指標 `ULONG32` ，接收包含命名空間所需的緩衝區大小。  
+ 擴展的指標 `ULONG32` ，會接收包含命名空間所需的緩衝區大小。  
   
  `pVars`  
- 脫銷包含命名空間之緩衝區的指標。  
+ 擴展包含命名空間之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

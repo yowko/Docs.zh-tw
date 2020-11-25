@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-ms.openlocfilehash: 532288364b2db1e6be49b9e6f87019b1e41e6866
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 516a12b7a4457a0f67da24294ad96fb79d1aa5aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497916"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707512"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo 方法
-取得指定之執行緒的目前 Win32 執行緒識別。  
+
+取得指定執行緒目前的 Win32 執行緒識別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +35,16 @@ HRESULT GetThreadInfo(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `threadId`  
- 在要取得其目前 Win32 識別碼之執行緒的識別碼。  
+ 在要取得目前 Win32 識別碼之執行緒的識別碼。  
   
  `pdwWin32ThreadId`  
- 脫銷指定執行緒目前 Win32 執行緒識別碼的指標。  
+ 擴展指定執行緒目前的 Win32 執行緒識別碼指標。  
   
-## <a name="requirements"></a>規格需求  
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+## <a name="requirements"></a>需求  
+
+ **平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

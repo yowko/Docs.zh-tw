@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-ms.openlocfilehash: c4416e8e4395c4e1967155310d12a1eb68c42d83
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: ac895032e70cf31532ab4c73409d6d750eae65df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706992"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile 方法
-提供中繼資料介面和檔案名，會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面，以便讀取與模組相關聯的偵錯工具符號。  
+
+指定中繼資料介面和檔案名之後，會傳回正確的 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 介面，以讀取與模組相關聯的偵錯工具符號。  
   
- 只有當程式資料庫（PDB）位於可執行檔的旁邊時，這個方法才會開啟該檔案。 這是基於安全性考慮而進行的變更。 如果您需要更廣泛的 PDB 檔案搜尋，請使用[ISymUnmanagedBinder2：： GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md)方法。  
+ 只有當程式資料庫位於可執行檔的旁邊時，此方法才會 (PDB) 檔中開啟該資料庫。 基於安全性考慮，已進行這種變更。 如果您需要更廣泛的 PDB 檔案搜尋，請使用 [ISymUnmanagedBinder2：： GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md) 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,6 +39,7 @@ HRESULT GetReaderForFile(
 ```  
   
 ## <a name="parameters"></a>參數  
+
  `importer`  
  在中繼資料匯入介面的指標。  
   
@@ -48,13 +50,15 @@ HRESULT GetReaderForFile(
  在搜尋路徑的指標。  
   
  `pRetVal`  
- 脫銷設定為所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面的指標。  
+ 擴展設定為傳回之 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他一些錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+
+ **標頭：** CorSym .idl、CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
