@@ -1,18 +1,19 @@
 ---
-title: HOW TO：從服務端點匯出中繼資料
+title: 作法：從服務端點匯出中繼資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 58e86e5566775048e081bfb4ac217a7747b98a35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c253358b68cf18a23bab4d12d4ad760874103bff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579406"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246403"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>HOW TO：從服務端點匯出中繼資料
+# <a name="how-to-export-metadata-from-service-endpoints"></a>作法：從服務端點匯出中繼資料
+
 本主題說明如何從服務端點匯出中繼資料。  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>從服務端點匯出中繼資料  
@@ -47,15 +48,17 @@ ms.locfileid: "84579406"
 7. 現在您可以呼叫 <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29> 方法，以使用中繼資料 (例如寫入至檔案)。  
   
 ## <a name="example"></a>範例  
+
  以下是這個範例的完整程式碼清單。  
   
  [!code-csharp[S_UEWsdlExporter#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#0)]
  [!code-vb[S_UEWsdlExporter#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#0)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  編譯 Program.cs 時，請參考 System.ServiceModel.dll。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料架構概觀](metadata-architecture-overview.md)
 - [使用中繼資料](using-metadata.md)

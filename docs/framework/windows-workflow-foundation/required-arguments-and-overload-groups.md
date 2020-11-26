@@ -2,17 +2,19 @@
 title: 必要引數與多載群組
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 452285b1f5b73ecf75fc50f59365aa2633f26e42
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142936"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245870"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必要引數與多載群組
+
 您可以設定活動，讓繫結活動所需的某些引數有效，以便用於執行。 `RequiredArgument` 屬性用於指出活動的特定引數是必要的，而 `OverloadGroup` 屬性則用於群組必要引數的分類。 透過使用屬性，活動作者可以提供簡單或複雜的活動驗證組態。  
   
 ## <a name="using-required-arguments"></a>使用必要的引數  
+
  若要在活動中使用 `RequiredArgument` 屬性，請使用 <xref:System.Activities.RequiredArgumentAttribute> 指出所需的引數。 在此範例中，會定義具有兩個必要引數的 `Add` 活動。  
   
 ```csharp  
@@ -63,11 +65,11 @@ public sealed class Add : CodeActivity<int>
   
  **未提供必要活動引數 'Operand1' 的值。**  
 > [!NOTE]
-> 有關檢查和處理驗證錯誤和警告的詳細資訊，請參閱[調用活動驗證](invoking-activity-validation.md)。  
+> 如需有關檢查和處理驗證錯誤和警告的詳細資訊，請參閱叫用 [活動驗證](invoking-activity-validation.md)。  
   
 ## <a name="using-overload-groups"></a>使用多載群組
 
-多載群組提供方法，指出活動中哪些引數組合是有效的。 引數會使用 <xref:System.Activities.OverloadGroupAttribute> 群組在一起。 每個組都為 指定的名稱<xref:System.Activities.OverloadGroupAttribute>。 當僅綁定重載組中的一組參數時，該活動有效。 在下列範例中，會定義 `CreateLocation` 類別。  
+多載群組提供方法，指出活動中哪些引數組合是有效的。 引數會使用 <xref:System.Activities.OverloadGroupAttribute> 群組在一起。 每個群組都會獲得所指定的名稱 <xref:System.Activities.OverloadGroupAttribute> 。 只有在系結多載群組中的一組引數時，活動才有效。 在下列範例中，會定義 `CreateLocation` 類別。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -106,7 +108,7 @@ class CreateLocation: Activity
   
  這個活動的目的是要指定美國的地點。 若要完成這項作業，活動的使用者可以使用三個引數群組的其中之一來指定地點。 為指定有效的引數組合，會定義三個多載群組。 `G1` 包含 `Latitude` 和 `Longitude` 引數。 `G2` 包含 `Street`、`City` 和 `State`。 `G3` 包含 `Street` 和 `Zip`。 `Name` 也是必要引數，但不是多載群組的一部分。 若要使這個活動有效，`Name` 必須與來自同一個多載群組的所有引數繫結在一起。  
   
- 在下面的示例中，從[資料庫訪問活動](./samples/database-access-activities.md)示例中，有兩個重載組：`ConnectionString`和`ConfigFileSectionName`。 若要讓此活動有效，必須繫結 `ProviderName` 和 `ConnectionString` 引數，或是繫結 `ConfigName` 引數，但不能同時使用這兩種方式。  
+ 在下列範例中，取自「 [資料庫存取活動](./samples/database-access-activities.md) 」範例，有兩個多載群組 `ConnectionString` ： `ConfigFileSectionName` 和。 若要讓此活動有效，必須繫結 `ProviderName` 和 `ConnectionString` 引數，或是繫結 `ConfigName` 引數，但不能同時使用這兩種方式。  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  

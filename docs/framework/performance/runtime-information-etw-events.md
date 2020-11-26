@@ -1,19 +1,20 @@
 ---
 title: 執行階段資訊 ETW 事件
-description: 請參閱執行時間資訊 ETW 事件，其會記錄 SKU、版本號碼、執行時間的啟動方式（包括命令列參數）、GUID 等等。
+description: 請參閱「執行時間資訊 ETW 事件」，其會記錄 SKU、版本號碼、執行時間的啟用方式 (包括) 的命令列參數、GUID 等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-ms.openlocfilehash: 385519229bdb76841cdf592d95e96d2288ec5e1a
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 354740b36ccab742022058288da84b22d460edc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474224"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245610"
 ---
 # <a name="runtime-information-etw-events"></a>執行階段資訊 ETW 事件
+
 執行階段的這些 ETW 事件記錄資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。 如果多個執行階段是在某個處理序內執行，則這些事件所提供的資訊 (ClrInstanceID) 有助於釐清執行階段。  
   
  下表顯示兩個執行階段資訊事件。 事件可能會透過任何關鍵字或遮罩引發。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  

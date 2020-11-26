@@ -2,17 +2,19 @@
 title: 持續性資料庫結構描述
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 04b57789e7c1ab6bfebd9c9b345ee0fb7dfb3e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246091"
 ---
 # <a name="persistence-database-schema"></a>持續性資料庫結構描述
+
 本主題描述 SQL 工作流程執行個體存放區所支援的公用檢視表。  
   
 ## <a name="instances-view"></a>Instances 檢視表  
+
  [ **實例** ] 視圖包含資料庫中所有工作流程實例的一般資訊。  
   
 |資料行名稱|資料行類型|描述|  
@@ -27,10 +29,10 @@ ms.locfileid: "90558234"
 |ActiveBookmarks|Nvarchar(max)|如果工作流程執行個體閒置中，此屬性表示執行個體封鎖所在的書籤。 如果執行個體不是處於閒置狀態，則此資料行為 NULL。|  
 |CurrentMachine|Nvarchar(128)|表示目前在記憶體中載入工作流程執行個體的電腦名稱。|  
 |LastMachine|Nvarchar(450)|表示載入工作流程執行個體的最後一部電腦。|  
-|ExecutionStatus|Nvarchar(450)|表示工作流程的目前執行狀態。 可能的狀態包括 **執行**中、 **閒置**中、 **已關閉**。|  
-|IsInitialized|bit|表示工作流程執行個體是否已初始化。 初始化的工作流程執行個體是至少已保存一次的工作流程執行個體。|  
-|IsSuspended|bit|表示工作流程執行個體是否已暫止。|  
-|IsCompleted|bit|表示工作流程執行個體是否已完成執行。 **注意：**  Iif **InstanceCompletionAction** 屬性設定為 **DeleteAll**時，會在完成時從視圖中移除實例。|  
+|ExecutionStatus|Nvarchar(450)|表示工作流程的目前執行狀態。 可能的狀態包括 **執行** 中、 **閒置** 中、 **已關閉**。|  
+|IsInitialized|位元|表示工作流程執行個體是否已初始化。 初始化的工作流程執行個體是至少已保存一次的工作流程執行個體。|  
+|IsSuspended|位元|表示工作流程執行個體是否已暫止。|  
+|IsCompleted|位元|表示工作流程執行個體是否已完成執行。 **注意：**  Iif **InstanceCompletionAction** 屬性設定為 **DeleteAll** 時，會在完成時從視圖中移除實例。|  
 |EncodingOption|TinyInt|描述用來序列化資料屬性的編碼方式。<br /><br /> -0 –無編碼<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|包含的序列化執行個體資料屬性將在執行個體載入時提供回到工作流程執行階段。<br /><br /> 每個基本屬性都是原生 CLR 類型，這表示不需要特殊組件還原序列化 Blob。|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|包含的序列化執行個體資料屬性在執行個體載入時不會提供回到工作流程執行階段。<br /><br /> 每個基本屬性都是原生 CLR 類型，這表示不需要特殊組件還原序列化 Blob。|  
@@ -38,16 +40,17 @@ ms.locfileid: "90558234"
 |WriteOnlyComplexDataProperties|Varbinary(max)|包含的序列化執行個體資料屬性在執行個體載入時不會提供回到工作流程執行階段。<br /><br /> 還原序列化程式需要此 Blob 中所儲存之所有物件類型的知識。|  
 |IdentityName|Nvarchar(max)|工作流程定義的名稱。|  
 |IdentityPackage|Nvarchar(max)|建立工作流程時指定的封裝資訊 (例如組件名稱)。|  
-|Build|BigInt|工作流程版本的組建編號。|  
+|組建|BigInt|工作流程版本的組建編號。|  
 |主要|BigInt|工作流程版本的主要編號。|  
 |Minor|BigInt|工作流程版本的次要編號。|  
 |修訂版|BigInt|工作流程版本的修訂編號。|  
   
 > [!CAUTION]
-> **實例**視圖也包含 Delete 觸發程式。 具有適當權限的使用者可以對此檢視表執行 Delete 陳述式，從資料庫強制移除工作流程執行個體。 直接從檢視表刪除，建議只當做最後手段，因為刪除工作流程執行階段底下的執行個體會造成非預期的結果。 請改用工作流程執行個體管理端點，讓工作流程執行階段結束執行個體。 如果您想要從檢視表刪除大量執行個體，請確認沒有使用中的執行階段正在操作這些執行個體。  
+> **實例** 視圖也包含 Delete 觸發程式。 具有適當權限的使用者可以對此檢視表執行 Delete 陳述式，從資料庫強制移除工作流程執行個體。 直接從檢視表刪除，建議只當做最後手段，因為刪除工作流程執行階段底下的執行個體會造成非預期的結果。 請改用工作流程執行個體管理端點，讓工作流程執行階段結束執行個體。 如果您想要從檢視表刪除大量執行個體，請確認沒有使用中的執行階段正在操作這些執行個體。  
   
 ## <a name="servicedeployments-view"></a>ServiceDeployments 檢視表  
- **Servicedeployments 表**view 包含所有 WEB (IIS/WAS) 主控的工作流程服務的部署資訊。 Web 裝載的每個工作流程實例都會包含參考此視圖中某個資料列的 **ServiceDeploymentId** 。  
+
+ **Servicedeployments 表** view 包含所有 WEB (IIS/WAS) 主控的工作流程服務的部署資訊。 Web 裝載的每個工作流程實例都會包含參考此視圖中某個資料列的 **ServiceDeploymentId** 。  
   
 |資料行名稱|資料行類型|描述|  
 |-----------------|-----------------|-----------------|  
@@ -65,7 +68,8 @@ ms.locfileid: "90558234"
 2. 任何嘗試刪除 [ **實例** ] view 中的專案所參考的 ServiceDeployment 資料列，都會導致無法作業。 您只能刪除零參考的 ServiceDeployment 資料列。  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 檢視表  
- **Instancepromotedproperties 表**view 包含使用者所指定之所有升級屬性的資訊。 已提升的屬性是做為第一級屬性，供使用者用於查詢以擷取執行個體。  例如，使用者可以新增 PurchaseOrder 升階，此升級一律會將訂單的成本儲存在 **Value1** 資料行中。 這可讓使用者查詢成本超過特定值的所有採購單。  
+
+ **Instancepromotedproperties 表** view 包含使用者所指定之所有升級屬性的資訊。 已提升的屬性是做為第一級屬性，供使用者用於查詢以擷取執行個體。  例如，使用者可以新增 PurchaseOrder 升階，此升級一律會將訂單的成本儲存在 **Value1** 資料行中。 這可讓使用者查詢成本超過特定值的所有採購單。  
   
 |資料行類型|資料行類型|描述|  
 |-|-|-|  

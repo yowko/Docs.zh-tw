@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420756"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245337"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess 介面
 
-提供查詢處理常式相關資訊的方法。
+提供查詢進程相關資訊的方法。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,23 +32,24 @@ ms.locfileid: "83420756"
 
 | 方法                                                                                                                                               | 描述                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | `AppDomain`依其唯一識別碼取得處理常式中的。                                              |
-| [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | 提供列舉進程模組的控制碼。                                        |
+| [GetRuntimeNameByAddress](ixclrdataprocess-getruntimenamebyaddress-method.md)                     | 取得指定位址的名稱。                                                               |
+| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | `AppDomain`依其唯一識別碼取得進程中的。                                              |
+| [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | 提供控制碼來列舉進程的模組。                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | 列舉此進程的模組。                                                         |
-| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | 釋放模組列舉期間所使用之內部反覆運算器所使用的資源。               |
-| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | 提供一個控制碼，用來列舉 `AppDomain` 從指定位址開始的方法實例。 |
+| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | 釋放模組列舉期間使用的內部反覆運算器所使用的資源。               |
+| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | 提供控制碼，以列舉 `AppDomain` 從指定位址開始的方法實例。 |
 | [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | 從位址位移開始，列舉這個進程的方法實例。                  |
-| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | 釋放實例列舉期間所使用之內部反覆運算器所使用的資源。             |
+| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | 釋放實例列舉期間使用的內部反覆運算器所使用的資源。             |
 
 ## <a name="remarks"></a>備註
 
-這個介面存在於執行時間內，而且不會透過任何標頭或程式庫檔案公開。 不過，它是衍生自的 COM 介面，其 `IUnknown` 具有 `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` 可透過一般 COM 機制取得的 GUID。
+這個介面存在於執行時間內，且不會透過任何標頭或程式庫檔案來公開。 不過，它是衍生自的 COM 介面， `IUnknown` `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` 可透過一般的 COM 機制取得 GUID。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
-**標頭：** 無  
-連結**庫：** 無  
+**平台：** 請參閱 [系統需求](../../get-started/system-requirements.md)。
+**標頭：** 沒有  
+連結 **庫：** 沒有  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱

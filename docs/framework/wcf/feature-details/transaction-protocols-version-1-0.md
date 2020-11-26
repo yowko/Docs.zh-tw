@@ -2,15 +2,16 @@
 title: 異動通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 9e21da0dfdda514e60b6f53090f5225b57aa1b75
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 7b1cfc21a1361cee3027fd5a61ec61a4a0a998b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720370"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246234"
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
-Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交易和 WS 協調通訊協定的1.0 版。 如需版本1.1 的詳細資訊，請參閱 [交易通訊協定](transaction-protocols.md)。  
+
+Windows Communication Foundation (WCF) 第1版會執行 WS-Atomic 交易和 WS-Coordination 通訊協定的1.0 版。 如需版本1.1 的詳細資訊，請參閱 [交易通訊協定](transaction-protocols.md)。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -68,14 +69,17 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
 |xsd|`http://www.w3.org/2001/XMLSchema`|  
   
 ## <a name="transaction-manager-bindings"></a>異動管理員繫結程序  
+
  R1001：異動管理員必須使用 SOAP 1.1 和 WS-Addressing 2004/08 以便交換 WS-Atomic 異動和 WS-Coordination 訊息。  
   
  應用程式訊息並不限於這些繫結，並且會在稍後描述。  
   
 ### <a name="transaction-manager-https-binding"></a>異動管理員 HTTPS 繫結程序  
+
  異動管理員 HTTPS 繫結程序僅依賴傳輸安全性來達到安全性，並且在異動樹狀中的每個傳送者與接收者組之間建立信任。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
+
  X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明：  
   
 - R1111：透過網路提供的 X.509 憑證必須有符合起始電腦之完整網域名稱 (FQDN) 的主體名稱。  
@@ -83,20 +87,25 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
 - B1112：在系統中每個傳送者與接收者組之間的 DNS 都必須正常運作，X.509 主體名稱檢查才會成功。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>啟動和登錄繫結組態  
+
  WCF 需要要求/回復雙工系結搭配 HTTPS 的相互關聯。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
+
  WCF 透過 HTTPS 支援單向 (資料包) 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B2131：必須支援 `wsa:ReferenceParameters` 如 ws-addressing 中所述，以達成 WCF 的2pc 訊息相互關聯。  
+ B2131：必須支援 `wsa:ReferenceParameters` 如 WS-Addressing 所述，以達成 WCF 的2pc 訊息相互關聯。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>異動管理員混合安全性繫結程序  
- 這是替代的 (混合模式) 系結，該系結會使用傳輸安全性，並結合基於身分識別建立用途的 WS 協調發行權杖模型。  啟動與登錄是兩個繫結之間唯一不同的項目。  
+
+ 這是替代的 (混合模式) 系結，它會使用傳輸安全性與 WS-Coordination 發行的權杖模型，以進行身分識別建立用途。  啟動與登錄是兩個繫結之間唯一不同的項目。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
+
  X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
   
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
+
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
   
  B1221： WCF 會使用雙工 HTTPS 系結， ([訊息通訊協定](messaging-protocols.md)) 中所述的啟用訊息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
@@ -110,6 +119,7 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
  `t:IssuedTokens`應產生新的標頭，以附加至外寄 `wscoor:CreateCoordinationContextResponse` 訊息。  
   
 #### <a name="registration-message-binding-configuration"></a>登錄訊息繫結組態  
+
  B1231： WCF 使用雙工 HTTPS 系結 () 的 [訊息通訊協定](messaging-protocols.md) 中所述。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
  第 8 節的 WS-AtomicTransaction 進一步描述有關相互關聯與訊息交換模式描述的詳細資料。  
@@ -119,11 +129,13 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
  `wsse:Timestamp`元素必須使用發出的進行簽署 `SecurityContextToken STx` 。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
+
  WCF 透過 HTTPS 支援單向 (資料包) 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B2131：必須支援 `wsa:ReferenceParameters` 如 ws-addressing 中所述，以達成 WCF 的2pc 訊息相互關聯。  
+ B2131：必須支援 `wsa:ReferenceParameters` 如 WS-Addressing 所述，以達成 WCF 的2pc 訊息相互關聯。  
   
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
+
  應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
   
 - R2001：應用程式之間的訊息必須將 `t:IssuedTokens` 標頭與訊息標頭中的 `CoordinationContext` 一起流通。  
@@ -137,6 +149,7 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
 ## <a name="message-examples"></a>訊息範例  
   
 ### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext 要求/回應訊息  
+
  下列訊息會遵循要求/回應模式。  
   
 #### <a name="createcoordinationcontext"></a>CreateCoordinationContext  
@@ -248,6 +261,7 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
 ```  
   
 ### <a name="registration-messages"></a>登錄訊息  
+
  下列訊息是登錄訊息。  
   
 #### <a name="register"></a>註冊  
@@ -348,6 +362,7 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
 ```  
   
 ### <a name="two-phase-commit-protocol-messages"></a>兩階段交易認可通訊協定訊息  
+
  下列訊息與兩階段交易認可 (2PC) 通訊協定有關。  
   
 #### <a name="commit"></a>Commit  
@@ -374,6 +389,7 @@ Windows Communication Foundation (WCF) 第1版會執行 WS-不可部分完成交
 ```  
   
 ### <a name="application-messages"></a>應用程式訊息  
+
  下列訊息是應用程式訊息。  
   
 #### <a name="application-message-request"></a>應用程式訊息要求  
