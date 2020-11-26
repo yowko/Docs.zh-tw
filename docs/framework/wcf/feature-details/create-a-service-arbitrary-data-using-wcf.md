@@ -1,20 +1,21 @@
 ---
-title: HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
+title: 作法：使用 WCF REST 程式設計模型建立接受任意資料的服務
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601331"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237829"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="5cf40-102">HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務</span><span class="sxs-lookup"><span data-stu-id="5cf40-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
-<span data-ttu-id="5cf40-103">有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。</span><span class="sxs-lookup"><span data-stu-id="5cf40-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="5cf40-104">當服務作業必須以不支援的 byWCF 格式傳回資料時，就會發生這種情況。</span><span class="sxs-lookup"><span data-stu-id="5cf40-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="5cf40-105">本主題討論如何使用 WCF REST 程式設計模型建立接收任意資料的服務。</span><span class="sxs-lookup"><span data-stu-id="5cf40-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="9a57c-102">作法：使用 WCF REST 程式設計模型建立接受任意資料的服務</span><span class="sxs-lookup"><span data-stu-id="9a57c-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
+
+<span data-ttu-id="9a57c-103">有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。</span><span class="sxs-lookup"><span data-stu-id="9a57c-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="9a57c-104">當服務作業必須以不支援的 byWCF 格式傳回資料時，就會發生這種情況。</span><span class="sxs-lookup"><span data-stu-id="9a57c-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="9a57c-105">本主題討論如何使用 WCF REST 程式設計模型建立接收任意資料的服務。</span><span class="sxs-lookup"><span data-stu-id="9a57c-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  
   
-### <a name="to-implement-the-service-contract"></a><span data-ttu-id="5cf40-106">若要實作服務合約</span><span class="sxs-lookup"><span data-stu-id="5cf40-106">To implement the service contract</span></span>  
+### <a name="to-implement-the-service-contract"></a><span data-ttu-id="9a57c-106">若要實作服務合約</span><span class="sxs-lookup"><span data-stu-id="9a57c-106">To implement the service contract</span></span>  
   
-1. <span data-ttu-id="5cf40-107">定義服務合約。</span><span class="sxs-lookup"><span data-stu-id="5cf40-107">Define the service contract.</span></span> <span data-ttu-id="5cf40-108">接收任意資料的作業必須擁有 <xref:System.IO.Stream> 型別的參數。</span><span class="sxs-lookup"><span data-stu-id="5cf40-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="5cf40-109">此外，此參數必須是以要求本文傳遞的唯一參數。</span><span class="sxs-lookup"><span data-stu-id="5cf40-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="5cf40-110">此範例中說明的作業也會接收檔案名稱參數。</span><span class="sxs-lookup"><span data-stu-id="5cf40-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="5cf40-111">這個參數會透過要求的 URL 來傳遞。</span><span class="sxs-lookup"><span data-stu-id="5cf40-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="5cf40-112">您可以在 <xref:System.UriTemplate> 中指定 <xref:System.ServiceModel.Web.WebInvokeAttribute>，指定以 URL 傳遞參數。</span><span class="sxs-lookup"><span data-stu-id="5cf40-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="5cf40-113">在此情況下，用來呼叫這個方法的 URI 會以 "UploadFile/Some-Filename" 結尾。</span><span class="sxs-lookup"><span data-stu-id="5cf40-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="5cf40-114">URI 範本的 "{filename}" 部分會指定在用來呼叫作業的 URI 中傳遞作業的 filename 參數。</span><span class="sxs-lookup"><span data-stu-id="5cf40-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
+1. <span data-ttu-id="9a57c-107">定義服務合約。</span><span class="sxs-lookup"><span data-stu-id="9a57c-107">Define the service contract.</span></span> <span data-ttu-id="9a57c-108">接收任意資料的作業必須擁有 <xref:System.IO.Stream> 型別的參數。</span><span class="sxs-lookup"><span data-stu-id="9a57c-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="9a57c-109">此外，此參數必須是以要求本文傳遞的唯一參數。</span><span class="sxs-lookup"><span data-stu-id="9a57c-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="9a57c-110">此範例中說明的作業也會接收檔案名稱參數。</span><span class="sxs-lookup"><span data-stu-id="9a57c-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="9a57c-111">這個參數會透過要求的 URL 來傳遞。</span><span class="sxs-lookup"><span data-stu-id="9a57c-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="9a57c-112">您可以在 <xref:System.UriTemplate> 中指定 <xref:System.ServiceModel.Web.WebInvokeAttribute>，指定以 URL 傳遞參數。</span><span class="sxs-lookup"><span data-stu-id="9a57c-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="9a57c-113">在此情況下，用來呼叫這個方法的 URI 會以 "UploadFile/Some-Filename" 結尾。</span><span class="sxs-lookup"><span data-stu-id="9a57c-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="9a57c-114">URI 範本的 "{filename}" 部分會指定作業的 filename 參數是在用來呼叫作業的 URI 內傳遞。</span><span class="sxs-lookup"><span data-stu-id="9a57c-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +26,7 @@ ms.locfileid: "84601331"
     }  
     ```  
   
-2. <span data-ttu-id="5cf40-115">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="5cf40-115">Implement the service contract.</span></span> <span data-ttu-id="5cf40-116">此合約只有一個方法 `UploadFile`，其可接收資料流中任意資料的檔案。</span><span class="sxs-lookup"><span data-stu-id="5cf40-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="5cf40-117">作業會讀取計算讀取之位元組數目的資料流，然後顯示該檔案名稱和所讀取的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="5cf40-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
+2. <span data-ttu-id="9a57c-115">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="9a57c-115">Implement the service contract.</span></span> <span data-ttu-id="9a57c-116">此合約只有一個方法 `UploadFile`，其可接收資料流中任意資料的檔案。</span><span class="sxs-lookup"><span data-stu-id="9a57c-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="9a57c-117">作業會讀取計算讀取之位元組數目的資料流，然後顯示該檔案名稱和所讀取的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="9a57c-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -44,9 +45,9 @@ ms.locfileid: "84601331"
     }  
     ```  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="5cf40-118">若要裝載服務</span><span class="sxs-lookup"><span data-stu-id="5cf40-118">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="9a57c-118">若要裝載服務</span><span class="sxs-lookup"><span data-stu-id="9a57c-118">To host the service</span></span>  
   
-1. <span data-ttu-id="5cf40-119">建立裝載服務的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="5cf40-119">Create a console application to host the service.</span></span>  
+1. <span data-ttu-id="9a57c-119">建立裝載服務的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="9a57c-119">Create a console application to host the service.</span></span>  
   
     ```csharp  
     class Program  
@@ -57,47 +58,47 @@ ms.locfileid: "84601331"
     }  
     ```  
   
-2. <span data-ttu-id="5cf40-120">建立一個變數，以保留該服務位於 `Main`方法內的基底位址。</span><span class="sxs-lookup"><span data-stu-id="5cf40-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
+2. <span data-ttu-id="9a57c-120">建立一個變數，以保留該服務位於 `Main`方法內的基底位址。</span><span class="sxs-lookup"><span data-stu-id="9a57c-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3. <span data-ttu-id="5cf40-121">建立可指定該服務類別及基底位址之服務的 <xref:System.ServiceModel.ServiceHost> 執行個體。</span><span class="sxs-lookup"><span data-stu-id="5cf40-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
+3. <span data-ttu-id="9a57c-121">建立可指定該服務類別及基底位址之服務的 <xref:System.ServiceModel.ServiceHost> 執行個體。</span><span class="sxs-lookup"><span data-stu-id="9a57c-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4. <span data-ttu-id="5cf40-122">加入指定合約、<xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 的端點。</span><span class="sxs-lookup"><span data-stu-id="5cf40-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
+4. <span data-ttu-id="9a57c-122">加入指定合約、<xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 的端點。</span><span class="sxs-lookup"><span data-stu-id="9a57c-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5. <span data-ttu-id="5cf40-123">開啟服務主機。</span><span class="sxs-lookup"><span data-stu-id="5cf40-123">Open the service host.</span></span> <span data-ttu-id="5cf40-124">現在服務已準備好接收要求。</span><span class="sxs-lookup"><span data-stu-id="5cf40-124">The service is now ready to receive requests.</span></span>  
+5. <span data-ttu-id="9a57c-123">開啟服務主機。</span><span class="sxs-lookup"><span data-stu-id="9a57c-123">Open the service host.</span></span> <span data-ttu-id="9a57c-124">現在服務已準備好接收要求。</span><span class="sxs-lookup"><span data-stu-id="9a57c-124">The service is now ready to receive requests.</span></span>  
   
     ```csharp  
     host.Open();  
     Console.WriteLine("Host opened");  
     ```  
   
-### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="5cf40-125">以程式設計的方式呼叫服務</span><span class="sxs-lookup"><span data-stu-id="5cf40-125">To call the service programmatically</span></span>  
+### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="9a57c-125">以程式設計的方式呼叫服務</span><span class="sxs-lookup"><span data-stu-id="9a57c-125">To call the service programmatically</span></span>  
   
-1. <span data-ttu-id="5cf40-126">使用用來呼叫服務的 URI 建立 <xref:System.Net.HttpWebRequest>。</span><span class="sxs-lookup"><span data-stu-id="5cf40-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="5cf40-127">在此程式碼中，基底位址會與 `"/UploadFile/Text"` 合併。</span><span class="sxs-lookup"><span data-stu-id="5cf40-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="5cf40-128">URI 的 `"UploadFile"` 部份會指定要呼叫的作業。</span><span class="sxs-lookup"><span data-stu-id="5cf40-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="5cf40-129">URI 的 `"Test.txt"` 部份會指定要傳遞至 `UploadFile` 作業的檔案名稱參數。</span><span class="sxs-lookup"><span data-stu-id="5cf40-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="5cf40-130">這兩個項目都對應到已套用至此作業合約的 <xref:System.UriTemplate>。</span><span class="sxs-lookup"><span data-stu-id="5cf40-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
+1. <span data-ttu-id="9a57c-126">使用用來呼叫服務的 URI 建立 <xref:System.Net.HttpWebRequest>。</span><span class="sxs-lookup"><span data-stu-id="9a57c-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="9a57c-127">在此程式碼中，基底位址會與 `"/UploadFile/Text"` 合併。</span><span class="sxs-lookup"><span data-stu-id="9a57c-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="9a57c-128">URI 的 `"UploadFile"` 部份會指定要呼叫的作業。</span><span class="sxs-lookup"><span data-stu-id="9a57c-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="9a57c-129">URI 的 `"Test.txt"` 部份會指定要傳遞至 `UploadFile` 作業的檔案名稱參數。</span><span class="sxs-lookup"><span data-stu-id="9a57c-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="9a57c-130">這兩個項目都對應到已套用至此作業合約的 <xref:System.UriTemplate>。</span><span class="sxs-lookup"><span data-stu-id="9a57c-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2. <span data-ttu-id="5cf40-131">將 <xref:System.Net.HttpWebRequest.Method%2A> 的 <xref:System.Net.HttpWebRequest> 屬性設為 `POST`，以及 <xref:System.Net.HttpWebRequest.ContentType%2A> 屬性設為 `"text/plain"`。</span><span class="sxs-lookup"><span data-stu-id="5cf40-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="5cf40-132">這樣做會告知服務，程式碼將傳送資料且資料為純文字。</span><span class="sxs-lookup"><span data-stu-id="5cf40-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
+2. <span data-ttu-id="9a57c-131">將 <xref:System.Net.HttpWebRequest.Method%2A> 的 <xref:System.Net.HttpWebRequest> 屬性設為 `POST`，以及 <xref:System.Net.HttpWebRequest.ContentType%2A> 屬性設為 `"text/plain"`。</span><span class="sxs-lookup"><span data-stu-id="9a57c-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="9a57c-132">這樣做會告知服務，程式碼將傳送資料且資料為純文字。</span><span class="sxs-lookup"><span data-stu-id="9a57c-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3. <span data-ttu-id="5cf40-133">呼叫 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 取得要求資料流，建立要傳送的資料，將該資料寫入要求資料流，然後關閉資料流。</span><span class="sxs-lookup"><span data-stu-id="5cf40-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
+3. <span data-ttu-id="9a57c-133">呼叫 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 取得要求資料流，建立要傳送的資料，將該資料寫入要求資料流，然後關閉資料流。</span><span class="sxs-lookup"><span data-stu-id="9a57c-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -110,21 +111,22 @@ ms.locfileid: "84601331"
     reqStream.Close();  
     ```  
   
-4. <span data-ttu-id="5cf40-134">透過呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A> 取得服務的回應，然後對主控台顯示回應資料。</span><span class="sxs-lookup"><span data-stu-id="5cf40-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
+4. <span data-ttu-id="9a57c-134">透過呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A> 取得服務的回應，然後對主控台顯示回應資料。</span><span class="sxs-lookup"><span data-stu-id="9a57c-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
     Console.WriteLine("Client: Receive Response HTTP/{0} {1} {2}", resp.ProtocolVersion, (int)resp.StatusCode, resp.StatusDescription);  
     ```  
   
-5. <span data-ttu-id="5cf40-135">關閉服務主機。</span><span class="sxs-lookup"><span data-stu-id="5cf40-135">Close the service host.</span></span>  
+5. <span data-ttu-id="9a57c-135">關閉服務主機。</span><span class="sxs-lookup"><span data-stu-id="9a57c-135">Close the service host.</span></span>  
   
     ```csharp  
     host.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="5cf40-136">範例</span><span class="sxs-lookup"><span data-stu-id="5cf40-136">Example</span></span>  
- <span data-ttu-id="5cf40-137">以下是這個範例的完整程式碼清單。</span><span class="sxs-lookup"><span data-stu-id="5cf40-137">The following is a complete listing of the code for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="9a57c-136">範例</span><span class="sxs-lookup"><span data-stu-id="9a57c-136">Example</span></span>  
+
+ <span data-ttu-id="9a57c-137">以下是這個範例的完整程式碼清單。</span><span class="sxs-lookup"><span data-stu-id="9a57c-137">The following is a complete listing of the code for this example.</span></span>  
   
 ```csharp  
 using System;  
@@ -189,12 +191,12 @@ namespace ReceiveRawData
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5cf40-138">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="5cf40-138">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9a57c-138">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="9a57c-138">Compiling the Code</span></span>  
   
-- <span data-ttu-id="5cf40-139">編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll</span><span class="sxs-lookup"><span data-stu-id="5cf40-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
+- <span data-ttu-id="9a57c-139">編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll</span><span class="sxs-lookup"><span data-stu-id="9a57c-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cf40-140">請參閱</span><span class="sxs-lookup"><span data-stu-id="5cf40-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a57c-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9a57c-140">See also</span></span>
 
-- [<span data-ttu-id="5cf40-141">UriTemplate 與 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="5cf40-141">UriTemplate and UriTemplateTable</span></span>](uritemplate-and-uritemplatetable.md)
-- [<span data-ttu-id="5cf40-142">WCF Web HTTP 程式設計模型</span><span class="sxs-lookup"><span data-stu-id="5cf40-142">WCF Web HTTP Programming Model</span></span>](wcf-web-http-programming-model.md)
-- [<span data-ttu-id="5cf40-143">WCF Web HTTP 程式設計模型概觀</span><span class="sxs-lookup"><span data-stu-id="5cf40-143">WCF Web HTTP Programming Model Overview</span></span>](wcf-web-http-programming-model-overview.md)
+- [<span data-ttu-id="9a57c-141">UriTemplate 與 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="9a57c-141">UriTemplate and UriTemplateTable</span></span>](uritemplate-and-uritemplatetable.md)
+- [<span data-ttu-id="9a57c-142">WCF Web HTTP 程式設計模型</span><span class="sxs-lookup"><span data-stu-id="9a57c-142">WCF Web HTTP Programming Model</span></span>](wcf-web-http-programming-model.md)
+- [<span data-ttu-id="9a57c-143">WCF Web HTTP 程式設計模型概觀</span><span class="sxs-lookup"><span data-stu-id="9a57c-143">WCF Web HTTP Programming Model Overview</span></span>](wcf-web-http-programming-model-overview.md)

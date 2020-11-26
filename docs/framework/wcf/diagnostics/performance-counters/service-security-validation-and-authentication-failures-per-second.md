@@ -2,33 +2,35 @@
 title: 服務：每秒的安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: f6dbf7f6da208bde3a9a380d50fd6caf68576f25
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f66e6b90622cf181229938bc4fd877a98cd23a48
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535907"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236880"
 ---
-# <a name="service-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="81ce1-102">服務：每秒的安全性驗證和驗證失敗數</span><span class="sxs-lookup"><span data-stu-id="81ce1-102">Service: Security Validation and Authentication Failures Per Second</span></span>
-<span data-ttu-id="81ce1-103">計數器名稱：每秒的安全性驗證和驗證失敗。</span><span class="sxs-lookup"><span data-stu-id="81ce1-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
+# <a name="service-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="5011c-102">服務：每秒的安全性驗證和驗證失敗數</span><span class="sxs-lookup"><span data-stu-id="5011c-102">Service: Security Validation and Authentication Failures Per Second</span></span>
+
+<span data-ttu-id="5011c-103">計數器名稱：每秒的安全性驗證和驗證失敗。</span><span class="sxs-lookup"><span data-stu-id="5011c-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="81ce1-104">描述</span><span class="sxs-lookup"><span data-stu-id="81ce1-104">Description</span></span>  
- <span data-ttu-id="81ce1-105">每當因為「未授權的安全性呼叫數」計數器所未涵蓋的安全性問題而拒絕訊息時，這個計數器就會遞增。</span><span class="sxs-lookup"><span data-stu-id="81ce1-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="81ce1-106">這類問題包括：</span><span class="sxs-lookup"><span data-stu-id="81ce1-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="5011c-104">描述</span><span class="sxs-lookup"><span data-stu-id="5011c-104">Description</span></span>  
+
+ <span data-ttu-id="5011c-105">每當因為「未授權的安全性呼叫數」計數器所未涵蓋的安全性問題而拒絕訊息時，這個計數器就會遞增。</span><span class="sxs-lookup"><span data-stu-id="5011c-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="5011c-106">這類問題包括：</span><span class="sxs-lookup"><span data-stu-id="5011c-106">Such problems include:</span></span>  
   
-- <span data-ttu-id="81ce1-107">無法從訊息中讀取用戶端權杖。</span><span class="sxs-lookup"><span data-stu-id="81ce1-107">Client token cannot be read from the message.</span></span>  
+- <span data-ttu-id="5011c-107">無法從訊息中讀取用戶端權杖。</span><span class="sxs-lookup"><span data-stu-id="5011c-107">Client token cannot be read from the message.</span></span>  
   
-- <span data-ttu-id="81ce1-108">用戶端權杖已經驗證失敗 (例如密碼錯誤)。</span><span class="sxs-lookup"><span data-stu-id="81ce1-108">Client token has failed authentication (for example, bad password).</span></span>  
+- <span data-ttu-id="5011c-108">用戶端權杖已經驗證失敗 (例如密碼錯誤)。</span><span class="sxs-lookup"><span data-stu-id="5011c-108">Client token has failed authentication (for example, bad password).</span></span>  
   
-- <span data-ttu-id="81ce1-109">簽章驗證已經失敗 (例如訊息遭到竄改)。</span><span class="sxs-lookup"><span data-stu-id="81ce1-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+- <span data-ttu-id="5011c-109">簽章驗證已經失敗 (例如訊息遭到竄改)。</span><span class="sxs-lookup"><span data-stu-id="5011c-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
-- <span data-ttu-id="81ce1-110">此訊息與之前的訊息重複，這可能會在重新執行攻擊時發生。</span><span class="sxs-lookup"><span data-stu-id="81ce1-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+- <span data-ttu-id="5011c-110">此訊息與之前的訊息重複，這可能會在重新執行攻擊時發生。</span><span class="sxs-lookup"><span data-stu-id="5011c-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
-- <span data-ttu-id="81ce1-111">發生解密失敗。</span><span class="sxs-lookup"><span data-stu-id="81ce1-111">A decryption failure has occurred.</span></span>  
+- <span data-ttu-id="5011c-111">發生解密失敗。</span><span class="sxs-lookup"><span data-stu-id="5011c-111">A decryption failure has occurred.</span></span>  
   
-- <span data-ttu-id="81ce1-112">訊息中遺失某些必要的項目 (例如遺失時間戳記或加密的資料區塊)。</span><span class="sxs-lookup"><span data-stu-id="81ce1-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+- <span data-ttu-id="5011c-112">訊息中遺失某些必要的項目 (例如遺失時間戳記或加密的資料區塊)。</span><span class="sxs-lookup"><span data-stu-id="5011c-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
-- <span data-ttu-id="81ce1-113">在 TLSNEGO/SPNEGO 交換期間發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="81ce1-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
+- <span data-ttu-id="5011c-113">在 TLSNEGO/SPNEGO 交換期間發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="5011c-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
   
- <span data-ttu-id="81ce1-114">此計數器是效能計數器類型 [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值是使用下列公式計算的：</span><span class="sxs-lookup"><span data-stu-id="81ce1-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), whose value is calculated using the following formula,</span></span>  
+ <span data-ttu-id="5011c-114">此計數器是效能計數器類型 [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值是使用下列公式計算的：</span><span class="sxs-lookup"><span data-stu-id="5011c-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), whose value is calculated using the following formula,</span></span>  
   
- <span data-ttu-id="81ce1-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="81ce1-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="5011c-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="5011c-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
