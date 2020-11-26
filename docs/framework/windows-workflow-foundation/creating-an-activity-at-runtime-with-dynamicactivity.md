@@ -1,19 +1,21 @@
 ---
 title: 使用 DynamicActivity 在執行階段建立活動
-description: DynamicActivity 是具象的密封類別，具有公用的函式。 使用類別，在執行時間使用活動 DOM 組合活動功能。
+description: DynamicActivity 是具有公用函式的具體、密封類別。 使用類別，在執行時間使用活動 DOM 組合活動功能。
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17ee14be7df4801018c7afd2e91f1fb07c34e8e1
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b65d7e385690b77d44c73e7a8a4ed38b04f30ea6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421536"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242093"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在執行階段建立活動
+
 <xref:System.Activities.DynamicActivity> 是含公用建構函式的具體密封類別。 <xref:System.Activities.DynamicActivity> 可在執行階段中使用活動 DOM 來組合活動功能。  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity 功能  
+
  <xref:System.Activities.DynamicActivity> 可以存取執行屬性、引數和變數，但不可以存取執行階段服務，例如排定子活動或追蹤。  
   
  最上層的屬性可以使用工作流程 <xref:System.Activities.Argument> 物件來設定。 在命令式程式碼中，這些引數是使用新型別的 CLR 屬性建立的。 在 XAML 中，這些引數則是使用 `x:Class` 和 `x:Member` 標籤宣告的。  
@@ -24,9 +26,9 @@ ms.locfileid: "83421536"
   
 1. OpenVisual Studio 2010。  
   
-2. 選取 [檔案]、[**新增** **]、[****專案**]。 在 [**專案類型**] 視窗中，選取 [ **Visual c #** ] 底下的**Workflow 4.0** ，然後選取 [ **v2010]** ] 節點。 在 [**範本**] 視窗中選取 [**連續工作流程主控台應用程式**]。 將新專案命名為 DynamicActivitySample。  
+2. 選取 [檔案]、[**新增** **]、[****專案**]。 在 [**專案類型**] 視窗中選取 [ **Visual c #** ] 底下的 **工作流程 4.0** ，然後選取 [ **v2010]** ] 節點。 選取 [**範本**] 視窗中的 [**連續工作流程主控台應用程式**]。 將新專案命名為 DynamicActivitySample。  
   
-3. 以滑鼠右鍵按一下 HelloActivity 專案中的 Workflow1.xaml，然後選取 [**刪除**]。  
+3. 以滑鼠右鍵按一下 HelloActivity 專案中的 [Workflow1.xaml]，然後選取 [ **刪除**]。  
   
 4. 開啟 Program.cs。 將下列指示詞加入至檔案的頂端。  
   
@@ -67,17 +69,17 @@ ms.locfileid: "83421536"
                 Console.ReadLine();  
     ```  
   
-6. 執行應用程式。 含有 "Hello World！" 文字的主控台視窗 出現.  
+6. 執行應用程式。 文字為 "Hello World！" 的主控台視窗 顯示。  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>若要使用 XAML 在執行階段建立活動  
   
 1. 開啟 Visual Studio 2010。  
   
-2. 選取 [檔案]、[**新增** **]、[****專案**]。 在 [**專案類型**] 視窗中，選取 [ **Visual c #** ] 底下的**Workflow 4.0** ，然後選取 [ **v2010]** ] 節點。 在 [**範本**] 視窗中選取 [**工作流程主控台應用程式**]。 將新專案命名為 DynamicActivitySample。  
+2. 選取 [檔案]、[**新增** **]、[****專案**]。 在 [**專案類型**] 視窗中選取 [ **Visual c #** ] 底下的 **工作流程 4.0** ，然後選取 [ **v2010]** ] 節點。 選取 [**範本**] 視窗中的 [**工作流程主控台應用程式**]。 將新專案命名為 DynamicActivitySample。  
   
-3. 開啟 HelloActivity 專案中的 Workflow1.xaml。 按一下設計工具底部的 [**引數**] 選項。 建立新的 `In` 引數，其名稱為 `TextToWrite`、型別為 `String`。  
+3. 開啟 HelloActivity 專案中的 Workflow1.xaml。 按一下設計工具底部的 [ **引數** ] 選項。 建立新的 `In` 引數，其名稱為 `TextToWrite`、型別為 `String`。  
   
-4. 將 [ **WriteLine** ] 活動從 [工具箱] 的 [**基本**] 區段拖曳到設計工具介面上。 將值指派 `TextToWrite` 給活動的**Text**屬性。  
+4. 將 [ **WriteLine** ] 活動從 [工具箱] 的 [ **基本** ] 區段拖曳至設計工具介面上。 將值指派 `TextToWrite` 給活動的 **Text** 屬性。  
   
 5. 開啟 Program.cs。 將下列指示詞加入至檔案的頂端。  
   
@@ -85,7 +87,7 @@ ms.locfileid: "83421536"
     using System.Activities.XamlIntegration;  
     ```  
   
-6. 以下列程式碼取代 `Main` 方法的內容。  
+6. 將 `Main` 方法的內容取代為下列程式碼。  
   
     ```csharp  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
@@ -93,10 +95,10 @@ ms.locfileid: "83421536"
     Console.ReadLine();  
     ```  
   
-7. 執行應用程式。 含有 "Hello World！" 文字的主控台視窗  隨即出現。  
+7. 執行應用程式。 文字為 "Hello World！" 的主控台視窗  隨即出現。  
   
-8. 以滑鼠右鍵按一下**方案總管**中的 workflow1.xaml，然後選取 [ **View Code**]。 請注意，活動類別是以 `x:Class` 建立的，而屬性則是以 `x:Property` 建立的。  
+8. 以滑鼠右鍵按一下 **方案總管** 中的 [workflow1.xaml] 檔案，然後選取 [ **視圖程式碼**]。 請注意，活動類別是以 `x:Class` 建立的，而屬性則是以 `x:Property` 建立的。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用命令式程式碼撰寫工作流程、活動與運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [使用命令式程式碼撰寫工作流程、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)

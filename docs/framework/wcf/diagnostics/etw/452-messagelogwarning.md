@@ -2,14 +2,15 @@
 title: 452 - MessageLogWarning
 ms.date: 03/30/2017
 ms.assetid: 22a9f6ea-5b5f-4110-8a4e-9be9c983fbbb
-ms.openlocfilehash: 22932c4de7a803307f2ee82adc958a30cf96f198
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 484909bcdac27c1b04be967df1182a67294f4920
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757465"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242652"
 ---
 # <a name="452---messagelogwarning"></a>452 - MessageLogWarning
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61757465"
 |識別碼|452|  
 |關鍵字|Troubleshooting，WCFMessageLogging|  
 |層級|警告|  
-|通道|Microsoft-Windows-Application Server-Applications/Analytic|  
+|通路|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>描述  
+
  當傳送訊息記錄警告時，就會發出此事件。  
   
 ## <a name="message"></a>訊息  
+
  %1  
   
 ## <a name="details"></a>詳細資料  

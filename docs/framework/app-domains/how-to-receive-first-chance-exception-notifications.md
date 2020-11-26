@@ -1,6 +1,6 @@
 ---
 title: 作法：接收第一個可能發生的例外狀況通知
-description: 在 CLR 搜尋例外狀況處理常式之前，透過 AppDomain 類別的 Appdomain.currentdomain.firstchanceexception 事件取得 .NET 中第一個可能發生的例外狀況通知。
+description: 在 CLR 搜尋例外狀況處理常式之前，透過 AppDomain 類別的 >appdomain.currentdomain.firstchanceexception 事件，在 .NET 中取得第一個可能發生的例外狀況通知。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 0b3150a52a68e078d1052a9894bb652ad35027d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104741"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242561"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>作法：接收第一個可能發生的例外狀況通知
+
 <xref:System.AppDomain> 類別的 <xref:System.AppDomain.FirstChanceException> 事件可讓您在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。
 
  這個事件是在應用程式定義域層級引發。 執行的執行緒可以通過多個應用程式定義域；因此，在另一個應用程式定義域中無法處理某個應用程式定義域中未處理的例外狀況。 在應用程式定義域處理例外狀況之前，通知都會發生在每個已新增事件之處理常式的應用程式定義域中。
@@ -26,6 +27,7 @@ ms.locfileid: "85104741"
  如需跨數個應用程式定義域的更複雜範例，請參閱 <xref:System.AppDomain.FirstChanceException> 事件的範例。
 
 ## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>接收預設應用程式定義域中第一個可能發生傳回型別的例外狀況通知
+
  在下列程序中，應用程式的進入點 (`Main()` 方法) 會在預設應用程式定義域中執行。
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>示範預設應用程式定義域中第一個可能發生傳回型別的例外狀況通知
@@ -51,6 +53,7 @@ ms.locfileid: "85104741"
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]
 
 ## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>接收另一個應用程式定義域中第一個可能發生傳回型別的例外狀況通知
+
  如果您的程式包含多個應用程式定義域，您可以選擇哪些應用程式網域會收到通知。
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>接收您所建立之應用程式定義域中第一個可能發生傳回型別的例外狀況通知
@@ -85,6 +88,7 @@ ms.locfileid: "85104741"
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>範例
+
  下列範例會建立名為 `AD1` 的應用程式定義域，並將事件處理常式新增至應用程式定義域的 <xref:System.AppDomain.FirstChanceException> 事件。 此範例會在應用程式定義域中建立 `Worker` 類別的執行個體，並呼叫名為 `Thrower` 且擲回 <xref:System.ArgumentException> 的方法。 根據其引數的值，方法會攔截例外狀況或無法處理它。
 
  每次 `Thrower` 方法在 `AD1` 中擲回例外狀況時，都會在 `AD1` 中引發 <xref:System.AppDomain.FirstChanceException> 事件，而且事件處理常式會顯示訊息。 執行階段接著會尋找例外狀況處理常式。 在第一個案例中，例外狀況處理常式位於 `AD1` 中。 在第二個案例中，此例外狀況未在 `AD1` 中處理，而是改為在預設應用程式定義域中攔截。

@@ -2,20 +2,20 @@
 title: dotnet tool restore 命令
 description: Dotnet tool restore 命令會在您的電腦上安裝目前目錄範圍內的 .NET 本機工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3425bc6b78fd53f578c209013f83b006305dbb81
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634268"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242925"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
 本文 **適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
-`dotnet tool restore` -在您的電腦上安裝目前目錄範圍內的 .NET 本機工具。
+`dotnet tool restore` -安裝目前目錄範圍內的 .NET 本機工具。
 
 ## <a name="synopsis"></a>概要
 
@@ -37,7 +37,7 @@ dotnet tool restore -h|--help
 
 - **`--configfile <FILE>`**
 
-  要使用的 NuGet 組態檔 ( *nuget.config* )。
+  要使用的 NuGet 組態檔 (*nuget.config*)。
 
 - **`--add-source <SOURCE>`**
 

@@ -1,19 +1,20 @@
 ---
 title: Interop ETW 事件
-description: 請參閱 interop ETW （Windows 事件追蹤）事件，其會在 .NET 中捕捉 Microsoft 中繼語言（MSIL） stub 產生 & 快取的相關資訊。
+description: 複習 interop ETW (Windows) 事件的事件追蹤，這些事件會在 .NET 中捕捉 Microsoft 中繼語言 (MSIL) 存根產生 & 快取的相關資訊。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-ms.openlocfilehash: 9dac9bc70cd070eb3e94969ce47ce24325a6f89d
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 8e92a1492d0295fb71473843752cb4c6184d3604
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904243"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242184"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 事件
+
 Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。  
 
 ## <a name="ilstubgenerated-event"></a>ILStubGenerated 事件
@@ -36,7 +37,7 @@ Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|模組識別碼。|  
 |StubMethodID|win:UInt64|虛設常式方法識別項。|  
-|StubFlags|win:UInt64|虛設常式的旗標：<br /><br /> 0x1 - 反向 interop。<br /><br /> 0x2 - COM interop。<br /><br /> 0x4 - NGen.exe 所產生的虛設常式。<br /><br /> 0x8 - 委派。<br /><br /> 0x10-變數引數。<br /><br /> 0x20 - Unmanaged 被呼叫者。|  
+|StubFlags|win:UInt64|虛設常式的旗標：<br /><br /> 0x1 - 反向 interop。<br /><br /> 0x2 - COM interop。<br /><br /> 0x4 - NGen.exe 所產生的虛設常式。<br /><br /> 0x8 - 委派。<br /><br /> 0x10-Variable 引數。<br /><br /> 0x20 - Unmanaged 被呼叫者。|  
 |ManagedInteropMethodToken|win:UInt32|Managed interop 方法的語彙基元。|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Managed interop 方法的命名空間。|  
 |ManagedInteropMethodName|win:UnicodeString|Managed interop 方法的名稱。|  

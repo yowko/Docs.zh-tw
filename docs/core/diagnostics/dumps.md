@@ -2,12 +2,12 @@
 title: 傾印-.NET
 description: .NET 中傾印的簡介。
 ms.date: 10/12/2020
-ms.openlocfilehash: a5f12837e81edc82f420f7b325b0248f9f8989a3
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96034806"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242769"
 ---
 # <a name="dumps"></a>傾印
 
@@ -50,17 +50,6 @@ ms.locfileid: "96034806"
 當應用程式尚未損毀時，您可能會想要收集傾印。 例如，如果您想要檢查看似處於鎖死的應用程式狀態，則設定環境變數以收集損毀傾印時，將不會有説明，因為應用程式仍在執行中。
 
 若要在您自己的要求中收集傾印，您可以使用 `dotnet-dump` ，這是用來收集和分析傾印的 CLI 工具。 如需如何使用它來收集傾印的詳細資訊 `dotnet-dump` ，請參閱傾印 [收集和分析公用程式](dotnet-dump.md)。
-
-### <a name="types-of-dumps-in-net"></a>.NET 中的傾印類型
-
-您可以根據用途收集不同類型的傾印。 `COMPlus_DbgMiniDumpType`當使用環境變數時，可以使用來設定，或在 `--type` 使用時使用旗標 `dotnet-dump` 。 下表顯示您可以在 .NET 中收集的傾印類型。
-
-|值|名稱|描述|
-|-----|----|-----------|
-|1|`MiniDumpNormal`|只包含為進程中所有現有線程捕捉堆疊追蹤所需的資訊。 有限的 GC 堆積記憶體和資訊。|
-|2|`MiniDumpWithPrivateReadWriteMemory`|包含 GC 堆積以及在進程中為所有現有線程捕捉堆疊追蹤所需的資訊。|
-|3|`MiniDumpFilterTriage`|只包含為進程中所有現有線程捕捉堆疊追蹤所需的資訊。 有限的 GC 堆積記憶體和資訊。|
-|4|`MiniDumpWithFullMemory`|在進程中包含所有可存取的記憶體。 原始記憶體資料會包含在結尾，因此可以直接對應初始結構，而不需要原始記憶體資訊。 此選項可能會產生非常大的檔案。|
 
 ## <a name="analyze-dumps"></a>分析傾印
 

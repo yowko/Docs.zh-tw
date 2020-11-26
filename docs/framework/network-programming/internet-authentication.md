@@ -1,6 +1,6 @@
 ---
 title: 網際網路驗證
-description: 瞭解在 .NET Framework 中，針對您的應用程式 System.Net 類別支援的各種用戶端驗證機制。
+description: 瞭解 System.Net 類別針對 .NET Framework 中的應用程式所支援的各種用戶端驗證機制。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [.NET Framework], classes
@@ -16,14 +16,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 085ca27dd0cfedc90211b21c10cc8bc5cf1ecd21
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241586"
 ---
 # <a name="internet-authentication"></a>網際網路驗證
+
 <xref:System.Net> 類別支援各種不同的用戶端驗證機制，包括標準的網際網路驗證方法 (基本、摘要式、交涉式、NTLM 和 Kerberos 驗證) 以及您可以建立的自訂方法。  
   
  驗證認證儲存在 <xref:System.Net.NetworkCredential> 和 <xref:System.Net.CredentialCache> 類別中，能夠實作 <xref:System.Net.ICredentials> 介面。 當這些類別的其中之一經查詢認證後，它會傳回 **NetworkCredential** 類別的執行個體。 驗證程序是由 <xref:System.Net.AuthenticationManager> 類別管理，而實際的驗證程序是由實作 <xref:System.Net.IAuthenticationModule> 介面的驗證模組類別執行。 您必須先向 **AuthenticationManager** 註冊自訂的驗證模組才能使用它，預設會註冊基本、摘要式、交涉式、NTLM 和 Kerberos 驗證方法模組。  
@@ -43,5 +44,5 @@ ms.locfileid: "84502375"
 ## <a name="see-also"></a>另請參閱
 
 - [基本和摘要式驗證](basic-and-digest-authentication.md)
-- [NTLM 和 Kerberos 驗證](ntlm-and-kerberos-authentication.md)
+- [NTLM 與 Kerberos 驗證](ntlm-and-kerberos-authentication.md)
 - [網路程式設計的安全性](security-in-network-programming.md)

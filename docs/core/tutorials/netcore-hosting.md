@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 380bfb3aa5e5715fe95e0d7772700bac9ab4a5be
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 79336396de3058e40cf7328e6d92e7e9e54296e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242912"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -19,7 +19,7 @@ ms.locfileid: "92160980"
 
 本文概述從機器碼啟動 .NET Core 執行階段及在其中執行受控碼的必要步驟。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 因為主機是原生應用程式，所以本教學課程說明如何建立 c + + 應用程式來裝載 .NET Core。 您將需要 C++ 開發環境 (例如 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 所提供的環境)。
 
@@ -163,6 +163,7 @@ int hr = executeAssembly(
 CoreCLR 不支援重新初始化或卸載。 請勿再次呼叫 `coreclr_initialize` 或卸載 CoreCLR 程式庫。
 
 ## <a name="conclusion"></a>結論
+
 建立主機之後，您可以從命令列執行它，並傳遞主機預期的任何引數，藉以進行測試。 指定主機要執行的 .NET Core 應用程式時，請務必使用 `dotnet build` 所產生的 .dll。 `dotnet publish` 為獨立式應用程式所產生的可執行檔 (.exe 檔案)，其實就是預設 .NET Core 主機 (因此應用程式可在主要情況下從命令列直接啟動)；使用者程式碼會編譯成同名的 DLL。
 
 如果最初無法運作，請仔細檢查主機所預期的位置中是否有可用的 *coreclr.dll* 、所有必要的架構程式庫都在 TPA 清單中，以及 CoreCLR 的位 (32 位或64位) 符合主機的建立方式。

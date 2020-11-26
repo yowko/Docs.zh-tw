@@ -2,14 +2,15 @@
 title: HTTPS 上的自訂繫結可靠工作階段
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: ab2dd4725879ba969afdae8a6423a920a9786125
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aec9bc11fab71a8e3adfe60e0c19b0ac4a9e3699
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585294"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241885"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS 上的自訂繫結可靠工作階段
+
 這個範例示範透過可靠工作階段來使用 SSL 傳輸安全性。 可靠工作階段會實作 WS-Reliable Messaging 通訊協定。 您可以經由在可靠工作階段上撰寫 WS-Security 來建立安全可靠工作階段。 但有時候，您可以改成選擇搭配 SSL 來使用 HTTP 傳輸安全性。  
   
 > [!IMPORTANT]
@@ -17,14 +18,15 @@ ms.locfileid: "84585294"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>範例詳細資料  
+
  SSL 會確定封包本身的安全性。 值得注意的是，這種做法不同於使用 WS-Secure Conversation 來保護可靠工作階段。  
   
- 若要在 HTTPS 上使用可靠工作階段，您必須建立自訂繫結。 這個範例是以執行計算機服務的[消費者入門](getting-started-sample.md)為基礎。 自訂系結是使用可靠會話繫結項目和所建立 [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) 。 下列組態是使用自訂繫結。  
+ 若要在 HTTPS 上使用可靠工作階段，您必須建立自訂繫結。 這個範例是以實作為計算機服務的 [消費者入門](getting-started-sample.md) 為基礎。 使用可靠會話繫結項目和來建立自訂系結 [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) 。 下列組態是使用自訂繫結。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +72,7 @@ ms.locfileid: "84585294"
 </configuration>  
 ```  
   
- 範例中的程式碼與[消費者入門](getting-started-sample.md)服務相同。 您必須建立一個憑證並使用 [Web 伺服器憑證精靈] 指派憑證，再建置及執行範例。 組態檔設定中的端點定義與繫結定義會啟用自訂繫結，如同下列用戶端的範例組態所示。  
+ 範例中的程式碼與 [消費者入門](getting-started-sample.md) 服務的程式碼相同。 您必須建立一個憑證並使用 [Web 伺服器憑證精靈] 指派憑證，再建置及執行範例。 組態檔設定中的端點定義與繫結定義會啟用自訂繫結，如同下列用戶端的範例組態所示。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -102,7 +104,7 @@ ms.locfileid: "84585294"
   
  指定的位址會使用 `https://` 配置。  
   
- 因為此範例中使用的憑證是使用 Makecert 建立的測試憑證，所以當您嘗試從瀏覽器存取 HTTPs：位址（例如）時，就會出現安全性警示 `https://localhost/servicemodelsamples/service.svc` 。 為了讓 Windows Communication Foundation （WCF）用戶端使用測試憑證，已將一些額外的程式碼新增至用戶端，以隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 因為此範例中使用的憑證是使用 Makecert.exe 建立的測試憑證，所以當您嘗試從瀏覽器存取 HTTPs：位址（例如）時，就會出現安全性警示 `https://localhost/servicemodelsamples/service.svc` 。 為了讓 Windows Communication Foundation (WCF) 用戶端使用測試憑證，用戶端已新增一些額外的程式碼來隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
@@ -128,10 +130,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 請確定您已執行[Internet Information Services （IIS）伺服器憑證安裝指示](iis-server-certificate-installation-instructions.md)。  
+3. 確定您已執行 [Internet Information Services (IIS) 伺服器憑證安裝指示](iis-server-certificate-installation-instructions.md)。  
   
 4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-5. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
+5. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
