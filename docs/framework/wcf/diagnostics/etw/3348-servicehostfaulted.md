@@ -2,27 +2,30 @@
 title: 3348 - ServiceHostFaulted
 ms.date: 03/30/2017
 ms.assetid: 1b58ab2e-4b11-4967-ad16-724d509814a1
-ms.openlocfilehash: 9e6d0449a7bec4c11afcf84cffdd0d43803dabf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 494ec96a66d1cec6f1b8299431db4136e4da67a6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971466"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234592"
 ---
-# <a name="3348---servicehostfaulted"></a><span data-ttu-id="d3f71-102">3348 - ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="d3f71-102">3348 - ServiceHostFaulted</span></span>
-## <a name="properties"></a><span data-ttu-id="d3f71-103">屬性</span><span class="sxs-lookup"><span data-stu-id="d3f71-103">Properties</span></span>  
+# <a name="3348---servicehostfaulted"></a><span data-ttu-id="372de-102">3348 - ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="372de-102">3348 - ServiceHostFaulted</span></span>
+
+## <a name="properties"></a><span data-ttu-id="372de-103">屬性</span><span class="sxs-lookup"><span data-stu-id="372de-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="d3f71-104">識別碼</span><span class="sxs-lookup"><span data-stu-id="d3f71-104">ID</span></span>|<span data-ttu-id="d3f71-105">3348</span><span class="sxs-lookup"><span data-stu-id="d3f71-105">3348</span></span>|  
-|<span data-ttu-id="d3f71-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="d3f71-106">Keywords</span></span>|<span data-ttu-id="d3f71-107">TCP</span><span class="sxs-lookup"><span data-stu-id="d3f71-107">TCP</span></span>|  
-|<span data-ttu-id="d3f71-108">層級</span><span class="sxs-lookup"><span data-stu-id="d3f71-108">Level</span></span>|<span data-ttu-id="d3f71-109">Critical</span><span class="sxs-lookup"><span data-stu-id="d3f71-109">Critical</span></span>|  
-|<span data-ttu-id="d3f71-110">通道</span><span class="sxs-lookup"><span data-stu-id="d3f71-110">Channel</span></span>|<span data-ttu-id="d3f71-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="d3f71-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="372de-104">識別碼</span><span class="sxs-lookup"><span data-stu-id="372de-104">ID</span></span>|<span data-ttu-id="372de-105">3348</span><span class="sxs-lookup"><span data-stu-id="372de-105">3348</span></span>|  
+|<span data-ttu-id="372de-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="372de-106">Keywords</span></span>|<span data-ttu-id="372de-107">TCP</span><span class="sxs-lookup"><span data-stu-id="372de-107">TCP</span></span>|  
+|<span data-ttu-id="372de-108">層級</span><span class="sxs-lookup"><span data-stu-id="372de-108">Level</span></span>|<span data-ttu-id="372de-109">重大</span><span class="sxs-lookup"><span data-stu-id="372de-109">Critical</span></span>|  
+|<span data-ttu-id="372de-110">通路</span><span class="sxs-lookup"><span data-stu-id="372de-110">Channel</span></span>|<span data-ttu-id="372de-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="372de-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="d3f71-112">描述</span><span class="sxs-lookup"><span data-stu-id="d3f71-112">Description</span></span>  
- <span data-ttu-id="d3f71-113">當服務主機錯誤時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="d3f71-113">This event is emitted when the service host faulted.</span></span>  
+## <a name="description"></a><span data-ttu-id="372de-112">描述</span><span class="sxs-lookup"><span data-stu-id="372de-112">Description</span></span>  
+
+ <span data-ttu-id="372de-113">當服務主機錯誤時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="372de-113">This event is emitted when the service host faulted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="d3f71-114">訊息</span><span class="sxs-lookup"><span data-stu-id="d3f71-114">Message</span></span>  
- <span data-ttu-id="d3f71-115">服務主機發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="d3f71-115">Service host faulted.</span></span>  
+## <a name="message"></a><span data-ttu-id="372de-114">訊息</span><span class="sxs-lookup"><span data-stu-id="372de-114">Message</span></span>  
+
+ <span data-ttu-id="372de-115">服務主機發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="372de-115">Service host faulted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="d3f71-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="d3f71-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="372de-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="372de-116">Details</span></span>
