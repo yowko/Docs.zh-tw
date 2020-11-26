@@ -6,14 +6,15 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 408a3064b67cae2d75c80881f918c774e05866e6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cfa7ec7cb0ff174a820afcdcbdb1eb461510fc05
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558377"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238531"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator 工具)
+
 .NET Security Annotator 工具 (SecAnnotate.exe) 是識別一個或多個組件之 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令列應用程式。  
   
  Visual Studio 延伸模組 ([Security Annotator](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator)) 提供 SecAnnotate.exe 的圖形化使用者介面，讓您能夠從 Visual Studio 執行該工具。  
@@ -49,6 +50,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/y:`*目錄*<br /><br /> 或<br /><br /> `/symbolpath:`*目錄*|註釋期間搜尋符號檔時包含指定的目錄。|  
   
 ## <a name="remarks"></a>備註  
+
  在命令列指定且前面加上一個 at 符號 (@) 的回應檔也可能會提供參數和組件。 回應檔中的每一行應該包含單一參數或組件名稱。  
   
  如需 .NET Security Annotator 的詳細資訊，請參閱 .NET Security 部落格中的項目[使用 SecAnnotate 分析您的組件是否發生透明度違規](/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example)。  

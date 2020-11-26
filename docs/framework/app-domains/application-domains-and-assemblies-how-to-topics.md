@@ -1,19 +1,20 @@
 ---
 title: 應用程式定義域和組件 HOW TO 主題
-description: 請參閱在 .NET 中使用應用程式域和元件進行程式設計的概念檔中，如何主題的連結。
+description: 請參閱在 .NET 中使用應用程式域和元件進行程式設計的概念檔中的 how to 主題連結。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-ms.openlocfilehash: 9489f23e6730e36fb43e367b34954d220f633c96
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 4f0bf91c9f8f52959ed387be90f9bd59eff494cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237478"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>應用程式定義域和組件 HOW TO 主題
+
 下列各節包含使用應用程式定義域和組件設計程式之概念文件中所有「如何」主題的連結。  
   
  **應用程式定義域**  
@@ -32,11 +33,11 @@ ms.locfileid: "85104974"
   
 - [如何：決定組件的完整名稱](../../standard/assembly/find-fully-qualified-name.md)  
   
-- [如何：建立單一檔案元件](build-single-file-assembly.md)  
+- [如何：建立 Single-File 元件](build-single-file-assembly.md)  
   
 - [如何：建立多檔案元件](build-multifile-assembly.md)  
   
-- [如何：建立公開/私密金鑰組](../../standard/assembly/create-public-private-key-pair.md)  
+- [如何：建立 Public-Private 金鑰組](../../standard/assembly/create-public-private-key-pair.md)  
   
 - [如何：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)  
   

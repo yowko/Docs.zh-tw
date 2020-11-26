@@ -1,20 +1,21 @@
 ---
-title: HOW TO：啟用資料流
-description: 瞭解如何在 WCF 中啟用串流訊息，而不是預設的緩衝傳輸，在處理之前必須完整接收。
+title: 作法：啟用資料流
+description: 瞭解如何在 WCF 中啟用資料流程處理的訊息，而非預設的緩衝傳輸，這必須在處理之前完全接收。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 538fd8634094aa6fbf097ddb94469d7bca749a63
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7f77c406e1cfd4def116a1abe24aa92be74c6abe
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247022"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237738"
 ---
-# <a name="how-to-enable-streaming"></a>HOW TO：啟用資料流
-Windows Communication Foundation （WCF）可以使用緩衝處理或資料流程處理的傳輸來傳送訊息。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
+# <a name="how-to-enable-streaming"></a>作法：啟用資料流
+
+Windows Communication Foundation (WCF) 可以使用經過緩衝處理或資料流程處理的傳輸來傳送訊息。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
   
  若要啟用資料流處理，請適當定義 `OperationContract` 並在傳輸層級啟用資料流處理。  
   
@@ -77,5 +78,5 @@ Windows Communication Foundation （WCF）可以使用緩衝處理或資料流�
   
 ## <a name="see-also"></a>另請參閱
 
-- [大型資料和串流](large-data-and-streaming.md)
-- [STREAM](../samples/stream.md)
+- [大型資料與資料流](large-data-and-streaming.md)
+- [資料流](../samples/stream.md)

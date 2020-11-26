@@ -2,14 +2,15 @@
 title: MSMQ 傳輸
 ms.date: 03/30/2017
 ms.assetid: 3f29a2fe-24df-4614-b64c-b0c084fb7003
-ms.openlocfilehash: a2e5384808b82f48bd1d4856bf893130da8c5f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 407512cbb129dd2e5497de92c32b0641dd21080b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959415"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238024"
 ---
 # <a name="msmq-transport"></a>MSMQ 傳輸
+
 本主題會列出 MSMQ 傳輸產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
@@ -22,7 +23,7 @@ ms.locfileid: "61959415"
 |MsmqDeserializationError|將訊息還原序列化時發生錯誤。 無法接收訊息，並捨棄訊息。|  
 |MsmqDLQNotWriteable|用戶端的繫結程序驗證失敗。 用戶端無法傳送訊息。 指定的寄不出的信件佇列不存在或無法寫入。 請確定佇列存在，且有適當的權限可寫入。|  
 |MsmqGetPrivateComputerInformationError|版本檢查失敗，因為發生指定的錯誤。 無法偵測 MSMQ 的版本。佇列通道上的所有作業將會失敗。 請確定已安裝 MSMQ，且可供使用。|  
-|MsmqNoAssurancesForVolatile|服務的繫結驗證失敗。 無法啟動服務端點或用戶端。 ExactlyOnce 屬性設定為 true，而 Durable 屬性設定為 false。 不支援此一狀況。 若要解決衝突，請更正其中一個屬性。|  
+|MsmqNoAssurancesForVolatile|服務的繫結驗證失敗。 無法啟動服務端點或用戶端。 ExactlyOnce 屬性設定為 true，而 Durable 屬性設定為 false。 不支援此連結方式。 若要解決衝突，請更正其中一個屬性。|  
 |MsmqNonTransactionalQueueNeeded|偵測到繫結與 MSMQ 佇列組態不符。 無法啟動服務端點。 ExactlyOnce 屬性設定為 false，且讀取訊息的來源佇列為異動式佇列。 若要更正錯誤，請將 ExactlyOnce 屬性設為 true，或建立非異動式繫結程序。|  
 |MsmqOpenError|開啟指定的佇列時發生錯誤。 無法從佇列傳送或接收訊息。 請確定 MSMQ 已安裝且在執行中。 同時，請確定佇列可供使用，且能以必要的存取模式和授權來開啟。|  
 |MsmqPathLookupError|將指定的佇列路徑名稱轉換成格式名稱時發生錯誤。 佇列通道上的所有作業失敗。 請確定佇列位址有效。 必須在啟用並能存取 Active Directory 整合的情況下安裝 MSMQ。|  

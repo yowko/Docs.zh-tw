@@ -1,6 +1,6 @@
 ---
 title: 追蹤接聽項
-description: 探索追蹤接聽項，這是一種機制，用來收集和記錄在 .NET 中傳送的追蹤訊息。 接聽程式會收集、儲存及路由傳送訊息。
+description: 探索追蹤接聽項，這是用來收集和記錄在 .NET 中傳送之追蹤訊息的機制。 接聽程式會收集、儲存和路由傳送訊息。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,16 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 8cd79d21d66d23f834b7ef0012d8360884028ac6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803519"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238115"
 ---
 # <a name="trace-listeners"></a>追蹤接聽項
-使用 **Trace**、**Debug** 和 <xref:System.Diagnostics.TraceSource> 時，您必須具有收集和記錄所傳送訊息的機制。 接聽*程式會*接收追蹤訊息。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
+
+使用 **Trace**、**Debug** 和 <xref:System.Diagnostics.TraceSource> 時，您必須具有收集和記錄所傳送訊息的機制。 接聽 *程式會* 接收追蹤訊息。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
   
  接聽程式可供 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 類別使用，其中每一項都可以將輸出傳送至各種不同的接聽程式物件。 以下是常用的預先定義接聽程式：  
   
@@ -35,7 +36,7 @@ ms.locfileid: "85803519"
   
 - <xref:System.Diagnostics.ConsoleTraceListener> 會將追蹤或偵錯輸出導向至標準輸出或標準錯誤資料流。  
   
-- <xref:System.Diagnostics.DelimitedListTraceListener> 會將追蹤或偵錯輸出導向文字寫入器，例如資料流寫入器，或是導向資料流，例如檔案資料流。 追蹤輸出是以分隔的文字格式，使用屬性所指定的分隔符號 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 。  
+- <xref:System.Diagnostics.DelimitedListTraceListener> 會將追蹤或偵錯輸出導向文字寫入器，例如資料流寫入器，或是導向資料流，例如檔案資料流。 追蹤輸出的格式為使用屬性所指定之分隔符號的分隔文字格式 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 。  
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> 會將追蹤或偵錯輸出當成 XML 編碼資料導向至 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
   
@@ -73,6 +74,7 @@ System.Diagnostics.Trace.Listeners.Add(
 ```  
   
 ## <a name="developer-defined-listeners"></a>開發人員定義的接聽程式  
+
  您可繼承自 **TraceListener** 基底類別並用自訂方法來覆寫其方法，定義自己的接聽程式。 如需有關如何建立開發人員定義之接聽程式的詳細資訊，請參閱 .NET Framework 參考中的 <xref:System.Diagnostics.TraceListener>。  
   
 ## <a name="see-also"></a>另請參閱
@@ -81,5 +83,5 @@ System.Diagnostics.Trace.Listeners.Add(
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)
+- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md) (機器翻譯)
 - [追蹤參數](trace-switches.md)

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 521b2a887792d41dd28342ca4bfe7be71ceba4b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556521"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237374"
 ---
 # <a name="message-security-with-mutual-certificates"></a>相互憑證的訊息安全性
+
 下列案例顯示 Windows Communication Foundation 使用訊息安全性模式來保護 WCF) 服務和用戶端 (。 用戶端與服務以憑證加以驗證。  
   
  因為案例使用具有 X.509 憑證權杖設定檔的 WS-Security，所以這個案例是互通的。  
@@ -27,25 +28,28 @@ ms.locfileid: "90556521"
 |安全性模式|訊息|  
 |互通性|是的，採用 WS-Security 及 X.509 憑證權杖設定檔相容的用戶端及服務。|  
 |驗證|伺服器和用戶端的交互驗證。|  
-|完整性|是|  
+|完整性|Yes|  
 |機密性|是|  
 |傳輸|HTTP|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
 - 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼顯示建立使用訊息安全性的服務端點。 服務需要憑證來驗證自己。  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  您可使用下列組態來取代程式碼，以建立相同的服務。  
   
 ```xml  
@@ -91,7 +95,8 @@ ms.locfileid: "90556521"
 ```  
   
 ## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
@@ -101,12 +106,14 @@ ms.locfileid: "90556521"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼會建立用戶端。 安全性模式設為訊息，而且用戶端認證類型設為憑證。  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  下列組態會設定用戶端。 您必須使用來指定用戶端憑證 [\<clientCertificate>](../../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md) 。 此外，也會使用來指定服務憑證 [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) 。  
   
 ```xml  

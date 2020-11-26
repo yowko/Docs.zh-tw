@@ -6,14 +6,15 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558741"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238648"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
+
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
 
 您可以從下載頁面下載 .NET Framework 的可轉散發套件和語言套件：
@@ -21,7 +22,7 @@ ms.locfileid: "90558741"
 - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
 - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
@@ -208,7 +209,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 - [偵測](#detect_net) 使用者電腦上是否已安裝正確的 .NET Framework 版本。
 
     > [!IMPORTANT]
-    > 在判斷是否已安裝正確版本的 .NET Framework 時，您應該檢查是否已安裝目標版本「或」 ** 更新的版本，而不是是否已安裝您的目標版本。 換句話說，您應該評估從登錄擷取的版本機碼是否大於或等於您的目標版本的版本機碼，而「不是」 ** 它是否等於目標版本的版本機碼。
+    > 在判斷是否已安裝正確版本的 .NET Framework 時，您應該檢查是否已安裝目標版本「或」  更新的版本，而不是是否已安裝您的目標版本。 換句話說，您應該評估從登錄擷取的版本機碼是否大於或等於您的目標版本的版本機碼，而「不是」  它是否等於目標版本的版本機碼。
 
 - [偵測](#detecting-the-language-packs) 使用者電腦上是否已安裝語言套件。
 
@@ -260,8 +261,8 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 | | |
 |-|-|
-| Key | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| 名稱 | 版本 |
+| 答案 | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Name | 版本 |
 | 類型 | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
@@ -275,7 +276,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
 - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)

@@ -2,17 +2,19 @@
 title: 服務：安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d89419d7d579d29a1c57370d61eefb8b26333a40
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204586"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236854"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>服務：安全性驗證和驗證失敗數
+
 計數器名稱：安全性驗證和驗證失敗數  
   
 ## <a name="description"></a>描述  
+
  每當因為「未授權的安全性呼叫數」計數器所未涵蓋的安全性問題而拒絕訊息時，這個計數器就會遞增。 這類問題包括：  
   
 - 無法從訊息中讀取用戶端權杖。  
