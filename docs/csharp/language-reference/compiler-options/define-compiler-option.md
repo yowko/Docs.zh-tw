@@ -13,55 +13,55 @@ helpviewer_keywords:
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173265"
 ---
-# <a name="-define-c-compiler-options"></a><span data-ttu-id="a8527-103">-define (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="a8527-103">-define (C# Compiler Options)</span></span>
+# <a name="-define-c-compiler-options"></a><span data-ttu-id="62885-103">-define (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="62885-103">-define (C# Compiler Options)</span></span>
 
-<span data-ttu-id="a8527-104">**-define** 選項會將 `name` 定義為程式中所有原始程式碼檔的符號。</span><span class="sxs-lookup"><span data-stu-id="a8527-104">The **-define** option defines `name` as a symbol in all source code files your program.</span></span>  
+<span data-ttu-id="62885-104">**-define** 選項會將 `name` 定義為程式中所有原始程式碼檔的符號。</span><span class="sxs-lookup"><span data-stu-id="62885-104">The **-define** option defines `name` as a symbol in all source code files your program.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8527-105">語法</span><span class="sxs-lookup"><span data-stu-id="a8527-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62885-105">語法</span><span class="sxs-lookup"><span data-stu-id="62885-105">Syntax</span></span>  
   
 ```console  
 -define:name[;name2]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="a8527-106">引數</span><span class="sxs-lookup"><span data-stu-id="a8527-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="62885-106">引數</span><span class="sxs-lookup"><span data-stu-id="62885-106">Arguments</span></span>  
 
- <span data-ttu-id="a8527-107">`name`, `name2`</span><span class="sxs-lookup"><span data-stu-id="a8527-107">`name`, `name2`</span></span>  
- <span data-ttu-id="a8527-108">您要定義的一或多個符號之名稱。</span><span class="sxs-lookup"><span data-stu-id="a8527-108">The name of one or more symbols that you want to define.</span></span>  
+ <span data-ttu-id="62885-107">`name`, `name2`</span><span class="sxs-lookup"><span data-stu-id="62885-107">`name`, `name2`</span></span>  
+ <span data-ttu-id="62885-108">您要定義的一或多個符號之名稱。</span><span class="sxs-lookup"><span data-stu-id="62885-108">The name of one or more symbols that you want to define.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a8527-109">備註</span><span class="sxs-lookup"><span data-stu-id="a8527-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="62885-109">備註</span><span class="sxs-lookup"><span data-stu-id="62885-109">Remarks</span></span>  
 
- <span data-ttu-id="a8527-110">**-define** 選項的作用與使用 [#define](../preprocessor-directives/preprocessor-define.md) 前置處理器指示詞相同，不同之處在於編譯器選項對專案中的所有檔案都有效。</span><span class="sxs-lookup"><span data-stu-id="a8527-110">The **-define** option has the same effect as using a [#define](../preprocessor-directives/preprocessor-define.md) preprocessor directive except that the compiler option is in effect for all files in the project.</span></span> <span data-ttu-id="a8527-111">直到原始程式檔中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指示詞移除符號的定義之前，符號在原始程式檔中都會維持已定義狀態。</span><span class="sxs-lookup"><span data-stu-id="a8527-111">A symbol remains defined in a source file until an [#undef](../preprocessor-directives/preprocessor-undef.md) directive in the source file removes the definition.</span></span> <span data-ttu-id="a8527-112">使用 -define 選項時，某個檔案中的 `#undef` 指示詞不會對專案中的其他原始程式碼檔造成影響。</span><span class="sxs-lookup"><span data-stu-id="a8527-112">When you use the -define option, an `#undef` directive in one file has no effect on other source code files in the project.</span></span>  
+ <span data-ttu-id="62885-110">**-define** 選項的作用與使用 [#define](../preprocessor-directives/preprocessor-define.md) 前置處理器指示詞相同，不同之處在於編譯器選項對專案中的所有檔案都有效。</span><span class="sxs-lookup"><span data-stu-id="62885-110">The **-define** option has the same effect as using a [#define](../preprocessor-directives/preprocessor-define.md) preprocessor directive except that the compiler option is in effect for all files in the project.</span></span> <span data-ttu-id="62885-111">直到原始程式檔中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指示詞移除符號的定義之前，符號在原始程式檔中都會維持已定義狀態。</span><span class="sxs-lookup"><span data-stu-id="62885-111">A symbol remains defined in a source file until an [#undef](../preprocessor-directives/preprocessor-undef.md) directive in the source file removes the definition.</span></span> <span data-ttu-id="62885-112">使用 -define 選項時，某個檔案中的 `#undef` 指示詞不會對專案中的其他原始程式碼檔造成影響。</span><span class="sxs-lookup"><span data-stu-id="62885-112">When you use the -define option, an `#undef` directive in one file has no effect on other source code files in the project.</span></span>  
   
- <span data-ttu-id="a8527-113">您可以使用此選項建立的符號，搭配 [#if](../preprocessor-directives/preprocessor-if.md)、[#else](../preprocessor-directives/preprocessor-else.md)、[#elif](../preprocessor-directives/preprocessor-elif.md) 和 [#endif](../preprocessor-directives/preprocessor-endif.md)，有條件地編譯原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="a8527-113">You can use symbols created by this option with [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md), and [#endif](../preprocessor-directives/preprocessor-endif.md) to compile source files conditionally.</span></span>  
+ <span data-ttu-id="62885-113">您可以使用此選項建立的符號，搭配 [#if](../preprocessor-directives/preprocessor-if.md)、[#else](../preprocessor-directives/preprocessor-else.md)、[#elif](../preprocessor-directives/preprocessor-elif.md) 和 [#endif](../preprocessor-directives/preprocessor-endif.md)，有條件地編譯原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="62885-113">You can use symbols created by this option with [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md), and [#endif](../preprocessor-directives/preprocessor-endif.md) to compile source files conditionally.</span></span>  
   
- <span data-ttu-id="a8527-114">**-d** 是 **-define** 的簡短形式。</span><span class="sxs-lookup"><span data-stu-id="a8527-114">**-d** is the short form of **-define**.</span></span>  
+ <span data-ttu-id="62885-114">**-d** 是 **-define** 的簡短形式。</span><span class="sxs-lookup"><span data-stu-id="62885-114">**-d** is the short form of **-define**.</span></span>  
   
- <span data-ttu-id="a8527-115">您可以使用分號或逗號分隔符號名稱，以 **-define** 定義多個符號。</span><span class="sxs-lookup"><span data-stu-id="a8527-115">You can define multiple symbols with **-define** by using a semicolon or comma to separate symbol names.</span></span> <span data-ttu-id="a8527-116">例如：</span><span class="sxs-lookup"><span data-stu-id="a8527-116">For example:</span></span>  
+ <span data-ttu-id="62885-115">您可以使用分號或逗號分隔符號名稱，以 **-define** 定義多個符號。</span><span class="sxs-lookup"><span data-stu-id="62885-115">You can define multiple symbols with **-define** by using a semicolon or comma to separate symbol names.</span></span> <span data-ttu-id="62885-116">例如：</span><span class="sxs-lookup"><span data-stu-id="62885-116">For example:</span></span>  
   
 ```console  
 -define:DEBUG;TUESDAY  
 ```  
   
- <span data-ttu-id="a8527-117">C# 編譯器本身不會定義任何您可以在原始程式碼中使用的符號或巨集；所有符號定義都必須是使用者定義。</span><span class="sxs-lookup"><span data-stu-id="a8527-117">The C# compiler itself defines no symbols or macros that you can use in your source code; all symbol definitions must be user-defined.</span></span>  
+ <span data-ttu-id="62885-117">C# 編譯器本身不會定義任何您可以在原始程式碼中使用的符號或巨集；所有符號定義都必須是使用者定義。</span><span class="sxs-lookup"><span data-stu-id="62885-117">The C# compiler itself defines no symbols or macros that you can use in your source code; all symbol definitions must be user-defined.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a8527-118">C# `#define` 不允許指定數值給符號，這點和 C++ 語言相同。</span><span class="sxs-lookup"><span data-stu-id="a8527-118">The C# `#define` does not allow a symbol to be given a value, as in languages such as C++.</span></span> <span data-ttu-id="a8527-119">例如，`#define` 不能用來建立巨集或定義常數。</span><span class="sxs-lookup"><span data-stu-id="a8527-119">For example, `#define` cannot be used to create a macro or to define a constant.</span></span> <span data-ttu-id="a8527-120">如果您需要定義常數，請使用 `enum` 變數。</span><span class="sxs-lookup"><span data-stu-id="a8527-120">If you need to define a constant, use an `enum` variable.</span></span> <span data-ttu-id="a8527-121">如果您想要建立 C++ 樣式巨集，請考慮替代項目，例如泛型。</span><span class="sxs-lookup"><span data-stu-id="a8527-121">If you want to create a C++ style macro, consider alternatives such as generics.</span></span> <span data-ttu-id="a8527-122">由於巨集非常可能發生錯誤，因此 C# 不允許使用巨集，而是提供較為安全的替代項目。</span><span class="sxs-lookup"><span data-stu-id="a8527-122">Since macros are notoriously error-prone, C# disallows their use but provides safer alternatives.</span></span>  
+> <span data-ttu-id="62885-118">C# `#define` 不允許指定數值給符號，這點和 C++ 語言相同。</span><span class="sxs-lookup"><span data-stu-id="62885-118">The C# `#define` does not allow a symbol to be given a value, as in languages such as C++.</span></span> <span data-ttu-id="62885-119">例如，`#define` 不能用來建立巨集或定義常數。</span><span class="sxs-lookup"><span data-stu-id="62885-119">For example, `#define` cannot be used to create a macro or to define a constant.</span></span> <span data-ttu-id="62885-120">如果您需要定義常數，請使用 `enum` 變數。</span><span class="sxs-lookup"><span data-stu-id="62885-120">If you need to define a constant, use an `enum` variable.</span></span> <span data-ttu-id="62885-121">如果您想要建立 C++ 樣式巨集，請考慮替代項目，例如泛型。</span><span class="sxs-lookup"><span data-stu-id="62885-121">If you want to create a C++ style macro, consider alternatives such as generics.</span></span> <span data-ttu-id="62885-122">由於巨集非常可能發生錯誤，因此 C# 不允許使用巨集，而是提供較為安全的替代項目。</span><span class="sxs-lookup"><span data-stu-id="62885-122">Since macros are notoriously error-prone, C# disallows their use but provides safer alternatives.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="a8527-123">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="a8527-123">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="62885-123">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="62885-123">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="a8527-124">開啟專案的 [屬性]\*\*\*\* 頁面。</span><span class="sxs-lookup"><span data-stu-id="a8527-124">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="62885-124">開啟專案的 [屬性] 頁面。</span><span class="sxs-lookup"><span data-stu-id="62885-124">Open the project's **Properties** page.</span></span>  
   
-2. <span data-ttu-id="a8527-125">在 [建置]\*\*\*\* 索引標籤的 [條件式編譯的符號]\*\*\*\* 方塊中，輸入要定義的符號。</span><span class="sxs-lookup"><span data-stu-id="a8527-125">On the **Build** tab, type the symbol that is to be defined in the **Conditional compilation symbols** box.</span></span> <span data-ttu-id="a8527-126">例如，如果您想要使用下列程式碼範例，只要在文字方塊中鍵入 `xx` 即可。</span><span class="sxs-lookup"><span data-stu-id="a8527-126">For example, if you are using the code example that follows, just type `xx` into the text box.</span></span>  
+2. <span data-ttu-id="62885-125">在 [建置] 索引標籤的 [條件式編譯的符號] 方塊中，輸入要定義的符號。</span><span class="sxs-lookup"><span data-stu-id="62885-125">On the **Build** tab, type the symbol that is to be defined in the **Conditional compilation symbols** box.</span></span> <span data-ttu-id="62885-126">例如，如果您想要使用下列程式碼範例，只要在文字方塊中鍵入 `xx` 即可。</span><span class="sxs-lookup"><span data-stu-id="62885-126">For example, if you are using the code example that follows, just type `xx` into the text box.</span></span>  
   
- <span data-ttu-id="a8527-127">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。</span><span class="sxs-lookup"><span data-stu-id="a8527-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.</span></span>  
+ <span data-ttu-id="62885-127">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。</span><span class="sxs-lookup"><span data-stu-id="62885-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a8527-128">範例</span><span class="sxs-lookup"><span data-stu-id="a8527-128">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="62885-128">範例</span><span class="sxs-lookup"><span data-stu-id="62885-128">Example</span></span>  
   
 ```csharp  
 // preprocessor_define.cs  
@@ -82,7 +82,7 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a8527-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a8527-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62885-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62885-129">See also</span></span>
 
-- [<span data-ttu-id="a8527-130">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="a8527-130">C# Compiler Options</span></span>](./index.md)
-- [<span data-ttu-id="a8527-131">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="a8527-131">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="62885-130">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="62885-130">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="62885-131">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="62885-131">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
