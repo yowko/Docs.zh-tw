@@ -1,20 +1,21 @@
 ---
 title: CorFlags.exe (CorFlags 轉換工具)
-description: 瞭解 CorFlags.exe，CorFlags 轉換工具。 此工具可讓您設定可移植的可執行檔映射標頭的 CorFlags 區段。
+description: 瞭解 CorFlags.exe CorFlags 轉換工具。 這項工具可讓您設定可攜式可執行檔映射標頭的 CorFlags 區段。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CorFlags conversion tool
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-ms.openlocfilehash: da5efadd63cc03f6f6e4eecf3115865ca3643b39
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3f9f2a71a7a33de13264ce60fa7ff6ea5832aace
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167227"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247183"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 轉換工具)
+
 CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區段。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
@@ -49,6 +50,7 @@ CorFlags.exe assembly [options]
 |`-UpgradeCLRHeader`|將 CLR 標頭版本升級到 2.5。 **注意：** 組件的 CLR 標頭必須是 2.5 (含) 以上版本，才能以原本的形式執行。|  
   
 ## <a name="remarks"></a>備註  
+
  如果未指定任何選項，則 CorFlags 轉換工具會針對所指定組件顯示旗標。  
   
 ## <a name="see-also"></a>另請參閱

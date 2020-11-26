@@ -5,17 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 67da01508fbb8f14b6405b79445bdef297e63288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556254"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247482"
 ---
 # <a name="authorization-in-wcf"></a>WCF 的授權
+
 授權是控制資源 (例如服務或檔案) 存取與權限的程序。 本章節中的主題示範如何以各種方式在 Windows Communication Foundation (WCF) 中執行這項基本工作。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [存取控制機制](access-control-mechanisms.md)  
  提供 WCF 中授權機制的簡短大綱，以及建議的用法。  
   
@@ -35,6 +37,7 @@ ms.locfileid: "90556254"
  解釋委派與模擬之間的差異。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.ServiceModel.Security>  
   
  <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
@@ -44,6 +47,7 @@ ms.locfileid: "90556254"
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
 ## <a name="related-sections"></a>相關章節  
+
  [驗證](authentication-in-wcf.md)  
   
 ## <a name="see-also"></a>另請參閱

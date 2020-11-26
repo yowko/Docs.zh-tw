@@ -1,6 +1,6 @@
 ---
 title: Aximp.exe (Windows Form ActiveX 控制項匯入工具)
-description: 瞭解 Aximp.exe，Windows Forms ActiveX 控制項匯入工具。 此工具會將適用于 ActiveX 的 COM 類型程式庫中的類型定義轉換成 Windows Forms。
+description: 瞭解 Aximp.exe，Windows Forms ActiveX 控制項匯入工具。 此工具會將 ActiveX 的 COM 類型程式庫中的類型定義轉換為 Windows Forms。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167337"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247339"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Form ActiveX 控制項匯入工具)
+
 ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。  
   
  Windows Form 只能裝載 Windows Form 控制項，也就是衍生自 <xref:System.Windows.Forms.Control> 的類別。 Aximp.exe 會產生 ActiveX 控制項的包裝函式類別，可以在 Windows Form 上裝載。 這可讓您使用相同的設計階段支援和程式設計方法論，以適用於其他 Windows Form 控制項。  
@@ -58,7 +59,7 @@ aximp [options]{file.dll | file.ocx}
   
  適用於 COM 類型的 Common Language Runtime Proxy：*progid*.dll  
   
- 適用於 ActiveX 控制項的 Windows Forms Proxy (其中 Ax 代表 ActiveX)：Ax*progid*.dll  
+ 適用於 ActiveX 控制項的 Windows Forms Proxy (其中 Ax 代表 ActiveX)：Ax *progid*.dll  
   
 > [!NOTE]
 > 如果 ActiveX 控制項的成員名稱符合 .NET Framework 中定義的名稱，則 Aximp.exe 在建立 AxHost 衍生類別時就會在成員名稱前面加上 "Ctl"。 例如，如果您的 ActiveX 控制項有一個名為 "Layout" 的成員，它在 AxHost 衍生類別中就會被重新命名為 "CtlLayout"，因為 Layout 事件是在 .NET Framework 中定義的。  
@@ -69,9 +70,10 @@ aximp [options]{file.dll | file.ocx}
   
  當您在 shdocvw.dll 上執行 Aximp.exe 時，必定會在執行這個工具的目錄中建立另一個名為 shdocvw.dll 的檔案。 如果這個產生的檔案是置於 Documents and Settings 目錄中，它將會對 Microsoft Internet Explorer 和 Windows 檔案總管造成問題。 當電腦重新開機時，Windows 會在搜尋 system32 目錄之前，先在 Documents and Settings 目錄中尋找 shdocvw.dll 的複本。 它會使用在 Documents and Settings 目錄中找到的複本，並嘗試載入 Managed 包裝函式。 Internet Explorer 和 Windows 檔案總管將無法正常運作，因為它們必須依賴位於 system32 目錄中之 shdocvw.dll 版本中的轉譯引擎。 如果發生這種問題，請刪除 Documents and Settings 目錄中的 shdocvw.dll 複本，然後重新啟動電腦。  
   
- 使用 Aximp.exe 搭配 shdocvw.dll 來建立用於應用程式開發的 .NET 組件時，可能也會導致問題。 在這種情況下，您的應用程式將會載入 shdocvw.dll 的系統版本和產生的版本，而且系統版本具有優先權。 在這個情況下，當您試圖將 Web 網頁載入到 WebBrowser ActiveX 控制項內部時，系統會以 [開啟/儲存] 對話方塊提示使用者。 當使用者按一下 [開啟]**** 時，將會在 Internet Explorer 中開啟網頁。 這種情形只會在使用執行 Internet Explorer 第 6 版 (含) 以前版本的電腦上發生。 若要避免這個問題，請使用受控 <xref:System.Windows.Forms.WebBrowser> 控制項或使用 Visual Studio 來產生受控 shdocvw.dll，如[如何：將參考新增至型別程式庫](../interop/how-to-add-references-to-type-libraries.md)中所述。  
+ 使用 Aximp.exe 搭配 shdocvw.dll 來建立用於應用程式開發的 .NET 組件時，可能也會導致問題。 在這種情況下，您的應用程式將會載入 shdocvw.dll 的系統版本和產生的版本，而且系統版本具有優先權。 在這個情況下，當您試圖將 Web 網頁載入到 WebBrowser ActiveX 控制項內部時，系統會以 [開啟/儲存] 對話方塊提示使用者。 當使用者按一下 [開啟] 時，將會在 Internet Explorer 中開啟網頁。 這種情形只會在使用執行 Internet Explorer 第 6 版 (含) 以前版本的電腦上發生。 若要避免這個問題，請使用受控 <xref:System.Windows.Forms.WebBrowser> 控制項或使用 Visual Studio 來產生受控 shdocvw.dll，如[如何：將參考新增至型別程式庫](../interop/how-to-add-references-to-type-libraries.md)中所述。  
   
 ## <a name="example"></a>範例  
+
  下列命令會產生 Media Player 控制項 `msdxm.ocx` 的 MediaPlayer.dll 和 AxMediaPlayer.dll。  
   
 ```console
@@ -81,4 +83,4 @@ aximp c:\systemroot\system32\msdxm.ocx
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [Ildasm.exe （IL 解譯器）](ildasm-exe-il-disassembler.md)
+- [Ildasm.exe (IL 解譯器) ](ildasm-exe-il-disassembler.md)

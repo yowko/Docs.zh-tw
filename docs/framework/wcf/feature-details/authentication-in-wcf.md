@@ -6,17 +6,19 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2334a8c024238f38e1c927a278a4e25e7dabd9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247534"
 ---
 # <a name="authentication-in-wcf"></a>WCF 的驗證
+
 下列主題顯示 Windows Communication Foundation (WCF) 提供驗證的許多不同機制，例如 Windows 驗證、x.509 憑證，以及使用者名稱和密碼。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [作法：使用 ASP.NET 成員資格提供者](how-to-use-the-aspnet-membership-provider.md)  
  ASP.NET 功能包括成員資格及角色提供者、用來儲存驗證時比對的使用者名稱/密碼組合之資料庫，以及供授權的使用者角色。 本主題說明 WCF 服務如何使用相同的資料庫來驗證和授權使用者。  
   
@@ -33,9 +35,11 @@ ms.locfileid: "90558273"
  焦點放在使用 Windows 驗證時，經常遇見的問題。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相關章節  
+
  [常見的安全性案例](common-security-scenarios.md)  
   
 ## <a name="see-also"></a>另請參閱

@@ -1,6 +1,6 @@
 ---
 title: loadFromContext MDA
-description: 瞭解 .NET 中的 loadFromCoNtext managed 偵錯工具（MDA），如果元件已載入 LoadFrom 內容中，就會啟用此功能。
+description: 瞭解 .NET 中的 loadFromCoNtext managed 偵錯工具 (MDA) ，如果將元件載入至 LoadFrom 內容，則會啟用此功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), LoadFrom context
@@ -8,22 +8,27 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 631939b38ace4d26d0deb5b104cc5de0df3d9f3a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247352"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
+
 如果組件載入到 `LoadFrom` 內容中，就會啟動 `loadFromContext` Managed 偵錯助理 (MDA)。 這種情況可能是因為呼叫 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或其他類似方法而發生。  
   
 ## <a name="symptoms"></a>徵狀  
+
  使用某些載入器方法可能會將組件載入到 `LoadFrom` 內容中。 使用這個內容可能會導致序列化、轉型和相依性解析的未預期行為。 一般情況下，建議將組件載入至 `Load` 內容，以避免這些問題發生。 無此 MDA，難以判斷哪些內容已載入組件。  
   
 ## <a name="cause"></a>原因  
+
  一般而言，如果組件是從 `Load` 內容的外部路徑載入，例如全域組件快取或 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 屬性，就會載入至 `LoadFrom` 內容。  
   
-## <a name="resolution"></a>解決方案  
+## <a name="resolution"></a>解決方法  
+
  設定應用程式，因此不再需要 <xref:System.Reflection.Assembly.LoadFrom%2A> 呼叫。 您可以使用下列技巧執行該作業：  
   
 - 在全域組件快取中安裝組件。  
@@ -35,12 +40,14 @@ ms.locfileid: "86051645"
  每個案例都可以變更程式碼，以使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+
  MDA 對 CLR 不會產生任何影響。 它報告的內容，過去用為載入要求的結果。  
   
 ## <a name="output"></a>輸出  
+
  MDA 會報告組件已載入至 `LoadFrom` 內容。 它會指定組件和路徑的簡單名稱。 也會建議降低風險，避免使用 `LoadFrom` 內容。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  
@@ -51,6 +58,7 @@ ms.locfileid: "86051645"
 ```  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例示範可以啟動此 MDA 的情況：  
   
 ```csharp
@@ -72,4 +80,4 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
