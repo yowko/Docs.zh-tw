@@ -20,6 +20,8 @@
       items:
         - name: .NET 5.0
           items:
+            - name: 概觀
+              href: 5.0.md
             - name: ASP.NET Core
               items:
                 - name: ASP.NET Core 應用程式還原序列化加上引號的數字
@@ -66,7 +68,7 @@
                   href: aspnet-core/5.0/kestrel-disables-http2-over-tls.md
                 - name: Kestrel：Libuv 傳輸已標示為過時
                   href: aspnet-core/5.0/kestrel-libuv-transport-obsolete.md
-                - name: ConsoleLoggerOptions 上的過時屬性
+                - name: ConsoleLoggerOptions 上的已過時屬性
                   href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
                 - name: 已移除 ResourceManagerWithCultureStringLocalizer 類別與 WithCulture 介面成員
                   href: aspnet-core/5.0/localization-members-removed.md
@@ -180,14 +182,8 @@
                   href: cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md
                 - name: 預設 FeedbackSize 值已變更
                   href: cryptography/5.0/tripledes-default-feedback-size-change.md
-            - name: Interop
-              items:
-                - name: 已移除 WinRT 的支援
-                  href: interop/5.0/built-in-support-for-winrt-removed.md
-                - name: 將 RCW 轉換成 InterfaceIsIInspectable 會擲回例外狀況
-                  href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
-                - name: 非 Windows 平台上沒有 A/W 尾碼探查
-                  href: interop/5.0/function-suffix-pinvoke.md
+            - name: Entity Framework Core
+              href: /ef/core/what-is-new/ef-core-5.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
             - name: 全球化
               items:
                 - name: 在 Windows 上使用 ICU 程式庫
@@ -196,6 +192,14 @@
                   href: globalization/5.0/uax29-compliant-grapheme-enumeration.md
                 - name: Latin-1 字元的 Unicode 類別已變更
                   href: globalization/5.0/unicode-categories-for-latin1-chars.md
+            - name: Interop
+              items:
+                - name: 已移除 WinRT 的支援
+                  href: interop/5.0/built-in-support-for-winrt-removed.md
+                - name: 將 RCW 轉換成 InterfaceIsIInspectable 會擲回例外狀況
+                  href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
+                - name: 非 Windows 平台上沒有 A/W 尾碼探查
+                  href: interop/5.0/function-suffix-pinvoke.md
             - name: MSBuild
               items:
                 - name: 依預設匯入的 Directory.Packages.props 檔案
@@ -267,11 +271,11 @@
                 - name: WPF 應用程式使用 Microsoft.NET.Sdk
                   href: windows-forms/5.0/sdk-and-target-framework-change.md
         - name: .NET Core 3.1
-          href: 3.0-3.1.md
+          href: 3.1.md
         - name: .NET Core 3.0
-          href: 2.2-3.0.md
+          href: 3.0.md
         - name: .NET Core 2.1
-          href: 2.0-2.1.md
+          href: 2.1.md
     - name: 依區域的中斷性變更
       items:
         - name: ASP.NET Core
@@ -449,7 +453,11 @@
             - name: .NET Core 2.1-3.0
               href: cryptography.md
         - name: Entity Framework Core
-          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+          items:
+            - name: EF Core 5.0
+              href: /ef/core/what-is-new/ef-core-5.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+            - name: EF Core 3.1
+              href: /ef/core/what-is-new/ef-core-3.x/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
         - name: 全球化
           items:
             - name: .NET 5.0
