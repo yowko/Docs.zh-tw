@@ -2,17 +2,19 @@
 title: NetTCPBinding
 ms.date: 03/30/2017
 ms.assetid: 1690b42f-acfd-4bb3-8f0d-0b17cd5ca36c
-ms.openlocfilehash: d0b1c288abddfb1707728e61e774618399a8b24c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 109ce1b6bc30e323558bed1f6ec3702ad84bb295
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584138"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235229"
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
-本節包含示範如何在 Windows Communication Foundation （WCF）中使用 TCP 系結的範例。  
+
+本節包含的範例示範如何在 Windows Communication Foundation (WCF) 中使用 TCP 系結。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [預設 NetTcpBinding](default-nettcpbinding.md)  
  示範 <xref:System.ServiceModel.NetTcpBinding> 繫結的使用方式。  
   

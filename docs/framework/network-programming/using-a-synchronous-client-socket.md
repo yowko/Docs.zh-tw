@@ -1,6 +1,6 @@
 ---
 title: 使用同步用戶端通訊端
-description: 這個範例會顯示 .NET Framework 中的同步用戶端通訊端，這會在網路作業完成時暫停應用程式。
+description: 此範例顯示 .NET Framework 中的同步用戶端通訊端，此通訊端會在網路作業完成時暫停應用程式。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: ef682af33c10cf06ffc398c22e4a7dc1adf8290e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f198f283f2acfdcfbafed25baecb02a64e9d1e26
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502063"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236308"
 ---
 # <a name="using-a-synchronous-client-socket"></a>使用同步用戶端通訊端
+
 在網路作業完成時，同步用戶端通訊端會暫止應用程式。 同步通訊端不適用於大量使用網路以進行作業的應用程式，但它們可以啟用其他應用程式的網路服務簡單存取。  
   
  若要傳送資料，請傳遞位元組陣列給其中一個 <xref:System.Net.Sockets.Socket> 類別的資料傳送方法 (<xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.SendTo%2A>)。 下列範例會使用 <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> 屬性將字串編碼成位元組陣列緩衝區，然後使用 **Send** 方法將緩衝區傳送給網路裝置。 **Send** 方法會傳回送給網路裝置的位元組數目。  
@@ -59,7 +60,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- 當不再需要通訊端時，您需要藉由呼叫 <xref:System.Net.Sockets.Socket.Shutdown%2A> 方法，然後呼叫 **Close** 方法釋放它。 下列範例會釋放**通訊端**。 <xref:System.Net.Sockets.SocketShutdown> 列舉定義常數，表示傳送、接收或是兩者時，是否應該關閉通訊端。  
+ 當不再需要通訊端時，您需要藉由呼叫 <xref:System.Net.Sockets.Socket.Shutdown%2A> 方法，然後呼叫 **Close** 方法釋放它。 下列範例會釋放 **通訊端**。 <xref:System.Net.Sockets.SocketShutdown> 列舉定義常數，表示傳送、接收或是兩者時，是否應該關閉通訊端。  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  

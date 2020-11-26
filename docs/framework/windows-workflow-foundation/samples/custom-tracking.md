@@ -2,17 +2,19 @@
 title: 自訂追蹤
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 87f72359e16b4268d77148ec16a626c2bac5751c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d125c59196cb2a7d33961e0f271aab8c5663a50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234566"
 ---
 # <a name="custom-tracking"></a>自訂追蹤
+
 這個範例示範如何建立自訂追蹤參與者，以及將追蹤資料的內容寫入主控台中。 此外，範例還會示範如何發出其中填入使用者定義資料的 <xref:System.Activities.Tracking.CustomTrackingRecord> 物件。 主控台式追蹤參與者會使用程式碼中建立的追蹤設定檔物件，篩選工作流程所發出的 <xref:System.Activities.Tracking.TrackingRecord> 物件。
 
 ## <a name="sample-details"></a>範例詳細資料
+
  Windows Workflow Foundation (WF) 提供追蹤基礎結構來追蹤工作流程實例的執行。 追蹤執行階段會實作工作流程執行個體，以發出與工作流程生命週期相關的事件、工作流程活動的事件，以及自訂追蹤事件。 下表詳細說明追蹤基礎結構的主要元件。
 
 |元件|描述|
@@ -33,6 +35,7 @@ ms.locfileid: "90557028"
  追蹤參與者可使用追蹤設定檔訂閱所發出 <xref:System.Activities.Tracking.TrackingRecord> 物件的子集。 追蹤設定檔包含追蹤查詢，這些查詢允許訂閱特殊追蹤記錄類型。 追蹤設定檔可在程式碼或組態中指定。
 
 ### <a name="custom-tracking-participant"></a>自訂追蹤參與者
+
  追蹤參與者 API 允許以使用者提供的追蹤者來擴充追蹤執行階段，可包含自訂邏輯以處理工作流程執行階段發出的 <xref:System.Activities.Tracking.TrackingRecord> 物件。
 
  為了撰寫追蹤參與者，使用者必須實作 <xref:System.Activities.Tracking.TrackingParticipant>。 具體而言，<xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 方法必須由自訂參與者實作。 這個方法會在工作流程執行階段發出 <xref:System.Activities.Tracking.TrackingRecord> 時呼叫。
@@ -108,6 +111,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 ```
 
 ### <a name="emitting-custom-tracking-records"></a>發出自訂追蹤記錄
+
  這個範例還會示範從自訂工作流程活動發出 <xref:System.Activities.Tracking.CustomTrackingRecord> 物件的能力。
 
 - 除了會建立 <xref:System.Activities.Tracking.CustomTrackingRecord> 物件之外，還會在其中填入希望隨記錄發出的使用者定義資料。

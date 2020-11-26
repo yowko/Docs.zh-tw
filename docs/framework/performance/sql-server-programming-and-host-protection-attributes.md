@@ -1,6 +1,6 @@
 ---
 title: SQL Server 程式設計和主機保護屬性
-description: 開始使用 SQL Server 程式設計和主機保護屬性。 請參閱 SQL Server 許可權集合和程式設計模型限制。
+description: 開始使用 SQL Server 程式設計和主機保護屬性。 複習 SQL Server 許可權集合和程式設計模型的限制。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQL Server [.NET Framework]
@@ -13,17 +13,19 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-ms.openlocfilehash: 33db32897d2f49d2c10f94dc73aeae728c17db73
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 3ded0a9ac95d56e000ef7870ec19721764c96a66
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236230"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 程式設計和主機保護屬性
+
 在 SQL Server 主機中載入和執行 Managed 程式碼的功能需要符合主機對程式碼存取安全性和主機資源保護的需求。  程式碼存取安全性需求由三個 SQL Server 權限集合其中之一所指定：SAFE、EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 權限集合內執行的程式碼，必須避免已套用 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性的特定類型或成員。 <xref:System.Security.Permissions.HostProtectionAttribute> 不像可靠性保證一樣是安全性權限，關鍵在於它會識別主機可能不允許的特定程式碼建構 (類型或方法)。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 會強制使用有助於保護主機之穩定性的程式設計模型。  
   
 ## <a name="host-protection-attributes"></a>主機保護屬性  
+
  主機保護屬性可識別不適合主機程式設計模型的類型或成員，並且代表下列遞增的可靠性威脅層級：  
   
 - 否則為良性。  
@@ -35,6 +37,7 @@ ms.locfileid: "86474198"
  SQL Server 不允許使用具有 <xref:System.Security.Permissions.HostProtectionAttribute> 且其 <xref:System.Security.Permissions.HostProtectionResource> 值指定為 <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization>、<xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> 或 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt> 的類型或成員。 這可防止組件呼叫可啟用共用狀態、執行同步處理、可能造成終止時資源流失，或影響 SQL Server 程序完整性的成員。  
   
 ### <a name="disallowed-types-and-members"></a>不允許的類型和成員  
+
  下表提供 SQL Server 不允許其 <xref:System.Security.Permissions.HostProtectionResource> 值的類型和成員。  
   
 |命名空間|類型或成員|  
@@ -52,6 +55,7 @@ ms.locfileid: "86474198"
 |`System.Windows.Forms`|<xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType> 屬性|  
   
 ## <a name="sql-server-permission-sets"></a>SQL Server 權限集合  
+
  SQL Server 可讓使用者針對部署到資料庫中的程式碼指定可靠性需求。 當組件上傳至資料庫時，組件作者可以為該組件指定三個權限集合的其中一個：SAFE、EXTERNAL-ACCESS 或 UNSAFE。  
   
 |權限集合|SAFE|EXTERNAL-ACCESS|UNSAFE|  
@@ -70,6 +74,7 @@ ms.locfileid: "86474198"
  SQL Server 使用主機層級程式碼存取安全性原則層來設定主機原則，根據儲存在 SQL Server 目錄的權限集合，授與三個權限集合的其中一個。 在資料庫內執行的 Managed 程式碼一定會取得這些程式碼存取權限集合當中的一個。  
   
 ## <a name="programming-model-restrictions"></a>程式設計模型限制  
+
  SQL Server 中的 Managed 程式碼程式設計模型需要的函式、程序和類型，不需要使用跨多個引動過程保留的狀態，或是在多個使用者工作階段之間共用狀態。 再者，如之前所述，共用狀態的存在可能會造成嚴重的例外狀況，而這些例外狀況會影響應用程式的延展性和可靠性。  
   
  基於這些考量，SQL Server 不允許使用靜態變數和靜態資料成員。 對於 SAFE 及 EXTERNAL-ACCESS 組件，SQL Server 會在 CREATE ASSEMBLY 時，檢查組件的中繼資料，並且如果它找到使用靜態資料成員和變數，便讓這類組件的建立作業失敗。  

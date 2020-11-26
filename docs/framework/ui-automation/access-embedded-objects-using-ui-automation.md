@@ -1,6 +1,6 @@
 ---
 title: UI 自動化存取內嵌物件
-description: 請參閱如何在文字控制項內容中使用 UI 自動化來存取内嵌物件。 内嵌物件會被視為使用者介面自動化文字提供者的子系。
+description: 請參閱如何使用文字控制項內容中的消費者介面自動化來存取内嵌物件。 内嵌物件會被視為消費者介面自動化文字提供者的子系。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 031d9c90318eec59ad2b77d611e0ed0d5a3ae719
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 30b41e3a3d47802eb4a3e761c4282b3e937156f2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516966"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235775"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI 自動化存取內嵌物件
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -29,9 +30,10 @@ ms.locfileid: "87516966"
  內嵌物件會被視為 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字提供者的子系。 這個特性使得這些物件可以透過與其他所有 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目相同的使用者介面自動化樹狀結構結構來公開。 功能則是透過內嵌物件控制項類型所要求的控制項模式公開 (例如，因為超連結是文字，所以支援 <xref:System.Windows.Automation.TextPattern>)。  
   
  ![內嵌於文字容器中的物件。](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
-包含文字內容的範例檔（「您知道嗎？」...)和兩個內嵌物件（whale 的圖片和文字超連結），當做程式碼範例的目標使用。  
+有文字內容的範例檔 ( 「您知道嗎？」... ) 和兩個内嵌物件 (whale 的圖片和文字超連結) ，用來作為程式碼範例的目標。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例說明，如何從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字提供者擷取內嵌物件的集合。 簡介中所提供的範例文件，會傳回兩個物件 (影像項目及文字項目)。  
   
 > [!NOTE]
@@ -45,6 +47,7 @@ ms.locfileid: "87516966"
 [!code-vb[FindText#GetChildren](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#getchildren)]  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例說明，如何從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字提供者的內嵌物件中取得文字範圍。 擷取的文字範圍是空白範圍，起始結束點前面接的是 "… ocean.(空格)"，而結尾結束點的後面則是結尾點 "."，代表內嵌超連結 (如簡介中提供的影像所示)。 即使這是空白範圍，但並不會被視為變質範圍，因為其擁有非零值的範圍。  
   
 > [!NOTE]

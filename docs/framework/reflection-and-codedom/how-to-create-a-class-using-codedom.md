@@ -1,6 +1,6 @@
 ---
 title: 如何：使用 CodeDOM 建立類別
-description: 請參閱說明如何使用程式碼檔物件模型（CodeDOM）來建立類別的詳細範例。
+description: 請參閱說明如何使用程式碼檔物件模型 (CodeDOM) 建立類別的詳細範例。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,15 @@ helpviewer_keywords:
 - CodeDOM, creating classes
 - CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
-ms.openlocfilehash: 3d7151d384402dba6fbb5da8fe54621346251f7b
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7c2cda2bb7cbdb93c27aef91c08f7c7227da7eed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865303"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235697"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 建立類別
+
 下列程序示範如何建立及編譯 CodeDOM 圖表，其可產生包含兩個欄位、三種屬性、一種方法、一個建構函式和一個進入點的類別。  
   
 1. 建立主控台應用程式，使用 CodeDOM 程式碼產生類別的原始程式碼。  
@@ -94,6 +95,7 @@ ms.locfileid: "86865303"
 2. 編譯並執行產生的類別。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例會顯示前幾個步驟的程式碼。  
   
  [!code-csharp[CodeDOM Class Sample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#1)]
