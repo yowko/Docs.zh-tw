@@ -2,17 +2,19 @@
 title: 傳播
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 732ae5cb1ce311b78728f8d5de0fd9102bf32499
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: be010178d8f0face8f6c7e986107e4ea90d91953
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578951"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240130"
 ---
 # <a name="propagation"></a>傳播
-本主題描述 Windows Communication Foundation （WCF）追蹤模型中的活動傳播。  
+
+本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動傳播。  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>使用傳播將端點上的活動相互關聯  
+
  傳播會針對應用程式端點間的相同處理單位 (例如，要求)，將錯誤追蹤的直接相互關聯提供給使用者。 在不同端點針對相同處理單位發出的錯誤會組成相同的活動群組，即使是跨應用程式定義域亦然。 這項工作是藉由傳播訊息標頭中的活動識別碼來達成。 因此，如果用戶端因為伺服器發生內部錯誤而逾時，則基於直接的相互關聯，這兩個錯誤都會出現在相同的活動中。  
   
  若要執行這項工作，請使用 `ActivityTracing` 設定，如前述範例所示。 此外，還要在所有端點上設定 `propagateActivity` 追蹤來源的 `System.ServiceModel` 屬性。  
@@ -21,9 +23,10 @@ ms.locfileid: "84578951"
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- 活動傳播是可設定的功能，會讓 WCF 將標頭新增至輸出訊息，其中包含 TLS 上的活動識別碼。 將這個識別碼包含在對伺服器端的後續追蹤中，我們就可以將用戶端和伺服器活動相互關聯起來。  
+ 活動傳播是可設定的功能，可讓 WCF 將標頭新增至輸出訊息，其中包含 TLS 上的活動識別碼。 將這個識別碼包含在對伺服器端的後續追蹤中，我們就可以將用戶端和伺服器活動相互關聯起來。  
   
 ## <a name="propagation-definition"></a>傳播定義  
+
  如果下列所有條件都成立，就會將活動 M 的 gAId 傳播至活動 N。  
   
 - N 是因為 M 而建立的  
@@ -71,12 +74,14 @@ ms.locfileid: "84578951"
 ```  
   
 ## <a name="propagation-and-activity-boundaries"></a>傳播和活動界限  
+
  在端點之間傳播活動識別碼時，訊息接收者會將「開始」和「停止」追蹤與這個 (傳播) 活動識別碼一起發出。 因此，會有包含來自每個追蹤來源之 gAId 的「開始」和「停止」追蹤。 如果數個端點位於相同的處理序且使用相同的追蹤來源名稱，就會建立多個具有相同 lAId (相同 gAId、相同追蹤來源、相同處理序) 的「開始」和「停止」追蹤。  
   
-## <a name="synchronization"></a>Synchronization  
+## <a name="synchronization"></a>同步處理  
+
  若要在執行於不同電腦的端點之間同步處理事件，請將 CorrelationId 新增至訊息中所傳播的 ActivityId 標頭。 工具可以使用這個識別碼，在時鐘不一致的電腦之間同步處理事件。 具體來說，「服務追蹤檢視器」工具會使用這個識別碼來顯示端點之間的訊息流動。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定追蹤](configuring-tracing.md)
 - [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

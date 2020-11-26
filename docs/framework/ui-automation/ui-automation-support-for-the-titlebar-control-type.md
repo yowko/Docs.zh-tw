@@ -1,20 +1,21 @@
 ---
 title: TitleBar 控制項類型的 UI 自動化支援
-description: 取得標題列控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
+description: 取得標題列控制項類型消費者介面自動化支援的相關資訊。 瞭解所需的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Title Bar
 - Title Bar control type
 - UI Automation, Title Bar control type
 ms.assetid: 3b7a4e13-0305-45d5-bc33-1f4133c50782
-ms.openlocfilehash: 00c2432e44771eee9dd49b74ed590b995c326a9c
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8860a5ec8b339482dd710a5f4d4a592a23f27cab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167865"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240274"
 ---
 # <a name="ui-automation-support-for-the-titlebar-control-type"></a>TitleBar 控制項類型的 UI 自動化支援
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -22,21 +23,25 @@ ms.locfileid: "87167865"
   
  標題列控制項代表視窗中的標題 (Title) 或標題 (Caption) 列。  
   
- 下列章節會定義標題列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有標題列控制項，無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
+ 下列章節會定義標題列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有標題列控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
+
  下表描述標題列控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|標題列<br /><br /> -Menu （0或1）<br />-按鈕（0個以上）|不適用。 (標題列控制項沒有任何內容)。|  
+|標題列<br /><br /> -功能表 (0 或 1) <br />-Button (0 或更多) |不適用。 (標題列控制項沒有任何內容)。|  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
+
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與標題列控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備忘錄|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|標題列的週框必須框住其中所有控制項。|  
@@ -54,19 +59,22 @@ ms.locfileid: "87167865"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|""|標題列控制項沒有便捷鍵。|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>必要的使用者介面自動化控制項模式  
+
  標題列控制項類型不需要支援任何控制項模式。 透過 Window 控制項的 Window 控制項模式可公開其功能。  
   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
+
  下表列出所有標題列控制項支援所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|永不|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|永不|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|永不|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|永不|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|無|  
   
 ## <a name="see-also"></a>另請參閱
 

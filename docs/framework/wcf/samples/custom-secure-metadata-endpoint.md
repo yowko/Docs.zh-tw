@@ -2,20 +2,22 @@
 title: 自訂安全中繼資料端點
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 75f271fdbb5db34dc59918da16d014daf32a368f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d699c8dedfec3068bf0fc1504b47d78fde1988dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555558"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240897"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自訂安全中繼資料端點
+
 這個範例會示範如何使用使用其中一個非中繼資料交換系結的安全中繼資料端點來執行服務，以及如何設定 [System.servicemodel 中繼資料公用程式工具 ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md) 或用戶端從這類中繼資料端點提取中繼資料。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="service"></a>服務  
+
  這個範例中的服務有兩個端點。 應用程式端點可用於 `ICalculator` 上的 `WSHttpBinding` 合約 (已啟用 `ReliableSession`)，並可用於使用憑證的 `Message` 安全性。 中繼資料端點也會使用 `WSHttpBinding`，它具有相同的安全性設定，但沒有 `ReliableSession`。 此處為相關的組態：  
   
 ```xml  
@@ -57,6 +59,7 @@ ms.locfileid: "90555558"
  第二個用戶端會使用 `MetadataResolver` 以動態擷取已知合約的中繼資料，然後在動態產生的用戶端上叫用作業。  
   
 ## <a name="svcutil-client"></a>Svcutil 用戶端  
+
  使用預設繫結裝載 `IMetadataExchange` 端點時，可以使用該端點的位址來執行 Svcutil.exe：  
   
 ```console  
@@ -92,6 +95,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
  前置的 ". \\ "確保在此目錄中 Svcutil.exe 的複本 (執行對應 Svcutil.exe.config) 。  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 用戶端  
+
  如果用戶端知道合約以及如何在設計階段與中繼資料互動，用戶端就可以使用 `MetadataResolver`，動態找出繫結和應用程式端點的位址。 這個範例用戶端會示範如何藉由建立和設定 `MetadataResolver`，進而設定 `MetadataExchangeClient` 所使用的繫結和認證。  
   
  您可以在 `MetadataExchangeClient` 上，以命令方式指定出現在 Svcutil.exe.config 中的相同繫結和憑證資訊。  
@@ -175,7 +179,7 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
 - 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
-    > 跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行 Windows Communication Foundation (使用跨電腦憑證的 WCF) 範例，請務必清除 TrustedPeople 存放區中已安裝的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` 。  
+    > 跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行 Windows Communication Foundation (使用跨電腦憑證的 WCF) 範例，請務必清除 TrustedPeople 存放區中已安裝的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

@@ -1,6 +1,6 @@
 ---
 title: TCP-UDP
-description: 瞭解 TcpClient、TcpListener 和 UdpClient 類別如何處理 TCP 和 UDP 服務，這會負責 .NET Framework 中的資料傳輸細節。
+description: 瞭解 TcpClient、TcpListener 和 UdpClient 類別如何處理 TCP 和 UDP 服務，這些服務會負責 .NET Framework 中的資料傳輸詳細資料。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, TCP/UDP
@@ -17,14 +17,15 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: ae6d2f9ced2235aa1b9b8fada8064d7e4be970a0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b5b8b5cb3ce38fcff9115b2f9acf23fc5a970adf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502089"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239442"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
+
 應用程式可以使用「傳輸控制通訊協定 (TCP)」和「使用者資料包通訊協定 (UDP)」服務，搭配 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。 這些通訊協定類別建立在 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別之上，並負責傳送資料的細節。  
   
  通訊協定類別使用 **Socket** 類別的同步方法，以提供簡單且直接的網路服務存取，不需要維護狀態資訊或了解設定通訊協定特定通訊端的詳細資料等成本。 若要使用非同步 **Socket** 方法，您可以使用 <xref:System.Net.Sockets.NetworkStream> 類別所提供的非同步方法。 若要存取 **Socket** 類別中通訊協定類別未公開的功能，您必須使用 **Socket** 類別。  

@@ -2,14 +2,15 @@
 title: WCF 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 7e5c65da3fa13a3640c7a6948f1284d0c6ffdfc4
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 72db5db9f6b4a3cd2ba62fe938fcfeed2dfda1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319937"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240936"
 ---
 # <a name="wcf-error-handling"></a>WCF 錯誤處理
+
 WCF 應用程式遇到的錯誤屬於下列其中一個群組：  
   
 1. 通訊錯誤  
@@ -35,13 +36,16 @@ WCF 應用程式遇到的錯誤屬於下列其中一個群組：
 - 處理 <xref:System.ServiceModel.ServiceHost> 事件  
   
 ## <a name="fault-contracts"></a>錯誤合約  
- 錯誤合約可讓您以獨立於平台的方式定義服務作業期間可能會發生的錯誤。 根據預設，從服務作業內部擲回的所有例外狀況都會當做 <xref:System.ServiceModel.FaultException> 物件傳回給用戶端。 <xref:System.ServiceModel.FaultException> 物件所包含的資訊非常少。 您可以定義錯誤合約並將錯誤當做 <xref:System.ServiceModel.FaultException%601> 傳回，藉以控制傳送至用戶端的資訊。 如需詳細資訊，請參閱[指定和處理合約和服務中的錯誤](specifying-and-handling-faults-in-contracts-and-services.md)。  
+
+ 錯誤合約可讓您以獨立於平台的方式定義服務作業期間可能會發生的錯誤。 根據預設，從服務作業內部擲回的所有例外狀況都會當做 <xref:System.ServiceModel.FaultException> 物件傳回給用戶端。 <xref:System.ServiceModel.FaultException> 物件所包含的資訊非常少。 您可以定義錯誤合約並將錯誤當做 <xref:System.ServiceModel.FaultException%601> 傳回，藉以控制傳送至用戶端的資訊。 如需詳細資訊，請參閱 [指定和處理合約和服務中的錯誤](specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面可讓您進一步控制 WCF 應用程式如何回應錯誤。  它不僅能讓您完全控制傳送至用戶端的錯誤訊息，還能讓您執行自訂錯誤處理，例如記錄。  如需有關 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 的詳細資訊，以及[擴充錯誤處理和報告的控制](./samples/extending-control-over-error-handling-and-reporting.md)  
+
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面可讓您進一步控制 WCF 應用程式如何回應錯誤。  它不僅能讓您完全控制傳送至用戶端的錯誤訊息，還能讓您執行自訂錯誤處理，例如記錄。  如需有關 <xref:System.ServiceModel.Dispatcher.IErrorHandler> [錯誤處理和報告的控制及擴充控制權](./samples/extending-control-over-error-handling-and-reporting.md)的詳細資訊  
   
 ## <a name="servicehost-events"></a>ServiceHost 事件  
- <xref:System.ServiceModel.ServiceHost> 類別會裝載服務並定義許多處理錯誤可能需要的事件。 例如:  
+
+ <xref:System.ServiceModel.ServiceHost> 類別會裝載服務並定義許多處理錯誤可能需要的事件。 例如：  
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   

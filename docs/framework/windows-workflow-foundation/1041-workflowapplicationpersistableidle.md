@@ -2,14 +2,15 @@
 title: 1041 - WorkflowApplicationPersistableIdle
 ms.date: 03/30/2017
 ms.assetid: 966adf2f-e21d-44df-a3ec-a8e285e0a316
-ms.openlocfilehash: 07be0ae603443a1ef06cb539bba7b227d7b3e325
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9995823753fc78ca3f278cd635fcf6c7d2b84325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924185"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238934"
 ---
 # <a name="1041---workflowapplicationpersistableidle"></a>1041 - WorkflowApplicationPersistableIdle
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,13 +18,15 @@ ms.locfileid: "61924185"
 |識別碼|1041|  
 |關鍵字|WFRuntime|  
 |層級|資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  表示工作流程應用程式處於閒置狀態且為永續性。 工作流程應用程式將會閒置或持續。  
   
 ## <a name="message"></a>訊息  
- WorkflowApplication 識別碼: '%1' 是閒置且為永續性。  將會採取下列動作: %2。  
+
+ WorkflowApplication 識別碼： ' %1 ' 為閒置和永久性。  將採取下列動作： %2。  
   
 ## <a name="details"></a>詳細資料  
   

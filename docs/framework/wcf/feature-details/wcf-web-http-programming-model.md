@@ -6,27 +6,29 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 644bcba9f8ced965ff962962bd83e1ae170159a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589847"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238999"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 程式設計模型
-Windows Communication Foundation （WCF） Web HTTP 程式設計模型可讓開發人員將 WCF 服務作業公開至非 SOAP 端點。 本章節中的主題會詳細檢查這項功能。  
+
+Windows Communication Foundation (WCF) Web HTTP 程式設計模型可讓開發人員將 WCF 服務作業公開給非 SOAP 端點。 本章節中的主題會詳細檢查這項功能。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [WCF Web HTTP 程式設計模型概觀](wcf-web-http-programming-model-overview.md)  
- 提供 Windows Communication Foundation （WCF） Web HTTP 程式設計模型的總覽。  
+ 提供 Windows Communication Foundation (WCF) Web HTTP 程式設計模型的總覽。  
   
  [WCF Web HTTP 程式設計物件模型](wcf-web-http-programming-object-model.md)  
- 討論 Windows Communication Foundation （WCF） Web HTTP 程式設計模型及其運作方式。  
+ 討論 Windows Communication Foundation (WCF) Web HTTP 程式設計模型及其運作方式。  
   
- [如何：建立基本 WCF Web HTTP 服務](how-to-create-a-basic-wcf-web-http-service.md)  
+ [作法：建立基本 WCF Web HTTP 服務](how-to-create-a-basic-wcf-web-http-service.md)  
  描述如何撰寫公開非 SOAP 端點的基本服務。  
   
- [HOW TO：將合約公開給 SOAP 和 Web 用戶端](how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ [作法：將合約公開給 SOAP 和 Web 用戶端](how-to-expose-a-contract-to-soap-and-web-clients.md)  
  描述如何撰寫將相同合約同時公開至 SOAP 與非 SOAP 用戶端的基本服務。  
   
  [UriTemplate 與 UriTemplateTable](uritemplate-and-uritemplatetable.md)  

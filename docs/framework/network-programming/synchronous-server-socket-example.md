@@ -1,6 +1,6 @@
 ---
 title: 同步伺服器通訊端範例
-description: 此範例 .NET Framework 程式會建立伺服器，以使用同步通訊端接收來自用戶端的連接。 它會接收並回顯字串。
+description: 此範例 .NET Framework 程式會建立一個伺服器，以使用同步通訊端接收來自用戶端的連接。 它會接收並回顯字串。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,16 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: 0e2fb91dc493b2da4c68a98ac8a62494e78a9fd1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 49646a71c979eda04f8bf932a3dbfac11677a8e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239519"
 ---
 # <a name="synchronous-server-socket-example"></a>同步伺服器通訊端範例
-下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 來自用戶端的字串必須包含字串 " \<EOF> "，以表示訊息的結尾。  
+
+下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 來自用戶端的字串必須包含字串 " \<EOF> "，以表示訊息結尾。  
   
 ```vb  
 Imports System  

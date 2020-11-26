@@ -1,24 +1,26 @@
 ---
 title: 載入器 ETW 事件
-description: 審查載入器 ETW 事件，其中包括應用程式域事件、CLR 載入器元件事件、模組事件、CLR 網域模組事件和模組範圍事件。
+description: 檢查載入器 ETW 事件，其中包括應用程式域事件、CLR 載入器元件事件、模組事件、CLR 網域模組事件，以及模組範圍事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7de4ad48ae275b4119f05a5269e9819c201027fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474354"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240585"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
+
 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
   
  所有的載入器事件都會在 `LoaderKeyword` (0x8) 關鍵字底下引發。 `DCStart` 和 `DCEnd` 事件會在啟用 `StartRundown`/`EndRundown` 時，於 `LoaderRundownKeyword` (0x8) 底下引發。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
 
 ## <a name="application-domain-events"></a>應用程式定義域事件
+
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|事件|層級|  
@@ -47,6 +49,7 @@ ms.locfileid: "86474354"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
 
 ## <a name="clr-loader-assembly-events"></a>CLR 載入器組件事件  
+
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|事件|層級|  
@@ -76,6 +79,7 @@ ms.locfileid: "86474354"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
 
 ## <a name="module-events"></a>模組事件
+
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|事件|層級|  
@@ -121,6 +125,7 @@ ms.locfileid: "86474354"
 - 以 "NativePdb" 開頭的欄位名稱表示該 NGen PDB 是透過呼叫 `NGEN createPDB`而產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 NGen 模組的原生項目。  
 
 ## <a name="clr-domain-module-events"></a>CLR 定義域模組事件
+
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|事件|層級|  
@@ -151,6 +156,7 @@ ms.locfileid: "86474354"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
 
 ## <a name="module-range-events"></a>模組範圍事件
+
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|事件|層級|  
@@ -180,6 +186,7 @@ ms.locfileid: "86474354"
 |RangeBegin2|win:UnicodeString||  
   
 ### <a name="remarks"></a>備註  
+
  如果 .NET Framework 處理序中載入的 NGen 影像已使用 IBC 最佳化，則包含 NGen 影像中作用範圍的 `ModuleRange` 事件會與其 `moduleID` 和 `ClrInstanceID`一起記錄。  如果 NGen 影像未經過 IBC 最佳化，則不會記錄這個事件。 若要判斷模組名稱，這個事件必須以模組載入 ETW 事件定序。  
   
  這個事件的承載大小是可變的， `Count` 欄位會指出事件中包含的範圍位移數。  這個事件必須以 Windows `IStart` 事件定序，以便判斷實際範圍。 每當載入影像時，就會記錄 Windows 影像載入事件，並且包含所載入影像的虛擬位址。  

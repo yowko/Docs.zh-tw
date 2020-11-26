@@ -1,20 +1,21 @@
 ---
 title: 實作 UI 自動化 Scroll 控制項模式
-description: 請參閱在使用者介面自動化中執行 Scroll 控制項模式的指導方針和慣例。 請參閱 IScrollProvider 介面的必要成員。
+description: 請參閱在消費者介面自動化中執行捲軸控制項模式的指導方針和慣例。 請參閱 IScrollProvider 介面所需的成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Scroll control pattern
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 830d65286f27302dcad109384b8df187ed4af1a5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 4069772530d8b4db817aa1b7a9be86a3ee83881e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166990"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239259"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>實作 UI 自動化 Scroll 控制項模式
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -28,7 +29,9 @@ ms.locfileid: "87166990"
  如需實作此控制項的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
+
  實作捲軸控制項模式時，請注意下列方針和慣例：  
   
 - 這個控制項的子系必須實作 <xref:System.Windows.Automation.Provider.IScrollItemProvider>。  
@@ -44,24 +47,28 @@ ms.locfileid: "87166990"
 - <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 是地區設定特性。 設定 HorizontalScrollPercent = 100.0 時，必須將控制項的捲動位置設為由左至右語言 (如英文) 的最右側位置。 相反地，若為由右至左語言 (如阿拉伯文)，設定 HorizontalScrollPercent = 100.0 時，必須將捲動位置設為最左側位置。  
   
 <a name="Required_Members_for_IScrollProvider"></a>
+
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider 的必要成員  
+
  以下是實作 <xref:System.Windows.Automation.Provider.IScrollProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|注意|  
+|必要成員|成員類型|備註|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|方法|無|  
   
  此控制項模式沒有任何相關聯的事件。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外狀況  
+
  提供者必須擲回下列例外狀況。  
   
 |例外狀況類型|條件|  

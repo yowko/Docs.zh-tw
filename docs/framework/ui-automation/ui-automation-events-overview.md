@@ -1,6 +1,6 @@
 ---
 title: UI 自動化事件概觀
-description: 請參閱 Microsoft 使用者介面自動化事件通知的總覽。 檢查事件種類、使用者介面自動化事件識別碼，以及使用者介面自動化事件引數。
+description: 查看 Microsoft 消費者介面自動化事件通知的總覽。 檢查事件種類、消費者介面自動化事件識別碼和消費者介面自動化事件引數。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, providers
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 4f51a31a433986822a9dba22bf8f17ade00bbb76
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8a97c4bfbe361eafc11cd920b032424f67c3a5fb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168093"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240442"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自動化事件概觀
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -26,7 +27,9 @@ ms.locfileid: "87168093"
  藉由允許提供者應用程式選擇性地引發事件來改善效率，取決於是否有用戶端訂閱那些事件或完全沒有，前提是沒有用戶端正在接聽任何事件。  
   
 <a name="Types_of_Events"></a>
+
 ## <a name="types-of-events"></a>事件的類型  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件可分類如下。  
   
 |事件|描述|  
@@ -49,7 +52,9 @@ ms.locfileid: "87168093"
 - `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>
+
 ## <a name="ui-automation-event-identifiers"></a>UI 自動化事件識別碼  
+
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件是由 <xref:System.Windows.Automation.AutomationEvent> 物件識別。 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 屬性包含專門識別事件類型的值。  
   
  下表提供 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 的可能值，以及用於事件引數的類型。 請注意，用戶端和提供者所使用的識別項是來自不同類別的同名欄位。  
@@ -64,7 +69,9 @@ ms.locfileid: "87168093"
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
 <a name="UI_Automation_Event_Arguments"></a>
+
 ## <a name="ui-automation-event-arguments"></a>UI 自動化事件引數  
+
  下列類別會封裝事件引數。  
   
 |類別|描述|  

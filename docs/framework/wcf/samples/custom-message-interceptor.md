@@ -2,14 +2,15 @@
 title: 自訂訊息攔截器
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: b9a517d0f8ada3680d49cd5ab0b13fa9e4d85402
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a3362ee33e6d3813d6715646ecb7d066f1930c76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600058"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240910"
 ---
 # <a name="custom-message-interceptor"></a>自訂訊息攔截器
+
 這個範例示範通道擴充性模型的使用方式。 尤其，這個範例會示範如何實作建立通道處理站和通道接聽程式的自訂繫結項目，以攔截執行階段堆疊中特定點的所有傳入與傳出訊息。 範例也包含用戶端和伺服器，以示範這些自訂處理站的使用方式。  
   
  在這個範例中，用戶端和服務都是主控台程式 (.exe)。 用戶端和服務都會使用含有自訂繫結項目及其相關執行階段物件的通用程式庫 (.dll)。  
@@ -22,11 +23,11 @@ ms.locfileid: "84600058"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 此範例說明在 Windows Communication Foundation （WCF）中建立自訂分層式通道的建議程式，方法是使用通道架構並遵循 WCF 最佳作法。 建立自訂層次通道的步驟如下：  
+ 此範例說明使用通道架構並遵循 WCF 最佳作法，在 Windows Communication Foundation (WCF) 中建立自訂分層通道的建議程式。 建立自訂層次通道的步驟如下：  
   
 1. 決定通道處理站和通道接聽項所要支援的通道類型。  
   
@@ -37,9 +38,11 @@ ms.locfileid: "84600058"
 4. 新增繫結元素延伸區段，即可將新的繫結元素公開至組態系統。  
   
 ## <a name="channel-shapes"></a>通道形狀  
+
  撰寫自訂層次通道時的第一個步驟是，決定通道所需要的類型。 對於訊息偵測器，我們支援下面層次所支援的任何類型 (例如，如果下面的層次可以建置 <xref:System.ServiceModel.Channels.IOutputChannel> 和 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>，則也會公開 <xref:System.ServiceModel.Channels.IOutputChannel> 和 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>)。  
   
 ## <a name="channel-factory-and-listener-factory"></a>通道處理站和接聽項處理站  
+
  撰寫自訂層次通道的下一個步驟是，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作以及服務通道的 <xref:System.ServiceModel.Channels.IChannelListener> 實作。  
   
  這些類別會接受內部處理站和接聽項，並且將除了 `OnCreateChannel` 和 `OnAcceptChannel` 以外的所有呼叫委派至內部處理站和接聽項。  
@@ -57,7 +60,8 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>新增繫結項目  
- 範例會定義自訂繫結項目：`InterceptingBindingElement`。 `InterceptingBindingElement`接受 `ChannelMessageInterceptor` 做為輸入，並使用這個 `ChannelMessageInterceptor` 來操作通過它的訊息。 這是唯一必須為公用的類別。 處理站、接聽項和通道全部都可以是公用執行階段介面的內部實作。  
+
+ 範例會定義自訂繫結項目：`InterceptingBindingElement`。 `InterceptingBindingElement` 採用 `ChannelMessageInterceptor` 做為輸入，並使用它 `ChannelMessageInterceptor` 來管理通過它的訊息。 這是唯一必須為公用的類別。 處理站、接聽項和通道全部都可以是公用執行階段介面的內部實作。  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement
@@ -66,6 +70,7 @@ public class InterceptingBindingElement : BindingElement
 ```  
   
 ## <a name="adding-configuration-support"></a>新增組態支援  
+
  為了與繫結組態整合，程式庫會將組態區段處理常式定義為繫結項目延伸區段。 用戶端和伺服器組態檔必須向組態系統註冊繫結項目延伸。 想要將其繫結項目公開給組態系統的實作器都可以衍生自這個類別。  
   
 ```csharp
@@ -76,9 +81,11 @@ public abstract class InterceptingElement : BindingElementExtensionElement
 ```  
   
 ## <a name="adding-policy"></a>新增原則  
+
  為了與原則系統整合，`InterceptingBindingElement` 會實作 IPolicyExportExtension 以表示必須參與產生原則。 若要在產生的用戶端上支援匯入原則，使用者可以註冊 `InterceptingBindingElementImporter` 的衍生類別，並覆寫 `CreateMessageInterceptor`() 來產生啟用原則的 `ChannelMessageInterceptor` 類別。  
   
 ## <a name="example-droppable-message-inspector"></a>範例：可卸除的訊息偵測器  
+
  範例中包含了會卸除訊息的 `ChannelMessageInspector` 的範例實作。  
   
 ```csharp
@@ -163,10 +170,10 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
+3. 若要建立方案，請依照 [建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
   
-4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
+4. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
 5. 先執行 Service.exe，然後執行 Client.exe，再查看兩個主控台視窗上的輸出。  
