@@ -2,14 +2,15 @@
 title: 作法：在 WAS 中裝載 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 8049b7961169c6ec7a8d80fb0e8747e99992247b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 640cfdd7525fb9877c6f3551a1456fed29c99b8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244401"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>作法：在 WAS 中裝載 WCF 服務
+
 本主題概述建立 Windows 進程啟用服務所需的基本步驟， (也稱為) 裝載 Windows Communication Foundation (WCF) 服務。 WAS 是新的處理序啟用服務，其為一般化的 Internet Information Services (IIS) 功能，與非 HTTP 傳輸通訊協定搭配使用。 WCF 會使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和訊息佇列）所接收的啟用要求。  
   
  這個裝載選項要求 WAS 啟用元件必須正確安裝與設定，但不要求將任何裝載程式碼撰寫為應用程式的一部分。 如需安裝和設定 WAS 的詳細資訊，請參閱 [如何：安裝和設定 WCF 啟用元件](how-to-install-and-configure-wcf-activation-components.md)。  

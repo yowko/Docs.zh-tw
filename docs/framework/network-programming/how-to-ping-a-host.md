@@ -1,18 +1,19 @@
 ---
-title: 如何：Ping 主機
-description: 使用此範例程式碼，瞭解如何在 .NET Framework 中 ping 遠端主機。 這個範例需要參考 System.Net 命名空間。
+title: 作法：Ping 主機
+description: 使用此範例程式碼，瞭解如何 ping .NET Framework 中的遠端主機。 此範例需要 System.Net 命名空間的參考。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: ac62f58eea41419de2d5651269154d9abb757aba
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1e77f7eb4dbb8a69848bc6b20e98e0df931f22c9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502492"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244024"
 ---
-# <a name="how-to-ping-a-host"></a>如何：Ping 主機
+# <a name="how-to-ping-a-host"></a>作法：Ping 主機
+
 這個範例示範如何 Ping 遠端主機。  
   
 ## <a name="example"></a>範例  
@@ -122,6 +123,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  這個範例需要：  
   
 - 對 **System.Net** 命名空間的參考。

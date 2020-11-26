@@ -1,6 +1,6 @@
 ---
-title: 如何：將追蹤陳述式加入至應用程式程式碼
-description: 瞭解如何在 .NET 中將追蹤語句新增至應用程式程式碼。 最常用於追蹤的方法，是將輸出寫入接聽程式的方法。
+title: 作法：將追蹤陳述式新增至應用程式程式碼
+description: 瞭解如何在 .NET 中將追蹤語句新增至應用程式程式碼。 最常用於追蹤的方法是將輸出寫入接聽程式的方法。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,17 +14,18 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 6beecf39d4372a194a9110ed8942b998443934d4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244206"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>如何：將追蹤陳述式加入至應用程式程式碼
+# <a name="how-to-add-trace-statements-to-application-code"></a>作法：將追蹤陳述式新增至應用程式程式碼
+
 追蹤最常使用的方法就是將輸出寫入接聽程式的方法：**Write**、**WriteIf**、**WriteLine**、**WriteLineIf**、**Assert** 和 **Fail**。 這些方法可以分成兩種類別：**Write**、**WriteLine** 與 **Fail** 都會無條件地發出輸出，而 **WriteIf**、**WriteLineIf** 與 **Assert** 則會測試布林條件，並根據條件的值寫入或不寫入。 如果條件為 `true`，**WriteIf** 與 **WriteLineIf** 會發出輸出，而如果條件為 `false`，則 **Assert** 會發出輸出。  
   
- 設計追蹤和偵錯策略時，應該思考該輸出的內容為何。 若在多個 **Write** 陳述式中填入不相關的資訊，將會建立一個不易閱讀的記錄檔。 相反地，若使用 **WriteLine** 將相關的陳述式置於不同行，可能難以區別哪些資訊有所關聯。 一般而言，當您想要將多個來源的資訊結合成單一的告知性訊息時，請使用多個 **Write** 陳述式，而當您想要建立單一且完整的訊息時，則請使用 **WriteLine** 陳述式。  
+ 設計追蹤和偵錯策略時，應該思考該輸出的內容為何。 多個以不相關資訊填滿的 **寫入** 語句將會建立難以讀取的記錄檔。 另一方面，使用 **WriteLine** 將相關的語句放在不同的行上，可能會讓您難以區分哪些資訊屬於同一個。 一般情況下，當您想要結合多個來源的資訊來建立單一的資訊訊息時，請使用多個 **Write** 語句，並在您想要建立單一完整訊息時使用 **WriteLine** 語句。  
   
 ### <a name="to-write-a-complete-line"></a>若要撰寫完整行  
   
@@ -89,7 +90,7 @@ ms.locfileid: "85415884"
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)
-- [如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)
+- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md) (機器翻譯)
+- [作法：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)
 - [追蹤參數](trace-switches.md)
-- [追蹤接聽程式](trace-listeners.md)
+- [追蹤接聽項](trace-listeners.md)

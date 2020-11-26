@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4ffbf6a05abd3ed9ebcea4b2e85f0dc305a4f2db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535894"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244765"
 ---
 # <a name="programming-wcf-security"></a>WCF 安全性程式設計
+
 本主題說明用來建立安全 Windows Communication Foundation (WCF) 應用程式的基本程式設計工作。 本主題僅涵蓋驗證、機密性和完整性，統稱為 *傳輸安全性*。 本主題未涵蓋授權 (控制資源或服務存取) ;如需授權的詳細資訊，請參閱 [授權](authorization-in-wcf.md)。  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ ms.locfileid: "90535894"
  WCF 安全性的程式設計是以三個步驟為基礎，設定下列各項：安全性模式、用戶端認證類型，以及認證值。 您可以透過程式碼或組態執行這些步驟。  
   
 ## <a name="setting-the-security-mode"></a>設定安全性模式  
+
  以下說明在 WCF 中使用安全性模式進行程式設計的一般步驟：  
   
 1. 針對應用程式需求選取一項適合的預先定義繫結程序。 如需系結選項的清單，請參閱 [系統提供](../system-provided-bindings.md)的系結。 根據預設，幾乎所有的繫結都會啟用安全性。 其中一個例外狀況是 <xref:System.ServiceModel.BasicHttpBinding> 使用 configuration、)  (的類別 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 。  
@@ -55,6 +57,7 @@ ms.locfileid: "90535894"
      當用戶端與服務透過對稱金鑰來建立通道時，就會產生安全工作階段 (用戶端與伺服器都會在對話期間全程使用相同的金鑰，直到對話結束為止)。  
   
 ## <a name="setting-the-client-credential-type"></a>設定用戶端認證類型  
+
  視需要選取用戶端認證類型。 如需詳細資訊，請參閱 [選取認證類型](selecting-a-credential-type.md)。 下列為可用的用戶端認證類型：  
   
 - `Windows`  
@@ -92,12 +95,14 @@ ms.locfileid: "90535894"
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>設定服務認證值  
+
  一旦您選取了用戶端認證類型，就必須設定實際認證以供服務與用戶端使用。 在服務上，認證需透過 <xref:System.ServiceModel.Description.ServiceCredentials> 類別來加以設定，並由 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 類別的 <xref:System.ServiceModel.ServiceHostBase> 屬性傳回。 使用中的繫結意指服務認證類型、選擇的安全性模式，以及用戶端認證類型。 下列程式碼將為服務認證設定憑證。  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>設定用戶端認證值  
+
  在用戶端上，用戶端認證值是使用 <xref:System.ServiceModel.Description.ClientCredentials> 類別進行設定，並由 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 類別的 <xref:System.ServiceModel.ClientBase%601> 屬性傳回。 下列程式碼將透過 TCP 通訊協定在用戶端上將憑證設為認證。  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]

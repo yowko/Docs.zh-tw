@@ -1,6 +1,6 @@
 ---
 title: 使用偵錯工具顯示屬性增強偵錯功能
-description: 開始使用 .NET 中的偵錯工具顯示內容，讓類型開發人員也可以在偵錯工具中顯示類型時，指定其外觀。
+description: 開始使用 .NET 中的偵錯工具顯示內容，讓型別開發人員也可以指定類型在偵錯工具中顯示時的樣子。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-ms.openlocfilehash: f266bf7278f472c51dd355df5ba04a123cbd7df0
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 2e556358490409a0fa7b345c4454eb43cf607e32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415962"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244362"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用偵錯工具顯示屬性增強偵錯功能
 
@@ -42,6 +42,7 @@ class MyHashtable
 例如，如果 C# 物件具有覆寫的 `ToString()`，則偵錯工具會呼叫覆寫並顯示它的結果，而不是標準的 `{<typeName>}.`。因此，如果您已覆寫 `ToString()`，就不需要使用 <xref:System.Diagnostics.DebuggerDisplayAttribute>。 如果兩者都使用，<xref:System.Diagnostics.DebuggerDisplayAttribute> 屬性則會優先於 `ToString()` 覆寫。
 
 ## <a name="using-the-debuggerbrowsableattribute"></a>使用 DebuggerBrowsableAttribute
+
  將 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 套用至欄位或屬性，以指定欄位或屬性在偵錯工具視窗中的顯示方式。 這個屬性的建構函式會使用其中一個 <xref:System.Diagnostics.DebuggerBrowsableState> 列舉值，指定下列狀態之一：
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.Never> 指出成員未顯示在資料視窗中。  例如，對欄位的 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 使用此值，會從階層中移除欄位；當您按一下類型執行個體的加號 (+) 展開封入類型時，不會顯示欄位。
@@ -61,6 +62,7 @@ public static string y = "Test String";
 ```
 
 ## <a name="using-the-debuggertypeproxy"></a>使用 DebuggerTypeProxy
+
  當您需要大幅並從本質上變更類型的偵錯檢視，但不是變更類型本身時，請使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性用來指定類型的顯示 Proxy，讓開發人員調整類型的檢視。  這個屬性，如 <xref:System.Diagnostics.DebuggerDisplayAttribute>，可以用在組件層級；如此 <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> 屬性會指定要使用 Proxy 的類型。 建議的用法是，這個屬性指定的私用巢狀類型，會出現在要套用屬性的類型內。  顯示類型時，支援類型檢視器的運算式評估工具會檢查這個屬性。 如果找到屬性，運算式評估工具會用顯示 Proxy 類型替代套用屬性的類型。
 
  當 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 出現時，偵錯工具變數視窗只會顯示 Proxy 類型的 Public 成員。 私用成員不會顯示。 屬性增強的檢視不會變更資料視窗的行為。

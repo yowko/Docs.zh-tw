@@ -2,22 +2,25 @@
 title: 追蹤的安全性考量及實用秘訣
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 415b27f5ac40d097c5bdf7b09d63ce901003f83f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555038"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243873"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>追蹤的安全性考量及實用秘訣
+
 此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
   
 ## <a name="using-a-custom-trace-listener-with-webhost"></a>使用自訂追蹤接聽項來搭配 WebHost  
+
  如果您正在撰寫自己的追蹤接聽項，應該知道追蹤有可能在 Web 裝載服務的情況中遺失。 當 WebHost 進行回收，會關閉即時處理序以讓複本接手。 然而，視接聽項型別而定，這兩個處理序必須同時存取相同資源一段時間。 在此情況中，`XmlWriterTraceListener` 會為第二個處理序建立新的追蹤檔；而 Windows 事件追蹤則負責管理相同工作階段中的多個處理序，並存取相同的檔案。 如果您自己的接聽項無法提供類似的功能，當兩個處理序鎖住該檔案，追蹤可能會遺失。  
   
  您應該同時了解到，自訂追蹤接聽項可以透過網路傳送追蹤與訊息，例如，傳送至遠端資料庫。 身為應用程式的部署者，您應該使用適當的存取控制來設定自訂接聽項。 您應該同時針對任何可以在遠端位置上公開的個人資訊套用安全性控制。  
   
 ## <a name="logging-sensitive-information"></a>記錄敏感資訊  
+
  當訊息在範圍內時，追蹤就包含訊息標頭。 啟用追蹤時，應用程式特定標頭中的個人資訊 (例如查詢字串) 和本文資訊 (例如信用卡號碼) 會在記錄檔中變得可見。 應用程式部署者負責強制針對組態和追蹤檔採取存取控制。 如果不要讓這類資訊變得可見，您應該停用追蹤，如果要共用追蹤記錄檔，則應該篩選掉部分資料。  
   
  下列秘訣有助於防止無意間公開追蹤檔內容：  

@@ -2,14 +2,15 @@
 title: 1104 - WorkflowActivityResume
 ms.date: 03/30/2017
 ms.assetid: 7fe95d1e-34bd-43ca-b92e-587d2d248fff
-ms.openlocfilehash: 4c9ae5fd386fc93ea19578097aa4e0afdda527e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a9c40e2c403d43dc980af116e4b6e98b3b2090b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924120"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243556"
 ---
 # <a name="1104---workflowactivityresume"></a>1104 - WorkflowActivityResume
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61924120"
 |識別碼|1104|  
 |關鍵字|WFRuntime|  
 |層級|資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  表示已繼續工作流程活動。  
   
 ## <a name="message"></a>訊息  
+
  WorkflowInstance Id：'%1' E2E 活動  
   
 ## <a name="details"></a>詳細資料  

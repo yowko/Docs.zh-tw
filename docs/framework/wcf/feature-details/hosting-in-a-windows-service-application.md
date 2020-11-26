@@ -2,14 +2,15 @@
 title: 在 Windows 服務應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555844"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243068"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
+
 Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以將 Windows 服務進程設定為在電腦啟動時自動啟動，使其成為適合「永遠開啟」應用程式的裝載環境。 如需 Windows 服務應用程式的詳細資訊，請參閱 [Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=89450)。  
   
  裝載長時間執行 Windows Communication Foundation (WCF) 服務的應用程式，與 Windows 服務共用許多特性。 尤其是，WCF 服務是長時間執行的伺服器可執行檔，不會直接與使用者互動，因此不會執行任何形式的使用者介面。 因此，在 Windows 服務應用程式中裝載 WCF 服務，是建立強大、長時間執行的 WCF 應用程式的一個選項。  

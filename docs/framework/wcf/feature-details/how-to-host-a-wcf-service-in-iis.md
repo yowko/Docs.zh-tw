@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 30910d428ddace7a5d5fc10fc0def21ea14d39c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e0eb61e56b20eda6627030700b823042e07d10c9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555994"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244440"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>作法：在 IIS 中裝載 WCF 服務
+
 本主題概述在 Internet Information Services (IIS) 中，建立 Windows Communication Foundation (WCF) 服務所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱 [Internet Information Services](https://www.iis.net/)。 在 IIS 環境中執行的 WCF 服務會充分利用 IIS 功能，例如進程回收、閒置關機、進程健康情況監視，以及訊息型啟用。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
   
  如需 WCF 和 ASP.NET 如何互動的詳細資訊，請參閱 [Wcf 服務和 ASP.NET](wcf-services-and-aspnet.md)。 如需設定安全性的詳細資訊，請參閱 [安全性](security.md)。  
@@ -70,6 +71,7 @@ ms.locfileid: "90555994"
 11. 若要確認服務裝載正確，請開啟 Internet Explorer 的執行個體，然後瀏覽到服務的 URL：`http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>範例  
+
  以下是裝載於 IIS 之計算機服務的完整程式碼清單。  
   
  [!code-csharp[C_HowTo_HostInIIS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#1)]

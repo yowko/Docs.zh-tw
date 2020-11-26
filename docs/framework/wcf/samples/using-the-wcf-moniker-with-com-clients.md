@@ -2,14 +2,15 @@
 title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: b36b646f650c2a2974c7b0689a9367961075ea14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eb2f14db8b58fd182bbe711bf559055659a02652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553015"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243686"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
+
 這個範例示範如何使用 Windows Communication Foundation (WCF) 服務的標記，將 Web 服務整合至 COM 開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
   
 > [!NOTE]
@@ -50,6 +51,7 @@ public interface ICalculator
 - 中繼資料交換合約：會在執行階段從中繼資料交換 (MEX) 端點擷取合約。  
   
 ## <a name="typed-contract"></a>型別合約  
+
  若要搭配使用 Moniker 和型別合約，必須使用 COM 適當地註冊服務合約的屬性化型別。 首先，必須使用 [System.servicemodel 中繼資料公用程式工具（ ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md)）來產生用戶端。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
   
 ```console  
@@ -103,6 +105,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
  當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這會示範使用具類型的名字標記進行 COM 呼叫，以與 WCF 服務進行通訊的 COM 用戶端。 就算在用戶端應用程式中使用 COM，服務通訊只能包含 Web 服務呼叫。  
   
 ## <a name="wsdl-contract"></a>WSDL 合約  
+
  若要搭配使用 Moniker 和 WSDL 合約，您不需要用戶端程式庫註冊，但必須透過超出範圍之外的機制擷取服務的 WSDL 合約，例如使用瀏覽器存取服務的 WSDL 端點。 Moniker 接著可在執行階段存取該合約。  
   
  ComCalcClient.vbs 用戶端應用程式會使用 `FileSystemObject` 來存取在本機儲存的 WSDL 檔，然後再次使用 `GetObject` 函式來建構服務的 Proxy。  
@@ -148,6 +151,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
  當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這會示範使用具有 WSDL 合約的標記進行 COM 呼叫的 COM 用戶端，以便與 WCF 服務進行通訊。  
   
 ## <a name="metadata-exchange-contract"></a>中繼資料交換合約  
+
  若要搭配使用 Moniker 和 MEX 合約，就如同搭配使用 WSDL 合約一樣，將不需要用戶端註冊。 透過內部使用中繼資料交換，即可在執行階段擷取服務合約。  
   
  ComCalcClient.vbs 用戶端應用程式會再次使用 `GetObject` 函式來建構服務的 Proxy。  
