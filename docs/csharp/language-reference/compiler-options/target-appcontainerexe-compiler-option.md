@@ -4,10 +4,10 @@ title: -target:appcontainerexe (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: e4aa60ebc9dcc1a63b63863385b0ee9f13d6d78d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193734"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# 編譯器選項)
@@ -30,9 +30,9 @@ ms.locfileid: "91193734"
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>若要在 IDE 中設定這個編譯器選項  
   
-1. 在方案總管**** 中，開啟專案的捷徑功能表，然後選擇 [屬性]****。  
+1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
   
-2. 在 [應用程式]**** 索引標籤上，選擇 [輸出類型]**** 清單中的 [Windows 市集應用程式]****。  
+2. 在 [應用程式] 索引標籤上，選擇 [輸出類型] 清單中的 [Windows 市集應用程式]。  
   
      此選項僅適用于 Windows 8. x Store 應用程式範本。  
   

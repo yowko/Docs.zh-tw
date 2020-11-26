@@ -4,10 +4,10 @@ description: 了解 C# 屬性，其中包含驗證、計算值、延遲評估和
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89358904"
 ---
 # <a name="properties"></a>屬性
@@ -27,7 +27,7 @@ ms.locfileid: "89358904"
 
 [!code-csharp[Person class with public properties](../../samples/snippets/csharp/properties/Person.cs#2)]
 
-以上所示的語法為「Auto 屬性」** 語法。 編譯器會為欄位產生儲存位置，以備份此屬性。 編譯器也會實作 `get` 和 `set` 存取子的主體。
+以上所示的語法為「Auto 屬性」語法。 編譯器會為欄位產生儲存位置，以備份此屬性。 編譯器也會實作 `get` 和 `set` 存取子的主體。
 
 有時候，您需要將屬性初始化為其類型的預設值以外的值。  C# 可讓您在屬性的右括弧之後設定一個值，以執行上述作業。 您可能偏好將 `FirstName` 屬性的初始值設為空字串而非 `null`。 您可依下列方式來進行上述設定：
 
@@ -39,7 +39,7 @@ ms.locfileid: "89358904"
 
 [!code-csharp[Person class with properties and backing field](../../samples/snippets/csharp/properties/Person.cs#4)]
 
-當屬性實作為單一運算式時，您可以針對 getter 或 setter 使用「運算式主體成員」**：
+當屬性實作為單一運算式時，您可以針對 getter 或 setter 使用「運算式主體成員」：
 
 [!code-csharp[Person class with properties and expression bodied getters and setters](../../samples/snippets/csharp/properties/Person.cs#5)]
 
@@ -107,15 +107,15 @@ public class Measurements
 
 上述範例使用[字串內插補點](./language-reference/tokens/interpolated.md)功能，來建立完整名稱的格式化字串。
 
-您也可以使用「運算式主體成員」**，以提供更簡潔的方法來建立計算的 `FullName` 屬性：
+您也可以使用「運算式主體成員」，以提供更簡潔的方法來建立計算的 `FullName` 屬性：
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
-「運算式主體成員」** 使用「Lambda 運算式」** 語法來定義包含單一運算式的方法。 在這裡，該運算式會傳回 person 物件的完整名稱。
+「運算式主體成員」使用「Lambda 運算式」語法來定義包含單一運算式的方法。 在這裡，該運算式會傳回 person 物件的完整名稱。
 
 ### <a name="cached-evaluated-properties"></a>快取的評估屬性
 
-您可以混合計算屬性與儲存體的概念，然後建立「快取的評估屬性」**。  例如，您可以更新 `FullName` 屬性，只在第一次存取時設定字串格式：
+您可以混合計算屬性與儲存體的概念，然後建立「快取的評估屬性」。  例如，您可以更新 `FullName` 屬性，只在第一次存取時設定字串格式：
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
@@ -141,7 +141,7 @@ public class Measurements
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` 運算子稱為「null 條件運算子」**。 它會檢查是否有 null 參考，再評估運算子的右邊。 最後結果是，如果沒有 `PropertyChanged` 事件的訂閱者，則不會執行引發事件的程式碼。 在此情況下，它會擲回 `NullReferenceException` 而不進行這項檢查。 如需詳細資訊，請參閱 [`events`](events-overview.md)。 此範例也會使用新的 `nameof` 運算子，從屬性名稱符號轉換成其文字表示。
+`?.` 運算子稱為「null 條件運算子」。 它會檢查是否有 null 參考，再評估運算子的右邊。 最後結果是，如果沒有 `PropertyChanged` 事件的訂閱者，則不會執行引發事件的程式碼。 在此情況下，它會擲回 `NullReferenceException` 而不進行這項檢查。 如需詳細資訊，請參閱 [`events`](events-overview.md) \(英文\)。 此範例也會使用新的 `nameof` 運算子，從屬性名稱符號轉換成其文字表示。
 使用 `nameof` 可減少鍵入錯誤屬性名稱時所發生的錯誤。
 
 同樣地，實作 <xref:System.ComponentModel.INotifyPropertyChanged> 是您可以在存取子中撰寫程式碼來支援所需案例的範例。

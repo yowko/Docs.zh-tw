@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 ms.openlocfilehash: 1d2eefdab433f67e1cba5f709a2db8ec6b9a5dc7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171308"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# 編譯器選項)
@@ -46,7 +46,7 @@ ms.locfileid: "91171308"
   
 - 您可以提供未指定所要求執行層級的自訂資訊清單。  
   
- Visual Studio 會建立預設.manifest 檔案，並將它與可執行檔一起儲存在偵錯和發行目錄中。 您可以在任何文字編輯器中建立自訂資訊清單，然後將檔案新增至專案，來新增自訂資訊清單。 或者，您可以使用滑鼠右鍵按一下方案總管**** 中的 [專案]**** 圖示，並按一下 [新增項目]****，然後按一下 [應用程式資訊清單檔案]****。 新增全新或現有資訊清單檔案之後，它將會顯示在 [資訊清單]**** 下拉式清單中。 如需詳細資訊，請參閱 [應用程式頁面、專案設計工具 (c # ) ](/visualstudio/ide/reference/application-page-project-designer-csharp)。  
+ Visual Studio 會建立預設.manifest 檔案，並將它與可執行檔一起儲存在偵錯和發行目錄中。 您可以在任何文字編輯器中建立自訂資訊清單，然後將檔案新增至專案，來新增自訂資訊清單。 或者，您可以使用滑鼠右鍵按一下方案總管中的 [專案] 圖示，並按一下 [新增項目]，然後按一下 [應用程式資訊清單檔案]。 新增全新或現有資訊清單檔案之後，它將會顯示在 [資訊清單] 下拉式清單中。 如需詳細資訊，請參閱 [應用程式頁面、專案設計工具 (c # ) ](/visualstudio/ide/reference/application-page-project-designer-csharp)。  
   
  您可以使用 [-nowin32manifest (C# 編譯器選項)](./nowin32manifest-compiler-option.md) 選項，提供應用程式資訊清單作為自訂建置後步驟或 Win32 資源檔的一部分。 如果您想要應用程式受制於 Windows Vista 上的檔案或登錄虛擬化，請使用這個相同的選項。 這會防止編譯器在可攜式執行檔 (PE) 中建立和內嵌預設資訊清單。  
   

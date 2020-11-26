@@ -10,10 +10,10 @@ helpviewer_keywords:
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
 ms.openlocfilehash: d67c99cc841c08a63cc83843a07a46e80199b9d1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89136898"
 ---
 # <a name="select-clause-c-reference"></a>select 子句 (C# 參考)
@@ -24,7 +24,7 @@ ms.locfileid: "89136898"
 
 [!code-csharp[cscsrefQueryKeywords#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#8)]  
 
-`select` 子句所產生的序列類型可決定查詢變數 `queryHighScores` 的類型。 在最簡單的情況下，`select` 子句只會指定範圍變數。 這會導致傳回的序列將相同類型的項目包含為資料來源。 如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。 不過，`select` 子句也提供功能強大的機制，將來源資料轉換 (或「投影」**) 為新的類型。 如需詳細資訊，請參閱[使用 LINQ 轉換資料 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)。
+`select` 子句所產生的序列類型可決定查詢變數 `queryHighScores` 的類型。 在最簡單的情況下，`select` 子句只會指定範圍變數。 這會導致傳回的序列將相同類型的項目包含為資料來源。 如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。 不過，`select` 子句也提供功能強大的機制，將來源資料轉換 (或「投影」) 為新的類型。 如需詳細資訊，請參閱[使用 LINQ 轉換資料 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)。
 
 ## <a name="example"></a>範例
 

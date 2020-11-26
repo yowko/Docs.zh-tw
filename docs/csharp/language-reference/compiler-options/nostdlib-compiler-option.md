@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 ms.openlocfilehash: 214918b32f1f1276eb936e66daba3d372a1e9228
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125094"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# 編譯器選項)
@@ -37,13 +37,13 @@ ms.locfileid: "89125094"
 > [!NOTE]
 > 下列指示僅適用於 Visual Studio 2015 (及更早版本)。 較新版本的 Visual Studio 中不存在 [ **不參考] mscorlib.dll** 組建屬性。
 
-1. 開啟專案的 [屬性] **** 頁面。
+1. 開啟專案的 [屬性]  頁面。
 
-2. 按一下 [建置] **** 屬性頁面。
+2. 按一下 [建置]  屬性頁面。
 
 3. 按一下 [進階]  按鈕。
 
-4. 修改 [不要參考 mscorlib.dll] **** 屬性。
+4. 修改 [不要參考 mscorlib.dll]  屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -51,4 +51,4 @@ ms.locfileid: "89125094"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)

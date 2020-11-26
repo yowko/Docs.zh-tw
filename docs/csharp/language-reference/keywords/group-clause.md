@@ -10,10 +10,10 @@ helpviewer_keywords:
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 ms.openlocfilehash: 5e642492b4b36bb0464baf16baa80c58c19ba9f1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89138224"
 ---
 # <a name="group-clause-c-reference"></a>group 子句 (C# 參考)
@@ -78,7 +78,7 @@ group person by new {name = person.surname, city = person.city};
 
 ## <a name="example"></a>範例
 
-這個範例示範如何搭配使用「接續」** 與 `into`，以在建立其他邏輯之後，對群組執行這些邏輯。 如需詳細資訊，請參閱 [into](into.md)。 下列範例會查詢每個群組，只選取其索引鍵值是母音的群組。
+這個範例示範如何搭配使用「接續」與 `into`，以在建立其他邏輯之後，對群組執行這些邏輯。 如需詳細資訊，請參閱 [into](into.md)。 下列範例會查詢每個群組，只選取其索引鍵值是母音的群組。
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 

@@ -3,15 +3,15 @@ title: .NET Core 執行時間識別碼 (RID) 目錄
 description: 深入瞭解執行時間識別碼 (RID) 以及如何在 .NET Core 中使用 Rid。
 ms.date: 02/22/2019
 ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90538220"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
-RID 是執行時間 *識別碼*的縮寫。 RID 值是用來識別應用程式執行所在的目標平台。
+RID 是執行時間 *識別碼* 的縮寫。 RID 值是用來識別應用程式執行所在的目標平台。
 .NET 套件會使用它們來代表 NuGet 套件中的平台特定資產。 下列值是 RID 的範例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。
 針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。
 
@@ -27,15 +27,15 @@ RID 是執行時間 *識別碼*的縮寫。 RID 值是用來識別應用程式�
 
 代表具體作業系統的 RID 通常遵循 `[os].[version]-[architecture]-[additional qualifiers]` 這個模式，其中：
 
-- `[os]` 是作業/平台系統 Moniker。 例如： `ubuntu` 。
+- `[os]` 是作業/平台系統 Moniker。 例如 `ubuntu`。
 
-- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如： `15.10` 。
+- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如 `15.10`。
 
-  - 版本**不應為**行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。
+  - 版本 **不應為** 行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。
 
 - `[architecture]` 處理器架構。 例如：`x86`、`x64`、`arm` 或 `arm64`。
 
-- `[additional qualifiers]` 進一步區分不同平台。 例如： `aot` 。
+- `[additional qualifiers]` 進一步區分不同平台。 例如：`aot`。
 
 ## <a name="rid-graph"></a>RID 圖表
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: 474b22f5a9d8f12c8a4365159817f878761b563c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89140785"
 ---
 # <a name="from-clause-c-reference"></a>from 子句 (C# 參考)
@@ -22,7 +22,7 @@ ms.locfileid: "89140785"
 
 - 會執行查詢或子查詢的資料來源。
 
-- 本機「範圍變數」**，代表來源序列中的每個項目。
+- 本機「範圍變數」，代表來源序列中的每個項目。
 
 範圍變數和資料來源都是強型別。 `from` 子句中參考的資料來源，必須有 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601> 類型，或 <xref:System.Linq.IQueryable%601> 等衍生類型。
 

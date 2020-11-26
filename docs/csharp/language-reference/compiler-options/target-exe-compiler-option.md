@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: ae1706f1ecdd396e24711070d19420faa6d34761
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193755"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C# 編譯器選項)
@@ -40,11 +40,11 @@ ms.locfileid: "91193755"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]**** 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [應用程式]**** 屬性頁。  
+2. 按一下 [應用程式] 屬性頁。  
   
-3. 修改 [輸出類型]**** 屬性。  
+3. 修改 [輸出類型] 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   

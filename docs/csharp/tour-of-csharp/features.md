@@ -3,10 +3,10 @@ title: 'C # 主要語言區域教學課程'
 description: 第一次接觸 C#？ 了解該語言的基本概念。
 ms.date: 08/06/2020
 ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93400744"
 ---
 # <a name="major-language-areas"></a>主要語言區域
@@ -25,7 +25,7 @@ C # 和 .NET 提供許多不同的集合類型。 陣列具有由語言定義的
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArraysSample":::
 
-這個範例會在一 _*_維陣列_*_ 上建立和操作。 C # 也支援 _*_多維度陣列_*_ 。 陣列類型的維度數目（也稱為陣列類型的 _*_等級_*_ ）是一加在陣列類型的方括弧之間所寫入的逗號數目。 下列範例會分別配置一個單維、一個二維和一個三維陣列。
+這個範例會在一 _*_維陣列_*_ 上建立和操作。 C # 也支援 _*_多維度陣列_*_。 陣列類型的維度數目（也稱為陣列類型的 _*_等級_*_ ）是一加在陣列類型的方括弧之間所寫入的逗號數目。 下列範例會分別配置一個單維、一個二維和一個三維陣列。
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="DeclareArrays":::
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
 ms.openlocfilehash: 0f6d94dd25a020d96430746c4b5e7aefd0f679da
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89140837"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (C# 編譯器選項)
@@ -31,11 +31,11 @@ ms.locfileid: "89140837"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]**** 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [建置]**** 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3. 選取 [容許 Unsafe 程式碼]**** 核取方塊。  
+3. 選取 [容許 Unsafe 程式碼] 核取方塊。  
   
 ### <a name="to-add-this-option-in-a-csproj-file"></a>在 csproj 檔案中新增此選項
 
@@ -59,5 +59,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](index.md)
+- [C# 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

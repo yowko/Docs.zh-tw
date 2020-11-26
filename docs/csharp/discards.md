@@ -4,10 +4,10 @@ description: 說明 C# 的 discard 支援，這是未指派且可捨棄的變數
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
 ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "95698802"
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南

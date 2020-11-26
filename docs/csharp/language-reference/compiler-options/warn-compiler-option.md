@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: d59274423e6f9844d3ab22f3ac513ba1a05d7f07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171347"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# 編譯器選項)
@@ -56,11 +56,11 @@ ms.locfileid: "91171347"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]**** 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [建置]**** 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3. 修改 [警告層級]**** 屬性。  
+3. 修改 [警告層級] 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
   

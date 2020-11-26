@@ -1,23 +1,573 @@
 - name: 什麼是中斷性變更？
   href: index.md
-- name: 相容性
+- name: 相容性類型
   href: categories.md
-- name: 頁面選取器
-  href: breaking-changes.md
-- name: 依版本
+- name: 參考
   expanded: true
   items:
-    - name: 3.1 至 5.0
-      href: 3.1-5.0.md
-    - name: 3.0 至 3.1
-      href: 3.0-3.1.md
-    - name: 2.2 至 3.1
-      href: 2.2-3.1.md
-    - name: 2.2 至 3.0
-      href: 2.2-3.0.md
-    - name: 2.0 至 2.1
-      href: 2.0-2.1.md
-    - name: .NET 5+ 中的過時情況
+    - name: 概觀
+      href: breaking-changes.md
+    - name: 從 .NET Framework
+      items:
+        - name: 重大變更
+          href: fx-core.md
+        - name: 無法使用的技術
+          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+        - name: 永遠擲回的 API
+          href: unsupported-apis.md
+    - name: 依版本的中斷性變更
+      expanded: true
+      items:
+        - name: .NET 5.0
+          items:
+            - name: ASP.NET Core
+              items:
+                - name: ASP.NET Core 應用程式還原序列化加上引號的數字
+                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                - name: AzureAD.UI 與 AzureADB2C.UI API 已過時
+                  href: aspnet-core/5.0/authentication-aad-packages-obsolete.md
+                - name: BinaryFormatter 序列化方法已過時
+                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                - name: 端點路由中的資源是 HttpContext
+                  href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
+                - name: 已移除前置詞為 Microsoft 的 Azure 整合套件
+                  href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: Blazor：已更新瀏覽器支援
+                  href: aspnet-core/5.0/blazor-browser-support-updated.md
+                - name: Blazor：編譯器已修剪不重要的空白字元
+                  href: aspnet-core/5.0/blazor-components-trim-insignificant-whitespace.md
+                - name: Blazor：JSObjectReference 與 JSInProcessObjectReference 類型為內部
+                  href: aspnet-core/5.0/blazor-jsobjectreference-to-internal.md
+                - name: Blazor：NuGet 套件的目標 Framework 已變更
+                  href: aspnet-core/5.0/blazor-packages-target-framework-changed.md
+                - name: Blazor：ProtectedBrowserStorage 功能已移至共用架構
+                  href: aspnet-core/5.0/blazor-protectedbrowserstorage-moved.md
+                - name: Blazor：RenderTreeFrame 唯讀公用欄位現在是屬性
+                  href: aspnet-core/5.0/blazor-rendertreeframe-fields-become-properties.md
+                - name: Blazor：已更新靜態 Web 資產的驗證邏輯
+                  href: aspnet-core/5.0/blazor-static-web-assets-validation-logic-updated.md
+                - name: 瀏覽器不支援密碼編譯 API
+                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                - name: 延伸模組：套件參考變更
+                  href: aspnet-core/5.0/extensions-package-reference-changes.md
+                - name: Kestrel 與 IIS BadHttpRequestException 類型已過時
+                  href: aspnet-core/5.0/http-badhttprequestexception-obsolete.md
+                - name: IHttpClientFactory 記錄整數狀態碼所建立的 HttpClient 執行個體
+                  href: aspnet-core/5.0/http-httpclient-instances-log-integer-status-codes.md
+                - name: HttpSys：用戶端憑證重新交涉預設已停用
+                  href: aspnet-core/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md
+                - name: IIS：UrlRewrite 中介軟體查詢字串已保留
+                  href: aspnet-core/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md
+                - name: Kestrel：預設會偵測到設定變更
+                  href: aspnet-core/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md
+                - name: Kestrel：預設支援的 TLS 通訊協定版本已變更
+                  href: aspnet-core/5.0/kestrel-default-supported-tls-protocol-versions-changed.md
+                - name: Kestrel：在不相容的 Windows 版本上，TLS 上的 HTTP/2 已停用
+                  href: aspnet-core/5.0/kestrel-disables-http2-over-tls.md
+                - name: Kestrel：Libuv 傳輸已標示為過時
+                  href: aspnet-core/5.0/kestrel-libuv-transport-obsolete.md
+                - name: ConsoleLoggerOptions 上的過時屬性
+                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                - name: 已移除 ResourceManagerWithCultureStringLocalizer 類別與 WithCulture 介面成員
+                  href: aspnet-core/5.0/localization-members-removed.md
+                - name: 已移除 Pubternal API
+                  href: aspnet-core/5.0/localization-pubternal-apis-removed.md
+                - name: 已在要求當地語系化中介軟體中移除過時的函式
+                  href: aspnet-core/5.0/localization-requestlocalizationmiddleware-constructor-removed.md
+                - name: 中介軟體：資料庫錯誤頁面已標示為已過時
+                  href: aspnet-core/5.0/middleware-database-error-page-obsolete.md
+                - name: 例外狀況處理常式中介軟體擲回原始例外狀況
+                  href: aspnet-core/5.0/middleware-exception-handler-throws-original-exception.md
+                - name: ObjectModelValidator 呼叫驗證的新多載
+                  href: aspnet-core/5.0/mvc-objectmodelvalidator-calls-new-overload.md
+                - name: Cookie 名稱編碼已移除
+                  href: aspnet-core/5.0/security-cookie-name-encoding-removed.md
+                - name: 已更新 IdentityModel NuGet 套件版本
+                  href: aspnet-core/5.0/security-identitymodel-nuget-package-versions-updated.md
+                - name: SignalR：MessagePack 中樞通訊協定選項類型已變更
+                  href: aspnet-core/5.0/signalr-messagepack-hub-protocol-options-changed.md
+                - name: SignalR：MessagePack 中樞通訊協定已移動
+                  href: aspnet-core/5.0/signalr-messagepack-package.md
+                - name: 已移除 UseSignalR 與 UseConnections 方法
+                  href: aspnet-core/5.0/signalr-usesignalr-useconnections-removed.md
+                - name: CSV 內容類型已變更為與標準相容
+                  href: aspnet-core/5.0/static-files-csv-content-type-changed.md
+            - name: 程式碼分析
+              items:
+                - name: CA1416 警告
+                  href: code-analysis/5.0/ca1416-platform-compatibility-analyzer.md
+                - name: CA1417 警告
+                  href: code-analysis/5.0/ca1417-outattributes-on-pinvoke-string-parameters.md
+                - name: CA1831 警告
+                  href: code-analysis/5.0/ca1831-range-based-indexer-on-string.md
+                - name: CA2013 警告
+                  href: code-analysis/5.0/ca2013-referenceequals-on-value-types.md
+                - name: CA2014 警告
+                  href: code-analysis/5.0/ca2014-stackalloc-in-loops.md
+                - name: CA2015 警告
+                  href: code-analysis/5.0/ca2015-finalizers-for-memorymanager-types.md
+                - name: CA2200 警告
+                  href: code-analysis/5.0/ca2200-rethrow-to-preserve-stack-details.md
+                - name: CA2247 警告
+                  href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
+            - name: Core .NET 程式庫
+              items:
+                - name: 單一檔案發佈的組件相關 API 變更
+                  href: core-libraries/5.0/assembly-api-behavior-changes-for-single-file-publish.md
+                - name: BinaryFormatter 序列化方法已過時
+                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                - name: 程式碼存取安全性 API 已過時
+                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                - name: CreateCounterSetInstance 擲回 InvalidOperationException
+                  href: core-libraries/5.0/createcountersetinstance-throws-invalidoperation.md
+                - name: 預設 ActivityIdFormat 為 W3C
+                  href: core-libraries/5.0/default-activityidformat-changed.md
+                - name: Environment.OSVersion 傳回正確的版本
+                  href: core-libraries/5.0/environment-osversion-returns-correct-version.md
+                - name: FrameworkDescription 的值為 .NET 而不是 .NET Core
+                  href: core-libraries/5.0/frameworkdescription-returns-net-not-net-core.md
+                - name: GAC API 已過時
+                  href: core-libraries/5.0/global-assembly-cache-apis-obsolete.md
+                - name: 硬體內部 IsSupported 檢查
+                  href: core-libraries/5.0/hardware-instrinsics-issupported-checks.md
+                - name: IntPtr 與 UIntPtr 實作 IFormattable
+                  href: core-libraries/5.0/intptr-uintptr-implement-iformattable.md
+                - name: LastIndexOf 處理空的搜尋字串
+                  href: core-libraries/5.0/lastindexof-improved-handling-of-empty-values.md
+                - name: Unix 上具有非 ASCII 字元的 URI 路徑
+                  href: core-libraries/5.0/non-ascii-chars-in-uri-parsed-correctly.md
+                - name: 具有非預設診斷識別碼的 API 已過時
+                  href: core-libraries/5.0/obsolete-apis-with-custom-diagnostics.md
+                - name: ConsoleLoggerOptions 上的已過時屬性
+                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                - name: LINQ OrderBy.First 的複雜性
+                  href: core-libraries/5.0/orderby-firstordefault-complexity-increase.md
+                - name: 已重新命名或移除 OSPlatform 屬性
+                  href: core-libraries/5.0/os-platform-attributes-renamed.md
+                - name: 已移除 Microsoft.DotNet.PlatformAbstractions 套件
+                  href: core-libraries/5.0/platformabstractions-package-removed.md
+                - name: PrincipalPermissionAttribute 已過時
+                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                - name: 來自預覽版本的參數名稱變更
+                  href: core-libraries/5.0/reference-assembly-parameter-names-rc1.md
+                - name: 參考元件中的參數名稱變更
+                  href: core-libraries/5.0/reference-assembly-parameter-names.md
+                - name: 遠端處理 API 已過時
+                  href: core-libraries/5.0/remoting-apis-obsolete.md
+                - name: Activity.Tags 的順序清單已反轉
+                  href: core-libraries/5.0/reverse-order-of-tags-in-activity-property.md
+                - name: SSE 與 SSE2 比較方法會處理 NaN
+                  href: core-libraries/5.0/sse-comparegreaterthan-intrinsics.md
+                - name: Thread.Abort 已過時
+                  href: core-libraries/5.0/thread-abort-obsolete.md
+                - name: Unix 上 UNC 路徑的 Uri 識別
+                  href: core-libraries/5.0/unc-path-recognition-unix.md
+                - name: UTF-7 程式碼路徑已過時
+                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+                - name: Vector2.Lerp 與 Vector4.Lerp 的行為變更
+                  href: core-libraries/5.0/vector-lerp-behavior-change.md
+                - name: Vector<T> 擲回 NotSupportedException
+                  href: core-libraries/5.0/vectort-throws-notsupportedexception.md
+            - name: 密碼編譯
+              items:
+                - name: 瀏覽器不支援密碼編譯 API
+                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                - name: Cryptography.Oid 為僅限初始化
+                  href: cryptography/5.0/cryptography-oid-init-only.md
+                - name: Linux 上的預設 TLS 加密套件
+                  href: cryptography/5.0/default-cipher-suites-for-tls-on-linux.md
+                - name: 密碼編譯抽象上的 Create() 多載已過時
+                  href: cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md
+                - name: 預設 FeedbackSize 值已變更
+                  href: cryptography/5.0/tripledes-default-feedback-size-change.md
+            - name: Interop
+              items:
+                - name: 已移除 WinRT 的支援
+                  href: interop/5.0/built-in-support-for-winrt-removed.md
+                - name: 將 RCW 轉換成 InterfaceIsIInspectable 會擲回例外狀況
+                  href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
+                - name: 非 Windows 平台上沒有 A/W 尾碼探查
+                  href: interop/5.0/function-suffix-pinvoke.md
+            - name: 全球化
+              items:
+                - name: 在 Windows 上使用 ICU 程式庫
+                  href: globalization/5.0/icu-globalization-api.md
+                - name: StringInfo 與 TextElementEnumerator 符合 UAX29 規範
+                  href: globalization/5.0/uax29-compliant-grapheme-enumeration.md
+                - name: Latin-1 字元的 Unicode 類別已變更
+                  href: globalization/5.0/unicode-categories-for-latin1-chars.md
+            - name: MSBuild
+              items:
+                - name: 依預設匯入的 Directory.Packages.props 檔案
+                  href: msbuild/5.0/directory-packages-props-imported-by-default.md
+                - name: 未定義 NETCOREAPP3_1 前置處理器符號
+                  href: msbuild/5.0/netcoreapp3_1-preprocessor-symbol-not-defined.md
+                - name: PublishDepsFilePath 行為變更
+                  href: msbuild/5.0/publishdepsfilepath-behavior-change.md
+                - name: TargetFramework 從 netcoreapp 變更為 net
+                  href: msbuild/5.0/targetframework-name-change.md
+            - name: 網路功能
+              items:
+                - name: Cookie 路徑處理符合 RFC 6265
+                  href: networking/5.0/cookie-path-conforms-to-rfc6265.md
+                - name: 呼叫 SendToAsync 之後，LocalEndPoint 會更新
+                  href: networking/5.0/localendpoint-updated-on-sendtoasync.md
+                - name: MulticastOption.Group 不接受 Null
+                  href: networking/5.0/multicastoption-group-doesnt-accept-null.md
+                - name: 串流允許後續的 Begin 作業
+                  href: networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md
+                - name: 已從 .NET 執行階段移除 WinHttpHandler
+                  href: networking/5.0/winhttphandler-removed-from-runtime.md
+            - name: 安全性
+              items:
+                - name: 程式碼存取安全性 API 已過時
+                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                - name: PrincipalPermissionAttribute 已過時
+                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                - name: UTF-7 程式碼路徑已過時
+                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+            - name: 序列化
+              items:
+                - name: BinaryFormatter.Deserialize 重新封裝例外狀況
+                  href: serialization/5.0/binaryformatter-deserialize-rewraps-exceptions.md
+                - name: JsonSerializer.Deserialize 需要單一字元字串
+                  href: serialization/5.0/deserializing-json-into-char-requires-single-character.md
+                - name: ASP.NET Core 應用程式還原序列化加上引號的數字
+                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                - name: JsonSerializer.Serialize 擲回 ArgumentNullException
+                  href: serialization/5.0/jsonserializer-serialize-throws-argumentnullexception-for-null-type.md
+                - name: 非公用的無參數函式不會用於還原序列化
+                  href: serialization/5.0/non-public-parameterless-constructors-not-used-for-deserialization.md
+                - name: 序列化機碼值組時，會接受選項
+                  href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
+            - name: Windows Forms
+              items:
+                - name: OutputType 設定為 WinExe
+                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                - name: DataGridView 不會重設自訂字型
+                  href: windows-forms/5.0/datagridview-doesnt-reset-custom-font-settings.md
+                - name: 方法擲回 ArgumentException
+                  href: windows-forms/5.0/invalid-args-cause-argumentexception.md
+                - name: 方法擲回 ArgumentNullException
+                  href: windows-forms/5.0/null-args-cause-argumentnullexception.md
+                - name: 屬性值回 ArgumentOutOfRangeException
+                  href: windows-forms/5.0/invalid-args-cause-argumentoutofrangeexception.md
+                - name: TextFormatFlags.ModifyString 已過時
+                  href: windows-forms/5.0/modifystring-field-of-textformatflags-obsolete.md
+                - name: DataGridView API 擲回 InvalidOperationException
+                  href: windows-forms/5.0/null-owner-causes-invalidoperationexception.md
+                - name: WinForms 應用程式使用 Microsoft.NET.Sdk
+                  href: windows-forms/5.0/sdk-and-target-framework-change.md
+                - name: 已移除狀態列控制項
+                  href: windows-forms/5.0/winforms-deprecated-controls.md
+            - name: WPF
+              items:
+                - name: OutputType 設定為 WinExe
+                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                - name: WPF 應用程式使用 Microsoft.NET.Sdk
+                  href: windows-forms/5.0/sdk-and-target-framework-change.md
+        - name: .NET Core 3.1
+          href: 3.0-3.1.md
+        - name: .NET Core 3.0
+          href: 2.2-3.0.md
+        - name: .NET Core 2.1
+          href: 2.0-2.1.md
+    - name: 依區域的中斷性變更
+      items:
+        - name: ASP.NET Core
+          items:
+            - name: .NET 5.0
+              items:
+                - name: ASP.NET Core 應用程式還原序列化加上引號的數字
+                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                - name: AzureAD.UI 與 AzureADB2C.UI API 已過時
+                  href: aspnet-core/5.0/authentication-aad-packages-obsolete.md
+                - name: BinaryFormatter 序列化方法已過時
+                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                - name: 端點路由中的資源是 HttpContext
+                  href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
+                - name: 已移除前置詞為 Microsoft 的 Azure 整合套件
+                  href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: Blazor：已更新瀏覽器支援
+                  href: aspnet-core/5.0/blazor-browser-support-updated.md
+                - name: Blazor：編譯器已修剪不重要的空白字元
+                  href: aspnet-core/5.0/blazor-components-trim-insignificant-whitespace.md
+                - name: Blazor：JSObjectReference 與 JSInProcessObjectReference 類型為內部
+                  href: aspnet-core/5.0/blazor-jsobjectreference-to-internal.md
+                - name: Blazor：NuGet 套件的目標 Framework 已變更
+                  href: aspnet-core/5.0/blazor-packages-target-framework-changed.md
+                - name: Blazor：ProtectedBrowserStorage 功能已移至共用架構
+                  href: aspnet-core/5.0/blazor-protectedbrowserstorage-moved.md
+                - name: Blazor：RenderTreeFrame 唯讀公用欄位現在是屬性
+                  href: aspnet-core/5.0/blazor-rendertreeframe-fields-become-properties.md
+                - name: Blazor：已更新靜態 Web 資產的驗證邏輯
+                  href: aspnet-core/5.0/blazor-static-web-assets-validation-logic-updated.md
+                - name: 瀏覽器不支援密碼編譯 API
+                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                - name: 延伸模組：套件參考變更
+                  href: aspnet-core/5.0/extensions-package-reference-changes.md
+                - name: Kestrel 與 IIS BadHttpRequestException 類型已過時
+                  href: aspnet-core/5.0/http-badhttprequestexception-obsolete.md
+                - name: IHttpClientFactory 記錄整數狀態碼所建立的 HttpClient 執行個體
+                  href: aspnet-core/5.0/http-httpclient-instances-log-integer-status-codes.md
+                - name: HttpSys：用戶端憑證重新交涉預設已停用
+                  href: aspnet-core/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md
+                - name: IIS：UrlRewrite 中介軟體查詢字串已保留
+                  href: aspnet-core/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md
+                - name: Kestrel：預設會偵測到設定變更
+                  href: aspnet-core/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md
+                - name: Kestrel：預設支援的 TLS 通訊協定版本已變更
+                  href: aspnet-core/5.0/kestrel-default-supported-tls-protocol-versions-changed.md
+                - name: Kestrel：在不相容的 Windows 版本上，TLS 上的 HTTP/2 已停用
+                  href: aspnet-core/5.0/kestrel-disables-http2-over-tls.md
+                - name: Kestrel：Libuv 傳輸已標示為過時
+                  href: aspnet-core/5.0/kestrel-libuv-transport-obsolete.md
+                - name: ConsoleLoggerOptions 上的已過時屬性
+                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                - name: 已移除 ResourceManagerWithCultureStringLocalizer 類別與 WithCulture 介面成員
+                  href: aspnet-core/5.0/localization-members-removed.md
+                - name: 已移除 Pubternal API
+                  href: aspnet-core/5.0/localization-pubternal-apis-removed.md
+                - name: 已在要求當地語系化中介軟體中移除過時的函式
+                  href: aspnet-core/5.0/localization-requestlocalizationmiddleware-constructor-removed.md
+                - name: 中介軟體：資料庫錯誤頁面已標示為已過時
+                  href: aspnet-core/5.0/middleware-database-error-page-obsolete.md
+                - name: 例外狀況處理常式中介軟體擲回原始例外狀況
+                  href: aspnet-core/5.0/middleware-exception-handler-throws-original-exception.md
+                - name: ObjectModelValidator 呼叫驗證的新多載
+                  href: aspnet-core/5.0/mvc-objectmodelvalidator-calls-new-overload.md
+                - name: Cookie 名稱編碼已移除
+                  href: aspnet-core/5.0/security-cookie-name-encoding-removed.md
+                - name: 已更新 IdentityModel NuGet 套件版本
+                  href: aspnet-core/5.0/security-identitymodel-nuget-package-versions-updated.md
+                - name: SignalR：MessagePack 中樞通訊協定選項類型已變更
+                  href: aspnet-core/5.0/signalr-messagepack-hub-protocol-options-changed.md
+                - name: SignalR：MessagePack 中樞通訊協定已移動
+                  href: aspnet-core/5.0/signalr-messagepack-package.md
+                - name: 已移除 UseSignalR 與 UseConnections 方法
+                  href: aspnet-core/5.0/signalr-usesignalr-useconnections-removed.md
+                - name: CSV 內容類型已變更為與標準相容
+                  href: aspnet-core/5.0/static-files-csv-content-type-changed.md
+            - name: .NET Core 3.0-3.1
+              href: aspnetcore.md
+        - name: 程式碼分析
+          items:
+            - name: .NET 5.0
+              items:
+                - name: CA1416 警告
+                  href: code-analysis/5.0/ca1416-platform-compatibility-analyzer.md
+                - name: CA1417 警告
+                  href: code-analysis/5.0/ca1417-outattributes-on-pinvoke-string-parameters.md
+                - name: CA1831 警告
+                  href: code-analysis/5.0/ca1831-range-based-indexer-on-string.md
+                - name: CA2013 警告
+                  href: code-analysis/5.0/ca2013-referenceequals-on-value-types.md
+                - name: CA2014 警告
+                  href: code-analysis/5.0/ca2014-stackalloc-in-loops.md
+                - name: CA2015 警告
+                  href: code-analysis/5.0/ca2015-finalizers-for-memorymanager-types.md
+                - name: CA2200 警告
+                  href: code-analysis/5.0/ca2200-rethrow-to-preserve-stack-details.md
+                - name: CA2247 警告
+                  href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
+        - name: Core .NET 程式庫
+          items:
+            - name: .NET 5.0
+              items:
+                - name: 單一檔案發佈的組件相關 API 變更
+                  href: core-libraries/5.0/assembly-api-behavior-changes-for-single-file-publish.md
+                - name: BinaryFormatter 序列化方法已過時
+                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                - name: 程式碼存取安全性 API 已過時
+                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                - name: CreateCounterSetInstance 擲回 InvalidOperationException
+                  href: core-libraries/5.0/createcountersetinstance-throws-invalidoperation.md
+                - name: 預設 ActivityIdFormat 為 W3C
+                  href: core-libraries/5.0/default-activityidformat-changed.md
+                - name: Environment.OSVersion 傳回正確的版本
+                  href: core-libraries/5.0/environment-osversion-returns-correct-version.md
+                - name: FrameworkDescription 的值為 .NET 而不是 .NET Core
+                  href: core-libraries/5.0/frameworkdescription-returns-net-not-net-core.md
+                - name: GAC API 已過時
+                  href: core-libraries/5.0/global-assembly-cache-apis-obsolete.md
+                - name: 硬體內部 IsSupported 檢查
+                  href: core-libraries/5.0/hardware-instrinsics-issupported-checks.md
+                - name: IntPtr 與 UIntPtr 實作 IFormattable
+                  href: core-libraries/5.0/intptr-uintptr-implement-iformattable.md
+                - name: LastIndexOf 處理空的搜尋字串
+                  href: core-libraries/5.0/lastindexof-improved-handling-of-empty-values.md
+                - name: Unix 上具有非 ASCII 字元的 URI 路徑
+                  href: core-libraries/5.0/non-ascii-chars-in-uri-parsed-correctly.md
+                - name: 具有非預設診斷識別碼的 API 已過時
+                  href: core-libraries/5.0/obsolete-apis-with-custom-diagnostics.md
+                - name: ConsoleLoggerOptions 上的已過時屬性
+                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                - name: LINQ OrderBy.First 的複雜性
+                  href: core-libraries/5.0/orderby-firstordefault-complexity-increase.md
+                - name: 已重新命名或移除 OSPlatform 屬性
+                  href: core-libraries/5.0/os-platform-attributes-renamed.md
+                - name: 已移除 Microsoft.DotNet.PlatformAbstractions 套件
+                  href: core-libraries/5.0/platformabstractions-package-removed.md
+                - name: PrincipalPermissionAttribute 已過時
+                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                - name: 來自預覽版本的參數名稱變更
+                  href: core-libraries/5.0/reference-assembly-parameter-names-rc1.md
+                - name: 參考元件中的參數名稱變更
+                  href: core-libraries/5.0/reference-assembly-parameter-names.md
+                - name: 遠端處理 API 已過時
+                  href: core-libraries/5.0/remoting-apis-obsolete.md
+                - name: Activity.Tags 的順序清單已反轉
+                  href: core-libraries/5.0/reverse-order-of-tags-in-activity-property.md
+                - name: SSE 與 SSE2 比較方法會處理 NaN
+                  href: core-libraries/5.0/sse-comparegreaterthan-intrinsics.md
+                - name: Thread.Abort 已過時
+                  href: core-libraries/5.0/thread-abort-obsolete.md
+                - name: Unix 上 UNC 路徑的 Uri 識別
+                  href: core-libraries/5.0/unc-path-recognition-unix.md
+                - name: UTF-7 程式碼路徑已過時
+                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+                - name: Vector2.Lerp 與 Vector4.Lerp 的行為變更
+                  href: core-libraries/5.0/vector-lerp-behavior-change.md
+                - name: Vector<T> 擲回 NotSupportedException
+                  href: core-libraries/5.0/vectort-throws-notsupportedexception.md
+            - name: .NET 1.0-3.1
+              href: corefx.md
+        - name: 密碼編譯
+          items:
+            - name: .NET 5.0
+              items:
+                - name: 瀏覽器不支援密碼編譯 API
+                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                - name: Cryptography.Oid 為僅限初始化
+                  href: cryptography/5.0/cryptography-oid-init-only.md
+                - name: Linux 上的預設 TLS 加密套件
+                  href: cryptography/5.0/default-cipher-suites-for-tls-on-linux.md
+                - name: 密碼編譯抽象上的 Create() 多載已過時
+                  href: cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md
+                - name: 預設 FeedbackSize 值已變更
+                  href: cryptography/5.0/tripledes-default-feedback-size-change.md
+            - name: .NET Core 2.1-3.0
+              href: cryptography.md
+        - name: Entity Framework Core
+          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+        - name: 全球化
+          items:
+            - name: .NET 5.0
+              items:
+                - name: 在 Windows 上使用 ICU 程式庫
+                  href: globalization/5.0/icu-globalization-api.md
+                - name: StringInfo 與 TextElementEnumerator 符合 UAX29 規範
+                  href: globalization/5.0/uax29-compliant-grapheme-enumeration.md
+                - name: Latin-1 字元的 Unicode 類別已變更
+                  href: globalization/5.0/unicode-categories-for-latin1-chars.md
+            - name: .NET 3.0
+              href: globalization.md
+        - name: Interop
+          items:
+            - name: .NET 5.0
+              items:
+                - name: 已移除 WinRT 的支援
+                  href: interop/5.0/built-in-support-for-winrt-removed.md
+                - name: 將 RCW 轉換成 InterfaceIsIInspectable 會擲回例外狀況
+                  href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
+                - name: 非 Windows 平台上沒有 A/W 尾碼探查
+                  href: interop/5.0/function-suffix-pinvoke.md
+            - name: .NET Core 2.1-3.0
+              href: interop.md
+        - name: MSBuild
+          items:
+            - name: .NET 5.0
+              items:
+                - name: 依預設匯入的 Directory.Packages.props 檔案
+                  href: msbuild/5.0/directory-packages-props-imported-by-default.md
+                - name: 未定義 NETCOREAPP3_1 前置處理器符號
+                  href: msbuild/5.0/netcoreapp3_1-preprocessor-symbol-not-defined.md
+                - name: PublishDepsFilePath 行為變更
+                  href: msbuild/5.0/publishdepsfilepath-behavior-change.md
+                - name: TargetFramework 從 netcoreapp 變更為 net
+                  href: msbuild/5.0/targetframework-name-change.md
+            - name: (此檔案最後會消失)
+            - name: .NET 3.0
+              href: msbuild.md
+        - name: 網路功能
+          items:
+            - name: .NET 5.0
+              items:
+                - name: Cookie 路徑處理符合 RFC 6265
+                  href: networking/5.0/cookie-path-conforms-to-rfc6265.md
+                - name: 呼叫 SendToAsync 之後，LocalEndPoint 會更新
+                  href: networking/5.0/localendpoint-updated-on-sendtoasync.md
+                - name: MulticastOption.Group 不接受 Null
+                  href: networking/5.0/multicastoption-group-doesnt-accept-null.md
+                - name: 串流允許後續的 Begin 作業
+                  href: networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md
+                - name: 已從 .NET 執行階段移除 WinHttpHandler
+                  href: networking/5.0/winhttphandler-removed-from-runtime.md
+            - name: .NET 2.0-3.0
+              href: networking.md
+        - name: 安全性
+          items:
+            - name: .NET 5.0
+              items:
+                - name: 程式碼存取安全性 API 已過時
+                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                - name: PrincipalPermissionAttribute 已過時
+                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                - name: UTF-7 程式碼路徑已過時
+                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+        - name: 序列化
+          items:
+            - name: .NET 5.0
+              items:
+                - name: BinaryFormatter.Deserialize 重新封裝例外狀況
+                  href: serialization/5.0/binaryformatter-deserialize-rewraps-exceptions.md
+                - name: JsonSerializer.Deserialize 需要單一字元字串
+                  href: serialization/5.0/deserializing-json-into-char-requires-single-character.md
+                - name: ASP.NET Core 應用程式還原序列化加上引號的數字
+                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                - name: JsonSerializer.Serialize 擲回 ArgumentNullException
+                  href: serialization/5.0/jsonserializer-serialize-throws-argumentnullexception-for-null-type.md
+                - name: 非公用的無參數函式不會用於還原序列化
+                  href: serialization/5.0/non-public-parameterless-constructors-not-used-for-deserialization.md
+                - name: 序列化機碼值組時，會接受選項
+                  href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
+        - name: Visual Basic
+          items:
+            - name: .NET Core 3.0
+              href: visualbasic.md
+        - name: Windows Forms
+          items:
+            - name: .NET 5.0
+              items:
+                - name: OutputType 設定為 WinExe
+                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                - name: DataGridView 不會重設自訂字型
+                  href: windows-forms/5.0/datagridview-doesnt-reset-custom-font-settings.md
+                - name: 方法擲回 ArgumentException
+                  href: windows-forms/5.0/invalid-args-cause-argumentexception.md
+                - name: 方法擲回 ArgumentNullException
+                  href: windows-forms/5.0/null-args-cause-argumentnullexception.md
+                - name: 屬性值回 ArgumentOutOfRangeException
+                  href: windows-forms/5.0/invalid-args-cause-argumentoutofrangeexception.md
+                - name: TextFormatFlags.ModifyString 已過時
+                  href: windows-forms/5.0/modifystring-field-of-textformatflags-obsolete.md
+                - name: DataGridView API 擲回 InvalidOperationException
+                  href: windows-forms/5.0/null-owner-causes-invalidoperationexception.md
+                - name: WinForms 應用程式使用 Microsoft.NET.Sdk
+                  href: windows-forms/5.0/sdk-and-target-framework-change.md
+                - name: 已移除狀態列控制項
+                  href: windows-forms/5.0/winforms-deprecated-controls.md
+            - name: .NET Core 3.0-3.1
+              href: winforms.md
+        - name: WPF
+          items:
+            - name: .NET 5.0
+              items:
+                - name: OutputType 設定為 WinExe
+                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                - name: WPF 應用程式使用 Microsoft.NET.Sdk
+                  href: windows-forms/5.0/sdk-and-target-framework-change.md
+    - name: SYSLIB 警告
       items:
         - name: 概觀
           displayName: 'syslib, obsolete, obsoletion'
@@ -46,40 +596,3 @@
           href: syslib0011.md
         - name: SYSLIB0012
           href: syslib0012.md
-    - name: .NET Framework 至 .NET Core
-      items:
-        - name: 重大變更
-          href: fx-core.md
-        - name: 無法使用的技術
-          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
-        - name: 永遠擲回的 API
-          href: unsupported-apis.md
-- name: 依技術範圍
-  expanded: true
-  items:
-    - name: ASP.NET Core
-      href: aspnetcore.md
-    - name: 程式碼分析
-      href: code-analysis.md
-    - name: Core .NET 程式庫
-      href: corefx.md
-    - name: 密碼編譯
-      href: cryptography.md
-    - name: Entity Framework Core
-      href: /ef/core/what-is-new/ef-core-3.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
-    - name: 全球化
-      href: globalization.md
-    - name: Interop
-      href: interop.md
-    - name: MSBuild
-      href: msbuild.md
-    - name: 網路
-      href: networking.md
-    - name: 序列化
-      href: serialization.md
-    - name: Visual Basic
-      href: visualbasic.md
-    - name: Windows Forms
-      href: winforms.md
-    - name: WPF
-      href: wpf.md

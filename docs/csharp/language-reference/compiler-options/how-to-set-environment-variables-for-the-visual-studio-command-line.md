@@ -17,10 +17,10 @@ helpviewer_keywords:
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 ms.openlocfilehash: b985c85e2fddce459ed68b3d07ba7d54a8b2d0a7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125601"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何為 Visual Studio 命令列設定環境變數
@@ -36,9 +36,9 @@ VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。
 
 1. 在 [ **開始** ] 功能表中，開啟 **VS 2019 的開發人員命令提示字元**。  它位於 **Visual Studio 2019** 資料夾中。
 
-2. 變更為 \Program Files\Microsoft Visual Studio \\ *版本* \\ *提供*\Common7\Tools 或 \Program 檔案 (x86) \microsoft Visual Studio \\ *版本* \\ *提供*安裝的 \Common7\Tools 子目錄。  目前版本的 (*版本* 是 *2019* 。 *供應項目*為 *Enterprise*、*Professional* 或 *Community* 中的其中一個。)
+2. 變更為 \Program Files\Microsoft Visual Studio \\ *版本* \\ *提供*\Common7\Tools 或 \Program 檔案 (x86) \microsoft Visual Studio \\ *版本* \\ *提供* 安裝的 \Common7\Tools 子目錄。  目前版本的 (*版本* 是 *2019* 。 *供應項目* 為 *Enterprise*、*Professional* 或 *Community* 中的其中一個。)
 
-3. 鍵入 **VsDevCmd**以執行 VsDevCmd.bat。
+3. 鍵入 **VsDevCmd** 以執行 VsDevCmd.bat。
 
     > [!CAUTION]
     > 在不同的電腦上，VsDevCmd.bat 檔案可能也不同。 請勿使用另一部電腦的 VsDevCmd.bat 來取代遺失或損毀的 VsDevCmd.bat 檔案。 請重新執行安裝程式以取代遺失的檔案。

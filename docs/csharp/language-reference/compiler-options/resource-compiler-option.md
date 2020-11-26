@@ -13,10 +13,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193773"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# 編譯器選項)
@@ -56,11 +56,11 @@ ms.locfileid: "91193773"
   
 1. 將資源檔新增至專案。  
   
-2. 選取您想要內嵌在方案總管**** 中的檔案。  
+2. 選取您想要內嵌在方案總管中的檔案。  
   
-3. 在 [屬性]**** 視窗中，選取檔案的 [建置動作]****。  
+3. 在 [屬性] 視窗中，選取檔案的 [建置動作]。  
   
-4. 將 [建置動作]**** 設定為 [內嵌資源]****。  
+4. 將 [建置動作] 設定為 [內嵌資源]。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   

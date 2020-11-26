@@ -10,15 +10,15 @@ helpviewer_keywords:
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
 ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92471647"
 ---
 # <a name="value-types-c-reference"></a>數值型別 (c # 參考) 
 
-實*數值型別*和[參考型別](../keywords/reference-types.md)是 c # 型別的兩個主要類別。 實值型別的變數包含型別的實例。 這與參考型別的變數不同，後者包含型別實例的參考。 根據預設，在 [指派](../operators/assignment-operator.md)時，將引數傳遞至方法，並傳回方法結果，會複製變數值。 在實數值型別變數的情況下，會複製對應的型別實例。 下列範例示範了該行為：
+實 *數值型別* 和 [參考型別](../keywords/reference-types.md)是 c # 型別的兩個主要類別。 實值型別的變數包含型別的實例。 這與參考型別的變數不同，後者包含型別實例的參考。 根據預設，在 [指派](../operators/assignment-operator.md)時，將引數傳遞至方法，並傳回方法結果，會複製變數值。 在實數值型別變數的情況下，會複製對應的型別實例。 下列範例示範了該行為：
 
 [!code-csharp[copy of values](snippets/shared/ValueTypes.cs#ValueTypeCopied)]
 

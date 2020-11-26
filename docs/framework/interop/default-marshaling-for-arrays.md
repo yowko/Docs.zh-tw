@@ -10,10 +10,10 @@ helpviewer_keywords:
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 ms.openlocfilehash: 6bfe95576a6460efac75fd392e24acf42e36f2de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90555259"
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
@@ -44,7 +44,7 @@ ms.locfileid: "90555259"
   
 |Unmanaged 類型|匯入的類型|  
 |--------------------|-------------------|  
-|**SafeArray (** *類型* **) **|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
+|**SafeArray (** *類型* **)**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
 |*類型*  **[]**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
   
 ### <a name="safe-arrays"></a>安全陣列  
@@ -187,7 +187,7 @@ void New3(ref String ar);
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>****\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
 |**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
   
- 與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串]**** 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
+ 與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串] 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  將包含 **ELEMENT_TYPE_SZARRAY** 參數 (一維陣列) 的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 相同的轉換規則會套用至陣列項目類型。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  

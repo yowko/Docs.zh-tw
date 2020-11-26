@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91059154"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 編碼慣例
@@ -37,7 +37,7 @@ Microsoft 會依照本主題中的指導方針來開發範例與檔。 如果您
   
 - 以空格插入索引標籤，並使用具有四個空格縮排的智慧縮排。  
   
-- 使用 **整齊的清單 (重新格式化程式碼) ** ，以在程式碼編輯器中重新格式化您的程式碼。 如需詳細資訊，請參閱 [ [選項]、[文字編輯器]、[基本 (Visual Basic) ](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。  
+- 使用 **整齊的清單 (重新格式化程式碼)** ，以在程式碼編輯器中重新格式化您的程式碼。 如需詳細資訊，請參閱 [ [選項]、[文字編輯器]、[基本 (Visual Basic) ](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。  
   
 - 每行只能使用一個語句。 請勿使用 Visual Basic 行分隔字元 (： ) 。  
   

@@ -3,10 +3,10 @@ title: 一般結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91203809"
 ---
 # <a name="common-schema-collections"></a>一般結構描述集合
@@ -79,7 +79,7 @@ ms.locfileid: "91203809"
 |IsLiteralSupported|bool|True 表示資料型別可表示為常值。<br /><br /> False 表示資料型別不可表示為常值。|  
 |LiteralPrefix|字串|套用至指定常值的前置詞。|  
 |LiteralSuffix|字串|套用至指定常值的後置詞。|  
-|NativeDataType|String|NativeDataType 是用於公開資料型別之 OLE DB 型別的 OLE DB 特定資料行。|  
+|NativeDataType|字串|NativeDataType 是用於公開資料型別之 OLE DB 型別的 OLE DB 特定資料行。|  
   
 ## <a name="restrictions"></a>限制  
 

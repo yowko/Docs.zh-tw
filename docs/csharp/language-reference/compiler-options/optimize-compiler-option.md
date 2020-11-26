@@ -14,10 +14,10 @@ helpviewer_keywords:
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193981"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# 編譯器選項)
@@ -44,11 +44,11 @@ ms.locfileid: "91193981"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]**** 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [建置]**** 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3. 修改**最佳化程式碼**屬性。  
+3. 修改 **最佳化程式碼** 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>。  
   

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: 3fdb030dfc141b011f5faa827a4e4bb45ae38d19
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89466010"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
@@ -57,15 +57,15 @@ anycpu (預設值)、anycpu32bitpreferred、ARM、x64、x86 或 Itanium。
 
 - 使用 **-platform:anycpu32bitpreferred** 所編譯的可執行檔會在 32 位元 CLR 上執行。
 
-**Anycpu32bitpreferred**設定只對可執行檔 ( 有效。EXE) 檔案，且需要 .NET Framework 4.5 或更新版本。
+**Anycpu32bitpreferred** 設定只對可執行檔 ( 有效。EXE) 檔案，且需要 .NET Framework 4.5 或更新版本。
 
 如需開發要在 Windows 64 位元作業系統上執行之應用程式的詳細資訊，請參閱 [64 位元應用程式](../../../framework/64-bit-apps.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性] **** 頁面。
+1. 開啟專案的 [屬性]  頁面。
 
-2. 按一下 [建置]**** 屬性頁面。
+2. 按一下 [建置] 屬性頁面。
 
 3. 修改 [ **平臺目標** ] 屬性，並針對以 .NET Framework 4.5 或更新版本為目標的專案，選取或清除 [ **偏好 32** 位] 核取方塊。
 
@@ -84,5 +84,5 @@ csc -platform:anycpu filename.cs
 
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](index.md)
+- [C# 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

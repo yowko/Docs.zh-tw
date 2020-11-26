@@ -10,15 +10,15 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91152438"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# 編譯器選項)
 
-**-Lib**選項會指定由[-Reference (c # 編譯器選項) ](./reference-compiler-option.md)選項參考之元件的位置。  
+**-Lib** 選項會指定由 [-Reference (c # 編譯器選項)](./reference-compiler-option.md)選項參考之元件的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,9 +56,9 @@ ms.locfileid: "91152438"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性頁] **** 對話方塊。  
+1. 開啟專案的 [屬性頁]  對話方塊。  
   
-2. 按一下 [參考路徑]**** 屬性頁。  
+2. 按一下 [參考路徑] 屬性頁。  
   
 3. 修改清單方塊的內容。  
   

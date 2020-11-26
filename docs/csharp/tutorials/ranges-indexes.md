@@ -5,10 +5,10 @@ ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
 ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90738862"
 ---
 # <a name="indices-and-ranges"></a>索引和範圍
@@ -54,7 +54,7 @@ string[] words = new string[]
 
 [!code-csharp[LastIndex](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-指定範圍「開頭」** 與「結尾」** 的範圍。 範圍是專屬的，這表示範圍中不包含 *結尾* 。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。
+指定範圍「開頭」與「結尾」的範圍。 範圍是專屬的，這表示範圍中不包含 *結尾* 。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。
 
 下列程式碼會建立具有 "quick"、"brown" 和 "fox" 字組的子範圍。 其會包含 `words[1]` 到 `words[3]`。 項目 `words[4]` 不在範圍內。 將下列程式碼新增至相同的方法。 複製並貼在互動式視窗的底部。
 
@@ -85,11 +85,11 @@ string[] words = new string[]
 > [!IMPORTANT]
 > 使用範圍運算子的程式碼效能取決於序列運算元的類型。
 >
-> 範圍運算子的時間複雜性取決於順序類型。 例如，如果序列是 `string` 或陣列，則結果會是輸入之指定區段的複本，因此，時間複雜度為 *O (N) * (其中 N 是) 範圍的長度。 另一方面，如果是 <xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.Memory%601?displayProperty=nameWithType> ，則結果會參考相同的備份存放區，這表示沒有任何複本，而且作業是 * (1) *。
+> 範圍運算子的時間複雜性取決於順序類型。 例如，如果序列是 `string` 或陣列，則結果會是輸入之指定區段的複本，因此，時間複雜度為 *O (N)* (其中 N 是) 範圍的長度。 另一方面，如果是 <xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.Memory%601?displayProperty=nameWithType> ，則結果會參考相同的備份存放區，這表示沒有任何複本，而且作業是 *(1)*。
 >
 > 除了時間複雜度，這會造成額外的配置和複本，進而影響效能。 在效能敏感的程式碼中，請考慮使用 `Span<T>` 或 `Memory<T>` 做為序列類型，因為範圍運算子不會配置它們。
 
-如果類型具有**countable**名為的屬性， `Length` 或是 `Count` 具有可存取 getter 和傳回類型的，則會計算類型 `int` 。 未明確支援索引或範圍的計算類型可能會為其提供隱含支援。 如需詳細資訊，請參閱[功能提案附注](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隱含索引支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隱含範圍支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)區段。 使用隱含範圍支援的範圍會傳回與來源序列相同的序列類型。
+如果類型具有 **countable** 名為的屬性， `Length` 或是 `Count` 具有可存取 getter 和傳回類型的，則會計算類型 `int` 。 未明確支援索引或範圍的計算類型可能會為其提供隱含支援。 如需詳細資訊，請參閱[功能提案附注](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隱含索引支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隱含範圍支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)區段。 使用隱含範圍支援的範圍會傳回與來源序列相同的序列類型。
 
 例如，下列 .NET 類型支援索引和範圍： <xref:System.String> 、 <xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601> 。 <xref:System.Collections.Generic.List%601>支援索引，但不支援範圍。
 

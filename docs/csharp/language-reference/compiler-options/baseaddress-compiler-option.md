@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 ms.openlocfilehash: 76da496f7045f12778bba273947b913be1b94e3e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91196841"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# 編譯器選項)
@@ -41,13 +41,13 @@ ms.locfileid: "91196841"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]**** 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [建置]**** 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
 3. 按一下 [進階]  按鈕。  
   
-4. 修改 **DLL 基底位址**屬性。  
+4. 修改 **DLL 基底位址** 屬性。  
   
      若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。  
   

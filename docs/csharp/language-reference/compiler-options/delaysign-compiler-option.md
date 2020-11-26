@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 ms.openlocfilehash: 5512ebeca4672f5d69852ab07c3f3fa40c305327
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125835"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# 編譯器選項)
@@ -34,7 +34,7 @@ ms.locfileid: "89125835"
 
 ## <a name="remarks"></a>備註
 
-除非搭配[-keyfile](./keyfile-compiler-option.md)或[-keycontainer](./keycontainer-compiler-option.md)使用，否則 **-delaysign**選項不會有任何作用。
+除非搭配 [-keyfile](./keyfile-compiler-option.md)或 [-keycontainer](./keycontainer-compiler-option.md)使用，否則 **-delaysign** 選項不會有任何作用。
 
 **-delaysign** 和 **-publicsign** 選項是互斥的。
 
@@ -46,13 +46,13 @@ ms.locfileid: "89125835"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性] **** 頁面。
-1. 修改 [僅延遲簽署]**** 屬性。
+1. 開啟專案的 [屬性]  頁面。
+1. 修改 [僅延遲簽署] 屬性。
 
 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# -publicsign 選項](publicsign-compiler-option.md)
-- [C # 編譯器選項](index.md)
+- [C# 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

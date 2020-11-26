@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177707"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 的參數
@@ -56,7 +56,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|這個參數會使用資料行的原始值。|  
 |`Proposed`|這個會參數使用建議值。|  
   
- 下一區段中的 `SqlClient` 程式碼範例會定義 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 的參數，其中 `CustomerID` 資料行將做為兩個參數的 `SourceColumn` 使用：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`參數是用來將**CustomerID**資料行更新為中的目前值 `DataRow` 。 如此一 `CustomerID` `SourceColumn` `SourceVersion` `Current` 來，就會使用的 with a。 `@OldCustomerID`參數是用來識別資料來源中的目前資料列。 因為在資料列的 `Original` 版本中找到相符的資料行值，所以會使用 `SourceColumn` 為 `CustomerID` 的同一個 `SourceVersion` (`Original`)。  
+ 下一區段中的 `SqlClient` 程式碼範例會定義 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 的參數，其中 `CustomerID` 資料行將做為兩個參數的 `SourceColumn` 使用：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`參數是用來將 **CustomerID** 資料行更新為中的目前值 `DataRow` 。 如此一 `CustomerID` `SourceColumn` `SourceVersion` `Current` 來，就會使用的 with a。 `@OldCustomerID`參數是用來識別資料來源中的目前資料列。 因為在資料列的 `Original` 版本中找到相符的資料行值，所以會使用 `SourceColumn` 為 `CustomerID` 的同一個 `SourceVersion` (`Original`)。  
   
 ## <a name="working-with-sqlclient-parameters"></a>使用 SqlClient 參數  
 
@@ -167,7 +167,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> 如果未提供參數的參數名稱，則會為參數指定參數*N*的增量預設名稱 *，* 開頭為 "Parameter1"。 當您提供參數名稱時，建議您避免使用參數*N* 命名慣例，因為您所提供的名稱可能會與中的現有預設參數名稱發生衝突 `ParameterCollection` 。 如果提供的名稱已經存在，便會發生例外狀況。  
+> 如果未提供參數的參數名稱，則會為參數指定參數 *N* 的增量預設名稱 *，* 開頭為 "Parameter1"。 當您提供參數名稱時，建議您避免使用參數 *N* 命名慣例，因為您所提供的名稱可能會與中的現有預設參數名稱發生衝突 `ParameterCollection` 。 如果提供的名稱已經存在，便會發生例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
 

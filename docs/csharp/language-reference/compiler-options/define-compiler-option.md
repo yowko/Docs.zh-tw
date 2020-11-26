@@ -13,10 +13,10 @@ helpviewer_keywords:
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173265"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C# 編譯器選項)
@@ -55,9 +55,9 @@ ms.locfileid: "91173265"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]**** 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 在 [建置]**** 索引標籤的 [條件式編譯的符號]**** 方塊中，輸入要定義的符號。 例如，如果您想要使用下列程式碼範例，只要在文字方塊中鍵入 `xx` 即可。  
+2. 在 [建置] 索引標籤的 [條件式編譯的符號] 方塊中，輸入要定義的符號。 例如，如果您想要使用下列程式碼範例，只要在文字方塊中鍵入 `xx` 即可。  
   
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。  
   

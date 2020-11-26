@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
 ms.openlocfilehash: 9e84ff95f7f0addac1c2c2d79af0ab53572da27f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193799"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (C# 編譯器選項)
@@ -36,7 +36,7 @@ ms.locfileid: "91193799"
   
 ## <a name="remarks"></a>備註  
 
- **-遞迴**選項可讓您在指定的目錄 (`dir`) 或專案目錄的所有子目錄中，編譯原始程式碼檔。  
+ **-遞迴** 選項可讓您在指定的目錄 (`dir`) 或專案目錄的所有子目錄中，編譯原始程式碼檔。  
   
  您可以在檔案名中使用萬用字元，來編譯專案目錄中的所有相符檔案，而不需要使用 **-遞迴**。  
   
