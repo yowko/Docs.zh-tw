@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 1fbde53289c147d8ea273b9c86e65cbb8e262b30
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596406"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252383"
 ---
 # <a name="ws-transaction-flow"></a>WS 交易流程
-這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 這個範例是以實作為計算機服務的[消費者入門](getting-started-sample.md)為基礎，但是作業的屬性是為了示範如何使用搭配 `TransactionFlowAttribute` **TransactionFlowOption**列舉來判斷啟用的交易流程程度。 在流動的異動範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調異動之前都會保存該記錄檔。如果用戶端異動未完成，Web 服務異動一定不會認可對資料庫進行適當的更新。  
+
+這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 這個範例是以實作為計算機服務的 [消費者入門](getting-started-sample.md) 為基礎，但作業的屬性是要示範如何使用搭配 `TransactionFlowAttribute` **TransactionFlowOption** 列舉來判斷啟用的交易流程。 在流動的異動範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調異動之前都會保存該記錄檔。如果用戶端異動未完成，Web 服務異動一定不會認可對資料庫進行適當的更新。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -47,7 +48,7 @@ public interface ICalculator
   
 - `Divide` 作業要求在省略 `TransactionFlow` 屬性時不可包含流動的異動。  
   
- 若要啟用交易流程， [\<transactionFlow>](../../configure-apps/file-schema/wcf/transactionflow.md) 除了適當的作業屬性之外，還必須使用已啟用屬性的系結。 在此範例中，除了中繼資料交換端點以外，服務組態也會公開 TCP 端點和 HTTP 端點。 TCP 端點和 HTTP 端點會使用下列系結，兩者都已 [\<transactionFlow>](../../configure-apps/file-schema/wcf/transactionflow.md) 啟用屬性。  
+ 若要啟用交易流程， [\<transactionFlow>](../../configure-apps/file-schema/wcf/transactionflow.md) 除了適當的作業屬性之外，還必須使用已啟用屬性的系結。 在此範例中，除了中繼資料交換端點以外，服務組態也會公開 TCP 端點和 HTTP 端點。 TCP 端點和 HTTP 端點會使用下列系結，這兩個系結都已 [\<transactionFlow>](../../configure-apps/file-schema/wcf/transactionflow.md) 啟用屬性。  
   
 ```xml  
 <bindings>  
@@ -64,7 +65,7 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
-> 系統提供的 netTcpBinding 允許使用 transactionProtocol 規格，而系統提供的 wsHttpBinding 僅使用更具互通性的 WSAtomicTransactionOctober2004 通訊協定。 OleTransactions 通訊協定僅供 Windows Communication Foundation （WCF）用戶端使用。  
+> 系統提供的 netTcpBinding 允許使用 transactionProtocol 規格，而系統提供的 wsHttpBinding 僅使用更具互通性的 WSAtomicTransactionOctober2004 通訊協定。 OleTransactions 通訊協定僅供 Windows Communication Foundation (WCF) 用戶端使用。  
   
  針對實作 `ICalculator` 介面的類別，將會以設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 的 `true` 屬性 (Property)，屬性化 (Attributed) 所有方法。 這個設定的宣告為，將會在交易範圍內發生方法內採用的所有動作。 在此情況下，採取的動作包含記錄資料庫的記錄。 如果作業要求中包含流動的異動，則會在傳入異動範圍內發生動作，或者自動產生新的異動範圍。  
   
@@ -223,68 +224,68 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 若要建立方案的 c # 或 Visual Basic .NET 版本，請遵循[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示  
+1. 若要建立解決方案的 c # 或 Visual Basic .NET 版本，請遵循[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示  
   
 2. 確定您已安裝 SQL Server Express Edition 或 SQL Server，而且已在服務的應用程式組態檔中正確設定連接字串。 若要在不使用資料庫的情況下執行範例，請將服務之應用程式組態檔中的 `usingSql` 值設定為 `false`。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
+3. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
     > [!NOTE]
-    > 若為跨電腦組態，請使用下列指示來啟用分散式異動協調器，然後使用 Windows SDK 中的 WsatConfig.exe 工具來啟用 WCF 異動網路支援。 如需設定 Wsatconfig.exe 的相關資訊，請參閱設定 WS-不可部分完成的[交易支援](../feature-details/configuring-ws-atomic-transaction-support.md)。  
+    > 若為跨電腦組態，請使用下列指示來啟用分散式異動協調器，然後使用 Windows SDK 中的 WsatConfig.exe 工具來啟用 WCF 異動網路支援。 如需設定 WsatConfig.exe 的詳細資訊，請參閱設定 [WS-Atomic 交易支援](../feature-details/configuring-ws-atomic-transaction-support.md)。  
   
- 無論您是在同一部電腦或不同電腦上執行範例，都必須設定 Microsoft 分散式交易協調器（MSDTC）以啟用網路交易流程，並使用 Wsatconfig.exe 工具來啟用 WCF 交易網路支援。  
+ 無論您是在同一部電腦或不同的電腦上執行此範例，您都必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 WCF 交易網路支援。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援執行範例  
   
 1. 在執行 Windows Server 2003 或 Windows XP 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
   
-    1. 在 [**開始**] 功能表中，依序流覽至 [**控制台**]、[系統**管理工具**] 和 [**元件服務**]。  
+    1. 在 [ **開始** ] 功能表中，依序流覽至 [ **主控台**]、[系統 **管理工具**] 和 [ **元件服務**]。  
   
-    2. 展開 [**元件服務**]。 開啟 [**電腦**] 資料夾。  
+    2. 展開 [ **元件服務**]。 開啟 [ **電腦** ] 資料夾。  
   
-    3. 以滑鼠右鍵按一下**我的電腦**，然後選取 [**屬性**]。  
+    3. 以滑鼠右鍵按一下 **我的電腦** ，然後選取 [ **屬性**]。  
   
-    4. 在 [ **MSDTC** ] 索引標籤上，按一下 [**安全性**設定]。  
+    4. 在 [ **MSDTC** ] 索引標籤上，按一下 [ **安全性** 設定]。  
   
-    5. 檢查**網路 DTC 存取**並**允許輸入**。  
+    5. 檢查 **網路 DTC 存取** 並 **允許輸入**。  
   
-    6. 按一下 **[確定]**，然後按一下 [**是**] 重新開機 MSDTC 服務。  
+    6. 按一下 **[確定]**，然後按一下 [ **是** ] 以重新開機 MSDTC 服務。  
   
-    7. 按一下 [確定]  關閉對話方塊。  
+    7. 按一下 **[確定]** ，關閉對話方塊。  
   
 2. 在執行 Windows Server 2008 或 Windows Vista 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
   
-    1. 在 [**開始**] 功能表中，依序流覽至 [**控制台**]、[系統**管理工具**] 和 [**元件服務**]。  
+    1. 在 [ **開始** ] 功能表中，依序流覽至 [ **主控台**]、[系統 **管理工具**] 和 [ **元件服務**]。  
   
-    2. 展開 [**元件服務**]。 開啟 [**電腦**] 資料夾。 選取 [**分散式交易協調器**]。  
+    2. 展開 [ **元件服務**]。 開啟 [ **電腦** ] 資料夾。 選取 **分散式交易協調器**。  
   
-    3. 以滑鼠右鍵按一下 [ **DTC 協調器**]，然後選取 [**屬性**]。  
+    3. 以滑鼠右鍵按一下 [ **DTC 協調器** ]，然後選取 [ **屬性**]。  
   
-    4. 在 [**安全性**] 索引標籤上，檢查 [**網路 DTC 存取**] 和 [**允許輸入**]。  
+    4. 在 [ **安全性** ] 索引標籤上，檢查 [ **網路 DTC 存取** ] 和 [ **允許輸入**]。  
   
-    5. 按一下 **[確定]**，然後按一下 [**是**] 重新開機 MSDTC 服務。  
+    5. 按一下 **[確定]**，然後按一下 [ **是** ] 以重新開機 MSDTC 服務。  
   
-    6. 按一下 [確定]  關閉對話方塊。  
+    6. 按一下 **[確定]** ，關閉對話方塊。  
   
 3. 在用戶端電腦上，設定 MSDTC 以允許傳出網路交易：  
   
-    1. 在 [**開始**] 功能表中，依序流覽至 [系統 `Control Panel` **管理工具**] 和 [**元件服務**]。  
+    1. 從 [ **開始** ] 功能表，依序流覽至 [系統 `Control Panel` **管理工具**] 和 [ **元件服務**]。  
   
-    2. 以滑鼠右鍵按一下**我的電腦**，然後選取 [**屬性**]。  
+    2. 以滑鼠右鍵按一下 **我的電腦** ，然後選取 [ **屬性**]。  
   
-    3. 在 [ **MSDTC** ] 索引標籤上，按一下 [**安全性**設定]。  
+    3. 在 [ **MSDTC** ] 索引標籤上，按一下 [ **安全性** 設定]。  
   
-    4. 檢查 [**網路 DTC 存取**] 和 [**允許輸出**]。  
+    4. 檢查 **網路 DTC 存取** 並 **允許輸出**。  
   
-    5. 按一下 **[確定]**，然後按一下 [**是**] 重新開機 MSDTC 服務。  
+    5. 按一下 **[確定]**，然後按一下 [ **是** ] 以重新開機 MSDTC 服務。  
   
-    6. 按一下 [確定]  關閉對話方塊。  
+    6. 按一下 **[確定]** ，關閉對話方塊。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

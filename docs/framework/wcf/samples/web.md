@@ -2,26 +2,27 @@
 title: Web
 ms.date: 03/30/2017
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-ms.openlocfilehash: aad3b68dfad8e542bf0975ffcc653a4e791b2d53
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fc62b88e2924db9df43d4169327a7db66f27d651
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602306"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251330"
 ---
 # <a name="web"></a>Web
+
 本節包含 Web 裝載的範例。  
   
 ## <a name="in-this-section"></a>本節內容
   
  [基本 HTTP 服務](basic-http-service.md)  
- 示範如何使用 WCF Web HTTP 程式設計模型，來執行以 HTTP 為基礎、以 RPC 為基礎的服務也就一般，稱為 "POX" （純舊 XML）服務。
+ 示範如何使用 WCF Web HTTP 程式設計模型，將以 HTTP 為基礎的 RPC 型服務也就一般（稱為 "POX" (單純的舊 XML) 服務）執行。
   
  [SOAP 及 HTTP 端點](soap-and-http-endpoints.md)  
- 示範如何執行 RPC 型服務，並使用 WCF Web HTTP 程式設計模型，以 SOAP 格式和「純舊 XML」（POX）格式公開它。  
+ 示範如何使用 WCF Web HTTP 程式設計模型，以 SOAP 格式和「純舊 XML」 (POX) 格式，來執行 RPC 型服務並以 SOAP 格式公開。  
   
  [ASP.NET 快取整合](aspnet-caching-integration.md)  
- 示範如何利用 WCF Web HTTP 程式設計模型來使用 ASP.NET 輸出快取。  
+ 示範如何使用 ASP.NET 輸出快取搭配 WCF Web HTTP 程式設計模型。  
   
  [UriTemplate](uritemplate-sample.md)  
  示範與 <xref:System.UriTemplate> 相關的主要概念。  

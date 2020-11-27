@@ -3,17 +3,19 @@ title: 在程式碼中設定 WCF 服務
 description: 瞭解如何使用程式碼，而不是使用自我裝載和 web 託管服務的設定檔來設定 WCF 服務。
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 975eafea5a153287f5ccc71b9aa342c12391004e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ba59856d94168c7f18319c09c9b00f26ecdff5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253306"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務
+
 Windows Communication Foundation (WCF) 可讓開發人員使用設定檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可讓您在程式碼中設定服務。 在舊版 WCF (4.0 和舊版中) 在自我裝載的案例中，以程式碼來設定服務很容易，類別可讓 <xref:System.ServiceModel.ServiceHost> 您在呼叫 ServiceHost 之前設定端點和行為。開啟。 但是在 Web 裝載案例中，您就無法直接存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET Framework 4.5 開始，WCF 提供更簡單的方法，讓您在程式碼中同時設定自我裝載和 web 託管服務。
 
 ## <a name="the-configure-method"></a>Configure 方法
+
  只需定義名為 `Configure` 的公用靜態方法，並在您的服務實作類別中包含下列簽章：
 
 ```csharp

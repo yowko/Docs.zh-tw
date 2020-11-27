@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: cc0772cbb35f7c149af7eac04239d7349fa79f27
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e33a487c03bbf87666d517040e00131f5482be6f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797209"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251512"
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
-資料合約*代理*是建立在資料合約模型上的一項先進功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
+
+資料合約 *代理* 是建立在資料合約模型上的先進功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
   
  序列化和還原序列化是在使用 <xref:System.Runtime.Serialization.DataContractSerializer> 從 .NET Framework 轉換為適合的格式 (例如 XML) 時，使用資料合約代理完成。 資料合約代理也可以在產生中繼資料表示 (例如 XML 結構描述文件，XSD) 時，用來修改針對型別匯出的中繼資料。 匯入時，程式碼會從中繼資料建立，而代理同樣可以在這種情況下用來自訂產生的程式碼。  
   
 ## <a name="how-the-surrogate-works"></a>代理的運作方式  
+
  代理是藉由對應一種型別 (「原始」型別) 到另一種型別 (「代理」型別) 的方式運作。 下列範例示範原始型別 `Inventory` 和新的代理 `InventorySurrogated` 型別。 `Inventory` 型別無法序列化，但是 `InventorySurrogated` 型別可以序列化。  
   
  [!code-csharp[C_IDataContractSurrogate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#1)]  
@@ -26,11 +28,13 @@ ms.locfileid: "70797209"
  [!code-csharp[C_IDataContractSurrogate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#2)]  
   
 ## <a name="implementing-the-idatacontractsurrogate"></a>實作 IDataContractSurrogate  
+
  若要使用資料合約代理，請實作 <xref:System.Runtime.Serialization.IDataContractSurrogate> 介面。  
   
  下列是每種 <xref:System.Runtime.Serialization.IDataContractSurrogate> 方法的概觀，包括可能的實作。  
   
 ### <a name="getdatacontracttype"></a>GetDataContractType  
+
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法會將一種型別對應到另一種。 這個方法為序列化、還原序列化、匯入和匯出時所需。  
   
  第一項工作是定義要對應到其他型別的型別。 例如：  
@@ -52,6 +56,7 @@ ms.locfileid: "70797209"
  在之前的範例中，方法會檢查 `type` 參數和 `Inventory` 是否可以比較。 如果可以的話，方法就會將它對應到 `InventorySurrogated`。 無論是呼叫序列化、還原序列化、匯入結構描述或匯出結構描述，都會先呼叫這個函式以判斷型別之間的對應。  
   
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize 方法  
+
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法會將原始型別執行個體轉換成代理型別執行個體。 這是序列化需要的方法。  
   
  下一個步驟是定義實體資料藉由實作 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法，從原始執行個體對應到代理的方式。 例如：  
@@ -60,15 +65,16 @@ ms.locfileid: "70797209"
   
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法會在序列化物件時呼叫。 這個方法會將資料從原始型別傳輸至代理型別的欄位。 欄位可以直接對應到代理欄位，或是原始資料的管理可以儲存在代理中。 一些可能的用法包括：直接對應欄位、在要儲存到代理欄位中的資料上執行作業，或是將原始型別的 XML 儲存到代理欄位中。  
   
- `targetType` 參數會參考宣告的成員型別。 這個參數是由 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法傳回的代理型別。 序列化程式不會強制傳回的物件必須能夠指派給這個型別。 `obj`參數是要序列化的物件，並會在必要時轉換成其代理。 如果代理的物件不會處理該物件的話，這個方法就必須傳回輸入物件。 否則將傳回新的代理物件。 如果物件為 null，則不會呼叫代理。 這個物件內可定義許多不同執行個體的代理對應。  
+ `targetType` 參數會參考宣告的成員型別。 這個參數是由 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法傳回的代理型別。 序列化程式不會強制傳回的物件必須能夠指派給這個型別。 `obj`參數是要序列化的物件，必要時將會轉換為其代理。 如果代理的物件不會處理該物件的話，這個方法就必須傳回輸入物件。 否則將傳回新的代理物件。 如果物件為 null，則不會呼叫代理。 這個物件內可定義許多不同執行個體的代理對應。  
   
- 建立 <xref:System.Runtime.Serialization.DataContractSerializer> 時，您可以指示它保留物件參考 （如需詳細資訊，請參閱[序列化和還原序列化](../feature-details/serialization-and-deserialization.md)）。只要在其建構函式中將 `preserveObjectReferences` 參數設為 `true`，就能達到這個目的。 在這個情況下，只會呼叫物件的代理一次，因為後續的所有序列化會直接將參考寫入資料流中。 如果 `preserveObjectReferences` 設為 `false`，則會在每次遇到執行個體時呼叫代理。  
+ 建立 <xref:System.Runtime.Serialization.DataContractSerializer> 時，您可以指示它保留物件參考   (如需詳細資訊，請參閱 [序列化和還原序列化](../feature-details/serialization-and-deserialization.md)。 ) 這是藉由將它的函式 `preserveObjectReferences` 中的參數設定為來 `true` 完成。 在這個情況下，只會呼叫物件的代理一次，因為後續的所有序列化會直接將參考寫入資料流中。 如果 `preserveObjectReferences` 設為 `false`，則會在每次遇到執行個體時呼叫代理。  
   
  如果序列化的執行個體型別與宣告的型別不同，則型別資訊會寫入資料流中 (例如 `xsi:type`)，讓執行個體能夠在另一端還原序列化。 這項程序無論物件是否為代理都會發生。  
   
  上面的範例會將 `Inventory` 執行個體的資料轉換成 `InventorySurrogated` 的資料。 它會檢查物件的型別並且執行必要的管理，以轉換成代理型別。 在這個案例中，`Inventory` 類別的欄位會直接複製到 `InventorySurrogated` 類別的欄位中。  
   
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject 方法  
+
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 方法會將代理型別執行個體轉換成原始型別執行個體。 這是還原序列化所需的程序。  
   
  下一項工作是定義將實體資料從代理執行個體對應到原始執行個體的方式。 例如：  
@@ -84,6 +90,7 @@ ms.locfileid: "70797209"
  之前的範例會將 `InventorySurrogated` 型別的物件轉換回初始型別 `Inventory`。 在這個案例中，資料是從 `InventorySurrogated` 直接傳輸回 `Inventory` 中對應的欄位。 由於沒有資料管理，因此每個成員欄位都會包含與序列化之前相同的值。  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 方法  
+
  匯出結構描述時，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是選擇性的。 這個方法是用來將額外的資料或提示插入匯出的結構描述中。 額外的資料可在成員層級或型別層級插入。 例如：  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
@@ -95,14 +102,17 @@ ms.locfileid: "70797209"
  其中任一個多載必須傳回 `null` 或可序列化的物件。 非 null 的物件將做為附註序列化成匯出的結構描述。 若為 `Type` 多載，匯出至結構描述的每個型別會隨著代理類別傳送到這個方法的第一個參數中做為 `dataContractType` 參數。 若為 `MemberInfo` 多載，則匯出至結構描述的每個成員都會傳送其資訊，做為第二個參數中代理型別的 `memberInfo` 參數。  
   
 #### <a name="getcustomdatatoexport-method-type-type"></a>GetCustomDataToExport 方法 (Type, Type)  
+
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Type%2CSystem.Type%29?displayProperty=nameWithType> 方法會在針對每一個型別定義匯出結構描述的期間呼叫。 這個方法會在匯出時，將資訊加入至結構描述內的型別。 定義的每個型別都會傳送至這個方法，以判斷是否有任何額外的資訊需要加入結構描述中。  
   
 #### <a name="getcustomdatatoexport-method-memberinfo-type"></a>GetCustomDataToExport 方法 (MemberInfo, Type)  
+
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Reflection.MemberInfo%2CSystem.Type%29?displayProperty=nameWithType> 會在匯出已匯出的型別中每一個成員時呼叫。 這個函式可讓您自訂匯出時，將加入結構描述中之成員的任何註解。 類別內每一個成員的資訊都會傳送至這個方法，以檢查是否有任何額外的資料需要加入結構描述中。  
   
  上面的範例會搜尋 `dataContractType` 中是否有代理的每個成員。 然後為每個欄位傳回適當的存取修飾詞。 如果沒有這個自訂程序，存取修飾詞的預設值就會是公用。 因此，無論實際的存取限制為何，所有成員在使用匯出的結構描述產生的程式碼中，都會定義為公用。 而沒有使用這個實作時，即使 `numpens` 成員在代理中定義為私用，在匯出的結構描述中仍會是公用。 透過使用這個方法，存取修飾詞在匯出的結構描述中就可以產生為私用。  
   
 ### <a name="getreferencedtypeonimport-method"></a>GetReferencedTypeOnImport 方法  
+
  這個方法會將代理的 <xref:System.Type> 對應到原始型別。 這個方法對於結構描述的匯入作業來說是選擇性的。  
   
  當建立匯入結構描述及產生其程式碼的代理時，下一項工作就是將代理執行個體的型別定義為其原始型別。  
@@ -114,6 +124,7 @@ ms.locfileid: "70797209"
  `customData` 參數是原本從 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 傳回的物件。 這個 `customData` 會在代理的作者想要在匯入以產生程式碼期間，將額外的資料/提示插入要使用的中繼資料時使用。  
   
 ### <a name="processimportedtype-method"></a>ProcessImportedType 方法  
+
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 方法會自訂任何從結構描述匯入作業建立的型別。 這個方法是一個選擇項目。  
   
  當匯入結構描述時，這個方法會允許自訂任何匯入的型別和編譯資訊。 例如：  
@@ -129,19 +140,22 @@ ms.locfileid: "70797209"
  上面的範例會在匯入的結構描述上執行某些變更。 程式碼會使用代理保留原始型別的私用成員。 匯入結構描述時的預設存取修飾詞為 `public`。 因此除非經過修改，否則代理結構描述的所有成員都會是公用，如本範例中所示。 匯出期間，自訂資料會插入有關哪些成員為私用的中繼資料中。 這個範例會查看自訂資料、檢查存取修飾詞是否為私用，然後藉由設定屬性的方式將適當的成員修改為私用。 如果沒有這項自訂程序，`numpens` 成員就會定義為公用而非私用。  
   
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes 方法  
+
  這個方法會從結構描述取得定義的自訂資料型別。 這個方法對於結構描述的匯入作業來說是選擇性的。  
   
- 這個方法會在結構描述匯出和匯入開始時呼叫。 然後傳回在匯出或匯入的結構描述中使用的自訂資料型別。 這個方法會收到傳遞的 <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` 參數)，此為型別的集合。 這個方法應將額外的已知型別加入這個集合中。 必須有已知的自訂資料型別，才能使用 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化和還原序列化自訂資料。 如需詳細資訊，請參閱[資料合約已知類型](../feature-details/data-contract-known-types.md)。  
+ 這個方法會在結構描述匯出和匯入開始時呼叫。 然後傳回在匯出或匯入的結構描述中使用的自訂資料型別。 這個方法會收到傳遞的 <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` 參數)，此為型別的集合。 這個方法應將額外的已知型別加入這個集合中。 必須有已知的自訂資料型別，才能使用 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化和還原序列化自訂資料。 如需詳細資訊，請參閱 [資料合約已知類型](../feature-details/data-contract-known-types.md)。  
   
 ## <a name="implementing-a-surrogate"></a>實作代理  
+
  若要在 WCF 中使用資料合約代理，您必須遵循幾個特殊程式。  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>若要使用代理進行序列化和還原序列化  
+
  您可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> 搭配代理來執行資料序列化和還原序列化。 <xref:System.Runtime.Serialization.DataContractSerializer> 是由 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 建立。 代理同樣必須指定。  
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>若要實作序列化和還原序列化  
   
-1. 為服務建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。 如需完整指示，請參閱[基本 WCF 程式設計](../basic-wcf-programming.md)。  
+1. 為服務建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。 如需完整的指示，請參閱 [基本 WCF 程式設計](../basic-wcf-programming.md)。  
   
 2. 針對所指定服務主機的每一個 <xref:System.ServiceModel.Description.ServiceEndpoint>，尋找其 <xref:System.ServiceModel.Description.OperationDescription>。  
   
@@ -154,6 +168,7 @@ ms.locfileid: "70797209"
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-import"></a>若要使用代理進行中繼資料匯入  
+
  匯入中繼資料如 WSDL 和 XSD 以產生用戶端程式碼時，必須將代理加入負責從 XSD 結構描述 <xref:System.Runtime.Serialization.XsdDataContractImporter> 產生程式碼的元件。 若要執行這項操作，請直接修改用來匯入中繼資料的 <xref:System.ServiceModel.Description.WsdlImporter>。  
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>若要實作代理以匯入中繼資料  
@@ -175,7 +190,8 @@ ms.locfileid: "70797209"
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>若要使用代理進行中繼資料匯出  
- 根據預設，從 WCF 匯出服務的中繼資料時，必須同時產生 WSDL 和 XSD 架構。 代理必須加入至負責產生資料合約型別 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的 XSD 結構描述元件中。 若要執行這項操作，可使用實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行為修改 <xref:System.ServiceModel.Description.WsdlExporter>，或是直接修改用來匯出中繼資料的 <xref:System.ServiceModel.Description.WsdlExporter>。  
+
+ 根據預設，從服務的 WCF 匯出中繼資料時，必須產生 WSDL 和 XSD 架構。 代理必須加入至負責產生資料合約型別 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的 XSD 結構描述元件中。 若要執行這項操作，可使用實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行為修改 <xref:System.ServiceModel.Description.WsdlExporter>，或是直接修改用來匯出中繼資料的 <xref:System.ServiceModel.Description.WsdlExporter>。  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>若要使用代理進行中繼資料匯出  
   

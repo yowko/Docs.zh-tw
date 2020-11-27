@@ -2,17 +2,19 @@
 title: System.Uri 的國際資源識別項支援
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3670c40a7a78e2ac8b521a4cb95477381848f36
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "64647342"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253358"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri 的國際資源識別項支援
+
 <xref:System.Uri?displayProperty=nameWithType> 類別已擴充加上國際資源識別碼 (IRI) 和國際化網域名稱 (IDN) 支援。 NET Framework 3.5、3.0 SP1 和 2.0 SP1 皆可使用這些增強功能。  
   
 ## <a name="iri-and-idn-support"></a>IRI 和 IDN 支援  
+
  網址通常是使用統一資源識別碼 (URI) 來表示，而 URI 是由非常有限的字元組構成：  
   
 - 大寫和小寫的英文 ASCII 字母。  

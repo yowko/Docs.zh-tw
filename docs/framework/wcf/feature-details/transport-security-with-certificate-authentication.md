@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251824"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>憑證驗證的傳輸安全性
 
@@ -27,12 +27,13 @@ ms.locfileid: "90545216"
 |安全性模式|傳輸|  
 |互通性|使用現有 Web 服務用戶端和服務。|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 SSL 憑證)<br /><br /> 是 (使用 X.509 憑證)|  
-|資料完整性|是|  
+|資料完整性|Yes|  
 |資料機密性|是|  
 |傳輸|HTTPS|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>設定服務  
+
  由於此案例中的服務是在 IIS 之下裝載，因此該服務使用 web.config 檔案設定。 以下的 web.config 示範如何設定 <xref:System.ServiceModel.WSHttpBinding> 使用傳輸安全性和 X.509 用戶端認證。  
   
 ```xml  
@@ -64,6 +65,7 @@ ms.locfileid: "90545216"
 ```  
   
 ## <a name="configure-the-client"></a>設定用戶端  
+
  用戶端可以在程式碼或 app.config 檔案中設定。 下列範例示範如何在程式碼中設定用戶端。  
   
 ```csharp

@@ -2,14 +2,15 @@
 title: 4203 - RenewLockSystemError
 ms.date: 03/30/2017
 ms.assetid: 6ec9ec6f-4ae2-45cf-b99b-02cdb9dc9ec9
-ms.openlocfilehash: 984f7ddae8797cba17753a618d0820d21bde5eef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17617e25c5cf8cecae608438529e9ce1a7d506f7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774344"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251265"
 ---
 # <a name="4203---renewlocksystemerror"></a>4203 - RenewLockSystemError
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61774344"
 |識別碼|4203|  
 |關鍵字|WFInstanceStore|  
 |層級|錯誤|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  表示因為已超過鎖定期限或已刪除鎖定擁有人，所以 SQL 提供者無法延長鎖定期限。 SqlWorkflowInstanceStore 即將中止。  
   
 ## <a name="message"></a>訊息  
+
  無法延長鎖定期限，已超過鎖定期限或已刪除鎖定擁有人。 正在中止 SqlWorkflowInstanceStore。  
   
 ## <a name="details"></a>詳細資料  

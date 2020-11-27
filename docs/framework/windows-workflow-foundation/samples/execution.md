@@ -2,15 +2,16 @@
 title: 執行
 ms.date: 03/30/2017
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-ms.openlocfilehash: fd6ba0bb3a463287cea28e95ad2b893dd8d0c8a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 116eec94cbd33c282ec2b899ff7689e31311e6b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913779"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251548"
 ---
 # <a name="execution"></a>執行
-本節包含示範執行工作流程中 Windows Workflow Foundation (WF) 的範例。  
+
+本節包含的範例示範如何在 Windows Workflow Foundation (WF) 中執行工作流程。  
   
 ## <a name="in-this-section"></a>本節內容
   

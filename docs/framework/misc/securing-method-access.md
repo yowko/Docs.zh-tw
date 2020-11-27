@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52ae1eb4b6210403ce9c5aa96479809f885b0eba
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555714"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251213"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 
@@ -40,7 +40,7 @@ ms.locfileid: "90555714"
   
 - 需要覆寫指定方法的衍生類別以具有指定身分識別或權限。  
   
- 下列範例示範如何以要求呼叫端使用特定強勢名稱，來協助保護限制存取的公用類別。 這個範例會使用 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 具有強式名稱的 **要求** 。 如需有關如何使用強式名稱簽署元件的工作型資訊，請參閱 [建立和使用強](../../standard/assembly/create-use-strong-named.md)名稱的元件。  
+ 下列範例示範如何以要求呼叫端使用特定強勢名稱，來協助保護限制存取的公用類別。 這個範例會使用 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 具有強式名稱的 **要求** 。 如需有關如何使用強式名稱簽署元件的工作型資訊，請參閱 [建立和使用 Strong-Named 元件](../../standard/assembly/create-use-strong-named.md)。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -57,6 +57,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>將類別和成員排除在未受信任程式碼的使用之外  
+
  使用這一節中所示的宣告，來防止部分信任程式碼使用特定類別和方法，以及屬性和事件。 藉由將這些宣告套用至類別，您可以將保護套用至其所有方法、屬性和事件。 但是，欄位存取不會受到宣告式安全性的影響。 也請注意，連結要求協助防範立即呼叫端，且可能還是會受到引誘攻擊。  
   
 > [!NOTE]
