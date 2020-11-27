@@ -5,17 +5,19 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 97308d97677ed9f791f54541e8c594873213c13e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 92e0924143b42309b98fb967dfea0502bae29203
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289902"
 ---
 # <a name="set-up-instructions"></a>設定指示
+
 這組主題說明如何設定執行 Windows Communication Foundation (WCF) 服務所需的服務。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [Windows Communication Foundation 範例的單次安裝程序](one-time-setup-procedure-for-the-wcf-samples.md)  
  概述設定 WCF 範例的步驟。  
   
@@ -41,4 +43,5 @@ ms.locfileid: "90535491"
  概述安裝訊息佇列的步驟。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [WCF 範例的疑難排解秘訣](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

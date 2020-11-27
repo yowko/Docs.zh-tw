@@ -2,18 +2,20 @@
 title: 使用具有探索用戶端通道的自訂繫結
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 49983c3ab303d3839350af72b1aa4821c071fe99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d84739a0021262826c541ab3ff9df663adabf44a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595033"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289655"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>使用具有探索用戶端通道的自訂繫結
+
 使用自訂繫結配合 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 時，您必須定義建立 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 執行個體的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。  
   
 ## <a name="creating-a-discoveryendpointprovider"></a>建立 DiscoveryEndpointProvider  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>會負責 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 視需要建立實例。 若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。 下列範例示範如何建立探索端點提供者。  
+
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>負責 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 視需要建立實例。 若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。 下列範例示範如何建立探索端點提供者。  
   
 ```csharp
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -43,9 +45,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- 如需有關使用探索用戶端通道的詳細資訊，請參閱[使用探索用戶端通道](using-the-discovery-client-channel.md)。
+ 如需使用探索用戶端通道的詳細資訊，請參閱 [使用探索用戶端通道](using-the-discovery-client-channel.md)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 探索概觀](wcf-discovery-overview.md)
 - [使用探索用戶端通道](using-the-discovery-client-channel.md)

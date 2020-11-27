@@ -2,12 +2,12 @@
 title: 不支援的案例
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557810"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289642"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 
@@ -16,6 +16,7 @@ ms.locfileid: "90557810"
 ## <a name="impersonation-scenarios"></a>模擬案例
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>當用戶端進行非同步呼叫時，模擬的身分識別可能不會流動
+
  當 WCF 用戶端在模擬下使用 Windows 驗證對 WCF 服務進行非同步呼叫時，可能會驗證用戶端處理序的識別，而非模擬的識別。
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>已啟用 Windows XP 和安全內容權杖 cookie
@@ -72,7 +73,7 @@ WCF 不支援符合 256 SHA-1 FIPS 標準的雜湊，因此在需要使用符合
 
 ### <a name="cngksp-certificates"></a>CNG/KSP 憑證
 
-*密碼編譯 API：新一代 (CNG) * 是 CryptoAPI 的長期取代。 此 API 適用于 Windows Vista、Windows Server 2008 及更新版本 Windows 版本上的非受控碼。
+*密碼編譯 API：新一代 (CNG)* 是 CryptoAPI 的長期取代。 此 API 適用于 Windows Vista、Windows Server 2008 及更新版本 Windows 版本上的非受控碼。
 
  .NET Framework 4.6.1 和較早的版本不支援這些憑證，因為它們使用舊版 CryptoAPI 來處理 CNG/KSP 憑證。 使用這些憑證搭配 .NET Framework 4.6.1 和更早版本將會造成例外狀況。
 

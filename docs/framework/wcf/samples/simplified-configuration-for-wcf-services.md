@@ -3,14 +3,15 @@ title: WCF 服務的簡化組態
 description: 瞭解如何使用 WCF 來執行和設定一般服務和用戶端。 服務會使用設定檔中指定的端點進行通訊。
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 087618d603ea1c7df75ab5383f6c95b781dca847
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554263"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290019"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
+
 這個範例示範如何使用 Windows Communication Foundation (WCF) 來執行和設定一般服務和用戶端。 這個範例是所有其他基本技術範例的基礎。  
   
  這項服務會公開用來與服務進行通訊的端點，使用 .NET Framework 4 的簡化設定。 在 .NET Framework 4 之前，端點通常定義于設定檔中 ( # A0) ，如下列範例設定程式碼所示。  

@@ -2,17 +2,19 @@
 title: 資料合約
 ms.date: 03/30/2017
 ms.assetid: 941049b6-8e98-497f-ab3f-19848241699f
-ms.openlocfilehash: 496e6c96330988974be19ebd1d804367467b4562
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ad50572d21a00afd202340743e843ee786fac77e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602553"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291553"
 ---
 # <a name="data-contracts"></a>資料合約
-本節包含的範例會示範 Windows Communication Foundation （WCF）中的資料合約。  
+
+本節包含的範例會示範 Windows Communication Foundation (WCF) 中的資料合約。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [基本資料合約](basic-data-contract.md)  
  示範如何實作資料合約。  
   

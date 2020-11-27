@@ -2,17 +2,18 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: 6d2717bc2d1d14e369af2b9c5a8c0affb67501d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6af85d62fffada95537494692b8694f42d7a2932
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956542"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290084"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
+
 TcpTransportBindingElement  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -25,19 +26,23 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 ```  
   
 ## <a name="methods"></a>方法  
+
  TcpTransportBindingElement 類別並未定義任何方法。  
   
 ## <a name="properties"></a>屬性  
+
  TcpTransportBindingElement 類別具有下列屬性：  
   
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
- 資料類型：TcpConnectionPoolSettings  
+
+ 資料型別：TcpConnectionPoolSettings  
   
  存取類型：唯讀  
   
  連線集區設定。  
   
 ### <a name="listenbacklog"></a>ListenBacklog  
+
  資料型別：sint32  
   
  存取類型：唯讀  
@@ -45,6 +50,7 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
  可以擱置之佇列連線要求的最大數目。  
   
 ### <a name="portsharingenabled"></a>PortSharingEnabled  
+
  資料型別：布林值  
   
  存取類型：唯讀  
@@ -52,13 +58,14 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
  布林值，這個值指定是否為此連線啟用 TCP 連接埠共用。  
   
 ### <a name="teredoenabled"></a>TeredoEnabled  
+
  資料型別：布林值  
   
  存取類型：唯讀  
   
  布林值，指定是否啟用 Teredo (對防火牆後的用戶端進行定址的技術)。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
 |---------|-----------------------------------|  

@@ -2,22 +2,24 @@
 title: 永久性發行權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7e0025eb4bc4918b977d9d8c4e2b1435b0425973
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291670"
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
+
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
   
-## <a name="discussion"></a>討論區  
- Windows Communication Foundation （WCF）中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附了 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：  
+## <a name="discussion"></a>討論  
+
+ Windows Communication Foundation (WCF) 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 - 如果您有內建權杖提供者無法使用的認證存放區。  
   
-- 如果您想要提供自己的自訂機制，以便在使用者將詳細資料提供給 WCF 用戶端使用認證時，從該點轉換認證。  
+- 如果您想要提供自己的自訂機制，將認證從使用者提供詳細資料到 WCF 用戶端使用認證時的時間點進行轉換。  
   
 - 如果您要建置自訂權杖。  
   
@@ -110,7 +112,8 @@ ms.locfileid: "84600552"
  安全性權杖服務會使用標準 wsHttpBinding 來公開單一端點。 「安全性權杖服務」會對用戶端要求權杖做出回應，假設用戶端驗證是使用 Windows 帳戶，會再發行包含用戶端之使用者名稱的權杖，當做發行之權杖中的宣告。 在建立權杖的過程中，「安全性權杖服務」會使用與 CN=STS 憑證關聯的私密金鑰來簽署權杖。 此外，它還會建立對稱金鑰，並使用與 CN=localhost 憑證關聯的公開金鑰進行加密。 在將權杖傳回至用戶端時，「安全性權杖服務」也會傳回對稱金鑰。 用戶端會向計算機服務出示發行權杖，然後使用對稱金鑰簽署訊息來證明它知道這把金鑰。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>自訂用戶端認證和權杖提供者  
- 下列步驟示範如何開發自訂權杖提供者，以快取已發行的權杖並將它與 WCF： security 整合。  
+
+ 下列步驟說明如何開發自訂權杖提供者，以快取發行的權杖並將其與 WCF 整合：安全性。  
   
 ### <a name="to-develop-a-custom-token-provider"></a>若要開發自訂權杖提供者  
   
@@ -226,16 +229,18 @@ ms.locfileid: "84600552"
     ```  
   
 ## <a name="running-the-sample"></a>執行範例  
+
  請參閱下列指示以執行範例。 當您執行範例時，安全性權杖的要求會顯示在「安全性權杖服務」主控台視窗中。 作業要求和回應會顯示在用戶端和服務主控台視窗中。 在任何主控台視窗中按下 ENTER 鍵，即可關閉應用程式。  
   
 ## <a name="the-setupcmd-batch-file"></a>Setup.cmd 批次檔  
+
  本範例中所包含的 Setup.cmd 批次檔可讓您使用相關的憑證設定伺服器和安全性權杖服務，以執行自我裝載應用程式。 批次檔會在 CurrentUser/TrustedPeople 憑證存放區中建立兩份憑證。 第一份憑證的主體名稱為 CN=STS，而且由「安全性權杖服務」用來簽署發行給用戶端的安全性權杖。 第二份憑證的主體名稱為 CN=localhost，而且由「安全性權杖服務」用於加密服務可以解密的密碼。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
 1. 執行 Setup.cmd 檔以建立所需的憑證。  
   
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。 確認已建置方案中的所有專案 (Shared、RSTRSTR、Service、SecurityTokenService 和 Client)。  
+2. 若要建立方案，請依照 [建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。 確認已建置方案中的所有專案 (Shared、RSTRSTR、Service、SecurityTokenService 和 Client)。  
   
 3. 確定 Service.exe 和 SecurityTokenService.exe 都以系統管理員權限執行中。  
   
@@ -250,6 +255,6 @@ ms.locfileid: "84600552"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

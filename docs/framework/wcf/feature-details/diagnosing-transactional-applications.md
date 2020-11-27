@@ -2,18 +2,20 @@
 title: 診斷交易式應用程式
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: fb3a83083e876cf697621ba70dcf7dd67636f83a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696ebe7249a8388eaaf38a678581e28d472e821a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599213"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290240"
 ---
 # <a name="diagnosing-transactional-applications"></a>診斷交易式應用程式
-本主題描述如何使用 Windows Communication Foundation （WCF）管理和診斷功能，對交易式應用程式進行疑難排解。  
+
+本主題說明如何使用 Windows Communication Foundation (WCF) 管理和診斷功能，對交易式應用程式進行疑難排解。  
   
 ## <a name="performance-counters"></a>效能計數器  
- WCF 提供一組標準的效能計數器，可讓您測量交易式應用程式的效能。 如需相關資訊，請參閱 [Performance Counters](../diagnostics/performance-counters/index.md)。  
+
+ WCF 提供一組標準的效能計數器，供您測量交易應用程式的效能。 如需相關資訊，請參閱 [Performance Counters](../diagnostics/performance-counters/index.md)。  
   
  效能計數器分為三種不同的層級：服務、端點和作業，如下表所述。  
   
@@ -45,7 +47,8 @@ ms.locfileid: "84599213"
 |每秒流動的異動數|每秒鐘流動至此端點處作業的異動數。 每當傳送給端點的訊息中出現一筆異動時，此計數器就會遞增。|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- WCF 會透過 WCF Windows Management Instrumentation （WMI）提供者，在執行時間公開服務的檢查資料。 如需存取 WMI 資料的詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](../diagnostics/wmi/index.md)。  
+
+ WCF 會透過 WCF Windows Management Instrumentation (WMI) 提供者，在執行時間公開服務的檢查資料。 如需存取 WMI 資料的詳細資訊，請參閱 [使用 Windows Management Instrumentation 進行診斷](../diagnostics/wmi/index.md)。  
   
  許多唯讀的 WMI 屬性會指示服務套用的異動設定， 下表則列出這些設定。  
   
@@ -85,6 +88,7 @@ ms.locfileid: "84599213"
 |TransactionFlowOption|字串，其中包含 <xref:System.ServiceModel.TransactionFlowOption> 列舉的有效值。|指定異動流程被需要的程度。|  
   
 ## <a name="tracing"></a>追蹤  
+
  追蹤可讓您監視及分析交易式應用程式內的錯誤。 您可以使用下列方式啟用追蹤：  
   
 - 標準 WCF 追蹤  
@@ -93,7 +97,7 @@ ms.locfileid: "84599213"
   
 - WS-AtomicTransaction 追蹤  
   
-     您可以使用 ws-atomictransaction 設定[公用程式（wsatconfig.exe）](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)來啟用 ws-atomictransaction 追蹤。 此類追蹤可讓您深入了解系統內交易和參與者的狀態。 若要同時啟用內部服務模型追蹤，您可以將 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 登錄機碼設定為 <xref:System.Diagnostics.SourceLevels> 列舉的有效值。 您可以使用與其他 WCF 應用程式相同的方式來啟用訊息記錄。  
+     您可以使用 [ws-atomictransaction 設定公用程式 ( # A0) ](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)來啟用 WS-AtomicTransaction 追蹤。 此類追蹤可讓您深入了解系統內交易和參與者的狀態。 若要同時啟用內部服務模型追蹤，您可以將 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 登錄機碼設定為 <xref:System.Diagnostics.SourceLevels> 列舉的有效值。 您可以使用與其他 WCF 應用程式相同的方式來啟用訊息記錄。  
   
 - `System.Transactions` 追蹤  
   
@@ -120,8 +124,8 @@ ms.locfileid: "84599213"
   
      這也會啟用 WCF 追蹤，因為 WCF 也會利用 <xref:System.Transactions> 基礎結構。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [系統管理與診斷](../diagnostics/index.md)
 - [設定追蹤](../diagnostics/tracing/configuring-tracing.md)
-- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
