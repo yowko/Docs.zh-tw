@@ -1,18 +1,18 @@
 ---
 title: 使用應用程式定義域
-description: 使用應用程式域，提供 common language runtime （CLR）的隔離單位。 應用程式域會在進程內建立和執行。
+description: 使用應用程式域，提供 common language runtime (CLR) 的隔離單位。 應用程式域會在進程內建立和執行。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 36bfc60a55c8b0374a7e542b590aa7c030ceaed6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105188"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272263"
 ---
 # <a name="using-application-domains"></a>使用應用程式定義域
 
@@ -55,6 +55,7 @@ ms.locfileid: "85105188"
 代表應用程式定義域。 提供建立及控制應用程式定義域的方法。  
   
 ## <a name="related-sections"></a>相關章節  
+
 [.NET 中的組件](../../standard/assembly/index.md)  
 提供組件執行函式的概觀。  
   
@@ -68,4 +69,4 @@ ms.locfileid: "85105188"
 提供應用程式定義域的概觀。  
   
 [反映概觀](../reflection-and-codedom/reflection.md)  
-描述如何使用「反映」**** 類別，以取得組件的相關資訊。
+描述如何使用「反映」類別，以取得組件的相關資訊。

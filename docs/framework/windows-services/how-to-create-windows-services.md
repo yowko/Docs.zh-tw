@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-ms.openlocfilehash: 35d78acd4fae7bf98a2b3f4ce6ac8a32393c35d4
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 9b171fa54cf65a482625c276c26185b12075c753
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608591"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270702"
 ---
 # <a name="how-to-create-windows-services"></a>作法：建立 Windows 服務
-當您建立服務時，可以使用稱為 **Windows 服務**的 Visual Studio 專案範本。 這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。  
+
+當您建立服務時，可以使用稱為 **Windows 服務** 的 Visual Studio 專案範本。 這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。  
   
 > [!WARNING]
 > 您無法在 Express 版的 Visual Studio 中使用 Windows 服務專案範本。  
@@ -29,12 +30,12 @@ ms.locfileid: "91608591"
   
 ### <a name="to-create-a-windows-service-application"></a>建立 Windows 服務應用程式  
   
-1. 建立 **Windows 服務**專案。  
+1. 建立 **Windows 服務** 專案。  
   
     > [!NOTE]
     > 如需不使用範本撰寫服務的指示，請參閱[如何：以程式設計方式撰寫服務](how-to-write-services-programmatically.md)。  
   
-2. 在 [屬性]**** 視窗中，設定服務的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性。  
+2. 在 [屬性] 視窗中，設定服務的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性。  
   
      ![設定 ServiceName 屬性。](./media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
@@ -52,7 +53,7 @@ ms.locfileid: "91608591"
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|如果為 `True`，則會在服務執行動作時，將資訊項目寫入應用程式事件記錄檔；如果為 `false`，則會停用這項功能。 如需詳細資訊，請參閱[如何：記錄關於服務的資訊](how-to-log-information-about-services.md)。 **注意：** 預設會將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 設定為 `true`。|  
   
     > [!NOTE]
-    > 當 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 設定為 `false` 時，**服務控制管理員**將會停用對應的功能表選項，以停止、暫停或繼續服務。  
+    > 當 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 設定為 `false` 時，**服務控制管理員** 將會停用對應的功能表選項，以停止、暫停或繼續服務。  
   
 4. 存取程式碼編輯器，然後填入您想要對 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 程序進行的處理。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "91608591"
   
 6. 為服務應用程式加入必要的安裝程式。 如需詳細資訊，請參閱[如何：將安裝程式加入服務應用程式](how-to-add-installers-to-your-service-application.md)。  
   
-7. 從 [建置]**** 功能表選取 [建置方案]****，以建置您的專案。  
+7. 從 [建置] 功能表選取 [建置方案]，以建置您的專案。  
   
     > [!NOTE]
     > 請勿按 F5 執行您的專案，您無法透過這個方法來執行服務專案。  

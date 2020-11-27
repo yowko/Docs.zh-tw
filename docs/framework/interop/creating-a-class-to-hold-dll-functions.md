@@ -1,6 +1,6 @@
 ---
 title: 建立類別以包裝 DLL 函式
-description: 在 .NET 中建立受控類別包裝函式以保存 DLL 函式，這有助於封裝平臺功能。
+description: 在 .NET 中建立 managed 類別包裝函式以保存 DLL 函式，這有助於封裝平臺功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, DLL functions
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-ms.openlocfilehash: b8aa0361ee5213cb947a102f903d1a7a35331f17
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c255efe4579635389ac62956cac9d1405bfb184c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622168"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271430"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>建立類別以包裝 DLL 函式
+
 將常用 DLL 函式包裝在 Managed 類別中，是封裝平台功能的有效方法。 雖然不會強制您在每個案例這麼做，但提供類別包裝函式十分方便，因為定義 DLL 函式十分麻煩又容易發生錯誤。 如果您是使用 Visual Basic 或 C# 進行程式設計，則必須在類別或 Visual Basic 模組內宣告 DLL 函式。  
   
  在類別內，您可以為每個您想要呼叫的 DLL 函式定義靜態方法。 定義可以包含其他資訊，例如傳遞方法引數時所使用的字元集或呼叫慣例；略過這項資訊，即可選取預設設定。 如需宣告選項和其預設設定的完整清單，請參閱[在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)。  

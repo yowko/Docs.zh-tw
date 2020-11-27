@@ -2,17 +2,19 @@
 title: Windows Workflow Foundation 中被取代的類型
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: 011f13a56695efdd9e964ef1e6c1099b0acc2710
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 628963650d32237dedbb6ab2a0a2d9a79866af18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713336"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272868"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Windows Workflow Foundation 中被取代的類型
+
 在 .NET 4 中，工作流程小組在 <xref:System.Activities> 命名空間中發行了全新的工作流程引擎。 在 .NET Framework 4.5 Beta 版中，我們會將 "WF 3" <xref:System.Workflow.Activities> 、和命名空間中的大部分類型標示 <xref:System.Workflow.ComponentModel>  <xref:System.Workflow.Runtime> 為已淘汰。
 
 ## <a name="obsolete-namespaces-and-tools"></a>過時的命名空間和工具
+
  下列組件含有一個或多個將會被取代的公用型別：
 
 - System.Workflow.Activities.dll

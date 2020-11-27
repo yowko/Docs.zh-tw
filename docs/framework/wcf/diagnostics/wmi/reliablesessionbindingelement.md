@@ -2,17 +2,18 @@
 title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-ms.openlocfilehash: b0a621da43402777cc620f1876bd968a72bb8c12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f91e38ab88cd9f93e9bec0e3a6ca65254bc49570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962912"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273317"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
+
 ReliableSessionBindingElement  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ReliableSessionBindingElement : BindingElement  
@@ -29,12 +30,15 @@ class ReliableSessionBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>方法  
+
  ReliableSessionBindingElement 類別不會定義任何方法。  
   
 ## <a name="properties"></a>屬性  
+
  ReliableSessionBindingElement 類別具有下列屬性：  
   
 ### <a name="acknowledgementinterval"></a>AcknowledgementInterval  
+
  資料型別：日期時間  
   
  存取類型：唯讀  
@@ -42,6 +46,7 @@ class ReliableSessionBindingElement : BindingElement
  目的地傳送確認到可靠通道 (由處理站所建立) 上的訊息來源之前等候的時間間隔。  
   
 ### <a name="flowcontrolenabled"></a>FlowControlEnabled  
+
  資料型別：布林值  
   
  存取類型：唯讀  
@@ -49,6 +54,7 @@ class ReliableSessionBindingElement : BindingElement
  指定是否已啟用流量控制的布林值。  
   
 ### <a name="inactivitytimeout"></a>InactivityTimeout  
+
  資料型別：日期時間  
   
  存取類型：唯讀  
@@ -56,6 +62,7 @@ class ReliableSessionBindingElement : BindingElement
  指定將通道判定為失敗之前可允許另一個通訊方不傳送任何訊息的最長期間。  
   
 ### <a name="maxpendingchannels"></a>MaxPendingChannels  
+
  資料型別：sint32  
   
  存取類型：唯讀  
@@ -63,6 +70,7 @@ class ReliableSessionBindingElement : BindingElement
  可在接聽項上等候接受的通道數目上限。  
   
 ### <a name="maxretrycount"></a>MaxRetryCount  
+
  資料型別：sint32  
   
  存取類型：唯讀  
@@ -70,13 +78,15 @@ class ReliableSessionBindingElement : BindingElement
  可靠通道透過在其基礎通道呼叫 `Send`，以嘗試重新傳輸尚未收到確認之訊息的最大次數。  
   
 ### <a name="maxtransferwindowsize"></a>MaxTransferWindowSize  
+
  資料型別：sint32  
   
  存取類型：唯讀  
   
  可靠工作階段的傳輸窗口大小上限。  
   
-### <a name="ordered"></a>排序  
+### <a name="ordered"></a>訂購時間  
+
  資料型別：布林值  
   
  存取類型：唯讀  
@@ -84,13 +94,14 @@ class ReliableSessionBindingElement : BindingElement
  布林值，指定是否保證訊息以傳送順序送達。  
   
 ### <a name="reliablemessagingversion"></a>ReliableMessagingVersion  
+
  資料型別：整數  
   
  存取類型：唯讀  
   
  指定用於可靠工作階段中 WS-ReliableMessaging 通訊協定版本的整數。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
 |---------|-----------------------------------|  

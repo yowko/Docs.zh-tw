@@ -1,6 +1,6 @@
 ---
 title: SqlMetal.exe (程式碼產生工具)
-description: 瞭解程式碼產生工具 SqlMetal.exe。 使用工具來產生 .NET LINQ to SQL 元件的程式碼和對應。
+description: 瞭解 SqlMetal.exe 程式碼產生工具。 使用工具來產生 .NET 的 LINQ to SQL 元件的程式碼和對應。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 4edf11315892ed8267bee17d69a70033348eca5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517044"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272562"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
+
 SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 元件產生程式碼及對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
   
 - 從資料庫產生原始程式碼和對應屬性或對應檔。  
@@ -40,22 +41,23 @@ sqlmetal [options] [<input file>]
 ```  
   
 ## <a name="options"></a>選項  
+
  若要檢視最新的選項清單，請進入安裝位置，並在命令提示字元輸入 `sqlmetal /?` 。  
   
  **連線選項**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/server：***\<name>*|指定資料庫伺服器名稱。|  
 |**/database：***\<name>*|指定伺服器上的資料庫目錄。|  
 |**/user：***\<name>*|指定登入使用者識別碼。預設值：使用 Windows 驗證。|  
 |**/password：***\<password>*|指定登入密碼。 預設值：使用 Windows 驗證。|  
-|**/conn：***\<connection string>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user**或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
+|**/conn：***\<connection string>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user** 或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
 |**/timeout：***\<seconds>*|指定 SqlMetal 存取資料庫時的逾時值。 預設值：0 (也就是沒有時間限制)。|  
   
  **擷取選項**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/views**|擷取資料庫檢視。|  
 |**/functions**|擷取資料庫函式。|  
@@ -63,7 +65,7 @@ sqlmetal [options] [<input file>]
   
  **輸出選項**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|以 .dbml 傳送輸出。 無法搭配 **/map** 選項使用。|  
 |**/code** *[:file]*|以原始程式碼傳送輸出。 無法搭配 **/dbml** 選項使用。|  
@@ -71,7 +73,7 @@ sqlmetal [options] [<input file>]
   
  **其他**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/language：***\<language>*|指定原始程式碼語言。<br /><br /> 有效 *\<language>* ： vb、csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
 |**/namespace：***\<name>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  
@@ -82,11 +84,12 @@ sqlmetal [options] [<input file>]
   
  **輸入檔**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**\<input file>**|指定 SQL Server Express .mdf 檔、SQL Server Compact 3.5 .sdf 檔或 .dbml 中繼檔。|  
   
 ## <a name="remarks"></a>備註  
+
  SqlMetal 功能實際上包含兩個步驟：  
   
 - 將資料庫的中繼資料擷取至 .dbml 檔。  
@@ -110,6 +113,7 @@ sqlmetal [options] [<input file>]
  若要指定輸入檔案名稱，請將名稱以輸入檔案加入命令列。 不支援將檔案名稱包含在連接字串中 (使用 **/conn** 選項)。  
   
 ## <a name="examples"></a>範例  
+
  產生 .dbml 檔，其中包含擷取的 SQL 中繼資料：  
   
  **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  

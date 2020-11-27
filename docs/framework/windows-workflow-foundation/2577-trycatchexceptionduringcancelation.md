@@ -2,14 +2,15 @@
 title: 2577 - TryCatchExceptionDuringCancelation
 ms.date: 03/30/2017
 ms.assetid: 35ee9f55-227f-4566-bcb4-4c7c75dea85b
-ms.openlocfilehash: c272dd91249dfc90e6f4c38a7339919a5a6446e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33c68984e88eaa5e3028899a7c3066c94a65e8eb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755619"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271235"
 ---
 # <a name="2577---trycatchexceptionduringcancelation"></a>2577 - TryCatchExceptionDuringCancelation
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61755619"
 |識別碼|2577|  
 |關鍵字|WFActivities|  
 |層級|警告|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  表示 TryCatch 活動的子活動在取消期間擲回例外狀況。  
   
 ## <a name="message"></a>訊息  
+
  TryCatch 活動 '%1' 的子活動在取消期間擲回例外狀況。  
   
 ## <a name="details"></a>詳細資料  

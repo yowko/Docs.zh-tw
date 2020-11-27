@@ -11,14 +11,15 @@ helpviewer_keywords:
 - ServiceInstaller class, adding installers to services
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
-ms.openlocfilehash: 9a6954c75595f5297a31dcaf37e744e655733df4
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 451f0db21e80dfc3dc40052179ac4ec60c2aabdc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608682"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270663"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>作法：將安裝程式新增至服務應用程式
+
 Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的資源。 安裝元件會在其安裝所在的系統上註冊個別服務，並讓服務控制管理員知道服務的存在。 當您使用服務應用程式時，可以選取 [屬性] 視窗中的連結，以便自動將適當的安裝程式加入您的專案。  
   
 > [!NOTE]
@@ -29,11 +30,11 @@ Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的
  您不需要在安裝程式內進行任何特殊編碼，即可正確安裝您的服務。 不過，如果您需要將特殊功能加入至安裝程序，偶爾可能需要修改安裝程式的內容。  
   
 > [!NOTE]
-> 您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更您的設定，請在 [工具]**** 功能表上選擇 [匯入和匯出設定]****。 如需詳細資訊，請參閱 [個人化 VISUAL STUDIO IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+> 您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更您的設定，請在 [工具] 功能表上選擇 [匯入和匯出設定]。 如需詳細資訊，請參閱 [個人化 VISUAL STUDIO IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-add-installers-to-your-service-application"></a>將安裝程式加入服務應用程式  
   
-1. 在 [方案總管]**** 中，針對您想要加入安裝元件的服務，存取服務的 [設計]**** 檢視。  
+1. 在 [方案總管] 中，針對您想要加入安裝元件的服務，存取服務的 [設計] 檢視。  
   
 2. 按一下設計工具的背景以選取服務本身，而不是它的任何內容。  
   

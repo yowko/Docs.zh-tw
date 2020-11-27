@@ -1,6 +1,6 @@
 ---
 title: invalidApartmentStateChange MDA
-description: 瞭解 .NET 中的 invalidApartmentStateChange managed 偵錯工具（MDA），這會在 COM 單元狀態發生問題時啟動。
+description: 瞭解 .NET 中的 invalidApartmentStateChange managed 偵錯工具 (MDA) ，如果 COM 單元狀態有問題，則會啟用此功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -12,13 +12,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: db55e3ac2d6862d008013abef0f09f67213d9faa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272744"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
+
 `invalidApartmentStateChange` Managed 偵錯助理 (MDA) 是由下列兩個問題之一所啟動：  
   
 - 嘗試變更執行緒的 COM Apartment 狀態，該執行緒已被 COM 初始化成不同的 Apartment 狀態。  
@@ -37,18 +39,21 @@ ms.locfileid: "86051823"
   
 - 在執行緒上呼叫具有不同並行模型的 `CoUninitialize` 方法 (或 `CoInitializeEx` 方法)。  
   
-## <a name="resolution"></a>解決方案  
+## <a name="resolution"></a>解決方法  
+
  請先設定執行緒的 Apartment 狀態再開始執行，或將 <xref:System.STAThreadAttribute> 屬性或 <xref:System.MTAThreadAttribute> 屬性套用到應用程式的 Main 方法。  
   
  第二個原因，在理想情況下，應該修改呼叫 `CoUninitialize` 方法的程式碼以延遲呼叫，直到執行緒即將終止且沒有任何 RCW 為止，執行緒仍繼續使用它們的基礎 COM 元件。 不過，如果不可能修改呼叫 `CoUninitialize` 方法的程式碼，則不應從未以此方式初始化的執行緒中使用任何 RCW。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+
  此 MDA 對 CLR 沒有影響。  
   
 ## <a name="output"></a>輸出  
+
  目前執行緒的 COM Apartment 狀態和程式碼之前嘗試套用的狀態。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  
@@ -59,6 +64,7 @@ ms.locfileid: "86051823"
 ```  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例示範可以啟動此 MDA 的情況。  
   
 ```csharp
@@ -78,5 +84,5 @@ namespace ApartmentStateMDA
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)

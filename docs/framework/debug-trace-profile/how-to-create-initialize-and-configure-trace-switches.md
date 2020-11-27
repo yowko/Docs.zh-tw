@@ -1,6 +1,6 @@
 ---
-title: 如何：建立，初始化和設定追蹤參數
-description: 使用 .NET 中的 BooleanSwitch 和 TraceSwitch 類別來建立、初始化和設定追蹤參數。
+title: 作法：建立、初始化和設定追蹤參數
+description: 使用 .NET 中的 BooleanSwitch 和 TraceSwitch 類別，建立、初始化和設定追蹤參數。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,21 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 4e8c076645f19e197ea820c052b20d5dde5e7565
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051320"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272250"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：建立，初始化和設定追蹤參數
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>作法：建立、初始化和設定追蹤參數
+
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
   
 <a name="create"></a>
+
 ## <a name="creating-and-initializing-a-trace-switch"></a>建立和初始化追蹤參數  
+
  為了使用追蹤參數，您必須先建立追蹤參數，並將其置於程式碼中。 您可從兩種預先定義的類別來建立參數物件：<xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 類別和 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 類別。 如果您只在意是否要顯示追蹤訊息，則可使用 <xref:System.Diagnostics.BooleanSwitch>；如果您想要區別追蹤層級，請使用 <xref:System.Diagnostics.TraceSwitch>。 如果您使用 <xref:System.Diagnostics.TraceSwitch>，則可定義您自己的偵錯訊息，並將其與不同的追蹤層級關聯。 您可使用這兩種類型的參數搭配追蹤或偵錯。 根據預設，<xref:System.Diagnostics.BooleanSwitch> 為停用狀態，而 <xref:System.Diagnostics.TraceSwitch> 會設定為層級 <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>。 您可以建立追蹤參數，並置於程式碼中任何可能需要使用的部分。  
   
  雖然您可在程式碼中設定追蹤層級和其他組態選項，但是建議您使用組態檔來管理參數的狀態。 這是因為在組態系統中管理參數的組態讓您擁有更多的彈性，也就是說，您可開啟或關閉各種參數和變更層級，而不需要重新編譯應用程式。  
@@ -31,7 +35,7 @@ ms.locfileid: "86051320"
   
 1. 將參數定義為 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 類型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 類型，並設定參數的名稱和描述。  
   
-2. 設定追蹤參數。 如需詳細資訊，請參閱設定[追蹤參數](#configure)。  
+2. 設定追蹤參數。 如需詳細資訊，請參閱設定 [追蹤參數](#configure)。  
   
      下列程式碼會建立兩個參數，每種類型各一個：  
   
@@ -49,10 +53,12 @@ ms.locfileid: "86051320"
     ```  
   
 <a name="configure"></a>
+
 ## <a name="configuring-trace-switches"></a>設定追蹤參數  
+
  在散發應用程式之後，您仍然可透過設定應用程式中的追蹤參數，來啟用或停用追蹤輸出。 設定參數表示在初始化參數之後，從外部來源變更其值。 您可以使用組態檔，來變更參數物件的值。 您可以設定開啟或關閉追蹤參數，或設定其層級，並決定要一起傳送至接聽程式的訊息數量和類型。  
   
- 參數是使用 .config 檔案來設定的。 若為 Web 應用程式，這會是與專案關聯的 Web.config 檔案。 在 Windows 應用程式中，這個檔案的名稱為（應用程式名稱） .exe.config。在已部署的應用程式中，這個檔案必須位於與可執行檔相同的資料夾中。  
+ 參數是使用 .config 檔案來設定的。 若為 Web 應用程式，這會是與專案關聯的 Web.config 檔案。 在 Windows 應用程式中，這個檔案會命名為 (應用程式名稱) # A0。在已部署的應用程式中，這個檔案必須位於與可執行檔相同的資料夾中。  
   
  當應用程式第一次執行建立參數執行個體的程式碼時，會檢查組態檔是否有具名參數的相關追蹤層級資訊。 追蹤系統只會檢查一次組態檔是否有任何特定參數，也就是在應用程式第一次建立參數時。  
   
@@ -71,13 +77,13 @@ ms.locfileid: "86051320"
   
 1. 若要使用追蹤參數，您必須先加以建立，並放在您的程式碼中，方法如[建立和初始化追蹤參數](#create)一節中所述。  
   
-2. 如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案]**** 功能表中選取 [新增項目]****。  
+2. 如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案] 功能表中選取 [新增項目]。  
   
-    - **Visual Basic：** 在 [新增項目]**** 對話方塊中，選擇 [應用程式組態檔]****。  
+    - **Visual Basic：** 在 [新增項目] 對話方塊中，選擇 [應用程式組態檔]。  
   
          隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
   
-    - **Visual C#：** 在 [新增項目]**** 對話方塊中，選擇 [XML 檔]****。 將此檔案命名為**app.config**。在 XML 編輯器中，于 XML 宣告之後，加入下列 XML：  
+    - **Visual C#：** 在 [新增項目] 對話方塊中，選擇 [XML 檔]。 將此檔案命名為 **app.config**。在 XML 編輯器中，于 XML 宣告之後，新增下列 XML：  
   
         ```xml  
         <configuration>  
@@ -125,7 +131,7 @@ ms.locfileid: "86051320"
   
 ## <a name="see-also"></a>另請參閱
 
-- [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)
-- [如何：將追蹤陳述式加入至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
+- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md) (機器翻譯)
+- [作法：將追蹤陳述式新增至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
 - [追蹤參數](trace-switches.md)
-- [追蹤和偵錯設定結構描述](../configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和調試設定架構](../configure-apps/file-schema/trace-debug/index.md)

@@ -7,18 +7,19 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: c9e073ef088595d3ee5cd9e1af70140f12022179
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712631"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271469"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 
 本主題提供您可以在 [Windows 效能監視器](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))中找到之效能計數器的清單。  
 
 ## <a name="exception-performance-counters"></a>例外狀況效能計數器  
+
  效能主控台 .NET CLR 例外狀況分類包含計數器，此計數器提供應用程式擲回例外狀況的相關資訊。 下表描述的是這些效能計數器。  
   
 |效能計數器|描述|  
@@ -30,6 +31,7 @@ ms.locfileid: "91712631"
 |**Throw to Catch Depth / Sec**|顯示從擲回例外狀況的框架周遊到處理例外狀況的框架之每秒堆疊框架數目。 當進入例外狀況處理常式時，此計數器會重設為零，因此巢狀例外狀況會顯示處理常式至處理常式的堆疊深度。<br /><br /> 這個計數器不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
 
 ## <a name="interop-performance-counters"></a>Interop 效能計數器  
+
  效能主控台 .NET CLR Interop 分類包含計數器，此計數器提供應用程式與 COM 元件、COM + 服務以及外部類型程式庫互動的相關資訊。 下表描述的是這些效能計數器。  
   
 |效能計數器|描述|  
@@ -41,6 +43,7 @@ ms.locfileid: "91712631"
 |**# of TLB imports / sec**|保留供未來使用。|  
 
 ## <a name="jit-performance-counters"></a>JIT 效能計數器  
+
  效能主控台 .NET CLR JIT 分類包含計數器，此計數器提供經 JIT 編譯之程式碼的相關資訊。 下表描述的是這些效能計數器。  
   
 |效能計數器|描述|  
@@ -53,6 +56,7 @@ ms.locfileid: "91712631"
 |**Total # of IL Bytes Jitted**|顯示自應用程式啟動後被 JIT 編譯的 MSIL 總計位元組數。 此計數器相當於 **# of IL Bytes Jitted** 計數器。|  
 
 ## <a name="loading-performance-counters"></a>載入效能計數器  
+
  效能主控台 .NET CLR 載入分類包含計數器，此計數器提供已載入組件、類別和應用程式定義域的相關資訊。 下表描述的是這些效能計數器。  
   
 |效能計數器|描述|  
@@ -75,6 +79,7 @@ ms.locfileid: "91712631"
 |**Total Classes Loaded**|顯示自啟動應用程式後在所有組件中已載入類別的累計數量。|  
 
 ## <a name="lock-and-thread-performance-counters"></a>鎖定和執行緒效能計數器  
+
  效能主控台 .NET CLR LocksAndThreads 分類包含計數器，此計數器提供應用程式使用之 Managed 鎖定及執行緒的相關資訊。 下表描述的是這些效能計數器。  
   
 |效能計數器|描述|  
@@ -91,6 +96,7 @@ ms.locfileid: "91712631"
 |**Total # of Contentions**|顯示執行緒在執行階段無法順利嘗試擷取 Managed 鎖定的總次數。|  
 
 ## <a name="memory-performance-counters"></a>記憶體效能計數器  
+
  效能主控台 .NET CLR 記憶體分類包含計數器，此計數器提供記憶體回收行程的相關資訊。 下表描述的是這些效能計數器。  
   
 |效能計數器|描述|  
@@ -218,6 +224,7 @@ for (int i = 0; i < Array.Length; i++)
  如需存取和管理應用程式中效能計數器的詳細資訊，請參閱[效能計數器](performance-counters.md)。  
 
 ## <a name="security-performance-counters"></a>安全性效能計數器  
+
  效能主控台 .NET CLR 安全性類別包含計數器，此計數器提供 Common Language Runtime 為應用程式執行安全性檢查的相關資訊。 下表描述的是這些效能計數器。  
   
 |效能計數器|描述|  

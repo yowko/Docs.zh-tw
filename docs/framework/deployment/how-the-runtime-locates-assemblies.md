@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 1b2ee58ccbd4bdfceb6300c20d5255718982f2e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031705"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272523"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 
@@ -135,11 +135,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 當共用元件更新時，就會使用發行者原則檔，而且使用該元件的所有應用程式，都應該收取共用元件的新版本。 除非應用程式組態檔強制執行安全模式，否則發行者原則檔中的設定會覆寫應用程式組態檔中的設定。
 
 #### <a name="safe-mode"></a>安全模式
+
 發行者原則檔通常會做為 Service Pack 或程式更新的一部分明確安裝。 如果升級後的共用元件有任何問題，您可以使用安全模式來忽略發行者原則檔中的覆寫。 安全模式是由元素所決定，此專案 **\<publisherPolicy apply="yes**&#124;**no"/>** 僅位於應用程式佈建檔中。 它會指定是否應該將發行者原則組態資訊從繫結程序中移除。
 
 您可以針對整個應用程式或選取的組件來設定安全模式。 亦即，您可以針對構成應用程式的所有組件，關閉此原則，或是針對某些組件開啟此原則，但其他組件不開啟此原則。 若要選擇性地將發行者原則套用至構成應用程式的元件，請設定 **\<publisherPolicy apply\=no/>** 並指定您想要使用元素影響哪些元件 \<**dependentAssembly**> 。 若要將發行者原則套用至構成應用程式的所有元件，請將設定為 **\<publisherPolicy apply\=no/>** 沒有相依元件專案。 如需組態的詳細資訊，請參閱 [使用組態檔設定應用程式](../configure-apps/index.md)。
 
 ### <a name="machine-configuration-file"></a>電腦組態檔
+
 第三，執行階段會檢查電腦組態檔。 此檔案名為 Machine.config，位在本機電腦上，執行階段安裝所在之根目錄的 Config 子目錄中。 系統管理員可以使用這個檔案來指定電腦本機的組件繫結限制。 電腦組態檔中的設定優先順序高於所有其他組態設定；不過，這不表示所有組態設定都應該放在這個檔案中。 系統管理員原則檔決定的版本為最終版本，不能覆寫。 在 Machine.config 檔案中指定覆寫會影響所有應用程式。 如需組態檔的詳細資訊，請參閱 [使用組態檔設定應用程式](../configure-apps/index.md)。
 
 <a name="step2"></a>
