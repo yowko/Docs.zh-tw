@@ -1,6 +1,6 @@
 ---
 title: 存取自訂屬性
-description: 存取 .NET 中的自訂屬性。 在屬性與程式元素相關聯之後，您可以使用反映來查詢其存在和值。
+description: 存取 .NET 中的自訂屬性。 當屬性與程式專案相關聯之後，您就可以使用反映來查詢其存在和值。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,20 +11,23 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d441bad7d4af3a88c4ede507d1bce7bdd1ab3215
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475134"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266814"
 ---
 # <a name="accessing-custom-attributes"></a>存取自訂屬性
+
 建立屬性與程式項目的關聯之後，就可以使用反映來查詢其存在狀況和值。 在 .NET Framework 1.0 和 1.1 版中，會檢查執行內容中的自訂屬性。 .NET Framework 2.0 版提供新的載入內容，就是僅限反映的內容，這可以用來檢查無法載入來執行的程式碼。  
   
 ## <a name="the-reflection-only-context"></a>僅限反映的內容  
- 無法執行載入僅限反映內容的程式碼。 這表示無法建立自訂屬性的執行個體，因為這將需要執行其建構函式。 若要載入和檢查僅限反映內容中的自訂屬性，請使用 <xref:System.Reflection.CustomAttributeData> 類別。 您可以使用靜態 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 方法的適當多載，以取得此類別的執行個體。 請參閱[如何：將元件載入僅限反映的內容](how-to-load-assemblies-into-the-reflection-only-context.md)。  
+
+ 無法執行載入僅限反映內容的程式碼。 這表示無法建立自訂屬性的執行個體，因為這將需要執行其建構函式。 若要載入和檢查僅限反映內容中的自訂屬性，請使用 <xref:System.Reflection.CustomAttributeData> 類別。 您可以使用靜態 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 方法的適當多載，以取得此類別的執行個體。 請參閱[如何：將組件載入僅限反映的內容](how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
 ## <a name="the-execution-context"></a>執行內容  
+
  查詢執行內容中屬性的主要反映方法是 <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> 和 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>。  
   
  會檢查自訂屬性有關附加組件的存取性。 這相當於檢查附加自訂屬性中組件內之類型的方法是否可以呼叫自訂屬性的建構函式。  

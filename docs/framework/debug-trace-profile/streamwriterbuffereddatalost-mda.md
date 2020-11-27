@@ -1,6 +1,6 @@
 ---
 title: streamWriterBufferedDataLost MDA
-description: 請參閱 streamWriterBufferedDataLost managed 偵錯工具（MDA），如果 StreamWriter 不會將最後1– 4 KB 的資料寫入檔案，這可能會啟用。
+description: 請參閱— Streamwriterbuffereddatalost — managed 偵錯工具 (MDA) ，如果 StreamWriter 未將最後1– 4 KB 的資料寫入檔案，則可能會啟用此項。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
@@ -11,20 +11,23 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 23a8146bfa5acc08000e689917abb844c5540fec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803478"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267074"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
+
 `streamWriterBufferedDataLost` Managed 偵錯助理 (MDA) 會在寫入 <xref:System.IO.StreamWriter> 時啟動，但在終結 <xref:System.IO.StreamWriter> 的執行個體之前，不會接著呼叫 <xref:System.IO.StreamWriter.Flush%2A> 或 <xref:System.IO.StreamWriter.Close%2A> 方法。 此 MDA 啟用時，執行階段會判斷在 <xref:System.IO.StreamWriter> 內是否仍有任何緩衝資料存在。 如果緩衝資料不存在，則會啟動 MDA。 呼叫 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以強制執行完成項。 否則完成項會在任意時間執行，並且可能根本不是在處理序結束時。 明確執行完成項並啟用這個 MDA，可協助您更可靠地重現這種類型的問題。  
   
 ## <a name="symptoms"></a>徵狀  
+
  <xref:System.IO.StreamWriter> 不會將資料的最後 1–4 KB 寫入至檔案。  
   
 ## <a name="cause"></a>原因  
+
  <xref:System.IO.StreamWriter> 會在內部緩衝處理資料，這樣需要呼叫 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A> 方法以將緩衝資料寫入基礎資料存放區。 如果 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A> 未適當地呼叫，則 <xref:System.IO.StreamWriter> 執行個體中的緩衝資料可能不會如預期般寫入。  
   
  以下是此 MDA 應該攔截、撰寫不夠周全的程式碼範例。  
@@ -46,7 +49,8 @@ GC.Collect();
 GC.WaitForPendingFinalizers();  
 ```  
   
-## <a name="resolution"></a>解決方案  
+## <a name="resolution"></a>解決方法  
+
  請確定您對 <xref:System.IO.StreamWriter> 呼叫 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A>，然後才關閉具有 <xref:System.IO.StreamWriter> 執行個體的應用程式或任何程式碼區塊。 達到此目的的其中一個最佳機制，是使用 C# `using` 區塊 (在 Visual Basic 中為 `Using`) 建立執行個體，這可確保叫用寫入器的 <xref:System.IO.StreamWriter.Dispose%2A> 方法，導致執行個體正確關閉。  
   
 ```csharp
@@ -88,12 +92,14 @@ static WriteToFile()
 ```  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+
  此 MDA 對執行階段沒有影響。  
   
 ## <a name="output"></a>輸出  
+
  指出發生此違規的訊息。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  
@@ -106,4 +112,4 @@ static WriteToFile()
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StreamWriter>
-- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)

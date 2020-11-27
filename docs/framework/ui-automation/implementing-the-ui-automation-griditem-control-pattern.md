@@ -1,20 +1,21 @@
 ---
 title: 實作 UI 自動化 GridItem 控制項模式
-description: 瞭解在使用者介面自動化中為格線專案執行 GridItemPattern 控制項模式的指導方針和慣例。 請參閱 IGridItemProvider 的必要成員。
+description: 瞭解在消費者介面自動化中為格線專案執行 GridItemPattern 控制項模式的指導方針和慣例。 請參閱必要的 IGridItemProvider 成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: e0a0c616f3f0cf9bc091e4fbb496d71ab8550bd3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 30932e630c663aabb7d26302174785d44dc1c385
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165827"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267880"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>實作 UI 自動化 GridItem 控制項模式
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87165827"
  <xref:System.Windows.Automation.GridItemPattern> 控制項模式是用以支援實作 <xref:System.Windows.Automation.Provider.IGridProvider> 之容器的個別子控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
+
  實作 <xref:System.Windows.Automation.Provider.IGridProvider> 時，請注意下列方針和慣例：  
   
 - 方格座標是以零起始，左上資料格座標為 (0, 0)。  
@@ -35,21 +38,25 @@ ms.locfileid: "87165827"
 - 通常可以使用鍵盤周遊實作 <xref:System.Windows.Automation.Provider.IGridItemProvider> 的控制項 (也就是，使用者介面自動化用戶端可以移到相鄰的控制項)。  
   
 <a name="Required_Members_for_IGridItemProvider"></a>
+
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider 的必要成員  
+
  以下是實作 <xref:System.Windows.Automation.Provider.IGridItemProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|注意|  
+|必要成員|成員類型|備註|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|屬性|無|  
   
  此控制項模式沒有任何相關聯的方法或事件。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外狀況  
+
  此控制項模式沒有任何相關聯的例外狀況。  
   
 ## <a name="see-also"></a>另請參閱

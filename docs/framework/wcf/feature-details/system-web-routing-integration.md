@@ -2,17 +2,19 @@
 title: System.Web.Routing 整合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 6e67aa4a790edeb367b099d4a94f465f1e7b9bcc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb820f535a69a24e05b7374bcf97539ae2b87aef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554771"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266424"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 整合
+
 在 Internet Information Service 中裝載 Windows Communication Foundation (WCF) 服務 (IIS) 您在虛擬目錄中放置 .svc 檔案。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 對服務提出要求時，您會在 URI 中指定 .svc 檔案，例如： `http://contoso.com/EmployeeServce.svc` 。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing>整合功能可讓您裝載 WCF REST 服務，以回應沒有副檔名的 uri。 如需路由的詳細資訊，請參閱 [ASP.NET 路由](/previous-versions/aspnet/cc668201(v=vs.100))。  
   
 ## <a name="using-systemwebrouting-integration"></a>使用 System.Web.Routing 整合  
+
  若要使用 <xref:System.Web.Routing> 整合功能，請使用 <xref:System.ServiceModel.Activation.ServiceRoute> 類別建立一個或多個路由，並且將路由加入至 Global.asax 檔案中的 <xref:System.Web.Routing.RouteTable>。 這些路由會指定服務回應的相對 URI。 下列範例示範如何執行。  
   
 ```aspx-csharp  

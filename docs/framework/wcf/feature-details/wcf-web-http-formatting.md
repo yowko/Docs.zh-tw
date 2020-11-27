@@ -2,17 +2,19 @@
 title: WCF Web HTTP 格式化
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9346cd1bb3798ad0beac5e9e28a8536007d897b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266905"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式化
+
 WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所使用的最佳格式。 兩種可用來判斷最適合格式的方法分別為：自動和明確。  
   
 ## <a name="automatic-formatting"></a>自動格式化  
+
  啟用時，自動格式化會選擇傳回回應所使用的最佳格式。 此方法會透過依序檢查下列各項來判斷最佳格式：  
   
 1. 要求訊息之 Accept 標頭中的媒體類型。  
@@ -23,7 +25,7 @@ WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所�
   
 4. WebHttpBehavior 中的預設格式設定。  
   
- 如果要求訊息包含 Accept 標頭，則 Windows Communication Foundation （WCF）基礎結構會搜尋其支援的類型。 如果 `Accept` 標頭指定其媒體類型的優先權，則會遵循優先權。 如果 `Accept` 標頭中找不到適合的格式，則會使用要求訊息的內容類型。 如果未指定適合的內容類型，則會使用作業的預設格式設定。 預設格式會使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 參數設定。 如果作業上未指定預設格式，則會使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 屬性的值。 自動格式化會仰賴 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 屬性。 當此屬性設定為 `true` 時，WCF 基礎結構會判斷要使用的最佳格式。 為了提供回溯相容性，自動格式選取預設為停用。 自動格式選取可以透過程式設計方式或透過組態啟用。 下列範例顯示如何在程式碼中啟用自動格式選取。  
+ 如果要求訊息包含 Accept 標頭，則 Windows Communication Foundation (WCF) 基礎結構會搜尋其所支援的類型。 如果 `Accept` 標頭指定其媒體類型的優先權，則會遵循優先權。 如果 `Accept` 標頭中找不到適合的格式，則會使用要求訊息的內容類型。 如果未指定適合的內容類型，則會使用作業的預設格式設定。 預設格式會使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 參數設定。 如果作業上未指定預設格式，則會使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 屬性的值。 自動格式化會仰賴 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 屬性。 當此屬性設定為 `true` 時，WCF 基礎結構會判斷要使用的最佳格式。 為了提供回溯相容性，自動格式選取預設為停用。 自動格式選取可以透過程式設計方式或透過組態啟用。 下列範例顯示如何在程式碼中啟用自動格式選取。  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract
@@ -91,6 +93,7 @@ try
 ```  
   
 ## <a name="explicit-formatting"></a>明確格式  
+
  明確格式化如其名稱所指，可讓開發人員決定要在作業程式碼內使用的最佳格式。 如果最佳格式為 XML 或 JSON，則開發人員會將 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 設定為 <xref:System.ServiceModel.Web.WebMessageFormat.Xml> 或 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。 如果未明確設定 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 屬性，則會使用作業的預設格式。  
   
  下列範例會檢查格式查詢字串參數，找出要使用的格式。 如果已指定，則該參數會使用 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 設定作業的格式。  
@@ -163,7 +166,7 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>

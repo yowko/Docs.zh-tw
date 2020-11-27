@@ -2,23 +2,25 @@
 title: WCF Web HTTP 服務說明網頁
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600162"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266931"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者流覽至 WCF WEB HTTP 服務並在 URL 結尾附加 "/Help" 時，會顯示如下的說明 `http://localhost:8000/Customers/Help` 頁面。  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者流覽至 WCF WEB HTTP 服務，並在 URL 的結尾附加 "/Help" 時， `http://localhost:8000/Customers/Help` 就會顯示如下所示的說明頁面。  
   
  ![已開啟 WCF REST 說明頁面的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  使用者可以按一下說明頁面中列出的任何方法，該作業的詳細資訊頁面便會顯示，提供有關該方法的詳細資訊，包括訊息格式和回應範例。 下圖是方法之說明頁面的範例。  
   
- ![已開啟 GetCustomers 方法的 WCF REST 說明頁面詳細資料的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
+ ![具有 GetCustomers 方法開啟之 WCF REST 說明頁面詳細資料的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 說明頁面  
+
  WCF WEB HTTP 說明頁面會顯示每項作業的簡短描述，您可以使用 <xref:System.ComponentModel.DescriptionAttribute> 來指定任何一項。 此屬性會使用包含作業所套用之簡短描述的字串。 例如，下列程式碼示範如何使用 <xref:System.ComponentModel.DescriptionAttribute>來提供簡短描述。  
   
 ```csharp
@@ -59,6 +61,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
  說明頁面是含有標記的 XHTML 架構，可識別頁面的不同部分。 如此可讓用戶端以程式設計方式，使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 存取頁面。  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明頁面中使用的結構描述  
+
  WCF Web HTTP 服務說明頁面會使用下列結構描述。  
   
 ```xml  
@@ -240,4 +243,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- 如需資料合約序列化架構的詳細資訊，請參閱[資料合約架構參考](data-contract-schema-reference.md)。
+ 如需資料合約序列化架構的詳細資訊，請參閱 [資料合約架構參考](data-contract-schema-reference.md)。

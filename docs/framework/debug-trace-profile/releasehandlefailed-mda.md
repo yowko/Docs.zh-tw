@@ -1,6 +1,6 @@
 ---
 title: releaseHandleFailed MDA
-description: 請參閱 releaseHandleFailed managed 偵錯工具（MDA），這可能會因為 .NET 中的資源或記憶體流失而啟用。
+description: 請參閱 >releasehandlefailed managed 偵錯工具 (MDA) ，這可能是因為 .NET 中的資源或記憶體流失而啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -11,20 +11,23 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b337a7283e961d0fae2b51d92a21fa77f7249250
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803634"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267126"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
+
 當衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 之類別的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法傳回 `false` 時，會啟動 `releaseHandleFailed` Managed 偵錯助理 (MDA) 來通知開發人員。  
   
 ## <a name="symptoms"></a>徵狀  
+
  資源或記憶體流失。  如果衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 之類別的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法失敗，則該類別所封裝的資源可能尚未釋出或清除。  
   
 ## <a name="cause"></a>原因  
+
  如果使用者建立衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 的類別，則必須提供 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法的實作；因此，這是個別資源特有的情況。 不過，需求如下：  
   
 - <xref:System.Runtime.InteropServices.SafeHandle> 和 <xref:System.Runtime.InteropServices.CriticalHandle> 類型代表重要處理序資源周圍的包裝函式。 記憶體遺漏會使處理序過一段時間後即無法使用。  
@@ -33,7 +36,8 @@ ms.locfileid: "85803634"
   
 - 在 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 執行期間，如果發生任何失敗，而導致無法釋出資源，就是 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法本身實作中的 Bug。 即使該程式碼呼叫別人撰寫的程式碼來執行其函式，程式設計師都有責任確保合約的履行。  
   
-## <a name="resolution"></a>解決方案  
+## <a name="resolution"></a>解決方法  
+
  如果是程式碼所使用的特定 <xref:System.Runtime.InteropServices.SafeHandle> (或 <xref:System.Runtime.InteropServices.CriticalHandle>) 類型引發了 MDA 通知，則應檢閱程式碼，尋找從 <xref:System.Runtime.InteropServices.SafeHandle> 擷取未經處理的控制代碼值並複製在他處的地方。 這是 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 實作中造成失敗的一般原因，因為執行階段後來就不會再追蹤未經處理之控制代碼值的使用狀況。 如果未經處理的控制代碼複本隨後關閉，可能會導致後來的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 呼叫失敗，因為是在相同的控制代碼上嘗試關閉，而現在為無效。  
   
  有很多種方式會發生不正確的控制代碼重複：  
@@ -49,9 +53,11 @@ ms.locfileid: "85803634"
 - 請注意，某些原生控制代碼類型 (例如可透過 `CloseHandle` 函式釋放的所有 Win32 控制代碼)，會共用相同的控制代碼命名空間。 一個控制代碼類型的錯誤釋放，可能會造成另一個控制代碼類型的問題。 比方說，不小心將 Win32 事件處理常式關閉兩次，可能會導致明顯無關的檔案控制代碼永久關閉。 當已釋放控制代碼，而控制代碼值變成可用來追蹤另一個資源，而該資源可能是另一種類型時，就會發生這種情況。 如果發生這種情況，接著又有錯誤的第二次釋放，不相關之執行緒的控制代碼可能會失效。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+
  此 MDA 對 CLR 沒有影響。  
   
 ## <a name="output"></a>輸出  
+
  訊息指出 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 無法適當地釋放控制代碼。 例如：  
   
 ```output
@@ -62,7 +68,7 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  
@@ -73,6 +79,7 @@ and closing it directly or building another SafeHandle around it."
 ```  
   
 ## <a name="example"></a>範例  
+
  以下是可啟動 `releaseHandleFailed` MDA 的程式碼範例。  
   
 ```csharp
@@ -92,5 +99,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)

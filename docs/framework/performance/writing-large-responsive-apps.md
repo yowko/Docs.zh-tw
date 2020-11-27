@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 20b9f34595f8586eb5162715eb6b0df171f132a1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266840"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 
@@ -19,6 +19,7 @@ ms.locfileid: "90555246"
 使用 .NET Framework 建置應用程式的效率很高。 這些強大且安全的語言和豐富的程式庫集合，可大幅提升應用程式的建置效能。 然而，生產力愈高，代表所負的責任愈大。 您應該充分利用 .NET Framework 的所有功能，但視需要隨時調整程式碼的效能。
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>新編譯器效能適用於您的應用程式的原因  
+
  .NET 編譯器平台 ("Roslyn") 小組以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，提供新的應用程式開發介面，以便模型化和分析程式碼、建置工具，以及提供更豐富並感知程式碼的 Visual Studio 體驗。 重寫編譯器並在新編譯器上建置 Visual Studio 體驗，顯示了實用的效能深入資訊，適用於任何大型 .NET Framework 應用程式或任何處理大量資料的應用程式。 您不需要了解編譯器，也能利用 C# 編譯器的深入資訊和範例。
   
  Visual Studio 使用編譯器應用程式開發介面建置使用者偏好的所有 IntelliSense 功能，例如以顏色標示識別項和關鍵字、語法完成清單、錯誤波浪線、參數提示、程式碼問題和程式碼動作。 Visual Studio 會在開發人員輸入及變更其程式碼時提供此說明，並且 Visual Studio 必須在編譯器持續模型化開發人員編輯的程式碼時保持回應。
@@ -28,30 +29,37 @@ ms.locfileid: "90555246"
  如需 Roslyn 編譯器的詳細資訊，請參閱 [.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)。
   
 ## <a name="just-the-facts"></a>認清事實  
+
  調整效能和建立回應能力佳的 .NET Framework 應用程式時，請考慮下列幾點事實。
   
 ### <a name="fact-1-dont-prematurely-optimize"></a>事實 1：不要太早進行最佳化  
+
  撰寫比所需還要複雜的程式碼，會產生維護、偵錯和修改成本。 有經驗的程式設計人員直覺便知道如何解決程式碼問題，以及如何撰寫更有效率的程式碼。 不過，他們有時會太早最佳化程式碼。 例如，他們可能會在簡單陣列便已足夠的情況下，使用雜湊資料表；或者使用可能會造成記憶體流失的複雜快取，而不直接重新計算值。 即使您是有經驗的程式設計人員，仍應測試效能，並在發現問題時分析程式碼。
   
 ### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事實 2：未經測量，不過是臆測  
+
  程式碼剖析和測量資料不會說謊。 程式碼剖析顯示 CPU 是否滿載，或者磁碟 I/O 是否發生封鎖的情況。 程式碼剖析告訴您目前配置的記憶體類型和數量，以及您的 CPU 是否花很多時間在[記憶體回收](../../standard/garbage-collection/index.md) (GC)。
   
  您應該為應用程式中的關鍵客戶體驗或案例設定效能目標，並撰寫測試以測量效能。 應用科學方法來調查失敗的測試：使用程式碼剖析來引導您、假設可能的問題，以及透過實驗或變更程式碼來測試您的假設。 透過定期測試建立一段時間的基準效能測量資料，以便您隔離出導致效能降低的變更。 當您以嚴謹的方式來處理效能工作時，便可避免浪費時間在不必要的程式碼更新。
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3：使用良好工具的成果大不相同  
+
  良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 提供各種效能工具，例如 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) 和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。
   
  PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。 您可以擷取與效能相關的 [Windows 事件追蹤](../wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。 PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。
   
 ### <a name="fact-4-its-all-about-allocations"></a>事實 4：重點在於配置  
+
  您可能會認為建置回應能力佳的 .NET Framework 應用程式的重點在於演算法，例如使用快速排序取代反昇排序，但實際上卻不然。 配置記憶體才是建置回應能力佳的應用程式的最大要素，特別是當您的應用程式很龐大或處理大量資料時。
   
  使用新編譯器應用程式開發介面建置回應能力佳的 IDE 體驗的幾乎所有工作，都與避免配置和管理快取策略相關。 PerfView 追蹤顯示新的 C# 和 Visual Basic 編譯器的效能很少佔用龐大的 CPU 資源。 當編譯器讀取數十萬或數百萬行程式碼、讀取中繼資料或發出產生的程式碼時，可能會受限於 I/O。 UI 執行緒延遲幾乎全部都是由於記憶體回收所造成。 .NET Framework GC 為了效能而高度調整，並在應用程式的程式碼執行同時執行大部分的工作。 但是，單一配置可能會觸發耗費大量資源的[gen2](../../standard/garbage-collection/fundamentals.md) 收集，並停止所有執行緒。
   
 ## <a name="common-allocations-and-examples"></a>常見配置和範例  
+
  本節中的範例運算式隱藏了看起來很小的配置。 但是，如果大型應用程式執行運算式夠多次，則可能造成數百個 MB，甚至是 GB 的配置。 例如，模擬開發人員在編輯器中輸入的一分鐘測試，會配置數 GB 記憶體，而導致效能小組專注於輸入案例。
   
 ### <a name="boxing"></a>Box 處理  
+
  當通常存留在堆疊或資料結構中的實值型別包裝在物件中時，會發生 [Boxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)。 換句話說，您可以配置保存資料的物件，再傳回物件的指標。 .NET Framework 有時由於方法的簽章或儲存位置的類型而以 Boxing 處理值。 在物件中包裝實值類型會導致記憶體配置。 許多 Boxing 作業可能導致數 MB 或 GB 的應用程式配置，這表示您的應用程式會造成更多 GC。 .NET Framework 和語言編譯器會盡可能避免 Boxing，但有時還是會在您預想不到的情況下發生。
   
  若要在 PerfView 中查看 Boxing，請開啟追蹤，然後檢視您的應用程式之處理序名稱下的 GC Heap Alloc Stacks (請記住，PerfView 會報告所有處理序)。 如果您在配置下看到類似 <xref:System.Int32?displayProperty=nameWithType> 和 <xref:System.Char?displayProperty=nameWithType> 的類型，則表示您以 Boxing 處理實值類型。 選擇其中一種類型可顯示以 Boxing 處理類型所在的堆疊和函式。
@@ -132,6 +140,7 @@ public class BoxingExample
  請記住第一點效能事實 (即不要太早進行最佳化)，不要以此方式開始重寫所有程式碼。 留意這些 Boxing 成本，但只在對應用程式進行程式碼分析並找出作用點之後變更程式碼。
   
 ### <a name="strings"></a>字串  
+
  字串操作是造成配置問題的一些最主要原因，通常會在 PerfView 中顯示為前五大配置。 程式在序列化、JSON 和 REST 應用程式開發介面中都會用到字串。 當您無法使用列舉類型時，您可以使用字串做為與系統互通的程式設計常數。 當您的程式碼分析顯示字串高度影響效能時，請尋找 <xref:System.String> 方法的呼叫，例如 <xref:System.String.Format%2A>、<xref:System.String.Concat%2A>、<xref:System.String.Split%2A>、<xref:System.String.Join%2A>、<xref:System.String.Substring%2A> 等。 使用 <xref:System.Text.StringBuilder> 可避免需要從許多說明建立一個字串的成本，但即使是配置 <xref:System.Text.StringBuilder> 物件也可能成為需要管理的瓶頸。
   
  **範例 3：字串作業**  
@@ -278,7 +287,8 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  此簡單的快取策略遵守良好的快取設計，因為該策略具有大小限制。 但是，現在的程式碼比原始程式碼更多，這表示維護成本會更高。 您應該僅在發現效能問題時才採用快取策略，而 PerfView 顯示 <xref:System.Text.StringBuilder> 配置是影響效能的主要因素。
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 Lambdas  
-與 lambda 運算式搭配使用的語言整合查詢 (LINQ) ，是產能功能的範例。 不過，其使用可能會對效能造成重大影響，而您可能會發現需要重寫程式碼。
+
+Language-Integrated Query (LINQ) （結合 lambda 運算式）是產能功能的範例。 不過，其使用可能會對效能造成重大影響，而您可能會發現需要重寫程式碼。
   
  **範例5： Lambda、List \<T> 和 IEnumerable\<T>**  
   
@@ -439,6 +449,7 @@ class Compilation { /*...*/
  此程式碼將 `cachedResult` 的類型變更為 `Task<SyntaxTree>`，並採用 `async` Helper 函式來保存 `GetSyntaxTreeAsync()` 中的原始程式碼。 `GetSyntaxTreeAsync()` 現在使用 [null 聯合運算子](../../csharp/language-reference/operators/null-coalescing-operator.md)來傳回 `cachedResult` (如果不是 null)。 如果 `cachedResult` 為 null，則 `GetSyntaxTreeAsync()` 會呼叫 `GetSyntaxTreeUncachedAsync()` 並快取結果。 請注意，`GetSyntaxTreeAsync()` 不會像是程式碼的一般運作方式一樣，等候對 `GetSyntaxTreeUncachedAsync()` 的呼叫。 不使用 await 表示當 `GetSyntaxTreeUncachedAsync()` 傳回其 <xref:System.Threading.Tasks.Task> 物件時，`GetSyntaxTreeAsync()` 會立即傳回 <xref:System.Threading.Tasks.Task>。 現在，快取的結果是 <xref:System.Threading.Tasks.Task>，因此不會有傳回快取結果的配置。
   
 ### <a name="additional-considerations"></a>其他考量  
+
  以下是有關大型應用程式或處理大量資料的應用程式可能發生之問題的一些重點。
   
  **字典**  

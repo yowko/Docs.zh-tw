@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: f1748372af520955c139dffb2e6e80ae066c9397
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c895a6dedc22a42adb7104927d39090ab6587f37
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536059"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266021"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 整合與 JSON 支援
+
 Windows Communication Foundation (WCF) ASP.NET 非同步 JavaScript 和 XML (AJAX) 和 JavaScript 物件標記法 (JSON) 資料格式的支援，可讓 WCF 服務對 AJAX 用戶端公開作業。 AJAX 用戶端是執行 JavaScript 程式碼的網頁，並使用 HTTP 要求來存取這些 WCF 服務。 本節中的主題會提供有關此支援以及如何實作的詳細資訊。  
   
  如需有關 ASP.NET AJAX 以及與 ASP.NET 2.0 整合的詳細資訊，請參閱 [ASP.NET Ajax 總覽](/previous-versions/aspnet/bb398874(v=vs.100))。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [建立 ASP.NET AJAX 的 WCF 服務](creating-wcf-services-for-aspnet-ajax.md)  
  描述如何將 WCF 服務公開給 AJAX 用戶端，方法是透過設定新增適當的 AJAX 端點，或使用自訂的服務主機 factory 來產生自動設定 AJAX 端點的服務主機。  
   

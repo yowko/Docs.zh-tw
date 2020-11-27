@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: 09b283712a66805669154c720dff5c2c5f910bf4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4961b4bc57d25f9fa83cf40f82b153aa93592b55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547176"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267009"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>作法：登錄主要 Interop 組件
 
@@ -42,6 +42,7 @@ ms.locfileid: "90547176"
      在這個命令中，*assemblyname* 是已註冊組件的檔案名稱。 Regasm.exe 會在與原始類型程式庫相同的登錄機碼之下，加入主要 Interop 組件的項目。
 
 ## <a name="example"></a>範例
+
  下列範例會註冊 `CompanyA.UtilLib.dll` 主要 Interop 組件。
 
 ```console

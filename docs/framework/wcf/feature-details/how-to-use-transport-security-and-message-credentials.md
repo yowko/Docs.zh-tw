@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用傳輸安全性和訊息認證
+title: 作法：使用傳輸安全性和訊息認證
 description: 瞭解如何使用訊息認證來執行傳輸安全性，以在 WCF 中提供最佳的傳輸和訊息安全性模式。
 ms.date: 03/30/2017
 dev_langs:
@@ -8,15 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: dbf04572e19d0dfc2508b3f8c3295ffae78ca0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268309"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>HOW TO：使用傳輸安全性和訊息認證
-使用傳輸和訊息認證來保護服務的安全，會在 Windows Communication Foundation （WCF）中使用傳輸和訊息安全性模式的最佳選擇。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需設定安全性模式的詳細資訊，請參閱[如何：設定安全性模式](../how-to-set-the-security-mode.md)。  
+# <a name="how-to-use-transport-security-and-message-credentials"></a>作法：使用傳輸安全性和訊息認證
+
+以傳輸和訊息認證保護服務的安全，在 Windows Communication Foundation (WCF) 中使用傳輸和訊息安全性模式的最佳方式。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需設定安全性模式的詳細資訊，請參閱 [如何：設定安全性模式](../how-to-set-the-security-mode.md)。  
   
  當您將安全性模式設為 `TransportWithMessageCredential` 時，傳輸會決定用來提供傳輸層安全性的實際機制。 對 HTTP 來說，此機制為 Secure Sockets Layer (SSL) over HTTP (HTTPS)；對 TCP 來說，此機制是 SSL over TCP 或 Windows 安全性。  
   
@@ -26,11 +27,11 @@ ms.locfileid: "85246645"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>若要使用 WSHttpBinding 搭配憑證來獲得傳輸安全性 (透過程式碼)  
   
-1. 請使用 HttpCfg.exe 工具，將 SSL 憑證繫結至電腦的連接埠。 如需詳細資訊，請參閱[如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)。  
+1. 請使用 HttpCfg.exe 工具，將 SSL 憑證繫結至電腦的連接埠。 如需詳細資訊，請參閱 [如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 2. 建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，並將 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 屬性設定為 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
-3. 將 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 屬性設定為適當值。 （如需詳細資訊，請參閱[選取認證類型](selecting-a-credential-type.md)。）下列程式碼會使用 <xref:System.ServiceModel.MessageCredentialType.Certificate> 值。  
+3. 將 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 屬性設定為適當值。  (如需詳細資訊，請參閱 [選取認證類型](selecting-a-credential-type.md)。 ) 下列程式碼會使用 <xref:System.ServiceModel.MessageCredentialType.Certificate> 該值。  
   
 4. 使用適當的基底位址，建立 <xref:System.Uri> 類別的執行個體 請注意，位址必須使用 "HTTPS" 配置，而且必須包含電腦的實際名稱，以及 SSL 憑證所繫結的連接埠號碼。 (另外，您也可以在組態中設定基底位址)。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "85246645"
   
 #### <a name="to-use-the-wshttpbinding"></a>若要使用 WSHttpBinding  
   
-1. 使用繫結至連接埠的 SSL 憑證來設定電腦  （如需詳細資訊，請參閱[如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)）。 您不需要使用此設定來設定 <`transport`> 元素值。  
+1. 使用繫結至連接埠的 SSL 憑證來設定電腦   (需詳細資訊，請參閱 [如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)) 。 您不需要使用此設定來設定 <`transport`> 元素值。  
   
 2. 指定訊息層級安全性的用戶端認證類型。 下列範例會將 `clientCredentialType` <> 元素的屬性設定 `message` 為 `UserName` 。  
   
@@ -138,7 +139,7 @@ ms.locfileid: "85246645"
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>若要使用 NetTcpBinding 搭配 Windows 來獲得傳輸安全性  
   
-1. 將加入 [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) 至系結區段，  
+1. 將加入 [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) 至系結區段。  
   
 2. 新增 <`binding`> 元素，並將 `name` 屬性設定為適當的值。  
   
@@ -163,6 +164,6 @@ ms.locfileid: "85246645"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：設定安全性模式](../how-to-set-the-security-mode.md)
-- [保護服務安全](../securing-services.md)
-- [Securing Services and Clients](securing-services-and-clients.md)
+- [作法：設定安全性模式](../how-to-set-the-security-mode.md)
+- [保護服務的安全](../securing-services.md)
+- [確保服務與用戶端的安全](securing-services-and-clients.md)

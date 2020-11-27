@@ -1,18 +1,18 @@
 ---
 title: 指定進入點
-description: 瞭解如何指定進入點，以在 DLL 中識別函式的位置。 您可以藉由將進入點對應到另一個名稱，來重新命名函式。
+description: 瞭解如何指定進入點，以識別函式在 DLL 中的位置。 您可以藉由將進入點對應至另一個名稱來重新命名函式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - EntryPoint field
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: 5628c54103410d127c2f9c4f56e1c6f897ada754
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: d5c6b651b3b5f19eea8e61bc17da92158be87957
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282017"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266359"
 ---
 # <a name="specifying-an-entry-point"></a>指定進入點
 
@@ -58,6 +58,7 @@ End Class
 ```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>在 C# 和 C++ 中重新命名函式  
+
  您可以使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 欄位來依名稱或序數指定 DLL 函式。 如果方法定義中的函式名稱與 DLL 中的進入點相同，則不必明確地以 **EntryPoint** 欄位來識別函式。 否則，請使用其中一種下列屬性形式來表示名稱或序數：  
   
 ```csharp
@@ -91,7 +92,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

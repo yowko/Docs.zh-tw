@@ -1,19 +1,21 @@
 ---
-title: HOW TO：使用組態新增 ASP.NET AJAX 端點
+title: 作法：使用組態新增 ASP.NET AJAX 端點
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: b229173381eed3e821a9ad9e1a6639912521731c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051658"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268426"
 ---
-# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>HOW TO：使用組態新增 ASP.NET AJAX 端點
-Windows Communication Foundation （WCF）可讓您建立服務，讓 ASP.NET AJAX 啟用的端點可在用戶端網站上從 JavaScript 呼叫。 若要建立此類端點，您可以使用設定檔，如同所有其他的 Windows Communication Foundation （WCF）端點，或使用不需要任何設定元素的方法。 本主題示範組態方法。  
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>作法：使用組態新增 ASP.NET AJAX 端點
+
+Windows Communication Foundation (WCF) 可讓您建立服務，讓 ASP.NET AJAX 啟用的端點可從用戶端網站上的 JavaScript 呼叫。 若要建立這類端點，您可以使用設定檔，如同所有其他 Windows Communication Foundation (WCF) 端點，或使用不需要任何設定元素的方法。 本主題示範組態方法。  
   
- 此程式的部分可讓服務端點變成 ASP.NET AJAX 啟用，其中包含設定端點以使用 <xref:System.ServiceModel.WebHttpBinding> 和來新增 [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) 端點行為。 設定端點之後，執行和裝載服務的步驟類似于任何 WCF 服務所使用的。 如需實用的範例，請參閱[使用 HTTP POST 的 AJAX 服務](../samples/ajax-service-using-http-post.md)。  
+ 讓服務端點變成 ASP.NET AJAX 啟用的程式部分，包括設定端點使用 <xref:System.ServiceModel.WebHttpBinding> 和來新增 [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) 端點行為。 在設定端點之後，執行和裝載服務的步驟與任何 WCF 服務所使用的步驟類似。 如需實用的範例，請參閱 [使用 HTTP POST 的 AJAX 服務](../samples/ajax-service-using-http-post.md)。  
   
- 如需有關如何設定 ASP.NET AJAX 端點而不使用設定的詳細資訊，請參閱 how [to： Add a ASP.NET Ajax endpoint，而不](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)使用 configuration。  
+ 如需如何在不使用設定的情況下設定 ASP.NET AJAX 端點的詳細資訊，請參閱 [如何：在不使用設定的情況下新增 ASP.NET Ajax 端點](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
   
 ## <a name="to-create-a-basic-wcf-service"></a>若要建立基本 WCF 服務  
   
@@ -56,7 +58,7 @@ Windows Communication Foundation （WCF）可讓您建立服務，讓 ASP.NET AJ
   
 ## <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>若要建立服務的 ASP.NET AJAX 端點  
   
-1. 建立行為設定，並指定 [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) ASP.NET 服務之 AJAX 啟用端點的行為。  
+1. 建立行為設定，並指定 [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) ASP.NET 服務之啟用 AJAX 的端點行為。  
   
     ```xml  
     <system.serviceModel>  
@@ -87,7 +89,7 @@ Windows Communication Foundation （WCF）可讓您建立服務，讓 ASP.NET AJ
   
 ## <a name="to-host-the-service-in-iis"></a>若要在 IIS 中裝載服務  
   
-1. 若要在 IIS 中裝載服務，請在應用程式中建立一個名為 service 且副檔名為 .svc 的新檔案。 藉由為服務新增適當的[ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md)指示詞資訊來編輯此檔案。 例如，`CalculatorService` 範例中的服務檔案內容包含下列資訊。  
+1. 若要在 IIS 中裝載服務，請在應用程式中建立一個名為 service 且副檔名為 .svc 的新檔案。 藉由新增服務的適當[ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md)指示詞資訊來編輯此檔案。 例如，`CalculatorService` 範例中的服務檔案內容包含下列資訊。  
   
     ```aspx-csharp
     <%@ServiceHost
@@ -97,13 +99,13 @@ Windows Communication Foundation （WCF）可讓您建立服務，讓 ASP.NET AJ
     %>  
     ```  
   
-2. 如需在 IIS 中裝載的詳細資訊，請參閱[如何：在 iis 中裝載 WCF 服務](how-to-host-a-wcf-service-in-iis.md)。  
+2. 如需在 IIS 中裝載的詳細資訊，請參閱 [如何：在 iis 中裝載 WCF 服務](how-to-host-a-wcf-service-in-iis.md)。  
   
 ## <a name="to-call-the-service"></a>若要呼叫服務  
   
-1. 端點是在與 .svc 檔案相對的空白位址上設定的，因此服務現在可供使用，並可透過將要求傳送至服務來叫用/ \<operation> -例如，針對作業的 .svc/Add。 `Add` 您可以將端點 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。 如需範例，請參閱[使用 HTTP POST 的 AJAX 服務](../samples/ajax-service-using-http-post.md)。  
+1. 端點是在相對於 .svc 檔案的空白位址上設定，因此服務現在可以使用，而且可以藉由將要求傳送至 service .svc/ \<operation> -例如，service .svc/Add for operation 來叫用 `Add` 。 您可以將端點 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。 如需範例，請參閱 [使用 HTTP POST 的 AJAX 服務](../samples/ajax-service-using-http-post.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [建立 ASP.NET AJAX 的 WCF 服務](creating-wcf-services-for-aspnet-ajax.md)
-- [HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [作法：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

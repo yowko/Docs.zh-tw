@@ -1,6 +1,6 @@
 ---
 title: 作法：實作回呼函式
-description: 請參閱如何執行回呼函式。 在此範例中，使用平台叫用的受控應用程式會列印電腦上每個視窗的控制碼值。
+description: 請參閱如何執行回呼函數。 在此範例中，使用平台叫用的受控應用程式會列印電腦上每個視窗的控制碼值。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: 31c657372e760c8d57f9714b20178967ad85fcd3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9fa1d3b3ece334e109584f38ba69b796dfe24491
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619113"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267048"
 ---
 # <a name="how-to-implement-callback-functions"></a>作法：實作回呼函式
+
 下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。 具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。  
   
 ### <a name="to-implement-a-callback-function"></a>若要實作回撥函式  
