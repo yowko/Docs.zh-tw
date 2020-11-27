@@ -1,20 +1,21 @@
 ---
 title: 實作 UI 自動化 Transform 控制項模式
-description: 請參閱指導方針和慣例，在使用者介面自動化中執行轉換控制項模式。 知道 ITransformProvider 介面的必要成員。
+description: 請參閱指導方針和慣例，以在消費者介面自動化中執行轉換控制項模式。 瞭解 ITransformProvider 介面所需的成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Transform
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: fc47170a08ff08f6cd8f67996ef8fbf19c40f819
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265644"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>實作 UI 自動化 Transform 控制項模式
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168216"
  <xref:System.Windows.Automation.TransformPattern> 控制項模式用來支援可在二維空間內移動、調整大小或旋轉的控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
+
  實作轉換控制項模式時，請注意下列方針和慣例：  
   
 - 此控制項模式的支援不限於桌面上的物件。 若容器物件的子項可以自由在容器的範圍內移動、調整大小或旋轉，則這些子項也必須支援此控制項模式。  
@@ -35,22 +38,26 @@ ms.locfileid: "87168216"
 - 所有參數和屬性值都是絕對值，不受地區設定影響。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider 的必要成員  
+
  以下是實作 <xref:System.Windows.Automation.Provider.ITransformProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|注意|  
+|必要成員|成員類型|備註|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|無|  
   
  此控制項模式沒有任何相關聯的事件。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外狀況  
+
  提供者必須擲回下列例外狀況。  
   
 |例外狀況類型|條件|  

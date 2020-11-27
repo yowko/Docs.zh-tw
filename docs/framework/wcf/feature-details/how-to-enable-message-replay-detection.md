@@ -10,14 +10,15 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a4d304a1316fe534e09f02ac1cd2900bf798011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557875"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265527"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>作法：啟用訊息重新執行偵測
+
 當攻擊者複製兩方之間的訊息資料流，並且對其中一方或多方重新執行資料流時，即表示發生重新執行攻擊。 除非緩解攻擊，否則受到攻擊的電腦會將資料流當成合法訊息來處理，導致發生一連串負面的影響，例如項目的重複排序。  
   
  如需訊息重新執行偵測的詳細資訊，請參閱訊息重新執行 [偵測](/previous-versions/msp-n-p/ff649371(v=pandp.10))。  
@@ -75,15 +76,18 @@ ms.locfileid: "90557875"
     ```  
   
 ## <a name="example"></a>範例  
+
  下列範例將使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 方法來建立 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>，並設定繫結的重新執行屬性。  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
 ## <a name="scope-of-replay-message-security-only"></a>重新執行範圍：僅限訊息安全性  
+
  請注意，下列程序僅適用訊息安全性模式。 在 [傳輸] 與 [使用訊息認證的傳輸] 模式中，傳輸機制會偵測重新執行。  
   
 ## <a name="secure-conversation-notes"></a>安全對話提示  
+
  針對可啟用安全對話的繫結，您可以同時對應用程式通道，以及安全對話啟動安裝繫結調整這些設定。 例如，您可以關閉應用程式通道的重新執行，但卻針對可建立安全對話的啟動安裝繫結加以啟用。  
   
  如果您並未使用安全對話工作階段，重新執行偵測將無法保證在伺服器陣列案例以及處理序回收期間偵測重新執行。 此情況適用下列系統提供的繫結：  

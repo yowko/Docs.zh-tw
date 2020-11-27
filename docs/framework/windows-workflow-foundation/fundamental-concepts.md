@@ -1,22 +1,25 @@
 ---
 title: 基本 Windows Workflow 概念
-description: 本文說明在 .NET Framework 4.6.1 中，某些開發人員可能不熟悉的工作流程開發中的一些概念。
+description: 本文說明某些開發人員可能不熟悉的 .NET Framework 4.6.1 中的工作流程開發概念。
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a7683791c7aed54beed9256ab08010dfeebe9936
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419885"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265293"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>基本 Windows Workflow 概念
+
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的工作流程開發運用了一些開發人員可能未曾使用過的概念。 本主題描述其中的部分概念及其實作方式。  
   
 ## <a name="workflows-and-activities"></a>工作流程與活動  
+
  工作流程是結構化的動作集合，這些動作會以處理序為模型。 工作流程中的每一個活動都會製作成活動的模型。 主機與工作流程互動的方式，是使用 <xref:System.Activities.WorkflowInvoker> 將工作流程當成方法來叫用，以 <xref:System.Activities.WorkflowApplication> 明確控制單一工作流程執行個體的執行，並以 <xref:System.ServiceModel.WorkflowServiceHost> 在多執行個體案例中進行以訊息為基礎的互動。 由於工作流程的步驟定義為活動的階層，因此階層中最上方的活動可說是用於定義工作流程本身。 這個階層模型取代了舊版中明確的 `SequentialWorkflow` 及 `StateMachineWorkflow` 類別。 活動本身會開發做為其他活動的集合 (使用 <xref:System.Activities.Activity> 類別做為基底，通常使用 XAML 來定義)，或是使用 <xref:System.Activities.CodeActivity> 類別 (可以使用執行階段進行資料存取) 或 <xref:System.Activities.NativeActivity> 類別 (會向活動作者公開工作執行階段的廣度)，以自訂方式來建立。 使用 <xref:System.Activities.CodeActivity> 和 <xref:System.Activities.NativeActivity> 來開發的活動，是使用 CLR 相容語言 (例如 C#) 開發而成。  
   
 ## <a name="activity-data-model"></a>活動資料模型  
+
  活動會使用下表顯示的型別來儲存及共用資料。  
   
 |||  
@@ -26,6 +29,7 @@ ms.locfileid: "83419885"
 |運算式|具有提升用於引數繫結之傳回值的活動。|  
   
 ## <a name="workflow-runtime"></a>工作流程執行階段  
+
  工作流程執行階段是工作流程的執行環境。 <xref:System.Activities.WorkflowInvoker> 是執行工作流程最簡單的方式。 主機會使用 <xref:System.Activities.WorkflowInvoker> 進行下列作業：  
   
 - 同步叫用工作流程。  
@@ -53,9 +57,11 @@ ms.locfileid: "83419885"
  藉由使用適當的 <xref:System.Activities.ActivityContext> 衍生類別 (例如 <xref:System.Activities.NativeActivityContext> 或 <xref:System.Activities.CodeActivityContext>)，活動可以存取工作流程執行階段環境。 並且會利用這種方式解析引數與變數、排程子活動，以及用於許多其他用途。  
   
 ## <a name="services"></a>服務  
- 工作流程利用傳訊活動，提供自然的方式來實作及存取鬆散耦合服務。 訊息活動建置於 WCF 上，而且是用來將資料傳入和傳出工作流程的主要機制。 您可以一起撰寫傳訊活動，針對您所需的任何傳訊交換型式建立模型。 如需詳細資訊，請參閱[訊息活動](../wcf/feature-details/messaging-activities.md)。 工作流程服務是使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別裝載的。 如需詳細資訊，請參閱[裝載工作流程服務總覽](../wcf/feature-details/hosting-workflow-services-overview.md)。 如需工作流程服務的詳細資訊，請參閱[工作流程服務](../wcf/feature-details/workflow-services.md)  
+
+ 工作流程利用傳訊活動，提供自然的方式來實作及存取鬆散耦合服務。 訊息活動是以 WCF 為基礎，而且是用來將資料傳入和傳出工作流程的主要機制。 您可以一起撰寫傳訊活動，針對您所需的任何傳訊交換型式建立模型。 如需詳細資訊，請參閱 [訊息活動](../wcf/feature-details/messaging-activities.md)。 工作流程服務是使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別裝載的。 如需詳細資訊，請參閱 [裝載工作流程服務總覽](../wcf/feature-details/hosting-workflow-services-overview.md)。 如需工作流程服務的詳細資訊，請參閱 [工作流程服務](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>持續性工作流程、卸載工作流程，以及長期執行工作流程  
+
  Windows 工作流程透過提供下列功能，簡化長期執行反應式程式的製作：  
   
 - 存取外部輸入的活動。  

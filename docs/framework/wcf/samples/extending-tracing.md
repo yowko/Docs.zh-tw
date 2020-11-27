@@ -2,12 +2,12 @@
 title: 擴充追蹤
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: f2b9deb346077609193ec08c2c01b10a3ad9357b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e3329238998f11467511960f32b177953036ab1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265332"
 ---
 # <a name="extend-tracing"></a>擴充追蹤
 
@@ -28,9 +28,11 @@ ms.locfileid: "90556508"
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>追蹤與活動傳播  
+
  使用者定義的活動追蹤可讓使用者建立自己的追蹤活動，將追蹤分組為工作的邏輯單元、透過傳輸和傳播來使活動相互關聯，以及降低 WCF 追蹤 (的效能成本，例如記錄檔) 的磁碟空間成本。  
   
 ### <a name="add-custom-sources"></a>新增自訂來源  
+
  使用者定義的追蹤可以同時新增至用戶端與服務程式碼。 將追蹤來源新增至用戶端或服務設定檔，可讓您在 [服務追蹤檢視器工具 ( # A0) ](../service-trace-viewer-tool-svctraceviewer-exe.md)中記錄和顯示這些自訂追蹤。 下列程式碼示範如何將名為 `ServerCalculatorTraceSource` 之使用者定義的追蹤來源新增至組態檔。  
   
 ```xml  
@@ -69,6 +71,7 @@ ms.locfileid: "90556508"
 ```  
   
 ### <a name="correlate-activities"></a>關聯活動  
+
  若要直接關聯跨端點的活動，在 `propagateActivity` 追蹤來源中的 `true` 屬性必須設定為 `System.ServiceModel`。 此外，若要在不經過 WCF 活動的情況下傳播追蹤，必須關閉 [System.servicemodel 活動追蹤]。 這項設定將如下列程式碼範例所示。  
   
 > [!NOTE]
@@ -87,6 +90,7 @@ ms.locfileid: "90556508"
 ```  
   
 ### <a name="lessen-performance-cost"></a>降低效能成本  
+
  將 `ActivityTracing` 追蹤來源中的 `System.ServiceModel` 設定為 Off 時會產生追蹤檔，其中只包含使用者定義的活動追蹤，而不包含任何 ServiceModel 活動追蹤。 排除 System.servicemodel 活動追蹤會導致較小的記錄檔。 但是，將 WCF 處理追蹤相互關聯的機會會遺失。  
   
 ## <a name="set-up-build-and-run-the-sample"></a>設定、建立及執行範例  
