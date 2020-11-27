@@ -2,21 +2,23 @@
 title: PiiLoggingOn
 ms.date: 03/30/2017
 ms.assetid: 08940d0f-dc4c-49e0-b6f6-b70856b5060d
-ms.openlocfilehash: dd061bc9dfaaacbb33c9446103cbfade540beb67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d53f8810ae6acb8123c260975d5d5a727adfdb13
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796207"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278462"
 ---
 # <a name="piiloggingon"></a>PiiLoggingOn
-識別碼:107  
+
+識別碼：107  
   
- 嚴重性：Error  
+ 嚴重性：錯誤  
   
- Category追蹤  
+ 分類：追蹤  
   
 ## <a name="description"></a>描述  
+
  這個事件表示已開啟 PII 記錄。 將記錄敏感資料。 此事件會列出處理序名稱和處理序識別碼。  
   
 ## <a name="see-also"></a>另請參閱

@@ -1,6 +1,6 @@
 ---
 title: 使用組件和全域組件快取
-description: 使用 .NET 中的元件和全域組件快取（GAC）。 請查看您可能想要在 GAC 中安裝元件的原因。
+description: 在 .NET 中使用元件和全域組件快取 (GAC) 。 請參閱您可能想要在 GAC 中安裝元件的原因。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: e27fdd7def2d234e1e8eb7557e869bf478d68210
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105157"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279307"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用組件和全域組件快取
 
@@ -46,6 +46,7 @@ ms.locfileid: "85105157"
  請注意，有些情況下您明確不想要將組件安裝到全域組件快取中。 如果您將構成應用程式的其中一個組件放入全域組件快取中，則可以使用 XCOPY 複製應用程式目錄，以不再複寫或安裝應用程式。 在此情況下，您也必須將組件移至全域組件快取。  
   
 ## <a name="in-this-section"></a>本節內容  
+
 [如何：將元件安裝到全域組件快取中](install-assembly-into-gac.md)  
 描述將組件安裝到全域組件快取中的方式。  
   

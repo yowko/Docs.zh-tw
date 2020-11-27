@@ -2,15 +2,16 @@
 title: 核心通訊：連線架構
 ms.date: 03/30/2017
 ms.assetid: 61ee00e1-896d-47c8-942f-1db28ac89cdc
-ms.openlocfilehash: a3f52ac82c2bf09ded504e412d7f216dd0b39959
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd90bf75370776382b584388330e59a0701ed772
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998682"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277500"
 ---
 # <a name="core-communications-connection-framework"></a>核心通訊：連線架構
-本主題會列出所有由 Windows Communication Foundation (WCF) 連線架構產生的例外狀況。  
+
+本主題會列出 Windows Communication Foundation (WCF) 連接架構所產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   

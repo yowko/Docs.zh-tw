@@ -1,6 +1,6 @@
 ---
 title: 指定字元集
-description: 瞭解如何指定使用窄（ANSI）或寬（Unicode）編碼的字元集。 您也可以指定自動執行時間選取。
+description: 瞭解如何指定使用窄 (ANSI) 或寬 (Unicode) 編碼的字元集。 您也可以指定自動執行時間選取。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 8cc4198d6c13d4705ffc5ce5229cce7a205aec8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309790"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278176"
 ---
 # <a name="specify-a-character-set"></a>指定字元集
 
@@ -33,6 +33,7 @@ ms.locfileid: "86309790"
      提供 2 個位元組字元 Unicode 格式化，區別方式是在進入點名稱附加 "W"。 **MessageBoxW** 呼叫一律以 Unicode 格式的字串封送處理。  
   
 ## <a name="string-marshaling-and-name-matching"></a>字串封送處理及名稱比對  
+
  `CharSet` 欄位可接受下列值：  
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi> (預設值)  
@@ -65,9 +66,9 @@ ms.locfileid: "86309790"
   
 ## <a name="specify-a-character-set-in-visual-basic"></a>在 Visual Basic 中指定字元集
 
-您可以藉由在宣告語句中加入 `Ansi` 、或關鍵字，在 Visual Basic 中指定字元集行為 `Unicode` `Auto` 。 如果您省略 character set 關鍵字， <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位會預設為 ANSI 字元集。
+您可以藉由將 `Ansi` 、或關鍵字加入至宣告語句，在 Visual Basic 中指定字元集行為 `Unicode` `Auto` 。 如果您省略 character set 關鍵字， <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位會預設為 ANSI 字元集。
 
-下列範例會宣告 **MessageBox** 函式三次，每次都有不同的字元集行為。 第一個語句會省略 character set 關鍵字，因此字元集預設為 ANSI。 第二個和第三個語句使用關鍵字明確指定字元集。
+下列範例會宣告 **MessageBox** 函式三次，每次都有不同的字元集行為。 第一個語句會省略 character set 關鍵字，因此字元集預設為 ANSI。 第二個和第三個語句會使用關鍵字明確指定字元集。
 
 ```vb
 Friend Class NativeMethods
@@ -91,7 +92,7 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specify-a-character-set-in-c-and-c"></a>在 c # 和 c + + 中指定字元集
+## <a name="specify-a-character-set-in-c-and-c"></a>使用 c # 和 c + + 指定字元集
 
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位將基礎字元集識別為 ANSI 或 Unicode。 字元集控制應該如何封送處理方法的字串引數。 您可以使用下列格式之一來表示字元集：  
   

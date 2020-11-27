@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 32c08daaacb482aa98a58d7f8882da2c9389293d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535354"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276668"
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
+
 下圖顯示公開、不安全的 Windows Communication Foundation (WCF) 用戶端和服務的範例：  
   
  ![顯示不安全網際網路案例的螢幕擷取畫面](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
@@ -28,19 +29,22 @@ ms.locfileid: "90535354"
 |機密性|無|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
 - 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼顯示如何建立無安全性的端點。 根據預設值，<xref:System.ServiceModel.BasicHttpBinding> 的安全性模式設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.None>。  
   
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
 ### <a name="service-configuration"></a>服務組態  
+
  下列程式碼會使用組態設定相同端點。  
   
 ```xml  
@@ -68,7 +72,8 @@ ms.locfileid: "90535354"
 ```  
   
 ## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
@@ -78,12 +83,14 @@ ms.locfileid: "90535354"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼顯示存取不安全端點的基本 WCF 用戶端。  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
   
 ### <a name="client-configuration"></a>用戶端組態  
+
  下列程式碼會設定用戶端。  
   
 ```xml  

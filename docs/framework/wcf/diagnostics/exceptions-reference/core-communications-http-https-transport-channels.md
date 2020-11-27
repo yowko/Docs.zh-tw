@@ -1,16 +1,17 @@
 ---
-title: 核心通訊：HTTP HTTPS 傳輸通道
+title: 核心通訊： HTTP-HTTPS 傳輸通道
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d33d153c6c527398b035ad9d027593a0fefd0e8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998747"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277409"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>核心通訊：HTTP/HTTPS 傳輸通道
-本主題列出 Windows Communication Foundation (WCF) 傳輸 HTTP/HTTPS 通道所產生的所有例外狀況。  
+
+本主題列出 Windows Communication Foundation (WCF) 傳輸 HTTP/HTTPS 通道產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   
@@ -21,7 +22,7 @@ ms.locfileid: "61998747"
 |Hosting_SslSettingsMisconfigured|指定之服務的安全通訊端層設定與網際網路資訊服務的安全通訊端層設定不相符。|  
 |HttpAuthSchemeAndClientCert|HTTPS 接聽項處理站已設定為需要用戶端憑證與指定的驗證配置。 然而，一次只需要一種用戶端驗證格式。|  
 |HttpReceiveFailure|對指定項目接收 HTTP 回應時發生錯誤。 服務端點繫結可能並未使用 HTTP 通訊協定。 另一種可能則是因為服務關閉，所以伺服器終止 HTTP 要求內容。 如需詳細資訊，請參閱伺服器記錄。|  
-|HttpRegistrationAccessDenied|HTTP 無法註冊指定的 URL。 您的程序並沒有此命名空間的存取權限 (請參閱[命名空間保留、 註冊和路由](/windows/desktop/http/namespace-reservations-registrations-and-routing)如需詳細資訊)。|  
+|HttpRegistrationAccessDenied|HTTP 無法註冊指定的 URL。 您的進程沒有此命名空間的存取權限 (如需詳細資訊，請參閱 [命名空間保留、註冊和路由](/windows/desktop/http/namespace-reservations-registrations-and-routing)) 。|  
 |HttpRegistrationAlreadyExists|HTTP 無法註冊指定的 URL。 已有另一個應用程式使用 HTTP.SYS 註冊此 URL。|  
 |HttpRegistrationPortInUse|HTTP 無法註冊指定的 URL，因為另一個應用程式正在使用指定的 TCP 連接埠。|  
 |HttpSendFailure|向指定項目提出 HTTP 要求時發生錯誤。 請確定原因不是出在安全性繫結不符。 同時也請確定服務尚未針對安全通訊端層進行設定。|  

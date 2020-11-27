@@ -2,12 +2,12 @@
 title: WCF Web HTTP 服務的快取支援
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 0445f0214f90873dad4241789db270c9b6f4a2f6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6ce3ceccde01879876960e0288cb600a3a20c204
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559411"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279333"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP 服務的快取支援
 
@@ -167,4 +167,5 @@ public Customer GetCustomer(string id)
 ```  
   
 ## <a name="security-considerations"></a>安全性考量  
+
  需要權限的要求不得快取其回應，因為從快取提供回應時，不會執行授權。  快取此類回應會導致嚴重的安全性弱點。  需要授權的要求通常會提供使用者專屬的資料，因此伺服器端快取甚至沒有任何好處。  在此類情況下，用戶端快取或完全不快取將更為適當。

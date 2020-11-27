@@ -6,17 +6,19 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: e24d3bc07c7292625813828d598ed43952155e4f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f15cd9b38285e88dac727bcfe51c8dc542a735f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822356"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277981"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
+
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  
   
 ## <a name="designing-and-planning-for-performance"></a>設計及規劃效能  
+
  如果您需要高效能的應用程式，您必須以設計其他任何功能的相同方式，將效能設計到應用程式中。 您應該判斷應用程式的效能關鍵案例、設定效能目標，並及早且經常地測量這些應用程式案例的效能。 由於每個應用程式都不同，並有不同的效能關鍵執行路徑，因此及早判斷這些路徑並集中工作，可讓您提升生產力。  
   
  您不需要完全熟悉您的目標平台，即可建立高效能的應用程式。 不過，您應該了解目標平台中的哪些組件會嚴重降低效能。 您可以在開發流程初期測量效能，來達成此目的。  
@@ -24,12 +26,14 @@ ms.locfileid: "94822356"
  若要判斷哪些區域對效能很重要，以及建立您的效能目標，請一律考量使用者體驗。 啟動時間和回應性是影響使用者對應用程式觀感的兩個主要區域。 如果您的應用程式使用大量記憶體，可能對使用者顯得遲緩或影響在系統上執行的其他應用程式，或者在某些情況下，造成 Windows 市集或 Windows Phone 市集提交流程失敗。 此外，如果您判斷程式碼中有哪些部分較常執行，則可以確保程式碼中的這些部分經過適當的最佳化。  
   
 ## <a name="analyzing-performance"></a>分析效能  
+
  在您的整體開發計劃中，於開發時設定應用程式效能的測量點，並將結果與您之前設定的目標進行比較。 在您預期使用者會有的環境和硬體中測量您的應用程式。 及早分析應用程式的效能，通常可以變更日後在開發週期中修復時可能所費不貲的架構決策。 下列各節說明您可用來分析應用程式的效能工具，並討論這些工具使用的事件追蹤。  
   
 ### <a name="performance-tools"></a>效能工具  
+
  以下是您可以搭配 .NET Framework 應用程式使用的一些效能工具。  
   
-|工具|說明|  
+|工具|描述|  
 |----------|-----------------|  
 |Visual Studio 效能分析|用來分析要部署至執行 Windows 作業系統的電腦之 .NET Framework 應用程式的 CPU 使用率。<br /><br /> 當您開啟專案之後，可從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊，請參閱[效能總管](/visualstudio/profiling/performance-explorer)。 **注意：** 以 Windows Phone 為目標時，請使用 Windows Phone 應用程式分析 (請參閱下一列)。|  
 |Windows Phone 應用程式分析|用來分析您的 Windows Phone 應用程式中的 CPU 和記憶體、網路資料傳輸速率、應用程式回應性和耗電量。<br /><br /> 當您安裝 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) 之後，可針對 Windows Phone 專案，從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊，請參閱 [Windows Phone 8 的應用程式分析](/previous-versions/windows/apps/jj215908(v=vs.105))。|  
@@ -37,9 +41,11 @@ ms.locfileid: "94822356"
 |[Windows Performance Analyzer](https://www.microsoft.com/p/windows-performance-analyzer/9n0w1b2bxgnz?activetab=pivot:overviewtab)|當多個應用程式在相同電腦上執行時，用來判斷整個系統效能，例如應用程式的記憶體和儲存體使用。 您可以從下載中心取得此工具，作為 Windows 8 的 Windows 評定及部署套件 (ADK) 的一部分。 如需詳細資訊，請參閱 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)。|
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows 事件追蹤 (ETW)  
+
  ETW 是一項技術，可讓您取得有關執行中程式碼的診斷資訊，對於之前所提到的許多效能工具而言，是不可或缺的一項技術。 ETW 會在 .NET Framework 應用程式和 Windows 引發特定事件時建立記錄檔。 透過 ETW，您可以動態啟用和停用記錄，讓您在生產環境中執行詳細追蹤，而不需要重新啟動應用程式。 .NET Framework 提供對 ETW 事件的支援，而許多程式碼分析和效能工具會使用 ETW 來產生效能資料。 這些工具通常會啟用和停用 ETW 事件，因此熟悉這些事件會很有幫助。 您可以使用特定 ETW 事件收集有關您的應用程式特定元件的效能資訊。 如需 .NET Framework 中 ETW 支援的詳細資訊，請參閱[通用語言執行平台中的 ETW 事件](etw-events-in-the-common-language-runtime.md)和[工作平行程式庫和 PLINQ 中的 ETW 事件](etw-events-in-task-parallel-library-and-plinq.md)。  
   
 ## <a name="performance-by-app-type"></a>依應用程式類型的效能  
+
  每一種類型的 .NET Framework 應用程式都有自己用於評估效能的最佳做法、考量和工具。 下表連結至特定 .NET Framework 應用程式類型的效能主題。  
   
 |應用程式類型|請參閱|  
@@ -51,7 +57,7 @@ ms.locfileid: "94822356"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[.NET Framework 應用程式中的快取](caching-in-net-framework-applications.md)|描述用於提升應用程式效能的快取資料技術。|  
 |[延遲初始設定](lazy-initialization.md)|描述如何視需要初始化物件以提升效能，特別是在應用程式啟動時。|  

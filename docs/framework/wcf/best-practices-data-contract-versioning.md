@@ -7,26 +7,29 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 4d500c37efa4a90e24b06cd2e886147e1f159d4e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: d6a1eef949e30a1a6d9a1c5971d33c788cc548b9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320785"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277903"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
-本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱[使用資料合約](./feature-details/using-data-contracts.md)中的主題。  
+
+本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱 [使用資料合約](./feature-details/using-data-contracts.md)中的主題。  
   
 ## <a name="note-on-schema-validation"></a>結構描述驗證注意事項  
- 在討論資料合約版本設定時，請務必注意，Windows Communication Foundation （WCF）所匯出的資料合約架構沒有任何版本控制支援，而不是專案預設會標示為選擇性的事實。  
+
+ 在討論資料合約版本設定時，請務必注意，Windows Communication Foundation (WCF) 匯出的資料合約架構沒有任何版本設定支援，除了專案預設標示為選擇性的事實。  
   
  這表示即使最常見的版本設定案例 (例如新增資料成員)，也無法以與指定結構描述完全整合的方式來實作。 較新版的資料合約 (例如具有新的資料成員) 不會使用舊的結構描述來驗證。  
   
- 然而，有許多案例並不需要嚴格的結構描述相容性。 許多 Web 服務平臺（包括使用 ASP.NET 所建立的 WCF 和 XML Web Service）都預設為不執行架構驗證，因此可容許架構未描述的額外元素。 當使用此類平台時，許多版本設定案例都更容易實作。  
+ 然而，有許多案例並不需要嚴格的結構描述相容性。 許多 Web 服務平臺（包括使用 ASP.NET 建立的 WCF 和 XML Web 服務）預設不會執行架構驗證，因此可容許架構未描述的額外元素。 當使用此類平台時，許多版本設定案例都更容易實作。  
   
  因此，有兩組資料合約版本設定指導方針：一組適用於嚴格結構描述驗證很重要的案例，另一組適用於不重要的案例。  
   
 ## <a name="versioning-when-schema-validation-is-required"></a>需要結構描述驗證時的版本設定  
+
  如果在所有方向中 (新至舊以及舊至新)，都需要嚴格結構描述驗證，資料合約應視為固定不變的。 如果需要版本設定，應使用不同的名稱或命名空間來建立新的資料合約，而且使用此資料型別的服務合約應依此進行版本設定。  
   
  例如，名為 `PoProcessing` 的訂單處理服務合約，以及採用符合 `PostPurchaseOrder` 資料合約之參數的 `PurchaseOrder` 作業。 如果 `PurchaseOrder` 合約必須變更，您必須建立新的資料合約，也就是包含變更的 `PurchaseOrder2`。 然後您必須在服務合約層處理版本設定。 例如，藉由建立採用 `PostPurchaseOrder2` 參數的 `PurchaseOrder2` 作業，或藉由建立 `PoProcessing2` 服務合約，其中 `PostPurchaseOrder` 作業是採用 `PurchaseOrder2` 資料合約。  
@@ -35,18 +38,19 @@ ms.locfileid: "72320785"
   
  雖然在這些範例中，名稱已變更 (附加一個 "2")，但建議您將新的命名空間加上版本號碼或日期，來變更命名空間而非名稱。 例如，`http://schemas.contoso.com/2005/05/21/PurchaseOrder` 資料合約會變更為 `http://schemas.contoso.com/2005/10/14/PurchaseOrder` 資料合約。  
   
- 如需詳細資訊，請參閱最佳做法：[服務版本](service-versioning.md)設定。  
+ 如需詳細資訊，請參閱最佳做法： [服務版本控制](service-versioning.md)。  
   
- 雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 這些多餘的值是由 WCF 儲存和傳回，因此會導致傳送架構不正確訊息。 如果要避免這個問題，應關閉往返功能。 執行這項作業的方法有兩種。  
+ 雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 多餘的值會由 WCF 儲存和傳回，因此會導致傳送架構不正確訊息。 如果要避免這個問題，應關閉往返功能。 做法有二種。  
   
 - 請勿在您任何的型別上實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。  
   
 - 將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>，以套用 `true` 屬性至您的服務合約。  
   
- 如需往返的詳細資訊，請參閱[向前相容資料合約](./feature-details/forward-compatible-data-contracts.md)。  
+ 如需來回往返的詳細資訊，請參閱 [向前相容資料合約](./feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>不需要結構描述驗證時的版本設定  
- 嚴格結構描述相容性很少有需要。 許多平台都會容許結構描述未描述的額外項目。 只要這是容許的，就可以使用[資料合約版本控制](./feature-details/data-contract-versioning.md)和[向前相容資料合約](./feature-details/forward-compatible-data-contracts.md)中所述的完整功能集。 建議使用下列指導方針。  
+
+ 嚴格結構描述相容性很少有需要。 許多平台都會容許結構描述未描述的額外項目。 只要這是可接受的，您就可以使用 [資料合約版本](./feature-details/data-contract-versioning.md) 設定和 [向前相容資料合約](./feature-details/forward-compatible-data-contracts.md) 中所述的完整功能集。 建議使用下列指導方針。  
   
  有些指導方針必須確實遵守，才能對預期收到舊版本之處傳送新版本的型別，或對預期收到新版本之處傳送舊的版本。 其他的指導方針並非絕對必要，但在此處會列出，因為它們可能會受到未來結構描述版本設定的影響。  
   
@@ -56,7 +60,7 @@ ms.locfileid: "72320785"
   
 3. 從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。 如需詳細資訊，請參閱[向前相容資料合約](./feature-details/forward-compatible-data-contracts.md)。 如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。  
   
-4. 在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 如需命名的詳細資訊，請參閱[資料合約名稱](./feature-details/data-contract-names.md)。  
+4. 在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 如需命名的詳細資訊，請參閱 [資料合約名稱](./feature-details/data-contract-names.md)。  
   
 5. 在較新的版本中，請勿變更任何資料成員的名稱。 如果變更做為資料成員基礎的欄位、屬性或事件的名稱，請使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性來保留現有的資料成員名稱。  
   
@@ -68,9 +72,9 @@ ms.locfileid: "72320785"
   
     1. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
   
-    2. 如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 如需回呼的詳細資訊，請參閱[版本相容序列化回呼](./feature-details/version-tolerant-serialization-callbacks.md)。  
+    2. 如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 如需回呼的詳細資訊，請參閱 [版本容錯序列化回呼](./feature-details/version-tolerant-serialization-callbacks.md)。  
   
-    3. @No__t_0 屬性應該用來確保所有新增的資料成員都會出現在現有的資料成員之後。 執行這項操作的建議方法如下：資料合約第一個版本中的所有資料成員都不應設定其 `Order` 屬性。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
+    3. <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>屬性應該用來確保所有新加入的資料成員都會出現在現有的資料成員之後。 執行這項操作的建議方法如下：資料合約第一個版本中的所有資料成員都不應設定其 `Order` 屬性。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
   
 9. 即使 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性保持為在舊版中 `false` 的預設屬性，也請不要在新版中移除資料成員。  
   
@@ -86,11 +90,11 @@ ms.locfileid: "72320785"
   
 14. 您不應在版本之間新增或移除列舉成員。 您也不應重新命名列舉成員，除非您使用 `EnumMemberAttribute` 屬性 (Attribute) 上的 Name 屬性 (Property) 讓它們的名稱在資料合約模型中保持相同。  
   
-15. 集合在資料合約模型中是可互換的，如[資料合約中的集合類型](./feature-details/collection-types-in-data-contracts.md)中所述。 這可允許更大程度的彈性。 然而，請確定您沒有在版本之間以不可互換的方式不慎變更集合型別。 例如，請勿從非自訂的集合 (也就是沒有 `CollectionDataContractAttribute` 屬性) 變更為自訂的集合，或從自訂的集合變更為非自訂的集合。 此外，請勿在版本之間變更 `CollectionDataContractAttribute` 上的屬性。 唯一允許的變更是，如果基礎集合型別的名稱或命名空間已變更，而您需要讓其資料合約名稱和命名空間和舊版本中的相同，則可新增 Name 或 Namespace 屬性。  
+15. 集合在資料合約模型中可以互換，如 [資料合約中的集合類型](./feature-details/collection-types-in-data-contracts.md)所述。 這可允許更大程度的彈性。 然而，請確定您沒有在版本之間以不可互換的方式不慎變更集合型別。 例如，請勿從非自訂的集合 (也就是沒有 `CollectionDataContractAttribute` 屬性) 變更為自訂的集合，或從自訂的集合變更為非自訂的集合。 此外，請勿在版本之間變更 `CollectionDataContractAttribute` 上的屬性。 唯一允許的變更是，如果基礎集合型別的名稱或命名空間已變更，而您需要讓其資料合約名稱和命名空間和舊版本中的相同，則可新增 Name 或 Namespace 屬性。  
   
  當情況特殊時，可以放心略過此處列出的一些指導方針。 在違背指導方針之前，請確定您完全瞭解其中的序列化、還原序列化以及結構描述機制。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataContractAttribute>

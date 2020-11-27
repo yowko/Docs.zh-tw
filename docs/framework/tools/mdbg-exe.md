@@ -1,19 +1,20 @@
 ---
 title: MDbg.exe (.NET Framework 命令列偵錯工具)
-description: 瞭解適用于 .NET 的命令列偵錯工具 MDbg.exe，可協助工具廠商和應用程式開發人員尋找並修正以 CLR 為目標的程式中的 bug。
+description: 瞭解 MDbg.exe 是適用于 .NET 的命令列偵錯工具，可協助工具廠商和應用程式開發人員尋找並修正以 CLR 為目標的程式中的 bug。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-ms.openlocfilehash: 1c663474e5084afa1824f0f6b0740ae03a344e92
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 8953db973e231014284ec6585012edc7f3ea11f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904217"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279164"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
+
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
   
 此工具會透過 NuGet 提供。 如需安裝資訊，請參閱 [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0)。 若要執行此工具，請使用 Package Manager Console。 如需如何使用套件管理員主控台的相關詳細資訊，請參閱[套件管理員主控台](/nuget/tools/package-manager-console)一文。
@@ -27,9 +28,10 @@ MDbg [ProgramName[arguments]] [options]
 ```  
   
 ## <a name="commands"></a>命令  
+
  當您在偵錯工具中時 (例如顯示 **mdbg>** 提示時)，請輸入下一節中所述的其中一個命令：  
   
- **命令**[*引數*]  
+ **命令** [*arguments*]  
   
  MDbg.exe 命令會區分大小寫。  
   
@@ -63,28 +65,29 @@ MDbg [ProgramName[arguments]] [options]
 |**newo**[**bj**] *typeName* [*arguments...*]|建立 *typeName* 類型的新物件。|  
 |**n**[**ext**]|執行程式碼，然後移至下一行 (即使下一行包含許多函式呼叫，也要下移)。|  
 |**Opendump** *pathToDumpFile*|開啟指定的傾印檔案進行偵錯。|  
-|**o**[**未**通過]|移至目前函式的尾端。|  
+|**o**[**ui**]|移至目前函式的尾端。|  
 |**pa**[**th**] [*pathName*]|如果二進位檔中的位置無法使用，則搜尋原始程式檔的指定路徑。|  
 |**p**[**rint**] [*var*] &#124; [`-d`]|列印範圍中的所有變數 (**print**)、列印指定的變數 (**print** *var*)，或列印偵錯工具變數 (**print**`-d`)。|  
 |**printe**[**xception**] [*-r*]|列印目前執行緒上的最後一個例外狀況。 使用 `–r` (遞迴) 選項來周遊例外狀況物件上的 `InnerException` 屬性，以取得整個例外狀況鏈結的相關資訊。|  
 |**pro**[**cessenum**]|顯示使用中處理序。|  
 |**q**[**uit**] [*exitcode*]|終止 MDbg.exe Shell，並選擇性指定處理序結束代碼。|  
 |**re**[**sume**] [`*` &#124; [`~`]*threadNumber*]|繼續目前的執行緒，或由 *threadNumber* 參數指定的執行緒。<br /><br /> 如果 *threadNumber* 參數指定為 `*`，或是如果執行緒編號以 `~` 開頭，則將此命令套用至所有執行緒，只有由 *threadNumber* 指定的執行緒除外。<br /><br /> 繼續非暫止的執行緒沒有任何效用。|  
-|**r**[**取消**] [ `-d` （ `ebug` ） &#124;- `o` （ `ptimize` ） &#124;`-enc` ] [[*path_to_exe*] [*args_to_exe*]]|停止目前處理序 (如果有的話)，並啟動新的處理序。 如果沒有傳遞可執行的引數，這個命令會執行先前以 `run` 命令執行的程式。 如果已提供可執行的引數，就會使用選擇性地提供的引數執行指定的程式。<br /><br /> 如果略過類別載入、模組載入和執行緒啟動事件 (如預設情況)，程式就會在主要執行緒之第一個可執行的指令上停止。<br /><br /> 您可以使用下列三個旗標的其中一個，強制執行偵錯工具對程式碼進行 Just-In-Time (JIT) 編譯：<br /><br /> -   `-d`*（* `ebug` *）* 會停用優化。 這是 MDbg.exe 的預設值。<br />-   `-o`*（* `ptimize` *）* 會強制程式碼執行起來更像是在偵錯工具之外，但也會讓偵錯工具體驗更棘手。 這是供在偵錯工具之外使用的預設值。<br />-   `-enc` 會啟用 [編輯後繼續] 功能，但是會因而影響到效能。|  
+|**r**[**un**] [ `-d` (`ebug`) &#124; `o` (`ptimize`) &#124;`-enc` ] [[*path_to_exe*] [*args_to_exe*]]|停止目前處理序 (如果有的話)，並啟動新的處理序。 如果沒有傳遞可執行的引數，這個命令會執行先前以 `run` 命令執行的程式。 如果已提供可執行的引數，就會使用選擇性地提供的引數執行指定的程式。<br /><br /> 如果略過類別載入、模組載入和執行緒啟動事件 (如預設情況)，程式就會在主要執行緒之第一個可執行的指令上停止。<br /><br /> 您可以使用下列三個旗標的其中一個，強制執行偵錯工具對程式碼進行 Just-In-Time (JIT) 編譯：<br /><br /> -   `-d`*(* `ebug`*)* 停用優化。 這是 MDbg.exe 的預設值。<br />-   `-o`*(* `ptimize`*)* 會強制程式碼在偵錯工具外部執行起來更像這樣，但也會讓偵錯工具更難進行。 這是供在偵錯工具之外使用的預設值。<br />-   `-enc` 會啟用 [編輯後繼續] 功能，但是會因而影響到效能。|  
 |**Set** *variable*=*value*|變更任何範圍內變數的值。<br /><br /> 您也可以自行建立偵錯工具變數，並從您的應用程式之內指定參考值給變數。 這些值是做為原始值的控制代碼，即使原始值超出範圍以外也無妨。 所有偵錯工具變數都必須以 `$` 開頭 (例如，`$var`)。 透過使用下列命令，將控制代碼設定為 nothing，清除這些控制代碼：<br /><br /> `set $var=`|  
-|**Setip** [ `-il` ]*數位*|將檔案中目前的指令指標 (IP) 設定為指定的位置。 如果指定 `-il` 選項，則數字代表方法中的 Microsoft intermediate language (MSIL) 位移。 否則數字表示原始程式碼行號。|  
+|**Setip** [ `-il` ] *號碼*|將檔案中目前的指令指標 (IP) 設定為指定的位置。 如果指定 `-il` 選項，則數字代表方法中的 Microsoft intermediate language (MSIL) 位移。 否則數字表示原始程式碼行號。|  
 |**sh**[**ow**] [*lines*]|指定要顯示的行數。|  
-|**s**[**步驟**]|將執行作業移入目前程式碼行上的下一個函式，或是如果沒有函式可逐步執行，即移至下一行。|  
+|**s**[**2**]|將執行作業移入目前程式碼行上的下一個函式，或是如果沒有函式可逐步執行，即移至下一行。|  
 |**su**[**spend**] [\* &#124; [~]*threadNumber*]|停止目前的執行緒，或由 *threadNumber* 參數指定的執行緒。  如果 *threadNumber* 是指定為 `*`，這個命令會套用至所有執行緒。 如果執行緒編號以 `~` 開頭，此命令可套用至所有執行緒，只有由 *threadNumber* 指定的執行緒除外。 在處理序由 **go** 或 **step** 命令執行時，會排除暫止的執行緒不加以執行。 如果處理序中沒有非暫止的執行緒，而您發出 **go** 命令，處理序將不會繼續。 在這種情況下，可按 CTRL-C 中斷處理序。|  
 |**sy**[**mbol**] *commandName* [*commandValue*]|指定下列任何一個命令：<br /><br /> -   `symbol path` [`"value"`]：顯示或設定目前的符號路徑。<br />-   `symbol addpath` `"value"`：新增至您目前的符號路徑。<br />-   `symbol reload` [`"module"`] - 重新載入所有符號或指定模組的符號。<br />-   `symbol list` [`module`]：顯示所有模組或指定模組目前載入的符號。|  
 |**t**[**Hread**] [*newThread*] [-*nick 昵稱*`]`|不帶參數的執行緒命令會顯示目前處理序中的所有 Managed 執行緒。 執行緒通常是以其執行緒編號識別，但是如果執行緒有指定的暱稱，則改為顯示暱稱。 您可以使用 `-nick` 參數指派暱稱給執行緒。<br /><br /> -   **thread** `-nick` *threadName* 會指派暱稱給目前執行中的執行緒。<br /><br /> 暱稱不可為編號。 如果目前的執行緒已經指定暱稱，就會以新的暱稱取代舊的暱稱。 如果新暱稱是空字串 ("")，則刪除目前執行緒的暱稱，而不指定任何新暱稱給執行緒。|  
 |**u**[**p**]|將現用堆疊框架往上移。|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|列印由控制代碼追蹤的變數。 控制代碼可以用名稱或位址加以指定。|  
-|**即使**|顯示目前使用中的 `when` 陳述式。<br /><br /> **when** **delete all** &#124; `num` [ `num` [ `num` ...]]-刪除數位所指定的 `when` 語句， `when` 如果指定了，則刪除所有語句 `all` 。<br /><br /> **when**時機 `stopReason`[ `specific_condition` ]**執行** `cmd`[ `cmd` [ `cmd` ...]]- *StopReason*參數可以是下列其中一項：<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* 可以是下列其中一個：<br /><br /> -   *number*：對於 `ThreadCreated` 和 `BreakpointHit`，只有在由執行緒 ID/中斷點編號，以相同的值停止時，才會觸發動作。<br />-[ `!` ]*name* -對於 `ModuleLoaded` 、 `ClassLoaded` 、 `AssemblyLoaded` 、 `AssemblyUnloaded` 、 `ExceptionThrown` 和 `UnhandledExceptionThrown` ，只有在名稱與*stopReason*的名稱相符時，才會觸發動作。<br /><br /> *specific_condition* 對其他 *stopReason* 的值必須是空白。|  
-|**w**[**這裡**] [ `-v` ] [ `-c` *depth*] [*threadID*]|顯示有關堆疊框架的偵錯資訊。<br /><br /> -   `-v` 選項提供有關各個所顯示堆疊框架的詳細資訊。<br />-   指定 `depth` 的數字，限制所顯示的框架數目。 使用 **all** 命令，顯示所有框架。 預設值為 100。<br />-   如果指定 *threadID* 參數，您可以控制與堆疊相關聯的執行緒。 預設只有目前的執行緒。 使用 **all** 命令，取得所有執行緒。|  
-|**x** [ `-c` *numSymbols*] [*模組*[ `!` *模式*]]|顯示與模組 `pattern` 相符的函式。<br /><br /> 如果指定 *numSymbols*，則輸出僅限在指定的數目以內。 如果未指定 *pattern* 的 `!` (指示規則運算式)，則顯示所有功能。 如果未提供 *module*，則顯示所有載入的模組。 符號（ *~#* ）可以用來設定使用**break**命令的中斷點。|  
+|**當**|顯示目前使用中的 `when` 陳述式。<br /><br /> **when** **delete all** &#124; `num` [ `num` [ `num` ...]]-刪除 `when` 由數位指定的語句， `when` 如果指定了，則會刪除所有的語句 `all` 。<br /><br /> **when** 時機 `stopReason`[ `specific_condition` ] **do** `cmd`[ `cmd` [ `cmd` ...]]- *StopReason* 參數可以是下列其中一項：<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* 可以是下列其中一個：<br /><br /> -   *number*：對於 `ThreadCreated` 和 `BreakpointHit`，只有在由執行緒 ID/中斷點編號，以相同的值停止時，才會觸發動作。<br />-[ `!` ]*名稱* -對於 `ModuleLoaded` 、 `ClassLoaded` 、、、 `AssemblyLoaded` `AssemblyUnloaded` `ExceptionThrown` 和 `UnhandledExceptionThrown` ，只有當名稱符合 *stopReason* 的名稱時，才會觸發動作。<br /><br /> *specific_condition* 對其他 *stopReason* 的值必須是空白。|  
+|**w**[**這裡**] [ `-v` ] [ `-c` *深度*] [*threadID*]|顯示有關堆疊框架的偵錯資訊。<br /><br /> -   `-v` 選項提供有關各個所顯示堆疊框架的詳細資訊。<br />-   指定 `depth` 的數字，限制所顯示的框架數目。 使用 **all** 命令，顯示所有框架。 預設值為 100。<br />-   如果指定 *threadID* 參數，您可以控制與堆疊相關聯的執行緒。 預設只有目前的執行緒。 使用 **all** 命令，取得所有執行緒。|  
+|**x** [ `-c` *numSymbols*] [*module*[ `!` *pattern*]]|顯示與模組 `pattern` 相符的函式。<br /><br /> 如果指定 *numSymbols*，則輸出僅限在指定的數目以內。 如果未指定 *pattern* 的 `!` (指示規則運算式)，則顯示所有功能。 如果未提供 *module*，則顯示所有載入的模組。 符號 (*~#*) 可用來使用 **break** 命令設定中斷點。|  
   
 ## <a name="remarks"></a>備註  
+
  使用編譯器專用旗標編譯要偵錯的應用程式，會讓編譯器產生偵錯符號。 如需這些旗標的詳細資訊，請參閱編譯器的文件。 您可以偵錯最佳化的應用程式，但是有些偵錯資訊將會遺失。 例如，許多區域變數將不可見，而原始程式行也會不準確。  
   
  編譯應用程式之後，請在命令提示字元鍵入 **mdbg** 來啟動偵錯工作階段，如下列範例所示。  

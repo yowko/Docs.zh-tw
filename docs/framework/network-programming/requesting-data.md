@@ -1,6 +1,6 @@
 ---
 title: 要求資料
-description: 瞭解插即用通訊協定如何讓您開發使用單一介面的應用程式，以從多個通訊協定抓取資料。
+description: 瞭解可插入的通訊協定如何讓您開發應用程式，以使用單一介面來從多個通訊協定取出資料。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,17 +18,19 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 87ad0144f57bdca0e0235aea30c4ab450cc890f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502180"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279294"
 ---
 # <a name="requesting-data"></a>要求資料
+
 開發在現今網際網路分散式作業環境中執行的應用程式，需要從所有類型的資源中擷取資料的有效且易用的方法。 可插式通訊協定可讓您開發應用程式，而應用程式使用單一介面來擷取多個網際網路通訊協定中的資料。  
   
 ## <a name="uploading-and-downloading-data-from-an-internet-server"></a>從網際網路伺服器上傳和下載資料  
+
  針對簡單要求和回應交易，<xref:System.Net.WebClient> 類別提供最簡單的模型，將資料上傳至網際網路伺服器，或從中下載資料。 **WebClient** 提供方法來上傳和下載檔案、傳送和接收資料流，並將資料緩衝區傳送至伺服器以及接收回應。 **WebClient** 會使用 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別進行實際網際網路資源連線，讓任何註冊的插入式通訊協定可供使用。  
   
  需要使用 **WebRequest** 類別和其子系，從伺服器製作更複雜交易要求資料的用戶端應用程式。 **WebRequest** 會封裝連線至伺服器、傳送要求以及接收回應的詳細資料。 **WebRequest** 是定義一組屬性和方法的抽象類別，而屬性和方法可供使用可插式通訊協定的所有應用程式使用。 **WebRequest** 子系 (例如 <xref:System.Net.HttpWebRequest>) 會使用與基礎通訊協定一致的方式，來實作 **WebRequest** 所定義的屬性和方法。  
@@ -55,6 +57,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 中的網路程式設計](index.md)
-- [如何：要求網頁並擷取結果當作資料流](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [如何：擷取符合 WebRequest 的通訊協定特定 WebResponse](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [以 .NET Framework 進行網路程式設計](index.md)
+- [作法：要求網頁並擷取結果當作資料流](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [作法：擷取符合 WebRequest 的通訊協定專屬 WebResponse](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

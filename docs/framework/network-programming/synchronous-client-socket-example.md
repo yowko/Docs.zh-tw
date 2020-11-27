@@ -1,6 +1,6 @@
 ---
 title: 同步用戶端通訊端範例
-description: 這個範例 .NET Framework 程式會建立使用同步通訊端連接到伺服器的用戶端。 它會傳送字串並顯示回復。
+description: 此範例 .NET Framework 程式會建立使用同步通訊端連接到伺服器的用戶端。 它會傳送字串並顯示回復。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 7455307441045360bc62cee50f13d106df4d005e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2595f3a6cb5e1ced17697def33e35ce8912ea90
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502115"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279242"
 ---
 # <a name="synchronous-client-socket-example"></a>同步用戶端通訊端範例
+
 下列範例程式會建立連線到伺服器的用戶端。 伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。 應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。  
   
 ```vb  

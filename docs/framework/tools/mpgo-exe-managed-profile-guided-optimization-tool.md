@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: f8830b13cb64c737525f5399beb244aeb6d9817f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 328c085035927b3f271a39a0ea3992dde29f5119
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721890"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279099"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Managed 特性指引最佳化工具)
 
@@ -41,6 +41,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ```
 
 ## <a name="parameters"></a>參數
+
  Mpgo.exe 的所有引數都不區分大小寫。 命令前面會加上虛線。
 
 > [!NOTE]
@@ -65,6 +66,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-RemoveNativeImages`|從已指定 `–LeaveNativeImages` 的回合進行清理。 如果指定了 `-RemoveNativeImages`，Mpgo.exe 就會忽略除了 `-64bit` 和 `–AssemblyList` 以外的所有引數，並會在移除所有已檢測的原生映像之後結束。|
 
 ## <a name="remarks"></a>備註
+
  您可以在命令列上多次使用 `–AssemblyList` 和 `- AssemblyListFile`。
 
  如果您在指定組件時未指定完整路徑名稱，Mpgo.exe 將在目前目錄中尋找。 如果您指定了不正確的路徑，Mpgo.exe 就會顯示錯誤訊息，但仍繼續產生其他組件的資料。 如果您指定的組件不是在訓練情節期間載入，則不會產生該組件的訓練資料。
@@ -99,6 +101,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  這個程序可確保所有組件都擁有最佳化資料。 如果您經常簽入更新的最佳化組件 (步驟 1 和 2)，則產品開發期間的整體效能數字將會更一致。
 
 ## <a name="using-mpgoexe-from-visual-studio"></a>從 Visual Studio 使用 Mpgo.exe
+
  您可以從 Visual Studio 執行 Mpgo.exe (請參閱[如何：指定建置事件 (C#)](/visualstudio/ide/how-to-specify-build-events-csharp) 一文)，但有下列限制：
 
 - 因為 Visual Studio 巨集預設也會使用結尾斜線標記，所以您無法使用前後加上引號且包含結尾斜線標記的路徑  例如， (`–OutDir "C:\Output Folder\"` 無效。 ) 若要解決這項限制，您可以將尾端斜線 escape。 (例如，請改用 `-OutDir "$(OutDir)\"`。)
@@ -106,7 +109,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 - 根據預設，Mpgo.exe 不在 Visual Studio 組建路徑上。 您必須將路徑加入至 Visual Studio，或是在 Mpgo 命令列上指定完整路徑。 您可以在 Visual Studio 的建置後事件中使用 `–Scenario` 或 `–Import` 參數。 但一般的處理序會從 Visual Studio 開發人員命令提示字元中使用一次 `–Scenario`，然後在每次建置之後，再使用 `–Import` 更新最佳化組件；例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。
 
 <a name="samples"></a>
+
 ## <a name="examples"></a>範例
+
  Visual Studio 開發人員命令提示字元中的下列 Mpgo.exe 命令會最佳化稅務應用程式：
 
 ```console

@@ -2,15 +2,16 @@
 title: 組態
 ms.date: 03/30/2017
 ms.assetid: 86a6e12f-73b5-450e-8725-f4ca5fe0702c
-ms.openlocfilehash: 3ef91a1f851f87ebf35669748f8beb1c6a880ae8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b14b9e66db7d3548022a728ec27137a14bf3e55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998812"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277617"
 ---
 # <a name="configuration"></a>組態
-本主題列出 Windows Communication Foundation (WCF) 組態所產生的所有例外狀況。  
+
+本主題列出 Windows Communication Foundation (WCF) 設定產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   
