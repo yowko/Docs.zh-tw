@@ -1,6 +1,6 @@
 ---
 title: 非同步用戶端通訊端範例
-description: 這個範例 .NET Framework 程式會使用非同步通訊端來建立連接到伺服器的用戶端。 它會傳送字串並顯示結果。
+description: 此範例 .NET Framework 程式會使用非同步通訊端建立連接到伺服器的用戶端。 它會傳送字串並顯示結果。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,16 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: c0bcf4becf8193f3bd6bc728dc6d7e96276dddf2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2ab53ef5973091d8828260aa82d287ce4a2455eb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502726"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250693"
 ---
-# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="12703-104">非同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="12703-104">Asynchronous Client Socket Example</span></span>
-<span data-ttu-id="12703-105">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="12703-105">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="12703-106">伺服器已內建非同步通訊端，因此在伺服器傳回回應時，不會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="12703-106">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="12703-107">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="12703-107">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="0f5e5-104">非同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="0f5e5-104">Asynchronous Client Socket Example</span></span>
+
+<span data-ttu-id="0f5e5-105">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="0f5e5-105">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="0f5e5-106">伺服器已內建非同步通訊端，因此在伺服器傳回回應時，不會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="0f5e5-106">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="0f5e5-107">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="0f5e5-107">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -322,8 +323,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="12703-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="12703-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f5e5-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f5e5-108">See also</span></span>
 
-- [<span data-ttu-id="12703-109">非同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="12703-109">Asynchronous Server Socket Example</span></span>](asynchronous-server-socket-example.md)
-- [<span data-ttu-id="12703-110">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="12703-110">Using a Synchronous Server Socket</span></span>](using-a-synchronous-server-socket.md)
-- [<span data-ttu-id="12703-111">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="12703-111">Socket Code Examples</span></span>](socket-code-examples.md)
+- [<span data-ttu-id="0f5e5-109">非同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="0f5e5-109">Asynchronous Server Socket Example</span></span>](asynchronous-server-socket-example.md)
+- [<span data-ttu-id="0f5e5-110">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="0f5e5-110">Using a Synchronous Server Socket</span></span>](using-a-synchronous-server-socket.md)
+- [<span data-ttu-id="0f5e5-111">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="0f5e5-111">Socket Code Examples</span></span>](socket-code-examples.md)
