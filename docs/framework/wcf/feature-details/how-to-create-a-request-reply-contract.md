@@ -1,29 +1,31 @@
 ---
-title: HOW TO：建立要求-回覆合約
+title: 作法：建立要求-回覆合約
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 8a09c265c77edc584b591477e64314f1e76e332b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 506ce527348286bb53223c64245c74e4cb21879a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593434"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286548"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a><span data-ttu-id="83140-102">HOW TO：建立要求-回覆合約</span><span class="sxs-lookup"><span data-stu-id="83140-102">How to: Create a Request-Reply Contract</span></span>
-<span data-ttu-id="83140-103">要求-回覆合約會指定一個方法以傳回回覆。</span><span class="sxs-lookup"><span data-stu-id="83140-103">A request-reply contract specifies a method that returns a reply.</span></span> <span data-ttu-id="83140-104">回覆必須在此合約條件下進行傳送並與要求相互關聯。</span><span class="sxs-lookup"><span data-stu-id="83140-104">The reply must be sent and correlated to the request under the terms of this contract.</span></span> <span data-ttu-id="83140-105">即便該方法未傳回任何回覆 (在 C# 為 `void`，在 Visual Basic 為 `Sub`)，基礎結構還是會建立空訊息並傳送給呼叫者。</span><span class="sxs-lookup"><span data-stu-id="83140-105">Even if the method returns no reply (`void` in C#, or a `Sub` in Visual Basic), the infrastructure creates and sends an empty message to the caller.</span></span> <span data-ttu-id="83140-106">若要避免傳送空的回覆訊息，請使用單向作業合約。</span><span class="sxs-lookup"><span data-stu-id="83140-106">To prevent the sending of an empty reply message, use a one-way contract for the operation.</span></span>  
+# <a name="how-to-create-a-request-reply-contract"></a><span data-ttu-id="5afb7-102">作法：建立要求-回覆合約</span><span class="sxs-lookup"><span data-stu-id="5afb7-102">How to: Create a Request-Reply Contract</span></span>
+
+<span data-ttu-id="5afb7-103">要求-回覆合約會指定一個方法以傳回回覆。</span><span class="sxs-lookup"><span data-stu-id="5afb7-103">A request-reply contract specifies a method that returns a reply.</span></span> <span data-ttu-id="5afb7-104">回覆必須在此合約條件下進行傳送並與要求相互關聯。</span><span class="sxs-lookup"><span data-stu-id="5afb7-104">The reply must be sent and correlated to the request under the terms of this contract.</span></span> <span data-ttu-id="5afb7-105">即便該方法未傳回任何回覆 (在 C# 為 `void`，在 Visual Basic 為 `Sub`)，基礎結構還是會建立空訊息並傳送給呼叫者。</span><span class="sxs-lookup"><span data-stu-id="5afb7-105">Even if the method returns no reply (`void` in C#, or a `Sub` in Visual Basic), the infrastructure creates and sends an empty message to the caller.</span></span> <span data-ttu-id="5afb7-106">若要避免傳送空的回覆訊息，請使用單向作業合約。</span><span class="sxs-lookup"><span data-stu-id="5afb7-106">To prevent the sending of an empty reply message, use a one-way contract for the operation.</span></span>  
   
-### <a name="to-create-a-request-reply-contract"></a><span data-ttu-id="83140-107">若要建立要求-回覆合約</span><span class="sxs-lookup"><span data-stu-id="83140-107">To create a request-reply contract</span></span>  
+### <a name="to-create-a-request-reply-contract"></a><span data-ttu-id="5afb7-107">若要建立要求-回覆合約</span><span class="sxs-lookup"><span data-stu-id="5afb7-107">To create a request-reply contract</span></span>  
   
-1. <span data-ttu-id="83140-108">使用您選擇的程式語言建立一個介面。</span><span class="sxs-lookup"><span data-stu-id="83140-108">Create an interface in the programming language of your choice.</span></span>  
+1. <span data-ttu-id="5afb7-108">使用您選擇的程式語言建立一個介面。</span><span class="sxs-lookup"><span data-stu-id="5afb7-108">Create an interface in the programming language of your choice.</span></span>  
   
-2. <span data-ttu-id="83140-109">將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性套用至該介面。</span><span class="sxs-lookup"><span data-stu-id="83140-109">Apply the <xref:System.ServiceModel.ServiceContractAttribute> attribute to the interface.</span></span>  
+2. <span data-ttu-id="5afb7-109">將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性套用至該介面。</span><span class="sxs-lookup"><span data-stu-id="5afb7-109">Apply the <xref:System.ServiceModel.ServiceContractAttribute> attribute to the interface.</span></span>  
   
-3. <span data-ttu-id="83140-110">將 <xref:System.ServiceModel.OperationContractAttribute> 屬性套用至用戶端可能叫用的每個方法。</span><span class="sxs-lookup"><span data-stu-id="83140-110">Apply the <xref:System.ServiceModel.OperationContractAttribute> attribute to each method that clients can invoke.</span></span>  
+3. <span data-ttu-id="5afb7-110">將 <xref:System.ServiceModel.OperationContractAttribute> 屬性套用至用戶端可能叫用的每個方法。</span><span class="sxs-lookup"><span data-stu-id="5afb7-110">Apply the <xref:System.ServiceModel.OperationContractAttribute> attribute to each method that clients can invoke.</span></span>  
   
-4. <span data-ttu-id="83140-111">選擇性。</span><span class="sxs-lookup"><span data-stu-id="83140-111">Optional.</span></span> <span data-ttu-id="83140-112">將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性設定為 `true` 值，以免傳送空的回覆訊息。</span><span class="sxs-lookup"><span data-stu-id="83140-112">Set the value of the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `true` to prevent the sending of an empty reply message.</span></span> <span data-ttu-id="83140-113">預設情況下，所有各項作業都是要求-回覆合約。</span><span class="sxs-lookup"><span data-stu-id="83140-113">By default, all operations are request-reply contracts.</span></span>  
+4. <span data-ttu-id="5afb7-111">選擇性。</span><span class="sxs-lookup"><span data-stu-id="5afb7-111">Optional.</span></span> <span data-ttu-id="5afb7-112">將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性設定為 `true` 值，以免傳送空的回覆訊息。</span><span class="sxs-lookup"><span data-stu-id="5afb7-112">Set the value of the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `true` to prevent the sending of an empty reply message.</span></span> <span data-ttu-id="5afb7-113">預設情況下，所有各項作業都是要求-回覆合約。</span><span class="sxs-lookup"><span data-stu-id="5afb7-113">By default, all operations are request-reply contracts.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="83140-114">範例</span><span class="sxs-lookup"><span data-stu-id="83140-114">Example</span></span>  
- <span data-ttu-id="83140-115">下列範例針對可提供 `Add` 和 `Subtract` 方法的計算機服務定義合約。</span><span class="sxs-lookup"><span data-stu-id="83140-115">The following sample defines a contract for a calculator service that provides `Add` and `Subtract` methods.</span></span> <span data-ttu-id="83140-116">`Multiply` 方法不是合約的一部分，因為它未加上 <xref:System.ServiceModel.OperationContractAttribute> 類別標示，因此無法由用戶端來存取。</span><span class="sxs-lookup"><span data-stu-id="83140-116">The `Multiply` method is not part of the contract because it is not marked by the <xref:System.ServiceModel.OperationContractAttribute> class and so it is not accessible to clients.</span></span>  
+## <a name="example"></a><span data-ttu-id="5afb7-114">範例</span><span class="sxs-lookup"><span data-stu-id="5afb7-114">Example</span></span>  
+
+ <span data-ttu-id="5afb7-115">下列範例針對可提供 `Add` 和 `Subtract` 方法的計算機服務定義合約。</span><span class="sxs-lookup"><span data-stu-id="5afb7-115">The following sample defines a contract for a calculator service that provides `Add` and `Subtract` methods.</span></span> <span data-ttu-id="5afb7-116">`Multiply` 方法不是合約的一部分，因為它未加上 <xref:System.ServiceModel.OperationContractAttribute> 類別標示，因此無法由用戶端來存取。</span><span class="sxs-lookup"><span data-stu-id="5afb7-116">The `Multiply` method is not part of the contract because it is not marked by the <xref:System.ServiceModel.OperationContractAttribute> class and so it is not accessible to clients.</span></span>  
   
 ```csharp
 using System.ServiceModel;
@@ -43,12 +45,12 @@ public interface ICalculator
 }
 ```
   
-- <span data-ttu-id="83140-117">如需如何指定作業合約的詳細資訊，請參閱 <xref:System.ServiceModel.OperationContractAttribute> 類別和 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="83140-117">For more information about how to specify operation contracts, see the <xref:System.ServiceModel.OperationContractAttribute> class and the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property.</span></span>  
+- <span data-ttu-id="5afb7-117">如需如何指定作業合約的詳細資訊，請參閱 <xref:System.ServiceModel.OperationContractAttribute> 類別和 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5afb7-117">For more information about how to specify operation contracts, see the <xref:System.ServiceModel.OperationContractAttribute> class and the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property.</span></span>  
   
-- <span data-ttu-id="83140-118">藉由套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會自動產生服務合約定義，亦即 Web 服務描述語言 (WSDL) 文件。</span><span class="sxs-lookup"><span data-stu-id="83140-118">Applying the <xref:System.ServiceModel.ServiceContractAttribute> and <xref:System.ServiceModel.OperationContractAttribute> attributes causes the automatic generation of service contract definitions in a Web Services Description Language (WSDL) document once the service is deployed.</span></span> <span data-ttu-id="83140-119">只要將 `?wsdl` 附加至服務的 HTTP 基底位址，便能夠下載這份文件。</span><span class="sxs-lookup"><span data-stu-id="83140-119">The document is downloaded by appending `?wsdl` to the HTTP base address for the service.</span></span> <span data-ttu-id="83140-120">例如， `http://microsoft/CalculatorService?wsdl`</span><span class="sxs-lookup"><span data-stu-id="83140-120">For example, `http://microsoft/CalculatorService?wsdl`</span></span>  
+- <span data-ttu-id="5afb7-118">藉由套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會自動產生服務合約定義，亦即 Web 服務描述語言 (WSDL) 文件。</span><span class="sxs-lookup"><span data-stu-id="5afb7-118">Applying the <xref:System.ServiceModel.ServiceContractAttribute> and <xref:System.ServiceModel.OperationContractAttribute> attributes causes the automatic generation of service contract definitions in a Web Services Description Language (WSDL) document once the service is deployed.</span></span> <span data-ttu-id="5afb7-119">只要將 `?wsdl` 附加至服務的 HTTP 基底位址，便能夠下載這份文件。</span><span class="sxs-lookup"><span data-stu-id="5afb7-119">The document is downloaded by appending `?wsdl` to the HTTP base address for the service.</span></span> <span data-ttu-id="5afb7-120">例如， `http://microsoft/CalculatorService?wsdl`</span><span class="sxs-lookup"><span data-stu-id="5afb7-120">For example, `http://microsoft/CalculatorService?wsdl`</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83140-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="83140-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5afb7-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5afb7-121">See also</span></span>
 
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [<span data-ttu-id="83140-122">設計服務合約</span><span class="sxs-lookup"><span data-stu-id="83140-122">Designing Service Contracts</span></span>](../designing-service-contracts.md)
-- [<span data-ttu-id="83140-123">HOW TO：建立雙工合約</span><span class="sxs-lookup"><span data-stu-id="83140-123">How to: Create a Duplex Contract</span></span>](how-to-create-a-duplex-contract.md)
+- [<span data-ttu-id="5afb7-122">設計服務合約</span><span class="sxs-lookup"><span data-stu-id="5afb7-122">Designing Service Contracts</span></span>](../designing-service-contracts.md)
+- [<span data-ttu-id="5afb7-123">作法：建立雙面合約</span><span class="sxs-lookup"><span data-stu-id="5afb7-123">How to: Create a Duplex Contract</span></span>](how-to-create-a-duplex-contract.md)

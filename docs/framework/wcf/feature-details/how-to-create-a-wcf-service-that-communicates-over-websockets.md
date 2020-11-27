@@ -1,19 +1,21 @@
 ---
-title: HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。
+title: 作法：建立會透過 WebSockets 進行通訊的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286158"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="3b3cd-102">HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
-<span data-ttu-id="3b3cd-103">WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="3b3cd-104">當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="3b3cd-105">本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="1e66e-102">作法：建立會透過 WebSockets 進行通訊的 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="1e66e-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
+
+<span data-ttu-id="1e66e-103">WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。</span><span class="sxs-lookup"><span data-stu-id="1e66e-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="1e66e-104">當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。</span><span class="sxs-lookup"><span data-stu-id="1e66e-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="1e66e-105">本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。</span><span class="sxs-lookup"><span data-stu-id="1e66e-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
   
-### <a name="define-the-service"></a><span data-ttu-id="3b3cd-106">定義服務</span><span class="sxs-lookup"><span data-stu-id="3b3cd-106">Define the Service</span></span>  
+### <a name="define-the-service"></a><span data-ttu-id="1e66e-106">定義服務</span><span class="sxs-lookup"><span data-stu-id="1e66e-106">Define the Service</span></span>  
   
-1. <span data-ttu-id="3b3cd-107">定義回呼合約</span><span class="sxs-lookup"><span data-stu-id="3b3cd-107">Define a callback contract</span></span>  
+1. <span data-ttu-id="1e66e-107">定義回呼合約</span><span class="sxs-lookup"><span data-stu-id="1e66e-107">Define a callback contract</span></span>  
   
     ```csharp  
     [ServiceContract]  
@@ -24,9 +26,9 @@ ms.locfileid: "86051931"
         }  
     ```  
   
-     <span data-ttu-id="3b3cd-108">本合約由用戶端應用程式實作以允許服務將訊息傳送回用戶端。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
+     <span data-ttu-id="1e66e-108">本合約由用戶端應用程式實作以允許服務將訊息傳送回用戶端。</span><span class="sxs-lookup"><span data-stu-id="1e66e-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
   
-2. <span data-ttu-id="3b3cd-109">定義服務合約，並指定 `IStockQuoteCallback` 介面做為回呼合約。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
+2. <span data-ttu-id="1e66e-109">定義服務合約，並指定 `IStockQuoteCallback` 介面做為回呼合約。</span><span class="sxs-lookup"><span data-stu-id="1e66e-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -37,7 +39,7 @@ ms.locfileid: "86051931"
         }  
     ```  
   
-3. <span data-ttu-id="3b3cd-110">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-110">Implement the service contract.</span></span>  
+3. <span data-ttu-id="1e66e-110">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="1e66e-110">Implement the service contract.</span></span>  
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
@@ -58,9 +60,9 @@ ms.locfileid: "86051931"
     }  
     ```  
   
-     <span data-ttu-id="3b3cd-111">服務作業 `StartSendingQuotes` 會實作成非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="3b3cd-112">我們使用 `OperationContext` 擷取回呼通道，如果通道已開啟，就會在回呼通道上進行非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
+     <span data-ttu-id="1e66e-111">服務作業 `StartSendingQuotes` 會實作成非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="1e66e-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="1e66e-112">我們使用 `OperationContext` 擷取回呼通道，如果通道已開啟，就會在回呼通道上進行非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="1e66e-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
   
-4. <span data-ttu-id="3b3cd-113">設定服務</span><span class="sxs-lookup"><span data-stu-id="3b3cd-113">Configure the service</span></span>  
+4. <span data-ttu-id="1e66e-113">設定服務</span><span class="sxs-lookup"><span data-stu-id="1e66e-113">Configure the service</span></span>  
   
     ```xml  
     <configuration>  
@@ -89,11 +91,11 @@ ms.locfileid: "86051931"
     </configuration>  
     ```  
   
-     <span data-ttu-id="3b3cd-114">服務組態檔依賴 WCF 的預設端點。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="3b3cd-115">`<protocolMapping>` 會用來指定建立的預設端點應使用 `NetHttpBinding`。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
+     <span data-ttu-id="1e66e-114">服務組態檔依賴 WCF 的預設端點。</span><span class="sxs-lookup"><span data-stu-id="1e66e-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="1e66e-115">`<protocolMapping>` 會用來指定建立的預設端點應使用 `NetHttpBinding`。</span><span class="sxs-lookup"><span data-stu-id="1e66e-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
   
-### <a name="define-the-client"></a><span data-ttu-id="3b3cd-116">定義用戶端</span><span class="sxs-lookup"><span data-stu-id="3b3cd-116">Define the Client</span></span>  
+### <a name="define-the-client"></a><span data-ttu-id="1e66e-116">定義用戶端</span><span class="sxs-lookup"><span data-stu-id="1e66e-116">Define the Client</span></span>  
   
-1. <span data-ttu-id="3b3cd-117">實作回呼合約。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-117">Implement the callback contract.</span></span>  
+1. <span data-ttu-id="1e66e-117">實作回呼合約。</span><span class="sxs-lookup"><span data-stu-id="1e66e-117">Implement the callback contract.</span></span>  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -105,9 +107,9 @@ ms.locfileid: "86051931"
             }  
     ```  
   
-     <span data-ttu-id="3b3cd-118">回呼合約會實作成非同步方法。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
+     <span data-ttu-id="1e66e-118">回呼合約會實作成非同步方法。</span><span class="sxs-lookup"><span data-stu-id="1e66e-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
   
-    1. <span data-ttu-id="3b3cd-119">實作用戶端程式碼。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-119">Implement the client code.</span></span>  
+    1. <span data-ttu-id="1e66e-119">實作用戶端程式碼。</span><span class="sxs-lookup"><span data-stu-id="1e66e-119">Implement the client code.</span></span>  
   
         ```csharp  
         class Program  
@@ -130,9 +132,9 @@ ms.locfileid: "86051931"
         }  
         ```  
   
-         <span data-ttu-id="3b3cd-120">為求清楚明瞭，這裡會重複 CallbackHandler。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="3b3cd-121">用戶端應用程式會建立新的 InstanceContext，並指定回呼介面的實作。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="3b3cd-122">接下來會建立 Proxy 類別的執行個體，傳送新建立之 InstanceContext 的參考。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="3b3cd-123">當用戶端呼叫服務時，服務會使用指定的回呼合約來呼叫用戶端。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
+         <span data-ttu-id="1e66e-120">為求清楚明瞭，這裡會重複 CallbackHandler。</span><span class="sxs-lookup"><span data-stu-id="1e66e-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="1e66e-121">用戶端應用程式會建立新的 InstanceContext，並指定回呼介面的實作。</span><span class="sxs-lookup"><span data-stu-id="1e66e-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="1e66e-122">接下來會建立 Proxy 類別的執行個體，傳送新建立之 InstanceContext 的參考。</span><span class="sxs-lookup"><span data-stu-id="1e66e-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="1e66e-123">當用戶端呼叫服務時，服務會使用指定的回呼合約來呼叫用戶端。</span><span class="sxs-lookup"><span data-stu-id="1e66e-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
   
-    2. <span data-ttu-id="3b3cd-124">設定用戶端</span><span class="sxs-lookup"><span data-stu-id="3b3cd-124">Configure the client</span></span>  
+    2. <span data-ttu-id="1e66e-124">設定用戶端</span><span class="sxs-lookup"><span data-stu-id="1e66e-124">Configure the client</span></span>  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
@@ -157,10 +159,11 @@ ms.locfileid: "86051931"
         </configuration>  
         ```  
   
-         <span data-ttu-id="3b3cd-125">在用戶端組態中沒有特別要做的事，只是使用 `NetHttpBinding` 指定用戶端端點。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
+         <span data-ttu-id="1e66e-125">在用戶端組態中沒有特別要做的事，只是使用 `NetHttpBinding` 指定用戶端端點。</span><span class="sxs-lookup"><span data-stu-id="1e66e-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3b3cd-126">範例</span><span class="sxs-lookup"><span data-stu-id="3b3cd-126">Example</span></span>  
- <span data-ttu-id="3b3cd-127">以下是這個主題中使用的完整程式碼。</span><span class="sxs-lookup"><span data-stu-id="3b3cd-127">The following is the complete code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e66e-126">範例</span><span class="sxs-lookup"><span data-stu-id="1e66e-126">Example</span></span>  
+
+ <span data-ttu-id="1e66e-127">以下是這個主題中使用的完整程式碼。</span><span class="sxs-lookup"><span data-stu-id="1e66e-127">The following is the complete code used in this topic.</span></span>  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -317,7 +320,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3b3cd-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b3cd-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e66e-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e66e-128">See also</span></span>
 
-- [<span data-ttu-id="3b3cd-129">同步和非同步作業</span><span class="sxs-lookup"><span data-stu-id="3b3cd-129">Synchronous and Asynchronous Operations</span></span>](../synchronous-and-asynchronous-operations.md)
-- [<span data-ttu-id="3b3cd-130">使用 NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="3b3cd-130">Using the NetHttpBinding</span></span>](using-the-nethttpbinding.md)
+- [<span data-ttu-id="1e66e-129">同步和非同步作業</span><span class="sxs-lookup"><span data-stu-id="1e66e-129">Synchronous and Asynchronous Operations</span></span>](../synchronous-and-asynchronous-operations.md)
+- [<span data-ttu-id="1e66e-130">使用 NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="1e66e-130">Using the NetHttpBinding</span></span>](using-the-nethttpbinding.md)

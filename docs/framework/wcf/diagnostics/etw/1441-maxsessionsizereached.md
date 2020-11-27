@@ -2,27 +2,30 @@
 title: 1441 - MaxSessionSizeReached
 ms.date: 03/30/2017
 ms.assetid: ccf51232-cdbc-4004-a4b9-aed0c256dfe4
-ms.openlocfilehash: bcb639d4fdf8a324d4ed9a024937ee748169f9f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c533ff3010977a0b5983a119ce4c627b8cb9ca7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782014"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285066"
 ---
-# <a name="1441---maxsessionsizereached"></a><span data-ttu-id="861ee-102">1441 - MaxSessionSizeReached</span><span class="sxs-lookup"><span data-stu-id="861ee-102">1441 - MaxSessionSizeReached</span></span>
-## <a name="properties"></a><span data-ttu-id="861ee-103">屬性</span><span class="sxs-lookup"><span data-stu-id="861ee-103">Properties</span></span>  
+# <a name="1441---maxsessionsizereached"></a><span data-ttu-id="29f30-102">1441 - MaxSessionSizeReached</span><span class="sxs-lookup"><span data-stu-id="29f30-102">1441 - MaxSessionSizeReached</span></span>
+
+## <a name="properties"></a><span data-ttu-id="29f30-103">屬性</span><span class="sxs-lookup"><span data-stu-id="29f30-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="861ee-104">識別碼</span><span class="sxs-lookup"><span data-stu-id="861ee-104">ID</span></span>|<span data-ttu-id="861ee-105">1441</span><span class="sxs-lookup"><span data-stu-id="861ee-105">1441</span></span>|  
-|<span data-ttu-id="861ee-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="861ee-106">Keywords</span></span>|<span data-ttu-id="861ee-107">配額</span><span class="sxs-lookup"><span data-stu-id="861ee-107">Quota</span></span>|  
-|<span data-ttu-id="861ee-108">層級</span><span class="sxs-lookup"><span data-stu-id="861ee-108">Level</span></span>|<span data-ttu-id="861ee-109">警告</span><span class="sxs-lookup"><span data-stu-id="861ee-109">Warning</span></span>|  
-|<span data-ttu-id="861ee-110">通道</span><span class="sxs-lookup"><span data-stu-id="861ee-110">Channel</span></span>|<span data-ttu-id="861ee-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="861ee-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="29f30-104">識別碼</span><span class="sxs-lookup"><span data-stu-id="29f30-104">ID</span></span>|<span data-ttu-id="29f30-105">1441</span><span class="sxs-lookup"><span data-stu-id="29f30-105">1441</span></span>|  
+|<span data-ttu-id="29f30-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="29f30-106">Keywords</span></span>|<span data-ttu-id="29f30-107">Quota</span><span class="sxs-lookup"><span data-stu-id="29f30-107">Quota</span></span>|  
+|<span data-ttu-id="29f30-108">層級</span><span class="sxs-lookup"><span data-stu-id="29f30-108">Level</span></span>|<span data-ttu-id="29f30-109">警告</span><span class="sxs-lookup"><span data-stu-id="29f30-109">Warning</span></span>|  
+|<span data-ttu-id="29f30-110">通路</span><span class="sxs-lookup"><span data-stu-id="29f30-110">Channel</span></span>|<span data-ttu-id="29f30-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="29f30-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="861ee-112">描述</span><span class="sxs-lookup"><span data-stu-id="861ee-112">Description</span></span>  
- <span data-ttu-id="861ee-113">工作階段大小達到最大值時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="861ee-113">This event is emitted when maximum session size is reached.</span></span>  
+## <a name="description"></a><span data-ttu-id="29f30-112">描述</span><span class="sxs-lookup"><span data-stu-id="29f30-112">Description</span></span>  
+
+ <span data-ttu-id="29f30-113">工作階段大小達到最大值時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="29f30-113">This event is emitted when maximum session size is reached.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="861ee-114">訊息</span><span class="sxs-lookup"><span data-stu-id="861ee-114">Message</span></span>  
- <span data-ttu-id="861ee-115">1%</span><span class="sxs-lookup"><span data-stu-id="861ee-115">1%</span></span>  
+## <a name="message"></a><span data-ttu-id="29f30-114">訊息</span><span class="sxs-lookup"><span data-stu-id="29f30-114">Message</span></span>  
+
+ <span data-ttu-id="29f30-115">1%</span><span class="sxs-lookup"><span data-stu-id="29f30-115">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="861ee-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="861ee-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="29f30-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="29f30-116">Details</span></span>
