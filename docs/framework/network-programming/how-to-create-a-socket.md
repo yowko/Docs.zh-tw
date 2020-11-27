@@ -1,6 +1,6 @@
 ---
-title: 如何：建立通訊端
-description: 瞭解如何初始化通訊端以與遠端裝置進行通訊。 使用 Socket 類別來指定位址系列、通訊端類型和通訊協定類型。
+title: 作法：建立通訊端
+description: 瞭解如何初始化通訊端以與遠端裝置通訊。 使用 Socket 類別來指定位址系列、通訊端類型和通訊協定類型。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,17 +18,19 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9746b814188a4dc92463399542a6044501d0da12
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502544"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287393"
 ---
-# <a name="how-to-create-a-socket"></a>如何：建立通訊端
+# <a name="how-to-create-a-socket"></a>作法：建立通訊端
+
 在您使用通訊端與遠端裝置進行通訊之前，必須先使用通訊協定和網路位址資訊初始化通訊端。 <xref:System.Net.Sockets.Socket> 類別的建構函式所擁有的參數，可指定通訊端用來建立連線的位址家族、通訊端類型和通訊協定類型。  
   
 ## <a name="example"></a>範例  
+
  下列範例會建立可在 TCP/IP 網路 (例如網際網路) 上用於通訊的通訊端。  
   
 ```csharp  
