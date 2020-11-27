@@ -6,31 +6,31 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/25/2020
 ms.locfileid: "96032401"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="8e3af-101">已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api</span><span class="sxs-lookup"><span data-stu-id="8e3af-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="d4a24-101">已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api</span><span class="sxs-lookup"><span data-stu-id="d4a24-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
 
-<span data-ttu-id="8e3af-102">已移除 ASP.NET Core 2.2 中過時的成員和相容性參數。</span><span class="sxs-lookup"><span data-stu-id="8e3af-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
+<span data-ttu-id="d4a24-102">已移除 ASP.NET Core 2.2 中過時的成員和相容性參數。</span><span class="sxs-lookup"><span data-stu-id="d4a24-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="8e3af-103">引進的版本</span><span class="sxs-lookup"><span data-stu-id="8e3af-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="d4a24-103">引進的版本</span><span class="sxs-lookup"><span data-stu-id="d4a24-103">Version introduced</span></span>
 
-<span data-ttu-id="8e3af-104">3.0</span><span class="sxs-lookup"><span data-stu-id="8e3af-104">3.0</span></span>
+<span data-ttu-id="d4a24-104">3.0</span><span class="sxs-lookup"><span data-stu-id="d4a24-104">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="8e3af-105">變更的原因</span><span class="sxs-lookup"><span data-stu-id="8e3af-105">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="d4a24-105">變更的原因</span><span class="sxs-lookup"><span data-stu-id="d4a24-105">Reason for change</span></span>
 
-<span data-ttu-id="8e3af-106">經過一段時間的 API 介面改進。</span><span class="sxs-lookup"><span data-stu-id="8e3af-106">Improvement of API surface over time.</span></span>
+<span data-ttu-id="d4a24-106">經過一段時間的 API 介面改進。</span><span class="sxs-lookup"><span data-stu-id="d4a24-106">Improvement of API surface over time.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="8e3af-107">建議的動作</span><span class="sxs-lookup"><span data-stu-id="8e3af-107">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="d4a24-107">建議的動作</span><span class="sxs-lookup"><span data-stu-id="d4a24-107">Recommended action</span></span>
 
-<span data-ttu-id="8e3af-108">以 .NET Core 2.2 為目標時，請遵循過時組建訊息中的指導方針，改為採用新的 Api。</span><span class="sxs-lookup"><span data-stu-id="8e3af-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
+<span data-ttu-id="d4a24-108">以 .NET Core 2.2 為目標時，請遵循過時組建訊息中的指導方針，改為採用新的 Api。</span><span class="sxs-lookup"><span data-stu-id="d4a24-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="8e3af-109">類別</span><span class="sxs-lookup"><span data-stu-id="8e3af-109">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="d4a24-109">類別</span><span class="sxs-lookup"><span data-stu-id="d4a24-109">Category</span></span>
 
-<span data-ttu-id="8e3af-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="8e3af-110">ASP.NET Core</span></span>
+<span data-ttu-id="d4a24-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="d4a24-110">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="8e3af-111">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="8e3af-111">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="d4a24-111">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="d4a24-111">Affected APIs</span></span>
 
-<span data-ttu-id="8e3af-112">下列類型和成員已針對 ASP.NET Core 2.1 和2.2 標記為過時：</span><span class="sxs-lookup"><span data-stu-id="8e3af-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
+<span data-ttu-id="d4a24-112">下列類型和成員已針對 ASP.NET Core 2.1 和2.2 標記為過時：</span><span class="sxs-lookup"><span data-stu-id="d4a24-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
 
-<span data-ttu-id="8e3af-113">**類型**</span><span class="sxs-lookup"><span data-stu-id="8e3af-113">**Types**</span></span>
+<span data-ttu-id="d4a24-113">**類型**</span><span class="sxs-lookup"><span data-stu-id="d4a24-113">**Types**</span></span>
 
 - `Microsoft.AspNetCore.Diagnostics.Views.WelcomePage`
 - `Microsoft.AspNetCore.DiagnosticsViewPage.Views.AttributeValue`
@@ -43,7 +43,7 @@ ms.locfileid: "96032401"
 - `Microsoft.AspNetCore.Routing.IRouteValuesAddressMetadata`
 - `Microsoft.AspNetCore.Routing.RouteValuesAddressMetadata`
 
-<span data-ttu-id="8e3af-114">**建構函式**</span><span class="sxs-lookup"><span data-stu-id="8e3af-114">**Constructors**</span></span>
+<span data-ttu-id="d4a24-114">**建構函式**</span><span class="sxs-lookup"><span data-stu-id="d4a24-114">**Constructors**</span></span>
 
 - `Microsoft.AspNetCore.Cors.Infrastructure.CorsService(IOptions{CorsOptions})`
 - `Microsoft.AspNetCore.Routing.Tree.TreeRouteBuilder(ILoggerFactory,UrlEncoder,ObjectPool{UriBuildingContext},IInlineConstraintResolver)`
@@ -53,8 +53,8 @@ ms.locfileid: "96032401"
 - `Microsoft.AspNetCore.Mvc.Formatters.FormatFilter(IOptions{MvcOptions})`
 - ``Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinder`1(IModelBinder)``
 - `Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinder`
-- [<span data-ttu-id="8e3af-115">AspNetCore，ModelBinding CollectionModelBinder ' 1 (IModelBinder) </span><span class="sxs-lookup"><span data-stu-id="8e3af-115">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinder\`1(IModelBinder)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.collectionmodelbinder-1.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_CollectionModelBinder_1__ctor_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder_)
-- [<span data-ttu-id="8e3af-116">AspNetCore (IDictionary ' 2) 的 ComplexTypeModelBinder。 </span><span class="sxs-lookup"><span data-stu-id="8e3af-116">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder(IDictionary\`2)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.complextypemodelbinder.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_ComplexTypeModelBinder__ctor_System_Collections_Generic_IDictionary_Microsoft_AspNetCore_Mvc_ModelBinding_ModelMetadata_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder__)
+- [<span data-ttu-id="d4a24-115">AspNetCore，ModelBinding CollectionModelBinder ' 1 (IModelBinder) </span><span class="sxs-lookup"><span data-stu-id="d4a24-115">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinder\`1(IModelBinder)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.collectionmodelbinder-1.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_CollectionModelBinder_1__ctor_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder_)
+- [<span data-ttu-id="d4a24-116">AspNetCore (IDictionary ' 2) 的 ComplexTypeModelBinder。 </span><span class="sxs-lookup"><span data-stu-id="d4a24-116">Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder(IDictionary\`2)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.binders.complextypemodelbinder.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_Binders_ComplexTypeModelBinder__ctor_System_Collections_Generic_IDictionary_Microsoft_AspNetCore_Mvc_ModelBinding_ModelMetadata_Microsoft_AspNetCore_Mvc_ModelBinding_IModelBinder__)
 - ``Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinder`2(IModelBinder,IModelBinder)``
 - `Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DoubleModelBinder(System.Globalization.NumberStyles)`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatModelBinder(System.Globalization.NumberStyles)`
@@ -67,19 +67,19 @@ ms.locfileid: "96032401"
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ModelAttributes(IEnumerable{System.Object},IEnumerable{System.Object})`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory(IModelMetadataProvider,IOptions{MvcOptions})`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder(IModelMetadataProvider,IModelBinderFactory,IObjectModelValidator)`
-- [<span data-ttu-id="8e3af-117">AspNetCore，KnownRouteValueConstraint ( # B1 </span><span class="sxs-lookup"><span data-stu-id="8e3af-117">Microsoft.AspNetCore.Mvc.Routing.KnownRouteValueConstraint()</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.routing.knownroutevalueconstraint.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_Routing_KnownRouteValueConstraint__ctor)
+- [<span data-ttu-id="d4a24-117">AspNetCore，KnownRouteValueConstraint ( # B1 </span><span class="sxs-lookup"><span data-stu-id="d4a24-117">Microsoft.AspNetCore.Mvc.Routing.KnownRouteValueConstraint()</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.routing.knownroutevalueconstraint.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_Routing_KnownRouteValueConstraint__ctor)
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter(System.Boolean)`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter(MvcOptions)`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlSerializerInputFormatter`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlSerializerInputFormatter(System.Boolean)`
 - `Microsoft.AspNetCore.Mvc.Formatters.XmlSerializerInputFormatter(MvcOptions)`
-- [<span data-ttu-id="8e3af-118">AspNetCore. >microsoft.aspnetcore.mvc.taghelpers. ImageTagHelper (IHostingEnvironment、IMemoryCache、HtmlEncoder、IUrlHelperFactory) </span><span class="sxs-lookup"><span data-stu-id="8e3af-118">Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,IUrlHelperFactory)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.taghelpers.imagetaghelper.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_TagHelpers_ImageTagHelper__ctor_Microsoft_AspNetCore_Hosting_IHostingEnvironment_Microsoft_Extensions_Caching_Memory_IMemoryCache_System_Text_Encodings_Web_HtmlEncoder_Microsoft_AspNetCore_Mvc_Routing_IUrlHelperFactory_)
+- [<span data-ttu-id="d4a24-118">AspNetCore. >microsoft.aspnetcore.mvc.taghelpers. ImageTagHelper (IHostingEnvironment、IMemoryCache、HtmlEncoder、IUrlHelperFactory) </span><span class="sxs-lookup"><span data-stu-id="d4a24-118">Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,IUrlHelperFactory)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.taghelpers.imagetaghelper.-ctor?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_TagHelpers_ImageTagHelper__ctor_Microsoft_AspNetCore_Hosting_IHostingEnvironment_Microsoft_Extensions_Caching_Memory_IMemoryCache_System_Text_Encodings_Web_HtmlEncoder_Microsoft_AspNetCore_Mvc_Routing_IUrlHelperFactory_)
 - `Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,JavaScriptEncoder,IUrlHelperFactory)`
 - `Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper(IHostingEnvironment,IMemoryCache,HtmlEncoder,JavaScriptEncoder,IUrlHelperFactory)`
 - `Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.RazorPageAdapter(RazorPageBase)`
 
-<span data-ttu-id="8e3af-119">**屬性**</span><span class="sxs-lookup"><span data-stu-id="8e3af-119">**Properties**</span></span>
+<span data-ttu-id="d4a24-119">**屬性**</span><span class="sxs-lookup"><span data-stu-id="d4a24-119">**Properties**</span></span>
 
 - `Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieDomain`
 - `Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieName`
@@ -104,7 +104,7 @@ ms.locfileid: "96032401"
 - `Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowDefaultHandlingForOptionsRequests`
 - `Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowMappingHeadRequestsToGetHandler`
 
-<span data-ttu-id="8e3af-120">**方法**</span><span class="sxs-lookup"><span data-stu-id="8e3af-120">**Methods**</span></span>
+<span data-ttu-id="d4a24-120">**方法**</span><span class="sxs-lookup"><span data-stu-id="d4a24-120">**Methods**</span></span>
 
 - `Microsoft.AspNetCore.Mvc.LocalRedirectResult.ExecuteResult(ActionContext)`
 - `Microsoft.AspNetCore.Mvc.RedirectResult.ExecuteResult(ActionContext)`
@@ -112,7 +112,7 @@ ms.locfileid: "96032401"
 - `Microsoft.AspNetCore.Mvc.RedirectToPageResult.ExecuteResult(ActionContext)`
 - `Microsoft.AspNetCore.Mvc.RedirectToRouteResult.ExecuteResult(ActionContext)`
 - `Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext,IValueProvider,ParameterDescriptor)`
-- [<span data-ttu-id="8e3af-121">AspNetCore. ModelBinding. ParameterBinder. BindModelAsync (ActionCoNtext、IValueProvider、ParameterDescriptor、Object) </span><span class="sxs-lookup"><span data-stu-id="8e3af-121">Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext,IValueProvider,ParameterDescriptor,Object)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.parameterbinder.bindmodelasync?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_ParameterBinder_BindModelAsync_Microsoft_AspNetCore_Mvc_ActionContext_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_Microsoft_AspNetCore_Mvc_Abstractions_ParameterDescriptor_System_Object_)
+- [<span data-ttu-id="d4a24-121">AspNetCore. ModelBinding. ParameterBinder. BindModelAsync (ActionCoNtext、IValueProvider、ParameterDescriptor、Object) </span><span class="sxs-lookup"><span data-stu-id="d4a24-121">Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext,IValueProvider,ParameterDescriptor,Object)</span></span>](/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.parameterbinder.bindmodelasync?view=aspnetcore-2.2#Microsoft_AspNetCore_Mvc_ModelBinding_ParameterBinder_BindModelAsync_Microsoft_AspNetCore_Mvc_ActionContext_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_Microsoft_AspNetCore_Mvc_Abstractions_ParameterDescriptor_System_Object_)
 
 <!--
 
