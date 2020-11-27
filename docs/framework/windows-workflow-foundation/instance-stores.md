@@ -2,14 +2,15 @@
 title: 執行個體存放區
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 26e0c28fe3061306a00e75b0498ef0781b7013c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e3cc0c6c635d9c42b4242581ce039b186116113
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279866"
 ---
 # <a name="instance-stores"></a>執行個體存放區
+
 執行個體存放區是執行個體的邏輯容器者。 這是儲存執行個體資料和中繼資料的位置。 執行個體存放區並不是指專用的實際儲存區。 執行個體存放區可包含 SQL Server 資料庫中的耐久資訊，或記憶體中的非耐久狀態資訊。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 隨附於 SQL 工作流程執行個體存放區，是執行個體存放區的具體實作，可讓工作流程將執行個體資料與中繼資料保存在 SQL Server 2005 或 SQL Server 2008 資料庫中。 此外，Windows Server App Fabric 還提供執行個體存放區的 concrete 實作。 如需詳細資訊，請參閱 [Windows Server App Fabric 實例存放區、查詢和控制提供者](/previous-versions/appfabric/ff383417(v=azure.10))。  
   
  持續性 API 是介於主機和執行個體存放區間的介面，可讓主機傳送命令要求 (例如：<xref:System.Activities.DurableInstancing.LoadWorkflowCommand> 和 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) 至執行個體存放區。 此 API 的具體實作稱為持續性提供者。 持續性提供者會收到來自主機的要求，並修改執行個體存放區。  
@@ -28,4 +29,4 @@ ms.locfileid: "90555792"
   
 3. 藉由呼叫 InstanceStore 上的方法，對實例控制碼叫用命令 <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> 。 **InstanceStore**  
   
-4. <xref:System.Runtime.DurableInstancing.InstanceView> **InstanceStore.Exe刻意**檢查傳回的，以判斷命令的結果。
+4. <xref:System.Runtime.DurableInstancing.InstanceView> **InstanceStore.Exe刻意** 檢查傳回的，以判斷命令的結果。

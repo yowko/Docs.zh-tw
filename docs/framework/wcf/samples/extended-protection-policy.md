@@ -2,20 +2,23 @@
 title: 延伸保護原則
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 3a5b1c7f296c68d407f0217963dec56f53e9a08a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b513eafecf9b5eaee49b5bc318b3f4bad71213a2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144718"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281920"
 ---
 # <a name="extended-protection-policy"></a>延伸保護原則
+
 延伸保護是防止攔截式攻擊的一項安全性方案。 MITM 攻擊是一項安全性威脅，其方式為 MITM 取得用戶端的認證並將它轉送至伺服器。  
   
 ## <a name="demonstrates"></a>示範  
+
  延伸保護  
   
-## <a name="discussion"></a>討論區  
+## <a name="discussion"></a>討論  
+
  當應用程式使用 Kerberos、Digest 或 NTLM 透過 HTTPS 進行驗證時，首先會建立傳輸層安全性 (TLS) 通道，然後使用這個安全的通道進行驗證。 但是，SSL 所產生的工作階段金鑰與驗證期間產生的工作階段金鑰之間並無任何繫結。 任何 MITM 都可以在用戶端和伺服器之間自行建立，並且開始從用戶端轉送要求，甚至是在傳輸通道本身是安全的情況下進行，因為伺服器無從得知安全的通道是從用戶端或 MITM 所建立。 這個案例中的解決方法是將外部 TLS 通道與內部驗證通道加以繫結，讓伺服器能夠偵測是否有 MITM。  
   
 > [!NOTE]
@@ -26,27 +29,27 @@ ms.locfileid: "79144718"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 安裝互聯網資訊服務從**控制台**，**添加/刪除程式**，**視窗功能**.  
+1. 從 **主控台**、[ **新增/移除程式**]、[ **Windows 功能**] 安裝 Internet Information Services。  
   
-2. 在 Windows**功能**、**互聯網資訊服務**、**萬維網服務**、**安全和**Windows 身份驗證中安裝**Windows** **身份驗證**。  
+2. 在 **Windows 功能**、 **Internet Information Services**、 **World Wide Web 服務**、**安全性** 和 **Windows 驗證** 中安裝 **windows 驗證**。  
   
-3. 在**Windows 功能**中安裝**Windows 通信基礎 HTTP 啟動**、微軟 **.NET 框架 3.5.1**和**Windows 通信基礎 HTTP 啟動**。  
+3. 在 **Windows 功能**、 **Microsoft .NET Framework 3.5.1** 和 **Windows Communication Foundation HTTP 啟用** Windows Communication Foundation 中安裝 **HTTP 啟用**。  
   
 4. 這個範例需由用戶端建立與伺服器之間的安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
   
-    1. 開啟 IIS 管理員。 打開**伺服器憑證**，在選擇根節點（電腦名稱稱）時顯示在 **"功能視圖**"選項卡中。  
+    1. 開啟 IIS 管理員。 開啟 [ **伺服器憑證**]，當選取根節點 (電腦名稱稱) 時，會出現在 [ **功能視圖** ] 索引標籤中。  
   
     2. 若要測試這個範例，請建立自我簽署憑證。 如果您不希望 Internet Explorer 出現憑證可能不安全的提示，請將此憑證安裝到 [受信任的根憑證授權單位] 存放區。  
   
-5. 打開預設網站的 **"操作"** 窗格。 按一下 **"編輯網站**"，**綁定**。 加入 HTTPS 做為類型 (如果尚未存在)，並且使用連接埠號碼 443。 指派上一個步驟中建立的 SSL 憑證。  
+5. 開啟 [預設網站] 的 [ **動作** ] 窗格。 按一下 [ **編輯網站** **、系** 結]。 加入 HTTPS 做為類型 (如果尚未存在)，並且使用連接埠號碼 443。 指派上一個步驟中建立的 SSL 憑證。  
   
 6. 建置服務。 這樣會在 IIS 中建立一個虛擬目錄，並且視需要複製 Web 主控服務的 .dll、.svc 和 .config 檔案。  
   
-7. 開啟 IIS 管理員。 按右鍵在前面步驟中創建的虛擬目錄 （**擴展保護**）。 選擇 **"轉換為應用程式**"。  
+7. 開啟 IIS 管理員。 以滑鼠右鍵按一下在上一個步驟中建立 (**ExtendedProtection**) 的虛擬目錄。 選取 [ **轉換成應用程式**]。  
   
-8. 打開此虛擬目錄的 IIS 管理器中的**身份驗證**模組，並啟用**Windows 身份驗證**。  
+8. 在 IIS 管理員中開啟此虛擬目錄的 **驗證** 模組，並啟用 **Windows 驗證**。  
   
-9. 打開此虛擬目錄**的 Windows 身份驗證**下**的高級設置**，並將其設置為 **"必需**"。  
+9. 在 [ **Windows 驗證**] 下開啟此虛擬目錄的 [ **Advanced Settings** ]，並將它設定為 [**必要**]。  
   
 10. 您可以從瀏覽器視窗存取 HTTPS URL 來測試服務 (提供完整網域名稱)。 如果您想要從遠端電腦存取此 URL，請確定防火牆已開放所有傳入的 HTTP 和 HTTPS 連線。  
   
@@ -59,6 +62,6 @@ ms.locfileid: "79144718"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

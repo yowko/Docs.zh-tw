@@ -1,18 +1,19 @@
 ---
-title: HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
+title: 作法：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f60d0c9ad3f6fc4e9596d466b5eabdaab0f4822f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595358"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280607"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>作法：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
+
 Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型，如下：  
   
-- 若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。 此為預設行為。  
+- 若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。 這是預設行為。  
   
 - 若要使用 Svcutil.exe 針對編譯服務匯出中繼資料，請指定服務組件或將組件指定為輸入參數。 您必須使用 `/serviceName` 選項指示您想要匯出之服務的組態名稱。 Svcutil.exe 自動載入特定可執行組件的組態檔。  
   
@@ -76,6 +77,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
     ```  
   
 ## <a name="example"></a>範例  
+
  下列範例示範如何產生簡單服務實作與組態的中繼資料。  
   
  若要匯出服務合約的中繼資料  
@@ -166,7 +168,7 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [匯出和匯入中繼資料](exporting-and-importing-metadata.md)

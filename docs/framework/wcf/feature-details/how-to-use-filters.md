@@ -1,15 +1,16 @@
 ---
-title: HOW TO：使用篩選
+title: 如何：使用篩選器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 149c0809820d6a4a9c8dabfb545258b9a3ffb40b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598888"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280841"
 ---
-# <a name="how-to-use-filters"></a>HOW TO：使用篩選
+# <a name="how-to-use-filters"></a>如何：使用篩選器
+
 本主題概要說明建立使用多個篩選條件之路由組態所需的基本步驟。 在此範例中，會將訊息路由至計算機服務的兩種實作 (regularCalc 與 roundingCalc)。 兩項實作都支援相同的作業，不過其中一個服務會在傳回之前將所有的計算結果四捨五入至最接近的整數值。 用戶端應用程式必須能夠指出是否要使用四捨五入後的服務版本，如果未指定任何服務偏好設定，則會在兩項服務之間平衡訊息負載。 由這兩項服務公開的作業為：  
   
 - 新增  
@@ -71,7 +72,7 @@ ms.locfileid: "84598888"
     </services>  
     ```  
   
-     路由服務會使用這個組態公開三個獨立的端點。 視執行階段選擇而定，用戶端應用程式會將訊息傳送至其中一個位址。 抵達其中一個「虛擬」服務端點（「舍入/計算機」或「一般/計算機」）的訊息會轉送到對應的計算機執行。 如果用戶端應用程式不將要求傳送至特定的端點，訊息就會以一般端點為對象。 無論選擇何種端點，用戶端應用程式都可以選擇加入自訂標頭，表示應將訊息轉送至四捨五入計算機實作。  
+     路由服務會使用這個組態公開三個獨立的端點。 視執行階段選擇而定，用戶端應用程式會將訊息傳送至其中一個位址。 抵達至其中一個「虛擬」服務端點 ( 「舍入/計算機」或「一般/計算機」 ) 的訊息會轉送至對應的計算機執行。 如果用戶端應用程式不將要求傳送至特定的端點，訊息就會以一般端點為對象。 無論選擇何種端點，用戶端應用程式都可以選擇加入自訂標頭，表示應將訊息轉送至四捨五入計算機實作。  
   
 2. 下列範例定義路由服務用來路由訊息的用戶端 (目的地) 端點。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "84598888"
   
 ### <a name="define-filters"></a>定義篩選  
   
-1. 若要根據用戶端應用程式新增至訊息的 "RoundingCalculator" 自訂標頭來路由傳送訊息，請定義使用 XPath 查詢的篩選準則，以檢查此標頭是否存在。 由於此標頭是使用自訂命名空間所定義，因此也會加入命名空間專案，以定義 XPath 查詢中使用的自訂命名空間前置詞 "custom"。 下列範例定義必要的路由區段、命名空間資料表，以及 XPath 篩選條件。  
+1. 若要根據用戶端應用程式新增至訊息的 "RoundingCalculator" 自訂標頭來路由訊息，請定義篩選器，以使用 XPath 查詢來檢查此標頭是否存在。 由於此標頭是使用自訂命名空間所定義，因此也會加入命名空間專案，以定義 XPath 查詢中所使用的自訂命名空間前置詞 "custom"。 下列範例定義必要的路由區段、命名空間資料表，以及 XPath 篩選條件。  
   
     ```xml  
     <routing>  
@@ -110,19 +111,19 @@ ms.locfileid: "84598888"
     </routing>  
     ```  
   
-     此**MessageFilter**會在訊息中尋找包含「進位」值的 RoundingCalculator 標頭。 這個標頭是由用戶端設定的，用於指出應將訊息路由至 roundingCalc 服務。  
+     這個 **MessageFilter** 會在訊息中尋找包含 "四捨五入" 值的 RoundingCalculator 標頭。 這個標頭是由用戶端設定的，用於指出應將訊息路由至 roundingCalc 服務。  
   
     > [!NOTE]
-    > S12 命名空間前置詞預設會定義在命名空間資料表中，代表命名空間 `http://www.w3.org/2003/05/soap-envelope` 。
+    > S12 命名空間前置詞預設會在命名空間資料表中定義，並且代表命名空間 `http://www.w3.org/2003/05/soap-envelope` 。
   
-2. 您必須同時設定會尋找兩個虛擬端點上接收到之訊息的篩選條件。 第一個虛擬端點是「標準/計算機」端點。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 regularCalc 服務。 下列組態定義的篩選條件會使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>，判斷訊息是否透過具有 filterData 中指定之名稱的端點送達。  
+2. 您必須同時設定會尋找兩個虛擬端點上接收到之訊息的篩選條件。 第一個虛擬端點是「一般/計算機」端點。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 regularCalc 服務。 下列組態定義的篩選條件會使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>，判斷訊息是否透過具有 filterData 中指定之名稱的端點送達。  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     如果訊息是由名為 "calculatorEndpoint" 的服務端點接收，則此篩選準則會評估為 `true` 。  
+     如果訊息是由名為 "calculatorEndpoint" 的服務端點所接收，則此篩選準則會評估為 `true` 。  
   
 3. 接下來，需要定義的篩選條件會尋找傳送至 roundingEndpoint 的位址之訊息。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 roundingCalc 服務。 下列設定會定義使用的篩選準則， <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 以判斷訊息是否抵達「舍入/計算機」端點。  
   
@@ -132,7 +133,7 @@ ms.locfileid: "84598888"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果訊息是在以開頭的位址接收， `http://localhost/routingservice/router/rounding/` 則此篩選準則會評估為**true**。 因為此設定所使用的基底位址是 `http://localhost/routingservice/router` ，而為 roundingEndpoint 指定的位址是「舍入/計算機」，所以用來與此端點通訊的完整位址是 `http://localhost/routingservice/router/rounding/calculator` ，其符合此篩選準則。  
+     如果訊息是在開頭為的位址接收， `http://localhost/routingservice/router/rounding/` 則此篩選準則會評估為 **true**。 因為這項設定所使用的基底位址是， `http://localhost/routingservice/router` 而且為 roundingEndpoint 指定的位址是 "四捨五入/計算機"，所以用來與此端點通訊的完整位址是 `http://localhost/routingservice/router/rounding/calculator` 符合此篩選準則的位址。  
   
     > [!NOTE]
     > PrefixEndpointAddress 篩選條件執行比對時不會評估主機名稱，因為可以使用多種主機名稱 (均為從用戶端應用程式參考主機的有效方式) 參考單一主機。 例如，下列所有名稱皆可參考同一個主機：  
@@ -142,7 +143,7 @@ ms.locfileid: "84598888"
     > - `www.contoso.com`  
     > - ContosoWeb01  
   
-4. 最終的篩選條件必須支援路由送達一般端點 (沒有自訂標頭) 的訊息。 在這個案例中，訊息應在 regularCalc 和 roundingCalc 服務之間交替。 若要支援這些訊息的「迴圈配置資源」路由，請使用自訂篩選準則，讓一個篩選準則實例符合每個已處理的訊息。  下列內容定義 RoundRobinMessageFilter 的兩個執行個體，這些執行個體群組在一起，表示應在彼此之間交替。  
+4. 最終的篩選條件必須支援路由送達一般端點 (沒有自訂標頭) 的訊息。 在這個案例中，訊息應在 regularCalc 和 roundingCalc 服務之間交替。 若要支援這些訊息的「迴圈配置資源」路由，請使用自訂篩選準則，讓一個篩選準則實例符合每個處理的訊息。  下列內容定義 RoundRobinMessageFilter 的兩個執行個體，這些執行個體群組在一起，表示應在彼此之間交替。  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -156,7 +157,7 @@ ms.locfileid: "84598888"
                     filterData="group1"/>  
     ```  
   
-     在執行階段時期，這個篩選條件類型會在所有已定義的此類型篩選執行個體之間交替 (這些執行個體已設定在一個集合的相同群組中)。 這會使此自訂篩選準則處理的訊息在傳回和的之間為替代 `true` `RoundRobinFilter1` `RoundRobinFilter2` 。  
+     在執行階段時期，這個篩選條件類型會在所有已定義的此類型篩選執行個體之間交替 (這些執行個體已設定在一個集合的相同群組中)。 這會導致這個自訂篩選所處理的訊息，在傳回的和之間進行替代 `true` `RoundRobinFilter1` `RoundRobinFilter2` 。  
   
 ### <a name="define-filter-tables"></a>若要定義篩選資料表  
   
@@ -165,7 +166,7 @@ ms.locfileid: "84598888"
     > [!NOTE]
     > 指定篩選條件優先順序可以讓您控制處理篩選條件的順序，但這麼做可能會對路由服務的效能造成負面影響。 如果可行，請建構使用不需篩選條件優先順序的篩選條件邏輯。  
   
-     下列定義篩選資料表，並將稍早定義的 "XPathFilter" 新增至優先順序為2的資料表。 這個專案也會指定如果 `XPathFilter` 符合訊息，則訊息會路由傳送至 `roundingCalcEndpoint` 。  
+     以下定義篩選資料表，並將稍早定義的 "XPathFilter" 加入至資料表，優先順序為2。 這個專案也會指定如果 `XPathFilter` 符合訊息，則訊息會路由傳送至 `roundingCalcEndpoint` 。  
   
     ```xml  
     <routing>  
@@ -226,6 +227,7 @@ ms.locfileid: "84598888"
     ```  
   
 ## <a name="example"></a>範例  
+
  下列範例是完整的組態檔清單。  
   
 ```xml  
@@ -325,6 +327,6 @@ ms.locfileid: "84598888"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [路由服務](../samples/routing-services.md)

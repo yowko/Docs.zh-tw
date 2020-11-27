@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 9fed65158f830fcdc5342800493029418a71d2f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a7b123c14aa14b64a9ca3a78d127aa55210a08ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724061"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280048"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
+
 本節說明 Windows Workflow Foundation (WF) 的程式設計模型、範例和工具。
 
 ## <a name="in-this-section"></a>本節內容
+
  [Windows Workflow 檔指南](guide-to-the-documentation.md) 一組建議閱讀的主題，取決於您熟悉的 (新手，以熟悉) 和需求。
 
  [Windows Workflow Foundation 的新功能](whats-new.md) 討論一些舊版開發範例中的變更。

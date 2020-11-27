@@ -6,17 +6,18 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc4ff2d4b53b679266978ae5ffdea97e4606a351
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594630"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281894"
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
+
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
   
- 這個範例是以[自我裝載](self-host.md)範例為基礎。 服務和用戶端設定檔與[自我裝載](self-host.md)範例的檔案相同。  
+ 此範例是以 [自我裝載](self-host.md) 範例為基礎。 服務和用戶端設定檔與 [自我裝載](self-host.md) 範例相同。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -102,18 +103,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
-> 服務必須在系統管理帳戶下執行，或是在其下執行的帳戶必須被授與許可權，才能向 `http://localhost:8000/ServiceModelSamples` HTTP 層註冊 URI。 您可以使用[HTTPcfg.exe](/windows/win32/http/httpcfg-exe)來設定[命名空間保留](/windows/win32/http/namespace-reservations-registrations-and-routing)區，以授與這類許可權。  
+> 服務必須在系統管理帳戶下執行，否則它所執行的帳戶必須被授 `http://localhost:8000/ServiceModelSamples` 與向 HTTP 層註冊 URI 的許可權。 您可以使用[Httpcfg.exe 工具](/windows/win32/http/httpcfg-exe)來設定[命名空間保留](/windows/win32/http/namespace-reservations-registrations-and-routing)區，以授與這類許可權。  
   
 > [!NOTE]
-> 在執行 Windows Server 2003 的電腦上，只有當 setup.exe 應用程式具有模擬許可權時，才支援模擬。 （根據預設，只有系統管理員具有此許可權）。若要將此許可權新增至服務執行身分的帳戶，請移至 [系統**管理工具**]，開啟 [**本機安全性原則**]，開啟 [**本機原則**]，按一下 [**使用者權限指派**]，然後選取 [**在驗證後模擬用戶端**]，**再按兩下 [內容] 以新增**使用者或群組。  
+> 在執行 Windows Server 2003 的電腦上，只有在 Host.exe 應用程式具有模擬許可權時，才支援模擬。  (根據預設，只有系統管理員具有此許可權。 ) 若要將此許可權新增至執行服務的帳戶，請移至 [系統 **管理工具**]，開啟 [ **本機安全性原則**]，開啟 [ **本機原則**]，按一下 [ **使用者權限指派**]，然後選取 [ **在驗證後模擬用戶端** ]，然後按兩下 [ **屬性** ] 以新增使用者或群組。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
+3. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
 4. 若要示範此服務模擬呼叫者，請使用與執行服務之帳戶不同的帳戶執行用戶端。 若要這麼做，請在命令提示字元輸入：  
   

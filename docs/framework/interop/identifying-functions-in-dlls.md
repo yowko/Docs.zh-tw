@@ -1,6 +1,6 @@
 ---
 title: 識別 DLL 中的函式
-description: 識別 DLL 中的函式。 DLL 函式的身分識別是由函式名稱或序數，以及可以在其中找到執行的 DLL 檔案名所組成。
+description: 識別 DLL 中的函式。 DLL 函式的身分識別是由函式名稱或序數所組成，以及可以在其中找到實作為的 DLL 檔案名。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - platform invoke, identifying functions
@@ -12,14 +12,15 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-ms.openlocfilehash: 054d1351a9ee6adab17117c9f423aa26d0d9ed59
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b1d95329e9b8ac6cd1f8ffc3111a50b6ab010462
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622727"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281712"
 ---
 # <a name="identifying-functions-in-dlls"></a>識別 DLL 中的函式
+
 DLL 函式的身分識別是由下列項目所組成：  
   
 - 函式名稱或序數  

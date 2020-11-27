@@ -6,14 +6,15 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 8941350e46680c4ecaeb9b89fe9e6910c5830bcb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 70dde7ab30d542ecc9f85d027a86b466eb13e4f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553287"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281308"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全性用語
+
 您可能會對討論安全性時使用的一些用語感到陌生。 本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。  
   
  如需 Windows Communication Foundation (WCF) 檔中所使用之詞彙的詳細資訊，請參閱 [基本 Windows Communication Foundation 概念](../fundamental-concepts.md)。  
@@ -31,7 +32,7 @@ ms.locfileid: "90553287"
  識別會將伺服器和用戶端驗證憑證發給要求這些憑證之伺服器和用戶端的憑證授權單位 (CA)。 因為它包含數位簽章中使用的公開金鑰，所以也稱為 *簽章憑證*。 如果 CA 是根授權單位，CA 憑證可能稱為 *根憑證*。 有時也稱為 *網站憑證*。  
   
  CA 階層架構  
- CA 階層架構包含多個 CA。 它會組織成較高層級階層中的另一個 CA 認證，直到達到階層的最上層（也稱為「 *根授權*單位」）為止。  
+ CA 階層架構包含多個 CA。 它會組織成較高層級階層中的另一個 CA 認證，直到達到階層的最上層（也稱為「 *根授權* 單位」）為止。  
   
  憑證 (certificate)  
  包含實體與實體公開金鑰相關資訊的數位簽署陳述式，因此會將這兩個資訊片段繫結在一起。 當實體通過授權單位驗證後，就會由稱為憑證授權單位的信任組織 (或實體) 發給憑證。  
@@ -90,7 +91,7 @@ ms.locfileid: "90553287"
  密碼編譯訊息語法標準。 一種通用的資料語法，可套用在數位簽章與加密之類的密碼編譯上。 它同時提供將憑證或憑證撤銷清單與其他訊息屬性 (例如時間戳記) 散佈到訊息的語法。  
   
  plaintext  
- 尚未加密的訊息。 純文字訊息有時*稱為純文字訊息。*  
+ 尚未加密的訊息。 純文字訊息有時 *稱為純文字訊息。*  
   
  權限  
  使用者用來執行各種系統相關作業的權限，例如關閉系統、載入裝置驅動程式，或是變更系統時間等等。 使用者的存取權杖包含使用者或使用者群組所擁有的權限清單。  

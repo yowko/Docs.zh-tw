@@ -1,22 +1,24 @@
 ---
 title: 設計和實作自訂活動
-description: 本文提供的資源，可讓您建立複合活動或建立新的活動類型，以在 Workflow Foundation 中建立自訂活動。
+description: 本文提供的資源可讓您建立複合活動或建立新的活動類型，以在 Workflow Foundation 中建立自訂活動。
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 9c184bff9518bb5581f3bf4cd408db224736192b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cb6e189cf5f59630ce8d89610eb0c2fc2acc92a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419989"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280386"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>設計和實作自訂活動
+
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的自訂活動建立方法，是將系統提供的活動組合到複合活動中，或是建立衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新型別。 本節描述如何以上述兩種方法建立自訂活動。  
   
 > [!IMPORTANT]
-> 在工作流程設計工具中，自訂活動預設會顯示成附有活動名稱的簡單矩形。 若要在工作流程設計工具中提供自訂的視覺化活動表示形式，您還必須建立自訂的設計工具。 如需詳細資訊，請參閱[使用自訂活動設計工具和範本](using-custom-activity-designers-and-templates.md)。  
+> 在工作流程設計工具中，自訂活動預設會顯示成附有活動名稱的簡單矩形。 若要在工作流程設計工具中提供自訂的視覺化活動表示形式，您還必須建立自訂的設計工具。 如需詳細資訊，請參閱 [使用自訂活動設計工具和範本](using-custom-activity-designers-and-templates.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [活動撰寫選項](activity-authoring-options-in-wf.md)  
  討論 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中可用的撰寫樣式。  
   
@@ -29,7 +31,7 @@ ms.locfileid: "83419989"
  [設定活動驗證](configuring-activity-validation.md)  
  說明如何使用活動驗證，在執行活動之前識別及報告活動組態中的錯誤。  
   
- [於執行階段建立活動](creating-an-activity-at-runtime-with-dynamicactivity.md)  
+ [在執行階段建立活動](creating-an-activity-at-runtime-with-dynamicactivity.md)  
  討論如何在執行階段使用 <xref:System.Activities.DynamicActivity> 建立活動。  
   
  [工作流程執行屬性](workflow-execution-properties.md)  
@@ -41,8 +43,8 @@ ms.locfileid: "83419989"
  [使用活動延伸模組](using-activity-extensions.md)  
  說明如何編寫和使用活動延伸模組。  
   
- [從工作流程使用 OData 摘要](consuming-odata-feeds-from-a-workflow.md)  
+ [從流程中使用 OData 摘要](consuming-odata-feeds-from-a-workflow.md)  
  說明從工作流程中呼叫 WCF 資料服務的幾種方法。  
   
- [活動定義範圍與可見度](activity-definition-scoping-and-visibility.md)  
+ [活動定義範圍和可視性](activity-definition-scoping-and-visibility.md)  
  說明定義資料範圍和活動成員可視性的選項及規則。

@@ -2,17 +2,19 @@
 title: WAS 啟動架構
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 46f9f9b0e951d363200cf41b5119b13ca921a3b5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545978"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281634"
 ---
 # <a name="was-activation-architecture"></a>WAS 啟動架構
+
 本主題將條列說明並討論 Windows Process Activation Service (亦稱為 WAS) 的元件。  
   
 ## <a name="activation-components"></a>啟動元件  
+
  WAS 包含好幾個架構元件：  
   
 - 接聽項配接器： Windows 服務，可在特定網路通訊協定上接收訊息，並與 WAS 通訊以將傳入訊息路由至正確的背景工作處理序。  
@@ -30,9 +32,10 @@ ms.locfileid: "90545978"
  ![顯示 WAS 架構的螢幕擷取畫面。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>接聽項配接器  
+
  接聽項配接器是個別的 Windows 服務，可實作網路通訊邏輯以透過所接聽的網路通訊協定來接收訊息。 下表列出 Windows Communication Foundation (WCF) 通訊協定的接聽程式介面卡。  
   
-|接聽項配接器服務名稱|通訊協定|注意|  
+|接聽項配接器服務名稱|通訊協定|備註|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|針對 IIS 7.0 和 WCF 提供 HTTP 啟用的萬用群組件。|  
 |NetTcpActivator|net.tcp|取決於 NetTcpPortSharing 服務。|  
@@ -59,6 +62,7 @@ ms.locfileid: "90545978"
 ```  
   
 ### <a name="protocol-handlers"></a>通訊協定處理常式  
+
  特定通訊協定的處理序通訊協定處理常式和 AppDomain 通訊協定處理常式會在電腦層級的 Web.config 檔案中註冊。  
   
 ```xml  
