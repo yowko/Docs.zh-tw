@@ -1,33 +1,36 @@
 ---
 title: 了解 HTTP 驗證
-description: 請參閱這篇 WCF 中的 HTTP 驗證簡介，包括 HTTP 驗證配置及選擇驗證架構。
+description: 請參閱 WCF 中 HTTP 驗證的簡介，包括 HTTP 驗證配置和選擇驗證配置。
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 65ccde358f4eb8727e59ca32fb9782b87e29c5c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246515"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293516"
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 驗證
+
 驗證是一種識別用戶端是否具備存取資源之資格的程序。 HTTP 通訊協定支援驗證作為存取安全資源的交涉方法。  
   
- 用戶端的初始要求一般為匿名要求，不包含任何驗證資訊。 HTTP 伺服器應用程式可拒絕匿名要求，同時表示驗證是必要的。 伺服器應用程式會傳送 WWW-Authentication 標頭，表示支援的驗證配置。 本檔描述數個適用于 HTTP 的驗證配置，並討論其在 Windows Communication Foundation （WCF）中的支援。  
+ 用戶端的初始要求一般為匿名要求，不包含任何驗證資訊。 HTTP 伺服器應用程式可拒絕匿名要求，同時表示驗證是必要的。 伺服器應用程式會傳送 WWW-Authentication 標頭，表示支援的驗證配置。 本檔說明數種 HTTP 驗證配置，並討論 Windows Communication Foundation (WCF) 的支援。  
   
 ## <a name="http-authentication-schemes"></a>HTTP 驗證配置  
- 伺服器可以為用戶端指定多個驗證配置，以供選擇。 下表描述一些通常在 Windows 應用程式中找到的驗證配置。  
+
+ 伺服器可以指定多個驗證配置供用戶端選擇。 下表說明一些常見在 Windows 應用程式中找到的驗證配置。  
   
 |驗證配置|描述|  
 |---------------------------|-----------------|  
 |匿名|匿名要求不包含任何驗證資訊。 這樣相當於授與所有人資源存取權。|  
 |基本|基本驗證會為用戶端傳送包含使用者名稱和密碼的 Base64 編碼字串。 Base64 不是一種加密形式，這種方法所傳送的使用者名稱與密碼應視同為明文形式。 若需要保護資源，強烈建議考慮使用驗證配置而非基本驗證。|  
-|Digest|摘要驗證是設計來取代基本驗證的挑戰/回應配置。 伺服器會以挑戰的形式，將稱為*nonce*的亂數據字串傳送給用戶端。 用戶端會回應包含使用者名稱、密碼與 Nonce 及其他資訊的雜湊。 使用這種驗證配置的交換所帶來的複雜性與資料雜湊，讓竊取與再利用使用者的認證更加困難。<br /><br /> 摘要驗證需要使用 Windows 網域帳號。 摘要*領域*是 Windows 功能變數名稱。 因此，您無法以不支援 Windows 網域的作業系統 (例如 Windows XP 家用版) 上執行的伺服器使用摘要驗證。 相反地，當用戶端在不支援 Windows 網域的作業系統上執行，驗證期間必須特別指定網域帳號。|  
+|Digest|摘要驗證是設計來取代基本驗證的挑戰/回應配置。 伺服器將稱為 *nonce* 的亂數據字串傳送給用戶端，是一項挑戰。 用戶端會回應包含使用者名稱、密碼與 Nonce 及其他資訊的雜湊。 使用這種驗證配置的交換所帶來的複雜性與資料雜湊，讓竊取與再利用使用者的認證更加困難。<br /><br /> 摘要驗證需要使用 Windows 網域帳號。 摘要 *領域* 是 Windows 功能變數名稱。 因此，您無法以不支援 Windows 網域的作業系統 (例如 Windows XP 家用版) 上執行的伺服器使用摘要驗證。 相反地，當用戶端在不支援 Windows 網域的作業系統上執行，驗證期間必須特別指定網域帳號。|  
 |NTLM|NT LAN Manager (NTLM) 驗證為摘要式驗證更安全的變異，是一種挑戰/回應配置。 NTLM 使用 Windows 認證轉換挑戰資料，而非未編碼的使用者名稱與密碼。 NTLM 驗證需要在用戶端與服務器之間進行多次交換。 伺服器與任何介入的 Proxy 必須支援持續性連線以成功完成驗證。|  
 |交涉|交涉驗證會自動在 Kerberos 通訊協定與 NTLM 驗證之間選擇，依可用性而定。 如果 Kerberos 通訊協定可以使用，就選擇它；否則就會嘗試使用 NTLM。 Kerberos 驗證較 NTLM 更大幅改善。 Kerberos 驗證不僅較 NTLM 更快，而且允許使用交互驗證和對遠端機器認證的委派。|  
-|Windows Live ID|基礎的 Windows HTTP 服務包括使用聯合通訊協定的驗證。 不過，WCF 中的標準 HTTP 傳輸不支援使用同盟驗證配置，例如 Microsoft Windows Live ID。 目前可透過訊息安全性提供對此功能的支援。 如需詳細資訊，請參閱[同盟和發行的權杖](federation-and-issued-tokens.md)。|  
+|Windows Live ID|基礎的 Windows HTTP 服務包括使用聯合通訊協定的驗證。 不過，WCF 中的標準 HTTP 傳輸不支援使用同盟驗證配置，例如 Microsoft Windows Live ID。 目前可透過訊息安全性提供對此功能的支援。 如需詳細資訊，請參閱 [同盟和已發行的權杖](federation-and-issued-tokens.md)。|  
   
 ## <a name="choosing-an-authentication-scheme"></a>選擇驗證配置  
+
  為 HTTP 伺服器選擇潛在驗證配置時，必須考量一些項目，包括：  
   
 - 考量資源是否需要保護。 使用 HTTP 驗證需要傳輸更多資料，並且可限制與用戶端的互通性。 允許匿名存取不需要保護的資源。  

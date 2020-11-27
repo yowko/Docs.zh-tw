@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 9bcac0e45d44270d27a4cf04677e967a80e94b90
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7168b393bde626c8c413cda3c7422e0eee4ce267
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292866"
 ---
 # <a name="message-security-with-a-user-name-client"></a>使用者名稱用戶端的訊息安全性
+
 下圖顯示 Windows Communication Foundation 使用訊息層級安全性來保護 WCF) 服務和用戶端 (。 服務會使用 X.509 憑證來進行驗證。 用戶端會使用使用者名稱與密碼來進行驗證。  
   
  如需範例應用程式，請參閱 [訊息安全性使用者名稱](../samples/message-security-user-name.md)。  
@@ -31,19 +32,22 @@ ms.locfileid: "90550198"
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
 - 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼會顯示如何建立會使用訊息安全性的服務端點。  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  可使用下列組態來取代程式碼：  
   
 ```xml  
@@ -89,12 +93,14 @@ ms.locfileid: "90550198"
 ## <a name="client"></a>用戶端  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼會建立用戶端。 繫結會使用訊息模式安全性，而且用戶端認證類型設為 `UserName`。 使用者名稱和密碼只能使用程式碼 (它是不可設定的) 來指定。 在此不示範傳回使用者名稱與密碼的程式碼，因為必須在應用程式層級才能完成這個動作。 例如，使用 [Windows 表單] 對話方塊查詢使用者的資料。  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  下列程式碼會設定用戶端。 繫結會使用訊息模式安全性，而且用戶端認證類型設為 `UserName`。 使用者名稱和密碼只能使用程式碼 (它是不可設定的) 來指定。  
   
 ```xml  

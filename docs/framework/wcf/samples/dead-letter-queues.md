@@ -2,21 +2,22 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 8ea2ea530db8745c3802f9f39793ffd77ddd0008
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cf281ff08d56669d0257d693af93d8a9b5b2e81a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575286"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292820"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
-這個範例示範如何處理已傳遞失敗的訊息。 它是以交易式[MSMQ](transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
+
+這個範例示範如何處理已傳遞失敗的訊息。 它是以交易的 [MSMQ](transacted-msmq-binding.md) 系結範例為基礎。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
 > [!NOTE]
-> 這個範例會示範每個僅適用于 Windows Vista 的應用程式無效信件佇列。 您可以修改此範例，以在 Windows Server 2003 和 Windows XP 上使用 MSMQ 3.0 的預設全系統佇列。
+> 這個範例會示範只能在 Windows Vista 上使用的每個應用程式寄不出的信件佇列。 您可以修改此範例，在 Windows Server 2003 和 Windows XP 上使用 MSMQ 3.0 的預設全系統佇列。
 
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
 
@@ -49,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
- 範例中的服務程式代碼就是交易式[MSMQ](transacted-msmq-binding.md)系結的。
+ 範例中的服務程式代碼是 [交易 MSMQ](transacted-msmq-binding.md)系結的。
 
  與服務進行的通訊會在交易範圍內發生。 服務會讀取佇列中的訊息、執行作業，然後顯示作業的結果。 應用程式也會為寄不出的信件訊息建立寄不出的信件佇列。
 
@@ -169,9 +170,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當寄不出的信件訊息服務從佇列讀取訊息時，Windows Communication Foundation （WCF）通道層會尋找端點不相符，而且不會分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。
+ 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當寄不出的信件訊息服務從佇列中讀取訊息時，Windows Communication Foundation (WCF) 通道層會在端點中找出不相符的情況，而且不會分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。
 
- 在此範例中，寄不出的信件訊息服務會在發生失敗的原因時重新傳送訊息，因為訊息已超時。基於所有其他原因，它會顯示傳遞失敗，如下列範例程式碼所示：
+ 在此範例中，寄不出的信件訊息服務會在錯誤的原因是訊息超時時重新傳送訊息。基於所有其他原因，它會顯示傳遞失敗，如下列範例程式碼所示：
 
 ```csharp
 // Service class that implements the service contract.
@@ -310,23 +311,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
     1. 在 Visual Studio 2012 中開啟伺服器管理員。
 
-    2. 展開 [**功能**] 索引標籤。
+    2. 展開 [ **功能** ] 索引標籤。
 
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。
+    3. 以滑鼠右鍵按一下 [ **私用訊息佇列**]，然後選取 [ **新增**]、[ **私用佇列**]。
 
-    4. 選取 [**交易**式] 方塊。
+    4. 檢查 **交易** 式方塊。
 
     5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-4. 若要在單一或跨電腦設定中執行此範例，請適當地變更佇列名稱，並以電腦的完整名稱取代 localhost，並遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
+4. 若要在單一或跨電腦的設定中執行範例，請適當地變更佇列名稱，並以電腦的完整名稱取代 localhost，然後遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例
 
@@ -350,6 +351,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > 將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。
 
 ## <a name="comments"></a>註解
+
  根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行這個範例，就會收到下列錯誤：「使用者的內部訊息佇列憑證不存在」。
 
 > [!IMPORTANT]
@@ -357,6 +359,6 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

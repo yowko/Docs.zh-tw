@@ -2,18 +2,20 @@
 title: 傳送
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: da31dcb24234e750c88383b9f1bea4f088f4ee3d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587764"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293399"
 ---
 # <a name="transfer"></a>傳送
-本主題描述 Windows Communication Foundation （WCF）活動追蹤模型中的傳輸。  
+
+本主題說明 Windows Communication Foundation (WCF) 活動追蹤模型中的傳輸。  
   
 ## <a name="transfer-definition"></a>傳輸定義  
- 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 WCF 中，在服務上傳入位元組時，「接聽時間」活動會傳送至建立訊息物件的接收位元組活動。 如需端對端追蹤案例的清單，以及其各自的活動和追蹤設計，請參閱[端對端追蹤案例](end-to-end-tracing-scenarios.md)。  
+
+ 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 WCF 中，在服務上傳入位元組時，接聽活動會傳送至建立訊息物件的接收位元組活動。 如需端對端追蹤案例的清單，以及其各自的活動和追蹤設計，請參閱 [端對端追蹤案例](end-to-end-tracing-scenarios.md)。  
   
  若要發出傳輸追蹤，請使用追蹤來源的 `ActivityTracing` 設定，如同下列組態程式碼所示。  
   
@@ -22,17 +24,19 @@ ms.locfileid: "84587764"
 ```  
   
 ## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>使用傳輸以相互關聯端點內的活動  
+
  活動和傳輸都可能讓使用者找到錯誤的根本原因。 例如，如果在元件 M 和 N 中的活動 M 和 N 之間來回傳輸，而在傳輸回 M 之後 N 馬上發生當機，很可能是 N 將資料傳遞回 M 時造成。  
   
  當 M 和 N 之間具有控制流程時，就會從活動 M 將傳輸追蹤發出至活動 N。例如，由於跨活動界限的方法呼叫，N 就會執行 M 的部分工作。 N 可能已存在或已建立。 當 N 是執行 M 之部分工作的新活動時，M 就會繁衍 (Spawn) N。  
   
- 從 N 傳輸回 M 之後可能不會從 M 傳輸至 N。這是因為當 N 完成該工作時，M 可以繁衍 N 中的部分工作並且不會進行追蹤。 實際上，M 可以在 N 完成其工作之前就終止。 這會發生在會產生接聽程式活動（N）然後終止的 "Open ServiceHost" 活動（M）中。 從 N 傳輸回 M 表示 N 已完成與 M 相關的工作。  
+ 從 N 傳輸回 M 之後可能不會從 M 傳輸至 N。這是因為當 N 完成該工作時，M 可以繁衍 N 中的部分工作並且不會進行追蹤。 實際上，M 可以在 N 完成其工作之前就終止。 這會發生在 "Open ServiceHost" 活動中 (M) 會 (N) 產生接聽程式活動，然後終止。 從 N 傳輸回 M 表示 N 已完成與 M 相關的工作。  
   
  N 則可以繼續執行其他與 M 不相關的處理，例如持續從不同登入活動接收登入要求 (M) 的現有驗證器活動 (N)。  
   
  在活動 M 和 N 之間不需要有巢狀關係，原因可能有兩個。 第一，當活動 M 在即使 M 初始化 N 的情況下，仍未監視在 N 上執行的實際處理時。第二，當 N 已經存在。  
   
 ## <a name="example-of-transfers"></a>傳輸範例  
+
  下列將會列出兩個傳輸範例。  
   
 - 當您建立服務主機時，建構函式會從呼叫程式碼中取得控制，或者呼叫程式碼會傳輸至建構函式。 建構函式執行完成時，會將控制權傳回呼叫程式碼，或者建構函式會傳輸回呼叫程式碼。 這就是巢狀關係的情況。  
@@ -40,6 +44,7 @@ ms.locfileid: "84587764"
 - 接聽項開始處理傳輸資料時，會建立新的執行緒，並將適當的內容交給接收位元組活動，以供處理、傳遞控制和資料。 當執行緒完成處理要求時，接收位元組活動不會將任何資料傳遞回接聽項。 在這個情況下，有資料傳輸進來，但沒有資料從新執行緒活動傳輸出去。 這兩個活動彼此相關，但不是巢狀關係。  
   
 ## <a name="activity-transfer-sequence"></a>活動傳輸順序  
+
  格式正確的活動傳輸順序包括下列步驟。  
   
 1. 開始新活動，而此活動是由選取新 gAId 所組成。  

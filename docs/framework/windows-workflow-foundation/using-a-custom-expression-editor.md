@@ -2,19 +2,20 @@
 title: 使用自訂運算式編輯器
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: a1cd92766c8897868920c1465ddb3eeabae1aa97
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e33e804d73239794a7f9cf9f3c28c3808f8b963e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182708"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293308"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自訂運算式編輯器
+
 可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。 在一些案例中，您可能會想要使用自訂運算式編輯器：  
   
-- 為 IntelliSense 和重新裝載的工作流程設計工具中其他豐富的編輯功能提供支援。 必須提供此功能，因為預設的 Visual Studio 運算式編輯器不能在重新託管的應用程式中使用。  
+- 為 IntelliSense 和重新裝載的工作流程設計工具中其他豐富的編輯功能提供支援。 必須提供這項功能，因為預設的 Visual Studio 運算式編輯器無法在重新裝載應用程式中使用。  
   
-- 簡化業務分析使用者的運算式編輯體驗，例如，不需要學習 Visual Basic 或處理 Visual Basic 運算式。  
+- 為了簡化商務分析師使用者的運算式編輯體驗，讓他們不需要學習 Visual Basic 或處理 Visual Basic 的運算式。  
   
  實作自訂運算式編輯器所需的三個基本步驟：  
   
@@ -25,6 +26,7 @@ ms.locfileid: "79182708"
 3. 在重新裝載的工作流程應用程式中發行 <xref:System.Activities.Presentation.View.IExpressionEditorService>。  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>在類別庫中實作自訂運算式編輯器  
+
  以下為 (概念證明) `MyEditorService` 類別的程式碼範例，該類別會實作包含在 MyExpressionEditorService 程式庫專案中的 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。  
   
 ```csharp  
@@ -222,7 +224,8 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>在 WPF 專案中發行自訂運算式編輯器  
- 下面是演示如何在 WPF 應用程式中重新託管設計器以及如何創建和發佈`MyEditorService`服務的代碼。 使用此程式碼前，請從包含 avalon2 應用程式的專案將參考加入到 MyExpressionEditorService 程式庫專案中。  
+
+ 以下程式碼顯示如何在 WPF 應用程式中重新裝載設計工具，以及如何建立和發行 `MyEditorService` 服務。 使用此程式碼前，請從包含 avalon2 應用程式的專案將參考加入到 MyExpressionEditorService 程式庫專案中。  
   
 ```csharp  
 using System.Windows;  
@@ -275,11 +278,12 @@ namespace WpfApplication1
 }  
 ```  
   
-### <a name="notes"></a>注意  
- 如果在自訂活動設計器中使用**ExpressionTextBox**控制項，則無需使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A><xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A><xref:System.Activities.Presentation.View.IExpressionEditorService>介面 的 和 方法創建和銷毀運算式編輯器。 <xref:System.Activities.Presentation.View.ExpressionTextBox> 類別會為您管理這項工作。  
+### <a name="notes"></a>備註  
+
+ 如果您在自訂活動設計工具中使用 **ExpressionTextBox** 控制項，則不需要使用介面的和方法來建立和終結運算式編輯器 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService> 。 <xref:System.Activities.Presentation.View.ExpressionTextBox> 類別會為您管理這項工作。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [在自訂活動設計工具中使用 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [使用自訂活動設計工具中的 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

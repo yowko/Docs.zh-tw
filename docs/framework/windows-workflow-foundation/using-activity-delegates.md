@@ -2,14 +2,15 @@
 title: 使用活動委派
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 66a03187336475ed377fda032506cfa66d3daf58
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837567"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293295"
 ---
 # <a name="using-activity-delegates"></a>使用活動委派
+
 活動委派可讓活動作者使用特定的簽章以公開回呼，活動使用者可以此為依據來提供活動處理常式。 活動委派有兩種型別可用：<xref:System.Activities.ActivityAction%601>，用來定義沒有傳回值的活動委派，以及 <xref:System.Activities.ActivityFunc%601>，用來定義有傳回值的活動委派。
 
 在限制子活動必須擁有簽章的案例中，活動委派非常實用。 例如，<xref:System.Activities.Statements.While> 活動可包含任何沒有條件約束的子活動型別，但 <xref:System.Activities.Statements.ForEach%601> 活動的主體是 <xref:System.Activities.ActivityAction%601>，且最終由 <xref:System.Activities.Statements.ForEach%601> 執行的子活動，必須具有與 <xref:System.Activities.InArgument%601> 列舉之集合成員相同型別的 <xref:System.Activities.Statements.ForEach%601>。
@@ -30,9 +31,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-如需物件初始化運算式的詳細資訊，請參閱[如何：在不呼叫函式C#的情況下初始化物件（程式設計手冊）](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)和[如何：使用物件初始化運算式宣告物件（Visual Basic）](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)。
+如需物件初始化運算式的詳細資訊，請參閱 [如何：在不呼叫函式的情況下初始化物件 (c # 程式設計手冊) ](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 和 how [To：使用物件初始化運算式宣告物件 (Visual Basic) ](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)。
 
-在下列範例中，<xref:System.Activities.Statements.TryCatch> 活動會用於工作流程中。 <xref:System.ApplicationException> 是由工作流程所擲回而且是由 <xref:System.Activities.Statements.Catch%601> 活動所處理。 <xref:System.Activities.Statements.Catch%601> 活動之活動動作的處理常式是 <xref:System.Activities.Statements.WriteLine> 活動，而例外狀況詳細資料會使用 `ex` <xref:System.Activities.DelegateInArgument%601>流動到它。
+在下列範例中，<xref:System.Activities.Statements.TryCatch> 活動會用於工作流程中。 <xref:System.ApplicationException> 是由工作流程所擲回而且是由 <xref:System.Activities.Statements.Catch%601> 活動所處理。 活動活動動作的處理常式 <xref:System.Activities.Statements.Catch%601> 是一個 <xref:System.Activities.Statements.WriteLine> 活動，而例外狀況詳細資料則是使用來流動 `ex` <xref:System.Activities.DelegateInArgument%601> 。
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

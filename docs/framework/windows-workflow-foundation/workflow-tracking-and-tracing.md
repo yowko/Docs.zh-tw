@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: ce7fa6582bb280bd050dd5609e1041452338fedd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45b1474b125a194498e5f7beddecbfeed5ce6ced
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548575"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293581"
 ---
 # <a name="workflow-tracking-and-tracing"></a>工作流程追蹤與追查
+
 Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。 它提供追蹤基礎架構，可追蹤工作流程執行個體的執行。 WF 追蹤基礎結構會透明化地檢測工作流程，在執行期間發出記錄以反映重要事件。 根據預設，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程都可使用這個功能。 不需要對 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 工作流程做任何變更，即可進行追蹤。 只需決定您想接收多少追蹤資料即可。 當工作流程執行個體開始或完成時，會發出處理的追蹤記錄。 追蹤也可以擷取與工作流程變數相關聯的商務相關資料。 例如，如果工作流程代表訂單處理系統，則訂單識別碼可與 <xref:System.Activities.Tracking.TrackingRecord> 物件一併擷取。 一般而言，啟用 WF 追蹤有助於對從執行工作流程而存取的資料進行診斷或業務分析。  
   
  這些追蹤元件相當於 WinFX 中的追蹤服務。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中已改善效能，且已為 WF 追蹤功能簡化程式設計的模型。 追蹤執行階段會檢測工作流程執行個體，以發出與工作流程生命週期相關的事件、工作流程活動和自訂事件。  
@@ -30,6 +31,7 @@ Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INC
 - 從工作流程執行個體發出的 <xref:System.Activities.Tracking.TrackingProfile> 物件篩選追蹤記錄。 如需詳細資訊，請參閱 [追蹤設定檔](tracking-profiles.md)。  
   
 ## <a name="workflow-tracking-infrastructure"></a>工作流程追蹤基礎結構  
+
  工作流程追蹤基礎結構會依照發行與訂閱的範例。 工作流程執行個體是追蹤記錄的發行者，而追蹤記錄的訂閱者則是註冊為工作流程的延伸。 訂閱 <xref:System.Activities.Tracking.TrackingRecord> 物件的這些延伸稱為追蹤參與者。 追蹤參與者是可延伸點，可存取 <xref:System.Activities.Tracking.TrackingRecord> 物件，並以編寫它們的任何方式進行處理。 追蹤基礎結構可讓應用程式篩選外送的追蹤記錄，讓參與者訂閱記錄的子集。 這個篩選機制是透過追蹤設定檔來完成。  
   
  下圖顯示追蹤基礎結構的高層級觀點：  
@@ -37,6 +39,7 @@ Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INC
  ![顯示工作流程追蹤基礎結構的螢幕擷取畫面。](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [追蹤記錄](tracking-records.md)  
  描述工作流程執行階段發出的追蹤記錄。  
   

@@ -2,17 +2,19 @@
 title: 使用追蹤來疑難排解應用程式
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: fc9427d0c06ed67ea69669cab2aae64f39f7c10c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62f2240831dd33bdaf78655199aad75b7e29c59c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551284"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293568"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用追蹤來疑難排解應用程式
+
 Windows Workflow Foundation (WF) 可讓您追蹤工作流程的相關資訊，以提供 Windows Workflow Foundation 應用程式或服務執行的詳細資料。 Windows Workflow Foundation 的主機可以在工作流程實例執行期間，捕捉工作流程事件。 如果您的工作流程產生錯誤或例外狀況，您可以使用 Windows Workflow Foundation 追蹤詳細資料來疑難排解其處理。  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>使用 WF 追蹤疑難排解 WF  
+
  若要偵測 Windows Workflow Foundation 活動處理中的錯誤，您可以使用追蹤設定檔來啟用追蹤，以查詢錯誤的 <xref:System.Activities.Tracking.ActivityStateRecord> 狀態。 下列程式碼中指定對應的查詢。  
   
 ```xml  

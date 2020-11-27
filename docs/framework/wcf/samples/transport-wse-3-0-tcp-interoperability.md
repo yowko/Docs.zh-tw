@@ -2,14 +2,15 @@
 title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: f61d5037af0be6579d5110152ca070bec586fe87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c268043a9d5c3f6a48b7b66dc807e4e30f029f61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558962"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292502"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
+
 WSE 3.0 TCP 互通性傳輸範例示範如何將 TCP 雙工會話實作為自訂 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟示範如何建立這個自訂 WCF 傳輸：  
   
 1. 從 TCP 通訊端 (Socket) 開始，建立會使用 DIME 框架來描述訊息界限之 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的用戶端和伺服器實作。  
@@ -23,6 +24,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何將 TCP 雙工會話實作為自訂
 5. 新增繫結項目，而此繫結項目會將自訂傳輸新增至通道堆疊。 如需詳細資訊，請參閱 [新增繫結項目]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>建立 IDuplexSessionChannel  
+
  撰寫 WSE 3.0 TCP 互通性傳輸的第一個步驟，就是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 之上建立 <xref:System.Net.Sockets.Socket> 的實作。 `WseTcpDuplexSessionChannel` 衍生自 <xref:System.ServiceModel.Channels.ChannelBase>。 傳送訊息的邏輯由兩個主要部分所組成：(1) 將訊息編碼成位元組，以及 (2) 框架處理這些位元組並在網路上傳送。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
@@ -50,6 +52,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何將 TCP 雙工會話實作為自訂
 - 會話。CloseOutputSession--將輸出資料流程關閉 (半近) 。  
   
 ## <a name="channel-factory"></a>通道處理站  
+
  撰寫 TCP 傳輸的下一個步驟為，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作。  
   
 - `WseTcpChannelFactory`衍生自 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel> 。 這是覆寫 `OnCreateChannel` 以產生用戶端通道的處理站。  
@@ -77,6 +80,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何將 TCP 雙工會話實作為自訂
 - 包裝網域特定的例外狀況，例如 `SocketException` 中的 <xref:System.ServiceModel.CommunicationException>，以充當為通道合約的一部分。  
   
 ## <a name="channel-listener"></a>通道接聽程式  
+
  撰寫 TCP 傳輸的下一個步驟為，建立可接受伺服器通道的 <xref:System.ServiceModel.Channels.IChannelListener> 實作。  
   
 - `WseTcpChannelListener`衍生自 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel> 和覆寫于 [開始] 開啟且在 [開始] 上，關閉以控制其接聽通訊端的存留期。 在 OnOpen 中，您會建立通訊端以接聽 IP_ANY。 更進階的實作則可以建立第二個通訊端，就也可以階聽 IPv6。 這些實作也允許在主機名稱中指定 IP 位址。  
@@ -92,6 +96,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何將 TCP 雙工會話實作為自訂
  接受新的通訊端時，就會使用此通訊端初始化伺服器通道。 在基底類別中已實作所有輸入和輸出，因此這個通道可以負責初始化通訊端。  
   
 ## <a name="adding-a-binding-element"></a>新增繫結項目  
+
  現在已建置處理站和通道，就必須透過繫結公開至 ServiceModel 執行階段。 繫結是繫結項目的集合，表示與服務位址相關聯的通訊堆疊。 堆疊中的每個項目都是由繫結項目表示。  
   
  在此範例中，繫結項目為 `WseTcpTransportBindingElement`，其衍生自 <xref:System.ServiceModel.Channels.TransportBindingElement>。 此繫結項目支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 並會覆寫下列方法，以建置與繫結相關聯的處理站。  
@@ -115,6 +120,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何將 TCP 雙工會話實作為自訂
  它還包含可以用來複製 `BindingElement` 以及傳回結構描述 (wse.tcp) 的成員。  
   
 ## <a name="the-wse-tcp-test-console"></a>WSE TCP 測試主控台  
+
  您可以在 TestCode.cs 中找到使用這個範例傳輸的測試程式碼。 下列指示說明如何設定 WSE `TcpSyncStockService` 範例。  
   
  測試程式碼會建立使用 MTOM 做為編碼，並使用 `WseTcpTransport` 做為傳輸的自訂繫結。 這也會將 AddressingVersion 設定為符合 WSE 3.0，如下列程式碼所示。  
