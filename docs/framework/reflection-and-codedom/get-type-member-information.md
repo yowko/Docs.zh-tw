@@ -10,26 +10,27 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 771917bb2ae5cae56c775ae23119d5eda9701df1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865316"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266320"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a><span data-ttu-id="ce95f-103">作法：使用反映取得類型和成員資訊</span><span class="sxs-lookup"><span data-stu-id="ce95f-103">How to: Get type and member information by using reflection</span></span>
-<span data-ttu-id="ce95f-104"><xref:System.Reflection>命名空間包含許多方法，可取得類型及其成員的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ce95f-104">The <xref:System.Reflection> namespace contains many methods for obtaining information about types and their members.</span></span> <span data-ttu-id="ce95f-105">本文示範其中一種方法： <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> 。</span><span class="sxs-lookup"><span data-stu-id="ce95f-105">This article demonstrates one of these methods, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="ce95f-106">如需其他資訊，請參閱[反映總覽](reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="ce95f-106">For additional information, see [Reflection overview](reflection.md).</span></span>
-  
-## <a name="example"></a><span data-ttu-id="ce95f-107">範例</span><span class="sxs-lookup"><span data-stu-id="ce95f-107">Example</span></span>
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a><span data-ttu-id="e0557-103">作法：使用反映取得類型和成員資訊</span><span class="sxs-lookup"><span data-stu-id="e0557-103">How to: Get type and member information by using reflection</span></span>
 
-<span data-ttu-id="ce95f-108">下列範例會使用反映來取得型別和成員資訊：</span><span class="sxs-lookup"><span data-stu-id="ce95f-108">The following example obtains type and member information by using reflection:</span></span>
+<span data-ttu-id="e0557-104"><xref:System.Reflection>命名空間包含許多方法，可取得類型和其成員的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e0557-104">The <xref:System.Reflection> namespace contains many methods for obtaining information about types and their members.</span></span> <span data-ttu-id="e0557-105">本文將示範其中一種方法 <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> 。</span><span class="sxs-lookup"><span data-stu-id="e0557-105">This article demonstrates one of these methods, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e0557-106">如需詳細資訊，請參閱 [反映總覽](reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="e0557-106">For additional information, see [Reflection overview](reflection.md).</span></span>
+  
+## <a name="example"></a><span data-ttu-id="e0557-107">範例</span><span class="sxs-lookup"><span data-stu-id="e0557-107">Example</span></span>
+
+<span data-ttu-id="e0557-108">下列範例會使用反映來取得類型和成員資訊：</span><span class="sxs-lookup"><span data-stu-id="e0557-108">The following example obtains type and member information by using reflection:</span></span>
 
 [!code-cpp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cpp)]
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a><span data-ttu-id="ce95f-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce95f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0557-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0557-109">See also</span></span>
 
-- [<span data-ttu-id="ce95f-110">使用應用程式域的程式</span><span class="sxs-lookup"><span data-stu-id="ce95f-110">Program with application domains</span></span>](../app-domains/application-domains.md#programming-with-application-domains)
-- [<span data-ttu-id="ce95f-111">反射</span><span class="sxs-lookup"><span data-stu-id="ce95f-111">Reflection</span></span>](reflection.md)
-- [<span data-ttu-id="ce95f-112">使用應用程式域</span><span class="sxs-lookup"><span data-stu-id="ce95f-112">Use application domains</span></span>](../app-domains/use.md)
+- [<span data-ttu-id="e0557-110">具有應用程式域的程式</span><span class="sxs-lookup"><span data-stu-id="e0557-110">Program with application domains</span></span>](../app-domains/application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="e0557-111">反射</span><span class="sxs-lookup"><span data-stu-id="e0557-111">Reflection</span></span>](reflection.md)
+- [<span data-ttu-id="e0557-112">使用應用程式域</span><span class="sxs-lookup"><span data-stu-id="e0557-112">Use application domains</span></span>](../app-domains/use.md)

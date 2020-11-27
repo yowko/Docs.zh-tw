@@ -2,24 +2,26 @@
 title: WCF Web HTTP 服務說明網頁
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600162"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266931"
 ---
-# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="b28da-102">WCF Web HTTP 服務說明網頁</span><span class="sxs-lookup"><span data-stu-id="b28da-102">WCF Web HTTP Service Help Page</span></span>
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <span data-ttu-id="b28da-103">會為 WCF WEB HTTP 服務提供自動說明頁面。</span><span class="sxs-lookup"><span data-stu-id="b28da-103">provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="b28da-104">此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。</span><span class="sxs-lookup"><span data-stu-id="b28da-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="b28da-105">此功能預設為關閉。</span><span class="sxs-lookup"><span data-stu-id="b28da-105">This functionality is turned off by default.</span></span> <span data-ttu-id="b28da-106">當使用者流覽至 WCF WEB HTTP 服務並在 URL 結尾附加 "/Help" 時，會顯示如下的說明 `http://localhost:8000/Customers/Help` 頁面。</span><span class="sxs-lookup"><span data-stu-id="b28da-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example `http://localhost:8000/Customers/Help`, a help page like the following is displayed.</span></span>  
+# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="89e62-102">WCF Web HTTP 服務說明網頁</span><span class="sxs-lookup"><span data-stu-id="89e62-102">WCF Web HTTP Service Help Page</span></span>
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <span data-ttu-id="89e62-103">會為 WCF WEB HTTP 服務提供自動說明頁面。</span><span class="sxs-lookup"><span data-stu-id="89e62-103">provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="89e62-104">此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。</span><span class="sxs-lookup"><span data-stu-id="89e62-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="89e62-105">此功能預設為關閉。</span><span class="sxs-lookup"><span data-stu-id="89e62-105">This functionality is turned off by default.</span></span> <span data-ttu-id="89e62-106">當使用者流覽至 WCF WEB HTTP 服務，並在 URL 的結尾附加 "/Help" 時， `http://localhost:8000/Customers/Help` 就會顯示如下所示的說明頁面。</span><span class="sxs-lookup"><span data-stu-id="89e62-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example `http://localhost:8000/Customers/Help`, a help page like the following is displayed.</span></span>  
   
  ![已開啟 WCF REST 說明頁面的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
- <span data-ttu-id="b28da-108">使用者可以按一下說明頁面中列出的任何方法，該作業的詳細資訊頁面便會顯示，提供有關該方法的詳細資訊，包括訊息格式和回應範例。</span><span class="sxs-lookup"><span data-stu-id="b28da-108">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="b28da-109">下圖是方法之說明頁面的範例。</span><span class="sxs-lookup"><span data-stu-id="b28da-109">The following image is an example of a help page for a method.</span></span>  
+ <span data-ttu-id="89e62-108">使用者可以按一下說明頁面中列出的任何方法，該作業的詳細資訊頁面便會顯示，提供有關該方法的詳細資訊，包括訊息格式和回應範例。</span><span class="sxs-lookup"><span data-stu-id="89e62-108">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="89e62-109">下圖是方法之說明頁面的範例。</span><span class="sxs-lookup"><span data-stu-id="89e62-109">The following image is an example of a help page for a method.</span></span>  
   
- ![已開啟 GetCustomers 方法的 WCF REST 說明頁面詳細資料的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
+ ![具有 GetCustomers 方法開啟之 WCF REST 說明頁面詳細資料的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
-## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="b28da-111">使用 WCF Web HTTP 說明頁面</span><span class="sxs-lookup"><span data-stu-id="b28da-111">Using the WCF Web HTTP Help Page</span></span>  
- <span data-ttu-id="b28da-112">WCF WEB HTTP 說明頁面會顯示每項作業的簡短描述，您可以使用 <xref:System.ComponentModel.DescriptionAttribute> 來指定任何一項。</span><span class="sxs-lookup"><span data-stu-id="b28da-112">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="b28da-113">此屬性會使用包含作業所套用之簡短描述的字串。</span><span class="sxs-lookup"><span data-stu-id="b28da-113">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="b28da-114">例如，下列程式碼示範如何使用 <xref:System.ComponentModel.DescriptionAttribute>來提供簡短描述。</span><span class="sxs-lookup"><span data-stu-id="b28da-114">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
+## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="89e62-111">使用 WCF Web HTTP 說明頁面</span><span class="sxs-lookup"><span data-stu-id="89e62-111">Using the WCF Web HTTP Help Page</span></span>  
+
+ <span data-ttu-id="89e62-112">WCF WEB HTTP 說明頁面會顯示每項作業的簡短描述，您可以使用 <xref:System.ComponentModel.DescriptionAttribute> 來指定任何一項。</span><span class="sxs-lookup"><span data-stu-id="89e62-112">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="89e62-113">此屬性會使用包含作業所套用之簡短描述的字串。</span><span class="sxs-lookup"><span data-stu-id="89e62-113">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="89e62-114">例如，下列程式碼示範如何使用 <xref:System.ComponentModel.DescriptionAttribute>來提供簡短描述。</span><span class="sxs-lookup"><span data-stu-id="89e62-114">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
   
 ```csharp
 [OperationContract]  
@@ -28,7 +30,7 @@ ms.locfileid: "84600162"
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- <span data-ttu-id="b28da-115">若要開啟 WCF WEB HTTP 說明頁面，您必須加入端點行為至服務的端點。</span><span class="sxs-lookup"><span data-stu-id="b28da-115">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="b28da-116">這個動作可在組態或程式碼中完成。</span><span class="sxs-lookup"><span data-stu-id="b28da-116">This can be done in configuration or code.</span></span> <span data-ttu-id="b28da-117">若要啟用組態中的 WCF WEB HTTP 說明頁面，請使用 `<webHttp>``enableHelp` 項目加入端點行為，將 `true` 設為，並加入端點然後將其設定為使用端點行為。</span><span class="sxs-lookup"><span data-stu-id="b28da-117">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="b28da-118">下列組態程式碼示範如何執行這項工作。</span><span class="sxs-lookup"><span data-stu-id="b28da-118">The following configuration code shows how to do this.</span></span>  
+ <span data-ttu-id="89e62-115">若要開啟 WCF WEB HTTP 說明頁面，您必須加入端點行為至服務的端點。</span><span class="sxs-lookup"><span data-stu-id="89e62-115">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="89e62-116">這個動作可在組態或程式碼中完成。</span><span class="sxs-lookup"><span data-stu-id="89e62-116">This can be done in configuration or code.</span></span> <span data-ttu-id="89e62-117">若要啟用組態中的 WCF WEB HTTP 說明頁面，請使用 `<webHttp>``enableHelp` 項目加入端點行為，將 `true` 設為，並加入端點然後將其設定為使用端點行為。</span><span class="sxs-lookup"><span data-stu-id="89e62-117">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="89e62-118">下列組態程式碼示範如何執行這項工作。</span><span class="sxs-lookup"><span data-stu-id="89e62-118">The following configuration code shows how to do this.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -45,7 +47,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- <span data-ttu-id="b28da-119">若要在程式碼中啟用 WCF Web HTTP 說明頁面，請加入服務端點，並將 <xref:System.ServiceModel.Description.WebHttpBehavior> 加入至端點設定，再將 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> 設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="b28da-119">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> to `true`.</span></span> <span data-ttu-id="b28da-120">下列程式碼示範如何執行這項操作。</span><span class="sxs-lookup"><span data-stu-id="b28da-120">The following code shows how to do this.</span></span>  
+ <span data-ttu-id="89e62-119">若要在程式碼中啟用 WCF Web HTTP 說明頁面，請加入服務端點，並將 <xref:System.ServiceModel.Description.WebHttpBehavior> 加入至端點設定，再將 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> 設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="89e62-119">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> to `true`.</span></span> <span data-ttu-id="89e62-120">下列程式碼示範如何執行這項操作。</span><span class="sxs-lookup"><span data-stu-id="89e62-120">The following code shows how to do this.</span></span>  
   
 ```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -56,10 +58,11 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- <span data-ttu-id="b28da-121">說明頁面是含有標記的 XHTML 架構，可識別頁面的不同部分。</span><span class="sxs-lookup"><span data-stu-id="b28da-121">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="b28da-122">如此可讓用戶端以程式設計方式，使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 存取頁面。</span><span class="sxs-lookup"><span data-stu-id="b28da-122">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
+ <span data-ttu-id="89e62-121">說明頁面是含有標記的 XHTML 架構，可識別頁面的不同部分。</span><span class="sxs-lookup"><span data-stu-id="89e62-121">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="89e62-122">如此可讓用戶端以程式設計方式，使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 存取頁面。</span><span class="sxs-lookup"><span data-stu-id="89e62-122">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
   
-## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="b28da-123">WCF Web HTTP 服務說明頁面中使用的結構描述</span><span class="sxs-lookup"><span data-stu-id="b28da-123">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
- <span data-ttu-id="b28da-124">WCF Web HTTP 服務說明頁面會使用下列結構描述。</span><span class="sxs-lookup"><span data-stu-id="b28da-124">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="89e62-123">WCF Web HTTP 服務說明頁面中使用的結構描述</span><span class="sxs-lookup"><span data-stu-id="89e62-123">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
+
+ <span data-ttu-id="89e62-124">WCF Web HTTP 服務說明頁面會使用下列結構描述。</span><span class="sxs-lookup"><span data-stu-id="89e62-124">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -240,4 +243,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- <span data-ttu-id="b28da-125">如需資料合約序列化架構的詳細資訊，請參閱[資料合約架構參考](data-contract-schema-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="b28da-125">For more information about the data contract serialization schema, see [Data Contract Schema Reference](data-contract-schema-reference.md).</span></span>
+ <span data-ttu-id="89e62-125">如需資料合約序列化架構的詳細資訊，請參閱 [資料合約架構參考](data-contract-schema-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="89e62-125">For more information about the data contract serialization schema, see [Data Contract Schema Reference](data-contract-schema-reference.md).</span></span>
