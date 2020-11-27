@@ -1,19 +1,21 @@
 ---
 title: 3.5 版中的通訊端效能增強功能
-description: 瞭解 .NET Framework 版本3.5 中的系統 .Net. Socket 類別的效能改進。
+description: 瞭解 .NET Framework 中3.5 版中的系統 .Net Socket 類別的效能改進。
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5bd7c97d6a6edd5f914d6fe3118b6d81b64544e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502141"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263135"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>3.5 版中的通訊端效能增強功能
+
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別已經在版本 3.5 中增強，以供使用非同步網路 I/O 的應用程式使用，以達到最高的效能。 一系列新類別已新增在 <xref:System.Net.Sockets.Socket> 類別的一組增強功能當中，提供另一種非同步模式，可供專業化的高效能通訊端應用程式使用。 這些增強功能專為需要高效能的網路伺服器應用程式而設計。 應用程式可以獨佔方式，使用增強的非同步模式，或是只在其應用程式的目標熱區使用 (例如接收大量資料時)。  
   
 ## <a name="class-enhancements"></a>類別增強功能  
+
  這些增強功能的主要功能是在大量的非同步通訊端 I/O 期間，避免重複配置和同步處理物件。 <xref:System.Net.Sockets.Socket> 類別目前針對非同步通訊端 I/O 所實作的 Begin/End 設計模式，需要為每個非同步通訊端作業配置一個 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件。  
   
  在新的 <xref:System.Net.Sockets.Socket> 類別增強功能中，應用程式所配置和維護的可重複使用 <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> 類別物件會描述非同步通訊端作業。 高效能通訊端應用程式最知道必須維持的重疊通訊端作業量。 應用程式可以視需要建立許多 <xref:System.Net.Sockets.SocketAsyncEventArgs> 物件。 例如，如果伺服器應用程式需要隨時有 15 個通訊端接受作業，以支援內送的用戶端連線比率，它可以事先配置 15 個可重複使用的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 物件以用於此用途。  

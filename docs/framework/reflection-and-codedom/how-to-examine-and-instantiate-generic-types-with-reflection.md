@@ -1,6 +1,6 @@
 ---
-title: 作法：使用反映檢查和具現化泛型型別
-description: 請參閱如何使用反映檢查和具現化泛型型別。 使用 IsGenericType、IsGenericParameter 和 GenericParameterPosition 屬性。
+title: 如何：使用反映檢視和執行個體化泛型類型
+description: 瞭解如何使用反映檢查和具現化泛型型別。 使用 IsGenericType、IsGenericParameter 和 GenericParameterPosition 屬性。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 34efca4a26b0ab3739d19b793237532ec9f4f15e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865095"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263434"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>作法：使用反映檢查和具現化泛型型別
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反映檢視和執行個體化泛型類型
+
 取得泛型型別相關資訊的方式和取得其他類型相關資訊的方式一樣：檢查代表泛型型別的 <xref:System.Type> 物件。 主要差異是泛型型別有代表其泛型型別參數的 <xref:System.Type> 物件清單。 本節的第一個程序是檢查泛型型別。  
   
  您可以將型別引數繫結至泛型型別定義的型別參數，建立代表建構類型的 <xref:System.Type> 物件。 第二個程序即示範此作業。  
@@ -73,6 +74,7 @@ ms.locfileid: "86865095"
      [!code-vb[HowToGeneric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#9)]  
   
 ## <a name="constructing-an-instance-of-a-generic-type"></a>建構泛型型別的執行個體  
+
  泛型型別就像範本。 除非指定其泛型型別參數的真實類型，否則無法建立它的執行個體。 若要在執行階段使用反映執行這項操作，需要 <xref:System.Type.MakeGenericType%2A> 方法。  
   
 #### <a name="to-construct-an-instance-of-a-generic-type"></a>建構泛型型別的執行個體  
@@ -102,6 +104,7 @@ ms.locfileid: "86865095"
      [!code-vb[HowToGeneric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#13)]  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例會定義 `DisplayGenericType` 方法，檢查程式碼中的泛型型別定義和建構的類型，並顯示其相關資訊。 `DisplayGenericType` 方法示範如何使用 <xref:System.Type.IsGenericType%2A>、<xref:System.Type.IsGenericParameter%2A> 和 <xref:System.Type.GenericParameterPosition%2A> 屬性以及 <xref:System.Type.GetGenericArguments%2A> 方法。  
   
  此範例也會定義 `DisplayGenericParameter` 方法，檢查泛型型別參數，並顯示其條件約束。  

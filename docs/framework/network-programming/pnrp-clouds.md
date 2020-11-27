@@ -2,14 +2,15 @@
 title: PNRP 雲端
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60b6fb44116fe2d8af50fb0b310615b3b962977b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047364"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263200"
 ---
 # <a name="pnrp-clouds"></a>PNRP 雲端
+
 PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「雲端」這個詞相當於「對等網格」和「點對點圖形」。  
   
  節點之間的通訊絕對不應該跨越不同的雲端。 <xref:System.Net.PeerToPeer.Cloud> 執行個體可透過其區分大小寫的名稱唯一進行識別。 單一對等或節點可能已連線至多個雲端。  
@@ -25,6 +26,7 @@ PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「
  第三個雲端是網站特定雲端，並對應至網站 IPv6 位址範圍和網站-本機位址。 此雲端已過時，不過 PNRP 中仍然支援此雲端。  
   
 ## <a name="clouds"></a>雲端  
+
  PNRP 雲端是由 <xref:System.Net.PeerToPeer.Cloud> 類別的執行個體所表示。 使用對等的雲端群組是由可列舉 <xref:System.Net.PeerToPeer.CloudCollection> 類別的執行個體所表示。 呼叫靜態 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> 方法，即可取得目前對等已知的 PNRP 雲端集合。  
   
  個別雲端具有唯一名稱，並以 256 個字元的 Unicode 字串呈現。 這些名稱以及上述範圍是用來建構 Cloud 類別的唯一執行個體。 這些執行個體可以序列化並重新建構以供持續使用。  

@@ -1,20 +1,20 @@
 ---
 title: 工作平行程式庫和 PLINQ 中的 ETW 事件
-description: 深入瞭解工作平行程式庫和 PLINQ 中的 ETW 事件。 使用這些事件來分析應用程式並進行疑難排解。
+description: 請參閱工作平行程式庫和 PLINQ 中的 ETW 事件。 使用這些事件來分析應用程式並進行疑難排解。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4cb4967ea704064ae08d09311ff33720e3871e19
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309634"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263642"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>工作平行程式庫和 PLINQ 中的 ETW 事件
 
-工作平行程式庫和 PLINQ 都會產生 Windows 事件追蹤 (ETW) 事件，您可使用 Windows Performance Analyzer 等工具，利用這些事件對應用程式進行程式碼剖析和疑難排解。 不過，在大部分的情況下，分析平行應用程式程式碼的最佳方式是在 Visual Studio 中使用並行[視覺化](/visualstudio/profiling/concurrency-visualizer)。
+工作平行程式庫和 PLINQ 都會產生 Windows 事件追蹤 (ETW) 事件，您可使用 Windows Performance Analyzer 等工具，利用這些事件對應用程式進行程式碼剖析和疑難排解。 不過，在大部分情況下，分析平行應用程式程式碼的最佳方式，是在 Visual Studio 中使用 [並行視覺化](/visualstudio/profiling/concurrency-visualizer) 。
 
 ## <a name="task-parallel-library-etw-events"></a>工作平行程式庫 ETW 事件
 
@@ -40,6 +40,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|迴圈計數器的結束值|
 
 ### <a name="parallel-loop-end"></a>平行迴圈結束
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2
@@ -54,6 +55,7 @@ EVENT_DESCRIPTOR.Id = 1
 |totalIterations|<xref:System.Int64?displayProperty=nameWithType>|反覆項目總數|
 
 ### <a name="parallel-invoke-begin"></a>平行叫用開始
+
  EVENT_DESCRIPTOR.Task = 3
 
  EVENT_DESCRIPTOR.Id = 3
@@ -70,6 +72,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|在平行叫用中會執行的動作數目。|
 
 ### <a name="parallel-invoke-end"></a>平行叫用結束
+
  EVENT_DESCRIPTOR.Task = 4
 
  EVENT_DESCRIPTOR.Id = 4
@@ -83,11 +86,13 @@ EVENT_DESCRIPTOR.Id = 1
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|用來指出巢狀結構和事件派生/聯結語意組的唯一識別碼。|
 
 ## <a name="plinq-etw-events"></a>PLINQ ETW 事件
+
  PLINQ 的 EVENT_HEADER.ProviderId GUID 是：
 
 `0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>平行查詢開始
+
  EVENT_DESCRIPTOR.Task = 1
 
  EVENT_DESCRIPTOR.Id = 1
@@ -101,6 +106,7 @@ EVENT_DESCRIPTOR.Id = 1
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|唯一的查詢識別碼。|
 
 ### <a name="parallel-query-end"></a>平行查詢結束
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2
@@ -115,6 +121,6 @@ EVENT_DESCRIPTOR.Id = 1
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 中的 ETW 事件](etw-events.md)
+- [ETW Events in the .NET Framework](etw-events.md)
 - [工作平行程式庫 (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [平行 LINQ (PLINQ)](../../standard/parallel-programming/introduction-to-plinq.md)

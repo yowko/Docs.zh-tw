@@ -1,18 +1,20 @@
 ---
-title: 可交互操作的物件引用
+title: 互通的物件參考
 ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 0927f217a1666f8f27ca9c3e68f80a96b9c0f2b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf395c187c46e88406bfb81798c7e359b48255e3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184697"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263226"
 ---
-# <a name="interoperable-object-references"></a>可交互操作的物件引用
-預設情況下，<xref:System.Runtime.Serialization.DataContractSerializer>按值序列化物件。 可以使用 屬性<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>指示資料協定序列化器在序列化物件時保留物件引用。  
+# <a name="interoperable-object-references"></a>互通的物件參考
+
+依預設，會 <xref:System.Runtime.Serialization.DataContractSerializer> 以傳值方式序列化物件。 您可以使用 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 屬性，指示資料合約序列化程式在序列化物件時保留物件參考。  
   
 ## <a name="generated-xml"></a>產生的 XML  
+
  做為範例，請考量下列物件：  
   
 ```csharp  
@@ -49,10 +51,11 @@ public class SomeClass
 </X>  
 ```  
   
- 但是，<xref:System.Runtime.Serialization.XsdDataContractExporter>即使`preserveObjectReferences`屬性設置為`true`，`id`也不會在其架構中描述 和`ref`屬性。  
+ 但是， <xref:System.Runtime.Serialization.XsdDataContractExporter> `id` 即使屬性設定為，也不會 `ref` 在其架構中描述和屬性 `preserveObjectReferences` `true` 。  
   
 ## <a name="using-isreference"></a>使用 IsReference  
- 要根據描述該資訊的架構生成有效的物件引用資訊，請將<xref:System.Runtime.Serialization.DataContractAttribute>屬性應用於類型，並將<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>標誌設置為`true`。 以下示例通過添加`X``IsReference`：  
+
+ 若要根據描述的架構產生有效的物件參考資訊，請將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至類型，並將旗標設 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 為 `true` 。 下列範例會藉 `X` 由新增下列內容來修改上一個範例中的類別 `IsReference` ：  
   
 ```csharp
 [DataContract(IsReference=true)]
@@ -81,7 +84,7 @@ public class SomeClass
 </X>
 ```  
   
- 使用 `IsReference` 確保往返的訊息相符。 如果沒有它，當從架構組建類型時，該類型的 XML 輸出不一定與最初假定的架構相容。 換句話說，即使 `id` 和 `ref` 屬性已序列化，原始結構描述仍可能禁止這些屬性 (或所有屬性) 出現在該 XML 中。 應用於`IsReference`資料成員後，該成員在四捨五入時繼續被識別為*可引用*成員。  
+ 使用 `IsReference` 確保往返的訊息相符。 如果沒有它，從架構產生型別時，該型別的 XML 輸出就不一定會與原本假設的架構相容。 換句話說，即使 `id` 和 `ref` 屬性已序列化，原始結構描述仍可能禁止這些屬性 (或所有屬性) 出現在該 XML 中。 `IsReference`如果套用至資料成員，則在進行往返時，成員會繼續被視為 *可參考*。  
   
 ## <a name="see-also"></a>另請參閱
 

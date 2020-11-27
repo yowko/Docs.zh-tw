@@ -1,6 +1,6 @@
 ---
 title: 作法：使用反映連結委派
-description: 請參閱如何在 .NET 中使用反映連結委派。 透過反映取得所需的類型，將現有的方法連接至事件。
+description: 瞭解如何在 .NET 中使用反映連結委派。 透過反映取得必要的型別，將現有的方法連接到事件。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: b5d93efd278a53a4e6382f2321918e58ead55899
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9a92afd1c2aeadeb0cf7bc1e626b5bd1fb3cecea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865082"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263421"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>作法：使用反映連結委派
+
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](../../visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
   
 > [!NOTE]
@@ -69,6 +70,7 @@ ms.locfileid: "86865082"
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 <a name="procedureSection1"></a>
+
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>使用動態方法以在執行階段產生事件處理常式  
   
 1. 使用輕量型動態方法和反映發出，可以在執行階段產生事件處理常式方法。 若要建構事件處理常式，您需要委派的傳回型別和參數類型。 這些可以透過檢查委派的 `Invoke` 方法取得。 下列程式碼使用 `GetDelegateReturnType` 和 `GetDelegateParameterTypes` 方法來取得這項資訊。 這些方法的程式碼位於本主題稍後的＜範例＞一節中。  
@@ -98,6 +100,7 @@ ms.locfileid: "86865082"
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例示範如何使用反映以將現有方法連結至事件，同時示範如何使用 <xref:System.Reflection.Emit.DynamicMethod> 類別以在執行階段發出方法，並將它連結至事件。  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]

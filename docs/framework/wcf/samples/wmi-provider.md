@@ -2,14 +2,15 @@
 title: WMI 提供者
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 3fc982bcec563d5e4b90ba3b25989859d7d86281
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d654527c6897e071f914d4015ba9a225974b0f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552874"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263765"
 ---
 # <a name="wmi-provider"></a>WMI 提供者
+
 這個範例會示範如何使用 WCF 內建的 Windows Management Instrumentation (WMI) 提供者，在執行時間收集 Windows Communication Foundation (WCF) 服務的資料。 此外，這個範例還會示範如何將使用者定義的 WMI 物件新增至服務。 此範例會啟用 [消費者入門](getting-started-sample.md) 的 WMI 提供者，並示範如何 `ICalculator` 在執行時間從服務收集資料。  
   
  WMI 是 Microsoft 對「Web 架構企業管理」(Web-Based Enterprise Management，WBEM) 標準的實作。 如需 WMI SDK 的詳細資訊，請參閱 [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)。 WBEM 是一套業界標準，說明應用程式如何將管理測試設備公開至外部管理工具。  
@@ -29,6 +30,7 @@ ms.locfileid: "90552874"
  這個組態項目會公開 WMI 介面。 現在，管理應用程式可以透過這個介面進行連線，並存取應用程式的管理測試設備。  
   
 ## <a name="custom-wmi-object"></a>自訂 WMI 物件  
+
  新增 WMI 物件至服務，可以將使用者定義的資訊連同內建 WMI 提供者的資訊一併公開。 只要使用 Installutil.exe 應用程式將服務的結構描述發行至 WMI，就能達成這個目的。 有關完成這項作業的指示以及詳細資料，可在本主題結尾的安裝指示中找到。  
   
 ## <a name="accessing-wmi-information"></a>存取 WMI 資訊  

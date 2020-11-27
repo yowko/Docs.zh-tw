@@ -6,14 +6,15 @@ helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-ms.openlocfilehash: f4ae277b5dfb09d2676755fec2208b63906ead84
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c1ba994b291bd278a95e34beb0b02ed6581786e8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554667"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263473"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Exception Thrown_V1 ETW 事件
+
 此事件會擷取被擲回的例外狀況相關資訊。  
   
  下表顯示引發事件的關鍵字以及事件層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  

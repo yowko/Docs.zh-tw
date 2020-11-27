@@ -11,14 +11,15 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: bf308b07bf4b2a863b9825e7c8d9f412bdb6d1b8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75076eb9ce1b9bfc6b3c8b5a48e200ca5e63cdff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559209"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263460"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>作法：使用反映發出定義泛型型別
+
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  
   
 > [!IMPORTANT]
@@ -110,6 +111,7 @@ ms.locfileid: "90559209"
      [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例會定義名為 `Sample` 的類別，以及一個基底類別和兩個介面。 程式會為 `Sample` 定義兩個泛型型別參數，將它轉換成泛型型別。 型別參數是唯一可將類型變成泛型的物件。 程式會顯示定義型別參數之前和之後的測試訊息，以顯示此變化。  
   
  使用基底類別和介面的型別參數 `TSecond` 用於示範類別和介面條件約束，而型別參數 `TFirst` 用於示範特殊條件約束。  
