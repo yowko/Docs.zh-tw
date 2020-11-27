@@ -1,16 +1,17 @@
 ---
-title: HOW TO：實作以探索 Proxy 註冊的可探索服務
+title: 作法：實作以探索 Proxy 註冊的可探索服務
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e6b57193d25da7e5c9a865525dd5e9ea21110b0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599226"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254255"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>HOW TO：實作以探索 Proxy 註冊的可探索服務
-本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在上一個主題中，how [to：執行探索 proxy](how-to-implement-a-discovery-proxy.md)，您已實作為探索 proxy。 在本主題中，您會建立 WCF 服務，將公告訊息（ `Hello` 和 `Bye` ）傳送至探索 proxy，使其向探索 proxy 註冊並取消註冊。
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>作法：實作以探索 Proxy 註冊的可探索服務
+
+本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在上一個主題中， [如何：](how-to-implement-a-discovery-proxy.md)執行探索 proxy，而您已執行探索 proxy。 在本主題中，您會建立 WCF 服務，以將公告訊息 (`Hello` 和 `Bye`) 傳送至探索 proxy，使其向探索 proxy 註冊和取消註冊。
 
 ### <a name="to-define-the-service-contract"></a>若要定義服務合約
 
@@ -156,9 +157,10 @@ ms.locfileid: "84599226"
     }
     ```
 
-您已經完成實作可探索的服務。 繼續進行[如何：執行使用探索 Proxy 來尋找服務的用戶端應用程式](client-app-discovery-proxy-to-find-a-service.md)。
+您已經完成實作可探索的服務。 繼續進行 [操作說明：執行使用探索 Proxy 的用戶端應用程式來尋找服務](client-app-discovery-proxy-to-find-a-service.md)。
 
 ## <a name="example"></a>範例
+
  以下是本主題所使用之程式碼的完整清單。
 
 ```csharp
@@ -289,8 +291,8 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 探索](wcf-discovery.md)
-- [HOW TO：實作探索 Proxy](how-to-implement-a-discovery-proxy.md)
-- [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](client-app-discovery-proxy-to-find-a-service.md)
+- [作法：實作探索 Proxy](how-to-implement-a-discovery-proxy.md)
+- [作法：實作使用探索 Proxy 的用戶端應用程式來尋找服務](client-app-discovery-proxy-to-find-a-service.md)

@@ -2,17 +2,19 @@
 title: 擴充性
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 757783536ac25dd30e96748b9d9791e06c08b091
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb939814fe30bd8e28d42cac4e4945a83b1b3158
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600486"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255432"
 ---
 # <a name="extensibility"></a>擴充性
-本節包含的範例會處理 Windows Communication Foundation （WCF）的自訂擴充性和其他功能。  
+
+本節包含的範例會處理 Windows Communication Foundation (WCF) 的自訂擴充性和其他功能。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [通道擴充性](channels-extensibility.md)  
  示範自訂通道。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "84600486"
  示範擴充點如何使用自訂訊息資料格式。  
   
  [自訂訊息篩選條件](custom-message-filter.md)  
- 示範如何取代 Windows Communication Foundation （WCF）用來將訊息分派至端點的訊息篩選器。  
+ 示範如何取代 Windows Communication Foundation (WCF) 用來將訊息分派至端點的訊息篩選器。  
   
  [自訂服務裝載](custom-service-host.md)  
  示範如何使用 <xref:System.ServiceModel.ServiceHost> 類別的自訂衍生，以變更服務的執行階段行為。  
@@ -53,7 +55,7 @@ ms.locfileid: "84600486"
  示範如何使用資料合約代理類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。  
   
  [延伸對錯誤處理和報告的控制](extending-control-over-error-handling-and-reporting.md)  
- 示範如何使用介面，在 WCF 服務中擴充對錯誤處理和錯誤報表的控制 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 。  
+ 示範如何使用介面擴充 WCF 服務中錯誤處理與錯誤報表的控制 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 。  
   
  [訊息偵測器](message-inspectors.md)  
  示範如何實作與設定用戶端和服務訊息偵測器。  

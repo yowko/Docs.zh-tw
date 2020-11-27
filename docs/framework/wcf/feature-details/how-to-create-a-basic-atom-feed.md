@@ -1,19 +1,20 @@
 ---
-title: HOW TO：建立基本 Atom 摘要
+title: 作法：建立基本 Atom 摘要
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 0317e7b42f589b31f5c77b89d26cb46815f13054
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 76362684d289ca6aaac852158a05087a0a28f837
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599044"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254047"
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a>HOW TO：建立基本 Atom 摘要
-Windows Communication Foundation （WCF）可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 Atom 新聞訂閱摘要的新聞訂閱服務。  
+# <a name="how-to-create-a-basic-atom-feed"></a>作法：建立基本 Atom 摘要
+
+Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 Atom 新聞訂閱摘要的新聞訂閱服務。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>若要建立基本新聞訂閱服務  
   
@@ -23,7 +24,7 @@ Windows Communication Foundation （WCF）可讓您建立公開新聞訂閱摘�
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > 所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱[如何：建立基本 WCF WEB HTTP 服務](how-to-create-a-basic-wcf-web-http-service.md)。  
+    > 所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱 [如何：建立基本 WCF WEB HTTP 服務](how-to-create-a-basic-wcf-web-http-service.md)。  
   
 2. 實作服務合約。  
   
@@ -64,9 +65,9 @@ Windows Communication Foundation （WCF）可讓您建立公開新聞訂閱摘�
   
 ### <a name="to-call-getblog-with-an-http-get"></a>若要使用 HTTP GET 呼叫 GetBlog()  
   
-1. 開啟 Internet Explorer，輸入下列 URL，然後按 ENTER 鍵：`http://localhost:8000/BlogService/GetBlog`  
+1. 開啟 Internet Explorer，輸入下列 URL，然後按 ENTER： `http://localhost:8000/BlogService/GetBlog`  
   
-     URL 包含服務的基底位址（ `http://localhost:8000/BlogService` ）、端點的相對位址，以及要呼叫的服務作業。  
+     URL 包含服務的基底位址 (`http://localhost:8000/BlogService`) 、端點的相對位址，以及要呼叫的服務作業。  
   
 ### <a name="to-call-getblog-from-code"></a>若要從程式碼呼叫 GetBlog()  
   
@@ -88,12 +89,14 @@ Windows Communication Foundation （WCF）可讓您建立公開新聞訂閱摘�
      [!code-vb[htAtomBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>範例  
+
  以下是這個範例的完整程式碼清單。  
   
  [!code-csharp[htAtomBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#12)]
  [!code-vb[htAtomBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
 ## <a name="see-also"></a>另請參閱

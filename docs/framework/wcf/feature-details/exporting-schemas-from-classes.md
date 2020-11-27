@@ -8,20 +8,22 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: d356450af8ce6690e2142f3487e153bcde095324
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8105ada41a2ec9dac962f5029ac89b66c69893ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595514"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255555"
 ---
 # <a name="exporting-schemas-from-classes"></a>從類別匯出結構描述
+
 如果要從用於資料合約模型中的類別產生 XML 結構描述定義語言 (XSD)，請使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 類別。 這個主題將說明建立結構描述的程序。  
   
 ## <a name="the-export-process"></a>匯出程序  
+
  結構描述匯出程序是以一個或多個類型開始，然後產生描述這些類型的 XML 規劃的 <xref:System.Xml.Schema.XmlSchemaSet> 。  
   
- `XmlSchemaSet`是 .NET Framework 的架構物件模型（SOM）的一部分，代表一組 XSD 架構檔。 如果要從 `XmlSchemaSet`建立 XSD 文件，請使用來自 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 類別之 `XmlSchemaSet` 屬性的結構描述集合。 然後使用 <xref:System.Xml.Schema.XmlSchema> 序列化各個 <xref:System.Xml.Serialization.XmlSerializer>物件。  
+ `XmlSchemaSet`是 .NET Framework 架構物件模型的一部分， (SOM) 表示一組 XSD 架構檔。 如果要從 `XmlSchemaSet`建立 XSD 文件，請使用來自 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 類別之 `XmlSchemaSet` 屬性的結構描述集合。 然後使用 <xref:System.Xml.Schema.XmlSchema> 序列化各個 <xref:System.Xml.Serialization.XmlSerializer>物件。  
   
 #### <a name="to-export-schemas"></a>匯出結構描述  
   
@@ -41,13 +43,15 @@ ms.locfileid: "84595514"
 5. 請透過 <xref:System.Xml.Schema.XmlSchemaSet> 屬性存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 。  
   
 ## <a name="export-options"></a>匯出選項  
+
  您可以將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 之 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設定為 <xref:System.Runtime.Serialization.ExportOptions> 類別的執行個體，以控制匯出處理程序的各方面。 特別是，您可以設定下列選項：  
   
-- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. `Type` 的這個集合代表正在匯出之型別的已知型別 （如需詳細資訊，請參閱[資料合約已知類型](data-contract-known-types.md)）。`Export`除了傳遞至方法的型別之外，每次呼叫也會匯出這些已知型別 `Export` 。  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. `Type` 的這個集合代表正在匯出之型別的已知型別  (如需詳細資訊，請參閱 [資料合約已知類型](data-contract-known-types.md)。 ) 這些已知型別會在每次呼叫時匯出， `Export` 除了傳遞給方法的型別之外 `Export` 。  
   
-- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。 如需詳細資訊，請參閱[資料合約代理](../extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。 如需詳細資訊，請參閱 [資料合約代理](../extending/data-contract-surrogates.md)程式。 根據預設，不會使用 Surrogate。  
   
 ## <a name="helper-methods"></a>Helper 方法  
+
  除了匯出結構描述的主要角色之外， `XsdDataContractExporter` 還提供數種有用的 Helper 方法，提供有關型別的資訊。 它們包括：  
   
 - <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 方法。 這個方法會採用 `Type` 並傳回 <xref:System.Xml.XmlQualifiedName> ，代表如果將這個型別序列化為根物件，會使用的根項目名稱和命名空間。  
@@ -58,7 +62,7 @@ ms.locfileid: "84595514"
   
  匯出選項會影響所有這些方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>

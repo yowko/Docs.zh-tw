@@ -2,19 +2,21 @@
 title: 可序列化的型別
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ba5fb80b3a7f4149eb49aa838826f2792147dd1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586100"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253956"
 ---
 # <a name="serializable-types"></a>可序列化的型別
+
 根據預設，<xref:System.Runtime.Serialization.DataContractSerializer> 會序列化所有公開可見的型別。 型別的所有公用讀取/寫入屬性 (Property) 和欄位都會序列化。  
   
  您可以透過將 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性套用至型別和成員的方式來變更預設行為。當您擁有的型別並非您所能控制，而且無法經過修改以加入屬性時，這個功能便相當實用。 <xref:System.Runtime.Serialization.DataContractSerializer> 會識別這類「未標記」的型別。  
   
 ## <a name="serialization-defaults"></a>序列化預設值  
+
  您可以套用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性，以便明確控制或自訂型別和成員的序列化作業。 此外，您可以將這些屬性套用至私用欄位。 不過，即使未以這些屬性標記的型別，仍可以進行序列化和還原序列化。 以下為適用的規則和例外狀況：  
   
 - <xref:System.Runtime.Serialization.DataContractSerializer> 會使用新建立型別的預設屬性 (Property)，從未包含屬性 (Attribute) 的型別推斷資料合約。  
@@ -36,9 +38,10 @@ ms.locfileid: "84586100"
 - 若要「選擇不」序列化公用成員、屬性 (Property) 或欄位的處理序，請將 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 屬性 (Attribute) 套用至該成員。  
   
 ## <a name="inheritance"></a>繼承  
- 未標記的型別 (沒有 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性的型別) 可以繼承自沒有這個屬性的型別，不過不允許反向操作，也就是說，擁有這個屬性的型別無法繼承自未標記的型別。 強制執行此規則主要是為了確保與舊版 .NET Framework 中撰寫的程式碼具有回溯相容性。  
+
+ 未標記的型別 (沒有 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性的型別) 可以繼承自沒有這個屬性的型別，不過不允許反向操作，也就是說，擁有這個屬性的型別無法繼承自未標記的型別。 這項規則主要是為了確保與舊版 .NET Framework 所撰寫的程式碼具有回溯相容性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>

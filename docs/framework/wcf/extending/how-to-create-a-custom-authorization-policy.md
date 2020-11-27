@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 5d5268cd2171bdccc3885cd599fdc8c277e61aa4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fef7aa531c946ecacef30bb79f2362bad4d375ed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795707"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256023"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>作法：建立自訂授權原則
-Windows Communication Foundation （WCF）中的識別模型基礎結構支援以宣告為基礎的授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用層就可以與 WCF 支援的各種 token 類型所提供的不同宣告的詳細資料分開。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
+
+Windows Communication Foundation 中 (WCF) 的身分識別模型基礎結構支援以宣告為基礎的授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用層就可以與 WCF 支援的不同權杖類型所服務之不同宣告的詳細資料分開。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>實作自訂授權原則  
   
@@ -29,7 +30,7 @@ Windows Communication Foundation （WCF）中的識別模型基礎結構支援�
   
 1. 有兩個參數會傳遞至這個方法：即 <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體，以及某個物件參考。  
   
-2. 如果自訂授權原則會<xref:System.IdentityModel.Claims.ClaimSet>新增實例<xref:System.IdentityModel.Policy.EvaluationContext>，而不考慮目前的內容，則請呼叫`ClaimSet` <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>方法並`true`從<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>方法傳回，以新增每個實例。 傳回 `true`，就是向授權基礎結構表示該授權原則已執行其工作，因此不需要重新呼叫。  
+2. 如果自訂授權原則 <xref:System.IdentityModel.Claims.ClaimSet> 會新增實例，而不考慮目前的內容 <xref:System.IdentityModel.Policy.EvaluationContext> ，則請 `ClaimSet` 呼叫 <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> 方法並 `true` 從方法傳回來新增每個實例 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 。 傳回 `true`，就是向授權基礎結構表示該授權原則已執行其工作，因此不需要重新呼叫。  
   
 3. 如果自訂授權原則只會在 `EvaluationContext` 中已出現某些宣告時新增宣告集，則請檢查 `ClaimSet` 屬性所傳回的 <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> 執行個體來查看這些宣告。 如果這些宣告有存在，則呼叫 <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> 方法來新增新的宣告集，如果沒有要新增其他宣告集，則傳回 `true`，向授權基礎結構表示授權原則已完成其工作。 如果沒有存在這些宣告，則傳回 `false`，表示如果有其他授權原則要新增更多宣告集至 `EvaluationContext`，就應該重新呼叫授權原則。  
   
@@ -70,6 +71,7 @@ Windows Communication Foundation （WCF）中的識別模型基礎結構支援�
      [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
   
 ## <a name="example"></a>範例  
+
  下列範例會示範完整的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 實作。  
   
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
@@ -78,6 +80,6 @@ Windows Communication Foundation （WCF）中的識別模型基礎結構支援�
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [如何：比較宣告](how-to-compare-claims.md)
-- [如何：為服務建立自訂授權管理員](how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [作法：比較宣告](how-to-compare-claims.md)
+- [作法：為服務建立自訂授權管理員](how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [授權原則](../samples/authorization-policy.md)

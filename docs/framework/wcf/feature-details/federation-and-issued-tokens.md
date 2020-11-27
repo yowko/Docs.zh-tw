@@ -6,17 +6,19 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ab3d6bad717e71901b4d94c99f1c48f99d8675e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559248"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255516"
 ---
 # <a name="federation-and-issued-tokens"></a>聯合與發行的權杖
-使用 WCF) 的 Windows Communication Foundation (，您可以建立用戶端，以安全地與執行 WS-同盟和 WS-TRUST 規格的服務進行通訊。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  
+
+使用 WCF) 的 Windows Communication Foundation (，您可以建立用戶端，以安全地與執行 WS-Federation 和 WS-Trust 規格的服務進行通訊。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [同盟](federation.md)  
  提供聯合的概觀。  
   
@@ -45,6 +47,7 @@ ms.locfileid: "90559248"
  說明如何停用 `WSFederationHttpBinding` 上的安全工作階段。 在建立要求每個用戶端都使用一個工作階段的 Web 伺服陣列時，必須停用安全工作階段。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

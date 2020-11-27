@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 86e7869efdba50d72cc61a1aebb767cf43927546
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84982aca06bacb5718855602872fe4dab2376a9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795628"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256062"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>作法：建立自訂用戶端身分識別驗證器
-Windows Communication Foundation （WCF）的身分*識別*功能可讓用戶端預先指定預期的服務身分識別。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別 （如需身分識別和其運作方式的說明，請參閱[服務身分識別和驗證](../feature-details/service-identity-and-authentication.md)）。  
+
+Windows Communication Foundation (WCF) 的身分 *識別* 功能，可讓用戶端預先指定預期的服務身分識別。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別   (如需身分識別和其運作方式的說明，請參閱 [服務身分識別和驗證](../feature-details/service-identity-and-authentication.md)。 )   
   
- 必要時，可使用自訂身分識別驗證器來自訂驗證。 例如，您可以執行其他服務身分識別驗證檢查。 在這個範例中，自訂身分識別驗證器會檢查從伺服器所傳回的 X.509 憑證中的其他宣告。 如需範例應用程式，請參閱[服務識別範例](../samples/service-identity-sample.md)。  
+ 必要時，可使用自訂身分識別驗證器來自訂驗證。 例如，您可以執行其他服務身分識別驗證檢查。 在這個範例中，自訂身分識別驗證器會檢查從伺服器所傳回的 X.509 憑證中的其他宣告。 如需範例應用程式，請參閱 [服務身分識別範例](../samples/service-identity-sample.md)。  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>若要擴充 EndpointIdentity 類別  
   
@@ -44,7 +45,7 @@ Windows Communication Foundation （WCF）的身分*識別*功能可讓用戶端
   
 ### <a name="to-implement-the-trygetidentity-method"></a>若要實作 TryGetIdentity 方法  
   
-1. 實作 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，可判斷 <xref:System.ServiceModel.EndpointIdentity> 類別的執行個體是否可由用戶端傳回。 WCF 基礎結構會先呼叫`TryGetIdentity`方法的執行，以從訊息中取出服務的身分識別。 接著，基礎結構會使用所傳回的 `CheckAccess` 和 `EndpointIdentity` 來呼叫 <xref:System.IdentityModel.Policy.AuthorizationContext> 實作。  
+1. 實作 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，可判斷 <xref:System.ServiceModel.EndpointIdentity> 類別的執行個體是否可由用戶端傳回。 WCF 基礎結構會先呼叫方法的執行， `TryGetIdentity` 以從訊息中取出服務的身分識別。 接著，基礎結構會使用所傳回的 `CheckAccess` 和 `EndpointIdentity` 來呼叫 <xref:System.IdentityModel.Policy.AuthorizationContext> 實作。  
   
 2. 在 `TryGetIdentity` 方法中，放入下列程式碼：  
   
@@ -70,12 +71,14 @@ Windows Communication Foundation （WCF）的身分*識別*功能可讓用戶端
      [!code-vb[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#4)]  
   
 ## <a name="example"></a>範例  
+
  下列範例會示範 <xref:System.ServiceModel.Security.IdentityVerifier> 類別的完整實作。  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#5)]
  [!code-vb[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#5)]  
   
 ## <a name="example"></a>範例  
+
  下列範例會示範 <xref:System.ServiceModel.EndpointIdentity> 類別的完整實作。  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]

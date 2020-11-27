@@ -3,17 +3,19 @@ title: 風險降低︰路徑正規化
 description: 瞭解 .NET Framework 中的路徑正規化如何從以 .NET Framework 4.6.2 為目標的應用程式開始變更。
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 89dcc46d9f266ffd3635dc0cc02b634720356eda
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6f7e07690ab06fc7ef03344556c045405a63c374
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475212"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253592"
 ---
 # <a name="mitigation-path-normalization"></a>風險降低︰路徑正規化
-從以 .NET Framework 4.6.2 為目標的應用程式開始，.NET Framework 中的路徑正規化已經變更。  
+
+從以 .NET Framework 4.6.2 為目標的應用程式開始，.NET Framework 中的路徑正規化已變更。  
   
 ## <a name="what-is-path-normalization"></a>路徑正規化是什麼？  
+
  路徑正規化牽涉到修改識別路徑或檔案的字串，使其符合目標作業系統上的有效路徑。 正規化通常牽涉到︰  
   
 - 規範化元件和目錄分隔符號。  
@@ -25,6 +27,7 @@ ms.locfileid: "86475212"
 - 修剪指定的字元。  
   
 ## <a name="the-changes"></a>變更  
+
  從以 .NET Framework 4.6.2 為目標的應用程式開始，路徑正規化在下列方面已有所變更：  
   
 - 執行階段會延後至作業系統的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函式再進行路徑正規化。  
@@ -44,7 +47,8 @@ ms.locfileid: "86475212"
 此變更不會影響以 .NET Framework 4.6.1 和舊版為目標但執行於 .NET Framework 4.6.2 或更新版本下的應用程式。  
   
 ## <a name="mitigation"></a>降低  
- 以 .NET Framework 4.6.2 或更新版本為目標的應用程式可以選擇不進行這項變更，並藉由在 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 應用程式佈建檔的區段中新增下列內容來使用舊版正規化：  
+
+ 以 .NET Framework 4.6.2 或更新版本為目標的應用程式可以選擇不進行這項變更，並藉由 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 在應用程式佈建檔的區段中新增下列內容來使用傳統正規化：  
   
 ```xml  
 <runtime>  
@@ -52,7 +56,7 @@ ms.locfileid: "86475212"
 </runtime>  
 ```  
   
-以 .NET Framework 4.6.1 或更早版本為目標，但在 .NET Framework 4.6.2 或更新版本上執行的應用程式，可以藉由在 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 應用程式佈建檔的區段中新增下行，來啟用路徑正規化的變更：  
+以 .NET Framework 4.6.1 或更早版本為目標，但在 .NET Framework 4.6.2 或更新版本上執行的應用程式，可以藉由將下列程式程式碼新增至應用程式的區段，來啟用路徑正規化的變更 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 。  
   
 ```xml  
 <runtime>  

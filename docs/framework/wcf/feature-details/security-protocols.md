@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: d09dd6bcb8564f770df6b87751aee4cdb04cd12c
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1455aeeeb759f8eb2cc09c8649a5cbd6843d950a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144613"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254008"
 ---
 # <a name="security-protocols"></a>安全性通訊協定
-Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節說明 <xref:System.ServiceModel.Channels.SecurityBindingElement> 下列 Web 服務安全性通訊協定的 Windows Communication Foundation （WCF）詳細資料（實作為）。  
+
+Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節說明在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 下列 Web 服務安全性通訊協定的) 中，Windows Communication Foundation (WCF) 詳細資料 (。  
   
 |規格/文件|連結|  
 |-|-|  
@@ -32,7 +33,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |應用程式注意事項：<br /><br /> Web 服務定址端點參考和識別|即將發行|  
 |WS-SecurityPolicy 1.2 (2007/04)|<http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf>|  
   
- WCF （第1版）提供17種驗證模式，可用來做為 Web 服務安全性設定的基礎。 每個模式都已針對一組通用的部署需求最佳化，例如：  
+ WCF 第1版提供17種驗證模式，可用來做為 Web 服務安全性設定的基礎。 每個模式都已針對一組通用的部署需求最佳化，例如：  
   
 - 用來驗證用戶端和服務的認證。  
   
@@ -40,7 +41,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
 - 訊息交換模式。  
   
-|驗證模式|用戶端驗證|伺服器驗證|模式|  
+|驗證模式|用戶端驗證|伺服器驗證|[模式]|  
 |-------------------------|---------------------------|---------------------------|----------|  
 |UserNameOverTransport|使用者名稱/密碼|X509|傳輸|  
 |CertificateOverTransport|X509|X509|傳輸|  
@@ -62,9 +63,9 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  使用這類驗證模式的端點可以使用 WS-SecurityPolicy (WS-SP) 來表示安全性需求。 本文件針對每個驗證模式描述安全性標頭和基礎結構訊息的結構，並提供原則和訊息的範例。  
   
- WCF 會利用 SecureConversation 來提供安全的會話支援，以保護應用程式之間的多訊息交換。  如需實作的詳細資訊，請參閱下面的「安全工作階段」。  
+ WCF 會利用 WS-SecureConversation 來提供安全會話支援，以保護應用程式之間的多重訊息交換。  如需實作的詳細資訊，請參閱下面的「安全工作階段」。  
   
- 除了驗證模式之外，WCF 還提供設定來控制適用于大部分訊息安全性驗證模式的一般保護機制，例如簽章和加密作業順序、演算法套件、金鑰衍生和簽章確認。  
+ 除了驗證模式之外，WCF 提供的設定可控制適用于大部分訊息安全性驗證模式的通用保護機制，例如：簽章和加密作業順序、演算法套件、金鑰衍生和簽章確認。  
   
  下列是本文件中使用的前置詞和命名空間。  
   
@@ -83,17 +84,19 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |wsp|`http://schemas.xmlsoap.org/ws/2004/09/policy`|  
 |mssp|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
   
-## <a name="1-token-profiles"></a>1. Token 設定檔  
- Web 服務安全性規格會以安全性權杖來表示認證。 WCF 支援下列 token 類型：  
+## <a name="1-token-profiles"></a>1. 權杖設定檔  
+
+ Web 服務安全性規格會以安全性權杖來表示認證。 WCF 支援下列權杖類型：  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
- WCF 會遵循 UsernameToken10 和 UsernameToken11 設定檔，並具有下列條件約束：  
+
+ WCF 遵循 UsernameToken10 和 UsernameToken11 設定檔，具有下列條件約束：  
   
  R1101 UsernameToken\Password 項目上的 PasswordType 屬性必須被省略，或者必須具有值 #PasswordText (預設)。  
   
- 使用擴充性，便可以實作 #PasswordDigest。 據觀察，#PasswordDigest 通常會被誤認是具備足夠安全性的密碼保護機制。 但是 #PasswordDigest 無法取代 UsernameToken 加密。 #PasswordDigest 的主要目標是防禦重新執行攻擊。 在 WCF 驗證模式中，會使用訊息簽章來降低重新執行攻擊威脅。  
+ 使用擴充性，便可以實作 #PasswordDigest。 據觀察，#PasswordDigest 通常會被誤認是具備足夠安全性的密碼保護機制。 但是 #PasswordDigest 無法取代 UsernameToken 加密。 #PasswordDigest 的主要目標是防禦重新執行攻擊。 在 WCF 驗證模式中，使用訊息簽章可減輕重新執行攻擊威脅。  
   
- B1102 WCF 永遠不會發出 Nonce 並建立 UsernameToken 的子項目。  
+ B1102 WCF 絕不會發出 Nonce 並建立 UsernameToken 的子項目。  
   
  這些子元素是為了協助進行重新執行偵測。 WCF 會改為使用訊息簽章。  
   
@@ -104,7 +107,8 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
  基本原理：密碼通常被視為太弱，無法用於密碼編譯作業。  
   
 ### <a name="12-x509-token"></a>1.2 X509 權杖  
- WCF 支援 X509v3 憑證作為認證類型，並遵循 X509TokenProfile 1.0 和 X509TokenProfile 1.1，並具有下列條件約束：  
+
+ WCF 支援以認證類型的形式 X509v3 憑證，並遵循 X509TokenProfile 1.0 和 X509TokenProfile 1.1，並具有下列限制：  
   
  R1201 當包含 X509v3 憑證時，BinarySecurityToken 項目上的 ValueType 屬性必須具有值 #X509v3。  
   
@@ -118,42 +122,52 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  R1204 如果 X509TokenProfile1.1 正在使用中，則 X509 安全性權杖的外部參考應使用 WS-Security 1.1 所引入的指紋。  
   
- WCF 支援 X509IssuerSerial。 不過，X509IssuerSerial 有互通性問題： WCF 會使用字串來比較 X509IssuerSerial 的兩個值。 因此，如果一個重新排序主體名稱的元件，並將憑證的參考傳送至 WCF 服務，則可能找不到它。  
+ WCF 支援 X509IssuerSerial。 但是 X509IssuerSerial 有互通性問題： WCF 會使用字串來比較 X509IssuerSerial 的兩個值。 因此，如果其中一個重新排序主體名稱的元件，並將憑證的參考傳送給 WCF 服務，則可能找不到該憑證的參考。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 權杖  
- WCF 支援使用 KerberosTokenProfile 1.1 來進行 Windows 驗證，並具有下列條件約束：  
+
+ WCF 支援 KerberosTokenProfile 1.1，目的 Windows 驗證有下列限制：  
   
  R1301 依照 GSS_API 和 Kerberos 規格定義，Kerberos 權杖必須具有 GSS 包裝的 Kerberos v4 AP_REQ 值，而且必須具有值為 #GSS_Kerberosv5_AP_REQ 的 ValueType 屬性。  
   
- WCF 使用的是 GSS 包裝的 Kerberos AP 要求，而不是裸機需求。 這是安全性的最佳做法。  
+ WCF 會使用 GSS 包裝的 Kerberos AP 需求，而不是裸機的要求。 這是安全性的最佳做法。  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 權杖  
- WCF 支援 SAML v1.1 權杖的 WSS SAML 權杖設定檔1.0 和1.1。 它也可以實作其他版本的 SAML 權杖格式。  
+
+ WCF 支援適用于 SAML v1.1 權杖的 WSS SAML 權杖設定檔1.0 和1.1。 它也可以實作其他版本的 SAML 權杖格式。  
   
 ### <a name="15-security-context-token"></a>1.5 安全性內容權杖  
- WCF 支援 SecureConversation 中引進的安全性內容權杖（SCT）。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
+
+ WCF 支援 SecureConversation 中引進 (SCT) 的安全性內容權杖。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
   
 ## <a name="2-common-message-security-parameters"></a>2. 一般訊息安全性參數  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- 時間戳記存在是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性加以控制。 WCF 一律會將 wsse： TimeStamp 與 wsse：已建立和 wsse： Expires 欄位進行序列化。 使用簽章時，一定會簽署 wsse:TimeStamp。  
+
+ 時間戳記存在是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性加以控制。 WCF 一律會序列化 wsse： TimeStamp with wsse：已建立和 wsse： Expires 欄位。 使用簽章時，一定會簽署 wsse:TimeStamp。  
   
 ### <a name="22-protection-order"></a>2.2 保護順序  
- WCF 支援訊息保護順序「加密後簽署」和「簽署前加密」（安全性原則1.2）。 基於下列理由，建議使用「簽署後加密」：除非使用 WS-Security 1.1 SignatureConfirmation 機制，否則使用「加密後簽署」保護的訊息容易遭受簽章替換攻擊，而且加密內容上的簽章會造成稽核困難。  
+
+ WCF 支援「簽署之前加密」和「簽署之前加密」 (安全性原則 1.2) 的訊息保護順序。 基於下列理由，建議使用「簽署後加密」：除非使用 WS-Security 1.1 SignatureConfirmation 機制，否則使用「加密後簽署」保護的訊息容易遭受簽章替換攻擊，而且加密內容上的簽章會造成稽核困難。  
   
 ### <a name="23-signature-protection"></a>2.3 簽章保護  
+
  使用「加密後簽署」時，建議保護簽章，以防止暴力密碼破解攻擊猜測加密內容或簽署金鑰 (特別是在自訂權杖與弱式金鑰內容搭配使用時)。  
   
 ### <a name="24-algorithm-suite"></a>2.4 演算法組合  
+
  WCF 支援安全性原則1.2 中列出的所有演算法套件。  
   
 ### <a name="25-key-derivation"></a>2.5 金鑰衍生  
+
  WCF 會使用「對稱金鑰的金鑰衍生」，如 SecureConversation 中所述。  
   
 ### <a name="26-signature-confirmation"></a>2.6 簽章確認  
+
  簽章確認可以防禦攔截式攻擊，以保護簽章組。  
   
 ### <a name="27-security-header-layout"></a>2.7 安全性標頭配置  
+
  每個驗證模式都會描述安全性標頭的某種配置。 安全性標頭中的項目是半排序的。 為了定義安全性標頭子項目的順序，WS-Security 原則會定義下列安全性標頭配置模式：  
   
 |||  
@@ -163,13 +177,15 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |LaxTimestampFirst|與 Lax 相同，除了安全性標頭中的第一個項目必須是 wsse:Timestamp|  
 |LaxTimestampLast|與 Lax 相同，除了安全性標頭中的最後一個項目必須是 wsse:Timestamp|  
   
- WCF 支援安全性標頭配置的全部四種模式。 下列驗證模式的安全性標頭結構和訊息範例都遵循 "Strict" 模式。  
+ WCF 針對安全性標頭配置支援全部四種模式。 下列驗證模式的安全性標頭結構和訊息範例都遵循 "Strict" 模式。  
   
 ## <a name="3-common-message-security-parameters"></a>3. 一般訊息安全性參數  
+
  本章節提供每個驗證模式的範例原則，並提供範例來示範用戶端和服務交換訊息中的安全性標頭結構。  
   
 ### <a name="31-transport-protection"></a>3.1 傳輸保護  
- WCF 提供五種驗證模式，以使用安全傳輸來保護訊息;UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。  
+
+ WCF 提供五種使用安全傳輸來保護訊息的驗證模式;UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。  
   
  這些驗證模式使用 SecurityPolicy 中所述的傳輸繫結加以建構。 對於 UserNameOverTransport 驗證模式，UsernameToken 是已簽署的支援權杖。 對於其他驗證模式，此權杖會顯示為已簽署 (Signed) 的簽署 (Endorsing) 權杖。 SecurityPolicy 的附錄 C.1.2 和 C.1.3 詳細描述了安全性標頭配置。 下列範例安全性標頭示範指定之驗證模式的 Strict 配置。  
   
@@ -184,6 +200,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
  演算法組合：Basic256  
   
 #### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
+
  在這個驗證模式中，用戶端會使用使用者名稱權杖來進行驗證，這個權杖出現在 SOAP 層中做為已簽署的支援權杖，且一定會從啟動器傳送至收件者。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。  
   
  原則  
@@ -207,6 +224,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="312-certificateovertransport"></a>3.1.2 CertificateOverTransport  
+
  在這個驗證模式中，用戶端會使用 X.509 憑證來進行驗證，這個憑證出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。 CertificateOverTransport 只會簽署 SOAP 標頭，而非 SOAP 主體。 這是 TransportWithMessageCredentials 安全性模式所使用的驗證模式。 只有 SOAP 標頭會進行簽署，因為驗證是使用訊息認證來完成。  
   
  原則  
@@ -230,6 +248,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="313-issuedtokenovertransport"></a>3.1.3 IssuedTokenOverTransport  
+
  在這個驗證模式中，用戶端本身不會向服務驗證，但會出示安全性權杖服務 (STS) 所發出的權杖，並證明得知共用金鑰。 發出的權杖出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 繫結為傳輸繫結。  
   
  原則  
@@ -322,6 +341,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="314-kerberosovertransport"></a>3.1.4 KerberosOverTransport  
+
  在這個驗證模式中，用戶端會使用 Kerberos 票證，向服務進行驗證。 Kerberos 權杖出現在 SOAP 層中做為簽署支援權杖。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 繫結為傳輸繫結。  
   
  原則  
@@ -345,7 +365,8 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- 在這個模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 產生的 SCT 出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 此外，服務也會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。 "SPNEGO" （協商）描述 WCF 如何搭配使用 SSPI 二進位協商通訊協定與 WS-TRUST。 本章節中的安全性標頭範例是在透過 SPNEGO 信號交換建立了 SCT 之後。  
+
+ 在這個模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 產生的 SCT 出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 此外，服務也會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。 "SPNEGO" (協商) 說明 WCF 如何搭配 WS-TRUST 使用 SSPI 二進位協商通訊協定。 本章節中的安全性標頭範例是在透過 SPNEGO 信號交換建立了 SCT 之後。  
   
  原則  
   
@@ -354,6 +375,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples"></a>安全性標頭範例  
+
  一旦使用 WS-Trust 二進位交涉透過 SPNEGO 信號交換來建立安全性內容權杖，應用程式訊息就會有下列結構的安全性標頭。  
   
  要求  
@@ -369,9 +391,11 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 使用 x.509 憑證進行服務驗證  
+
  本章節描述下列驗證模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
+
  在這個驗證模式中，用戶端會使用 X.509 憑證來進行驗證，這個憑證出現在 SOAP 層中做為啟動器權杖。 服務也會使用 X.509 憑證來進行驗證。 SOAP 標頭和 SOAP 主體都會進行簽署。 對稱金鑰是使用收件者的傳輸憑證來建立和加密。  
   
  使用的繫結為具有下列屬性值的非對稱式繫結：  
@@ -395,6 +419,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -414,6 +439,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -427,6 +453,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="322-mutualcertificateduplex"></a>3.2.2 MutualCertificateDuplex  
+
  在這個驗證模式中，用戶端會使用 X.509 憑證來進行驗證，這個憑證出現在 SOAP 層中做為啟動器權杖。 服務也會使用 X.509 憑證來進行驗證。  
   
  使用的繫結為具有下列屬性值的非對稱式繫結：  
@@ -450,6 +477,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求和回應  
   
 ```xml  
@@ -463,6 +491,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求和回應  
   
 ```xml  
@@ -470,7 +499,8 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 搭配使用 SymmetricBinding 與 X.509 服務驗證  
- "WSS10" 會為使用 X509 權杖的案例提供有限支援。 例如，對於只使用服務 X509 權杖的訊息，則無法提供簽章和加密保護。 "WSS11" 引入 EncryptedKey 做為對稱式權杖。 現在，服務 X.509 憑證的暫時加密金鑰可以做為要求和回應訊息保護。 下列區段3.4 中所述的驗證模式使用此模式。  
+
+ "WSS10" 會為使用 X509 權杖的案例提供有限支援。 例如，對於只使用服務 X509 權杖的訊息，則無法提供簽章和加密保護。 "WSS11" 引入 EncryptedKey 做為對稱式權杖。 現在，服務 X.509 憑證的暫時加密金鑰可以做為要求和回應訊息保護。 下一節3.4 中所述的驗證模式會使用此模式。  
   
  WS-SecurityPolicy 使用 SymmetricBinding 搭配服務 X509 權杖做為保護權杖，描述這個模式。  
   
@@ -488,6 +518,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
  以上的驗證模式只有一個地方不同，那就是支援的權杖。 AnonymousForCertificate 沒有任何支援權杖，MutualCertificate WSS 1.1 會將用戶端的 X509 憑證當做簽署 (Endorsing) 支援權杖，UserNameForCertificate 會將 UserName 權杖當做已簽署 (Signed) 的支援權杖、IssuedTokenForCertificate 會將發出的權杖當做簽署 (Endorsing) 支援權杖。  
   
 #### <a name="324-anonymousforcertificate"></a>3.2.4 AnonymousForCertificate  
+
  在這個驗證模式中，用戶端為匿名，而服務會使用 X.509 憑證來進行驗證。 使用的繫結為對稱式繫結的執行個體，如 3.4.2 中所述。  
   
  原則  
@@ -497,6 +528,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -516,6 +548,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -529,6 +562,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="325-usernameforcertificate"></a>3.2.5 UserNameForCertificate  
+
  在這個驗證模式中，用戶端會使用使用者名稱權杖，向服務進行驗證，這個權杖出現在 SOAP 層中做為已簽署的支援權杖。 服務會使用 X.509 憑證對用戶端進行驗證。 使用的繫結是對稱式繫結，其中的保護權杖是用戶端產生的金鑰，且以服務的公開金鑰來加密。  
   
  原則  
@@ -538,6 +572,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -557,6 +592,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -570,6 +606,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="326-mutualcertificate-wss-11"></a>3.2.6 MutualCertificate (WSS 1.1)  
+
  在這個驗證模式中，用戶端會使用 X.509 憑證來進行驗證，這個憑證出現在 SOAP 層中做為簽署支援權杖。 服務也會使用 X.509 憑證來進行驗證。 使用的繫結是對稱式繫結，其中的保護權杖是用戶端產生的金鑰，且以服務的公開金鑰來加密。  
   
  原則  
@@ -579,6 +616,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -598,6 +636,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -611,6 +650,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="327-issuedtokenforcertificate"></a>3.2.7 IssuedTokenForCertificate  
+
  在這個驗證模式中，用戶端本身不會向服務驗證，但會出示 STS 所發出的權杖，並證明得知共用金鑰。 發出的權杖出現在 SOAP 層中做為簽署支援權杖。 服務會使用 X.509 憑證對用戶端進行驗證。 使用的繫結是對稱式繫結，其中的保護權杖是用戶端產生的金鑰，且以服務的公開金鑰來加密。  
   
  原則  
@@ -620,6 +660,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -633,6 +674,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  原則  
   
 ```xml  
@@ -652,6 +694,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ## <a name="33-kerberos"></a>3.3 Kerberos  
+
  在這個驗證模式中，用戶端會使用 Kerberos 票證，向服務進行驗證。 相同的票證也會提供伺服器驗證。 使用的繫結為具有下列屬性的對稱式繫結：  
   
  保護權杖：Kerberos 票證，其內含模式設定為 .../IncludeToken/Once  
@@ -670,6 +713,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -689,6 +733,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -702,6 +747,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="34-issuedtoken"></a>3.4 IssuedToken  
+
  在這個驗證模式中，用戶端本身不會向服務驗證，但用戶端會出示 STS 所發出的權杖，並證明得知共用金鑰。 服務本身也不會向用戶端驗證，但 STS 會加密共用金鑰做為已發出權杖的一部分，只有服務才能解密金鑰。 使用的繫結為具有下列屬性的對稱式繫結：  
   
  保護權杖：發出的權杖，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
@@ -720,6 +766,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -739,6 +786,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -752,6 +800,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 使用 SslNegotiated 進行服務驗證  
+
  本章節描述一組驗證模式，這些驗證模式使用對稱式繫結，並將基於 WS-SecureConversation (WS-SC) 的安全性內容權杖做為保護權杖，權杖的金鑰值是藉由在 WS-Trust (WS-T) RST/RSTR 訊息上執行 TLS 通訊協定交涉而來。 TLSNEGO 中會詳細描述使用 WS-Trust 的 TLS 信號交換實作。 在這裡的訊息範例中，假設具有相關安全性內容的 SCT 已透過信號交換而建立。  
   
  使用的繫結為具有下列屬性的對稱式繫結：  
@@ -766,9 +815,11 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
  加密簽章：True  
   
 #### <a name="351-policy-for-sslnegotiated-service-authentication"></a>3.5.1 SslNegotiated 服務驗證的原則  
+
  本章節中所有驗證模式的原則都相似，只有一個不同之處，就是使用特定已簽署 (Signed) 的支援權杖或簽署 (Endorsing) 權杖。  
   
 #### <a name="352-anonymousforsslnegotiated"></a>3.5.2 AnonymousForSslNegotiated  
+
  在這個驗證模式中，用戶端為匿名，而服務會使用 X.509 憑證來進行驗證。 使用的繫結為對稱式繫結的執行個體，如上面 3.5.1 中所述。  
   
  原則  
@@ -778,6 +829,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -797,6 +849,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -810,6 +863,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="353-usernameforsslnegotiated"></a>3.5.3 UserNameForSslNegotiated  
+
  在這個驗證模式中，用戶端會使用使用者名稱權杖來進行驗證，這個權杖出現在 SOAP 層中做為已簽署的支援權杖。 服務會使用 X.509 憑證來進行驗證。 使用的繫結為對稱式繫結的執行個體，如 3.5.1 中所述。  
   
  原則  
@@ -819,6 +873,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -838,6 +893,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -851,6 +907,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="354-issuedtokenforsslnegotiated"></a>3.5.4 IssuedTokenForSslNegotiated  
+
  在這個驗證模式中，用戶端本身不會向服務驗證，但會出示 STS 所發出的權杖，並證明得知共用金鑰。 發出的權杖出現在 SOAP 層中做為簽署支援權杖。 服務會使用 X.509 憑證來進行驗證。 使用的繫結為對稱式繫結的執行個體，如上面 3.5.1 中所述。  
   
  原則  
@@ -860,6 +917,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -879,6 +937,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -892,6 +951,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="355-mutualsslnegotiated"></a>3.5.5 MutualSslNegotiated  
+
  在這個驗證模式中，用戶端和服務會使用 X.509 憑證來進行驗證。 使用的繫結為對稱式繫結的執行個體，如上面 3.5.1 中所述。  
   
  原則  
@@ -901,6 +961,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -920,6 +981,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -933,6 +995,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
+
  在這個驗證模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 使用的繫結為具有下列屬性的對稱式繫結：  
   
  保護權杖：SpnegoContextToken，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
@@ -951,6 +1014,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -970,6 +1034,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  
@@ -983,6 +1048,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="37-secureconversation"></a>3.7 SecureConversation  
+
  使用的繫結為對稱式繫結，其中的保護權杖是依據 WS-SecureConversation (WS-SC) 的 SCT。 SCT 是根據巢狀繫結使用 WS-Trust (WS-Trust) 或 WS-SecureConversation (WS-SC) 交涉而來，而巢狀繫結本身則是使用交涉通訊協定的對稱式繫結。 如果可能，交涉通訊協定會使用 Kerberos 來執行用戶端和伺服器驗證。 如果無法使用 Kerberos，則會退而使用 NTLM。  
   
  原則  
@@ -992,6 +1058,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+
  要求  
   
 ```xml  
@@ -1011,6 +1078,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>安全性標頭範例：EncryptBeforeSign  
+
  要求  
   
 ```xml  

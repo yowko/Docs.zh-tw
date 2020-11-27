@@ -6,19 +6,21 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b92f1ad8bb00e9df8daf55da4d7a808420d909cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546311"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253995"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
+
 本節中的主題描述 Windows Communication Foundation (WCF) 安全性功能，以及如何使用這些功能來協助保護訊息的安全。  
   
  如需 Windows Server AppFabric 和安全性的詳細資訊，請參閱 [Windows Server appfabric 的安全性模型。](/previous-versions/appfabric/ee677202(v=azure.10))  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [安全性概觀](security-overview.md)  
  描述 WCF 中的安全性功能。  
   
@@ -56,11 +58,13 @@ ms.locfileid: "90546311"
  建立安全 WCF 應用程式的指導方針。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>相關章節  
+
  [WCF 功能詳細資料](index.md)  
   
  [基本 WCF 程式設計](../basic-wcf-programming.md)  

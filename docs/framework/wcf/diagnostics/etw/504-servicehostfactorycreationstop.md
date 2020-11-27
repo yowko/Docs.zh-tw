@@ -2,14 +2,15 @@
 title: 504 - ServiceHostFactoryCreationStop
 ms.date: 03/30/2017
 ms.assetid: 284d240a-ef0c-4572-b3cd-8fbc579db05f
-ms.openlocfilehash: f32b29a7b76b7557d65603b9bf04dd60f0016a8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e93e7a4d797dbf87d876ba4327709a604695340
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999618"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254658"
 ---
 # <a name="504---servicehostfactorycreationstop"></a>504 - ServiceHostFactoryCreationStop
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61999618"
 |識別碼|504|  
 |關鍵字|WebHost|  
 |層級|資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  當 ServiceHostFactory 建立結束時，就會發出此事件。  
   
 ## <a name="message"></a>訊息  
+
  ServiceHostFactory 結束建立。  
   
 ## <a name="details"></a>詳細資料

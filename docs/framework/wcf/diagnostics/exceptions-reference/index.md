@@ -2,25 +2,26 @@
 title: 例外狀況參考
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-ms.openlocfilehash: 5e61f395cb107202a7c435648f53ad40fce318b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 233586c3a4fdda4cfbea2c3370d447c7bfa41b94
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797331"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254801"
 ---
 # <a name="exceptions-reference"></a>例外狀況參考
-此區段會列出 Windows Communication Foundation （WCF）所產生的下欄區域中的所有例外狀況：  
+
+此區段會列出 Windows Communication Foundation (WCF) 所產生的下欄區域中的所有例外狀況：  
   
  [IdentityModel](identitymodel-exceptions.md)  
   
  [COM+ 整合](com-integration.md)  
   
- [組態](configuration.md)  
+ [設定](configuration.md)  
   
  [核心通訊：通道架構](core-communications-channel-framework.md)  
   
- [核心通訊：連接架構](core-communications-connection-framework.md)  
+ [核心通訊：連線架構](core-communications-connection-framework.md)  
   
  核心通訊：HTTP/HTTPS 傳輸通道  
   
@@ -32,11 +33,11 @@ ms.locfileid: "70797331"
   
  [核心通訊：傳輸架構](core-communications-transport-framework.md)  
   
- [核心通訊：多數](core-communications-utilities.md)  
+ [核心通訊：公用程式](core-communications-utilities.md)  
   
  [核心通訊：Webhost 支援](core-communications-webhost-support.md)  
   
- [異動](transaction-exceptions.md)  
+ [交易](transaction-exceptions.md)  
   
  [裝載](hosting-exceptions.md)  
   
@@ -46,7 +47,7 @@ ms.locfileid: "70797331"
   
  [MSMQ 傳輸](msmq-transport.md)  
   
- [可靠傳訊](reliable-messaging.md)  
+ [可信賴傳訊](reliable-messaging.md)  
   
  [安全性例外狀況](security-exceptions.md)  
   

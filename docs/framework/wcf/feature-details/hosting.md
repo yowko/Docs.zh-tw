@@ -2,19 +2,21 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 0a502093ff40f1a702f5d4d9046d4627eae39e01
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a83cc0d12b1099bc77d62f108741de1dbf387686
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555779"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255984"
 ---
-# <a name="hosting"></a>Hosting
+# <a name="hosting"></a>裝載
+
 本節中各主題描述服務裝載。 服務可以由 Internet Information Services (IIS) 、Windows Process Activation Service (是) 、Windows Server AppFabric、Windows 服務或受控應用程式來裝載，此選項通常稱為「 *自我裝載*」。  
   
  從未受信任的主機執行服務或任何延伸項目都會破壞安全性，這點請您務必注意。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [在網際網路資訊服務中裝載](hosting-in-internet-information-services.md)  
  描述 Windows Communication Foundation (WCF) 服務如何裝載于 Internet Information Services 或 [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10))中。  
   

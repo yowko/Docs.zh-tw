@@ -1,16 +1,17 @@
 ---
-title: HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
+title: 作法：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 9753fbc9b333cb7e89ddc8dff030cb1f62ede23b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ed3e5269be5b636b348ff0efe44c49dae5335e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253891"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
-有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 當服務作業必須以 WCF 不支援的格式傳回資料時，就會發生這種情況。 本主題討論如何使用 WCF WEB HTTP 程式設計模型來建立這類服務。 該項服務提供一種會傳回資料流的作業。  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>作法：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
+
+有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 當服務作業必須以 WCF 不支援的格式傳回資料時，就會發生這種情況。 本主題討論如何使用 WCF WEB HTTP 程式設計模型建立這類服務。 該項服務提供一種會傳回資料流的作業。  
   
 ### <a name="to-implement-the-service-contract"></a>若要實作服務合約  
   
@@ -25,7 +26,7 @@ ms.locfileid: "84600357"
         }  
     ```  
   
-     因為方法 <xref:System.IO.Stream> 會傳回，所以 WCF 會假設作業對於從服務作業傳回的位元組有完整的控制權，而且它不會對傳回的資料套用任何格式。  
+     因為方法會 <xref:System.IO.Stream> 傳回，所以 WCF 會假設作業對於從服務作業傳回的位元組具有完整控制權，而且不會對傳回的資料套用任何格式。  
   
 2. 實作服務合約。 該合約只能有一項作業 (`GetImage`)。 這個方法會產生一張點陣圖，然後以 JPG 格式儲存為 <xref:System.IO.MemoryStream>。 然後，這個作業會將該資料流傳回給呼叫者。  
   
@@ -108,6 +109,7 @@ ms.locfileid: "84600357"
 2. 開啟 Internet Explorer，輸入 `http://localhost:8000/Service/GetImage?width=50&height=40`，您應該會看見對角線為藍色的黃色長方形。  
   
 ## <a name="example"></a>範例  
+
  以下是這個主題的完整程式碼清單。  
   
 ```csharp  
@@ -175,6 +177,6 @@ namespace RawImageService
   
 - 編譯範例程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF Web HTTP 程式設計模型](wcf-web-http-programming-model.md)
