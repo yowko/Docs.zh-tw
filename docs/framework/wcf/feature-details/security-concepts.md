@@ -2,17 +2,19 @@
 title: 安全性概念
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: b39db755ad33405e5dfcb22297f311bd3f6dbaae
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fee751a1a309e9afb7b143f274f8a4e403030dd7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268582"
 ---
 # <a name="security-concepts"></a>安全性概念
+
 本節簡要說明與 Windows Communication Foundation (WCF) 安全性相關聯的概念。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [用於 WCF 的安全性概念](security-concepts-used-in-wcf.md)  
  用於安全性實作的概念的高階概觀。  
   
@@ -23,6 +25,7 @@ ms.locfileid: "90558260"
  討論 WCF 安全性時使用的詞彙。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -34,6 +37,7 @@ ms.locfileid: "90558260"
  <xref:System.Security>  
   
 ## <a name="related-sections"></a>相關章節  
+
  [擴充安全性](../extending/extending-security.md)  
   
 ## <a name="see-also"></a>另請參閱

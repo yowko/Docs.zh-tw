@@ -1,20 +1,21 @@
 ---
 title: 實作 UI 自動化 Dock 控制項模式
-description: 瞭解如何執行使用者介面自動化 dock 控制項模式。 使用 DockPattern 控制項模式來公開控制項的 dock 屬性。 執行 IDockProvider。
+description: 學習如何實行消費者介面自動化 dock 控制項模式。 使用 DockPattern 控制項模式來公開控制項的 dock 屬性。 執行 IDockProvider。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 769808b190ade33ae52c53e03e1b4f77d4439df1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165906"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269622"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>實作 UI 自動化 Dock 控制項模式
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -26,7 +27,9 @@ ms.locfileid: "87165906"
 Visual Studio 的停駐範例，其中「類別檢視」視窗是 DockPosition.Right，「錯誤清單」視窗是 DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
+
  實作停駐控制項模式時，請注意下列方針和慣例：  
   
 - <xref:System.Windows.Automation.Provider.IDockProvider> 不會公開停駐容器的任何屬性，而對於停駐容器內與目前控制項相鄰的停駐控制項，也不會公開其任何屬性。  
@@ -38,18 +41,22 @@ Visual Studio 的停駐範例，其中「類別檢視」視窗是 DockPosition.R
 - 在多監視器系統上，控制項應停駐到目前監視器的左或右邊。 若不可行，則應停駐到最左邊監視器的左邊，或最右邊監視器的右邊。  
   
 <a name="Required_Members_for_IDockProvider"></a>
+
 ## <a name="required-members-for-idockprovider"></a>IDockProvider 的必要成員  
+
  以下是實作 IDockProvider 介面的必要屬性和方法。  
   
-|必要成員|成員類型|注意|  
+|必要成員|成員類型|備註|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|無|  
   
  此控制項模式沒有任何相關聯的事件。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外狀況  
+
  提供者必須擲回下列例外狀況。  
   
 |例外狀況類型|條件|  

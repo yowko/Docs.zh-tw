@@ -1,6 +1,6 @@
 ---
 title: 傳遞結構
-description: 瞭解如何將結構和類別傳遞至未受管理的函式。 瞭解用來定義格式化類型的 StructLayoutAttribute 屬性。
+description: 瞭解如何將結構和類別傳遞給未受管理的函式。 瞭解用來定義格式化類型的 StructLayoutAttribute 屬性。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-ms.openlocfilehash: eae28d6746cd89d98b659b9eb957f158e1319190
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ece5db8fdf803ce2f450ebeaaad66a379cfbf992
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268907"
 ---
 # <a name="passing-structures"></a>傳遞結構
+
 許多 Unmanaged 函式都需要您將其傳遞為函式的參數、結構成員 (Visual Basic 中的使用者定義型別) 或使用 Managed 程式碼所定義類別的成員。 使用平台叫用將結構或類別傳遞至 Unmanaged 程式碼時，您必須提供其他資訊來保留原始配置和對齊方式。 本主題介紹用來定義格式化類型的 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性。 針對 Managed 結構和類別，您可以從 **LayoutKind** 列舉所提供的數個可預測配置行為中進行選取。  
   
  本主題中所呈現概念的中心是結構與類別類型之間的重要差異。 結構是實值型別，而類別是參考型別 - 類別一律會提供至少一層記憶體間接取值 (實值的指標)。 這項差異十分重要，因為 Unmanaged 函式通常要求間接取值，如下表第一個資料行中的簽章所示。 其餘資料行中的 Managed 結構和類別宣告會顯示您可調整宣告中間接取值層級的目標程度。所提供的宣告同時適用於 Visual Basic 和 Visual C#。  
@@ -35,6 +36,7 @@ ms.locfileid: "85620816"
 - Unmanaged 函式要求兩層間接取值時，請使用以傳址方式傳遞的類別。  
   
 ## <a name="declaring-and-passing-structures"></a>宣告和傳遞結構  
+
  下列範例示範如何使用 Managed 程式碼定義 `Point` 和 `Rect` 結構，並將類型當成參數傳遞至 User32.dll 檔案中的 **PtInRect** 函式。 **PtInRect** 具有下列 Unmanaged 簽章：  
   
 ```cpp
@@ -89,6 +91,7 @@ internal static class NativeMethods
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>宣告和傳遞類別  
+
  只要類別具有固定成員配置，您就可以將類別的成員傳遞至 Unmanaged DLL 函式。 下列範例示範如何以定義的循序順序將 `MySystemTime` 類別成員傳遞至 User32.dll 檔案中的 **GetSystemTime**。 **GetSystemTime** 具有下列 Unmanaged 簽章：  
   
 ```cpp

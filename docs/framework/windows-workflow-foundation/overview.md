@@ -3,17 +3,19 @@ title: Windows Workflow 概觀
 description: 本文說明 Workflow Foundation 工作流程，這些工作流程是描述真實世界進程的模型。
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f966aa2b62a743358d4c1ad18f237f988924014d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558096"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268673"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
+
 工作流程是一組稱為活動的 elemental 單位，這些 *活動* 會儲存為描述真實世界進程的模型。 工作流程能夠描述執行的順序，以及短期工作和長期工作之間的相依關係。 這個工作會從頭到尾經過整個模型，而活動可能會由人員或系統功能執行。  
   
 ## <a name="workflow-run-time-engine"></a>工作流程執行階段引擎  
+
  每個執行中的工作流程執行個體是由同處理序執行階段引擎建立與維護的，主機處理序會透過以下其中一種方式與該引擎互動：  
   
 - <xref:System.Activities.WorkflowInvoker>，如同方法一般叫用工作流程。  
@@ -30,6 +32,7 @@ ms.locfileid: "90558096"
 主機處理序中的工作流程元件  
   
 ## <a name="interaction-between-workflow-components"></a>工作流程元件之間的互動  
+
  下圖顯示工作流程元件之間的互動方式。  
   
  ![此圖顯示工作流程元件的互動方式。](./media/overview/workflow-component-interatction.gif)  

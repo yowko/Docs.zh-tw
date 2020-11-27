@@ -10,14 +10,15 @@ helpviewer_keywords:
 - troubleshooting NT services
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
-ms.openlocfilehash: d606adc7fddeb9f7e76a6974699c2455eda084b2
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 02ac95c22007caa6e30300fb8a98178f11cecd14
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608877"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270350"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>疑難排解：無法安裝服務應用程式
+
 如果您的服務應用程式無法正確安裝，請檢查以確定會將服務類別的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性設定為與該服務安裝程式中所示相同的值。 此值在這兩個執行個體中必須一樣，才能正確安裝您的服務。  
   
 > [!NOTE]

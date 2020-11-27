@@ -15,14 +15,15 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c2344dd0a7d35781aea52b24694f2cfee70a6d41
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270454"
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
+
 Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 類別的類別為基礎。 您會覆寫來自這個類別的方法，並定義適用於它們的功能以決定服務的行為方式。  
   
  以下是涉及服務建立的主要類別：  
@@ -34,6 +35,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
  此外，名為 <xref:System.ServiceProcess.ServiceController> 的類別可用來操作服務本身。 這個類別並未涉及服務的建立，但可用來啟動和停止服務、將命令傳遞到其中，以及傳回一連串的列舉。  
   
 ## <a name="defining-your-services-behavior"></a>定義服務行為  
+
  在服務類別中，您會覆寫基底類別函式，以決定在服務控制管理員中變更服務狀態時會發生什麼事。 <xref:System.ServiceProcess.ServiceBase> 類別會公開下列方法，您可以覆寫這些方法以加入自訂行為。  
   
 |方法|覆寫到|  
@@ -49,7 +51,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
 > [!NOTE]
 > 這些方法表示服務在其存留期間行進的狀態；服務會從某個狀態轉換到下一個狀態。 例如，您絕對不會讓服務在呼叫 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 之前回應 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 命令。  
   
- 還有其他數個感興趣的屬性和方法。 其中包括：  
+ 還有其他數個感興趣的屬性和方法。 它們包括：  
   
 - <xref:System.ServiceProcess.ServiceBase> 類別上的 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。 這是服務的主要進入點。 當您使用 Windows 服務範本建立服務時，會將程式碼插入應用程式的 `Main` 方法來執行服務。 此程式碼如下所示：  
   
