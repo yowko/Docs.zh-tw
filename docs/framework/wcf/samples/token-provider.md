@@ -2,14 +2,15 @@
 title: 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 442371d211fe55cab33a87a5cf1b660679d7f94a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e761f32ab26cf620b6ef1dddff2bcba53289af84
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548549"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262329"
 ---
 # <a name="token-provider"></a>權杖提供者
+
 這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 也隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
 
 - 如果您有這些權杖提供者無法使用的認證存放區。
@@ -215,6 +216,7 @@ static void DisplayIdentityInformation()
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
 ## <a name="setup-batch-file"></a>設定批次檔
+
  這個範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。
 
  下面提供批次檔的各區段簡要概觀，讓批次檔得以修改為在適當的組態下執行：

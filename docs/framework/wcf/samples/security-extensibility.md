@@ -2,17 +2,19 @@
 title: 安全性擴充
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-ms.openlocfilehash: f3fc9a482271b904ccf56f1a911d3a44172bb40e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 967fde21f599835a06af4c502f3b8a4c8555b77c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602384"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262628"
 ---
 # <a name="security-extensibility"></a>安全性擴充
-本節包含示範 Windows Communication Foundation （WCF）中自訂安全性的範例。  
+
+本章節包含的範例會示範 Windows Communication Foundation (WCF) 的自訂安全性。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [永久性發行權杖提供者](durable-issued-token-provider.md)  
  示範如何實作自訂用戶端發出的權杖提供者。  
   
@@ -38,7 +40,7 @@ ms.locfileid: "84602384"
  示範如何實作自訂宣告授權原則以及相關聯的自訂服務授權管理員。  
   
  [自訂權杖](custom-token.md)  
- 示範如何將自訂權杖實作為新增至 Windows Communication Foundation （WCF）應用程式。  
+ 示範如何將自訂權杖實 Windows Communication Foundation 新增至 WCF) 應用程式 (。  
   
  [用戶端驗證](client-validation.md)  
  示範如何撰寫用戶端端點行為，此行為會驗證服務端點以確定能夠安全地使用服務端點。

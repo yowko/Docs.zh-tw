@@ -1,6 +1,6 @@
 ---
 title: NTLM 與 Kerberos 驗證
-description: 瞭解預設 NTLM 驗證和 Kerberos 驗證如何適用于 .NET Framework 應用程式，並瞭解非預設 NTLM 驗證。
+description: 瞭解 .NET Framework 應用程式的預設 NTLM 驗證和 Kerberos 驗證如何運作，並瞭解非預設 NTLM 驗證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: d91ebca084d84acd4eb8facb82ff08679ec35cd0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3fcd39f5414bca9bfcb368f6962ae36891458151
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502232"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262823"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 與 Kerberos 驗證
+
 預設 NTLM 驗證和 Kerberos 驗證使用與呼叫端應用程式建立關聯的 Microsoft Windows NT 使用者認證，以嘗試向伺服器進行驗證。 使用非預設 NTLM 驗證時，應用程式會將驗證類型設為 NTLM，並使用 <xref:System.Net.NetworkCredential> 物件將使用者名稱、密碼和網域傳遞給主機，如下列範例所示。  
   
 ```vb  

@@ -1,19 +1,20 @@
 ---
 title: 建立並存執行元件的方針
-description: 請參閱建立並存執行元件的指導方針。 例如，將類型識別系結至特定檔案版本，或使用版本感知儲存體。
+description: 檢查建立並存執行元件的指導方針。 例如，將類型識別系結至特定的檔案版本，或使用版本感知的儲存體。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3ac7c514a69ae05b00e7a486aadcbf41e5d1cbd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622636"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262511"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
+
 請遵循這些一般方針建立為並存執行而設計的 Managed 應用程式或元件：  
   
 - 將類型識別繫結至特定版本的檔案。  
@@ -29,6 +30,7 @@ ms.locfileid: "85622636"
      在隔離狀態執行的應用程式或元件必須管理資源，以避免該應用程式或元件的兩個執行個體同時執行時產生衝突。 應用程式或元件也必須使用版本特定的檔案結構。  
   
 ## <a name="application-and-component-isolation"></a>應用程式和元件隔離  
+
  隔離是成功設計用於並存執行之應用程式或元件的其中一個關鍵。 應用程式或元件必須以隔離的方式管理所有資源，尤其是檔案 I/O。 請遵循這些方針，確定您的應用程式或元件在隔離狀態執行：  
   
 - 以版本特定的方式寫入登錄。 將值儲存在指出此版本的登錄區或機碼中，且不要在各種版本的元件之間共用資訊或狀態。 這可防止同時執行的兩個應用程式或元件覆寫資訊。  
@@ -40,6 +42,7 @@ ms.locfileid: "85622636"
 - 使用版本特定的方式建立帳戶和群組。 應用程式所建立的使用者帳戶和群組應該以版本識別。 請勿在應用程式版本之間共用使用者帳戶和群組。  
   
 ## <a name="installing-and-uninstalling-versions"></a>安裝和解除安裝版本  
+
  設定用於並存執行的應用程式時，請遵循這些有關安裝及解除安裝版本的方針：  
   
 - 請勿從登錄中刪除資訊；其他應用程式在不同版本的 .NET Framework 下執行時可能需要用到這些資訊。  
@@ -55,6 +58,7 @@ ms.locfileid: "85622636"
 - 請勿將任何項目加入包含未建立版本之路徑的登錄。  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>檔案版本號碼和組件版本號碼  
+
  檔案版本是執行階段不使用的 Win32 版本資源。 一般來說，您甚至可以就地更新檔案版本。 兩個相同的檔案可以有不同的檔案版本資訊，而兩個不同的檔案也可以有相同的檔案版本資訊。  
   
  組件版本可供執行階段用於組件繫結。 執行階段會將兩個具有不同版本號碼的相同組件視為兩個不同的組件。  

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: 544ae8c0bc88d49c281810714225dbadecfd443b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f421e9e1fb33ca0f8a35025603d279c5629fb7ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558403"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262589"
 ---
 # <a name="self-host"></a>自我裝載
+
 這個範例會示範如何在主控台應用程式中實作自我裝載的服務。 這個範例是以 [消費者入門](getting-started-sample.md)為基礎。 服務的組態檔已經從 Web.config 重新命名為 App.config，並且修改為設定主機使用的基底位址。 服務的原始程式碼已經修改為實作靜態 `Main` 函式，這個函式會建立和開啟提供已設定之基底位址的服務主機。 服務實作已經修改為將每個作業的輸出寫入至主控台。 除了設定服務的正確端點位址外，用戶端未經過修改。  
   
 > [!NOTE]

@@ -2,14 +2,15 @@
 title: 執行 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 57f760fa8bf4a3abf83492ac455dfaed2b327e7e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3a12128541739ba5c380be2efc291b9b419cab12
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545099"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262667"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>執行 Windows Communication Foundation 範例
+
 Windows Communication Foundation (WCF) 範例可以在單一電腦或跨電腦的設定中執行。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
   
  在 Windows Vista 上，不是裝載在 IIS 中的範例需要較高的許可權，才能向 Http.sys 註冊接聽程式。 請使用 Httpcfg.exe 以在其中執行服務的帳戶來註冊服務的接聽位址，或從使用系統管理員權限執行的命令提示字元來啟用服務。  
@@ -67,7 +68,7 @@ Windows Communication Foundation (WCF) 範例可以在單一電腦或跨電腦�
   
     2. 在方案中，選擇 [ **調試** 程式] 功能表和 [ **附加至進程** ] 功能表項目。  
   
-    3. 選取 [顯示所有使用者的處理序]**** 核取方塊。  
+    3. 選取 [顯示所有使用者的處理序] 核取方塊。  
   
     4. 選取主機背景工作處理序 W3wp.exe 來進行偵錯 (在 Windows XP 中選取 ASPNet_wp.exe)。  
   
