@@ -1,18 +1,19 @@
 ---
-title: <Assembly>元素（.NET Native）
+title: '<Assembly> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9d1556d8d414386d3f350a96396381bd7b66ffc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181073"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251122"
 ---
-# <a name="assembly-element-net-native"></a>\<Assembly>元素（.NET Native）
+# <a name="assembly-element-net-native"></a>\<Assembly> 元素 ( .NET Native) 
+
 將執行階段反映原則套用至指定組件中的所有類型。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Assembly Name="assembly_name"
@@ -29,6 +30,7 @@ ms.locfileid: "79181073"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -49,13 +51,13 @@ ms.locfileid: "79181073"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*assembly_name*|組件的簡單名稱，不包含其副檔名。 這個屬性 (Attribute) 會對應至 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 屬性 (Property)。 例如，名為 Extensions.dll 之組件的名稱是 "Extensions"。<br /><br /> 您也可以指定常值字串 `*Application*`，以將原則套用至應用程式套件中的所有組件 (無論這些組件是否已載入)。 `*Application*` 永遠不會將原則套用至 .NET Framework 組件。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|針對組件中的所有類型，要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
@@ -75,7 +77,8 @@ ms.locfileid: "79181073"
 |[\<Library>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](library-element-net-native.md)元素可以有零個或一個 `<Assembly>` 元素。|  
   
 ## <a name="remarks"></a>備註  
- `<Assembly>` 元素可定義組件中所有類型的執行階段原則。 它與專案不同 [\<Library>](library-element-net-native.md) ，後者會指定程式庫，但相依于其子項目來定義執行時間反映原則。 `<Assembly>` 元素會套用至組件中的所有類型，除非是被子元素覆寫。  
+
+ `<Assembly>` 元素可定義組件中所有類型的執行階段原則。 它與指定連結 [\<Library>](library-element-net-native.md) 庫但相依于其子項目以定義執行時間反映原則的元素不同。 `<Assembly>` 元素會套用至組件中的所有類型，除非是被子元素覆寫。  
   
  下列範例顯示如何為 `Name` 屬性指定 "*Application\*" 的值，以在您的應用程式套件中，將執行階段原則套用至組件中的所有類型。 `<Assembly>`元素必須是元素的子系 [\<Application>](application-element-net-native.md) 。  
   

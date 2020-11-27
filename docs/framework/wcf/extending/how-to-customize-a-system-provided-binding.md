@@ -5,23 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 6b92382b4a37168c33f9e97077ad292d27ea5bc3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3d7cb72bcbdd636530e7861071b73f8a5f38b31
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797019"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249224"
 ---
-# <a name="how-to-customize-a-system-provided-binding"></a>HOW TO：自訂系統提供的繫結
-Windows Communication Foundation （WCF）包含數個系統提供的系結，可讓您設定基礎繫結項目的某些屬性，但不是所有屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  
+# <a name="how-to-customize-a-system-provided-binding"></a>作法：自訂系統提供的繫結
+
+Windows Communication Foundation (WCF) 包含數個系統提供的系結，可讓您設定基礎繫結項目的一些屬性，但不是所有屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  
   
- 如需如何直接建立和設定繫結項目的詳細資訊，而不使用系統提供的系結，請參閱[自訂](custom-bindings.md)系結。  
+ 如需有關如何直接建立和設定繫結項目，而不使用系統提供之系結的詳細資訊，請參閱 [自訂](custom-bindings.md)系結。  
   
- 如需建立和擴充自訂系結的詳細資訊，請參閱[擴充](extending-bindings.md)系結。  
+ 如需建立和延伸自訂系結的詳細資訊，請參閱 [擴充](extending-bindings.md)系結。  
   
- 在 WCF 中，所有系結都是由*綁定*項所組成。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 諸如 <xref:System.ServiceModel.BasicHttpBinding> 的系統提供繫結，會建立並設定自有的繫結項目。 本主題說明如何存取與變更這些繫結項目的屬性，而這些屬性並未直接在繫結上公開 (特別是 <xref:System.ServiceModel.BasicHttpBinding> 類別)。  
+ 在 WCF 中，所有系結都是由 *綁定* 項所組成。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 諸如 <xref:System.ServiceModel.BasicHttpBinding> 的系統提供繫結，會建立並設定自有的繫結項目。 本主題說明如何存取與變更這些繫結項目的屬性，而這些屬性並未直接在繫結上公開 (特別是 <xref:System.ServiceModel.BasicHttpBinding> 類別)。  
   
- 個別的繫結項目會包含在由<xref:System.ServiceModel.Channels.BindingElementCollection>類別表示的集合中，並依此順序新增：交易流程，可靠會話，安全性，複合雙工，單向，資料流程安全性，訊息編碼和傳輸。 請注意，並非每個繫結都需要所列的所有繫結項目。 使用者定義的繫結項目也可以出現在此繫結項目集合中，而且必須依照前述順序。 例如，使用者定義的傳輸必須是繫結項目集合中的最後一個項目。  
+ 個別的繫結程序項目會包含在由 <xref:System.ServiceModel.Channels.BindingElementCollection> 類別表示的集合中，並依下列順序新增：異動流程、可靠工作階段、安全性、複合雙工、單向、資料流安全性、訊息編碼和傳輸。 請注意，並非每個繫結都需要所列的所有繫結項目。 使用者定義的繫結項目也可以出現在此繫結項目集合中，而且必須依照前述順序。 例如，使用者定義的傳輸必須是繫結項目集合中的最後一個項目。  
   
  <xref:System.ServiceModel.BasicHttpBinding> 類別包含三個繫結項目：  
   
@@ -31,7 +32,7 @@ Windows Communication Foundation （WCF）包含數個系統提供的系結，�
   
 3. 必要的傳輸繫結項目，可以是 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 或 <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>。  
   
- 在此範例中，我們會建立系結的實例、從它產生*自訂*系結、檢查自訂系結中的繫結項目，以及當我們找到 HTTP 繫結項目時`KeepAliveEnabled` ，將`false`其屬性設定為。 `KeepAliveEnabled` 屬性不會直接在 `BasicHttpBinding` 上公開，因此我們必須建立自訂繫結以向下巡覽至繫結項目並設定此屬性。  
+ 在此範例中，我們會建立系結的實例、產生 *自訂* 系結、檢查自訂系結中的繫結項目，以及當我們找到 HTTP 繫結項目時，將其 `KeepAliveEnabled` 屬性設定為 `false` 。 `KeepAliveEnabled` 屬性不會直接在 `BasicHttpBinding` 上公開，因此我們必須建立自訂繫結以向下巡覽至繫結項目並設定此屬性。  
   
 ### <a name="to-modify-a-system-provided-binding"></a>若要修改系統提供的繫結  
   

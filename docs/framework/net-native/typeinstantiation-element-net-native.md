@@ -1,18 +1,19 @@
 ---
-title: <TypeInstantiation>元素（.NET Native）
+title: '<TypeInstantiation> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128671"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250745"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation>元素（.NET Native）
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> 元素 ( .NET Native) 
+
 將執行階段反映原則套用至建構的泛型類型。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <TypeInstantiation Name="type_name"  
@@ -30,6 +31,7 @@ ms.locfileid: "73128671"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -51,19 +53,19 @@ ms.locfileid: "73128671"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|*type_name*|類型名稱。 如果這個專案 `<TypeInstantiation>` 是專案 [\<Namespace>](namespace-element-net-native.md) 、專案或另一個元素的子系， [\<Type>](type-element-net-native.md) `<TypeInstantiation>` *type_name*可以指定類型的名稱，而不包含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。 不裝飾類型名稱。 例如，針對 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 物件，`<TypeInstantiation>` 元素可能會像下面這樣：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|類型名稱。 如果這個 `<TypeInstantiation>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素、 [\<Type>](type-element-net-native.md) 元素或另一個元素的子系 `<TypeInstantiation>` ， *type_name* 可以指定類型的名稱，而不包含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。 不裝飾類型名稱。 例如，針對 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 物件，`<TypeInstantiation>` 元素可能會像下面這樣：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>引數屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*type_argument*|指定泛型型別引數。 如果有多個引數存在，會以逗號分隔。 每個引數都必須包含完整的類型名稱。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要為建構的泛型類型套用至此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
@@ -92,12 +94,14 @@ ms.locfileid: "73128671"
 |`<TypeInstantiation>`|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
+
  反映、序列化和 interop 屬性都是選用性。 不過，必須至少有一個屬性存在。  
   
- 如果 `<TypeInstantiation>` 元素是、或專案的子 [\<Assembly>](assembly-element-net-native.md) 系 [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) ，則會覆寫父元素所定義的原則設定。 如果 [\<Type>](type-element-net-native.md) 元素定義了對應的泛型型別定義，則 `<TypeInstantiation>` 元素只會針對指定的結構化泛型型別的具現化，覆寫執行時間反映原則。  
+ 如果 `<TypeInstantiation>` 元素是、或專案的子 [\<Assembly>](assembly-element-net-native.md) 系 [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) ，它會覆寫父元素所定義的原則設定。 如果專案 [\<Type>](type-element-net-native.md) 定義對應的泛型型別定義，則 `<TypeInstantiation>` 元素只會針對指定之結構化泛型型別的具現化覆寫執行時間反映原則。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用反映，從建構的 <xref:System.Collections.Generic.Dictionary%602> 物件擷取泛型類型定義。 它也會使用反映來顯示代表建構泛型類型和泛型類型定義的 <xref:System.Type> 物件。 `b`範例中的變數是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。  
+
+ 下列範例會使用反映，從建構的 <xref:System.Collections.Generic.Dictionary%602> 物件擷取泛型類型定義。 它也會使用反映來顯示代表建構泛型類型和泛型類型定義的 <xref:System.Type> 物件。 `b`範例中的變數為 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

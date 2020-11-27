@@ -1,6 +1,6 @@
 ---
 title: System.Net 類別的最佳作法
-description: 請遵循這些建議，使用 System.Net 中所含的類別，以充分利用 .NET Framework 程式設計。
+description: 遵循這些建議，以使用 System.Net 中所含的類別，以充分利用 .NET Framework 程式設計。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - sending data, best practices
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 583fa5e57c7c4d60252dddfd425596e7acad7c0d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 170e8cfe0a7d7c911122dafe18b8a5081ceb3d2d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502674"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250771"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 類別的最佳作法
+
 下列建議將協助您善加利用 <xref:System.Net> 中所含的類別：  
   
 - 如需傳輸層安全性 (TLS) 的最佳做法，請參閱 [.NET Framework 的傳輸層安全性 (TLS) 最佳做法](tls.md)。
@@ -35,4 +36,4 @@ ms.locfileid: "84502674"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 中的網路程式設計](index.md)
+- [以 .NET Framework 進行網路程式設計](index.md)

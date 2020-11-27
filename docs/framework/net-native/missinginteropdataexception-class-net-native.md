@@ -5,24 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-ms.openlocfilehash: faf14245cd9dd7aa4bf8e89d5a05901279956509
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bbbb484e5cb8060568b321a2a41474d60c9f87f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250914"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException 類別 (.NET Native)
-**適用于 Windows 10 的 Windows 應用程式的 .NET，僅限 .NET Native**  
+
+**適用于 Windows 應用程式的 .NET Windows 10，僅 .NET Native**  
   
  當呼叫手動封送處理方法，但靜態分析或執行階段指示詞檔案中找不到類型的中繼資料時，會擲回這個例外狀況。  
   
  **命名空間：** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException`類別僅供 .NET Native 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
+> 類別僅供 `MissingInteropDataException` .NET Native 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
+
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
  [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
   
@@ -32,11 +34,11 @@ ms.locfileid: "73128273"
   
 |建構函式|描述|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|使用系統提供有關錯誤及遺漏資料之類型的說明訊息識別碼，初始化 `MissingInteropDataException` 類別的新執行個體。 此函式僅供 .NET Native 工具鏈內部使用。|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|使用系統提供有關錯誤及遺漏資料之類型的說明訊息識別碼，初始化 `MissingInteropDataException` 類別的新執行個體。 這個函式僅供 .NET Native 工具鏈內部使用。|  
   
 ## <a name="properties"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|取得鍵值組的集合，這些鍵值組會提供關於例外狀況的其他使用者定義資訊。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
 |`public string HelpLink { get; set; }`|取得或設定與這個例外狀況相關聯的說明檔連結。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
@@ -68,9 +70,10 @@ ms.locfileid: "73128273"
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|當例外狀況序列化，以建立包含例外狀況相關序列化資料的例外狀況狀態物件時，就會發生此事件。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
   
 ## <a name="usage-details"></a>使用量詳細資料  
+
  當由於沒有類型資訊而無法順利對 COM 或 Windows 執行階段元件呼叫方法時，會擲回 `MissingInteropDataException` 例外狀況。  
   
- 應用程式在執行時間可使用的中繼資料是由執行時間指示詞（XML 設定）檔案（app.config）所 \* 定義。 若要防止應用程式擲回這個例外狀況，您必須修改這個檔案，定義必須在執行階段有中繼資料。 解決這個錯誤的最常見方式，是將 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 屬性加入至執行階段指示詞檔案中的適當程式項目。 如需此檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 應用程式在執行時間可使用的中繼資料是由執行時間指示詞所定義， (XML 設定) 檔 \*.rd.xml。 若要防止應用程式擲回這個例外狀況，您必須修改這個檔案，定義必須在執行階段有中繼資料。 解決這個錯誤的最常見方式，是將 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 屬性加入至執行階段指示詞檔案中的適當程式項目。 如需此檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 > [!IMPORTANT]
 > 因為這個例外狀況指出應用程式所需的中繼資料在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後將適當地進入點加入階段指示詞檔案，以去除這項例外狀況。  

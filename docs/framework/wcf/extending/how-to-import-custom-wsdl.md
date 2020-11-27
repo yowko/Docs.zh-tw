@@ -1,15 +1,16 @@
 ---
-title: HOW TO：匯入自訂 WSDL
+title: 作法：匯入自訂 WSDL
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 614842f2d77d967e0a6d4841e5e5e4fcc8805580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5aa554394743314a91afd6a5cdf86f9974e81f8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185553"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249081"
 ---
-# <a name="how-to-import-custom-wsdl"></a>HOW TO：匯入自訂 WSDL
+# <a name="how-to-import-custom-wsdl"></a>作法：匯入自訂 WSDL
+
 這個主題會描述如何匯入自訂 WSDL。 若要處理自訂 WSDL，您必須實作 <xref:System.ServiceModel.Description.IWsdlImportExtension> 介面。  
   
 ### <a name="to-import-custom-wsdl"></a>匯入自訂 WSDL  
@@ -80,6 +81,6 @@ ms.locfileid: "79185553"
   
 ## <a name="see-also"></a>另請參閱
 
-- [元](../feature-details/metadata.md)
+- [中繼資料](../feature-details/metadata.md)
 - [匯出和匯入中繼資料](../feature-details/exporting-and-importing-metadata.md)
-- [自訂 WSDL 發行集](../samples/custom-wsdl-publication.md)
+- [自訂 WSDL 發行物](../samples/custom-wsdl-publication.md)

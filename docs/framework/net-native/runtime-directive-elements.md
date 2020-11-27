@@ -2,14 +2,15 @@
 title: 執行階段指示詞項目
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 96bce89c02ad17d1b30eda66237f69a15123dcd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128176"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250797"
 ---
 # <a name="runtime-directive-elements"></a>執行階段指示詞項目
+
 執行階段指示詞 (rd.xml) 檔案格式支援下列執行階段指示詞元素。 如需階層表示法，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
  [\<Application>](application-element-net-native.md)  
@@ -19,7 +20,7 @@ ms.locfileid: "73128176"
  將執行階段原則套用至組件中的所有類型。 這是和元素的子 [\<Application>](application-element-net-native.md) 系 [\<Library>](library-element-net-native.md) 。  
   
  [\<AttributeImplies>](attributeimplies-element-net-native.md)  
- 如果其包含 [\<Type>](type-element-net-native.md) 的指示詞是屬性，則會將執行時間原則套用至套用該屬性的程式碼元素。  
+ 如果其包含 [\<Type>](type-element-net-native.md) 的指示詞是屬性，則會將執行時間原則套用至套用該屬性的程式碼專案。  
   
  [\<Directives>](directives-element-net-native.md)  
  .NET Native 的每個執行時間指示詞檔案中的根項目。 其子項目為 [\<Application>](application-element-net-native.md) 和 [\<Library>](library-element-net-native.md) 。  

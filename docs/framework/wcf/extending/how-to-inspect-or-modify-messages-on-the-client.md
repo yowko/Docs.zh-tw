@@ -1,27 +1,29 @@
 ---
-title: HOW TO：檢查或修改用戶端上的訊息
-description: 瞭解如何藉由執行適當的介面，檢查或修改跨 WCF 用戶端或服務的傳入或傳出訊息。
+title: 作法：檢查或修改用戶端上的訊息
+description: 瞭解如何藉由執行適當的介面，跨 WCF 用戶端或服務來檢查或修改傳入或傳出的訊息。
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6f6a3d20d7f3a9fb79de5cd3e29096e270d0f188
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f8b75001754739b48d10ee577ae26a175e72860
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247503"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249042"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>HOW TO：檢查或修改用戶端上的訊息
-您可以藉由執行 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 並將其插入用戶端執行時間中，檢查或修改 WCF 用戶端上的傳入或傳出訊息。 如需詳細資訊，請參閱[擴充用戶端](extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱[訊息](../samples/message-inspectors.md)偵測器範例。  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>作法：檢查或修改用戶端上的訊息
+
+您可以藉由執行 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> ，並將其插入用戶端執行時間中，來檢查或修改 WCF 用戶端上的傳入或傳出訊息。 如需詳細資訊，請參閱 [擴充用戶端](extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱 [訊息](../samples/message-inspectors.md) 偵測器範例。  
   
 ### <a name="to-inspect-or-modify-messages"></a>檢查或修改訊息  
   
 1. 實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 介面。  
   
-2. 根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>可讓您變更端點層級的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>可讓您變更合約層級的行為。  
+2. 根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 可讓您變更端點層級的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 可讓您變更合約層級的行為。  
   
-3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 如需詳細資訊，請參閱[使用行為設定和擴充運行](configuring-and-extending-the-runtime-with-behaviors.md)時間。  
+3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 如需詳細資訊，請參閱 [使用行為設定和擴充運行](configuring-and-extending-the-runtime-with-behaviors.md)時間。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例會依序顯示：  
   
 - 用戶端偵測器實作。  

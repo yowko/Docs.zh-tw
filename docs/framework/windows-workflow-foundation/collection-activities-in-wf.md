@@ -2,15 +2,16 @@
 title: WF 中的集合活動
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 5935b569bc46a6f38a7158049336f1e57fd8b0e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff6bfdff7c05d996be66af508307f2087d8bfc76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143144"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250329"
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活動
-集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection`和`RemoveFromCollection`具有<xref:System.Activities.OutArgument%601>類型<xref:System.Boolean>，指示結果。  
+
+集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection` 和 `RemoveFromCollection` 具有 <xref:System.Activities.OutArgument%601> 代表結果的型別 <xref:System.Boolean> 。  
   
 > [!IMPORTANT]
 > 如果集合活動在設定基礎集合物件之前執行，便會擲回 <xref:System.InvalidOperationException> 與活動錯誤。  
@@ -25,6 +26,7 @@ ms.locfileid: "79143144"
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|移除指定集合中的項目，若順利移除該項目，則傳回 `true`。|  
   
 ## <a name="using-collection-activities"></a>使用集合活動  
+
  下列程式碼範例示範如何與宣告為工作流程變數的集合互動。 所使用的集合是名為 <xref:System.Collections.Generic.List%601> 之 <xref:System.String> 物件的 `fruitList`。  
   
 ```csharp  
@@ -427,4 +429,4 @@ Activity wf = new Sequence
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用命令式程式碼撰寫工作流程、活動與運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [使用命令式程式碼撰寫工作流程、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)

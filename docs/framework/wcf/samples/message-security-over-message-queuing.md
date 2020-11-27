@@ -2,14 +2,15 @@
 title: 訊息佇列上的訊息安全性
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1733cea17c82f85751b810f4a6033caefd828e29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248912"
 ---
 # <a name="message-security-over-message-queuing"></a>訊息佇列上的訊息安全性
+
 這個範例示範如何實作應用程式，該應用程式會針對用戶端使用具有 X.509v3 憑證驗證的 WS-Security，並透過 MSMQ 使用伺服器的 X.509v3 憑證來要求伺服器驗證。 有時候，為了確保 MSMQ 存放區中的訊息持續加密，並且讓應用程式可以執行其本身的訊息驗證，使用訊息安全性所產生的效果更為理想。
 
  這個範例是以交易的 [MSMQ](transacted-msmq-binding.md) 系結範例為基礎。 訊息會經過加密和簽署。
@@ -82,10 +83,12 @@ ms.locfileid: "90558637"
     > [!NOTE]
     > 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行 Windows Communication Foundation (使用跨電腦憑證的 WCF) 範例，請務必清除 TrustedPeople 存放區中已安裝的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
+
  這個範例需要安裝並執行 MSMQ。
 
 ## <a name="demonstrates"></a>示範
+
  用戶端會使用服務的公開金鑰對訊息加密，再使用它自己的憑證來簽署訊息。 從佇列讀取訊息的服務會使用其受信任人存放區中的憑證來驗證用戶端憑證， 然後解密訊息，並將它分派至服務作業。
 
  因為 Windows Communication Foundation (WCF) 訊息會在 MSMQ 訊息主體中以承載的形式傳送，所以本文會在 MSMQ 存放區中保持加密狀態。 這可以保護訊息，避免不該發生的洩漏風險。 請注意，MSMQ 本身並不知道它所攜帶的訊息是否有加密。
@@ -93,6 +96,7 @@ ms.locfileid: "90558637"
  此範例示範如何將訊息層級上的相互驗證與 MSMQ 搭配使用。 憑證是透過超出範圍之外的方式進行交換。 對佇列應用程式而言，一定都會採用這種方式，因為服務和用戶端並不需要同時啟動和執行。
 
 ## <a name="description"></a>描述
+
  範例用戶端和服務程式代碼與 [交易的 MSMQ](transacted-msmq-binding.md) 系結範例相同，但有一項差異。 作業合約附有保護層級的標註，這表示訊息必須經過簽署並加密。
 
 ```csharp

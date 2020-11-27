@@ -1,18 +1,19 @@
 ---
-title: <Property>元素（.NET Native）
+title: '<Property> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250849"
 ---
-# <a name="property-element-net-native"></a>\<Property>元素（.NET Native）
+# <a name="property-element-net-native"></a>\<Property> 元素 ( .NET Native) 
+
 將執行階段反映原則套用至屬性。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Property Name="property_name"  
@@ -22,6 +23,7 @@ ms.locfileid: "73128203"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -35,17 +37,18 @@ ms.locfileid: "73128203"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|*method_name*|屬性名稱。 屬性的類型是由父系或元素所定義 [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。|  
+|*method_name*|屬性名稱。 屬性的類型是由父系 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素定義。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要為屬性套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,9 +59,11 @@ ms.locfileid: "73128203"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
+
  如果未明確定義屬性的原則，則會繼承其父元素的執行階段原則。  
   
 ## <a name="example"></a>範例  
+
  下列範例會使用反映來具現化 `Book` 物件，並顯示其屬性值。 專案的原始 default.rd.xml 檔案會像下面這樣：  
   
 ```xml  
@@ -79,9 +84,9 @@ ms.locfileid: "73128203"
   
  不過，編譯和執行此範例會擲回 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外狀況。 雖然我們已經讓 `Book` 類型的中繼資料可供使用，但我們無法讓屬性 getter 的實作供動態使用。 我們可以用下列兩種方法之一來更正這個錯誤：  
   
-- 藉由 `Dynamic` `Book` 在其元素中定義類型的原則 [\<Type>](type-element-net-native.md) 。  
+- 藉由 `Dynamic` 在專案中定義 `Book` 類型的原則 [\<Type>](type-element-net-native.md) 。  
   
-- 藉由 [\<Property>](property-element-net-native.md) 為每個要叫用其 getter 的屬性新增一個 nested 專案，如同下列的 default.aspx 檔案所示。  
+- 藉由 [\<Property>](property-element-net-native.md) 為要叫用其 getter 的每個屬性加入一個 nested 元素，如下 default.rd.xml 檔案所示。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

@@ -2,17 +2,19 @@
 title: 依賴反映的 API
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-ms.openlocfilehash: 1d8daceb6b744b984f86b011ad7952d0da583a79
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2c361962f4570200d63037a68ef39b0c982bd5f7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181084"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251135"
 ---
 # <a name="apis-that-rely-on-reflection"></a>依賴反映的 API
-在某些情況下，在程式碼中使用反映並不明顯，因此 .NET Native 工具鏈並不會保留在執行時間所需的中繼資料。 本主題涵蓋一些常見的 API 或常見的程式設計模式，這些 API 或程式設計模式不是反映 API 的一部分，但依賴反映才能順利執行。 如果您在原始程式碼中使用這些 API 或程式設計模式，您可以將相關資訊加入至執行階段指示詞 (.rd.xml) 檔案，讓這些 API 的呼叫不會在執行階段擲回 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外狀況或某個其他例外狀況。  
+
+在某些情況下，在程式碼中使用反映並不明顯，因此 .NET Native 工具鏈不會保留執行時間所需的中繼資料。 本主題涵蓋一些常見的 API 或常見的程式設計模式，這些 API 或程式設計模式不是反映 API 的一部分，但依賴反映才能順利執行。 如果您在原始程式碼中使用這些 API 或程式設計模式，您可以將相關資訊加入至執行階段指示詞 (.rd.xml) 檔案，讓這些 API 的呼叫不會在執行階段擲回 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外狀況或某個其他例外狀況。  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType 方法  
+
  您可以使用類似如下的程式碼呼叫 `AppClass<T>` 方法，以動態具現化泛型類型 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>：  
   
  [!code-csharp[ProjectN#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/type_makegenerictype1.cs#1)]  
@@ -27,7 +29,7 @@ ms.locfileid: "79181084"
   
  但是即使您加入未具現化之泛型型別的中繼資料，呼叫 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 方法還是會擲回 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外狀況：  
   
-無法執行這項作業，因為基於效能考慮，下列類型的中繼資料已移除：  
+因為基於效能考慮，已移除下列類型的中繼資料，所以無法執行這項作業：  
   
 `App1.AppClass`1<的 System.object>'。  
   
@@ -41,6 +43,7 @@ ms.locfileid: "79181084"
  如果 `AppClass<T>` 是使用 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 方法建立，並且不是以靜態方式使用，則對其進行之每個不同的具現化都需要個別的指示詞。  
   
 ## <a name="methodinfomakegenericmethod-method"></a>MethodInfo.MakeGenericMethod 方法  
+
  假設類別 `Class1` 具有泛型方法 `GetMethod<T>(T t)`，則可以使用類似如下的程式碼透過反映叫用 `GetMethod`：  
   
  [!code-csharp[ProjectN#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/makegenericmethod1.cs#2)]  
@@ -68,6 +71,7 @@ ms.locfileid: "79181084"
  動態叫用之方法的每個不同具現化各需要一個 `MethodInstantiation` 指示詞，並會更新 `Arguments` 元素以反映每個不同的具現化引數。  
   
 ## <a name="arraycreateinstance-and-typemaketypearray-methods"></a>Array.CreateInstance 和 Type.MakeTypeArray 方法  
+
  下列範例會在 <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 類型上呼叫 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 和 `Class1` 方法。  
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  

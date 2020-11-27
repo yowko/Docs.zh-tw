@@ -2,17 +2,18 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: 016ff823eb2c84a9f54c0763edadef1224e31517
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806066a8845068413d2a52c78878f76b5f5fa34f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040041"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250368"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
+
 OneWayBindingElement  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class OneWayBindingElement : BindingElement  
@@ -24,19 +25,23 @@ class OneWayBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>方法  
+
  OneWayBindingElement 類別不會定義任何方法。  
   
 ## <a name="properties"></a>屬性  
+
  OneWayBindingElement 類別具有下列屬性：  
   
 ### <a name="channelpoolsettings"></a>ChannelPoolSettings  
- 資料類型：ChannelPoolSettings  
+
+ 資料型別：ChannelPoolSettings  
   
  存取類型：唯讀  
   
  通道集區設定。  
   
 ### <a name="maxacceptedchannels"></a>MaxAcceptedChannels  
+
  資料型別：sint32  
   
  存取類型：唯讀  
@@ -44,13 +49,14 @@ class OneWayBindingElement : BindingElement
  已接受之通道的數目上限。  
   
 ### <a name="packetroutable"></a>PacketRoutable  
+
  資料型別：布林值  
   
  存取類型：唯讀  
   
  代表封包是否為可路由傳送的值。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
 |---------|-----------------------------------|  

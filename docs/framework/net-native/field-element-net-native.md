@@ -1,18 +1,19 @@
 ---
-title: <Field>元素（.NET Native）
+title: '<Field> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e63dc293c42aa620b7f7ac15fc0454bc603b9dde
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128412"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251044"
 ---
-# <a name="field-element-net-native"></a>\<Field>元素（.NET Native）
+# <a name="field-element-net-native"></a>\<Field> 元素 ( .NET Native) 
+
 將執行階段反映原則套用至欄位。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Field Name="field_name"  
@@ -22,6 +23,7 @@ ms.locfileid: "73128412"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -35,17 +37,18 @@ ms.locfileid: "73128412"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|*method_name*|欄位名稱。 欄位的類型是由父系或元素所定義 [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。|  
+|*method_name*|欄位名稱。 欄位的類型是由父系 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素定義。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要為欄位套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,6 +59,7 @@ ms.locfileid: "73128412"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
+
  如果未明確定義欄位的原則，則會繼承其父元素的執行階段原則。  
   
 ## <a name="see-also"></a>另請參閱
