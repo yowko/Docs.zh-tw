@@ -1,6 +1,6 @@
 ---
 title: 資料成員順序
-description: 瞭解 WCF 中的資料成員順序。 應用程式可能需要知道或變更傳送或預期資料成員的順序。
+description: 瞭解 WCF 中的資料成員順序。 應用程式可能需要知道或變更資料成員傳送或預期的順序。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1cb63569c1789b1577588caf63fb0a0259e530ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247360"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262160"
 ---
 # <a name="data-member-order"></a>資料成員順序
+
 在某些應用程式中，知道來自各個資料成員之資料的傳送順序或是資料的預期收到順序是十分有用的 (例如，資料出現在序列化 XML 中的順序)。 有時候可能需要變更這個順序。 本主題將說明排序規則。  
   
 ## <a name="basic-rules"></a>基本規則  
+
  資料排序的基本規則包括：  
   
 - 如果資料合約類型屬於繼承階層的一部分，則其基底類型的資料成員的順序一定會是最前面。  
@@ -30,6 +32,7 @@ ms.locfileid: "85247360"
  透過呼叫 <xref:System.String.CompareOrdinal%2A> 方法，即可建立字母順序。  
   
 ## <a name="examples"></a>範例  
+
  請考慮下列程式碼：  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]

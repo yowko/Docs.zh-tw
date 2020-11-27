@@ -2,31 +2,34 @@
 title: 變更傳送活動的快取共用層級
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 101aab98a7d34ad45ad29efbe252cff0814ca290
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cbb937ac47c93307db922b28e3df0ea694a77960
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185387"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262044"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>變更傳送活動的快取共用層級
+
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 擴充可讓您為使用 <xref:System.ServiceModel.Activities.Send> 傳訊活動傳送訊息至服務端點的工作流程自訂快取共用層級、通道處理站快取的設定，以及通道快取的設定。 這些工作流程通常是用戶端工作流程，但也可以是裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務。 通道處理站快取會包含快取的 <xref:System.ServiceModel.ChannelFactory%601> 物件。 通道快取則包含快取的通道。  
   
 > [!NOTE]
 > 工作流程可以利用 <xref:System.ServiceModel.Activities.Send> 傳訊活動傳送訊息或參數。 工作流程執行階段會將通道處理站加入快取，這個快取會在您使用 <xref:System.ServiceModel.Channels.IRequestChannel> 活動搭配 <xref:System.ServiceModel.Activities.ReceiveReply> 活動時建立 <xref:System.ServiceModel.Activities.Send> 型別的通道，以及在您只使用 <xref:System.ServiceModel.Channels.IOutputChannel> 活動 (無 <xref:System.ServiceModel.Activities.Send>) 時建立 <xref:System.ServiceModel.Activities.ReceiveReply> 型別的通道。  
   
 ## <a name="the-cache-sharing-levels"></a>快取共用層級  
+
  根據預設，在 <xref:System.ServiceModel.WorkflowServiceHost> 所裝載的工作流程中，<xref:System.ServiceModel.Activities.Send> 中的所有工作流程執行個體會共用 <xref:System.ServiceModel.WorkflowServiceHost> 傳訊活動使用的快取 (主機層級快取)。 針對並非由 <xref:System.ServiceModel.WorkflowServiceHost> 裝載的用戶端工作流程，快取只能供工作流程執行個體使用 (執行個體層級快取)。 此快取僅適用於 <xref:System.ServiceModel.Activities.Send> 活動 (此活動不使用組態中定義的端點，除非已啟用不安全的快取)。  
   
  以下是工作流程中的 <xref:System.ServiceModel.Activities.Send> 活動適用的不同快取共用層級，以及其建議用法：  
   
-- **主機分級**：在主機共用級別中，緩存僅對工作流服務主機中託管的工作流實例可用。 整個處理序快取中的工作流程服務主機間也可以共用快取。  
+- **主控制項層級**：在主機共用層級中，快取只適用于工作流程服務主機中裝載的工作流程實例。 整個處理序快取中的工作流程服務主機間也可以共用快取。  
   
-- **實例級別**：在實例共用級別中，緩存在其存留期內對特定工作流實例可用，但緩存對其他工作流實例不可用。  
+- **實例層級**：在實例共用層級中，快取會在其存留期內提供給特定的工作流程實例使用，但其他工作流程實例則無法使用快取。  
   
-- **無緩存**：如果有使用配置中定義的終結點的工作流，則預設情況下緩存將被關閉。 在此情況下，建議保持關閉快取，因為開啟快取可能不安全。 例如，如果每次傳送都需要不同的識別 (不同的認證或使用模擬)。  
+- **無** 快取：如果您的工作流程使用 configuration 中定義的端點，則預設會關閉快取。 在此情況下，建議保持關閉快取，因為開啟快取可能不安全。 例如，如果每次傳送都需要不同的識別 (不同的認證或使用模擬)。  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>變更用戶端工作流程的快取共用層級  
+
  若要在用戶端工作流程中設定快取共用，請將 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別的執行個體做為擴充，加入所需的一組工作流程執行個體。 這樣會跨所有工作流程執行個體共用快取。 下列程式碼範例示範如何執行這些步驟。  
   
  首先，宣告 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 型別的執行個體。  
@@ -50,6 +53,7 @@ clientInstance2.Extensions.Add(sharedChannelCacheExtension);
 ```  
   
 ## <a name="changing-the-cache-sharing-level-for-a-hosted-workflow-service"></a>變更裝載之工作流程服務的快取共用層級。  
+
  若要在裝載的工作流程服務中設定快取共用，請將 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別的執行個體加入至所有工作流程服務主機做為擴充。 這樣會跨所有工作流程服務主機共用快取。 下列程式碼範例示範如何執行這些步驟。  
   
  首先，在類別層級宣告 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 型別的執行個體。  
@@ -86,7 +90,8 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>自訂快取設定  
- 您可以自訂通道處理站快取與通道快取的快取設定。 快取設定是在 <xref:System.ServiceModel.Activities.ChannelCacheSettings> 類別中所定義的。 該<xref:System.ServiceModel.Activities.SendMessageChannelCache>類在其無參數建構函式中定義通道工廠緩存和通道緩存的預設緩存設置。 下表列出這些屬於每個快取型別之快取設定的預設值。  
+
+ 您可以自訂通道處理站快取與通道快取的快取設定。 快取設定是在 <xref:System.ServiceModel.Activities.ChannelCacheSettings> 類別中所定義的。 類別會定義通道處理站快取的預設快取 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 設定，以及其無參數的函式中的通道快取。 下表列出這些屬於每個快取型別之快取設定的預設值。  
   
 |設定|LeaseTimeout (分鐘)|IdleTimeout (分鐘)|MaxItemsInCache|  
 |-|-|-|-|  
@@ -150,7 +155,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下面的示例顯示包含自訂工廠緩存和通道緩存設置`MyChannelCacheBehavior`的服務行為的設定檔的內容。 此服務行為通過 屬性添加到服務中`behaviorConfiguration`。  
+ 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下列範例會顯示設定檔的內容，其中包含 `MyChannelCacheBehavior` 具有自訂處理站快取和通道快取設定的服務行為。 此服務行為會透過屬性加入至服務 `behaviorConfiguration` 。  
   
 ```xml  
 <configuration>

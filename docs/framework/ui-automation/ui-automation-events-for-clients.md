@@ -1,19 +1,20 @@
 ---
 title: 用戶端的 UI 自動化事件
-description: 瞭解 .NET 中的 UI 自動化用戶端如何使用 Microsoft UI 自動化事件。 使用者介面自動化可讓用戶端訂閱感的事件。
+description: 瞭解如何在 .NET 中消費者介面自動化用戶端使用 Microsoft 消費者介面自動化事件。 消費者介面自動化可讓用戶端訂閱感興趣的事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: fd27443fba3722c6cd2d00d6c2ca9cfc9c151b6e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903736"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261107"
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -24,12 +25,14 @@ ms.locfileid: "84903736"
  同時也因為能夠只接聽定義範圍內的事件，而改善效率。 例如，用戶端可以接聽樹狀結構中所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的焦點變更事件，或是只接聽一個項目和其下階的焦點變更事件。  
   
 > [!NOTE]
-> 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有屬性變更都會導致 Windows Forms 和 Win32 控制項的標準 proxy 提供者引發事件。  
+> 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有屬性變更都會使 Windows Forms 和 Win32 控制項的標準 proxy 提供者引發事件。  
   
- 如需更廣泛的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件檢視，請參閱[UI 自動化事件總覽](ui-automation-events-overview.md)。  
+ 如需更廣泛的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件查看，請參閱 [消費者介面自動化事件總覽](ui-automation-events-overview.md)。  
   
 <a name="Subscribing_to_Events"></a>
+
 ## <a name="subscribing-to-events"></a>訂閱事件  
+
  用戶端應用程式藉由使用下列方法之一註冊事件處理常式，來訂閱特定種類的事件。  
   
 |方法|事件類型|事件引數類型|委派類型|  
@@ -56,7 +59,7 @@ ms.locfileid: "84903736"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|移除註冊使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 註冊的事件處理常式。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|移除註冊所有已註冊的事件處理常式。|  
   
- 如需範例程式碼，請參閱[訂閱使用者介面自動化事件](subscribe-to-ui-automation-events.md)。  
+ 如需範例程式碼，請參閱 [訂閱消費者介面自動化事件](subscribe-to-ui-automation-events.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

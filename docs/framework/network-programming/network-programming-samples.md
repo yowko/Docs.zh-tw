@@ -3,20 +3,22 @@ title: 網路程式設計範例
 description: 針對 .NET Framework System.Net 和擴充類別，請使用這些可下載的網路程式設計範例。
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: b2bff98a23b5ed8fd9a27413818f0c455d46f6f8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e5d1306f3d42226bca88e2338a31a2c984491645
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558442"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261698"
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
+
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。
   
 > [!NOTE]
 > 所有範例均可從 [.NET Framework SDK 2.0 版範例下載](https://www.microsoft.com/download/confirmation.aspx?id=22181)中取得，此連結是針對 .NET Framework 2.0 所發行，且可能會過時。
 
 ## <a name="in-this-section"></a>本節內容  
+
  [下載進度指示器技術範例](/previous-versions/dotnet/netframework-3.0/t8w6294a(v=vs.85))  
  示範如何顯示檔案下載進度。  
   
@@ -53,11 +55,12 @@ ms.locfileid: "90558442"
  示範如何列出 FTP 伺服器的內容。  
 
 ## <a name="reference"></a>參考  
+
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 中的網路程式設計](index.md)
+- [以 .NET Framework 進行網路程式設計](index.md)
 - [網路程式設計 HOW TO 主題](network-programming-how-to-topics.md)

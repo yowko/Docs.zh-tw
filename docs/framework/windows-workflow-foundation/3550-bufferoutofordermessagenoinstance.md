@@ -2,14 +2,15 @@
 title: 3550 - BufferOutOfOrderMessageNoInstance
 ms.date: 03/30/2017
 ms.assetid: 1299d294-99b8-430e-98b1-55f5f17002f3
-ms.openlocfilehash: 1af943e23aa643c6614b946175c0b1854a7ceb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61605d666911cce277bcebbb0a2f803e9a5dcfeb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755580"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261302"
 ---
 # <a name="3550---bufferoutofordermessagenoinstance"></a>3550 - BufferOutOfOrderMessageNoInstance
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61755580"
 |識別碼|3550|  
 |關鍵字|WFServices|  
 |層級|資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Analytic|  
+|通路|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>描述  
+
  表示緩衝接收已失敗。 當服務執行個體準備好處理這個特定作業時，就會再次嘗試此作業。  
   
 ## <a name="message"></a>訊息  
+
  目前無法執行作業 '%1'。 將在服務執行個體準備就緒可以處理這個特定作業時，再次嘗試。  
   
 ## <a name="details"></a>詳細資料  

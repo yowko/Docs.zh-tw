@@ -1,33 +1,38 @@
 ---
 title: 標準控制項的 UI 自動化支援
-description: 取得針對 Windows Presentation Foundation （WPF）、Win32 和 Windows Forms 所開發的應用程式中，標準控制項的 UI 自動化支援的相關資訊。
+description: 取得針對 Windows Presentation Foundation (WPF) 、Win32 和 Windows Forms 所開發的應用程式中，消費者介面自動化支援標準控制項的相關資訊。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 17916a6978008439e91caae00d8b6f26045f9018
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0a5a0b61a6492d9efb62799fa610859b247cf26e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166115"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261068"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本主題包含針對 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 、Win32 和 Windows Forms 架構所開發之應用程式中的標準控制項支援的相關資訊。  
+ 本主題包含針對 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 、Win32 和 Windows Forms 架構開發的應用程式中，標準控制項支援的相關資訊。  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>
+
 ## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation 控制項  
+
  提供資訊或支援使用者互動的所有 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項項目，都有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的完整原生支援。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]看不見其他如面板等的項目。  
   
 <a name="Win32_Controls"></a>
+
 ## <a name="win32-controls"></a>Win32 控制項  
- 大部分的 Win32 控制項都會 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 透過 UIAutomationClientsideProviders.dll 中的用戶端提供者公開至。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
+
+ 大部分的 Win32 控制項都是 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 透過 UIAutomationClientsideProviders.dll 中的用戶端提供者來公開。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
   
- 僅針對第6版*ComCtrl32.dll*的控制項提供完整支援。  
+ 僅針對 *ComCtrl32.dll* 第6版的控制項提供完整的支援。  
   
  支援的控制項如下。  
   
@@ -42,10 +47,10 @@ ms.locfileid: "87166115"
 |按鈕|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|編輯|Document|  
+|編輯|文件|  
 |編輯|編輯|  
 |SysLink|Hyperlink|  
-|靜態|Text|  
+|靜態|文字|  
 |靜態|映像|  
 |SysIPAddress32|自訂|  
 |SysHeader32|Header/HeaderItem|  
@@ -57,12 +62,12 @@ ms.locfileid: "87166115"
 |#32768|MenuItem|  
 |msctls_progress32|進度列|  
 |RichEdit|文件。 請參閱附註。|  
-|RichEdit20A|Document|  
-|RichEdit20W|Document|  
-|RichEdit50W|Document|  
+|RichEdit20A|文件|  
+|RichEdit20W|文件|  
+|RichEdit50W|文件|  
 |ScrollBar|滑桿|  
 |msctls_trackbar32|滑桿|  
-|msctls_updown32|Spinner|  
+|msctls_updown32|微調按鈕|  
 |msctls_statusbar32|StatusBar|  
 |SysTabControl32|索引標籤|  
 |SysTabControl32|TabItem|  
@@ -78,26 +83,28 @@ ms.locfileid: "87166115"
 |SysTreeView32|樹狀結構|  
 |SysTreeView32|TreeItem|  
   
- **注意**只有 Windows Vista 隨附的版本（RichEd20.dll 3.1 版和更新版本，以及 MsftEdit.dll 4.1 版和更新版本）才支援 RichEdit 控制項。  
+ **注意** RichEdit 控制項僅支援 Windows Vista (RichEd20.dll 3.1 版和更新版本中隨附的版本，以及 MsftEdit.dll 4.1 版和更新版本的) 。  
   
  不支援的控制項如下。  
   
 |類別名稱|控制項類型|  
 |----------------|------------------|  
 |SysAnimate32|映像|  
-|SysPager|Spinner|  
+|SysPager|微調按鈕|  
 |SysDateTimePick32|自訂|  
-|SysMonthCal32|行事曆|  
+|SysMonthCal32|Calendar|  
 |MS_WINNOTE|工具提示|  
 |VBBubble|工具提示|  
 |ScrollBar (當做獨立控制項使用時)|滑桿|  
 |SuperGrid|自訂|  
   
 <a name="Windows_Forms_Controls"></a>
+
 ## <a name="windows-forms-controls"></a>Windows Form 控制項  
- Windows Forms 控制項會 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 透過 UIAutomationClientsideProviders.dll 中的用戶端提供者公開至。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
+
+ Windows Forms 的控制項會 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 透過 UIAutomationClientsideProviders.dll 中的用戶端提供者來公開。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
   
- 一般來說，支援 Win32 通用控制項的 managed 包裝函式 Windows Forms 控制項 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。 支援的控制項如下。  
+ 一般而言，支援 Win32 通用控制項的 managed 包裝函式 Windows Forms 控制項 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。 支援的控制項如下。  
   
 |類別名稱|  
 |----------------|  
@@ -137,7 +144,7 @@ ms.locfileid: "87166115"
 |VscrollBar|  
 |WebBrowser|  
   
- 下列控制項 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 只會透過其 Microsoft Active Accessibility 的支援來公開。 部分功能可能無法使用。  
+ 下列控制項 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 只會透過其對 Microsoft Active Accessibility 的支援公開。 部分功能可能無法使用。  
   
 |控制項名稱|  
 |------------------|  

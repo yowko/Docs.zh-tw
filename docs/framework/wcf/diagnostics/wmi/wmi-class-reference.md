@@ -2,20 +2,23 @@
 title: WMI 類別參考
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-ms.openlocfilehash: 226e4dedecd152f3a3d4143280529c7823339932
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9830fbf50e8df625e3d3077a66c66e0370204acb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262251"
 ---
 # <a name="wmi-class-reference"></a>WMI 類別參考
-本節列出由 Windows Communication Foundation （WCF） WMI 提供者公開的所有 WMI 類別。  
+
+本節列出 Windows Communication Foundation (WCF) WMI 提供者公開的所有 WMI 類別。  
   
 ## <a name="accessing-wmi-instances"></a>存取 WMI 執行個體  
- WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以從端點實例存取 TransportBindingElement 實例-> Binding-> BindingElements。  
+
+ WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以從端點實例存取 TransportBindingElement 實例-> 系結-> BindingElements。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [ActivityTransfer](activitytransfer.md)  
   
  [AppDomainInfo](appdomaininfo.md)  
@@ -24,11 +27,11 @@ ms.locfileid: "70795882"
   
  [AsymmetricSecurityBindingElement](asymmetricsecuritybindingelement.md)  
   
- 「行為類別」  
+ "行為類別"  
   
  [BinaryMessageEncodingBindingElement](binarymessageencodingbindingelement.md)  
   
- [Binding](binding.md)  
+ [繫結](binding.md)  
   
  [BindingElement](bindingelement.md)  
   
@@ -46,7 +49,7 @@ ms.locfileid: "70795882"
   
  [ConnectionOrientedTransportBindingElement](connectionorientedtransportbindingelement.md)  
   
- [Contract](contract.md)  
+ [合同](contract.md)  
   
  [CustomBindingElement](custombindingelement.md)  
   
@@ -80,7 +83,7 @@ ms.locfileid: "70795882"
   
  [OneWayBindingElement](onewaybindingelement.md)  
   
- 「Operation 類別」  
+ "Operation class"  
   
  [OperationBehaviorAttribute](operationbehaviorattribute.md)  
   
@@ -102,7 +105,7 @@ ms.locfileid: "70795882"
   
  [SecurityBindingElement](securitybindingelement.md)  
   
- [Service](service.md)  
+ [服務](service.md)  
   
  [ServiceAppDomain](serviceappdomain.md)  
   

@@ -1,19 +1,20 @@
 ---
 title: UI 自動化控制項類型概觀
-description: 閱讀使用者介面自動化控制項類型的總覽，這些是已知的識別碼，可用來表示專案所代表的控制項類型。
+description: 閱讀消費者介面自動化控制項類型的總覽，這些類型是已知的識別碼，可用來指出元素所代表的控制項種類。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: 204e950fca74c4f7bd2c13dc8a8891152954c071
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 851d509e719afb658971ea5f6fc2f8fdd6bd2cf7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166132"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261341"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 自動化控制項類型概觀
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -22,7 +23,9 @@ ms.locfileid: "87166132"
  有了已知的識別項，可讓輔助技術裝置更容易判斷哪些類型的控制項可在 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 使用，以及如何與控制項互動。  
   
 <a name="UI_Automation_Control_Type_Requisites"></a>
+
 ## <a name="ui-automation-control-type-requisites"></a>UI 自動化控制項類型必要條件  
+
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制項類型提供一組提供者必須符合的條件。 一旦符合這些條件，控制項就可以使用特定的控制項類型名稱。 每個控制項類型都具有下列條件：  
   
 - [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制模式—必須支援哪些控制項模式、哪些控制項模式是選用項目，以及控制項不必須支援哪些控制項模式。  
@@ -34,7 +37,9 @@ ms.locfileid: "87166132"
  當控制項符合特定控制項類型的條件時， <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 屬性值會指出該控制項類型。  
   
 <a name="Current_UI_Automation_Control_Types"></a>
+
 ## <a name="current-ui-automation-control-types"></a>目前 UI 自動化控制項類型  
+
  下列清單包含目前的一組 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制項類型：  
   
 - [Button 控制項類型的 UI 自動化支援](ui-automation-support-for-the-button-control-type.md)  
