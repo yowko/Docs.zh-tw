@@ -2,14 +2,15 @@
 title: 權杖驗證器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab3f8486229416465d7eca0b9413475d81318d32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548588"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264630"
 ---
 # <a name="token-authenticator"></a>權杖驗證器
+
 這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 中的權杖驗證器會用來驗證與訊息搭配使用的權杖、確認它是否為自我一致，以及驗證與權杖相關聯的身分識別。
 
  自訂權杖驗證器適用於各種情況，例如：
@@ -119,6 +120,7 @@ static void Main()
 ```
 
 ## <a name="custom-token-authenticator"></a>自訂權杖驗證器
+
  使用下列步驟來建立自訂權杖驗證器：
 
 1. 撰寫自訂權杖驗證器。
@@ -293,6 +295,7 @@ static void DisplayIdentityInformation()
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
 ## <a name="setup-batch-file"></a>設定批次檔
+
  本範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。
 
  下面提供批次檔的各區段簡要概觀，讓您將批次檔修改為可在適當的組態下執行。

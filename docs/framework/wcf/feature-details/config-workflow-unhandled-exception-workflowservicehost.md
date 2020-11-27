@@ -1,20 +1,21 @@
 ---
-title: HOW TO：以 WorkflowServiceHost 設定工作流程服務的未處理例外狀況行為
+title: 作法：以 WorkflowServiceHost 設定工作流程的未處理例外狀況行為
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 3881d1af21dcc0c211c6738162360e522648d949
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 93eb2f4493b70f54336a5d47957c6913239088e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593590"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264851"
 ---
-# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定工作流程服務的未處理例外狀況行為
+# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>作法：以 WorkflowServiceHost 設定工作流程的未處理例外狀況行為
+
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 是一項行為，可讓您指定裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流程內發生未處理的例外狀況時，所採取的動作。 本主題示範如何組態檔中設定此行為。  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>若要設定 WorkflowUnhandledExceptionBehavior  
   
-1. `workflowUnhandledException`在 <> 專案內的 <> 專案中加入 <> 專案 `behavior` `serviceBehaviors` ，使用 `action` 屬性指定未處理的例外狀況發生時所採取的動作，如下列範例所示。  
+1. 將 <的 `workflowUnhandledException`> 專案加入 `behavior` <> 專案內 <> 專案中 `serviceBehaviors` ， `action` 並使用屬性來指定發生未處理的例外狀況時所要採取的動作，如下列範例所示。  
   
     ```xml  
     <behaviors>  
@@ -27,7 +28,7 @@ ms.locfileid: "84593590"
     ```  
   
     > [!NOTE]
-    > 上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱[簡化](../simplified-configuration.md)的設定。  
+    > 上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱 [簡化](../simplified-configuration.md)的設定。  
   
      此行為可以在程式碼中設定，如下列範例所示。  
   
@@ -49,9 +50,9 @@ ms.locfileid: "84593590"
      **終止**  
      完成記憶體中的執行個體並將其從執行個體庫中移除。  
   
-     如需的詳細資訊 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ，請參閱[工作流程服務主機](workflow-service-host-extensibility.md)擴充性。  
+     如需的詳細資訊 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ，請參閱 [工作流程服務主機](workflow-service-host-extensibility.md)擴充性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [工作流程服務主機擴充性](workflow-service-host-extensibility.md)
 - [工作流程服務](workflow-services.md)

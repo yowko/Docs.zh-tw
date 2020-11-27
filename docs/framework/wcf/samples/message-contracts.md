@@ -2,21 +2,23 @@
 title: 訊息合約
 ms.date: 03/30/2017
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
-ms.openlocfilehash: 5467ee9ff807bca79330054c30ad424ea479a6a3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e00720674a384e2b0ac1cdb5aeab84f9b2c91209
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591679"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264695"
 ---
 # <a name="message-contracts"></a>訊息合約
-本節包含的範例會示範 Windows Communication Foundation （WCF）中的訊息合約。  
+
+本節包含的範例會示範 Windows Communication Foundation (WCF) 中的訊息合約。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [預設訊息合約](default-message-contract.md)  
  示範一項服務，在這項服務中可以對服務作業來回傳遞自訂的使用者定義訊息。  
   
- 不具類型的要求-回復  
+ 不具類型的 Request-Reply  
  示範如何定義使用 Message 類別的作業合約。  
   
  [未包裝的訊息](unwrapped-messages.md)  

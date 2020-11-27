@@ -1,6 +1,6 @@
 ---
 title: 使用用戶端通訊端
-description: 這個範例示範如何使用 .NET Framework 中的通訊端，建立遠端服務的 TCP/IP 連接。
+description: 此範例示範如何使用 .NET Framework 中的通訊端，建立遠端服務的 TCP/IP 連接。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6982d09c20cd0d7e9d27fc63880b39e0982c86ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501998"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265189"
 ---
 # <a name="using-client-sockets"></a>使用用戶端通訊端
+
 在透過 <xref:System.Net.Sockets.Socket> 起始交談之前，您必須先建立應用程式和遠端裝置之間的資料管道。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 連線。  
   
  TCP/IP 會使用網路位址和服務連接埠編號來唯一識別服務。 網路位址可識別網路上的特定裝置；連接埠編號則可識別該裝置上要連線的特定服務。 網路位址和服務連接埠的組合稱為端點，在 .NET Framework 中是以 <xref:System.Net.EndPoint> 類別表示。 每個支援的位址系列已定義 **EndPoin** 的子系；對於 IP 位址系列，此類別是 <xref:System.Net.IPEndPoint>。  
@@ -82,5 +83,5 @@ try {
 
 - [使用同步用戶端通訊端](using-a-synchronous-client-socket.md)
 - [使用非同步用戶端通訊端](using-an-asynchronous-client-socket.md)
-- [如何：建立通訊端](how-to-create-a-socket.md)
+- [作法：建立通訊端](how-to-create-a-socket.md)
 - [通訊端](sockets.md)

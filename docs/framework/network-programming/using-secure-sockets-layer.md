@@ -1,6 +1,6 @@
 ---
 title: 使用安全通訊端層
-description: 深入瞭解 System.Net 和擴充類別如何使用安全通訊端層，為 .NET Framework 中的數個網路通訊協定加密連接。
+description: 瞭解 System.Net 和擴充類別如何使用安全通訊端層，在 .NET Framework 中加密數個網路通訊協定的連接。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,15 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 67330962382e768849cbf67d5f412ea80f65569d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1309e9dc594869cec7bce81ef666d9f5e06f13b9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501985"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265176"
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全通訊端層
+
 <xref:System.Net> 類別會使用安全通訊端層 (SSL) 來加密數個網路通訊協定的連線。  
   
  若為 HTTP 連線，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會使用 SSL 來與支援 SSL 的 Web 主機通訊。 決定使用 SSL 與否是 <xref:System.Net.WebRequest> 類別根據給定的 URI 來進行。 如果 URI 開頭是 "https:"，則使用 SSL。如果 URI 開頭是 "http:"，則使用未加密的連線。  
@@ -59,6 +60,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  這個範例需要：  
   
 - 對 **System.Net** 命名空間的參考。  
@@ -66,5 +68,5 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="see-also"></a>另請參閱
 
 - [網路程式設計的安全性](security-in-network-programming.md)
-- [.NET Framework 中的網路程式設計](index.md)
+- [以 .NET Framework 進行網路程式設計](index.md)
 - [憑證的選取和驗證](certificate-selection-and-validation.md)

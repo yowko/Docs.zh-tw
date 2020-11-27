@@ -1,6 +1,6 @@
 ---
 title: 全域組件快取
-description: 瞭解全域組件快取，這是安裝 .NET 通用語言執行時間的電腦程式代碼快取。
+description: 瞭解全域組件快取，這是安裝適用于 .NET 的 common language runtime 的全電腦程式代碼快取。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 57d18c01bd6261e8207d8ad3849a3a7da9a24b6c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104905"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264604"
 ---
 # <a name="global-assembly-cache"></a>全域組件快取
+
 每部安裝通用語言執行平台的電腦都有稱為「全域組件快取」的全電腦程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。  
   
  您應該只有在需要時才將組件安裝到全域組件快取，來共用組件。 一般來說，除非明確需要共用組件，否則會將組件相依性保留為私用，並且在應用程式目錄中尋找組件。 此外，不需要將組件安裝到全域組件快取，它們即可供 COM Interop 或非受控碼使用。  

@@ -1,6 +1,6 @@
 ---
 title: 使用非同步伺服器通訊端
-description: 這個範例會顯示非同步伺服器通訊端。 Socket 類別會使用 .NET Framework 非同步程式設計來處理網路服務要求。
+description: 此範例顯示非同步伺服器通訊端。 Socket 類別使用 .NET Framework 非同步程式設計來處理網路服務要求。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 8b85afb3ffdf69973eff37ccbb067b470ed44e3a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6800a1973d9eb65bbb7520f9db7a8f431656c685
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502024"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265202"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用非同步伺服器通訊端
+
 非同步伺服器通訊端會使用 .NET Framework 非同步程式設計模型來處理網路服務要求。 <xref:System.Net.Sockets.Socket> 類別會遵循標準 .NET Framework 非同步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法對應於非同步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
   
  非同步伺服器通訊端需要一個用來開始接受網路連線要求的方法、一個用來處理連線要求並開始接收網路資料的回呼方法，以及一個用來結束接收資料的回呼方法。 本節會進一步討論所有這些方法。  
   
- 在下列範例中，若要開始接受網路的連線要求，`StartListening` 方法會初始化**通訊端**，然後使用 **BeginAccept** 方法來開始接受新連線。 在通訊端上收到新的連線要求時，就會呼叫接受回呼方法。 它會負責取得將處理連線的**通訊端**執行個體，並將該**通訊端**移交給將處理要求的執行緒。 接受回呼方法會實作 <xref:System.AsyncCallback> 委派；它會傳回 void，並採用 <xref:System.IAsyncResult> 類型的單一參數。 下列範例是接受回呼方法的殼層。  
+ 在下列範例中，若要開始接受網路的連線要求，`StartListening` 方法會初始化 **通訊端**，然後使用 **BeginAccept** 方法來開始接受新連線。 在通訊端上收到新的連線要求時，就會呼叫接受回呼方法。 它會負責取得將處理連線的 **通訊端** 執行個體，並將該 **通訊端** 移交給將處理要求的執行緒。 接受回呼方法會實作 <xref:System.AsyncCallback> 委派；它會傳回 void，並採用 <xref:System.IAsyncResult> 類型的單一參數。 下列範例是接受回呼方法的殼層。  
   
 ```vb  
 Sub AcceptCallback(ar As IAsyncResult)  
@@ -45,7 +46,7 @@ void AcceptCallback(IAsyncResult ar)
 }  
 ```  
   
- **BeginAccept** 方法採用兩個參數：指向接受回呼方法的 **AsyncCallback** 委派和用來將狀態資訊傳遞至回呼方法的物件。 在下列範例中，接聽**通訊端**會透過 *stat* 參數傳遞至回呼方法。 這個範例會建立 **AsyncCallback** 委派並開始接受來自網路的連線。  
+ **BeginAccept** 方法採用兩個參數：指向接受回呼方法的 **AsyncCallback** 委派和用來將狀態資訊傳遞至回呼方法的物件。 在下列範例中，接聽 **通訊端** 會透過 *stat* 參數傳遞至回呼方法。 這個範例會建立 **AsyncCallback** 委派並開始接受來自網路的連線。  
   
 ```vb  
 listener.BeginAccept( _  
@@ -59,7 +60,7 @@ listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener)
   
  非同步通訊端使用系統執行緒集區中的執行緒來處理連入連線。 其中一個執行緒負責接受連線、另一個執行緒用來處理每個連入連線，還有一個執行緒負責接收來自連線的資料。 這些可能是相同的執行緒，視執行緒集區所指派的執行緒而定。 在下列範例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類別會暫停執行主執行緒，並在可以繼續執行時發出訊號。  
   
- 下列範例示範非同步方法，用來在本機電腦上建立非同步的 TCP/IP 通訊端，並開始接受連接。 它假設有一個名為 `allDone` 的全域 **ManualResetEvent**且該方法是 `SocketListener` 類別的成員，以及已定義名為 `AcceptCallback` 的回呼方法。  
+ 下列範例示範非同步方法，用來在本機電腦上建立非同步的 TCP/IP 通訊端，並開始接受連接。 它假設有一個名為 `allDone` 的全域 **ManualResetEvent** 且該方法是 `SocketListener` 類別的成員，以及已定義名為 `AcceptCallback` 的回呼方法。  
   
 ```vb  
 Public Sub StartListening()  

@@ -1,6 +1,6 @@
 ---
 title: 使用非同步用戶端通訊端
-description: 這個範例會顯示非同步用戶端通訊端。 .NET Framework 非同步程式設計可讓應用程式在處理連接時繼續執行。
+description: 此範例顯示非同步用戶端通訊端。 .NET Framework 非同步程式設計可讓應用程式在處理連接時繼續執行。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 9cf46e9519bcecf4d7a20ff99b86fa5f66af2087
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af5379533e51e7488d673359dc24268c6329c082
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265215"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用非同步用戶端通訊端
+
 非同步用戶端通訊端等待網路作業完成時，不會暫停應用程式。 相反地，它會使用標準 .NET Framework 非同步程式設計模型，在一個執行緒上處理網路連線，同時應用程式繼續在原始執行緒上執行。 非同步通訊端適用於大量使用網路的應用程式，或是無法等候網路作業完成再繼續進行的應用程式。  
   
  <xref:System.Net.Sockets.Socket> 類別遵循非同步方法的 .NET Framework 命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Receive%2A> 方法對應於非同步 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 和 <xref:System.Net.Sockets.Socket.EndReceive%2A> 方法。  
@@ -34,7 +35,7 @@ ms.locfileid: "84502037"
   
  非同步通訊端使用系統執行緒集區中的多個執行緒來處理網路連線。 一個執行緒負責初始化資料的傳送或接收；其他執行緒則完成與網路裝置的連線並且傳送或接收資料。 在下列範例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類別的執行個體會暫停執行主執行緒，並在可以繼續執行時發出訊號。  
   
- 在下列範例中，為了將非同步通訊端連線到網路裝置，`Connect` 方法會初始化**通訊端**，然後呼叫 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> 方法、傳遞代表網路裝置的遠端端點、連線回呼方法和狀態物件 (用戶端**通訊端**)，這用來在非同步呼叫之間傳遞狀態資訊。 此範例會實作 `Connect` 方法，將指定的**通訊端**連線到指定的端點。 它會假設一個名為 `connectDone` 的全域 **ManualResetEvent**。  
+ 在下列範例中，為了將非同步通訊端連線到網路裝置，`Connect` 方法會初始化 **通訊端**，然後呼叫 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> 方法、傳遞代表網路裝置的遠端端點、連線回呼方法和狀態物件 (用戶端 **通訊端**)，這用來在非同步呼叫之間傳遞狀態資訊。 此範例會實作 `Connect` 方法，將指定的 **通訊端** 連線到指定的端點。 它會假設一個名為 `connectDone` 的全域 **ManualResetEvent**。  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -54,7 +55,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- 連線回呼方法 `ConnectCallback` 會實作 <xref:System.AsyncCallback> 委派。 它在遠端裝置可用時連線到遠端裝置，然後設定**ManualResetEvent** `connectDone`，通知應用程式執行緒連線已完成。 下例程式碼會實作 `ConnectCallback` 方法。  
+ 連線回呼方法 `ConnectCallback` 會實作 <xref:System.AsyncCallback> 委派。 它在遠端裝置可用時連線到遠端裝置，然後設定 **ManualResetEvent** `connectDone`，通知應用程式執行緒連線已完成。 下例程式碼會實作 `ConnectCallback` 方法。  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  

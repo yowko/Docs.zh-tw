@@ -2,23 +2,24 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: d64be95f71f840e08ede63e1c1f14ee08e52ce97
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b8496992c7b0694a07ac047ba8537c67fc363c02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592472"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264227"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
+
 ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態系統的工具。 這將允許您的自訂通道使用者使用 .config 檔案設定通道，就像平常使用 `NetTcpBinding` 來設定系統提供的繫結 (例如 `TcpTransportBindingElement`) 或自訂繫結一般。  
   
  使用新的 `BindingElement` 或 `Binding` 撰寫自訂通道並將它公開給程式設計模型時，您必須建立一組類別，讓 `BindingElement` 或 `Binding` 可透過使用 .config 檔案來加以設定。 您可以使用 ConfigurationCodeGenerator 工具產生這些類別，並增進客戶的使用體驗。  
   
 ### <a name="to-build-the-tool"></a>建置工具  
   
-1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
+1. 若要建立方案，請依照 [建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
   
-2. 建置方案時會產生一個檔案：ConfigurationCodeGenerator.exe。 檔案 Samplerun.cmd 包含範例命令列，說明如何使用此工具來產生[Transport： UDP](transport-udp.md)範例的類別。  
+2. 建置方案時會產生一個檔案：ConfigurationCodeGenerator.exe。 Samplerun.cmd 檔案有一個範例命令列，說明如何使用此工具來產生 [Transport： UDP](transport-udp.md) 範例的類別。  
   
 ### <a name="to-run-the-tool"></a>執行工具  
   
@@ -46,6 +47,6 @@ ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態�
   
     2. 如果您指定 /sb 選項，其中兩個 .cs 檔案將會分別實作 `StandardBindingElement` 和 `StandardBindingCollectionElement`，藉以向組態系統公開您的標準繫結。 其他檔案含有表示預設值和常數的類別。 檔案中會有 `//TODO` 註解，用意在提醒您更新預設值。  
   
-         如果您指定/sb：選項，Codetoaddto< 會 \<*YourStdBinding*> 有程式碼，您必須手動將其加入至執行標準系結的類別。  
+         如果您指定了/sb：選項，Codetoaddto<yourstdbinding>.cs \<*YourStdBinding*> 就會有程式碼，您必須手動將程式碼加入至實作為標準系結的類別。  
   
      SampleConfig.xml 檔案中含有組態程式碼，您必須將它新增至註冊處理常式 (在前面步驟 1 或 2 中定義) 的組態檔中。  
