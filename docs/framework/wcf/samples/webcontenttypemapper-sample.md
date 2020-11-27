@@ -2,17 +2,18 @@
 title: WebContentTypeMapper 範例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: a51d03fab5c6499a0e9685e01a9bbace1c11f28a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 550e763d30a7fa503f6500dcaa8f9b77ea499bca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283259"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 範例
-這個範例會示範如何將新的內容類型對應至 Windows Communication Foundation （WCF）訊息內文格式。  
+
+這個範例示範如何將新的內容型別對應至 Windows Communication Foundation (WCF) 訊息主體格式。  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint>元素會插入 Web 訊息編碼器中，讓 WCF 能夠在相同的端點上接收 JSON、XML 或原始二進位訊息。 此編碼器會藉由尋找要求的 HTTP 內容型別來判定訊息的本文格式。 這個範例會介紹 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 類別，以允許使用者控制內容型別與本文格式之間的對應。  
+ 專案 <xref:System.ServiceModel.Description.WebHttpEndpoint> 會插入 Web 訊息編碼器，讓 WCF 可在相同的端點上接收 JSON、XML 或原始的二進位訊息。 此編碼器會藉由尋找要求的 HTTP 內容型別來判定訊息的本文格式。 這個範例會介紹 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 類別，以允許使用者控制內容型別與本文格式之間的對應。  
   
  WCF 提供一組內容類型的預設對應。 例如，`application/json` 會對應至 JSON，而 `text/xml` 會對應至 XML。 未對應至 JSON 或 XML 的任何內容型別都會對應至原始二進位格式。  
   
@@ -54,17 +55,17 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 如[建立 Windows Communication Foundation 範例](building-the-samples.md)中所述，建立方案 WebContentTypeMapperSample。  
+2. 如 [建立 Windows Communication Foundation 範例](building-the-samples.md)所述，建立方案 WebContentTypeMapperSample .sln。  
   
-3. 流覽至 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` （請勿在瀏覽器中從專案目錄開啟 JCTMClientPage）。  
+3. 流覽至 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (不會在瀏覽器中從專案目錄) 開啟 JCTMClientPage.htm。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

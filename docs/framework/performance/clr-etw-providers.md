@@ -1,26 +1,28 @@
 ---
 title: CLR ETW 提供者
-description: 查看 Windows （ETW）提供者的兩個 common language runtime （CLR）事件追蹤的詳細資料： runtimne 提供者和取消提供者。
+description: 請參閱 Windows (ETW) 提供者的兩個 common language runtime (CLR) 事件追蹤的詳細資料： runtimne 提供者和取消提供者。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: 9f86e8334482880c4f7cb23ec93a3c826c083389
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f537a2e0557f1b0434d1f303d74f9cd48f157edc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283870"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
+
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
   
  執行階段提供者會根據啟用哪些關鍵字 (事件的類別) 來引發事件。 例如，您可以啟用 `LoaderKeyword` 關鍵字來收集載入器事件。  
   
- Windows 事件追蹤（ETW）事件會記錄到具有 .etl 副檔名的檔案中，稍後可以視需要以逗號分隔值（.csv）檔案進行後續處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](controlling-logging.md)。  
+ Windows (ETW) 事件的事件追蹤會記錄到副檔名為 .etl 的檔案中，稍後您可以視需要使用以逗號分隔的值 ( .csv) 檔案進行後置處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](controlling-logging.md)。  
   
 ## <a name="the-runtime-provider"></a>執行階段提供者  
+
  執行階段提供者是主要 CLR ETW 提供者。  
   
  CLR 執行階段提供者 GUID 是 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4。  
@@ -30,22 +32,25 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
  除了使用 `LoaderKeyword` 這類關鍵字之外，您可能還需要啟用關鍵字來記錄可能太頻繁引發的事件。 `StartEnumerationKeyword` 和 `EndEnumerationKeyword` 關鍵字會啟用這些事件，[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)中會有摘要說明。  
   
 ## <a name="the-rundown-provider"></a>取消提供者  
+
  針對某些特殊用途，必須開啟取消提供者。 不過，對大部分的使用者而言，執行階段提供者應該就已足夠。  
   
  CLR 取消提供者 GUID 是 A669021C-C450-4609-A035-5AF59AF4DF18。  
   
  一般來說，會在啟動處理序之前啟用 ETW 記錄，並在處理序結束之後關閉記錄。 不過，如果在處理序執行時開啟 ETW 記錄，則需要處理序的額外資訊。 例如，進行符號解析時，您必須針對已在開啟記錄之前載入的方法，來記錄方法事件。  
   
- `DCStart` 和 `DCEnd` 事件會擷取啟動和停止資料收集時的處理序狀態 （狀態指的是高階資訊，包括已編譯的一次性（JIT）和已載入元件的方法）。這兩個事件可以提供處理常式中已發生之內容的相關資訊;例如，哪些方法已進行 JIT 編譯，依此類推。  
+ `DCStart` 和 `DCEnd` 事件會擷取啟動和停止資料收集時的處理序狀態  (狀態是指較高層級的資訊，包括已經 (JIT) 編譯的方法，以及已載入的元件。 ) 這兩個事件可以提供進程中已發生之作業的相關資訊;例如，哪些方法已進行 JIT 編譯，依此類推。  
   
  在取消提供者下，只會引發其名稱含有 `DC`、`DCStart`、`DCEnd` 或 `DCInit` 的事件。 此外，只會在取消提供者下引發這些事件。  
   
  除了事件關鍵字篩選之外，取消提供者也支援 `StartRundownKeyword` 和 `EndRundownKeyword` 關鍵字，以提供目標篩選。  
   
 ### <a name="start-rundown"></a>開始取消  
+
  使用 `StartRundownKeyword` 關鍵字啟用取消提供者下的記錄時，會觸發開始取消。 這會引發 `DCStart` 事件，並擷取系統的狀態。 開始列舉之前，會引發 `DCStartInit` 事件。 列舉結束時，會引發 `DCStartComplete` 事件，以通知控制器資料收集已正常終止。  
   
 ### <a name="end-rundown"></a>結束取消  
+
  使用 `EndRundownKeyword` 關鍵字啟用取消提供者下的記錄時，會觸發結束取消。 結束取消會停止對繼續執行之處理序的分析。 `DCEnd` 事件會擷取停止分析時的系統狀態。  
   
  開始列舉之前，會引發 `DCEndInit` 事件。 列舉結束時，會引發 `DCEndComplete` 事件，以通知消費者資料收集已正常終止。 開始取消和結束取消主要用於 Managed 符號解析。 開始取消可以提供已在啟動分析工作階段之前進行 JIT 編譯之方法的位址範圍資訊。 結束取消可以提供已在即將關閉分析時進行 JIT 編譯之所有方法的位址範圍資訊。  
@@ -55,6 +60,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
  雖然開始取消或結束取消可以提供 Managed 符號解析的方法位址範圍資訊，但是建議您使用 `EndRundownKeyword` 關鍵字 (其提供 `DCEnd` 事件)，而非 `StartRundownKeyword` 關鍵字 (其提供 `DCStart` 事件)。 使用 `StartRundownKeyword` 可在分析工作階段期間發生取消，而這可能會干擾分析的案例。  
   
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>使用執行階段和取消提供者的 ETW 資料收集  
+
  下列範例示範如何使用 CLR 取消提供者，而方式是允許 Managed 處理序的符號解析，並且影響最少，而且不論處理序是在分析的時間範圍內部或外部開始或結束。  
   
 1. 使用 CLR 執行階段提供者開啟 ETW 記錄：  

@@ -6,15 +6,16 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f0f6b2f35c184b4df8c93af1c85e7169cb0cc95
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283142"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 和非 Blittable 類型
-大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」**，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
+
+大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
   
  從平台叫用呼叫傳回的結構必須是 Blittable 類型。 平台叫用不支援非 Blittable 結構作為傳回類型。  
   

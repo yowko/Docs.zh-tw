@@ -2,15 +2,16 @@
 title: 延伸對錯誤處理和報告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2e9298c6a282b9df8499458ad166e320d41e63a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283324"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>延伸對錯誤處理和報告的控制
-這個範例會示範如何使用介面，在 Windows Communication Foundation （WCF）服務中擴充錯誤處理和錯誤報表的控制 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 。 此範例是以[消費者入門](getting-started-sample.md)為基礎，並在服務中加入一些額外的程式碼來處理錯誤。 用戶端會強制產生數個錯誤狀況。 服務則攔截這些錯誤並記錄在檔案中。  
+
+這個範例示範如何使用介面，在 Windows Communication Foundation (WCF) 服務中擴充錯誤處理和錯誤報表的控制 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 。 此範例是以 [消費者入門](getting-started-sample.md) 為基礎，並將一些額外的程式碼新增至服務來處理錯誤。 用戶端會強制產生數個錯誤狀況。 服務則攔截這些錯誤並記錄在檔案中。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -132,7 +133,7 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- c:\logs\errors.txt 檔案包含服務所記錄關於錯誤的資訊。 請注意，若要讓服務寫入目錄，您必須確定執行服務的程式（通常是 ASP.NET 或 Network Service）具有寫入目錄的許可權。  
+ c:\logs\errors.txt 檔案包含服務所記錄關於錯誤的資訊。 請注意，若要讓服務寫入至目錄，您必須確定執行服務的進程 (通常是 ASP.NET 或網路服務) 有寫入目錄的許可權。  
   
 ```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
@@ -141,19 +142,19 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
+2. 若要建立方案，請依照 [建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
   
 3. 確定您已為 error.txt 檔案建立 c:\logs 目錄。 或者，修改 `CalculatorErrorHandler.HandleError` 中使用的檔案名稱。  
   
-4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
+4. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

@@ -1,18 +1,20 @@
 ---
-title: 「行為」
+title: 行為
 ms.date: 03/30/2017
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
-ms.openlocfilehash: 79cc9af5a2050ccee4da3239fa89d704b6378d04
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e963da6d151b82b205f6f52b70aeb69b09eae4f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575560"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283610"
 ---
-# <a name="behaviors"></a>「行為」
-本節包含示範 Windows Communication Foundation （WCF）服務行為的範例。  
+# <a name="behaviors"></a>行為
+
+本節包含的範例示範 Windows Communication Foundation (WCF) 服務行為。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [並行](concurrency.md)  
  示範搭配 <xref:System.ServiceModel.ServiceBehaviorAttribute> 列舉使用 <xref:System.ServiceModel.ConcurrencyMode>，以控制服務的執行個體要循序處理或並行處理訊息。  
   

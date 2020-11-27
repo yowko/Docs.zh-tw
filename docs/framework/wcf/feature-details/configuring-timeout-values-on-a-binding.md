@@ -1,16 +1,17 @@
 ---
 title: 設定繫結上的逾時值
-description: 瞭解如何管理 WCF 系結的超時設定，以改善服務的效能、可用性和安全性。
+description: 瞭解如何管理 WCF 系結的 timeout 設定，以提升服務的效能、可用性和安全性。
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6582568f3579f784d4c91c707dbb35c38533551d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245111"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284039"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>設定繫結上的逾時值
+
 WCF 繫結有一些逾時設定可供使用。 正確設定這些逾時設定可以改善服務的效能，但也會對服務的可用性和安全性造成影響。 可在 WCF 繫結上使用的逾時如下：  
   
 1. OpenTimeout  
@@ -22,6 +23,7 @@ WCF 繫結有一些逾時設定可供使用。 正確設定這些逾時設定可
 4. ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>WCF 繫結逾時  
+
  本主題中討論的每個設定，不論在程式碼還是組態中，都是對繫結本身進行設定。 下列程式碼示範如何在自我裝載服務的內容中，以程式設計方式對 WCF 繫結設定逾時。  
   
 ```csharp  
@@ -76,17 +78,19 @@ public static void Main()
  這些設定的其他資訊可以在 <xref:System.ServiceModel.Channels.Binding> 類別的文件中找到。  
   
 ### <a name="client-side-timeouts"></a>用戶端逾時  
+
  在用戶端：  
   
 1. SendTimeout – 用來初始化 OperationTimeout，這會控制整個傳送訊息程序，包括接收要求/回覆服務作業的回覆訊息。 從合約回呼方法傳送回覆郵件時，也適用這個逾時。  
   
-2. OpenTimeout –在未指定明確的超時值時，用來開啟通道。  
+2. OpenTimeout –未指定明確的超時值時，用於開啟通道。  
   
-3. CloseTimeout –在未指定明確的超時值時，用於關閉通道。  
+3. CloseTimeout –未指定明確的超時值時，用於關閉通道。  
   
-4. ReceiveTimeout –不會使用。  
+4. ReceiveTimeout –未使用。  
   
-### <a name="service-side-timeouts"></a>服務端超時  
+### <a name="service-side-timeouts"></a>服務端的超時  
+
  在服務端：  
   
 1. SendTimeout、OpenTimeout、CloseTimeout 與用戶端上的相同。  

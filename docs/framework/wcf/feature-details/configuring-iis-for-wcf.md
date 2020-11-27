@@ -2,18 +2,19 @@
 title: 設定 Internet Information Services 7.0 for Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 6b0cc48c7a817f71339fb6d7eea35baf1d97b245
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 865e19d6626846481347274774d3ea59f2f7ecdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556651"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284208"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>設定 Internet Information Services 7.0 for Windows Communication Foundation
 
 Internet Information Services (IIS) 7.0 具有模組化的設計，可以讓您選擇性地安裝所需的元件。 這項設計是以 Windows Vista 引進的全新資訊清單驅動元件化技術為基礎。 IIS 7.0 有40個以上的獨立功能元件，可獨立安裝。 這讓 IT 專業人員能夠輕鬆地依其需要自訂安裝。 本主題討論如何設定 IIS 7.0 以搭配 Windows Communication Foundation (WCF) 使用，並判斷需要哪些元件。
 
 ## <a name="minimal-installation-installing-was"></a>基本安裝：安裝 WAS
+
  整個 IIS 7.0 封裝的最基本安裝是安裝 Windows Process Activation Service (WAS) 。 WAS 是獨立的功能，而且是 IIS 7.0 中唯一適用于所有 Windows Vista 作業系統的功能， (Home Basic、Home Premium、Business 和終極和企業) 。
 
  在 [主控台] 中，按一下 [**程式**]，然後按一下 [**程式和功能**] 下的 [**開啟或關閉 WINDOWS 功能**]，[WAS] 元件會顯示在清單中，如下圖所示。
@@ -33,6 +34,7 @@ Internet Information Services (IIS) 7.0 具有模組化的設計，可以讓您�
  若要讓 WCF 或任何 ASP.NET 應用程式運作，請核取 [ **.Net 環境** ] 核取方塊。 這表示所有 WAS 元件都必須讓 WCF 和 ASP.NET 正常運作。 一旦您安裝任何其中一個上述元件，這些應用程式便會自動核取。
 
 ## <a name="iis-70-default-installation"></a>IIS 7.0：預設安裝
+
  藉由檢查 **Internet Information Services** 功能，會自動檢查部分子節點，如下圖所示。
 
  ![IIS 7.0 功能的預設值](media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")
@@ -40,20 +42,23 @@ Internet Information Services (IIS) 7.0 具有模組化的設計，可以讓您�
  這是 IIS 7.0 的預設安裝。 在此安裝中，您可以使用 IIS 7.0 來服務靜態內容 (例如 HTML 網頁和其他內容) 。 不過，您無法執行 ASP.NET 或 CGI 應用程式或裝載 WCF 服務。
 
 ## <a name="iis-70-installation-with-aspnet-support"></a>IIS 7.0：具有 ASP.NET 支援的安裝
- 您必須安裝 ASP.NET，才能讓 ASP.NET 在 IIS 7.0 上運作。 檢查 **ASP.NET**之後，您的畫面看起來應該如下圖所示。
+
+ 您必須安裝 ASP.NET，才能讓 ASP.NET 在 IIS 7.0 上運作。 檢查 **ASP.NET** 之後，您的畫面看起來應該如下圖所示。
 
  ![Asp.NET 必要設定](media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")
 
  這是 WCF 和 ASP.NET 應用程式在 IIS 7.0 中運作的最基本環境。
 
 ## <a name="iis-70-installation-with-iis-60-compatibility-components"></a>IIS 7.0：具有 IIS 6.0 相容性元件的安裝
- 在具有 Visual Studio 2005 或某些其他自動化腳本或工具的系統上安裝 IIS 7.0 時 (例如設定使用 IIS 6.0 元資料庫 API 之虛擬應用程式的 Adsutil.vbs) ，請務必檢查 IIS 6.0 **腳本工具**。 這會自動檢查 IIS 6.0 **管理相容性**的其他子節點。 下圖顯示完成這項操作之後的畫面：
+
+ 在具有 Visual Studio 2005 或某些其他自動化腳本或工具的系統上安裝 IIS 7.0 時 (例如設定使用 IIS 6.0 元資料庫 API 之虛擬應用程式的 Adsutil.vbs) 時，請務必檢查 IIS 6.0 **腳本工具**。 這會自動檢查 IIS 6.0 **管理相容性** 的其他子節點。 下圖顯示完成這項操作之後的畫面：
 
  ![IIS 6.0 管理相容性設定](media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
 
  在此安裝中，您擁有使用 IIS 7.0、ASP.NET 和 WCF 功能以及 Web 上可用範例的所有必要專案。
 
 ## <a name="request-limits"></a>要求限制
+
  在 Windows Vista （含 IIS 7）上，和設定的預設值已 `maxUri` `maxQueryStringSize` 變更。 根據預設，IIS 7.0 中的要求篩選允許 URL 長度為 4096 個字元，查詢字串長度為 2048 個字元。 若要變更這些預設值，請將下列 XML 加入至您的 App.config 檔中。
 
 ```xml

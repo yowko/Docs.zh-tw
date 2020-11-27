@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a9e984e1b81adda572076cb118a25f5f3a045ea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543383"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283753"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
+
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
@@ -56,6 +57,7 @@ tlbexp assemblyName [options]
 > Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如，**/n** 相當於 **/nologo**，且 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
   
 ## <a name="remarks"></a>備註  
+
  Tlbexp.exe 會產生一個類型程式庫，其含有組件中所定義的類型定義。 應用程式 (例如 Visual Basic 6.0) 可以使用產生的類型程式庫來繫結至組件中所定義的 .NET 類型。  
   
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
  Microsoft Windows 2000 (含) 以後版本都支援類型程式庫匯出工具。  
   
 ## <a name="examples"></a>範例  
+
  下列命令會產生一個和 `myTest.dll` 中組件同名的類型程式庫。  
   
 ```console  
@@ -132,7 +135,7 @@ tlbexp Sample.dll
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [工具](index.md)
-- [Regasm.exe (元件註冊工具) ](regasm-exe-assembly-registration-tool.md)
+- [Regasm.exe (組件登錄工具)](regasm-exe-assembly-registration-tool.md)
 - [組件至型別程式庫轉換的摘要](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (型別程式庫匯入工具) ](tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (類型程式庫匯入工具)](tlbimp-exe-type-library-importer.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

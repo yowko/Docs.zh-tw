@@ -1,22 +1,24 @@
 ---
 title: 同處理序並存執行
-description: 使用同進程並存裝載，在單一 .NET 進程中執行多個版本的 common language runtime （CLR）。
+description: 使用同進程並存裝載，在單一 .NET 進程中執行多個版本的 common language runtime (CLR) 。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 85d0ec90a8877384517e9de3b56258d294e0c612
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622597"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283480"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
+
 從 .NET Framework 4 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
   
 ## <a name="background"></a>背景  
+
  .NET Framework 一律會提供受控碼應用程式的並存裝載，但在 .NET Framework 4 之前，並未針對受控 COM 元件提供該功能。 過去，載入至程序的 Managed COM 元件是與已載入的執行階段版本或 .NET Framework 的最新已安裝版本一起執行。 如果此版本與 COM 元件不相容，元件就會失敗。  
   
  .NET Framework 4 提供新的方式進行並存裝載，以確保下列各項：  
@@ -47,19 +49,20 @@ ms.locfileid: "85622597"
 > .NET Framework 3.0 和 3.5 版是根據 2.0 版透過累加方式所建置，不需要並存執行。 這些本質上是相同的版本。  
   
 <a name="scenarios"></a>
+
 ## <a name="common-side-by-side-hosting-scenarios"></a>常見並存裝載案例  
   
 - **情節 1：** 使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。  
   
-     已安裝的 .NET Framework 版本： .NET Framework 4 和 COM 元件所使用的所有其他版本的 .NET Framework。  
+     安裝的 .NET Framework 版本： .NET Framework 4 以及 COM 元件所使用的所有其他 .NET Framework 版本。  
   
      處理方式：在此情節中，不執行任何動作。 COM 元件會與註冊它們的 .NET Framework 版本一起執行。  
   
-- **案例 2**：使用 .NET FRAMEWORK 2.0 SP1 建立的受控應用程式，您希望以 .NET Framework 2.0 執行，但如果沒有2.0 版本，則願意在 .NET Framework 4 上執行。  
+- **案例 2**：使用 .NET FRAMEWORK 2.0 SP1 建立的受控應用程式，您想要搭配 .NET Framework 2.0 執行，但願意在2.0 版不存在時，在 .NET Framework 4 上執行。  
   
-     安裝的 .NET Framework 版本：舊版的 .NET Framework 和 .NET Framework 4。  
+     安裝的 .NET Framework 版本：舊版 .NET Framework 和 .NET Framework 4。  
   
-     要執行的動作：在應用程式目錄的[應用程式佈建檔](../configure-apps/index.md)中，使用專案和設定的[ \<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)， [ \<startup> 如下所示](../configure-apps/file-schema/startup/startup-element.md)：  
+     作法：在應用程式目錄的[應用程式佈建檔](../configure-apps/index.md)中，使用[ \<startup> 元素](../configure-apps/file-schema/startup/startup-element.md)和[ \<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)集，如下所示：  
   
     ```xml  
     <configuration>  
@@ -70,9 +73,9 @@ ms.locfileid: "85622597"
     </configuration>  
     ```  
   
-- **案例3：** 原生應用程式，其使用以舊版 .NET Framework 建立的 COM 元件，而您想要使用 .NET Framework 4 來執行。  
+- **案例3：** 原生應用程式，其使用以舊版 .NET Framework 所建立的 COM 元件，而您想要使用 .NET Framework 4 來執行這些元件。  
   
-     已安裝的 .NET Framework 版本： .NET Framework 4。  
+     安裝的 .NET Framework 版本： .NET Framework 4。  
   
      處理方式：在應用程式目錄的應用程式組態檔中，搭配使用 `<startup>` 項目與設為 `true` 的 `useLegacyV2RuntimeActivationPolicy` 屬性以及設定如下的 `<supportedRuntime>` 項目：  
   
@@ -85,9 +88,10 @@ ms.locfileid: "85622597"
     ```  
   
 ## <a name="example"></a>範例  
+
  下列範例示範執行 Managed COM 元件的 Unmanaged COM 主機，方法是使用編譯元件使用的 .NET Framework 版本。  
   
- 若要執行下列範例，請編譯並註冊下列使用 .NET Framework 3.5 的受控 COM 元件。 若要註冊元件，請在 [專案]**** 功能表上按一下 [屬性]****，再按一下 [組建]**** 索引標籤，然後選取 [註冊 COM Interop]**** 核取方塊。  
+ 若要執行下列範例，請編譯並註冊下列使用 .NET Framework 3.5 的受控 COM 元件。 若要註冊元件，請在 [專案] 功能表上按一下 [屬性]，再按一下 [組建] 索引標籤，然後選取 [註冊 COM Interop] 核取方塊。  
   
 ```csharp
 using System;  
@@ -174,5 +178,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<startup>元素](../configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime>元素](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup> 元素](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

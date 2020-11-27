@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bdebe0db25d796c2debfb905864fd8bf780c8e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 164a939fa7ee0112e1ceae24755854b09dc72603
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558650"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283987"
 ---
 # <a name="message-security-certificate"></a>訊息安全性憑證
+
 這個範例會示範如何實作應用程式，該應用程式會對用戶端使用搭配 X.509 v3 憑證驗證的 WS-Security，並要求使用伺服器之 X.509 v3 憑證進行驗證的伺服器。 這個範例會使用預設的設定值，使所有在用戶端與伺服器之間的應用程式訊息進行簽署與加密。 此範例是以 [WSHttpBinding](wshttpbinding.md) 為基礎，而且是由用戶端主控台程式和 INTERNET INFORMATION SERVICES (IIS) 所裝載的服務程式庫所組成。 服務會實作定義要求-回覆通訊模式的合約。  
   
 > [!NOTE]
@@ -309,13 +310,13 @@ Press <ENTER> to terminate client.
   
 4. 將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5. 在伺服器上，以具有系統管理員許可權 Visual Studio 的開發人員命令提示字元執行 **setup.bat 服務** 。 使用**service**引數執行**setup.bat**會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 service .cer 的檔案。  
+5. 在伺服器上，以具有系統管理員許可權 Visual Studio 的開發人員命令提示字元執行 **setup.bat 服務** 。 使用 **service** 引數執行 **setup.bat** 會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 service .cer 的檔案。  
   
 6. 編輯 Web.config，以反映) 中的屬性 (新的憑證名稱，此名稱與 `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 電腦的完整功能變數名稱相同。  
   
 7. 從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
-8. 在用戶端上，以具有系統管理員許可權之 Visual Studio 的開發人員命令提示字元執行 **setup.bat 用戶端** 。 使用**用戶端**引數執行**setup.bat**會建立名為 client.com 的用戶端憑證，並將用戶端憑證匯出至名為 client .cer 的檔案。  
+8. 在用戶端上，以具有系統管理員許可權之 Visual Studio 的開發人員命令提示字元執行 **setup.bat 用戶端** 。 使用 **用戶端** 引數執行 **setup.bat** 會建立名為 client.com 的用戶端憑證，並將用戶端憑證匯出至名為 client .cer 的檔案。  
   
 9. 在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 若要這麼做，請使用伺服器的完整網域名稱取代 localhost。  
   

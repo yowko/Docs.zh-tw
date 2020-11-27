@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8acc792b5217519e2a73c0cdf30c20161373c678
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553814"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283909"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
+
 本節中的主題描述 Windows (ETW) 事件的事件追蹤。 每個事件都有相關聯的關鍵字和層級，如 [CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)主題中所述。 CLR 具有事件的兩個提供者：  
   
 - 執行階段提供者，以根據啟用哪些關鍵字 (事件的類別) 來引發事件。 CLR 執行階段提供者 GUID 是 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4。  
@@ -24,6 +25,7 @@ ms.locfileid: "90553814"
  如需提供者的詳細資訊，請參閱 [CLR ETW 提供者](clr-etw-providers.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [執行階段資訊事件](runtime-information-etw-events.md)  
  擷取執行階段的相關資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。  
   

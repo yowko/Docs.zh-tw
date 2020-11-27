@@ -1,6 +1,6 @@
 ---
 title: 管理連接
-description: 瞭解針對資料資源使用 HTTP 的應用程式如何使用 .NET Framework ServicePoint 和 ServicePointManager 類別來管理連接。
+description: 瞭解針對資料資源使用 HTTP 的應用程式如何使用 .NET Framework >servicepoint 和 ServicePointManager 類別來管理連接。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 124dff1b104e323b929d13f73cf17d740e747c32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 00db05c99cf232a31b10bbd0356e6d43d3bc3e28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502284"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282856"
 ---
 # <a name="managing-connections"></a>管理連接
+
 使用 HTTP 連線至資料資源的應用程式可以使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 類別管理網際網路連線，以及協助它們達到最佳規模和效能。  
   
  **ServicePoint** 類別所提供的應用程式具有應用程式可連線以存取網際網路資源的端點。 每個 **ServicePoint** 都會包含資訊來協助最佳化與網際網路伺服器的連線，方法是在連線之間共用最佳化資訊來改善效能。  
@@ -67,5 +68,5 @@ sp.ConnectionLimit = newLimit
   
 ## <a name="see-also"></a>另請參閱
 
-- [連線群組](connection-grouping.md)
+- [連接群組](connection-grouping.md)
 - [使用應用程式通訊協定](using-application-protocols.md)

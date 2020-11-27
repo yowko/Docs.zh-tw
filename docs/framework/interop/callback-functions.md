@@ -1,19 +1,20 @@
 ---
 title: 回呼函式
-description: 瞭解回呼函式，這是具有受控應用程式的程式碼，可協助非受控 DLL 函式完成工作。
+description: 閱讀有關回呼函式的程式碼，這些函式是具有 managed 應用程式的程式碼，可協助非受控 DLL 函式完成工作。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-ms.openlocfilehash: e28756b5ed935aff83363b38d6f33982e87718b2
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 659f384f7bfc3a2326a40a9536c977d7c41ab076
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621713"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283155"
 ---
 # <a name="callback-functions"></a>回呼函式
+
 回呼函式是 Managed 應用程式內的程式碼，協助未管理 DLL 函式完成工作。 回呼函式的呼叫會透過 DLL 函式從 Managed 應用程式間接傳遞，然後傳遞回 Managed 實作。 許多使用平台叫用所呼叫的 DLL 函式有一部分需要 Managed 程式碼中有回呼函式，才能正確執行。  
   
  若要從 Managed 程式碼呼叫大部分的 DLL 函式，請建立函式的 Managed 定義，然後進行呼叫。 此程序相當直接明瞭。  

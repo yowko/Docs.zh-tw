@@ -9,14 +9,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ffeb342f286663ee7fe733ee617741e0ab30d0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554836"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282869"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
   
 - COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
@@ -110,13 +111,13 @@ ms.locfileid: "90554836"
   
     |屬性|描述|必要|  
     |---------------|-----------------|--------------|  
-    |`clsid`|指定要啟用之類別的識別碼。|是|  
-    |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
-    |`name`|代表 Managed 類別的字串。|是|  
-    |`progid`|要用於晚期繫結啟用的識別碼。|否|  
-    |`threadingModel`|COM 執行緒模型。 「兩者」都是預設值。|否|  
-    |`runtimeVersion`|指定要使用的 Common Language Runtime (CLR) 版本。 如果您未指定此屬性，而且尚未載入 CLR，則會載入具有 CLR 第 4 版前之最新已安裝 CLR 的元件。 如果您指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本會自動向前復原至 CLR 版本 4 之前的最新已安裝 CLR 版本 (通常是 v2.0.50727)。 如果已載入另一個版本的 CLR，並且可以透過並存同處理序方式載入指定的版本，則會載入指定的版本；否則，會使用載入的 CLR。 這可能會造成載入失敗。|否|  
-    |`tlbid`|包含類別類型資訊的類型程式庫識別項。|否|  
+    |`clsid`|指定要啟用之類別的識別碼。|Yes|  
+    |`description`|通知使用者有關元件的字串。 空字串為預設值。|No|  
+    |`name`|代表 Managed 類別的字串。|Yes|  
+    |`progid`|要用於晚期繫結啟用的識別碼。|No|  
+    |`threadingModel`|COM 執行緒模型。 「兩者」都是預設值。|No|  
+    |`runtimeVersion`|指定要使用的 Common Language Runtime (CLR) 版本。 如果您未指定此屬性，而且尚未載入 CLR，則會載入具有 CLR 第 4 版前之最新已安裝 CLR 的元件。 如果您指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本會自動向前復原至 CLR 版本 4 之前的最新已安裝 CLR 版本 (通常是 v2.0.50727)。 如果已載入另一個版本的 CLR，並且可以透過並存同處理序方式載入指定的版本，則會載入指定的版本；否則，會使用載入的 CLR。 這可能會造成載入失敗。|No|  
+    |`tlbid`|包含類別類型資訊的類型程式庫識別項。|No|  
   
      所有屬性標記都會區分大小寫。 您可以使用 OLE/COM ObjectViewer (Oleview.exe) 檢視針對組件所匯出的型別程式庫，以取得 CLSID、ProgID、執行緒模型和執行階段版本。  
   

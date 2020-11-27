@@ -2,19 +2,21 @@
 title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550543"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283766"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
+
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
   
 ## <a name="security-concerns"></a>安全性考量  
   
 ### <a name="logging-sensitive-information"></a>記錄敏感資訊  
+
  Windows Communication Foundation (WCF) 不會修改應用程式特定標頭和主體中的任何資料。 WCF 也不會追蹤應用程式特定標頭或主體資料中的個人資訊。  
   
  啟用訊息記錄時，應用程式特定標頭中的個人資訊 (例如查詢字串) 和本文資訊 (例如信用卡號碼) 會在記錄檔中變得可見。 應用程式部署者負責強制針對組態和記錄檔採取存取控制。 如果不要讓這類資訊變得可見，您應該停用記錄，如果要共用記錄檔，則應該篩選掉部分資料。  
@@ -94,9 +96,11 @@ ms.locfileid: "90550543"
 > 格式錯誤的訊息中不會隱藏 PII。 這類訊息會依現狀記錄，不做任何修改。 上述的屬性在此不會有任何作用。  
   
 ### <a name="custom-trace-listener"></a>自訂追蹤接聽項  
+
  在訊息記錄追蹤來源上加入自訂追蹤接聽項，是僅限於系統管理員的權限。 這是因為惡意的自訂接聽項可以設定為從遠端傳送訊息，進而導致敏感資訊洩漏。 此外，如果您將自訂接聽項設定為在網路上傳送訊息，例如傳送至遠端資料庫，在遠端電腦的訊息記錄檔上應該強制採取適當的存取控制。  
   
 ## <a name="events-triggered-by-message-logging"></a>由訊息記錄所觸發的事件  
+
  以下列出由訊息記錄所發出的所有事件。  
   
 - Message logging on：在組態中或透過 WMI 啟用訊息記錄時，會發出這個事件。 事件內容為「已開啟訊息記錄。 可能會以純文字記錄敏感資料，即使在網路傳輸時經過加密，例如，訊息本文」。  
@@ -105,7 +109,7 @@ ms.locfileid: "90550543"
   
 - Log Known PII On：啟用已知 PII 記錄時，會發出這個事件。 當 `enableLoggingKnownPii` Machine.config 檔之元素中的屬性 `machineSettings` 設定為 `true` ，且 `logKnownPii` `source` App.config 或 Web.config 檔中的專案屬性設定為時， `true` 就會發生這種情況。  
   
-- Log Known PII Not Allowed：不允許記錄已知 PII 時，會發出這個事件。 當 `logKnownPii` `source` App.config 或 Web.config 檔案中專案的屬性設定為 `true` ，但 `enableLoggingKnownPii` Machine.config 檔之元素中的屬性設定為時， `machineSettings` 就 `false` 會發生這種情況。 不會擲回任何例外狀況。  
+- Log Known PII Not Allowed：不允許記錄已知 PII 時，會發出這個事件。 當 `logKnownPii` `source` App.config 或 Web.config 檔案中專案的屬性設定為 `true` ，但 `enableLoggingKnownPii` Machine.config 檔之元素中的屬性設定為時， `machineSettings` 就 `false` 會發生這種情況。 不會有例外狀況擲回。  
   
  您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需此功能的詳細資訊，請參閱 [事件記錄](./event-logging/index.md)。  
   

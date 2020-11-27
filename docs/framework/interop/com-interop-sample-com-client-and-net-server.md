@@ -1,6 +1,6 @@
 ---
 title: COM Interop 範例：COM 用戶端與 .NET 伺服器
-description: 閱讀程式碼範例，其中會顯示 COM 用戶端與執行抵押計算之 .NET 伺服器的互通性。
+description: 閱讀程式碼範例，此範例會顯示 COM 用戶端的互通性，以及執行抵押計算的 .NET server。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,19 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-ms.openlocfilehash: 1a9c17cda6a6d129327b296e5d7d851902f78d35
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 91c908153592eb8ae55ecd341b32b82a232ee473
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620881"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282921"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM Interop 範例：COM 用戶端與 .NET 伺服器
+
 此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。 在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。 這個範例的程式碼範例會出現在本節中。  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
+
 ## <a name="com-client"></a>COM 用戶端  
   
 ```cpp  
@@ -87,6 +89,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
+
 ## <a name="net-server"></a>.NET 伺服器  
   
 ```vb  

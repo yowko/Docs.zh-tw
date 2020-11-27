@@ -1,6 +1,6 @@
 ---
 title: 使用 Unmanaged DLL 函式
-description: 使用平台叫用服務來取用非受控 DLL 函式，讓 managed 程式碼呼叫在 DLL 程式庫中執行的非受控函式。
+description: 使用平台叫用服務來取用非受控 DLL 函式，此服務可讓 managed 程式碼呼叫 DLL 程式庫中所執行的非受控函式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-ms.openlocfilehash: 880cbd4701ae4aee35038f6402b3beb70e60290c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ea4008db59e580fc9d68135618f292496e96fce9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622181"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282934"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
+
 平台叫用服務，可讓受控碼呼叫實作在動態連結程式庫 (DLL) 中的非受控函式，如 Windows API 中的函式。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
   
  本節將介紹與取用非受控 DLL 函式相關聯的工作，並提供關於平台叫用的詳細資訊。 除了下列工作之外，還有一般考量以及提供其他資訊和範例的連結。  
@@ -38,11 +39,11 @@ ms.locfileid: "85622181"
   
 3. [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md).  
   
-     [Visual Basic] 搭配使用**宣告**陳述式與**函式**和 **Lib** 關鍵字。 在某些罕見的情況下，您可以搭配使用 **DllImportAttribute** 與**共用函式**關鍵字。 關於這種情況本節會於稍後加以說明。  
+     [Visual Basic] 搭配使用 **宣告** 陳述式與 **函式** 和 **Lib** 關鍵字。 在某些罕見的情況下，您可以搭配使用 **DllImportAttribute** 與 **共用函式** 關鍵字。 關於這種情況本節會於稍後加以說明。  
   
-     編寫使用**DllImportAttribute**來識別 DLL 和函式。 以**靜態**和**外部**修飾詞來標記方法。  
+     **使用DllImportAttribute** 來識別 DLL 和函式。 以 **靜態** 和 **外部** 修飾詞來標記方法。  
   
-     [C#] 使用 **DllImportAttribute** 來識別 DLL 和函式。 以**外部 "C"** 來標記包裝函式方法或函式。  
+     [C#] 使用 **DllImportAttribute** 來識別 DLL 和函式。 以 **外部 "C"** 來標記包裝函式方法或函式。  
   
 4. [呼叫 DLL 函式](calling-a-dll-function.md)。  
   
@@ -51,6 +52,7 @@ ms.locfileid: "85622181"
  如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>進一步了解平台叫用  
+
  平台叫用依賴中繼資料來找出被匯出的函式，並在執行階段封送處理其引數。 下圖顯示這項程序。  
   
  ![顯示平台叫用呼叫的圖表。](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  

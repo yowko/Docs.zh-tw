@@ -1,6 +1,6 @@
 ---
 title: Storeadm.exe (隔離儲存區工具)
-description: 請參閱隔離儲存區工具 Storeadm.exe 的相關資訊。 此工具會列出或移除目前使用者的所有現有存放區。
+description: 瞭解 Storeadm.exe 的隔離儲存區工具。 此工具會列出或移除目前使用者的所有現有存放區。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storeadm.exe
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 153fc2b4b5a955fd5ed768d1492f053595363e6e
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 974f3c464ff686a486657d08e77c97299cc94732
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517005"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283831"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (隔離儲存區工具)
+
 隔離儲存區 (Isolated Storage) 工具可以列出或移除目前使用者的所有現有存放區。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
@@ -31,7 +32,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/h**[**elp**]|顯示工具的命令語法和選項。|  
 |**/list**|顯示目前使用者的所有現有存放區。 包括這個使用者所執行的所有應用程式或組件的存放區。|  
@@ -42,6 +43,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
+
  從命令列執行 Storeadm.exe 而沒有指定任何選項時，會顯示工具的語法和選項。  
   
  **/list** 和 **/remove** 選項通常不會同時使用；不過，如果指定了兩個以上的選項，則會依照出現在命令列上的順序執行這些選項。  

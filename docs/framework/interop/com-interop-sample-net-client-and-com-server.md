@@ -1,6 +1,6 @@
 ---
 title: COM Interop 範例：.NET 用戶端與 COM 伺服器
-description: 閱讀程式碼範例，其中顯示 .NET 用戶端如何存取 COM 伺服器來建立 COM coclass 實例，以及呼叫類別成員來執行抵押計算。
+description: 閱讀程式碼範例，以示範 .NET 用戶端如何存取 COM 伺服器來建立 COM coclass 實例，並呼叫類別成員以執行抵押計算。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,21 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: bc95197813f5e4b0f4c7db6a8f0c24e8b27e4c3e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ed8568116d189573a1903678726cb348fa062376
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620868"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282882"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Interop 範例：.NET 用戶端與 COM 伺服器
+
 此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。  
   
  在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。 這個範例的程式碼片段會出現在本節中。  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
+
 ## <a name="net-client"></a>.NET 用戶端  
   
 ```vb  
@@ -153,6 +155,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
+
 ## <a name="com-server"></a>COM 伺服器  
   
 ```cpp  

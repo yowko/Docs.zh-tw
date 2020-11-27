@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: c2b23705ae309436344513e54d6258e206d69da4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f5b74674ba4144f75d125267f2458394bb74fab1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551461"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283948"
 ---
 # <a name="internet-protocol-version-6"></a>網際網路通訊協定第 6 版
+
 網際網路通訊協定第 6 版 (IPv6) 是網際網路網路層級的新標準通訊協定套件。 IPv6 旨在解決網際網路通訊協定當前版本 (稱為 IPv4) 有關位址耗竭、安全性、自動組態和擴充性等等的許多問題。 IPv6 展開網際網路的功能，以啟用新種類的應用程式，包括點對點與行動應用程式。 以下是目前 IPv4 通訊協定的主要問題：  
   
 - 快速消耗位址空間。  
@@ -45,7 +46,8 @@ ms.locfileid: "90551461"
   
  如需詳細資訊，請參閱 [IPv6 定址](ipv6-addressing.md)、[IPv6 路由](ipv6-routing.md)、[IPv6 自動組態](ipv6-auto-configuration.md)、[啟用和停用 IPv6](enabling-and-disabling-ipv6.md) 以及[如何：修改電腦組態檔以啟用 IPv6 支援](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
-## <a name="references"></a>參考  
+## <a name="references"></a>參考資料  
+
  以下是您可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站中找到的精選 RFC 文件：  
   
 - RFC 1287，前進未來網際網路架構。  
