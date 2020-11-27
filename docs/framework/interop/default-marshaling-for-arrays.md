@@ -9,14 +9,15 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: 6bfe95576a6460efac75fd392e24acf42e36f2de
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b6a675bbbfb974d78539d02b31b500b03a2ac8f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "90555259"
+ms.locfileid: "96256654"
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
+
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
   
  使用[關聯最佳化](copying-and-pinning.md)，與相同 Apartment 中的物件互動時，Blittable 陣列可以操作為 In/Out 參數。 不過，如果您稍後將程式碼匯出至用來產生跨電腦 Proxy 的型別程式庫，並且使用該程式庫跨 Apartment 封送處理呼叫，則呼叫可以回復為實際 In 參數行為。  
@@ -24,6 +25,7 @@ ms.locfileid: "90555259"
  陣列本質上相當複雜，而且 Managed 與 Unmanaged 陣列之間的區別保證資訊比其他非 Blittable 類型還要多。  
   
 ## <a name="managed-arrays"></a>Managed 陣列  
+
  Managed 陣列類別可能會不同；不過，<xref:System.Array?displayProperty=nameWithType> 類別是所有陣列類型的基底類別。 **System.Array** 類別的屬性可以判斷陣列的順位、長度以及下限和上限，以及用來存取、排序、搜尋、複製和建立陣列的方法。  
   
  這些陣列類型是動態的，而且沒有基底類別庫中所定義的對應靜態類型。 很容易就會將每個項目類型和順位組合視為不同類型的陣列。 因此，一維整數陣列的類型與一維 Double 類型陣列不同。 同樣地，二維整數陣列與一維整數陣列不同。 比較類型時，不會考慮陣列界限。  
@@ -37,9 +39,11 @@ ms.locfileid: "90555259"
 |**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*類型* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>Unmanaged 陣列  
+
  Unmanaged 陣列是具有固定或變動長度的 COM 樣式安全陣列或 C 樣式陣列。 安全陣列是自我描述陣列，具有關聯陣列資料的類型、順位和界限。 C 樣式陣列是固定下限為 0 的一維類型陣列。 封送處理服務具有這兩種類型之陣列的有限支援。  
   
 ## <a name="passing-array-parameters-to-net-code"></a>將陣列參數傳遞給 .NET 程式碼  
+
  從 Unmanaged 程式碼，可以將 C 樣式陣列和安全陣列以安全陣列或 C 樣式陣列形式傳遞給 .NET 程式碼。 下表顯示 Unmanaged 類型值和匯入的類型。  
   
 |Unmanaged 類型|匯入的類型|  
@@ -48,6 +52,7 @@ ms.locfileid: "90555259"
 |*類型*  **[]**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
   
 ### <a name="safe-arrays"></a>安全陣列  
+
  將安全陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成一維已知類型陣列 (例如 **int**)。 套用至參數的相同類型轉換規則也會套用至陣列項目。 例如，**BSTR** 類型的安全陣列變成 Managed 字串陣列，而變異值的安全陣列變成 Managed 物件陣列。 **SAFEARRAY** 項目類型擷取自型別程式庫，並儲存至 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉的 **SAFEARRAY** 值中。  
   
  因為無法從型別程式庫判斷安全陣列的順位和界限，所以順位會假設等於 1，而下限假設等於 0。 順位和界限必須定義於[型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 所產生的 Managed 簽章中。 如果在執行階段傳遞給方法的順位不同，則會擲回 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>。 如果在執行階段傳遞的陣列類型不同，則會擲回 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>。 下列範例示範 Managed 和 Unmanaged 程式碼中的安全陣列。  
@@ -82,6 +87,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
  如果修改 Tlbimp.exe 所產生的方法簽章以指出項目類型為 **ELEMENT_TYPE_ARRAY** 而非 **ELEMENT_TYPE_SZARRAY**，則可以將多維度或非零繫結的安全陣列封送處理至 Managed 程式碼。 或者，您可以搭配使用 **/sysarray** 參數與 Tlbimp.exe，以將所有陣列匯入為 <xref:System.Array?displayProperty=nameWithType> 物件。 如果所傳遞的陣列已知為多維度，您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯。 如需如何修改 MSIL 程式碼的詳細資訊，請參閱[自訂執行階段可呼叫包裝函式](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。  
   
 ### <a name="c-style-arrays"></a>C 樣式陣列  
+
  將 C 樣式陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成 **ELEMENT_TYPE_SZARRAY**。  
   
  陣列項目類型取決於型別程式庫，並且在匯入期間保留。 套用至參數的相同轉換規則也會套用至陣列項目。 例如，**LPStr** 類型陣列會成為 **String** 類型陣列。 Tlbimp.exe 會擷取陣列項目類型，並將 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性套用至參數。  
@@ -179,6 +185,7 @@ void New3(ref String ar);
  Interop 封送處理器使用 **CoTaskMemAlloc** 和 **CoTaskMemFree** 方法來配置和擷取記憶體。 Unmanaged 程式碼所執行的記憶體配置也必須使用這些方法。  
   
 ## <a name="passing-arrays-to-com"></a>將陣列傳遞給 COM  
+
  所有 Managed 陣列類型都可以從 Managed 程式碼傳遞至 Unmanaged 程式碼。 根據 Managed 類型和其套用的屬性，陣列可以存取為安全陣列或 C 樣式陣列，如下表所示。  
   
 |Managed 陣列類型|匯出為|  
@@ -190,6 +197,7 @@ void New3(ref String ar);
  與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串] 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
+
  將包含 **ELEMENT_TYPE_SZARRAY** 參數 (一維陣列) 的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 相同的轉換規則會套用至陣列項目類型。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
@@ -248,6 +256,7 @@ HRESULT New(LPStr ar[]);
  雖然封送處理器具有封送處理陣列所需的長度資訊，但是陣列長度通常會傳遞為個別引數，以將長度傳遞給被呼叫者。  
   
 ### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
+
  將包含 **ELEMENT_TYPE_ARRAY** 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
@@ -311,6 +320,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+
  將包含 <xref:System.Array?displayProperty=nameWithType> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
@@ -333,6 +343,7 @@ HRESULT New([in] SAFEARRAY(VARIANT) ar);
 ```  
   
 ### <a name="arrays-within-structures"></a>結構內的陣列  
+
  Unmanaged 結構可以包含內嵌的陣列。 根據預設，會將這些內嵌的陣列欄位封送處理為 SAFEARRAY。 在下列範例中，`s1` 是直接配置在結構本身內的內嵌陣列。  
   
 #### <a name="unmanaged-representation"></a>Unmanaged 呈現  
