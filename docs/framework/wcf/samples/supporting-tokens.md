@@ -2,17 +2,19 @@
 title: 支援權杖
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: ff46a2f5289bc72244ea586f01ea05504d628f69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d7e2a824060f4be05e0b0e9d1765fcf271eacbd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555194"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293659"
 ---
 # <a name="supporting-tokens"></a>支援權杖
+
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。
 
 ## <a name="demonstrates"></a>示範
+
  範例會示範下列情況：
 
 - 用戶端如何傳遞其他安全性權杖給服務。
@@ -25,6 +27,7 @@ ms.locfileid: "90555194"
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>用戶端透過使用者名稱權杖和支援的 X.509 安全性權杖進行驗證
+
  服務會公開用來通訊的單一端點，此端點是使用 `BindingHelper` 和 `EchoServiceHost` 類別，透過程式設計所建立的。 端點是由位址、繫結及合約所組成。 繫結是透過使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 的自訂繫結所設定。 這個範例會設定 `SymmetricSecurityBindingElement`，使其在傳輸期間使用服務 X.509 憑證來保護對稱金鑰，以及在 WS-Security 訊息標頭中傳遞 `UserNameToken` 以及支援的 `X509SecurityToken`。 對稱金鑰會用來加密訊息本文和使用者名稱安全性權杖。 支援權杖會包含在 WS-Security 訊息標頭中，當做其他二進位安全性權杖傳遞。 支援權杖的真實性是使用與支援之 X.509 安全性權杖相關聯的私密金鑰來簽署訊息的一部分，而獲得證明。
 
 ```csharp
@@ -282,6 +285,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>顯示呼叫端的資訊
+
  若要顯示呼叫者的資訊，您可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下列程式碼所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含與目前呼叫者關聯的授權宣告。 針對訊息中收到的每個權杖，Windows Communication Foundation (WCF) 會自動提供這些宣告。
 
 ```csharp
@@ -345,14 +349,17 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>執行範例
+
  當您執行範例時，用戶端首先會提示您提供使用者名稱權杖的使用者名稱和密碼。 請務必為您的系統帳戶提供正確的值，因為服務上的 WCF 會將使用者名稱權杖中提供的值對應到系統提供的身分識別。 然後，用戶端便會顯示服務的回應。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
 ## <a name="setup-batch-file"></a>設定批次檔
+
  這個範例隨附的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的網際網路資訊服務 (IIS) 裝載應用程式。 這個批次檔必須經過修改才能跨機器運作，或在非裝載的情況下運作。
 
  下面提供批次檔的各區段簡要概觀，讓您將批次檔修改為可在適當的組態下執行。
 
 ### <a name="creating-the-client-certificate"></a>建立用戶端憑證
+
  下列 Setup.bat 批次檔中的程式行會建立要使用的用戶端憑證。 `%CLIENT_NAME%` 變數會指定用戶端憑證的主體。 這個範例使用 "client.com" 做為主體名稱。
 
  憑證會儲存在 `CurrentUser` 存放區位置下的 My (Personal) 存放區中。
@@ -365,6 +372,7 @@ makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -p
 ```
 
 ### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>將用戶端憑證安裝至伺服器的受信任存放區中
+
  Setup.bat 批次檔中的下列程式行會將用戶端憑證複製到伺服器的受信任人存放區。 這是必要步驟，因為伺服器系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 
 ```console
@@ -375,6 +383,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```
 
 ### <a name="creating-the-server-certificate"></a>建立伺服器憑證
+
  下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔中的預設值為 localhost。
 
  憑證會儲存在 LocalMachine 存放區位置下的 My (Personal) 存放區中。 憑證會儲存在 IIS 裝載服務的 LocalMachine 存放區中。 對於自我裝載的服務，您應該以 CurrentUser 取代字串 LocalMachine，將批次檔改為在 CurrentUser 存放區的位置上儲存伺服器憑證。
@@ -390,6 +399,7 @@ makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -
 ```
 
 ### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>將伺服器憑證安裝至用戶端的受信任憑證存放區中
+
  Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 
 ```console
@@ -399,6 +409,7 @@ echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r C
 ```
 
 ### <a name="enabling-access-to-the-certificates-private-key"></a>啟用對憑證私密金鑰的存取
+
  若要啟用從 IIS 裝載服務對憑證私密金鑰進行的存取，就必須將私密金鑰的適當權限授與用於執行 IIS 裝載處理序的使用者帳戶。 Setup.bat 指令碼中的最後幾個步驟將會完成這個部分。
 
 ```console

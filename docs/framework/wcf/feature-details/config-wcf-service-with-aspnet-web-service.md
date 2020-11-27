@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9c241c06f153e4f85c70459ff3c50889057103f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556638"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295037"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>作法：將 WCF 服務設為與 ASP.NET Web 服務用戶端交互操作
 
@@ -18,7 +18,7 @@ ms.locfileid: "90556638"
   
  您可選擇啟用 HTTPS 支援及對繫結的傳輸層級用戶端驗證。 ASP.NET Web 服務用戶端不支援 MTOM 訊息編碼，因此 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 屬性應該保留為其預設值，也就是 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> 。 ASP.NET Web 服務用戶端不支援 WS-Security，因此 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 應該設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> 。  
   
- 若要將 WCF 服務的中繼資料提供給 ASP.NET Web 服務 proxy 產生工具 (也就是 [Web 服務描述語言工具 ( # A0) ](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))、 [Web 服務探索工具 ( # A1) ](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))和 Visual Studio) 中的「 **加入 Web 參考** 」功能，您應該公開 HTTP/GET 中繼資料端點。  
+ 若要將 WCF 服務的中繼資料提供給 ASP.NET Web 服務 proxy 產生工具 (也就是 [Web 服務描述語言工具 ( # A0)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))、 [Web 服務探索工具 ( # A1)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))和 Visual Studio) 中的「 **加入 Web 參考** 」功能，您應該公開 HTTP/GET 中繼資料端點。  
   
 ## <a name="add-an-endpoint-in-code"></a>在程式碼中新增端點  
   
@@ -41,6 +41,7 @@ ms.locfileid: "90556638"
 4. 啟用您的服務的 HTTP/GET 中繼資料端點。 如需詳細資訊，請參閱 [如何：使用設定檔發行服務的中繼資料](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)。  
   
 ## <a name="example"></a>範例  
+
  下列範例程式碼示範如何在程式碼中新增與 ASP.NET Web 服務用戶端相容的 WCF 端點，也可以在設定檔中新增。  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]

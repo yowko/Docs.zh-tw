@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295076"
 ---
 # <a name="common-security-scenarios"></a>常見的安全性案例
+
 本章節中的主題列出一些可能的用戶端和服務安全性組態。 組態會視一些因素而改變。 例如，服務或用戶端是否在內部網路，或安全性是由 Windows 或傳輸 (例如 HTTPS) 所提供。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [沒有安全保障的網際網路用戶端與服務](internet-unsecured-client-and-service.md)  
  公開、不安全的用戶端與服務範例。  
   
@@ -58,9 +60,11 @@ ms.locfileid: "90558884"
  用戶端會存取分散在網路上的一或多個 Web 服務。 Web 服務會存取必須受到保護的其他資源 (例如，資料庫或其他 Web 服務)。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相關章節  
+
  [授權](authorization-in-wcf.md)  
   
  [安全性概觀](security-overview.md)  

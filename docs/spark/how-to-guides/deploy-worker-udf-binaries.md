@@ -4,12 +4,12 @@ description: 瞭解如何為 Apache Spark 背景工作角色和使用者定義�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 19ecd4736baaf789a409229d35a6946c6021db45
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: c777fdb26045c62317b49259fdde974f43ba5c0d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688185"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293763"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>針對 Apache Spark 背景工作角色和使用者定義函數二進位檔部署 .NET
 
@@ -30,6 +30,7 @@ ms.locfileid: "94688185"
 | DOTNET_WORKER_DEBUG          | 如果您想要對 <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF 進行 debug</a>，請在執行之前將此環境變數設定為 <code>1</code> <code>spark-submit</code> 。
 
 ### <a name="parameter-options"></a>參數選項
+
 一旦將 Spark 應用程式 [配套](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies)之後，您就可以使用來啟動它 `spark-submit` 。 下表顯示一些常用的選項：
 
 | 參數名稱        | 描述
@@ -47,17 +48,21 @@ ms.locfileid: "94688185"
 > `--options` `application-jar` 使用啟動應用程式時，請指定所有的 `spark-submit` ，否則會忽略它們。 如需詳細資訊，請參閱 YARN 上的[ `spark-submit` 選項](https://spark.apache.org/docs/latest/submitting-applications.html)和執行[spark 詳細資料](https://spark.apache.org/docs/latest/running-on-yarn.html)。
 
 ## <a name="frequently-asked-questions"></a>常見問題集
+
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>當我執行具有 Udf 的 spark 應用程式時，我收到「FileNotFoundException」錯誤。 我該怎麼辦？
+
 > **錯誤：** [錯誤] [TaskRunner] [0] ProcessStream ( # A1 失敗，例外狀況：： Assembly ' MySparkApp，Version = 1.0.0.0，Culture = 中性，PublicKeyToken = null ' 找不到檔案： ' mySparkApp.dll '
 
 **答：** 檢查是否 `DOTNET_ASSEMBLY_SEARCH_PATHS` 已正確設定環境變數。 它應該是包含的路徑 `mySparkApp.dll` 。
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>在升級 Apache Spark 版本的 .NET 並重設 `DOTNET_WORKER_DIR` 環境變數之後，為什麼仍會收到下列 `IOException` 錯誤？
+
 > **錯誤：** 在階段11.0 中遺失工作 0.0 (TID 24、localhost、執行程式驅動程式) ： IOException：無法執行程式 "Microsoft.Spark.Worker.exe"： CreateProcess error = 2，系統找不到指定的檔案。
 
 **答：** 請先嘗試重新開機 PowerShell 視窗 (或其他命令視窗) ，讓它可以採用最新的環境變數值。 然後啟動您的程式。
 
 ### <a name="after-submitting-my-spark-application-i-get-the-error-systemtypeloadexception-could-not-load-type-systemruntimeremotingcontextscontext"></a>提交 Spark 應用程式之後，我收到錯誤訊息 `System.TypeLoadException: Could not load type 'System.Runtime.Remoting.Contexts.Context'` 。
+
 > **錯誤：** [錯誤] [TaskRunner] [0] ProcessStream ( # A1 失敗，例外狀況： TypeLoadException：無法從元件 ' Mscorlib.dll，Version = 4.0.0.0，Culture = 中立，PublicKeyToken = ... ' 載入類型 ' '。
 
 **答：** 檢查 `Microsoft.Spark.Worker` 您正在使用的版本。 有兩個版本： **.NET Framework 4.6.1** 和 **.net Core 3.1. x**。 在此情況下， `Microsoft.Spark.Worker.net461.win-x64-<version>` 您可以 [下載](https://github.com/dotnet/spark/releases))  (，因為 `System.Runtime.Remoting.Contexts.Context` 只適用于 .NET Framework。
@@ -78,7 +83,7 @@ hdfs://<path to jar file>/microsoft-spark-<spark_majorversion-spark_minorversion
 hdfs://<path to your files>/mySparkApp.zip mySparkApp
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 * [開始使用 .NET for Apache Spark](../tutorials/get-started.md)
 * [對 Windows 上的 .NET for Apache Spark 應用程式進行偵錯](debug.md)

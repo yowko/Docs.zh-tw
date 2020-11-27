@@ -2,14 +2,15 @@
 title: 使用者名稱密碼驗證程式
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4ad365061e6a0f3178650699febd6c18cdd14205
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bf20c9baaec44ebdfed351b35c54ab14448c7644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553109"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294920"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
+
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。
 
 > [!IMPORTANT]
@@ -32,7 +33,7 @@ ms.locfileid: "90553109"
 
 - 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
- 服務會公開單一端點，以便與服務進行通訊，使用設定檔 App.config 定義。端點是由位址、系結和合約所組成。 系結會使用 `wsHttpBinding` 預設為使用 ws-management 和使用者名稱驗證的標準進行設定。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 在中，伺服器憑證必須包含與相同的值 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。
+ 服務會公開單一端點，以便與服務進行通訊，使用設定檔 App.config 定義。端點是由位址、系結和合約所組成。 系結會使用 `wsHttpBinding` 預設為使用 WS-Security 和使用者名稱驗證的標準進行設定。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 在中，伺服器憑證必須包含與相同的值 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。
 
 ```xml
 <system.serviceModel>
@@ -251,6 +252,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 用戶端應該會成功呼叫所有方法。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
 ## <a name="setup-batch-file"></a>設定批次檔
+
  本範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨機器運作，或在非自動裝載的情況下運作。
 
  下面提供批次檔的各區段簡要概觀，讓將批次檔得以修改為在適當的組態下執行。

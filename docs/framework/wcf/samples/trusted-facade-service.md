@@ -2,14 +2,15 @@
 title: 信任的外觀服務
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 80f139ace43d5f8d2136528681386711bea7a1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544176"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295050"
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
+
 此案例範例示範如何使用 Windows Communication Foundation (WCF) 安全性基礎結構，將呼叫端的身分識別資訊從一個服務流動到另一個服務。  
   
  這是使用外觀服務將服務提供的功能公開至公用網路的一般設計模式。 外觀服務通常是在周邊網路中 (也就是非警戒區域和遮蔽式子網路)，並會與實作商務邏輯並可存取內部資料的後端服務進行通訊。 外觀服務和後端服務之間的通訊通道會經過防火牆，而且其目的通常僅限一項。  
@@ -28,9 +29,11 @@ ms.locfileid: "90544176"
 > 後端服務會信任外觀服務以驗證呼叫者。 因此，後端服務不會再次驗證呼叫者，而是會在轉遞要求中使用外觀服務提供的身分識別資訊。 由於此信任關係，後端服務必須驗證外觀服務，確保轉遞的訊息是來自可信任的來源，在此例中也就是指外觀服務。  
   
 ## <a name="implementation"></a>實作  
+
  在本範例中有兩個通訊路徑。 第一個是在用戶端和外觀服務之間，第二個則是在外觀服務和後端服務之間。  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>用戶端和外觀服務之間的通訊路徑  
+
  用戶端到外觀服務的通訊路徑會搭配使用 `wsHttpBinding` 和 `UserName` 用戶端認證類型。 這表示用戶端透過使用者名稱和密碼來驗證外觀服務，而外觀服務使用 X.509 憑證來驗證用戶端。 繫結組態如下列範例所示。  
   
 ```xml  
@@ -93,6 +96,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>外觀服務和後端服務之間的通訊路徑  
+
  外觀服務到後端服務的通訊路徑會使用由數個繫結項目組成的 `customBinding` 。 此繫結會完成兩個動作。 第一，會驗證外觀服務和後端服務，確保通訊為安全而且是來自可信任的來源。 第二，也會傳輸 `Username` 安全性權杖內部的初始呼叫者身分識別。 在此情況下，只有初始呼叫者的使用者名稱會傳輸至後端服務，而訊息中不含密碼。 這是因為後端服務信任外觀服務，以在轉遞要求至呼叫者之前先驗證呼叫者。 由於外觀服務會對後端服務進行自我驗證，後端服務便會信任轉遞之要求中所含的資訊。  
   
  下列為此通訊路徑的繫結組態。  
@@ -212,6 +216,7 @@ public string GetCallerIdentity()
  使用 `ServiceSecurityContext.Current.WindowsIdentity` 屬性擷取外觀服務的帳戶資訊。 若要存取初始呼叫者的相關資訊，後端服務會使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 屬性。 這個屬性會查詢型別為 `Identity` 的 `Name`宣告。 WCF 安全性基礎結構會自動從安全性權杖中包含的資訊產生此宣告 `Username` 。  
   
 ## <a name="running-the-sample"></a>執行範例  
+
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。 您可以在外觀和後端服務的主控台視窗中按 ENTER 鍵，即可關閉服務。  
   
 ```console  

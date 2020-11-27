@@ -2,17 +2,19 @@
 title: 使用 CodeActivity 類別撰寫工作流程活動
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: e82122301ef412f9f145ef8b6e2c9e7b9033ced1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 714e0971a006db20d002b0f3a486533b1357fba7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656013"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293815"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>使用 CodeActivity 類別撰寫工作流程活動
+
 繼承自 <xref:System.Activities.CodeActivity> 所建立的活動可藉由覆寫 <xref:System.Activities.CodeActivity.Execute%2A> 方法來實作基本命令式行為。
 
 ## <a name="using-codeactivitycontext"></a>使用 CodeActivityContext
+
  工作流程執行階段的功能可透過 <xref:System.Activities.CodeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.CodeActivityContext>)。 透過 <xref:System.Activities.CodeActivityContext> 可使用的功能如下：
 
 - 取得與設定引數和變數的值。
@@ -25,11 +27,11 @@ ms.locfileid: "64656013"
 
 1. 開啟 Visual Studio 2010。
 
-2. 選取 **檔案**，**新**，然後**專案**。 選取  **Workflow 4.0**下方**Visual C#** 中**專案類型**視窗中，然後選取**v2010**節點。 選取 **活動程式庫**中**範本**視窗。 將新專案命名為 HelloActivity。
+2. 依 **序選取 [** 檔案]、[ **新增**] 和 [ **專案**]。 在 [**專案類型**] 視窗中選取 [ **Visual c #** ] 底下的 **工作流程 4.0** ，然後選取 [ **v2010]** ] 節點。 選取 [**範本**] 視窗中的 [**活動程式庫**]。 將新專案命名為 HelloActivity。
 
-3. 以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取**刪除**。
+3. 以滑鼠右鍵按一下 HelloActivity 專案中的 [Activity1]，然後選取 [ **刪除**]。
 
-4. 以滑鼠右鍵按一下 HelloActivity 專案並選取**新增**，然後**類別**。 將新類別命名為 HelloActivity.cs。
+4. 以滑鼠右鍵按一下 HelloActivity 專案，然後依序選取 [ **加入** ] 和 [ **類別**]。 將新類別命名為 HelloActivity.cs。
 
 5. 在 HelloActivity.cs 檔案中加入下列 `using` 指示詞。
 

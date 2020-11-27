@@ -2,14 +2,15 @@
 title: 401- StopSignPostEvent
 ms.date: 03/30/2017
 ms.assetid: e033d03a-510d-4300-aa65-ef02cb4807f2
-ms.openlocfilehash: 1776252c362feb3c3ebc04651603944040ceee7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e549a8aabd0a54022000515050cde19dc4f20dd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999748"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294062"
 ---
 # <a name="401--stopsignpostevent"></a>401- StopSignPostEvent
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61999748"
 |識別碼|401|  
 |關鍵字|疑難排解|  
 |層級|資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Analytic|  
+|通路|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>描述  
+
  此事件會標記端對端活動的結束。 其中包含了活動的名稱。  
   
 ## <a name="message"></a>訊息  
+
  活動界限。  
   
 ## <a name="details"></a>詳細資料  

@@ -2,14 +2,15 @@
 title: 4820 - SynchronizationContextReset
 ms.date: 03/30/2017
 ms.assetid: 8a5c1597-5270-4b0a-9c8c-bf5f07f7e816
-ms.openlocfilehash: d128df9861fd7133ad2527044ac2c913b5c33ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92fb8fea5d8053b89a00bbf14c0225af407ec340
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651567"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295245"
 ---
 # <a name="4820---synchronizationcontextreset"></a>4820 - SynchronizationContextReset
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61651567"
 |識別碼|4820|  
 |關鍵字|探索|  
 |層級|資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  當 SynchronizationContext 已由 DiscoveryClientChannel 重設為其原始值時，就會發出此事件。  
   
 ## <a name="message"></a>訊息  
+
  SynchronizationContext 已由 DiscoveryClientChannel 重設為其原始值 %1。  
   
 ## <a name="details"></a>詳細資料

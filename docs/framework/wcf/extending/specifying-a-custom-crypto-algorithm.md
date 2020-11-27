@@ -2,14 +2,15 @@
 title: 指定自訂的加密演算法
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 3b4690071ac148966601a1c0f50edfd5a9fd52fc
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: bdb7d45752be94c4c81e27161f57f765d64bd94a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163229"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293997"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自訂的加密演算法
+
 WCF 可讓您指定加密資料或計算數位簽章時使用的自訂密碼編譯演算法。 其步驟如下：  
   
 1. 從 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生類別  
@@ -19,6 +20,7 @@ WCF 可讓您指定加密資料或計算數位簽章時使用的自訂密碼編�
 3. 使用 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生的類別設定繫結。  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>從 SecurityAlgorithmSuite 衍生類別  
+
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 是一個抽象的基底類別，可讓您指定執行各種安全性相關作業時使用的演算法。 例如，計算數位簽章的雜湊或加密訊息。 下列程式碼示範如何從 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生類別：  
   
 ```csharp  
@@ -87,6 +89,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 ```  
   
 ## <a name="register-the-custom-algorithm"></a>註冊自訂演算法  
+
  您可以在組態檔或命令式程式碼中進行註冊。 註冊自訂演算法的方法是，在實作密碼編譯服務提供者和別名的類別之間建立對應。 接著，將別名對應到在 WCF 服務的繫結中指定演算法時使用的 URI。 下列組態程式碼片段說明如何在組態中註冊自訂演算法：  
   
 ```xml  
@@ -116,6 +119,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://contoso.c
 ```  
   
 ## <a name="configure-the-binding"></a>設定繫結  
+
  在繫結設定中指定自訂 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生的類別來設定繫結，如下列程式碼片段所示：  
   
 ```csharp  

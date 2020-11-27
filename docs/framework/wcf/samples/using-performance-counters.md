@@ -2,14 +2,15 @@
 title: 使用效能計數器
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3e6b9805bd0b9c5eea991fce4dde2035f8f5c1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553040"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294907"
 ---
 # <a name="using-performance-counters"></a>使用效能計數器
+
 這個範例示範如何存取 Windows Communication Foundation (WCF) 效能計數器，以及如何建立使用者定義的效能計數器。 這個範例是以 [消費者入門](getting-started-sample.md)為基礎。  
   
 > [!NOTE]
@@ -63,7 +64,7 @@ ms.locfileid: "90553040"
   
 4. 按一下設定樹狀目錄上的 [ **診斷** ]。  
   
-5. 切換 [**診斷**] 視窗中的**效能計數器**，以顯示 [全部]。  
+5. 切換 [**診斷**] 視窗中的 **效能計數器**，以顯示 [全部]。  
   
 6. 儲存組態檔並結束編輯器。  
   

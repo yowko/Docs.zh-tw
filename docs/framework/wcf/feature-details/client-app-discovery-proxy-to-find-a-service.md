@@ -1,16 +1,17 @@
 ---
-title: HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
+title: 作法：實作使用探索 Proxy 的用戶端應用程式來尋找服務
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7316b080809f0298ae5f19eaf4160d9bca2b3ad0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587010"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295115"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
-本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在上一個主題中，[如何：執行向探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)，您已實作為向探索 proxy 註冊其本身的 WCF 服務。 在本主題中，您會建立使用探索 proxy 來尋找 WCF 服務的 WCF 用戶端。  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>作法：實作使用探索 Proxy 的用戶端應用程式來尋找服務
+
+本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在上一個主題中， [如何：執行使用探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)，您所執行的 WCF 服務會向探索 proxy 註冊本身。 在本主題中，您會建立使用探索 proxy 來尋找 WCF 服務的 WCF 用戶端。  
   
 ### <a name="implement-the-client"></a>實作用戶端  
   
@@ -101,9 +102,10 @@ ms.locfileid: "84587010"
     }  
     ```  
   
- 您已經完成實作用戶端應用程式。 繼續進行[如何：測試探索 Proxy](how-to-test-the-discovery-proxy.md)。  
+ 您已經完成實作用戶端應用程式。 繼續進行 [操作說明：測試探索 Proxy](how-to-test-the-discovery-proxy.md)。  
   
 ## <a name="example"></a>範例  
+
  以下是這個主題的完整程式碼清單。  
   
 ```csharp  
@@ -281,8 +283,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 探索概觀](wcf-discovery-overview.md)
-- [HOW TO：實作探索 Proxy](how-to-implement-a-discovery-proxy.md)
-- [HOW TO：實作以探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [作法：實作探索 Proxy](how-to-implement-a-discovery-proxy.md)
+- [作法：實作以探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)
