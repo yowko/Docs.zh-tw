@@ -6,17 +6,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 05/20/2020
 ms.locfileid: "83721223"
 ---
-### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 傾向于將 OpenSSL 1.1. x OpenSSL 1.0. x
+### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 偏好將 OpenSSL 1.1. x OpenSSL 1.0. x
 
-適用于 Linux 的 .NET Core 可跨多個 Linux 發行版本，同時支援 OpenSSL 1.0. x 和 OpenSSL 1.1. x。  .NET Core 2.1 和 .NET Core 2.2 會先尋找 1.0. x，然後回到 1.1. x; .NET Core 3.0 會先尋找 1.1. x。 這是為了新增密碼編譯標準的支援而進行的變更。
+適用于 Linux 的 .NET Core （可跨多個 Linux 發行版本運作）可支援 OpenSSL 1.0. x 和 OpenSSL 1.1. x。  .NET Core 2.1 和 .NET Core 2.2 會先尋找 1.0. x，然後切換回 1.1. x; .NET Core 3.0 會先尋找 1.1. x。 這是為了新增密碼編譯標準的支援所做的變更。
 
-這項變更可能會影響使用 .NET Core 中的 OpenSSL 特定 interop 類型執行平臺 interop 的程式庫或應用程式。
+這項變更可能會影響使用 .NET Core 中的 OpenSSL 特定 interop 類型進行平臺交互操作的程式庫或應用程式。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 2.2 和更早版本中，執行時間偏好在 1.1. x 版上載入 OpenSSL 1.0. x。 這表示 <xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> 與 OpenSSL 的互通性和類型會搭配 libcrypto 使用。因此，1.0.0/libcrypto. 1.0/libcrypto。因此，請依照喜好設定。
+在 .NET Core 2.2 及更早版本中，執行時間偏好在 1.1. x 上載入 OpenSSL 1.0. x。 這表示與 <xref:System.IntPtr> OpenSSL 搭配使用的和型別會搭配 <xref:System.Runtime.InteropServices.SafeHandle> libcrypto 使用，因此 1.0.0/libcrypto. 依此類推 1.0/libcrypto。因此，請依喜好設定來進行10。
 
-從 .NET Core 3.0 開始，執行時間偏好在 OpenSSL 1.0. x 上載入 OpenSSL 1.1. x，因此與 OpenSSL 互通的 <xref:System.IntPtr> 和 <xref:System.Runtime.InteropServices.SafeHandle> 類型會用於 libcrypto。因此，1.1/libcrypto. 11/libcrypto。因此，請依喜好設定使用 1.1.0/libcrypto。 因此，從 .NET Core 2.1 或 .NET Core 2.2 升級時，直接與 OpenSSL 互通的程式庫和應用程式可能會與 .NET Core 公開的值具有不相容的指標。
+從 .NET Core 3.0 開始，執行時間會偏好在 OpenSSL 1.0. x 上載入 OpenSSL 1.1. x， <xref:System.IntPtr> 因此 <xref:System.Runtime.InteropServices.SafeHandle> 與 OpenSSL 的 interop 的和類型會搭配 libcrypto 使用。因此，1.1/libcrypto. 依此類推. 11/libcrypto. 1.1.0/libcrypto。因此，請依喜好設定。 因此，從 .NET Core 2.1 或 .NET Core 2.2 升級時，與 OpenSSL 直接交互操作的程式庫和應用程式可能會有與 .NET Core 公開值不相容的指標。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -24,9 +24,9 @@ ms.locfileid: "83721223"
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用 OpenSSL 直接作業的程式庫和應用程式必須謹慎，以確保它們使用與 .NET Core 執行時間相同的 OpenSSL 版本。
+使用 OpenSSL 直接操作的程式庫和應用程式必須小心，以確保它們使用的 OpenSSL 版本與 .NET Core 執行時間相同。
 
-所有從 .NET Core 密碼編譯類型使用或值的程式庫或應用程式，都 <xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> 應該將其使用的程式庫版本與新的 <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> 屬性進行比較，以確保指標相容。
+使用或直接使用 OpenSSL 從 .NET Core 密碼編譯類型中之值的所有程式庫或應用程式， <xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> 都應該比較其使用的程式庫版本與新的 <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> 屬性，以確保指標相容。
 
 #### <a name="category"></a>類別
 

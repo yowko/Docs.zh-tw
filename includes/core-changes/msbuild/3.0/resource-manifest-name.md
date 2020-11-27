@@ -16,9 +16,9 @@ ms.locfileid: "83206219"
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 3.0 之前，如果 `LogicalName` `ManifestResourceName` 為專案檔中的專案指定了 no、或 `DependentUpon` 中繼資料 `EmbeddedResource` ，則 MSBuild 會在模式中產生資訊清單檔案名 `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` 。 如果 `RootNamespace` 專案檔中未定義，它會預設為專案名稱。 例如，根專案*目錄中名為*MyProject 的資源檔所產生的資訊清單名稱是*MyProject.Form1.resources*。
+在 .NET Core 3.0 之前，如果 `LogicalName` `ManifestResourceName` 為專案檔中的專案指定了 no、或 `DependentUpon` 中繼資料 `EmbeddedResource` ，則 MSBuild 會在模式中產生資訊清單檔案名 `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` 。 如果 `RootNamespace` 專案檔中未定義，它會預設為專案名稱。 例如，根專案 *目錄中名為* MyProject 的資源檔所產生的資訊清單名稱是 *MyProject.Form1.resources*。
 
-從 .NET Core 3.0 開始，如果資源檔與相同名稱的原始程式檔共存 (*例如，Form1.cs) ，MSBuild*會使用來源檔案*Form1.cs*中的類型資訊，以在模式中產生資訊清單檔案名 `<Namespace>.<ClassName>.resources` 。 命名空間和類別名稱是從共置原始檔中的第一個型別解壓縮而來。 例如，與名為*Form1.cs*的*原始程式檔共存的資源*檔所產生的資訊清單名稱，會是*MyNamespace。* 要注意的重點是，檔案名的第一個部分與舊版的 .NET Core (*MyNamespace* ，而不是 *MyProject*) 。
+從 .NET Core 3.0 開始，如果資源檔與相同名稱的原始程式檔共存 (*例如，Form1.cs) ，MSBuild* 會使用來源檔案 *Form1.cs* 中的類型資訊，以在模式中產生資訊清單檔案名 `<Namespace>.<ClassName>.resources` 。 命名空間和類別名稱是從共置原始檔中的第一個型別解壓縮而來。 例如，與名為 *Form1.cs* 的 *原始程式檔共存的資源* 檔所產生的資訊清單名稱，會是 *MyNamespace。* 要注意的重點是，檔案名的第一個部分與舊版的 .NET Core (*MyNamespace* ，而不是 *MyProject*) 。
 
 > [!NOTE]
 > 如果您在 `LogicalName` `ManifestResourceName` 專案檔中的 `DependentUpon` 專案上指定、或中繼資料 `EmbeddedResource` ，則這項變更不會影響該資源檔。

@@ -29,7 +29,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-None
+無
 
 <!-- 
 
