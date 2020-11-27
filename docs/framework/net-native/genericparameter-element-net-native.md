@@ -1,18 +1,19 @@
 ---
-title: <GenericParameter>元素（.NET Native）
+title: '<GenericParameter> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
-ms.openlocfilehash: d0b18211206a8f9d4365ab3affe6d1c376003348
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1400fb7029df533d54e87a1c534f4ac3b0a5fc68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128426"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288017"
 ---
-# <a name="genericparameter-element-net-native"></a>\<GenericParameter>元素（.NET Native）
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter> 元素 ( .NET Native) 
+
 將原則套用到泛型類型或方法的參數類型。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <GenericParameter Name="generic_parameter_name"  
@@ -29,6 +30,7 @@ ms.locfileid: "73128426"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -49,17 +51,18 @@ ms.locfileid: "73128426"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*generic_parameter_name*|必要屬性。 泛型型別參數的名稱。 例如，針對泛型委派的 <xref:System.Func%603>，"TResult" 的 *generic_parameter_name* 值會將執行階段原則套用至委派的傳回值。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -70,9 +73,10 @@ ms.locfileid: "73128426"
 |[\<Type>](type-element-net-native.md)|將執行階段反映原則套用至特定類型，例如類別或結構。|  
   
 ## <a name="remarks"></a>備註  
- `<GenericParameter>`元素是或專案的子系 [\<Method>](method-element-net-native.md) [\<Type>](type-element-net-native.md) ，用來將原則套用至特定的泛型型別參數，其由泛型型別或方法簽章中的名稱所指定。  
+
+ 專案 `<GenericParameter>` 是或專案的子系 [\<Method>](method-element-net-native.md) [\<Type>](type-element-net-native.md) ，用來將原則套用至特定的泛型型別參數，此參數是由其在泛型型別或方法簽章中的名稱所指定。  
   
- `<GenericParameter>` 元素與序列化程式搭配使用時最有用。 下列範例會使用 `<GenericParameter>` 元素，將原則套用至 `T` 呼叫 NewtonSoft JSON 序列化程式的[jsonconvert.deserializeobject. DeserializeObject \<T> （String）](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm)方法多載的類型。  
+ `<GenericParameter>` 元素與序列化程式搭配使用時最有用。 下列範例會使用專案 `<GenericParameter>` ，將原則套用至 `T` NewtonSoft JSON 序列化程式 [>jsonconvert.deserializeobject. >jsonconvert.deserializeobject \<T> (字串) ](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) 方法多載的呼叫類型。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -86,8 +90,8 @@ ms.locfileid: "73128426"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<Method>元素](method-element-net-native.md)
-- [\<Type>元素](type-element-net-native.md)
+- [\<Method> 元素](method-element-net-native.md)
+- [\<Type> 元素](type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

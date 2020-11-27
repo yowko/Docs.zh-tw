@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 6221f253746ac304115fe844966e2cf552263d04
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a1cb6d804d313f438fc8e7a92946d55f73b9ee5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551141"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288576"
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
+
 下列案例顯示 Windows Communication Foundation (使用訊息安全性模式保護的 WCF) 用戶端和服務。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱 [分散式應用程式安全性](distributed-application-security.md)。
 
  ![顯示具有憑證之用戶端的螢幕擷取畫面。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
@@ -25,25 +26,28 @@ ms.locfileid: "90551141"
 |互通性|僅限 WCF|  
 |驗證 (伺服器)|使用服務憑證|  
 |驗證 (用戶端)|使用用戶端憑證|  
-|完整性|是|  
+|完整性|Yes|  
 |機密性|是|  
 |傳輸|HTTP|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
 - 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼顯示如何建立使用訊息安全性產生安全內容的服務端點。  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  可以使用以下組態來取代程式碼。  
   
 ```xml  
@@ -85,7 +89,8 @@ ms.locfileid: "90551141"
 ```  
   
 ## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
@@ -95,12 +100,14 @@ ms.locfileid: "90551141"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼會建立用戶端。 繫結會使用訊息模式安全性，而且用戶端認證類型設為 `Certificate`。  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](working-with-certificates.md)。 程式碼也會使用 <`identity`> 專案來指定網域名稱系統 (DNS) 的預期伺服器身分識別。 如需有關身分識別的詳細資訊，請參閱 [服務身分識別和驗證](service-identity-and-authentication.md)。  
   
 ```xml  

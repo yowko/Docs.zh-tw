@@ -2,17 +2,19 @@
 title: 使用探索用戶端通道
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: a74d0ba77977e158a6c6e469a9b6a88c8d1aac82
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: baf822b5c5acd34913fdd58c346426ad91971cb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289395"
 ---
 # <a name="using-the-discovery-client-channel"></a>使用探索用戶端通道
+
 撰寫 WCF 用戶端應用程式時，您需要知道您所呼叫之服務的端點位址。 在很多情況下，無法事先知道服務的端點位址，或是服務的位址可能會隨著時間改變。 探索用戶端通道可讓您撰寫 WCF 用戶端應用程式、描述您要呼叫的服務，然後用戶端會自動傳送探查要求。 服務回應的時候，探索用戶端通道會從探查回應擷取服務的端點位址，並且使用此位址呼叫服務。  
   
 ## <a name="using-the-discovery-client-channel"></a>使用探索用戶端通道  
+
  若要使用探索用戶端通道，請將 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 的執行個體加入到您的用戶端通道堆疊。 另一種方法是使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，如果繫結還沒有 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>，就會自動加入至繫結。  
   
 > [!CAUTION]
@@ -22,9 +24,9 @@ ms.locfileid: "84575975"
   
 1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>，用來描述您要呼叫的服務。  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>，指定要傳送探索訊息的目標探索端點。  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> ，指定要將探索訊息傳送至其中的探索端點。  
   
- <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> 屬性可以指定您要搜尋的服務合約、任何必要的範圍 URI，以及開啟通道嘗試次數的上限。 合約類型是藉由呼叫此函式來指定 <xref:System.ServiceModel.Discovery.FindCriteria> 。 範圍 URI 可以加入至 <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> 屬性。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 屬性可讓您指定用戶端嘗試連接的結果數目上限。 收到探查回應時，用戶端會使用探查回應中的端點位址，嘗試開啟通道。 如果發生例外狀況，用戶端會移至下一個探查回應，若有必要，則會等候更多回應。 這個動作會繼續執行，直到通道已成功開啟，或是達到結果數目上限為止。 如需這些設定的詳細資訊，請參閱 <xref:System.ServiceModel.Discovery.FindCriteria>。  
+ <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> 屬性可以指定您要搜尋的服務合約、任何必要的範圍 URI，以及開啟通道嘗試次數的上限。 合約類型是藉由呼叫函式來指定  <xref:System.ServiceModel.Discovery.FindCriteria> 。 範圍 URI 可以加入至 <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> 屬性。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 屬性可讓您指定用戶端嘗試連接的結果數目上限。 收到探查回應時，用戶端會使用探查回應中的端點位址，嘗試開啟通道。 如果發生例外狀況，用戶端會移至下一個探查回應，若有必要，則會等候更多回應。 這個動作會繼續執行，直到通道已成功開啟，或是達到結果數目上限為止。 如需這些設定的詳細資訊，請參閱 <xref:System.ServiceModel.Discovery.FindCriteria>。  
   
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> 屬性可讓您指定要使用的探索端點。 通常這會是 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，但也可能是任何有效的端點。  
   
@@ -60,4 +62,5 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>安全性與探索用戶端通道  
- 使用探索用戶端通道時，會指定兩個端點。 一個會用來探索訊息 (通常是 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>)，另一個則是應用程式端點。 實作安全服務時，請務必謹慎，以確保兩個端點的安全。 如需安全性的詳細資訊，請參閱[保護服務和用戶端](securing-services-and-clients.md)。
+
+ 使用探索用戶端通道時，會指定兩個端點。 一個會用來探索訊息 (通常是 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>)，另一個則是應用程式端點。 實作安全服務時，請務必謹慎，以確保兩個端點的安全。 如需安全性的詳細資訊，請參閱 [保護服務與用戶端](securing-services-and-clients.md)。

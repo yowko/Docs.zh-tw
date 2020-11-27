@@ -1,18 +1,19 @@
 ---
-title: <ImpliesType>元素（.NET Native）
+title: '<ImpliesType> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181008"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287952"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType>元素（.NET Native）
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> 元素 ( .NET Native) 
+
 如果原則已套用至包含類型或方法，則會將該原則套用至類型。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml
 <ImpliesType Name="type_name"  
@@ -29,6 +30,7 @@ ms.locfileid: "79181008"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -49,17 +51,18 @@ ms.locfileid: "79181008"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*type_name*|類型名稱。 如果這個 `<ImpliesType>` 項目所表示的類型位在與其包含 `<Type>` 項目相同的命名空間中，則 *type_name* 可以包含該類型的名稱，而不包含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -71,6 +74,7 @@ ms.locfileid: "79181008"
 |[\<Method>](method-element-net-native.md)|將反映原則套用至方法。|  
   
 ## <a name="remarks"></a>備註  
+
  `<ImpliesType>` 元素的主要目的是要供程式庫使用。 它可以解決下列情況：  
   
 - 如果常式需要反映在一個類型上，則一定需要反映在第二個類型上。  
@@ -89,7 +93,7 @@ ms.locfileid: "79181008"
   
  除非 `Explicit` 的具現化具有已定義的 `Dynamic` 原則設定，否則這個指示詞沒有任何作用。 例如，如果 `Explicit<Int32>` 是這種情形，則會以其公用成員為基礎來將 `Implicit<Int32>` 具現化，並使其中繼資料可供存取來進行動態程式設計。  
   
- 下列是套用到至少一個序列化程式的真實世界範例。 指示詞會捕捉在輸入的專案上反映的需求， `IList<` *something* `>` 也牽涉到在對應的某個類型上反映， `List<` *something* `>` 而不需要每個應用程式的批註。  
+ 下列是套用到至少一個序列化程式的真實世界範例。 指示詞會捕捉在輸入的內容上反映的需求，其中 `IList<` *something* `>` 也牽涉到對應的 `List<` *某個* `>` 類型，而不需要任何每個應用程式的注釋。  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  

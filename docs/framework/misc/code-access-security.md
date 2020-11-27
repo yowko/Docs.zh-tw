@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1119965f971e00b1b795378d9af3977074a696f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224353"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288316"
 ---
 # <a name="code-access-security"></a>程式碼存取安全性
 
@@ -44,7 +44,9 @@ ms.locfileid: "92224353"
  以 Common Language Runtime 為目標的所有 Managed 程式碼，皆受益於程式碼存取安全性，即使該程式碼沒有進行單一程式碼存取安全性呼叫也一樣。 如需詳細資訊，請參閱 [Code Access Security Basics](code-access-security-basics.md)。  
   
 <a name="key_functions"></a>
+
 ## <a name="key-functions-of-code-access-security"></a>程式碼存取安全性的主要功能  
+
  程式碼存取安全性有助於限制程式碼存取受保護的資源和作業。 在 .NET Framework 中，程式碼存取安全性可執行下列功能：  
   
 - 定義代表存取各種系統資源之權利的權限和權限集合。  
@@ -56,7 +58,9 @@ ms.locfileid: "92224353"
 - 藉由比較呼叫堆疊上授與每個呼叫端的權限與呼叫端必須具備的權限，在執行階段對程式碼強制執行限制。  
   
 <a name="walking_the_call_stack"></a>
+
 ## <a name="walking-the-call-stack"></a>查核呼叫堆疊  
+
  為了判斷程式碼是否經授權可存取資源或執行某項作業，執行階段的安全性系統會查核呼叫堆疊，並比較每個呼叫端被授與的權限與要求的權限。 如果呼叫堆疊中的任何呼叫端沒有所要求的權限，系統就會擲回安全性例外狀況，並拒絕存取。 堆疊查核行程的設計是為了協助防止引誘攻擊，在這些攻擊中，信任度較低的程式碼會呼叫受高度信任的程式碼，並使用它來執行未經授權的動作。 在執行階段要求所有呼叫端的權限會影響效能，但這是基本的防護措施，可協助保護程式碼不會引誘信任度較低的程式碼攻擊。 若要優化效能，您可以讓程式碼執行較少的堆疊逐步解說。 不過，請確定您在進行此操作時，不會暴露安全性弱點。  
   
  下圖顯示當組件 A4 中的方法要求其呼叫端擁有權限 P 時，堆疊查核行程所造成的結果。  
@@ -64,9 +68,10 @@ ms.locfileid: "92224353"
  ![代碼啟用安全性堆疊逐步解說](media/slide-10a.gif "slide_10a")
   
 <a name="related_topics"></a>
+
 ## <a name="related-articles"></a>相關文章
   
-|Title|描述|  
+|標題|描述|  
 |-----------|-----------------|  
 |[程式碼存取安全性的基本概念](code-access-security-basics.md)|說明程式碼存取安全性及其最常見的用法。|  
 |[安全性透明的程式碼，層級 2](security-transparent-code-level-2.md)|描述 .NET Framework 4 中的安全性透明度模型。|  

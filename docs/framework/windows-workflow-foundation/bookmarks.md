@@ -1,24 +1,28 @@
 ---
-title: 書簽 - WF
+title: 書簽-WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: c5bd8130ee623599e80014777baf92986c3b6969
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a52823ff68d8f09895bb3a9323a57d3abccd823
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183015"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289109"
 ---
 # <a name="bookmarks"></a>書籤
+
 書籤是一種可讓活動被動等候輸入而不需保存工作流程執行緒的機制。 活動發出等候刺激的訊號時，就可以建立書籤。 此動作可讓執行階段知道，即使目前執行中的方法 (此方法建立了 <xref:System.Activities.Bookmark>) 傳回，也不應將活動的執行視為已完成。  
   
 ## <a name="bookmark-basics"></a>書籤基本資訊  
+
  <xref:System.Activities.Bookmark> 代表工作流程執行個體中可繼續執行的點 (且可透過此點傳遞輸入)。 一般而言，<xref:System.Activities.Bookmark> 有名稱，而外部 (主機或擴充) 程式碼則會負責繼續執行具有相關資料的書籤。 繼續執行 <xref:System.Activities.Bookmark> 時，工作流程執行階段會排定 <xref:System.Activities.BookmarkCallback> 委派，此委派建立時與該 <xref:System.Activities.Bookmark> 相關。  
   
 ## <a name="bookmark-options"></a>書籤選項  
+
  <xref:System.Activities.BookmarkOptions> 類別會指定要建立之 <xref:System.Activities.Bookmark> 的型別。 可能的非互斥值包括 <xref:System.Activities.BookmarkOptions.None>、<xref:System.Activities.BookmarkOptions.MultipleResume> 和 <xref:System.Activities.BookmarkOptions.NonBlocking>。 建立預期只應繼續執行一次的 <xref:System.Activities.BookmarkOptions.None> 時，請使用預設值 <xref:System.Activities.Bookmark>。 建立可以繼續多次的 <xref:System.Activities.BookmarkOptions.MultipleResume> 時，則使用 <xref:System.Activities.Bookmark>。 建立可能不會再繼續的 <xref:System.Activities.BookmarkOptions.NonBlocking> 時，請使用 <xref:System.Activities.Bookmark>。 不同於使用預設 <xref:System.Activities.BookmarkOptions> 建立的書籤，<xref:System.Activities.BookmarkOptions.NonBlocking> 書籤不會防止活動完成。  
   
 ## <a name="bookmark-resumption"></a>書籤繼續  
+
  工作流程以外的程式碼可以使用其中一個 <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> 多載來繼續書籤。 在這個範例中，會建立 `ReadLine` 活動。 執行時，`ReadLine` 活動就會建立 <xref:System.Activities.Bookmark>、註冊回呼，然後等候繼續 <xref:System.Activities.Bookmark>。 當它繼續時，`ReadLine` 活動會將以 <xref:System.Activities.Bookmark> 傳遞的資料指派至其 <xref:System.Activities.Activity%601.Result%2A> 引數。  
   
 ```csharp  
@@ -114,4 +118,5 @@ syncEvent.WaitOne();
  當執行 `ReadLine` 活動時，它會建立稱為 <xref:System.Activities.Bookmark> 的 `UserName`，然後等候書籤繼續。 主機會收集想要的資料，然後繼續 <xref:System.Activities.Bookmark>。 工作流程會繼續、顯示名稱，然後完成。 請注意，繼續書籤時不需同步處理程式碼。 <xref:System.Activities.Bookmark> 只能在工作流程閒置時繼續，若工作流程未閒置，就會封鎖對 <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> 的呼叫，直到工作流程閒置為止。  
   
 ## <a name="bookmark-resumption-result"></a>書籤繼續結果  
+
  <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> 會傳回 <xref:System.Activities.BookmarkResumptionResult> 列舉值，指出書籤繼續要求的結果。 可能的傳回值包括 <xref:System.Activities.BookmarkResumptionResult.Success>、<xref:System.Activities.BookmarkResumptionResult.NotReady> 和 <xref:System.Activities.BookmarkResumptionResult.NotFound>。 主機與擴充可以利用這個值來判斷如何繼續進行。

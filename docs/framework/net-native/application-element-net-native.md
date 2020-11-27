@@ -1,21 +1,22 @@
 ---
-title: <Application>元素（.NET Native）
+title: '<Application> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128524"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288134"
 ---
-# <a name="application-element-net-native"></a>\<Application>元素（.NET Native）
+# <a name="application-element-net-native"></a>\<Application> 元素 ( .NET Native) 
+
 做為容器，以包含整個應用程式中，可在執行階段將中繼資料用於反映的類型和類型成員，並將執行階段反映原則套用至應用程式中的所有程式元素。  
   
  \<Directives> 項目  
-\<Application>元素（rd .xml）  
+\<Application> 元素 ( # A0)   
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Application Activate="policy_setting"  
@@ -31,6 +32,7 @@ ms.locfileid: "73128524"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。 在「子元素」表格中，原則會指出可在執行階段供特定程式元素使用的中繼資料種類。  
   
 ### <a name="attributes"></a>屬性  
@@ -50,7 +52,7 @@ ms.locfileid: "73128524"
   
 ## <a name="all-attributes"></a>所有屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要讓這個原則在應用程式中套用至類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
@@ -75,17 +77,18 @@ ms.locfileid: "73128524"
 |[\<Directives>](directives-element-net-native.md)|執行階段指示詞檔案的根項目。|  
   
 ## <a name="remarks"></a>備註  
+
  [\<Directives>](directives-element-net-native.md)元素可以包含零個或一個 `<Application>` 元素。 不支援單一反映指示詞檔案中有多個 `<Application>` 元素。  
   
  `<Application>` 元素有兩種用法：  
   
-- 做為容器，以定義在執行階段會需要其中繼資料的程式元素。 在此情況下，`<Application>` 元素不需要任何屬性。 在編譯時期，編譯器工具會在所有程式庫 (包括 .NET Framework 核心程式庫) 中，搜尋 `<Application>` 元素的子元素所識別的程式元素。 相反地，編譯器工具只會搜尋元素所指定的程式庫， [\<Library>](library-element-net-native.md) 以代表的子項目所識別的程式元素 [\<Library>](library-element-net-native.md) 。  
+- 做為容器，以定義在執行階段會需要其中繼資料的程式元素。 在此情況下，`<Application>` 元素不需要任何屬性。 在編譯時期，編譯器工具會在所有程式庫 (包括 .NET Framework 核心程式庫) 中，搜尋 `<Application>` 元素的子元素所識別的程式元素。 相反地，編譯器工具只會在專案所指定的程式庫中，搜尋的 [\<Library>](library-element-net-native.md) 子專案所識別的程式元素 [\<Library>](library-element-net-native.md) 。  
   
-- 做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 元素的屬性 `<Application>` 會定義整個應用程式原則，這可能會由或元素所定義的子項目覆 `<Application>` 寫 [\<Library>](library-element-net-native.md) 。  
+- 做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 專案的屬性 `<Application>` 會定義整個應用程式的原則，該原則可能會由或專案所定義的子項目覆寫 `<Application>` [\<Library>](library-element-net-native.md) 。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<Library>元素](library-element-net-native.md)
-- [\<Directives>元素](directives-element-net-native.md)
+- [\<Library> 元素](library-element-net-native.md)
+- [\<Directives> 元素](directives-element-net-native.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

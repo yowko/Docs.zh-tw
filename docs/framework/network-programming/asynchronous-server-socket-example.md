@@ -10,14 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: e30b9694a07d1551163f5d80e7874fe5c7d29050
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 2afcd0cbfc26146c09326057037347cc9f3d7ce7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359048"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287627"
 ---
 # <a name="asynchronous-server-socket-example"></a>非同步伺服器通訊端範例
+
 下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，不會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 來自用戶端的字串必須包含字串 " \<EOF> "，以表示訊息結尾。  
   
 ```vb  

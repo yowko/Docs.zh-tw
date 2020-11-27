@@ -11,17 +11,19 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad162f24042f30eabee7a1fad2025072b26d9af5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959559"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289369"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>版本相容序列化回呼
+
 資料合約程式設計模型完整支援 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 類別所支援的版本相容序列化回呼方法。  
   
 ## <a name="version-tolerant-attributes"></a>版本相容的屬性  
+
  回呼屬性有四個。 每個屬性都可以套用至序列化/還原序列化引擎在不同時間呼叫的方法。 下表說明何時使用各個屬性。  
   
 |屬性|呼叫對應方法的時機|  
@@ -38,6 +40,7 @@ ms.locfileid: "69959559"
  每種型別只有一個方法可以標上前述各個回呼屬性。  
   
 ### <a name="example"></a>範例  
+
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   

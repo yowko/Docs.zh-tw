@@ -1,27 +1,29 @@
 ---
-title: <Library>元素（.NET Native）
+title: '<Library> 元素 ( .NET Native) '
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-ms.openlocfilehash: f94bfe047fa7a95b6f24264bae0b27112c589dfd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aeaa6b1a9c3c4ceebdd0eab3f331a044971398bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128360"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287913"
 ---
-# <a name="library-element-net-native"></a>\<Library>元素（.NET Native）
+# <a name="library-element-net-native"></a>\<Library> 元素 ( .NET Native) 
+
 定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。  
   
  \<Directives> 項目  
 \<Library> 項目  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Library Name="assembly_name" />  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -52,11 +54,12 @@ ms.locfileid: "73128360"
 |[\<Directives>](directives-element-net-native.md)|執行階段指示詞檔案的根項目。|  
   
 ## <a name="remarks"></a>備註  
+
  [\<Directives>](directives-element-net-native.md)元素可以包含零個、一個或多個 `<Library>` 元素。  
   
- `<Library>` 項目可當做容器來使用，以定義在執行階段需要中繼資料的程式項目；這個項目不會表示原則。 在編譯時期，編譯器工具只會在 `<Library>` 項目所指定的程式庫中，搜尋其子項目所識別的程式項目。 相反地，編譯器工具會搜尋所有程式庫（including.NET Framework 核心程式庫），以尋找元素的子項目所識別的程式元素 [\<Application>](application-element-net-native.md) 。  
+ `<Library>` 項目可當做容器來使用，以定義在執行階段需要中繼資料的程式項目；這個項目不會表示原則。 在編譯時期，編譯器工具只會在 `<Library>` 項目所指定的程式庫中，搜尋其子項目所識別的程式項目。 相反地，編譯器工具會在所有程式庫（including.NET Framework core 程式庫）中搜尋元素的子項目所識別的程式元素 [\<Application>](application-element-net-native.md) 。  
   
- 您可以有條件地利用 `<Library>` 指示詞。 如果專案名稱的 `<Library>` 開頭和結尾都是星號（ \* ），則只有在 `<Library>` 應用程式參考星號之間指定的元件時，指示詞才會生效。 例如，下列執行時間指示詞僅適用于應用程式參考的公用程式 .dll 元件。  
+ 您可以有條件地利用 `<Library>` 指示詞。 如果專案名稱的 `<Library>` 開頭和結尾都是星號 (\*) ，則 `<Library>` 只有當應用程式參考星號之間指定的元件時，指示詞才會有效果。 例如，只有當應用程式參考 Utilities.dll 元件時，才會套用下列執行時間指示詞。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -68,7 +71,7 @@ ms.locfileid: "73128360"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<Application>元素](application-element-net-native.md)
-- [\<Directives>元素](directives-element-net-native.md)
+- [\<Application> 元素](application-element-net-native.md)
+- [\<Directives> 元素](directives-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

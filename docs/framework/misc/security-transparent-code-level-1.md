@@ -10,12 +10,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 55cf6b937d4bb12c44aae2022921c8adb8180df4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 97acccdc1dcab11e42d116f4743e1182029e2dd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556417"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288186"
 ---
 # <a name="security-transparent-code-level-1"></a>安全性透明的程式碼，層級 1
 
@@ -35,7 +35,9 @@ ms.locfileid: "90556417"
 - [安全性透明度範例](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>
+
 ## <a name="the-level-1-transparency-model"></a>層級 1 透明度模型  
+
  當您使用層級 1 透明度時，就是使用將程式碼分為安全性透明、安全性安全關鍵和安全性關鍵方法的安全性模型。  
   
  您可以將整個組件、組件中的某些類別，或是類別中的某些方法標記為安全性透明。 安全性透明程式碼無法提高權限。 這項限制有三個後果：  
@@ -58,7 +60,9 @@ ms.locfileid: "90556417"
  為了與舊版 .NET Framework 回溯相容，會將所有未以透明度屬性標註的成員視為安全性安全關鍵。 會將所有未標註的類型都視為透明。 沒有任何靜態分析規則可以用來驗證透明度。 因此，您可能需要在執行階段偵錯透明度錯誤。  
   
 <a name="transparency_attributes"></a>
+
 ## <a name="transparency-attributes"></a>透明度屬性  
+
  下表說明您可以用來標註程式碼透明度的三個屬性。  
   
 |屬性|描述|  
@@ -70,6 +74,7 @@ ms.locfileid: "90556417"
  <xref:System.Security.SecuritySafeCriticalAttribute> 屬性可以讓安全性透明程式碼存取相同組件中安全性關鍵的成員。 請考慮將組件中的安全性透明及安全性關鍵程式碼區分成兩個組件。 安全性透明程式碼無法查看安全性關鍵程式碼的私用或內部成員。 此外，安全性關鍵程式碼一般是為了存取公用介面而受稽核的。 您可能不希望私用或內部狀態在組件外還能存取；您可能想要讓狀態保持隔離。 <xref:System.Security.SecuritySafeCriticalAttribute> 屬性會維護安全性透明與安全性關鍵程式碼之間的狀態隔離，但是可在必要時提供覆寫隔離的功能。 安全性透明程式碼無法存取私用或內部安全性關鍵程式碼，除非那些成員已經以 <xref:System.Security.SecuritySafeCriticalAttribute> 標記。 套用 <xref:System.Security.SecuritySafeCriticalAttribute> 之前，請先將成員視為已公開並加以稽核。  
   
 ### <a name="assembly-wide-annotation"></a>組件範圍的註釋  
+
  下表說明在組件層級中使用安全性屬性的效果。  
   
 |組件屬性|組件狀態|  
@@ -81,7 +86,9 @@ ms.locfileid: "90556417"
 |`SecurityCritical`|所有程式碼都預設為透明的。 不過，個別的類型和成員可以有其他屬性。|  
   
 <a name="security_transparency_examples"></a>
+
 ## <a name="security-transparency-examples"></a>安全性透明度範例  
+
  若要使用 .NET Framework 2.0 透明度規則 (層級 1 透明度)，請使用下列組件註釋：  
   
 ```csharp
