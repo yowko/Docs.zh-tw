@@ -1,20 +1,21 @@
 ---
 title: 實作 UI 自動化 Grid 控制項模式
-description: 瞭解在使用者介面自動化中執行 GridPattern 方格控制項模式的指導方針和慣例。 學習如何執行 IGridProvider 介面。
+description: 瞭解在消費者介面自動化中執行 GridPattern 方格控制項模式的指導方針和慣例。 學習如何執行 IGridProvider 介面。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 2290fd91c8eee0ab969eef2827d3c7440ef21e20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165876"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274877"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>實作 UI 自動化 Grid 控制項模式
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87165876"
  <xref:System.Windows.Automation.GridPattern> 控制項模式是用以支援當作子項目集合的容器使用的控制項。 此項目的子系必須實作 <xref:System.Windows.Automation.Provider.IGridItemProvider> ，並組合管理成資料列與資料行可周遊的二維邏輯座標系統。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
+
  實作方格控制項模式時，請注意下列方針和慣例：  
   
 - 方格座標是從左上角 (或根據地區為右上儲存格) 以零為起始，座標為 (0, 0)。  
@@ -44,25 +47,29 @@ ms.locfileid: "87165876"
 - 使用 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 追蹤方格項目或儲存格的周遊情形。  
   
 <a name="Required_Members_for_IGridProvider"></a>
+
 ## <a name="required-members-for-igridprovider"></a>IGridProvider 的必要成員  
+
  以下是實作 IGridProvider 介面的必要屬性和方法。  
   
 |必要成員|類型|注意|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|無|  
   
  此控制項模式沒有任何相關聯的事件。  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>例外狀況  
+
  提供者必須擲回下列例外狀況。  
   
 |例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列座標大於，或資料行 <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> 座標大於 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> 。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列或資料行座標之一小於零。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列座標大於，或是資料行 <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> 座標大於 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> 。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果其中一個要求的資料列或資料行座標小於零。|  
   
 ## <a name="see-also"></a>另請參閱
 

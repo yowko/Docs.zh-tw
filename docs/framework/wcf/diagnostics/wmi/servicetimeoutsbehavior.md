@@ -2,17 +2,18 @@
 title: ServiceTimeoutsBehavior
 ms.date: 03/30/2017
 ms.assetid: 4412525d-a3cc-4eae-b3e8-a50ce766d09d
-ms.openlocfilehash: 58e872f2b15776d65bccdcc47c353ce566cd9d2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867219130fc853f3ba2c1c2f807b1651f6480f13
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956724"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273967"
 ---
 # <a name="servicetimeoutsbehavior"></a>ServiceTimeoutsBehavior
+
 ServiceTimeoutsBehavior  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ServiceTimeoutsBehavior : Behavior  
@@ -22,19 +23,22 @@ class ServiceTimeoutsBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>方法  
+
  ServiceTimeoutsBehavior 類別不會定義任何方法。  
   
 ## <a name="properties"></a>屬性  
+
  ServiceTimeoutsBehavior 類別具有下列屬性：  
   
 ### <a name="transactiontimeout"></a>TransactionTimeout  
+
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  異動必須完成的期間。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
 |---------|-----------------------------------|  

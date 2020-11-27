@@ -1,16 +1,17 @@
 ---
 title: 作法：將受控碼 DCOM 移轉至 WCF
-description: 將伺服器和用戶端之間的分散式元件物件模型（DCOM） managed 程式碼呼叫遷移至 Windows Communication Foundation （WCF）。
+description: 將分散式元件物件模型遷移 (DCOM) 伺服器和用戶端之間的 managed 程式碼呼叫，以 Windows Communication Foundation (WCF) 。
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: cc6ac1dd01e17bb184d1f1faca372134d6130d33
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: eb84b8071d8dec5d3e70a2f1903f84ee64c31b08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619087"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274838"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>作法：將受控碼 DCOM 移轉至 WCF
+
 對於分散式環境中伺服器與用戶端之間的 Managed 程式碼呼叫，Windows Communication Foundation (WCF) 是比分散式元件物件模型 (DCOM) 更建議使用的安全選擇。 本文將說明如何在下列情節中將程式碼從 DCOM 移轉至 WCF。  
   
 - 遠端服務以傳值方式將物件傳回給用戶端  
@@ -24,6 +25,7 @@ ms.locfileid: "85619087"
  如需為那些服務建立 WCF 服務和用戶端的詳細資料，請參閱[基本 WCF 程式設計](../wcf/basic-wcf-programming.md)、[設計與實作服務](../wcf/designing-and-implementing-services.md)和[建置用戶端](../wcf/building-clients.md)。  
   
 ## <a name="dcom-example-code"></a>DCOM 範例程式碼  
+
  針對這些情節，使用 WCF 說明的 DCOM 介面有下列結構：  
   
 ```csharp  
@@ -48,6 +50,7 @@ public class Customer
 ```  
   
 ## <a name="the-service-returns-an-object-by-value"></a>服務以傳值方式傳回物件  
+
  在此情節中，您呼叫服務，而它的物件會從伺服器以傳值方式將物件傳回給用戶端。 此情節代表下列 COM 呼叫：  
   
 ```csharp  
@@ -60,6 +63,7 @@ public interface IRemoteService
  在此情節中，用戶端會收到來自遠端服務的已還原序列化物件複本。 用戶端可以與這個本機複本互動，而無需回呼服務。  換句話說，用戶端保證在呼叫本機複本上的方法時，將不會以任何方式影響到服務。 WCF 一律會以傳值方式從服務傳回物件，因此下列步驟說明如何建立一般 WCF 服務。  
   
 ### <a name="step-1-define-the-wcf-service-interface"></a>步驟 1：定義 WCF 服務介面  
+
  定義 WCF 服務的公用介面並以 [<xref:System.ServiceModel.ServiceContractAttribute>] 屬性標記。  將您想要公開給用戶端的方法以 [<xref:System.ServiceModel.OperationContractAttribute>] 屬性標記。 下列範例顯示使用這些屬性來識別伺服器端介面，以及用戶端可以呼叫的介面方法。 此情節中所使用的方法是以粗體顯示。  
   
 ```csharp  
@@ -79,6 +83,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="step-2-define-the-data-contract"></a>步驟 2：定義資料合約  
+
  接下來，您應該建立服務的資料合約，它將說明如何在服務及其用戶端之間交換資料。  資料合約中所述的類別應該以 [<xref:System.Runtime.Serialization.DataContractAttribute>] 屬性標記。 您想要顯示給用戶端與伺服器的個別屬性或欄位，都應有 [<xref:System.Runtime.Serialization.DataMemberAttribute>] 標記。 如果您要允許資料合約中從類別衍生的類型，您必須以 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 屬性加以識別。 WCF 只會序列化或還原序列化服務介面中的類型和已識別為已知類型的類型。 如果您嘗試使用的類型不是已知的類型，會發生例外狀況。  
   
  如需資料合約的詳細資訊，請參閱[資料合約](../wcf/samples/data-contracts.md)。  
@@ -121,6 +126,7 @@ public class Address
 ```  
   
 ### <a name="step-3-implement-the-wcf-service"></a>步驟 3：實作 WCF 服務  
+
  接下來，您應該實作 WCF 服務類別，以實作您在上個步驟中定義的介面。  
   
 ```csharp  
@@ -138,6 +144,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-4-configure-the-service-and-the-client"></a>步驟 4：設定服務和用戶端  
+
  若要執行 WCF 服務，您需要宣告一個端點，這個端點會使用特定 WCF 繫結在特定 URL 上公開該服務介面。 繫結會指定用戶端與伺服器通訊用的傳輸、編碼和通訊協定詳細資料。 您通常會將繫結加入至服務專案的組態檔 (web.config)。 下列範例顯示範例服務的繫結項目：  
   
 ```xml  
@@ -170,6 +177,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>步驟 5：執行服務  
+
  最後，您可以將下列幾行加入到服務應用程式並啟動應用程式，以在主控台應用程式自我裝載它。 如需裝載 WCF 服務應用程式之其他方式的詳細資訊，請參閱[裝載服務](../wcf/hosting-services.md)。  
   
 ```csharp  
@@ -178,6 +186,7 @@ customerServiceHost.Open();
 ```  
   
 ### <a name="step-6-call-the-service-from-the-client"></a>步驟 6：從用戶端呼叫服務  
+
  若要從用戶端呼叫服務，您需要建立服務的通道處理站，並要求通道，這可讓您直接從用戶端呼叫 `GetCustomer` 方法。 通道會實作服務的介面並為您處理基礎要求/回覆邏輯。  從該方法呼叫傳回的值是服務回應的已還原序列化複本。  
   
 ```csharp  
@@ -188,6 +197,7 @@ Customer customer = service.GetCustomer("Mary", "Smith");
 ```  
   
 ## <a name="the-client-sends-a-by-value-object-to-the-server"></a>用戶端以傳值方式將物件傳送至伺服器  
+
  在此情節中，用戶端以傳值方式將物件傳送至伺服器。 這表示伺服器會收到物件的已還原序列化複本。  伺服器可以在該複本上呼叫方法，而且保證對用戶端程式碼沒有任何回呼。 如先前所述，一般 WCF 交換資料是使用傳值方式。  如此可保證在其中一個物件上呼叫方法的作業只會在本機執行，而不會在用戶端上呼叫程式碼。  
   
  此情節代表下列 COM 方法呼叫：  
@@ -213,6 +223,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>將程式碼加入至以傳值方式傳送物件的用戶端  
+
  下列程式碼顯示用戶端如何建立新的傳值客戶物件、建立與 `ICustomerManager` 服務通訊的通道，並將客戶的物件傳送給它。  
   
  客戶物件會序列化並傳送至服務，在此處，服務會將其還原序列化為該物件的新複本。  服務在此物件上呼叫的任何方法，僅會在伺服器上本機執行。 請務必注意，此程式碼說明如何傳送衍生類型 (`PremiumCustomer`)。  服務合約需要 `Customer` 物件，但服務資料合約使用 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 屬性來指出也允許 `PremiumCustomer`。  WCF 對於透過這個服務介面序列化或還原序列化其他任何類型所做的嘗試都將會失敗。  
@@ -233,6 +244,7 @@ customerManager.StoreCustomer(customer);
 ```  
   
 ## <a name="the-service-returns-an-object-by-reference"></a>服務以傳址方式傳回物件  
+
  在此情節中，用戶端應用程式會呼叫遠端服務，方法會以傳址方式從服務傳回物件到用戶端。  
   
  如先前所述，WCF 服務一律會以傳值方式傳回物件。  不過，您可以使用 <xref:System.ServiceModel.EndpointAddress10> 類別達成類似的結果。  <xref:System.ServiceModel.EndpointAddress10> 是可序列化的傳值物件，可供用戶端用來取得伺服器上的工作階段傳址物件。  
@@ -251,6 +263,7 @@ public interface IRemoteService
 ```  
   
 ### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>步驟 1：定義工作階段 WCF 服務介面與實作  
+
  首先，定義包含工作階段物件的 WCF 服務介面。  
   
  在此程式碼中，工作階段物件會以 `ServiceContract` 屬性標記，它會識別為一般 WCF 服務介面。  此外，<xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 屬性會設定成表示它會是具有工作階段的服務。  
@@ -291,6 +304,7 @@ public interface ISessionBoundObject
 ```  
   
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>步驟 2：定義工作階段物件的 WCF 處理站服務  
+
  建立工作階段物件的服務必須定義並實作。 下列程式碼示範如何執行這項操作。 此程式碼會建立另一個 WCF 服務，傳回 <xref:System.ServiceModel.EndpointAddress10> 物件。  這是端點的可序列化形式，可用來建立工作階段物件。  
   
 ```csharp  
@@ -323,6 +337,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 ```  
   
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>步驟 3：設定並啟動 WCF 服務  
+
  若要裝載這些服務，您必須在伺服器的組態檔 (web.config) 加入下列內容。  
   
 1. 加入宣告描述工作階段物件端點的 `<client>` 區段。  在此情節中，伺服器也做為用戶端，並必須設定為啟用此設定。  
@@ -369,6 +384,7 @@ sessionBoundServiceHost.Open();
 ```  
   
 ### <a name="step-4-configure-the-client-and-call-the-service"></a>步驟 4：設定用戶端並呼叫服務  
+
  藉由在專案的應用程式組態檔 (app.config) 加入下列項目，設定用戶端與 WCF 服務進行通訊。  
   
 ```xml  

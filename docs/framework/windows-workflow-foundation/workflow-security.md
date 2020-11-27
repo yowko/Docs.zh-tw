@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: d2d8556b1ed2ac0a2b030a88d6bfc0ad48ed6f5c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6253a0d76d8b1db938e789f19d2cdd5abba9b700
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557511"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273889"
 ---
 # <a name="workflow-security"></a>工作流程安全性
+
 Windows Workflow Foundation (WF) 與數種不同的技術整合，例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。
 
 ## <a name="persistence-security-concerns"></a>持續性安全性考量
@@ -45,6 +46,7 @@ Windows Workflow Foundation (WF) 與數種不同的技術整合，例如 Microso
 - 傳入訊息的 ServiceSecurityContext 也可在工作流程內取得，方法是存取 OperationContext。
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
+
  Microsoft WF Security Pack 社區技術預覽版 (CTP) 1 是一組活動及其執行方式，以[.NET Framework 4](/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) 和[Windows IDENTITY Foundation (WIF) ](/previous-versions/dotnet/framework/security/index)中的[Windows Workflow Foundation](index.md)為基礎。 Microsoft WF Security Pack CTP 1 包含活動及其設計工具，說明如何使用工作流程輕鬆進行各種安全性相關的案例，包括：
 
 1. 在工作流程中模擬用戶端身分識別
