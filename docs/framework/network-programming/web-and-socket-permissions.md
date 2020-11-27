@@ -1,6 +1,6 @@
 ---
 title: Web 和通訊端權限
-description: 瞭解 WebPermission 和 SocketPermission 類別如何提供網際網路安全性，以便在 .NET Framework 中使用 System.Net 命名空間。
+description: 瞭解 WebPermission 和 SocketPermission 類別如何提供使用 .NET Framework 中的 System.Net 命名空間的網際網路安全性。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -16,14 +16,15 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: 08ae360e8097f7281631da2a3f9846994dfbf5b6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b940e6deb98686051847728da6fa5e20debc0f11
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501894"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276603"
 ---
 # <a name="web-and-socket-permissions"></a>Web 和通訊端權限
+
 使用 <xref:System.Net> 命名空間之應用程式的網際網路安全性是透過 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 類別提供。 **WebPermission** 類別可控制應用程式向 URI 要求資料，或提供 URI 給網際網路的權限。 **SocketPermission** 類別則可控制應用程式根據通訊端的主機、連接埠編號和傳輸通訊協定，使用 <xref:System.Net.Sockets.Socket> 在本機連接埠上接受資料，或使用另一個位址上的傳輸通訊協定連絡遠端裝置的權限。  
   
  使用的權限類別取決於您的應用程式類型。 使用 <xref:System.Net.WebRequest> 和其子系的應用程式應使用 **WebPermission** 類別來管理權限。 使用通訊端層級存取的應用程式應使用 **SocketPermission** 類別來管理權限。  
