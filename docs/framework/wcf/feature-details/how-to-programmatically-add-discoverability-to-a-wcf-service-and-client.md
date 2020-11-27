@@ -2,19 +2,20 @@
 title: 作法：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: c1b92568d90734a33a7b36af987fdb7cbbbe5149
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1226f02dd96b8ab1502869cb319c6efe1ad09d4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295557"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>作法：以程式設計方式將探索能力新增至 WCF 服務與用戶端
+
 本主題說明如何讓 Windows Communication Foundation (WCF) 服務可供探索。 它是以 [自我裝載](../samples/self-host.md) 範例為基礎。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
-1. 在 Visual Studio 2012 中開啟自我裝載解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
+1. 在 Visual Studio 2012 中開啟 Self-Host 方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
   
 2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到一則錯誤訊息，指出「系統。 ServiceModel.Discovery.dll 或其相依性的其中一個相依性需要較新版本的 .NET Framework，而不是專案中指定的版本 ...」如果您看到此訊息，請以滑鼠右鍵按一下方案總管中的專案，然後選擇 [ **屬性**]。 在 [ **專案屬性** ] 視窗中，確認 **目標 Framework** 為 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "90557823"
   
 2. 將參考加入至 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll`  
   
-3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請在 **方案總管**中的檔案上按一下滑鼠右鍵，選取 [ **複製**]，然後選取 [ **discoveryclientapp.exe** ] 專案，按一下滑鼠右鍵並選取 [ **貼**上]。  
+3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請在 **方案總管** 中的檔案上按一下滑鼠右鍵，選取 [ **複製**]，然後選取 [ **discoveryclientapp.exe** ] 專案，按一下滑鼠右鍵並選取 [ **貼** 上]。  
   
 4. 開啟 Program.cs。  
   
@@ -220,7 +221,8 @@ ms.locfileid: "90557823"
     ```  
   
 ## <a name="example"></a>範例  
- 以下是本範例的程式碼清單。 因為此程式碼是以 [自我裝載](../samples/self-host.md) 範例為基礎，所以只會列出已變更的檔案。 如需有關自我裝載範例的詳細資訊，請參閱 [安裝指示](../samples/set-up-instructions.md)。  
+
+ 以下是本範例的程式碼清單。 因為此程式碼是以 [自我裝載](../samples/self-host.md) 範例為基礎，所以只會列出已變更的檔案。 如需 Self-Host 範例的詳細資訊，請參閱 [安裝指示](../samples/set-up-instructions.md)。  
   
 ```csharp  
 // Service.cs  

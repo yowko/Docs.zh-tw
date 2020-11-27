@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 2819fb3857fa6d40a2b2e42eeaec2d9c6e50eef0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032337"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96299349"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授權： AddAuthorization 多載移至不同的元件
 
@@ -15,6 +15,7 @@ ms.locfileid: "96032337"
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
+
 `AddAuthorization` 方法存在於中 `Microsoft.AspNetCore.Authorization` 。
 
 #### <a name="new-behavior"></a>新的行為
