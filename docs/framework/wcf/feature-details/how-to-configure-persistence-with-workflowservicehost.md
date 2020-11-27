@@ -2,14 +2,15 @@
 title: 作法：以 WorkflowServiceHost 設定持續性
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 93397923154d780ed3b714bf0bb95c15bc71bbfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d8b7183b11c138b8da1f04d9084f8b94b7dcaa6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556306"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257336"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>作法：以 WorkflowServiceHost 設定持續性
+
 本主題描述如何設定 SQL 工作流程執行個體存放區功能，透過使用組態檔以啟用裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中之工作流程的持續性。 使用 SQL 工作流程執行個體存放區功能前，您必須建立一個用於保存工作流程執行個體的 SQL 資料庫。 如需詳細資訊，請參閱 [如何：啟用工作流程和工作流程服務的 SQL 持續](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)性。  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>若要在組態中設定 SQL 工作流程執行個體存放區  

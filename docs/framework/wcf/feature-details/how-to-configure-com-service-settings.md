@@ -1,23 +1,25 @@
 ---
-title: HOW TO：設定 COM+ 服務設定
+title: 作法：設定 COM+ 服務設定
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b75f5c2a64b7184959e929439893b33193aa7bae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597172"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257466"
 ---
-# <a name="how-to-configure-com-service-settings"></a>HOW TO：設定 COM+ 服務設定
-使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。 在 COM + 裝載模式中，app.config 檔案會放在應用程式根目錄中（%Programfiles%\complus applications\ 應用程式 \\ {appid} 是預設值）。 在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。  
+# <a name="how-to-configure-com-service-settings"></a>作法：設定 COM+ 服務設定
+
+使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。 在 COM + 裝載模式中，Application.config 檔案會放在應用程式根目錄中 (%Programfiles%\complus applications\ 應用程式 \\ {appid} 是預設) 。 在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。  
   
 > [!NOTE]
-> 訊息簽章應用來保護用戶端和伺服器之間的訊息不受竄改。 此外，訊息或傳輸層加密也應該用來保護用戶端和伺服器之間的訊息，以免資訊洩漏。 如同 Windows Communication Foundation （WCF）服務，您應該使用節流來限制同時呼叫、連接、實例和暫止作業的數目。 這有助防止資源過度消耗。 節流行為是透過服務組態檔設定所指定的。  
+> 訊息簽章應用來保護用戶端和伺服器之間的訊息不受竄改。 此外，訊息或傳輸層加密也應該用來保護用戶端和伺服器之間的訊息，以免資訊洩漏。 如同 Windows Communication Foundation WCF) services (，您應該使用節流來限制同時呼叫、連接、實例和擱置作業的數目。 這有助防止資源過度消耗。 節流行為是透過服務組態檔設定所指定的。  
   
 ## <a name="example"></a>範例  
+
  試想實作下列介面的元件：  
   
 ```csharp
@@ -49,7 +51,7 @@ public interface IFinancesContract : IDisposable
   
  使用這個服務的用戶端應用程式必須符合這個合約，並且使用與應用程式組態中所指定的繫結相容的繫結。  
   
- 下列程式碼範例中會示範預設組態檔。 做為 Windows Communication Foundation （WCF） Web 服務，這符合標準的服務模型設定架構，而且可以使用與其他 WCF 服務設定檔相同的方式進行編輯。  
+ 下列程式碼範例中會示範預設組態檔。 Windows Communication Foundation (WCF) Web 服務，這符合標準的服務模型設定架構，而且可以使用與其他 WCF 服務設定檔相同的方式進行編輯。  
   
  一般修改包含：  
   
@@ -96,6 +98,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [與 COM + 應用程式整合](integrating-with-com-plus-applications.md)

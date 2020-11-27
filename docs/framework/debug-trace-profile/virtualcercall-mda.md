@@ -1,6 +1,6 @@
 ---
 title: virtualCERCall MDA
-description: 檢查 virtualCERCall managed 偵錯工具（MDA），這是在 CER 包含無法自動備妥之虛擬方法的呼叫時叫用的。
+description: 檢查 virtualCERCall managed 偵錯工具 (MDA) ，如果 CER 包含無法自動準備的虛擬方法呼叫，則會叫用此功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,26 +10,31 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-ms.openlocfilehash: fab0686b1c7d2fbb1485f6e4b82d008495a553cd
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c3e8060702239c6f87659f48658160e46491542f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803556"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257089"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
+
 `virtualCERCall` Managed 偵錯助理 (MDA) 會以警告模式啟動，指示限制的執行區域 (CER) 呼叫圖形內的呼叫位置會參考虛擬目標，也就是對非 final 虛擬方法的虛擬呼叫或使用介面的呼叫。 通用語言執行平台 (CLR) 無法單從中繼語言和中繼資料分析來預測這些呼叫的目標方法。 因此，無法將呼叫樹狀結構準備為 CER 圖形的一部分，而且無法自動封鎖在該樹狀子目錄內中止的執行緒。 這個 MDA 會在下列情況下發出警告：在執行階段已知計算呼叫目標所需的其他資訊時，可能需要使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 方法的明確呼叫來擴充 CER。  
   
 ## <a name="symptoms"></a>徵狀  
+
  不會在中止執行緒或卸載應用程式定義域時執行的 CER。  
   
 ## <a name="cause"></a>原因  
+
  CER 包含了對無法自動準備之虛擬方法的呼叫。  
   
-## <a name="resolution"></a>解決方案  
+## <a name="resolution"></a>解決方法  
+
  為虛擬方法呼叫 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+
  此 MDA 對 CLR 沒有影響。  
   
 ## <a name="output"></a>輸出  
@@ -45,7 +50,7 @@ declaringType name="VirtualCERCall+MyClass"
     callsite name="MethodWithCer" offset="0x0024"  
 ```  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  
@@ -98,5 +103,5 @@ void MethodWithCer(MyClass object)
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)
