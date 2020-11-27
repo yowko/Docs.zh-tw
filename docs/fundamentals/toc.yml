@@ -19,7 +19,7 @@ items:
             href: ../core/install/macos.md
           - name: 安裝在 Linux 上
             items:
-              - name: 概觀
+              - name: 總覽
                 href: ../core/install/linux.md
               - name: Ubuntu
                 href: ../core/install/linux-ubuntu.md
@@ -196,7 +196,7 @@ items:
           - name: 總覽
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: 參考
+          - name: 參考資料
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -328,7 +328,7 @@ items:
             items:
               - name: 總覽
                 href: ../core/project-sdk/overview.md
-              - name: 參考
+              - name: 參考資料
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -384,6 +384,8 @@ items:
             href: ../core/diagnostics/index.md
           - name: 受控偵錯工具
             href: ../core/diagnostics/managed-debuggers.md
+          - name: 傾印
+            href: ../core/diagnostics/dumps.md
           - name: 對 Linux 傾印進行偵錯
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
@@ -1173,7 +1175,7 @@ items:
                             href: code-analysis/style-rules/ide0084.md
                       - name: 程式碼區塊喜好設定
                         items:
-                          - name: 概觀
+                          - name: 總覽
                             href: code-analysis/style-rules/code-block-preferences.md
                           - name: IDE0011
                             href: code-analysis/style-rules/ide0011.md
