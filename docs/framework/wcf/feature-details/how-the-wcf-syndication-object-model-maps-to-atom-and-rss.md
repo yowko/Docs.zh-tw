@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 67fbbb035a3a6683cefbf24e299f32579b674bbd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6fa390c8ae05035e589392c909ef340fb9c7948a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597250"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257811"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式
-開發 Windows Communication Foundation （WCF）同步發行服務時，您可以使用下列類別來建立摘要和專案：  
+
+當您 (WCF) 新聞訂閱服務開發 Windows Communication Foundation 時，您可以使用下列類別來建立摘要和專案：  
   
 - <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -33,7 +34,7 @@ ms.locfileid: "84597250"
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed> 可以序列化為任何一種用來定義格式器的同步發佈格式。 WCF 隨附兩個格式器： <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 。  
   
- 在 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 周圍的物件模型會與 Atom 1.0 規格 (而不是 RSS 2.0 規格) 較為符合。 這是因為 Atom 1.0 是比較實質上的規格，可用來定義不明確或是從 RSS 2.0 規格中省略的項目。 因此，WCF 摘要整合物件模型中的許多專案在 RSS 2.0 規格中並沒有直接的標記法。 將 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件序列化為 RSS 2.0 時，WCF 可讓您將 Atom 特定的資料元素序列化為符合 atom 規格的命名空間限定延伸元素。 您可以將參數傳遞至 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 建構函式來控制這個項目。  
+ 在 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 周圍的物件模型會與 Atom 1.0 規格 (而不是 RSS 2.0 規格) 較為符合。 這是因為 Atom 1.0 是比較實質上的規格，可用來定義不明確或是從 RSS 2.0 規格中省略的項目。 因此，WCF 新聞訂閱物件模型中的許多專案在 RSS 2.0 規格中沒有直接標記法。 當將 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件序列化為 RSS 2.0 時，WCF 可讓您將 Atom 特定的資料元素序列化為符合 atom 規格的符合命名空間的延伸元素。 您可以將參數傳遞至 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 建構函式來控制這個項目。  
   
  本主題中的程式碼範例將使用此處所定義的兩種方法之一來實際執行序列化作業。  
   
@@ -48,6 +49,7 @@ ms.locfileid: "84597250"
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
 ## <a name="syndicationfeed"></a>SyndicationFeed  
+
  下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationFeed> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
@@ -145,6 +147,7 @@ ms.locfileid: "84597250"
 ```  
   
 ## <a name="syndicationitem"></a>SyndicationItem  
+
  下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationItem> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
@@ -231,6 +234,7 @@ ms.locfileid: "84597250"
 ```  
   
 ## <a name="syndicationperson"></a>SyndicationPerson  
+
  下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationPerson> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
@@ -288,6 +292,7 @@ ms.locfileid: "84597250"
 ```  
   
 ## <a name="syndicationlink"></a>SyndicationLink  
+
  下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationLink> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
@@ -302,6 +307,7 @@ ms.locfileid: "84597250"
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
 ## <a name="syndicationcategory"></a>SyndicationCategory  
+
  下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationCategory> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
@@ -316,6 +322,7 @@ ms.locfileid: "84597250"
  `<category domain="categoryScheme">categoryName</category>`  
   
 ## <a name="textsyndicationcontent"></a>TextSyndicationContent  
+
  下列程式碼範例說明當您使用 HTML 內容來建立 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 的時候，將 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
@@ -360,6 +367,7 @@ ms.locfileid: "84597250"
  `<description><html> some xhtml </html></description>`  
   
 ## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
+
  下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
@@ -376,6 +384,7 @@ ms.locfileid: "84597250"
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
 ## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
+
  下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
@@ -397,10 +406,10 @@ ms.locfileid: "84597250"
   
  `</content>`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 新聞訂閱概觀](wcf-syndication-overview.md)
-- [摘要整合架構](architecture-of-syndication.md)
-- [HOW TO：建立基本 RSS 摘要](how-to-create-a-basic-rss-feed.md)
-- [HOW TO：建立基本 Atom 摘要](how-to-create-a-basic-atom-feed.md)
-- [HOW TO：將摘要同時公開為 Atom 和 RSS](how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [新聞訂閱架構](architecture-of-syndication.md)
+- [作法：建立基本 RSS 摘要](how-to-create-a-basic-rss-feed.md)
+- [作法：建立基本 Atom 摘要](how-to-create-a-basic-atom-feed.md)
+- [作法：將摘要同時公開為 Atom 和 RSS](how-to-expose-a-feed-as-both-atom-and-rss.md)

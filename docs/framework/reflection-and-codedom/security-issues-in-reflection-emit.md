@@ -12,14 +12,15 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 859c564e107fd3a9b219d71dc6ac5ccdf6e9d690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558793"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259274"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
+
 .NET Framework 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
   
 - [動態組件](#Dynamic_Assemblies)  
@@ -34,7 +35,9 @@ ms.locfileid: "90558793"
 > 針對程式碼進行反射及發出程式碼所需權限已在後續發行的 .NET Framework 中變更。 請參閱本主題稍後的[版本資訊](#Version_Information)。  
   
 <a name="Dynamic_Assemblies"></a>
+
 ## <a name="dynamic-assemblies"></a>動態組件  
+
  使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。  (查看 [安全性變更](/previous-versions/dotnet/framework/security/security-changes)。 ) 任何程式碼都可以執行其餘的多載，而不考慮信任層級。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
   
 > [!NOTE]
@@ -48,6 +51,7 @@ ms.locfileid: "90558793"
  暫時性動態組件會在記憶體中建立，並永遠不會儲存到磁碟，所以它們不需要檔案存取權限。 儲存動態組件至磁碟需要具有適當旗標的 <xref:System.Security.Permissions.FileIOPermission>。  
   
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>從部分信任的程式碼產生動態組件  
+
  請考慮具有網際網路權限的組件可產生暫時性動態組件並執行其程式碼的條件：  
   
 - 動態組件只會使用公用類型和其他組件的成員。  
@@ -59,7 +63,9 @@ ms.locfileid: "90558793"
 - 不會產生偵錯符號。 (`Internet` 和 `LocalIntranet` 權限集合不包含必要的權限。)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>
+
 ## <a name="anonymously-hosted-dynamic-methods"></a>匿名裝載的動態方法  
+
  匿名裝載的動態方法可用兩個 <xref:System.Reflection.Emit.DynamicMethod> 建構函式建立，該函式並未指定相關聯的類型或模組、<xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> 和 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>。 這些建構函式會將動態方法置於系統提供、完全受信任的安全性透明組件中。 使用這些建構函式，或發出動態方法的程式碼不需要權限。  
   
  相反地，當建立匿名裝載的動態方法時，會擷取呼叫堆疊。 當建構方法時，會對已擷取的呼叫堆疊提出安全性要求。  
@@ -82,6 +88,7 @@ ms.locfileid: "90558793"
  如需詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別。  
   
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>從部分信任的程式碼產生匿名裝載的動態方法  
+
  請考慮具有網際網路權限的組件可產生匿名裝載的動態方法並予以執行的條件：  
   
 - 動態方法只會使用公用類型和成員。 如果其授權集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，則它可以使用授權集為發出組件授權集子集或與其相等的任何組件之非公用類型與成員。  
@@ -92,7 +99,9 @@ ms.locfileid: "90558793"
 > 動態方法並不支援偵錯符號。  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
+
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>與現有組件相關聯的動態方法  
+
  若要將動態方法和現有組件中的類型或模組相關聯，請使用任何一種指定相關聯的類型或模組的 <xref:System.Reflection.Emit.DynamicMethod> 建構函式。 呼叫這些建構函式所需的權限有所不同，因為將動態方法與現有類型或模組產生關聯會讓動態方法存取非公用類型和成員：  
   
 - 與類型相關聯的動態方法可以存取所有該類型的成員，甚至是私用成員，且能存取包含相關聯的類型之組件中的所有內部類型和成員。  
@@ -137,7 +146,9 @@ ms.locfileid: "90558793"
 > 動態方法並不支援偵錯符號。  
   
 <a name="Version_Information"></a>
+
 ## <a name="version-information"></a>版本資訊  
+
  從 .NET Framework 4 開始，已消除全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](/previous-versions/dotnet/framework/security/security-changes)。  
   
  從 .NET Framework 2.0 Service Pack 1 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 此旗標在所有先前版本的 .NET Framework 中都是必要項目。  
@@ -150,6 +161,7 @@ ms.locfileid: "90558793"
  最後，.NET Framework 2.0 SP1 導入了匿名裝載的方法。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>取得類型和成員資訊  
+
  從 .NET Framework 2.0 開始，取得非公開型別和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 .NET Framework 先前版本需要具備 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](security-considerations-for-reflection.md)。  
   
 ## <a name="see-also"></a>另請參閱

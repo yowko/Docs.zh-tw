@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 847146c2025612689f0d69cc0c23d2be14018c0f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c955244c2e6821abda3a1fc5e25f00a73389ff1d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556833"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257765"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務
-當 WCF 用戶端設定為使用 WS-ADDRESSING 規格的2004版本時，Windows Communication Foundation (WCF) 用戶端與 Web 服務增強功能相容 (WSE) 3.0 for Microsoft .NET 服務。 但是，WSE 3.0 服務並不支援 (MEX) 通訊協定的中繼資料交換，因此當您使用 [配置 [中繼資料公用程式] 工具 ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md) 建立 wcf 用戶端類別時，安全性設定不會套用至產生的 wcf 用戶端。 因此，在產生 WCF 用戶端之後，您必須指定 WSE 3.0 服務所需的安全性設定。  
+
+當 WCF 用戶端設定為使用) 規格的2004版時，Windows Communication Foundation (WCF) 用戶端與 Web 服務增強功能相容 (WSE WS-Addressing 3.0 for Microsoft .NET 服務。 但是，WSE 3.0 服務並不支援 (MEX) 通訊協定的中繼資料交換，因此當您使用 [配置 [中繼資料公用程式] 工具 ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md) 建立 wcf 用戶端類別時，安全性設定不會套用至產生的 wcf 用戶端。 因此，在產生 WCF 用戶端之後，您必須指定 WSE 3.0 服務所需的安全性設定。  
   
  您可以使用自訂系結來套用這些安全性設定，以將 wse 3.0 服務的需求和 WSE 3.0 服務和 WCF 用戶端之間的互通需求納入考慮。 這些互通性需求包含上述的 WS-Addressing August 2004 規格使用和 WSE 3.0 預設訊息保護 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>。 WCF 的預設訊息保護是 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> 。 本主題詳細說明如何建立與 WSE 3.0 服務交互操作的 WCF 系結。 WCF 也提供併入這個系結的範例。 如需此範例的詳細資訊，請參閱 [與 .Asmx Web 服務互](../samples/interoperating-with-asmx-web-services.md)操作。  
   
@@ -58,6 +59,7 @@ ms.locfileid: "90556833"
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例會定義自訂的繫結，此繫結會公開 WSE 3.0 通行安全性判斷提示屬性的對應屬性。 該自訂系結（名為 `WseHttpBinding` ）接著會用來指定 WCF 用戶端的系結屬性，該用戶端會與 WSSECURITYANONYMOUS WSE 3.0 快速入門範例進行通訊。  
 
 ## <a name="see-also"></a>另請參閱

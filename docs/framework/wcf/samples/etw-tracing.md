@@ -3,14 +3,15 @@ title: ETW 追蹤
 description: 這個範例示範如何使用 Windows 事件追蹤 (ETW) 和 ETWTraceListener，來執行端對端 (E2E) 追蹤。
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6777b2d14786f7a79b3605bec93b4da62ff24616
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547137"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258474"
 ---
 # <a name="etw-tracing"></a>ETW 追蹤
+
 這個範例示範如何使用 Event Tracing for Windows (ETW) 和範例隨附的 `ETWTraceListener`，以實作端對端 (E2E) 追蹤。 此範例是以 [消費者入門](getting-started-sample.md) 為基礎，而且包含 ETW 追蹤。  
   
 > [!NOTE]

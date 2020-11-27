@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: 3ec8b8387abf0f0271bb9585d8487c98ee6a893f
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: e8bce469fd09de02ef6ab30e21ae20a9b9f71325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259266"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
+
 您可以使用 .NET Framework 的 [便攜類別庫](portable-class-library.md) ，在多個平臺上執行模型視圖模型 (MVVM) 模式並共用元件。
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
@@ -27,6 +28,7 @@ ms.locfileid: "92687808"
  本主題不提供 MVVM 模式的一般資訊。 它只會提供有關如何使用可移植類別庫來實行 MVVM 的資訊。 如需 MVVM 的詳細資訊，請參閱 [使用適用于 WPF 的 Prism 程式庫5.0 的 Mvvm 快速入門](/previous-versions/msp-n-p/gg430857(v=pandp.40))。
 
 ## <a name="classes-that-support-mvvm"></a>支援 MVVM 的類別
+
  當您將目標設為適用于 .NET Framework 4.5、適用于 Windows 8 x 商店應用程式的 .NET、適用于您的便攜類別庫專案的 .NET，或 Windows Phone 7.5 時，可使用下列類別來實 MVVM 模式：
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 類別
@@ -52,11 +54,13 @@ ms.locfileid: "92687808"
 - 命名空間中的所有類別 <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>
 
 ## <a name="implementing-mvvm"></a>實現 MVVM
+
  若要實施 MVVM，您通常會在可移植的類別庫專案中建立模型和視圖模型，因為便攜類別庫專案無法參考不可移植的專案。 模型和視圖模型可以位於相同專案或個別專案中。 如果您使用不同的專案，請將視圖模型專案的參考加入至模型專案。
 
  在您編譯模型並查看模型專案之後，您可以在包含此視圖的應用程式中參考這些元件。 如果視圖只與視圖模型互動，您只需要參考包含視圖模型的元件。
 
-### <a name="model"></a>型號
+### <a name="model"></a>模型
+
  下列範例顯示可位於可移植類別庫專案中的簡化模型類別。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -68,6 +72,7 @@ ms.locfileid: "92687808"
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]
 
 ### <a name="view-model"></a>視圖模型
+
  建立 MVVM 模式時，經常會加入視圖模型的基類。 下列範例顯示基類。
 
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
@@ -84,10 +89,11 @@ ms.locfileid: "92687808"
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
 ### <a name="view"></a>檢視  
+
  從 .NET Framework 4.5 應用程式、Windows 8. x 商店應用程式、Silverlight 應用程式或 Windows Phone 7.5 應用程式，您可以參考包含模型和 view 模型專案的元件。  然後，您可以建立與視圖模型互動的視圖。 下列範例顯示簡化的 Windows Presentation Foundation (WPF) 應用程式，可從視圖模型中抓取和更新資料。 您可以在 Silverlight、Windows Phone 或 Windows 8. x Store 應用程式中建立類似的視圖。  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [可攜式類別庫](portable-class-library.md)

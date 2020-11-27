@@ -2,14 +2,15 @@
 title: 使用 IPv6 和 Teredo 的 NAT 周遊
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6448ddf117e1f454338869820751ae5d9e0070e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642167"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258617"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 周遊
+
 已進行支援網路位址轉譯 (NAT) 周遊的增強功能。 這些變更設計成與 IPv6 和 Teredo 搭配使用，但也適用於其他 IP 通道技術。 這些增強功能會影響 <xref:System.Net> 和相關命名空間中的類別。  
   
  這些變更可能會影響計劃使用 IP 通道技術的用戶端和伺服器應用程式。  
@@ -17,6 +18,7 @@ ms.locfileid: "61642167"
  支援 NAT 周遊的變更只適用於使用 .NET Framework 第 4 版的應用程式。 舊版 .NET Framework 無法使用這些功能。  
   
 ## <a name="overview"></a>概觀  
+
  網際網路通訊協定第 4 版 (IPv4) 已將 IPv4 位址的長度定義為 32 位元。 因此，IPv4 大約支援 40 億個唯一 IP 位址 (2^32)。 因為網際網路上的電腦和網路裝置數目已在 1990 年代擴充，所以 IPv4 位址空間限制變得明顯。  
   
  數個用來擴充 IPv4 存留期的其中一個技術是部署 NAT，以允許單一唯一公用 IP 位址代表大量私人 IP 位址 (私人內部網路)。 受 NAT 裝置保護的私人 IP 位址會共用單一公用 IPv4 位址。 NAT 裝置可能是專用硬體裝置 (例如，便宜的無線存取點和路由器) 或執行服務來提供 NAT 的電腦。 此公用 IP 位址的裝置或服務會在公用網際網路與私人內部網路之間轉譯 IP 位址封包。  
@@ -30,6 +32,7 @@ ms.locfileid: "61642167"
  Teredo 是其中一種 IPv6 轉換技術，具有與 IPv4 網路的 IPv6 連線。 網際網路工程任務推動小組 (IETF) 發行的 RFC 4380 中已記載 Teredo。 Windows XP SP2 和更新版本所支援的虛擬 Teredo 配接器可以提供 2001:0::/32 範圍中的公用 IPv6 位址。 這個 IPv6 位址可以用來接聽來自網際網路的連入連線，並且可以提供給具 IPv6 功能且想要連線至接聽端服務的用戶端。 這讓應用程式不用擔心如何處理受 NAT 裝置保護的電腦，因為應用程式只能使用其 IPv6 Teredo 位址與之連線。  
   
 ## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>支援 NAT 周遊和 Teredo 的增強功能  
+
  在 <xref:System.Net>、<xref:System.Net.NetworkInformation> 和 <xref:System.Net.Sockets> 命名空間中新增增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
   
  <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> 類別中已新增數個方法，來取得主機上的單點傳播 IP 位址清單。 <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> 方法會開始非同步要求，以擷取本機電腦上的穩定單點傳播 IP 位址表格。 <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> 方法會結束暫止非同步要求，以擷取本機電腦上的穩定單點傳播 IP 位址表格。 <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> 方法是同步要求，以擷取本機電腦上的穩定單點傳播 IP 位址表格，並視需要等到位址表格穩定為止。  

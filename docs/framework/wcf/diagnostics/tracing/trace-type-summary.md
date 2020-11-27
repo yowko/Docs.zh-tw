@@ -2,17 +2,18 @@
 title: 追蹤類型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: e8d222d6f093f5db3bd620194bfde7edd4b998a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674832"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259241"
 ---
 # <a name="trace-type-summary"></a>追蹤類型摘要
-[源級別](xref:System.Diagnostics.SourceLevels)定義各種跟蹤級別：嚴重、錯誤、警告、資訊和詳細，並提供`ActivityTracing`標誌的說明，該標誌可切換跟蹤邊界和活動傳輸事件的輸出。  
+
+[來源層級](xref:System.Diagnostics.SourceLevels) 會定義各種不同的追蹤層級： [嚴重]、[錯誤]、[警告]、[資訊] 和 [詳細資訊]，並提供旗標的描述 `ActivityTracing` ，以切換追蹤界限與活動傳輸事件的輸出。  
   
- 您還可以查看<xref:System.Diagnostics.TraceEventType>可以從 中釋放的跟蹤類型<xref:System.Diagnostics>。  
+ 您也可以查看 <xref:System.Diagnostics.TraceEventType> 可從發出的追蹤類型 <xref:System.Diagnostics> 。  
   
  下表列出最重要的幾個。  
   
@@ -23,11 +24,11 @@ ms.locfileid: "78674832"
 |警告|參考資訊。|  
 |資訊|非嚴重問題。|  
 |「詳細資訊」|偵錯追蹤。|  
-|Start|開始邏輯處理單位。|  
+|開始|開始邏輯處理單位。|  
 |暫止|暫停邏輯處理單位。|  
 |繼續|繼續邏輯處理單位。|  
-|Stop|停止邏輯處理單位。|  
-|傳輸|相互關聯身分識別變更。|  
+|停止|停止邏輯處理單位。|  
+|傳送|相互關聯身分識別變更。|  
   
  活動會定義為上述追蹤類型的組合。  
   

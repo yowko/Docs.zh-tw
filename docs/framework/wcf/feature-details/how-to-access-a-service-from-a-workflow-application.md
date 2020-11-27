@@ -2,14 +2,15 @@
 title: 如何：存取來自工作流程應用程式的服務
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556872"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257928"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：存取來自工作流程應用程式的服務
+
 本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。 這取決於完成 how [to：使用訊息活動建立工作流程服務](how-to-create-a-workflow-service-with-messaging-activities.md) 主題。 雖然本主題描述如何從工作流應用程式呼叫工作流程服務，但是您可以使用相同的方法，從工作流應用程式呼叫任何 Windows Communication Foundation (WCF) 服務。
 
 ### <a name="create-a-workflow-console-application-project"></a>建立工作流程主控台應用程式專案
@@ -18,7 +19,7 @@ ms.locfileid: "90556872"
 
 2. 載入您在 how [to：使用訊息活動建立工作流程服務](how-to-create-a-workflow-service-with-messaging-activities.md) 主題中建立的 MyWFService 專案。
 
-3. 以滑鼠右鍵按一下**方案總管**中的 [ **MyWFService** ] 方案，然後選取 [**加入**]、[**新增專案**]。 從專案類型清單中，選取 [**已安裝的範本**] 和 [**工作流程主控台應用程式**] 中的**工作流程**。 將專案命名為 MyWFClient，並且使用預設位置，如下圖所示。
+3. 以滑鼠右鍵按一下 **方案總管** 中的 [ **MyWFService** ] 方案，然後選取 [**加入**]、[**新增專案**]。 從專案類型清單中，選取 [**已安裝的範本**] 和 [**工作流程主控台應用程式**] 中的 **工作流程**。 將專案命名為 MyWFClient，並且使用預設位置，如下圖所示。
 
      ![加入新的專案對話方塊](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
@@ -26,11 +27,11 @@ ms.locfileid: "90556872"
 
 4. 建立專案之後，Workflow1.xaml 檔會在設計工具中開啟。 按一下 [ **工具箱** ] 索引標籤以開啟 [工具箱] （如果尚未開啟），然後按一下圖釘將 [工具箱] 視窗保持開啟。
 
-5. 按下**Ctrl** + **F5**來建立和啟動服務。 ASP.NET 程式開發伺服器會如往常一般隨即啟動，而且 Internet Explorer 會顯示 WCF 說明網頁。 請記下這個網頁的 URI，因為您必須在下一個步驟中使用。
+5. 按下 **Ctrl** + **F5** 來建立和啟動服務。 ASP.NET 程式開發伺服器會如往常一般隨即啟動，而且 Internet Explorer 會顯示 WCF 說明網頁。 請記下這個網頁的 URI，因為您必須在下一個步驟中使用。
 
      ![顯示 WCF 說明頁面和 URI 的 IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6. 以滑鼠右鍵按一下**方案總管**中的 [ **MyWFClient** ] 專案，然後選取 [**加入**  >  **服務參考**]。 按一下 [ **探索** ] 按鈕，在目前的解決方案中搜尋任何服務。 按一下 [服務] 清單中 Service1.xamlx 旁邊的三角形。 按一下 Service1 旁邊的三角形，即可列出 Service1 服務實作的合約。 展開 [**服務**] 清單中的 [ **Service1** ] 節點。 Echo 作業會顯示在 **作業** 清單中，如下圖所示。
+6. 以滑鼠右鍵按一下 **方案總管** 中的 [ **MyWFClient** ] 專案，然後選取 [**加入**  >  **服務參考**]。 按一下 [ **探索** ] 按鈕，在目前的解決方案中搜尋任何服務。 按一下 [服務] 清單中 Service1.xamlx 旁邊的三角形。 按一下 Service1 旁邊的三角形，即可列出 Service1 服務實作的合約。 展開 [**服務**] 清單中的 [ **Service1** ] 節點。 Echo 作業會顯示在 **作業** 清單中，如下圖所示。
 
      ![加入服務參考對話方塊](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -52,7 +53,7 @@ ms.locfileid: "90556872"
 
      ![將引數繫結至變數](./media/how-to-access-a-service-from-a-workflow-application/bind-arguments-variables.jpg)
 
-10. 將 [ **WriteLine** ] 活動拖放到 [ **Echo** ] 活動下方，以顯示服務呼叫所傳回的字串。 [ **WriteLine** ] 活動位於 [工具箱] 的 [ **基本** ] 節點中。 藉由**Text**在**WriteLine** `outString` `outString` [ **writeline** ] 活動的文字方塊中輸入，將 WriteLine 活動的文字引數系結至變數。 現在，工作流程的外觀應該如下圖所示。
+10. 將 [ **WriteLine** ] 活動拖放到 [ **Echo** ] 活動下方，以顯示服務呼叫所傳回的字串。 [ **WriteLine** ] 活動位於 [工具箱] 的 [ **基本** ] 節點中。 藉由 **Text** 在 **WriteLine** `outString` `outString` [ **writeline** ] 活動的文字方塊中輸入，將 WriteLine 活動的文字引數系結至變數。 現在，工作流程的外觀應該如下圖所示。
 
      ![完整的用戶端工作流程](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 

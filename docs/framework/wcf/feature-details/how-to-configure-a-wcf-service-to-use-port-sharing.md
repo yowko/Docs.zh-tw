@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 28f2858d68de99839d7fec66b0fe4528d7e42325
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 39b9da1096c38eba648f528f7c2b3ecaa39ab7c2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579523"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257505"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>HOW TO：將 Windows Communication Foundation 服務設為使用連接埠共用
-在您的 Windows Communication Foundation （WCF）應用程式中使用 net.tcp：//埠共用的最簡單方式，就是使用來公開服務 <xref:System.ServiceModel.NetTcpBinding> 。  
+
+在 Windows Communication Foundation (WCF) 應用程式中使用 net.tcp：//埠共用的最簡單方式，就是使用來公開服務 <xref:System.ServiceModel.NetTcpBinding> 。  
   
  這項繫結會提供 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 屬性，以控制是否針對使用此繫結進行設定的服務啟用 net.tcp:// 連接埠共用。  
   
@@ -21,7 +22,7 @@ ms.locfileid: "84579523"
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>若要使用程式碼啟用 NetTcpBinding 上的 net.tcp:// 連接埠共用  
   
-1. 建立服務來執行名為的合約， `IMyService` 並呼叫它 `MyService` 。  
+1. 建立服務以執行名為的合約 `IMyService` ，然後呼叫它 `MyService` 。  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -60,7 +61,7 @@ ms.locfileid: "84579523"
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Net.TCP 連接埠共用](net-tcp-port-sharing.md)
-- [如何：啟用 Net.TCP 連接埠共用服務](how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Net.TCP Port Sharing](net-tcp-port-sharing.md)
+- [作法：啟用 Net.TCP 連接埠共用服務](how-to-enable-the-net-tcp-port-sharing-service.md)

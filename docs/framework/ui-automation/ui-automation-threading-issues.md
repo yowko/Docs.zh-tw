@@ -1,19 +1,20 @@
 ---
 title: UI 自動化執行緒問題
-description: 閱讀關於 UI 自動化執行緒的問題。 例如，如果用戶端應用程式嘗試在 UI 執行緒上與自己的 UI 互動，則可能會發生衝突。
+description: 閱讀消費者介面自動化執行緒的相關問題。 例如，如果用戶端應用程式嘗試在 UI 執行緒上與其本身的 UI 互動，則可能會發生衝突。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, threading issues
 - threading issues with UI Automation
 ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
-ms.openlocfilehash: 290c26981d5eb993e2a9ab387f8d106aafa54efb
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1f17336e6baa2e2baf4cd37a5b39bed913bd3bd2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924535"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258643"
 ---
 # <a name="ui-automation-threading-issues"></a>UI 自動化執行緒問題
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   

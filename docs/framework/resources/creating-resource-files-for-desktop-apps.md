@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: d10af40420c1ab9ab177514c0babeaf5cea96922
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957433"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259072"
 ---
 # <a name="create-resource-files-for-net-apps"></a>建立 .NET 應用程式的資源檔
 
@@ -33,6 +33,7 @@ ms.locfileid: "88957433"
 - 使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 建立資源檔，並將它包含在您的專案中。 Visual Studio 提供可讓您新增、刪除和修改資源的資源編輯器。 在編譯時間，資源檔會自動轉換成二進位 .resources 檔案，並內嵌在應用程式組件或附屬組件中。 如需詳細資訊，請參閱 [Visual Studio 中的資源檔](creating-resource-files-for-desktop-apps.md#VSResFiles)一節。
 
 <a name="TextFiles"></a>
+
 ## <a name="resources-in-text-files"></a>文字檔中的資源
 
 您只能使用文字 (.txt 或 .restext) 檔案來儲存字串資源。 針對非字串資源，請使用 .resx 檔案或以程式設計方式建立它們。 包含字串資源的文字檔的格式如下：
@@ -59,7 +60,7 @@ name2=value2
 
  .txt 和 .restext 檔案的資源檔格式完全相同。 .restext 副檔名只提供可立即將文字檔識別為文字資源檔。
 
- 字串資源會以「名稱/值」** 配對的形式出現，其中「名稱」** 是識別資源的字串，「值」** 則是當您將「名稱」** 傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」** 和「值」** 必須以等號 (=) 分隔。 例如：
+ 字串資源會以「名稱/值」配對的形式出現，其中「名稱」是識別資源的字串，「值」則是當您將「名稱」傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」和「值」必須以等號 (=) 分隔。 例如：
 
 ```text
 FileMenuName=File
@@ -91,9 +92,9 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- 如果文字檔包含重複出現的「名稱」**，則[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 會顯示警告，並忽略另一個名稱。
+ 如果文字檔包含重複出現的「名稱」，則[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 會顯示警告，並忽略另一個名稱。
 
- *值*不能包含新的行字元，但您可以使用 C 語言樣式的逸出字元（例如） `\n` 來表示新行，以及表示索引標籤 `\t` 。您也可以包含反斜線字元（如果有反斜線） (例如 " \\ \\ " ) 。 此外，也允許空字串。
+ *值* 不能包含新的行字元，但您可以使用 C 語言樣式的逸出字元（例如） `\n` 來表示新行，以及表示索引標籤 `\t` 。您也可以包含反斜線字元（如果有反斜線） (例如 " \\ \\ " ) 。 此外，也允許空字串。
 
  使用 UTF-8 編碼或 UTF-16 編碼（以位元組由小到大或位元組由大到小的順序），以文本檔案格式儲存資源。 不過，可將 .txt 檔案轉換為 .resources 檔案的[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，預設會將檔案視為 UTF-8。 如果您想要 Resgen.exe 辨識使用 UTF-16 所編碼的檔案，必須在檔案開頭包括 Unicode 位元組順序標記 (U+FEFF)。
 
@@ -135,7 +136,9 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 <a name="ResxFiles"></a>
+
 ## <a name="resources-in-resx-files"></a>.resx 檔案中的資源
+
  與只能儲存字串資源的文字檔不同，XML 資源檔 (.resx) 可以儲存字串；影像、圖示和音訊剪輯這類二進位資料，以及程式化物件。 .resx 檔案包含描述資源項目格式的標準標頭，並指定用來剖析資料之 XML 的版本資訊。 資源檔資料接在 XML 標頭後面。 每個資料項目都會包含 `data` 標記中所含的名稱/值配對。 其 `name` 屬性定義資源名稱，而巢狀 `value` 標記包含資源值。 針對字串資料，`value` 標記會包含字串。
 
  例如，下列 `data` 標記會定義名為 `prompt` 且其值為 "Enter your name:" 的字串資源。
@@ -174,6 +177,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > 因為 .resx 檔案必須包含具有預先定義格式的格式正確 XML，所以不建議手動使用 .resx 檔案，特別是 .resx 檔案包含字串以外的資源時。 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 改為提供一種透明的介面，來建立和操作 .resx 檔案。 如需詳細資訊，請參閱 [Visual Studio 中的資源檔](creating-resource-files-for-desktop-apps.md#VSResFiles)一節。 您也可以透過程式設計方式建立和操作 .resx 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](working-with-resx-files-programmatically.md)。
 
 <a name="ResourcesFiles"></a>
+
 ## <a name="resources-in-resources-files"></a>.resources 檔案中的資源
 
 您可以使用 <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> 類別，以程式設計方式直接從程式碼建立二進位資源檔 (.resources)。 您也可以使用[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，從文字檔或 .resx 檔案建立 .resources 檔案。 除了字串資料之外，.resources 檔案還可以包含二進位資料 (位元組陣列) 和物件資料。 以程式設計方式建立 .resources 檔案，需要下列步驟：
@@ -195,11 +199,12 @@ csc greeting.cs -resource:GreetingResources.resources
  當您建立 .resources 檔案之後，可以包括語言編譯器的 `/resource` 切換參數以將它內嵌在執行階段可執行檔或程式庫中，或是使用[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。
 
 <a name="VSResFiles"></a>
+
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio 中的資源檔
 
 當您將資源檔新增至 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 專案時，Visual Studio 會在專案目錄中建立 .resx 檔案。 Visual Studio 提供可讓您新增字串、影像和二進位物件的資源編輯器。 因為編輯器設計成只處理靜態資料，所以無法使用它們來儲存程式化物件；您必須以程式設計方式將物件資料寫入 .resx 檔案或 .resources 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](working-with-resx-files-programmatically.md)和 [.resources 檔案中的資源](creating-resource-files-for-desktop-apps.md#ResourcesFiles)章節。
 
-若您要新增當地語系化的資源，請提供它們與主要資源檔相同的根檔案名稱。 您也應在檔案名稱中指定它們的文化特性 (Culture)。 例如，如果您新增名為 Resources.resx 的資源檔，也可能會建立名為 Resources.en-US.resx 和 Resources.fr-FR.resx 的資源檔，來分別保留英文 (美國) 和法文 (法國) 文化特性的當地語系化資源。 您也應該指定應用程式的預設文化特性。 如果找不到特定文化特性的當地語系化資源，則這是使用其資源的文化特性。 若要指定預設文化特性，請在 Visual Studio 的方案總管中以滑鼠右鍵按一下專案名稱、指向 [應用程式]、按一下 [組件資訊]****，然後在 [中性語言]**** 清單中選取適當語言/文化特性。
+若您要新增當地語系化的資源，請提供它們與主要資源檔相同的根檔案名稱。 您也應在檔案名稱中指定它們的文化特性 (Culture)。 例如，如果您新增名為 Resources.resx 的資源檔，也可能會建立名為 Resources.en-US.resx 和 Resources.fr-FR.resx 的資源檔，來分別保留英文 (美國) 和法文 (法國) 文化特性的當地語系化資源。 您也應該指定應用程式的預設文化特性。 如果找不到特定文化特性的當地語系化資源，則這是使用其資源的文化特性。 若要指定預設文化特性，請在 Visual Studio 的方案總管中以滑鼠右鍵按一下專案名稱、指向 [應用程式]、按一下 [組件資訊]，然後在 [中性語言] 清單中選取適當語言/文化特性。
 
 在編譯時間，Visual Studio 先將專案中的 .resx 檔案轉換成二進位資源檔 (.resources)，並將它們儲存在專案 *obj* 目錄的子目錄中。 Visual Studio 會將未包含當地語系化資源的任何資源檔內嵌在專案所產生的主要組件中。 如果任何資源檔包含當地語系化資源，Visual Studio 會將其內嵌在每個當地語系化文化特性的個別附屬組件中。 它接著會將每個附屬組件儲存在名稱對應至當地語系化文化特性的目錄中。 例如，當地語系化的英文 (美國) 資源會儲存在 en-US 子目錄的附屬組件中。
 

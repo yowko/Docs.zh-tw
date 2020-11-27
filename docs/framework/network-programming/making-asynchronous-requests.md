@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 0af143b723c90b146dc5de8447d4a7e1866e7105
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f6eba7a1f10e037f93b20c0e7016f083e3e24200
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502297"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258708"
 ---
 # <a name="making-asynchronous-requests"></a>進行非同步要求
+
 <xref:System.Net> 類別會使用 .NET Framework 的標準非同步程式設計模型，非同步存取網際網路資源。 <xref:System.Net.WebRequest> 類別的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法會啟動和完成網際網路資源的非同步要求。  
   
 > [!NOTE]
