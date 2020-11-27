@@ -2,24 +2,25 @@
 title: 工具
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-ms.openlocfilehash: 623ba8a3ae3b58381edc80a19bf2d1a4561f3976
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2f7ef8b7f871dada676eb05713d6f624427d5395
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774244"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285690"
 ---
 # <a name="tools"></a>工具
-本主題列出 Windows Communication Foundation （WCF）工具所產生的所有例外狀況。
+
+本主題列出 Windows Communication Foundation (WCF) 工具產生的所有例外狀況。
 
 ## <a name="exception-list"></a>例外狀況清單
 
 |資源程式碼|資源字串|
 |-------------------|---------------------|
-|ParametersTarget|\<enum >|
-|ParametersToolConfig|\<configFile >|
+|ParametersTarget|\<enum>|
+|ParametersToolConfig|\<configFile>|
 |ErrInvalidPath|指定的路徑無效。 請檢查指定的引數。|
-|ParametersReference|\<file 路徑 >|
+|ParametersReference|\<file path>|
 |WrnCannotLoadConfigFileForValidation|在處理從指定位置載入的組態檔時發生錯誤。 無法驗證此組態檔中定義的服務。|
 |MoreHelp|如需詳細說明，請輸入 "svcutil" 並包含指定引數。|
 |HelpMergeConfig|會導致產生的組態合併到現有的檔案，而不是覆寫現有的檔案。|
@@ -45,13 +46,13 @@ ms.locfileid: "72774244"
 |WrnNoServiceContractTypes|無法產生指定組件的 XmlSerializer 型別。 找不到服務合約類型。|
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|在載入先前從指定項目載入的組件型別時發生錯誤。 無法載入組件中某些型別，因此無法提供給工具使用。|
 |ErrDirectoryPointsToAFile|指定的無效值已傳遞給指定的選項。 指定值為檔案路徑。|
-|錯誤|Error:|
+|錯誤|錯誤：|
 |ErrDuplicateReferenceValues|已使用指定選項來載入指定組件兩次。 組件只能當作參照一次。|
 |WrnNoXmlSerializerOperationBehavior|無法產生指定組件的 XmlSerializer。 組件中的所有服務合約都未與 XmlSerializerOperationBehavior 一起運作。|
 |ErrCannotCreateDirectory|無法建立指定目錄。|
 |ErrCouldNotLoadTypesFromAssemblyAt|無法將任何型別載入指定組件中。|
 |ErrUnknownSwitch|指定的參數為無法辨識的選項。|
-|Logo|工具的標誌為包含版本資訊的 "Microsoft ® Service Model Metadata Tool"。|
+|標誌|工具的標誌為包含版本資訊的 "Microsoft ® Service Model Metadata Tool"。|
 |NoCodeWasGenerated|未產生任何程式碼。<br /><br /> 如果您之前嘗試產生用戶端，可能是因為中繼資料文件並未包含任何有效的合約或服務<br /><br /> 或是因為所有合約/服務被發現存在參照組件中。 請確認您已將所有中繼資料文件傳送至工具中。|
 |WrnUnableToLoadContractForSGen|載入合約類型時發生錯誤。 無法產生此合約的 XmlSerializer 型別。 指定了型別和詳細資料。|
 |WrnOptionConflictsWithInput|無法將指定選項與多個輸入組件一起使用。 已忽略指定選項。|
@@ -68,14 +69,14 @@ ms.locfileid: "72774244"
 |HelpCodeGenerationCategory|-= 程式碼產生 =-|
 |RetreivingMetadataWithMexAndDisco|使用 WS-Metadata Exchange 或 DISCO 嘗試從指定項目中下載中繼資料。|
 |ErrGeneralSchemaValidation|驗證在匯出期間產生的 XML 結構描述時發生錯誤。|
-|ParametersDirectory|\<directory >|
+|ParametersDirectory|\<directory>|
 |ErrCannotLoadSpecifiedType|無法針對已經傳送至指定選項的指定值載入任何型別。 請確定此型別所屬的組件係透過指定選項來指定。|
 |ErrOptionModeConflict|指定選項無法搭配指定選項一起使用，因為它們意指不同的輸出類型。|
 |ErrIsNotAnAssembly|無法將指定項目當成組件載入。 請驗證此檔案為 .NET 組件。|
 |ErrInputConflictsWithMode|從指定項目讀取的輸入與其他選項不一致。|
 |ErrDuplicateValuePassedToTypeArg|指定值已經多次傳送至指定選項。 每種型別只能指定一次。|
 |ErrInputEPRFileParseError|無法從指定項目讀取端點參照。 請驗證 XML 格式正確而且有效。|
-|ErrCouldNotCreateCodeProvider|無法為傳遞給/{1} 引數的指定值建立程式碼提供者。 請驗證程式碼提供者已安裝且設定妥當。|
+|ErrCouldNotCreateCodeProvider|無法針對傳遞給/引數的指定值建立程式碼提供者 {1} 。 請驗證程式碼提供者已安裝且設定妥當。|
 |ErrPathTooLongDirOnly|結果指定路徑太長。 請檢視指定引數。|
 |HelpDataContractSerializer|產生使用 DataContract 序列化程式以進行序列化與還原序列化的資料型別。|
 |ErrUnableToExportEndpoint|匯出指定命名空間之指定端點名稱時發生錯誤，此命名空間可在組件所載入的組態檔之指定服務型別中找到。|
@@ -87,7 +88,7 @@ ms.locfileid: "72774244"
 |ErrDirectoryNotFound|找不到指定目錄。 請驗證目錄確實存在，而且您具有適當的讀取權限。|
 |ErrUnableToLoadFile|無法讀取指定檔案。|
 |ErrNoFilesFound|指定的輸入路徑並未參照到任何現有檔案。|
-|ParametersConfig|\<configFile >|
+|ParametersConfig|\<configFile>|
 |ErrDirectoryInsteadOfFile|指定的輸入路徑可能是目錄。 輸入必須是 URL 或檔案路徑。|
 |HelpConfig|指示工具使用提供的名稱來產生組態檔。 預設：output.config。|
 |ErrSingleUseSwitch|您無法多次指定選項。|
@@ -112,9 +113,9 @@ ms.locfileid: "72774244"
 |ErrInvalidTarget|使用指定項目來指定時，指定目標將失效。 已指定支援目標。|
 |ErrPathTooLong|結果路徑太長。 請檢視指定引數。|
 |HelpCommonOptionsCategory|-= 常見問題 =-|
-|ParametersServiceName|\<serviceConfigName >|
+|ParametersServiceName|\<serviceConfigName>|
 |ErrNoValidInputFilesSpecified|未指定有效的輸入檔。 請指定中繼資料文件或組件檔。|
-|ParametersLanguage|\<language >|
+|ParametersLanguage|\<language>|
 |ErrUnableToLoadMetadataDocument|從其中一個載入的文件讀取中繼資料時發生錯誤。 已指定文件識別項。|
 |ErrConflictingInputs|指定的輸入引數與指定項目衝突，因為它們意指不同的工具作業模式。|
 |WrnUnableToLoadContractForValidation|載入合約類型時發生錯誤。 指定了型別和詳細資料。|
@@ -125,7 +126,7 @@ ms.locfileid: "72774244"
 |GeneratingFiles|正在產生檔案...|
 |ErrCannotSpecifyMultipleMappingsForNamespace|已將無效值傳遞給指定選項。 指定的目標命名空間無法對應至多個指定的 CLR 命名空間。|
 |ErrCouldNotLoadReferenceAssemblyAt|無法載入指定的參照組件。|
-|ParametersOut|\<file >|
+|ParametersOut|\<file>|
 |NoCodeWasGeneratedSuggestDCOnly|若要從結構描述中產生合約，請使用指定選項。|
 |ErrUnableToLoadInputConfig|無法載入指定的組態檔。|
 |ErrUnexpectedDelimiter|無效的引數分隔符號 (':' or '=') 無法啟動選項。|
@@ -142,7 +143,7 @@ ms.locfileid: "72774244"
 |ErrCodegenError|以指定語言產生程式碼時發生錯誤。<br /><br /> 該語言不支援所有正在產生的程式碼項目。 您應該使用其他語言。|
 |ErrInputWsdlParseError|讀取指定項目時發生 WSDL 剖析錯誤。 請驗證 XML 格式正確而且有效。|
 |ErrCouldNotCreateInstance|無法針對已傳送至指定引數的指定型別建立其執行個體。|
-|ParametersNamespace|\<string，字串 >|
+|ParametersNamespace|\<string,string>|
 |HelpNostdlib|請勿參照標準程式庫 (根據預設會參照 mscorlib.dll 與 system.servicemodel.dll)。|
 |WrnCannotLoadConfigFileForExport|在處理從指定位置載入的組態檔時發生錯誤。 無法載入在此組態檔中定義的服務。|
 |WrnUnableToLoadContractForExport|載入合約類型時發生錯誤。 無法匯出這個指定型別。|

@@ -2,15 +2,16 @@
 title: 交易例外狀況
 ms.date: 03/30/2017
 ms.assetid: 1d27ed51-7eda-477f-9eca-94fa129f3e07
-ms.openlocfilehash: 85d8d043a5610743d6cbad4d950330ed4bedb502
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcdf825699368617335f2d59a05f8826884a8e9e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285677"
 ---
 # <a name="transaction-exceptions"></a>交易例外狀況
-本主題列出 Windows Communication Foundation (WCF) 之交易所產生的所有例外狀況。  
+
+本主題列出 Windows Communication Foundation (WCF) 交易所產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   

@@ -2,14 +2,15 @@
 title: 服務架構
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fb39f2106e027cc5d4125cfb0bc89f3e5983cec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780753"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285716"
 ---
 # <a name="service-framework"></a>服務架構
+
 此主題會列出服務架構資料產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
@@ -25,7 +26,7 @@ ms.locfileid: "61780753"
 |BaseAddressCannotHaveUserInfo|起始位址無法包含統一資源識別元使用者資訊區段。|  
 |BaseAddressDuplicateScheme|此集合已包含具有指定配置的位址。 在此集合中，每個配置只允許一個位址。|  
 |BaseAddressMustBeAbsolute|只有一個絕對的統一資源識別元可以用來當做起始位址。|  
-|BindingDoesnTSupportAnyChannelTypes1|指定的繫結不支援建立任何通道類型。 自訂繫結中的繫結項目堆疊方式有誤或堆疊順序不正確。 傳輸是堆疊最下方的必要項。 繫結項目的建議的順序為：TransactionFlow、 ReliableSession、 Security、 CompositeDuplex、 OneWay、 StreamSecurity、 MessageEncoding、 傳輸。|  
+|BindingDoesnTSupportAnyChannelTypes1|指定的繫結不支援建立任何通道類型。 自訂繫結中的繫結項目堆疊方式有誤或堆疊順序不正確。 傳輸是堆疊最下方的必要項。 繫結程序項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。|  
 |BindingDoesnTSupportDuplexButContractRequires1|合約需要 Duplex。 指定的繫結不支援它，或是未正確設定來支援它。|  
 |BindingDoesnTSupportOneWayButContractRequires1|合約需要 OneWay。 指定的繫結不支援它，或是未正確設定來支援它。|  
 |BindingDoesnTSupportRequestReplyButContract1|合約需要 Request/Reply。 指定的繫結不支援它，或是未正確設定來支援它。|  
@@ -33,11 +34,11 @@ ms.locfileid: "61780753"
 |BindingDoesnTSupportTwoWayButContractRequires1|合約需要 Two-Way (可以是要求-回覆或雙工)。 指定的繫結不支援它，或是未正確設定來支援它。|  
 |BindingRequirementsAttributeDisallowsQueuedDelivery1|DeliveryRequirementsAttribute 不允許 QueuedDelivery。 內含指定之合約的端點繫結支援它。|  
 |BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute 需要 QueuedDelivery。 內含指定之合約的端點繫結不支援它，或是並未正確設定來支援它。|  
-|channelDoesNotHaveADuplexSession0|目前通道不支援關閉輸出工作階段。 此通道未實作 ISessionChannel\<IDuplexSession >。|  
+|channelDoesNotHaveADuplexSession0|目前通道不支援關閉輸出工作階段。 此通道不會執行 Isessionchannel<iduplexsession> \<IDuplexSession> 。|  
 |ClientRuntimeRequiresFormatter0|指定的 ClientOperation 需要格式器，因為 SerializeRequest 與 DeserializeReply 並非同為 false。|  
 |CommunicationObjectAborted1|由於指定的通訊物件已停止，因此無法用來通訊。|  
-|CommunicationObjectAbortedStack2|指定的通訊物件無法用於通訊，因為它已停止： {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|指定的通訊物件已覆寫虛擬函式{1}但未呼叫基底類別中定義的版本。|  
+|CommunicationObjectAbortedStack2|因為指定的通訊物件已停止，所以無法用於通訊： {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|指定的通訊物件已覆寫虛擬函式， {1} 但不會呼叫在基類中定義的版本。|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|指定的合約具有一或多個 IsTerminating 或 non-IsInitiating 作業。 它並未將 SessionMode 屬性設為 SessionMode.Required。 IsInitiating 和 IsTerminating 屬性只能用在工作階段內容中。|  
 |CouldnTCreateChannelForChannelType2|已要求指定的通道類型，但是指定的繫結不支援它或是未正確設定來支援它。|  
 |DispatchRuntimeRequiresFormatter0|指定的 DispatchOperation 需要格式器，因為 DeserializeRequest 和 SerializeReply 並非同為 false。|  
@@ -48,7 +49,7 @@ ms.locfileid: "61780753"
 |MultipleMebesInParameters|在 BindingContext 的 BindingParameters 中找到一個以上的 MessageEncodingBindingElement。 CustomBinding 無法包含多個 MessageEncodingBindingElements。 請移除全部項目，只留下其中一個項目。|  
 |MultipleStreamUpgradeProvidersInParameters|在 BindingContext 的 BindingParameters 中找到一個以上的 IStreamUpgradeProviderElement。 CustomBinding 只能包含一個 IStreamUpgradeProviderElements。 請移除全部項目，只留下其中一個項目。|  
 |NoChannelBuilderAvailable|由於繫結並未包含 TransportBindingElement，因此無法用來建立通道處理站或通道接聽項。 每一個繫結都至少必須有一個衍生自 TransportBindingElement 的繫結項目。|  
-|NotAllBindingElementsBuilt|在建置通道處理站與通道接聽項時，並未採用此繫結中的某些繫結項目。 繫結項目的順序不正確。 繫結項目的建議的順序為：TransactionFlow、 ReliableSession、 Security、 CompositeDuplex、 OneWay、 StreamSecurity、 MessageEncoding、 傳輸。  請注意，TransportBindingElement 必須排在最後一個。 尚未建置指定的繫結項目。|  
+|NotAllBindingElementsBuilt|在建置通道處理站與通道接聽項時，並未採用此繫結中的某些繫結項目。 繫結項目的順序不正確。 繫結程序項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。  請注意，TransportBindingElement 必須排在最後一個。 尚未建置指定的繫結項目。|  
 |RuntimeRequiresInvoker0|分派作業需要 Invoker。|  
 |ServiceHasZeroAppEndpoints|指定的 Service 不包含應用程式 (非基礎結構) 端點。 這是因為找不到應用程式的任何組態檔，或者因為組態檔中找不到任何符合服務名稱的服務項目，又或因為服務項目中未定義任何端點所導致。|  
 |SFxActionMismatch|因為動作不符而無法建立具型別的訊息。 預期發生指定的動作但卻發生另一個動作。|  
@@ -100,13 +101,13 @@ ms.locfileid: "61780753"
 |SFXEndpointBehaviorUsedOnWrongSide|指定的 IEndpointBehavior 無法用在伺服器上。 此行為只能套用到用戶端。|  
 |SFxEndpointNoMatchingScheme|找不到符合具有指定繫結之端點的指定配置的起始位址。 已指定註冊的起始位址配置。|  
 |SFxErrorCreatingMtomReader|建立訊息傳輸最佳化機制訊息的讀取器時發生錯誤。|  
-|SFxErrorDeserializingFault|伺服器傳回一個無效的簡單物件存取通訊協定錯誤。 如需詳細資訊，請參閱 InnerException。|  
+|SFxErrorDeserializingFault|伺服器傳回一個無效的簡單物件存取通訊協定錯誤。 如需詳細資料，請參閱 InnerException。」|  
 |SFxErrorDeserializingHeader|還原序列化指定之訊息的其中一個標頭時發生錯誤。 如需詳細資訊，請參閱 InnerException。|  
-|SFxErrorReflectingOnMethod3|在指定的方法上以指定的類型載入指定屬性時發生錯誤。  如需詳細資訊，請參閱 InnerException。|  
-|SFxErrorReflectingOnParameter4|在指定之方法的指定參數上以指定的類型載入指定屬性時發生錯誤。 如需詳細資訊，請參閱 InnerException。|  
-|SFxErrorReflectingOnType2|在指定的類型上載入指定屬性時發生錯誤。  如需詳細資訊，請參閱 InnerException。|  
-|SFxErrorSerializingBody|序列化指定之訊息的本文時發生錯誤。 如需詳細資訊，請參閱 InnerException。|  
-|SFxErrorSerializingHeader|序列化指定之訊息的其中一個標頭時發生錯誤。 如需詳細資訊，請參閱 InnerException。|  
+|SFxErrorReflectingOnMethod3|在指定的方法上以指定的類型載入指定屬性時發生錯誤。  如需詳細資料，請參閱 InnerException。」|  
+|SFxErrorReflectingOnParameter4|在指定之方法的指定參數上以指定的類型載入指定屬性時發生錯誤。 如需詳細資料，請參閱 InnerException。」|  
+|SFxErrorReflectingOnType2|在指定的類型上載入指定屬性時發生錯誤。  如需詳細資料，請參閱 InnerException。」|  
+|SFxErrorSerializingBody|序列化指定之訊息的本文時發生錯誤。 如需詳細資料，請參閱 InnerException。」|  
+|SFxErrorSerializingHeader|序列化指定之訊息的其中一個標頭時發生錯誤。 如需詳細資料，請參閱 InnerException。」|  
 |SFxExpectedIMethodCallMessage|內部錯誤。 訊息必須是有效的 IMethodCallMessage。|  
 |SFxExportMustHaveType|由於指定之作業中的指定部分未包含有效的 CLR 類型，因此無法匯出。|  
 |SFxHeaderNotUnderstood|訊息尚未處理。 來自指定之命名空間的指定標頭無法被此訊息的收件者所理解。 此錯誤通常表示此訊息的寄件人已啟用接收者無法處理的通訊協定。 請確定用戶端繫結的組態與服務的繫結一致。|  
@@ -117,12 +118,12 @@ ms.locfileid: "61780753"
 |SFxInvalidMessageBody|OperationFormatter 發生無效的訊息本文。 預期具有指定之名稱與命名空間的 'Element' 節點類型。 找到具有指定之名稱與命名空間的指定節點類型。|  
 |SFxInvalidMessageBodyEmptyMessage|OperationFormatter 無法還原序列化任何來自訊息的資訊，因為訊息是空的。|  
 |SFxInvalidMessageBodyErrorDeserializingParameter|嘗試還原序列化指定的參數時發生錯誤。 如需詳細資訊，請參閱 InnerException。|  
-|SFxInvalidMessageBodyErrorSerializingParameter|嘗試序列化指定的參數時發生錯誤。 已指定 InnerException 訊息。  如需詳細資訊，請參閱 InnerException。|  
+|SFxInvalidMessageBodyErrorSerializingParameter|嘗試序列化指定的參數時發生錯誤。 已指定 InnerException 訊息。  如需詳細資料，請參閱 InnerException。」|  
 |SFxInvalidMessageBodyUnexpectedNode|還原序列化參數時，發生來自指定命名空間之指定的未預期節點。|  
 |SFxInvalidMessageContractSignature|指定的作業可能包含參數，或是標示為 MessageContractAttribute 的傳回型別。 使用訊息合約來代表要求訊息時，作業必須具有標示為 MessageContractAttribute 的單一參數。 使用訊息合約來代表回應訊息時，作業的傳回值必須是標示為 MessageContractAttribute 的類型。 作業不可具有任何 'out' 或 'ref' 參數。|  
 |SFxInvalidReplyAction|作業的傳出回覆訊息已經指定 Action，但是該作業的合約卻指定另一個 ReplyAction。 訊息中指定的 Action 必須符合合約中的 ReplyAction，或者作業合約必須指定 ReplyAction='*'。|  
 |SFxInvalidRequestAction|作業的傳出要求訊息已經指定 Action，但是該作業的合約卻指定另一個 RequestAction。 訊息中指定的 Action 必須符合合約中的 RequestAction，或者作業合約必須指定 RequestAction='*'。|  
-|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|靜態 CreateChannel 方法不能與指定的合約一起使用，因為該合約會定義回呼合約。 使用其中一個靜態 CreateChannel 多載上 DuplexChannelFactory\<TChannel >。|  
+|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|靜態 CreateChannel 方法不能與指定的合約一起使用，因為該合約會定義回呼合約。 在 DuplexChannelFactory 上使用其中一個靜態 CreateChannel 多載 \<TChannel> 。|  
 |SFxInvalidStreamInRequest|若要讓指定之作業中的要求成為資料流，作業必須包含 Stream 類型的單一參數。|  
 |SFxInvalidStreamInResponse|若要讓指定之作業中的回應成為資料流，作業必須包含 Stream 類型的單一 out 參數或傳回值。|  
 |SFxInvalidStreamInTypedMessage|若要使用資料流來搭配 Message Contract 程式設計模型，指定的類型必須包含 Stream 類型的單一 MessageBody 成員。|  
@@ -145,7 +146,7 @@ ms.locfileid: "61780753"
 |SFxSchemaDoesNotContainType|具有指定之目標命名空間的配置未包含具有指定名稱的類型。|  
 |SfxServiceContractAttributeNotFound|指定的合約類型未以 ServiceContractAttribute 賦予屬性。 若要定義有效合約，指定的類型必須以 ServiceContractAttribute 賦予屬性。 此類型可以是合約介面或是服務類別。|  
 |SFxServiceContractGeneratorConfigRequired|為了使用 GenerateServiceEndpoint 方法來產生組態資訊，必須以有效 Configuration 物件來初始化 ServiceContractGenerator 執行個體。|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|當 ServiceHost 處於下列其中一種狀態之後，就無法新增端點：<br /><br /> 開啟<br />-發生錯誤<br />終止<br />-關閉|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|當 ServiceHost 處於下列其中一種狀態之後，就無法新增端點：<br /><br /> -已開啟<br />-錯誤<br />-已終止<br />-封閉式|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|在初始化 Description 屬性之前，無法新增端點。|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|ServiceMetadataBehavior 的 HttpGetEnabled 屬性已設為 true 而 HttpGetUrl 屬性則是相對位址，但是不包含 HTTP 初始位址。 請提供 HTTP 初始位址，或是將 HttpGetUrl 設為絕對位址。|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|ServiceMetadataBehavior 的 HttpsGetEnabled 屬性已設為 true 而 HttpsGetUrl 屬性則是相對位址，但是不包含 HTTPS 初始位址。 請提供 HTTPS 初始位址，或是將 HttpsGetUrl 設為絕對位址。|  

@@ -1,14 +1,16 @@
 ---
-title: HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。
+title: 作法：建立會透過 WebSockets 進行通訊的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286158"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>作法：建立會透過 WebSockets 進行通訊的 WCF 服務
+
 WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。  當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。 本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。  
   
 ### <a name="define-the-service"></a>定義服務  
@@ -160,6 +162,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
          在用戶端組態中沒有特別要做的事，只是使用 `NetHttpBinding` 指定用戶端端點。  
   
 ## <a name="example"></a>範例  
+
  以下是這個主題中使用的完整程式碼。  
   
 ```csharp  

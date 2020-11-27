@@ -1,15 +1,16 @@
 ---
-title: HOW TO：建立要求-回覆合約
+title: 作法：建立要求-回覆合約
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 8a09c265c77edc584b591477e64314f1e76e332b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 506ce527348286bb53223c64245c74e4cb21879a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593434"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286548"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>HOW TO：建立要求-回覆合約
+# <a name="how-to-create-a-request-reply-contract"></a>作法：建立要求-回覆合約
+
 要求-回覆合約會指定一個方法以傳回回覆。 回覆必須在此合約條件下進行傳送並與要求相互關聯。 即便該方法未傳回任何回覆 (在 C# 為 `void`，在 Visual Basic 為 `Sub`)，基礎結構還是會建立空訊息並傳送給呼叫者。 若要避免傳送空的回覆訊息，請使用單向作業合約。  
   
 ### <a name="to-create-a-request-reply-contract"></a>若要建立要求-回覆合約  
@@ -23,6 +24,7 @@ ms.locfileid: "84593434"
 4. 選擇性。 將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性設定為 `true` 值，以免傳送空的回覆訊息。 預設情況下，所有各項作業都是要求-回覆合約。  
   
 ## <a name="example"></a>範例  
+
  下列範例針對可提供 `Add` 和 `Subtract` 方法的計算機服務定義合約。 `Multiply` 方法不是合約的一部分，因為它未加上 <xref:System.ServiceModel.OperationContractAttribute> 類別標示，因此無法由用戶端來存取。  
   
 ```csharp
@@ -47,8 +49,8 @@ public interface ICalculator
   
 - 藉由套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會自動產生服務合約定義，亦即 Web 服務描述語言 (WSDL) 文件。 只要將 `?wsdl` 附加至服務的 HTTP 基底位址，便能夠下載這份文件。 例如， `http://microsoft/CalculatorService?wsdl`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [設計服務合約](../designing-service-contracts.md)
-- [HOW TO：建立雙工合約](how-to-create-a-duplex-contract.md)
+- [作法：建立雙面合約](how-to-create-a-duplex-contract.md)

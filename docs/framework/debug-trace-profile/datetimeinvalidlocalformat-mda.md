@@ -1,6 +1,6 @@
 ---
 title: dateTimeInvalidLocalFormat MDA
-description: 請參閱 dateTimeInvalidLocalFormat managed 偵錯工具（MDA），這會在 UTC 儲存的日期時間值取得僅限本機日期時間格式時啟用。
+description: 請參閱 dateTimeInvalidLocalFormat managed 偵錯工具 (MDA) ，其會在 UTC 儲存的日期時間值取得僅限本機的日期時間格式時啟動。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [.NET Framework], formatting
@@ -13,17 +13,19 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: d092b93af55d2cdf14e9284d8cffcdc8440cbf81
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: ed2cf0b960c0a8f51dc327a5c58770fcf5e2fa17
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415988"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286054"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
+
 使用只能用於當地 <xref:System.DateTime> 執行個體的格式來格式化儲存為全球定位時間 (UTC) 的 <xref:System.DateTime> 執行個體時，會啟用 `dateTimeInvalidLocalFormat` MDA。 針對未指定或預設 <xref:System.DateTime> 執行個體，不會啟用此 MDA。  
   
 ## <a name="symptom"></a>徵狀  
+
  應用程式使用當地格式手動序列化 UTC <xref:System.DateTime> 執行個體：  
   
 ```csharp
@@ -32,9 +34,11 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ```  
   
 ### <a name="cause"></a>原因  
+
  <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 方法的 'z' 格式包含當地時區位移，例如，"+10:00" 表示雪梨時間。 因此，如果 <xref:System.DateTime> 的值是當地時間，則它只會產生有意義的結果。 如果值是 UTC 時間，則 <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 會包含當地時區位移，但不會顯示或調整時區規範。  
   
-### <a name="resolution"></a>解決方案  
+### <a name="resolution"></a>解決方法  
+
  UTC <xref:System.DateTime> 執行個體應該使用指出它們為 UTC 的方式進行格式化。 UTC 時間的建議格式是使用 'Z' 表示 UTC 時間：  
   
 ```csharp
@@ -50,9 +54,11 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+
  此 MDA 不會影響執行階段。  
   
 ## <a name="output"></a>輸出  
+
  此 MDA 啟用沒有任何特殊輸出。不過，呼叫堆疊可以用來決定已啟用 MDA 之 <xref:System.DateTime.ToString%2A> 呼叫的位置。  
   
 ## <a name="configuration"></a>設定  
@@ -66,6 +72,7 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="example"></a>範例  
+
  請以下列方式考慮使用利用 <xref:System.Xml.XmlConvert> 或 <xref:System.Data.DataSet> 類別間接序列化 UTC <xref:System.DateTime> 值的應用程式。  
   
 ```csharp
@@ -88,4 +95,4 @@ String serialized = XmlConvert.ToString(myDateTime,
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)

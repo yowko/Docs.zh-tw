@@ -2,14 +2,15 @@
 title: 4814 - EndpointDiscoverabilityDisabled
 ms.date: 03/30/2017
 ms.assetid: b3805218-4865-42d8-976a-cbbd4ff6fcc8
-ms.openlocfilehash: 8d5a5e87ef03f9ad921c5f9af7f0fca4aad37d68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59177cfbbf215fba78ec5b9b0549c4b283b32f18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778439"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285937"
 ---
 # <a name="4814---endpointdiscoverabilitydisabled"></a>4814 - EndpointDiscoverabilityDisabled
+
 ## <a name="properties"></a>屬性  
   
 |||  
@@ -17,12 +18,14 @@ ms.locfileid: "61778439"
 |識別碼|4814|  
 |關鍵字|探索|  
 |層級|資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  停用端點的探索能力時，就會發出此事件。  
   
 ## <a name="message"></a>訊息  
+
  EndpointAddress='%1' 且 ListenUri='%2' 的端點可搜尋性已遭停用。  
   
 ## <a name="details"></a>詳細資料
