@@ -5,48 +5,51 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: 94149e0c444cad7e32f959eaedd55bf14acb1ecb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bcbd2c50fcbd9af3f2eead57ac2e26f8db0c6ad6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547840"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275940"
 ---
-# <a name="marshaling-data-with-com-interop"></a><span data-ttu-id="63aee-104">使用 COM Interop 封送處理資料</span><span class="sxs-lookup"><span data-stu-id="63aee-104">Marshaling Data with COM Interop</span></span>
-<span data-ttu-id="63aee-105">COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和公開 Managed 物件給 COM 的支援。</span><span class="sxs-lookup"><span data-stu-id="63aee-105">COM interop provides support for both using COM objects from managed code and exposing managed objects to COM.</span></span> <span data-ttu-id="63aee-106">廣泛支援封送處理資料至 COM 或對來自 COM 的資料封送處理，幾乎一律會提供正確的封送處理行為。</span><span class="sxs-lookup"><span data-stu-id="63aee-106">Support for marshaling data to and from COM is extensive and almost always provides the correct marshaling behavior.</span></span>  
-  
- <span data-ttu-id="63aee-107">Windows SDK 包含下列 COM Interop 工具：</span><span class="sxs-lookup"><span data-stu-id="63aee-107">The Windows SDK includes the following COM interop tools:</span></span>  
-  
-- <span data-ttu-id="63aee-108">[型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)，這會將 COM 型別程式庫轉換成 Interop 組件。</span><span class="sxs-lookup"><span data-stu-id="63aee-108">[Type Library Importer (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md), which converts a COM type library to an interop assembly.</span></span> <span data-ttu-id="63aee-109">從這個組件中，Interop 封送處理服務會產生包裝函式，在 Managed 和 Unmanaged 記憶體之間執行資料封送處理。</span><span class="sxs-lookup"><span data-stu-id="63aee-109">From this assembly, the interop marshaling service generates wrappers that perform data marshaling between managed and unmanaged memory.</span></span>  
-  
-- <span data-ttu-id="63aee-110">[型別程式庫匯出工具 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md)，這會從組件產生 COM 型別程式庫，並產生在方法呼叫期間執行封送處理的包裝函式。</span><span class="sxs-lookup"><span data-stu-id="63aee-110">[Type Library Exporter (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md), which produces a COM type library from an assembly and generates a wrapper that performs marshaling during method calls.</span></span>  
-  
- <span data-ttu-id="63aee-111">下列各節會連結到各個主題，以描述當您可以 (或必須) 提供具有其他類型資訊的封送處理器時，自訂 Interop 包裝函式的程序。</span><span class="sxs-lookup"><span data-stu-id="63aee-111">The following sections link to topics that describe the processes for customizing interop wrappers when you can (or must) supply the marshaler with additional type information.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="63aee-112">本節內容</span><span class="sxs-lookup"><span data-stu-id="63aee-112">In This Section</span></span>  
-<span data-ttu-id="63aee-113">[如何：手動建立包裝](how-to-create-wrappers-manually.md) 函式描述如何在 managed 原始程式碼中手動建立 COM 包裝函式。</span><span class="sxs-lookup"><span data-stu-id="63aee-113">[How to: Create Wrappers Manually](how-to-create-wrappers-manually.md) Describes how to create a COM wrapper manually in managed source code.</span></span>
+# <a name="marshaling-data-with-com-interop"></a><span data-ttu-id="5e838-104">使用 COM Interop 封送處理資料</span><span class="sxs-lookup"><span data-stu-id="5e838-104">Marshaling Data with COM Interop</span></span>
 
- [<span data-ttu-id="63aee-114">作法：將受控碼 DCOM 移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="63aee-114">How to: Migrate Managed-Code DCOM to WCF</span></span>](how-to-migrate-managed-code-dcom-to-wcf.md)  
- <span data-ttu-id="63aee-115">描述如何將受控的 DCOM 程式碼移轉至 WCF 的最安全解決方案。</span><span class="sxs-lookup"><span data-stu-id="63aee-115">Describes how to migrate managed DCOM code to WCF for the most secure solution.</span></span>  
+<span data-ttu-id="5e838-105">COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和公開 Managed 物件給 COM 的支援。</span><span class="sxs-lookup"><span data-stu-id="5e838-105">COM interop provides support for both using COM objects from managed code and exposing managed objects to COM.</span></span> <span data-ttu-id="5e838-106">廣泛支援封送處理資料至 COM 或對來自 COM 的資料封送處理，幾乎一律會提供正確的封送處理行為。</span><span class="sxs-lookup"><span data-stu-id="5e838-106">Support for marshaling data to and from COM is extensive and almost always provides the correct marshaling behavior.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="63aee-116">相關章節</span><span class="sxs-lookup"><span data-stu-id="63aee-116">Related Sections</span></span>  
- <span data-ttu-id="63aee-117">[COM 資料類型](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="63aee-117">[COM Data Types](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))</span></span>  
- <span data-ttu-id="63aee-118">提供對應的 Managed 和 Unmanaged 資料類型。</span><span class="sxs-lookup"><span data-stu-id="63aee-118">Provides corresponding managed and unmanaged data types.</span></span>  
+ <span data-ttu-id="5e838-107">Windows SDK 包含下列 COM Interop 工具：</span><span class="sxs-lookup"><span data-stu-id="5e838-107">The Windows SDK includes the following COM interop tools:</span></span>  
   
- <span data-ttu-id="63aee-119">[自訂 COM 可呼叫包裝函式](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="63aee-119">[Customizing COM Callable Wrappers](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))</span></span>  
- <span data-ttu-id="63aee-120">描述如何在設計階段使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性明確封送處理資料類型。</span><span class="sxs-lookup"><span data-stu-id="63aee-120">Describes how to explicitly marshal data types using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute at design time.</span></span>  
+- <span data-ttu-id="5e838-108">[型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)，這會將 COM 型別程式庫轉換成 Interop 組件。</span><span class="sxs-lookup"><span data-stu-id="5e838-108">[Type Library Importer (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md), which converts a COM type library to an interop assembly.</span></span> <span data-ttu-id="5e838-109">從這個組件中，Interop 封送處理服務會產生包裝函式，在 Managed 和 Unmanaged 記憶體之間執行資料封送處理。</span><span class="sxs-lookup"><span data-stu-id="5e838-109">From this assembly, the interop marshaling service generates wrappers that perform data marshaling between managed and unmanaged memory.</span></span>  
   
- <span data-ttu-id="63aee-121">[自訂執行階段可呼叫包裝函式](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="63aee-121">[Customizing Runtime Callable Wrappers](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))</span></span>  
- <span data-ttu-id="63aee-122">描述如何調整 Interop 組件中的類型封送處理行為，以及描述如何以手動方式定義 COM 類型。</span><span class="sxs-lookup"><span data-stu-id="63aee-122">Describes how to adjust the marshaling behavior of types in an interop assembly and how to define COM types manually.</span></span>  
+- <span data-ttu-id="5e838-110">[型別程式庫匯出工具 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md)，這會從組件產生 COM 型別程式庫，並產生在方法呼叫期間執行封送處理的包裝函式。</span><span class="sxs-lookup"><span data-stu-id="5e838-110">[Type Library Exporter (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md), which produces a COM type library from an assembly and generates a wrapper that performs marshaling during method calls.</span></span>  
   
- <span data-ttu-id="63aee-123">[進階 COM 互通性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="63aee-123">[Advanced COM Interoperability](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))</span></span>  
- <span data-ttu-id="63aee-124">提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。</span><span class="sxs-lookup"><span data-stu-id="63aee-124">Provides links to more information about incorporating COM components into your .NET Framework application.</span></span>  
+ <span data-ttu-id="5e838-111">下列各節會連結到各個主題，以描述當您可以 (或必須) 提供具有其他類型資訊的封送處理器時，自訂 Interop 包裝函式的程序。</span><span class="sxs-lookup"><span data-stu-id="5e838-111">The following sections link to topics that describe the processes for customizing interop wrappers when you can (or must) supply the marshaler with additional type information.</span></span>  
   
- <span data-ttu-id="63aee-125">[組件至型別程式庫轉換的摘要](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="63aee-125">[Assembly to Type Library Conversion Summary](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))</span></span>  
- <span data-ttu-id="63aee-126">描述組件至類型程式庫匯出轉換的程序。</span><span class="sxs-lookup"><span data-stu-id="63aee-126">Describes the assembly to type library export conversion process.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5e838-112">本節內容</span><span class="sxs-lookup"><span data-stu-id="5e838-112">In This Section</span></span>  
+
+<span data-ttu-id="5e838-113">[如何：手動建立包裝](how-to-create-wrappers-manually.md) 函式描述如何在 managed 原始程式碼中手動建立 COM 包裝函式。</span><span class="sxs-lookup"><span data-stu-id="5e838-113">[How to: Create Wrappers Manually](how-to-create-wrappers-manually.md) Describes how to create a COM wrapper manually in managed source code.</span></span>
+
+ [<span data-ttu-id="5e838-114">作法：將受控碼 DCOM 移轉至 WCF</span><span class="sxs-lookup"><span data-stu-id="5e838-114">How to: Migrate Managed-Code DCOM to WCF</span></span>](how-to-migrate-managed-code-dcom-to-wcf.md)  
+ <span data-ttu-id="5e838-115">描述如何將受控的 DCOM 程式碼移轉至 WCF 的最安全解決方案。</span><span class="sxs-lookup"><span data-stu-id="5e838-115">Describes how to migrate managed DCOM code to WCF for the most secure solution.</span></span>  
   
- <span data-ttu-id="63aee-127">[型別程式庫至組件轉換的摘要](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="63aee-127">[Type Library to Assembly Conversion Summary](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))</span></span>  
- <span data-ttu-id="63aee-128">描述類型程式庫至組件匯入轉換的程序。</span><span class="sxs-lookup"><span data-stu-id="63aee-128">Describes the type library to assembly import conversion process.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5e838-116">相關章節</span><span class="sxs-lookup"><span data-stu-id="5e838-116">Related Sections</span></span>  
+
+ <span data-ttu-id="5e838-117">[COM 資料類型](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5e838-117">[COM Data Types](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))</span></span>  
+ <span data-ttu-id="5e838-118">提供對應的 Managed 和 Unmanaged 資料類型。</span><span class="sxs-lookup"><span data-stu-id="5e838-118">Provides corresponding managed and unmanaged data types.</span></span>  
   
- <span data-ttu-id="63aee-129">[使用泛型型別交互操作](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="63aee-129">[Interoperating Using Generic Types](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))</span></span>  
- <span data-ttu-id="63aee-130">描述使用泛型類型來取得 COM 互通性時所支援的動作。</span><span class="sxs-lookup"><span data-stu-id="63aee-130">Describes which actions are supported when using generic types for COM interoperability.</span></span>
+ <span data-ttu-id="5e838-119">[自訂 COM 可呼叫包裝函式](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5e838-119">[Customizing COM Callable Wrappers](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))</span></span>  
+ <span data-ttu-id="5e838-120">描述如何在設計階段使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性明確封送處理資料類型。</span><span class="sxs-lookup"><span data-stu-id="5e838-120">Describes how to explicitly marshal data types using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute at design time.</span></span>  
+  
+ <span data-ttu-id="5e838-121">[自訂執行階段可呼叫包裝函式](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5e838-121">[Customizing Runtime Callable Wrappers](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))</span></span>  
+ <span data-ttu-id="5e838-122">描述如何調整 Interop 組件中的類型封送處理行為，以及描述如何以手動方式定義 COM 類型。</span><span class="sxs-lookup"><span data-stu-id="5e838-122">Describes how to adjust the marshaling behavior of types in an interop assembly and how to define COM types manually.</span></span>  
+  
+ <span data-ttu-id="5e838-123">[進階 COM 互通性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5e838-123">[Advanced COM Interoperability](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))</span></span>  
+ <span data-ttu-id="5e838-124">提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。</span><span class="sxs-lookup"><span data-stu-id="5e838-124">Provides links to more information about incorporating COM components into your .NET Framework application.</span></span>  
+  
+ <span data-ttu-id="5e838-125">[組件至型別程式庫轉換的摘要](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5e838-125">[Assembly to Type Library Conversion Summary](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))</span></span>  
+ <span data-ttu-id="5e838-126">描述組件至類型程式庫匯出轉換的程序。</span><span class="sxs-lookup"><span data-stu-id="5e838-126">Describes the assembly to type library export conversion process.</span></span>  
+  
+ <span data-ttu-id="5e838-127">[型別程式庫至組件轉換的摘要](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5e838-127">[Type Library to Assembly Conversion Summary](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))</span></span>  
+ <span data-ttu-id="5e838-128">描述類型程式庫至組件匯入轉換的程序。</span><span class="sxs-lookup"><span data-stu-id="5e838-128">Describes the type library to assembly import conversion process.</span></span>  
+  
+ <span data-ttu-id="5e838-129">[使用泛型型別交互操作](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5e838-129">[Interoperating Using Generic Types](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))</span></span>  
+ <span data-ttu-id="5e838-130">描述使用泛型類型來取得 COM 互通性時所支援的動作。</span><span class="sxs-lookup"><span data-stu-id="5e838-130">Describes which actions are supported when using generic types for COM interoperability.</span></span>
