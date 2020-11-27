@@ -9,20 +9,22 @@ helpviewer_keywords:
 - elements, finding by property conditions
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-ms.openlocfilehash: 112f38d6bef726f92dbf13da70b88732929175dd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 603ecf5375af919a558168e14792035a16fb20f2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557680"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276486"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>根據屬性條件尋找 UI 自動化項目
+
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題包含範例程式碼，示範如何 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 根據特定屬性或屬性找出樹狀結構中的元素。  
   
 ## <a name="example"></a>範例  
+
  在下列範例中，指定了一組屬性條件，以識別樹狀結構中所需的特定元素 (或元素) <xref:System.Windows.Automation.AutomationElement> 。 接著，會使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 併入一連串布耳運算的方法來執行所有相符專案的搜尋 <xref:System.Windows.Automation.AndCondition> ，以限制相符專案的數目。  
   
 > [!NOTE]

@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: 0d696adbe1ee224e78f79a049ed2e41d50be1faa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0321e98e6237e54397db7e583546fd69803ab7e1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554165"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275953"
 ---
 # <a name="how-to-create-wrappers-manually"></a>作法：手動建立包裝函式
+
 若您決定在 Managed 原始程式碼中手動宣告 COM 類型，現有的介面定義語言 (IDL) 檔或類型程式庫，將會是最佳的啟動位置。 沒有 IDL 檔案或無法產生類型程式庫檔案時，可建立 Managed 宣告並將所產生的組件匯出至類型程式庫，進而模擬 COM類型。  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>從 Managed 原始檔模擬 COM 類型  
@@ -34,6 +35,7 @@ ms.locfileid: "90554165"
 4. 如同使用 Tlbimp.exe 匯入類型一樣，部分檔案會要求額外的資訊，其可由您直接加入程式碼。 如需詳細資料，請參閱[如何：編輯 Interop 組件](/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼為 `ISATest` 介面，和 IDL 中 `SATest` 類別以及C# 原始程式碼中對應類型的範例。  
   
  **IDL 或型別程式庫檔案**  
@@ -104,5 +106,5 @@ namespace SAServer
 - [COM 資料類型](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [如何：編輯 Interop 組件](/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [型別程式庫至組件轉換的摘要](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (型別程式庫匯入工具) ](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (型別程式庫匯出工具) ](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (類型程式庫匯入工具)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)

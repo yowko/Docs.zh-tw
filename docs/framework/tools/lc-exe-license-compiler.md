@@ -1,6 +1,6 @@
 ---
 title: Lc.exe (授權編譯器)
-description: 使用授權編譯器 Lc.exe。 此工具會讀取具有授權資訊的文字檔，並將二進位檔案內嵌在 CLR 可執行檔中做為資源。
+description: 使用 Lc.exe 授權編譯器。 此工具會讀取具有授權資訊的文字檔，並將二進位檔案內嵌在 CLR 可執行檔中做為資源。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Lc.exe
@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d1644ff4d69c857e36e87f7e83f668908b7ba021
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164254"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275758"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (授權編譯器)
+
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  
   
  每當將授權控制項加入至表單時，Windows Form 設計工具便會自動產生或更新 .licx 文字檔。 專案系統會將 .licx 文字檔轉換為可支援 .NET 控制項授權的 .licenses 二進位資源，當做編譯的一部分。 接著此二進位資源將嵌入專案輸出。  
@@ -31,7 +32,7 @@ ms.locfileid: "87164254"
   
  在命令提示字元中，請輸入下列項目：  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```console
       lc /target:  
@@ -41,19 +42,19 @@ targetPE /complist:filename [-outdir:path]
   
 |選項|描述|  
 |------------|-----------------|  
-|**/complist: filename** **|指定要包含在 .licenses 檔案中含有授權元件清單的檔案名稱。 使用元件的完整名稱與每行只有一個元件方式參考每個元件。<br /><br /> 命令列使用者可以為專案中的每個表單指定個別的檔案。 Lc.exe 接受多個輸入檔並產生單一 .licenses 檔案。|  
+|**/complist: filename** |指定要包含在 .licenses 檔案中含有授權元件清單的檔案名稱。 使用元件的完整名稱與每行只有一個元件方式參考每個元件。<br /><br /> 命令列使用者可以為專案中的每個表單指定個別的檔案。 Lc.exe 接受多個輸入檔並產生單一 .licenses 檔案。|  
 |**/h**[**elp**]|顯示工具的命令語法和選項。|  
-|**/i: module** **|指定包含列於 **/complist** 檔案中之元件的模組。 若要指定一個以上的模組，請使用多個 **/i** 旗標。|  
+|**/i: module** |指定包含列於 **/complist** 檔案中之元件的模組。 若要指定一個以上的模組，請使用多個 **/i** 旗標。|  
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
-|**/outdir: path** **|指定要放置輸出 .licenses 檔案的目錄。|  
-|**/target: targetPE** **|指定要產生 .licenses 檔案的可執行檔。|  
+|**/outdir: path** |指定要放置輸出 .licenses 檔案的目錄。|  
+|**/target: targetPE** |指定要產生 .licenses 檔案的可執行檔。|  
 |**/v**|指定詳細資訊模式；顯示編譯程序資訊。|  
-|**@***file*檔案|指定回應檔 (.rsp)。|  
+|**@***file* 檔案|指定回應檔 (.rsp)。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="example"></a>範例  
   
-1. 如果您要使用名為 `HostApp.exe` 之應用程式中 `Samples.DLL` 所包含的授權控制項 `MyCompany.Samples.LicControl1`，** 可以建立包含下列程式碼的 `HostAppLic.txt`。  
+1. 如果您要使用名為 `HostApp.exe` 之應用程式中 `Samples.DLL` 所包含的授權控制項 `MyCompany.Samples.LicControl1`，可以建立包含下列程式碼的 `HostAppLic.txt`。  
   
     ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
@@ -78,6 +79,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 ```  
   
 ## <a name="response-file-example"></a>回應檔範例  
+
  下列清單顯示回應檔 `response.rsp` 的範例。 如需回應檔的詳細資訊，請參閱[回應檔](/visualstudio/msbuild/msbuild-response-files)。  
   
 ```text  
@@ -96,5 +98,5 @@ lc @response.rsp
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [Al.exe （元件連結器）](al-exe-assembly-linker.md)
+- [Al.exe (元件連結器) ](al-exe-assembly-linker.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

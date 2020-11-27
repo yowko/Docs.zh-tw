@@ -2,28 +2,31 @@
 title: 1020 - CreateBookmark
 ms.date: 03/30/2017
 ms.assetid: 4bee948d-816f-4803-85cc-3883b5e23d10
-ms.openlocfilehash: 2a382a2f12f4800cd70286a553af253e2af64c9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c9c20fd4fb74f80779c1d2ef8f29ac3d44050d9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924744"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275371"
 ---
 # <a name="1020---createbookmark"></a>1020 - CreateBookmark
+
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |識別碼|1020|  
 |關鍵字|WFRuntime|  
-|層級|詳細資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|層級|「詳細資訊」|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  表示已經為活動建立書籤。  
   
 ## <a name="message"></a>訊息  
- 已建立書籤的活動 '%1'，DisplayName: '%2'、 InstanceId: '%3'。  BookmarkName：%4、BookmarkScope：%5。  
+
+ 已為活動 ' %1 '、DisplayName： ' %2 '、InstanceId： ' %3 ' 建立書簽。  BookmarkName：%4、BookmarkScope：%5。  
   
 ## <a name="details"></a>詳細資料  
   

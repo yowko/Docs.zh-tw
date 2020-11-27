@@ -2,18 +2,19 @@
 title: NativeActivity 基底類別
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d875f62dacadb2baf6b5d7e93ddb2933aed9cdb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989555"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274955"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基底類別
 
 <xref:System.Activities.NativeActivity> 是具有受保護建構函式的抽象類別。 如同 <xref:System.Activities.CodeActivity>，<xref:System.Activities.NativeActivity> 會用於透過實作 <xref:System.Activities.NativeActivity.Execute%2A> 方法的方式寫入命令式行為。 不同於 <xref:System.Activities.CodeActivity> 的是，<xref:System.Activities.NativeActivity> 可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 物件，存取工作流程執行階段的所有公開功能。
 
 ## <a name="using-nativeactivitycontext"></a>使用 NativeActivityContext
+
  工作流程執行階段的功能可透過 <xref:System.Activities.NativeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.NativeActivityContext>)。 透過 <xref:System.Activities.NativeActivityContext> 可使用的功能如下：
 
 - 取得與設定引數和變數。
@@ -36,11 +37,11 @@ ms.locfileid: "70989555"
 
 1. OpenVisual Studio 2010。
 
-2. 選取 **[** 檔案]、[**新增**] 和 [**專案**]。 在 **專案類型** 視窗中，選取 **視覺效果C#**   底下的  **Workflow 4.0** ，然後選取  **v2010**  節點 在 [**範本**] 視窗中選取 [**活動程式庫**]。 將新專案命名為 HelloActivity。
+2. 依 **序選取 [** 檔案]、[ **新增**] 和 [ **專案**]。 在 [**專案類型**] 視窗中選取 [ **Visual c #** ] 底下的 **工作流程 4.0** ，然後選取 [ **v2010]** ] 節點。 選取 [**範本**] 視窗中的 [**活動程式庫**]。 將新專案命名為 HelloActivity。
 
-3. 以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1，然後選取 [**刪除**]。
+3. 以滑鼠右鍵按一下 HelloActivity 專案中的 [Activity1]，然後選取 [ **刪除**]。
 
-4. 以滑鼠右鍵按一下 HelloActivity 專案，然後依序選取 [**新增**] 和 [**類別**]。 將新類別命名為 HelloActivity.cs。
+4. 以滑鼠右鍵按一下 HelloActivity 專案，然後依序選取 [ **加入**] 和 [ **類別**]。 將新類別命名為 HelloActivity.cs。
 
 5. 在 HelloActivity.cs 檔案中加入下列 `using` 指示詞。
 

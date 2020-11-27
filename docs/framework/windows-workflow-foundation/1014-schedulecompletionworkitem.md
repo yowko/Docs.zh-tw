@@ -2,28 +2,31 @@
 title: 1014 - ScheduleCompletionWorkItem
 ms.date: 03/30/2017
 ms.assetid: 84203735-478d-42d8-a320-c175dbddcb38
-ms.openlocfilehash: 50b00a49ea73dcbe09e8f4c4195cbce8c1cbf615
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fd93683851c5a8c4ab253272c3f2129b3f0bb49
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982263"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275553"
 ---
 # <a name="1014---schedulecompletionworkitem"></a>1014 - ScheduleCompletionWorkItem
+
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |識別碼|1014|  
 |關鍵字|WFRuntime|  
-|層級|詳細資訊|  
-|通道|Microsoft-Windows-Application Server-Applications/Debug|  
+|層級|「詳細資訊」|  
+|通路|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
+
  表示已排定 CompletionWorkItem。  
   
 ## <a name="message"></a>訊息  
- 已排定 CompletionWorkItem 父活動 '%1'，DisplayName: '%2'、 InstanceId: '%3'。  已完成活動 '%4'、DisplayName：'%5'、InstanceId：'%6'。  
+
+ 已排程父活動 ' %1 '、DisplayName： ' %2 '、InstanceId： ' %3 ' 的 CompletionWorkItem。  已完成活動 '%4'、DisplayName：'%5'、InstanceId：'%6'。  
   
 ## <a name="details"></a>詳細資料  
   

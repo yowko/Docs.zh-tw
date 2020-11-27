@@ -2,12 +2,12 @@
 title: 作法：以受限的保留項目取代 WCF URL 保留項目
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 52dc74ea1f8e86d6a92a2894b888b8d150ebf47c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811609"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276057"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>作法：以受限的保留項目取代 WCF URL 保留項目
 
@@ -29,18 +29,19 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>若要刪除 WCF URL 保留項目  
   
-1. 按一下 [ **開始**]，依序指向 [ **所有程式**]、[ **附屬**應用程式] 和 [ **命令提示** 字元]，然後在出現的內容功能表上按一下 [以 **系統管理員身分執行** ]。 在 [使用者帳戶控制] (UAC) 視窗中按一下 [ **繼續** ]，可能會要求許可權才能繼續。  
+1. 按一下 [ **開始**]，依序指向 [ **所有程式**]、[ **附屬** 應用程式] 和 [ **命令提示** 字元]，然後在出現的內容功能表上按一下 [以 **系統管理員身分執行** ]。 在 [使用者帳戶控制] (UAC) 視窗中按一下 [ **繼續** ]，可能會要求許可權才能繼續。  
   
 2. 在 `netsh http delete urlacl url=http://+:80/Temporary_Listen_Addresses/` [命令提示字元] 視窗中輸入。  
   
 3. 如果成功刪除保留項目，就會顯示下列訊息。 **URL 保留項目已成功刪除**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>建立新的安全性群組與新的受限 URL 保留項目  
+
  若要以受限的保留專案取代 WCF URL 保留專案，您必須先建立新的安全性群組。 您可以從命令提示字元或電腦管理主控台執行這個動作。 您只需要選擇其中一種方式。  
   
 ### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>若要從命令提示字元建立新的安全性群組  
   
-1. 按一下 [ **開始**]，依序指向 [ **所有程式**]、[ **附屬**應用程式] 和 [ **命令提示** 字元]，然後在出現的內容功能表上按一下 [以 **系統管理員身分執行** ]。 在 [使用者帳戶控制] (UAC) 視窗中按一下 [ **繼續** ]，可能會要求許可權才能繼續。  
+1. 按一下 [ **開始**]，依序指向 [ **所有程式**]、[ **附屬** 應用程式] 和 [ **命令提示** 字元]，然後在出現的內容功能表上按一下 [以 **系統管理員身分執行** ]。 在 [使用者帳戶控制] (UAC) 視窗中按一下 [ **繼續** ]，可能會要求許可權才能繼續。  
   
 2. 在命令提示字元中輸入 `net localgroup "<security group name>" /comment:"<security group description>" /add` 。 以 **\<security group name>** 您想要建立的安全性群組名稱取代，並 **\<security group description>** 以適當的安全性群組描述取代。  
   
@@ -54,8 +55,8 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 ### <a name="to-create-the-restricted-url-reservation"></a>若要建立受限的 URL 保留項目  
   
-1. 按一下 [ **開始**]，依序指向 [ **所有程式**]、[ **附屬**應用程式] 和 [ **命令提示** 字元]，然後在出現的內容功能表上按一下 [以 **系統管理員身分執行** ]。 在 [使用者帳戶控制] (UAC) 視窗中按一下 [ **繼續** ]，可能會要求許可權才能繼續。  
+1. 按一下 [ **開始**]，依序指向 [ **所有程式**]、[ **附屬** 應用程式] 和 [ **命令提示** 字元]，然後在出現的內容功能表上按一下 [以 **系統管理員身分執行** ]。 在 [使用者帳戶控制] (UAC) 視窗中按一下 [ **繼續** ]，可能會要求許可權才能繼續。  
   
 2. 在命令提示字元中輸入 `netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="<machine name>\<security group name>` 。 **\<machine name>** 以必須建立群組的電腦名稱稱取代，並 **\<security group name>** 以您先前建立的安全性群組名稱取代。  
   
-3. 如果成功建立保留項目，就會顯示下列訊息。 **已成功新增 URL 保留**專案。
+3. 如果成功建立保留項目，就會顯示下列訊息。 **已成功新增 URL 保留** 專案。

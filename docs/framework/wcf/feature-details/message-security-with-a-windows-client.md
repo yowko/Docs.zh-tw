@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: c87583bec908c3465dedf7c542e30ce264cd7b47
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1fe50f711c65871b811837a7f48cf6f45f4455b4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553775"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275602"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
+
 此案例顯示 Windows Communication Foundation (WCF) 用戶端，以及由訊息安全性模式保護的伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
   
  ![Windows 用戶端的訊息安全性](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
@@ -29,19 +30,22 @@ ms.locfileid: "90553775"
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
 - 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼會示範如何建立服務端點，而這個服務端點會使用訊息安全性來建立 Windows 電腦的安全內容。  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  可以使用下列組態取代程式碼來設定服務：  
   
 ```xml  
@@ -73,7 +77,8 @@ ms.locfileid: "90553775"
 ```  
   
 ## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
+
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
@@ -83,12 +88,14 @@ ms.locfileid: "90553775"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>程式碼  
+
  下列程式碼會建立用戶端。 繫結會使用訊息模式安全性，而且用戶端認證類型設為 `Windows`。  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
+
  可使用下列組態來設定用戶端屬性。  
   
 ```xml  

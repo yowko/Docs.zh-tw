@@ -5,14 +5,15 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: 94149e0c444cad7e32f959eaedd55bf14acb1ecb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bcbd2c50fcbd9af3f2eead57ac2e26f8db0c6ad6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547840"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275940"
 ---
 # <a name="marshaling-data-with-com-interop"></a>使用 COM Interop 封送處理資料
+
 COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和公開 Managed 物件給 COM 的支援。 廣泛支援封送處理資料至 COM 或對來自 COM 的資料封送處理，幾乎一律會提供正確的封送處理行為。  
   
  Windows SDK 包含下列 COM Interop 工具：  
@@ -24,12 +25,14 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
  下列各節會連結到各個主題，以描述當您可以 (或必須) 提供具有其他類型資訊的封送處理器時，自訂 Interop 包裝函式的程序。  
   
 ## <a name="in-this-section"></a>本節內容  
+
 [如何：手動建立包裝](how-to-create-wrappers-manually.md) 函式描述如何在 managed 原始程式碼中手動建立 COM 包裝函式。
 
  [作法：將受控碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  描述如何將受控的 DCOM 程式碼移轉至 WCF 的最安全解決方案。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [COM 資料類型](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  提供對應的 Managed 和 Unmanaged 資料類型。  
   
