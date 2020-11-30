@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90556085"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF Data Services
@@ -98,7 +98,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
     - [HOW TO：在 Visual Studio 中建立 Web 部署套件](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [如何：在 Visual Studio 中使用單鍵發行來部署 Web 專案](/previous-versions/aspnet/dd465337(v=vs.110))
+    - [如何：在 Visual Studio 中使用 One-Click 發佈來部署 Web 專案](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **用於 ASP.NET 網站的部署技術**
 

@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "91169033"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
@@ -16,7 +16,7 @@ ms.locfileid: "91169033"
 > _「借助雲端，個人和小型企業彈指之間就能立即設定企業級服務。」_  
 > _- Roy Stephan_
 
-## <a name="vision"></a>願景
+## <a name="vision"></a>視覺
 
 > *以您喜歡的方式開發設計良好的 ASP.NET Core 應用程式，使用 Visual Studio 或 dotnet CLI 和 Visual Studio Code 或您選擇的編輯器。*
 
@@ -62,7 +62,7 @@ ms.locfileid: "91169033"
 
 請務必啟用持續整合，以便每當您小組中有人認可新的程式碼時，系統便將建置排入佇列中。 測試組建，並確認它產生 Web 部署套件作為其中一個成品。
 
-建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」**，這會部署到您的 Azure App Service。
+建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」，這會部署到您的 Azure App Service。
 
 [部署 Azure web 應用程式](/azure/devops/pipelines/targets/webapp)
 

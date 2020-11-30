@@ -9,7 +9,7 @@ ms.openlocfilehash: 61c3b8ebd431c3a16475342984b463d5f8842a89
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "96235879"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服務執行階段行為

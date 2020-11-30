@@ -1,68 +1,68 @@
 ---
-title: C# 保留屬性:條件屬性、過時屬性使用
+title: 'C # 保留屬性：條件式、已過時、AttributeUsage'
 ms.date: 04/09/2020
-description: 這些屬性由編譯器解釋,以影響編譯器生成的代碼
+description: 編譯器會解讀這些屬性來影響編譯器產生的程式碼
 ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "82021772"
 ---
-# <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>保留屬性:條件屬性、過時屬性、屬性使用屬性
+# <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>保留屬性： ConditionalAttribute、ObsoleteAttribute、AttributeUsageAttribute
 
-這些屬性可以應用於代碼中的元素。 它們為這些元素添加語義意義。 編譯器使用這些語義含義來更改其輸出,並報告使用代碼的開發人員可能的錯誤。
+這些屬性可以套用至程式碼中的元素。 它們會將語義意義新增至這些元素。 編譯器會使用這些語義意義來改變其輸出，並在使用您的程式碼的開發人員報告可能的錯誤。
 
 ## <a name="conditional-attribute"></a>`Conditional` 屬性
 
 `Conditional` 屬性會根據前置處理識別碼來執行方法。 `Conditional` 屬性是 <xref:System.Diagnostics.ConditionalAttribute> 的別名，而且可以套用至方法或屬性類別。
 
-在下面的範例中,`Conditional`應用於啟用或關閉程式的診斷資訊顯示的方法:
+在下列範例中， `Conditional` 會套用至方法，以啟用或停用程式特定診斷資訊的顯示：
 
 :::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
 
-如果未定義`TRACE_ON`識別碼,則不顯示追蹤輸出。 在互動式視窗中自行探索。
+如果 `TRACE_ON` 未定義識別碼，則不會顯示追蹤輸出。 在互動式視窗中自行探索。
 
-該`Conditional`屬性通常與識別碼一起`DEBUG`使用 ,用於為除錯產生啟用追蹤和紀錄記錄功能,但在發表版本中不使用,如以下範例所示:
+`Conditional`屬性通常會與識別碼搭配使用， `DEBUG` 以啟用 debug 組建的追蹤和記錄功能，而不是在發行組建中，如下列範例所示：
 
 :::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
 
-當調用標記為條件的方法時,指定的預處理符號的存在或不存在將確定調用是包含還是省略。 如果定義符號，則會包括呼叫；否則會省略呼叫。 條件方法必須是類或結構聲明中的方法,並且必須具有`void`返回類型。 與`Conditional`將方法封閉在塊`#if…#endif`內 相比,使用更簡潔、更優雅、不易出錯。
+呼叫標記為條件的方法時，指定的前置處理符號是否存在或不存在，會決定是否要包含或省略呼叫。 如果定義符號，則會包括呼叫；否則會省略呼叫。 條件式方法必須是類別或結構宣告中的方法，而且必須有傳回 `void` 型別。 使用 `Conditional` 比區塊內的封入方法更簡潔、更簡潔、更不容易出錯 `#if…#endif` 。
 
-如果方法有多個`Conditional`屬性,則如果定義了一個或多個條件符號(符號通過使用 OR 運算符以邏輯方式連結在一起),則包括對該方法的調用。 在下面的示例中,任一或`A``B`結果為方法調用:
+如果某個方法具有多個 `Conditional` 屬性，則在定義一或多個條件式符號時，會包含方法的呼叫 (符號會以邏輯方式使用 or 運算子) 來連結在一起。 在下列範例中，或結果會出現 `A` `B` 在方法呼叫中：
 
 :::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
 
-### <a name="using-conditional-with-attribute-classes"></a>使用`Conditional`屬性類別
+### <a name="using-conditional-with-attribute-classes"></a>搭配 `Conditional` 屬性類別使用
 
-`Conditional` 屬性也可以套用至屬性類別定義。 在下面的示例中,自定義屬性`Documentation`將僅向元數據添加資訊(`DEBUG`如果已定義)。
+`Conditional` 屬性也可以套用至屬性類別定義。 在下列範例中，如果已定義，則自訂屬性 `Documentation` 只會將資訊新增至中繼資料 `DEBUG` 。
 
 :::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
 
 ## <a name="obsolete-attribute"></a>`Obsolete` 屬性
 
-該`Obsolete`屬性將代碼元素標記為不再建議使用。 使用標記為過時的實體會產生警告或錯誤。 `Obsolete` 屬性是單次使用屬性，並且可以套用至任何允許屬性的實體。 `Obsolete` 是 <xref:System.ObsoleteAttribute> 的別名。
+屬性會將 `Obsolete` 程式碼元素標示為不再建議使用。 使用標示為過時的實體會產生警告或錯誤。 `Obsolete` 屬性是單次使用屬性，並且可以套用至任何允許屬性的實體。 `Obsolete` 是 <xref:System.ObsoleteAttribute> 的別名。
 
-在下面的範例中,`Obsolete`該屬性套用`A`於類別與`B.OldMethod`方法 。 因為套用至 `B.OldMethod` 的屬性建構函式的第二個引數設為 `true`，所以這個方法會造成編譯器錯誤，而使用 `A` 類別則只會產生警告。 不過，呼叫 `B.NewMethod` 不會產生任何警告或錯誤。 例如，當您將它與先前的定義搭配使用時，下列程式碼會產生兩個警告和一個錯誤︰
+在下列範例中， `Obsolete` 屬性會套用至類別 `A` 和方法 `B.OldMethod` 。 因為套用至 `B.OldMethod` 的屬性建構函式的第二個引數設為 `true`，所以這個方法會造成編譯器錯誤，而使用 `A` 類別則只會產生警告。 不過，呼叫 `B.NewMethod` 不會產生任何警告或錯誤。 例如，當您將它與先前的定義搭配使用時，下列程式碼會產生兩個警告和一個錯誤︰
 
 :::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
 
-作為屬性建構函數的第一個參數提供的字串將顯示為警告或錯誤的一部分。 會產生 `A` 類別的兩個警告︰一個用於宣告類別參考，一個則用於類別建構函式。 該`Obsolete`屬性無需參數即可使用,但建議說明使用什麼。
+以屬性函式的第一個引數提供的字串將會顯示為警告或錯誤的一部分。 會產生 `A` 類別的兩個警告︰一個用於宣告類別參考，一個則用於類別建構函式。 `Obsolete`您可以使用不含引數的屬性，但建議您應改用的說明。
 
 ## <a name="attributeusage-attribute"></a>`AttributeUsage` 屬性
 
-該`AttributeUsage`屬性確定如何使用自定義屬性類。 <xref:System.AttributeUsageAttribute> 是您套用至自訂屬性定義的屬性。 `AttributeUsage` 屬性可讓您控制：
+`AttributeUsage`屬性會決定自訂屬性類別的使用方式。 <xref:System.AttributeUsageAttribute> 是您套用至自訂屬性定義的屬性。 `AttributeUsage` 屬性可讓您控制：
 
 - 屬性可能套用至哪些程式元素。 除非您限制其使用方式，否則屬性可能會套用至下列任一程式元素：
-  - 組件 (assembly)
-  - module
+  - 組件
+  - name
   - field
   - event
   - method
   - 參數
   - 屬性
   - return
-  - type
+  - 類型
 - 屬性是否可以套用至單一程式元素多次。
 - 衍生類別是否會繼承屬性。
 
