@@ -2,12 +2,12 @@
 title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 11/16/2020
-ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 77ed506fb1c5bd4018b5fe0c14cc0bf37cb08113
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687775"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438193"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -63,7 +63,7 @@ ASP.NET 的跨平臺、高效能、開放原始碼的實作為。
 
 下列詞彙通常會參考 BCL 所指的相同 Api 集合：
 
-- [核心 .NET 程式庫](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [核心 .NET 程式庫](../core/compatibility/corefx.md)
 - [framework 程式庫](#framework-libraries)
 - [執行時間程式庫](#runtime)
 - [共用架構](#shared-framework)

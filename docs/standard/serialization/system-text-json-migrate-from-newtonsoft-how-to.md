@@ -6,19 +6,19 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 11/05/2020
+ms.date: 11/30/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: cd40b6f6daac267342f54631075e4640f9a77d94
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: bc256c5129cd4a7306e632685474b159a43ce76c
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329764"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438057"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何從遷移 Newtonsoft.Json 至 System.Text.Json
 
@@ -46,15 +46,14 @@ ms.locfileid: "94329764"
 | Newtonsoft.Json 功能                               | System.Text.Json 等效 |
 |-------------------------------------------------------|-----------------------------|
 | 預設不區分大小寫的還原序列化           | ✔️ [PropertyNameCaseInsensitive global 設定](#case-insensitive-deserialization) |
-| Camel 大小寫屬性名稱                             | ✔️ [PropertyNamingPolicy global 設定](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
+| Camel 大小寫屬性名稱                             | ✔️ [PropertyNamingPolicy global 設定](system-text-json-customize-properties.md#use-camel-case-for-all-json-property-names) |
 | 減少字元轉義                            | ✔️ [可設定的 Strict 字元轉義](#minimal-character-escaping) |
-| `NullValueHandling.Ignore` 全域設定             | ✔️ [DefaultIgnoreCondition global 選項](system-text-json-how-to.md#ignore-all-null-value-properties) |[有條件地忽略屬性](#conditionally-ignore-a-property)
+| `NullValueHandling.Ignore` 全域設定             | ✔️ [DefaultIgnoreCondition global 選項](system-text-json-ignore-properties.md#ignore-all-null-value-properties) |[有條件地忽略屬性](#conditionally-ignore-a-property)
 | 允許批註                                        | ✔️ [ReadCommentHandling global 設定](#comments) |
 | 允許尾端逗號                                 | ✔️ [AllowTrailingCommas global 設定](#trailing-commas) |
 | 自訂轉換器註冊                         | ✔️ [優先順序不同的順序](#converter-registration-precedence) |
 | 預設沒有最大深度                           | ✔️ [預設最大深度64（可設定）](#maximum-depth) |
 | `PreserveReferencesHandling` 全域設定           | ✔️ [ReferenceHandling global 設定](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling` 全域設定                | ✔️ [ReferenceHandling global 設定](#preserve-object-references-and-handle-loops) |
 | 序列化或還原序列化以引號括住的數位            | ✔️ [NumberHandling global 設定，[JsonNumberHandling] 屬性](#allow-or-write-numbers-in-quotes) |
 | 還原序列化為不可變的類別和結構          | ✔️ [JsonConstructor，c # 9 記錄](#deserialize-to-immutable-classes-and-structs) |
 | 支援欄位                                    | ✔️ [IncludeFields global 設定，[JsonInclude] 屬性](#public-and-non-public-fields) |
@@ -76,6 +75,7 @@ ms.locfileid: "94329764"
 | `JsonConvert.PopulateObject` 方法                   | ⚠️[不支援，](#populate-existing-objects)因應措施 |
 | `ObjectCreationHandling` 全域設定               | ⚠️[不支援，](#reuse-rather-than-replace-properties)因應措施 |
 | 新增至不含 setter 的集合                    | ⚠️[不支援，](#add-to-collections-without-setters)因應措施 |
+| `ReferenceLoopHandling` 全域設定                | ❌ [不支援](#preserve-object-references-and-handle-loops) |
 | 支援 `System.Runtime.Serialization` 屬性 | ❌ [不支援](#systemruntimeserialization-attributes) |
 | `MissingMemberHandling` 全域設定                | ❌ [不支援](#missingmemberhandling) |
 | 允許沒有引號的屬性名稱                   | ❌ [不支援](#json-strings-property-names-and-string-values) |
@@ -87,9 +87,9 @@ ms.locfileid: "94329764"
 | Newtonsoft.Json 功能                               | System.Text.Json 等效 |
 |-------------------------------------------------------|-----------------------------|
 | 預設不區分大小寫的還原序列化           | ✔️ [PropertyNameCaseInsensitive global 設定](#case-insensitive-deserialization) |
-| Camel 大小寫屬性名稱                             | ✔️ [PropertyNamingPolicy global 設定](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
+| Camel 大小寫屬性名稱                             | ✔️ [PropertyNamingPolicy global 設定](system-text-json-customize-properties.md#use-camel-case-for-all-json-property-names) |
 | 減少字元轉義                            | ✔️ [可設定的 Strict 字元轉義](#minimal-character-escaping) |
-| `NullValueHandling.Ignore` 全域設定             | ✔️ [IgnoreNullValues global 選項](system-text-json-how-to.md#ignore-all-null-value-properties) |
+| `NullValueHandling.Ignore` 全域設定             | ✔️ [IgnoreNullValues global 選項](system-text-json-ignore-properties.md#ignore-all-null-value-properties) |
 | 允許批註                                        | ✔️ [ReadCommentHandling global 設定](#comments) |
 | 允許尾端逗號                                 | ✔️ [AllowTrailingCommas global 設定](#trailing-commas) |
 | 自訂轉換器註冊                         | ✔️ [優先順序不同的順序](#converter-registration-precedence) |
@@ -124,7 +124,7 @@ ms.locfileid: "94329764"
 | 允許字串屬性的非字串 JSON 值    | ❌ [不支援](#non-string-values-for-string-properties) |
 ::: zone-end
 
-這不是完整的功能清單 `Newtonsoft.Json` 。 此清單包含 [GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 或 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 文章中已要求的許多案例。 如果您針對此處所列的其中一個案例執行因應措施，而此案例目前沒有範例程式碼，而且您想要共用方案，請在此頁面底部的 **意見** 反應區段中選取 **此頁面** 。 這會在此檔的 GitHub 存放庫中建立問題，並將其列在此頁面的 **意見** 反應區段中。
+這不是完整的功能清單 `Newtonsoft.Json` 。 此清單包含 [GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 或 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 文章中已要求的許多案例。 如果您針對此處所列的其中一個案例執行因應措施，而此案例目前沒有範例程式碼，而且您想要共用方案，請在此頁面底部的 **意見** 反應區段中選取 **此頁面**。 這會在此檔的 GitHub 存放庫中建立問題，並將其列在此頁面的 **意見** 反應區段中。
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>預設 JsonSerializer 行為與之間的差異 Newtonsoft.Json
 
@@ -132,9 +132,9 @@ ms.locfileid: "94329764"
 
 ### <a name="case-insensitive-deserialization"></a>不區分大小寫的還原序列化
 
-在還原序列化期間， `Newtonsoft.Json` 預設不區分大小寫的屬性名稱相符。 <xref:System.Text.Json>預設值會區分大小寫，這可提供更佳的效能，因為它會執行完全相符的結果。 如需有關如何進行不區分大小寫比對的詳細資訊，請參閱不區分 [大小寫的屬性](system-text-json-how-to.md#case-insensitive-property-matching)比對。
+在還原序列化期間， `Newtonsoft.Json` 預設不區分大小寫的屬性名稱相符。 <xref:System.Text.Json>預設值會區分大小寫，這可提供更佳的效能，因為它會執行完全相符的結果。 如需有關如何進行不區分大小寫比對的詳細資訊，請參閱不區分 [大小寫的屬性](system-text-json-character-casing.md)比對。
 
-如果您使用 `System.Text.Json` ASP.NET Core 間接使用，則不需要採取任何動作來取得像這樣的行為 `Newtonsoft.Json` 。 ASP.NET Core 指定符合 [camel 大小寫之屬性名稱](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) 的設定，以及使用時不區分大小寫的比對 `System.Text.Json` 。
+如果您使用 `System.Text.Json` ASP.NET Core 間接使用，則不需要採取任何動作來取得像這樣的行為 `Newtonsoft.Json` 。 ASP.NET Core 指定符合 [camel 大小寫之屬性名稱](system-text-json-customize-properties.md#use-camel-case-for-all-json-property-names) 的設定，以及使用時不區分大小寫的比對 `System.Text.Json` 。
 
 ::: zone pivot="dotnet-5-0"
 ASP.NET Core 預設也啟用還原序列化 [引號的數位](#allow-or-write-numbers-in-quotes) 。
@@ -142,15 +142,15 @@ ASP.NET Core 預設也啟用還原序列化 [引號的數位](#allow-or-write-nu
 
 ### <a name="minimal-character-escaping"></a>減少字元轉義
 
-在序列化期間， `Newtonsoft.Json` 相對於讓字元通過，而不將它們進行轉義。 也就是說，它不會將它們取代 `\uxxxx` `xxxx` 為字元的程式碼點。 在它進行 escape 的地方，它會在 (的 `\` 字元之前發出，以 `"` 成為 `\"`) 。 <xref:System.Text.Json> 根據預設，請將更多字元轉義以提供深度防禦的保護，以防範跨網站腳本 (XSS) 或資訊洩漏攻擊，並使用六個字元的序列。 `System.Text.Json` 預設會將所有非 ASCII 字元加入，因此，如果您在中使用，就不需要採取任何動作 `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json` 。 `System.Text.Json` 根據預設，也會將 HTML 機密字元轉義。 如需有關如何覆寫預設行為的詳細資訊 `System.Text.Json` ，請參閱 [自訂字元編碼](system-text-json-how-to.md#customize-character-encoding)。
+在序列化期間， `Newtonsoft.Json` 相對於讓字元通過，而不將它們進行轉義。 也就是說，它不會將它們取代 `\uxxxx` `xxxx` 為字元的程式碼點。 在它進行 escape 的地方，它會在 (的 `\` 字元之前發出，以 `"` 成為 `\"`) 。 <xref:System.Text.Json> 根據預設，請將更多字元轉義以提供深度防禦的保護，以防範跨網站腳本 (XSS) 或資訊洩漏攻擊，並使用六個字元的序列。 `System.Text.Json` 預設會將所有非 ASCII 字元加入，因此，如果您在中使用，就不需要採取任何動作 `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json` 。 `System.Text.Json` 根據預設，也會將 HTML 機密字元轉義。 如需有關如何覆寫預設行為的詳細資訊 `System.Text.Json` ，請參閱 [自訂字元編碼](system-text-json-character-encoding.md)。
 
-### <a name="comments"></a>註解
+### <a name="comments"></a>評價
 
-在還原序列化期間， `Newtonsoft.Json` 預設會忽略 JSON 中的批註。 <xref:System.Text.Json>預設值是擲回批註的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不包含它們。 如需有關如何允許批註的詳細資訊，請參閱 [允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。
+在還原序列化期間， `Newtonsoft.Json` 預設會忽略 JSON 中的批註。 <xref:System.Text.Json>預設值是擲回批註的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不包含它們。 如需有關如何允許批註的詳細資訊，請參閱 [允許批註和尾端逗號](system-text-json-invalid-json.md)。
 
 ### <a name="trailing-commas"></a>尾端逗號
 
-在還原序列化期間， `Newtonsoft.Json` 預設會忽略結尾的逗號。 它也會忽略多個尾端逗號 (例如 `[{"Color":"Red"},{"Color":"Green"},,]`) 。 <xref:System.Text.Json>預設值是擲回尾端逗號的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不允許它們。 如需如何接受這些專案的詳細資訊 `System.Text.Json` ，請參閱 [允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。 沒有任何方法可允許多個尾端逗號。
+在還原序列化期間， `Newtonsoft.Json` 預設會忽略結尾的逗號。 它也會忽略多個尾端逗號 (例如 `[{"Color":"Red"},{"Color":"Green"},,]`) 。 <xref:System.Text.Json>預設值是擲回尾端逗號的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不允許它們。 如需如何接受這些專案的詳細資訊 `System.Text.Json` ，請參閱 [允許批註和尾端逗號](system-text-json-invalid-json.md)。 沒有任何方法可允許多個尾端逗號。
 
 ### <a name="converter-registration-precedence"></a>轉換器註冊優先順序
 
@@ -236,9 +236,9 @@ The JSON value could not be converted to System.String.
 ::: zone pivot="dotnet-5-0"
 `Newtonsoft.Json` 可以序列化或還原序列化 JSON 字串所表示的數位， (以引號括住) 。 例如，它可以接受： `{"DegreesCelsius":"23"}` 而不是 `{"DegreesCelsius":23}` 。 若要在中啟用該行為 <xref:System.Text.Json> ，請將設 <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType> 為 <xref:System.Text.Json.Serialization.JsonNumberHandling.WriteAsString> 或 <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString> ，或使用 [[JsonNumberHandling]](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute) 屬性。
 
-如果您使用 `System.Text.Json` ASP.NET Core 間接使用，則不需要採取任何動作來取得像這樣的行為 `Newtonsoft.Json` 。 ASP.NET Core 會在使用時指定 [web 預設值](system-text-json-how-to.md#web-defaults-for-jsonserializeroptions) `System.Text.Json` ，而 web 預設值則允許加上引號的數位。
+如果您使用 `System.Text.Json` ASP.NET Core 間接使用，則不需要採取任何動作來取得像這樣的行為 `Newtonsoft.Json` 。 ASP.NET Core 會在使用時指定 [web 預設值](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) `System.Text.Json` ，而 web 預設值則允許加上引號的數位。
 
-如需詳細資訊，請參閱 [允許或寫入以引號括](system-text-json-how-to.md#allow-or-write-numbers-in-quotes)住的數位。
+如需詳細資訊，請參閱 [允許或寫入以引號括](system-text-json-invalid-json.md)住的數位。
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -247,7 +247,7 @@ The JSON value could not be converted to System.String.
 * 它會將它們序列化為 JSON 字串。
 * 它會在還原序列化時，接受引號內的 JSON 數位和數位。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/LongToStringConverter.cs":::
 
 使用個別屬性上的 [屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) ， `long` 或 [將轉換器新增](system-text-json-converters-how-to.md#registration-sample---converters-collection) 至集合，以註冊這個自訂轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters> 。
 ::: zone-end
@@ -257,7 +257,7 @@ The JSON value could not be converted to System.String.
 `Newtonsoft.Json` `[JsonConstructor]` 屬性可讓您指定在還原序列化為 POCO 時要呼叫的函式。
 
 ::: zone pivot="dotnet-5-0"
-`System.Text.Json` 也有 [[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 屬性。 如需詳細資訊，請參閱 [不可變的類型和記錄](system-text-json-how-to.md#immutable-types-and-records)。
+`System.Text.Json` 也有 [[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 屬性。 如需詳細資訊，請參閱 [不可變的類型和記錄](system-text-json-immutability.md)。
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -276,10 +276,10 @@ The JSON value could not be converted to System.String.
 
 <xref:System.Text.Json> 提供下列方法，以在序列化時忽略屬性或欄位：
 
-* 屬性 [（property）上的 [JsonIgnore] 屬性（attribute）](system-text-json-how-to.md#ignore-individual-properties) 會在序列化期間，從 JSON 中省略屬性（property）。
-* [IgnoreReadOnlyProperties](system-text-json-how-to.md#ignore-all-read-only-properties) global 選項可讓您忽略所有的唯讀屬性。
+* 屬性 [（property）上的 [JsonIgnore] 屬性（attribute）](system-text-json-ignore-properties.md#ignore-individual-properties) 會在序列化期間，從 JSON 中省略屬性（property）。
+* [IgnoreReadOnlyProperties](system-text-json-ignore-properties.md#ignore-all-read-only-properties) global 選項可讓您忽略所有的唯讀屬性。
 * 如果您要 [包含欄位](system-text-json-how-to.md#include-fields)， <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> global 選項可讓您忽略所有唯讀欄位。
-* `DefaultIgnoreCondition`Global 選項可讓您[忽略所有具有預設值的實值型別屬性](system-text-json-how-to.md#ignore-all-default-value-properties)，或[忽略所有具有 null 值的參考型](system-text-json-how-to.md#ignore-all-null-value-properties)別屬性。
+* `DefaultIgnoreCondition`Global 選項可讓您[忽略所有具有預設值的實值型別屬性](system-text-json-ignore-properties.md#ignore-all-default-value-properties)，或[忽略所有具有 null 值的參考型](system-text-json-ignore-properties.md#ignore-all-null-value-properties)別屬性。
 
 ::: zone-end
 
@@ -287,9 +287,9 @@ The JSON value could not be converted to System.String.
 
 <xref:System.Text.Json> 在 .NET Core 3.1 中，會提供下列方法，在序列化時忽略屬性：
 
-* 屬性 [（property）上的 [JsonIgnore] 屬性（attribute）](system-text-json-how-to.md#ignore-individual-properties) 會在序列化期間，從 JSON 中省略屬性（property）。
-* [IgnoreNullValues](system-text-json-how-to.md#ignore-all-null-value-properties) global 選項可讓您忽略所有 null 值屬性。
-* [IgnoreReadOnlyProperties](system-text-json-how-to.md#ignore-all-read-only-properties) global 選項可讓您忽略所有的唯讀屬性。
+* 屬性 [（property）上的 [JsonIgnore] 屬性（attribute）](system-text-json-ignore-properties.md#ignore-individual-properties) 會在序列化期間，從 JSON 中省略屬性（property）。
+* [IgnoreNullValues](system-text-json-ignore-properties.md#ignore-all-null-value-properties) global 選項可讓您忽略所有 null 值屬性。
+* [IgnoreReadOnlyProperties](system-text-json-ignore-properties.md#ignore-all-read-only-properties) global 選項可讓您忽略所有的唯讀屬性。
 ::: zone-end
 
 這些選項 **不** 會讓您：
@@ -311,9 +311,9 @@ The JSON value could not be converted to System.String.
 
 針對該功能，您可以撰寫自訂的轉換器。 以下是說明此方法的範例 POCO 和自訂的轉換器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs":::
 
 `Summary`如果屬性的值為 null、空字串或 "N/A"，轉換器會導致從序列化中省略屬性。
 
@@ -356,8 +356,9 @@ The JSON value could not be converted to System.String.
 
 * [JsonPropertyAttribute. IsReference](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_IsReference.htm)
 * [JsonPropertyAttribute. ReferenceLoopHandling](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_ReferenceLoopHandling.htm)
+* [JsonSerializerSettings. ReferenceLoopHandling](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonSerializerSettings_ReferenceLoopHandling.htm)
 
-如需詳細資訊，請參閱 [保留參考和處理迴圈參考](system-text-json-how-to.md#preserve-references-and-handle-circular-references)
+如需詳細資訊，請參閱 [保留參考和處理迴圈參考](system-text-json-preserve-references.md)。
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -394,13 +395,13 @@ The JSON value could not be converted to System.String.
 
 ### <a name="polymorphic-serialization"></a>多型序列化
 
-`Newtonsoft.Json` 自動執行多型序列化。 如需的有限多型序列化功能的詳細資訊 <xref:System.Text.Json> ，請參閱 [序列化衍生類別的屬性](system-text-json-how-to.md#serialize-properties-of-derived-classes)。
+`Newtonsoft.Json` 自動執行多型序列化。 如需的有限多型序列化功能的詳細資訊 <xref:System.Text.Json> ，請參閱 [序列化衍生類別的屬性](system-text-json-polymorphism.md)。
 
 其中所述的因應措施是定義可能包含衍生類別做為類型的屬性 `object` 。 如果無法這麼做，另一個選項是使用整個繼承類型階層的方法來建立轉換器，例如 `Write` [如何撰寫自訂轉換器](system-text-json-converters-how-to.md#support-polymorphic-deserialization)的範例。
 
 ### <a name="polymorphic-deserialization"></a>多型還原序列化
 
-`Newtonsoft.Json` 具有在序列化 `TypeNameHandling` 時將類型名稱中繼資料新增至 JSON 的設定。 它會在還原序列化時使用中繼資料，以進行多型還原序列化。 <xref:System.Text.Json> 可以進行有限範圍的多型序列化，但不能進行多型還原 [序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes) 。
+`Newtonsoft.Json` 具有在序列化 `TypeNameHandling` 時將類型名稱中繼資料新增至 JSON 的設定。 它會在還原序列化時使用中繼資料，以進行多型還原序列化。 <xref:System.Text.Json> 可以進行有限範圍的多型序列化，但不能進行多型還原 [序列化](system-text-json-polymorphism.md) 。
 
 若要支援多型還原序列化，請建立類似 [于如何撰寫自訂轉換器](system-text-json-converters-how-to.md#support-polymorphic-deserialization)的轉換器。
 
@@ -436,13 +437,13 @@ The JSON value could not be converted to System.String.
 
 另一個因應措施是建立類型的轉換器，例如下列範例來處理類型的 null 值 `DateTimeOffset` ：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DateTimeOffsetNullHandlingConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DateTimeOffsetNullHandlingConverter.cs":::
 
 您可以 [使用屬性（attribute）上的屬性（property](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) ）或 [將轉換器新增](system-text-json-converters-how-to.md#registration-sample---converters-collection) 至集合，以註冊這個自訂轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters> 。
 
 **注意：** 上述轉換器會 **以不同** 于 `Newtonsoft.Json` 指定預設值的 poco 來處理 null 值。 例如，假設下列程式碼代表您的目標物件：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithDefault":::
 
 假設下列 JSON 是使用上述轉換器還原序列化：
 
@@ -461,7 +462,7 @@ The JSON value could not be converted to System.String.
 `Newtonsoft.Json` 可以還原序列化為不可變的類別和結構，因為它可以使用具有參數的函式。
 
 ::: zone pivot="dotnet-5-0"
-在中 <xref:System.Text.Json> ，使用 [[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 屬性來指定參數化函式的使用方式。 C # 9 中的記錄也是不可變的，且支援作為還原序列化目標。 如需詳細資訊，請參閱 [不可變的類型和記錄](system-text-json-how-to.md#immutable-types-and-records)。
+在中 <xref:System.Text.Json> ，使用 [[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 屬性來指定參數化函式的使用方式。 C # 9 中的記錄也是不可變的，且支援作為還原序列化目標。 如需詳細資訊，請參閱 [不可變的類型和記錄](system-text-json-immutability.md)。
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -469,11 +470,11 @@ The JSON value could not be converted to System.String.
 
 以下是具有多個函式參數的不可變結構：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/ImmutablePoint.cs#ImmutablePoint)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/ImmutablePoint.cs" id="ImmutablePoint":::
 
 以下是將此結構序列化和還原序列化的轉換器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/ImmutablePointConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/ImmutablePointConverter.cs":::
 
 [將轉換器新增](system-text-json-converters-how-to.md#registration-sample---converters-collection)至集合，以註冊這個自訂的轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters> 。
 
@@ -486,7 +487,7 @@ The JSON value could not be converted to System.String.
 
 <xref:System.Text.Json> 如果未收到目標型別其中一個屬性的值，則不會擲回例外狀況。 例如，如果您有一個 `WeatherForecast` 類別：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
 下列 JSON 會還原序列化，而不會發生錯誤：
 
@@ -499,7 +500,7 @@ The JSON value could not be converted to System.String.
 
 若要在 JSON 中沒有任何屬性時將還原序列化失敗 `Date` ，請執行自訂轉換器。 如果未在還原序列化 `Date` 完成之後設定屬性，則下列範例轉換器程式碼會擲回例外狀況：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs":::
 
 [將轉換器新增](system-text-json-converters-how-to.md#registration-sample---converters-collection)至集合，以註冊這個自訂的轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> 。
 
@@ -515,11 +516,11 @@ The JSON value could not be converted to System.String.
 
 以下是 `WeatherForecast*` 類型：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithReqPptyConverterAttr":::
 
 以下是轉換器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs":::
 
 如果您需要處理屬性（例如 [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) ）或不同選項（例如自訂編碼器），則必要的屬性轉換器會需要額外的邏輯。 此外，範例程式碼不會處理在函式中設定預設值的屬性。 這種方法並不區分下列案例：
 
@@ -547,7 +548,7 @@ The JSON value could not be converted to System.String.
 
 在中 <xref:System.Text.Json> ，您可以藉由撰寫自訂轉換器來模擬回呼。 下列範例顯示 POCO 的自訂轉換子。 轉換器包含的程式碼會在每個對應至回呼的點上顯示訊息 `Newtonsoft.Json` 。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs":::
 
 [將轉換器新增](system-text-json-converters-how-to.md#registration-sample---converters-collection)至集合，以註冊這個自訂的轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters> 。
 
@@ -563,7 +564,7 @@ The JSON value could not be converted to System.String.
 `Newtonsoft.Json` 可以透過屬性使用私用和內部屬性 setter 和 getter `JsonProperty` 。
 
 ::: zone pivot="dotnet-5-0"
-<xref:System.Text.Json> 透過 [[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 屬性支援私用和內部屬性 setter 和 getter。 如需範例程式碼，請參閱 [非公用屬性存取](system-text-json-how-to.md#non-public-property-accessors)子。
+<xref:System.Text.Json> 透過 [[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 屬性支援私用和內部屬性 setter 和 getter。 如需範例程式碼，請參閱 [非公用屬性存取](system-text-json-immutability.md)子。
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -592,7 +593,7 @@ The JSON value could not be converted to System.String.
 
 ### <a name="missingmemberhandling"></a>MissingMemberHandling
 
-`Newtonsoft.Json` 可以設定為在還原序列化期間擲回例外狀況（如果 JSON 包括目標型別中遺漏的屬性）。 <xref:System.Text.Json> 除非您使用 [[JsonExtensionData] 屬性](system-text-json-how-to.md#handle-overflow-json)，否則會忽略 JSON 中的額外屬性。 遺漏的成員功能沒有因應措施。
+`Newtonsoft.Json` 可以設定為在還原序列化期間擲回例外狀況（如果 JSON 包括目標型別中遺漏的屬性）。 <xref:System.Text.Json> 除非您使用 [[JsonExtensionData] 屬性](system-text-json-handle-overflow.md)，否則會忽略 JSON 中的額外屬性。 遺漏的成員功能沒有因應措施。
 
 ### <a name="tracewriter"></a>>tracewriter
 
@@ -652,7 +653,7 @@ public JsonElement ReturnFileName(JsonElement source)
 * 使用內建的枚舉器 (<xref:System.Text.Json.JsonElement.EnumerateArray%2A> 和 <xref:System.Text.Json.JsonElement.EnumerateObject%2A>) ，而不是執行您自己的索引或迴圈。
 * 請勿 `JsonDocument` 使用在每個屬性上進行順序搜尋 `RootElement` 。 相反地，根據 JSON 資料的已知結構來搜尋嵌套的 JSON 物件。 例如，如果您要尋找 `Grade` 物件中的屬性 `Student` ，請在物件之間執行迴圈， `Student` 並 `Grade` 為每個物件取得值，而不是搜尋所有 `JsonElement` 尋找屬性的物件 `Grade` 。 如此一來，就會導致相同資料的不必要傳遞。
 
-如需程式碼範例，請參閱 [使用 JsonDocument 存取資料](system-text-json-how-to.md#use-jsondocument-for-access-to-data)。
+如需程式碼範例，請參閱 [使用 JsonDocument 存取資料](write-custom-serializer-deserializer.md#use-jsondocument-for-access-to-data)。
 
 ## <a name="utf8jsonreader-compared-to-jsontextreader"></a>Utf8JsonReader 相較于 JsonTextReader
 
@@ -662,11 +663,11 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader 是 ref 結構
 
-因為 `Utf8JsonReader` 類型是 *ref 結構* ，所以具有 [某些限制](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 例如，它無法在 ref 結構以外的類別或結構上儲存為欄位。 為了達到高效能，此型別必須是， `ref struct` 因為它需要快取輸入[ReadOnlySpan \<byte> ](xref:System.ReadOnlySpan%601)，它本身就是 ref 結構。 此外，這種類型是可變動的，因為它會保存狀態。 因此， **以傳址方式傳遞** ，而不是以傳值方式傳遞。 以傳值方式傳遞會導致結構複製，而且呼叫端看不到狀態變更。 這與的不同之處在于， `Newtonsoft.Json` 因為 `Newtonsoft.Json` `JsonTextReader` 是類別。 如需如何使用 ref 結構的詳細資訊，請參閱 [撰寫安全且有效率的 c # 程式碼](../../csharp/write-safe-efficient-code.md)。
+因為 `Utf8JsonReader` 類型是 *ref 結構*，所以具有 [某些限制](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 例如，它無法在 ref 結構以外的類別或結構上儲存為欄位。 為了達到高效能，此型別必須是， `ref struct` 因為它需要快取輸入[ReadOnlySpan \<byte> ](xref:System.ReadOnlySpan%601)，它本身就是 ref 結構。 此外，這種類型是可變動的，因為它會保存狀態。 因此， **以傳址方式傳遞** ，而不是以傳值方式傳遞。 以傳值方式傳遞會導致結構複製，而且呼叫端看不到狀態變更。 這與的不同之處在于， `Newtonsoft.Json` 因為 `Newtonsoft.Json` `JsonTextReader` 是類別。 如需如何使用 ref 結構的詳細資訊，請參閱 [撰寫安全且有效率的 c # 程式碼](../../csharp/write-safe-efficient-code.md)。
 
 ### <a name="read-utf-8-text"></a>讀取 UTF-8 文字
 
-若要在使用時達到最佳效能 `Utf8JsonReader` ，請讀取已編碼為 utf-8 文字而非 utf-16 字串的 JSON 承載。 如需程式碼範例，請參閱 [使用 Utf8JsonReader 來篩選資料](system-text-json-how-to.md#filter-data-using-utf8jsonreader)。
+若要在使用時達到最佳效能 `Utf8JsonReader` ，請讀取已編碼為 utf-8 文字而非 utf-16 字串的 JSON 承載。 如需程式碼範例，請參閱 [使用 Utf8JsonReader 來篩選資料](write-custom-serializer-deserializer.md#filter-data-using-utf8jsonreader)。
 
 ### <a name="read-with-a-stream-or-pipereader"></a>使用資料流程或 PipeReader 讀取
 
@@ -676,7 +677,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 因為 `Utf8JsonReader` 會將輸入視為 JSON 文字，所以 (BOM) 的 utf-8 位元組順序標記會被視為不正確 JSON。 呼叫端必須在將資料傳遞給讀取器之前進行篩選。
 
-如需程式碼範例，請參閱 [使用 Utf8JsonReader](system-text-json-how-to.md#use-utf8jsonreader)。
+如需程式碼範例，請參閱 [使用 Utf8JsonReader](write-custom-serializer-deserializer.md#use-utf8jsonreader)。
 
 ### <a name="read-with-multi-segment-readonlysequence"></a>使用多區段 ReadOnlySequence 進行讀取
 
@@ -700,9 +701,9 @@ while (reader.Read())
 
 請勿使用 <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A> ，藉由呼叫屬性名稱查閱來執行逐位元組的比較 <xref:System.MemoryExtensions.SequenceEqual%2A> 。 <xref:System.Text.Json.Utf8JsonReader.ValueTextEquals%2A>改為呼叫，因為該方法會將任何在 JSON 中進行轉義的字元。 以下範例顯示如何搜尋名為 "name" 的屬性：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/ValueTextEqualsExample.cs?name=SnippetDefineUtf8Var)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/ValueTextEqualsExample.cs" id="DefineUtf8Var":::
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/ValueTextEqualsExample.cs?name=SnippetUseUtf8Var&highlight=11)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/ValueTextEqualsExample.cs" id="UseUtf8Var" highlight="9":::
 
 ### <a name="read-null-values-into-nullable-value-types"></a>讀取 null 值成為可為 null 的實數值型別
 
@@ -757,7 +758,7 @@ public bool ReadAsBoolean(bool defaultValue)
 
 若要在使用時達到最佳效能 `Utf8JsonWriter` ，請撰寫已編碼為 utf-8 文字而非 utf-16 字串的 JSON 承載。 用 <xref:System.Text.Json.JsonEncodedText> 來快取已知字串屬性名稱和值，並將其預先編碼為靜態，並將其傳遞至寫入器，而不是使用 utf-16 字串常值。 這比快取和使用 UTF-8 位元組陣列更快。
 
-如果您需要進行自訂的轉義，這個方法也適用。 `System.Text.Json` 不讓您在寫入字串時停用轉義。 不過，您可以將自己的自訂 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 作為選項傳遞給寫入器，或是自行建立 `JsonEncodedText` 使用 `JavascriptEncoder` 來進行轉義的，然後寫入， `JsonEncodedText` 而不是字串。 如需詳細資訊，請參閱 [自訂字元編碼](system-text-json-how-to.md#customize-character-encoding)。
+如果您需要進行自訂的轉義，這個方法也適用。 `System.Text.Json` 不讓您在寫入字串時停用轉義。 不過，您可以將自己的自訂 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 作為選項傳遞給寫入器，或是自行建立 `JsonEncodedText` 使用 `JavascriptEncoder` 來進行轉義的，然後寫入， `JsonEncodedText` 而不是字串。 如需詳細資訊，請參閱 [自訂字元編碼](system-text-json-character-encoding.md)。
 
 ### <a name="write-raw-values"></a>寫入原始值
 
@@ -770,7 +771,7 @@ doc.WriteTo(writer);
 
 ### <a name="customize-character-escaping"></a>自訂字元轉義
 
-的 [StringEscapeHandling](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm) 設定 `JsonTextWriter` 提供選項，以將所有非 ASCII 字元 **或** HTML 字元全部 escape。 依預設，會將 `Utf8JsonWriter` 所有非 ASCII **和** HTML 字元全部加上轉義。 這種轉義是針對深層防禦的安全性原因進行。 若要指定不同的轉義原則，請建立 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 和設定 <xref:System.Text.Json.JsonWriterOptions.Encoder?displayProperty=nameWithType> 。 如需詳細資訊，請參閱 [自訂字元編碼](system-text-json-how-to.md#customize-character-encoding)。
+的 [StringEscapeHandling](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm) 設定 `JsonTextWriter` 提供選項，以將所有非 ASCII 字元 **或** HTML 字元全部 escape。 依預設，會將 `Utf8JsonWriter` 所有非 ASCII **和** HTML 字元全部加上轉義。 這種轉義是針對深層防禦的安全性原因進行。 若要指定不同的轉義原則，請建立 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 和設定 <xref:System.Text.Json.JsonWriterOptions.Encoder?displayProperty=nameWithType> 。 如需詳細資訊，請參閱 [自訂字元編碼](system-text-json-character-encoding.md)。
 
 ### <a name="customize-json-format"></a>自訂 JSON 格式
 
@@ -811,4 +812,4 @@ doc.WriteTo(writer);
 * [如何撰寫自訂轉換器](system-text-json-converters-how-to.md)
 * [中的 DateTime 和 DateTimeOffset 支援 System.Text.Json](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
-* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)
+* [System.Text.Json。序列化 API 參考](xref:System.Text.Json.Serialization)

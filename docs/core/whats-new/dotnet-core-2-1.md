@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5c15b663cf69de334771e83c1a14db8d66d30458
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087358"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437911"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -65,7 +65,7 @@ ms.locfileid: "91087358"
 
 ### <a name="global-tools"></a>通用工具
 
-.NET Core 2.1 支援*通用工具*，亦即從命令列以通用方式提供的自訂工具。 舊版 .NET Core 的擴充性模型，只能透過使用 `DotnetCliToolReference` 來使自訂工具可供每個專案使用。
+.NET Core 2.1 支援 *通用工具*，亦即從命令列以通用方式提供的自訂工具。 舊版 .NET Core 的擴充性模型，只能透過使用 `DotnetCliToolReference` 來使自訂工具可供每個專案使用。
 
 若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如：
 
@@ -77,7 +77,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>使用 `dotnet tool` 命令來管理工具
 
-在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 有下列選項可供使用：
+在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 可用選項如下：
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md) 以安裝工具。
 
@@ -89,7 +89,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>向前復原
 
-從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本**。
+從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本。
 
 從 .NET Core 2.0 開始，如果用來建立應用程式的 .NET Core 版本不存在於執行時間，應用程式會自動針對最新安裝的 .NET Core *次要版本* 執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
 
@@ -138,7 +138,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="jit-compiler-improvements"></a>JIT 編譯器的改進項目
 
-.NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」**(也稱為「調適型最佳化」**)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
+.NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」(也稱為「調適型最佳化」)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
 
 由 JIT 編譯器所執行的其中一項重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
 
@@ -248,7 +248,7 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 ### <a name="breaking-changes"></a>重大變更
 
-如需有關中斷變更的詳細資訊，請參閱 [從版本2.0 遷移至2.1 的重大變更](../compatibility/2.0-2.1.md)。
+如需有關中斷變更的詳細資訊，請參閱 [從版本2.0 遷移至2.1 的重大變更](../compatibility/2.1.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: 使用 Web API 實作微服務應用程式層
 description: 瞭解相依性插入和中繼程式模式，以及其在 Web API 應用層中的實作為詳細資料。
 ms.date: 08/17/2020
-ms.openlocfilehash: 56d4eecb2831a57460b01ff4da8150d6dcce5bc5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173415"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437795"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -23,7 +23,7 @@ ms.locfileid: "91173415"
 
 **圖 7-23**。 Ordering.API ASP.NET Core Web API 專案中的應用程式層
 
-ASP.NET Core 包含簡單[內建 IoC 容器](/aspnet/core/fundamentals/dependency-injection) (由 IServiceProvider 介面代表)，它預設會支援建構函式插入，ASP.NET 則是透過 DI 提供特定服務。 ASP.NET Core 會將「服務」** 詞彙用於透過 DI 插入的任何已註冊類型。 您可以在應用程式 Startup 類別的 ConfigureServices 方法中設定內建容器服務。 相依性實作所在之服務為類型所需且以 IoC 容器註冊的服務。
+ASP.NET Core 包含簡單[內建 IoC 容器](/aspnet/core/fundamentals/dependency-injection) (由 IServiceProvider 介面代表)，它預設會支援建構函式插入，ASP.NET 則是透過 DI 提供特定服務。 ASP.NET Core 會將「服務」詞彙用於透過 DI 插入的任何已註冊類型。 您可以在應用程式 Startup 類別的 ConfigureServices 方法中設定內建容器服務。 相依性實作所在之服務為類型所需且以 IoC 容器註冊的服務。
 
 一般而言，您會想要插入可實作基礎結構物件的相依性。 要插入的一般相依性是存放庫。 但是，您可以插入可能會有的任何其他基礎結構相依性。 為求更簡單的實作，您可以直接插入工作單元模式物件 (EF DbContext 物件)，因為 DBContext 也是您基礎結構持續性物件的實作。
 
@@ -162,11 +162,11 @@ Autofac 也有功能可[掃描組件以及按命名慣例註冊類型](https://a
 
 執行個體範圍類型決定如何在相同服務或相依性的要求之間共用執行個體。 提出相依性要求時，IoC 容器可以傳回下列結果：
 
-- 一個存留期範圍有單一執行個體 (在 ASP.NET Core IoC 容器中稱為「範圍」**)。
+- 一個存留期範圍有單一執行個體 (在 ASP.NET Core IoC 容器中稱為「範圍」)。
 
-- 一個相依性有新的執行個體 (在 ASP.NET Core IoC 容器中稱為「暫時性」**)。
+- 一個相依性有新的執行個體 (在 ASP.NET Core IoC 容器中稱為「暫時性」)。
 
-- 跨所有使用 IoC 容器的物件所共用的單一執行個體 (在 ASP.NET Core IoC 容器中稱為「單一」**).
+- 跨所有使用 IoC 容器的物件所共用的單一執行個體 (在 ASP.NET Core IoC 容器中稱為「單一」).
 
 #### <a name="additional-resources"></a>其他資源
 
@@ -469,7 +469,7 @@ public class CreateOrderCommandHandler
 
 中繼程式是封裝此進程「如何」的物件：它會根據狀態、叫用命令處理常式的方式，或您提供給處理常式的承載來協調執行。 有了中繼程式元件，您就可以在[MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)) 之後套用裝飾專案 (或[管線行為](https://github.com/jbogard/MediatR/wiki/Behaviors)，以集中且透明的方式套用跨領域考慮。 如需詳細資訊，請參閱[裝飾項目模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
 
-裝飾項目和行為類似[層面導向程式設計 (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)，僅套用至中繼程序元件所管理的特定處理序管線。 根據在編譯期間插入的「層面編織程序」** 或根據物件呼叫攔截，套用 AOP 中實作跨領域關注的層面。 這兩種典型 AOP 方法的運作有時稱為「就像變魔術一樣」，因為不容易看到 AOP 的運作工作。 處理嚴重問題或 Bug 時，AOP 很難進行偵錯。 另一方面，這些裝飾項目/行為十分明確，而且只會套用至中繼程序內容，因此，偵錯更容易預測且更為輕鬆。
+裝飾項目和行為類似[層面導向程式設計 (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)，僅套用至中繼程序元件所管理的特定處理序管線。 根據在編譯期間插入的「層面編織程序」或根據物件呼叫攔截，套用 AOP 中實作跨領域關注的層面。 這兩種典型 AOP 方法的運作有時稱為「就像變魔術一樣」，因為不容易看到 AOP 的運作工作。 處理嚴重問題或 Bug 時，AOP 很難進行偵錯。 另一方面，這些裝飾項目/行為十分明確，而且只會套用至中繼程序內容，因此，偵錯更容易預測且更為輕鬆。
 
 例如，在 eShopOnContainers 順序微服務中，有兩個範例行為的實作為 [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) 類別和 [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) 類別。 下一節會說明 eShopOnContainers 如何使用 [MediatR](https://www.nuget.org/packages/MediatR) [行為](https://github.com/jbogard/MediatR/wiki/Behaviors)，來說明行為的實。
 
@@ -663,7 +663,7 @@ public class IdentifiedCommandHandler<T, R> : IRequestHandler<IdentifiedCommand<
                     commandId,
                     command);
 
-                // Send the embeded business command to mediator so it runs its related CommandHandler
+                // Send the embedded business command to mediator so it runs its related CommandHandler
                 var result = await _mediator.Send(command, cancellationToken);
 
                 _logger.LogInformation(

@@ -2,12 +2,12 @@
 title: 重大變更： CA1831：針對字串使用 AsSpan 而非以範圍為基礎的索引子
 description: 瞭解 .NET 5.0 中因為啟用程式碼分析規則 CA1831 所造成的重大變更。
 ms.date: 08/21/2020
-ms.openlocfilehash: 74f34af04a56b73478ffb3305d69ed49f3a30072
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 850916b804ae29dba8d2bd05c6e4fb06fe667296
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760429"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437885"
 ---
 # <a name="warning-ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>警告 CA1831：針對字串使用 AsSpan 而非以範圍為基礎的索引子
 
@@ -41,7 +41,7 @@ ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ```
 
-- 如果您不想變更您的程式碼，您可以將規則的嚴重性設定為或，以停用此規則 `suggestion` `none` 。 如需詳細資訊，請參閱 [設定程式碼分析規則](../../../../fundamentals/productivity/configure-code-analysis-rules.md)。
+- 如果您不想變更您的程式碼，您可以將規則的嚴重性設定為或，以停用此規則 `suggestion` `none` 。 如需詳細資訊，請參閱 [設定程式碼分析規則](../../../../fundamentals/code-analysis/configuration-options.md)。
 
 - 若要完全停用程式碼分析，請 `EnableNETAnalyzers` `false` 在您的專案檔中將設定為。 如需詳細資訊，請參閱 [EnableNETAnalyzers](../../../project-sdk/msbuild-props.md#enablenetanalyzers)。
 

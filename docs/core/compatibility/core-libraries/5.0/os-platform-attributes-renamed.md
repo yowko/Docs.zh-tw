@@ -2,14 +2,14 @@
 title: 重大變更：已重新命名或移除 OSPlatform 屬性
 description: 瞭解核心 .NET 程式庫中已移除或重新命名已在預覽版本中引進之 OS 平臺屬性的 .NET 5.0 重大變更。
 ms.date: 11/01/2020
-ms.openlocfilehash: 7e709b84005a7b807e390e12d9f36d8b4f73a9df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 80eba790a607a01e0588c067cdc6105d5f3b20a7
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760653"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437876"
 ---
-# <a name="osplatform-attributes-renamed-or-removed"></a>OSPlatform 屬性已重新命名或移除
+# <a name="osplatform-attributes-renamed-or-removed"></a>已重新命名或移除 OSPlatform 屬性
 
 已移除或重新命名 .NET 5.0 Preview 8 中引進的下列屬性： `MinimumOSPlatformAttribute` 、 `RemovedInOSPlatformAttribute` 和 `ObsoletedInOSPlatformAttribute` 。
 
@@ -34,7 +34,7 @@ ms.locfileid: "95760653"
 
 ## <a name="reason-for-change"></a>變更的原因
 
-.NET 5.0 Preview 8 引進中的屬性 <xref:System.Runtime.Versioning> ，以指定 api 支援的平臺。 當平臺特定 Api 在不支援這些 Api 的平臺上取用時， [平臺相容性分析器](../../../../core/compatibility/code-analysis.md#ca1416-platform-compatibility) 會使用這些屬性來產生組建警告。
+.NET 5.0 Preview 8 引進中的屬性 <xref:System.Runtime.Versioning> ，以指定 api 支援的平臺。 當平臺特定 Api 在不支援這些 Api 的平臺上取用時， [平臺相容性分析器](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) 會使用這些屬性來產生組建警告。
 
 針對 .NET 5.0 RC1，平臺相容性分析器已新增其他功能來排除平臺。 這項功能可讓 Api 在作業系統平臺上標示為完全不受支援。 這項功能會提示變更屬性，包括使用更適合的名稱。 `ObsoletedInOSPlatformAttribute`已移除，因為不再需要它。
 

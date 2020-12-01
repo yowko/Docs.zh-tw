@@ -3,16 +3,16 @@ title: Debug high CPU 使用量-.NET Core
 description: 本教學課程會逐步引導您在 .NET Core 中進行高 CPU 使用率的偵錯工具。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538705"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437830"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>在 .NET Core 中進行高 CPU 使用率的調試
 
-本文**適用于：✔️** .net CORE 3.1 SDK 和更新版本
+本文 **適用于：✔️** .net CORE 3.1 SDK 和更新版本
 
 在本教學課程中，您將瞭解如何對過多的 CPU 使用量案例進行調試。 使用提供的範例 [ASP.NET Core web 應用程式](/samples/dotnet/samples/diagnostic-scenarios) 原始程式碼存放庫，您可以刻意造成鎖死。 端點將會遇到停止回應和執行緒累積。 您將瞭解如何使用各種工具來診斷此案例，其中包含幾個重要的診斷資料片段。
 
@@ -90,7 +90,7 @@ Press p to pause, r to resume, q to quit.
 現在，請重新執行 [dotnet 計數器](dotnet-counters.md) 命令。 若只要監視 `cpu-usage` ，請指定 `System.Runtime[cpu-usage]` 做為命令的一部分。
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 您應該會看到 CPU 使用率增加，如下所示：

@@ -1,16 +1,16 @@
 ---
 title: .NET 5 的新功能
 description: 深入瞭解 .NET 5，這是一個跨平臺和開放原始碼的開發平臺，也就是 .NET Core 的下一次演進。
-ms.date: 11/18/2020
+ms.date: 11/30/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 1101e218f225eed2a2013ed9e19b60f4ece57738
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: d0b8533dd63dd7d24f49e11093770b52d7daea89
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982297"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437869"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -120,7 +120,7 @@ let message = $"%s{name} is %d{age} years old."
 
 .NET 5 中沒有適用于 Visual Basic 的新語言功能。 不過，在 .NET 5 中，Visual Basic 支援延伸至：
 
-| 說明                            | `dotnet new` 參數 |
+| 描述                            | `dotnet new` 參數 |
 |----------------------------------------|------------------------|
 | 主控台應用程式                    | `console`              |
 | 類別庫                          | `classlib`             |
@@ -141,17 +141,17 @@ let message = $"%s{name} is %d{age} years old."
 
 和中有 [System.Text.Js](../standard/serialization/system-text-json-overview.md)的新功能：
 
-- [保留參考並處理迴圈參考](../standard/serialization/system-text-json-how-to.md#preserve-references-and-handle-circular-references)
+- [保留參考並處理迴圈參考](../standard/serialization/system-text-json-preserve-references.md)
 - [HttpClient 和 HttpContent 擴充方法](../standard/serialization/system-text-json-how-to.md#httpclient-and-httpcontent-extension-methods)
-- [以引號允許或寫入數位](../standard/serialization/system-text-json-how-to.md#allow-or-write-numbers-in-quotes)
-- [支援不可變的類型和 c # 9 記錄](../standard/serialization/system-text-json-how-to.md#immutable-types-and-records)
-- [支援非公用屬性存取子](../standard/serialization/system-text-json-how-to.md#non-public-property-accessors)
+- [以引號允許或寫入數位](../standard/serialization/system-text-json-invalid-json.md#allow-or-write-numbers-in-quotes)
+- [支援不可變的類型和 c # 9 記錄](../standard/serialization/system-text-json-immutability.md)
+- [支援非公用屬性存取子](../standard/serialization/system-text-json-immutability.md)
 - [支援欄位](../standard/serialization/system-text-json-how-to.md#include-fields)
-- [有條件地忽略屬性](../standard/serialization/system-text-json-how-to.md#ignore-properties)
+- [有條件地忽略屬性](../standard/serialization/system-text-json-ignore-properties.md)
 - [支援非字串索引鍵字典](../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md#dictionary-with-non-string-key)
 - [允許自訂轉換器處理 null](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
-- [複製 JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
-- [使用 web 預設值建立 JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
+- [複製 JsonSerializerOptions](../standard/serialization/system-text-json-configure-options.md#copy-jsonserializeroptions)
+- [使用 web 預設值建立 JsonSerializerOptions](../standard/serialization/system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -4,12 +4,12 @@ description: 了解這些程式庫如何提供許多一般和應用程式特定�
 author: richlander
 ms.date: 06/20/2016
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: e59f53f2a16dc84709e0b815d3e2b710c903ff60
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e71f81b0dd72f4569d8b6b319b9e97491533d28
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827928"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438207"
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
 
@@ -39,7 +39,7 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 
 .NET 包含一組可承載幾乎所有 .NET 應用程式的資料結構。 其中大多是集合，但也包含其他類型。
 
-* <xref:System.Array> - 代表可依索引存取的強型別物件陣列。 根據其建構具有固定大小。
+* <xref:System.Array> -代表可依索引存取的強型別物件陣列。 根據其建構具有固定大小。
 * <xref:System.Collections.Generic.List%601> - 代表可依索引存取的強型別物件清單。 其大小會視需要自動調整。
 * <xref:System.Collections.Generic.Dictionary%602> - 代表由索引鍵編製索引的值集合。 這些值可透過索引鍵存取。 其大小會視需要自動調整。
 * <xref:System.Uri> - 提供統一資源識別項 (URI) 的物件表示，以及對 URI 各部分的簡易存取。

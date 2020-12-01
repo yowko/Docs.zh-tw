@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 9caecdcc3516db2bd71420184fbd21f7837552a7
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608129"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437930"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 的新功能
 
@@ -29,7 +29,7 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
 
 .NET Core 3.1 是 LTS 版本，可在未來三年提供 Microsoft 的支援。 強烈建議您將應用程式移至 .NET Core 3.1。 其他主要版本的目前生命週期如下所示：
 
-| 版本 | 附註 |
+| 版本 | 注意 |
 | ------- | ---- |
 | .NET Core 3.0 | 2020年3月3日結束生命週期。     |
 | .NET Core 2.2 | 2019年12月23日結束生命週期。 |
@@ -99,5 +99,5 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
 
 ## <a name="next-steps"></a>後續步驟
 
-- [查看 .NET Core 3.0 和3.1 之間的重大變更。](../compatibility/3.0-3.1.md)
+- [查看 .NET Core 3.0 和3.1 之間的重大變更。](../compatibility/3.1.md)
 - [查看 .NET Core 3.1 中 Windows Forms 應用程式的重大變更。](../compatibility/winforms.md#net-core-31)

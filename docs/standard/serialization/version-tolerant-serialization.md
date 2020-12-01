@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 26612c5b0591efa61fcd476733aee2b219d67c62
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282410"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438163"
 ---
 # <a name="version-tolerant-serialization"></a>版本相容序列化
 
@@ -28,7 +28,7 @@ ms.locfileid: "93282410"
 - 當要求將新版的舊型別還原序列化時，舊版應用程式會擲回例外狀況。
 - 新版的應用程式在還原序列化資料遺失的舊版型別時，會擲回例外狀況。
 
-版本相容序列化 (VTS) 是一組功能，可讓您更輕鬆地在一段時間內修改可序列化的類型。 具體地說，VTS 功能是為套用 <xref:System.SerializableAttribute> 屬性的類別啟用，包括泛型型別。 VTS 可在不破壞與其他版本之型別相容性的情況下，將新欄位加入那些類別。 如需可用的範例應用程式，請參閱[版本相容序列化技術範例](basic-serialization-technology-sample.md)。
+版本相容序列化 (VTS) 是一組功能，可讓您更輕鬆地在一段時間內修改可序列化的類型。 具體地說，VTS 功能是為套用 <xref:System.SerializableAttribute> 屬性的類別啟用，包括泛型型別。 VTS 可在不破壞與其他版本之型別相容性的情況下，將新欄位加入那些類別。
 
 使用 時，會啟用 VTS 功能。 除此之外，使用 時，除了沒有直接關聯的資料容錯功能外，其他所有功能都會啟用。 如需使用這些類別進行序列化的詳細資訊，請參閱[二進位序列化](binary-serialization.md)。
 

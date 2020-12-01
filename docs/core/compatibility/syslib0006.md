@@ -3,12 +3,12 @@ title: SYSLIB0006 警告
 description: 瞭解產生編譯時期警告 SYSLIB0006 的 obsoletions。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 222b669a8a0260713e85721e6031144bb7bda5cc
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: a5ab4fe4576bd336cb7de0a91b889fa48ac5650a
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440656"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437470"
 ---
 # <a name="syslib0006-threadabort-is-not-supported"></a>SYSLIB0006：不支援 Thread. Abort
 
@@ -38,7 +38,7 @@ void ProcessPendingWorkItemsNew(CancellationToken cancellationToken)
 
 [!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [執行緒。 Abort 是過時的重大變更](3.1-5.0.md#threadabort-is-obsolete)
+- [Thread.Abort 已過時](core-libraries/5.0/thread-abort-obsolete.md)
 - [受控執行緒中的取消作業](../../standard/threading/cancellation-in-managed-threads.md)

@@ -3,12 +3,12 @@ title: 屬性
 description: 了解 C# 屬性，其中包含驗證、計算值、延遲評估和屬性變更通知的功能。
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 5306650a10a3de0ff208f7c72c0ba520a527e746
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89358904"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437943"
 ---
 # <a name="properties"></a>屬性
 
@@ -129,7 +129,7 @@ public class Measurements
 ### <a name="attaching-attributes-to-auto-implemented-properties"></a>將屬性 (attribute) 附加至自動實作屬性 (property)
 
 從 C# 7.3 開始，可以將欄位屬性 (attribute) 附加至自動實作屬性 (property) 中編譯器產生的支援欄位。 例如，考慮要修訂可新增唯一整數 `Id` 屬性的 `Person` 類別。
-您可以使用自動實作屬性撰寫 `Id` 屬性，但是您的設計不會要求保存 `Id` 屬性。 <xref:System.NonSerializedAttribute> 只能附加至欄位，而不是屬性。 您可以藉由在屬性 (attribute) 上使用 `field:` 指定名稱，將 <xref:System.NonSerializedAttribute> 附加至 `Id` 屬性 (property) 的支援欄位，如下列範例所示：
+您可以 `Id` 使用自動執行的屬性來撰寫屬性，但您的設計不會呼叫來保存 `Id` 屬性。 <xref:System.NonSerializedAttribute> 只能附加至欄位，而不是屬性。 您可以藉由在屬性 (attribute) 上使用 `field:` 指定名稱，將 <xref:System.NonSerializedAttribute> 附加至 `Id` 屬性 (property) 的支援欄位，如下列範例所示：
 
 [!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 

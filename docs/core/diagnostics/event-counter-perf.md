@@ -3,16 +3,16 @@ title: 使用 .NET Core 中的 EventCounters 測量效能
 description: 在本教學課程中，您將瞭解如何使用 EventCounters 來測量效能。
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538562"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437452"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>教學課程：在 .NET Core 中使用 EventCounters 測量效能
 
-本文**適用于：✔️** .net CORE 3.0 SDK 和更新版本
+本文 **適用于：✔️** .net CORE 3.0 SDK 和更新版本
 
 在本教學課程中，您將瞭解如何 <xref:System.Diagnostics.Tracing.EventCounter> 使用高頻率的事件來測量效能。 您可以使用各種官方 .NET Core 套件、協力廠商提供者所發行的 [可用計數器](event-counters.md#available-counters) ，或建立您自己的計量來進行監視。
 
@@ -49,7 +49,7 @@ ms.locfileid: "90538562"
 
 ## <a name="add-an-action-filter"></a>新增動作篩選
 
-範例原始程式碼是 ASP.NET Core 專案。 您可以在全域新增可記錄要求時間總計的 [動作篩選準則](/aspnet/core/mvc/controllers/filters#action-filters) 。 建立名為 *LogRequestTimeFilterAttribute.cs*的新檔案，並使用下列程式碼：
+範例原始程式碼是 ASP.NET Core 專案。 您可以在全域新增可記錄要求時間總計的 [動作篩選準則](/aspnet/core/mvc/controllers/filters#action-filters) 。 建立名為 *LogRequestTimeFilterAttribute.cs* 的新檔案，並使用下列程式碼：
 
 ```csharp
 using System.Diagnostics;
@@ -97,7 +97,7 @@ dotnet-counters ps
 從命令的輸出使用程式識別碼 `dotnet-counters ps` ，您可以使用下列命令來開始監視事件計數器 `dotnet-counters monitor` ：
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 當命令執行時 `dotnet-counters monitor` ，請在瀏覽器上保留 <kbd>F5</kbd> 以開始向端點發出持續要求 `https://localhost:5001/api/values` 。 在幾秒鐘後按<kbd>q</kbd>鍵停止
@@ -118,10 +118,10 @@ Press p to pause, r to resume, q to quit.
 此 `dotnet-counters monitor` 命令非常適合主動監視。 不過，您可能會想要收集這些診斷計量以進行後置處理和分析。 若要這樣做，請使用 `dotnet-counters collect` 命令。 `collect`Switch 命令與 `monitor` 命令類似，但可接受幾個額外的參數。 您可以指定所需的輸出檔案名和格式。 針對名為 *diagnostics.js* 的 JSON 檔案，請使用下列命令：
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
-同樣地，當命令正在執行時，請在瀏覽器上保留 <kbd>F5</kbd> ，以開始向端點發出連續要求 `https://localhost:5001/api/values` 。 在幾秒鐘後，按 <kbd>q</kbd>鍵停止。 寫入檔案 * 上的diagnostics.js* 。 但是，寫入的 JSON 檔案不會縮排，為了方便閱讀，此處會縮排。
+同樣地，當命令正在執行時，請在瀏覽器上保留 <kbd>F5</kbd> ，以開始向端點發出連續要求 `https://localhost:5001/api/values` 。 在幾秒鐘後，按 <kbd>q</kbd>鍵停止。 寫入檔案 *上的diagnostics.js* 。 但是，寫入的 JSON 檔案不會縮排，為了方便閱讀，此處會縮排。
 
 ```json
 {

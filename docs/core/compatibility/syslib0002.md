@@ -3,12 +3,12 @@ title: SYSLIB0002 錯誤
 description: 瞭解產生編譯時期錯誤 SYSLIB0002 的 obsoletion。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 53eb51d5e525c463e5698710bdb6fa0c0907e43c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 36ecde3c52845a6594c4d04e167df48142038654
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440773"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437509"
 ---
 # <a name="syslib0002-principalpermissionattribute-is-obsolete"></a>SYSLIB0002： PrincipalPermissionAttribute 已淘汰
 
@@ -62,6 +62,6 @@ ms.locfileid: "94440773"
 
 [!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [PrincipalPermissionAttribute 已淘汰為錯誤](3.1-5.0.md#principalpermissionattribute-is-obsolete-as-error)
+- [PrincipalPermissionAttribute 已淘汰為錯誤](core-libraries/5.0/principalpermissionattribute-obsolete.md)
