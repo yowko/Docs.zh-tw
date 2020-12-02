@@ -2,12 +2,12 @@
 title: 'F # 5.0 中的新功能-F # 指南'
 description: '深入瞭解 F # 5.0 中可用的新功能。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098693"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438012"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5.0 的新功能
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-這項功能會實行 [F # 工具 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)。 如需封裝參考的詳細資訊，請參閱 [F# 互動](../tutorials/fsharp-interactive/index.md) 教學課程。
+這項功能會實行 [F # 工具 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)。 如需封裝參考的詳細資訊，請參閱 [F# 互動](../tools/fsharp-interactive/index.md) 教學課程。
 
 ## <a name="string-interpolation"></a>字串插補
 

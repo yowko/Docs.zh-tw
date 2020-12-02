@@ -4,12 +4,12 @@ description: '瞭解 F # 語言預處理器指示詞、條件式編譯指示詞�
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ff106339478c3413dc6458b12f12e1d3f9cd1fe5
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557316"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438179"
 ---
 # <a name="compiler-directives"></a>編譯器指示詞
 
@@ -23,7 +23,7 @@ ms.locfileid: "90557316"
 
 |指示詞|描述|
 |---------|-----------|
-|`#if`*符號*|支援條件式編譯。 如果已定義符號，則 `#if` 會包含後面區段*symbol*中的程式碼。 符號也可以使用否定 `!` 。|
+|`#if`*符號*|支援條件式編譯。 如果已定義符號，則 `#if` 會包含後面區段 *symbol* 中的程式碼。 符號也可以使用否定 `!` 。|
 |`#else`|支援條件式編譯。 若未定義與先前的 `#if` 搭配使用的符號，則標記要包含的程式碼區段。|
 |`#endif`|支援條件式編譯。 標示程式碼的條件式區段結尾。|
 |`#`行 *int*、<br/>`#`行 *int* *字串*，<br/>`#`行 *int* *逐字字串*|表示原始的原始程式碼行和檔案名稱 (適用於偵錯)。 這項功能提供用於產生 F# 原始程式碼的工具。|
@@ -78,7 +78,7 @@ let str = "Debugging!"
 |---------|-----------|
 |`#light` [on "&#124;" off "]|啟用或停用輕量型語法，與其他 ML 版本相容。 根據預設，會啟用輕量型語法。 一律會啟用詳細語法。 因此，您可以使用輕量型語法和詳細語法。 指示詞 `#light` 本身就相當於 `#light "on"`。 如果您指定 `#light "off"`，您必須針對所有語言建構使用詳細語法。 會假設您使用輕量型語法，在文件中顯示 F# 語法。 如需詳細資訊，請參閱 [詳細資訊語法](verbose-syntax.md)。|
 
-如 ( # A0) 指示詞的解譯器，請參閱 [使用 F # 的互動式程式設計](../tutorials/fsharp-interactive/index.md)。
+如 ( # A0) 指示詞的解譯器，請參閱 [使用 F # 的互動式程式設計](../tools/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 

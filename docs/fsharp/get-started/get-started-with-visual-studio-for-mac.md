@@ -1,67 +1,67 @@
 ---
-title: 開始使用F# Visual Studio for Mac
-description: 瞭解如何搭配 Visual Studio for Mac F#使用。
+title: '開始使用 Visual Studio for Mac 中的 F #'
+description: '瞭解如何搭配 Visual Studio for Mac 使用 F #。'
 ms.date: 07/03/2018
-ms.openlocfilehash: cd45ab9c59cef76e4bf85a93f39d8e2ee063d200
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d2ad24ad18bb31419b39508f2cf555c82fbe2e0b
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552374"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437998"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>開始使用F# Visual Studio for Mac
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>開始使用 Visual Studio for Mac 中的 F #
 
-F#Visual Studio for Mac IDE 中F#支援和視覺化檢視。 請確定您已[安裝 Visual Studio for Mac](install-fsharp.md#install-f-with-visual-studio-for-mac)。
+Visual Studio for Mac IDE 支援 F # 和 Visual F# 工具。 確定您已 [安裝 Visual Studio for Mac](install-fsharp.md#install-f-with-visual-studio-for-mac)。
 
 ## <a name="creating-a-console-application"></a>建立主控台應用程式
 
-Visual Studio for Mac 中最基本的專案之一，就是主控台應用程式。  以下為作法。  開啟 Visual Studio for Mac 之後：
+Visual Studio for Mac 的其中一個最基本的專案是主控台應用程式。  以下說明如何執行這項作業。  Visual Studio for Mac 開啟之後：
 
 1. **在 [檔案**] 功能表上，指向 [**新增方案**]。
 
-2. 在 [新增專案] 對話方塊中，主控台應用程式有2個不同的範本。  在以 .NET Framework 為目標的其他 > .NET 底下有一個。  另一個範本位於 .NET Core-以 .NET Core 為目標 > 應用程式底下。  其中一個範本應適用于本文的目的。
+2. 在 [新增專案] 對話方塊中，主控台應用程式有2個不同的範本。  在以 .NET Framework 為目標的其他 > .NET 下會有一個。  另一個範本是以 .net core 為目標的 > 應用程式，以 .NET Core 為目標。  這兩個範本都應該適用于本文的目的。
 
-3. 在 [主控台應用程式C# ] F#下，視需要將變更為。  選擇 [**下一步]** 按鈕繼續進行！  
+3. 在 [主控台應用程式] 下，視需要將 c # 變更為 F #。  選擇 [ **下一步]** 按鈕繼續進行！  
 
-4. 指定您的專案名稱，然後選擇您想要用於應用程式的選項。  請注意，畫面側邊的預覽窗格會顯示將根據選取的選項建立的目錄結構。  
+4. 為您的專案命名，並選擇您想要用於應用程式的選項。  請注意，畫面側邊的 [預覽] 窗格會顯示將根據選取的選項建立的目錄結構。  
 
-5. 按一下 [建立]。  您現在應該會在F#方案總管中看到專案。
+5. 按一下 [建立]。  您現在應該會在方案總管中看到 F # 專案。
 
 ## <a name="writing-your-code"></a>撰寫程式碼
 
-讓我們先從撰寫一些程式碼開始。  請確定 `Program.fs` 檔案已開啟，然後以下列內容取代其內容：
+先撰寫一些程式碼，讓我們開始吧。  請確定檔案 `Program.fs` 已開啟，然後將其內容取代為下列內容：
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-在先前的程式碼範例中，已定義函式 `square`，它會接受名為 `x` 的輸入，並將其與本身相乘。  因為F#使用[型別推斷](../language-reference/type-inference.md)，所以不需要指定 `x` 的類型。  F#編譯器會瞭解乘法的有效值，並根據呼叫 `square` 的方式，將型別指派給 `x`。  如果您將滑鼠停留在 `square`上，您應該會看到下列內容：
+在先前的程式碼範例中，已 `square` 定義函式，該函式會接受名為的輸入 `x` ，並將其本身相乘。  因為 F # 使用 [型別推斷](../language-reference/type-inference.md)，所以 `x` 不需要指定的型別。  F # 編譯器瞭解乘法有效的型別，而且會根據呼叫方式將型別指派給 `x` `square` 。  如果您將滑鼠停留在上方 `square` ，您應該會看到下列內容：
 
 ```console
 val square: x:int -> int
 ```
 
-這就是所謂的函式型別簽章。  它可以讀取如下：「正方形是一個函式，它會採用名為 x 的整數，並產生一個整數」。  請注意，編譯器現在提供 `square` `int` 類型，這是因為乘法在*所有*類型之間並不是泛型，而是在一組封閉的類型之間是泛型的。  F#編譯器會在此時挑選 `int`，但如果您使用不同的輸入類型（例如 `float`）來呼叫 `square`，它會調整類型簽章。
+這就是所謂的函式類型簽章。  它可以像這樣讀取：「方形是一個函式，它會採用名為 x 的整數，並產生整數」。  請注意，編譯器 `square` `int` 會提供目前的型別，這是因為在 *所有* 類型中的乘法不是泛型，而是在一組封閉的型別中是泛型。  此時會挑選 F # 編譯器 `int` ，但如果您 `square` 使用不同的輸入類型（例如）來呼叫，則會調整型別簽章 `float` 。
 
-已定義另一個函式 `main`，它會使用 `EntryPoint` 屬性裝飾，告訴編譯器應該F#在該處啟動程式執行。  其遵循與其他[C 樣式程式語言](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)相同的慣例，其中命令列引數可傳遞給此函式，並傳回整數代碼（通常 `0`）。
+另外也定義了另一個函式， `main` 它是以 `EntryPoint` 屬性裝飾，告訴 F # 編譯器，程式執行應該在此開始。  它會遵循與其他 [C 樣式程式設計語言](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)相同的慣例，其中命令列引數可傳遞給此函式，而整數程式碼則會傳回 (通常 `0`) 。
 
-在這個函式中，我們使用 `12`的引數來呼叫 `square` 函數。  然後F#編譯器會指派要 `int -> int` 的 `square` 類型（也就是接受 `int` 並產生 `int`的函式）。  `printfn` 的呼叫是格式化的列印函式，它會使用格式字串，類似于 C 樣式的程式語言、對應于格式字串中所指定的參數，然後列印結果和新行。
+在這個函式中，我們使用的 `square` 引數來呼叫函式 `12` 。  然後，F # 編譯器會將的型別指派為 `square` `int -> int` (也就是採用 `int` 並產生) 的函式 `int` 。  的呼叫 `printfn` 是格式化的列印函式，它會使用格式字串，類似于 C 樣式的程式設計語言、與格式字串中指定的參數對應的參數，然後列印結果和新的行。
 
 ## <a name="running-your-code"></a>執行您的程式碼
 
-您可以從最上層功能表按一下 [**執行**] 來執行程式碼並查看結果，然後在不進行檢查的情況**下啟動**。  這會執行程式而不進行偵測，並可讓您查看結果。
+您可以從最上層功能表中按一下 [ **執行** ]，然後在不進行偵錯工具的情況 **下啟動**，來執行程式碼並查看結果。  這會執行程式而不進行任何偵測，並可讓您查看結果。
 
-您現在應該會在主控台視窗中看到下列列印 Visual Studio for Mac：
+您現在應該會在主控台視窗中看到下列輸出 Visual Studio for Mac 快顯視窗：
 
 ```console
 12 squared is 144!
 ```
 
-恭喜您！  您已在 Visual Studio for Mac 中F#建立第一個專案，並F#撰寫一個函式來列印呼叫該函數的結果，然後執行專案以查看一些結果。
+恭喜！  您已在 Visual Studio for Mac 中建立您的第一個 F # 專案、撰寫 F # 函式以列印呼叫該函式的結果，並執行專案以查看某些結果。
 
-## <a name="using-f-interactive"></a>使用F#互動式
+## <a name="using-f-interactive"></a>使用 F# 互動
 
-Visual Studio for Mac 中視覺化F#工具的其中一項最佳功能就是F#互動式視窗。  它可讓您將程式碼傳送至進程，您可以在其中呼叫該程式碼，並以互動方式查看結果。
+在 Visual Studio for Mac 中，Visual F# 工具的其中一個最佳功能是 F# 互動視窗。  它可讓您將程式碼傳送至進程，您可以在其中呼叫該程式碼，並以互動方式查看結果。
 
-若要開始使用，請反白顯示程式碼中所定義的 `square` 函式。  接下來，按一下最上層功能表中的 [**編輯**]。  接下來 **，選取 [ F#將選取範圍傳送至互動式**]。  這會在F#互動式視窗中執行程式碼。  或者，您也可以在選取範圍上按一下滑鼠右鍵，然後選擇 [**傳送選取專案F#到互動**]。  您應該會看到F#互動式視窗出現，其中包含下列內容：
+若要開始使用，請反白顯示 `square` 您程式碼中所定義的函式。  接著，按一下最上層功能表中的 [ **編輯** ]。  接下來選取 [ **傳送選取專案至 F# 互動**]。  這會在 F# 互動視窗中執行程式碼。  或者，您也可以在選取專案上按一下滑鼠右鍵，然後選擇 [ **傳送選取專案] F# 互動**。  您應該會看到 F# 互動視窗顯示如下：
 
 ```console
 >
@@ -71,7 +71,7 @@ val square : x:int -> int
 >
 ```
 
-這會顯示 `square` 函式的相同函式簽章，當您在函式上暫留時，您會看到此功能簽章。  由於 `square` 現在是在F#互動式進程中定義，因此您可以使用不同的值來呼叫它：
+這會顯示函式的相同函式簽章，您稍早在此函式上方看到該簽章 `square` 。  因為 `square` 現在已在 F# 互動進程中定義，所以您可以使用不同的值來呼叫它：
 
 ```console
 > square 12;;
@@ -80,7 +80,7 @@ val it : int = 144
 val it : int = 169
 ```
 
-這會執行函式，將結果系結至 `it`的新名稱，並顯示 `it`的類型和值。  請注意，您必須使用 `;;`來終止每一行。  這是互動式F#瞭解函式呼叫完成的方式。  您也可以在互動中定義F#新的函式：
+這會執行函數、將結果系結至新的名稱 `it` ，並顯示的類型和值 `it` 。  請注意，您必須使用來終止每一行 `;;` 。  這是在函式呼叫完成時 F# 互動知道的方式。  您也可以在 F# 互動中定義新函數：
 
 ```console
 > let isOdd x = x % 2 <> 0;;
@@ -91,32 +91,32 @@ val isOdd : x:int -> bool
 val it : bool = false
 ```
 
-上述定義了新的函式 `isOdd`，它會接受 `int` 並檢查其是否為奇數！  您可以呼叫此函式，以查看它以不同的輸入傳回的內容。  您可以在函式呼叫中呼叫函數：
+上述定義了新的函 `isOdd` 式，它會取得 `int` 並檢查是否為奇數！  您可以呼叫此函式，以查看傳回的內容有不同的輸入。  您可以呼叫函式呼叫內的函數：
 
 ```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
-您也可以使用「順[向」運算子](../language-reference/symbol-and-operator-reference/index.md)，將值管線至這兩個函數：
+您也可以使用 [管道轉寄運算子](../language-reference/symbol-and-operator-reference/index.md) ，將值管線至兩個函數：
 
 ```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```
 
-後面的教學課程會涵蓋「管線轉寄」運算子等等。
+順向運算子和其他的教學課程將在稍後的教學課程中討論。
 
-這只是深入探討您可以使用F#互動式執行的工作。  若要深入瞭解，請參閱[使用的F#互動式程式設計](../tutorials/fsharp-interactive/index.md)。
+這只是您可以運用 F# 互動的內容。  若要深入瞭解，請參閱 [使用 F # 的互動式程式設計](../tools/fsharp-interactive/index.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您還沒有這麼做，請參閱的[導覽F# ](../tour.md)，其中涵蓋了F#語言的一些核心功能。  它可讓您大致瞭解的某些功能F#，並提供您可以複製到 Visual Studio for Mac 並執行的豐富程式碼範例。  還有一些您可以使用的絕佳外部資源，請參閱[ F#指南](../index.yml)中的展示。
+如果您尚未這麼做，請查看 [f #](../tour.md)的教學課程，其中包含 f # 語言的一些核心功能。  它將概述 F # 的一些功能，並提供可複製到 Visual Studio for Mac 並執行的豐富程式碼範例。  另外還有一些絕佳的外部資源可供您使用，請展示在 [F # 指南](../index.yml)中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [F#輥](../index.yml)
+- [F# 指南](../index.yml)
 - [F# 的教學課程](../tour.md)
-- [F#語言參考](../language-reference/index.md)
+- [F# 語言參考](../language-reference/index.md)
 - [型別推斷](../language-reference/type-inference.md)
 - [符號和運算子參考](../language-reference/symbol-and-operator-reference/index.md)

@@ -1,15 +1,15 @@
 ---
 title: F# 互動 (dotnet) 參考
 description: '瞭解如何使用 F# 互動 (dotnet fsi) ，以互動方式在主控台執行 F # 程式碼，或執行 F # 腳本。'
-ms.date: 10/31/2020
+ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b535cb03d76909043ca192ed5a9d2078f9343795
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099472"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438044"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F 的互動式程式設計\#
 
@@ -118,6 +118,17 @@ let f (x: Tensor) = sin (sqrt x)
 printfn "%A" (f (dsharp.tensor 1.2))
 ```
 
+### <a name="specifying-a-package-source"></a>指定套件來源
+
+您也可以使用命令來指定套件來源 `#i` 。 下列範例會指定遠端和本機來源：
+
+```fsharp
+#i "nuget:https://my-remote-package-source/index.json
+#i @"path-to-my-local-source"
+```
+
+這會告訴解析引擎也要考慮將遠端和/或本機來源新增至腳本。
+
 您可以在腳本中指定任意數量的封裝參考。
 
 > [!NOTE]
@@ -210,7 +221,7 @@ fsi
 
 `#r`先前看到的和指示詞 `#load` 只能在 F# 互動中使用。 只有 F# 互動有幾個指示詞可用：
 
-|指示詞|Description|
+|指示詞|描述|
 |---------|-----------|
 |`#r "nuget:..."`|從 NuGet 參考封裝|
 |`#r "assembly-name.dll"`|參考磁片上的元件|
@@ -249,6 +260,6 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|說明|
+|標題|描述|
 |-----|-----------|
 |[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述 F# 互動、fsi.exe 的命令列語法和選項。|
