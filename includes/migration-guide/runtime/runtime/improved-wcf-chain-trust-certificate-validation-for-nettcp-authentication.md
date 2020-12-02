@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8f017084fc1ec1eca636ef0178a40559e15b2c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: f6553444e13416850a398ae5bcb6574f2a69bd2d
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497844"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96478536"
 ---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>針對 Net.Tcp 憑證驗證改善的 WCF 鏈結信任憑證驗證
 
@@ -14,7 +14,7 @@ ms.locfileid: "89497844"
 
 #### <a name="suggestion"></a>建議
 
-<ul><li>驗證您的伺服器和用戶端憑證是否具有必要的 EKU OID。 如果沒有，請更新您的憑證。</li><li>驗證您的根憑證是否無效。 如果是，請更新根憑證。</li><li>如何選擇退出變更：如果無法更新憑證，您可以使用下列組態設定暫時解決這項重大變更，不過，選擇退出此變更會使您的系統容易受到安全性問題影響。</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;wcf:useLegacyCertificateUsagePolicy&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>
+<ul><li>驗證您的伺服器和用戶端憑證是否具有必要的 EKU OID。 如果沒有，請更新您的憑證。</li><li>驗證您的根憑證是否無效。 如果是，請更新根憑證。</li><li>如何退出宣告變更：如果無法更新憑證，您可以使用下列設定設定暫時解決這項重大變更，不過，退出宣告變更會讓您的系統容易受到安全性問題的影響。</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;wcf:useLegacyCertificateUsagePolicy&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>
 
 | 名稱    | 值       |
 |:--------|:------------|
