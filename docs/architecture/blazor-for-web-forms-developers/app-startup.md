@@ -3,13 +3,13 @@ title: 應用程式啟動
 description: 瞭解如何為您的應用程式定義啟動邏輯。
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158184"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509698"
 ---
 # <a name="app-startup"></a>應用程式啟動
 
@@ -28,7 +28,7 @@ ms.locfileid: "91158184"
 
 ## <a name="blazor-server-startup-structure"></a>Blazor 伺服器啟動結構
 
-Blazor 伺服器應用程式位於 ASP.NET Core 3.0 或更新版本的應用程式之上。  ASP.NET Core web 應用程式是透過 `Startup.cs` 應用程式根資料夾中類別的一對方法來設定。  Startup 類別的預設內容如下所示
+Blazor 伺服器應用程式位於 ASP.NET Core 3.0 或更新版本的最上層。  ASP.NET Core web 應用程式是透過 `Startup.cs` 應用程式根資料夾中類別的一對方法來設定。  Startup 類別的預設內容如下所示
 
 ```csharp
 public class Startup
@@ -79,7 +79,7 @@ public class Startup
 
 和 ASP.NET Core 的其餘部分一樣，會使用相依性插入原則來建立啟動類別。  `IConfiguration`會提供給函式，並在公用屬性中隱藏，以便稍後在設定期間進行存取。
 
-`ConfigureServices`ASP.NET Core 引進的方法可讓您針對架構的內建相依性插入容器設定各種 ASP.NET Core framework 服務。  不同的 `services.Add*` 方法會加入服務，以啟用驗證、razor 頁面、MVC 控制器路由、SignalR 和 Blazor 伺服器之間的互動等功能。  Web form 中不需要這個方法，因為在 web.config 設定檔中參考 ASP.NET 來定義 .ASPX、.ASCX、ASHX 和 .ASMX 檔案的剖析和處理。  有關 ASP.NET Core 中的相依性插入的詳細資訊，可在 [線上檔](/aspnet/core/fundamentals/dependency-injection)中取得。
+`ConfigureServices`ASP.NET Core 引進的方法可讓您針對架構的內建相依性插入容器設定各種 ASP.NET Core framework 服務。  不同的 `services.Add*` 方法會加入服務，以啟用驗證、razor 頁面、MVC 控制器路由、SignalR 和 Blazor 伺服器之間的互動等功能。  Web form 中不需要這個方法，因為在 web.config 設定檔中參考 ASP.NET，定義了 ASPX、ASCX、ASHX 和 .ASMX 檔案的剖析和處理。  有關 ASP.NET Core 中的相依性插入的詳細資訊，可在 [線上檔](/aspnet/core/fundamentals/dependency-injection)中取得。
 
 `Configure`方法會介紹要 ASP.NET Core 之 HTTP 管線的概念。  在此方法中，我們會從上到下宣告 [中介軟體](middleware.md) ，以處理傳送至應用程式的每個要求。 在預設設定中，大部分的功能都散佈在 web form 設定檔中，現在已在一個位置方便您參考。
 
@@ -89,7 +89,7 @@ public class Startup
 
 下一行是從 web forms 複製其中一個設定選項的第一行： `UseRouting` 。  這個方法會將 ASP.NET Core 路由器新增至管線，並可在這裡或在可考慮路由傳送的個別檔案中進行設定。  路由設定的詳細資訊可在 [路由] [區段](pages-routing-layouts.md)中找到。
 
-此方法中的最後一個語句會定義 ASP.NET Core 正在接聽的端點。  這些是可供您在 web 伺服器上存取的 web 可存取位置，並接收由 .NET 處理並傳回給您的一些內容。  第一個專案會設定 SignalR 中樞，以用於 `MapBlazorHub` 提供處理 Blazor 元件之狀態和轉譯之伺服器的即時和持續連接。  `MapFallbackToPage`方法呼叫表示網頁的可存取位置，該頁面會啟動 Blazor 應用程式，同時也會設定應用程式以處理來自用戶端的深層連結要求。  如果您開啟瀏覽器，並在應用程式中直接流覽至 Blazor 處理的路由，例如 `/counter` 在預設專案範本中，您將會看到這項功能正在運作。 要求是由 *_Host 的 cshtml* 回溯頁面處理，然後執行 Blazor 路由器並轉譯計數器頁面。
+此方法中的最後一個語句會定義 ASP.NET Core 正在接聽的端點。  這些路由是 web 可存取的位置，可讓您在 web 伺服器上存取，並接收由 .NET 處理並傳回給您的一些內容。  第一個專案會設定 SignalR 中樞，以用於 `MapBlazorHub` 提供處理 Blazor 元件之狀態和轉譯之伺服器的即時和持續連接。  `MapFallbackToPage`方法呼叫表示網頁的可存取位置，該頁面會啟動 Blazor 應用程式，同時也會設定應用程式以處理來自用戶端的深層連結要求。  如果您開啟瀏覽器，並在應用程式中直接流覽至 Blazor 處理的路由，例如 `/counter` 在預設專案範本中，您將會看到這項功能正在運作。 要求是由 *_Host 的 cshtml* 回溯頁面處理，然後執行 Blazor 路由器並轉譯計數器頁面。
 
 ## <a name="upgrading-the-bundleconfig-process"></a>升級 >bundleconfig.cs 流程
 

@@ -5,13 +5,13 @@ author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 9a8e78338aff53002647a10ed9007296e4682b5a
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: afb5d4025b81c2ddef782c462c94d32edc872a21
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267707"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509724"
 ---
 # <a name="architecture-comparison-of-aspnet-web-forms-and-no-locblazor"></a>ASP.NET Web Forms 和的架構比較 Blazor
 
@@ -38,7 +38,7 @@ ASP.NET Web Forms framework 是以以頁面為中心的架構為基礎。 應用
 
 ## Blazor
 
-Blazor 用戶端 web UI 架構的本質類似于 JavaScript 前端架構，例如角度或回應。 Blazor 處理使用者互動，並呈現必要的 UI 更新。 Blazor*不*是以要求-回復模型為基礎。 使用者互動會以非任何特定 HTTP 要求內容中的事件來處理。
+Blazor 用戶端 web UI 架構的本質類似于 JavaScript 前端架構，例如角度或回應。 Blazor 處理使用者互動，並呈現必要的 UI 更新。 Blazor*不* 是以要求-回復模型為基礎。 使用者互動會以非任何特定 HTTP 要求內容中的事件來處理。
 
 Blazor 應用程式是由一個或多個在 HTML 網頁上轉譯的根元件所組成。
 

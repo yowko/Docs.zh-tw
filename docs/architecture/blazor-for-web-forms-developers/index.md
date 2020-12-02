@@ -6,19 +6,23 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 47f684e1b48ca95b8d999e6f1429840eb5f541de
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158171"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509763"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor 適用于 ASP.NET Web Forms 開發人員
 
 ![顯示「無伺服器應用程式」電子書封面的螢幕擷取畫面。](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
 > 下載：<https://aka.ms/blazor-ebook>
+
+**1.0 版**
+
+請參閱 [變更記錄](https://aka.ms/blazor-ebook-changelog) ，以取得書籍更新和社區貢獻。
 
 發行者
 
@@ -34,7 +38,7 @@ Microsoft Corporation 的著作權©2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
-本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
+本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路的網站參考) 如有變更，恕不另行通知。
 
 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
@@ -46,11 +50,11 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 作者：
 
-> Microsoft Corp 的首席專案經理**[Daniel Roth](https://github.com/danroth27)**。
+> Microsoft Corp 的首席專案經理 **[Daniel Roth](https://github.com/danroth27)**。
 
-> Microsoft Corp 資深專案經理**[Jeff Fritz](https://github.com/csharpfritz)**。
+> Microsoft Corp 資深專案經理 **[Jeff Fritz](https://github.com/csharpfritz)**。
 
-> Microsoft Corp 資深軟體工程師**[Taylor Southwick](https://github.com/twsouthwick)**。
+> Microsoft Corp 資深軟體工程師 **[Taylor Southwick](https://github.com/twsouthwick)**。
 
 > **[Scott Addie](https://github.com/scottaddie)**，資深內容開發人員，Microsoft Corp。
 
@@ -60,7 +64,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 .NET 透過 ASP.NET 提供長時間支援的 web 應用程式開發，這是一組完整的架構和工具，可用來建立任何類型的 web 應用程式。 ASP.NET 有自己的 web 架構和技術歷程，從傳統的 Active Server Pages (ASP) 開始。 ASP.NET Web Forms、ASP.NET MVC、ASP.NET Web Pages 等架構，以及最新 ASP.NET Core 的架構，可提供具生產力且功能強大的方式來建立 *伺服器呈現* 的 Web 應用程式，以在伺服器上動態產生 UI 內容以回應 HTTP 要求。 每個 ASP.NET 架構都已經考慮至不同的物件和應用程式建立原理。 ASP.NET Web Forms 隨附于原始版本的 .NET Framework，並使用許多桌面開發人員熟悉的模式來啟用 Web 開發，例如可重複使用的 UI 控制項，以及簡單的事件處理。 不過，沒有任何 ASP.NET 供應專案會提供方法來執行在使用者的瀏覽器中執行的程式碼。 若要這麼做，需要撰寫 JavaScript，並使用許多 JavaScript 架構和工具，這些架構和工具在過去幾年內都有可能出現和不受歡迎： jQuery、挖起、角度、反應等。
 
-[Blazor](https://blazor.net) 是新的 web 架構，可變更使用 .NET 建立 web 應用程式時可能發生的情況。 Blazor 是以 c # 為基礎的用戶端 web UI 架構，而不是 JavaScript。 Blazor您可以使用以 c # 撰寫用戶端邏輯和 UI 元件、將它們編譯成一般的 .net 元件，然後使用名為的新開放式 web 標準，直接在瀏覽器中執行它們 WebAssembly 。 或者，也 Blazor 可以在伺服器上執行 .NET UI 元件，並透過瀏覽器的即時連線來處理所有 UI 互動流暢地。 當與在伺服器上執行的 .NET 搭配使用時， Blazor 可使用 .net 進行完整堆疊的 網頁程式開發。 雖然 Blazor 與 ASP.NET Web Forms 共用許多共通性，例如擁有可重複使用的元件模型，以及處理使用者事件的簡單方法，但它也是以 .Net Core 的基礎為基礎，以提供現代化且高效能的 Web 開發體驗。
+[Blazor](https://blazor.net) 是新的 web 架構，可變更使用 .NET 建立 web 應用程式時可能發生的情況。 Blazor 是以 c # 為基礎的用戶端 web UI 架構，而不是 JavaScript。 Blazor您可以使用以 c # 撰寫用戶端邏輯和 UI 元件、將它們編譯成一般的 .net 元件，然後使用名為的新開放式 web 標準，直接在瀏覽器中執行它們 WebAssembly 。 或者，也 Blazor 可以在伺服器上執行 .NET UI 元件，並透過瀏覽器的即時連線來處理所有 UI 互動流暢地。 當與在伺服器上執行的 .NET 搭配使用時， Blazor 可使用 .net 進行完整堆疊的 網頁程式開發。 雖然 Blazor 與 ASP.NET Web Forms 共用許多共通性，例如擁有可重複使用的元件模型，以及處理使用者事件的簡單方法，但它也是以 .net 的基礎為基礎，以提供現代化且高效能的 Web 開發體驗。
 
 本書以熟悉且方便的方式，介紹 ASP.NET Web Forms 開發人員 Blazor 。 它會以 Blazor ASP.NET Web Forms 中的類似概念來平行引進概念，同時也會說明可能較不熟悉的新概念。 其中涵蓋各種主題和問題，包括元件撰寫、路由、配置、設定和安全性。 雖然本書的內容主要是用來啟用新的開發，但它也涵蓋了將現有的 ASP.NET Web Forms 遷移至的指導方針和策略，以便將現有 Blazor 的應用程式現代化。
 
@@ -85,4 +89,4 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 本書和相關的範例不斷演進，所以您的意見反應歡迎！ 如果您有關于如何改進本書的意見，請使用內建于 [GitHub 問題](https://github.com/dotnet/docs/issues)之任何頁面底部的意見反應區段。
 
 >[!div class="step-by-step"]
->[下一個](introduction.md)
+>[下一步](introduction.md)

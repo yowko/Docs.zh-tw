@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 2ebb021d2fce46a91a006227ccf9ba0cbcc5eea5
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 5d80b28642ee1e975d334f89504a1748d13dea8f
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267603"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509776"
 ---
 # <a name="no-locblazor-app-hosting-models"></a>Blazor 應用程式裝載模型
 
@@ -66,8 +66,8 @@ Blazor WebAssembly 裝載模型有下列優點：
 相反地， Blazor 伺服器裝載模型提供下列優點：
 
 - 下載大小遠小於用戶端應用程式，而應用程式的載入速度更快。
-- 應用程式會充分利用伺服器功能，包括使用任何 .NET Core 相容的 Api。
-- 伺服器上的 .NET Core 可用來執行應用程式，因此現有的 .NET 工具（例如偵錯工具）會如預期般運作。
+- 應用程式會充分利用伺服器功能，包括使用任何 .NET 相容的 Api。
+- 伺服器上的 .NET 是用來執行應用程式，因此現有的 .NET 工具（例如偵錯工具）會如預期般運作。
 - 支援瘦用戶端。 例如，伺服器端應用程式會使用不支援 WebAssembly 和在資源受限裝置上的瀏覽器。
 - 應用程式的 .NET/c # 程式碼基底（包括應用程式的元件程式碼）不會提供給用戶端。
 

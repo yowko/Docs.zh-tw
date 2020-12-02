@@ -1,28 +1,28 @@
 ---
-title: 應用程式設定
+title: 應用程式組態
 description: 瞭解如何在 Blazor 不使用 ConfigurationManager 的情況下設定應用程式。
 author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/01/2020
-ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267499"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509789"
 ---
-# <a name="app-configuration"></a>應用程式設定
+# <a name="app-configuration"></a>應用程式組態
 
-在 Web Form 中載入應用程式設定的主要方式，是在伺服器上 *web.config* 檔案中的專案， &mdash; 或 *web.config*所參考的相關設定檔案。您可以使用靜態 `ConfigurationManager` 物件來與應用程式設定、資料存放庫連接字串，以及新增到應用程式中的其他擴充設定提供者互動。 通常會查看與應用程式設定的互動，如下列程式碼所示：
+在 Web Form 中載入應用程式設定的主要方式，是在伺服器上 *web.config* 檔案中的專案， &mdash; 或 *web.config* 所參考的相關設定檔案。您可以使用靜態 `ConfigurationManager` 物件來與應用程式設定、資料存放庫連接字串，以及新增到應用程式中的其他擴充設定提供者互動。 通常會查看與應用程式設定的互動，如下列程式碼所示：
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
 var connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionName"].ConnectionString;
 ```
 
-Blazor如果您的應用程式是裝載在 WINDOWS IIS 伺服器上，使用 ASP.NET Core 和伺服器端時，可能會出現*web.config*檔案。 但是，不 `ConfigurationManager` 會與此設定互動，而且您可以從其他來源接收更多結構化的應用程式設定。 讓我們看看如何收集設定，以及您如何仍可以從 *web.config* 檔案存取設定資訊。
+Blazor如果您的應用程式是裝載在 WINDOWS IIS 伺服器上，使用 ASP.NET Core 和伺服器端時，可能會出現 *web.config* 檔案。 但是，不 `ConfigurationManager` 會與此設定互動，而且您可以從其他來源接收更多結構化的應用程式設定。 讓我們看看如何收集設定，以及您如何仍可以從 *web.config* 檔案存取設定資訊。
 
 ## <a name="configuration-sources"></a>組態來源
 
@@ -30,9 +30,9 @@ ASP.NET Core 辨識您的應用程式有許多設定來源可供使用。 根據
 
 ASP.NET Core 是專為雲端感知而設計，可讓操作員和開發人員更輕鬆地設定應用程式。 ASP.NET Core 可感知環境，並知道它是否正在您的 `Production` 或環境中執行 `Development` 。 環境指標是在 `ASPNETCORE_ENVIRONMENT` 系統內容變數中設定。 如果未設定任何值，則應用程式會預設為在 `Production` 環境中執行。
 
-您的應用程式可以根據環境的名稱，從數個來源觸發和新增設定。 依預設，會依列出的順序從下列資源載入設定：
+您的應用程式可以根據環境的名稱，從數個來源觸發和新增設定。 根據預設，會依列出的順序從下列資源載入設定：
 
-1. 檔案*上的appsettings.js* （如果有的話）
+1. 檔案 *上的appsettings.js* （如果有的話）
 1. *appsettings。{ENVIRONMENT_NAME}. json* 檔案（如果有的話）
 1. 磁片上的使用者秘密檔案（如果有的話）
 1. 環境變數
@@ -40,7 +40,7 @@ ASP.NET Core 是專為雲端感知而設計，可讓操作員和開發人員更�
 
 ## <a name="appsettingsjson-format-and-access"></a>格式和存取 appsettings.js
 
-檔案 * 上的appsettings.js* 可以使用結構化的值（如下列 JSON）進行階層處理：
+檔案 *上的appsettings.js* 可以使用結構化的值（如下列 JSON）進行階層處理：
 
 ```json
 {
@@ -57,14 +57,14 @@ ASP.NET Core 是專為雲端感知而設計，可讓操作員和開發人員更�
 
 當您看到上述的 JSON 時，設定系統會將子值壓平合併，並參考其完整階層式路徑。 冒號 (`:`) 字元分隔階層中的每個屬性。 例如，設定索引鍵會 `section1:key0` 存取 `section1` 物件常值的 `key0` 值。
 
-## <a name="user-secrets"></a>使用者秘密
+## <a name="user-secrets"></a>使用者祕密
 
 使用者密碼為：
 
 * 儲存在開發人員工作站上的 JSON 檔案中，位於應用程式開發資料夾外部的設定值。
 * 只有在環境中執行時才會載入 `Development` 。
 * 與特定應用程式相關聯。
-* 使用 .NET Core CLI 的命令來管理 `user-secrets` 。
+* 使用 .NET CLI 的命令來管理 `user-secrets` 。
 
 藉由執行下列命令，為您的應用程式設定秘密儲存體 `user-secrets` ：
 
@@ -72,7 +72,7 @@ ASP.NET Core 是專為雲端感知而設計，可讓操作員和開發人員更�
 dotnet user-secrets init
 ```
 
-上述命令會將 `UserSecretsId` 元素新增至專案檔。 元素包含 GUID，用來將秘密與應用程式產生關聯。 然後，您可以使用命令來定義秘密 `set` 。 例如：
+上述命令會將 `UserSecretsId` 元素新增至專案檔。 元素包含 GUID，用來將秘密與應用程式產生關聯。 然後，您可以使用命令來定義秘密 `set` 。 例如︰
 
 ```dotnetcli
 dotnet user-secrets set "Parent:ApiKey" "12345"

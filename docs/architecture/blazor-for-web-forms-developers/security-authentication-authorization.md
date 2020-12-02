@@ -5,33 +5,33 @@ author: ardalis
 ms.author: daroth
 no-loc:
 - Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 0344960237a5d9da61eb0d85987c44e136f1be48
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161291"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509841"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>安全性： ASP.NET Web Forms 和中的驗證和授權 Blazor
 
-Blazor假設應用程式已設定驗證，則從 ASP.NET Web Forms 應用程式遷移到幾乎都需要更新驗證和授權的執行方式。 本章將說明如何) 成員資格、角色和使用者設定檔的 ASP.NET Web Forms 通用提供者模型 (遷移，以及如何從應用程式使用 ASP.NET Core 身分識別 Blazor 。 雖然本章將涵蓋高階步驟和考慮，但您可以在參考的檔中找到詳細的步驟和腳本。
+Blazor假設應用程式已設定驗證，則從 ASP.NET Web Forms 應用程式遷移到幾乎都需要更新驗證和授權的執行方式。 本章將說明如何) 成員資格、角色和使用者設定檔的 ASP.NET Web Forms 通用提供者模型 (遷移，以及如何從應用程式使用 ASP.NET Core 身分識別 Blazor 。 本章節將討論高階步驟和考慮，您可以在參考的檔中找到詳細的步驟和腳本。
 
 ## <a name="aspnet-universal-providers"></a>ASP.NET 通用提供者
 
 自 ASP.NET 2.0 起，ASP.NET Web Forms 平臺支援各種功能的提供者模型，包括成員資格。 通用成員資格提供者以及選用的角色提供者，通常會與 ASP.NET Web Forms 的應用程式一起部署。 它提供一種健全且安全的方式來管理驗證和授權，以持續正常運作。 這些通用提供者的最新供應專案是以 NuGet[套件的形式提供。](https://www.nuget.org/packages/Microsoft.AspNet.Providers)
 
-Universal Providers 使用包含 `aspnet_Applications` 、、和等資料表的 SQL database 架構 `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 。 藉由執行 [aspnet_regsql.exe 命令](/previous-versions/ms229862(v=vs.140))來設定時，提供者會安裝資料表和預存程式，以提供使用基礎資料所需的所有必要查詢和命令。 資料庫架構與這些預存程式與較新的 ASP.NET Identity 和 ASP.NET Core 的身分識別系統不相容，因此必須將現有的資料移轉到新系統中。 [圖 1] 顯示針對通用提供者設定的範例資料表架構。
+Universal Providers 使用包含 `aspnet_Applications` 、、和等資料表的 SQL database 架構 `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 。 藉由執行 [aspnet_regsql.exe 命令](/previous-versions/ms229862(v=vs.140))來設定時，提供者會安裝資料表和預存程式，以提供所有必要的查詢和命令來使用基礎資料。 資料庫架構與這些預存程式與較新的 ASP.NET Identity 和 ASP.NET Core 的身分識別系統不相容，因此必須將現有的資料移轉到新系統中。 [圖 1] 顯示針對通用提供者設定的範例資料表架構。
 
 ![通用提供者架構](./media/security/membership-tables.png)
 
-通用提供者會處理使用者、成員資格、角色和設定檔。 系統會將全域唯一識別碼和非常基本的資訊指派給使用者， (userId、userName) 儲存在 `aspnet_Users` 資料表中。 系統會將驗證資訊（例如密碼、密碼格式、密碼 salt、鎖定計數器和詳細資料等）儲存在 `aspnet_Membership` 資料表中。 角色只包含名稱和唯一識別碼，可透過關聯資料表指派給使用者 `aspnet_UsersInRoles` ，並提供多對多關聯性。
+通用提供者會處理使用者、成員資格、角色和設定檔。 系統會為使用者指派全域唯一識別碼，並將使用者識別碼、使用者名稱等基本資訊儲存在 `aspnet_Users` 資料表中。 系統會將驗證資訊（例如密碼、密碼格式、密碼 salt、鎖定計數器和詳細資料等）儲存在 `aspnet_Membership` 資料表中。 角色只包含名稱和唯一識別碼，可透過關聯資料表指派給使用者 `aspnet_UsersInRoles` ，並提供多對多關聯性。
 
 如果您現有的系統除了成員資格之外還在使用角色，您必須將使用者帳戶、相關聯的密碼、角色和角色成員資格遷移至 ASP.NET Core 身分識別。 您也可能需要使用 if 語句來更新您目前正在執行角色檢查的程式碼，以改用宣告式篩選、屬性和/或標記協助程式。 我們將在這一章的結尾更詳細地探討遷移考慮。
 
 ### <a name="authorization-configuration-in-web-forms"></a>Web Form 中的授權設定
 
-若要在 ASP.NET Web Forms 應用程式中設定特定頁面的授權存取，您通常會指定匿名使用者無法存取特定頁面或資料夾。 這是在 web.config 檔案中完成：
+若要在 ASP.NET Web Forms 應用程式中設定特定頁面的授權存取，您通常會指定匿名使用者無法存取特定頁面或資料夾。 這項設定會在 web.config 檔案中完成：
 
 ```xml
 <?xml version="1.0"?>
@@ -49,7 +49,7 @@ Universal Providers 使用包含 `aspnet_Applications` 、、和等資料表的 
 </configuration>
 ```
 
-`authentication`設定區段會設定應用程式的表單驗證。 `authorization`區段是用來禁止整個應用程式的匿名使用者。 不過，您可以針對每個位置提供更細微的授權規則，以及套用以角色為基礎的授權檢查。
+`authentication`設定區段會設定應用程式的表單驗證。 `authorization`區段是用來禁止整個應用程式的匿名使用者。 不過，您可以根據每個位置來提供更細微的授權規則，以及套用以角色為基礎的授權檢查。
 
 ```xml
 <location path="login.aspx">
@@ -74,13 +74,13 @@ Universal Providers 使用包含 `aspnet_Applications` 、、和等資料表的 
 </location>
 ```
 
-上述設定與其他設定合併時， `/admin` 會將資料夾和其內所有資源的存取限制為「系統管理員」角色的成員。 也可以藉由將個別檔案放 `web.config` 在資料夾根目錄中來套用 `/admin` 。
+上述設定與其他設定合併時， `/admin` 會將資料夾和其內所有資源的存取限制為「系統管理員」角色的成員。 這項限制也可以藉由在 `web.config` 資料夾根目錄中放置個別檔案來套用 `/admin` 。
 
 ### <a name="authorization-code-in-web-forms"></a>Web Form 中的授權碼
 
 除了使用設定存取之外 `web.config` ，您也可以在 Web Form 應用程式中，以程式設計方式設定存取和行為。 例如，您可以限制執行特定作業或根據使用者角色來查看特定資料的能力。
 
-這段程式碼可用於程式碼後置邏輯和頁面本身：
+這段程式碼可用於程式碼後端邏輯和頁面本身：
 
 ```html
 <% if (HttpContext.Current.User.IsInRole("Administrators")) { %>
@@ -107,11 +107,11 @@ protected void Page_Load(object sender, EventArgs e)
 
 在上述程式碼中， (RBAC) 的角色型存取控制會用來判斷是否 `SecretPanel` 會根據目前使用者的角色來顯示頁面的某些專案，例如。
 
-一般來說，ASP.NET Web Forms 的應用程式會在檔案中設定安全性 `web.config` ，然後再于 `.aspx` 頁面及其相關的程式碼後置檔案中新增其他檢查 `.aspx.cs` 。 大部分的應用程式會利用通用的成員資格提供者，通常會有額外的角色提供者。
+一般來說，ASP.NET Web Forms 的應用程式會在檔案中設定安全性 `web.config` ，然後再于 `.aspx` 頁面及其相關的 `.aspx.cs` 程式碼後端檔案中新增其他檢查。 大部分的應用程式會利用通用的成員資格提供者，通常會有額外的角色提供者。
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core 身分識別
 
-雖然仍然負責驗證和授權，但在與通用提供者相較之下，ASP.NET Core 身分識別會使用一組不同的抽象概念和假設。 例如，新的身分識別模型支援協力廠商驗證，可讓使用者使用社交媒體帳戶或其他受信任的驗證提供者進行驗證。 ASP.NET Core 身分識別支援使用者介面，可用於通常需要的頁面，例如登入、登出及註冊。 它會利用 EF Core 來存取資料，並使用 EF Core 的遷移來產生支援其資料模型所需的架構。 本 [ASP.NET Core 的身分識別簡介](/aspnet/core/security/authentication/identity) 提供了 ASP.NET Core 身分識別所包含的內容，以及如何開始使用它的良好總覽。 如果您尚未在您的應用程式及其資料庫中設定 ASP.NET Core 身分識別，它會協助您開始使用。
+雖然仍然負責驗證和授權，但在與通用提供者相較之下，ASP.NET Core 身分識別會使用一組不同的抽象概念和假設。 例如，新的身分識別模型支援協力廠商驗證，可讓使用者使用社交媒體帳戶或其他受信任的驗證提供者進行驗證。 ASP.NET Core 身分識別支援使用者介面，可用於通常需要的頁面，例如登入、登出及註冊。 它會利用 EF Core 來存取其資料，並使用 EF Core 的遷移來產生支援其資料模型所需的架構。 本 [ASP.NET Core 的身分識別簡介](/aspnet/core/security/authentication/identity) 提供了 ASP.NET Core 身分識別所包含的內容，以及如何開始使用它的良好總覽。 如果您尚未在您的應用程式及其資料庫中設定 ASP.NET Core 身分識別，它會協助您開始使用。
 
 ### <a name="roles-claims-and-policies"></a>角色、宣告和原則
 
@@ -119,9 +119,9 @@ protected void Page_Load(object sender, EventArgs e)
 
 除了角色之外，ASP.NET Core 身分識別也支援宣告和原則的概念。 角色應特別對應到一組資源，而該角色的使用者應該能夠存取，而宣告只是使用者身分識別的一部分。 宣告是一組名稱值組，代表主體是什麼，而不是主體可做的動作。
 
-您可以直接檢查使用者的宣告，並根據這些使用者是否應該獲得資源的存取權來決定。 不過，這類檢查通常會在整個系統中重複和散佈。 更好的方法是定義 *原則*。
+您可以直接檢查使用者的宣告，並根據這些值判斷使用者是否應該獲得資源的存取權。 不過，這類檢查通常會在整個系統中重複和散佈。 更好的方法是定義 *原則*。
 
-授權原則包含一個或多個需求。 原則會在的方法中註冊為授權服務設定的一部分 `ConfigureServices` `Startup.cs` 。 例如，下列程式碼片段會設定名為 "CanadiansOnly" 的原則，其要求使用者的國家/地區宣告值為 "加拿大"。
+授權原則包含一個或多個需求。 原則會在的方法中註冊為授權服務設定的一部分 `ConfigureServices` `Startup.cs` 。 例如，下列程式碼片段會設定名為 "CanadiansOnly" 的原則，其要求使用者必須具有值為 "加拿大" 的國家/地區宣告。
 
 ```csharp
 services.AddAuthorization(options =>
@@ -146,7 +146,7 @@ services.AddAuthorization(options =>
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-如果您需要存取使用者的驗證狀態、角色或程式碼中的宣告，有兩種主要方式可以達成此目的。 第一個是以串聯參數形式接收驗證狀態。 第二個是使用插入的來存取狀態 `AuthenticationStateProvider` 。 這些方法的詳細資料將在[ Blazor 安全性檔案](/aspnet/core/blazor/security/)中說明。
+如果您需要存取使用者的驗證狀態、角色或程式碼中的宣告，有兩種主要方式可以達成這項功能。 第一個是以串聯參數形式接收驗證狀態。 第二個是使用插入的來存取狀態 `AuthenticationStateProvider` 。 這些方法的詳細資料將在[ Blazor 安全性檔案](/aspnet/core/blazor/security/)中說明。
 
 下列程式碼示範如何以串聯 `AuthenticationState` 參數的形式接收：
 
@@ -221,7 +221,7 @@ private async Task AddCountryClaim()
 
 1. 在目的地資料庫中建立 ASP.NET Core 身分識別資料庫架構
 2. 將資料從通用提供者架構遷移至 ASP.NET Core 的身分識別架構
-3. 將 configuration 從 web.config 遷移至中介軟體和服務，通常位於 `Startup.cs`
+3. 將設定從遷移 `web.config` 至中介軟體和服務，通常位於 `Startup.cs`
 4. 使用控制項和條件更新個別頁面，以使用標記協助程式和新的身分識別 Api。
 
 下列各節將詳細討論這其中每個步驟。
@@ -252,11 +252,11 @@ dotnet ef database update
 dotnet ef migrations script -o auth.sql
 ```
 
-這將會在輸出檔案中產生 SQL 腳本， `auth.sql` 然後針對您想要的任何資料庫來執行。 如果您在執行命令時遇到任何問題 `dotnet ef` ， [請確定您已在系統上安裝 EF Core 工具](/ef/core/miscellaneous/cli/dotnet)。
+上述命令會在輸出檔案中產生 SQL 腳本 `auth.sql` ，然後針對您想要的任何資料庫來執行。 如果您在執行命令時遇到任何問題 `dotnet ef` ， [請確定您已在系統上安裝 EF Core 工具](/ef/core/miscellaneous/cli/dotnet)。
 
 如果您的來源資料表有額外的資料行，您必須在新的架構中找出這些資料行的最佳位置。 一般而言，資料表上的資料行 `aspnet_Membership` 應該對應至 `AspNetUsers` 資料表。 上的資料行 `aspnet_Roles` 應該對應至 `AspNetRoles` 。 資料表上的任何其他資料行 `aspnet_UsersInRoles` 都會加入至 `AspNetUserRoles` 資料表。
 
-也值得考慮將任何額外的資料行放在不同的資料表上，以便未來的遷移不需要考慮預設身分識別架構的自訂。
+也值得考慮將任何其他資料行放在不同的資料表上。 因此，未來的遷移不需要考慮預設身分識別架構的自訂。
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>將資料從通用提供者遷移至 ASP.NET Core 身分識別
 
@@ -268,7 +268,7 @@ dotnet ef migrations script -o auth.sql
 
 ### <a name="migrating-security-settings-from-webconfig-to-startupcs"></a>將安全性設定從 web.config 遷移至 Startup.cs
 
-如先前所述，ASP.NET 成員資格和角色提供者會在應用程式的 web.config 檔中設定。 由於 ASP.NET Core 的應用程式不會系結至 IIS，並且使用個別的系統進行設定，因此必須在其他地方設定這些設定。 在大部分的情況下，會在檔案中設定 ASP.NET Core 身分識別 `Startup.cs` 。 開啟稍早建立的 Web 專案 (，以產生識別資料表架構) 並檢查其檔案 `Startup.cs` 。
+如先前所述，ASP.NET 成員資格和角色提供者是在應用程式的檔案中設定 `web.config` 。 由於 ASP.NET Core 的應用程式不會系結至 IIS，並且使用個別的系統進行設定，因此必須在其他地方設定這些設定。 在大部分的情況下，會在檔案中設定 ASP.NET Core 身分識別 `Startup.cs` 。 開啟稍早建立的 Web 專案 (，以產生識別資料表架構) 並檢查其檔案 `Startup.cs` 。
 
 預設的 ConfigureServices 方法會新增 EF Core 和身分識別的支援：
 
@@ -327,19 +327,19 @@ ASP.NET Identity 不會將匿名或以角色為基礎的存取設定至的位置
 
 ### <a name="updating-individual-pages-to-use-aspnet-core-identity-abstractions"></a>更新個別頁面以使用 ASP.NET Core 身分識別抽象
 
-在您的 ASP.NET Web Forms 應用程式中，如果您有 web.config 設定來拒絕匿名使用者的特定頁面或資料夾的存取權，您只要將此 `[Authorize]` 屬性新增至這類頁面，即可進行遷移：
+在您的 ASP.NET Web Forms 應用程式中，如果您有 `web.config` 設定來拒絕匿名使用者存取特定頁面或資料夾，您可以將 `[Authorize]` 屬性新增至這類頁面來遷移這些變更：
 
 ```razor
 @attribute [Authorize]
 ```
 
-如果您對屬於某個角色的使用者進一步拒絕存取，您也可以藉由新增指定角色的屬性來進行遷移：
+如果您對屬於某個角色的使用者進一步拒絕存取，您也可以藉由新增指定角色的屬性來遷移此行為：
 
 ```razor
 @attribute [Authorize(Roles ="administrators")]
 ```
 
-請注意，此 `[Authorize]` 屬性只適用于透過 `@page` 路由器達成的元件 Blazor 。 屬性無法與子元件搭配使用，而應該改用 `AuthorizeView` 。
+`[Authorize]`屬性只適用于透過 `@page` 路由器達成的元件 Blazor 。 屬性無法與子元件搭配使用，而應該改用 `AuthorizeView` 。
 
 如果您在頁面標記內有邏輯來判斷是否要對特定使用者顯示某些程式碼，您可以將此取代為 `AuthorizeView` 元件。 [AuthorizeView 元件](/aspnet/core/blazor/security#authorizeview-component)會選擇性地顯示 UI，取決於使用者是否已獲授權查看。 它也會公開 `context` 可以用來存取使用者資訊的變數。
 
@@ -356,7 +356,7 @@ ASP.NET Identity 不會將匿名或以角色為基礎的存取設定至的位置
 </AuthorizeView>
 ```
 
-您可以使用屬性設定的，存取程式邏輯內的驗證狀態 `Task<AuthenticationState` `[CascadingParameter]` 。 這可讓您存取使用者，這可讓您判斷它們是否經過驗證，以及是否屬於特定的角色。 如果您需要評估原則 cti，您可以插入的實例， `IAuthorizationService` 並 `AuthorizeAsync` 在其上呼叫方法。 下列範例程式碼示範如何取得使用者資訊，並允許授權的使用者執行原則所限制的工作 `content-editor` 。
+您可以使用屬性設定的，存取程式邏輯內的驗證狀態 `Task<AuthenticationState` `[CascadingParameter]` 。 這項設定可讓您存取使用者，這可讓您判斷它們是否經過驗證，以及是否屬於特定的角色。 如果您需要評估原則 cti，您可以插入的實例， `IAuthorizationService` 並 `AuthorizeAsync` 在其上呼叫方法。 下列範例程式碼示範如何取得使用者資訊，並允許授權的使用者執行原則所限制的工作 `content-editor` 。
 
 ```razor
 @using Microsoft.AspNetCore.Authorization
@@ -392,7 +392,7 @@ ASP.NET Identity 不會將匿名或以角色為基礎的存取設定至的位置
 }
 ```
 
-`AuthenticationState`首先需要將設定為串聯值，才能系結至像這樣的串聯參數。 這通常是使用元件來完成 `CascadingAuthenticationState` 。 這通常是在中完成 `App.razor` ：
+第一個必須先設定為串聯值，然後才能系結 `AuthenticationState` 至像這樣的串聯參數。 這通常是使用元件來完成 `CascadingAuthenticationState` 。 這項設定通常會在下列情況中完成 `App.razor` ：
 
 ```razor
 <CascadingAuthenticationState>
@@ -412,9 +412,9 @@ ASP.NET Identity 不會將匿名或以角色為基礎的存取設定至的位置
 
 ## <a name="summary"></a>摘要
 
-Blazor 使用與 ASP.NET Core 相同的安全性模型，這是 ASP.NET Core 身分識別。 從通用提供者遷移到 ASP.NET Core 身分識別相當簡單，但前提是不太太多自訂套用至原始資料架構。 一旦資料移轉之後，在應用程式中使用驗證和授權的 Blazor 記錄就會有完整的記錄，並可進行設定，以及針對大部分的安全性需求進行程式設計支援。
+Blazor 使用與 ASP.NET Core 相同的安全性模型，這是 ASP.NET Core 身分識別。 從通用提供者遷移到 ASP.NET Core 身分識別相當簡單，但前提是不太太多自訂套用至原始資料架構。 資料移轉之後，在應用程式中使用驗證和授權 Blazor 已妥善記載，並可設定及以程式設計方式支援大部分的安全性需求。
 
-## <a name="references"></a>參考資料
+## <a name="references"></a>參考
 
 - [ASP.NET Core 上的身分識別簡介](/aspnet/core/security/authentication/identity)
 - [從 ASP.NET 成員資格驗證遷移至 ASP.NET Core 2.0 身分識別](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)

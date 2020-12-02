@@ -6,13 +6,13 @@ ms.author: tasou
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/19/2019
-ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 893b6f851681ec540629fe160749b2622b6d5440
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161200"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509828"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>從 ASP.NET Web Forms 遷移至 Blazor
 
@@ -33,7 +33,7 @@ ms.locfileid: "91161200"
 
 如 [裝載模型](hosting-models.md) 一章所述， Blazor 應用程式可以用兩種不同的方式裝載：伺服器端和用戶端。 伺服器端模型會在執行伺服器上的任何實際程式碼時，使用 ASP.NET Core SignalR 連接來管理 DOM 更新。 用戶端模型會在 WebAssembly 瀏覽器中執行，而不需要伺服器連接。 有一些差異會影響，最適合特定的應用程式：
 
-- 執行時 WebAssembly 仍在開發中，而且可能不支援所有功能 (例如目前時間的執行緒) 
+- 執行 as WebAssembly 並不支援所有功能 (例如目前時間的執行緒) 
 - 用戶端與伺服器之間的多對話通訊可能會導致伺服器端模式的延遲問題
 - 存取資料庫和內部或受保護的服務時，需要使用用戶端裝載的個別服務
 
@@ -41,13 +41,13 @@ ms.locfileid: "91161200"
 
 ## <a name="create-a-new-project"></a>建立新專案
 
-此初始遷移步驟是建立新專案。 此專案類型是以 .NET Core 的 SDK 樣式專案為基礎，並且簡化了先前專案格式所使用的大部分重複專案。 如需詳細資訊，請參閱 [專案結構](project-structure.md)的章節。
+此初始遷移步驟是建立新專案。 此專案類型是以 .NET 的 SDK 樣式專案為基礎，可簡化先前的專案格式所使用的大部分重複專案。 如需詳細資訊，請參閱 [專案結構](project-structure.md)的章節。
 
 建立專案之後，請安裝先前專案中使用的程式庫。 在較舊的 Web Form 專案中，您可能已使用 *packages.config* 檔案來列出所需的 NuGet 套件。 在新的 SDK 樣式專案中， *packages.config* 已取代為 `<PackageReference>` 專案檔中的元素。 這種方法的優點是所有相依性都是以可轉移的方式安裝的。 您只會列出您感興趣的最上層相依性。
 
-您所使用的許多相依性都適用于 .NET Core，包括 Entity Framework 6 和 log4net。 如果沒有可用的 .NET Core 或 .NET Standard 版本，則通常可以使用 .NET Framework 版本。 您的里程可能會有所不同。 任何在 .NET Core 中無法使用的 API 都會導致執行階段錯誤。 Visual Studio 會通知您這類套件。 **方案總管**中專案的 [**參考**] 節點上會出現黃色圖示。
+您所使用的許多相依性都適用于 .NET，包括 Entity Framework 6 和 log4net。 如果沒有可用的 .NET 或 .NET Standard 版本，則通常可以使用 .NET Framework 版本。 您的里程可能會有所不同。 任何在 .NET 中無法使用的 API 都會導致執行階段錯誤。 Visual Studio 會通知您這類套件。 **方案總管** 中專案的 [**參考**] 節點上會出現黃色圖示。
 
-在以 Blazor eShop 為基礎的專案中，您可以看到已安裝的封裝。 先前， *packages.config* 檔案會列出專案中使用的每個套件，而導致檔案的長度大約是50行。 *packages.config*的程式碼片段為：
+在以 Blazor eShop 為基礎的專案中，您可以看到已安裝的封裝。 先前， *packages.config* 檔案會列出專案中使用的每個套件，而導致檔案的長度大約是50行。 *packages.config* 的程式碼片段為：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -80,18 +80,19 @@ Blazor專案會在專案檔的專案中列出您需要的相依性 `<ItemGroup>`
 ```xml
 <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.3" />
-    <PackageReference Include="EntityFramework" Version="6.3.0-preview9-19423-04" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.12" />
 </ItemGroup>
 ```
 
-其中一個可簡化 Web Form 開發人員生命週期的 NuGet 套件是 [Windows 相容性套件](../../core/porting/windows-compat-pack.md)。 雖然 .NET Core 是跨平臺的，但某些功能只能在 Windows 上使用。 藉由安裝相容性套件，可取得 Windows 特定功能。 這類功能的範例包括登錄、WMI 和目錄服務。 套件會新增 20000 Api，並啟用您可能已經熟悉的許多服務。 EShop 專案不需要相容性套件;但是，如果您的專案使用 Windows 特定功能，則套件會簡化遷移工作。
+其中一個可簡化 Web Form 開發人員生命週期的 NuGet 套件是 [Windows 相容性套件](../../core/porting/windows-compat-pack.md)。 雖然 .NET 是跨平臺的，但某些功能只能在 Windows 上使用。 藉由安裝相容性套件，可取得 Windows 特定功能。 這類功能的範例包括登錄、WMI 和目錄服務。 套件會新增 20000 Api，並啟用您可能已經熟悉的許多服務。 EShop 專案不需要相容性套件;但是，如果您的專案使用 Windows 特定功能，則套件會簡化遷移工作。
 
 ## <a name="enable-startup-process"></a>啟用啟動進程
 
 的啟動程式 Blazor 從 Web Form 變更，並遵循其他 ASP.NET Core 服務的類似設定。 裝載伺服器端時， Blazor 元件會作為一般 ASP.NET Core 應用程式的一部分來執行。 當裝載于瀏覽器時 WebAssembly ， Blazor 元件會使用類似的裝載模型。 不同之處在于元件是以不同于任何後端進程的服務來執行。 無論何種方式，啟動都很類似。
 
-*Global.asax.cs*檔案是 Web Form 專案的預設啟動頁面。 在 eShop 專案中，此檔案會設定反轉 (IoC) 容器的控制權，並處理應用程式或要求的各種生命週期事件。 其中有些事件是使用中介軟體 (（例如) ）來處理 `Application_BeginRequest` 。 其他事件則需要透過相依性插入 (DI) 覆寫特定的服務。
+*Global.asax.cs* 檔案是 Web Form 專案的預設啟動頁面。 在 eShop 專案中，此檔案會設定反轉 (IoC) 容器的控制權，並處理應用程式或要求的各種生命週期事件。 其中有些事件是使用中介軟體 (（例如) ）來處理 `Application_BeginRequest` 。 其他事件則需要透過相依性插入 (DI) 覆寫特定的服務。
 
 例如，eShop 的 *Global.asax.cs* 檔案包含下列程式碼：
 
@@ -247,7 +248,7 @@ public class Startup
 
 您可能會注意到 Web Form 的一項重大變更，就是 DI 的優點。 DI 是 ASP.NET Core 設計中的指導準則。 它支援 ASP.NET Core framework 幾乎所有層面的自訂。 甚至有內建的服務提供者可以用於許多案例。 如果需要更多自訂，許多的社區專案都可以支援。 例如，您可以將協力廠商 DI 程式庫投資轉寄。
 
-在原始的 eShop 應用程式中，有一些會話管理的設定。 由於伺服器端 Blazor 使用 ASP.NET Core SignalR 進行通訊，因此不支援會話狀態，因為連接可能會因 HTTP 內容而發生。 使用會話狀態的應用程式必須先重新架構，才能以 Blazor 應用程式的形式執行。
+在原始的 eShop 應用程式中，有一些會話管理的設定。 由於伺服器端 Blazor 使用 ASP.NET Core SignalR 來進行通訊，因此不支援會話狀態，因為連接可能會在 HTTP 內容以外的情況下發生。 使用會話狀態的應用程式必須先重新架構，才能以應用程式的形式執行 Blazor 。
 
 如需應用程式啟動的詳細資訊，請參閱 [應用程式啟動](app-startup.md)。
 
@@ -284,9 +285,9 @@ EShop 專案會啟用基本的靜態檔案存取。 有許多自訂可用於靜�
 
 ## <a name="migrate-aspx-pages"></a>遷移 ASPX 頁面
 
-Web Form 應用程式中的頁面是具有 *.aspx* 副檔名的檔案。 Web Form 頁面通常可以對應到中的元件 Blazor 。 Blazor元件是以*razor*副檔名的檔案撰寫的。 針對 eShop 專案，會將五個頁面轉換成 Razor 頁面。
+Web Form 應用程式中的頁面是具有 *.aspx* 副檔名的檔案。 Web Form 頁面通常可以對應到中的元件 Blazor 。 Blazor元件是以 *razor* 副檔名的檔案撰寫的。 針對 eShop 專案，會將五個頁面轉換成 Razor 頁面。
 
-例如，詳細資料檢視包含 Web Form 專案中的三個檔案： *default.aspx*、 *Details.aspx.cs*和 *Details.aspx.designer.cs*。 轉換為時 Blazor ，程式碼後端和標記會合並成 *詳細資料。 razor*。 Razor 編譯 (相當於 *designer.cs* 檔案) 儲存在 *obj* 目錄中，而且預設不會在 **方案總管**中看到。 Web Form] 頁面包含下列標記：
+例如，詳細資料檢視包含 Web Form 專案中的三個檔案： *default.aspx*、 *Details.aspx.cs* 和 *Details.aspx.designer.cs*。 轉換為時 Blazor ，程式碼後端和標記會合並成 *詳細資料。 razor*。 Razor 編譯 (相當於 *designer.cs* 檔案) 儲存在 *obj* 目錄中，而且預設不會在 **方案總管** 中看到。 Web Form] 頁面包含下列標記：
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -562,7 +563,7 @@ namespace eShopLegacyWebForms.Catalog
 
 ## <a name="migrate-configuration"></a>移轉組態
 
-在 Web Form 專案中，設定資料最常儲存在 *web.config* 檔案中。 使用存取設定資料 `ConfigurationManager` 。 服務通常需要剖析物件。 在 .NET Framework 4.7.2 中，可組合性是透過來新增至 configuration `ConfigurationBuilders` 。 這些產生器可讓開發人員加入不同的設定來源，然後在執行時間撰寫這些來源以取得必要的值。
+在 Web Form 專案中，設定資料最常儲存在 *web.config* 檔案中。 使用存取設定資料 `ConfigurationManager` 。 服務通常需要剖析物件。 使用 .NET Framework 4.7.2，會透過將可組合性新增至設定 `ConfigurationBuilders` 。 這些產生器可讓開發人員加入設定的各種來源，然後在執行時間撰寫這些來源，以取得必要的值。
 
 ASP.NET Core 引進了彈性的設定系統，可讓您定義應用程式和部署所使用的設定來源或來源。 `ConfigurationBuilder`您可能會在 Web Form 應用程式中使用的基礎結構，是在 ASP.NET Core 設定系統中使用的概念之後進行模型化。
 
@@ -583,7 +584,7 @@ ASP.NET Core 引進了彈性的設定系統，可讓您定義應用程式和部�
 </configuration>
 ```
 
-在 *web.config*中儲存秘密（例如資料庫連接字串）是很常見的。秘密可避免保存在不安全的位置，例如原始檔控制。 Blazor在 ASP.NET Core 上，上述以 XML 為基礎的設定會以下列 JSON 取代：
+在 *web.config* 中儲存秘密（例如資料庫連接字串）是很常見的。秘密可避免保存在不安全的位置，例如原始檔控制。 Blazor在 ASP.NET Core 上，上述以 XML 為基礎的設定會以下列 JSON 取代：
 
 ```json
 {
@@ -616,7 +617,7 @@ public class Startup
 
 ## <a name="migrate-data-access"></a>遷移資料存取
 
-資料存取是任何應用程式的重要層面。 EShop 專案會將目錄資訊儲存在資料庫中，並使用 Entity Framework (EF) 6 來抓取資料。 由於 .NET Core 3.0 支援 EF 6，因此專案可以繼續使用。
+資料存取是任何應用程式的重要層面。 EShop 專案會將目錄資訊儲存在資料庫中，並使用 Entity Framework (EF) 6 來抓取資料。 因為 .NET 5.0 支援 EF 6，所以專案可以繼續使用。
 
 EShop 需要下列 EF 相關變更：
 

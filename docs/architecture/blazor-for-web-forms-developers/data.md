@@ -5,13 +5,13 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 09/08/2020
-ms.openlocfilehash: 84e12f9890351fa46cd7ed0ee31db449f3c55e59
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.date: 11/20/2020
+ms.openlocfilehash: 66e6001cbcac612cb556e90fb86fd694ca7d1459
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515848"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509750"
 ---
 # <a name="work-with-data"></a>使用資料
 
@@ -29,7 +29,7 @@ ADO.NET 是與資料庫互動的低層級方法。 您的應用程式可以使�
 
 ## <a name="entity-framework"></a>Entity Framework
 
-Entity Framework (EF) 是 .NET Foundation 所維護的開放原始碼物件關聯式對應架構。 EF 一開始會使用 .NET Framework，可讓您針對資料庫連接、儲存架構和互動產生程式碼。 您可以使用此抽象概念，將焦點放在應用程式的商務規則，並允許受信任的資料庫管理員管理資料庫。 在 .NET Core 中，您可以使用名為 EF Core 的 EF 更新版。 EF Core 有助於使用命令列工具來產生和維護您的程式碼與資料庫之間的互動，以及一系列可供您使用的命令 `dotnet ef` 。 讓我們來看看一些範例，讓您使用資料庫。
+Entity Framework (EF) 是 .NET Foundation 所維護的開放原始碼物件關聯式對應架構。 EF 一開始會使用 .NET Framework，可讓您針對資料庫連接、儲存架構和互動產生程式碼。 您可以使用此抽象概念，將焦點放在應用程式的商務規則，並允許受信任的資料庫管理員管理資料庫。 在 .NET 中，您可以使用名為 EF Core 的 EF 更新版。 EF Core 有助於使用命令列工具來產生和維護您的程式碼與資料庫之間的互動，以及一系列可供您使用的命令 `dotnet ef` 。 讓我們來看看一些範例，讓您使用資料庫。
 
 ### <a name="ef-code-first"></a>EF Code First
 

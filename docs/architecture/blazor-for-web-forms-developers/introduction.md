@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: a5aae6cf02ccec84ac8642b6ce8d9c919755e868
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: f1967dac0f46ba7cfefab62c5528dd1db8029514
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267564"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509711"
 ---
 # <a name="an-introduction-to-no-locblazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web Forms 開發人員的簡介
 
@@ -33,7 +33,7 @@ ms.locfileid: "88267564"
 
 現今大部分的 web 架構也都是開放原始碼，有許多好處。 使用者不會 beheld 至單一專案擁有者來修正 bug 和新增功能。 開放原始碼專案可針對開發進度和即將進行的變更，提供更好的透明度。 開放原始碼專案可享受整個團體的貢獻，並促進可提供的開放原始碼生態系統。 儘管有開放原始碼的風險，許多取用者和參與者都找到適當的緩和措施，讓他們能夠以安全且合理的方式享受開放原始碼生態系統的優點。 這類緩和措施的範例包括參與者授權合約、易記的授權、歷史掃描，以及支援的基礎。
 
-.NET 社區同時採用跨平臺支援和開放原始碼。 .NET Core 是 .NET 的開放原始碼和跨平臺執行，可在眾多的平臺上執行，包括 Windows、macOS 和各種 Linux 發行版本。 Xamarin 提供 Mono，也就是 .NET 的開放原始碼版本。 Mono 可在 Android、iOS 和各種其他外型規格上執行，包括監看式和智慧型電視。 Microsoft 宣佈 [.net 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/) 將會將 .net Core 和 Mono 協調為「單一 .net 執行時間和架構，可在任何地方使用，並具備一致的執行時間行為和開發人員體驗。」
+.NET 社區同時採用跨平臺支援和開放原始碼。 .NET Core 是 .NET 的開放原始碼和跨平臺執行，可在眾多的平臺上執行，包括 Windows、macOS 和各種 Linux 發行版本。 Xamarin 提供 Mono，也就是 .NET 的開放原始碼版本。 Mono 可在 Android、iOS 和各種其他外型規格上執行，包括監看式和智慧型電視。 Microsoft 已發行將 .NET Core 和 Mono 協調成「單一 .NET 執行時間和架構，可在任何地方使用，且具有統一執行時間行為和開發人員體驗」的 [.net 5](https://devblogs.microsoft.com/dotnet/announcing-net-5-0/) 。
 
 從移至開放原始碼和跨平臺支援，ASP.NET Web Forms 是否受益？ 抱歉，答案是否，或至少與其他平臺的範圍不同。 .NET 小組 [最近已清楚](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) 指出 ASP.NET Web Forms 不會移植到 .net Core 或 .net 5。 這是為什麼？
 
@@ -45,7 +45,7 @@ ms.locfileid: "88267564"
 
 ## <a name="client-side-web-development"></a>用戶端 網頁程式開發
 
-所有。以網路為基礎的 web 架構（包括 ASP.NET Web Forms）在過去有一個共通的內容：它們是 *伺服器呈現*的。 在伺服器呈現的 web 應用程式中，瀏覽器會向伺服器提出要求，這會在 ASP.NET apps) 中執行一些程式碼 ( .NET 程式碼，以產生回應。 該回應會傳送回瀏覽器以進行處理。 在此模型中，會使用瀏覽器作為精簡轉譯引擎。 在伺服器上產生 UI、執行商務邏輯和管理狀態的困難工作。
+所有。以網路為基礎的 web 架構（包括 ASP.NET Web Forms）在過去有一個共通的內容：它們是 *伺服器呈現* 的。 在伺服器呈現的 web 應用程式中，瀏覽器會向伺服器提出要求，這會在 ASP.NET apps) 中執行一些程式碼 ( .NET 程式碼，以產生回應。 該回應會傳送回瀏覽器以進行處理。 在此模型中，會使用瀏覽器作為精簡轉譯引擎。 在伺服器上產生 UI、執行商務邏輯和管理狀態的困難工作。
 
 不過，瀏覽器已成為多功能平臺。 他們會採用不斷增加的開放式 web 標準，將存取權授與使用者電腦的功能。 為什麼無法利用用戶端裝置的計算能力、儲存體、記憶體和其他資源？ 尤其是在處理至少部分或完全用戶端時，UI 互動的優點是更豐富且更有互動的感覺。 應該在伺服器上處理的邏輯和資料仍可在伺服器端處理。 您可以使用 Web API 呼叫或甚至是即時的通訊協定，例如 Websocket。 如果 網頁程式開發人員願意撰寫 JavaScript，可免費使用這些權益。 用戶端 UI 架構（例如，角度、反應和 Vue）可簡化用戶端 網頁程式開發並提高普及度。 ASP.NET Web Forms 開發人員也可以利用用戶端獲益，甚至還能以整合式 JavaScript 架構（例如 ASP.NET AJAX）提供一些現成的支援。
 
@@ -55,11 +55,11 @@ ms.locfileid: "88267564"
 
 在2015中，主要的瀏覽器廠商已加入 W3C 社區群組中的強制，以建立名為的新開放式 web 標準 WebAssembly 。 WebAssembly 是 Web 的位元組碼。 如果您可以將程式碼編譯為 WebAssembly ，則可以在任何平臺上的任何瀏覽器上以近乎原生速度執行。 著重于 C/c + + 的初始工作。 結果是在沒有外掛程式的情況下，直接在瀏覽器中執行原生3D 圖形引擎的明顯示範。 WebAssembly 已經過了所有主要瀏覽器的標準化和實行。
 
-在上執行 .NET 的工作 WebAssembly 已于2017年後期宣佈，並預期會在2020中寄出，包括 .net 5 的支援。 直接在瀏覽器中執行 .NET 程式碼的功能，可讓您使用 .NET 進行完整堆疊的 網頁程式開發。
+執行上的 .NET 的工作在 WebAssembly 2017 年後期宣佈，並于2020發行，包括 .net 5 的支援。 直接在瀏覽器中執行 .NET 程式碼的功能，可讓您使用 .NET 進行完整堆疊的 網頁程式開發。
 
 ## <a name="no-locblazor-full-stack-web-development-with-net"></a>Blazor：使用 .NET 進行完整堆疊 網頁程式開發
 
-在瀏覽器中執行 .NET 程式碼的能力並不提供建立用戶端 web 應用程式的端對端體驗。 這就是您所 Blazor 遇到的。 Blazor 是以 c # 為基礎的用戶端 web UI 架構，而不是 JavaScript。 Blazor 可以直接在瀏覽器中執行 WebAssembly 。 不需要瀏覽器外掛程式。 或者， Blazor 應用程式可以在 .Net Core 上執行伺服器端，以及透過瀏覽器的即時連線來處理所有使用者互動。
+在瀏覽器中執行 .NET 程式碼的能力並不提供建立用戶端 web 應用程式的端對端體驗。 這就是您所 Blazor 遇到的。 Blazor 是以 c # 為基礎的用戶端 web UI 架構，而不是 JavaScript。 Blazor 可以直接在瀏覽器中執行 WebAssembly 。 不需要瀏覽器外掛程式。 或者， Blazor 應用程式可以在 .net 上執行伺服器端，以及透過瀏覽器即時連線來處理所有使用者互動。
 
 Blazor 在 Visual Studio 和 Visual Studio Code 中有絕佳的工具支援。 此架構也包含完整的 UI 元件模型，而且具有適用于的內建功能：
 
@@ -76,12 +76,12 @@ Blazor 有許多 ASP.NET Web Forms 的常見功能。 這兩種架構都提供�
 
 - 如何建立 Blazor 應用程式。
 - 如何 Blazor 運作。
-- 如何 Blazor 與 .Net Core 相關。
+- 如何與 Blazor .net 相關。
 - 將現有 ASP.NET Web Forms 應用程式遷移到適當位置的合理策略 Blazor 。
 
 ## <a name="get-started-with-no-locblazor"></a>開始使用 Blazor
 
-開始使用 Blazor 很簡單。 移至 <https://blazor.net> 並遵循連結，安裝適當的 .NET Core SDK 和 Blazor 專案範本。 您也可以找到 Blazor 在 Visual Studio 或 Visual Studio Code 中設定工具的指示。
+開始使用 Blazor 很簡單。 移至 <https://blazor.net> 並遵循連結以安裝適當的 .NET SDK 和 Blazor 專案範本。 您也可以找到 Blazor 在 Visual Studio 或 Visual Studio Code 中設定工具的指示。
 
 >[!div class="step-by-step"]
 >[上一個](index.md) 
