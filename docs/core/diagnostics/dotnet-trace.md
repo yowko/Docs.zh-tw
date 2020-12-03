@@ -2,12 +2,12 @@
 title: dotnet-追蹤診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet 追蹤 CLI 工具，以使用 .NET EventPipe 來收集執行中進程的 .NET 追蹤，而不使用原生 profiler。
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829306"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549328"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -50,7 +50,7 @@ dotnet-trace [-h, --help] [--version] <command>
 * 是以 [`EventPipe`](./eventpipe.md) .Net Core 執行時間為基礎。
 * 在 Windows、Linux 或 macOS 上提供相同的體驗。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-h|--help`**
 
@@ -83,7 +83,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
     [-- <command>] (for target applications running .NET 5.0 or later)
 ```
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 - **`--buffersize <size>`**
 
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  一組名為預先定義的提供者設定，可讓您簡潔地指定常見的追蹤案例。
+  一組名為預先定義的提供者設定，可讓您簡潔地指定常見的追蹤案例。 可用設定檔如下：
+
+ | 設定檔 | 說明 |
+ |---------|-------------|
+ |`cpu-sampling`|適用于追蹤 CPU 使用量和一般 .NET 執行時間資訊。 如果未指定任何設定檔或提供者，這是預設選項。|
+ |`gc-verbose`|追蹤 GC 集合和範例物件配置。|
+ |`gc-collect`|只會以極低的負荷追蹤 GC 集合。|
 
 - **`--providers <list-of-comma-separated-providers>`**
 
@@ -150,7 +156,7 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 
   要轉換的輸入追蹤檔案。 預設值為 *nettrace*。
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 - **`--format <Chromium|NetTrace|Speedscope>`**
 

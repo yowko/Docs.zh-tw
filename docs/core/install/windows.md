@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 Windows 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715117"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549341"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安裝 .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "95715117"
 >
 > - [在 Windows 上安裝](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [安裝在 Linux 上](linux.md)
+> - [在 Linux 上安裝](linux.md)
 
 在本文中，您將瞭解如何在 Windows 上安裝 .NET。 .NET 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET 應用程式，且不一定會包含在應用程式中。 SDK 是用來建立 .NET 應用程式和程式庫。 .NET 執行時間一律會與 SDK 一起安裝。
 
@@ -32,22 +32,26 @@ ms.locfileid: "95715117"
 
 Windows 10 版本的服務結束日期會依版本分割。 下表只考慮 **家用** 版、 **專業** 版、 **專業教育** 版和 **工作站版專業** 版。 查看 [Windows 生命週期的工作表](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) 以取得特定詳細資料。
 
-- ✔️表示仍然支援 Windows 或 .NET Core 的版本。
-- ❌表示該 windows 版本不支援 windows 或 .Net Core 的版本。
-- 當 Windows 版本和 .NET Core 版本都✔️時，支援該作業系統和 .NET 組合。
+> [!TIP]
+> `+`符號表示最小版本。
 
-| 作業系統                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
-|-----------------------------|---------------|---------------|----------------|
-| ✔️ Windows 10，版本2004 | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ✔️ Windows 10，版本1909 | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ✔️ Windows 10，版本1903 | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ✔️ Windows 10，版本1809 | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ❌ Windows 10，版本1803 | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ❌ Windows 10，版本1709 | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ❌ Windows 10，版本1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10，版本1607 | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ❌ Windows 10，版本1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10，版本1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| 作業系統            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
+|-----------------------------|---------------|---------------|--------|
+| Windows 10，版本2004    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本1909    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本1903    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本1809    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本1803    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本1709    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 8.1                 | ✔️           | ✔️            | ✔️    |
+| Windows 7 SP1 [ESU][esu]    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 10，版本 1607    | ✔️           | ✔️            | ✔️    |
+| Windows Server 2012 R2      | ✔️           | ✔️            | ✔️    |
+| Windows Server Core 2012 R2 | ✔️           | ✔️            | ✔️    |
+| Nano Server、Version 1809 +  | ✔️           | ✔️            | ✔️    |
+| Nano Server，版本1803   | ✔️           | ✔️            | ❌    |
 
 ## <a name="unsupported-releases"></a>不支援的版本
 
@@ -84,7 +88,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-50"></a>[.NET 5。0](#tab/net50)
+# <a name="net-50"></a>[.NET 5.0](#tab/net50)
 
 .NET 5.0 支援下列 Windows 版本：
 
@@ -111,7 +115,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 | OS                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
-| Windows 10 用戶端             | 版本 1609 +                  | x64、x86        |
+| Windows 10 用戶端             | 1607版 +                  | x64、x86        |
 | Windows Server                | 2012 R2 +                       | x64、x86        |
 | Nano Server                   | 版本 1803 +                  | x64、ARM32      |
 
@@ -119,7 +123,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
-*.NET Core 3.0 目前不支援。如需詳細資訊，請參閱 [.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
+*.NET Core 3.0 目前不 ❌ 支援。如需詳細資訊，請參閱 [.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
 
 .NET Core 3.0 支援下列 Windows 版本：
 
@@ -137,7 +141,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
-*.NET Core 2.2 目前不支援。如需詳細資訊，請參閱 [.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
+*.NET Core 2.2 目前不 ❌ 支援。如需詳細資訊，請參閱 [.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
 
 .NET Core 2.2 支援下列 Windows 版本：
 
@@ -177,11 +181,11 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 
 如果您要在下列 Windows 版本上安裝 .NET SDK 或執行時間，則需要額外的相依性：
 
-- ❌ Windows 7 SP1
-- ❌ Windows Vista SP 2
-- ✔️ Windows 8。1
-- ✔️ Windows Server 2008 R2
-- ✔️ Windows Server 2012 R2
+- Windows 7 SP1 [ESU][esu]
+- Windows Vista SP 2
+- Windows 8.1
+- Windows Server 2008 R2
+- Windows Server 2012 R2
 
 安裝下列項目：
 
@@ -260,15 +264,25 @@ Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，�
 01. [下載並安裝 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)。
 01. [從 Visual Studio Code Marketplace 安裝 c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能。
 
+## <a name="windows-installer"></a>Windows Installer
+
+.NET 的 [下載頁面](https://dotnet.microsoft.com/download/dotnet-core) 提供 Windows Installer 可執行檔。
+
+當您使用 MSI 檔案來安裝 .NET 時< 您可以藉由設定和參數來自訂安裝路徑 `DOTNETHOME_X64` `DOTNETHOME_X86` ：
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
+```
+
 ## <a name="download-and-manually-install"></a>下載並手動安裝
 
 您也可以下載並手動安裝 SDK 或執行時間，以替代適用于 .NET 的 Windows 安裝程式。 手動安裝通常會做為持續整合測試的一部分來執行。 針對開發人員或使用者，通常最好是使用 [安裝程式](https://dotnet.microsoft.com/download/dotnet-core)。
 
 .NET SDK 和 .NET 執行時間都可以在下載之後手動安裝。 如果您安裝的是 .NET SDK，就不需要安裝對應的執行時間。 首先，從下列其中一個網站下載 SDK 或執行時間的二進位版本：
 
-- ✔️ [.net 5.0 下載](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.Net Core 3.1 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.Net Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET 5.0 下載](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET Core 3.1 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [所有 .NET Core 下載](https://dotnet.microsoft.com/download/dotnet-core)
 
 例如，建立用來將 .NET 解壓縮至的目錄 `%USERPROFILE%\dotnet` 。 然後，將下載的 zip 檔案解壓縮到該目錄中。
@@ -301,3 +315,5 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 - [教學課程： Hello World 教學](../tutorials/with-visual-studio.md)課程。
 - [教學課程：使用 Visual Studio Code 建立新的應用程式](../tutorials/with-visual-studio-code.md)。
 - [教學課程：將 .Net Core 應用程式](../docker/build-container.md)。
+
+[esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq

@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 來對 .NET 主控台應用程式進行偵錯工具
 description: 瞭解如何使用 Visual Studio Code 來進行 .NET 主控台應用程式的偵錯工具。
 ms.date: 05/26/2020
-ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 7215ed4a93b31ebac313c04708734667148c4e02
+ms.sourcegitcommit: 30fef5b0ed76e334377d28fa8e80159b29353e10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916225"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556105"
 ---
 # <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 來對 .NET 主控台應用程式進行偵錯工具
 
@@ -47,15 +47,7 @@ ms.locfileid: "94916225"
 
 1. 開啟 *.vscode/launch.json*。
 
-1. 將 `console` 設定變更為 `integratedTerminal` 。
-
-   寄件者: 
-
-   ```json
-   "console": "internalConsole",
-   ```
-
-   變更為：
+1. 將 `console` 設定從變更 `internalConsole` 為 `integratedTerminal` ：
 
    ```json
    "console": "integratedTerminal",
