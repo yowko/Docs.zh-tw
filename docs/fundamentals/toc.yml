@@ -19,7 +19,7 @@ items:
             href: ../core/install/macos.md
           - name: 安裝在 Linux 上
             items:
-              - name: 總覽
+              - name: 概觀
                 href: ../core/install/linux.md
               - name: Ubuntu
                 href: ../core/install/linux-ubuntu.md
@@ -138,7 +138,7 @@ items:
           - name: 新功能
             href: ../core/dotnet-five.md
           - name: 重大變更
-            href: ../core/compatibility/5.0.md
+            href: ../core/compatibility/5.0.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
       - name: .NET Core 3.1
         items:
           - name: 新功能
@@ -193,7 +193,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: .NET Core CLI
         items:
-          - name: 總覽
+          - name: 概觀
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
           - name: 參考資料
@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: .NET 解除安裝工具
             href: ../core/additional-tools/uninstall-tool.md
+          - name: 建立自我簽署憑證
+            href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: WCF Web Service Reference Provider
             href: ../core/additional-tools/wcf-web-service-reference-guide.md
           - name: WCF 服務公用程式
@@ -385,9 +387,12 @@ items:
           - name: 受控偵錯工具
             href: ../core/diagnostics/managed-debuggers.md
           - name: 傾印
-            href: ../core/diagnostics/dumps.md
-          - name: 對 Linux 傾印進行偵錯
-            href: ../core/diagnostics/debug-linux-dumps.md
+            items:
+              - name: 概觀
+                displayName: dumps
+                href: ../core/diagnostics/dumps.md
+              - name: Linux 傾印
+                href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
           - name: EventPipe
@@ -471,7 +476,7 @@ items:
                     href: code-analysis/quality-rules/index.md
                   - name: 設計規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: design rules
                         href: code-analysis/quality-rules/design-warnings.md
                       - name: CA1000
@@ -581,7 +586,7 @@ items:
                         href: code-analysis/quality-rules/ca1200.md
                   - name: 全球化規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: globalization rules
                         href: code-analysis/quality-rules/globalization-warnings.md
                       - name: CA1303
@@ -1175,7 +1180,7 @@ items:
                             href: code-analysis/style-rules/ide0084.md
                       - name: 程式碼區塊喜好設定
                         items:
-                          - name: 總覽
+                          - name: 概觀
                             href: code-analysis/style-rules/code-block-preferences.md
                           - name: IDE0011
                             href: code-analysis/style-rules/ide0011.md
@@ -1236,7 +1241,7 @@ items:
                         href: code-analysis/style-rules/formatting-rules.md
                   - name: 命名規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: naming rules
                         href: code-analysis/style-rules/naming-rules.md
           - name: 平台相容性分析器
@@ -1603,10 +1608,36 @@ items:
                 displayName: json serialization
               - name: 如何將 JSON 序列化及還原序列化
                 href: ../standard/serialization/system-text-json-how-to.md
-              - name: 如何撰寫自訂轉換器
-                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: 控制序列化行為
+                items:
+                  - name: Instantiate JsonSerializerOptions
+                    href: ../standard/serialization/system-text-json-configure-options.md
+                  - name: 啟用不區分大小寫比對
+                    href: ../standard/serialization/system-text-json-character-casing.md
+                  - name: 自訂屬性名稱與值
+                    href: ../standard/serialization/system-text-json-customize-properties.md
+                  - name: 忽略屬性
+                    href: ../standard/serialization/system-text-json-ignore-properties.md
+                  - name: 允許不正確 JSON
+                    href: ../standard/serialization/system-text-json-invalid-json.md
+                  - name: 處理溢位 JSON
+                    href: ../standard/serialization/system-text-json-handle-overflow.md
+                  - name: 保留參考
+                    href: ../standard/serialization/system-text-json-preserve-references.md
+                  - name: 不可變型別及非公用存取子
+                    href: ../standard/serialization/system-text-json-immutability.md
+                  - name: 多型序列化
+                    href: ../standard/serialization/system-text-json-polymorphism.md
               - name: 如何從 Newtonsoft.Json 移轉
                 href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+              - name: 進階
+                items:
+                  - name: 自訂字元編碼
+                    href: ../standard/serialization/system-text-json-character-encoding.md
+                  - name: 自訂序列化程式及還原序列化程式
+                    href: ../standard/serialization/write-custom-serializer-deserializer.md
+                  - name: 自訂轉換器
+                    href: ../standard/serialization/system-text-json-converters-how-to.md
           - name: 二進位序列化
             items:
               - name: 總覽
@@ -1809,7 +1840,7 @@ items:
         href: /ef/core/
   - name: 平行處理、並行與非同步
     items:
-      - name: 總覽
+      - name: 概觀
         href: ../standard/parallel-processing-and-concurrency.md
         displayName: 'Parallel processing, concurrency, async'
       - name: 非同步程式設計
@@ -2249,7 +2280,7 @@ items:
           - name: 使用 Windows 相容性套件
             href: ../core/porting/windows-compat-pack.md
           - name: 移植 Windows Form 專案
-            href: ../core/porting/winforms.md
+            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
           - name: 移植 WPF 專案
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: 移植 C++/CLI 專案
