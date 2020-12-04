@@ -6,12 +6,12 @@ metadata:
   description: 瞭解在 Windows、Linux 和 macOS 版本上下載和安裝 .NET 的位置。 探索開發、部署和執行 .NET 應用程式所需的相依性。
   ms.topic: landing-page
   ms.date: 06/29/2020
-  ms.openlocfilehash: 53c4485b986abf58bdff45d78342c110b15d7824
-  ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+  ms.openlocfilehash: 4ffa74980e983442d37306fe1e943f68251e51e5
+  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/11/2020
-  ms.locfileid: "94507198"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96599241"
 landingContent:
 - title: Windows
   linkLists:
@@ -61,3 +61,17 @@ landingContent:
       url: linux-sles.md
     - text: Ubuntu
       url: linux-ubuntu.md
+- title: 問答集
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 獨立安裝程式
+      url: /answers/topics/dotnet-ad-installer.html
+    - text: Visual Studio 安裝程式
+      url: /answers/topics/dotnet-ad-vs.html
+    - text: Linux 摘要
+      url: /answers/topics/dotnet-ad-linux.html
+    - text: Docker
+      url: /answers/topics/dotnet-ad-docker.html
+    - text: 企業部署
+      url: /answers/topics/dotnet-ad-enterprise.html

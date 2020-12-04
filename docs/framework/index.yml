@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 54133d7cd73c9a4d097b601f92b685c27575dc8b
-  ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+  ms.openlocfilehash: a30bf235f58c2f66bdcc1d8765e231ecefa312b9
+  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/10/2020
-  ms.locfileid: "94439504"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96599599"
 landingContent:
 - title: 瞭解 .NET Framework
   linkLists:
@@ -26,6 +26,10 @@ landingContent:
       url: get-started/overview.md
     - text: 系統需求
       url: get-started/system-requirements.md
+  - linkListType: get-started
+    links:
+    - text: Q&A 上的 .NET Framework
+      url: /answers/topics/dotnet-runtime-framework.html
   - linkListType: concept
     links:
     - text: 較舊版本的 .NET Framework
@@ -112,7 +116,7 @@ landingContent:
       url: /ef/ef6/modeling/designer/workflows/database-first
   - linkListType: concept
     links:
-    - text: 連接字串和設定檔
+    - text: 連接字串與組態檔
       url: data/adonet/connection-strings-and-configuration-files.md
     - text: SQL Server 連接共用
       url: data/adonet/sql-server-connection-pooling.md
