@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: cf19b4e4b7a7b9033fb97b2b2736ab0383c11f93
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688172"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598929"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>在 Jupyter 筆記本中使用 .NET 進行 Apache Spark
 

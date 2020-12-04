@@ -7,12 +7,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 08/13/2020
   ms.custom: contperfq1
-  ms.openlocfilehash: 1819d6c6cedcd9c2544c8ab6e5ff47d807d8c232
-  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+  ms.openlocfilehash: 5c393052a1782b64af18d32727f6df5bbd9d1415
+  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/15/2020
-  ms.locfileid: "90554745"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96599677"
 landingContent:
 - title: 開始使用
   linkLists:
@@ -30,7 +30,7 @@ landingContent:
       url: walkthroughs.md
     - text: 其他資源
       url: getting-started/additional-resources.md
-- title: 基本概念
+- title: 基礎
   linkLists:
   - linkListType: overview
     links:
@@ -50,7 +50,11 @@ landingContent:
       url: developing-apps/index.md
     - text: Windows Forms 應用程式
       url: developing-apps/windows-forms/index.md
-- title: 語言參考
+  - linkListType: get-started
+    links:
+    - text: Q&A 上的 Visual Basic
+      url: /answers/topics/dotnet-visual-basic.html
+- title: 程式設計語言參考
   linkLists:
   - linkListType: reference
     links:

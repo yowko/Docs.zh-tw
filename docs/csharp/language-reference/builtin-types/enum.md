@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: a21bdf63247dc5fec95922de017e1d3502e08565
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471846"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599430"
 ---
 # <a name="enumeration-types-c-reference"></a>列舉類型 (c # 參考) 
 
-*列舉型*別 (或*列舉型*別) 是一組由基礎[整數數值](integral-numeric-types.md)型別之指定常數所定義的實[值型](value-types.md)別。 若要定義列舉型別，請使用 `enum` 關鍵字並指定 *列舉成員*的名稱：
+*列舉型* 別 (或 *列舉型* 別) 是一組由基礎 [整數數值](integral-numeric-types.md)型別之指定常數所定義的實 [值型](value-types.md)別。 若要定義列舉型別，請使用 `enum` 關鍵字並指定 *列舉成員* 的名稱：
 
 ```csharp
 enum Season
@@ -62,7 +62,7 @@ enum ErrorCode : ushort
 
 此 <xref:System.Enum?displayProperty=nameWithType> 類型是所有列舉類型的抽象基類。 它會提供數種方法來取得列舉型別和其值的相關資訊。 如需詳細資訊和範例，請參閱 <xref:System.Enum?displayProperty=nameWithType> API 參考頁面。
 
-從 c # 7.3 開始，您可以 `System.Enum` 在稱為 [列舉條件約束](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints) 的基類條件約束 (中使用，) 指定型別參數為列舉型別。
+從 c # 7.3 開始，您可以 `System.Enum` 在稱為 [列舉條件約束](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints) 的基類條件約束 (中使用，) 指定型別參數為列舉型別。 任何列舉型別也 `struct` 會滿足條件約束，用來指定型別參數為不可為 null 的實值型別。
 
 ## <a name="conversions"></a>轉換
 

@@ -1,35 +1,33 @@
 ---
-title: 使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
-description: 瞭解如何使用 Visual Studio for Mac 來建立 .NET Core 主控台應用程式。
-ms.date: 06/02/2020
-ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: 使用 Visual Studio for Mac 建立 .NET 主控台應用程式
+description: 瞭解如何使用 Visual Studio for Mac 建立 .NET 主控台應用程式。
+ms.date: 11/30/2020
+ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400522"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599482"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 建立 .NET 主控台應用程式
 
-本教學課程說明如何使用 Visual Studio for Mac 來建立和執行 .NET Core 主控台應用程式。
+本教學課程說明如何使用 Visual Studio for Mac 來建立和執行 .NET 主控台應用程式。
 
 > [!NOTE]
 > 我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
 >
-> * 在 Visual Studio for Mac 中， **Help**  >  **Report a Problem** 從功能表中選取 [說明]，或從歡迎畫面回報 **問題** ，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://aka.ms/feedback/report?space=41)入口網站追蹤您的意見反應。
-> * 若要提出建議，請 **Help**  >  從功能表中選取 [說明] **提供建議** ，或從歡迎畫面 **提供** 建議，這會帶您前往 [Visual Studio for Mac 開發人員社群網頁](https://aka.ms/feedback/suggest?space=41)。
+> * 在 Visual Studio for Mac 中， **Help**  >  **Report a Problem** 從功能表中選取 [說明]，或從歡迎畫面回報 **問題**，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://aka.ms/feedback/report?space=41)入口網站追蹤您的意見反應。
+> * 若要提出建議，請 **Help**  >  從功能表中選取 [說明]**提供建議**，或從歡迎畫面 **提供** 建議，這會帶您前往 [Visual Studio for Mac 開發人員社群網頁](https://aka.ms/feedback/suggest?space=41)。
 
 ## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio for Mac 8.6 版或更新版本](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 選取安裝 .NET Core 的選項。 安裝 Xamarin 是 .NET Core 開發的選擇性選項。 如需詳細資訊，請參閱下列資源：
+* [Visual Studio for Mac 8.8 版或更新版本](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 選取安裝 .NET Core 的選項。 安裝 Xamarin 是適用于 .NET 開發的選擇性選項。 如需詳細資訊，請參閱下列資源：
 
   * [教學課程：安裝 Visual Studio for Mac](/visualstudio/mac/installation)。
   * [支援的 macOS 版本](../install/windows.md)。
-  * [Visual Studio for Mac 支援的 .Net Core 版本](/visualstudio/mac/net-core-support)。
+  * [Visual Studio for Mac 支援的 .net 版本](/visualstudio/mac/net-core-support)。
 
 ## <a name="create-the-app"></a>建立應用程式
-
-建立名為 "HelloWorld" 的 .NET Core 主控台應用程式專案。
 
 1. 開始 Visual Studio for Mac。
 
@@ -37,15 +35,13 @@ ms.locfileid: "93400522"
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Visual Studio for Mac [開始] 畫面上的 [新增] 按鈕":::
 
-1. 在 [ **新增專案** ] 對話方塊的 [Web] **和 [主控台** ] 節點底下，選取 [ **應用程式** ]。 選取 [ **主控台應用程式** ] 範本，然後選取 **[下一步]** 。
+1. 在 [**新增專案**] 對話方塊的 [Web]**和 [主控台**] 節點底下，選取 [**應用程式**]。 選取 [ **主控台應用程式** ] 範本，然後選取 **[下一步]**。
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="[新增專案] 範本清單":::
 
-1. 在 [ **設定您的新主控台應用程式** ] 對話方塊的 [ **目標 Framework** ] 下拉式清單中，選取 [ **.net Core 3.1** ]，然後選取 **[下一步]** 。
+1. 在 [**設定您的新主控台應用程式**] 對話方塊的 [**目標 Framework** ] 下拉式清單中，選取 [ **.net 5.0**]，然後選取 **[下一步]**。
 
-   :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="選取目標 Framework":::
-
-1. 輸入 "HelloWorld" 作為 **專案名稱** ，然後選取 [ **建立** ]。
+1. 輸入 "HelloWorld" 作為 **專案名稱**，然後選取 [ **建立**]。
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-options.png" alt-text="設定新主控台應用程式對話方塊":::
 
@@ -102,7 +98,7 @@ namespace HelloWorld
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已建立 .NET Core 主控台應用程式。 在下一個教學課程中，您將會對應用程式進行偵錯工具。
+在本教學課程中，您已建立 .NET 主控台應用程式。 在下一個教學課程中，您將會對應用程式進行偵錯工具。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio for Mac 來對 .NET Core 主控台應用程式進行偵錯工具](debugging-with-visual-studio-mac.md)
+> [使用 Visual Studio for Mac 來對 .NET 主控台應用程式進行偵錯工具](debugging-with-visual-studio-mac.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4bd57d32120f51ffd1ff09c9817edbafa28a3f19
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439896"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599072"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>如何啟用不區分大小寫的屬性名稱比對 System.Text.Json
 
@@ -45,12 +45,12 @@ ms.locfileid: "96439896"
 ## <a name="see-also"></a>另請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [具現化 JsonSerializerOptions](system-text-json-configure-options.md)
-* [自訂屬性名稱和值](system-text-json-customize-properties.md)
-* [略過屬性](system-text-json-ignore-properties.md)
+* [Instantiate JsonSerializerOptions](system-text-json-configure-options.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
+* [忽略屬性](system-text-json-ignore-properties.md)
 * [允許不正確 JSON](system-text-json-invalid-json.md)
 * [處理溢位 JSON](system-text-json-handle-overflow.md)
 * [保留迴圈參考](system-text-json-preserve-references.md)
-* [不可變類型和非公用存取子](system-text-json-immutability.md)
+* [不可變型別及非公用存取子](system-text-json-immutability.md)
 * [多型序列化](system-text-json-polymorphism.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)

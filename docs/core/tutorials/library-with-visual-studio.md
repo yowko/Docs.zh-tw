@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 3af08b5a92c61f29a3700a3417043170f41407bc
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 6a3f61525ca86afc9ee71d56cbc9450862760ba4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916114"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599508"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET 類別庫
 
@@ -21,7 +21,7 @@ ms.locfileid: "94916114"
 
 當您建立類別庫時，可以將它發佈為 NuGet 套件，或作為與使用它之應用程式配套的元件。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 已安裝 **.Net Core 跨平臺開發** 工作負載的 [Visual Studio 2019 16.8 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET 5.0 SDK。 本教學課程假設您已啟用在 **新的專案中顯示所有 .Net Core 範本**，如 [教學課程：使用 Visual Studio 建立 .net 主控台應用程式](with-visual-studio.md)中所示。
 
@@ -126,6 +126,7 @@ ms.locfileid: "94916114"
 ## <a name="additional-resources"></a>其他資源
 
 * [使用 .NET CLI 開發程式庫](libraries.md)
+* [.NET Standard 支援的版本和平臺](../../standard/net-standard.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 建立 .NET 類別庫
 description: 瞭解如何使用 Visual Studio Code 建立 .NET 類別庫。
 ms.date: 11/18/2020
-ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 4473163b76060623b364d7dabf7366c3575e3dcd
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916087"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599495"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET 類別庫
 
@@ -17,7 +17,7 @@ ms.locfileid: "94916087"
 
 當您建立類別庫時，可以將它散發為協力廠商元件，或做為配套的元件，以及一或多個應用程式。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝擴充功能的詳細資訊，請參閱 [VS Code 擴充功能 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
 2. [.Net 5.0 SDK 或更新版本](https://dotnet.microsoft.com/download)
@@ -211,6 +211,7 @@ ms.locfileid: "94916087"
 ## <a name="additional-resources"></a>其他資源
 
 * [使用 .NET CLI 開發程式庫](libraries.md)
+* [.NET Standard 支援的版本和平臺](../../standard/net-standard.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

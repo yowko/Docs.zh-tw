@@ -4,12 +4,12 @@ description: 瞭解如何在 Azure HDInsight 的 Jupyter 筆記本上安裝適�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688276"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599651"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>在 Azure HDInsight Spark 叢集上的 Jupyter 筆記本上安裝適用于 Apache Spark 的 .NET
 
@@ -22,7 +22,7 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 > [!NOTE]
 > 這項功能是 *實驗* 性的，且不受 HDInsight Spark 團隊的支援。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 如果您還沒有帳戶，請建立一個 [Azure HDInsight Spark](/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) 叢集。
 
@@ -61,7 +61,7 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 
    在您的本機電腦上建立名為 **install-interactive-notebook.sh** 的新檔案，並貼上 [install-interactive-notebook.sh 內容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh)的內容。
 
-   將腳本上傳至可從 HDInsight 叢集存取的 [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) 。 例如 `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`。
+   將腳本上傳至可從 HDInsight 叢集存取的 [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) 。 例如： `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh` 。
 
 2. 使用 [HDInsight 指令碼動作](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)在叢集上執行 `install-interactive-notebook.sh`。
 
@@ -69,7 +69,7 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 
    |屬性  |描述  |
    |---------|---------|
-   | 指令碼類型 | Custom |
+   | 指令碼類型 | 自訂 |
    | 名稱 | *安裝適用于 Apache Spark 互動式筆記本體驗的 .NET* |
    | Bash 指令碼 URI | 您上傳 `install-interactive-notebook.sh` 的目標 URI。 |
    | 節點類型| Head 和背景工作 |
@@ -121,11 +121,11 @@ Azure HDInsight 叢集已經隨附 Jupyter 筆記本，所以您只需要設定 
 
    出現提示時，選取 [ **確認全部重新開機** ] 以繼續，然後按一下 **[確定** ] 以完成。
 
-## <a name="submit-jobs-through-a-jupyter-notebook"></a>透過 Jupyter 筆記本提交作業
+## <a name="submit-jobs-through-a-jupyter-notebook"></a>透過 Jupyter Notebook 提交作業
 
 完成上述步驟之後，您現在可以透過 Jupyter 筆記本提交適用于 Apache Spark 作業的 .NET。
 
-1. 為 Apache Spark 筆記本建立新的 .NET。 從您的 HDI 叢集中啟動 Azure 入口網站的 Jupyter 筆記本。
+1. 為 Apache Spark 筆記本建立新的 .NET。 從 Azure 入口網站的 HDI 叢集中啟動 Jupyter Notebook。
 
    ![啟動 Jupyter Notebook](./media/hdinsight-notebook-installation/launch-notebook.png)
 

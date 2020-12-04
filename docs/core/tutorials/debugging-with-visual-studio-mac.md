@@ -1,21 +1,21 @@
 ---
-title: 使用 Visual Studio for Mac 來對 .NET Core 主控台應用程式進行偵錯工具
-description: 瞭解如何使用 Visual Studio Mac 來對 .NET Core 主控台應用程式進行 debug 錯。
-ms.date: 06/08/2020
-ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+title: 使用 Visual Studio for Mac 來對 .NET 主控台應用程式進行偵錯工具
+description: 瞭解如何使用 Visual Studio Mac 來進行 .NET 主控台應用程式的偵錯工具。
+ms.date: 11/30/2020
+ms.openlocfilehash: e35bbef5582b6eec00ee48669a0f5d028eb051fb
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957521"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599612"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 對 .NET Core 主控台應用程式進行偵錯工具
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 來對 .NET 主控台應用程式進行偵錯工具
 
 本教學課程介紹 Visual Studio for Mac 中提供的調試工具。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-- 本教學課程適用于您 [使用 Visual Studio for Mac 建立 .Net Core 主控台應用程式](with-visual-studio-mac.md)中所建立的主控台應用程式。
+- 本教學課程適用于您 [使用 Visual Studio for Mac 建立 .net 主控台應用程式](with-visual-studio-mac.md)中所建立的主控台應用程式。
 
 ## <a name="use-debug-build-configuration"></a>使用 Debug build configuration
 
@@ -27,7 +27,7 @@ ms.locfileid: "88957521"
 
 1. 開始 Visual Studio for Mac。
 
-1. 開啟您在 [使用 Visual Studio for Mac 建立 .Net Core 主控台應用程式](with-visual-studio-mac.md)中建立的專案。
+1. 開啟您在 [使用 Visual Studio for Mac 建立 .net 主控台應用程式](with-visual-studio-mac.md)中建立的專案。
 
    目前的組建組態會顯示在工具列上。 下列工具列影像顯示 Visual Studio 設定為編譯應用程式的偵錯工具版本：
 
@@ -35,15 +35,15 @@ ms.locfileid: "88957521"
 
 ## <a name="set-a-breakpoint"></a>設定中斷點
 
-「中斷點」** 會在含有中斷點的行執行「之前」，暫時中斷應用程式的執行。
+「中斷點」會在含有中斷點的行執行「之前」，暫時中斷應用程式的執行。
 
-1. 在顯示名稱、日期和時間的行上設定中斷點。 若要這樣做，請將游標放在程式程式碼中，然後按<kbd>⌘</kbd> <kbd>\\</kbd> (<kbd>命令</kbd> + <kbd>\\</kbd>) 。 設定中斷點的另一種方式是， **Run**  >  從功能表中選取 [執行**切換中斷點**]。
+1. 在顯示名稱、日期和時間的行上設定中斷點。 若要這樣做，請將游標放在程式程式碼中，然後按<kbd>⌘</kbd> <kbd>\\</kbd> (<kbd>命令</kbd> + <kbd>\\</kbd>) 。 設定中斷點的另一種方式是， **Run**  >  從功能表中選取 [執行 **切換中斷點**]。
 
    Visual Studio 表示藉由反白顯示中斷點，並在左邊界中顯示紅點，來設定中斷點的行。
 
    :::image type="content" source="media/debugging-with-visual-studio-mac/set-breakpoint-in-editor.png" alt-text="已設定中斷點的 Visual Studio 程式視窗":::
 
-1. 按<kbd>⌘</kbd><kbd>↵</kbd> (<kbd>命令</kbd> + <kbd>輸入</kbd>) ，以在偵測模式中啟動程式。 啟動偵錯工具的另一種方式是從功能表中選擇 [**執行**  >  **開始調試**程式]。
+1. 按<kbd>⌘</kbd><kbd>↵</kbd> (<kbd>命令</kbd> + <kbd>輸入</kbd>) ，以在偵測模式中啟動程式。 啟動偵錯工具的另一種方式是從功能表中選擇 [**執行**  >  **開始調試** 程式]。
 
 1. 當程式提示您輸入名稱時，在終端機視窗中輸入字串，然後按 <kbd>enter</kbd>鍵。
 
@@ -55,17 +55,17 @@ ms.locfileid: "88957521"
 
 [即時 **運算] 視窗** 可讓您與您要進行偵錯工具的應用程式互動。 您可以互動方式變更變數的值，以查看它對您的程式有何影響。
 
-1. 如果看**不到 [** 即時運算] 視窗，請選擇 [立即**觀看**  >  **Debug pad**] 來顯示它  >  ** **。
+1. 如果看 **不到 [** 即時運算] 視窗，請選擇 [立即 **觀看**  >  **Debug pad**] 來顯示它  >  ****。
 
-1. `name = "Gracie"`在 [即時**Immediate**運算] 視窗中輸入，然後按<kbd>enter</kbd>鍵。
+1. `name = "Gracie"`在 [即時 **Immediate** 運算] 視窗中輸入，然後按 <kbd>enter</kbd>鍵。
 
-1. `date = date.AddDays(1)`在 [即時**Immediate**運算] 視窗中輸入，然後按<kbd>enter</kbd>鍵。
+1. `date = date.AddDays(1)`在 [即時 **Immediate** 運算] 視窗中輸入，然後按 <kbd>enter</kbd>鍵。
 
    [即時 **運算] 視窗** 會顯示字串變數的新值和值的屬性 <xref:System.DateTime> 。
 
    :::image type="content" source="media/debugging-with-visual-studio-mac/immediate-window.png" alt-text="Visual Studio 中的 [即時運算] 視窗":::
 
-   [區域變數]**** 視窗會顯示目前正在執行的方法中所定義變數的值。 您剛剛變更之變數的值會在 [ **區域變數** ] 視窗中更新。
+   [區域變數] 視窗會顯示目前正在執行的方法中所定義變數的值。 您剛剛變更之變數的值會在 [ **區域變數** ] 視窗中更新。
 
    :::image type="content" source="media/debugging-with-visual-studio-mac/locals-window.png" alt-text="Visual Studio 中的 [區域變數] 視窗":::
 
@@ -77,13 +77,13 @@ ms.locfileid: "88957521"
 
    :::image type="content" source="media/debugging-with-visual-studio-mac/terminal-hello-world.png" alt-text="底部導覽列中的終端 Hello World":::
 
-1. 按任意鍵以結束程式。
+1. 按任意鍵以結束該程式。
 
 1. 關閉終端機視窗。
 
 ## <a name="set-a-conditional-breakpoint"></a>設定條件式中斷點
 
-程式會顯示使用者輸入的字串。 如果使用者未進行任何輸入時，會發生什麼情況？ 您可以使用稱為 *條件式中斷點*的實用調試功能來進行測試。
+程式會顯示使用者輸入的字串。 如果使用者未進行任何輸入時，會發生什麼情況？ 您可以使用稱為 *條件式中斷點* 的實用調試功能來進行測試。
 
 1. <kbd>ctrl</kbd>-按一下代表中斷點的紅點。 在內容功能表中，選取 [ **編輯中斷點**]。
 
@@ -107,7 +107,7 @@ ms.locfileid: "88957521"
 
 1. 選取 [ **區域變數** ] 視窗，此視窗會顯示目前正在執行之方法的本機變數值。 在此案例中， `Main` 是目前執行的方法。 請注意，變數的值 `name` 是 `""` ，也就是 <xref:System.String.Empty?displayProperty=nameWithType> 。
 
-1. 您也可以 `name` 在 [即時運算] 視窗中輸入變數名稱，然後按<kbd>enter</kbd>， **Immediate**以查看值是否為空字串。
+1. 您也可以 `name` 在 [即時運算] 視窗中輸入變數名稱，然後按 <kbd>enter</kbd>， **Immediate** 以查看值是否為空字串。
 
    :::image type="content" source="media/debugging-with-visual-studio-mac/immediate-window-output.png" alt-text="顯示名稱為空字串的 [即時運算] 視窗":::
 
@@ -129,7 +129,7 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 一般�
 
    Visual Studio 在含有中斷點的行上停止。
 
-1. 按<kbd>⇧</kbd><kbd>⌘</kbd><kbd>i</kbd> (<kbd>shift</kbd> + <kbd>命令</kbd> + <kbd>i</kbd>) 或選取 [**執行**  >  **逐步**執行] 以一行前進。
+1. 按 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>i</kbd> (<kbd>shift</kbd> + <kbd>命令</kbd> + <kbd>i</kbd>) 或選取 [**執行**  >  **逐步** 執行] 以一行前進。
 
    Visual Studio 會醒目提示要執行的下一行，並在該行旁邊顯示一個箭頭。
 
@@ -155,11 +155,11 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 一般�
 
    Visual Studio 會呼叫 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> 方法。 終端機會顯示格式化的字串。
 
-1. 按<kbd>⇧</kbd><kbd>⌘</kbd><kbd>U</kbd> (<kbd>shift</kbd> + <kbd>命令</kbd> + <kbd>U</kbd>) 或選取 [**執行**  >  **跳出**]。
+1. 按 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>U</kbd> (<kbd>shift</kbd> + <kbd>命令</kbd> + <kbd>U</kbd>) 或選取 [**執行**  >  **跳出**]。
 
    終端機會顯示一則訊息，並等候您按下按鍵。
 
-1. 按任意鍵以結束程式。
+1. 按任意鍵以結束該程式。
 
 ## <a name="use-release-build-configuration"></a>使用發行組建設定
 
@@ -178,4 +178,4 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 一般�
 在本教學課程中，您已使用 Visual Studio 調試工具。 在下一個教學課程中，您將發行應用程式的可部署版本。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio for Mac 發佈 .NET Core 主控台應用程式](publishing-with-visual-studio-mac.md)
+> [使用 Visual Studio for Mac 發佈 .NET 主控台應用程式](publishing-with-visual-studio-mac.md)

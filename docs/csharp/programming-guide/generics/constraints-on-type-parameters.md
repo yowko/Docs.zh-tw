@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8230dfed11bb4ba21e922827cc1a525ce45ba3e5
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224319"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599111"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -20,7 +20,7 @@ ms.locfileid: "92224319"
 
 |條件約束|描述|
 |----------------|-----------------|
-|`where T : struct`|型別引數必須是不可為 null 的實值型別。 如需可為 null 實值型別的資訊，請參閱[可為 null 的實數值型別](../../language-reference/builtin-types/nullable-value-types.md) 由於所有實值型別都具有可存取的無參數函式，因此 `struct` 條件約束暗示 `new()` 條件約束，而且無法與 `new()` 條件約束合併。 您無法將 `struct` 條件約束與 `unmanaged` 條件約束合併。|
+|`where T : struct`|型別引數必須是不可為 null 的實 [值型](../../language-reference/builtin-types/value-types.md)別。 如需可為 null 實值型別的資訊，請參閱[可為 null 的實數值型別](../../language-reference/builtin-types/nullable-value-types.md) 由於所有實值型別都具有可存取的無參數函式，因此 `struct` 條件約束暗示 `new()` 條件約束，而且無法與 `new()` 條件約束合併。 您無法將 `struct` 條件約束與 `unmanaged` 條件約束合併。|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。 在 c # 8.0 或更新版本中可為 null 的內容中， `T` 必須是不可為 null 的參考型別。 |
 |`where T : class?`|型別引數必須是參考型別，可以是 null 或不可為 null。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
 |`where T : notnull`|型別引數必須是不可為 null 的型別。 引數可以是 c # 8.0 或更新版本中不可為 null 的參考型別，或不可為 null 的實值型別。 |

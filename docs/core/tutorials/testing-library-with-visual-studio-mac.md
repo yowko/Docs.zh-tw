@@ -1,21 +1,21 @@
 ---
-title: 使用 Visual Studio for Mac 測試具有 .NET Core 的 .NET Standard 類別庫
-description: 建立 .NET Core 類別庫的單元測試專案。 確認 .NET Core 類別庫可在單元測試中正確運作。
-ms.date: 06/08/2020
-ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: 使用 Visual Studio for Mac 測試 .NET 類別庫
+description: 建立 .NET 類別庫的單元測試專案。 確認 .NET 類別庫可在單元測試中正確運作。
+ms.date: 11/18/2020
+ms.openlocfilehash: 02d5aa74258ec15c5447b23246a3c7e9c61a6760
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180526"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599522"
 ---
-# <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>使用 Visual Studio 測試具有 .NET Core 的 .NET Standard 類別庫
+# <a name="test-a-net-class-library-using-visual-studio"></a>使用 Visual Studio 測試 .NET 類別庫
 
 本教學課程示範如何將測試專案加入至方案，以自動化單元測試。
 
 ## <a name="prerequisites"></a>必要條件
 
-- 本教學課程適用于 [使用 Visual Studio for Mac 建立 .NET Standard 程式庫](library-with-visual-studio-mac.md)中所建立的解決方案。
+- 本教學課程適用于 [使用 Visual Studio for Mac 建立 .net 類別庫](library-with-visual-studio-mac.md)中所建立的方案。
 
 ## <a name="create-a-unit-test-project"></a>建立單元測試專案
 
@@ -23,15 +23,17 @@ ms.locfileid: "91180526"
 
 1. 開始 Visual Studio for Mac。
 
-1. 開啟 `ClassLibraryProjects` 您在 [使用 Visual Studio for Mac 建立 .NET Standard 程式庫](library-with-visual-studio-mac.md)中建立的方案。
+1. 開啟 `ClassLibraryProjects` 您在 [使用 Visual Studio for Mac 建立 .net 類別庫](library-with-visual-studio-mac.md)中建立的方案。
 
-1. 在**solution** pad 中， <kbd>ctrl +</kbd>按一下 `ClassLibraryProjects` 方案，然後選取 [**加入**  >  **新專案**]。
+1. 在 **solution** pad 中， <kbd>ctrl +</kbd>按一下 `ClassLibraryProjects` 方案，然後選取 [**加入**  >  **新專案**]。
 
 1. 在 [**新增專案**] 對話方塊中，從 [ **Web] 和 [主控台**] 節點選取 [**測試**]。 選取 [ **MSTest] 專案** ，然後選取 **[下一步]**。
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="建立測試專案 Visual Studio Mac [新增專案] 對話方塊":::
 
-1. 選取 [ **.Net Core 3.1**]。 將新專案命名為 "StringLibraryTest"，然後選取 [ **建立**]。
+1. 選取 [ **.net 5.0** ] 作為 **目標架構** ，然後選取 **[下一步]**。
+
+1. 將新專案命名為 "StringLibraryTest"，然後選取 [ **建立**]。
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="提供專案名稱的 Visual Studio Mac [新增專案] 對話方塊":::
 
@@ -65,7 +67,7 @@ ms.locfileid: "91180526"
 
 若要讓測試專案使用 `StringLibrary` 類別，請將參考加入至 `StringLibrary` 專案。
 
-1. 在**Solution** pad 中，依序按一下 [ **StringLibraryTest**] 底下的 [相依性 **]** 。 <kbd>ctrl</kbd> 從內容功能表選取 [ **加入參考** ]。
+1. 在 **Solution** pad 中，依序按一下 [ **StringLibraryTest**] 底下的 [相依性 **]** 。 <kbd>ctrl</kbd> 從內容功能表選取 [ **加入參考** ]。
 
 1. 在 [ **參考** ] 對話方塊中，選取 [ **StringLibrary** ] 專案。 選取 [確定]。
 
@@ -77,7 +79,7 @@ ms.locfileid: "91180526"
 
 最常見的測試會呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 類別的成員。 許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。 `Assert`下表顯示某些類別最常呼叫的方法：
 
-| Assert 方法     | 函式 |
+| Assert 方法     | 函數 |
 | ------------------ | -------- |
 | `Assert.AreEqual`  | 驗證兩個值或物件相等。 如果值或物件不相等，判斷提示就會失敗。 |
 | `Assert.AreSame`   | 驗證兩個物件變數參考相同的物件。 如果變數參考不同的物件，判斷提示就會失敗。 |
@@ -100,7 +102,7 @@ ms.locfileid: "91180526"
 
    方法中的大寫字元測試 `TestStartsWithUpper` 包含希臘文大寫字母 Alpha (u + 0391) 和斯拉夫文大寫字母 EM (U + 041C) 。 方法中的小寫字元測試 `TestDoesNotStartWithUpper` 包含希臘文小寫字母 Alpha (u + 03B1) 和斯拉夫文小寫字母 Ghe (U + 0433) 。
 
-1. 在功能表列上 **，選取 [**  >  **另存**新檔]。 在對話方塊中，確定 [ **編碼** ] 設定為 [ **Unicode (utf-8) **。
+1. 在功能表列上 **，選取 [**  >  **另存** 新檔]。 在對話方塊中，確定 [ **編碼** ] 設定為 [ **Unicode (utf-8)**。
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Visual Studio 另存新檔] 對話方塊":::
 
@@ -108,13 +110,13 @@ ms.locfileid: "91180526"
 
    如果您無法將您的原始程式碼儲存為 UTF8 編碼檔案，Visual Studio 可能會將它儲存為 ASCII 檔案。 當這種情況發生時，執行時間不會正確地解碼 ASCII 範圍以外的 UTF8 字元，而且測試結果將會不正確。
 
-1. 開啟螢幕右側的 [單元測試]**** 面板。 從功能表選取 [ **View**  >  **測試**]。
+1. 開啟螢幕右側的 [單元測試] 面板。 從功能表選取 [ **View**  >  **測試**]。
 
-1. 按一下**固定**圖示維持面板開啟。
+1. 按一下 **固定** 圖示維持面板開啟。
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Visual Studio for Mac [單元測試] 面板固定圖示":::
 
-1. 按一下 [全部執行]**** 按鈕。
+1. 按一下 [全部執行] 按鈕。
 
    所有測試皆通過。
 
@@ -139,7 +141,7 @@ ms.locfileid: "91180526"
 
 1. <kbd>ctrl</kbd>-按一下失敗的測試， `TestDoesNotStartWithUpper` 然後從操作功能表中選取 [ **顯示結果板** ]。
 
-   **結果**填充會顯示 assert 產生的訊息：「IsFalse 失敗。 'Error' 的預期︰false；實際：True」。 因為失敗，所以在測試 "Error" 之後，陣列中沒有任何字串。
+   **結果** 填充會顯示 assert 產生的訊息：「IsFalse 失敗。 'Error' 的預期︰false；實際：True」。 因為失敗，所以在測試 "Error" 之後，陣列中沒有任何字串。
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="顯示 IsFalse 判斷提示失敗的 Test Explorer 視窗":::
 
@@ -151,7 +153,7 @@ ms.locfileid: "91180526"
 
 測試發行組建︰
 
-1. 在 Visual Studio 工具列中，將組建組態從 [偵錯]**** 變更為 [發行]****。
+1. 在 Visual Studio 工具列中，將組建組態從 [偵錯] 變更為 [發行]。
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="醒目提示 [發行] 組建的 Visual Studio 工具列":::
 
@@ -165,13 +167,13 @@ ms.locfileid: "91180526"
 
 ## <a name="debug-tests"></a>偵錯測試
 
-如果您使用 Visual Studio for Mac 作為 IDE，您可以使用教學課程：使用您的單元測試專案來進行程式碼 [的偵錯工具](debugging-with-visual-studio-mac.md) 中所示的相同程式：使用 Visual Studio for Mac 來偵錯工具代碼。 請不要啟動*展示*應用程式專案，而是在**StringLibraryTests**專案上按<kbd>ctrl 鍵</kbd>，然後從操作功能表中選取 [**開始調試**程式]。
+如果您使用 Visual Studio for Mac 作為 IDE，您可以使用教學課程：使用您的單元測試專案來進行程式碼 [的偵錯工具](debugging-with-visual-studio-mac.md) 中所示的相同程式：使用 Visual Studio for Mac 來對程式碼進行程式碼處理。 請不要啟動 *展示* 應用程式專案，而是在 **StringLibraryTests** 專案上按 <kbd>ctrl 鍵</kbd>，然後從操作功能表中選取 [**開始調試** 程式]。
 
 Visual Studio 啟動已附加偵錯工具的測試專案。 執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。
 
 ## <a name="additional-resources"></a>其他資源
 
-* [.NET Core 與 .NET Standard 中的單元測試](../testing/index.md)
+* [.NET 中的單元測試](../testing/index.md)
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -188,4 +190,4 @@ Visual Studio 啟動已附加偵錯工具的測試專案。 執行將會在您�
 程式庫不需要以套件的形式散發。 它可以與使用它的主控台應用程式配套。 若要瞭解如何發佈主控台應用程式，請參閱本系列的先前教學課程：
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio for Mac 發佈 .NET Core 主控台應用程式](publishing-with-visual-studio-mac.md)
+> [使用 Visual Studio for Mac 發佈 .NET 主控台應用程式](publishing-with-visual-studio-mac.md)

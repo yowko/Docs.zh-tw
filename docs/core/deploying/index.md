@@ -2,12 +2,12 @@
 title: 應用程式發佈
 description: 瞭解發佈 .NET Core 應用程式的方式。 .NET Core 可以發佈平臺特定或跨平臺應用程式。 您可以將應用程式發佈為獨立或與 framework 相依的應用程式。 每個模式都會影響使用者執行您應用程式的方式。
 ms.date: 04/01/2020
-ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 03d53c8b5184d7276a69a1058d6b1b2f1e62dc81
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654668"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599573"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 應用程式發行總覽
 
@@ -23,7 +23,7 @@ ms.locfileid: "91654668"
 
 下表概述每個 SDK 版本用來將應用程式發佈為架構相依或獨立的命令：
 
-| 類型                                                                                     | SDK 2.1 | SDK 3。x | Command |
+| 類型                                                                                     | SDK 2.1 | SDK 3。x | 命令 |
 | ---------------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | 適用于目前平臺的[framework 相依可執行檔](#publish-framework-dependent)。 |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | 特定平臺的[framework 相依可執行檔](#publish-framework-dependent)。  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -38,7 +38,7 @@ ms.locfileid: "91654668"
 
 下列命令會產生可執行檔：
 
-| 類型                                                                                     | SDK 2.1 | SDK 3。x | Command |
+| 類型                                                                                     | SDK 2.1 | SDK 3。x | 命令 |
 | ---------------------------------------------------------------------------------------- | ------- | ------- | ------- |
 | 適用于目前平臺的[framework 相依可執行檔](#publish-framework-dependent)。 |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | 特定平臺的[framework 相依可執行檔](#publish-framework-dependent)。  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -46,13 +46,13 @@ ms.locfileid: "91654668"
 
 ## <a name="produce-a-cross-platform-binary"></a>產生跨平臺二進位檔
 
-當您將應用程式發佈為與 [framework 相依](#publish-framework-dependent)的應用程式時，會建立跨平臺二進位檔（以 *dll* 檔案的形式）。 *Dll*檔案會以您的專案命名。 例如，如果您有一個名為 **word_reader**的應用程式，則會建立名為 *word_reader.dll* 的檔案。 以這種方式發佈的應用程式會使用 `dotnet <filename.dll>` 命令執行，而且可以在任何平臺上執行。
+當您將應用程式發佈為與 [framework 相依](#publish-framework-dependent)的應用程式時，會建立跨平臺二進位檔（以 *dll* 檔案的形式）。 *Dll* 檔案會以您的專案命名。 例如，如果您有一個名為 **word_reader** 的應用程式，則會建立名為 *word_reader.dll* 的檔案。 以這種方式發佈的應用程式會使用 `dotnet <filename.dll>` 命令執行，而且可以在任何平臺上執行。
 
 只要已安裝目標 .NET Core 執行時間，就可以在任何作業系統上執行跨平臺二進位檔。 如果未安裝目標 .NET Core 執行時間，應用程式可以使用較新的執行時間執行（如果應用程式設定為向前復原）。 如需詳細資訊，請參閱 [與 framework 相依的應用程式向前](../versions/selection.md#framework-dependent-apps-roll-forward)復原。
 
 下列命令會產生跨平臺二進位檔：
 
-| 類型                                                                                 | SDK 2.1 | SDK 3。x | Command |
+| 類型                                                                                 | SDK 2.1 | SDK 3。x | 命令 |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | [framework 相依的跨平臺二進位](#publish-framework-dependent)檔。           | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
@@ -60,14 +60,14 @@ ms.locfileid: "91654668"
 
 發佈為與 framework 相依的應用程式是跨平臺，不包含 .NET Core 執行時間。 您應用程式的使用者必須安裝 .NET Core 執行時間。
 
-將應用程式發佈為與 framework 相依的應用程式，會產生 [跨平臺二進位](#produce-a-cross-platform-binary) 檔做為 *dll* 檔案，以及以您目前平臺為目標的 [平臺特定可執行](#produce-an-executable) 檔。 *Dll*是跨平臺，而可執行檔則不是。 例如，如果您發行名為**word_reader**和目標 Windows 的應用程式，則會隨著*word_reader.dll*建立*word_reader.exe*可執行檔。 以 Linux 或 macOS 為目標時，會建立 *word_reader* 可執行檔以及 *word_reader.dll*。 如需有關 Rid 的詳細資訊，請參閱 [.Net CORE RID 目錄](../rid-catalog.md)。
+將應用程式發佈為與 framework 相依的應用程式，會產生 [跨平臺二進位](#produce-a-cross-platform-binary) 檔做為 *dll* 檔案，以及以您目前平臺為目標的 [平臺特定可執行](#produce-an-executable) 檔。 *Dll* 是跨平臺，而可執行檔則不是。 例如，如果您發行名為 **word_reader** 和目標 Windows 的應用程式，則會隨著 *word_reader.dll* 建立 *word_reader.exe* 可執行檔。 以 Linux 或 macOS 為目標時，會建立 *word_reader* 可執行檔以及 *word_reader.dll*。 如需有關 Rid 的詳細資訊，請參閱 [.Net CORE RID 目錄](../rid-catalog.md)。
 
 > [!IMPORTANT]
 > 當您發佈與應用程式架構相依的應用程式時，.NET Core SDK 2.1 不會產生平臺特定的可執行檔。
 
 您可以使用命令來執行應用程式的跨平臺二進位檔 `dotnet <filename.dll>` ，並可在任何平臺上執行。 如果應用程式使用的 NuGet 套件具有平臺特定的執行，則所有平臺的相依性都會連同應用程式一起複製到 [發佈] 資料夾。
 
-您可以藉由將參數傳遞至命令，為特定平臺建立可執行檔 `-r <RID> --self-contained false` [`dotnet publish`](../tools/dotnet-publish.md) 。 如果 `-r` 省略此參數，就會為您目前的平臺建立可執行檔。 任何具有目標平臺之平臺特定相依性的 NuGet 套件都會複製到 [發佈] 資料夾。
+您可以藉由將參數傳遞至命令，為特定平臺建立可執行檔 `-r <RID> --self-contained false` [`dotnet publish`](../tools/dotnet-publish.md) 。 如果 `-r` 省略此參數，就會為您目前的平臺建立可執行檔。 任何具有目標平臺之平臺特定相依性的 NuGet 套件都會複製到 [發佈] 資料夾。 如果您不需要平臺特定的可執行檔，您可以 `<UseAppHost>False</UseAppHost>` 在專案檔中指定。 如需詳細資訊，請參閱 [.NET SDK 專案的 MSBuild 參考](../project-sdk/msbuild-props.md#useapphost)。
 
 ### <a name="advantages"></a>優點
 
@@ -111,7 +111,7 @@ dotnet publish -r linux-x64 --self-contained false
 
 將您的應用程式發佈為獨立應用程式，會產生平臺特定的可執行檔。 輸出發行資料夾包含應用程式的所有元件，包括 .NET Core 程式庫和目標執行時間。 應用程式會與其他 .NET Core 應用程式隔離，而且不會使用本機安裝的共用執行時間。 您應用程式的使用者不需要下載和安裝 .NET Core。
 
-針對指定的目標平臺產生可執行檔二進位檔。 例如，如果您有一個名為 **word_reader**的應用程式，而且您發行了 Windows 的獨立可執行檔，則會建立 *word_reader.exe* 檔。 針對 Linux 或 macOS 發行，會建立 *word_reader* 檔案。 使用命令的參數指定目標平臺和架構 `-r <RID>` [`dotnet publish`](../tools/dotnet-publish.md) 。 如需有關 Rid 的詳細資訊，請參閱 [.Net CORE RID 目錄](../rid-catalog.md)。
+針對指定的目標平臺產生可執行檔二進位檔。 例如，如果您有一個名為 **word_reader** 的應用程式，而且您發行了 Windows 的獨立可執行檔，則會建立 *word_reader.exe* 檔。 針對 Linux 或 macOS 發行，會建立 *word_reader* 檔案。 使用命令的參數指定目標平臺和架構 `-r <RID>` [`dotnet publish`](../tools/dotnet-publish.md) 。 如需有關 Rid 的詳細資訊，請參閱 [.Net CORE RID 目錄](../rid-catalog.md)。
 
 如果應用程式具有平臺特定的相依性（例如包含平臺特定相依性的 NuGet 套件），則會將這些相依性連同應用程式一起複製到 [發佈] 資料夾。
 

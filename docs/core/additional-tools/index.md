@@ -4,12 +4,12 @@ description: 支援及延伸 .NET Core 功能之其他工具的簡介。
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6aa8b62f02c4325664ffeccc0c0d4a0635a96f2d
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698997"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599215"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 其他工具概觀
 
@@ -28,6 +28,10 @@ ms.locfileid: "95698997"
 [dotnet-gcdump](../diagnostics/dotnet-gcdump.md) 可讓您收集 GC (垃圾收集行程，) 即時 .net 進程的傾印。
 
 [dotnet](../diagnostics/dotnet-trace.md) 會從您的應用程式收集分析資料，在需要找出導致應用程式執行速度變慢的案例中有所説明。
+
+## <a name="net-install-tool-for-extension-authors"></a>延伸模組作者的 .NET 安裝工具
+
+[延伸模組作者的 .Net 安裝工具](https://github.com/dotnet/vscode-dotnet-runtime)是 Visual Studio Code 延伸模組，可讓您專門針對 VS Code 延伸模組作者取得 .net Core 執行時間。 這項工具的目的是要用於以 .NET 撰寫的延伸模組，並要求使用 .NET 來啟動延伸模組 (例如，語言伺服器) 。 延伸模組不能直接供使用者用來安裝 .NET 進行開發。
 
 ## <a name="wcf-web-service-reference-tool"></a>WCF Web Service Reference 工具
 

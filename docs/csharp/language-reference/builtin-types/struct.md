@@ -9,16 +9,16 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526604"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599098"
 ---
 # <a name="structure-types-c-reference"></a>結構類型 (c # 參考) 
 
-*結構類型* (或*結構類型*) 是可封裝資料和相關功能的實[值型](value-types.md)別。 您可以使用 `struct` 關鍵字來定義結構類型：
+*結構類型* (或 *結構類型*) 是可封裝資料和相關功能的實 [值型](value-types.md)別。 您可以使用 `struct` 關鍵字來定義結構類型：
 
 [!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
@@ -130,6 +130,10 @@ ms.locfileid: "92526604"
 
 在 .NET 中，結構的範例 `ref` 包括 <xref:System.Span%601?displayProperty=nameWithType> 和 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 。
 
+## <a name="struct-constraint"></a>結構條件約束
+
+您也可以 `struct` 在[ `struct` 條件約束](../../programming-guide/generics/constraints-on-type-parameters.md)中使用關鍵字，指定型別參數為不可為 null 的實值型別。 結構和 [列舉](enum.md) 類型都符合 `struct` 條件約束。
+
 ## <a name="conversions"></a>轉換
 
 若為任何結構類型 ([ `ref` 結構](#ref-struct)類型除外) ，則會在和類型之間存在的[裝箱和取消](../../programming-guide/types/boxing-and-unboxing.md)加入轉換 <xref:System.ValueType?displayProperty=nameWithType> <xref:System.Object?displayProperty=nameWithType> 。 結構類型和它所執行的任何介面之間，也有另外的裝箱和取消程式轉換。
@@ -144,7 +148,7 @@ ms.locfileid: "92526604"
 - [唯讀執行個體成員](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 - [參考樣式類型的編譯時間安全性](~/_csharplang/proposals/csharp-7.2/span-safety.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)
 - [設計指導方針-在類別和結構之間選擇](../../../standard/design-guidelines/choosing-between-class-and-struct.md)

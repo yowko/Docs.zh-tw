@@ -3,12 +3,12 @@ title: C# 語言版本控制 - C# 指南
 description: '瞭解如何根據您的專案以及該選項背後的原因來決定 c # 語言版本。 瞭解如何手動覆寫預設值。'
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634493"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598925"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
@@ -29,7 +29,7 @@ ms.locfileid: "94634493"
 
 編譯器會根據下列規則決定預設值：
 
-| 目標架構 | 版本 | C# 語言版本預設值 |
+| 目標架構 | version | C# 語言版本預設值 |
 |------------------|---------|-----------------------------|
 | .NET             | 版     | C# 9.0                      |
 | .NET Core        | 3.x     | C# 8.0                      |
@@ -41,8 +41,8 @@ ms.locfileid: "94634493"
 
 當您的專案是以具有對應預覽語言版本為目標的預覽架構時，所使用的語言版本將會是預覽語言版本。 您可以在任何環境中使用該預覽版的最新功能，而不會影響以發行之 .NET Core 版本為目標的專案。
 
-> [!TIP]
-> 若要瞭解您目前使用的語言版本，請 `#error version` 在您的程式碼中放 (區分大小寫) 。 這會讓編譯器產生診斷（CS8304），其中包含所使用之編譯器版本和目前所選語言版本的訊息。
+> [!IMPORTANT]
+> Visual Studio 2017 已將專案新增 `<LangVersion>latest</LangVersion>` 至它所建立的任何專案檔。 這表示在加入 *c # 7.0* 時。 不過，一旦您升級至 Visual Studio 2019，這就表示最新發行的版本，而不論目標 framework 為何。 這些專案現在會覆 [寫預設行為](#override-a-default)。 您應該編輯專案檔，並移除該節點。 然後，您的專案將會使用針對您的目標架構所建議的編譯器版本。
 
 ## <a name="override-a-default"></a>覆寫預設
 
@@ -51,6 +51,9 @@ ms.locfileid: "94634493"
 - 手動編輯您的[專案檔](#edit-the-project-file)。
 - 針對[子目錄中的多個專案](#configure-multiple-projects)設定語言版本。
 - 設定[ `-langversion` 編譯器選項](compiler-options/langversion-compiler-option.md)。
+
+> [!TIP]
+> 若要瞭解您目前使用的語言版本，請 `#error version` 在您的程式碼中放 (區分大小寫) 。 這會讓編譯器產生診斷（CS8304），其中包含所使用之編譯器版本和目前所選語言版本的訊息。
 
 ### <a name="edit-the-project-file"></a>編輯專案檔
 

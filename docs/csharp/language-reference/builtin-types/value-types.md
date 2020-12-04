@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471647"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599391"
 ---
 # <a name="value-types-c-reference"></a>數值型別 (c # 參考) 
 
@@ -31,7 +31,7 @@ ms.locfileid: "92471647"
 > [!NOTE]
 > 若要讓您的程式碼較不容易出錯且更健全，請定義和使用不可變的實數值型別。 本文僅針對示範目的使用可變的實數值型別。
 
-## <a name="kinds-of-value-types"></a>實數值型別的種類
+## <a name="kinds-of-value-types-and-type-constraints"></a>實數值型別和類型條件約束的種類
 
 實值型別可以是下列兩種類型之一：
 
@@ -39,6 +39,8 @@ ms.locfileid: "92471647"
 - [列舉型](enum.md)別，它是由一組命名常數所定義，代表一個選擇或一個選擇組合。
 
 [可為 null](nullable-value-types.md)的實值型別 `T?` 代表其基礎實值型別的所有值 `T` ，以及一個額外的[null](../keywords/null.md)值。 您無法指派 `null` 給實值型別的變數，除非它是可為 null 的實值型別。
+
+您可以使用[ `struct` 條件約束](../../programming-guide/generics/constraints-on-type-parameters.md)來指定型別參數為不可為 null 的實值型別。 結構和列舉類型都符合 `struct` 條件約束。 從 c # 7.3 開始，您可以 `System.Enum` 在稱為 [列舉條件約束](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints) 的基類條件約束 (中使用，) 指定型別參數為列舉型別。
 
 ## <a name="built-in-value-types"></a>內建實數值型別
 
