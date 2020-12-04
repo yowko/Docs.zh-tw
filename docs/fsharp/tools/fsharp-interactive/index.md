@@ -4,12 +4,12 @@ description: '瞭解如何使用 F# 互動 (dotnet fsi) ，以互動方式在主
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438044"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549393"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F 的互動式程式設計\#
 
@@ -90,6 +90,9 @@ F # 腳本在 [Visual Studio](../../get-started/get-started-visual-studio.md)、
 
 ## <a name="referencing-packages-in-f-interactive"></a>在 F# 互動中參考封裝
 
+> [!NOTE]
+> 封裝管理系統可延伸，請進一步閱讀 [其他擴充](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)功能。
+
 F# 互動支援使用 `#r "nuget:"` 語法和選擇性版本參考 NuGet 套件：
 
 ```fsharp
@@ -133,6 +136,8 @@ printfn "%A" (f (dsharp.tensor 1.2))
 
 > [!NOTE]
 >  (使用架構參考的腳本目前有一項限制，例如 `Microsoft.NET.Sdk.Web` 或  `Microsoft.NET.Sdk.WindowsDesktop`) 。 無法使用 Saturn、Giraffe、WinForms 等套件。 這是在問題 [#9417](https://github.com/dotnet/fsharp/issues/9417)中追蹤。
+
+深入瞭解 [套件管理擴充性和其他擴充](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)功能。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>使用 F # interactive 參考磁片上的元件
 
@@ -221,7 +226,7 @@ fsi
 
 `#r`先前看到的和指示詞 `#load` 只能在 F# 互動中使用。 只有 F# 互動有幾個指示詞可用：
 
-|指示詞|描述|
+|指示詞|說明|
 |---------|-----------|
 |`#r "nuget:..."`|從 NuGet 參考封裝|
 |`#r "assembly-name.dll"`|參考磁片上的元件|
@@ -235,7 +240,7 @@ fsi
 
 ## <a name="interactive-and-compiled-preprocessor-directives"></a>互動式和編譯的預處理器指示詞
 
-當您在 F# 互動中編譯器代碼時，無論是以互動方式執行或是執行腳本，都會定義符號 **Interactive** 。 當您在編譯器中編譯器代碼時，會定義已 **編譯** 的符號。 因此，如果程式碼在編譯和互動模式中必須不同，您可以使用這些預處理器指示詞進行條件式編譯，以決定要使用的是哪一個。 例如：
+當您在 F# 互動中編譯器代碼時，無論是以互動方式執行或是執行腳本，都會定義符號 **Interactive** 。 當您在編譯器中編譯器代碼時，會定義已 **編譯** 的符號。 因此，如果程式碼在編譯和互動模式中必須不同，您可以使用這些預處理器指示詞進行條件式編譯，以決定要使用的是哪一個。 例如︰
 
 ```fsharp
 #if INTERACTIVE
@@ -260,6 +265,6 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|標題|說明|
 |-----|-----------|
 |[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述 F# 互動、fsi.exe 的命令列語法和選項。|
