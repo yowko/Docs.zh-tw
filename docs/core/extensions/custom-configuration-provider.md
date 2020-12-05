@@ -3,14 +3,14 @@ title: 在 .NET 中執行自訂設定提供者
 description: 瞭解如何在 .NET 應用程式中執行自訂設定提供者。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
+ms.date: 12/04/2020
 ms.topic: how-to
-ms.openlocfilehash: 968bf202eeea32742444681260d5ab0b27b403f9
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 22e46b7df8b02421633d6be251d990879baa8b2b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720746"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740114"
 ---
 # <a name="implement-a-custom-configuration-provider-in-net"></a>在 .NET 中執行自訂設定提供者
 
@@ -26,7 +26,7 @@ ms.locfileid: "90720746"
 - 啟動時，該提供者會將資料庫資料表讀入到設定中。 該提供者不會以個別機碼為基礎查詢資料庫。
 - 未實作變更時重新載入，因此在應用程式啟動後更新資料庫對應用程式設定沒有影響。
 
-定義 `Settings` 記錄類型實體，以將設定值儲存在資料庫中。 例如，您可以在 [*模型*] 資料夾中新增*Settings.cs*檔案：
+定義 `Settings` 記錄類型實體，以將設定值儲存在資料庫中。 例如，您可以在 [*模型*] 資料夾中新增 *Settings.cs* 檔案：
 
 :::code language="csharp" source="snippets/configuration/custom-provider/Models/Settings.cs":::
 
@@ -58,7 +58,7 @@ ms.locfileid: "90720746"
 
 下列程式碼顯示如何在 *Program.cs* 中使用自訂 `EntityConfigurationProvider`：
 
-:::code language="csharp" source="snippets/configuration/custom-provider/Program.cs" highlight="21-22":::
+:::code language="csharp" source="snippets/configuration/custom-provider/Program.cs" highlight="27-28":::
 
 ## <a name="see-also"></a>另請參閱
 

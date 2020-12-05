@@ -3,13 +3,13 @@ title: .NET 中的設定提供者
 description: 瞭解如何使用設定提供者 API 來設定 .NET 應用程式。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
-ms.openlocfilehash: d5333e8e52feb7d28e2149a988dc7ce53a926a50
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.date: 12/04/2020
+ms.openlocfilehash: 301e23170428f2291ccaa1bd882007cadfbce3b1
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874752"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740008"
 ---
 # <a name="configuration-providers-in-net"></a>.NET 中的設定提供者
 
@@ -40,12 +40,12 @@ ms.locfileid: "90874752"
 
 請考慮下列程式碼：
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="1-33,37-38" highlight="17-23":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="1-39,43-44" highlight="23-29":::
 
 上述程式碼：
 
 - 清除方法中預設新增的所有現有設定提供者 <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(System.String[])> 。
-- 設定 JSON 設定提供者，以將 *appsettings.js* 載入和  *appsettings*。 `Environment`具有下列選項的*json* 檔案：
+- 設定 JSON 設定提供者，以將 *appsettings.js* 載入和  *appsettings*。 `Environment`具有下列選項的 *json* 檔案：
   - `optional: true`：檔案是選擇性的。
   - `reloadOnChange: true` ：儲存變更時，會重載該檔案。
 
@@ -65,11 +65,11 @@ JSON 設定會由 [環境變數設定提供者](#environment-variable-configurat
 
 下列程式碼會建立設定根目錄、將區段系結至 `TransientFaultHandlingOptions` 記錄類型，以及將系結值列印到主控台視窗：
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="25-32":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="31-38":::
 
 應用程式會寫入下列範例輸出：
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="34-36":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="40-42":::
 
 ### <a name="xml-configuration-provider"></a>XML 設定提供者
 
@@ -77,7 +77,7 @@ JSON 設定會由 [環境變數設定提供者](#environment-variable-configurat
 
 下列程式碼示範如何使用 XML 設定提供者來設定 XML 檔案。
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="1-28,46,52-53" highlight="17-28":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="1-34,52,58-59" highlight="23-34":::
 
 上述程式碼：
 
@@ -100,11 +100,11 @@ JSON 設定會由 [環境變數設定提供者](#environment-variable-configurat
 
 下列程式碼會讀取先前的設定檔，並顯示金鑰和值：
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="30-45":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="36-51":::
 
 應用程式會寫入下列範例輸出：
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="47-51":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="53-57":::
 
 屬性可用來提供值：
 
@@ -129,7 +129,7 @@ JSON 設定會由 [環境變數設定提供者](#environment-variable-configurat
 
 下列程式碼會清除所有設定提供者，並新增 `IniConfigurationProvider` 包含兩個 INI 檔案的作為來源：
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="1-31,38-39" highlight="18-24":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="1-37,44-45" highlight="24-30":::
 
 具有各種設定的範例 *appsettings.ini* 檔案如下：
 
@@ -137,15 +137,15 @@ JSON 設定會由 [環境變數設定提供者](#environment-variable-configurat
 
 下列程式碼會藉由將上述設定寫入主控台視窗來顯示上述設定：
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="26-30":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="32-36":::
 
 應用程式會寫入下列範例輸出：
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="32-37":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="38-43":::
 
 ## <a name="environment-variable-configuration-provider"></a>環境變數設定提供者
 
-使用預設設定時，會 <xref:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider> 從環境變數機碼值組載入設定，在讀取*appsettings.js* *appsettings 之後。* `Environment`*. json*和秘密管理員。 因此，從環境讀取的索引鍵值會覆寫 appsettings*上從appsettings.js*讀取的值 *。* `Environment`*. json*和秘密管理員。
+使用預設設定時，會 <xref:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider> 從環境變數機碼值組載入設定，在讀取 *appsettings.js* *appsettings 之後。* `Environment`*. json* 和秘密管理員。 因此，從環境讀取的索引鍵值會覆寫 appsettings *上從appsettings.js* 讀取的值 *。* `Environment`*. json* 和秘密管理員。
 
 `:`分隔符號不適用於所有平臺上的環境變數階層式索引鍵。 雙底線 (`__`) 會自動由所取代 `:` ，而且所有平臺都支援此功能。 例如， `:` [Bash](https://linuxhint.com/bash-environment-variables)不支援分隔符號，但 `__` 為。
 
@@ -177,14 +177,14 @@ setx TransientFaultHandlingOptions__AutoRetryDelay "00:00:05" /M
 dotnet run
 ```
 
-若要測試上述命令是否覆寫*appsettings.json*和*appsettings。* `Environment`*. json*：
+若要測試上述命令是否覆寫 *appsettings.json* 和 *appsettings。* `Environment`*. json*：
 
 - 使用 Visual Studio： Exit 並重新啟動 Visual Studio。
 - 使用 CLI：啟動新的命令視窗，然後輸入 `dotnet run` 。
 
 <xref:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables%2A>使用字串呼叫以指定環境變數的前置詞：
 
-:::code language="csharp" source="snippets/configuration/console-env/Program.cs" highlight="15-16":::
+:::code language="csharp" source="snippets/configuration/console-env/Program.cs" highlight="21-22":::
 
 在上述程式碼中：
 
@@ -207,7 +207,7 @@ dotnet run
 
 如需有關主機和應用程式設定的詳細資訊，請參閱 [.Net 泛型主機](generic-host.md)。
 
-在[Azure App Service](https://azure.microsoft.com/services/app-service)上，選取 [**設定 > 設定**] 頁面上的 [**新增應用程式設定**]。 Azure App Service 的應用程式設定如下：
+在 [Azure App Service](https://azure.microsoft.com/services/app-service)上，選取 [**設定 > 設定**] 頁面上的 [**新增應用程式設定**]。 Azure App Service 的應用程式設定如下：
 
 - 靜態加密，並透過加密通道傳輸。
 - 公開為環境變數。
@@ -243,7 +243,7 @@ dotnet run
 
 使用預設設定時，會 <xref:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider> 從命令列引數索引鍵/值組在下列設定來源之後載入設定：
 
-- *appsettings.json*和*appsettings*。 `Environment`*json*檔案。
+- *appsettings.json* 和 *appsettings*。 `Environment`*json* 檔案。
 - 環境中 (Secret Manager) 的應用程式秘密 `Development` 。
 - 環境變數。
 
@@ -307,7 +307,7 @@ dotnet run --SecretKey "Secret key set from double hyphen"
 
 下列程式碼會將記憶體集合新增至設定系統：
 
-:::code language="csharp" source="snippets/configuration/console-memory/Program.cs" highlight="16-23":::
+:::code language="csharp" source="snippets/configuration/console-memory/Program.cs" highlight="22-29":::
 
 在上述程式碼中，會在 <xref:Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions.AddInMemoryCollection(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})?displayProperty=nameWithType> 預設設定提供者之後新增記憶體提供者。 如需排序設定提供者的範例，請參閱 [XML 設定提供者](#xml-configuration-provider)。
 

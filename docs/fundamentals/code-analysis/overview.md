@@ -8,16 +8,19 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: ca3a9cb914befbc8e0982070b818b27ee3143793
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "96586567"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739970"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET source 程式碼分析總覽
 
-.NET 編譯器平台 (Roslyn) 分析器會檢查 C# 或 Visual Basic 程式碼以找出程式碼品質與程式碼樣式問題。 從 .NET 5.0 開始，這些分析器即隨附於 .NET SDK。  (之前，您已將程式碼品質分析器安裝為 [NuGet 套件](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)，且程式碼樣式分析器已安裝 Visual Studio。 ) 
+.NET 編譯器平台 (Roslyn) 分析器會檢查 C# 或 Visual Basic 程式碼以找出程式碼品質與程式碼樣式問題。 從 .NET 5.0 開始，這些分析器即隨附於 .NET SDK。 如果您不想要移至 .NET 5 + SDK，或您偏好以 NuGet 套件為基礎的模型，則 `Microsoft.CodeAnalysis.NetAnalyzers` [nuget 套件](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)中也會提供分析器。 您可能偏好以套件為基礎的模型來進行隨選版本更新。
+
+> [!NOTE]
+> .NET 分析器與目標平臺無關。 也就是說，您的專案不需要以特定的 .NET 平臺為目標。 分析器適用于以和舊版 .NET 版本為目標的專案 `net5.0` ，例如 `netcoreapp` 、 `netstandard` 和 `net472` 。
 
 - [程式碼品質分析 ( "CAxxxx" 規則) ](#code-quality-analysis)
 - [程式碼樣式分析 ( "IDExxxx" 規則) ](#code-style-analysis)

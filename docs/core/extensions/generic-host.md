@@ -3,13 +3,13 @@ title: .NET 泛型主機
 author: IEvangelist
 description: 瞭解 .NET 泛型主機，其負責應用程式啟動和存留期管理。
 ms.author: dapine
-ms.date: 09/18/2020
-ms.openlocfilehash: d00a8aeae8b4de2cbcb091992fa739c47da6dafc
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.date: 12/04/2020
+ms.openlocfilehash: ddb71b70d15121b7f59899fba38b2bf861219878
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916171"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740094"
 ---
 # <a name="net-generic-host"></a>.NET 泛型主機
 
@@ -19,7 +19,7 @@ ms.locfileid: "94916171"
 
 - 相依性插入 (DI)
 - 記錄
-- 組態
+- 設定
 - `IHostedService` 實作
 
 當主機啟動時，它會呼叫 <xref:Microsoft.Extensions.Hosting.IHostedService.StartAsync%2A?displayProperty=nameWithType> <xref:Microsoft.Extensions.Hosting.IHostedService> 服務容器的託管服務集合中註冊的每個執行。 在背景工作服務應用程式中， `IHostedService` 包含實例的所有 <xref:Microsoft.Extensions.Hosting.BackgroundService> 實例都會 <xref:Microsoft.Extensions.Hosting.BackgroundService.ExecuteAsync%2A?displayProperty=nameWithType> 呼叫其方法。
@@ -74,7 +74,7 @@ public class Program
   - EventLog (僅當在 Windows 上執行時)
 - 當環境為時，可啟用範圍驗證和相依性 [驗證](xref:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateOnBuild) `Development` 。
 
-`ConfigureServices`方法會公開將服務加入至實例的功能 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> 。 稍後，您可以從相依性插入最可用性這些服務。
+`ConfigureServices`方法會公開將服務加入至實例的功能 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> 。 之後，這些服務可以從相依性插入中取得。
 
 ## <a name="framework-provided-services"></a>架構提供的服務
 
@@ -128,9 +128,9 @@ public class Program
 
 下列範例會建立主機組態：
 
-:::code language="csharp" source="snippets/configuration/console-host/Program.cs" highlight="13-19":::
+:::code language="csharp" source="snippets/configuration/console-host/Program.cs" highlight="19-25":::
 
-## <a name="app-configuration"></a>應用程式設定
+## <a name="app-configuration"></a>應用程式組態
 
 應用程式組態的建立方式是在 `IHostBuilder` 上呼叫 <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A>。 `ConfigureAppConfiguration` 可以多次呼叫，其結果是累加的。 應用程式會使用指定索引鍵上最後設定值的任何選項。
 

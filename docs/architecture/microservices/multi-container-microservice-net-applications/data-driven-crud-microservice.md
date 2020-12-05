@@ -2,12 +2,12 @@
 title: 建立簡單資料驅動 CRUD 微服務
 description: 容器化 .NET 應用程式的 .NET 微服務架構 |瞭解如何在微服務應用程式的內容中建立簡單的 CRUD (資料驅動) 微服務。
 ms.date: 08/14/2020
-ms.openlocfilehash: 056ba37965cf831e0fb176eb585042c440530c6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 27c9b331573ff08ea16c756552818df285156282
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172361"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739865"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -233,7 +233,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ```json
 {
-    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word",
+    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]",
     "ExternalCatalogBaseUrl": "http://localhost:5101",
     "Logging": {
         "IncludeScopes": false,
@@ -256,7 +256,7 @@ settings.json 檔案可具有 ConnectionString 屬性及其他任何屬性的預
 #
 catalog-api:
   environment:
-    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -268,7 +268,7 @@ catalog-api:
 
 然而，針對生產環境，建議您探索其他儲存像是連接字串這種機密資料的方式。 管理應用程式秘密的絕佳方式是使用 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)。
 
-Azure Key Vault 可協助儲存及保護您雲端應用程式及服務所使用的密碼編譯金鑰及祕密。 任何您想要嚴格控管的項目都是祕密，例如 API 金鑰、連接字串、密碼等，而嚴格控管的方法包括使用方式記錄、設定到期日、管理存取權*等等*。
+Azure Key Vault 可協助儲存及保護您雲端應用程式及服務所使用的密碼編譯金鑰及祕密。 任何您想要嚴格控管的項目都是祕密，例如 API 金鑰、連接字串、密碼等，而嚴格控管的方法包括使用方式記錄、設定到期日、管理存取權 *等等*。
 
 Azure Key Vault 提供非常細微的應用程式祕密使用控制層級，且不須讓任何人知悉。 祕密甚至可以在不中斷開發或營運的狀況下輪替，以加強安全性。
 

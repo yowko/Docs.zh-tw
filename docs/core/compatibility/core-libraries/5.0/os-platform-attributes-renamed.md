@@ -2,12 +2,12 @@
 title: 重大變更：已重新命名或移除 OSPlatform 屬性
 description: 瞭解核心 .NET 程式庫中已移除或重新命名已在預覽版本中引進之 OS 平臺屬性的 .NET 5.0 重大變更。
 ms.date: 11/01/2020
-ms.openlocfilehash: 80eba790a607a01e0588c067cdc6105d5f3b20a7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: be2ddd4909bef70f531ca48246f091923d6435ec
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437876"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739486"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>已重新命名或移除 OSPlatform 屬性
 

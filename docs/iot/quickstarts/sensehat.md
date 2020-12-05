@@ -6,16 +6,16 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96586629"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739526"
 ---
 # <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>快速入門-使用 .NET 驅動 Raspberry Pi 感知 HAT
 
-Raspberry Pi [意義 HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> 是 Raspberry Pi 的附加元件。 意義 HAT 配備了8× 8 RGB LED 矩陣、五個按鈕的搖桿，並且包含下列感應器：
+Raspberry Pi [感知 HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** 硬體 ttached **** on **T** op) 是 Raspberry Pi 的附加元件面板。 意義 HAT 配備了8× 8 RGB LED 矩陣、五個按鈕的搖桿，並且包含下列感應器：
 
 - 迴轉儀
 - 加速計
@@ -52,7 +52,7 @@ Raspberry Pi [意義 HAT](https://www.raspberrypi.org/products/sense-hat/) <span
 
 ## <a name="get-the-source-code"></a>取得原始程式碼
 
-本快速入門的來源 [可在 GitHub 上](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart)取得。 <span class="docon docon-navigate-external x-hidden-focus"></span>
+本快速入門的來源 [可在 GitHub 上](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart)取得 <span class="docon docon-navigate-external x-hidden-focus"></span> 。
 
 ## <a name="next-steps"></a>後續步驟
 

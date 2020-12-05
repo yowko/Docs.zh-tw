@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
 ms.topic: overview
-ms.openlocfilehash: f5dc7c99b209b16dfb8595f9d50dcb1428bbde84
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 5955e46c2f5acb6776ada4e3fd6a65507d3faa1f
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607993"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740121"
 ---
 # <a name="configuration-in-net"></a>.NET 中的設定
 
@@ -29,13 +29,13 @@ ms.locfileid: "91607993"
 
 根據預設，使用 [dotnet new](../tools/dotnet-new.md) 或 Visual Studio 建立新的 .net 主控台應用程式 *不會* 公開設定功能。 若要在新的 .NET 主控台應用程式中加入設定，請 [將封裝參考加入](../tools/dotnet-add-package.md) 至 `Microsoft.Extensions.Hosting` 。 修改 *Program.cs* 檔案，以符合下列程式碼：
 
-:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="12":::
+:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="18":::
 
 方法會依 <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(System.String[])?displayProperty=nameWithType> 下列順序提供應用程式的預設設定：
 
 1. [ChainedConfigurationProvider](xref:Microsoft.Extensions.Configuration.ChainedConfigurationSource) ：加入現有的 `IConfiguration` 作為來源。
-1. 使用[JSON 設定提供者](configuration-providers.md#file-configuration-provider)的*appsettings.js* 。
-1. *appsettings。* `Environment`使用[json 設定提供者](configuration-providers.md#file-configuration-provider)的*json。* 例如， *appsettings*。***生產環境***。*json* 和 *appsettings*。***開發***。*json*。
+1. 使用 [JSON 設定提供者](configuration-providers.md#file-configuration-provider)的 *appsettings.js* 。
+1. *appsettings。* `Environment`使用 [json 設定提供者](configuration-providers.md#file-configuration-provider)的 *json。* 例如， *appsettings*。***生產 * * _._json* 與 *appsettings*。 * * * 開發** _._json *。
 1. 應用程式在環境中執行時的應用程式秘密 `Development` 。
 1. 使用 [環境變數設定提供者](configuration-providers.md#environment-variable-configuration-provider)的環境變數。
 1. 使用 [命令列設定提供者](configuration-providers.md#command-line-configuration-provider)的命令列引數。
@@ -44,7 +44,7 @@ ms.locfileid: "91607993"
 
 ### <a name="binding"></a>繫結
 
-在 .NET 中設定的主要優點之一，就是能夠將設定值系結至 .NET 物件的實例。 例如，JSON 設定提供者可以用來將檔案 * 上的appsettings.js* 對應至 .net 物件，並與相依性插入一起使用。 這會啟用選項模式，選項模式會使用類別來提供相關設定群組的強型別存取。
+在 .NET 中設定的主要優點之一，就是能夠將設定值系結至 .NET 物件的實例。 例如，JSON 設定提供者可以用來將檔案 *上的appsettings.js* 對應至 .net 物件，並與相依性插入一起使用。 這會啟用選項模式，選項模式會使用類別來提供相關設定群組的強型別存取。
 
 ## <a name="configuration-providers"></a>設定提供者
 

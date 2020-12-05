@@ -3,13 +3,13 @@ title: .NET 中的選項模式
 author: IEvangelist
 description: 瞭解如何使用選項模式來代表 .NET 應用程式中的相關設定群組。
 ms.author: dapine
-ms.date: 09/30/2020
-ms.openlocfilehash: 5c59a14223ec7c35456e1ea84d3f976e236f45dd
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/04/2020
+ms.openlocfilehash: 76d99337c51920115a38c400daca1649d0e74a99
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614690"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740015"
 ---
 # <a name="options-pattern-in-net"></a>.NET 中的選項模式
 
@@ -33,14 +33,14 @@ ms.locfileid: "91614690"
 Options 類別：
 
 * 必須是具有公用無參數函數的非抽象
-* 包含系結 (欄位 ***未*** 系結的公用讀寫屬性) 
+* 包含用來系結的公用讀寫屬性 (欄位為 ***not** _ 系結) 
 
 下列程式碼：
 
-* 呼叫 [ConfigurationBinder](xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind%2A) ，將類別系結至 `TransientFaultHandlingOptions` `"TransientFaultHandlingOptions"` 區段。
+_ 呼叫 [ConfigurationBinder](xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind%2A) ，將類別系結至 `TransientFaultHandlingOptions` `"TransientFaultHandlingOptions"` 區段。
 * 顯示設定資料。
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="25-32":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="31-38":::
 
 在上述程式碼中，會讀取應用程式啟動後的 JSON 設定檔變更。
 
@@ -74,13 +74,13 @@ services.Configure<TransientFaultHandlingOptions>(
 
 :::code language="csharp" source="snippets/configuration/console-json/ExampleService.cs":::
 
-在上述程式碼中， ***不*** 會讀取應用程式啟動後的 JSON 設定檔變更。 若要讀取應用程式啟動後的變更，請使用 [IOptionsSnapshot](#use-ioptionssnapshot-to-read-updated-data)。
+在上述程式碼中，應用程式啟動後的 JSON 設定檔變更為 ***not** _ read。 若要讀取應用程式啟動後的變更，請使用 [IOptionsSnapshot](#use-ioptionssnapshot-to-read-updated-data)。
 
 ## <a name="options-interfaces"></a>選項介面
 
 <xref:Microsoft.Extensions.Options.IOptions%601>:
 
-- 不***支援：***
+- 不 _*_支援：_*_
   - 在應用程式啟動後讀取設定資料。
   - [具名選項](#named-options-support-using-iconfigurenamedoptions)
 - 註冊為 [Singleton](dependency-injection.md#singleton) ，並且可以插入至任何 [服務存留期](dependency-injection.md#service-lifetimes)。
@@ -151,7 +151,7 @@ services.Configure<TransientFaultHandlingOptions>(
 - 當多個設定區段系結至相同的屬性時，會很有用。
 - 會區分大小寫。
 
-請考慮下列 *appsettings.json* file：
+請考慮 * file 上的下列 _appsettings.js：
 
 ```json
 {

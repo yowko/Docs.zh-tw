@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b8c634404cf2f214cc4bee5d754443e9302a723
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699626"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739512"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>!  (null 容許) 運算子 (c # 參考) 
 
-在 c # 8.0 和更新版本中提供，一元 `!` 後置運算子是 null 容許運算子。 在啟用的 [可為 null 注釋內容](../../nullable-references.md#nullable-annotation-context)中，您可以使用 null 容許運算子來宣告 `x` 參考型別的運算式不是 `null` ： `x!` 。 一元前置 `!` 運算子是 [邏輯負運算子](boolean-logical-operators.md#logical-negation-operator-)。
+在 c # 8.0 和更新版本中提供，一元 `!` 後置運算子是 null 容許或 null 隱藏專案運算子。 在啟用的 [可為 null 注釋內容](../../nullable-references.md#nullable-annotation-context)中，您可以使用 null 容許運算子來宣告 `x` 參考型別的運算式不是 `null` ： `x!` 。 一元前置 `!` 運算子是 [邏輯負運算子](boolean-logical-operators.md#logical-negation-operator-)。
 
 Null 容許運算子在執行時間不會有任何作用。 它只會變更運算式的 null 狀態，以影響編譯器的靜態流程分析。 在執行時間，運算式會 `x!` 評估為基礎運算式的結果 `x` 。
 

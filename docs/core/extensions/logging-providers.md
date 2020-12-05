@@ -3,13 +3,13 @@ title: .NET 中的記錄提供者
 description: 瞭解如何在 .NET 應用程式中使用記錄提供者 API。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/25/2020
-ms.openlocfilehash: 4d4658b7ca892d101af32f5cf8ac48a4beabfb92
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 12/04/2020
+ms.openlocfilehash: fdec9018e58c6038b5589c01e775bbb5f10b6b10
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804751"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740087"
 ---
 # <a name="logging-providers-in-net"></a>.NET 中的記錄提供者
 
@@ -24,7 +24,7 @@ ms.locfileid: "91804751"
   - [EventSource](#event-source)
   - [EventLog](#windows-eventlog)：僅限 Windows
 
-:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="12":::
+:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="18":::
 
 上述程式碼顯示 `Program` 使用 .net 背景工作應用程式範本所建立的類別。 接下來的幾節會根據使用一般主機的 .NET 背景工作應用程式範本提供範例。
 
@@ -102,7 +102,7 @@ Microsoft 擴充功能包含下列記錄提供者，作為執行時間程式庫�
 
 ### <a name="windows-eventlog"></a>Windows EventLog
 
-此 `EventLog` 提供者會將記錄輸出傳送至 Windows 事件記錄檔。 不同于其他提供者， `EventLog` 提供者 ***不*** 會繼承預設的非提供者設定。 如果 `EventLog` 未指定記錄檔設定，則預設為 `LogLevel.Warning` 。
+此 `EventLog` 提供者會將記錄輸出傳送至 Windows 事件記錄檔。 不同于其他提供者， `EventLog` 提供者不 **not** 會繼承預設的非提供者設定。 如果 `EventLog` 未指定記錄檔設定，則預設為 `LogLevel.Warning` 。
 
 若要記錄低於 <xref:Microsoft.Extensions.Logging.LogLevel.Warning?displayProperty=nameWithType> 的事件，請明確設定記錄層級。 下列範例會將事件記錄檔的預設記錄層級設定為 <xref:Microsoft.Extensions.Logging.LogLevel.Information?displayProperty=nameWithType> ：
 
@@ -127,8 +127,14 @@ Microsoft 擴充功能包含下列記錄提供者，作為執行時間程式庫�
 ```csharp
 public class Program
 {
-    public static Task Main(string[] args) =>
-        CreateHostBuilder(args).Build().RunAsync();
+    static async Task Main(string[] args)
+    {
+        using IHost host = CreateHostBuilder(args).Build();
+
+        // Application code should start here.
+
+        await host.RunAsync();
+    }
 
     static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
@@ -149,8 +155,14 @@ public class Program
 ```csharp
 class Program
 {
-    static Task Main(string[] args) =>
-        CreateHostBuilder(args).Build().RunAsync();
+    static async Task Main(string[] args)
+    {
+        using IHost host = CreateHostBuilder(args).Build();
+
+        // Application code should start here.
+
+        await host.RunAsync();
+    }
 
     static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
@@ -160,7 +172,7 @@ class Program
                 services.Configure<AzureFileLoggerOptions>(options =>
                 {
                     options.FileName = "azure-diagnostics-";
-                    options.FileSizeLimit = 50 * 1024;
+                    options.FileSizeLimit = 50 _ 1024;
                     options.RetainedFileCountLimit = 5;
                 })
                 .Configure<AzureBlobLoggerOptions>(options =>
@@ -170,7 +182,7 @@ class Program
 }
 ```
 
-當部署到 Azure App Service 時，應用程式會使用 Azure 入口網站之**App Service**頁面的 [ [App Service 記錄](/azure/app-service/web-sites-enable-diagnostic-log/#enable-application-logging-windows)] 區段中的設定。 當下列設定更新時，變更會立即生效，而不需要重新啟動或重新部署應用程式。
+當部署到 Azure App Service 時，應用程式會使用 Azure 入口網站之 **App Service** 頁面的 [ [App Service 記錄](/azure/app-service/web-sites-enable-diagnostic-log/#enable-application-logging-windows)] 區段中的設定。 當下列設定更新時，變更會立即生效，而不需要重新啟動或重新部署應用程式。
 
 - **應用程式記錄 (檔案系統)**
 - **應用程式記錄 (Blob)**
@@ -190,8 +202,8 @@ Azure 記錄串流支援即時查看記錄活動：
 若要設定 Azure 記錄資料流：
 
 - 從應用程式的入口網站頁面流覽至 [ **App Service 記錄** ] 頁面。
-- 將 [應用程式記錄 (檔案系統)]**** 設定為 [開啟]****。
-- 選擇記錄 [層級]****。 此設定僅適用于 Azure 記錄串流。
+- 將 [應用程式記錄 (檔案系統)] 設定為 [開啟]。
+- 選擇記錄 [層級]。 此設定僅適用于 Azure 記錄串流。
 
 流覽至 [ **記錄資料流程** ] 頁面以查看記錄。 記錄的訊息會與介面一起記錄 `ILogger` 。
 
@@ -230,7 +242,7 @@ Azure 記錄串流支援即時查看記錄活動：
 
 如需詳細資訊，請參閱每個提供者的文件。 Microsoft 不支援第三方記錄提供者。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 .net 中記錄](logging.md)。
 - [在 .net 中執行自訂記錄提供者](custom-logging-provider.md)。
