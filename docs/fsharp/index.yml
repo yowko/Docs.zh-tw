@@ -8,12 +8,12 @@ metadata:
   author: cartermp
   ms.author: phcart
   ms.date: 08/29/2020
-  ms.openlocfilehash: 12ae202d3618a35ecb19cad85452f5af98640152
-  ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+  ms.openlocfilehash: 308f91c4bc8f199410dac1c45ad54dc2feb1c1f4
+  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/21/2020
-  ms.locfileid: "95099357"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96599046"
 landingContent:
 - title: 瞭解如何在 F 中進行程式設計#
   linkLists:
@@ -31,6 +31,10 @@ landingContent:
     links:
     - text: 下載 .NET Core SDK
       url: https://dotnet.microsoft.com/download
+  - linkListType: get-started
+    links:
+    - text: 'Q&A 上的 F #'
+      url: /answers/topics/dotnet-fsharp.html
 - title: 'F # 基本概念'
   linkLists:
   - linkListType: overview
@@ -69,13 +73,13 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: 語言參考
+    - text: 程式設計語言參考
       url: language-reference/index.md
     - text: 關鍵字參考
       url: language-reference/keyword-reference.md
     - text: 符號和運算子參考
       url: language-reference/symbol-and-operator-reference/index.md
-    - text: 函數
+    - text: 函式
       url: language-reference/functions/index.md
     - text: 'F # 類型'
       url: language-reference/fsharp-types.md
