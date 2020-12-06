@@ -4,12 +4,12 @@ description: '瞭解如何使用 F# 互動 (dotnet fsi) ，以互動方式在主
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549393"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739304"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F 的互動式程式設計\#
 
@@ -118,7 +118,7 @@ let t2 = dsharp.tensor [ [ 0; 1 ]; [ 2; 2 ] ]
 // Define a scalar-to-scalar function
 let f (x: Tensor) = sin (sqrt x)
 
-printfn "%A" (f (dsharp.tensor 1.2))
+printfn $"{f (dsharp.tensor 1.2)}"
 ```
 
 ### <a name="specifying-a-package-source"></a>指定套件來源
@@ -137,7 +137,7 @@ printfn "%A" (f (dsharp.tensor 1.2))
 > [!NOTE]
 >  (使用架構參考的腳本目前有一項限制，例如 `Microsoft.NET.Sdk.Web` 或  `Microsoft.NET.Sdk.WindowsDesktop`) 。 無法使用 Saturn、Giraffe、WinForms 等套件。 這是在問題 [#9417](https://github.com/dotnet/fsharp/issues/9417)中追蹤。
 
-深入瞭解 [套件管理擴充性和其他擴充](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)功能。
+如需詳細資訊，請參閱 [封裝管理擴充性和其他擴充](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)功能。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>使用 F # interactive 參考磁片上的元件
 
@@ -154,7 +154,7 @@ let myFunction x y = x + 2 * y
 ```fsharp
 #r "path/to/MyAssembly.dll"
 
-printfn "%A" (MyAssembly.myFunction 10 40)
+printfn $"{MyAssembly.myFunction 10 40}"
 ```
 
 輸出如下所示：
@@ -182,7 +182,7 @@ let square x = x * x
 #load "Script1.fsx"
 open Script1
 
-printfn "%d" (square 12)
+printfn $"%d{square 12}"
 ```
 
 請注意，宣告 `open Script1` 是必要的。 這是因為 F # 腳本中的結構會編譯成最上層模組，也就是它所在的指令檔名。
@@ -206,7 +206,7 @@ F # 腳本可存取 `fsi` 代表 F# 互動會話的自訂物件。 它可讓您�
 let args = fsi.CommandLineArgs
 
 for arg in args do
-    printfn "%s" arg
+    printfn $"{arg}"
 ```
 
 進行評估時，會列印所有引數。 第一個引數一律是所評估腳本的名稱：
@@ -226,7 +226,7 @@ fsi
 
 `#r`先前看到的和指示詞 `#load` 只能在 F# 互動中使用。 只有 F# 互動有幾個指示詞可用：
 
-|指示詞|說明|
+|指示詞|描述|
 |---------|-----------|
 |`#r "nuget:..."`|從 NuGet 參考封裝|
 |`#r "assembly-name.dll"`|參考磁片上的元件|
@@ -240,7 +240,7 @@ fsi
 
 ## <a name="interactive-and-compiled-preprocessor-directives"></a>互動式和編譯的預處理器指示詞
 
-當您在 F# 互動中編譯器代碼時，無論是以互動方式執行或是執行腳本，都會定義符號 **Interactive** 。 當您在編譯器中編譯器代碼時，會定義已 **編譯** 的符號。 因此，如果程式碼在編譯和互動模式中必須不同，您可以使用這些預處理器指示詞進行條件式編譯，以決定要使用的是哪一個。 例如︰
+當您在 F# 互動中編譯器代碼時，無論是以互動方式執行或是執行腳本，都會定義符號 **Interactive** 。 當您在編譯器中編譯器代碼時，會定義已 **編譯** 的符號。 因此，如果程式碼在編譯和互動模式中必須不同，您可以使用這些預處理器指示詞進行條件式編譯，以決定要使用的是哪一個。 例如：
 
 ```fsharp
 #if INTERACTIVE
@@ -265,6 +265,6 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|說明|
+|標題|描述|
 |-----|-----------|
 |[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述 F# 互動、fsi.exe 的命令列語法和選項。|

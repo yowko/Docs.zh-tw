@@ -2,12 +2,12 @@
 title: 結果
 description: '瞭解如何使用 F # 的「結果」類型，協助您撰寫容錯程式碼。'
 ms.date: 08/13/2020
-ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 53b1db0c9224ae032d58c06cd3c58e3dbed03f7b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656914"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740220"
 ---
 # <a name="results"></a>結果
 
@@ -68,15 +68,15 @@ let test() =
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
     match res1 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
-    | Error e -> printfn "Error: %s" e
+    | Ok req -> printfn $"My request was valid! Name: {req.Name} Email {req.Email}"  
+    | Error e -> printfn $"Error: {e}"
     // Prints: "My request was valid!  Name: Phillip Email: phillip@consoto.biz"
 
     let req2 = { Name = "Phillip"; Email = "phillip@bananas.com" }
     let res2 = validateRequest (Ok req2)
     match res2 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
-    | Error e -> printfn "Error: %s" e
+    | Ok req -> printfn $"My request was valid! Name: {req.Name} Email {req.Email}"  
+    | Error e -> printfn $"Error: {e}"
     // Prints: "Error: No email from bananas.com is allowed."
 
 test()
@@ -84,7 +84,7 @@ test()
 
 如您所見，如果您強制將各種驗證函式全部傳回，就很容易將它們連結在一起 `Result` 。  這可讓您將像這樣的功能分解成可組合的小部分，就像您需要的一樣。  這也具有在往返驗證的結尾 *強制* 使用 [模式](pattern-matching.md) 比對的額外值，進而強制執行較高程度的程式正確性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [已區分的聯集](discriminated-unions.md)
 - [模式比對](pattern-matching.md)

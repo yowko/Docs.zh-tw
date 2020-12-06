@@ -2,12 +2,12 @@
 title: 教學課程：建立型別提供者
 description: '瞭解如何在 F # 3.0 中建立您自己的 F # 型別提供者，方法是檢查數個簡單的型別提供者來說明基本概念。'
 ms.date: 11/04/2019
-ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810868"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739694"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程：建立型別提供者
 
@@ -175,7 +175,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-這個型別必須是公用的，而且您必須使用 [TypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) 屬性來標記它，如此一來，當另一個 F # 專案參考包含型別的元件時，編譯器就會辨識型別提供者。 *Config*參數是選擇性的，如果有的話，則會包含 F # 編譯器所建立之型別提供者實例的內容設定資訊。
+這個型別必須是公用的，而且您必須使用 [TypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) 屬性來標記它，如此一來，當另一個 F # 專案參考包含型別的元件時，編譯器就會辨識型別提供者。 *Config* 參數是選擇性的，如果有的話，則會包含 F # 編譯器所建立之型別提供者實例的內容設定資訊。
 
 接下來，您會執行 [ITypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-itypeprovider.html) 介面。 在此情況下，您會使用 `TypeProviderForNamespaces` API 中的型別 `ProvidedTypes` 做為基底類型。 此協助程式類型可以提供有限的立即提供命名空間集合，其中每個命名空間都會直接包含有限數目的固定、立即提供類型。 在此內容中，提供者 *立即* 會產生型別，即使它們不需要或使用也一樣。
 
@@ -243,7 +243,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 接下來，將 XML 檔加入至類型。 這是延遲的檔，也就是當主機編譯器需要時，視需要計算。
 
 ```fsharp
-t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
+t.AddXmlDocDelayed (fun () -> $"""This provided type {"Type" + string n}""")
 ```
 
 接下來，您要將提供的靜態屬性加入至類型：
@@ -352,9 +352,9 @@ t.AddMembersDelayed(fun () ->
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
               p.AddXmlDocDelayed(fun () ->
-                  sprintf "This is StaticProperty%d on NestedType" i)
+                  $"This is StaticProperty{i} on NestedType")
 
-              p
+              p
       ]
 
     staticPropsInNestedType)
@@ -461,7 +461,7 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-請注意下列事項：
+請注意下列幾點：
 
 - 標準 Regex 類型代表參數化 `RegexTyped` 型別。
 
@@ -527,7 +527,7 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-請注意下列事項：
+請注意下列幾點：
 
 - 型別提供者採用兩個靜態參數： `pattern` ，這是必要的， `options` 而且是選擇性的 (因為) 會提供預設值。
 
@@ -581,7 +581,7 @@ for group in r.GetGroupNames() do
         propertyName = group,
         propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+        prop.AddXmlDoc($"""Gets the ""{group}"" group from this match""")
     matchTy.AddMember prop
 ```
 
@@ -764,7 +764,7 @@ do ()
 let info = new MiniCsv<"info.csv">()
 for row in info.Data do
 let time = row.Time
-printfn "%f" (float time)
+printfn $"{float time}"
 ```
 
 在此情況下，編譯器應該將這些呼叫轉換成如下列範例所示的內容：
@@ -773,7 +773,7 @@ printfn "%f" (float time)
 let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
-printfn "%f" (float time)
+printfn $"%f{float time}"
 ```
 
 最佳轉譯需要型別提供者 `CsvFile` 在型別提供者的元件中定義實數型別。 型別提供者通常依賴一些協助程式類型和方法來包裝重要的邏輯。 因為量值會在執行時間清除，所以您可以使用做為資料 `float[]` 列的清除型別。 編譯器會將不同的資料行視為具有不同的量數值型別。 例如，在我們的範例中，第一個資料行的類型為 `float<meter>` ，而第二個數據行有 `float<second>` 。 不過，已清除的表示可以維持相當簡單。
@@ -1048,7 +1048,7 @@ ProvidedTypes API 提供提供量值附注的協助程式。 例如，若要提�
   let nullableDecimal_kgpm2 = typedefof<System.Nullable<_>>.MakeGenericType [|dkgpm2 |]
 ```
 
-### <a name="accessing-project-local-or-script-local-resources"></a>存取專案本機或腳本本機資源
+### <a name="accessing-project-local-or-script-local-resources"></a>存取 Project-Local 或 Script-Local 資源
 
 型別提供者的每個實例都可以在 `TypeProviderConfig` 結構中指定一個值。 此值包含提供者的「解析資料夾」 (也就是編譯的專案資料夾或包含腳本) 的目錄、參考元件的清單，以及其他資訊。
 

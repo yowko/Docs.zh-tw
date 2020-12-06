@@ -2,12 +2,12 @@
 title: '使用命令列工具開始使用 F #'
 description: '瞭解如何使用任何作業系統上的 .NET Core CLI （ (Windows、macOS 或 Linux) ），在 F # 上建立簡單的多專案解決方案。'
 ms.date: 08/15/2020
-ms.openlocfilehash: e652b66337a3122de8e6bd4d62d86fb6082b759d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f890e31fe8c665874dc3034aebfae32e38b9031a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811986"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739911"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>使用 .NET Core CLI 開始使用 F #
 
@@ -64,7 +64,7 @@ open Newtonsoft.Json
 
 let getJsonNetJson value =
     let json = JsonConvert.SerializeObject(value)
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value json
+    $"I used to be {value} but now I'm {json} thanks to JSON.NET!"
 ```
 
 將 NuGet 套件上的 Newtonsoft.Js新增至程式庫專案。
@@ -115,7 +115,7 @@ let main argv =
 
     for arg in argv do
         let value = getJsonNetJson arg
-        printfn "%s" value
+        printfn $"{value}"
 
     0 // return an integer exit code
 ```

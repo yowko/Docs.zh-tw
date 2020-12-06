@@ -4,12 +4,12 @@ description: '瞭解如何建立方便的語法，以 F # 撰寫可使用控制�
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a0a71533ea1bc87b75f028ad0d416326f627672a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705302"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739297"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -111,7 +111,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 在大部分的情況下，呼叫端可以省略它。 最常見的省略方法 `yield` 是使用 `->` 運算子：
@@ -123,7 +123,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 針對可能會產生許多不同值的更複雜運算式，而且可能有條件地省略關鍵字可以執行下列作業：
@@ -167,7 +167,7 @@ let squaresAndCubes =
         yield! cubes
     }
 
-printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+printfn $"{squaresAndCubes}"  // Prints - 1; 4; 9; 1; 8; 27
 ```
 
 進行評估時，所呼叫的計算運算式 `yield!` 會將其專案逐一產生，並將結果壓平合併。
@@ -262,7 +262,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 在上述程式碼中， `Run` `Delay` 如果未在計算運算式產生器類別中定義，則會省略和的呼叫。 計算運算式的主體（在此表示為 `{| cexpr |}` ）會轉譯成包含產生器類別之方法的呼叫，並遵循下表所述的翻譯。 計算運算式 `{| cexpr |}` 會根據這些轉譯以遞迴方式定義，其中 `expr` 是 F # 運算式且 `cexpr` 為計算運算式。
 
-|運算式|翻譯|
+|運算是|翻譯|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -390,7 +390,7 @@ let eventually = new EventuallyBuilder()
 
 let comp = eventually {
     for x in 1..2 do
-        printfn " x = %d" x
+        printfn $" x = %d{x}"
     return 3 + 4 }
 
 // Try the remaining lines in F# interactive to see how this

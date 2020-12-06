@@ -2,12 +2,12 @@
 title: 事件
 description: '瞭解 F # 事件如何讓您將函式呼叫與使用者動作產生關聯，這在 GUI 程式設計中很重要。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 42783255412d56c6ff6729694c31d0868ed99633
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 17e0cc8840053bf24d5c69694fe94d544c44510d
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559189"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740337"
 ---
 # <a name="events"></a>事件
 
@@ -104,7 +104,7 @@ type AppForm() as this =
     member this.OnPropertyChanged(args : PropertyChangedEventArgs) =
         let newProperty = this.GetType().GetProperty(args.PropertyName)
         let newValue = newProperty.GetValue(this :> obj) :?> string
-        printfn "Property %s changed its value to %s" args.PropertyName newValue
+        printfn "Property {args.PropertyName} changed its value to {newValue}"
 
 // Create a form, hook up the event handler, and start the application.
 let appForm = new AppForm()
@@ -158,7 +158,7 @@ type AppForm private (dummy) as this =
     member this.OnPropertyChanged(args : PropertyChangedEventArgs) =
         let newProperty = this.GetType().GetProperty(args.PropertyName)
         let newValue = newProperty.GetValue(this :> obj) :?> string
-        printfn "Property %s changed its value to %s" args.PropertyName newValue
+        printfn "Property {args.PropertyName} changed its value to {newValue}"
 
     new() as this =
         new AppForm(0)

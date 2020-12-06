@@ -2,12 +2,12 @@
 title: 可為 Null 的運算子
 description: '瞭解 F # 程式設計語言中可用的可為 null 運算子。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 951692ba22781f7f9e759c55bc708fc24f7a5014
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 9ac6afc2c3f4277ee6e93b1ccb3d21f892926b4b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559137"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740363"
 ---
 # <a name="nullable-operators"></a>可為 Null 的運算子
 
@@ -48,7 +48,7 @@ let nullableInt = new System.Nullable<int>(10)
 let nullableFloat = Nullable.float nullableInt
 
 // Use the regular non-nullable float operator to convert to a non-nullable float.
-printfn "%f" (float nullableFloat)
+printfn $"%f{float nullableFloat}"
 ```
 
 輸出為 `10.000000`。
@@ -73,14 +73,14 @@ query {
     for row in db.Table2 do
     where (row.TestData1.HasValue && row.TestData1.Value > 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" row.TestData1.Value row.Name)
+} |> Seq.iter (fun row -> printfn $"%d{row.TestData1.Value} %s{row.Name}")
 
 query {
     for row in db.Table2 do
     // Use a nullable operator ?>
     where (row.TestData1 ?> 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" (row.TestData1.GetValueOrDefault()) row.Name)
+} |> Seq.iter (fun row -> printfn "%d{row.TestData1.GetValueOrDefault()} %s{row.Name}")
 ```
 
 ## <a name="see-also"></a>另請參閱

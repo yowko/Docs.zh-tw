@@ -2,12 +2,12 @@
 title: 開始在 Visual Studio Code 中使用 F#
 description: '瞭解如何使用 F # 搭配 Visual Studio Code 和 Ionide 外掛程式套件。'
 ms.date: 12/23/2018
-ms.openlocfilehash: 3317d0037d3c14a6b55079385d7b27e499c0c392
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 11fb0d443fb7c2b3f270d45bfeaa91102ba28efd
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050542"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739798"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>開始在 Visual Studio Code 中使用 F#
 
@@ -36,7 +36,7 @@ code .
 
 首先，請確定 .NET Core 腳本是您的預設腳本環境：
 
-1. 開啟 [Visual Studio Code 設定] ([程式**代碼**  >  **偏好**  >  **設定**]) 。
+1. 開啟 [Visual Studio Code 設定] ([程式 **代碼**  >  **偏好**  >  **設定**]) 。
 1. 搜尋「 **F # 腳本**」一詞。
 1. 按一下顯示 [ **fsharp.core：使用 SDK 腳本**] 的核取方塊。
 
@@ -52,7 +52,7 @@ code .
 
 此函式會將單字轉換成 [Pig 拉丁](https://en.wikipedia.org/wiki/Pig_Latin)的形式。 下一步是使用 F# 互動 (FSI) 來進行評估。
 
-醒目提示整個函數 (應為11行長) 。 反白顯示之後，請按住 **Alt** 鍵，然後按 **Enter**鍵。 您會注意到畫面底部會出現一個終端機視窗，看起來應該像這樣：
+醒目提示整個函數 (應為11行長) 。 反白顯示之後，請按住 **Alt** 鍵，然後按 **Enter** 鍵。 您會注意到畫面底部會出現一個終端機視窗，看起來應該像這樣：
 
 ![使用 Ionide F# 互動輸出的範例](./media/getting-started-vscode/vscode-fsi.png)
 
@@ -144,7 +144,7 @@ val toPigLatin : word:string -> string
 let main argv =
     for name in argv do
         let newName = PigLatin.toPigLatin name
-        printfn "%s in Pig Latin is: %s" name newName
+        printfn %"{name} in Pig Latin is: {newName}"
 
     0
 ```

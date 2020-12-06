@@ -2,12 +2,12 @@
 title: 模式比對
 description: '瞭解如何在 F # 中使用模式來比較資料與邏輯結構、將資料分解為構成部分，或從資料中取出資訊。'
 ms.date: 11/12/2020
-ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 932f50b7947f6df728149437dd3ceb19c42e5c6a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687801"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740272"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -88,8 +88,8 @@ type Shape =
 ```fsharp
 let matchShape shape =
     match shape with
-    | Rectangle(height = h) -> printfn "Rectangle with length %f" h
-    | Circle(r) -> printfn "Circle with radius %f" r
+    | Rectangle(height = h) -> printfn $"Rectangle with length %f{h}"
+    | Circle(r) -> printfn $"Circle with radius %f{r}"
 ```
 
 使用命名欄位是選擇性的，因此在上述範例中， `Circle(r)` 和都 `Circle(radius = r)` 有相同的效果。
@@ -98,7 +98,7 @@ let matchShape shape =
 
 ```fsharp
 match shape with
-| Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
+| Rectangle(height = h; width = w) -> printfn $"Rectangle with height %f{h} and width %f{w}"
 | _ -> ()
 ```
 

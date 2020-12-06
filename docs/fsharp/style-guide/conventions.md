@@ -2,12 +2,12 @@
 title: F# 編碼慣例
 description: '瞭解撰寫 F # 程式碼時的一般指導方針和慣用語。'
 ms.date: 01/15/2020
-ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554022"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739898"
 ---
 # <a name="f-coding-conventions"></a>F# 編碼慣例
 
@@ -93,7 +93,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 在 F # 中，開啟至範圍的專案可以遮蔽其他已經存在的專案。 這表示重新排列 `open` 語句可以改變程式碼的意義。 因此，所有語句的任意排序 (例如 `open` ，不建議使用順序) ，以免您產生可能預期的不同行為。
 
-相反地，我們建議您將它們排序[拓撲](https://en.wikipedia.org/wiki/Topological_sorting);也就是說，依照您的系統層級定義順序來排序您的 `open` 語句。 _layers_ 也可以考慮在不同拓撲層級內進行英數位元排序。
+相反地，我們建議您將它們排序 [拓撲](https://en.wikipedia.org/wiki/Topological_sorting);也就是說，依照您的系統層級定義順序來排序您的 `open` 語句。 _layers_ 也可以考慮在不同拓撲層級內進行英數位元排序。
 
 例如，以下是 F # 編譯器服務公用 API 檔案的拓撲排序：
 
@@ -190,13 +190,13 @@ type MoneyWithdrawalResult =
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f" am
-    | InsufficientFunds balance -> printfn "Failed: balance is %f" balance
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O" expiredDate
+    | Success am -> printfn "Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-一般情況下，如果您可以針對在網域中可能會 **失敗** 的不同方式建立模型，則錯誤處理常式代碼不會再被視為您必須在一般程式流程中處理的某些專案。 它只是一般程式流程的一部分，不是 **例外**狀況。 這有兩個主要優點：
+一般情況下，如果您可以針對在網域中可能會 **失敗** 的不同方式建立模型，則錯誤處理常式代碼不會再被視為您必須在一般程式流程中處理的某些專案。 它只是一般程式流程的一部分，不是 **例外** 狀況。 這有兩個主要優點：
 
 1. 當您的網域隨著時間變更時，更容易維護。
 2. 錯誤案例更容易進行單元測試。
@@ -209,7 +209,7 @@ let handleWithdrawal amount =
 
 F # 中可用來引發例外狀況的主要結構，應該依照下列喜好設定順序來考慮：
 
-| 函式 | 語法 | 目的 |
+| 函數 | 語法 | 目的 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | `System.ArgumentNullException`使用指定的引數名稱引發。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | `System.ArgumentException`使用指定的引數名稱和訊息來引發。 |
@@ -301,7 +301,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 這個函式現在會在找不到檔案時適當地處理案例，並將該意義指派給傳回，而不是全部運作。 這個傳回值可以對應至該錯誤案例，而不會捨棄任何內容相關資訊，或強制呼叫端處理在程式碼中該點可能不相關的案例。
 
-等型別 `Result<'Success, 'Error>` 適用于不會進行嵌套的基本作業，而且 F # 選用型別最適合用來表示何時有可能傳回 *某事物* 或 *任何*東西。 不過，它們不是例外狀況的取代，而且不應該用於嘗試取代例外狀況。 相反地，應謹慎套用，以依目標的方式處理例外狀況和錯誤管理原則的特定層面。
+等型別 `Result<'Success, 'Error>` 適用于不會進行嵌套的基本作業，而且 F # 選用型別最適合用來表示何時有可能傳回 *某事物* 或 *任何* 東西。 不過，它們不是例外狀況的取代，而且不應該用於嘗試取代例外狀況。 相反地，應謹慎套用，以依目標的方式處理例外狀況和錯誤管理原則的特定層面。
 
 ## <a name="partial-application-and-point-free-programming"></a>部分應用程式和無點程式設計
 
@@ -309,7 +309,7 @@ F # 支援部分的應用程式，因此，您可以使用不同的方式來以�
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>請勿在公用 Api 中使用部分應用程式和 currying
 
-只要稍微例外，在公用 Api 中使用部分應用程式可能會對取用者造成混淆。 `let`F # 程式碼中的系結值通常是**值**，而不是**函數值**。 將值與函式值混合在一起可能會導致在 exchange 中儲存少量的程式碼，以達相當多的認知負擔，特別是當結合運算子（例如） `>>` 來撰寫函數時。
+只要稍微例外，在公用 Api 中使用部分應用程式可能會對取用者造成混淆。 `let`F # 程式碼中的系結值通常是 **值**，而不是 **函數值**。 將值與函式值混合在一起可能會導致在 exchange 中儲存少量的程式碼，以達相當多的認知負擔，特別是當結合運算子（例如） `>>` 來撰寫函數時。
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>考慮無點程式設計的工具含意
 
@@ -317,7 +317,7 @@ F # 支援部分的應用程式，因此，您可以使用不同的方式來以�
 
 ```fsharp
 let func name age =
-    printfn "My name is %s and I am %d years old!" name age
+    printfn "My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -642,7 +642,7 @@ F # 對於物件和麵向物件的 (OO) 概念具有完整的支援。 雖然許
 **在許多情況下，請考慮使用這些功能：**
 
 * 點標記法 (`x.Length`) 
-* 實例成員
+* 執行個體成員
 * 隱含的函式
 * 靜態成員
 * 索引子標記法 (`arr.[x]`) 

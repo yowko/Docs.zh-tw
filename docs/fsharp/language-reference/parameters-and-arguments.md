@@ -2,12 +2,12 @@
 title: 參數和引數
 description: '深入瞭解 F # 語言支援以定義參數，以及將引數傳遞至函式、方法和屬性。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6564fd31105427683af8fc6280672e638737e9b5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3c391ca37a1cf3bd150316943e5b06efa532b317
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811518"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740285"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
@@ -137,7 +137,7 @@ open System
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
-        printfn "%s" message
+        printfn $"{message}"
 ```
 
 您也可以將新的物件指定為預設參數值。 例如， `Foo` 成員可以改為使用選擇性的 `CancellationToken` 作為輸入：
@@ -147,7 +147,7 @@ open System.Threading
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
-        printfn "%A" ct
+        printfn $"{ct}"
 ```
 
 提供做為引數的值 `DefaultParameterValue` 必須符合參數的類型。 例如，不允許下列動作：
@@ -168,12 +168,12 @@ type C =
 - `byref<'T>`如果您需要讀取和寫入指標，請使用。
 
 ```fsharp
-let example1 (x: inref<int>) = printfn "It's %d" x
+let example1 (x: inref<int>) = printfn $"It's %d{x}"
 
 let example2 (x: outref<int>) = x <- x + 1
 
 let example3 (x: byref<int>) =
-    printfn "It'd %d" x
+    printfn $"It's %d{x}"
     x <- x + 1
 
 let test () =

@@ -2,12 +2,12 @@
 title: 非同步程式設計
 description: '瞭解 F # 如何根據衍生自核心功能程式設計概念的語言層級程式設計模型，提供非同步全新支援。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811765"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739323"
 ---
 # <a name="async-programming-in-f"></a>F 中的非同步程式設計\#
 
@@ -33,7 +33,7 @@ ms.locfileid: "88811765"
 - "a"，表示「不」。
 - 「同步」，表示「同時」。
 
-當您將這兩個詞彙結合在一起時，您會看到「非同步」表示「不是同時」。 就這麼簡單！ 這項定義中沒有平行存取或平行處理原則的含意。 在實務上也是如此。
+當您將這兩個詞彙結合在一起時，您會看到「非同步」表示「不是同時」。 這樣就完成了！ 這項定義中沒有平行存取或平行處理原則的含意。 在實務上也是如此。
 
 在實際的情況下，F # 中的非同步計算排程為獨立于主要程式流程的執行。 此獨立執行不表示並行或平行處理，也不表示計算一律會在背景中發生。 事實上，根據計算的本質和計算執行所在的環境而定，非同步計算甚至可以同步執行。
 
@@ -57,7 +57,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -73,7 +73,7 @@ let main argv =
 
 另一個重要的程式列是的呼叫 `Async.RunSynchronously` 。 如果您想要實際執行 F # 非同步計算，這是啟動函式的其中一個非同步模組，您必須呼叫這些函式。
 
-這是 c #/Visual 基本程式設計風格的基本差異 `async` 。 在 F # 中，可以將非同步計算視為 **冷**工作。 它們必須明確地啟動，才能實際執行。 這有一些優點，因為它可讓您比使用 c # 或 Visual Basic 更輕鬆地結合和排序非同步工作。
+這是 c #/Visual 基本程式設計風格的基本差異 `async` 。 在 F # 中，可以將非同步計算視為 **冷** 工作。 它們必須明確地啟動，才能實際執行。 這有一些優點，因為它可讓您比使用 c # 或 Visual Basic 更輕鬆地結合和排序非同步工作。
 
 ## <a name="combine-asynchronous-computations"></a>合併非同步計算
 
@@ -87,7 +87,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -119,7 +119,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]

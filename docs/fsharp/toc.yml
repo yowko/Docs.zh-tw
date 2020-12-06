@@ -142,6 +142,8 @@
       href: language-reference/classes.md
     - name: 結構
       href: language-reference/structures.md
+    - name: 可為 Null 的實值型別
+      href: language-reference/nullable-value-types.md
     - name: 繼承
       href: language-reference/inheritance.md
     - name: 介面
