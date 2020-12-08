@@ -196,7 +196,7 @@ items:
           - name: 概觀
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: 參考資料
+          - name: 參考
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -328,7 +328,7 @@ items:
             items:
               - name: 總覽
                 href: ../core/project-sdk/overview.md
-              - name: 參考資料
+              - name: 參考
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: .NET 解除安裝工具
             href: ../core/additional-tools/uninstall-tool.md
+          - name: 適用於延伸模組作者的 .NET 安裝工具
+            href: ../core/additional-tools/vscode-dotnet-runtime.md
           - name: 建立自我簽署憑證
             href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: WCF Web Service Reference Provider
@@ -1645,6 +1647,8 @@ items:
                 displayName: binary serialization
               - name: BinaryFormatter 安全性指南
                 href: ../standard/serialization/binaryformatter-security-guide.md
+              - name: BinaryFormatter 事件來源
+                href: ../standard/serialization/binaryformatter-event-source.md
               - name: 序列化概念
                 href: ../standard/serialization/serialization-concepts.md
               - name: 基本序列化

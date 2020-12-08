@@ -6,12 +6,12 @@ metadata:
   description: 學習 C# 程式設計 - 適用於新手開發人員、剛接觸 C# 的開發人員，以及經驗豐富的 C# / .Net 開發人員
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: f31d24add06b958f6c5bc00baf4c09601616604e
-  ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+  ms.openlocfilehash: bc75503b565020fb9966fd756d87890263f63533
+  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/12/2020
-  ms.locfileid: "94556812"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96599443"
 landingContent:
 - title: 學習如何在 C# 中撰寫程式
   linkLists:
@@ -25,6 +25,8 @@ landingContent:
       url: tutorials/intro-to-csharp/index.md
     - text: 使用 Visual Studio 建立 C# 應用程式
       url: /visualstudio/get-started/csharp/tutorial-console
+    - text: Q&A 上的 C#
+      url: /answers/topics/dotnet-csharp.html
   - linkListType: video
     links:
     - text: 什麼是 C#?
