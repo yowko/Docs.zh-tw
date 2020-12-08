@@ -1,24 +1,27 @@
 ---
 title: 判斷安裝的 .NET Framework 版本
 description: 藉由查詢 Windows 登錄，使用程式碼、regedit.exe 或 PowerShell 來偵測電腦上所安裝的 .NET Framework 版本。
-ms.date: 02/03/2020
+ms.date: 12/04/2020
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - versions, determining for .NET Framework
-- .NET Framework, determining version
+- .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: b4c5b6911a4be4f9ac156b600646c649549f88f8
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: a219514fafdcb17db259e089afa8318dbab24811
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438133"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851825"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
 
 使用者可以在其電腦上 [安裝](../install/index.md) 及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 登錄包含電腦上所安裝 .NET Framework 版本的清單。
+
+> [!NOTE]
+> 本文適用于 .NET Framework。 若要判斷已安裝的 .NET Core 和 .NET 5 + Sdk 和執行時間，請參閱 [如何確認已安裝 .net](../../core/install/how-to-detect-installed-versions.md)。
 
 .NET Framework 是由兩個主要元件所組成，這些元件分別設定版本：
 
@@ -37,6 +40,21 @@ ms.locfileid: "96438133"
   PowerShell 2.0 模組。
 
 如需有關針對每個 .NET Framework 版本偵測已安裝之更新的詳細資訊，請參閱 [如何：判斷已安裝哪些 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。
+
+## <a name="determine-which-net-implementation-and-version-an-app-is-running-on"></a>判斷應用程式執行所在的 .NET 執行和版本
+
+您可以使用 <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> 屬性來查詢您的應用程式執行所在的 .net 執行和版本。 如果應用程式是在 .NET Framework 上執行，則輸出將類似于：
+
+```output
+.NET Framework 4.8.4250.0
+```
+
+相較之下，如果應用程式是在 .NET Core 或 .NET 5 + 上執行，則輸出將類似于：
+
+```output
+.NET Core 3.1.9
+.NET 5.0.0
+```
 
 ## <a name="detect-net-framework-45-and-later-versions"></a>偵測 .NET Framework 4.5 和更新版本
 
@@ -81,13 +99,13 @@ ms.locfileid: "96438133"
 
 ### <a name="use-registry-editor"></a>使用登錄編輯程式
 
-01. 從 [開始] 功能表上，選擇 [執行]，輸入 *regedit*，然後選取 [確定]。
+1. 從 [開始] 功能表上，選擇 [執行]，輸入 *regedit*，然後選取 [確定]。
 
     (您必須擁有系統管理認證才能執行 regedit。 ) 
 
-01. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE \\ SOFTWARE \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**。 如果 **完整** 的子機碼不存在，您就不會安裝 .NET Framework 4.5 或更新版本。
+1. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE \\ SOFTWARE \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**。 如果 **完整** 的子機碼不存在，您就不會安裝 .NET Framework 4.5 或更新版本。
 
-01. 檢查名為 **Release** 的 REG_DWORD 專案。 如果存在，表示您已安裝 .NET Framework 4.5 或更新版本。 其值會對應至特定版本的 .NET Framework。 例如，在下圖中， **發行** 專案的值是528040，也就是 .NET Framework 4.8 的發行金鑰。
+1. 檢查名為 **Release** 的 REG_DWORD 專案。 如果存在，表示您已安裝 .NET Framework 4.5 或更新版本。 其值會對應至特定版本的 .NET Framework。 例如，在下圖中， **發行** 專案的值是528040，也就是 .NET Framework 4.8 的發行金鑰。
 
    ![.NET Framework 4.5 的登錄專案](./media/clr-installdir.png )
 

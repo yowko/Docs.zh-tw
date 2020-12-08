@@ -1,13 +1,13 @@
 ---
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
-ms.date: 02/14/2020
-ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/07/2020
+ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634366"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851690"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -194,3 +194,19 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   ```dotnetcli
   dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```
+
+- 建立解決方案、主控台應用程式和兩個類別庫。 將專案加入至方案，並使用的 `--solution-folder` 選項，將 `dotnet sln` 類別庫組織成方案資料夾。
+
+  ```dotnetcli
+  dotnet new sln -n mysolution
+  dotnet new console -o myapp
+  dotnet new classlib -o mylib1
+  dotnet new classlib -o mylib2
+  dotnet sln mysolution.sln add myapp\myapp.csproj
+  dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
+  dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+  ```
+
+  下列螢幕擷取畫面顯示 Visual Studio 2019 **方案總管** 中的結果：
+
+  :::image type="content" source="media/dotnet-sln/dotnet-sln-solution-folder.png" alt-text="方案總管顯示分組至方案資料夾的類別庫專案。":::

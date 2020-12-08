@@ -1,13 +1,13 @@
 ---
 title: 比較 .NET 5 + 上的字串時的行為變更
 description: 瞭解 Windows 上 .NET 5 和更新版本中的字串比較行為變更。
-ms.date: 11/04/2020
-ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/07/2020
+ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734227"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851747"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>比較 .NET 5 + 上的字串時的行為變更
 
@@ -43,16 +43,29 @@ Console.WriteLine(idx);
 
 ### <a name="enable-code-analyzers"></a>啟用程式碼分析器
 
-程式[代碼分析器](../../fundamentals/code-analysis/overview.md)可以偵測到可能有錯誤的呼叫網站。 為了防止任何令人驚訝的行為，建議您 [將 __CodeAnalysis 將 microsoft.codeanalysis.fxcopanalyzers__ NuGet 套件](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) 安裝到您的專案中。 此封裝包含程式碼分析規則 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) 和 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)，可協助您旗標可能會在可能預期的序數比較子中使用語言比較子的程式碼。
+程式[代碼分析器](../../fundamentals/code-analysis/overview.md)可以偵測到可能有錯誤的呼叫網站。 為了防止任何令人驚訝的行為，建議您在專案中啟用 .NET 編譯器平臺 (Roslyn) 分析器。 當有可能想要使用序數比較子時，分析器會協助旗標可能會不慎使用語言比較子的程式碼。 下列規則應有助於將這些問題加上旗標：
 
-例如：
+- [CA1307:指定 StringComparison 以提升明確性](../../fundamentals/code-analysis/quality-rules/ca1307.md)
+- [CA1309:使用循序的 StringComparison](../../fundamentals/code-analysis/quality-rules/ca1309.md)
+- [CA1310：指定 StringComparison 以提升正確性](../../fundamentals/code-analysis/quality-rules/ca1310.md)
+
+預設不會啟用這些特定規則。 若要啟用它們並將任何違規顯示為組建錯誤，請在您的專案檔中設定下列屬性：
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <WarningsAsErrors>$(WarningsAsErrors);CA1307;CA1309;CA1310</WarningsAsErrors>
+</PropertyGroup>
+```
+
+下列程式碼片段顯示的程式碼範例會產生相關的程式碼分析器警告或錯誤。
 
 ```cs
 //
 // Potentially incorrect code - answer might vary based on locale.
 //
 string s = GetString();
-// Produces analyzer warning CA1307.
+// Produces analyzer warning CA1310 for string; CA1307 matches on char ','
 int idx = s.IndexOf(",");
 Console.WriteLine(idx);
 
@@ -89,17 +102,12 @@ List<string> list = GetListOfStrings();
 list.Sort(StringComparer.Ordinal);
 ```
 
-如需這些程式碼分析器規則的詳細資訊，包括何時可能適合在您自己的程式碼基底中隱藏這些規則，請參閱下列文章：
-
-* [CA1307:指定 StringComparison 以提升明確性](../../fundamentals/code-analysis/quality-rules/ca1307.md)
-* [CA1309:使用循序的 StringComparison](../../fundamentals/code-analysis/quality-rules/ca1309.md)
-
 ### <a name="revert-back-to-nls-behaviors"></a>還原回 NLS 行為
 
 若要在 Windows 上執行時，將 .NET 5 應用程式還原回較舊的 NLS 行為，請依照 [.Net 全球化和 ICU](../globalization-localization/globalization-icu.md)中的步驟執行。 您必須在應用層級設定此整個應用程式的相容性參數。 個別程式庫無法加入宣告或退出此行為。
 
 > [!TIP]
-> 強烈建議您啟用 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) 和 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) 程式碼分析規則，以協助改善程式碼的防護，並探索任何現有的潛在錯誤。 如需詳細資訊，請參閱 [啟用程式碼分析器](#enable-code-analyzers)。
+> 強烈建議您啟用 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md)、 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)和 [CA1310](../../fundamentals/code-analysis/quality-rules/ca1310.md) 程式碼分析規則，以協助改善程式碼的防護，並探索任何現有的潛在錯誤。 如需詳細資訊，請參閱 [啟用程式碼分析器](#enable-code-analyzers)。
 
 ## <a name="affected-apis"></a>受影響的 API
 
@@ -196,7 +204,7 @@ Console.WriteLine("re\u0301sume\u0301".IndexOf("E", StringComparison.OrdinalIgno
 
 定序專案相當於讀取器想要做為單一字元或字元叢集的內容。 它在概念上類似于 [語素簇](character-encoding-introduction.md#grapheme-clusters) 叢集，但包含較大的傘。
 
-在語言比較子下，不需要完全相符。 定序專案會根據其語義意義而比較。 例如，語言比較子會 tsreat 子字串 `"\u00E9"` 並 `"e\u0301"` 相等，因為它們都是以語義表示 "a 小寫 e with a 銳角修飾詞 這可讓 `IndexOf` 方法 `"e\u0301"` 比對包含語義相等子字串的大型字串中的子字串 `"\u00E9"` ，如下列程式碼範例所示。
+在語言比較子下，不需要完全相符。 定序專案會根據其語義意義而比較。 例如，語言比較子會將子字串 `"\u00E9"` 視為 `"e\u0301"` 相等，因為兩者都是以語義表示 "a 小寫 e with a 銳角修飾詞 這可讓 `IndexOf` 方法 `"e\u0301"` 比對包含語義相等子字串的大型字串中的子字串 `"\u00E9"` ，如下列程式碼範例所示。
 
 ```cs
 Console.WriteLine("r\u00E9sum\u00E9".IndexOf("e")); // prints '-1' (not found)

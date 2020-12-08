@@ -3,20 +3,20 @@ title: Azure 開發程序
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | Azure 開發程序
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.date: 12/01/2020
+ms.openlocfilehash: 2706a4091565e6f3cb795acf031a238ae55a1068
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91169033"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851623"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
 
 > _「借助雲端，個人和小型企業彈指之間就能立即設定企業級服務。」_  
 > _- Roy Stephan_
 
-## <a name="vision"></a>視覺
+## <a name="vision"></a>願景
 
 > *以您喜歡的方式開發設計良好的 ASP.NET Core 應用程式，使用 Visual Studio 或 dotnet CLI 和 Visual Studio Code 或您選擇的編輯器。*
 
@@ -26,13 +26,13 @@ ms.locfileid: "91169033"
 
 不論您偏好使用完整且強大的 IDE，還是輕量型的敏捷式編輯器，Microsoft 都能支援您開發 ASP.NET Core 應用程式。
 
-**Visual Studio 2019。** Visual Studio 2019 是針對 ASP.NET Core 開發應用程式的最佳 IDE。 它提供了許多功能，可提升開發人員的生產力。 您可以使用它來開發應用程式，然後分析其效能和其他特性。 整合式偵錯工具可讓您在程式碼執行時，暫停程式碼執行，並在程式碼前後逐步執行。 內建的測試執行器可讓您組織您的測試及其結果，甚至可以在撰寫程式碼時執行即時單元測試。 使用 Live Share 時，您可以與其他開發人員即時共同作業，並透過網路順暢地共用您的程式碼會話。 當您準備好時，Visual Studio 包括將應用程式發佈至 Azure 所需的所有專案，或您可以裝載該應用程式的任何位置。
+**Visual Studio 2019。** Visual Studio 2019 是針對 ASP.NET Core 開發應用程式的最佳 IDE。 它提供了許多功能，可提升開發人員的生產力。 您可以使用它來開發應用程式，然後分析其效能和其他特性。 整合式偵錯工具可讓您在程式碼執行時，暫停程式碼執行，並在程式碼前後逐步執行。 內建的測試執行器可讓您組織您的測試及其結果，甚至可以在撰寫程式碼時執行即時單元測試。 使用 Live Share，您可以與其他開發人員即時共同作業，並透過網路順暢地共用您的程式碼會話。 當您準備好時，Visual Studio 包括將應用程式發佈至 Azure 所需的所有專案，或您可以裝載該應用程式的任何位置。
 
 [下載 Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Visual Studio Code 和 dotnet CLI** (適用於 Mac、Linux 和 Windows 的跨平台工具)。 如果您偏好使用支援任何開發語言之輕量型且跨平台的編輯器，您可以使用 Microsoft Visual Studio Code 和 dotnet CLI。 這些產品提供簡單但強大的體驗，可簡化開發人員工作流程。 此外，Visual Studio Code 支援 C\# 及 Web 程式開發的延伸模組，並在編輯器中提供 Intellisense 和捷徑工作。
+**Visual Studio Code 和 DOTNET CLI** (適用于 Mac、Linux 和 Windows) 的跨平臺工具。 如果您偏好使用支援任何開發語言之輕量型且跨平台的編輯器，您可以使用 Microsoft Visual Studio Code 和 dotnet CLI。 這些產品提供簡單但強大的體驗，可簡化開發人員工作流程。 此外，Visual Studio Code 支援 C\# 及 Web 程式開發的延伸模組，並在編輯器中提供 Intellisense 和捷徑工作。
 
-[下載 .NET Core SDK](https://dotnet.microsoft.com/download)
+[下載 .NET SDK](https://dotnet.microsoft.com/download)
 
 [下載 Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -56,17 +56,17 @@ ms.locfileid: "91169033"
 
 **圖10-1。** 在 Azure 入口網站建立新的 Azure App Service Web 應用程式。
 
-每當新的程式碼認可到專案的原始檔控制存放庫時，CI 的建置程序將會執行自動化建置。 這可提供您程式碼建置 (以及在理想的情況下，通過自動化測試) 且可能部署的立即回應。 這個 CI 組建將會產生 Web 部署套件成品，並發佈它以供您的 CD 程序取用。
+每當新的程式碼認可到專案的原始檔控制存放庫時，CI 的建置程序將會執行自動化建置。 此程式可讓您立即提出程式碼建立 (的意見反應，而且在理想的情況下，會將自動化測試傳遞) ，而且可能會進行部署。 這個 CI 組建將會產生 Web 部署套件成品，並發佈它以供您的 CD 程序取用。
 
 [定義 CI 組建流程](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 請務必啟用持續整合，以便每當您小組中有人認可新的程式碼時，系統便將建置排入佇列中。 測試組建，並確認它產生 Web 部署套件作為其中一個成品。
 
-建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」，這會部署到您的 Azure App Service。
+建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這個步驟，您可以建立並設定將部署至您 Azure App Service 的 *版本*。
 
 [部署 Azure web 應用程式](/azure/devops/pipelines/targets/webapp)
 
-CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可到原始檔控制中以便部署。
+一旦設定您的 CI/CD 管線之後，您就可以輕鬆地更新您的 web 應用程式，並將其認可至原始檔控制，以部署它們。
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Azure 裝載之 ASP.NET Core 應用程式的開發工作流程
 
@@ -78,7 +78,7 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>步驟 1： 本機開發環境內部迴圈
 
-開發您的 ASP.NET Core 應用程式以便部署至 Azure，與用其他方式開發應用程式並無不同。 使用您慣用的本機開發環境，不論是 Visual Studio 2017 或 dotnet CLI 和 Visual Studio Code 或您偏好的編輯器。 您可以撰寫程式碼、執行變更並加以偵錯、執行自動化測試，以及本機認可至原始檔控制，直到您準備好要將變更推送到共用原始檔控制存放庫。
+開發您的 ASP.NET Core 應用程式以便部署至 Azure，與用其他方式開發應用程式並無不同。 使用您熟悉的本機開發環境，不論是 Visual Studio 2019 或 dotnet CLI 以及 Visual Studio Code 或您偏好的編輯器。 您可以撰寫程式碼、執行變更並加以偵錯、執行自動化測試，以及本機認可至原始檔控制，直到您準備好要將變更推送到共用原始檔控制存放庫。
 
 #### <a name="step-2-application-code-repository"></a>步驟 2： 應用程式程式碼存放庫
 
@@ -90,7 +90,7 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 #### <a name="step-4-build-server-continuous-delivery"></a>步驟 4： 組建伺服器：持續傳遞
 
-建置成功之後，CD 程序會取得所產生的組建成品。 這會包括 Web 部署套件。 組建伺服器會將此套件部署至 Azure App Service，以新建的服務來取代任何現有的服務。 此步驟通常以預備環境為目標，但某些應用程式會透過 CD 程序直接部署至生產環境。
+建置成功之後，CD 程序會取得所產生的組建成品。 此程式會包含 web deploy 套件。 組建伺服器會將此套件部署至 Azure App Service，以新建的服務來取代任何現有的服務。 此步驟通常以預備環境為目標，但某些應用程式會透過 CD 程序直接部署至生產環境。
 
 #### <a name="step-5-azure-app-service-web-app"></a>步驟 5。 Azure App Service Web 應用程式
 

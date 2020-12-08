@@ -5,18 +5,20 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: af2ebb74786f0ae884ffee4636765cae43fcb23f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "96586224"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851786"
 ---
 # <a name="configuration-options-for-code-analysis"></a>程式碼分析的設定選項
 
 程式碼分析規則有各種不同的設定選項。 這些選項會在 [分析器設定檔](configuration-files.md) 中使用語法指定為索引鍵/值組 `<option key> = <option value>` 。
 
-您將設定的最常見選項是規則的嚴重性。 您可以設定所有分析器規則的嚴重性層級，包括程式 [代碼品質規則](quality-rules/index.md) 和程式 [代碼樣式規則](style-rules/index.md)。
+您將設定的最常見選項是 [規則的嚴重性](#severity-level)。 您可以設定所有分析器規則的嚴重性層級，包括程式 [代碼品質規則](quality-rules/index.md) 和程式 [代碼樣式規則](style-rules/index.md)。 例如，若要啟用規則做為警告，您可以將下列索引鍵/值組新增至檔案 EditorConfig 。
+
+`dotnet_diagnostic.<rule ID>.severity = warning`
 
 您也可以設定其他選項來自訂規則行為：
 
@@ -58,7 +60,7 @@ generated_code = true
 
 下表顯示您可以為所有分析器規則（包括程式 [代碼品質](quality-rules/index.md) 和程式 [代碼樣式](style-rules/index.md) 規則）設定的不同規則嚴重性。
 
-| 嚴重性 | 組建階段行為 |
+| Severity | 組建階段行為 |
 |-|-|
 | `error` | 違規會顯示為組建 *錯誤* ，導致組建失敗。|
 | `warning` | 違規會顯示為組建 *警告* ，但不會造成組建失敗 (除非您有選項設定為 [錯誤時將警告視為錯誤]) 。 |
@@ -70,7 +72,7 @@ generated_code = true
 > [!TIP]
 > 如需有關 Visual Studio 中的規則嚴重性如何呈現的詳細資訊，請參閱 [嚴重性層級](/visualstudio/ide/editorconfig-language-conventions#severity-levels)。
 
-#### <a name="scope"></a>範圍
+#### <a name="scope"></a>影響範圍
 
 若要設定單一規則的規則嚴重性，請使用下列語法。
 

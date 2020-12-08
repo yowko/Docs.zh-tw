@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 2fc12c8c398b1a74d623e53884df666f4d4b85f1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687438"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851610"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>如何檢查是否已安裝 .NET
 
@@ -139,7 +139,7 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>檢查安裝資料夾
 
-您可以安裝 .NET，但無法將其新增至 `PATH` 您的作業系統或使用者設定檔的變數。 執行上述各節的命令可能無法運作。 或者，您可以檢查 .NET 安裝資料夾是否存在。
+您可以安裝 .NET，但無法將其新增至 `PATH` 您的作業系統或使用者設定檔的變數。 在此情況下，先前章節的命令可能無法運作。 或者，您可以檢查 .NET 安裝資料夾是否存在。
 
 當您從安裝程式或腳本安裝 .NET 時，它會安裝到標準資料夾中。 您用來安裝 .NET 的安裝程式或腳本大部分的時候，都能讓您選擇安裝到不同的資料夾。 如果您選擇安裝到不同的資料夾，請調整資料夾路徑的開頭。
 
@@ -182,7 +182,7 @@ _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 
-## <a name="more-information"></a>詳細資訊
+## <a name="more-information"></a>更多資訊
 
 您可以使用命令來查看 SDK 版本和執行階段版本 `dotnet --info` 。 您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼 (RID) 。
 
@@ -191,3 +191,7 @@ _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 - [安裝適用于 Windows 的 .Net 執行時間和 SDK](windows.md)。
 - [安裝適用于 macOS 的 .Net 執行時間和 SDK](macos.md)。
 - [安裝 .Net 執行時間和適用于 Linux 的 SDK](linux.md)。
+
+## <a name="see-also"></a>另請參閱
+
+- [判斷安裝的 .NET Framework 版本](../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)

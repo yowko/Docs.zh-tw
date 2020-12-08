@@ -4,12 +4,12 @@ author: IEvangelist
 description: 了解如何使用由 Microsoft.Extensions.Logging NuGet 套件提供的記錄架構。
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: 5a4d333368082389c4dfc134bb6a9a2e618d47e9
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 73c16c80e7e000533b880e908b38109d2b1e88fd
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982317"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851726"
 ---
 # <a name="logging-in-net"></a>.NET 中的記錄
 
@@ -162,7 +162,7 @@ namespace Example
         private readonly ILogger _logger;
 
         public DefaultService(ILoggerFactory loggerFactory) =>
-            _logger = logger.CreateLogger("CustomCategory");
+            _logger = loggerFactory.CreateLogger("CustomCategory");
 
         // ...
     }
@@ -177,7 +177,7 @@ namespace Example
 
 下表列出這些 <xref:Microsoft.Extensions.Logging.LogLevel> 值、便利的 `Log{LogLevel}` 擴充方法，以及建議的使用方式：
 
-| LogLevel | 值 | 方法 | 說明 |
+| LogLevel | 值 | 方法 | 描述 |
 |--|--|--|--|
 | [追蹤](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | 包含最詳細的訊息。 這些訊息可能包含敏感性應用程式資料。 這些訊息預設為停用，且 **不** 應在生產環境中啟用 *。 |
 | [偵錯](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | 用於偵錯工具和開發。 在生產環境中，請謹慎使用，因為這是大量的磁片區。 |
@@ -185,7 +185,7 @@ namespace Example
 | [警告](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | 針對異常或非預期的事件。 通常會包含不會導致應用程式失敗的錯誤或狀況。 |
 | [錯誤](xref:Microsoft.Extensions.Logging.LogLevel) | 4 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogError%2A> | 發生無法處理的錯誤和例外狀況。 這些訊息表示目前的作業或要求失敗，而不是整個應用程式的失敗。 |
 | [嚴重](xref:Microsoft.Extensions.Logging.LogLevel) | 5 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical%2A> | 發生需要立即注意的失敗。 範例：資料遺失情況、磁碟空間不足。 |
-| [None](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | 指定不應寫入任何訊息。 |
+| [無](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | 指定不應寫入任何訊息。 |
 
 在上表中， `LogLevel` 是從最低到最高的嚴重性列出。
 
@@ -222,7 +222,7 @@ public async Task<T> GetAsync<T>(string id)
 
 在上述程式碼中，第一個 `Log{LogLevel}` 參數 `AppLogEvents.Read` 是 [記錄事件識別碼](#log-event-id)。 第二個參數是訊息範本，其中的預留位置會置入其餘方法參數所提供的引數值。 方法參數將在本文稍後的「 [訊息範本](#log-message-template) 」一節中說明。
 
-設定適當的記錄層級，並呼叫正確的 `Log{LogLevel}` 方法，以控制寫入至特定儲存媒體的記錄輸出量。 例如：
+設定適當的記錄層級，並呼叫正確的 `Log{LogLevel}` 方法，以控制寫入至特定儲存媒體的記錄輸出量。 例如︰
 
 - 在生產環境中：
   - 在 `Trace` 或 `Information` 層級進行記錄會產生大量的詳細記錄訊息。 若要控制成本，而不超過資料儲存限制、記錄 `Trace` 和 `Information` 層級訊息至高容量、低成本的資料存放區。 考慮限制 `Trace` 和 `Information` 特定類別。
