@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: c38649a9e3b3f75ec35fb8711324302a682b504e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94982390"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851330"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -32,7 +32,7 @@ ms.locfileid: "94982390"
 使用類型模式執行模式比對時，`is` 會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 它是 `is` 陳述式的直覺性延伸，允許精簡的類型評估和轉換。 `is` 類型模式的一般格式為：
 
 ```csharp
-   expr is type varname
+expr is type varname
 ```
 
 其中 *expr* 是評估為某個型別實例的運算式， *type* 是要轉換 *expr* 結果的型別名稱，而 *varname* 則是當測試為時，會將 *expr* 的結果轉換成的物件 `is` `true` 。
@@ -130,5 +130,5 @@ ms.locfileid: "94982390"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)
-- [C # 關鍵字](index.md)
+- [C# 關鍵字](index.md)
 - [型別測試和轉換運算子](../operators/type-testing-and-cast.md)

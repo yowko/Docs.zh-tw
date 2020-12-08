@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/01/2020
+ms.openlocfilehash: 2a9e55250018352c8019d30a4d615ec39e619e31
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608357"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851226"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
@@ -25,7 +25,7 @@ ASP.NET Core 已針對現代化 Web 應用程式和雲端式裝載案例最佳�
 
 ## <a name="reference-application-eshoponweb"></a>參考應用程式：eShopOnWeb
 
-本指南包含參考應用程式 _eShopOnWeb_ 來示範一些原則與建議。 該應用程式是一個簡單的線上商店，支援瀏覽上衣、咖啡馬克杯以及其他行銷商品目錄。 參考應用程式刻意簡單化，以便於理解。
+本指南包含參考應用程式 _eShopOnWeb_ 來示範一些原則與建議。 此應用程式是簡單的線上商店，可支援透過襯衫、咖啡馬克杯和其他行銷專案的流覽目錄。 參考應用程式刻意簡單化，以便於理解。
 
 ![eShopOnWeb](./media/image2-1.png)
 
@@ -42,7 +42,7 @@ ASP.NET Core 十分適合雲端 (公用、私人、任何雲端)，因為記憶�
 
 ## <a name="cross-platform"></a>跨平台
 
-ASP.NET Core 可跨平台，能在 Linux、MacOS 及 Windows 上執行。 這會針對使用 ASP.NET Core 建立的應用程式，開啟許多新選項。 Linux 及 Windows 的 Docker 容器都可以裝載 ASP.NET Core 應用程式，使其能夠利用[容器和微服務](../microservices/index.md)的優勢。
+ASP.NET Core 可跨平台，能在 Linux、MacOS 及 Windows 上執行。 這項功能會針對使用 ASP.NET Core 建立的應用程式，開啟許多新選項。 Linux 及 Windows 的 Docker 容器都可以裝載 ASP.NET Core 應用程式，使其能夠利用[容器和微服務](../microservices/index.md)的優勢。
 
 ## <a name="modular-and-loosely-coupled"></a>模組化且鬆散結合
 

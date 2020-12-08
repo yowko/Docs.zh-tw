@@ -1,7 +1,7 @@
 ---
 title: 如何允許某些種類的無效 JSON 搭配 System.Text.Json
 description: 瞭解如何在 .NET 中序列化和還原序列化時，允許批註、尾端逗號和引號數位。
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 60cbb98bb65ee5c1ffdd3043e42a04004530a115
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 1b6402952c4765290d22b530834ed831a68bd2fe
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439898"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851239"
 ---
 # <a name="how-to-allow-some-kinds-of-invalid-json-with-no-locsystemtextjson"></a>如何允許某些種類的無效 JSON 搭配 System.Text.Json
 
@@ -36,6 +36,8 @@ ms.locfileid: "96439898"
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25, // Fahrenheit 77
   "Summary": "Hot", /* Zharko */
+  // Comments on
+  /* separate lines */
 }
 ```
 
@@ -45,7 +47,7 @@ ms.locfileid: "96439898"
 
 某些序列化程式會將數位編碼為 JSON 字串， (以引號括住) 。
 
-例如：
+例如︰
 
 ```json
 {
@@ -77,12 +79,12 @@ ms.locfileid: "96439898"
 ## <a name="see-also"></a>另請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [具現化 JsonSerializerOptions](system-text-json-configure-options.md)
-* [啟用不區分大小寫的比對](system-text-json-character-casing.md)
-* [自訂屬性名稱和值](system-text-json-customize-properties.md)
-* [略過屬性](system-text-json-ignore-properties.md)
+* [Instantiate JsonSerializerOptions](system-text-json-configure-options.md)
+* [啟用不區分大小寫比對](system-text-json-character-casing.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
+* [忽略屬性](system-text-json-ignore-properties.md)
 * [處理溢位 JSON](system-text-json-handle-overflow.md)
 * [保留迴圈參考](system-text-json-preserve-references.md)
-* [不可變類型和非公用存取子](system-text-json-immutability.md)
+* [不可變型別及非公用存取子](system-text-json-immutability.md)
 * [多型序列化](system-text-json-polymorphism.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)

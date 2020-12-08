@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8c7d46b9271e33ab7ce3f989fae95bd57394ccd
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96586324"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851525"
 ---
 # <a name="design-rules"></a>設計規則
 
@@ -75,3 +75,4 @@ ms.locfileid: "96586324"
 | [CA1068：CancellationToken 參數必須位於最後](ca1068.md) | 方法的 CancellationToken 參數不是最後一個參數。 |
 | [CA1069：列舉不能有重複的值](ca1069.md) | 列舉具有多個明確指派相同常數值的成員。 |
 | [CA1070：請勿將事件欄位宣告為 virtual](ca1070.md) | [類似欄位的事件](../../../csharp/event-pattern.md#defining-and-raising-field-like-events)已宣告為 virtual。 |
+| [CA1071：覆寫基底。執行 IEquatable 時等於](ca1071.md) | 衍生型別 <xref:System.IEquatable%601> 會執行，但不會覆寫基類 <xref:System.IEquatable%601.Equals%2A> 方法。 |

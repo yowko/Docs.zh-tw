@@ -4,12 +4,12 @@ description: 示範在 RHEL 上安裝 .NET SDK 和 .NET 執行時間的各種方
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 931cad51ff8e35ff16b67ff9b795feb36010a66b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0b6138185bfd3e2f50c1b31e82779165715a5b6e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031753"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851636"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>在 RHEL 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -29,7 +29,7 @@ RHEL 支援 .NET。 本文說明如何在 RHEL 上安裝 .NET。
 - ❌表示該 rhel 版本不支援 rhel 或 .net 的版本。
 - 當版本的 RHEL 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| RHEL                     | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
+| RHEL                     | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [8](#rhel-8-)        | ✔️2。1        | ✔️3。1        | ✔️5。0 |
 | ✔️ [7](#rhel-7--net-50) | ✔️2。1        | ✔️ [3.1](#rhel-7--net-core-31)        | ✔️ [5.0](#rhel-7--net-50) |
@@ -50,28 +50,51 @@ RHEL 支援 .NET。 本文說明如何在 RHEL 上安裝 .NET。
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-> [!TIP]
-> .NET 5.0 尚未在應用程式資料流程存放庫中提供，但 .NET Core 3.1 為。 若要安裝 .NET Core 3.1，請使用 `dnf install` 命令搭配適當的封裝，例如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1` 。 下列指示適用于 .NET 5.0。
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-```
+.NET 包含在 RHEL 8 的應用程式資料流程存放庫中。
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5。0
 
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+下列命令會安裝 `scl-utils` 套件：
 
 ```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+sudo yum install scl-utils
 ```
 
-[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+### <a name="install-the-sdk"></a>安裝 SDK
+
+.NET SDK 可讓您使用 .NET 開發應用程式。 如果您安裝 .NET SDK，就不需要安裝對應的執行時間。 若要安裝 .NET SDK，請執行下列命令：
+
+```bash
+subscription-manager repos --enable=rhel-7-server-dotnet-rpms
+yum install rh-dotnet50 -y
+scl enable rh-dotnet50 bash
+```
+
+Red Hat 不建議永久啟用 `rh-dotnet50` ，因為它可能會影響其他程式。 如果您想要 `rh-dotnet` 永久啟用，請將下列這一行新增至 _~/.bashrc_ 檔案。
+
+```bash
+source scl_source enable rh-dotnet50
+```
+
+### <a name="install-the-runtime"></a>安裝執行階段
+
+.NET 執行時間可讓您執行以 .NET 建立的應用程式，而這些應用程式不包含執行時間。 下列命令會安裝 ASP.NET Core 執行時間，這是 .NET Core 最相容的執行時間。 在您的終端機中執行下列命令。
+
+```bash
+subscription-manager repos --enable=rhel-7-server-dotnet-rpms
+yum install rh-dotnet50-aspnetcore-runtime-5.0 -y
+scl enable rh-dotnet50 bash
+```
+
+Red Hat 不建議永久啟用 `rh-dotnet50` ，因為它可能會影響其他程式。 如果您想要 `rh-dotnet50` 永久啟用，請將下列這一行新增至 _~/.bashrc_ 檔案。
+
+```bash
+source scl_source enable rh-dotnet50
+```
+
+除了 ASP.NET Core 執行時間之外，您還可以安裝不包含 ASP.NET Core 支援的 .NET 執行時間： `rh-dotnet50-aspnetcore-runtime-5.0` 在上述命令中將取代為 `rh-dotnet50-dotnet-runtime-5.0` 。
 
 ## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3。1
 
@@ -106,13 +129,13 @@ source scl_source enable rh-dotnet31
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
-scl enable rh-dotnet31-aspnetcore-runtime-3.1 bash
+scl enable rh-dotnet31 bash
 ```
 
-Red Hat 不建議永久啟用 `rh-dotnet31-aspnetcore-runtime-3.1` ，因為它可能會影響其他程式。 例如， `rh-dotnet31-aspnetcore-runtime-3.1` 包含 `libcurl` 與基底 RHEL 版本不同的版本。 這可能會導致不預期不同版本的程式發生問題 `libcurl` 。 如果您想要 `rh-dotnet31-aspnetcore-runtime-3.1` 永久啟用，請將下列這一行新增至 _~/.bashrc_ 檔案。
+Red Hat 不建議永久啟用 `rh-dotnet31` ，因為它可能會影響其他程式。 例如， `rh-dotnet31` 包含 `libcurl` 與基底 RHEL 版本不同的版本。 這可能會導致不預期不同版本的程式發生問題 `libcurl` 。 如果您想要 `rh-dotnet31` 永久啟用，請將下列這一行新增至 _~/.bashrc_ 檔案。
 
 ```bash
-source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
+source scl_source enable rh-dotnet31
 ```
 
 除了 ASP.NET Core 執行時間之外，您還可以安裝不包含 ASP.NET Core 支援的 .NET Core 執行時間： `rh-dotnet31-aspnetcore-runtime-3.1` 在上述命令中將取代為 `rh-dotnet31-dotnet-runtime-3.1` 。

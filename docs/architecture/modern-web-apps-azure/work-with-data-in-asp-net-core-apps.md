@@ -3,16 +3,16 @@ title: 使用 ASP.NET Core 應用程式中的資料
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 使用 ASP.NET Core 應用程式中的資料
 author: ardalis
 ms.author: wiwagn
-ms.date: 08/12/2020
+ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: cfc91bb811697176ef5d9ecd6b412bd36af3af04
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 9d85d700ecb8d6cbe7afd8d3c724f499ee5fed71
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438061"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851252"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -121,7 +121,7 @@ EF Core 支援擷取和儲存的同步與非同步的方法。 若是 Web 應用
 
 ### <a name="fetching-related-data"></a>擷取相關資料
 
-當 EF Core 擷取實體時，它會填入與資料庫中的這個實體一起儲存的所有屬性。 EF Core 不會填入相關實體清單這類導覽屬性，且可能會將其值設為 Null。 這可確保 EF Core 不會擷取超過實際所需的資料，這對 Web 應用程式來說尤其重要，因為這類應用程式必須快速處理要求，並以有效率的方式傳回回應。 若要使用「積極式載入」__ 來包含實體的關聯性，您可以在查詢中使用 Include 擴充方法以指定屬性，如下所示：
+當 EF Core 擷取實體時，它會填入與資料庫中的這個實體一起儲存的所有屬性。 EF Core 不會填入相關實體清單這類導覽屬性，且可能會將其值設為 Null。 此程式可確保 EF Core 不會提取比所需更多的資料，這對 web 應用程式而言特別重要，因為這種應用程式必須快速處理要求，並以有效率的方式傳迴響應。 若要使用「積極式載入」來包含實體的關聯性，您可以在查詢中使用 Include 擴充方法以指定屬性，如下所示：
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -148,15 +148,15 @@ query = specification.IncludeStrings.Aggregate(query,
             (current, include) => current.Include(include));
 ```
 
-另一個用來載入相關資料的選項是使用「明確式載入」__。 明確式載入可讓您將其他資料載入已擷取的實體中。 由於這牽涉到資料庫的個別要求，因此不建議用於 Web 應用程式，而應該將每項要求的資料庫往返次數降至最低。
+另一個用來載入相關資料的選項是使用「明確式載入」。 明確式載入可讓您將其他資料載入已擷取的實體中。 因為此方法牽涉到對資料庫的個別要求，所以不建議 web 應用程式使用，這應該會將每個要求的資料庫往返次數降到最低。
 
-「消極式載入」__ 功能會自動載入應用程式參考的相關資料。 EF Core 已在 2.1 版中新增對消極式載入的支援。 消極式載入預設不會啟用，而且需要安裝 `Microsoft.EntityFrameworkCore.Proxies`。 如同明確式載入，通常應該為 Web 應用程式停用消極式載入，因為其使用會導致在每個 Web 要求中發出額外的資料庫查詢。 不幸的是，當延遲很小且用於測試的資料集通常很小時，消極式載入所產生的額外負荷往往在開發期間不易察覺。 不過，在生產環境中，由於使用者、資料和延遲更多，額外的資料庫要求通常會導致 Web 應用程式大量使用消極式載入而效能不佳。
+「消極式載入」功能會自動載入應用程式參考的相關資料。 EF Core 已在 2.1 版中新增對消極式載入的支援。 消極式載入預設不會啟用，而且需要安裝 `Microsoft.EntityFrameworkCore.Proxies`。 如同明確式載入，通常應該為 Web 應用程式停用消極式載入，因為其使用會導致在每個 Web 要求中發出額外的資料庫查詢。 可惜的是，消極式載入所產生的額外負荷通常會在開發期間未察覺，而延遲很小，而且通常用於測試的資料集很小。 不過，在生產環境中，由於使用者、資料和延遲更多，額外的資料庫要求通常會導致 Web 應用程式大量使用消極式載入而效能不佳。
 
 [避免在 Web 應用程式中消極載入實體](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
 ### <a name="encapsulating-data"></a>封裝資料
 
-EF Core 支援多種功能，可讓您的模型正確封裝其狀態。 領域模型中的常見問題之一便是他們會將集合導覽屬性作為可公開存取的清單類型公開。 這可讓任何共同作業者操縱這些集合類型的內容，使其略過與集合相關的重要商務規則，並可能讓物件處於無效狀態。 其解決方案便是公開相關集合的唯讀存取，並明確提供定義用戶端可操縱他們之方式的方法，如下列範例所示：
+EF Core 支援多種功能，可讓您的模型正確封裝其狀態。 領域模型中的常見問題之一便是他們會將集合導覽屬性作為可公開存取的清單類型公開。 這個問題可讓任何共同作業者操作這些集合類型的內容，這可能會略過與集合相關的重要商務規則，可能會讓物件處於無效狀態。 此問題的解決方法是公開相關集合的唯讀存取，並明確提供方法來定義用戶端可以操作的方法，如下列範例所示：
 
 ```csharp
 public class Basket : BaseEntity
@@ -209,7 +209,7 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 
 ### <a name="resilient-connections"></a>具復原功能的連接
 
-有時您可能會無法使用 SQL 資料庫等外部資源。 在暫時無法使用的情況下，應用程式可以使用重試邏輯，以避免引發例外狀況。 這項技術通常稱為「連線復原能力」__。 您可以重試某項作業，並以指數方式增加等候時間，直到已達重試計數上限為止，藉此實作[使用指數輪詢重試](/azure/architecture/patterns/retry)技術。 這項技術是為了因應雲端資源可能會在短時間內斷斷續續無法使用，而導致某些要求失敗的問題。
+有時您可能會無法使用 SQL 資料庫等外部資源。 在暫時無法使用的情況下，應用程式可以使用重試邏輯，以避免引發例外狀況。 這項技術通常稱為「連線復原能力」。 您可以重試某項作業，並以指數方式增加等候時間，直到已達重試計數上限為止，藉此實作[使用指數輪詢重試](/azure/architecture/patterns/retry)技術。 這項技術的事實是，雲端資源可能會在短時間內間歇性地無法使用，而導致某些要求失敗。
 
 在 Azure SQL DB 中，Entity Framework Core 已提供內部資料庫恢復連接功能和重試邏輯。 如果您想要使用具復原功能的 EF Core 連線，則必須為每個 DbContext 連線啟用 Entity Framework 執行策略。
 
@@ -285,7 +285,7 @@ await strategy.ExecuteAsync(async () =>
 
 雖然 EF Core 是管理持續性的絕佳選擇，但在大部分的情況下，封裝應用程式開發人員的資料庫詳細資料並不是唯一的選擇。 另一個常用的開放原始碼替代方案是 [Dapper](https://github.com/StackExchange/Dapper)，也就是所謂的微型 ORM。 微型 ORM 是一種功能較簡單的輕量型工具，可將物件對應至資料結構。 舉 Dapper 為例，其設計目標著重在效能，而非完整封裝用來擷取和更新資料的基礎查詢。 因為 Dapper 不需要開發人員完全抽離 SQL，所以是比較單純的「試用版」，可讓開發人員撰寫想用於指定資料存取作業的確切查詢。
 
-EF Core 與 Dapper 的主要差異是前者提供下列兩個重要的功能，但這也會對效能產生額外負荷。 第一個是它會將 LINQ 運算式轉譯為 SQL。 雖然系統會快取這些轉譯，第一次執行時仍會產生額外負荷。 第二個是追蹤實體的變更 (以便產生有效的 UPDATE 陳述式)。 您可以使用擴充功能，針對特定查詢關閉此行為 <xref:System.Data.Entity.DbExtensions.AsNoTracking%2A> 。 EF Core 也會產生非常有效率的 SQL 查詢，而且在任何情況下，效能都是完全可以接受的等級；但如果您需要妥善控制要執行的精確查詢，您也可以使用 EF Core 傳入自訂的 SQL (或執行預存程序)。 在這種情況下，Dapper 就略勝於 EF Core。 Julie Lerman 在 2016 年 5 月的 [Dapper, Entity Framework, and Hybrid Apps](/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps) (Dapper、Entity Framework 和混合式應用程式) MSDN 文章中提供了一些效能資料。 如需各種不同資料存取方法的其他效能基準測試資料，請參閱 [Dapper 網站](https://github.com/StackExchange/Dapper)。
+EF Core 與 Dapper 的主要差異是前者提供下列兩個重要的功能，但這也會對效能產生額外負荷。 第一個是將 LINQ 運算式轉譯為 SQL。 雖然系統會快取這些轉譯，第一次執行時仍會產生額外負荷。 第二個是追蹤實體的變更 (以便產生有效的 UPDATE 陳述式)。 您可以使用擴充功能，針對特定查詢關閉此行為 <xref:System.Data.Entity.DbExtensions.AsNoTracking%2A> 。 EF Core 也會產生非常有效率的 SQL 查詢，而且在任何情況下，效能都是完全可以接受的等級；但如果您需要妥善控制要執行的精確查詢，您也可以使用 EF Core 傳入自訂的 SQL (或執行預存程序)。 在這種情況下，Dapper 就略勝於 EF Core。 Julie Lerman 在 2016 年 5 月的 [Dapper, Entity Framework, and Hybrid Apps](/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps) (Dapper、Entity Framework 和混合式應用程式) MSDN 文章中提供了一些效能資料。 如需各種不同資料存取方法的其他效能基準測試資料，請參閱 [Dapper 網站](https://github.com/StackExchange/Dapper)。
 
 若要查看 Dapper 和 EF Core 的語法差異，請參考下列用來擷取項目清單之相同方法的兩個版本：
 
@@ -305,7 +305,7 @@ public async Task<IEnumerable<CatalogType>> GetCatalogTypesWithDapper()
 }
 ```
 
-如果您需要使用 Dapper 建立更複雜的物件圖形，則必須自行撰寫相關的查詢 (反之，在 EF Core 中是要新增 Include)。 上述作業是透過各種語法來支援，包括「多重對應」這項功能，可讓您將個別資料列對應到多個對應物件。 例如，假設 Post 類別具有 User 類型的 Owner 屬性 ，下列 SQL 就會傳回所有必要的資料：
+如果您需要使用 Dapper 建立更複雜的物件圖形，則必須自行撰寫相關的查詢 (反之，在 EF Core 中是要新增 Include)。 這項功能是透過各種語法所支援，包括稱為多重對應的功能，可讓您將個別資料列對應至多個對應的物件。 例如，假設 Post 類別具有 User 類型的 Owner 屬性 ，下列 SQL 就會傳回所有必要的資料：
 
 ```sql
 select * from #Posts p
@@ -337,17 +337,17 @@ var data = connection.Query<Post, User, Post>(sql,
 
 傳統上來看，SQL Server 這類關聯式資料庫主導了永續性資料儲存的市場，但它們並不是唯一可用的解決方案。 [MongoDB](https://www.mongodb.com/what-is-mongodb) 這類 NoSQL 資料庫提供儲存物件的不同方式。 這個選項不會將物件對應至資料表和資料列，而是序列化整個物件圖形，並且將結果儲存。 初步來講，這個方法的優點是簡潔和效能。 使用索引鍵來儲存單一序列化物件會比將物件分解為許多資料表更簡單，而這些資料表具有關聯性和更新，以及自從上次從資料庫抓取物件之後可能已經變更的資料列。 同樣地，相較於從關聯式資料庫完整撰寫相同物件所需的複雜聯結或多個資料庫查詢，從以索引鍵為基礎的存放區中擷取和還原序列化單一物件通常更為快速、簡單。 缺少鎖定或交易或固定的架構也會讓 NoSQL 資料庫適合在多部電腦上進行調整，以支援非常大型的資料集。
 
-另一方面來看，NoSQL 資料庫 (如字面通稱) 也有其缺點。 關聯式資料庫使用正規化功能，強制執行一致性並避免出現重複的資料。 這可減少資料庫的大小總計，並確保對共用資料所做的更新可在整個資料庫中立即生效。 在關聯式資料庫中，假設「地址」資料表參考「國家/地區」資料表中的識別碼，則當國家/地區的名稱變更時，地址記錄也會隨之更新，因此您不需要另行更新地址記錄。 不過，在 NoSQL 資料庫中，「地址」和其相關聯的「國家/地區」可能會序列化為許多預存物件的一部分。 更新國家/地區名稱時，也必須更新所有相關物件，而不是單一資料列。 關聯式資料庫也可以強制執行規則 (例如外部索引鍵)，以確保關聯的完整性。 NoSQL 資料庫通常不會對其資料提供這類條件約束。
+另一方面來看，NoSQL 資料庫 (如字面通稱) 也有其缺點。 關聯式資料庫使用正規化功能，強制執行一致性並避免出現重複的資料。 這種方法會減少資料庫的總大小，並確保共用資料的更新可以立即在整個資料庫中使用。 在關聯式資料庫中，假設「地址」資料表參考「國家/地區」資料表中的識別碼，則當國家/地區的名稱變更時，地址記錄也會隨之更新，因此您不需要另行更新地址記錄。 不過，在 NoSQL 資料庫中，位址和其相關聯的國家/地區可能會被序列化為許多儲存物件的一部分。 更新國家/地區名稱時，也必須更新所有相關物件，而不是單一資料列。 關聯式資料庫也可以強制執行規則 (例如外部索引鍵)，以確保關聯的完整性。 NoSQL 資料庫通常不會對其資料提供這類條件約束。
 
-NoSQL 資料庫還有一個必須處理的複雜問題是版本設定。 當物件的屬性變更時，您可能無法從過去已儲存的版本將它還原序列化。 因此，所有含序列化版本 (舊版) 物件的現有物件，都必須更新以符合新的結構描述。 而在關聯式資料庫中，當結構描述變更時，有時需要更新指令碼或對應更新，因此兩者已不只是概念上的差異。 不過，使用 NoSQL 方法時，您必須修改的項目數通常非常多，因為重複的資料比較多。
+NoSQL 資料庫還有一個必須處理的複雜問題是版本設定。 當物件的屬性變更時，您可能無法從過去已儲存的版本將它還原序列化。 因此，所有含序列化版本 (舊版) 物件的現有物件，都必須更新以符合新的結構描述。 這種方法在概念上不同于關係資料庫，架構變更有時需要更新腳本或對應更新。 不過，使用 NoSQL 方法時，您必須修改的項目數通常非常多，因為重複的資料比較多。
 
-您可以在 NoSQL 資料庫中儲存物件的多個版本，而固定結構描述的關聯式資料庫通常不支援這項功能。 不過，在這種情況下，應用程式的程式碼必須找出存在的舊版本物件，這增加了其額外的複雜性。
+您可以在 NoSQL 資料庫中儲存物件的多個版本，而固定結構描述的關聯式資料庫通常不支援這項功能。 不過，在此情況下，您的應用程式程式碼將需要考慮舊版物件是否存在，並增加額外的複雜度。
 
 NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACID)，因此在效能和延展性方面比關聯式資料庫更有優勢。 它們非常適合非常大型的資料集和物件，而不適合儲存在正規化資料表結構中。 單一應用程式也可以同時利用關聯式和 NoSQL 資料庫，只要依據最適合的情況來選擇即可。
 
 ## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure Cosmos DB 是完全受控的 NoSQL 資料庫服務，可提供雲端架構的無架構資料儲存。 Azure Cosmos DB 是專為快速且可預測的效能、高可用性、彈性調整和全球散發所建立。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 Azure Cosmos DB 中的所有資源都會儲存為 JSON 檔。 系統會以「項目」__ 形式來管理資源；也就是說，資源是包含中繼資料和「摘要」__ 的文件，也是項目的集合。 圖8-2 顯示不同 Azure Cosmos DB 資源之間的關聯性。
+Azure Cosmos DB 是完全受控的 NoSQL 資料庫服務，可提供雲端架構的無架構資料儲存。 Azure Cosmos DB 是專為快速且可預測的效能、高可用性、彈性調整和全球散發所建立。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 Azure Cosmos DB 中的所有資源都會儲存為 JSON 檔。 系統會以「項目」形式來管理資源；也就是說，資源是包含中繼資料和「摘要」的文件，也是項目的集合。 圖8-2 顯示不同 Azure Cosmos DB 資源之間的關聯性。
 
 ![Azure Cosmos DB 中的資源之間的階層式關聯性，即 NoSQL JSON 資料庫](./media/image8-2.png)
 
@@ -377,13 +377,13 @@ Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於�
 
 ## <a name="caching"></a>Caching
 
-在 Web 應用程式中，每個 Web 要求都應盡量在最短時間內完成。 為了達成上述目的，其中一個方法是限制伺服器為完成要求必須發出的外部呼叫數目。 快取功能會將資料的複本儲存到伺服器 (或比資料來源更容易查詢的其他資料存放區)。 Web 應用程式 (特別是非 SPA 的傳統 Web 應用程式) 必須使用每個要求來建置完整的使用者介面。 若要這麼做，通常要從某個使用者要求到下一個使用者要求不斷重複進行許多相同的資料庫查詢。 在大部分情況下，這些資料很少變更，因此實在沒有必要不斷向資料庫提出要求。 ASP.NET Core 支援可快取整個頁面的回應快取，以及可支援更細微快取行為的資料快取。
+在 Web 應用程式中，每個 Web 要求都應盡量在最短時間內完成。 達成這項功能的其中一種方式是限制伺服器完成要求所必須進行的外部呼叫數目。 快取功能會將資料的複本儲存到伺服器 (或比資料來源更容易查詢的其他資料存放區)。 Web 應用程式 (特別是非 SPA 的傳統 Web 應用程式) 必須使用每個要求來建置完整的使用者介面。 這種方法經常牽涉到從一個使用者要求重複進行許多相同的資料庫查詢。 在大部分情況下，這些資料很少變更，因此實在沒有必要不斷向資料庫提出要求。 ASP.NET Core 支援可快取整個頁面的回應快取，以及可支援更細微快取行為的資料快取。
 
-當實作快取時，應特別注意關注點分離原則。 避免在資料存取邏輯或使用者介面中，實作快取邏輯。 相反地，請將快取封裝在其自身的類別中，並使用組態來管理它的行為。 這會遵循開啟/關閉準則 (Open/Closed Principle) 和單一責任準則 (Single Responsibility Principle)，並可讓您更輕鬆管理應用程式增長時的快取使用方式。
+當實作快取時，應特別注意關注點分離原則。 避免在資料存取邏輯或使用者介面中，實作快取邏輯。 相反地，請將快取封裝在其自身的類別中，並使用組態來管理它的行為。 這種方法遵循 Open/Closed 和單一責任原則，可讓您更輕鬆地管理應用程式在應用程式成長時的使用方式。
 
 ### <a name="aspnet-core-response-caching"></a>ASP.NET Core 回應快取
 
-ASP.NET Core 支援兩個層級的快取回應。 第一個層級不會快取伺服器上的任何項目，但會新增 HTTP 標頭以指示用戶端和 Proxy 伺服器來快取回應。 上述作業的實作方式為將 ResponseCache 屬性新增至個別的控制器或動作：
+ASP.NET Core 支援兩個層級的快取回應。 第一個層級不會快取伺服器上的任何項目，但會新增 HTTP 標頭以指示用戶端和 Proxy 伺服器來快取回應。 這項功能的執行方式是將 ResponseCache 屬性新增至個別控制器或動作：
 
 ```csharp
 [ResponseCache(Duration = 60)]
@@ -416,7 +416,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="data-caching"></a>資料快取
 
-您可以只快取個別的資料查詢結果，或同時快取完整的 Web 回應。 若要這麼做，您可以在 Web 伺服器上使用記憶體內部快取，或使用[分散式快取](/aspnet/core/performance/caching/distributed)。 本節將示範如何實作記憶體內部快取。
+您可以只快取個別的資料查詢結果，或同時快取完整的 Web 回應。 針對這項功能，您可以在 web 伺服器的記憶體快取中使用，或使用 [分散式](/aspnet/core/performance/caching/distributed)快取。 本節將示範如何實作記憶體內部快取。
 
 在 ConfigureServices 中，新增對記憶體 (或分散式) 快取的支援：
 
@@ -477,7 +477,7 @@ public class CachedCatalogService : ICatalogService
 }
 ```
 
-若要將應用程式設定為使用服務的快取版本，但仍然允許服務取得其建構函式中所需的 CatalogService 執行個體，您可以在 ConfigureServices 中新增下列項目：
+若要將應用程式設定為使用服務的快取版本，但仍允許服務取得其在其函式中所需的 CatalogService 實例，您可以在 ConfigureServices 中新增下列幾行：
 
 ```csharp
 services.AddMemoryCache();
@@ -485,9 +485,9 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-完成上述作業時，系統只會每分鐘呼叫一次資料庫以擷取目錄資料，而不會在每次要求時都呼叫。 視網站的流量而定，這可能會對資料庫的查詢數目產生顯著的影響，而首頁的平均頁面載入時間則取決於此服務所公開的三個查詢。
+使用此程式碼時，提取目錄資料的資料庫呼叫只會每分鐘進行一次，而不是每個要求。 視網站的流量而定，這可能會對資料庫的查詢數目產生顯著的影響，而首頁的平均頁面載入時間則取決於此服務所公開的三個查詢。
 
-執行快取時所發生的問題是 _過時的資料_ ，也就是在來源變更但過期版本仍在快取中的資料。 若要緩和這個問題，一個簡單的方式是將快取持續時間縮短，因為對忙碌的應用程式來說，延長快取資料的時間長度意義不大。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間設為一小時，整體可以減少 99.997%；不過，這樣一來，過時資料的可能性和存在時間都會大幅增加。
+執行快取時所發生的問題是 _過時的資料_ ，也就是在來源變更但過期版本仍在快取中的資料。 解決此問題的簡單方法是使用較小的快取持續時間，因為在忙碌的應用程式中，擴充長度資料的額外好處是有限制的。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間是一小時的時間，整體的縮減會是99.997%，但現在，過時資料的可能性和可能的存留期都會大幅增加。
 
 另一個方法是當快取項目包含的資料有所更新時，就主動移除快取項目。 只要知道索引鍵，就可以移除任何個別的項目：
 
@@ -540,9 +540,9 @@ _httpClient.DefaultRequestHeaders.Authorization =
     new AuthenticationHeaderValue("Bearer", token);
 ```
 
-這可以從任何已插入它的元件來完成 `HttpClient` ，但前提是未 `HttpClient` 新增至存留期為應用程式的服務 `Transient` 。 應用程式中的每個參考都會 `HttpClient` 參考相同的實例，因此在一個元件中對它進行的變更會流經整個應用程式。 執行這項驗證檢查的好地方 (接著指定權杖) 在共用元件中，例如網站的主要導覽。 若要深入瞭解這種方法，請參閱 `BlazorAdmin` [eShopOnWeb 參考應用程式](https://github.com/dotnet-architecture/eShopOnWeb)的專案。
+此活動可以從任何已插入的元件來完成 `HttpClient` ，但前提是未 `HttpClient` 新增至存留期為應用程式的服務 `Transient` 。 應用程式中的每個參考都會 `HttpClient` 參考相同的實例，因此在一個元件中對它進行的變更會流經整個應用程式。 執行這項驗證檢查的好地方 (接著指定權杖) 在共用元件中，例如網站的主要導覽。 若要深入瞭解這種方法，請參閱 `BlazorAdmin` [eShopOnWeb 參考應用程式](https://github.com/dotnet-architecture/eShopOnWeb)的專案。
 
-Blazor WebAssembly 超越傳統 JavaScript spa 的其中一個優點是，您不需要保留資料傳輸物件的複本 (dto) 同步處理。 您的 Blazor WebAssembly 專案和您的 web API 專案都可以共用相同的 dto 在共同的共用專案中。 這消除了開發 Spa 所牽涉到的一些取捨。
+Blazor WebAssembly 超越傳統 JavaScript spa 的其中一個優點是，您不需要保留資料傳輸物件的複本 (dto) 同步處理。 您的 Blazor WebAssembly 專案和您的 web API 專案都可以共用相同的 dto 在共同的共用專案中。 這種方法消除了開發 Spa 所牽涉到的一些取捨。
 
 若要快速從 API 端點取得資料，您可以使用內建的 helper 方法 `GetFromJsonAsync` 。 POST、PUT 等有類似的方法。以下顯示如何使用 `HttpClient` 在應用程式中設定的 API 端點來取得 CatalogItem Blazor WebAssembly ：
 

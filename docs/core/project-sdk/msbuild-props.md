@@ -4,12 +4,12 @@ description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 14603ba98f00d46d0f167652500979f94de0ec9a
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 3b58fd080439c73ee30d5c8dc59c50c0410db164
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031685"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851571"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
@@ -185,7 +185,7 @@ ms.locfileid: "96031685"
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
-`AnalysisLevel`屬性可讓您指定程式碼分析層級。 例如，如果您想要存取預覽程式碼分析器，請將設定 `AnalysisLevel` 為 `preview` 。 預設值是 `latest`。
+`AnalysisLevel`屬性可讓您指定程式碼分析層級。 例如，如果您想要存取預覽程式碼分析器，請將設定 `AnalysisLevel` 為 `preview` 。 預設值為 `latest`。
 
 ```xml
 <PropertyGroup>
@@ -204,7 +204,7 @@ ms.locfileid: "96031685"
 
 ### <a name="analysismode"></a>AnalysisMode
 
-從 .NET 5.0 RC2 開始，.NET SDK 隨附所有「CA」程式 [代碼品質規則](../../fundamentals/code-analysis/quality-rules/index.md)。 依預設，只 [會啟用部分規則](../../fundamentals/code-analysis/overview.md#enabled-rules) 做為組建警告。 `AnalysisMode`屬性可讓您自訂預設啟用的規則集。 您可以切換至更積極的 (退出) 分析模式或更保守的 (加入) 分析模式。 例如，如果您想要預設啟用所有規則作為組建警告，請將值設定為 `AllEnabledByDefault` 。
+從 .NET 5.0 開始，.NET SDK 隨附所有「CA」程式 [代碼品質規則](../../fundamentals/code-analysis/quality-rules/index.md)。 依預設，只 [會啟用部分規則](../../fundamentals/code-analysis/overview.md#enabled-rules) 做為組建警告。 `AnalysisMode`屬性可讓您自訂預設啟用的規則集。 您可以切換至更積極的 (退出) 分析模式或更保守的 (加入) 分析模式。 例如，如果您想要預設啟用所有規則作為組建警告，請將值設定為 `AllEnabledByDefault` 。
 
 ```xml
 <PropertyGroup>
