@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 008455a77f98cd9975b04001121217866cc2ba6e
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438125"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918602"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化的自訂轉換器 (封送處理) 
 
@@ -44,6 +44,8 @@ ms.locfileid: "96438125"
 * [支援](#support-polymorphic-deserialization)多型還原序列化。
 * [支援 Stack \<T> 的來回行程](#support-round-trip-for-stackt)。
 ::: zone-end
+
+在您為自訂轉換器撰寫的程式碼中，請留意使用新實例的顯著效能損失 <xref:System.Text.Json.JsonSerializerOptions> 。 如需詳細資訊，請參閱 [重複使用 JsonSerializerOptions 實例](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)。
 
 ## <a name="custom-converter-patterns"></a>自訂轉換器模式
 

@@ -1,7 +1,7 @@
 ---
 title: 如何使用具現化 JsonSerializerOptions System.Text.Json
-description: 瞭解如何藉由複製現有的實例或使用 web 預設值，來具現化 JsonSerializerOptions 實例。
-ms.date: 11/30/2020
+description: 瞭解如何避免效能問題，以及如何針對 JsonSerializerOptions 實例使用可用的函式。
+ms.date: 12/02/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,16 +11,30 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 0febfe15f36856f10699fd327fb17c146277eb9b
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 257c99e117dea9a9b3ab2352c9a442d71a2cdabd
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439942"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918550"
 ---
 # <a name="how-to-instantiate-jsonserializeroptions-instances-with-no-locsystemtextjson"></a>如何使用具現化 JsonSerializerOptions 實例 System.Text.Json
 
-在本文中，您將瞭解如何藉 <xref:System.Text.Json.JsonSerializerOptions> 由複製現有的實例或使用 web 預設值來具現化實例。
+本文說明如何在使用時避免發生效能問題 <xref:System.Text.Json.JsonSerializerOptions> 。 它也會示範如何使用可用的參數化的函式。
+
+## <a name="reuse-jsonserializeroptions-instances"></a>重複使用 JsonSerializerOptions 實例
+
+如果您 `JsonSerializerOptions` 重複使用相同的選項，請勿 `JsonSerializerOptions` 在每次使用時建立新的實例。 每次呼叫時重複使用相同的實例。 本指南適用于您為自訂轉換器撰寫的程式碼，以及當您呼叫 <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> 或時 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 。
+
+下列程式碼示範使用新選項實例的效能負面影響。
+
+:::code language="csharp" source="snippets/system-text-json-configure-options/csharp/ReuseOptionsInstances.cs":::
+
+上述程式碼會使用相同的選項實例，將小型物件100000次序列化。 然後，它會將相同的物件序列化相同次數，並每次建立新的選項實例。 相較于40140毫秒，一般的執行時間差異為190。 如果您增加反復專案的數目，則差異會更大。
+
+當傳遞新的選項實例時，序列化程式會在物件圖形中的每個類型第一次序列化期間進行準備階段。 此準備工作包括建立序列化所需的中繼資料快取。 中繼資料包含屬性 getter、setter、函式引數、指定屬性等的委派。 此中繼資料快取會儲存在 options 實例中。 相同的準備程式和快取會套用至還原序列化。
+
+實例中的中繼資料快取大小 `JsonSerializerOptions` 取決於要序列化的類型數目。 如果您將許多型別（例如，動態產生的型別）傳遞給序列化程式，快取大小將會持續成長，最後會導致 `OutOfMemoryException` 。
 
 ## <a name="copy-jsonserializeroptions"></a>複製 JsonSerializerOptions
 
@@ -60,12 +74,12 @@ ms.locfileid: "96439942"
 ## <a name="see-also"></a>另請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [啟用不區分大小寫的比對](system-text-json-character-casing.md)
-* [自訂屬性名稱和值](system-text-json-customize-properties.md)
-* [略過屬性](system-text-json-ignore-properties.md)
+* [啟用不區分大小寫比對](system-text-json-character-casing.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
+* [忽略屬性](system-text-json-ignore-properties.md)
 * [允許不正確 JSON](system-text-json-invalid-json.md)
 * [處理溢位 JSON](system-text-json-handle-overflow.md)
 * [保留迴圈參考](system-text-json-preserve-references.md)
-* [不可變類型和非公用存取子](system-text-json-immutability.md)
+* [不可變型別及非公用存取子](system-text-json-immutability.md)
 * [多型序列化](system-text-json-polymorphism.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)

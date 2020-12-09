@@ -1,7 +1,7 @@
 ---
 title: '如何使用 c # 序列化和還原序列化 JSON-.NET'
 description: 瞭解如何 System.Text.Json 在 .net 中使用命名空間進行序列化，並從 JSON 還原序列化。 包含範例程式碼。
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.custom: contperfq2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9ea9e2fef5ef66f2a5ff816168abfbd7b2e75276
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: dc1f8dab0d8d1ab5001797140a3bbfe4a02cb52b
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437676"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918563"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -248,6 +248,8 @@ using System.Text.Json.Serialization;
   "Summary": "Hot"
 }
 ```
+
+如果您 `JsonSerializerOptions` 重複使用相同的選項，請勿 `JsonSerializerOptions` 在每次使用時建立新的實例。 每次呼叫時重複使用相同的實例。 如需詳細資訊，請參閱 [重複使用 JsonSerializerOptions 實例](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)。
 
 ## <a name="include-fields"></a>包含欄位
 
