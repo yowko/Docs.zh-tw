@@ -1,6 +1,6 @@
 - name: .NET for Apache Spark 指南
   href: index.yml
-- name: 總覽
+- name: 概觀
   expanded: true
   items:
     - name: Apache Spark 是什麼？
