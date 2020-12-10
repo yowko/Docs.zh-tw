@@ -196,7 +196,7 @@ items:
           - name: 概觀
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: 參考
+          - name: 參考資料
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -328,7 +328,7 @@ items:
             items:
               - name: 總覽
                 href: ../core/project-sdk/overview.md
-              - name: 參考
+              - name: 參考資料
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -579,6 +579,8 @@ items:
                         href: code-analysis/quality-rules/ca1069.md
                       - name: CA1070
                         href: code-analysis/quality-rules/ca1070.md
+                      - name: CA1071
+                        href: code-analysis/quality-rules/ca1071.md
                   - name: 文件規則
                     items:
                       - name: 概觀
