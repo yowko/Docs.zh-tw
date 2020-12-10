@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bc256c5129cd4a7306e632685474b159a43ce76c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438057"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009894"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何從遷移 Newtonsoft.Json 至 System.Text.Json
 
@@ -144,7 +144,7 @@ ASP.NET Core 預設也啟用還原序列化 [引號的數位](#allow-or-write-nu
 
 在序列化期間， `Newtonsoft.Json` 相對於讓字元通過，而不將它們進行轉義。 也就是說，它不會將它們取代 `\uxxxx` `xxxx` 為字元的程式碼點。 在它進行 escape 的地方，它會在 (的 `\` 字元之前發出，以 `"` 成為 `\"`) 。 <xref:System.Text.Json> 根據預設，請將更多字元轉義以提供深度防禦的保護，以防範跨網站腳本 (XSS) 或資訊洩漏攻擊，並使用六個字元的序列。 `System.Text.Json` 預設會將所有非 ASCII 字元加入，因此，如果您在中使用，就不需要採取任何動作 `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json` 。 `System.Text.Json` 根據預設，也會將 HTML 機密字元轉義。 如需有關如何覆寫預設行為的詳細資訊 `System.Text.Json` ，請參閱 [自訂字元編碼](system-text-json-character-encoding.md)。
 
-### <a name="comments"></a>評價
+### <a name="comments"></a>註解
 
 在還原序列化期間， `Newtonsoft.Json` 預設會忽略 JSON 中的批註。 <xref:System.Text.Json>預設值是擲回批註的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不包含它們。 如需有關如何允許批註的詳細資訊，請參閱 [允許批註和尾端逗號](system-text-json-invalid-json.md)。
 
@@ -535,7 +535,7 @@ The JSON value could not be converted to System.String.
 * `DateTimeZoneHandling`設定可以用來將所有值序列化 `DateTime` 為 UTC 日期。
 * `DateFormatString`設定和 `DateTime` 轉換器可以用來自訂日期字串的格式。
 
-在中 <xref:System.Text.Json> ，具有內建支援的唯一格式是 ISO 8601-1:2019，因為它已廣泛採用、明確，並且會精確地進行往返。 若要使用任何其他格式，請建立自訂的轉換器。 如需詳細資訊，請參閱[中 System.Text.Json 的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)。
+<xref:System.Text.Json> 支援 ISO 8601-1:2019，包括 RFC 3339 設定檔。 這種格式廣泛採用、明確，並且會精確地進行往返。 若要使用任何其他格式，請建立自訂的轉換器。 如需詳細資訊，請參閱[中 System.Text.Json 的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)。
 
 ### <a name="callbacks"></a>回撥
 
@@ -806,10 +806,20 @@ doc.WriteTo(writer);
 
 ## <a name="additional-resources"></a>其他資源
 
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [如何使用 System.Text.Json](system-text-json-how-to.md)
-* [如何撰寫自訂轉換器](system-text-json-converters-how-to.md)
-* [中的 DateTime 和 DateTimeOffset 支援 System.Text.Json](../datetime/system-text-json-support.md)
+* [如何將 JSON 序列化及還原序列化](system-text-json-how-to.md)
+* [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
+* [啟用不區分大小寫比對](system-text-json-character-casing.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
+* [忽略屬性](system-text-json-ignore-properties.md)
+* [允許不正確 JSON](system-text-json-invalid-json.md)
+* [處理溢位 JSON](system-text-json-handle-overflow.md)
+* [保留參考](system-text-json-preserve-references.md)
+* [不可變型別及非公用存取子](system-text-json-immutability.md)
+* [多型序列化](system-text-json-polymorphism.md)
+* [自訂字元編碼](system-text-json-character-encoding.md)
+* [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
+* [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
-* [System.Text.Json。序列化 API 參考](xref:System.Text.Json.Serialization)
+* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

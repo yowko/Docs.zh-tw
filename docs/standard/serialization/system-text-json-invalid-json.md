@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 1b6402952c4765290d22b530834ed831a68bd2fe
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2559b081010fb0a2fa208b121cb095efdeb8da2e
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851239"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009804"
 ---
 # <a name="how-to-allow-some-kinds-of-invalid-json-with-no-locsystemtextjson"></a>如何允許某些種類的無效 JSON 搭配 System.Text.Json
 
@@ -47,7 +47,7 @@ ms.locfileid: "96851239"
 
 某些序列化程式會將數位編碼為 JSON 字串， (以引號括住) 。
 
-例如︰
+例如：
 
 ```json
 {
@@ -76,15 +76,22 @@ ms.locfileid: "96851239"
 `System.Text.Json` 在 .NET Core 3.1 中，不支援序列化或還原序列化以引號括住的數位。 如需詳細資訊，請參閱 [允許或寫入以引號括](system-text-json-migrate-from-newtonsoft-how-to.md#allow-or-write-numbers-in-quotes)住的數位。
 ::: zone-end
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [Instantiate JsonSerializerOptions](system-text-json-configure-options.md)
+* [如何將 JSON 序列化及還原序列化](system-text-json-how-to.md)
+* [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
 * [啟用不區分大小寫比對](system-text-json-character-casing.md)
 * [自訂屬性名稱與值](system-text-json-customize-properties.md)
 * [忽略屬性](system-text-json-ignore-properties.md)
 * [處理溢位 JSON](system-text-json-handle-overflow.md)
-* [保留迴圈參考](system-text-json-preserve-references.md)
+* [保留參考](system-text-json-preserve-references.md)
 * [不可變型別及非公用存取子](system-text-json-immutability.md)
 * [多型序列化](system-text-json-polymorphism.md)
+* [從遷移 Newtonsoft.Json 至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自訂字元編碼](system-text-json-character-encoding.md)
+* [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
+* [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
+* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

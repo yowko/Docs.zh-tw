@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825074"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009813"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>在 .NET 中比較字串的最佳作法
 
@@ -54,7 +54,7 @@ ms.locfileid: "94825074"
 
 在 .NET 中的字串操作方法大多都是多載。 一般而言，您可讓一或多個多載接受預設值，而其他不接受預設值的多載，則定義用來比較或操作字串的精確方式。 大部分不依賴預設值的方法都會包含 <xref:System.StringComparison>類型的參數，其為一種列舉類型，可明確指定依據文化特性和大小寫進行字串比較的規則。 下表說明 <xref:System.StringComparison> 列舉類型成員。
 
-|StringComparison 成員|說明|
+|StringComparison 成員|描述|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|使用目前文化特性執行區分大小寫的比較。|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|使用目前文化特性執行不區分大小寫的比較。|
@@ -167,9 +167,6 @@ ms.locfileid: "94825074"
 
 這些比較仍非常快速。
 
-> [!NOTE]
-> <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>最能代表檔案系統、登錄機碼和值及環境變數的字串行為。
-
 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 和 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 兩者都直接使用二進位值，最適合用來比對。 當您不確定比較設定時，請使用這兩個值的其中一個。 不過，因為它們是以位元組為單位逐一比較，所以不會依照語言排序次序來排序 (就像英文字典一樣)，而是採用二進位排序次序。 因此，在大多數內容當中，使用者看到的結果可能很奇怪。
 
 不包含 <xref:System.String.Equals%2A?displayProperty=nameWithType> 引數 (包括等號比較運算子) 的 <xref:System.StringComparison> 多載是以序數語意為預設。 在任何情況下，我們建議您呼叫具有 <xref:System.StringComparison> 參數的多載。
@@ -197,7 +194,7 @@ InvariantCulture: a + ̊ = å
 
 下表概述從語義字串內容到列舉成員的對應 <xref:System.StringComparison> ：
 
-|資料|行為|對應的 System.StringComparison<br /><br /> value|
+|資料|行為|對應的 System.StringComparison<br /><br /> 值|
 |----------|--------------|-----------------------------------------------------|
 |區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 區分大小寫的安全性相關設定。|位元組完全相符的非語言識別項。|<xref:System.StringComparison.Ordinal>|
 |不區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 檔案路徑。<br /><br /> 登錄機碼和值。<br /><br /> 環境變數。<br /><br /> 資源識別項 (例如控制代碼名稱)。<br /><br /> 不區分大小寫的安全性相關設定。|大小寫不重要的非語言識別項，特別是大部分 Windows 系統服務中儲存的資料。|<xref:System.StringComparison.OrdinalIgnoreCase>|

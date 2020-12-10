@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 macOS 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b1434938a8e8e81da81e495a6b99e6c99467aae1
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715130"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009354"
 ---
 # <a name="install-net-on-macos"></a>在 macOS 上安裝 .NET
 
@@ -33,8 +33,9 @@ ms.locfileid: "95715130"
 - ✔️表示仍支援 .NET Core 的版本。
 - ❌表示不支援 .Net Core 的版本。
 
-| 作業系統          | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
+| 作業系統          | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |---------------------------|---------------|---------------|----------------|
+| macOS 11.0 "Big Sur"        | ✔️ 2.1 ([版本][release-notes-21] 資訊)  | ✔️ 3.1 ([版本][release-notes-31] 資訊)  | ✔️ 5.0 ([版本][release-notes-50] 資訊)  |
 | macOS 10.15 "Catalina"    | ✔️ 2.1 ([版本][release-notes-21] 資訊)  | ✔️ 3.1 ([版本][release-notes-31] 資訊)  | ✔️ 5.0 ([版本][release-notes-50] 資訊)  |
 | macOS 10.14 "Mojave"      | ✔️ 2.1 ([版本][release-notes-21] 資訊)  | ✔️ 3.1 ([版本][release-notes-31] 資訊)  | ✔️ 5.0 ([版本][release-notes-50] 資訊)  |
 | macOS 10.13 "High Sierra" | ✔️ 2.1 ([版本][release-notes-21] 資訊)  | ✔️ 3.1 ([版本][release-notes-31] 資訊)  | ✔️ 5.0 ([版本][release-notes-50] 資訊)  |
@@ -74,7 +75,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 同時�
 > [!NOTE]
 > `+`符號表示最小版本。
 
-| .NET Core 版本 | macOS                 | 架構 | 其他資訊    |
+| .NET Core 版本 | macOS                 | 架構 | 詳細資訊    |
 | ----------------- | --------------------- | --------------| --- |
 | 5.0               | 高塞拉里昂 (10.13 +)   | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
 | 3.1               | 高塞拉里昂 (10.13 +)   | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |

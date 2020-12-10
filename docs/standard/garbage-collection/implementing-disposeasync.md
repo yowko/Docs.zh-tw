@@ -3,18 +3,18 @@ title: 實作 DisposeAsync 方法
 description: 瞭解如何執行 DisposeAsync 和 DisposeAsyncCore 方法，以執行非同步資源清除。
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/26/2020
+ms.date: 12/09/2020
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 551dbc30f6f5c99c7bfa468d7d708789c06acb7b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f04ac6695864b96cdcb7efeb6eb8e1d9551e1d14
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827798"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009686"
 ---
 # <a name="implement-a-disposeasync-method"></a>實作 DisposeAsync 方法
 
@@ -130,7 +130,9 @@ public async ValueTask DisposeAsync()
 > [!TIP]
 > 請避免此模式，因為它可能會導致非預期的行為。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
+
+如需和的雙重執行 `IDisposable` 範例 `IAsyncDisposable` ，請參閱 <xref:System.Text.Json.Utf8JsonWriter> [GitHub 上](https://github.com/dotnet/runtime/blob/035b729d829368c2790d825bd02db14f0c0fd2ea/src/libraries/System.Text.Json/src/System/Text/Json/Writer/Utf8JsonWriter.cs#L297-L345)的原始程式碼。
 
 - <xref:System.IAsyncDisposable>
 - <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>

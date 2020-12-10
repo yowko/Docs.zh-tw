@@ -7,12 +7,12 @@ ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 94dda02045f4c3bb1b5bdd64ab6b40eb22f6817c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851424"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009660"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -52,9 +52,9 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-在此範例中，已將名為 "default" 的路由新增至路由表。 它會定義路由範本，其中包含 _控制器_、 _動作_ 和 _識別碼_ 的預留位置。控制器和動作預留位置) 分別有預設指定 ( "Home" 和 "Index"，且識別碼預留位置是選擇性的 (，因為它) 會套用 "？"。 此處定義的慣例指出要求的第一個部分應該對應至控制器的名稱，第二個部分對應至動作，而第三個部分 (如果需要) 則會代表 id 參數。 慣例路由通常是在應用程式的一個位置定義，例如在啟動類別的 Configure 方法中。
+在此範例中，已將名為 "default" 的路由新增至路由表。 它會定義具有、和預留位置的路由範本 `controller` `action` `id` 。 `controller`和 `action` 預留位置具有預設指定的 (`Home` 和 `Index` ，分別) ，而且 `id` 預留位置是選擇性的 (，因為它) 會套用 "？"。 此處定義的慣例指出，要求的第一個部分應該對應至控制器的名稱、動作的第二個部分，然後在必要時，第三個部分會代表識別碼參數。 慣例路由通常是在應用程式的一個位置定義，例如類別中的 `Configure` 方法 `Startup` 。
 
-屬性路由會直接套用至控制器和動作，而不是全域指定。 這種方法的優點是，當您查看特定的方法時，可以更容易找到它們，但這表示不會在應用程式中的單一位置保留路由資訊。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如︰
+屬性路由會直接套用至控制器和動作，而不是全域指定。 這種方法的優點是，當您查看特定的方法時，可以更容易找到它們，但這表示不會在應用程式中的單一位置保留路由資訊。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如：
 
 ```csharp
 [Route("Home")]
@@ -91,7 +91,7 @@ Razor Pages 不會使用屬性路由。 您可以為 Razor 頁面指定其他路
 "/Products/123"
 ```
 
-在指定的要求與路由經過比對之後，但呼叫動作方法之前，ASP.NET Core MVC 會在要求上執行[模型繫結](/aspnet/core/mvc/models/model-binding)和[模型驗證](/aspnet/core/mvc/models/validation)。 模型繫結會負責將傳入 HTTP 資料轉換成 .NET 類型，以指定為要呼叫之動作方法的參數。 例如，如果動作方法需要 `int id` 參數，模型系結會嘗試從要求中提供的值提供此參數。 若要這樣做，模型繫結會尋找以 POST 形式送出的值、路由本身中的值，以及查詢字串值。 假設找到 id 值，則會將它轉換成整數，再傳入動作方法。
+在指定的要求與路由經過比對之後，但呼叫動作方法之前，ASP.NET Core MVC 會在要求上執行[模型繫結](/aspnet/core/mvc/models/model-binding)和[模型驗證](/aspnet/core/mvc/models/validation)。 模型繫結會負責將傳入 HTTP 資料轉換成 .NET 類型，以指定為要呼叫之動作方法的參數。 例如，如果動作方法需要 `int id` 參數，模型系結會嘗試從要求中提供的值提供此參數。 若要這樣做，模型繫結會尋找以 POST 形式送出的值、路由本身中的值，以及查詢字串值。 假設 `id` 找到值，則會在傳遞至動作方法之前轉換成整數。
 
 在繫結模型之後，但呼叫動作方法之前，會進行模型驗證。 模型驗證會根據模型類型使用選用屬性，並可協助確保提供的模型物件符合特定資料需求。 某些值可以指定為必要，或限制為特定長度或數位範圍等等。如果指定了驗證屬性，但模型不符合其需求，則屬性 ModelState 會是 false，而失敗的驗證規則集將可用於傳送給提出要求的用戶端。
 
@@ -105,7 +105,7 @@ Web API 專案應該考慮使用 `[ApiController]` 屬性，該屬性可以套�
 
 若是以頁面為基礎的應用程式，Razor Pages 可以讓控制器變得太大的工作變得很大。 每個個別頁面都有自己的檔案和類別，專用於其處理常式 (s) 。 在 Razor Pages 推出之前，許多以視圖為中心的應用程式都有大型控制器類別，負責許多不同的動作和觀點。 這些類別自然會成長為具有許多責任和相依性，使其更難維護。 如果您發現您的 view 型控制器成長太大，請考慮將它們重構以使用 Razor Pages，或引進中繼程式之類的模式。
 
-中繼程式設計模式可用來減少類別之間的結合，同時允許兩者之間的通訊。 在 ASP.NET Core MVC 應用程式中，使用 *處理常式* 來執行動作方法的工作，通常會使用此模式將控制器分解為較小的片段。 常用的 [MediatR NuGet 套件](https://www.nuget.org/packages/MediatR/) 通常用來完成這項工作。 一般而言，控制器包含許多不同的動作方法，每個動作方法都可能需要特定的相依性。 任何動作所需的所有相依性集合都必須傳遞至控制器的函式。 使用 Mediatr 時，控制器的唯一相依性是在中繼程式的實例上。 接著，每個動作都會使用中繼程式實例來傳送訊息（由處理常式處理）。 處理常式是單一動作特有的，因此只需要該動作所需的相依性。 使用 MediatR 的控制器範例如下所示：
+中繼程式設計模式可用來減少類別之間的結合，同時允許兩者之間的通訊。 在 ASP.NET Core MVC 應用程式中，使用 *處理常式* 來執行動作方法的工作，通常會使用此模式將控制器分解為較小的片段。 常用的 [MediatR NuGet 套件](https://www.nuget.org/packages/MediatR/) 通常用來完成這項工作。 一般而言，控制器包含許多不同的動作方法，每個動作方法都可能需要特定的相依性。 任何動作所需的所有相依性集合都必須傳遞至控制器的函式。 使用 MediatR 時，控制器的唯一相依性是在中繼程式的實例上。 接著，每個動作都會使用中繼程式實例來傳送訊息（由處理常式處理）。 處理常式是單一動作特有的，因此只需要該動作所需的相依性。 使用 MediatR 的控制器範例如下所示：
 
 ```csharp
 public class OrderController : Controller
@@ -169,15 +169,15 @@ public class GetMyOrdersHandler : IRequestHandler<GetMyOrders, IEnumerable<Order
 
 > ### <a name="references--mapping-requests-to-responses"></a>參考資料 - 將要求對應至回應
 >
-> - **路由至控制器動作**
+> - **路由至控制器動作**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **模型系結**
+> - **模型系結**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
-> - **模型驗證**
+> - **模型驗證**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **過濾 器**
+> - **過濾 器**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ApiController 屬性**
+> - **ApiController 屬性**\
  > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>使用相依性
@@ -391,13 +391,13 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 > ### <a name="references--structuring-applications"></a>參考資料 - 建構應用程式
 >
-> - **區**  
+> - **地區**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN Magazine - ASP.NET Core MVC 的功能分區**  
+> - **MSDN 雜誌– ASP.NET Core MVC 的功能配量**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
-> - **篩選條件**  
+> - **過濾 器**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN 雜誌-真實世界 ASP.NET Core MVC 篩選器**  
+> - **MSDN 雜誌-真實世界 ASP.NET Core MVC 篩選器**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>安全性
@@ -447,7 +447,7 @@ public void Configure(IApplicationBuilder app)
 
 驗證是判斷誰正在存取系統的程式。 如果您使用 ASP.NET Core 身分識別和上一節所示的設定方法，則會自動在應用程式中設定某些驗證預設值。 不過，您也可以手動設定這些預設值，或覆寫 AddIdentity 所設定的預設值。 如果您使用的是身分識別，它會將以 cookie 為基礎的驗證設定 *為預設配置*。
 
-在以 web 為基礎的驗證中，通常會在驗證系統用戶端的過程中執行5個動作。 這些警告是：
+在以 web 為基礎的驗證中，通常會在驗證系統用戶端的過程中執行五個動作。 這些警告是：
 
 - 身份 驗證。 使用用戶端提供的資訊來建立身分識別，以便在應用程式內使用。
 - 挑戰。 這個動作是用來要求用戶端識別自己的身分。
@@ -501,13 +501,13 @@ Blazor 伺服器應用程式可以利用與任何其他 ASP.NET Core 應用程�
 
 > ### <a name="references--authentication"></a>參考–驗證
 >
-> - **驗證動作和預設值**  
+> - **驗證動作和預設值**\
 >   <https://stackoverflow.com/a/52493428>
-> - **Spa 的驗證和授權**
+> - **Spa 的驗證和授權**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity-api-authorization>
-> - **ASP.NET Core Blazor 驗證與授權**
+> - **ASP.NET Core Blazor 驗證與授權**\
 >   <https://docs.microsoft.com/aspnet/core/blazor/security/>
-> - **安全性： ASP.NET Web Forms 和中的驗證和授權 Blazor**
+> - **安全性： ASP.NET Web Forms 和中的驗證和授權 Blazor**\
 >   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization>
 
 ### <a name="authorization"></a>授權
@@ -584,17 +584,17 @@ private async Task SetAuthorizationHeader()
 
 > ### <a name="references--security"></a>參考資料 - 安全性
 >
-> - **安全性文件概觀**  
+> - **安全性檔案總覽**\
 >   <https://docs.microsoft.com/aspnet/core/security/>
-> - **Enforcing SSL in an ASP.NET Core App** (在 ASP.NET Core 應用程式中強制執行 SSL)  
+> - **在 ASP.NET Core 應用程式中強制執行 SSL**\
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
-> - **身分識別簡介**  
+> - **身分識別簡介**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
-> - **授權簡介**  
+> - **授權簡介**\
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Azure App Service 中的 API Apps 的驗證與授權**  
+> - **Azure App Service 中的 API Apps 的驗證與授權**\
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
-> - **身分識別伺服器**  
+> - **身分識別伺服器**\
 >   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>用戶端通訊
@@ -653,9 +653,9 @@ public class Program
 
 > ### <a name="references--client-communication"></a>參考資料 - 用戶端通訊
 >
-> - **ASP.NET Core SignalR**  
+> - **ASP.NET Core SignalR**\
 >   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
-> - **WebSocket Manager**  
+> - **WebSocket 管理員**\
 >   <https://github.com/radu-matei/websocket-manager>
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>領域驅動設計 - 是否應該套用？
@@ -702,7 +702,7 @@ DDD 牽涉到投資模型、架構和通訊，這對較小型的應用程式，�
 
 > ### <a name="references--domain-driven-design"></a>參考資料 - 領域驅動設計
 >
-> - **DDD 簡單說明 (StackOverflow 解答)**  
+> - **DDD 以純英文 (StackOverflow 回答)**\
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>部署
@@ -745,13 +745,13 @@ _深入瞭解第 [10 章](development-process-for-azure.md)的 Azure 部署選�
 
 > ### <a name="references--deployment"></a>參考資料 - 部署
 >
-> - **裝載和部署概觀**  
+> - **裝載和部署總覽**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **何時搭配使用 Kestrel 與反向 Proxy**  
+> - **使用 Kestrel 搭配反向 proxy 的時機**\
 >   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
-> - **在 Docker 中裝載 ASP.NET Core 應用程式**  
+> - **在 Docker 中裝載 ASP.NET Core 應用程式**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/docker>
-> - **Azure 應用程式閘道簡介**  
+> - **Azure 應用程式閘道簡介**\
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]

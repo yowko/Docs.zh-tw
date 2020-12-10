@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: dc1f8dab0d8d1ab5001797140a3bbfe4a02cb52b
-ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
+ms.openlocfilehash: 1ea4ff71b9e21bd7c5b12598581b33e1e96ebb19
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96918563"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008834"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -282,11 +282,22 @@ System.Text.Json在 .Net Core 3.1 中不支援欄位。 [自訂轉換器](system
 和上的擴充方法在 `HttpClient` `HttpContent` System.Text.Json .net Core 3.1 中無法使用。
 ::: zone-end
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [如何撰寫自訂轉換器](system-text-json-converters-how-to.md)
-* [如何遷移 Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [中的 DateTime 和 DateTimeOffset 支援 System.Text.Json](../datetime/system-text-json-support.md)
+* [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
+* [啟用不區分大小寫比對](system-text-json-character-casing.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
+* [忽略屬性](system-text-json-ignore-properties.md)
+* [允許不正確 JSON](system-text-json-invalid-json.md)
+* [處理溢位 JSON](system-text-json-handle-overflow.md)
+* [保留參考](system-text-json-preserve-references.md)
+* [不可變型別及非公用存取子](system-text-json-immutability.md)
+* [多型序列化](system-text-json-polymorphism.md)
+* [從遷移 Newtonsoft.Json 至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自訂字元編碼](system-text-json-character-encoding.md)
+* [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
+* [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
+* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

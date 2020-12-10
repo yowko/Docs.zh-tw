@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851812"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009842"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET source 程式碼分析總覽
 
@@ -48,8 +48,8 @@ ms.locfileid: "96851812"
 | [CA2013](/visualstudio/code-quality/ca2013) | 可靠性 | 警告 | 請勿搭配實 `ReferenceEquals` 數值型別使用 |
 | [CA2014](/visualstudio/code-quality/ca2014) | 可靠性 | 警告 | 不要 `stackalloc` 在迴圈中使用 |
 | [CA2015](/visualstudio/code-quality/ca2015) | 可靠性 | 警告 | 請勿針對衍生自的類型定義完成項 <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 使用量 | 警告 | 必須重新擲回以保存堆疊詳細資料
-| [CA2247](/visualstudio/code-quality/ca2247) | 使用量 | 警告 | 傳遞至 >taskcompletionsource 函式的引數應該是 <xref:System.Threading.Tasks.TaskCreationOptions> 列舉，而不是 <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 使用方式 | 警告 | 必須重新擲回以保存堆疊詳細資料
+| [CA2247](/visualstudio/code-quality/ca2247) | 使用方式 | 警告 | 傳遞至 >taskcompletionsource 函式的引數應該是 <xref:System.Threading.Tasks.TaskCreationOptions> 列舉，而不是 <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 您可以變更這些規則的嚴重性來停用它們，或將它們提升為錯誤。 您也可以 [啟用更多規則](#enable-additional-rules)。
 
@@ -110,14 +110,13 @@ ms.locfileid: "96851812"
 
 如需程式碼樣式分析規則的完整清單，請參閱程式 [代碼樣式規則](style-rules/index.md)。
 
-> [!NOTE]
-> 程式碼樣式分析功能是實驗性，而且在 .NET 5 和 .NET 6 版本之間可能會變更。
+### <a name="enable-on-build"></a>在組建時啟用
 
-在組建上啟用程式碼樣式分析的步驟：
+遵循下列步驟來啟用組建的程式碼樣式分析：
 
 1. 將 MSBuild 屬性 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 設定為 `true` 。
 
-1. 在 *editorconfig* 檔案中，將您想要在組建上執行的每個「IDE」程式碼樣式規則 [設定](configuration-options.md) 為警告或錯誤。 例如︰
+1. 在 *editorconfig* 檔案中，將您想要在組建上執行的每個「IDE」程式碼樣式規則 [設定](configuration-options.md) 為警告或錯誤。 例如：
 
    ```ini
    [*.{cs,vb}]
@@ -125,7 +124,7 @@ ms.locfileid: "96851812"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   或者，您可以將整個「樣式」類別設定為警告或錯誤（依預設，），然後選擇性地關閉您不想在組建上執行的規則。 例如︰
+   或者，您可以將整個「樣式」類別設定為警告或錯誤（依預設，），然後選擇性地關閉您不想在組建上執行的規則。 例如：
 
    ```ini
    [*.{cs,vb}]
@@ -137,9 +136,12 @@ ms.locfileid: "96851812"
    dotnet_diagnostic.IDE0040.severity = silent
    ```
 
+> [!NOTE]
+> 程式碼樣式分析功能是實驗性，而且在 .NET 5 和 .NET 6 版本之間可能會變更。
+
 ## <a name="suppress-a-warning"></a>隱藏警告
 
-若要隱藏規則違規，請在 EditorConfig 檔案中將該規則識別碼的嚴重性選項設定為 `none` 。 例如︰
+若要隱藏規則違規，請在 EditorConfig 檔案中將該規則識別碼的嚴重性選項設定為 `none` 。 例如：
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
@@ -153,7 +155,7 @@ Visual Studio 提供其他方式來隱藏程式碼分析規則的警告。 如�
 
 除了正式的 .NET 分析器，您也可以安裝協力廠商分析器，例如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、 [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/)、 [XUnit 分析器](https://www.nuget.org/packages/xunit.analyzers/)和 [聲納 Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程式碼品質分析規則參考](quality-rules/index.md)
 - [程式碼樣式分析規則參考](style-rules/index.md)

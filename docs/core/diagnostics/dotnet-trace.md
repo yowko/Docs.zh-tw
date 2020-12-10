@@ -2,12 +2,12 @@
 title: dotnet-追蹤診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet 追蹤 CLI 工具，以使用 .NET EventPipe 來收集執行中進程的 .NET 追蹤，而不使用原生 profiler。
 ms.date: 11/17/2020
-ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549328"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009530"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -41,7 +41,7 @@ ms.locfileid: "96549328"
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet-trace`工具：
 
@@ -50,7 +50,7 @@ dotnet-trace [-h, --help] [--version] <command>
 * 是以 [`EventPipe`](./eventpipe.md) .Net Core 執行時間為基礎。
 * 在 Windows、Linux 或 macOS 上提供相同的體驗。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-h|--help`**
 
@@ -78,12 +78,12 @@ dotnet-trace [-h, --help] [--version] <command>
 ```console
 dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
-    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [-n, --name <name>] [--diagnostic-port] [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
     [-- <command>] (for target applications running .NET 5.0 or later)
 ```
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`--buffersize <size>`**
 
@@ -99,11 +99,15 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--format {Chromium|NetTrace|Speedscope}`**
 
-  設定追蹤檔案轉換的輸出格式。 預設為 `NetTrace`。
+  設定追蹤檔案轉換的輸出格式。 預設值為 `NetTrace`。
 
 - **`-n, --name <name>`**
 
   要從中收集追蹤的進程名稱。
+
+- **`--diagnostic-port <path-to-port>`**
+
+  要建立之診斷埠的名稱。 請參閱 [使用診斷埠從應用程式啟動收集追蹤](#use-diagnostic-port-to-collect-a-trace-from-app-startup) ，以瞭解如何使用此選項從應用程式啟動收集追蹤。
 
 - **`-o|--output <trace-file-path>`**
 
@@ -156,7 +160,7 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 
   要轉換的輸入追蹤檔案。 預設值為 *nettrace*。
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`--format <Chromium|NetTrace|Speedscope>`**
 
@@ -250,6 +254,48 @@ Press <Enter> or <Ctrl+C> to exit...
 > 透過 `hello.exe` dotnet 追蹤會將其輸入/輸出重新導向，而您將無法與其 stdin/stdout 互動。
 > 透過 CTRL + C 或 SIGTERM 結束工具會安全地結束工具和子進程。
 > 如果子進程在工具之前結束，則工具也會結束，而且應該安全地查看追蹤。
+
+## <a name="use-diagnostic-port-to-collect-a-trace-from-app-startup"></a>使用診斷埠從應用程式啟動收集追蹤
+
+  > [!IMPORTANT]
+  > 這僅適用于執行 .NET 5.0 或更新版本的應用程式。
+
+診斷埠是新增在 .NET 5 中的新執行時間功能，可讓您從應用程式啟動開始追蹤。 若要使用來執行此作業， `dotnet-trace` 您可以使用 `dotnet-trace collect -- <command>` 如上述範例中所述，或使用 `--diagnostic-port` 選項。
+
+使用 `dotnet-trace <collect|monitor> -- <command>` 以子進程的形式啟動應用程式，是從啟動時快速追蹤它的最簡單方式。
+
+但是，當您想要更精確地控制追蹤的應用程式存留期 (例如，只在前10分鐘內監視應用程式並繼續執行) 或者，如果您需要使用 CLI 與應用程式互動，使用 `--diagnostic-port` 選項可讓您控制受監視的目標應用程式和 `dotnet-trace` 。
+
+1. 下列命令會建立 `dotnet-trace` 名為的診斷通訊端 `myport.sock` ，並等候連接。
+
+    > ```dotnet-cli
+    > dotnet-trace collect --diagnostic-port myport.sock
+    > ```
+
+    輸出：
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. 在個別的主控台中，啟動目標應用程式，並將環境變數 `DOTNET_DiagnosticPorts` 設為輸出中的值 `dotnet-trace` 。
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    如此一 `dotnet-trace` 來，就可以開始追蹤 `my-dotnet-app` ：
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > 啟動您的應用程式可能 `dotnet run` 會造成問題，因為 DOTNET CLI 可能會產生許多不是您應用程式的子進程，而且它們可以在您的應用 `dotnet-trace` 程式之前連線，讓您的應用程式在執行時間暫停。 建議您直接使用應用程式的獨立版本，或用 `dotnet exec` 來啟動應用程式。
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>查看從 dotnet 捕捉的追蹤
 

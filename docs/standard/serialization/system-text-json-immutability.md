@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d3e61d44ce22b7f50838b6d3ba9cf64004bd3725
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: ff8ecec0d70c877b7cbbd0297b85f0d9578ab828
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439902"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008821"
 ---
 # <a name="how-to-use-immutable-types-and-non-public-accessors-with-no-locsystemtextjson"></a>如何搭配使用不可變類型和非公用存取子 System.Text.Json
 
@@ -52,15 +52,22 @@ ms.locfileid: "96439902"
 .NET Core 3.1 不支援非公用屬性存取子。 如需詳細資訊，請參閱「 [從 Newtonsoft.Json 文章遷移](system-text-json-migrate-from-newtonsoft-how-to.md#non-public-property-setters-and-getters)」。
 ::: zone-end
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [具現化 JsonSerializerOptions](system-text-json-configure-options.md)
-* [啟用不區分大小寫的比對](system-text-json-character-casing.md)
-* [自訂屬性名稱和值](system-text-json-customize-properties.md)
-* [略過屬性](system-text-json-ignore-properties.md)
+* [如何將 JSON 序列化及還原序列化](system-text-json-how-to.md)
+* [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
+* [啟用不區分大小寫比對](system-text-json-character-casing.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
+* [忽略屬性](system-text-json-ignore-properties.md)
 * [允許不正確 JSON](system-text-json-invalid-json.md)
 * [處理溢位 JSON](system-text-json-handle-overflow.md)
-* [保留迴圈參考](system-text-json-preserve-references.md)
+* [保留參考](system-text-json-preserve-references.md)
 * [多型序列化](system-text-json-polymorphism.md)
+* [從遷移 Newtonsoft.Json 至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自訂字元編碼](system-text-json-character-encoding.md)
+* [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
+* [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
+* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

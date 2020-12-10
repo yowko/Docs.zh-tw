@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599072"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009738"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>如何啟用不區分大小寫的屬性名稱比對 System.Text.Json
 
@@ -42,15 +42,22 @@ ms.locfileid: "96599072"
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [Instantiate JsonSerializerOptions](system-text-json-configure-options.md)
+* [如何將 JSON 序列化及還原序列化](system-text-json-how-to.md)
+* [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
 * [自訂屬性名稱與值](system-text-json-customize-properties.md)
 * [忽略屬性](system-text-json-ignore-properties.md)
 * [允許不正確 JSON](system-text-json-invalid-json.md)
 * [處理溢位 JSON](system-text-json-handle-overflow.md)
-* [保留迴圈參考](system-text-json-preserve-references.md)
+* [保留參考](system-text-json-preserve-references.md)
 * [不可變型別及非公用存取子](system-text-json-immutability.md)
 * [多型序列化](system-text-json-polymorphism.md)
+* [從遷移 Newtonsoft.Json 至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自訂字元編碼](system-text-json-character-encoding.md)
+* [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
+* [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
+* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

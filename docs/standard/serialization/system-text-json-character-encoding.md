@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: f6a50a3ca2a5e871294cf7c056cbf197a61cd668
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: cfb83af0c58e0c9dfb73ecb8e2177d255e403fae
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439938"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009621"
 ---
 # <a name="how-to-customize-character-encoding-with-no-locsystemtextjson"></a>如何使用自訂字元編碼 System.Text.Json
 
@@ -83,9 +83,22 @@ ms.locfileid: "96439938"
 >
 > 只有在已知用戶端會將產生的承載解讀為 UTF-8 編碼的 JSON 時，才使用 unsafe 編碼器。 例如，如果伺服器正在傳送回應標頭，您可以使用它 `Content-Type: application/json; charset=utf-8` 。 絕不允許將原始 `UnsafeRelaxedJsonEscaping` 輸出發出至 HTML 網頁或 `<script>` 元素。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [如何撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
-* [如何撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [如何將 JSON 序列化及還原序列化](system-text-json-how-to.md)
+* [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
+* [啟用不區分大小寫比對](system-text-json-character-casing.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
+* [忽略屬性](system-text-json-ignore-properties.md)
+* [允許不正確 JSON](system-text-json-invalid-json.md)
+* [處理溢位 JSON](system-text-json-handle-overflow.md)
+* [保留參考](system-text-json-preserve-references.md)
+* [不可變型別及非公用存取子](system-text-json-immutability.md)
+* [多型序列化](system-text-json-polymorphism.md)
+* [從遷移 Newtonsoft.Json 至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
+* [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
+* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

@@ -1,19 +1,19 @@
 ---
-title: .NET Core 教學課程
-description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux 和 Windows 上建置應用程式和程式庫。
-author: richlander
-ms.date: 09/09/2020
+title: .NET 教學課程
+description: 遵循教學課程，瞭解如何在 Mac、Linux 和 Windows 上建立應用程式和程式庫。
+author: tdykstra
+ms.date: 12/07/2020
 titleSuffix: ''
-ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: cf466f7ea004199052c1f02f5860668f2bb2ff28
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656154"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009315"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>探索這些教學課程，以瞭解 .NET Core 和 .NET Core SDK 工具
+# <a name="learn-net-and-the-net-sdk-tools-by-exploring-these-tutorials"></a>探索這些教學課程，以瞭解 .NET 和 .NET SDK 工具
 
-下列教學課程可用於了解 .NET Core。
+下列教學課程說明如何開發適用于 .NET Core、.NET 5 和更新版本的主控台應用程式和程式庫。 針對其他類型的應用程式，請參閱 [開始使用 .net 的教學](../../standard/get-started.md)課程。
 
 ## <a name="use-visual-studio"></a>使用 Visual Studio
 
@@ -58,7 +58,3 @@ ms.locfileid: "89656154"
 - [建立 CLI 的範本](cli-templates-create-item-template.md)
 - [建立和使用 CLI 的工具](../tools/global-tools-how-to-create.md)
 - [使用外掛程式建立應用程式](creating-app-with-plugin-support.md)
-
-## <a name="create-web-apps"></a>建立 Web 應用程式
-
-如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](/aspnet/core/)。

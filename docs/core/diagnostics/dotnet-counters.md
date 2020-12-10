@@ -2,12 +2,12 @@
 title: dotnet-計數器診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet-counter CLI 工具，以進行臨機操作健全狀況監視和第一層效能調查。
 ms.date: 11/17/2020
-ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48e3b038ddb5c9421367612a592c5ba6b9459791
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822213"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009543"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a> (dotnet) 的計數器調查效能計數器
 
@@ -41,7 +41,7 @@ ms.locfileid: "94822213"
 dotnet-counters [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet-counters` 是一種效能監視工具，適用于臨機操作健全狀況監視和第一層效能調查。 它可以觀察經由 API 發佈的效能計數器值 <xref:System.Diagnostics.Tracing.EventCounter> 。 例如，您可以在 .NET Core 應用程式中快速監視 CPU 使用量或擲回例外狀況率等專案，以查看是否有任何可疑的專案，然後再使用或進行更嚴重的效能調查 `PerfView` `dotnet-trace` 。
 
@@ -71,7 +71,7 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>選項
@@ -83,6 +83,10 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   要從中收集計數器資料之進程的名稱。
+
+- **`--diagnostic-port`**
+
+  要建立之診斷埠的名稱。 請參閱 [使用診斷埠](#using-diagnostic-port) 來瞭解如何使用此選項，從應用程式啟動開始監視計數器。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -106,6 +110,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
+
+  > [!NOTE]
+  > 透過 dotnet 啟動 .NET 可執行檔會將其輸入/輸出重新導向，而您將無法與其 stdin/stdout 進行互動。 透過 CTRL + C 或 SIGTERM 結束工具會安全地結束工具和子進程。 如果子進程在工具之前結束，則工具也會結束，而且應該安全地查看追蹤。 如果您需要使用 stdin/stdout，可以使用 `--diagnostic-port` 選項。 如需詳細資訊，請參閱 [使用診斷埠](#using-diagnostic-port) 。
 
 ### <a name="examples"></a>範例
 
@@ -180,7 +187,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>選項
@@ -192,6 +199,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   要監視之進程的名稱。
+
+- **`--diagnostic-port`**
+
+  要建立之診斷埠的名稱。 請參閱 [使用診斷埠](#using-diagnostic-port) 來瞭解如何使用此選項，從應用程式啟動開始監視計數器。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -207,6 +218,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
+
+  > [!NOTE]
+  > 透過 dotnet 啟動 .NET 可執行檔會將其輸入/輸出重新導向，而您將無法與其 stdin/stdout 進行互動。 透過 CTRL + C 或 SIGTERM 結束工具會安全地結束工具和子進程。 如果子進程在工具之前結束，則工具也會結束，而且應該安全地查看追蹤。 如果您需要使用 stdin/stdout，可以使用 `--diagnostic-port` 選項。 如需詳細資訊，請參閱 [使用診斷埠](#using-diagnostic-port) 。
 
 ### <a name="examples"></a>範例
 
@@ -313,6 +327,48 @@ dotnet-counters ps [-h|--help]
 ```console
 > dotnet-counters ps
   
-  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  15683 WebApi     /home/user/repos/WebApi/WebApi
   16324 dotnet     /usr/local/share/dotnet/dotnet
 ```
+
+## <a name="using-diagnostic-port"></a>使用診斷埠
+
+  > [!IMPORTANT]
+  > 這僅適用于執行 .NET 5.0 或更新版本的應用程式。
+
+診斷埠是新增在 .NET 5 中的新執行時間功能，可讓您從應用程式啟動開始監視或收集計數器。 若要使用來執行此作業， `dotnet-counters` 您可以使用 `dotnet-counters <collect|monitor> -- <command>` 如上述範例中所述，或使用 `--diagnostic-port` 選項。
+
+使用 `dotnet-counters <collect|monitor> -- <command>` 以子進程的形式啟動應用程式是從啟動時快速監視的最簡單方式。
+
+但是，當您想要更精確地控制受監視的應用程式存留期 (例如，只在前10分鐘內監視應用程式並繼續執行) 或者，如果您需要使用 CLI 與應用程式互動，使用 `--diagnostic-port` 選項可讓您控制受監視的目標應用程式和 `dotnet-counters` 。
+
+1. 下列命令會建立名為 dotnet 的診斷通訊端 `myport.sock` ，並等候連接。
+
+    > ```dotnet-cli
+    > dotnet-counters collect --diagnostic-port myport.sock
+    > ```
+
+    輸出：
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. 在個別的主控台中，啟動目標應用程式，並將環境變數 `DOTNET_DiagnosticPorts` 設為輸出中的值 `dotnet-counters` 。
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    如此一來，就可以 `dotnet-counters` 開始收集計數器 `my-dotnet-app` ：
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > 啟動您的應用程式可能 `dotnet run` 會造成問題，因為 DOTNET CLI 可能會產生許多不是您應用程式的子進程，而且它們可以在您的應用 `dotnet-counters` 程式之前連線，讓您的應用程式在執行時間暫停。 建議您直接使用應用程式的獨立版本，或用 `dotnet exec` 來啟動應用程式。

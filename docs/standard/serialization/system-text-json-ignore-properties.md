@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: ed7ef8509d6660bbbbaf194a87aa9d4815143507
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 6d703156d50a3e00a33cea5e15be2df911ed7c1b
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439899"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008808"
 ---
 # <a name="how-to-ignore-properties-with-no-locsystemtextjson"></a>如何忽略屬性 System.Text.Json
 
@@ -134,15 +134,22 @@ ms.locfileid: "96439899"
 沒有內建的方法可防止序列化 .NET Core 3.1 中具有值型別預設值的屬性 `System.Text.Json` 。
 ::: zone-end
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [具現化 JsonSerializerOptions](system-text-json-configure-options.md)
-* [啟用不區分大小寫的比對](system-text-json-character-casing.md)
-* [自訂屬性名稱和值](system-text-json-customize-properties.md)
+* [如何將 JSON 序列化及還原序列化](system-text-json-how-to.md)
+* [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
+* [啟用不區分大小寫比對](system-text-json-character-casing.md)
+* [自訂屬性名稱與值](system-text-json-customize-properties.md)
 * [允許不正確 JSON](system-text-json-invalid-json.md)
 * [處理溢位 JSON](system-text-json-handle-overflow.md)
-* [保留迴圈參考](system-text-json-preserve-references.md)
-* [不可變類型和非公用存取子](system-text-json-immutability.md)
+* [保留參考](system-text-json-preserve-references.md)
+* [不可變型別及非公用存取子](system-text-json-immutability.md)
 * [多型序列化](system-text-json-polymorphism.md)
+* [從遷移 Newtonsoft.Json 至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自訂字元編碼](system-text-json-character-encoding.md)
+* [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
+* [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
+* [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)
