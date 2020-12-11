@@ -1,19 +1,19 @@
 ---
 title: 可為 Null 的實值型別
-description: '瞭解如何使用可為 null 的實值型別，表示在 F # 中也可以是 null 的實值型別。'
+description: '瞭解如何使用可為 null 的實值型別，表示在 F # 中也可以是 null 的實數值型別。'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740401"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009634"
 ---
 # <a name="nullable-value-types"></a>可為 Null 的實值型別
 
 _可為 null 的實值型_ 別 `Nullable<'T>` 代表也可以是的任何 [結構](structures.md)類型 `null` 。 當您與可選擇用來代表這些類型類型的程式庫和元件（例如整數）進行互動時，這項功能會很有説明 `null` 。 支援此結構的基礎類型為 <xref:System.Nullable%601?displayProperty=nameWithType> 。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 Nullable<'T>
@@ -62,7 +62,7 @@ a <- Nullable()
 
 ## <a name="pass-and-assign-to-members"></a>傳遞並指派給成員
 
-使用成員和 F # 值兩者之間的主要差異在於，當您使用成員時，可以隱含推斷可為 null 的實數值型別。 請考慮採用可為 null 實值型別的 folling 方法做為輸入：
+使用成員和 F # 值兩者之間的主要差異在於，當您使用成員時，可以隱含推斷可為 null 的實數值型別。 請考慮採用可為 null 實值型別做為輸入的下列方法：
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-在上述範例中，您可以傳遞 `12` 給方法 `M` 。 您也可以指派 `12` 給 auto 屬性 `NVT` 。 如果您可以將輸入視為 nullabel 值型別，則 F # 編譯器會在目標型別符合輸入時，以隱含的方式轉換呼叫或指派，如下所示。
+在上述範例中，您可以傳遞 `12` 給方法 `M` 。 您也可以指派 `12` 給 auto 屬性 `NVT` 。 如果輸入可視為可為 null 的實值型別，且符合目標型別，則 F # 編譯器會隱含地轉換這類呼叫或指派。
 
 ## <a name="examine-a-nullable-value-type-instance"></a>檢查可為 null 的實值型別實例
 
