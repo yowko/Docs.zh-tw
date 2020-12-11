@@ -1,6 +1,6 @@
 - name: ML.NET
   href: index.yml
-- name: 總覽
+- name: 概觀
   expanded: true
   items:
     - name: 模型建立器與 CLI
@@ -111,6 +111,8 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: 將模型部署到 Web API
               href: how-to-guides/serve-model-web-api-ml-net.md
+            - name: 取用 Azure Machine Learning ONNX 模型
+              href: /azure/machine-learning/how-to-use-automl-onnx-model-dotnet?toc=/dotnet/machine-learning/how-to-guides/toc.json&bc=/dotnet/machine-learning/how-to-guides/toc.json
 - name: 參考資料
   items:
     - name: ML.NET API 參考
