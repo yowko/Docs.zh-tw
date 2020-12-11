@@ -6,19 +6,19 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 4a33d9de96af805c3696ceed5cd30a3fa8547222
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110828"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何從遷移 Newtonsoft.Json 至 System.Text.Json
 
@@ -369,6 +369,10 @@ The JSON value could not be converted to System.String.
 
 ::: zone pivot="dotnet-5-0"
 `Newtonsoft.Json`和都 `System.Text.Json` 支援型別的集合 `Dictionary<TKey, TValue>` 。
+
+> [!CAUTION]
+> 還原序列化為的， `Dictionary<TKey, TValue>` 其中的 `TKey` 輸入會在取用 `string` 應用程式中造成安全性弱點。 如需詳細資訊，請參閱 [dotnet/runtime # c7e7839c-293b-4761-ae4c-848eda91130b](https://github.com/dotnet/runtime/issues/4761)。
+
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"

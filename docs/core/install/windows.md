@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 Windows 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110230"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安裝 .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "96549341"
 >
 > - [在 Windows 上安裝](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [在 Linux 上安裝](linux.md)
+> - [安裝在 Linux 上](linux.md)
 
 在本文中，您將瞭解如何在 Windows 上安裝 .NET。 .NET 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET 應用程式，且不一定會包含在應用程式中。 SDK 是用來建立 .NET 應用程式和程式庫。 .NET 執行時間一律會與 SDK 一起安裝。
 
@@ -37,6 +37,7 @@ Windows 10 版本的服務結束日期會依版本分割。 下表只考慮 **�
 
 | 作業系統            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
 |-----------------------------|---------------|---------------|--------|
+| Windows 10，版本20H2    | ✔️           | ✔️            | ✔️    |
 | Windows 10，版本2004    | ✔️           | ✔️            | ✔️    |
 | Windows 10，版本1909    | ✔️           | ✔️            | ✔️    |
 | Windows 10，版本1903    | ✔️           | ✔️            | ✔️    |
@@ -235,7 +236,7 @@ dotnet-install.ps1 -Channel Current
 如果您已經安裝 Visual Studio，您可以使用下列步驟來檢查您的版本。
 
 01. 開啟 Visual Studio。
-01. 選取 **Help**  >  **Microsoft Visual Studio** 的 [說明]。
+01. 選取  >  **Microsoft Visual Studio** 的 [說明]。
 01. 閱讀 [ **關於** ] 對話方塊中的版本號碼。
 
 Visual Studio 可以安裝最新的 .NET SDK 和執行時間。
