@@ -1,30 +1,30 @@
 ---
 title: 安裝額外的 ML.NET 相依性
-description: 瞭解如何安裝 ML.NET 套件相依的任何原生程式庫，但不會隨 NuGet 套件一起安裝
+description: 瞭解如何安裝 ML.NET 套件相依的任何原生程式庫，但不會隨 NuGet 套件安裝
 ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 75d29c6bafdce5c9bb104229ddc8d7b847f57e29
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008426"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366800"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>安裝額外的 ML.NET 相依性
 
-在大部分情況下，在所有作業系統上，安裝 ML.NET 就像參考適當的 NuGet 套件一樣簡單。
+在大部分的情況下，在所有作業系統上安裝 ML.NET 就像參考適當的 NuGet 套件一樣簡單。
 
 ```dotnetcli
 dotnet add package Microsoft.ML
 ```
 
-不過在某些情況下，有其他安裝需求，特別是在需要原生元件時。 本檔說明這些案例的安裝需求。 這些區段會依照具有額外相依性的特定 `Microsoft.ML.*` NuGet 套件來細分。
+不過，在某些情況下會有其他安裝需求，特別是在需要原生元件時。 本檔說明這些案例的安裝需求。 這些區段會依具有額外相依性的特定 `Microsoft.ML.*` NuGet 套件進行細分。
 
-## <a name="microsoftmltimeseries-microsoftmlautoml"></a>時間序列、Microsoft AutoML。
+## <a name="microsoftmltimeseries-microsoftmlautoml"></a>時間序列，AutoML 的 microsoft ml。
 
-這兩個封裝相依于，相依 `Microsoft.ML.MKL.Redist` 于 `libiomp` 。
+這兩個套件相依于，相依 `Microsoft.ML.MKL.Redist` 于 `libomp` 。
 
 ### <a name="windows"></a>Windows
 
@@ -72,7 +72,7 @@ dotnet add package Microsoft.ML
     sudo apt-get install intel-mkl-64bit-2020.0-088
     ```
 
-    判斷位置`libiomp.so`
+    判斷的位置 `libiomp.so`
 
     ```bash
     find /opt -name "libiomp5.so"
@@ -92,7 +92,7 @@ dotnet add package Microsoft.ML
 
 ### <a name="mac"></a>Mac
 
-1. 使用安裝程式庫`Homebrew`
+1. 安裝程式庫 `Homebrew`
 
     ```bash
     brew update && brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f5b1ac99a7fba27c19cee0bc4f036775c889b359/Formula/libomp.rb && brew link libomp --force

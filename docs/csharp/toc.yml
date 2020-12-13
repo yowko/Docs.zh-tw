@@ -52,8 +52,6 @@
       href: tutorials/exploration/top-level-statements.md
     - name: 探索物件中的模式
       href: tutorials/exploration/patterns-objects.md
-    - name: 探索 C# 6
-      href: tutorials/exploration/csharp-6.yml
     - name: 探索字串插補 - 互動式
       href: tutorials/exploration/interpolated-strings.yml
     - name: 探索您環境中的字串插補
@@ -93,8 +91,6 @@
       href: whats-new/csharp-8.md
     - name: C# 7.0-7.3
       href: whats-new/csharp-7.md
-    - name: C# 6
-      href: whats-new/csharp-6.md
     - name: 編譯器的重大變更
       href: whats-new/breaking-changes.md
     - name: C# 的版本歷程記錄

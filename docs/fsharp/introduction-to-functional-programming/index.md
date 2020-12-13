@@ -2,12 +2,12 @@
 title: F# 函式程式設計簡介
 description: '瞭解 F # 中功能性程式設計的基本概念。'
 ms.date: 10/29/2018
-ms.openlocfilehash: fc2aebe80de16b92942c3557c0e03c198883dde1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 44242a4319a331312a003a555d1483f2a3f1a90d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110581"
 ---
 # <a name="introduction-to-functional-programming-in-f"></a>F 中的功能程式設計簡介\#
 
@@ -20,7 +20,7 @@ ms.locfileid: "96740324"
 
 在本系列中，您將探索使用 F # 的功能性程式設計概念和模式。 在過程中，您也將學習一些 F #。
 
-## <a name="terminology"></a>術語
+## <a name="terminology"></a>詞彙
 
 功能性程式設計（如同其他程式設計架構）隨附的詞彙，您最終將需要學習。 以下是您將會看到的一些常見詞彙：
 
@@ -54,7 +54,7 @@ val addOne: x:int -> int
 
 ### <a name="expressions"></a>運算式
 
-運算式是評估為值的結構。 相較于執行動作的語句，運算式可以考慮執行可傳回值的動作。 運算式幾乎一律用於函式程式設計中的語句。
+運算式是評估為值的結構。 相較于執行動作的語句，運算式可以考慮執行可傳回值的動作。 運算式幾乎一律用於功能性程式設計，而不是語句。
 
 請考慮先前的函數 `addOne` 。 的主體 `addOne` 為運算式：
 
@@ -203,6 +203,6 @@ value = value + 1 // Produces a 'bool' value!
 
 [第](first-class-functions.md) 一級函式探索更深層的函式，並示範如何在各種內容中使用這些函數。
 
-## <a name="further-reading"></a>進階閱讀
+## <a name="further-reading"></a>進一步閱讀
 
 [思考功能](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/)系列是另一項絕佳的資源，可瞭解如何使用 F # 進行功能性程式設計。 它涵蓋功能性程式設計的基本概念，並使用 F # 功能來說明概念，以提供實用且容易閱讀的方式。

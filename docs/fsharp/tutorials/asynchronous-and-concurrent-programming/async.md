@@ -2,12 +2,12 @@
 title: 非同步程式設計
 description: '瞭解 F # 如何根據衍生自核心功能程式設計概念的語言層級程式設計模型，提供非同步全新支援。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 8bf8d6987187377cc1f44e77141b5d70d873f849
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739323"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366818"
 ---
 # <a name="async-programming-in-f"></a>F 中的非同步程式設計\#
 
@@ -93,7 +93,7 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Parallel
     |> Async.Ignore
     |> Async.RunSynchronously
@@ -101,14 +101,14 @@ let main argv =
     0
 ```
 
-如您所見， `main` 函數有更多呼叫。 就概念而言，它會執行下列動作：
+如您所見， `main` 函數有更多元素。 就概念而言，它會執行下列動作：
 
-1. 使用將命令列引數轉換成 `Async<unit>` 計算 `Array.map` 。
+1. 使用將命令列引數轉換成一系列 `Async<unit>` 計算 `Seq.map` 。
 2. 建立 `Async<'T[]>` ，以 `printTotalFileBytes` 在執行時平行排程和執行計算。
-3. 建立 `Async<unit>` 會執行平行計算的，並忽略其結果。
-4. 使用和封鎖來明確執行最後一個計算 `Async.RunSynchronously` ，直到完成為止。
+3. 建立 `Async<unit>` 會執行平行計算的，並忽略其結果 (也就是 `unit[]`) 。
+4. 明確執行整體組成的計算 `Async.RunSynchronously` ，並封鎖直到完成為止。
 
-當此程式執行時，會 `printTotalFileBytes` 針對每個命令列引數平行執行。 因為非同步計算獨立執行程式流程，所以沒有順序可讓它們列印其資訊並完成執行。 計算會以平行方式排程，但不保證其執行順序。
+當此程式執行時，會 `printTotalFileBytes` 針對每個命令列引數平行執行。 由於非同步計算獨立執行程式流程，因此沒有任何定義的順序可列印其資訊並完成執行。 計算會以平行方式排程，但不保證其執行順序。
 
 ## <a name="sequence-asynchronous-computations"></a>順序非同步計算
 
@@ -125,18 +125,18 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Sequential
     |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
 
-這會排程依 `printTotalFileBytes` 元素循序執行， `argv` 而非以平行方式進行排程。 因為下一個專案將不會排定到最後一個計算完成執行，所以會排序計算，使其執行不會有任何重迭。
+這會排程依 `printTotalFileBytes` 元素循序執行， `argv` 而非以平行方式進行排程。 因為後續的計算完成執行之後，每個後續的作業都不會排程，所以計算會排序，使其執行不會有任何重迭。
 
 ## <a name="important-async-module-functions"></a>重要的非同步模組函數
 
-當您在 F # 中撰寫非同步程式碼時，通常會與處理計算排程的架構互動。 不過，這不一定都是如此，所以最好是學習各種啟動函式來排程非同步工作。
+當您在 F # 中撰寫非同步程式碼時，通常會與處理計算排程的架構互動。 不過，這不一定都是如此，因此最好瞭解可用來排程非同步工作的各種功能。
 
 因為 F # 非同步計算是工作的 _規格_ ，而不是表示已在執行中的工作，所以必須使用啟動函式來明確地啟動它們。 有許多 [非同步啟動方法](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) 在不同的內容中很有用。 下一節將說明一些較常見的啟動函式。
 
@@ -190,7 +190,7 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 使用時機：
 
-- 當您需要呼叫的 .NET API 需要 <xref:System.Threading.Tasks.Task%601> 表示非同步計算的結果時。
+- 當您需要呼叫 .NET API 時，它會產生 <xref:System.Threading.Tasks.Task%601> 以代表非同步計算的結果。
 
 要注意的事項：
 
@@ -198,12 +198,12 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 ### <a name="asyncparallel"></a>Async. Parallel
 
-排定要平行執行的非同步計算順序。 藉由指定參數，可以選擇性地調整/節流處理平行處理原則的程度 `maxDegreesOfParallelism` 。
+排定要平行執行的非同步計算順序，以提供的順序產生結果陣列。 藉由指定參數，可以選擇性地調整/節流處理平行處理原則的程度 `maxDegreeOfParallelism` 。
 
 簽章：
 
 ```fsharp
-computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreeOfParallelism: int -> Async<'T[]>
 ```
 
 使用時機：
@@ -251,7 +251,7 @@ task: Task<'T> -> Async<'T>
 
 要注意的事項：
 
-- 例外狀況會依照工作 <xref:System.AggregateException> 平行程式庫的慣例包裝，而這種行為與 F # async 通常會如何呈現例外狀況不同。
+- 例外狀況會依照 <xref:System.AggregateException> 工作平行程式庫的慣例包裝，而這種行為與 F # async 通常會如何呈現例外狀況不同。
 
 ### <a name="asynccatch"></a>Async. Catch
 
@@ -273,7 +273,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async. Ignore
 
-建立會執行指定計算並忽略其結果的非同步計算。
+建立會執行指定計算但捨棄其結果的非同步計算。
 
 簽章：
 
@@ -283,7 +283,7 @@ computation: Async<'T> -> Async<unit>
 
 使用時機：
 
-- 當您有不需要結果的非同步計算時。 這類似于 `ignore` 非非同步程式碼的程式碼。
+- 當您有不需要結果的非同步計算時。 這類似于 `ignore` 非非同步程式碼的函式。
 
 要注意的事項：
 
@@ -291,7 +291,7 @@ computation: Async<'T> -> Async<unit>
 
 ### <a name="asyncrunsynchronously"></a>Async. Async.runsynchronously
 
-執行非同步計算，並等候其在呼叫執行緒上的結果。 此呼叫正在封鎖中。
+執行非同步計算，並等候其在呼叫執行緒上的結果。 如果計算產生一個例外狀況，則會傳播例外狀況。 此呼叫正在封鎖中。
 
 簽章：
 
@@ -310,7 +310,7 @@ computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>Async. 開始
 
-在傳回的執行緒集區中啟動非同步計算 `unit` 。 不會等待其結果。 以啟動的嵌套計算 `Async.Start` 會與呼叫它們的父代計算分開啟動。 其存留期未系結至任何父代計算。 如果取消父代計算，則不會取消任何子計算。
+啟動會線上程集區中傳回的非同步計算 `unit` 。 不會等待其完成，並（或）觀察到例外狀況結果。 開頭的嵌套計算 `Async.Start` 會與呼叫它們的父代計算分開啟動; 其存留期不會系結至任何父代計算。 如果取消父代計算，則不會取消任何子計算。
 
 簽章：
 
@@ -323,7 +323,7 @@ computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 - 您有不產生結果及/或需要處理一項的非同步計算。
 - 非同步計算完成時，您不需要知道。
 - 您不在意非同步計算執行所在的執行緒。
-- 您不需要留意或報告工作所產生的例外狀況。
+- 您不需要留意或報告執行所產生的例外狀況。
 
 要注意的事項：
 
@@ -382,7 +382,7 @@ module Async =
 
 雖然 F # 提供了一些功能，可讓您在目前的執行緒上啟動非同步計算 (或明確地不) 目前的執行緒上，非同步通常不會與特定的執行緒策略相關聯。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F # 非同步程式設計模型](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet .com 的 F # 非同步指南](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
