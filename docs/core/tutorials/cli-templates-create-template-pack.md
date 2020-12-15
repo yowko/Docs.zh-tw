@@ -2,19 +2,19 @@
 title: 建立適用於 dotnet new 的範本套件
 description: 了解如何建立將會針對 dotnet new 命令建置範本套件的 csproj 檔案。
 author: adegeo
-ms.date: 12/10/2019
+ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 25264fff42c47f5bb660f68f85dbb123b5b2608c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0d8ef9c158920ec49948215afb505a3753503286
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324334"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512446"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
 
-透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 本教學課程是系列中的第三部分，會教您如何建立、安裝和卸載範本以搭配 `dotnet new` 命令使用。
+您可以使用 .NET 來建立和部署範本，以產生專案、檔案，甚至是資源。 本教學課程是一系列文章中的第三部分，說明如何建立、安裝及卸載範本以搭配 `dotnet new` 命令使用。
 
 在這部分的系列文章中，您將了解如何：
 
@@ -25,13 +25,13 @@ ms.locfileid: "85324334"
 > * 從 NuGet 套件檔案安裝範本
 > * 依套件識別碼將範本解除安裝
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)和[第 2 部分](cli-templates-create-project-template.md)。
 
-  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 只要您將範本當做資料夾複製到_working\templates \\ _資料夾，就可以使用不同的範本。
+  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 您可以使用不同的範本，只要將範本以資料夾的形式複製到 _working\templates \\_ 資料夾即可。
 
-* 開啟終端機，並流覽至_工作 \\ _資料夾。
+* 開啟終端機，並流覽至 _工作 \\_ 資料夾。
 
 ## <a name="create-a-template-pack-project"></a>建立範本套件專案
 
@@ -49,7 +49,7 @@ ms.locfileid: "85324334"
 dotnet new console -n templatepack -o .
 ```
 
-`-n`參數會將 _.csproj_檔案名設定為_templatepack_。 `-o`參數會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
+`-n`參數會將 _.csproj_ 檔案名設定為 _>templatepack.csproj .csproj_。 `-o`參數會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
 
 ```dotnetcli
 dotnet new console -n templatepack -o .
@@ -84,6 +84,7 @@ Restore succeeded.
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -94,11 +95,13 @@ Restore succeeded.
 </Project>
 ```
 
-上面 XML 中的 `<PropertyGroup>` 設定會被分成三個群組。 第一個群組會處理 NuGet 套件的必要屬性。 三個 `<Package` 設定和用來在 NuGet 摘要上識別您套件的 NuGet 套件屬性有關。 特別是 `<PackageId>` 值，其是用來透過單一名稱 (而非目錄路徑) 將範本套件解除安裝。 它也可以用來從 NuGet 摘要安裝範本套件。 其餘的設定 (例如 `<Title>` 和 `<PackageTags>`) 都與顯示在 NuGet 摘要上的中繼資料有關。 如需 NuGet 設定的詳細資訊，請參閱 [NuGet 和 MSBuild 屬性](/nuget/reference/msbuild-targets)。
+上面 XML 中的 `<PropertyGroup>` 設定會被分成三個群組。 第一個群組會處理 NuGet 套件的必要屬性。 三個 `<Package*>` 設定和用來在 NuGet 摘要上識別您套件的 NuGet 套件屬性有關。 特別是 `<PackageId>` 值，其是用來透過單一名稱 (而非目錄路徑) 將範本套件解除安裝。 它也可以用來從 NuGet 摘要安裝範本套件。 其餘的設定 (例如 `<Title>` 和 `<PackageTags>`) 都與顯示在 NuGet 摘要上的中繼資料有關。 如需 NuGet 設定的詳細資訊，請參閱 [NuGet 和 MSBuild 屬性](/nuget/reference/msbuild-targets)。
 
 必須設定 `<TargetFramework>` 設定，來使 MSBuild 能在您執行封裝命令以編譯及封裝專案時能夠正常執行。
 
-最後的三個設定與在建立 NuGet 套件時正確設定專案，以將範本包含在 NuGet 套件中適當的資料夾有關。
+接下來的三個設定必須正確地設定專案，以在建立 NuGet 套件時，將範本包含在 NuGet 套件的適當資料夾中。
+
+最後一個設定會隱藏未套用至範本套件專案的警告訊息。
 
 `<ItemGroup>` 包含兩個設定。 首先，`<Content>` 設定會將 _templates_ 資料夾中的所有項目包含為內容。 它也會排除任何 _bin_ 資料夾或 _obj_ 資料夾，以防止包含任何已編譯的程式碼 (如果您已測試並編譯您的範本的話)。 再來，`<Compile>` 設定會將所有程式碼檔案排除在編譯之外，無論它們位於何處。 此設定能防止用來建立範本套件的專案嘗試編譯 _templates_ 資料夾階層中的程式碼。
 
@@ -117,7 +120,7 @@ dotnet pack
 ```
 
 ```console
-Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
+Microsoft (R) Build Engine version 16.8.0+126527ff1 for .NET
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Restore completed in 123.86 ms for C:\working\templatepack.csproj.
@@ -138,12 +141,12 @@ Options:
 
 ... cut to save space ...
 
-Templates                                         Short Name            Language          Tags
--------------------------------------------------------------------------------------------------------------------------------
-Example templates: string extensions              stringext             [C#]              Common/Code
-Console Application                               console               [C#], F#, VB      Common/Console
-Example templates: async project                  consoleasync          [C#]              Common/Console/C#8
-Class library                                     classlib              [C#], F#, VB      Common/Library
+Templates                                         Short Name               Language          Tags
+--------------------------------------------      -------------------      ------------      ----------------------
+Example templates: string extensions              stringext                [C#]              Common/Code
+Console Application                               console                  [C#], F#, VB      Common/Console
+Example templates: async project                  consoleasync             [C#]              Common/Console/C#9
+Class library                                     classlib                 [C#], F#, VB      Common/Library
 ```
 
 如果您將 NuGet 套件上傳至 NuGet 摘要，您可以使用 `dotnet new -i PACKAGEID` 命令；其中 `PACKAGEID` 和 _.csproj_ 檔案中的 `<PackageId>` 設定相同。 此套件識別碼和 NuGet 套件識別碼相同。
@@ -160,29 +163,33 @@ dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
-  Microsoft.DotNet.Common.ItemTemplates
+  Microsoft.DotNet.Common.ProjectTemplates.2.2
+    Details:
+      NuGetPackageId: Microsoft.DotNet.Common.ProjectTemplates.2.2
+      Version: 1.0.2-beta4
+      Author: Microsoft
     Templates:
-      dotnet gitignore file (gitignore)
-      global.json file (globaljson)
-      NuGet Config (nugetconfig)
-      Solution File (sln)
-      Dotnet local tool manifest file (tool-manifest)
-      Web Config (webconfig)
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+    Uninstall Command:
+      dotnet new -u Microsoft.DotNet.Common.ProjectTemplates.2.2
 
 ... cut to save space ...
 
-  NUnit3.DotNetNew.Template
-    Templates:
-      NUnit 3 Test Project (nunit) C#
-      NUnit 3 Test Item (nunit-test) C#
-      NUnit 3 Test Project (nunit) F#
-      NUnit 3 Test Item (nunit-test) F#
-      NUnit 3 Test Project (nunit) VB
-      NUnit 3 Test Item (nunit-test) VB
   AdatumCorporation.Utility.Templates
+    Details:
+      NuGetPackageId: AdatumCorporation.Utility.Templates
+      Version: 1.0.0
+      Author: Me
     Templates:
       Example templates: async project (consoleasync) C#
       Example templates: string extensions (stringext) C#
+    Uninstall Command:
+      dotnet new -u AdatumCorporation.Utility.Templates
 ```
 
 執行 `dotnet new -u AdatumCorporation.Utility.Templates` 來將範本解除安裝。 `dotnet new` 命令將會輸出說明資訊，其應該會省略您先前所安裝的範本。

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: a339766313678590cb80263ba5b2ff328c018a58
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: f6fb6ad907ecd668d59ca95b19218c19d378d83e
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099181"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513246"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何將位元組陣列轉換為 int (c # 程式設計手冊) 
 
@@ -50,7 +50,7 @@ ms.locfileid: "95099181"
 
 [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.BitConverter>
 - <xref:System.BitConverter.IsLittleEndian>

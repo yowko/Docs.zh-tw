@@ -6,14 +6,14 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 42ea67e9012fd55fbceb8a7bad4c8df8bf6bf6da
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 972deaa4616c15c00e83e26891c4473eae7bfcf8
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099383"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513051"
 ---
 # <a name="how-to-define-constants-in-c"></a>如何在 C 中定義常數\#
 
@@ -32,6 +32,6 @@ ms.locfileid: "95099383"
   
  使用類別名稱限定詞，可協助確保您和其他常數使用者了解它是無法修改的常數。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類別和結構](./index.md)

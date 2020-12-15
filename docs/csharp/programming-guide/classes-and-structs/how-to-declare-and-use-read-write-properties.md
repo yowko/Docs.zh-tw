@@ -9,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: a0ef36ebff54d6e55e6fd5c72558bf114816d1ca
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 824ce8a8cd8f0ef94495a85726331cd6cd024891
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099396"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513001"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>如何宣告和使用讀寫屬性 (c # 程式設計手冊) 
 
@@ -60,7 +60,7 @@ person.SetAge(person.GetAge() + 1);
   
  請注意，程式中未明確使用 `ToString`。 預設會由 `WriteLine` 呼叫叫用。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 程式設計指南](../index.md)
 - [屬性](./properties.md)

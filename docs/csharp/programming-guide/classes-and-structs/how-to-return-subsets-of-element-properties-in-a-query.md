@@ -5,14 +5,14 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 3e30793ed16204943e2398984ed200b93db7f86f
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 5784d6a288af374d357346e32535ebe9c1877bcc
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098849"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512791"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何在查詢中傳回元素屬性的子集 (c # 程式設計手冊) 
 
@@ -50,7 +50,7 @@ Console.WriteLine(student.First + " " + student.Last);
   
 若要執行此程式碼，請將該類別複製貼入 System.Linq 指示詞為 `using` 的 C# 主控台應用程式。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 程式設計指南](../index.md)
 - [匿名類型](./anonymous-types.md)

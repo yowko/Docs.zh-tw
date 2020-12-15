@@ -7,14 +7,14 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 862eb86a5b0cc6b95302260874222bbc09d98132
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 88afff854b8136bde837db8effb0e0eb512e1099
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099406"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513090"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>如何建立列舉的新方法 (c # 程式設計手冊) 
 
@@ -28,7 +28,7 @@ ms.locfileid: "95099406"
   
  請注意，`Extensions` 類別也包含動態更新的靜態變數，以及反映該變數目前值的擴充方法傳回值。 本例示範，在幕後直接對定義所在的靜態類別叫用擴充方法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 程式設計指南](../index.md)
 - [擴充方法](./extension-methods.md)

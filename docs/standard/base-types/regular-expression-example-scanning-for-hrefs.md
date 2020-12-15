@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: aceccc019542bb1afe3082881626cfc32740a338
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 659ba966ab18f2c5db13af3ac687af57dea7b126
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733642"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513207"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 
@@ -46,7 +46,7 @@ ms.locfileid: "95733642"
 |`\s*`|比對零個以上的空白字元。|  
 |`=`|比對等號。|  
 |`\s*`|比對零個以上的空白字元。|  
-|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|比對下列其中一項，而不將結果指派給擷取的群組：<br /> <ul><li><p>引號 (或單引號)，後面加上零個或多個引號 (或單引號) 以外的任何字元，再加上引號 (或單引號)。 此模式中包含名為 `1` 的群組。</p></li><li><p>一個或多個非空白字元。 此模式中包含名為 `1` 的群組。</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']\|(?<1>\S+))`|比對下列其中一項，而不將結果指派給擷取的群組：<br /> <ul><li><p>引號 (或單引號)，後面加上零個或多個引號 (或單引號) 以外的任何字元，再加上引號 (或單引號)。 此模式中包含名為 `1` 的群組。</p></li><li><p>一個或多個非空白字元。 此模式中包含名為 `1` 的群組。</p></li></ul>|  
 |`(?<1>[^"']*)`|將零個或多個引號 (或單引號) 以外的任何字元指派給名為 `1` 的擷取端群組。|  
 |`(?<1>\S+)`|將一或多個非空白字元指派給名為 `1` 的擷取群組。|  
   
@@ -60,6 +60,6 @@ ms.locfileid: "95733642"
   
  為了解決這些問題，<xref:System.Text.RegularExpressions.Regex> 類別支援 `(?<name>…)` 的語法，可將相符項目擷取至指定的位置 (該位置可以使用字串或整數命名；重新叫用整數的速度更快)。 因此，相同字串的所有替代比對皆可導向相同的位置。 萬一發生衝突時，最後一個進入位置的比對就是成功的比對 (不過，您可以使用單一位置之多個比對的完整清單。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合。)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

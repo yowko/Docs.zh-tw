@@ -2,13 +2,13 @@
 title: 教學課程：安裝和使用 .NET 本機工具
 description: 瞭解如何安裝和使用 .NET 工具作為本機工具。
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/11/2020
+ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633877"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512459"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>教學課程：使用 .NET CLI 安裝和使用 .NET 本機工具
 
@@ -16,7 +16,7 @@ ms.locfileid: "94633877"
 
 本教學課程會教您如何安裝和使用本機工具。 您可以使用您在 [本系列的第一個教學](global-tools-how-to-create.md)課程中建立的工具。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 * 完成 [本系列的第一個教學](global-tools-how-to-create.md)課程。
 * 安裝 .NET Core 2.1 執行時間。
@@ -172,7 +172,7 @@ dotnet tool run botsay hello from the bot
 
 ## <a name="update-a-local-tool"></a>更新本機工具
 
-安裝的本機工具版本 `dotnetsay` 是2.1.3。  最新版本是2.1.4。 使用 [dotnet tool update](dotnet-tool-update.md) 命令將工具更新為最新版本。
+安裝的本機工具版本 `dotnetsay` 是2.1.3。  使用 [dotnet tool update](dotnet-tool-update.md) 命令將工具更新為最新版本。
 
 ```dotnetcli
 dotnet tool update dotnetsay
@@ -181,7 +181,7 @@ dotnet tool update dotnetsay
 輸出會指出新的版本號碼：
 
 ```console
-Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
+Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.7'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
@@ -203,6 +203,6 @@ dotnet tool uninstall dotnetsay
 
 如果您在遵循本教學課程時收到錯誤訊息，請參閱 [疑難排解 .net 工具使用問題](troubleshoot-usage-issues.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-如需詳細資訊，請參閱[.Net Core 工具](global-tools.md)。
+如需詳細資訊，請參閱 [.net 工具](global-tools.md)

@@ -1,18 +1,18 @@
 ---
-title: 使用 .NET Core CLI 組織和測試專案
-description: 本教學課程說明如何從命令列組織和測試 .NET Core 專案。
+title: 使用 .NET CLI 組織和測試專案
+description: 本教學課程說明如何從命令列組織和測試 .NET 專案。
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 58c78c0f11ab1b275e4e4d05bf1da32562333c91
-ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
+ms.openlocfilehash: 93e8a6b8afd9f9405bf21488998a61c2e761bf1e
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84325941"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512251"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>使用 .NET Core CLI 組織和測試專案
+# <a name="organizing-and-testing-projects-with-the-net-cli"></a>使用 .NET CLI 組織和測試專案
 
-本教學課程會遵循[教學課程：使用 Visual Studio Code 建立具有 .Net Core 的主控台應用程式](with-visual-studio-code.md)，讓您超越建立簡單的主控台應用程式，以開發先進且妥善組織的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
+本教學課程會遵循 [教學課程：使用 Visual Studio Code 建立使用 .net 的主控台應用程式](with-visual-studio-code.md)，讓您超越建立簡單的主控台應用程式，以開發先進且妥善組織的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
 
 ## <a name="using-folders-to-organize-code"></a>使用資料夾來組織程式碼
 
@@ -42,6 +42,10 @@ ms.locfileid: "84325941"
 您也可以輕鬆地巡覽及維護以邏輯方式將檔案群組到資料夾的專案。 在下一節中，您會建立具有資料夾及單元測試的更複雜範例。
 
 ## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>使用 NewTypes Pets 範例進行組織及測試
+
+### <a name="prerequisites"></a>Prerequisites
+
+* [.Net 5.0 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 
 ### <a name="building-the-sample"></a>建置範例
 
@@ -83,7 +87,7 @@ ms.locfileid: "84325941"
 
 [!code-xml[NewTypes csproj](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/NewTypes.csproj)]
 
-執行下列命令：
+執行以下命令：
 
 ```dotnetcli
 dotnet run
@@ -104,7 +108,7 @@ Meow!
 
 巡覽回到 *src* 資料夾，並建立內含 *NewTypesTests* 資料夾的 *test* 資料夾。 在命令提示字元中，從 *NewTypesTests* 資料夾執行 `dotnet new xunit`。 這會產生兩個檔案︰*NewTypesTests.csproj* 及 *UnitTest1.cs*。
 
-測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。 若要新增專案參考，請使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
+測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。 若要加入專案參考，請使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 下列命令：
 
 ```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
@@ -158,10 +162,10 @@ public class PetTests
 }
 ```
 
-選擇性練習︰如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 PetTests.cs** 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
+選擇性練習︰如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 PetTests.cs 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
 
 > [!NOTE]
-> 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定這些值「不相等」**。 一開始一律會讓測試失敗，以檢查測試邏輯。 在您確認測試失敗之後，調整判斷提示以允許測試通過。
+> 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定這些值「不相等」。 一開始一律會讓測試失敗，以檢查測試邏輯。 在您確認測試失敗之後，調整判斷提示以允許測試通過。
 
 下列顯示完整專案結構：
 
@@ -181,38 +185,27 @@ public class PetTests
       |__NewTypesTests.csproj
 ```
 
-從 *test/NewTypesTests* 目錄開始。 使用命令還原測試專案 [`dotnet restore`](../tools/dotnet-restore.md) 。 使用命令執行測試 [`dotnet test`](../tools/dotnet-test.md) 。 這個命令會啟動專案檔中指定的測試執行器。
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+從 *test/NewTypesTests* 目錄開始。 使用命令執行測試 [`dotnet test`](../tools/dotnet-test.md) 。 這個命令會啟動專案檔中指定的測試執行器。
 
 如預期，測試會失敗，而且主控台會顯示下列輸出︰
 
 ```output
-Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
-Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Test run for C:\Source\dotnet\docs\samples\snippets\core\tutorials\testing-with-cli\csharp\test\NewTypesTests\bin\Debug\net5.0\NewTypesTests.dll (.NETCoreApp,Version=v5.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.8.1
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
-[xUnit.net 00:00:00.77]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
-[xUnit.net 00:00:00.78]     PetTests.CatTalkToOwnerReturnsMeow [FAIL]
-Failed   PetTests.DogTalkToOwnerReturnsWoof
-Error Message:
- Assert.NotEqual() Failure
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.50]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
+  Failed PetTests.DogTalkToOwnerReturnsWoof [6 ms]
+  Error Message:
+   Assert.NotEqual() Failure
 Expected: Not "Woof!"
 Actual:   "Woof!"
-Stack Trace:
-   at PetTests.DogTalkToOwnerReturnsWoof() in c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 13
-Failed   PetTests.CatTalkToOwnerReturnsMeow
-Error Message:
- Assert.NotEqual() Failure
-Expected: Not "Meow!"
-Actual:   "Meow!"
-Stack Trace:
-   at PetTests.CatTalkToOwnerReturnsMeow() in c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 22
+  Stack Trace:
+     at PetTests.DogTalkToOwnerReturnsWoof() in C:\Source\dotnet\docs\samples\snippets\core\tutorials\testing-with-cli\csharp\test\NewTypesTests\PetTests.cs:line 13
 
-Total tests: 2. Passed: 0. Failed: 2. Skipped: 0.
-Test Run Failed.
-Test execution time: 1.7000 Seconds
+Failed!  - Failed:     1, Passed:     1, Skipped:     0, Total:     2, Duration: 8 ms - NewTypesTests.dll (net5.0)
 ```
 
 將您測試的判斷提示從 `Assert.NotEqual` 變更為 `Assert.Equal`：
@@ -222,15 +215,14 @@ Test execution time: 1.7000 Seconds
 使用 `dotnet test` 命令重新執行測試，並取得下列輸出︰
 
 ```output
-Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
-Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Test run for C:\Source\dotnet\docs\samples\snippets\core\tutorials\testing-with-cli\csharp\test\NewTypesTests\bin\Debug\net5.0\NewTypesTests.dll (.NETCoreApp,Version=v5.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.8.1
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
 
-Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
-Test Run Successful.
-Test execution time: 1.6029 Seconds
+Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 2 ms - NewTypesTests.dll (net5.0)
 ```
 
 通過測試。 與擁有者交談時，寵物類型的方法會傳回正確值。

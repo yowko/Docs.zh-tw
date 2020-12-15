@@ -6,14 +6,14 @@ helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 032bbbff3ad356f9718053e8ba54a53559ef1ace
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 0c2d38713a1fdefd922234a02e23518c0f00add5
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098680"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512778"
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>如何使用物件初始化運算式初始化物件 (c # 程式設計手冊) 
 
@@ -33,7 +33,7 @@ ms.locfileid: "95098680"
 
 [!code-csharp[InitializerIndexerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToIndexInitializer.cs#HowToIndexInitializer)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 程式設計指南](../index.md)
 - [物件和集合初始設定式](object-and-collection-initializers.md)

@@ -5,14 +5,14 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: d344489e88ddc2c8cac51afeb5bbc76bc7b42913
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 4ae48a05d451a3276b3a0f2ee4d6c633ce7db306
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099070"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513002"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何執行和呼叫自訂擴充方法 (c # 程式設計手冊) 
 
@@ -44,7 +44,7 @@ ms.locfileid: "95099070"
 
  擴充方法沒有特定安全性弱點。 它們無法用於模擬類型上的現有方法，因為所有名稱衝突已使用類型自行定義的執行個體或靜態方法解決。 擴充方法無法存取擴充類別中的任何私用資料。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 程式設計指南](../index.md)
 - [擴充方法](./extension-methods.md)

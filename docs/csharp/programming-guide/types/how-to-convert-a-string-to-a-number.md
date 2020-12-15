@@ -8,18 +8,18 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 0a9585d05a817d09308e06558352f78a5347a8f1
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 430887ebb16570439a89f3625ac12a1fbb368227
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099168"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513155"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何將字串轉換為數字 (c # 程式設計手冊) 
 
-您可以藉由[string](../../language-reference/builtin-types/reference-types.md)呼叫在 `Parse` 各種數數值型別上找到的或方法，將字串轉換成數位 `TryParse` (`int` 、、等等 `long` `double`) ，或使用類別中的方法 <xref:System.Convert?displayProperty=nameWithType> 。  
+您可以藉由[](../../language-reference/builtin-types/reference-types.md)呼叫在 `Parse` 各種數數值型別上找到的或方法，將字串轉換成數位 `TryParse` (`int` 、、等等 `long` `double`) ，或使用類別中的方法 <xref:System.Convert?displayProperty=nameWithType> 。  
   
  呼叫 `TryParse` 方法 (，例如 [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) 或 `Parse` 方法 (例如) ，稍微更有效率且直接 [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A) 。  使用 <xref:System.Convert> 方法比實作 <xref:System.IConvertible> 的一般物件更有用。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "95099168"
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類型](./index.md)
 - [如何判斷字串是否表示數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

@@ -6,19 +6,19 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 12/09/2020
+ms.date: 12/14/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4a33d9de96af805c3696ceed5cd30a3fa8547222
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 8c2d4baa9b9a3b19b8f1bde09bea0ab718092e24
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110828"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512641"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何從遷移 Newtonsoft.Json 至 System.Text.Json
 
@@ -81,6 +81,7 @@ ms.locfileid: "97110828"
 | 允許沒有引號的屬性名稱                   | ❌ [不支援](#json-strings-property-names-and-string-values) |
 | 允許在字串值前後加上單引號              | ❌ [不支援](#json-strings-property-names-and-string-values) |
 | 允許字串屬性的非字串 JSON 值    | ❌ [不支援](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` 全域設定                 | ❌ [不支援](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -122,6 +123,7 @@ ms.locfileid: "97110828"
 | 允許沒有引號的屬性名稱                   | ❌ [不支援](#json-strings-property-names-and-string-values) |
 | 允許在字串值前後加上單引號              | ❌ [不支援](#json-strings-property-names-and-string-values) |
 | 允許字串屬性的非字串 JSON 值    | ❌ [不支援](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` 全域設定                 | ❌ [不支援](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 這不是完整的功能清單 `Newtonsoft.Json` 。 此清單包含 [GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 或 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 文章中已要求的許多案例。 如果您針對此處所列的其中一個案例執行因應措施，而此案例目前沒有範例程式碼，而且您想要共用方案，請在此頁面底部的 **意見** 反應區段中選取 **此頁面**。 這會在此檔的 GitHub 存放庫中建立問題，並將其列在此頁面的 **意見** 反應區段中。
@@ -629,7 +631,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 上述程式碼需要 `JsonElement` 包含 `fileName` 屬性的。 它會開啟 JSON 檔案，並建立 `JsonDocument` 。 方法假設呼叫端想要處理整份檔，因此它會傳回的 `Clone` `RootElement` 。
 
-如果您收到， `JsonElement` 且傳回子項目，則不需要傳回 `Clone` 子項目的。 呼叫端會負責維持 `JsonDocument` 傳入的 `JsonElement` 所屬的。 例如：
+如果您收到， `JsonElement` 且傳回子項目，則不需要傳回 `Clone` 子項目的。 呼叫端會負責維持 `JsonDocument` 傳入的 `JsonElement` 所屬的。 例如︰
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -807,6 +809,10 @@ doc.WriteTo(writer);
 
 * [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
 * [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
+
+## <a name="typenamehandlingall-not-supported"></a>Typenamehandling.none。全部不支援
+
+從有意排除對 `TypeNameHandling.All` 等功能的決策 `System.Text.Json` 。 允許 JSON 承載指定其本身的型別資訊，是 web 應用程式中常見的弱點來源。 尤其是設定 `Newtonsoft.Json` with `TypeNameHandling.All` 可讓遠端用戶端在 JSON 承載本身內內嵌整個可執行檔應用程式，如此一來，在還原序列化時，web 應用程式就會解壓縮並執行內嵌程式碼。 如需詳細資訊，請參閱星期五第13次的 [json 攻擊 PowerPoint](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-Json-Attacks.pdf) 和星期五，第 [13 個 json 攻擊詳細資料](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf)。
 
 ## <a name="additional-resources"></a>其他資源
 

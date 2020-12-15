@@ -6,18 +6,18 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: fd560c84c095dffc3718a7709af904d9ba722a18
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267681"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512765"
 ---
 # <a name="build-reusable-ui-components-with-no-locblazor"></a>使用建立可重複使用的 UI 元件 Blazor
 
 ASP.NET Web Forms 的其中一項很美觀的事，就是它如何能夠將可重複使用的使用者介面 (UI) 程式碼封裝成可重複使用的 UI 控制項。 自訂使用者控制項可以使用 *.ascx* 檔在標記中定義。 您也可以使用完整的設計工具支援，在程式碼中建立詳盡的伺服器控制項。
 
-Blazor 也支援透過 *元件*的 UI 封裝。 元件：
+Blazor 也支援透過 *元件* 的 UI 封裝。 元件：
 
 - 是獨立的 UI 區塊。
 - 維護其本身的狀態和轉譯邏輯。
@@ -77,18 +77,18 @@ Razor 指示詞以 `@` 字元開頭，通常是在檔案開頭的新行開頭使
 
 下表摘要說明中使用的各種 Razor 指示詞 Blazor ，以及它們的 ASP.NET Web Forms 對等專案（如果有的話）。
 
-|指示詞    |描述|範例|Web Form 相等|
+|指示詞    |說明|範例|Web Form 相等|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|None|
+|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|無|
 |`@code`      |將類別成員新增至元件|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|實行指定的介面|`@implements IDisposable`|使用程式碼後置|
 |`@inherits`  |繼承自指定的基類|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|None|
+|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|無|
 |`@layout`    |指定元件的版面配置元件|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|None|
+|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|無|
 |`@page`      |指定元件的路由|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |指定元件的泛型型別參數|`@typeparam TItem`|使用程式碼後置|
-|`@using`     |指定要帶入範圍內的命名空間|`@using MyComponentNamespace`|在*web.config*中新增命名空間|
+|`@using`     |指定要帶入範圍內的命名空間|`@using MyComponentNamespace`|在 *web.config* 中新增命名空間|
 
 Razor 元件也廣泛使用元素上的指示詞 *屬性* ，來控制如何編譯元件 (事件處理、資料系結、元件 & 專案參考等等，以及) 。 指示詞屬性全都遵循一般一般語法，其中括弧中的值是選擇性的：
 
@@ -98,7 +98,7 @@ Razor 元件也廣泛使用元素上的指示詞 *屬性* ，來控制如何編�
 
 下表摘要說明中所使用之 Razor 指示詞的各種屬性 Blazor 。
 
-|屬性    |描述|範例|
+|屬性    |說明|範例|
 |-------------|-----------|-------|
 |`@attributes`|呈現屬性的字典|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |建立雙向資料系結    |`<input @bind="username" @bind:event="oninput" />`|
@@ -108,7 +108,7 @@ Razor 元件也廣泛使用元素上的指示詞 *屬性* ，來控制如何編�
 
  (、、等) 所使用的各種指示詞屬性， Blazor `@onclick` `@bind` `@ref` 將在下列各節和後續章節中討論。
 
-*.Aspx*和 *.ascx*檔案中使用的許多語法在 Razor 中都有平行語法。 以下是 ASP.NET Web Forms 和 Razor 語法的簡單比較。
+*.Aspx* 和 *.ascx* 檔案中使用的許多語法在 Razor 中都有平行語法。 以下是 ASP.NET Web Forms 和 Razor 語法的簡單比較。
 
 |功能                      |Web Form           |語法               |Razor         |語法 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
@@ -146,7 +146,7 @@ Razor 元件也廣泛使用元素上的指示詞 *屬性* ，來控制如何編�
 不同于 ASP.NET Web Forms，中的元件 Blazor ：
 
 - 請勿使用元素首碼 (例如 `asp:`) 。
-- 不需要在頁面或 *web.config*中註冊。
+- 不需要在頁面或 *web.config* 中註冊。
 
 您可以把 Razor 元件想像成像是 .NET 型別，因為這正是它們的意思。 如果參考包含元件的元件，則元件可供使用。 若要將元件的命名空間帶入範圍中，請套用指示詞 `@using` ：
 
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-`OnParametersSet` `OnParametersSetAsync` 當元件從其父系收到參數，且將值指派給屬性時，會呼叫和方法。 這些方法會在元件初始化之後，以及 *每次轉譯元件*之後執行。
+`OnParametersSet` `OnParametersSetAsync` 當元件從其父系收到參數，且將值指派給屬性時，會呼叫和方法。 這些方法會在元件初始化之後，以及 *每次轉譯元件* 之後執行。
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -550,7 +550,9 @@ Blazor 元件可以將其子內容視為的 `RenderFragment` 一部分，並在�
 
 ```razor
 <ChildContentComponent>
-    <p>The time is @DateTime.Now</p>
+    <ChildContent>
+        <p>The time is @DateTime.Now</p>
+    </ChildContent>
 </ChildContentComponent>
 ```
 
@@ -609,7 +611,7 @@ Blazor 元件可以將其子內容視為的 `RenderFragment` 一部分，並在�
 
 ## <a name="code-behind"></a>程式碼後置
 
-Blazor元件通常會在單一的*razor*檔案中撰寫。 不過，您也可以使用程式碼後端檔案來分隔程式碼和標記。 若要使用元件檔，請新增符合元件檔檔案名的 c # 檔案，但副檔名為 *.cs* 的 (*Counter.razor.cs*) 。 使用 c # 檔案來定義元件的基類。 您可以將基類命名為任何您想要的名稱，但通常會將該類別命名為與 component 類別相同，但是擴充功能會 `Base` 新增 (`CounterBase`) 。 以元件為基礎的類別也必須衍生自 `ComponentBase` 。 然後，在 Razor 元件檔中加入指示詞， `@inherits` 以指定元件 () 的基類 `@inherits CounterBase` 。
+Blazor元件通常會在單一的 *razor* 檔案中撰寫。 不過，您也可以使用程式碼後端檔案來分隔程式碼和標記。 若要使用元件檔，請新增符合元件檔檔案名的 c # 檔案，但副檔名為 *.cs* 的 (*Counter.razor.cs*) 。 使用 c # 檔案來定義元件的基類。 您可以將基類命名為任何您想要的名稱，但通常會將該類別命名為與 component 類別相同，但是擴充功能會 `Base` 新增 (`CounterBase`) 。 以元件為基礎的類別也必須衍生自 `ComponentBase` 。 然後，在 Razor 元件檔中加入指示詞， `@inherits` 以指定元件 () 的基類 `@inherits CounterBase` 。
 
 *計數器 razor*
 

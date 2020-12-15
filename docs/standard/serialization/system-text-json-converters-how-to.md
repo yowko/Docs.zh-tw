@@ -1,7 +1,7 @@
 ---
 title: 如何撰寫 JSON 序列化的自訂轉換器-.NET
 description: 瞭解如何針對命名空間中提供的 JSON 序列化類別，建立自訂的轉換器 System.Text.Json 。
-ms.date: 12/09/2020
+ms.date: 12/14/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 390438e3dca7a5d40dd9957090f498b495996e05
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008860"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513194"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化的自訂轉換器 (封送處理) 
 
@@ -84,7 +84,7 @@ ms.locfileid: "97008860"
 下列步驟說明如何遵循基本模式來建立轉換器：
 
 * 建立衍生自的類別， <xref:System.Text.Json.Serialization.JsonConverter%601> 其中 `T` 是要序列化和還原序列化的型別。
-* 覆寫方法以將內送 JSON 還原序列化 `Read` ，並將其轉換為類型 `T` 。 使用 <xref:System.Text.Json.Utf8JsonReader> 傳遞至方法的，以讀取 JSON。
+* 覆寫方法以將內送 JSON 還原序列化 `Read` ，並將其轉換為類型 `T` 。 使用 <xref:System.Text.Json.Utf8JsonReader> 傳遞至方法的，以讀取 JSON。 當序列化程式傳遞目前 JSON 範圍的所有資料時，您不需要擔心處理部分資料。 因此，不需要呼叫或，也不需要 <xref:System.Text.Json.Utf8JsonReader.Skip%2A> <xref:System.Text.Json.Utf8JsonReader.TrySkip%2A> 驗證傳回的 <xref:System.Text.Json.Utf8JsonReader.Read%2A> `true` 。
 * 覆寫 `Write` 方法以序列化類型的傳入物件 `T` 。 使用 <xref:System.Text.Json.Utf8JsonWriter> 傳遞至方法的，以寫入 JSON。
 * `CanConvert`只有在必要時才覆寫方法。 `true`當要轉換的類型是型別時，就會傳回預設的實值 `T` 。 因此，只支援類型的轉換器 `T` 不需要覆寫這個方法。 如需需要覆寫這個方法的轉換器範例，請參閱本文稍後的多型還原 [序列化一節](#support-polymorphic-deserialization) 。
 
@@ -377,7 +377,7 @@ Path: $.TemperatureRanges | LineNumber: 4 | BytePositionInLine: 24
 ::: zone pivot="dotnet-5-0"
 若要啟用自訂轉換器來處理 `null` 參考或實數值型別，請覆寫 <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> 以傳回 `true` ，如下列範例所示：
 
-:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="18":::
 ::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>其他自訂轉換器範例

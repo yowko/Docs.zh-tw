@@ -2,7 +2,7 @@
 title: 具名和選擇性引數 - C# 程式設計手冊
 description: 'C # 中的具名引數會依名稱指定引數，而不是使用位置。 可以省略選擇性引數。'
 ms.date: 09/25/2020
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: a0606d6acccb47347c663a9fe3ffb8ab65b0ecec
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: bb79d956124a610bac0de6825c1f42655789e98d
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438013"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513103"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 
-C# 4 引進具名和選擇性引數。 *具名引數* 可讓您指定參數的引數，方法是將引數與其名稱比對，而不是在參數清單中的位置。 「選擇性引數」** 可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。
+C# 4 引進具名和選擇性引數。 *具名引數* 可讓您指定參數的引數，方法是將引數與其名稱比對，而不是在參數清單中的位置。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。
 
 當您使用具名和選擇性引數時，會依照引數清單中的引數顯示順序來評估引數，不是依照參數清單的順序。
 

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: fc2ffd24a67f026bd0c78e7d604a0147cf57ba49
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 18021156af879f324993beca04531c8a822725db
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099155"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513233"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何在十六進位字串和數位類型之間轉換 (c # 程式設計手冊) 
 
@@ -61,7 +61,7 @@ ms.locfileid: "95099155"
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md) \(部分機器翻譯\)
 - [類型](./index.md)
