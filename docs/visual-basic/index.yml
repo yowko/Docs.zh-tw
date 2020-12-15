@@ -6,13 +6,13 @@ metadata:
   description: 瞭解 .NET 中的 Visual Basic 程式設計-適用于開發人員、Visual Basic 的新手開發人員，以及有經驗的 Visual Basic 開發人員
   ms.topic: landing-page
   ms.date: 08/13/2020
-  ms.custom: contperfq1
-  ms.openlocfilehash: 5c393052a1782b64af18d32727f6df5bbd9d1415
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.custom: contperf-fy21q1
+  ms.openlocfilehash: 559b97e9c6b3a6b48eb05643ad3221a36b5b5a23
+  ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599677"
+  ms.lasthandoff: 12/15/2020
+  ms.locfileid: "97512615"
 landingContent:
 - title: 開始使用
   linkLists:
@@ -54,7 +54,7 @@ landingContent:
     links:
     - text: Q&A 上的 Visual Basic
       url: /answers/topics/dotnet-visual-basic.html
-- title: 程式設計語言參考
+- title: 語言參考
   linkLists:
   - linkListType: reference
     links:

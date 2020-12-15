@@ -9,59 +9,59 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: a0ef36ebff54d6e55e6fd5c72558bf114816d1ca
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 824ce8a8cd8f0ef94495a85726331cd6cd024891
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099396"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513001"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a><span data-ttu-id="f1eff-104">如何宣告和使用讀寫屬性 (c # 程式設計手冊) </span><span class="sxs-lookup"><span data-stu-id="f1eff-104">How to declare and use read write properties (C# Programming Guide)</span></span>
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a><span data-ttu-id="559de-104">如何宣告和使用讀寫屬性 (c # 程式設計手冊) </span><span class="sxs-lookup"><span data-stu-id="559de-104">How to declare and use read write properties (C# Programming Guide)</span></span>
 
-<span data-ttu-id="f1eff-105">屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。</span><span class="sxs-lookup"><span data-stu-id="f1eff-105">Properties provide the convenience of public data members without the risks that come with unprotected, uncontrolled, and unverified access to an object's data.</span></span> <span data-ttu-id="f1eff-106">這是透過「存取子」完成的：從基礎資料成員指派和擷取值的特殊方法。</span><span class="sxs-lookup"><span data-stu-id="f1eff-106">This is accomplished through *accessors*: special methods that assign and retrieve values from the underlying data member.</span></span> <span data-ttu-id="f1eff-107">[set](../../language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../language-reference/keywords/get.md) 存取子可擷取資料成員值。</span><span class="sxs-lookup"><span data-stu-id="f1eff-107">The [set](../../language-reference/keywords/set.md) accessor enables data members to be assigned, and the [get](../../language-reference/keywords/get.md) accessor retrieves data member values.</span></span>  
+<span data-ttu-id="559de-105">屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。</span><span class="sxs-lookup"><span data-stu-id="559de-105">Properties provide the convenience of public data members without the risks that come with unprotected, uncontrolled, and unverified access to an object's data.</span></span> <span data-ttu-id="559de-106">這是透過「存取子」完成的：從基礎資料成員指派和擷取值的特殊方法。</span><span class="sxs-lookup"><span data-stu-id="559de-106">This is accomplished through *accessors*: special methods that assign and retrieve values from the underlying data member.</span></span> <span data-ttu-id="559de-107">[set](../../language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../language-reference/keywords/get.md) 存取子可擷取資料成員值。</span><span class="sxs-lookup"><span data-stu-id="559de-107">The [set](../../language-reference/keywords/set.md) accessor enables data members to be assigned, and the [get](../../language-reference/keywords/get.md) accessor retrieves data member values.</span></span>  
   
- <span data-ttu-id="f1eff-108">這個範例會示範有兩個屬性的 `Person` 類別：`Name` (字串) 和 `Age` (整數)。</span><span class="sxs-lookup"><span data-stu-id="f1eff-108">This sample shows a `Person` class that has two properties: `Name` (string) and `Age` (int).</span></span> <span data-ttu-id="f1eff-109">這兩個屬性都提供 `get` 和 `set` 存取子，所以它們被視為讀取/寫入屬性。</span><span class="sxs-lookup"><span data-stu-id="f1eff-109">Both properties provide `get` and `set` accessors, so they are considered read/write properties.</span></span>  
+ <span data-ttu-id="559de-108">這個範例會示範有兩個屬性的 `Person` 類別：`Name` (字串) 和 `Age` (整數)。</span><span class="sxs-lookup"><span data-stu-id="559de-108">This sample shows a `Person` class that has two properties: `Name` (string) and `Age` (int).</span></span> <span data-ttu-id="559de-109">這兩個屬性都提供 `get` 和 `set` 存取子，所以它們被視為讀取/寫入屬性。</span><span class="sxs-lookup"><span data-stu-id="559de-109">Both properties provide `get` and `set` accessors, so they are considered read/write properties.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1eff-110">範例</span><span class="sxs-lookup"><span data-stu-id="f1eff-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="559de-110">範例</span><span class="sxs-lookup"><span data-stu-id="559de-110">Example</span></span>  
 
  [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="f1eff-111">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="f1eff-111">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="559de-111">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="559de-111">Robust Programming</span></span>  
 
- <span data-ttu-id="f1eff-112">在上例中，`Name` 和 `Age` 屬性是[公用的](../../language-reference/keywords/public.md)，且同時包含 `get` 和 `set` 存取子。</span><span class="sxs-lookup"><span data-stu-id="f1eff-112">In the previous example, the `Name` and `Age` properties are [public](../../language-reference/keywords/public.md) and include both a `get` and a `set` accessor.</span></span> <span data-ttu-id="f1eff-113">這可讓任何物件讀取和寫入這些屬性。</span><span class="sxs-lookup"><span data-stu-id="f1eff-113">This allows any object to read and write these properties.</span></span> <span data-ttu-id="f1eff-114">但有時候會很想排除其中一個存取子。</span><span class="sxs-lookup"><span data-stu-id="f1eff-114">It is sometimes desirable, however, to exclude one of the accessors.</span></span> <span data-ttu-id="f1eff-115">例如，省略 `set` 存取子會讓屬性變成唯讀的：</span><span class="sxs-lookup"><span data-stu-id="f1eff-115">Omitting the `set` accessor, for example, makes the property read-only:</span></span>  
+ <span data-ttu-id="559de-112">在上例中，`Name` 和 `Age` 屬性是[公用的](../../language-reference/keywords/public.md)，且同時包含 `get` 和 `set` 存取子。</span><span class="sxs-lookup"><span data-stu-id="559de-112">In the previous example, the `Name` and `Age` properties are [public](../../language-reference/keywords/public.md) and include both a `get` and a `set` accessor.</span></span> <span data-ttu-id="559de-113">這可讓任何物件讀取和寫入這些屬性。</span><span class="sxs-lookup"><span data-stu-id="559de-113">This allows any object to read and write these properties.</span></span> <span data-ttu-id="559de-114">但有時候會很想排除其中一個存取子。</span><span class="sxs-lookup"><span data-stu-id="559de-114">It is sometimes desirable, however, to exclude one of the accessors.</span></span> <span data-ttu-id="559de-115">例如，省略 `set` 存取子會讓屬性變成唯讀的：</span><span class="sxs-lookup"><span data-stu-id="559de-115">Omitting the `set` accessor, for example, makes the property read-only:</span></span>  
   
  [!code-csharp[csProgGuideObjects#87](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#87)]  
   
- <span data-ttu-id="f1eff-116">或者，您也可以向公眾公開某個存取子，但讓其他存取子為私用或受保護的。</span><span class="sxs-lookup"><span data-stu-id="f1eff-116">Alternatively, you can expose one accessor publicly but make the other private or protected.</span></span> <span data-ttu-id="f1eff-117">如需詳細資訊，請參閱[非對稱存取子的存取範圍](./restricting-accessor-accessibility.md)。</span><span class="sxs-lookup"><span data-stu-id="f1eff-117">For more information, see [Asymmetric Accessor Accessibility](./restricting-accessor-accessibility.md).</span></span>  
+ <span data-ttu-id="559de-116">或者，您也可以向公眾公開某個存取子，但讓其他存取子為私用或受保護的。</span><span class="sxs-lookup"><span data-stu-id="559de-116">Alternatively, you can expose one accessor publicly but make the other private or protected.</span></span> <span data-ttu-id="559de-117">如需詳細資訊，請參閱[非對稱存取子的存取範圍](./restricting-accessor-accessibility.md)。</span><span class="sxs-lookup"><span data-stu-id="559de-117">For more information, see [Asymmetric Accessor Accessibility](./restricting-accessor-accessibility.md).</span></span>  
   
- <span data-ttu-id="f1eff-118">屬性一旦宣告，即可當成類別的欄位使用。</span><span class="sxs-lookup"><span data-stu-id="f1eff-118">Once the properties are declared, they can be used as if they were fields of the class.</span></span> <span data-ttu-id="f1eff-119">這在取得和設定屬性值時，可使用非常自然的語法，如下列陳述式所示：</span><span class="sxs-lookup"><span data-stu-id="f1eff-119">This allows for a very natural syntax when both getting and setting the value of a property, as in the following statements:</span></span>  
+ <span data-ttu-id="559de-118">屬性一旦宣告，即可當成類別的欄位使用。</span><span class="sxs-lookup"><span data-stu-id="559de-118">Once the properties are declared, they can be used as if they were fields of the class.</span></span> <span data-ttu-id="559de-119">這在取得和設定屬性值時，可使用非常自然的語法，如下列陳述式所示：</span><span class="sxs-lookup"><span data-stu-id="559de-119">This allows for a very natural syntax when both getting and setting the value of a property, as in the following statements:</span></span>  
   
  [!code-csharp[csProgGuideObjects#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#35)]  
   
- <span data-ttu-id="f1eff-120">請注意，在屬性 `set` 方法中提供特殊的 `value` 變數。</span><span class="sxs-lookup"><span data-stu-id="f1eff-120">Note that in a property `set` method a special `value` variable is available.</span></span> <span data-ttu-id="f1eff-121">此變數包含使用者指定的值，例如：</span><span class="sxs-lookup"><span data-stu-id="f1eff-121">This variable contains the value that the user specified, for example:</span></span>  
+ <span data-ttu-id="559de-120">請注意，在屬性 `set` 方法中提供特殊的 `value` 變數。</span><span class="sxs-lookup"><span data-stu-id="559de-120">Note that in a property `set` method a special `value` variable is available.</span></span> <span data-ttu-id="559de-121">此變數包含使用者指定的值，例如：</span><span class="sxs-lookup"><span data-stu-id="559de-121">This variable contains the value that the user specified, for example:</span></span>  
   
  [!code-csharp[csProgGuideObjects#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#36)]  
   
- <span data-ttu-id="f1eff-122">請注意在 `Person` 物件上遞增 `Age` 屬性的全新語法：</span><span class="sxs-lookup"><span data-stu-id="f1eff-122">Notice the clean syntax for incrementing the `Age` property on a `Person` object:</span></span>  
+ <span data-ttu-id="559de-122">請注意在 `Person` 物件上遞增 `Age` 屬性的全新語法：</span><span class="sxs-lookup"><span data-stu-id="559de-122">Notice the clean syntax for incrementing the `Age` property on a `Person` object:</span></span>  
   
  [!code-csharp[csProgGuideObjects#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#37)]  
   
- <span data-ttu-id="f1eff-123">如果分別使用 `set` 和 `get` 方法建立了屬性模型，對等的程式碼可能看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="f1eff-123">If separate `set` and `get` methods were used to model properties, the equivalent code might look like this:</span></span>  
+ <span data-ttu-id="559de-123">如果分別使用 `set` 和 `get` 方法建立了屬性模型，對等的程式碼可能看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="559de-123">If separate `set` and `get` methods were used to model properties, the equivalent code might look like this:</span></span>  
   
 ```csharp  
 person.SetAge(person.GetAge() + 1);
 ```  
   
- <span data-ttu-id="f1eff-124">本例中覆寫 `ToString` 方法：</span><span class="sxs-lookup"><span data-stu-id="f1eff-124">The `ToString` method is overridden in this example:</span></span>  
+ <span data-ttu-id="559de-124">本例中覆寫 `ToString` 方法：</span><span class="sxs-lookup"><span data-stu-id="559de-124">The `ToString` method is overridden in this example:</span></span>  
   
  [!code-csharp[csProgGuideObjects#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#38)]  
   
- <span data-ttu-id="f1eff-125">請注意，程式中未明確使用 `ToString`。</span><span class="sxs-lookup"><span data-stu-id="f1eff-125">Notice that `ToString` is not explicitly used in the program.</span></span> <span data-ttu-id="f1eff-126">預設會由 `WriteLine` 呼叫叫用。</span><span class="sxs-lookup"><span data-stu-id="f1eff-126">It is invoked by default by the `WriteLine` calls.</span></span>  
+ <span data-ttu-id="559de-125">請注意，程式中未明確使用 `ToString`。</span><span class="sxs-lookup"><span data-stu-id="559de-125">Notice that `ToString` is not explicitly used in the program.</span></span> <span data-ttu-id="559de-126">預設會由 `WriteLine` 呼叫叫用。</span><span class="sxs-lookup"><span data-stu-id="559de-126">It is invoked by default by the `WriteLine` calls.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1eff-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1eff-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="559de-127">請參閱</span><span class="sxs-lookup"><span data-stu-id="559de-127">See also</span></span>
 
-- [<span data-ttu-id="f1eff-128">C # 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="f1eff-128">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="f1eff-129">屬性</span><span class="sxs-lookup"><span data-stu-id="f1eff-129">Properties</span></span>](./properties.md)
-- [<span data-ttu-id="f1eff-130">類別和結構</span><span class="sxs-lookup"><span data-stu-id="f1eff-130">Classes and Structs</span></span>](./index.md)
+- [<span data-ttu-id="559de-128">C # 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="559de-128">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="559de-129">屬性</span><span class="sxs-lookup"><span data-stu-id="559de-129">Properties</span></span>](./properties.md)
+- [<span data-ttu-id="559de-130">類別和結構</span><span class="sxs-lookup"><span data-stu-id="559de-130">Classes and Structs</span></span>](./index.md)
