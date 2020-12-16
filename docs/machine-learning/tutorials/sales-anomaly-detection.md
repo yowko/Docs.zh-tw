@@ -1,17 +1,17 @@
 ---
-title: 教學課程：偵測產品銷售中的異常
+title: 教學課程：偵測產品銷售中的異常狀況
 description: 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 2019 中使用 C# 建立 .NET Core 主控台應用程式。
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: cf61f197e4befebdbb1fbf2ca4cbcdc61c48780a
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 48a8b26409b20e2a01aa97425153336b34c9b5b7
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281663"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97594172"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售額中的異常
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售中的異常狀況
 
 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 中使用 C# 建立 .NET Core 主控台應用程式。
 
@@ -28,7 +28,7 @@ ms.locfileid: "86281663"
 
 ## <a name="prerequisites"></a>必要條件
 
-* 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本。
+* 已安裝「.NET Core 跨平臺開發」工作負載[Visual Studio 2017 15.6 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
 * [product-sales.csv 資料集](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -40,13 +40,13 @@ ms.locfileid: "86281663"
 
 1. 建立稱為 "ProductSalesAnomalyDetection" 的 **.NET Core 主控台應用程式**。
 
-2. 在專案中建立名為*Data*的目錄，以儲存您的資料集檔案。
+2. 在您的專案中建立名為 *data* 的目錄，以儲存資料集檔案。
 
-3. 安裝「Microsoft.ML NuGet 套件」****：
+3. 安裝「Microsoft.ML NuGet 套件」：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 [nuget.org] 作為 [套件來源]，選取 [流覽] 索引標籤，搜尋**Microsoft.ML** ，然後選取 [**安裝**] 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。 針對**時間序列**重複這些步驟。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]，選取 [流覽] 索引標籤，搜尋 **Microsoft.ML** ，然後選取 [ **安裝** ] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 針對 **時間序列** 重複上述步驟。
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
@@ -60,7 +60,7 @@ ms.locfileid: "86281663"
 
      請務必將 \*.csv 檔案儲存至 *Data* 資料夾，或儲存在其他位置之後將 \*.csv 檔案移至 *Data* 資料夾。
 
-2. 在 [方案總管] 中，以滑鼠右鍵按一下 \*.csv 檔案，並選取 [內容]****。 在 [ **Advanced**] 底下，將 [**複製到輸出目錄**] 的值變更為 [**更新時複製**]。
+2. 在 [方案總管] 中，以滑鼠右鍵按一下 \*.csv 檔案，並選取 [內容]。 在 [ **Advanced**] 底下，將 [ **複製到輸出目錄** ] 的值變更為 [ **更新時複製**]。
 
 下表是 \*.csv 檔案的資料預覽：
 
@@ -78,9 +78,9 @@ ms.locfileid: "86281663"
 
 將新類別新增至專案：
 
-1. 在 [方案總管]**** 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]****。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
 
-2. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *ProductSalesData.cs*。 接著，選取 [新增]**** 按鈕。
+2. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *ProductSalesData.cs*。 接著，選取 [新增] 按鈕。
 
    隨即在程式碼編輯器中開啟 *ProductSalesData.cs* 檔案。
 
@@ -129,20 +129,20 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 異常偵測會標記未預期或異常的事件或行為。 它可提供尋找問題的線索，協助您回答「這奇不奇怪？」的問題。
 
-![「這是奇怪的異常偵測」的範例。](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
+![「這個奇怪的異常偵測」的範例。](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 異常偵測是偵測時間序列資料極端值的程序，它們是指定輸入時間序列中非預期或「奇怪」行為的資料點。
 
 異常偵測適用於許多方面。 例如：
 
-如果您有車輛，您可能會想知道：此石油量測計是否正常閱讀，或是否有流失？
-如果您要監視電源耗用量，您會想知道：是否有中斷？
+如果您有車輛，您可能會想要知道：此石油量測計是否正常閱讀，或是否有流失？
+如果您要監視電源耗用量，您想知道：是否有中斷？
 
 可偵測到的時間序列異常有兩種：
 
-* **尖峰**表示系統中異常行為的暫時高載。
+* **尖峰** 表示系統中異常行為的暫時高載。
 
-* **變更點**表示系統開頭的持續性隨著時間變更。
+* **變更點** 表示系統開頭的持續性隨著時間變更。
 
 在 ML.NET 中，IID 尖峰偵測或 IID 變更點偵測演算法都很適合[獨立同分布資料集](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)。
 
@@ -195,7 +195,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     上述程式碼使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法對多個資料集輸入資料列進行預測。
 
-1. `transformedData` `IEnumerable` 使用[CreateEnumerable ( # B1](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A)方法搭配下列程式碼，將您的轉換成強型別，以方便顯示：
+1. `transformedData` `IEnumerable` 使用[CreateEnumerable ( # B1](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A)方法搭配下列程式碼，將您的轉換成強型別，以便更輕鬆地顯示：
 
     [!code-csharp[CreateEnumerable1](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEnumerable1)]
 
@@ -299,7 +299,7 @@ Alert   Score   P-Value
 
     [!code-csharp[TransformData2](./snippets/sales-anomaly-detection/csharp/Program.cs#TransformData2)]
 
-1. 如同您先前所做的， `transformedData` 使用方法搭配下列程式碼，將轉換成強型別 `IEnumerable` 以方便顯示 `CreateEnumerable()` ：
+1. 如同您先前所做的，將轉換 `transformedData` 成強 `IEnumerable` 型別，以使用方法搭配下列程式碼來輕鬆顯示 `CreateEnumerable()` ：
 
     [!code-csharp[CreateEnumerable2](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEnumerable2)]
 
@@ -314,7 +314,7 @@ Alert   Score   P-Value
     * `P-Value` "P" 表示機率。 P 值越接近 0，資料點就越可能有異常。
     * `Martingale value` 根據一系列的 P 值，用來識別資料點的「怪異」程度。
 
-1. 逐一查看 `predictions` `IEnumerable` ，並使用下列程式碼來顯示結果：
+1. 逐一查看 `predictions` `IEnumerable` ，並以下列程式碼顯示結果：
 
     [!code-csharp[DisplayResults2](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayResults2)]
 
@@ -384,6 +384,6 @@ Alert   Score   P-Value Martingale value
 
 ## <a name="next-steps"></a>後續步驟
 
-請查看機器學習範例 GitHub 存放庫，以探索耗電量異常偵測範例。
+請參閱 Machine Learning 範例 GitHub 存放庫，以探索季節性資料異常偵測範例。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub 存放庫](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings) \(英文\)
+> [dotnet/machinelearning-samples GitHub 存放庫](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls) \(英文\)

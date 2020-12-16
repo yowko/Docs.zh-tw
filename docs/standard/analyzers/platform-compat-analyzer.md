@@ -3,12 +3,12 @@ title: 平台相容性分析器
 description: Roslyn 分析器，可協助偵測跨平臺應用程式和程式庫中的平臺相容性問題。
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 427a2d8ae61a82699e5cf0987fcd1c5a45152cac
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819483"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97594913"
 ---
 # <a name="platform-compatibility-analyzer"></a>平台相容性分析器
 
@@ -24,9 +24,9 @@ ms.locfileid: "94819483"
 > [!TIP]
 > 平臺相容性分析器會升級並取代[.NET API 分析器](../../standard/analyzers/api-analyzer.md)的[探索跨平臺問題](../../standard/analyzers/api-analyzer.md#discover-cross-platform-issues)功能。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-平臺相容性分析器是 Roslyn 的程式碼品質分析器之一。 從 .NET 5.0 開始，這些分析器即[隨附於 .NET SDK](../../fundamentals/code-analysis/overview.md)。 根據預設，平臺相容性分析器僅針對以或更新版本為目標的專案啟用 `net5.0` 。 不過，您可以針對以其他架構為目標的專案 [啟用它](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability) 。
+平臺相容性分析器是 Roslyn 的程式碼品質分析器之一。 從 .NET 5.0 開始，這些分析器即[隨附於 .NET SDK](../../fundamentals/code-analysis/overview.md)。 根據預設，平臺相容性分析器僅針對以或更新版本為目標的專案啟用 `net5.0` 。 不過，您可以針對以其他架構為目標的專案 [啟用它](../../fundamentals/code-analysis/quality-rules/ca1416.md#configure-code-to-analyze) 。
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>分析器如何判斷平臺相關性
 
@@ -41,9 +41,9 @@ ms.locfileid: "94819483"
     - 如果從相同平臺特定的內容參考平臺特定的 API， (**呼叫網站也** 以) 進行屬性化，則 **不會發出警告** `[SupportedOSPlatform("platform")` 。
 - 標記為的 API `[UnsupportedOSPlatform("platform")]` 只會在指定的 OS 上被視為不受支援， `platform` 但所有其他平臺皆支援此 API。
   - 您可以使用不同的平臺多次套用屬性，例如 `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]` 。
-  - 只有當對 **warning** `platform` 呼叫位置有效時，分析器才會產生警告：
+  - 只有當對 `platform` 呼叫位置有效時，分析器才會產生警告：
     - 如果專案的目標平臺是以不 (支援的屬性為目標的平臺，例如，如果 API 是以屬性化，而且呼叫位置的目標是) ，則會 **發出警告** `[UnsupportedOSPlatform("windows")]` `<TargetFramework>net5.0-windows</TargetFramework>` 。
-    - **Warns** 如果專案是多目標且 `platform` 包含在預設 [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props)專案群組中，或 `platform` 手動包含在 `MSBuild` items 群組內，則會發出警告 \<SupportedPlatform> ：
+    - 如果專案是多目標且 `platform` 包含在預設[MSBuild `<SupportedPlatform>` ](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props)專案群組中，或 `platform` 手動包含在 `MSBuild` items 群組內，則會發出警告 \<SupportedPlatform> ：
 
       ```XML
       <ItemGroup>
@@ -377,7 +377,7 @@ Guard 方法的平臺名稱應該與呼叫平臺相依的 API 平臺名稱相符
   }
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 5 中的目標 Framework 名稱](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [標注平臺特定 Api 並偵測其使用](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)

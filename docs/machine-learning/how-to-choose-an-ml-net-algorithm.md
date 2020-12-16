@@ -3,38 +3,38 @@ title: 如何選擇 ML.NET 演算法
 description: 了解如何選擇機器學習模型的 ML.NET 演算法
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 04cf191401c7c25f1fa341acaf9312dc19752260
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679634"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593086"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何選擇 ML.NET 演算法
 
 針對每項 [ML.NET 工作](resources/tasks.md)，有多個定型演算法可供選擇。 要選擇哪一個，取決於您嘗試解決的問題、您資料的特性，以及您目前可使用的計算和儲存資源。 請務必注意，定型的機器學習模型是一種反覆運算程序。 您可能需要嘗試多種演算法，找出最適合的那一種。
 
-演算法作用於**特性**。 特性是計算輸入資料所得出的數值。 它們是機器學習演算法的最佳輸入。 您使用一或多種[資料轉換](resources/transforms.md)，將未經處理的輸入資料轉換成特性。 例如，文字資料會轉換成一組字數統計和字詞組合統計。 一旦使用資料轉換從未經處理的資料類型擷取特性，它們就稱為**凸顯**。 例如，凸顯的文字或影像資料。
+演算法作用於 **特性**。 特性是計算輸入資料所得出的數值。 它們是機器學習演算法的最佳輸入。 您使用一或多種[資料轉換](resources/transforms.md)，將未經處理的輸入資料轉換成特性。 例如，文字資料會轉換成一組字數統計和字詞組合統計。 一旦使用資料轉換從未經處理的資料類型擷取特性，它們就稱為 **凸顯**。 例如，凸顯的文字或影像資料。
 
 ## <a name="trainer--algorithm--task"></a>定型器 = 演算法 + 工作
 
-演算法是為產生**模型**所執行的數學。 不同演算法產生不同特性的模型。
+演算法是為產生 **模型** 所執行的數學。 不同演算法產生不同特性的模型。
 
-使用 ML.NET，相同演算法可以套用到不同的工作。 例如，隨機對偶座標上升法可用於二元分類、多元分類和迴歸。 不同之處在於如何解譯演算法的輸出，使符合工作。
+使用 ML.NET，相同演算法可以套用到不同的工作。 例如，隨機雙重座標上升可用於二元分類、多元分類和回歸。 不同之處在於如何解譯演算法的輸出，使符合工作。
 
-針對每種演算法/工作組合，ML.NET 提供執行定型演算法和完成解譯的元件。 這些元件稱為「定型器」。 例如，<xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> 使用 **StochasticDualCoordinatedAscent** 演算法套用至**迴歸**工作。
+針對每個演算法/工作組合，ML.NET 會提供執行定型演算法的元件，並進行轉譯。 這些元件稱為「定型器」。 例如，<xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> 使用 **StochasticDualCoordinatedAscent** 演算法套用至 **迴歸** 工作。
 
 ## <a name="linear-algorithms"></a>線性演算法
 
-線性演算法產生的模型會計算輸入資料和一組**權數**之線性組合的**分數**。 權數是在定型期間評估的模型參數。
+線性演算法產生的模型會計算輸入資料和一組 **權數** 之線性組合的 **分數**。 權數是在定型期間評估的模型參數。
 
 線性演算法適用於[線性可分](https://en.wikipedia.org/wiki/Linear_separability)的特性。
 
-使用線性演算法定型之前，應先將特性標準化。 這可防止某項特色對結果的影響超過其他特色。
+使用線性演算法定型之前，應先將特性標準化。 這可防止某項功能對結果產生比其他功能更多的影響。
 
-一般而言，線性演算法可調整又快速，定型和預測的成本低廉。 它們可以調整特色數目，約為定型資料集的大小。
+一般而言，線性演算法可調整、快速、便宜，以及預測成本低廉。 它們可以調整特色數目，約為定型資料集的大小。
 
-線性演算法對定型資料進行多次傳遞。 如果您的資料集貼合記憶體，則先將[快取檢查點](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A)新增至 ML.NET 管線，再附加定型器，會讓定型執行更快速。
+線性演算法對定型資料進行多次傳遞。 如果您的資料集符合記憶體，則在附加訓練課程之前將快取 [檢查點](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A) 新增至 ML.NET 管線，可讓定型執行速度更快。
 
 **線性定型器**
 
@@ -76,7 +76,7 @@ ms.locfileid: "90679634"
 
 ## <a name="meta-algorithms"></a>中繼演算法
 
-這些定型器從二元定型器建立多元定型器。 搭配使用 <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer><xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>、<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>、<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>、<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>。
+這些定型者會從二元講師建立多元講師。 搭配使用 <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer><xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>、<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>、<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>、<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>。
 
 |演算法|屬性|定型器|
 |---------|----------|--------|

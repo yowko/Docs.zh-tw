@@ -2,12 +2,12 @@
 title: dotnet-追蹤診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet 追蹤 CLI 工具，以使用 .NET EventPipe 來收集執行中進程的 .NET 追蹤，而不使用原生 profiler。
 ms.date: 11/17/2020
-ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a2925ac0a0815fe48ca9b36b643ff896aa3c0ff6
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009530"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593203"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -144,6 +144,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   > [!NOTE]
   > 使用這個選項會監視第一個與工具通訊的 .NET 5.0 進程，這表示如果您的命令會啟動多個 .NET 應用程式，則只會收集第一個應用程式。 因此，建議您在獨立應用程式上使用此選項，或使用 `dotnet exec <app.dll>` 選項。
 
+> [!NOTE]
+> 針對大型應用程式，停止追蹤可能需要很長的時間 (最多幾分鐘的時間) 。 執行時間必須針對追蹤中所捕捉的所有 managed 程式碼，傳送類型快取。
+
 ## <a name="dotnet-trace-convert"></a>dotnet-追蹤轉換
 
 將 `nettrace` 追蹤轉換成替代的格式，以搭配使用替代的追蹤分析工具。
@@ -169,6 +172,9 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 - **`-o|--output <output-filename>`**
 
   輸出檔案名。 將會新增目標格式的擴充。
+
+> [!NOTE]
+> 將檔案轉換 `nettrace` 成或檔案無法 `chromium` `speedscope` 復原。 `speedscope` 和檔案 `chromium` 沒有重建檔案所需的所有資訊 `nettrace` 。 不過，此 `convert` 命令會保留原始檔案 `nettrace` ，因此，如果您打算在未來開啟此檔案，請勿刪除此檔案。
 
 ## <a name="dotnet-trace-ps"></a>dotnet-追蹤 ps
 

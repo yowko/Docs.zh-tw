@@ -3,12 +3,12 @@ title: 使用 PerfCollect 追蹤 .NET 應用程式。
 description: 本教學課程會逐步引導您使用 .NET 中的 perfcollect 收集追蹤。
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507237"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593216"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>使用 PerfCollect 追蹤 .NET 應用程式
 
@@ -55,7 +55,7 @@ ms.locfileid: "94507237"
 
 ## <a name="collect-a-trace"></a>收集追蹤
 
-1. 有兩個可用的 shell-一個用來控制追蹤，稱為 **[Trace]** ，另一個用來執行應用程式，稱為 **[App]** 。
+1. 有兩個可用的 shell-一個用來控制追蹤，稱為 **[Trace]**，另一個用來執行應用程式，稱為 **[App]**。
 
 2. **[追蹤]** 開始收集。
 
@@ -149,15 +149,15 @@ ms.locfileid: "94507237"
 
 PerfView 會根據追蹤檔中包含的資料，顯示支援的視圖清單。
 
-- 針對 CPU 調查，請選擇 [ **cpu 堆疊** ]。
+- 針對 CPU 調查，請選擇 [ **cpu 堆疊**]。
 
-- 如需詳細的 GC 資訊，請選擇 [ **GCStats** ]。
+- 如需詳細的 GC 資訊，請選擇 [ **GCStats**]。
 
-- 針對每個進程/模組/方法的 JIT 資訊，請選擇 [ **JITStats** ]。
+- 針對每個進程/模組/方法的 JIT 資訊，請選擇 [ **JITStats**]。
 
-- 如果沒有您需要的資訊，您可以嘗試在「原始事件」視圖中尋找事件。  選擇 [ **事件** ]。
+- 如果沒有您需要的資訊，您可以嘗試在「原始事件」視圖中尋找事件。  選擇 [ **事件**]。
 
-如需有關如何在 PerfView 中解讀視圖的詳細資訊，請參閱 view 本身的說明連結，或從 PerfView 的主視窗中，選擇 [說明 **->使用者指南** ]。
+如需有關如何在 PerfView 中解讀視圖的詳細資訊，請參閱 view 本身的說明連結，或從 PerfView 的主視窗中，選擇 [說明 **->使用者指南**]。
 
 ### <a name="use-tracecompass-to-open-the-trace-file"></a>使用 TraceCompass 開啟追蹤檔案
 
@@ -181,7 +181,7 @@ unzip myTrace.trace.zip
 
 一般來說，當您建立 .NET 應用程式時，它只會為您撰寫的程式碼產生 DLL，並使用其餘的執行時間共用複本。   不過，您也可以產生所謂的「獨立」版本的應用程式，其中包含所有執行時間 Dll。 `crossgen` 是 NuGet 套件的一部分，用來建立獨立式應用程式，因此取得正確版本的其中一種方式 `crossgen` 就是建立應用程式的獨立套件。
 
-例如︰
+例如：
 
    >```bash
    > mkdir helloWorld
@@ -250,3 +250,31 @@ export COMPlus_ZapDisable=1
 ## <a name="collect-in-a-docker-container"></a>在 Docker 容器中收集
 
 如需有關如何 `perfcollect` 在容器環境中使用的詳細資訊，請參閱在 [容器中收集診斷](./diagnostics-in-containers.md)。
+
+## <a name="learn-more-about-collection-options"></a>深入瞭解收集選項
+
+您可以指定下列選擇性旗標， `perfcollect` 使其更符合您的診斷需求。
+
+### <a name="collect-for-a-specific-duration"></a>針對特定持續時間進行收集
+
+當您想要收集特定期間的追蹤時，您可以使用 `-collectsec` 選項，後面接著一個數位，以指定收集追蹤的總秒數。
+
+### <a name="collect-threadtime-traces"></a>收集 threadtime 追蹤
+
+指定 `-threadtime` with 可 `perfcollect` 讓您收集每個執行緒的 CPU 使用量資料。 這可讓您分析每個執行緒花費其 CPU 時間的位置。
+
+### <a name="collect-traces-for-managed-memory-and-garbage-collector-performance"></a>收集 managed 記憶體和垃圾收集行程效能的追蹤
+
+下列選項可讓您明確地從執行時間收集 GC 事件。
+
+* `perfcollect collect -gccollectonly`
+
+只收集一組基本的 GC 收集事件。 這是最不詳細的 GC 事件集合設定檔，對目標應用程式效能的影響最低。 此命令類似于 `PerfView.exe /GCCollectOnly collect` PerfView 中的命令。
+
+* `perfcollect collect -gconly`
+
+使用 JIT、載入器和例外狀況事件收集更詳細的 GC 收集事件。 這會要求更詳細的事件 (例如配置資訊和 GC 聯結資訊) ，而且對目標應用程式效能的影響會比選項更多 `-gccollectonly` 。 此命令類似于 `PerfView.exe /GCOnly collect` PerfView 中的命令。
+
+* `perfcollect collect -gcwithheap`
+
+收集最詳細的 GC 收集事件，這些事件也會追蹤堆積的存活和移動。 這可提供 GC 行為的深入分析，但會產生高效能的成本，因為每個 GC 可能需要兩倍以上的時間。 建議您瞭解在生產環境中進行追蹤時，使用此追蹤選項的效能含意。

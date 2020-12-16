@@ -2,12 +2,12 @@
 title: .NET 5 + 中已淘汰的功能
 description: 瞭解在 .NET 5.0 和更新版本中標示為過時的 Api，這些 Api 會產生 SYSLIB 編譯器警告。
 ms.date: 10/20/2020
-ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440760"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593301"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 中已淘汰的功能
 
@@ -23,20 +23,20 @@ ms.locfileid: "94440760"
 
 下表提供 `SYSLIBxxxx` .net 5 + 中 obsoletions 的索引。
 
-| 診斷識別碼 | 說明 |
+| 診斷識別碼 | 描述 |
 | - | - |
-| [SYSLIB0001](syslib0001.md) | UTF-7 編碼並不安全，因此不應該使用。 請考慮改為使用 UTF-8。 |
-| [SYSLIB0002](syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> 執行時間不接受，而且不得使用。 |
-| [SYSLIB0003](syslib0003.md) | 執行時間不支援或不接受代碼啟用安全性 (CAS) 。 |
-| [SYSLIB0004](syslib0004.md) | 不支援 (CER) 功能的限制執列區域。 |
-| [SYSLIB0005](syslib0005.md) | 不支援全域組件快取 (GAC) 。 |
-| [SYSLIB0006](syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> 不受支援，而且會擲回 <xref:System.PlatformNotSupportedException> 。 |
-| [SYSLIB0007](syslib0007.md) | 不支援此密碼編譯演算法的預設執行。 |
-| [SYSLIB0008](syslib0008.md) | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator>不支援並擲回 API <xref:System.PlatformNotSupportedException> 。 |
-| [SYSLIB0009](syslib0009.md) | <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType>和 <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> 方法不受支援，而且會擲回 <xref:System.PlatformNotSupportedException> 。 |
-| [SYSLIB0010](syslib0010.md) | 某些遠端 Api 不受支援且會擲回 <xref:System.PlatformNotSupportedException> 。 |
-| [SYSLIB0011](syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 序列化已過時，不應該使用。 |
-| [SYSLIB0012](syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> 只包含 .NET Framework 相容性。 請改用 <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType>。 |
+| [SYSLIB0001](syslib-warnings/syslib0001.md) | UTF-7 編碼並不安全，因此不應該使用。 請考慮改為使用 UTF-8。 |
+| [SYSLIB0002](syslib-warnings/syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> 執行時間不接受，而且不得使用。 |
+| [SYSLIB0003](syslib-warnings/syslib0003.md) | 執行時間不支援或不接受代碼啟用安全性 (CAS) 。 |
+| [SYSLIB0004](syslib-warnings/syslib0004.md) | 不支援 (CER) 功能的限制執列區域。 |
+| [SYSLIB0005](syslib-warnings/syslib0005.md) | 不支援全域組件快取 (GAC) 。 |
+| [SYSLIB0006](syslib-warnings/syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> 不受支援，而且會擲回 <xref:System.PlatformNotSupportedException> 。 |
+| [SYSLIB0007](syslib-warnings/syslib0007.md) | 不支援此密碼編譯演算法的預設執行。 |
+| [SYSLIB0008](syslib-warnings/syslib0008.md) | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator>不支援並擲回 API <xref:System.PlatformNotSupportedException> 。 |
+| [SYSLIB0009](syslib-warnings/syslib0009.md) | <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType>和 <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> 方法不受支援，而且會擲回 <xref:System.PlatformNotSupportedException> 。 |
+| [SYSLIB0010](syslib-warnings/syslib0010.md) | 某些遠端 Api 不受支援且會擲回 <xref:System.PlatformNotSupportedException> 。 |
+| [SYSLIB0011](syslib-warnings/syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 序列化已過時，不應該使用。 |
+| [SYSLIB0012](syslib-warnings/syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> 只包含 .NET Framework 相容性。 請改用 <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType>。 |
 
 ## <a name="suppress-warnings"></a>隱藏警告
 
