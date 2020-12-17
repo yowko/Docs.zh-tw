@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ffef401c07dbb27db7c0225acdc6817d95bfe11
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 2046762be2ae5d6d4c9f7fb061849b63e7ab06a2
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451583"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97612678"
 ---
 ## <a name="available-counters"></a>可用計數器
 
@@ -17,7 +17,7 @@ ms.locfileid: "91451583"
 | 計數器 | 描述 |
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | 自上次 GC 之後 GC 的時間百分比 |
-| :::no-loc text="Allocation Rate"::: (`alloc-rate`) | 配置的速率（以位元組為單位） |
+| :::no-loc text="Allocation Rate"::: (`alloc-rate`) | 每個更新間隔所配置的位元組數 |
 | :::no-loc text="CPU Usage"::: (`cpu-usage`) | 進程的 CPU 使用量百分比 |
 | :::no-loc text="Exception Count"::: (`exception-count`) | 已發生的例外狀況數目 |
 | :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | 考慮要配置的位元組數目（根據 <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> |
@@ -48,7 +48,7 @@ ms.locfileid: "91451583"
 |--|--|
 | :::no-loc text="Current Requests"::: (`current-requests`) | 已啟動但尚未停止的要求總數 |
 | :::no-loc text="Failed Requests"::: (`failed-requests`) | 應用程式存留期內發生的失敗要求總數 |
-| :::no-loc text="Request Rate"::: (`requests-per-second`) | 每秒發生的要求數目 |
+| :::no-loc text="Request Rate"::: (`requests-per-second`) | 每個更新間隔發生的要求數目 |
 | :::no-loc text="Total Requests"::: (`total-requests`) | 應用程式存留期內發生的要求總數 |
 
 ### <a name="microsoftaspnetcorehttpconnections-counters"></a>"AspNetCore" 計數器
@@ -70,12 +70,12 @@ ms.locfileid: "91451583"
 | 計數器 | 描述 |
 |--|--|
 | :::no-loc text="Connection Queue Length"::: (`connection-queue-length`) | 連接佇列的目前長度 |
-| :::no-loc text="Connection Rate"::: (`connections-per-second`) | 每秒對 web 伺服器的連接數目 |
+| :::no-loc text="Connection Rate"::: (`connections-per-second`) | Web 服務器的每個更新間隔的連接數目 |
 | :::no-loc text="Current Connections"::: (`current-connections`) | 目前與 web 伺服器的作用中連接數目 |
 | :::no-loc text="Current TLS Handshakes"::: (`current-tls-handshakes`) | 目前的 TLS 交握數目 |
 | :::no-loc text="Current Upgraded Requests (WebSockets)"::: (`current-upgraded-requests`) |  (Websocket 的目前升級的要求數目)  |
 | :::no-loc text="Failed TLS Handshakes"::: (`failed-tls-handshakes`) | 失敗的 TLS 交握總數 |
 | :::no-loc text="Request Queue Length"::: (`request-queue-length`) | 要求佇列的目前長度 |
-| :::no-loc text="TLS Handshake Rate"::: (`tls-handshakes-per-second`) | 每秒的 TLS 交握數目 |
+| :::no-loc text="TLS Handshake Rate"::: (`tls-handshakes-per-second`) | 每個更新間隔的 TLS 交握數目 |
 | :::no-loc text="Total Connections"::: (`total-connections`) | 與網頁伺服器的連接總數 |
 | :::no-loc text="Total TLS Handshakes"::: (`total-tls-handshakes`) | 與網頁伺服器之間的 TLS 交握總數 |
