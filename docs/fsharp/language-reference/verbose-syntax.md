@@ -1,26 +1,26 @@
 ---
 title: 詳細語法
-description: 瞭解 F# 程式設計語言中詳細語法和輕量級語法之間的區別。
+description: '瞭解 F # 程式設計語言中的詳細資訊與輕量語法之間的差異。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 4e1725b58c8cb67c074ba12fd4ca25ce0c000a1e
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463912"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97595173"
 ---
 # <a name="verbose-syntax"></a>詳細語法
 
-F# 語言中的許多建構有兩種形式的語法:*詳細語法*與*輕巧的語法*。 詳細語法不常用,但優點是對縮進不太敏感。 輕量級語法較短,並使用縮進來發出構造的開始和結束信號,而不是其他關鍵字,如`begin`、、、`end``in`等。 默認語法是輕量級語法。 本主題介紹未啟用輕量級語法時 F# 構造的語法。 詳細語法始終啟用,因此即使您啟用輕量級語法,您仍可以為某些構造使用詳細語法。 您可以使用`#light "off"`該指令禁用輕量級語法。
+有兩種形式的語法可用於 F # 語言： *詳細語法* 和 *輕量語法* 中的許多結構。 詳細資訊語法並不常用，但其優點在於縮排較不敏感。 輕量語法較短，而且會使用縮排來表示結構的開頭和結尾，而不是如、、等等的其他關鍵字 `begin` `end` `in` 。 預設語法是輕量語法。 本主題說明未啟用輕量語法時 F # 結構的語法。 詳細語法一律為啟用狀態，因此即使您啟用輕量語法，還是可以針對某些結構使用詳細語法。 您可以使用指示詞來停用輕量語法 `#light "off"` 。
 
-## <a name="table-of-constructs"></a>建構表
+## <a name="table-of-constructs"></a>結構表
 
-下表顯示了 F# 語言構造的輕量級和詳細語法,這些上下文中兩種窗體之間存在差異。 在此表中,角括弧&lt;&gt;( ) 括使用者提供的語法元素。 有關這些構造中使用的語法的詳細資訊,請參閱每個語言構造的文檔。
+下表顯示在這兩種形式之間有差異之 F # 語言結構的輕量和詳細語法。 在此表格中，角括弧 (&lt; &gt;) 括住使用者提供的語法元素。 如需有關這些結構中所使用之語法的詳細資訊，請參閱每個語言結構的檔。
 
 <table>
 <tr>
-<th>語言建構</th>
-<th>輕巧法</th>
+<th>語言結構</th>
+<th>輕量語法</th>
 <th>詳細語法</th>
 </tr>
 <tr>
@@ -29,9 +29,9 @@ F# 語言中的許多建構有兩種形式的語法:*詳細語法*與*輕巧的�
 </td>
 <td>
 
-```xml
-<expression1 />
-<expression2 />
+```fsharp
+<expression1>
+<expression2>
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ F# 語言中的許多建構有兩種形式的語法:*詳細語法*與*輕巧的�
 </tr>
 <tr><td>
 
-巢狀`let`結合
+嵌套 `let` 系結
 
 </td><td>
 
@@ -67,7 +67,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-代碼塊
+程式碼區塊
 </td><td>
 
 ```fsharp
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>歧視工會</td><td>
+<tr><td>區分聯集</td><td>
 
 ```fsharp
 type <union-name> =
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>型態延伸</td><td>
+<tr><td>類型延伸模組</td><td>
 
 ```fsharp
 type <type-name>
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td>module</td><td>
+<tr><td>name</td><td>
 
 ```fsharp
 module <module-name> =
@@ -352,6 +352,6 @@ module <module-name> =
 
 ## <a name="see-also"></a>另請參閱
 
-- [F# 語言參考](index.md)
+- [F # 語言參考](index.md)
 - [編譯器指示詞](compiler-directives.md)
 - [程式碼格式化方針](../style-guide/formatting.md)
