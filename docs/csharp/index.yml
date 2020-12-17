@@ -6,12 +6,12 @@ metadata:
   description: 學習 C# 程式設計 - 適用於新手開發人員、剛接觸 C# 的開發人員，以及經驗豐富的 C# / .Net 開發人員
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: bc75503b565020fb9966fd756d87890263f63533
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.openlocfilehash: 584db55455af54bcf7e91771e3598a7349091bee
+  ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599443"
+  ms.lasthandoff: 12/15/2020
+  ms.locfileid: "97512147"
 landingContent:
 - title: 學習如何在 C# 中撰寫程式
   linkLists:
@@ -71,38 +71,20 @@ landingContent:
     links:
     - text: C# 9.0 中的新增功能
       url: whats-new/csharp-9.md
-- title: C# 8.0 的新功能
+- title: C# 9.0 中的新功能
   linkLists:
   - linkListType: whats-new
     links:
-    - text: C# 8.0 的新功能
-      url: whats-new/csharp-8.md
-  - linkListType: overview
-    links:
-    - text: 模式比對
-      url: pattern-matching.md
-    - text: 可為 Null 的參考型別
-      url: nullable-references.md
-  - linkListType: concept
-    links:
-    - text: 選擇可為 Null 的移轉策略
-      url: nullable-migration-strategies.md
+    - text: C# 9.0 中的新增功能
+      url: whats-new/csharp-9.md
   - linkListType: tutorial
     links:
-    - text: 取用及產生非同步資料流
-      url: tutorials/generate-consume-asynchronous-stream.md
-    - text: 使用可為 Null 的參考型別來開發
-      url: tutorials/nullable-reference-types.md
-    - text: 使用可為 Null 的參考型別來移轉現有程式碼
-      url: tutorials/upgrade-to-nullable-references.md
-    - text: 針對更具表達性的演算法使用模式比對
-      url: tutorials/pattern-matching.md
-    - text: 使用預設介面成員安全地進行介面版本設定
-      url: tutorials/default-interface-methods-versions.md
-    - text: 使用預設介面方法混合使用功能
-      url: tutorials/mixins-with-default-interface-methods.md
-    - text: 使用範圍與索引來處理子集
-      url: tutorials/ranges-indexes.md
+    - text: 探索記錄類型
+      url: tutorials/exploration/records.md
+    - text: 探索最上層陳述式
+      url: tutorials/exploration/top-level-statements.md
+    - text: 探索新的模式
+      url: tutorials/exploration/patterns-objects.md
   - linkListType: reference
     links:
     - text: C# 編譯器的中斷性變更

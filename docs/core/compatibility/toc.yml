@@ -34,6 +34,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: 已移除前置詞為 Microsoft 的 Azure 整合套件
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: Blazor：Blazor 應用程式中的路由優先順序邏輯已變更
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: Blazor：已更新瀏覽器支援
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: Blazor：編譯器已修剪不重要的空白字元
@@ -292,6 +294,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: 已移除前置詞為 Microsoft 的 Azure 整合套件
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: Blazor：Blazor 應用程式中的路由優先順序邏輯已變更
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: Blazor：已更新瀏覽器支援
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: Blazor：編譯器已修剪不重要的空白字元
