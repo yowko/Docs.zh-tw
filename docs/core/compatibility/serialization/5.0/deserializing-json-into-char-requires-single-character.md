@@ -1,31 +1,33 @@
 ---
-title: 重大變更：還原序列化需要單一字元字串
-description: 瞭解 .NET 5.0 中的重大變更，其中 JsonSerializer 需要單一字元字串。
-ms.date: 10/18/2020
-ms.openlocfilehash: 780f2928d776ecb6db9a7fc05a720e889eb363e7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: 重大變更：還原序列化 char 需要單一字元字串
+description: 瞭解 .NET 5.0 中的重大變更，在此情況下，System.Text.Json 在還原序列化至 char 目標時需要 JSON 中的單一字元字串。
+ms.date: 12/15/2020
+ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760767"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633867"
 ---
-# <a name="jsonserializerdeserialize-requires-single-character-string"></a>JsonSerializer。還原序列化需要單一字元字串
+# <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a>System.Text.Json 需要單一字元字串才能還原序列化字元
 
-當型別參數是時 <xref:System.Char> ，的字串引數 <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> 必須包含單一字元才能成功還原序列化。
+若要使用成功還原序列化 <xref:System.Char> <xref:System.Text.Json> ，JSON 字串必須包含單一字元。
 
 ## <a name="change-description"></a>變更描述
 
-在先前的 .NET 版本中，如果您將多個字元的字串傳遞至 <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> ，且類型參數是，則還原序列化會 <xref:System.Char> 成功，而且只會還原序列化第一個字元。
-
-在 .NET 5.0 和更新版本中，當型別參數是時 <xref:System.Char> ，傳遞單一字元字串以外的任何字元都會導致擲回 <xref:System.Text.Json.JsonException> 。
+在先前的 .NET 版本中，JSON 中的多字串已成功還原序列化 `char` 為 `char` 屬性或欄位。 只 `char` 會使用第一個字串，如下列範例所示：
 
 ```csharp
-// .NET Core 3.0 and 3.1: Returns the first character 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one character.
-JsonSerializer.Deserialize<char>("\"abc\"");
+// .NET Core 3.0 and 3.1: Returns the first char 'a'.
+// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
+```
 
+在 .NET 5.0 和更新版本中，單一字串以外的任何其他作業都會導致在還原序列化 `char` <xref:System.Text.Json.JsonException> 目標為時擲回 `char` 。 下列範例字串已在所有 .NET 版本中成功還原序列化：
+
+```csharp
 // Correct usage.
-JsonSerializer.Deserialize<char>("\"a\"");
+char deserializedChar = JsonSerializer.Deserialize<char>("\"a\"");
 ```
 
 ## <a name="version-introduced"></a>引進的版本
@@ -34,21 +36,21 @@ JsonSerializer.Deserialize<char>("\"a\"");
 
 ## <a name="reason-for-change"></a>變更的原因
 
-<xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> 將表示單一 JSON 值的文字，剖析成泛型型別參數所指定之類型的實例。 只有當提供的裝載對指定的泛型型別參數有效時，才會成功剖析。 對於實 <xref:System.Char> 值型別而言，有效承載是單一字元字串。
+只有當提供的裝載對目標型別有效時，才應該成功剖析還原序列化。 針對 `char` 類型，唯一有效的承載是單一 `char` 字串。
 
 ## <a name="recommended-action"></a>建議的動作
 
-使用將字串剖析為 <xref:System.Char> 型別時 <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> ，請確定字串是由單一字元所組成。
+當您將 JSON 還原序列化為 `char` 目標時，請確定該字串包含單一 `char` 。
 
 ## <a name="affected-apis"></a>受影響的 API
 
-- <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=fullName>
+- <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=fullName>
 
 <!--
 
 ### Affected APIs
 
-- `M:System.Text.Json.JsonSerializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)`
+- `Overload:System.Text.Json.JsonSerializer.Deserialize`
 
 ### Category
 

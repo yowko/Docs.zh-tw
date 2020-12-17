@@ -4,18 +4,18 @@ description: 瞭解如何使用 .NET CLI 建立 .NET 程式庫。 您將建立�
 author: cartermp
 ms.topic: how-to
 ms.date: 12/14/2020
-ms.openlocfilehash: 5a70cec4a991f673f4d5d3e7b00cd704c6799f47
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512407"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633672"
 ---
 # <a name="develop-libraries-with-the-net-cli"></a>使用 .NET CLI 開發程式庫
 
 本文涵蓋如何使用 .NET CLI 撰寫適用于 .NET 的程式庫。 CLI 提供可在所有支援的作業系統上運作的有效率且低階體驗。 您仍然可以使用 Visual Studio 來建置程式庫，而且，如果那是您偏好的體驗，[請參閱 Visual Studio 指南](library-with-visual-studio.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 您需要在電腦上安裝 [.NET SDK 和 CLI](https://dotnet.microsoft.com/download) 。
 
@@ -206,7 +206,7 @@ netstandard2.0/
 
 ## <a name="how-to-test-libraries-on-net"></a>如何在 .NET 上測試程式庫
 
-重要的是一定要可以跨平台進行測試。 您可以使用現成的 [xUnit](https://xunit.github.io/) 或 MSTest。 兩者都完全適用于在 .NET 上對程式庫進行單元測試。 如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。 下列範例假設測試及來源目錄位於相同的最上層目錄中。
+重要的是一定要可以跨平台進行測試。 您可以使用現成的 [xUnit](https://xunit.net/) 或 MSTest。 兩者都完全適用于在 .NET 上對程式庫進行單元測試。 如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。 下列範例假設測試及來源目錄位於相同的最上層目錄中。
 
 > [!NOTE]
 > 這會使用一些 [.NET CLI](../tools/index.md) 命令。 如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。

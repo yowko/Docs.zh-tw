@@ -2,18 +2,18 @@
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
 ms.date: 12/07/2020
-ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: af502efe842e9c9610137738d86c05e00a3b37df
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851690"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633646"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 本文 **適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet sln` -列出或修改 .NET 方案檔中的專案。
 
@@ -25,7 +25,7 @@ dotnet sln [<SOLUTION_FILE>] [command]
 dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 此 `dotnet sln` 命令提供一個便利的方式來列出和修改方案檔中的專案。
 
@@ -104,7 +104,7 @@ dotnet sln add [-h|--help]
 
 - **`-s|--solution-folder <PATH>`**
 
-  要加入專案的目的地方案資料夾路徑。 自 .NET Core 3.0 SDK 起提供。
+  要加入專案的目的地 [方案資料夾](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-folder) 路徑。 自 .NET Core 3.0 SDK 起提供。
 
 ### `remove`
 

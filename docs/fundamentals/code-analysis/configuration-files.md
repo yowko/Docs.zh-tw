@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: cf9b8f4033e6774684b2b7e3b788ef3c157d95df
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96586659"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633984"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>程式碼分析規則的設定檔
 
@@ -68,7 +68,7 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>Global AnalyzerConfig
 
-從支援 Visual Studio 2019 16.8 版和更新版本) 的 .NET 5.0 SDK (，您也可以使用全域 _AnalyzerConfig_ 檔來設定分析器選項。 這些檔案是用來提供套用 **至專案中所有原始** 程式檔的選項，而不論其檔案名或檔案路徑為何。
+從支援 Visual Studio 2019 16.8 版和更新版本) 的 .NET 5 SDK (，您也可以使用全域 _AnalyzerConfig_ 檔來設定分析器選項。 這些檔案是用來提供套用 **至專案中所有原始** 程式檔的選項，而不論其檔案名或檔案路徑為何。
 
 與檔案不同的 [EditorConfig](#editorconfig) 是，全域設定檔案不能用來設定 ide 的編輯器樣式設定，例如縮排大小或是否修剪尾端空白。 相反地，它們是專門用來指定專案層級的分析器設定選項。
 
@@ -141,6 +141,6 @@ dotnet_diagnostic.CA1000.severity = warning
 
 - 如需具有不同索引鍵的相關嚴重性選項之優先順序規則的相關資訊（例如，針對單一規則指定不同的嚴重性，以及規則所屬的類別），請參閱程式 [代碼分析](configuration-options.md#precedence)的設定選項。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [EditorConfig vs global AnalyzerConfig 設計問題](https://github.com/dotnet/roslyn/issues/47707)

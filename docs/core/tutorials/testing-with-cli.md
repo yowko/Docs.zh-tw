@@ -3,16 +3,16 @@ title: 使用 .NET CLI 組織和測試專案
 description: 本教學課程說明如何從命令列組織和測試 .NET 專案。
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 93e8a6b8afd9f9405bf21488998a61c2e761bf1e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 263eaf15beac008de8bb353a385b8f3588a7fefc
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512251"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633633"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-cli"></a>使用 .NET CLI 組織和測試專案
 
-本教學課程會遵循 [教學課程：使用 Visual Studio Code 建立使用 .net 的主控台應用程式](with-visual-studio-code.md)，讓您超越建立簡單的主控台應用程式，以開發先進且妥善組織的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
+本教學課程會遵循 [教學課程：使用 Visual Studio Code 建立使用 .net 的主控台應用程式](with-visual-studio-code.md)，讓您超越建立簡單的主控台應用程式，以開發先進且妥善組織的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.net/) 測試架構來擴充主控台應用程式。
 
 ## <a name="using-folders-to-organize-code"></a>使用資料夾來組織程式碼
 
@@ -43,7 +43,7 @@ ms.locfileid: "97512251"
 
 ## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>使用 NewTypes Pets 範例進行組織及測試
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>必要條件
 
 * [.Net 5.0 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 
@@ -104,7 +104,7 @@ Meow!
 
 ### <a name="testing-the-sample"></a>測試範例
 
-`NewTypes` 專案已經就緒，而且組織方式是將寵物相關類型保留在資料夾中。 接下來，建立測試專案，並開始撰寫具有 [xUnit](https://xunit.github.io/) 測試架構的測試。 單元測試可讓您自動檢查寵物類型的行為以確認它們正常運作。
+`NewTypes` 專案已經就緒，而且組織方式是將寵物相關類型保留在資料夾中。 接下來，建立測試專案，並開始撰寫具有 [xUnit](https://xunit.net/) 測試架構的測試。 單元測試可讓您自動檢查寵物類型的行為以確認它們正常運作。
 
 巡覽回到 *src* 資料夾，並建立內含 *NewTypesTests* 資料夾的 *test* 資料夾。 在命令提示字元中，從 *NewTypesTests* 資料夾執行 `dotnet new xunit`。 這會產生兩個檔案︰*NewTypesTests.csproj* 及 *UnitTest1.cs*。
 

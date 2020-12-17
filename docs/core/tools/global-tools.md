@@ -4,12 +4,12 @@ description: 如何安裝、使用、更新和移除 .NET 工具。 涵蓋通用
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 8839fd4fba72c9f973d906eabb72919306a847dd
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556897"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633880"
 ---
 # <a name="how-to-manage-net-tools"></a>如何管理 .NET 工具
 
@@ -40,8 +40,6 @@ ms.locfileid: "94556897"
 
 * 使用 [dotnet 工具搜尋](dotnet-tool-search.md) 命令來尋找已發佈至 NuGet.org 的工具。
 * 使用 ".NET tool" 套件類型篩選準則來搜尋 [NuGet](https://www.nuget.org) 網站。 如需詳細資訊，請參閱[尋找及選擇套件](/nuget/consume-packages/finding-and-choosing-packages)。
-* 請參閱 [natemcmaster/dotnet 工具](https://github.com/natemcmaster/dotnet-tools) GitHub 存放庫中的工具清單。
-* 使用 [ToolGet](https://www.toolget.net/) 搜尋 .net 工具。
 * 請參閱 [dotnet/Aspnetcore GitHub 存放庫的 tools 目錄](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)中，由 ASP.NET Core 團隊所建立之工具的原始程式碼。
 * 瞭解 [.net 診斷工具](../diagnostics/index.md#net-core-diagnostic-global-tools)上的診斷工具。
 
@@ -276,7 +274,7 @@ dotnet <command> --help
 
 如果工具無法安裝或執行，請參閱針對 [.net 工具使用問題進行疑難排解](troubleshoot-usage-issues.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [教學課程：使用 .NET CLI 建立 .NET 工具](global-tools-how-to-create.md)
 - [教學課程：使用 .NET CLI 安裝和使用 .NET 通用工具](global-tools-how-to-use.md)

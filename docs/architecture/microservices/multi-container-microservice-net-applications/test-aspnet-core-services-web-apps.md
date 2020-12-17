@@ -2,12 +2,12 @@
 title: 測試 ASP.NET Core 服務和 Web 應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索在容器中用於測試 ASP.NET Core 服務和 Web 應用程式的架構。
 ms.date: 08/07/2020
-ms.openlocfilehash: af1187fb1e2afbb9fa953db5a280c9cc317ab6a8
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804766"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633945"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -21,7 +21,7 @@ ms.locfileid: "91804766"
 
 - 每個微服務的功能測試。 這些可確保應用程式從使用者的觀點來看如預期般運作。
 
-- 服務測試。 這些可確保會測試端對端的服務使用案例，包括在相同的時間測試多個服務。 針對這種測試，您需要先準備環境。 在此情況下，這表示啟動服務 (例如，使用 docker-compose up)。
+- 服務測試。 這些可確保會測試端對端的服務使用案例，包括在相同的時間測試多個服務。 針對這種測試，您需要先準備環境。 在此情況下，這表示啟動服務 (例如，使用 docker-compose up)。
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>實作 ASP.NET Core Web API 的單元測試
 
@@ -31,7 +31,7 @@ ms.locfileid: "91804766"
 
 單元測試是根據測試架構而實作，例如 xUnit.net、MSTest、Moq 或使用 NUnit。 針對 eShopOnContainers 範例應用程式，我們使用 xUnit。
 
-當您為 Web API 控制器撰寫單元測試時，您會直接使用 C\# 中的新關鍵字具現化控制器類別，以便盡快執行測試。 下列範例示範在使用 [xUnit](https://xunit.github.io/) 作為測試架構時如何執行這項操作。
+當您為 Web API 控制器撰寫單元測試時，您會直接使用 C\# 中的新關鍵字具現化控制器類別，以便盡快執行測試。 下列範例示範在使用 [xUnit](https://xunit.net/) 作為測試架構時如何執行這項操作。
 
 ```csharp
 [Fact]
@@ -111,7 +111,7 @@ public class PrimeWebDefaultRequestShould
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. 官方網站。 \
-    <https://xunit.github.io/>
+    <https://xunit.net/>
 
 - **單元測試基本概念。** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
@@ -124,7 +124,7 @@ public class PrimeWebDefaultRequestShould
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>實作多重容器應用程式上的服務測試
 
-如前文所述，當您測試多重容器應用程式時，所有微服務都需要在 Docker 主機或容器叢集內執行。 端對端服務測試包含牽涉到數個微服務的多個作業，需要您在 Docker 主機中執行 docker-compose up (如果您使用協調器則是類似的機制) 部署和啟動整個應用程式。 一旦整個應用程式及其所有服務執行之後，您便可以執行端對端整合和功能測試。
+如前文所述，當您測試多重容器應用程式時，所有微服務都需要在 Docker 主機或容器叢集內執行。 端對端服務的測試包含牽涉到數個微服務的多個作業，需要您在 Docker 主機中執行 docker-compose up (如果您使用協調器則是類似的機制) 部署和啟動整個應用程式。 一旦整個應用程式及其所有服務執行之後，您便可以執行端對端整合和功能測試。
 
 有一些方法可供您使用。 在您用來部署應用程式的 docker-compose.yml 檔案中，您可以在解決方案層級展開進入點，以使用 [dotnet test](../../../core/tools/dotnet-test.md)。 您也可以使用另一個 compose 檔案，在您目標的映像中執行測試。 藉由針對包含您容器上之微服務和資料庫的整合測試使用另一個 compose 檔案，您可以確保相關的資料永遠重設為其原始狀態，然後才執行測試。
 
@@ -134,7 +134,7 @@ compose 應用程式啟動且執行之後，如果您正在執行 Visual Studio�
 
 最近已重組參考應用程式 (eShopOnContainers) 測試，現在有四個類別：
 
-1. **單元**測試，只是單純的舊版一般單元測試，包含在 **{MicroserviceName}.UnitTests** 專案中
+1. **單元** 測試，只是單純的舊版一般單元測試，包含在 **{MicroserviceName}.UnitTests** 專案中
 
 2. **微服務功能/整合測試**，其中測試案例涉及每個微服務的基礎結構，但會與其他項目隔離，且包含在 **{MicroserviceName}.FunctionalTests** 專案中。
 
@@ -198,10 +198,10 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 
 ### <a name="additional-resources"></a>其他資源
 
-- EShopOnContainers 上的**單元 & 整合測試**\
+- EShopOnContainers 上的 **單元 & 整合測試**\
     <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Unit-and-integration-testing>
 
-- EShopOnContainers 上的**負載測試**\
+- EShopOnContainers 上的 **負載測試**\
     <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Load-testing>
 
 > [!div class="step-by-step"]

@@ -3,18 +3,18 @@ title: 將程式庫移植到 .NET Core
 description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223567"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633906"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>將 .NET Framework 程式庫移植到 .NET Core
 
 瞭解如何將 .NET Framework 程式庫程式碼移植到 .NET Core，在其中執行跨平臺，並擴充使用它的應用程式的範圍。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本文假設您已具備下列條件：
 
@@ -43,7 +43,7 @@ ms.locfileid: "92223567"
 針對您想要移植的每個專案，在 Visual Studio 中執行下列動作：
 
 1. 以滑鼠右鍵按一下專案，然後選取 [ **屬性**]。
-1. 在 [目標 Framework]**** 下拉式清單中，選取 [.NET Framework 4.7.2]****。
+1. 在 [目標 Framework] 下拉式清單中，選取 [.NET Framework 4.7.2]。
 1. 重新編譯專案。
 
 因為您的專案現在是以 .NET Framework 4.7.2 為目標，請使用該版本的 .NET Framework 作為基礎移植程式碼。
@@ -107,8 +107,8 @@ ms.locfileid: "92223567"
 
 移轉程式碼後，確定一切正常運作的最佳方式，是在將程式碼移轉到 .NET Core 時測試程式碼。 若要這樣做，您必須使用能針對 .NET Core 建置並執行測試的測試架構。 目前有三個選項︰
 
-- [xUnit](https://xunit.github.io/)
-  - [快速入門](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- [xUnit](https://xunit.net/)
+  - [快速入門](https://xunit.net/docs/getting-started/netcore/cmdline)
   - [將 MSTest 專案轉換成 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   - [快速入門](https://github.com/nunit/docs/wiki/Installation)
@@ -127,7 +127,7 @@ ms.locfileid: "92223567"
 
 如果您是從程式庫基底向外進行移植，並視需要測試每一層，移植將會是個系統化的程序，並將所有問題都隔離在單層的程式碼內。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 >[!div class="nextstepaction"]
 >[整理專案在 .NET Core 中使用](project-structure.md)

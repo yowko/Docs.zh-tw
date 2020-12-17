@@ -1,16 +1,17 @@
 ---
 title: 建立 dotnet 新 .NET CLI 的專案範本
+titleSuffix: ''
 description: 了解如何針對 dotnet new 命令建立項目範本。 項目範本可能會包含數個檔案。
 author: adegeo
 ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: b148870480584cff37f3fd395e0594344001f247
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: d213646a933c77bd0d9a3f1aa9b6b4948b66439b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512420"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633659"
 ---
 # <a name="tutorial-create-an-item-template"></a>教學課程：建立專案範本
 
@@ -26,7 +27,7 @@ ms.locfileid: "97512420"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * [.Net 5.0 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 * 請參閱參考文章 [dotnet new 的自訂範本](../tools/custom-templates.md)。
@@ -253,7 +254,7 @@ C:\Test\templatetutorial\working\templates\extensions
 dotnet new -u C:\working\templates\extensions
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 在此教學課程中，您已建立項目範本。 若要了解如何建立專案範本，請繼續進行此教學課程系列。
 

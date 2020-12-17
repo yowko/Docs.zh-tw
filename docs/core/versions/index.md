@@ -2,12 +2,12 @@
 title: .NET 執行時間和 SDK 的版本設定方式
 description: 本文說明如何將 .NET SDK 和執行時間的版本設定 (類似于語義版本設定) 。
 ms.date: 12/07/2020
-ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 2fbc2775f31b4eab1c9883282c58accd9bb2b9f5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009302"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633620"
 ---
 # <a name="overview-of-how-net-is-versioned"></a>.NET 的版本設定總覽
 
@@ -19,15 +19,15 @@ ms.locfileid: "97009302"
 
 .NET SDK 不遵循語義版本控制。 .NET SDK 的發行速度更快，而且其版本號碼必須傳達對齊的執行時間和 SDK 本身的次要和修補程式版本。
 
-.NET SDK 版本號碼的前兩個位置會鎖定至它所發行的 .NET 執行時間。 SDK 的每個版本都可以針對此執行階段或任何較低的版本建立應用程式。
+.NET SDK 版本號碼的前兩個位置會鎖定至其發行的 .NET 執行階段版本。 SDK 的每個版本都可以針對此執行階段或任何較低的版本建立應用程式。
 
-SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版本會被乘以 100。 次要版本 1、修補版本 2 將以 102 表示。 最後兩位數代表修補號碼。 例如，以下是執行時間和 SDK 版本號碼的可能順序：
+SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版本會被乘以 100。 最後兩位數代表修補號碼。 次要版本 1、修補版本 2 將以 102 表示。 例如，以下是執行時間和 SDK 版本號碼的可能順序：
 
 | 變更                | .NET 執行階段      | .NET SDK (\*)      |
 |-----------------------|-------------------|-------------------|
 | 初始版本       | 2.2.0             | 2.2.100           |
 | SDK 修補程式             | 2.2.0             | 2.2.101           |
-| 執行階段與 SDK 修補程式 | 2.2.1             | 2.2.102           |
+| 執行時間和 SDK 修補程式 | 2.2.1             | 2.2.102           |
 | SDK 功能變更    | 2.2.1             | 2.2.200           |
 
 注意：

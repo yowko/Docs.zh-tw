@@ -2,12 +2,12 @@
 title: DevOps
 description: 雲端原生應用程式的 DevOps 考慮
 ms.date: 05/13/2020
-ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1a04f5178877f3fdde707753e94718ce0f0bb49d
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163995"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633711"
 ---
 # <a name="devops"></a>DevOps
 
@@ -118,11 +118,11 @@ GitHub 有超過40000000的使用者，使其成為世界上最大的原始程�
 
 單一儲存機制的方法也有許多缺點。 其中一個最擔心的問題是，擁有單一存放庫會引發安全性問題。 如果存放庫的內容在每個服務模型的儲存機制中流失，則程式碼遺失的數量會降至最低。 在單一存放庫中，公司擁有的所有專案都可能遺失。 在這種情況下，有許多範例會 derailing 整個遊戲開發工作。 有多個存放庫公開較少的介面區，這是大部分安全性作法的理想特性。
 
-單一儲存機制的大小可能很快就會變得難以管理。 這會帶來一些有趣的效能含意。 您可能會需要使用特定的工具，例如 [適用于 Git 的虛擬檔案系統](https://vfsforgit.org/)，其原本是設計來改善 Windows 小組開發人員的體驗。
+單一儲存機制的大小可能很快就會變得難以管理。 這會帶來一些有趣的效能含意。 您可能會需要使用特定的工具，例如 [適用于 Git 的虛擬檔案系統](https://github.com/Microsoft/VFSForGit)，其原本是設計來改善 Windows 小組開發人員的體驗。
 
 使用單一儲存機制的引數通常會細分為 Facebook 或 Google 將此方法用於原始程式碼安排的引數。 如果此方法對這些公司來說夠好，則一定是所有公司都是正確的方法。 重要的是，少數公司的運作方式就像是 Facebook 或 Google 的規模。 這些規模所發生的問題與大部分開發人員都會面臨的問題不同。 Goose 適用于看的功能可能不適合。
 
-最後，您可以使用任一種解決方案來裝載微服務的原始程式碼。 不過，在大部分情況下，在單一存放庫中操作的管理和工程額外負荷，不值得 meager 的優點。 將程式碼分割成多個存放庫，可促進更好的考慮，並促進開發小組之間的自主性。  
+最後，您可以使用任一種解決方案來裝載微服務的原始程式碼。 不過，在大部分情況下，在單一存放庫中操作的管理和工程額外負荷，不值得 meager 的優點。 將程式碼分割成多個存放庫，可促進更好的考慮，並促進開發小組之間的自主性。
 
 ### <a name="standard-directory-structure"></a>標準目錄結構
 
@@ -199,7 +199,7 @@ variables:
   artifactName: drop
   buildPlatform: any cpu
   buildConfiguration: release
-  
+
 pool:
   name: Hosted VS2017
   demands:

@@ -1,13 +1,13 @@
 ---
 title: .NET Core 執行時間識別碼 (RID) 目錄
 description: 深入瞭解執行時間識別碼 (RID) 以及如何在 .NET Core 中使用 Rid。
-ms.date: 02/22/2019
-ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 12/15/2020
+ms.openlocfilehash: f818ab2d503be7960d9eb8450a7dd749766637a6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90538220"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633607"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -27,9 +27,9 @@ RID 是執行時間 *識別碼* 的縮寫。 RID 值是用來識別應用程式�
 
 代表具體作業系統的 RID 通常遵循 `[os].[version]-[architecture]-[additional qualifiers]` 這個模式，其中：
 
-- `[os]` 是作業/平台系統 Moniker。 例如 `ubuntu`。
+- `[os]` 是作業/平台系統 Moniker。 例如： `ubuntu` 。
 
-- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如 `15.10`。
+- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如： `15.10` 。
 
   - 版本 **不應為** 行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。
 
@@ -80,7 +80,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 ## <a name="using-rids"></a>使用 RID
 
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
-如需最新的完整版本，請[runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
+如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
 
 .NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值，適用於 .NET Core 2.0 和更新版本。 由於大部分發行版本的 RID 都會對應至可攜式 RID，因此在處理多個 Linux 發行版本時特別有用。
 
@@ -112,17 +112,17 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="linux-rids"></a>Linux RID
 
-僅列出常見值。 如需最新的完整版本，請[runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
+僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
 
-- 可攜式 (.NET Core 2.0 或更新版本)
+- 可攜式
   - `linux-x64` (大部分的桌面散發套件，例如 CentOS、Debian、Fedora、Ubuntu 和衍生) 
   - `linux-musl-x64` (使用 [musl](https://wiki.musl-libc.org/projects-using-musl.html) 的輕量發行版本，如 Alpine Linux)
   - `linux-arm` 在 ARM 上執行的 (Linux 散發套件，例如 Raspberry Pi 模型 2 +) 上的 Raspbian
   - `linux-arm64` 在 Raspberry Pi 模型 3 +) 上執行于64位 ARM 上的 (Linux 散發套件（如 Ubuntu Server 64 位）
 - Red Hat Enterprise Linux
   - `rhel-x64` (RHEL 6 版以上已由 `linux-x64` 取代)
-  - `rhel.6-x64` (.NET Core 2.0 或更新版本)
-- Tizen (.NET Core 2.0 或更新版本)
+  - `rhel.6-x64`
+- Tizen
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
@@ -131,23 +131,28 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的完整版本，請[runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
+macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
 
-- 可攜式 (.NET Core 2.0 或更新版本)
+- 可攜式
   - `osx-x64` (最低 OS 版本為 macOS 10.12 Sierra)
 - macOS 10.10  Yosemite
   - `osx.10.10-x64`
 - macOS 10.11 El Capitan
   - `osx.10.11-x64`
-- macOS 10.12 Sierra (.NET Core 1.1 或更新版本)
+- macOS 10.12 Sierra
   - `osx.10.12-x64`
-- macOS 10.13 High Sierra (.NET Core 1.1 或更新版本)
+- macOS 10.13 High Sierra
   - `osx.10.13-x64`
-- macOS 10.14 Mojave (.NET Core 1.1 或更新版本)
+- macOS 10.14 Mojave
   - `osx.10.14-x64`
+- macOS 10.15 Catalina
+  - `osx.10.15-x64`
+- macOS 11.01 Big Sur
+  - `osx.11.0-x64`
+  - `osx.11.0-arm64`
 
 如需詳細資訊，請參閱 [.Net Core 相依性和需求](./install/macos.md#dependencies)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段識別碼](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)

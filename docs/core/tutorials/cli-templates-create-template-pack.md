@@ -5,12 +5,12 @@ author: adegeo
 ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 0d8ef9c158920ec49948215afb505a3753503286
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 2aea143f1e41d580de41a9cc9e924d70b55695db
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512446"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633594"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
 
@@ -25,7 +25,7 @@ ms.locfileid: "97512446"
 > * 從 NuGet 套件檔案安裝範本
 > * 依套件識別碼將範本解除安裝
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)和[第 2 部分](cli-templates-create-project-template.md)。
 
@@ -50,10 +50,6 @@ dotnet new console -n templatepack -o .
 ```
 
 `-n`參數會將 _.csproj_ 檔案名設定為 _>templatepack.csproj .csproj_。 `-o`參數會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
-
-```dotnetcli
-dotnet new console -n templatepack -o .
-```
 
 ```console
 The template "Console Application" was created successfully.
@@ -196,7 +192,7 @@ Currently installed items:
 
 恭喜！ 您已安裝並解除安裝範本套件。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 若要深入了解範本 (您已經了解其大部分的內容)，請參閱 [dotnet new 的自訂範本](../tools/custom-templates.md)一文。
 

@@ -4,12 +4,12 @@ description: 瞭解如何建立時間序列資料的異常偵測應用程式。 
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 69b617e760c1dd6a579c925168c92630756f92fc
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 3451a44f8fa7ae85625687b7d52f120c411df1b6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596486"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97634049"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>教學課程：使用 ML.NET 偵測時間序列中的異常
 
@@ -22,7 +22,7 @@ ms.locfileid: "97596486"
 > * 偵測時間序列的期間
 > * 偵測定期時間序列的異常狀況
 
-您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) 存放庫中找到本教學課程的原始程式碼。
+您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) 存放庫中找到本教學課程的原始程式碼。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -66,7 +66,7 @@ ms.locfileid: "97596486"
 | 2018/10/3  | 34.49893429  |
 | ...    | ....   |
 
-此檔案代表時間序列。 檔案中的每個資料列都是一個資料點。 每個資料 piont 都有兩個屬性， `timestamp` 也就 `value` 是和，用以 reprensent 每天通話的次數。 通話的數目會轉換成不區分大小寫。
+此檔案代表時間序列。 檔案中的每個資料列都是一個資料點。 每個資料點都有兩個屬性， `timestamp` 也就 `value` 是和，代表每天通話的次數。 通話的數目會轉換成不區分大小寫。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -92,7 +92,7 @@ ms.locfileid: "97596486"
 
     `PhoneCallsData` 會指定輸入資料類別。 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 屬性會指定應該載入資料集內的哪些資料行 (依資料行索引)。 它有兩個屬性 `timestamp` ，而且 `value` 對應到資料檔案中的相同屬性。
 
-    `PhoneCallsPrediction` 指定預測資料類別。 針對 SR-IOV CNN 偵測器，預測取決於指定的偵測 [模式](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) 。 在此範例中，我們會選取 `AnomalyAndMargin` 模式。 輸出包含七個數據行。 在大部分的情況下，、 `IsAnomaly` `ExpectedValue` `UpperBoundary` 和 `LowerBoundary` 都有足夠的資訊。 它們會告訴您某個點是否為異常，這是點的預期值和點的下限/上限區域。
+    `PhoneCallsPrediction` 指定預測資料類別。 針對 SR-IOV CNN 偵測器，預測取決於指定的偵測 [模式](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) 。 在此範例中，我們會選取 `AnomalyAndMargin` 模式。 輸出包含七個數據行。 在大部分的情況下，、、 `IsAnomaly` `ExpectedValue` `UpperBoundary` 和 `LowerBoundary` 都有足夠的資訊。 它們會告訴您某個點是否為異常，這是點的預期值和點的下限/上限區域。
 
 5. 將下列程式碼新增至方法上方的行， `Main` 以指定資料檔案的路徑：
 
@@ -120,7 +120,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 時間序列異常偵測是偵測時間序列資料極端值的過程;指向指定的輸入時間序列，其中行為不是預期的行為，或「奇怪」。 這些異常通常代表問題領域的一些感興趣事件：使用者帳戶的網路攻擊、電源中斷、伺服器上的高載 RPS、記憶體流失等。
 
-若要在時間序列上尋找異常狀況，您應該先決定數列的期間。 然後，時間序列可以分解成數個元件 `Y = T + S + R` ，其中 `Y` 是原始數列 `T` 是趨勢元件， `S` 是季節性 componnent，而 `R` 是數列的剩餘元件。 此步驟稱為 [分解](https://en.wikipedia.org/wiki/Decomposition_of_time_series)。 最後，會在剩餘的元件上執行偵測，以找出異常狀況。 在 ML.NET 中，CNN 演算法是先進的新穎演算法，以光譜殘留 (SR) 和卷積類神經網路 (CNN) 偵測時間序列上的異常 ( 請參閱 Microsoft 白皮書的 [時間序列異常偵測服務](https://arxiv.org/pdf/1906.03821.pdf) ，以取得此演算法) 的詳細資料。
+若要在時間序列上尋找異常狀況，您應該先決定數列的期間。 然後，時間序列可以分解成數個元件，例如 `Y = T + S + R` ， `Y` 原始數列 `T` 是趨勢元件、 `S` 是季節性元件，而 `R` 是數列的剩餘元件。 此步驟稱為 [分解](https://en.wikipedia.org/wiki/Decomposition_of_time_series)。 最後，會在剩餘的元件上執行偵測，以找出異常狀況。 在 ML.NET 中，CNN 演算法是先進的新穎演算法，以光譜殘留 (SR) 和卷積類神經網路 (CNN) 偵測時間序列上的異常狀況。 如需此演算法的詳細資訊，請參閱 [Microsoft 的時間序列異常偵測服務](https://arxiv.org/pdf/1906.03821.pdf)。
 
 在本教學課程中，您會看到可以使用兩個函數來完成這些程式。
 
@@ -139,7 +139,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
     }
     ```
 
-2. 使用 [DetectSeasonality](xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality) 函式來偵測週期。 使用下列程式碼將它新增至 `DetectPeriod` 方法：
+2. 使用 <xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality%2A> 函數來偵測期間。 使用下列程式碼將它新增至 `DetectPeriod` 方法：
 
     [!code-csharp[DetectSeasonality](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DetectSeasonality)]
 
@@ -161,7 +161,7 @@ Period of the series is: 7.
 
 ## <a name="detect-anomaly"></a>偵測異常
 
-在此步驟中，您會使用 [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetector) 來尋找異常。
+在此步驟中，您會使用 <xref:Microsoft.ML.TimeSeriesCatalog.DetectEntireAnomalyBySrCnn%2A> 方法來尋找異常。
 
 ### <a name="create-the-detectanomaly-method"></a>建立 DetectAnomaly 方法
 
@@ -174,7 +174,7 @@ Period of the series is: 7.
     }
     ```
 
-2. 使用下列程式碼，在方法中設定 [SrCnnEntireAnomalyDetectorOptions](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetectorOptions) `DetectAnomaly` ：
+2. <xref:Microsoft.ML.TimeSeries.SrCnnEntireAnomalyDetectorOptions> `DetectAnomaly` 使用下列程式碼在方法中設定：
 
     [!code-csharp[SetupSrCnnParameters](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#SetupSrCnnParameters)]
 
@@ -193,7 +193,7 @@ Period of the series is: 7.
     您會在變更點偵測結果中顯示下列資訊：
 
     * `Index` 這是每個點的索引。
-    * `Anomaly` 這是 wheather 的指標，會偵測為異常。
+    * `Anomaly` 這是是否偵測到每個點是否為異常的指標。
     * `ExpectedValue` 這是每個點的估計值。
     * `LowerBoundary` 是每個點都不是異常的最小值。
     * `UpperBoundary` 這是最大值，每個點都不是異常。
@@ -243,7 +243,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 25,0,29.381125690882463,33.681408258162854,25.080843123602072
 26,0,5.261543539820418,9.561826107100808,0.9612609725400283
 27,0,5.4873712582971805,9.787653825577571,1.1870886910167897
-28,1,36.504694001629254,40.804976568909645,32.20441143434886  <-- alert is on, detecte anomaly
+28,1,36.504694001629254,40.804976568909645,32.20441143434886  <-- alert is on, detected anomaly
 ...
 ```
 
@@ -258,7 +258,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 > * 偵測時間序列資料的期間
 > * 偵測時間序列資料的異常狀況
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 請查看機器學習範例 GitHub 存放庫，以探索耗電量異常偵測範例。
 > [!div class="nextstepaction"]

@@ -4,12 +4,12 @@ description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2c44a83b4d45c95cbe45f125523207811f6368c2
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679660"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97634062"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -111,7 +111,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ![使用偏差和加權參數的線性迴歸模型](./media/linear-regression-model.svg)
 
-此模型就只是：$Price = b + Size * w$。 參數 $b$ 和 $w$ 的評估方式是根據一組 (大小、價格) 對組來調整線條。 用來尋找模型參數的資料稱為**定型資料**。 機器學習模型的輸入稱為**特性**。 在本例中，$Size$ 是唯一的特性。 用來定型機器學習模型的實況資料稱為**標籤**。 在這裡，定型資料集的 $Price$ 值是標籤。
+此模型就只是：$Price = b + Size * w$。 參數 $b$ 和 $w$ 的評估方式是根據一組 (大小、價格) 對組來調整線條。 用來尋找模型參數的資料稱為 **定型資料**。 機器學習模型的輸入稱為 **特性**。 在本例中，$Size$ 是唯一的特性。 用來定型機器學習模型的實況資料稱為 **標籤**。 在這裡，定型資料集的 $Price$ 值是標籤。
 
 ### <a name="more-complex"></a>更複雜
 
@@ -121,7 +121,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ![文字分類模型](./media/text-classification-model.svg)
 
-房價模型和文字分類模型都是**線性**模型。 根據資料本質以及要解決的問題本質，您也可以使用**決策樹**模型、**一般化累加**模型和其他模型。 您可以在[任務](./resources/tasks.md)中深入了解模型。
+房價模型和文字分類模型都是 **線性** 模型。 根據資料本質以及要解決的問題本質，您也可以使用 **決策樹** 模型、**一般化累加** 模型和其他模型。 您可以在[任務](./resources/tasks.md)中深入了解模型。
 
 ## <a name="data-preparation"></a>資料準備
 
@@ -139,7 +139,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 每種機器學習工作都有針對測試資料集，用來評估模型正確性和精確度的計量。
 
-在房價範例中，我們使用了**迴歸**工作。 若要評估模型，請將下列程式碼新增至原始範例。
+在房價範例中，我們使用了 **迴歸** 工作。 若要評估模型，請將下列程式碼新增至原始範例。
 
 ```csharp
         HouseData[] testHouseData =
@@ -168,7 +168,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 在本節中，我們要探討 ML.NET 的架構模式。 如果您是有經驗的 .NET 開發人員，對這些模式有些很熟悉，有些則較不熟悉。 跟上來一探究竟吧！
 
-ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一物件包含**目錄**。 目錄是資料載入儲存、轉換、定型器和模型作業元件的處理站。 每個目錄物件都有建立不同類型元件的方法：
+ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一物件包含 **目錄**。 目錄是資料載入儲存、轉換、定型器和模型作業元件的處理站。 每個目錄物件都有建立不同類型元件的方法：
 
 |||||
 |-|-|-|-|
@@ -210,7 +210,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
     var model = pipeline.Fit(trainingData);
 ```
 
-呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是定型模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差**和**權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
+呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是定型模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差** 和 **權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
 
 您可以深入瞭解 [如何訓練模型](./how-to-guides/train-machine-learning-model-ml-net.md)的模型定型。
 
@@ -236,7 +236,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 
 ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) 物件。
 
-管線中的每個轉換都有輸入結構描述 (轉換預期在其輸入中看到的資料名稱、類型和大小) 以及輸出結構描述 (轉換在轉換後產生的資料名稱、類型和大小)。 下列文件提供 [IDataView 介面及其型別系統](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)的深入說明。
+管線中的每個轉換都有輸入結構描述 (轉換預期在其輸入中看到的資料名稱、類型和大小) 以及輸出結構描述 (轉換在轉換後產生的資料名稱、類型和大小)。
 
 如果管線中來自轉換之輸出結構描述不符合下一個轉換的輸入結構描述，則 ML.NET 會擲回例外狀況。
 
@@ -244,13 +244,13 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
    ![具有房價預測資料的 ML.NET 資料檢視範例](./media/ml-net-dataview.png)
 
-所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為**特性**。 這就是為什麼我們要在房價範例中，把 [大小]**** 資料行串連到稱為 [特性]**** 的新資料行。
+所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為 **特性**。 這就是為什麼我們要在房價範例中，把 [大小] 資料行串連到稱為 [特性]的新資料行。
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]****。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
+所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
 
 ```csharp
     public class Prediction
@@ -262,7 +262,7 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
 您可以在[機器學習工作](resources/tasks.md)指南中深入了解不同機器學習工作的輸出資料行。
 
-DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會在模型定型和評估期間以及資料預測期間載入及操作。 當您撰寫和測試 ML.NET 應用程式時，您可以呼叫 [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) 方法，使用 Visual Studio 偵錯工具看一下任何資料檢視物件。
+DataView 物件的重要屬性是它們都 **延遲** 評估。 資料檢視只會在模型定型和評估期間以及資料預測期間載入及操作。 當您撰寫和測試 ML.NET 應用程式時，您可以呼叫 [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) 方法，使用 Visual Studio 偵錯工具看一下任何資料檢視物件。
 
 ```csharp
     var debug = testPriceDataView.Preview();
@@ -278,7 +278,7 @@ DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 * 瞭解如何使用不同的機器學習工作，在 [教學](./tutorials/index.md)課程中使用更實際的資料集來建立應用程式。
 
