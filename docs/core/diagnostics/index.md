@@ -3,12 +3,12 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0aa404497cb7d6a488fb51e1df8f7f45d4f213fd
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031913"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678102"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -24,6 +24,10 @@ ms.locfileid: "96031913"
 
 [記錄和追蹤](logging-tracing.md) 是相關的技術。 它們會參考檢測程式碼以建立記錄檔。 那些檔案會記錄程式所執行之內容的詳細資料。 這些詳細資料可用來診斷最為複雜的問題。 透過與時間戳記結合，這些技術在調查效能方面的問題上也非常有用。
 
+## <a name="metrics"></a>計量
+
+[EventCounters](event-counters.md) 可讓您撰寫度量來識別和監視效能問題。 相較于追蹤，計量會產生較低的效能負荷，因此更適合用於 always on 效能監視。 .NET 執行時間和程式庫會發佈數個 [已知的 EventCounters](available-counters.md) ，您也可以進行監視。
+
 ## <a name="unit-testing"></a>單元測試
 
 [單元測試](../testing/index.md) 是持續整合和部署高品質軟體的重要元件。 單元測試的設計是要在您中斷某個項目時提前警告您。
@@ -35,10 +39,6 @@ ms.locfileid: "96031913"
 ## <a name="collect-diagnostics-in-containers"></a>在容器中收集診斷
 
 在非容器化 Linux 環境中使用的診斷工具，也可以用來 [收集容器中的診斷](diagnostics-in-containers.md)資訊。 為了確保工具在 Docker 容器中運作，只需要幾個使用方式變更。
-
-## <a name="debug-linux-dumps"></a>對 Linux 傾印進行偵錯
-
-[Debug linux](debug-linux-dumps.md) 傾印說明如何收集和分析 linux 上的傾印。
 
 ## <a name="net-core-diagnostic-global-tools"></a>.NET Core 診斷通用工具
 
@@ -83,6 +83,10 @@ ms.locfileid: "96031913"
 ### <a name="debug-deadlock"></a>針對死結進行偵錯
 
 [教學課程： Debug 鎖死](debug-deadlock.md) 會示範如何使用 [dotnet](dotnet-dump.md) 傾印工具來調查執行緒和鎖定。
+
+### <a name="debug-linux-dumps"></a>對 Linux 傾印進行偵錯
+
+[Debug linux](debug-linux-dumps.md) 傾印說明如何收集和分析 linux 上的傾印。
 
 ### <a name="measure-performance-using-eventcounters"></a>使用 EventCounters 測量效能
 

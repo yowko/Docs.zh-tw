@@ -2,12 +2,12 @@
 title: .NET Core 中的 EventCounters
 description: 在本文中，您將瞭解什麼是 EventCounters、如何實行它們，以及如何使用它們。
 ms.date: 08/07/2020
-ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 08180b5580d2e7fe782fbd531a26872715825cdf
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437812"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678199"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 中的 EventCounters
 
@@ -15,13 +15,11 @@ ms.locfileid: "96437812"
 
 EventCounters 是 .NET Core Api，用於輕量、跨平臺和近乎即時的效能計量集合。 EventCounters 已新增為 Windows 上 .NET Framework 之「效能計數器」的跨平臺替代方案。 在本文中，您將瞭解什麼是 EventCounters、如何實行它們，以及如何使用它們。
 
-.NET Core 執行時間和一些 .NET 程式庫會使用 EventCounters （從 .NET Core 3.0 開始）發佈基本的診斷資訊。 除了 .NET 執行時間所提供的 EventCounters 之外，您還可以選擇執行自己的 EventCounters。 EventCounters 可以用來追蹤各種計量。
+.NET Core 執行時間和一些 .NET 程式庫會使用 EventCounters （從 .NET Core 3.0 開始）發佈基本的診斷資訊。 除了 .NET 執行時間所提供的 EventCounters 之外，您還可以選擇執行自己的 EventCounters。 EventCounters 可以用來追蹤各種計量。 在 .NET 的知名[EventCounters](available-counters.md)中深入瞭解它們
 
 EventCounters 即時作為的一部分 <xref:System.Diagnostics.Tracing.EventSource> ，並且會定期自動推送至接聽程式工具。 就像上的所有其他事件一樣 <xref:System.Diagnostics.Tracing.EventSource> ，它們都可以透過內部進程和跨進程的方式，透過 <xref:System.Diagnostics.Tracing.EventListener> 和 [EventPipe](./eventpipe.md)使用。 本文著重于 EventCounters 的跨平臺功能，並刻意排除 PerfView 和 ETW (Windows) 的事件追蹤，雖然兩者都可以搭配 EventCounters 使用。
 
 ![EventCounters 同進程和跨進程的圖表影像](media/event-counters.svg)
-
-[!INCLUDE [available-counters](includes/available-counters.md)]
 
 ## <a name="eventcounter-api-overview"></a>EventCounter API 總覽
 

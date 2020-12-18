@@ -6,16 +6,16 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: dbb0a94b0401d58139c024fd8ca3e00353a19efa
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267876"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678033"
 ---
 # <a name="modules-handlers-and-middleware"></a>模組、處理常式和中介軟體
 
-ASP.NET Core 的應用程式是以一系列 *中介軟體*為基礎。 中介軟體是排列成管線以處理要求和回應的處理常式。 在 Web Form 應用程式中，HTTP 處理常式和模組會解決類似的問題。 在 ASP.NET Core 中，模組、處理常式、 *Global.asax.cs*和應用程式生命週期會取代為中介軟體。 在本章中，您將瞭解應用程式內容中的中介軟體 Blazor 。
+ASP.NET Core 的應用程式是以一系列 *中介軟體* 為基礎。 中介軟體是排列成管線以處理要求和回應的處理常式。 在 Web Form 應用程式中，HTTP 處理常式和模組會解決類似的問題。 在 ASP.NET Core 中，模組、處理常式、 *Global.asax.cs* 和應用程式生命週期會取代為中介軟體。 在本章中，您將瞭解應用程式內容中的中介軟體 Blazor 。
 
 ## <a name="overview"></a>概觀
 
@@ -23,7 +23,7 @@ ASP.NET Core 要求管線由要求委派序列組成，並會一個接著一個�
 
 ![管線](media/middleware/request-delegate-pipeline.png)
 
-上圖缺少生命週期事件的概念。 這是處理 ASP.NET Web Forms 要求的基礎概念。 此系統可讓您更輕鬆地瞭解正在發生的進程，並允許在任何時間點插入中介軟體。 中介軟體會依照將其新增至要求管線的順序來執行。 它們也會以程式碼（而非設定檔）的方式加入，通常是在 *Startup.cs*中。
+上圖缺少生命週期事件的概念。 這是處理 ASP.NET Web Forms 要求的基礎概念。 此系統可讓您更輕鬆地瞭解正在發生的進程，並允許在任何時間點插入中介軟體。 中介軟體會依照將其新增至要求管線的順序來執行。 它們也會以程式碼（而非設定檔）的方式加入，通常是在 *Startup.cs* 中。
 
 ## <a name="katana"></a>Katana
 

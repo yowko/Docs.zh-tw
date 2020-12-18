@@ -2,12 +2,12 @@
 title: 使用 Ocelot 實作 API 閘道
 description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以容器為基礎的環境中使用 Ocelot。
 ms.date: 03/02/2020
-ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718094"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678118"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -39,7 +39,7 @@ ms.locfileid: "95718094"
 
 我們有在先前的章節[建立以微服務為基礎的複合 UI](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md)中進行更深入的探討。
 
-其重點在於，針對許多中型和大型應用程式，使用自訂建置的 API 閘道產品通常是不錯的方法，但不能作為單一整合型彙總工具或唯一中央自訂 API 閘道，除非該 API 閘道允許數個開發小組透過多個獨立設定區域建立自發微服務。
+作為關鍵重點，對於許多中型和大型應用程式而言，使用自訂的 API 閘道產品通常是很好的方法，而不是單一整合型匯總工具或唯一的中央自訂 API 閘道，除非該 API 閘道允許數個開發小組建立自發微服務的多個獨立設定區域。
 
 ### <a name="sample-microservicescontainers-to-reroute-through-the-api-gateways"></a>範例微服務/容器透過 API 閘道重設路徑
 
@@ -97,7 +97,7 @@ EXPOSE 80
 
 用戶端應用程式只能存取使用 `docker-compose` 部署時所發佈的外部連接埠 (如果有的話)。
 
-部署到生產環境時，不應該發佈這些外部連接埠。 這就是為什麼您想要使用 API 閘道來避免用戶端應用程式與微服務之間的直接通訊。
+部署到生產環境時，不應該發佈這些外部連接埠。 基於這個特殊原因，為什麼您想要使用 API 閘道，以避免用戶端應用程式與微服務之間的直接通訊。
 
 不過，開發時，您想要直接存取微服務/容器，並透過 Swagger 來執行。 這就是為什麼在 eShopOnContainers 中，即使 API 閘道或用戶端應用程式不會使用外部埠，仍會指定外部埠。
 
@@ -155,7 +155,7 @@ Install-Package Ocelot
 
 **圖 6-32**。 eShopOnContainers 中的 OcelotApiGw 基底專案
 
-此 ASP.NET Core WebHost 專案基本上由兩個簡單的檔案所組成：`Program.cs` 和 `Startup.cs`。
+此 ASP.NET Core WebHost 專案是以兩個簡單的檔案建立：  `Program.cs` 和 `Startup.cs` 。
 
 Program.cs 只需要建立及設定一般 ASP.NET Core BuildWebHost。
 
@@ -267,7 +267,7 @@ DownstreamPathTemplate、Scheme 和 DownstreamHostAndPorts 會建立此要求將
 
 `Host` 是相依於您使用之服務名稱解析的服務名稱。 使用 docker-compose 時，服務名稱是由 Docker 主機提供，也就是使用 docker-compose 檔案所提供的服務名稱。 如果使用 Kubernetes 或 Service Fabric 等協調器，該名稱應該透過 DNS 或每個協調器提供的名稱解析來解析。
 
-DownstreamHostAndPorts 是包含您想要轉送要求的任何下游服務之主機和連接埠的陣列。 這通常只會包含一個項目，但有時您可能想要將要求負載平衡至您的下游服務，而 Ocelot 可讓您新增多個項目，然後選取負載平衡器。 但如果使用 Azure 及任何協調器，最好透過雲端和協調器基礎結構進行負載平衡。
+DownstreamHostAndPorts 是包含您想要轉送要求的任何下游服務之主機和連接埠的陣列。 這項設定通常只會包含一個專案，但有時候您可能會想要對下游服務的要求進行負載平衡，而 Ocelot 可讓您新增多個專案，然後選取負載平衡器。 但如果使用 Azure 及任何協調器，最好透過雲端和協調器基礎結構進行負載平衡。
 
 UpstreamPathTemplate 是 URL，可供 Ocelot 用來識別針對用戶端中的指定要求使用哪個 DownstreamPathTemplate。 最後，使用 UpstreamHttpMethod，讓 Ocelot 可以區別傳送至相同 URL 的不同要求 (GET、POST、PUT)。
 
@@ -393,7 +393,7 @@ webmarketingapigw:
 
 **圖 6-38**。 放大檢視彙總工具服務
 
-您可以注意到當圖表顯示來自 API 閘道的可能要求時，可能會變得複雜。 雖然您可以看到藍色箭號如何簡化，但從用戶端應用程式觀點來看，當使用彙總工具模式時，若能減少通訊中的頻繁交談和延遲，最終特別會大幅改善遠端應用程式 (行動和 SPA 應用程式) 的使用者體驗。
+您可以注意到當圖表顯示來自 API 閘道的可能要求時，可能會變得複雜。 另一方面，當您使用匯總工具模式時，您可以看到藍色箭號如何簡化用戶端應用程式觀點的通訊。 這種模式不僅有助於減少通訊中的對話和延遲，還可改善遠端應用程式 (行動和 SPA 應用程式) 的使用者體驗。
 
 在「行銷」商務領域和微服務的案例中，這是一個簡單的使用案例，因此不需要使用匯總工具，但如果有需要，也可能會發生此情況。
 
@@ -527,7 +527,7 @@ services.AddAuthentication(options =>
 
 但如果您使用輸入方法，您就會在網際網路與服務 (包括 API 閘道) 之間有一個中介層作為反向 Proxy。
 
-按照定義，輸入是允許輸入連線到達叢集服務的規則集合。 輸入通常會設定為提供服務可從外部連線的 URL、負載平衡流量、SSL 終止等項目。 使用者透過將輸入資源張貼到 API 伺服器來要求輸入。
+按照定義，輸入是允許輸入連線到達叢集服務的規則集合。 輸入設定為提供服務可從外部連線的 URL、負載平衡流量、SSL 終止等。 使用者透過將輸入資源張貼到 API 伺服器來要求輸入。
 
 在 eShopOnContainers 中，當您在本機開發並只使用您的開發電腦作為 Docker 主機時，您不會使用任何輸入，而只會使用多個 API 閘道。
 
@@ -543,7 +543,7 @@ API 閘道是前端或外觀只會呈現服務，而不會呈現通常不在其�
 
 **圖 6-41**。 部署至 Kubernetes 時之 eShopOnContainers 中的輸入層
 
-Kubernetes 輸入扮演著所有對應用程式流量的反向 Proxy 角色，其中包括通常不在 API 閘道範圍內的 Web 應用程式。 當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
+Kubernetes 輸入可作為應用程式的所有流量（包括 web 應用程式）的反向 proxy，而這些流量都不在 Api 閘道範圍內。 當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
 
 - `/` 代表用戶端 SPA Web 應用程式
 - `/webmvc` 代表用戶端 MVC Web 應用程式

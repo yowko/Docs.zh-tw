@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955209"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678231"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C # 7.0 到 c # 7.3 的新功能
 
@@ -76,7 +76,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 [!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-有時候您可能會想要解除封裝已從方法傳回的 Tuple 成員。  您可以藉由為 Tuple 中的每個值宣告不同變數來這麼做。 這種解除封裝稱為*解構* Tuple：
+有時候您可能會想要解除封裝已從方法傳回的 Tuple 成員。  您可以藉由為 Tuple 中的每個值宣告不同變數來這麼做。 這種解除封裝稱為 *解構* Tuple：
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
@@ -98,7 +98,7 @@ var pair = (count, label); // element names are "count" and "label"
 
 您可以在「 [元組類型](../language-reference/builtin-types/value-tuples.md) 」一文中深入瞭解這項功能。
 
-通常在您解構元組或以 `out` 參數呼叫方法時，會強制您要定義變數，而您無須在意變數的值也沒有使用該值的打算。 C# 新增了對*捨棄*的支援，來應付這種狀況。 捨棄是僅限寫入的變數，其名稱為 `_` (底線字元)；您可將所有想要捨棄的值指派到單一變數。 捨棄類似於未經指派的變數；和指派陳述式一樣，都不能用於程式碼中。
+通常在您解構元組或以 `out` 參數呼叫方法時，會強制您要定義變數，而您無須在意變數的值也沒有使用該值的打算。 C# 新增了對 *捨棄* 的支援，來應付這種狀況。 捨棄是僅限寫入的變數，其名稱為 `_` (底線字元)；您可將所有想要捨棄的值指派到單一變數。 捨棄類似於未經指派的變數；和指派陳述式一樣，都不能用於程式碼中。
 
 下列情況中支援捨棄：
 
@@ -178,7 +178,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 ## <a name="async-main"></a>非同步主要
 
-「非同步主要」** 方法可讓您在 `Main` 方法中使用 `await`。 在過去您必須這樣寫：
+「非同步主要」方法可讓您在 `Main` 方法中使用 `await`。 在過去您必須這樣寫：
 
 ```csharp
 static int Main()
@@ -211,7 +211,7 @@ static async Task Main()
 
 ## <a name="local-functions"></a>區域函式
 
-類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」** 可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
+類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
 
 有兩個常見的區域函式使用案例︰公用迭代器方法和公用非同步方法。 這兩種方法都會產生程式碼，比程式設計人員想像更晚才報告錯誤。 在迭代器方法中，任何例外狀況只會在呼叫列舉傳回序列的程式碼時觀察到。 在非同步方法中，任何例外狀況只會在傳回的 `Task` 等候時觀察到。 下列範例示範使用區域函式分隔參數驗證和迭代器實作：
 
@@ -231,11 +231,11 @@ public int SomeProperty { get; set; }
 屬性 `SomeThingAboutFieldAttribute` 套用至編譯器針對 `SomeProperty` 產生的支援欄位。 如需詳細資訊，請參閱 C# 程式設計指南中的[屬性](../programming-guide/concepts/attributes/index.md)。
 
 > [!NOTE]
-> 某些區域函數所支援的設計也可以使用 *lambda 運算式*來完成。 如需詳細資訊，請參閱 [區域函數與 lambda 運算式](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)。
+> 某些區域函數所支援的設計也可以使用 *lambda 運算式* 來完成。 如需詳細資訊，請參閱 [區域函數與 lambda 運算式](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)。
 
 ## <a name="more-expression-bodied-members"></a>更多運算式主體成員
 
-C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」**、「完成項」**，以及「屬性」** 和「索引子」** 上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
+C # 6 引進了成員函式和唯讀屬性的運算式主體成員。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」、「完成項」，以及「屬性」和「索引子」上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -270,7 +270,7 @@ Func<string, bool> whereClause = default;
 
 ## <a name="numeric-literal-syntax-improvements"></a>數值常值的語法增強功能
 
-錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 位元遮罩或其他符號值容易遭到誤解。 C# 7.0 包含兩項新功能，可以用預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」** 和「數字分隔符號」**。
+錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 位元遮罩或其他符號值容易遭到誤解。 C# 7.0 包含兩項新功能，可以用預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」和「數字分隔符號」。
 
 當您在建立位元遮罩時，或是每當數字的二進位表示法構成最容易閱讀的程式碼時，請以二進位撰寫該數字︰
 
@@ -361,7 +361,7 @@ public class D : B
 
 ### <a name="ref-locals-and-returns"></a>Ref 區域變數和傳回
 
-這項功能可以啟用使用和傳回在其他地方定義之變數參考的演算法。 其中一個範例是使用大型矩陣，並尋找具有特定特性的單一位置。 下列方法會傳回矩陣中該儲存體的**參考**：
+這項功能可以啟用使用和傳回在其他地方定義之變數參考的演算法。 其中一個範例是使用大型矩陣，並尋找具有特定特性的單一位置。 下列方法會傳回矩陣中該儲存體的 **參考**：
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
@@ -522,7 +522,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="reference-assembly-generation"></a>參考組件產生
 
-有兩個新編譯器選項會產生「僅參考的組件」**：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有兩個新編譯器選項會產生「僅參考的組件」：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
 連結的文章將更詳細地說明這些選項和參考組件。
 
 ### <a name="public-or-open-source-signing"></a>公用或開放原始碼簽署

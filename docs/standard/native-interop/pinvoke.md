@@ -2,12 +2,12 @@
 title: 平台叫用 (P/Invoke)
 description: 了解如何在 .NET 中透過 P/Invoke 呼叫原生函式。
 ms.date: 01/18/2019
-ms.openlocfilehash: fa8b43edfba50fbc620f257c4e7caf1673f83235
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cde52d9d0a4e3b84fec632b615b635e7b7df3924
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706301"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678266"
 ---
 # <a name="platform-invoke-pinvoke"></a>平台叫用 (P/Invoke)
 
@@ -19,9 +19,9 @@ P/Invoke 是一種技術，可讓您從受控碼存取結構、回呼和非受�
 
 上述範例很簡單，但它顯示了從受控碼叫用非受控函式所需的項目。 現在逐步查看範例︰
 
-- 行 #1 顯示 `System.Runtime.InteropServices` 命名空間的 using 陳述式，該命名空間持有需要的所有項目。
-- 行 #7 引進 `DllImport` 屬性。 此屬性十分重要，因為它會告訴執行階段應載入 Unmanaged DLL。 傳入的字串是我們的目標函式所在的 DLL。 此外，它會指定要使用哪個[字元集](./charset.md)來對字串進行封送處理。 最後，它會指定此函式會呼叫 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且執行階段應該擷取錯誤碼，讓使用者可以透過 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 擷取它。
-- 行 #8 是 P/Invoke 工作的關鍵。 它會定義與 Unmanaged 方法具有**同樣簽章**的 Managed 方法。 您可以注意到宣告具有新的關鍵字 `extern`，它會告訴執行階段這就是外部方法，而且當您叫用它時，執行階段應該能在 `DllImport` 屬性指定的 DLL 中找到此關鍵字。
+- 行 #2 顯示命名空間的 using 語句 `System.Runtime.InteropServices` ，這個命名空間會保留所需的所有專案。
+- Line #8 引進 `DllImport` 屬性。 此屬性十分重要，因為它會告訴執行階段應載入 Unmanaged DLL。 傳入的字串是我們的目標函式所在的 DLL。 此外，它會指定要使用哪個[字元集](./charset.md)來對字串進行封送處理。 最後，它會指定此函式會呼叫 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且執行階段應該擷取錯誤碼，讓使用者可以透過 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 擷取它。
+- Line #9 是 P/Invoke 工作的關鍵在於。 它會定義與 Unmanaged 方法具有 **同樣簽章** 的 Managed 方法。 您可以注意到宣告具有新的關鍵字 `extern`，它會告訴執行階段這就是外部方法，而且當您叫用它時，執行階段應該能在 `DllImport` 屬性指定的 DLL 中找到此關鍵字。
 
 此範例的其餘部分僅示範如何叫用方法，就如同叫用任何其他 Managed 方法一樣。
 
@@ -35,7 +35,7 @@ P/Invoke 是一種技術，可讓您從受控碼存取結構、回呼和非受�
 
 ## <a name="invoking-managed-code-from-unmanaged-code"></a>從 Unmanaged 程式碼叫用 Managed 程式碼
 
-執行階段允通訊許對雙向流動，讓您可使用函式指標從原生函式回呼受控碼。 與 Managed 程式碼中的函式指標最相似的是**委派**，因此委派被用來允許從原生程式碼回撥至 Managed 程式碼。
+執行階段允通訊許對雙向流動，讓您可使用函式指標從原生函式回呼受控碼。 與 Managed 程式碼中的函式指標最相似的是 **委派**，因此委派被用來允許從原生程式碼回撥至 Managed 程式碼。
 
 使用此功能的方式與上述受控對原生的程序類似。 針對指定的回呼，您可定義符合特徵標記的委派，並將它傳遞至外部方法中。 執行階段會處理其他項目。
 

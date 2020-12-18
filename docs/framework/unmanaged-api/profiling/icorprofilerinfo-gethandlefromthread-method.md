@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-ms.openlocfilehash: 632a9070eab227bc48ce76c51ea08f98060d680d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94c2c6e01e4188f1fa13c3b6a9f638d4b79a502f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722529"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678191"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 方法
 
@@ -45,6 +45,8 @@ HRESULT GetHandleFromThread(
 ## <a name="remarks"></a>備註  
 
  分析工具在使用控制碼之前，必須先對其呼叫 Win32 `DuplicateHandle` 函數。  
+
+ 從這個方法傳回的控制碼是由執行時間所擁有，而且程式碼剖析工具絕對不應該關閉它。
   
 ## <a name="requirements"></a>需求  
 

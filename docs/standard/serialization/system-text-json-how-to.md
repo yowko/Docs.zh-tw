@@ -1,7 +1,7 @@
 ---
 title: '如何使用 c # 序列化和還原序列化 JSON-.NET'
 description: 瞭解如何 System.Text.Json 在 .net 中使用命名空間進行序列化，並從 JSON 還原序列化。 包含範例程式碼。
-ms.date: 12/02/2020
+ms.date: 12/16/2020
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 46203aa1b4daa4281c7c26191f7df947967fa1c0
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: b69dfd6238f529c3b315d63a93a82da0f316f459
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513259"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678259"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -189,6 +189,15 @@ using System.Text.Json.Serialization;
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs" id="Deserialize":::
 
+> [!TIP]
+> 如果您有想要還原序列化的 JSON，而且沒有將它還原序列化的類別，Visual Studio 2019 會自動產生您需要的類別：
+>
+> 1. 複製您需要還原序列化的 JSON。
+> 1. 建立類別檔案並刪除範本程式碼。
+> 1. 選擇 [**編輯** 貼上]  >  **特殊**  >  **貼上 JSON 做為類別**。
+>
+> 結果是可用於還原序列化目標的類別。
+
 ## <a name="deserialize-from-utf-8"></a>從 UTF-8 還原序列化
 
 若要從 UTF-8 還原序列化，請呼叫 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 接受 `ReadOnlySpan<byte>` 或的多載， `Utf8JsonReader` 如下列範例所示。 這些範例假設 JSON 是在名為 jsonUtf8Bytes 的位元組陣列中。
@@ -282,7 +291,7 @@ System.Text.Json在 .Net Core 3.1 中不支援欄位。 [自訂轉換器](system
 和上的擴充方法在 `HttpClient` `HttpContent` System.Text.Json .net Core 3.1 中無法使用。
 ::: zone-end
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
 * [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
