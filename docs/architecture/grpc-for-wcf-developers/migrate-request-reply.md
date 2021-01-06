@@ -1,13 +1,13 @@
 ---
 title: 將 WCF 要求-回復服務遷移至 WCF 開發人員的 gRPC-gRPC
 description: 瞭解如何將簡單的要求-回復服務從 WCF 遷移至 gRPC。
-ms.date: 09/02/2019
-ms.openlocfilehash: 29a7bc77bc3a4becd767fc7a50adff5b746f54bc
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.date: 12/15/2020
+ms.openlocfilehash: 38c6e33e7588dd7c1b263d813d06c088ab484948
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512693"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938568"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>將 WCF 要求-回復服務遷移至 gRPC 一元 RPC
 
@@ -196,7 +196,7 @@ ASP.NET Core 中所有 gRPC 一元服務方法的簽章都是一致的。 有兩
 
 方法的傳回型別是 `Task<T>` ，其中 `T` 是回應訊息類型。 所有 gRPC 服務方法都是非同步。
 
-## <a name="migrate-the-portfoliodata-library-to-net-core"></a>將 PortfolioData 程式庫遷移至 .NET Core
+## <a name="migrate-the-portfoliodata-library-to-net"></a>將 PortfolioData 程式庫遷移至 .NET
 
 此時，專案需要 `TraderSys.PortfolioData` WCF 方案中類別庫中所包含的組合存放庫和模型。 Visual Studio 使用 [ **新增專案** ] 對話方塊和 [類別庫] ( .NET Standard) 範本，或從命令列使用 .NET Core CLI 從命令列執行下列命令，以將它們帶到最簡單的方式，就是建立新的類別庫 `TraderSys.sln` ：
 
@@ -395,7 +395,7 @@ public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerC
 在相同方案中建立 .NET Standard 類別庫以包含用戶端。 這主要是建立用戶端程式代碼的範例，但您可以使用 NuGet 封裝這類程式庫，並將其散發至內部儲存機制，以供其他 .NET 小組使用。 繼續進行，並將名為的新 .NET Standard 類別庫加入 `TraderSys.Portfolios.Client` 至方案，然後刪除該檔案 `Class1.cs` 。
 
 > [!CAUTION]
-> [Grpc .net. 用戶端](https://www.nuget.org/packages/Grpc.Net.Client)NuGet 套件需要 .net Core 3.0 (或其他 .NET Standard 2.1 相容的執行時間) 。 Grpc 和 .NET Core 的舊版 .NET Framework 和 .NET Core 是由 [Core](https://www.nuget.org/packages/Grpc.Core) NuGet 套件支援。
+> [Grpc .net. 用戶端](https://www.nuget.org/packages/Grpc.Net.Client)NuGet 套件需要 .net Core 3.0 或更新版本 (或其他 .NET Standard 2.1 相容的執行時間) 。 Grpc 和 .NET Core 的舊版 .NET Framework 和 .NET Core 是由 [Core](https://www.nuget.org/packages/Grpc.Core) NuGet 套件支援。
 
 在 Visual Studio 2019 中，您可以將參考新增至 gRPC 服務，其方式類似于將服務參考加入至舊版 Visual Studio 的 WCF 專案。 服務參考和已聯機服務現在都是在相同的 UI 下進行管理。 您可以用滑鼠右鍵按一下 [方案總管 **]** 中專案的 [相依性] 節點 `TraderSys.Portfolios.Client` ，然後選取 [ **加入已連接服務**]，來存取 UI。 在出現的工具視窗中，選取 [ **服務參考** ] 區段，然後選取 [ **新增 gRPC 服務參考**]：
 

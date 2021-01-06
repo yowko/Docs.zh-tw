@@ -1,13 +1,13 @@
 ---
 title: F# 編碼慣例
 description: '瞭解撰寫 F # 程式碼時的一般指導方針和慣用語。'
-ms.date: 01/15/2020
-ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/5/2021
+ms.openlocfilehash: e69ceb2f3c37404ca8d8ed972f985340e62ecb59
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739898"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938685"
 ---
 # <a name="f-coding-conventions"></a>F# 編碼慣例
 
@@ -93,7 +93,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 在 F # 中，開啟至範圍的專案可以遮蔽其他已經存在的專案。 這表示重新排列 `open` 語句可以改變程式碼的意義。 因此，所有語句的任意排序 (例如 `open` ，不建議使用順序) ，以免您產生可能預期的不同行為。
 
-相反地，我們建議您將它們排序 [拓撲](https://en.wikipedia.org/wiki/Topological_sorting);也就是說，依照您的系統層級定義順序來排序您的 `open` 語句。 _layers_ 也可以考慮在不同拓撲層級內進行英數位元排序。
+相反地，我們建議您將它們排序[拓撲](https://en.wikipedia.org/wiki/Topological_sorting);也就是說，依照您的系統層級定義順序來排序您的 `open` 語句。  也可以考慮在不同拓撲層級內進行英數位元排序。
 
 例如，以下是 F # 編譯器服務公用 API 檔案的拓撲排序：
 
@@ -135,7 +135,7 @@ open Internal.Utilities.Collections
 ```fsharp
 // This is bad!
 module MyApi =
-    let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
+    let dep1 = File.ReadAllText "/Users/<name>/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
 
     let private r = Random()
@@ -190,9 +190,9 @@ type MoneyWithdrawalResult =
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f{am}"
-    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
+    | Success am -> printfn $"Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn $"Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn $"Failed: card expired on {expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -238,7 +238,7 @@ with
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>請勿使用 monadic 錯誤處理來取代例外狀況
 
-例外狀況會在功能程式設計中被視為有點 taboo。 事實上，例外狀況違反了純度，因此可以放心地將它們視為無法正常運作。 不過，這會忽略程式碼必須執行的實際情況，而且可能發生執行階段錯誤。 一般來說，撰寫程式碼時假設大部分的專案都不是單純也不是總計，以將不愉快的意外情況降到最低。
+例外狀況通常會在功能程式設計中視為 taboo。 事實上，例外狀況違反了純度，因此可以放心地將它們視為無法正常運作。 不過，這會忽略程式碼必須執行的實際情況，而且可能發生執行階段錯誤。 一般來說，撰寫程式碼時假設大部分的專案都不是單純也不是總計，以將不愉快的意外情況降到最低。
 
 請務必考慮下列與 .NET 執行時間和跨語言生態系統中的相關性和」適當性相關的例外狀況核心優勢/層面：
 
@@ -317,7 +317,7 @@ F # 支援部分的應用程式，因此，您可以使用不同的方式來以�
 
 ```fsharp
 let func name age =
-    printfn "My name is {name} and I am %d{age} years old!"
+    printfn $"My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -331,7 +331,7 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-在呼叫位置，工具中的工具提示（例如 Visual Studio）將不會提供有意義的資訊，讓您知道 `string` 和 `int` 輸入類型實際上代表什麼。
+在呼叫位置，工具（例如 Visual Studio）中的工具提示會提供您類型簽章，但因為沒有定義任何名稱，所以不會顯示名稱。 名稱對於良好的 API 設計很重要，因為它們可協助呼叫端更清楚瞭解 API 背後的意義。 在公用 API 中使用無點程式碼，可讓呼叫端更難理解。
 
 如果您遇到可公開取用的無點程式碼 `funcWithApplication` ，則建議進行完整η展開，讓工具可以針對引數使用有意義的名稱。
 

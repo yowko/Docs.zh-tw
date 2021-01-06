@@ -1,13 +1,13 @@
 ---
 title: 適用于 WCF 開發人員的 Docker gRPC
 description: 建立 ASP.NET Core gRPC 應用程式的 Docker 映射
-ms.date: 09/02/2019
-ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/15/2020
+ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688441"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938412"
 ---
 # <a name="create-docker-images"></a>建立 Docker 映射
 
@@ -27,12 +27,12 @@ Microsoft 提供一系列基礎映射來建立和執行 .NET Core 應用程式�
 
 每個映射都有四個以不同 Linux 散發套件為基礎的變化，並依標記區分。
 
-| 影像標記 (s)  | Linux | 備忘稿 |
+| 影像標記 (s)  | Linux | 注意 |
 | --------- | ----- | ----- |
-| 3.0-buster、3。0 | Debian 10 | 如果未指定作業系統變數，則為預設映射。 |
-| 3.0-alpine | Alpine 3。9 | Alpine 基底映射遠小於 Debian 或 Ubuntu。 |
-| 3.0-disco | Ubuntu 19.04 | |
-| 3.0-bionic | Ubuntu 18.04 | |
+| 5.0-buster、5。0 | Debian 10 | 如果未指定作業系統變數，則為預設映射。 |
+| 5.0-alpine | Alpine 3。9 | Alpine 基底映射遠小於 Debian 或 Ubuntu。 |
+| 5.0-disco | Ubuntu 19.04 | |
+| 5.0-bionic | Ubuntu 18.04 | |
 
 Alpine 基底映射大約是 100 MB，相較于 Debian 和 Ubuntu 映射的 200 MB。 某些軟體套件或程式庫可能無法在 Alpine 的套件管理中使用。 如果您不確定要使用哪個映射，您應該選擇預設 Debian。
 
@@ -41,29 +41,31 @@ Alpine 基底映射大約是 100 MB，相較于 Debian 和 Ubuntu 映射的 200 
 
 ## <a name="create-a-docker-image"></a>建立 Docker 映像
 
-Docker 映射是由 *Dockerfile* 所定義。 這是一個文字檔，其中包含建立應用程式所需的所有命令，並安裝建立或執行應用程式所需的任何相依性。 下列範例顯示 ASP.NET Core 3.0 應用程式的最簡單 Dockerfile：
+Docker 映射是由 *Dockerfile* 所定義。 此 *Dockerfile* 是一個文字檔，其中包含建立應用程式所需的所有命令，並安裝建立或執行應用程式所需的任何相依性。 下列範例顯示 ASP.NET Core 5.0 應用程式的最簡單 Dockerfile：
 
 ```dockerfile
-# Application build steps
-FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:5.0 as build
 
 WORKDIR /src
 
-COPY . .
+COPY ./StockKube.sln .
+COPY ./src/StockData/StockData.csproj ./src/StockData/
+COPY ./src/StockWeb/StockWeb.csproj ./src/StockWeb/
 
 RUN dotnet restore
 
-RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
+COPY . .
 
-# Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+RUN dotnet publish --no-restore -c Release -o /published src/StockData/StockData.csproj
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 as runtime
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
 
 WORKDIR /app
 
-COPY --from=builder /published .
+COPY --from=build /published .
 
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
@@ -91,18 +93,18 @@ Dockerfile 有兩個部分：第一個是使用 `sdk` 基底映射來建立和�
 
 ### <a name="https-in-docker"></a>Docker 中的 HTTPS
 
-適用于 Docker 的 Microsoft 基礎映射 `ASPNETCORE_URLS` 會將環境變數設為 `http://+:80` ，這表示 Kestrel 會在該埠上執行而不需要 HTTPS。 如果您使用 HTTPS 與自訂憑證 (如 [自我裝載 gRPC 應用程式](self-hosted.md)) 中所述，您應該覆寫此項。 在 Dockerfile 的執行時間映射建立部分中設定環境變數。
+適用于 Docker 的 Microsoft 基礎映射 `ASPNETCORE_URLS` 會將環境變數設為 `http://+:80` ，這表示 Kestrel 會在該埠上執行而不需要 HTTPS。 如果您使用 HTTPS 與自訂憑證 (如 [自我裝載 gRPC 應用程式](self-hosted.md)) 中所述，您應覆寫此設定。 在 Dockerfile 的執行時間映射建立部分中設定環境變數。
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```
 
 ### <a name="the-dockerignore-file"></a>>.dockerignore 檔案
 
-就像 `.gitignore` 從原始檔控制中排除特定檔案和目錄的檔案一樣，檔案 `.dockerignore` 可以用來排除檔案和目錄，不要在組建期間複製到映射中。 這不僅能節省時間的複製，也可以避免將電腦上的 `obj` 目錄複寫到映射時所發生的一些錯誤。 您至少應該在檔案中加入和的 `bin` 專案 `obj` `.dockerignore` 。
+就像 `.gitignore` 從原始檔控制中排除特定檔案和目錄的檔案一樣，檔案 `.dockerignore` 可以用來排除檔案和目錄，不要在組建期間複製到映射中。 這個檔案不僅能節省時間的複製，也可以避免將電腦上的 `obj` 目錄複寫到映射時所發生的一些錯誤。 您至少應該在檔案中加入和的 `bin` 專案 `obj` `.dockerignore` 。
 
 ```console
 bin/
@@ -111,10 +113,10 @@ obj/
 
 ## <a name="build-the-image"></a>建立映像
 
-針對具有單一應用程式的方案，因此為單一 Dockerfile，最簡單的方式是將 Dockerfile 放在基底目錄中。 換句話說，將它放在與檔案相同的目錄中 `.sln` 。 在此情況下，若要建立映射，請 `docker build` 從包含 Dockerfile 的目錄中使用下列命令。
+針對 `StockKube.sln` 包含兩個不同應用程式 `StockData` 和的方案 `StockWeb` ，最簡單的方式是將每個應用程式的 Dockerfile 放在基底目錄中。 在此情況下，若要建立映射，請 `docker build` 從檔案所在的相同目錄中使用下列命令 `.sln` 。
 
 ```console
-docker build --tag stockdata .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 Confusingly 命名的 `--tag` 旗標 (可以縮短為 `-t`) 指定影像的整個名稱，包括實際標記（如果有指定的話）。 `.`結束時，會指定將在其中執行組建的內容; `COPY` Dockerfile 中命令的目前工作目錄。
@@ -122,7 +124,7 @@ Confusingly 命名的 `--tag` 旗標 (可以縮短為 `-t`) 指定影像的整�
 如果您在單一解決方案中有多個應用程式，您可以將每個應用程式的 Dockerfile 保留在檔案旁的資料夾中 `.csproj` 。 您仍然應該 `docker build` 從基底目錄執行此命令，以確保方案和所有專案都會複製到映射中。 您可以使用 `--file` (或) 旗標，在目前的目錄下指定 Dockerfile `-f` 。
 
 ```console
-docker build --tag stockdata --file src/StockData/Dockerfile .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>在您電腦上的容器中執行映射
@@ -130,27 +132,27 @@ docker build --tag stockdata --file src/StockData/Dockerfile .
 若要在您的本機 Docker 實例中執行映射，請使用 `docker run` 命令。
 
 ```console
-docker run -ti -p 5000:80 stockdata
+docker run -ti -p 5000:80 stockdata:1.0.0
 ```
 
 旗標會將 `-ti` 您目前的終端機連接到容器的終端機，並在互動模式中執行。 會將 `-p 5000:80` 容器上的埠 80) 的 (連結發佈到 localhost 網路介面上的埠5000。
 
 ## <a name="push-the-image-to-a-registry"></a>將映像推送至登錄
 
-確認映射可正常運作之後，請將它推送到 Docker 登錄，使其可在其他系統上使用。 內部網路將需要布建 Docker 登錄。 這可以像是執行 [docker 本身的 `registry` 映射](https://docs.docker.com/registry/deploying/) 一樣簡單 (docker 登錄是在 docker 容器中執行) ，但是有各種更全面的解決方案可用。 針對外部共用和雲端用途，有各種可用的受控登錄，例如 [Azure Container Registry](/azure/container-registry/) 或 [Docker Hub](https://docs.docker.com/docker-hub/repos/)。
+確認映射可正常運作之後，請將它推送到 Docker 登錄，使其可在其他系統上使用。 內部網路將需要布建 Docker 登錄。 此活動可以像是執行 [docker 本身的 `registry` 映射](https://docs.docker.com/registry/deploying/) 一樣簡單 (docker 登錄是在 docker 容器) 中執行，但是有各種更全面的解決方案可供使用。 針對外部共用和雲端用途，有各種可用的受控登錄，例如 [Azure Container Registry](/azure/container-registry/) 或 [Docker Hub](https://docs.docker.com/docker-hub/repos/)。
 
 若要推送至 Docker Hub，請在映射名稱前加上您的使用者或組織名稱。
 
 ```console
-docker tag stockdata myorg/stockdata
-docker push myorg/stockdata
+docker tag stockdata:1.0.0 <myorg>/stockdata:1.0.0
+docker push <myorg>/stockdata:1.0.0
 ```
 
 若要推送至私人登錄，請在映射名稱前加上登錄主機名稱和組織名稱。
 
 ```console
-docker tag stockdata internal-registry:5000/myorg/stockdata
-docker push internal-registry:5000/myorg/stockdata
+docker tag stockdata <internal-registry:5000>/<myorg>/stockdata:1.0.0
+docker push <internal-registry:5000>/<myorg>/stockdata:1.0.0
 ```
 
 映射在登錄中之後，您可以將它部署到個別的 Docker 主機或容器協調流程引擎（例如 Kubernetes）。

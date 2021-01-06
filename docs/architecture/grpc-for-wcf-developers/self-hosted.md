@@ -1,23 +1,23 @@
 ---
-title: 自託管 gRPC 應用程式 - 適用于 WCF 開發人員的 gRPC
-description: 將 ASP.NET核心 gRPC 應用程式部署為自託管服務。
-ms.date: 09/02/2019
-ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+title: 自我裝載的 gRPC 應用程式-適用于 WCF 開發人員的 gRPC
+description: 將 ASP.NET Core gRPC 應用程式部署為自我裝載服務。
+ms.date: 12/15/2020
+ms.openlocfilehash: a5e2316b8d76593f4eb53760d2609b5bbbc9d2c5
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110902"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938529"
 ---
-# <a name="self-hosted-grpc-applications"></a>自託管 gRPC 應用程式
+# <a name="self-hosted-grpc-applications"></a>自我裝載的 gRPC 應用程式
 
-儘管 ASP.NET Core 3.0 應用程式可以在 Windows 伺服器上的 IIS 中託管，但當前無法在 IIS 中託管 gRPC 應用程式，因為某些 HTTP/2 功能不受支援。 此功能是將來更新到 Windows 伺服器的目標。
+雖然 ASP.NET Core 5.0 應用程式可裝載于 Windows Server 上的 IIS 中，但目前無法在 IIS 中裝載 gRPC 應用程式，因為某些 HTTP/2 功能不受支援。 這項功能是 Windows Server 未來更新的目標。
 
-您可以將應用程式作為 Windows 服務運行。 或者，由於 .NET Core 3.0 託管擴展中的新功能，您可以將它作為由[系統控制的](https://en.wikipedia.org/wiki/Systemd)Linux 服務運行。
+您可以將應用程式當作 Windows 服務來執行。 或者，您也可以將它當作 [systemd](https://en.wikipedia.org/wiki/Systemd)所控制的 Linux 服務來執行，因為 .net 5.0 裝載延伸模組的新功能。
 
-## <a name="run-your-app-as-a-windows-service"></a>將應用作為 Windows 服務運行
+## <a name="run-your-app-as-a-windows-service"></a>以 Windows 服務的形式執行您的應用程式
 
-要將ASP.NET核心應用程式佈建為 Windows 服務運行，請安裝來自 NuGet 的[Microsoft.擴展.託管.Windows服務](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices)包。 然後向`UseWindowsService`中`CreateHostBuilder``Program.cs`的方法添加調用。
+若要將您的 ASP.NET Core 應用程式設定為以 Windows 服務形式執行，請從 NuGet 安裝 [WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) 套件。 然後，將呼叫新增至 `UseWindowsService` `CreateHostBuilder` 中的方法 `Program.cs` 。
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -30,44 +30,44 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 ```
 
 > [!NOTE]
-> 如果應用程式未作為 Windows 服務運行，則`UseWindowsService`該方法不執行任何操作。
+> 如果應用程式不是以 Windows 服務的方式執行，則 `UseWindowsService` 方法不會執行任何動作。
 
-現在使用以下方法之一發布應用程式：
+現在請使用下列其中一種方法來發佈您的應用程式：
 
-* 通過按右鍵專案並在快顯功能表上選擇 **"發佈"，** 從視覺化工作室開始。
-* 從 .NET 核心 CLI。
+* 在 [Visual Studio] 中，以滑鼠右鍵按一下專案，然後選取快捷方式功能表上的 [ **發行** ]。
+* 從 .NET CLI。
 
-發佈 .NET Core 應用程式時，可以選擇創建*與框架相關的*部署或*自包含*部署。 與框架相關的部署要求在運行它們的主機上安裝 .NET Core 共用運行時。 自包含部署使用 .NET Core 運行時和框架的完整副本發佈，可在任何主機上運行。 有關詳細資訊（包括每種方法的優缺點），請參閱[.NET Core 應用程式部署](../../core/deploying/index.md)文檔。
+當您發行 .NET 應用程式時，您可以選擇建立與 *framework 相依* 的部署或 *獨立* 的部署。 Framework 相依部署需要在執行的主機上安裝 .NET 共用執行時間。 獨立的部署是以 .NET 執行時間和架構的完整複本發行，而且可以在任何主機上執行。 如需詳細資訊，包括每個方法的優點和缺點，請參閱 [.net 應用程式部署](../../core/deploying/index.md) 檔。
 
-要發佈不需要在主機上安裝 .NET Core 3.0 運行時的應用程式的自包含生成，請指定要包含在應用程式中的運行時。 使用`-r`（或`--runtime`） 標誌。
+若要發行應用程式的獨立組建，而不需要在主機上安裝 .NET 5.0 執行時間，請指定要包含在應用程式中的執行時間。 使用 `-r` (或 `--runtime`) 旗標。
 
 ```dotnetcli
 dotnet publish -c Release -r win-x64 -o ./publish
 ```
 
-要發佈與框架相關的生成，省略該`-r`標誌。
+若要發行與 framework 相依的組建，請省略 `-r` 旗標。
 
 ```dotnetcli
 dotnet publish -c Release -o ./publish
 ```
 
-將`publish`目錄的完整內容複寫到安裝資料夾。 然後，使用[sc 工具](/windows/desktop/services/controlling-a-service-using-sc)為可執行檔創建 Windows 服務。
+將目錄的完整內容複寫 `publish` 到安裝資料夾。 然後，使用 [sc 工具](/windows/desktop/services/controlling-a-service-using-sc) 來建立可執行檔的 Windows 服務。
 
 ```console
 sc create MyService binPath=C:\MyService\MyService.exe
 ```
 
-### <a name="log-to-the-windows-event-log"></a>登錄到 Windows 事件日誌
+### <a name="log-to-the-windows-event-log"></a>記錄到 Windows 事件記錄檔
 
-該方法`UseWindowsService`會自動添加將日誌消息寫入 Windows 事件日誌的[日誌記錄](/aspnet/core/fundamentals/logging/)提供程式。 您可以通過向 的 分區或其他配置源添加`EventLog`條目來配置`Logging`此提供程式`appsettings.json`的日誌記錄。
+`UseWindowsService`方法會自動新增[記錄](/aspnet/core/fundamentals/logging/)提供者，以將記錄檔訊息寫入 Windows 事件記錄檔。 您可以藉由將 `EventLog` 專案加入至 `Logging` 或其他設定來源的區段，來設定此提供者的記錄 `appsettings.json` 。
 
-可以通過在這些設置中設置`SourceName`屬性來覆蓋事件日誌中使用的源名稱。 如果不指定名稱，將使用預設應用程式名稱（通常是可執行程式集名稱）。
+您可以在這些設定中設定屬性，以覆寫事件記錄檔中使用的來源名稱 `SourceName` 。 如果您未指定名稱，預設的應用程式名稱 (通常會使用) 的可執行元件名稱。
 
-有關日誌記錄的詳細資訊，在本章的末尾。
+有關記錄的詳細資訊位於本章結尾。
 
-## <a name="run-your-app-as-a-linux-service-with-systemd"></a>使用系統運行應用作為 Linux 服務
+## <a name="run-your-app-as-a-linux-service-with-systemd"></a>使用 systemd 以 Linux 服務的形式執行您的應用程式
 
-要將ASP.NET核心應用程式佈建為以 Linux 服務（或 Linux 術語中的*守護進程*）運行，請安裝[Microsoft.擴展.Hosting.Systemd](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.Systemd)套裝程式（ NuGet）。 然後向`UseSystemd`中`CreateHostBuilder``Program.cs`的方法添加調用。
+若要將 ASP.NET Core 應用程式設定為以 Linux 服務的形式執行 (或 Linux 說法) 中的 *daemon* ，請從 NuGet 安裝 [Microsoft.Extensions.Hosting.Systemd](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.Systemd) 套件。 然後，將呼叫新增至 `UseSystemd` `CreateHostBuilder` 中的方法 `Program.cs` 。
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -80,20 +80,20 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 ```
 
 > [!NOTE]
-> 如果應用程式未作為 Linux 服務運行，則`UseSystemd`該方法不執行任何操作。
+> 如果應用程式不是以 Linux 服務的形式執行，則 `UseSystemd` 方法不會執行任何動作。
 
-現在發佈應用程式。 對於相關的 Linux 運行時（例如，）。`linux-x64`應用程式可以是依賴于框架的，也可以是自包含的。 可以使用以下方法之一進行發佈：
+現在發佈您的應用程式。 應用程式可以是 framework 相依或獨立于相關 Linux 執行時間的 (例如 `linux-x64`) 。 您可以使用下列其中一種方法來發佈：
 
-* 通過按右鍵專案並在快顯功能表上選擇 **"發佈"，** 從視覺化工作室開始。
-* 從 .NET 核心 CLI，通過使用以下命令：
+* 在 [Visual Studio] 中，以滑鼠右鍵按一下專案，然後選取快捷方式功能表上的 [ **發行** ]。
+* 從 .NET CLI 使用下列命令：
 
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
   
-將`publish`目錄的完整內容複寫到 Linux 主機上的安裝資料夾。 註冊服務需要將一個特殊的檔（稱為*單中繼檔*）添加到`/etc/systemd/system`目錄中。 您需要根許可權才能在此資料夾中創建檔。 使用要使用的`systemd`識別碼和副檔名`.service`命名檔。 例如，使用 `/etc/systemd/system/myapp.service`。
+將目錄的完整內容複寫 `publish` 到 Linux 主機上的安裝資料夾。 註冊服務需要將特殊檔案（稱為 *單位* 檔）新增至 `/etc/systemd/system` 目錄。 您將需要根許可權，才能在此資料夾中建立檔案。 使用您想要使用的識別碼和延伸模組來命名檔案 `systemd` `.service` 。 例如，使用 `/etc/systemd/system/myapp.service`。
 
-服務檔使用 INI 格式，如以下示例所示：
+服務檔案使用 INI 格式，如下列範例所示：
 
 ```ini
 [Unit]
@@ -107,16 +107,16 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-該`Type=notify`屬性告訴`systemd`應用程式將在啟動和關閉時通知它。 當`WantedBy=multi-user.target`Linux 系統達到"執行層級 2"時，該設置將導致服務啟動，這意味著非圖形的多使用者外殼處於活動狀態。
+`Type=notify`屬性會指示 `systemd` 應用程式在啟動和關閉時通知它。 `WantedBy=multi-user.target`當 Linux 系統到達「runlevel 2」時，此設定會導致服務啟動，這表示非圖形化的多使用者 shell 為作用中。
 
-在`systemd`識別服務之前，它需要重新載入其配置。 您可以使用`systemd`命令`systemctl`進行控制。 重新載入後，`status`使用子命令確認應用程式已成功註冊。
+在 `systemd` 辨識服務之前，它需要重載其設定。 您可以 `systemd` 使用命令來控制 `systemctl` 。 重載之後，請使用 `status` 子命令確認應用程式已成功註冊。
 
 ```console
 sudo systemctl daemon-reload
 sudo systemctl status myapp
 ```
 
-如果配置的服務正確，您將獲得以下輸出：
+如果您已正確設定服務，將會取得下列輸出：
 
 ```text
 myapp.service - My gRPC Application
@@ -124,52 +124,52 @@ myapp.service - My gRPC Application
  Active: inactive (dead)
 ```
 
-使用`start`命令啟動服務。
+使用 `start` 命令來啟動服務。
 
 ```console
 sudo systemctl start myapp.service
 ```
 
 > [!TIP]
-> 使用`.service``systemctl start`時，擴展是可選的。
+> `.service`當您使用時，此延伸模組是選擇性的 `systemctl start` 。
 
-要告訴`systemd`在系統啟動時自動啟動服務，請使用 命令`enable`。
+若要指示 `systemd` 在系統啟動時自動啟動服務，請使用 `enable` 命令。
 
 ```console
 sudo systemctl enable myapp
 ```
 
-### <a name="log-to-journald"></a>日誌
+### <a name="log-to-journald"></a>記錄至 journald
 
-與 Windows 事件日誌等效的`journald`Linux 是 ，是 中的`systemd`結構化日誌記錄系統服務。 Linux 守護進程寫入標準輸出的日誌消息將自動寫入`journald`。 要配置日誌記錄級別，`Console`請使用日誌記錄配置的部分。 主機`UseSystemd`產生器方法自動設定主控台輸出格式以適應日誌。
+Linux 對等的 Windows 事件記錄檔是的 `journald` 一部分，這是的結構化記錄系統服務 `systemd` 。 Linux daemon 寫入標準輸出的記錄訊息會自動寫入至 `journald` 。 若要設定記錄層級，請使用記錄設定的 `Console` 區段。 主機產生器 `UseSystemd` 方法會自動將主控台輸出格式設定為符合日誌。
 
-因為它是`journald`Linux 日誌的標準，因此各種工具都集成在一起。 您可以輕鬆地將日誌從`journald`外部日誌記錄系統路由到外部日誌記錄系統。 在主機的本地工作，可以使用 命令`journalctl`查看命令列中的日誌。
+因為 `journald` 是 Linux 記錄的標準，所以有各式各樣的工具會與它整合。 您可以輕鬆地將記錄從路由傳送 `journald` 至外部記錄系統。 您可以使用 `journalctl` 命令，從命令列查看記錄檔，以在主機本機上工作。
 
 ```console
 sudo journalctl -u myapp
 ```
 
 > [!TIP]
-> 如果您的主機上有可用的 GUI 環境，則一些圖形日誌檢視器可用於 Linux，例如*QJournalctl*和*gnome 日誌*。
+> 如果您的主機上有可用的 GUI 環境，則有幾個圖形化記錄檢視器可供 Linux 使用，例如 *QJournalctl* 和 *gnome 記錄*。
 
-要瞭解有關使用`journalctl`從 命令`systemd`行查詢日誌的更多內容，請參閱[manpages](https://manpages.debian.org/buster/systemd/journalctl.1)。
+若要深入瞭解如何 `systemd` 使用從命令列查詢日誌 `journalctl` ，請參閱 [manpages](https://manpages.debian.org/buster/systemd/journalctl.1)。
 
-## <a name="https-certificates-for-self-hosted-applications"></a>用於自託管應用程式的 HTTPS 證書
+## <a name="https-certificates-for-self-hosted-applications"></a>自我裝載應用程式的 HTTPS 憑證
 
-在生產中運行 gRPC 應用程式時，應使用來自受信任的憑證授權單位 （CA） 的 TLS 證書。 此 CA 可能是公共 CA，也可以是組織的內部 CA。
+當您在生產環境中執行 gRPC 應用程式時，您應該使用來自信任憑證授權單位單位的 TLS 憑證 (CA) 。 此 CA 可能是公用 CA，或您組織的內部 ca。
 
-在 Windows 主機上，可以使用<xref:System.Security.Cryptography.X509Certificates.X509Store>類從安全[憑證存放區載入](/windows/win32/seccrypto/managing-certificates-with-certificate-stores)證書。 您還可以在某些 Linux`X509Store`主機上將該類與 OpenSSL 金鑰存儲一起使用。
+在 Windows 主機上，您可以使用類別從安全的 [憑證存放區](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) 載入憑證 <xref:System.Security.Cryptography.X509Certificates.X509Store> 。 您也可以 `X509Store` 在某些 Linux 主機上使用類別搭配 OpenSSL 金鑰存放區。
 
-還可以通過使用[X509 證書2建構函式](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A)之一從以下任一創建證書：
+您也可以使用其中一個 [X509Certificate2](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A)的函式，從下列其中一個方法建立憑證：
 
-* 檔，`.pfx`如受強式密碼保護的檔
-* 從安全存儲服務（如[Azure 金鑰保存庫](https://azure.microsoft.com/services/key-vault/)）檢索的二進位資料
+* 檔案，例如 `.pfx` 強式密碼所保護的檔案
+* 從安全的儲存體服務（例如[Azure Key Vault](https://azure.microsoft.com/services/key-vault/) ）取出的二進位資料
 
-您可以將 Kestrel 配置為以兩種方式使用證書：從配置或代碼中。
+您可以使用兩種方式設定 Kestrel 來使用憑證：從設定或在程式碼中。
 
-### <a name="set-https-certificates-by-using-configuration"></a>使用配置設置 HTTPS 證書
+### <a name="set-https-certificates-by-using-configuration"></a>使用 configuration 設定 HTTPS 憑證
 
-配置方法要求在 Kestrel 配置部分`.pfx`中設置證書檔和密碼的路徑。 在`appsettings.json`中，如下所示：
+設定方法需要在 [Kestrel 設定] 區段中設定憑證檔案的路徑 `.pfx` 和密碼。 在中 `appsettings.json` ，這看起來像這樣：
 
 ```json
 {
@@ -184,14 +184,14 @@ sudo journalctl -u myapp
 }
 ```
 
-通過使用安全配置源（如 Azure 金鑰保存庫或 Hashicorp 保存庫）提供密碼。
+使用安全設定來源（例如 Azure Key Vault 或 Hashicorp Vault）來提供密碼。
 
 > [!IMPORTANT]
-> 不要在設定檔中存儲未加密的密碼。
+> 請勿將未加密的密碼儲存在設定檔中。
 
-### <a name="set-https-certificates-in-code"></a>在代碼中設置 HTTPS 證書
+### <a name="set-https-certificates-in-code"></a>在程式碼中設定 HTTPS 憑證
 
-要在代碼中配置 Kestrel 上的`ConfigureKestrel`HTTPS，`IWebHostBuilder`請使用`Program`類 中 的方法。
+若要在程式碼中設定 Kestrel 上的 HTTPS，請在 `ConfigureKestrel` 類別中使用的方法 `IWebHostBuilder` `Program` 。
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -209,8 +209,8 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
         });
 ```
 
-同樣，請確保將`.pfx`檔的密碼存儲在安全配置源中並從中檢索。
+同樣地，請務必將檔案的密碼儲存 `.pfx` 在中，並從安全的設定來源加以取出。
 
 >[!div class="step-by-step"]
->[上一個](grpc-in-production.md)
->[下一個](docker.md)
+>[上一個](grpc-in-production.md) 
+>[下一步](docker.md)

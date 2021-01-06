@@ -4,12 +4,12 @@ description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可�
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687513"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938672"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -24,8 +24,8 @@ ms.locfileid: "94687513"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [通用 Windows 平台 (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [遊戲](https://dotnet.microsoft.com/apps/games)
-* [物聯網 (IoT) ](/dotnet/iot)
-* [機器學習](../machine-learning/index.yml)
+* [物聯網 (IoT)](/dotnet/iot)
+* [機器學習服務](../machine-learning/index.yml)
 * [主控台應用程式](tutorials/with-visual-studio-code.md)
 * [Windows 服務](/aspnet/core/host-and-deploy/windows-service)
 
@@ -116,7 +116,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
   只能在 Windows 上執行。 具有廣泛的內建功能，其設計目的是使用 .NET。 所有學生、開放原始碼參與者及個人均可免費取得此社區版。
 
-* [Visual Studio Code](https://code.visualstudio.com/) \(英文\)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
   在 Windows、macOS 和 Linux 上執行。 免費且開放的原始碼。 擴充功能可搭配 .NET 語言使用。
 
@@ -144,6 +144,13 @@ SDK 下載包含下列元件：
 * [運行](#runtime-libraries)時間程式庫。 提供基本資料類型和基本公用程式。
 * ASP.NET Core 執行時間。 為網際網路連線的應用程式（例如 web 應用程式、IoT 應用程式和行動後端）提供基本的服務。
 * 桌面執行時間。 提供 Windows 傳統型應用程式的基本服務，包括 Windows Forms 和 WPF。
+
+執行時間下載包含下列元件：
+
+* （選擇性）桌面或 ASP.NET Core 執行時間。
+* [.Net 運行](#clr)時間。 提供類型系統、元件載入、垃圾收集行程、原生 interop 及其他基本服務。
+* [運行](#runtime-libraries)時間程式庫。 提供基本資料類型和基本公用程式。
+* `dotnet`[驅動程式](tools/index.md#driver)。 執行與架構相依的應用程式的 CLI 命令。
 
 如需詳細資訊，請參閱下列資源：
 
@@ -287,7 +294,7 @@ GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程�
 | [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) | [應用程式存留期管理 (一般主機) ](extensions/generic-host.md) |
 | [DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection) | [相依性插入 (DI)](extensions/dependency-injection.md)
 | [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration) | [設定](extensions/configuration.md) |
-| [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [Logging](extensions/logging.md) |
+| [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [記錄](extensions/logging.md) |
 | [Microsoft. Extensions. 選項](https://www.nuget.org/packages/Microsoft.Extensions.Options) | [選項模式](extensions/options.md) |
 
 如需詳細資訊，請參閱 [GitHub 上的 dotnet/extensions 存放庫](https://github.com/dotnet/extensions)。

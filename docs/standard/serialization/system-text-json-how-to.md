@@ -1,7 +1,7 @@
 ---
 title: '如何使用 c # 序列化和還原序列化 JSON-.NET'
 description: 瞭解如何 System.Text.Json 在 .net 中使用命名空間進行序列化，並從 JSON 還原序列化。 包含範例程式碼。
-ms.date: 12/16/2020
+ms.date: 01/04/2021
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: b69dfd6238f529c3b315d63a93a82da0f316f459
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: bd257cf8d79ea2afa209fe71ad7eff969a62d6b2
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678259"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938711"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -30,6 +30,9 @@ ms.locfileid: "97678259"
 程式碼範例參考下列類別和它的變異：
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+
+> [!NOTE]
+> System.Text.Json 使用 Visual Basic 不支援的 [ref 結構](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 如果您嘗試搭配 System.Text.Json Visual Basic 使用 api，您會收到 BC40000 的編譯錯誤。 此錯誤訊息表示問題是已淘汰的 API，但實際的問題在於 `ref struct` 編譯器中缺乏支援。
 
 ## <a name="namespaces"></a>命名空間
 
@@ -291,7 +294,7 @@ System.Text.Json在 .Net Core 3.1 中不支援欄位。 [自訂轉換器](system
 和上的擴充方法在 `HttpClient` `HttpContent` System.Text.Json .net Core 3.1 中無法使用。
 ::: zone-end
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
 * [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)

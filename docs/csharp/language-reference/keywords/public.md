@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 26edaf7538d11d082a4b8863228213c3ebc46937
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 90c1d2a1d9efcdf57f914f4318bf7a743d3f37ec
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122338"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938464"
 ---
 # <a name="public-c-reference"></a>public (C# 參考)
 
@@ -30,7 +30,7 @@ class SampleClass
 
 ## <a name="example"></a>範例
 
-在下列範例中，宣告兩個類別：`PointTest` 和 `MainClass`。 `PointTest`的公用成員 `x` 和 `y` 直接存取自 `MainClass`。
+在下列範例中，宣告兩個類別：`PointTest` 和 `Program`。 `PointTest`的公用成員 `x` 和 `y` 直接存取自 `Program`。
 
 [!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
 
@@ -42,7 +42,7 @@ class SampleClass
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[已宣告存取範圍](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)
@@ -50,7 +50,7 @@ class SampleClass
 - [C # 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
 - [協助工具層級](accessibility-levels.md)
-- [修飾詞](index.md)
+- [修飾 符](index.md)
 - [私人](private.md)
 - [protected](protected.md)
-- [internal](internal.md)
+- [內部](internal.md)

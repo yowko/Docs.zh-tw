@@ -1,17 +1,17 @@
 ---
 title: 適用于字典的 Protobuf 對應-適用于 WCF 開發人員的 gRPC
 description: 瞭解如何使用 Protobuf 對應來代表 .NET 中的字典類型。
-ms.date: 09/09/2019
-ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.date: 12/15/2020
+ms.openlocfilehash: d38270d4bc320cf1f758080c18843ed1d716b350
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867461"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938542"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>適用於字典的 Protobuf 對應
 
-務必要能夠在訊息中表示任意的命名值集合。 在 .NET 中，這通常是透過字典類型來處理。 <xref:System.Collections.Generic.IDictionary%602>通訊協定緩衝區 () Protobuf 中的 .net 型別等同于 `map<key_type, value_type>` 型別。 本節說明如何 `map` 在 Protobuf 中宣告型別，以及如何使用產生的程式碼。
+務必要能夠在訊息中表示任意的命名值集合。 在 .NET 中，這項活動通常會透過字典類型來處理。 <xref:System.Collections.Generic.IDictionary%602>通訊協定緩衝區 () Protobuf 中的 .net 型別等同于 `map<key_type, value_type>` 型別。 本節說明如何 `map` 在 Protobuf 中宣告型別，以及如何使用產生的程式碼。
 
 ```protobuf
 message StockPrices {

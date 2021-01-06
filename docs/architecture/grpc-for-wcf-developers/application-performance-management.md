@@ -1,13 +1,13 @@
 ---
 title: 應用程式效能管理-WCF 開發人員的 gRPC
 description: ASP.NET Core gRPC 應用程式的記錄、計量和追蹤。
-ms.date: 09/02/2019
-ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.date: 12/15/2020
+ms.openlocfilehash: 8a2a89e268e3b2dffdcc945ac71b2de85b4d4964
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982338"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938451"
 ---
 # <a name="application-performance-management"></a>應用程式效能管理
 
@@ -25,7 +25,7 @@ ms.locfileid: "94982338"
 
 ## <a name="logging-in-aspnet-core-grpc"></a>ASP.NET Core gRPC 中的記錄
 
-ASP.NET Core 提供記錄的內建支援，格式為「[記錄 NuGet 套件」。](https://www.nuget.org/packages/Microsoft.Extensions.Logging) 此程式庫的核心部分隨附于 Web SDK，因此不需要手動安裝。 根據預設，記錄訊息會寫入至標準輸出 (「主控台」 ) 和任何附加的偵錯工具。 若要將記錄寫入持續性的外部資料存放區，您可能需要匯入 [選擇性的記錄接收套件](/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)。
+ASP.NET Core 提供記錄的內建支援， [格式為「記錄 NuGet 套件](https://www.nuget.org/packages/Microsoft.Extensions.Logging) 」。 此程式庫的核心部分隨附于 Web SDK，因此不需要手動安裝。 根據預設，記錄訊息會寫入至標準輸出 (「主控台」 ) 和任何附加的偵錯工具。 若要將記錄寫入持續性的外部資料存放區，您可能需要匯入 [選擇性的記錄接收套件](/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)。
 
 ASP.NET Core gRPC 架構會將詳細的診斷記錄訊息寫入此記錄架構中，因此可以處理和儲存應用程式本身的訊息。
 
@@ -59,7 +59,7 @@ public class StockData : Stocks.StocksBase
 
 大部分的計量平臺都支援下列類型：
 
-| 度量類型 | 說明 |
+| 度量類型 | 描述 |
 | ----------- | ----------- |
 | 計數器     | 追蹤發生某件事的頻率，例如要求和錯誤。 |
 | 量測計       | 記錄會隨著時間而變更的單一值，例如使用中的連接。 |
@@ -110,7 +110,7 @@ public class StockData : Stocks.StocksBase
 
 ## <a name="distributed-tracing"></a>分散式追蹤
 
-分散式追蹤是在監視中的最新開發，零件出現了從增加使用微服務和分散式架構。 用戶端瀏覽器、應用程式或裝置的單一要求可以細分為許多步驟和子要求，並牽涉到跨網路使用許多服務。 這使得記錄訊息和計量與觸發這些訊息的特定要求很難相互關聯。 分散式追蹤會對要求套用識別碼，這可讓記錄和計量與特定作業相互關聯。 這類似于 [WCF 的端對端追蹤](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)，但會在多個平臺上套用。
+分散式追蹤是在監視中的最新開發，零件出現了從增加使用微服務和分散式架構。 用戶端瀏覽器、應用程式或裝置的單一要求可以細分為許多步驟和子要求，並牽涉到跨網路使用許多服務。 此活動讓記錄訊息和計量與觸發它們的特定要求很難相互關聯。 分散式追蹤會將識別碼套用至要求，並允許記錄和計量與特定作業相互關聯。 這項追蹤類似于 [WCF 的端對端追蹤](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)，但會套用到多個平臺。
 
 分散式追蹤迅速成長，而且開始標準化。 雲端原生運算基礎建立了 [開放的追蹤標準](https://opentracing.io)，並嘗試提供廠商中立的程式庫，以搭配 [JAEGER](https://www.jaegertracing.io/) 和 [彈性 APM](https://www.elastic.co/products/apm)等後端運作。 同時，Google 建立了 [OpenCensus 專案](https://opencensus.io/) 來解決一組相同的問題。 這兩個專案會合並到新的專案 [OpenTelemetry](https://opentelemetry.io)中，其目標是未來的產業標準。
 
@@ -120,9 +120,9 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>分散式追蹤 `DiagnosticSource`
 
-.NET Core 的內部模組可適當地對應到分散式追蹤和範圍： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 除了提供簡單的方法，讓您在進程內產生和取用診斷， `DiagnosticSource` 模組也有 *活動* 的概念。 活動實際上是分散式追蹤或追蹤內的範圍。 模組的內部負責處理父子式活動，包括配置識別碼。 如需使用此類型的詳細資訊 `Activity` ，請參閱 [GitHub 上的活動使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
+.NET 的內部模組可適當地對應到分散式追蹤和範圍： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 除了提供簡單的方法，讓您在進程內產生和取用診斷， `DiagnosticSource` 模組也有 *活動* 的概念。 活動實際上是分散式追蹤或追蹤內的範圍。 模組的內部負責處理父子式活動，包括配置識別碼。 如需使用此類型的詳細資訊 `Activity` ，請參閱 [GitHub 上的活動使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
 
-因為 `DiagnosticSource` 是核心架構的一部分，所以有數個核心元件支援。 這些包括 <xref:System.Net.Http.HttpClient> 、Entity Framework Core 和 ASP.NET Core，包括 gRPC 架構中的明確支援。 當 ASP.NET Core 收到要求時，它會檢查符合 [W3C 追蹤內容](https://www.w3.org/TR/trace-context) 標準的一對 HTTP 標頭。 如果找不到標頭，則會使用標頭中的識別值和內容來啟動活動。 如果找不到標頭，則會使用符合標準格式之產生的識別值啟動活動。 在此活動存留期間，架構或應用程式程式碼所產生的任何診斷都可以使用追蹤和 span 識別碼標記。 `HttpClient`此支援會藉由檢查每個要求的目前活動，以及自動將追蹤標頭新增至傳出要求，來進一步延伸此功能。
+因為 `DiagnosticSource` 是核心架構和更新版本的一部分，所以有數個核心元件支援。 這些包括 <xref:System.Net.Http.HttpClient> 、Entity Framework Core 和 ASP.NET Core，包括 gRPC 架構中的明確支援。 當 ASP.NET Core 收到要求時，它會檢查符合 [W3C 追蹤內容](https://www.w3.org/TR/trace-context) 標準的一對 HTTP 標頭。 如果找不到標頭，則會使用標頭中的識別值和內容來啟動活動。 如果找不到標頭，則會使用符合標準格式之產生的識別值啟動活動。 在此活動存留期間，架構或應用程式程式碼所產生的任何診斷都可以使用追蹤和 span 識別碼標記。 此 `HttpClient` 支援會藉由檢查每個要求的目前活動，以及自動將追蹤標頭新增至傳出要求，來進一步延伸此功能。
 
 ASP.NET Core gRPC 用戶端和伺服器程式庫包含對和的明確支援 `DiagnosticSource` `Activity` ，並會自動建立活動並套用和使用標頭資訊。
 

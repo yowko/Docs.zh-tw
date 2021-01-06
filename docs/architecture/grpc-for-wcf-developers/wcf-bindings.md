@@ -1,46 +1,46 @@
 ---
-title: WCF 綁定和傳輸 - gRPC 面向 WCF 開發人員
-description: 瞭解不同的 WCF 綁定和傳輸與 gRPC 的比較情況。
-ms.date: 09/02/2019
-ms.openlocfilehash: 3a295268b486578c70c2c98f1d05f89070daaeb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Wcf 系結和傳輸-適用于 WCF 開發人員的 gRPC
+description: 瞭解不同的 WCF 系結和傳輸與 gRPC 的比較。
+ms.date: 12/15/2020
+ms.openlocfilehash: 7a50e3e4468d86a6140066502a765818119642d4
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147720"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938503"
 ---
 # <a name="wcf-bindings-and-transports"></a>WCF 繫結和傳輸
 
-Windows 通信基礎 （WCF） 具有內置*綁定*，用於指定不同的網路通訊協定、線格式和其他實現詳細資訊。 gRPC 實際上只有一個網路通訊協定和一個線格式。 （從技術上講，*您可以*自訂線格式，但這超出了本書的範圍。您可能會發現 gRPC 在大多數情況下提供了最佳解決方案。
+Windows Communication Foundation (WCF) 具有內建系 *結，可* 指定不同的網路通訊協定、電傳格式和其他的執行詳細資料。 gRPC 實際上只有一個網路通訊協定和一個電傳格式。  (技術上，您 *可以* 自訂電傳格式，但這已超出本書的範圍。 ) 您可能會發現 gRPC 在大部分情況下都能提供最佳解決方案。
 
-以下是關於最相關的 WCF 綁定及其與 gRPC 中的等效綁定的比較的簡短討論。
+接下來是關於最相關 WCF 系結的簡短討論，以及它們與 gRPC 中的對應專案之間的比較。
 
 ## <a name="nettcp"></a>NetTCP
 
-WCF 的 NetTCP 綁定允許持久連接、小消息和雙向消息傳送。 但它僅在 .NET 用戶端和伺服器之間工作。 gRPC 允許相同的功能，但支援跨多個程式設計語言和平臺。
+WCF 的 NetTCP 系結允許持續連線、小型訊息和雙向訊息。 但它只能在 .NET 用戶端和伺服器之間運作。 gRPC 允許相同的功能，但在多個程式設計語言和平臺上都有支援。
 
-gRPC 具有 WCF NetTCP 綁定的許多功能，但它們並不總是以相同的方式實現。 例如，在 WCF 中，加密通過配置進行控制，並在框架中處理。 在 gRPC 中，通過 TLS 的 HTTP/2 在連接級別實現加密。
+gRPC 具有 WCF NetTCP 系結的許多功能，但不一定會以相同的方式來執行。 例如，在 WCF 中，加密是透過設定來控制，並在架構中處理。 在 gRPC 中，透過 TLS 透過 HTTP/2 在連線層級達到加密。
 
 ## <a name="http"></a>HTTP
 
-稱為 BasicHttpBinding 的 WCF 綁定通常基於文本，並使用 SOAP 作為線格式。 與 NetTCP 綁定相比，它的速度很慢。 它通常用於提供跨平臺互通性或通過 Internet 基礎結構進行連接。
+稱為 BasicHttpBinding 的 WCF 系結通常是以文字為基礎，而且會使用 SOAP 做為電傳格式。 相較于 NetTCP 系結，它的速度很慢。 它是用來提供跨平臺的互通性，或透過網際網路基礎結構的連線。
 
-gRPC 中的等效項使用 HTTP/2 作為具有二進位 Protobuf 線格式的消息的基礎傳輸層。 因此，它可以提供 NetTCP 服務等級的性能，並與所有現代程式設計語言和框架實現全跨平臺互通性。
+GRPC 中的對等用法會使用 HTTP/2 作為訊息的二進位 Protobuf 電傳格式的基礎傳輸層。 因此它可以提供 NetTCP 服務層級的效能，以及所有新式程式設計語言和架構的完整跨平臺互通性。
 
 ## <a name="named-pipes"></a>具名管道
 
-WCF 提供了一*個具名管道*綁定，用於在同一物理電腦上的進程之間的通信。 ASP.NET核心 gRPC 的第一個版本不支援具名管道。 添加具名管道（和 Unix 域通訊端）的用戶端和伺服器支援是未來版本的目標。
+WCF 提供 *具名管道* 系結，以便在相同實體電腦上的進程之間進行通訊。 ASP.NET Core gRPC 的第一版不支援具名管道。 為具名管道 (和 Unix 網域通訊端新增用戶端和伺服器支援，) 是未來版本的目標。
 
 ## <a name="msmq"></a>MSMQ
 
-MSMQ 是一個專有的 Windows 訊息佇列。 WCF 與 MSMQ 的綁定允許來自用戶端的"觸發和忘記"請求，這些請求將來可能隨時處理。 gRPC 不本機提供任何訊息佇列功能。
+MSMQ 是專屬的 Windows 訊息佇列。 WCF 對 MSMQ 的系結可讓用戶端在未來隨時處理的要求「引發」和「遺忘」。 gRPC 本身不會提供任何訊息佇列功能。
 
-最好的選擇是直接使用消息傳遞系統，如 Azure 服務匯流排、兔子MQ或 Kafka。 可以通過將消息直接放在佇列上的用戶端或對消息進行排隊的 gRPC 用戶端流服務來實現此項。
+最佳替代方式是直接使用訊息系統，例如 Azure 服務匯流排、RabbitMQ 或 Kafka。 您可以透過將訊息直接放到佇列的用戶端，或將訊息的 gRPC 用戶端串流服務來執行此功能。
 
 ## <a name="webhttpbinding"></a>WebHttpBinding
 
-WebHttpBinding（也稱為 WCF REST），具有`WebGet`和`WebInvoke`屬性，使您能夠開發 RESTful API，在不太常見時可以講 JSON。 如果使用 WCF REST 構建了 RESTful API，請考慮將其遷移到常規ASP.NET核心 MVC Web API 應用程式。 此遷移將提供與轉換為 gRPC 相同的功能。
+WebHttpBinding (也稱為 WCF REST) ，其中包含 `WebGet` 和 `WebInvoke` 屬性，可讓您開發 RESTful api，以便在這種行為較不常見時，一次就能說出 JSON。 如果您有以 WCF REST 建立的 RESTful API，請考慮將它遷移至一般 ASP.NET Core MVC Web API 應用程式。 這項遷移會提供與 gRPC 轉換相同的功能。
 
 >[!div class="step-by-step"]
->[上一個](wcf-endpoints-grpc-methods.md)
->[下一個](rpc-types.md)
+>[上一個](wcf-endpoints-grpc-methods.md) 
+>[下一步](rpc-types.md)

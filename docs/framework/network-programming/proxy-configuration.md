@@ -12,12 +12,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 5094a066fe6689a1c0cda227b284accaac49ad54
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 668e6a4082a132d94e6aa8039e2afaaf543fb5e9
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263161"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938152"
 ---
 # <a name="proxy-configuration"></a>Proxy 組態
 
@@ -73,13 +73,13 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
                 bypassonlocal="True"  
         />  
         <bypasslist>  
-            <add address="[a-z]+.blueyonderairlines.com$" />  
+            <add address="[a-z]+\.blueyonderairlines\.com$" />  
         </bypasslist>  
     </defaultProxy>  
 </system.net>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
