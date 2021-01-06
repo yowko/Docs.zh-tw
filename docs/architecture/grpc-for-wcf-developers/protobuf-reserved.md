@@ -1,19 +1,19 @@
 ---
-title: 原托布夫保留字段 - gRPC 面向 WCF 開發人員
+title: Protobuf 保留的欄位-WCF 開發人員的 gRPC
 description: 瞭解跨版本相容性的保留字段。
-ms.date: 09/09/2019
-ms.openlocfilehash: f89513c4659a02cbc94e1c659baecb9e750acbdc
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.date: 12/15/2020
+ms.openlocfilehash: d82043d619c5b3b81091ae4ea381e4778c1cf6ba
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111032"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938516"
 ---
-# <a name="protobuf-reserved-fields"></a><span data-ttu-id="74a31-103">Protobuf 保留欄位</span><span class="sxs-lookup"><span data-stu-id="74a31-103">Protobuf reserved fields</span></span>
+# <a name="protobuf-reserved-fields"></a><span data-ttu-id="b66b6-103">Protobuf 保留欄位</span><span class="sxs-lookup"><span data-stu-id="b66b6-103">Protobuf reserved fields</span></span>
 
-<span data-ttu-id="74a31-104">協定緩衝區 （Protobuf） 中的向後相容性保證依賴于始終表示相同資料項目的欄位編號。</span><span class="sxs-lookup"><span data-stu-id="74a31-104">The backward-compatibility guarantees in Protocol Buffer (Protobuf) rely on field numbers always representing the same data item.</span></span> <span data-ttu-id="74a31-105">如果從服務新版本中的消息中刪除了欄位，則不應重複使用該欄位編號。</span><span class="sxs-lookup"><span data-stu-id="74a31-105">If a field is removed from a message in a new version of the service, that field number should never be reused.</span></span> <span data-ttu-id="74a31-106">您可以使用`reserved`關鍵字強制執行此情況。</span><span class="sxs-lookup"><span data-stu-id="74a31-106">You can enforce this by using the `reserved` keyword.</span></span>
+<span data-ttu-id="b66b6-104">通訊協定緩衝區中的回溯相容性保證 (Protobuf) 依賴欄位號碼永遠代表相同的資料項目。</span><span class="sxs-lookup"><span data-stu-id="b66b6-104">The backward-compatibility guarantees in Protocol Buffer (Protobuf) rely on field numbers always representing the same data item.</span></span> <span data-ttu-id="b66b6-105">如果從新的服務版本的訊息中移除欄位，則永遠不應重複使用該欄位編號。</span><span class="sxs-lookup"><span data-stu-id="b66b6-105">If a field is removed from a message in a new version of the service, that field number should never be reused.</span></span> <span data-ttu-id="b66b6-106">您可以使用關鍵字來強制執行此行為 `reserved` 。</span><span class="sxs-lookup"><span data-stu-id="b66b6-106">You can enforce this behavior by using the `reserved` keyword.</span></span>
 
-<span data-ttu-id="74a31-107">如果`displayName`從`marketId`前面定義`Stock`的消息中刪除 和 欄位，則應保留其欄位編號，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="74a31-107">If the `displayName` and `marketId` fields were removed from the `Stock` message defined earlier, their field numbers should be reserved as in the following example.</span></span>
+<span data-ttu-id="b66b6-107">如果 `displayName` 和 `marketId` 欄位已從稍早定義的訊息中移除 `Stock` ，則應該保留其欄位編號，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="b66b6-107">If the `displayName` and `marketId` fields were removed from the `Stock` message defined earlier, their field numbers should be reserved as in the following example.</span></span>
 
 ```protobuf
 syntax "proto3";
@@ -27,7 +27,7 @@ message Stock {
 }
 ```
 
-<span data-ttu-id="74a31-108">您還可以將`reserved`關鍵字用作將來可能添加的欄位的預留位置。</span><span class="sxs-lookup"><span data-stu-id="74a31-108">You can also use the `reserved` keyword as a placeholder for fields that might be added in the future.</span></span> <span data-ttu-id="74a31-109">您可以使用`to`關鍵字將連續欄位數表示為範圍。</span><span class="sxs-lookup"><span data-stu-id="74a31-109">You can express contiguous field numbers as a range by using the `to` keyword.</span></span>
+<span data-ttu-id="b66b6-108">您也可以使用 `reserved` 關鍵字做為未來可能加入之欄位的預留位置。</span><span class="sxs-lookup"><span data-stu-id="b66b6-108">You can also use the `reserved` keyword as a placeholder for fields that might be added in the future.</span></span> <span data-ttu-id="b66b6-109">您可以使用關鍵字將連續的欄位編號表示為範圍 `to` 。</span><span class="sxs-lookup"><span data-stu-id="b66b6-109">You can express contiguous field numbers as a range by using the `to` keyword.</span></span>
 
 ```protobuf
 syntax "proto3";
@@ -40,6 +40,6 @@ message Info {
 ```
 
 >[!div class="step-by-step"]
-><span data-ttu-id="74a31-110">[上一個](protobuf-repeated.md)
->[下一個](protobuf-any-oneof.md)</span><span class="sxs-lookup"><span data-stu-id="74a31-110">[Previous](protobuf-repeated.md)
+><span data-ttu-id="b66b6-110">[上一個](protobuf-repeated.md) 
+>[下一步](protobuf-any-oneof.md)</span><span class="sxs-lookup"><span data-stu-id="b66b6-110">[Previous](protobuf-repeated.md)
 [Next](protobuf-any-oneof.md)</span></span>
