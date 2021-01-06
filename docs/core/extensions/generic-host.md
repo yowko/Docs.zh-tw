@@ -3,13 +3,13 @@ title: .NET 泛型主機
 author: IEvangelist
 description: 瞭解 .NET 泛型主機，其負責應用程式啟動和存留期管理。
 ms.author: dapine
-ms.date: 12/04/2020
-ms.openlocfilehash: ddb71b70d15121b7f59899fba38b2bf861219878
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 12/18/2020
+ms.openlocfilehash: bf6d5ad624bbed46994633abace0af64712757f3
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740094"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700731"
 ---
 # <a name="net-generic-host"></a>.NET 泛型主機
 
@@ -19,7 +19,7 @@ ms.locfileid: "96740094"
 
 - 相依性插入 (DI)
 - 記錄
-- 設定
+- 組態
 - `IHostedService` 實作
 
 當主機啟動時，它會呼叫 <xref:Microsoft.Extensions.Hosting.IHostedService.StartAsync%2A?displayProperty=nameWithType> <xref:Microsoft.Extensions.Hosting.IHostedService> 服務容器的託管服務集合中註冊的每個執行。 在背景工作服務應用程式中， `IHostedService` 包含實例的所有 <xref:Microsoft.Extensions.Hosting.BackgroundService> 實例都會 <xref:Microsoft.Extensions.Hosting.BackgroundService.ExecuteAsync%2A?displayProperty=nameWithType> 呼叫其方法。
@@ -120,9 +120,12 @@ public class Program
 
 ## <a name="host-configuration"></a>主機組態
 
-主機組態用於 <xref:Microsoft.Extensions.Hosting.IHostEnvironment> 實作的屬性。
+主機設定是用來設定 [IHostEnvironment](#ihostenvironment) 執行的屬性。
 
-主機組態位於 <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A> 內的 [HostBuilderContext.Configuration](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration)。 在 `ConfigureAppConfiguration` 之後，應用程式組態會取代 `HostBuilderContext.Configuration`。
+主機設定適用于方法內 [HostBuilderContext.Configuration](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration) <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A> 。 當呼叫 `ConfigureAppConfiguration` 方法時， `HostBuilderContext` 和 `IConfigurationBuilder` 會傳遞至 `configureDelegate` 。 `configureDelegate`定義為 `Action<HostBuilderContext, IConfigurationBuilder>` 。 主機產生器內容會公開 `.Configuration` 屬性，也就是的實例 `IConfiguration` 。 它代表從主機建立的設定，而 `IConfigurationBuilder` 是用來設定應用程式的 builder 物件。
+
+> [!TIP]
+> 在 `ConfigureAppConfiguration` 呼叫之後， `HostBuilderContext.Configuration` 會將取代為 [應用程式](#app-configuration)設定。
 
 若要新增主機組態，請呼叫 `IHostBuilder` 上的 <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureHostConfiguration%2A>。 `ConfigureHostConfiguration` 可以多次呼叫，其結果是累加的。 主機會使用指定索引鍵上最後設定值的任何選項。
 
@@ -134,11 +137,11 @@ public class Program
 
 應用程式組態的建立方式是在 `IHostBuilder` 上呼叫 <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A>。 `ConfigureAppConfiguration` 可以多次呼叫，其結果是累加的。 應用程式會使用指定索引鍵上最後設定值的任何選項。
 
-由 `ConfigureAppConfiguration` 建立的組態位於 [HostBuilderContext.Configuration](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration%2A)，可用於後續作業並用作 DI 中的服務。 主機組態也會新增至應用程式組態。
+建立的設定 `ConfigureAppConfiguration` 可用於後續作業的 [HostBuilderContext.Configuration](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration%2A) ，以及來自 DI 的服務。 主機組態也會新增至應用程式組態。
 
 如需詳細資訊，請參閱 [.net 中](configuration.md)的設定。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 中的設定](configuration.md)
 - [ASP.NET Core Web 主機](/aspnet/core/fundamentals/host/web-host)

@@ -3,13 +3,13 @@ title: 主控台記錄格式
 description: 瞭解如何使用可用的主控台記錄格式，或為您的 .NET 應用程式執行自訂的記錄格式。
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/22/2020
-ms.openlocfilehash: 28a3de833b759e043ec3e2cb5016852f9a861cee
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.date: 12/17/2020
+ms.openlocfilehash: 0ec8fc2018febe4273aa646d1682be197933f925
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897651"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700816"
 ---
 # <a name="console-log-formatting"></a>主控台記錄格式
 
@@ -151,6 +151,19 @@ info: Microsoft.Hosting.Lifetime[0]
 :::code language="csharp" source="snippets/logging/console-formatter-custom/CustomColorFormatter.cs" highlight="15-18,52-65":::
 
 當您執行應用程式時，記錄檔會 `CustomPrefix` 在為時以綠色顯示訊息 `FormatterOptions.ColorBehavior` `Enabled` 。
+
+> [!NOTE]
+> 當 <xref:Microsoft.Extensions.Logging.Console.LoggerColorBehavior> 為時 `Disabled` ，記錄訊息 _不會_ 解讀記錄訊息內內嵌的 ANSI 色彩代碼。 相反地，它們會輸出原始訊息。 例如，設想下列情況：
+>
+> ```csharp
+> logger.LogInformation("Random log \x1B[42mwith green background\x1B[49m message");
+> ```
+>
+> 這會輸出逐字字串，而且 _不_ 會以色彩標示。
+>
+> ```output
+> Random log \x1B[42mwith green background\x1B[49m message
+> ```
 
 ## <a name="see-also"></a>請參閱
 

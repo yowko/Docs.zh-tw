@@ -4,12 +4,12 @@ description: 瞭解如何使用設定提供者 API 來設定 .NET 應用程式�
 author: IEvangelist
 ms.author: dapine
 ms.date: 12/04/2020
-ms.openlocfilehash: 301e23170428f2291ccaa1bd882007cadfbce3b1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 036eb403318200bc0ae1d93e2c7cf9d074cb0bfb
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740008"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899444"
 ---
 # <a name="configuration-providers-in-net"></a>.NET 中的設定提供者
 
@@ -197,8 +197,8 @@ dotnet run
 
 ```dotnetcli
 set CustomPrefix__SecretKey="Secret key with CustomPrefix_ environment"
-set CustomPrefix_TransientFaultHandlingOptions__Enabled=true
-set CustomPrefix_TransientFaultHandlingOptions__AutoRetryDelay=00:00:21
+set CustomPrefix__TransientFaultHandlingOptions__Enabled=true
+set CustomPrefix__TransientFaultHandlingOptions__AutoRetryDelay=00:00:21
 
 dotnet run
 ```
@@ -311,7 +311,7 @@ dotnet run --SecretKey "Secret key set from double hyphen"
 
 在上述程式碼中，會在 <xref:Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions.AddInMemoryCollection(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})?displayProperty=nameWithType> 預設設定提供者之後新增記憶體提供者。 如需排序設定提供者的範例，請參閱 [XML 設定提供者](#xml-configuration-provider)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 中的設定](configuration.md)
 - [.NET 泛型主機](generic-host.md)

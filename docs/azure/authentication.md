@@ -2,19 +2,19 @@
 title: 瞭解適用于 .NET 的 Azure 程式庫中的驗證
 description: 說明使用 Azure SDK for .NET 進行驗證的不同方式。
 ms.date: 06/19/2020
-ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-dotnet
+ms.openlocfilehash: 0a508606b40905d5b09b8515910873359efbbf2e
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539173"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700837"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>使用 Azure SDK for .NET 進行驗證
 
 ## <a name="recommended-azureidentity"></a>建議： Azure 身分識別
 
-Azure SDK for .NET 中的最新套件使用一般驗證套件來進行驗證 `Azure.Identity` 。 `Azure.Identity`建議您不要使用本檔稍後所述的其他驗證機制。 支援所提供之認證的套件 `Azure.Identity` 建置於之上 `Azure.Core` ，並具有從 *Azure*開始的套件識別碼。 [請參閱套件清單](packages.md) ，以取得使用的封裝清查 `Azure.Core` 。
+Azure SDK for .NET 中的最新套件使用一般驗證套件來進行驗證 `Azure.Identity` 。 `Azure.Identity`建議您不要使用本檔稍後所述的其他驗證機制。 支援所提供之認證的套件 `Azure.Identity` 建置於之上 `Azure.Core` ，並具有從 *Azure* 開始的套件識別碼。 [請參閱套件清單](packages.md) ，以取得使用的封裝清查 `Azure.Core` 。
 
 如需在專案中使用的完整指示 `Azure.Identity` ，請參閱適用于 [.Net 的 Azure 身分識別用戶端](/dotnet/api/overview/azure/identity-readme)檔。
 
@@ -54,7 +54,7 @@ var credentials = SdkContext.AzureCredentialsFactory
         AzureEnvironment.AzureGlobalCloud);
 ```
 
-使用 *clientId*、*clientSecret*和 *tenantId* 等值，這些值來自已建立服務主體處的 JSON 輸出。
+使用 *clientId*、*clientSecret* 和 *tenantId* 等值，這些值來自已建立服務主體處的 JSON 輸出。
 
 然後，建立進入點 `Azure` 物件來開始使用 API：
 

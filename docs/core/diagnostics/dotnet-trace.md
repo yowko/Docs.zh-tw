@@ -2,12 +2,12 @@
 title: dotnet-追蹤診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet 追蹤 CLI 工具，以使用 .NET EventPipe 來收集執行中進程的 .NET 追蹤，而不使用原生 profiler。
 ms.date: 11/17/2020
-ms.openlocfilehash: a2925ac0a0815fe48ca9b36b643ff896aa3c0ff6
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593203"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753662"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -99,7 +99,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--format {Chromium|NetTrace|Speedscope}`**
 
-  設定追蹤檔案轉換的輸出格式。 預設值為 `NetTrace`。
+  設定追蹤檔案轉換的輸出格式。 預設為 `NetTrace`。
 
 - **`-n, --name <name>`**
 
@@ -206,7 +206,7 @@ dotnet-trace list-profiles [-h|--help]
   - 例如，在 Linux 上， `ps` 命令。
   - [dotnet-追蹤 ps](#dotnet-trace-ps)
 
-- 執行下列命令：
+- 執行以下命令：
 
   ```console
   dotnet-trace collect --process-id <PID>
@@ -335,12 +335,31 @@ dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCoun
 
 上述命令會停用運行時間事件和 managed stack profiler。
 
-## <a name="net-providers"></a>.NET 提供者
+## <a name="use-rsp-file-to-avoid-typing-long-commands"></a>使用 .rsp 檔案以避免輸入較長的命令
 
-.NET Core 執行時間支援下列 .NET 提供者。 .NET Core 會使用相同的關鍵字來啟用 `Event Tracing for Windows (ETW)` 和 `EventPipe` 追蹤。
+您可以 `dotnet-trace` 使用 `.rsp` 包含要傳遞之引數的檔案來啟動。 當啟用的提供者需要冗長的引數，或使用會去除字元的 shell 環境時，這會很有用。
 
-| 提供者名稱                            | 資訊 |
-|------------------------------------------|-------------|
-| `Microsoft-Windows-DotNETRuntime`        | [執行階段提供者](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[CLR 執行時間關鍵字](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
-| `Microsoft-Windows-DotNETRuntimeRundown` | [取消提供者](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[CLR 取消關鍵字](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
-| `Microsoft-DotNETCore-SampleProfiler`    | 啟用範例 profiler。 |
+例如，下列提供者在您每次想要進行追蹤時，可能會很麻煩地輸入：
+
+```cmd
+dotnet-trace collect --providers Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+此外，上述範例會包含 `"` 做為引數的一部分。 因為每個 shell 都不會平均處理引號，所以使用不同的 shell 時，您可能會遇到各種問題。 例如，在中輸入的命令與 `zsh` 中的命令不同 `cmd` 。
+
+您可以將下列文字儲存到名為的檔案中，而不是每次都輸入此名稱 `myprofile.rsp` 。
+
+```txt
+--providers
+Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+儲存之後 `myprofile.rsp` ，您可以 `dotnet-trace` 使用下列命令來啟動此設定：
+
+```bash
+dotnet-trace @myprofile.rsp
+```
+
+## <a name="see-also"></a>請參閱
+
+- [來自 .NET 的知名事件提供者](well-known-event-providers.md)

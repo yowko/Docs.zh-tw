@@ -5,12 +5,12 @@ ms.date: 11/30/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: d0b8533dd63dd7d24f49e11093770b52d7daea89
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 7984f235044db5dfc7533343e7d43cd7745fba33
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437869"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899451"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -49,7 +49,7 @@ ASP.NET Core 5.0 是以 .NET 5.0 為基礎，但會保留 "Core" 的名稱，以
 | 技術            | 建議的替代方案                                                                         |
 |-----------------------|-------------------------------------------------------------------------------------------------|
 | Web Form             | ASP.NET Core [Blazor](/aspnet/core/blazor) 或 [Razor Pages](/aspnet/core/tutorials/razor-pages) |
-| Windows Workflow (WF)  | [開放原始碼 CoreWF](https://github.com/UiPath-Open/corewf)                                     |
+| Windows Workflow (WF)  | [開放原始碼 CoreWF](https://github.com/UiPath-Open/corewf) 或 [Elsa-工作流程](https://github.com/elsa-workflows/elsa-core) |
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
@@ -153,7 +153,7 @@ let message = $"%s{name} is %d{age} years old."
 - [複製 JsonSerializerOptions](../standard/serialization/system-text-json-configure-options.md#copy-jsonserializeroptions)
 - [使用 web 預設值建立 JsonSerializerOptions](../standard/serialization/system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [一個 .NET 的旅程](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [.NET 5 的效能改進](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)

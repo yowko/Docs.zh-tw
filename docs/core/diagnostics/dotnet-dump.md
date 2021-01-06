@@ -2,12 +2,12 @@
 title: dotnet-傾印診斷工具-.NET CLI
 description: 瞭解如何在不使用任何原生偵錯工具的情況下，安裝和使用 dotnet 傾印 CLI 工具來收集和分析 Windows 和 Linux 傾印。
 ms.date: 11/17/2020
-ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822200"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765042"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印收集和分析公用程式 (dotnet-傾印) 
 
@@ -44,7 +44,7 @@ ms.locfileid: "94822200"
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet-dump`全域工具可收集和分析 Windows 和 linux 傾印，而不需要任何與 Linux 相關的原生偵錯工具 `lldb` 。 這項工具在 Alpine Linux 等平臺上很重要，因為無法使用完整的工作 `lldb` 。 此 `dotnet-dump` 工具可讓您執行 SOS 命令來分析損毀和垃圾收集行程 (GC) ，但它不是原生偵錯工具，因此不支援顯示原生堆疊框架之類的動作。
 
@@ -138,7 +138,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ### <a name="analyze-sos-commands"></a>分析 SOS 命令
 
-| Command                             | 函式                                                                                      |
+| 命令                             | 函數                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
 | `soshelp`                           | 顯示所有可用的命令                                                               |
 | `soshelp|help <command>`            | 顯示指定的命令。                                                               |
@@ -146,34 +146,37 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `clrstack <arguments>`              | 僅提供 Managed 程式碼的堆疊追蹤。                                                  |
 | `clrthreads <arguments>`            | 列出正在執行的 managed 執行緒。                                                            |
 | `dumpasync <arguments>`             | 顯示垃圾收集堆積上的非同步狀態機器的相關資訊。                |
-| `dumpassembly <arguments>`          | 顯示元件的詳細資料。                                                           |
-| `dumpclass <arguments>`             | 顯示指定位址之 EE 類別結構的相關資訊。                     |
-| `dumpdelegate <arguments>`          | 顯示委派的相關資訊。                                                        |
-| `dumpdomain <arguments>`            | 顯示網域中所有 Appdomain 和所有元件的資訊。                |
+| `dumpassembly <arguments>`          | 顯示位於指定位址之元件的詳細資料。                                 |
+| `dumpclass <arguments>`             | 顯示指定位址之結構的相關資訊 `EEClass` 。                  |
+| `dumpdelegate <arguments>`          | 顯示指定位址之委派的相關資訊。                             |
+| `dumpdomain <arguments>`            | 顯示指定網域內所有 Appdomain 和所有元件的資訊。       |
 | `dumpheap <arguments>`              | 顯示垃圾收集堆積的相關資訊，以及物件的集合統計資料。       |
 | `dumpil <arguments>`                | 顯示與 Managed 方法相關聯的 Microsoft 中繼語言 (MSIL)。 |
 | `dumplog <arguments>`               | 將記憶體中壓力記錄檔的內容寫入指定的檔案。                         |
-| `dumpmd <arguments>`                | 在指定的位址顯示 MethodDesc 結構的相關資訊。                   |
-| `dumpmodule <arguments>`            | 顯示指定位址之 EE 模組結構的相關資訊。                    |
-| `dumpmt <arguments>`                | 顯示在所指定位址之方法資料表的相關資訊。                           |
-| `dumpobj <arguments>`               | 顯示指定位址之物件的相關資訊。                                       |
+| `dumpmd <arguments>`                | 顯示指定位址之結構的相關資訊 `MethodDesc` 。               |
+| `dumpmodule <arguments>`            | 顯示指定位址上模組的相關資訊。                               |
+| `dumpmt <arguments>`                | 顯示指定位址的相關資訊 `MethodTable` 。                        |
+| `dumpobj <arguments>`               | 顯示指定位址之物件的相關資訊。                                      |
 | `dso|dumpstackobjects <arguments>`  | 顯示可在目前堆疊界限內找到的所有 Managed 物件。                    |
 | `eeheap <arguments>`                | 顯示內部執行時間資料結構所耗用的進程記憶體相關資訊。              |
 | `finalizequeue <arguments>`         | 顯示所有已註冊為完成項的物件。                                             |
-| `gcroot <arguments>`                | 顯示指定位址之物件 (或根) 參考的相關資訊。              |
+| `gcroot <arguments>`                | 在指定的位址上，顯示物件 (或根) 參考的相關資訊。             |
 | `gcwhere <arguments>`               | 顯示傳入的引數 GC 堆積中的位置。                               |
-| `ip2md <arguments>`                 | 在 JIT 程式碼中，以指定的位址顯示 MethodDesc 結構。                       |
+| `ip2md <arguments>`                 | `MethodDesc`以 JIT 程式碼顯示指定位址的結構。                     |
 | `histclear <arguments>`             | 釋放 `hist*` 命令系列所使用的任何資源。                                |
 | `histinit <arguments>`              | 初始化在偵錯項目中儲存之壓力記錄檔中的 SOS 結構。                     |
 | `histobj <arguments>`               | 顯示與相關的垃圾收集壓力記錄重新調整 `<arguments>` 。              |
-| `histobjfind <arguments>`           | 顯示參考位於指定位址之物件的所有記錄檔項目。               |
+| `histobjfind <arguments>`           | 顯示在指定的位址參考物件的所有記錄專案。              |
 | `histroot <arguments>`              | 顯示與指定之根的提升和重新配置都相關的資訊。        |
 | `lm|modules`                        | 顯示進程中的原生模組。                                                   |
-| `name2ee <arguments>`               | 顯示的 MethodTable 結構和 EEClass 結構 `<argument>` 。                |
-| `pe|printexception <arguments>`     | 顯示衍生自位址之例外狀況類別的任何物件 `<argument>` 。             |
+| `name2ee <arguments>`               | 顯示的 `MethodTable` 和 `EEClass` 結構 `<argument>` 。                     |
+| `pe|printexception <arguments>`     | 顯示衍生自之類別的任何物件 <xref:System.Exception> `<argument>` 。      |
 | `setsymbolserver <arguments>`       | 啟用符號伺服器支援                                                             |
 | `syncblk <arguments>`               | 顯示 SyncBlock 持有者資訊。                                                           |
 | `threads|setthread <threadid>`      | 設定或顯示 SOS 命令的目前線程識別碼。                                  |
+
+> [!NOTE]
+> 您可以在 [適用于 .net 的 SOS 偵錯工具擴充](sos-debugging-extension.md)功能中找到其他詳細資料。
 
 ## <a name="using-dotnet-dump"></a>使用 `dotnet-dump`
 

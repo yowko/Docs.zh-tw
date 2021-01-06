@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656940"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899648"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -27,10 +27,10 @@ ms.locfileid: "88656940"
 
 如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
-您將必須設定電腦以執行 .NET Core。 您可以在 [.Net Core 下載](https://dotnet.microsoft.com/download) 頁面中找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
-您將必須安裝慣用的程式碼編輯器。 下列說明使用 [Visual Studio Code](https://code.visualstudio.com/)，也就是開放原始碼的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
+您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core 下載](https://dotnet.microsoft.com/download) 頁面上找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
+您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code](https://code.visualstudio.com/)，這是一個開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
 ## <a name="create-the-application"></a>建立應用程式
 
@@ -42,7 +42,7 @@ dotnet new console --name WebAPIClient
 
 這會建立基本 "Hello World" 應用程式的起始檔案。 專案名稱為 "WebAPIClient"。 因為這是新的專案，所以沒有任何相依性已就緒。 第一次執行會下載 .NET Core framework、安裝開發憑證，然後執行 NuGet 套件管理員來還原遺失的相依性。
 
-在您開始建立修改前，請先在命令提示字元中鍵入 `dotnet run` ([請參閱附註](#dotnet-restore-note))，執行您的應用程式。 如果您的環境缺少相依性，`dotnet run` 會自動執行 `dotnet restore`。 如果您的應用程式需要重建，它也會執行 `dotnet build`。
+在您開始進行修改之前，請在 `cd` "WebAPIClient" 目錄中輸入 `dotnet run` (在命令提示字元) 中， [請參閱附注](#dotnet-restore-note) 來執行您的應用程式。 如果您的環境缺少相依性，`dotnet run` 會自動執行 `dotnet restore`。 如果您的應用程式需要重建，它也會執行 `dotnet build`。
 在初始安裝之後，當它對您的專案有意義時，您只需要執行 `dotnet restore` 或 `dotnet build`。
 
 ## <a name="adding-new-dependencies"></a>新增新的相依性
@@ -88,7 +88,7 @@ static async Task Main(string[] args)
 
 現在，您擁有一個不會執行任何動作但會以非同步方式執行的程式。 來加以改善吧。
 
-首先，您需要一個能夠從網路擷取資料的物件；使用 <xref:System.Net.Http.HttpClient> 即可達成。 此物件會處理要求和回應。 在 Program.cs 檔案內的類別中具現化該類型的單一實例 `Program` 。 *Program.cs*
+首先，您需要一個能夠從網路擷取資料的物件；使用 <xref:System.Net.Http.HttpClient> 即可達成。 此物件會處理要求和回應。 在 Program.cs 檔案內的類別中具現化該類型的單一實例 `Program` 。 
 
 ```csharp
 namespace WebAPIClient
@@ -175,7 +175,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 ```
 
-請注意，您現在使用的是 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> 而不是 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>。 序列化程式會使用資料流 (而不是字串) 作為其來源。 讓我們來說明 c # 語言的幾項功能，這些功能是在先前的程式碼片段的第二行中使用。 的第一個引數 <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> 是 `await` 運算式。  (其他兩個參數都是選擇性的，且在程式碼片段中會省略。 ) Await 運算式幾乎可以出現在程式碼中的任何位置，但現在，您只會看到它們是指派語句的一部分。 `Deserialize`方法是*泛型*，這表示您必須提供類型引數，以便從 JSON 文字建立哪種類型的物件。 在此範例中，您會還原序列化為 `List<Repository>` 另一個泛型物件，也就是另一個泛型物件 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 。 `List<>`類別會儲存物件的集合。 型別引數會宣告儲存在中的物件類型 `List<>` 。 JSON 文字代表存放庫物件的集合，因此類型引數為 `Repository` 。
+請注意，您現在使用的是 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> 而不是 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>。 序列化程式會使用資料流 (而不是字串) 作為其來源。 讓我們來說明 c # 語言的幾項功能，這些功能是在先前的程式碼片段的第二行中使用。 的第一個引數 <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> 是 `await` 運算式。  (其他兩個參數都是選擇性的，且在程式碼片段中會省略。 ) Await 運算式幾乎可以出現在程式碼中的任何位置，但現在，您只會看到它們是指派語句的一部分。 `Deserialize`方法是 *泛型*，這表示您必須提供類型引數，以便從 JSON 文字建立哪種類型的物件。 在此範例中，您會還原序列化為 `List<Repository>` 另一個泛型物件，也就是另一個泛型物件 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 。 `List<>`類別會儲存物件的集合。 型別引數會宣告儲存在中的物件類型 `List<>` 。 JSON 文字代表存放庫物件的集合，因此類型引數為 `Repository` 。
 
 您差不多已經完成這個部分。 現在您已將 JSON 轉換成 C# 物件，讓我們來顯示每個儲存機制的名稱。 將下列幾行：
 
@@ -296,7 +296,7 @@ public DateTime LastPushUtc { get; set; }
 public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-讓我們來看看剛定義的新結構。 `LastPush`屬性是使用存取子的*運算式主體成員*所定義 `get` 。 沒有 `set` 存取子。 省略 `set` 存取子是您如何在 c # 中定義 *唯讀* 屬性的方式。 (是的，您可以用 C# 來建立「唯寫」** 屬性，但其值會受到限制)。
+讓我們來看看剛定義的新結構。 `LastPush`屬性是使用存取子的 *運算式主體成員* 所定義 `get` 。 沒有 `set` 存取子。 省略 `set` 存取子是您如何在 c # 中定義 *唯讀* 屬性的方式。 (是的，您可以用 C# 來建立「唯寫」屬性，但其值會受到限制)。
 
 最後，請在主控台中再多新增一個輸出陳述式，這樣您便已準備好來重新建置及執行此應用程式：
 

@@ -2,91 +2,39 @@
 title: 開始使用 Azure 與 .NET
 description: 了解您需要知道的 Azure 和 .NET 基本概念。
 ms.date: 06/20/2020
-ms.openlocfilehash: e4a071e302247332cdc98c1aabf595cb4f8e2eff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.topic: conceptual
+ms.custom: devx-track-dotnet
+ms.author: daberry
+author: daberry
+ms.openlocfilehash: 5d14bd0d9930d41a8c60b58b9f5b0522f0c0e398
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171568"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700767"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 與 .NET 簡介
 
-本檔概述 .NET 開發人員應該熟悉的重要概念和服務，以開始使用 Azure 服務開發應用程式。
+## <a name="what-is-azure"></a>何謂 Azure？
 
-## <a name="key-concepts"></a>重要概念
+Azure 是一個雲端平臺，旨在簡化新式應用程式的建立流程。  無論您選擇將應用程式完全裝載在 Azure 中，或使用 Azure 服務擴充您的內部部署應用程式，Azure 都可協助您建立可調整、可靠且可維護的應用程式。  隨著您已經使用的工具廣泛支援，例如 Visual Studio 和 Visual Studio Code 以及全方位的 SDK 程式庫，Azure 的設計可讓您從一開始就能成為 .NET 開發人員的生產力。
 
-**Azure 帳戶**：Azure 帳戶是用來登入 Azure 服務 (例如 [Azure 入口網站](https://portal.azure.com)或 [Cloud Shell](https://shell.azure.com)) 的認證。 如果您沒有 Azure 帳戶，可以[建立一個免費帳戶](https://azure.microsoft.com/free/dotnet/)。
+## <a name="application-development-scenarios-on-azure"></a>Azure 上的應用程式開發案例
 
-**Azure 訂用帳戶**：訂用帳戶是一個計費方案，您可以在其中建立 Azure 資源。 訂用帳戶可以是個人訂用帳戶，或是由您公司管理的企業訂用帳戶。 您的 Azure 帳戶可以與多個訂用帳戶相關聯。 在此情況下，請確定您已選取正確的訂用帳戶來建立資源。 如需詳細資訊，請參閱[了解帳戶、訂用帳戶和計費](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)。
+您可以根據您的需求，以不同的方式將 Azure 納入您的應用程式。
 
-> [!TIP]
-> 如果您有 Visual Studio 訂用帳戶，[則會有等待啟用的每月 Azure 點數](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)。
+- **裝載在 Azure 上的應用程式-** Azure 可以將整個應用程式堆疊從 web 應用程式和 Api 裝載到儲存體服務的資料庫。 Azure 支援各種不同的裝載模型，從完全受控的服務到容器到虛擬機器。 使用完全受控的 Azure 服務時，您的應用程式可以利用 Azure 中內建的擴充性、高可用性和安全性。
 
-**資源群組**：資源群組是將 Azure 資源分組管理的方式。 在 Azure 中建立的資源會儲存在資源群組中，類似於將檔案儲存在電腦上的資料夾。
+- **從應用程式使用雲端服務-** 現有的應用程式可以併入 Azure 服務，以擴充其功能。  這可能包括使用 [Azure 認知搜尋](/azure/search/search-what-is-azure-search)新增全文檢索搜尋功能、將應用程式秘密安全地儲存在 [Azure Key Vault](/azure/key-vault/) ，或使用 [Azure 認知服務](/azure/cognitive-services/)來新增視覺、語音和語言理解功能。  這些服務完全由 Azure 管理，而且可以輕鬆地新增至您的應用程式，而不需要變更您目前的應用程式架構或部署模型。
 
-**託管**：若要在 Azure 中執行程式碼，則程式碼必須託管在服務中，而該服務必須可執行使用者提供的程式碼。
+- **新式無伺服器架構-** Azure Functions 簡化建立解決方案來處理事件驅動的工作流程、回應 HTTP 要求、處理 Blob 儲存體中的檔案上傳，或處理佇列中的事件。  您只需撰寫處理事件所需的程式碼，而不需要擔心伺服器或架構程式碼。  此外，您可以利用超過250個連接器來處理其他 Azure 和協力廠商服務，以解決最棘手的整合問題。
 
-**受控服務**：Azure 會提供一些服務，讓您可以將資料或資訊提供給 Azure，然後 Azure 的實作會採取適當動作。 其中一個範例就是 Azure Blob 儲存體，當您提供檔案後，Azure 就會處理這些檔案的讀取、撰寫和保存作業。
+## <a name="access-azure-services-from-net-applications"></a>從 .NET 應用程式存取 Azure 服務
 
-**AZURE SDK for .net** 統稱為您在專案中安裝的 [NuGet 套件](packages.md) ，可提供 Azure 服務的各種互動和功能。 這些套件也包含用來布建和管理資源的管理程式庫。
+無論您的應用程式是裝載于 Azure 或內部部署，大部分 Azure 服務的存取都是透過 **AZURE SDK for .net** 提供。  Azure SDK for .NET 是以一系列 NuGet 套件的形式提供，可在 .NET Core (2.1 和更新版本) 和 .NET Framework (4.6.1 和更高的) 應用程式中使用。 Azure SDK for .NET 可讓您輕鬆地將 Azure 服務整合到您的應用程式中，只要安裝正確的 NuGet 套件、將用戶端物件具現化，然後呼叫適當的方法即可。 如需 Azure SDK for .NET 的詳細資訊，請參閱 [AZURE sdk for .Net 總覽](./sdk/azure-sdk-for-dotnet.md)。
 
-## <a name="choosing-a-hosting-option"></a>選擇託管選項
-
-Azure 中的託管可分為三類。
-
-* **基礎結構即服務 (IaaS)**：有了 IaaS，您可以佈建所需要的虛擬機器，以及相關聯的網路和儲存體元件。 然後您會部署想放在這些 VM 上的任何軟體和應用程式。 此模型最接近傳統內部部署環境，不同之處在於 Microsoft 會管理基礎結構。 您還是可以管理個別的 VM，包括作業系統、自訂軟體和安全性更新。
-
-* **平台即服務 (PaaS)**：PaaS 提供受控的託管環境，您可以在其中部署應用程式而不需要管理 VM 或網路資源。 例如，不要建立個別的 VM，您可以指定執行個體計數，而服務將會佈建、設定和管理所需的資源。 Azure App Service 是 PaaS 服務的範例。
-  
-* **函式即服務 (FaaS)**：FaaS 通常稱為無伺服器運算，能比 PaaS 更進一步地分擔託管環境的考量。 您不用建立計算執行個體並將程式碼部署到其中，只需部署您的程式碼，服務即會自動執行程式碼。 您也不需要管理計算資源。 平台會根據處理流量時所需的任何層級，無縫地相應增加或減少您的程式碼，而且只有當程式碼執行時才需支付費用。 Azure Functions 即是 FaaS 服務。
-
-一般而言，如果您應用程式支援的 FaaS 和 PaaS 模型愈多，則愈能從雲端執行中看見優勢。 以下是 Azure 中三種常見託管選項的摘要及選擇時機。
-
-* [Azure App Service](/azure/app-service/app-service-value-prop-what-is)：如果您想要託管 Web 應用程式或服務，請先考慮 App Service。 若要開始使用 App Service 和 ASP.NET、WCF 和 ASP.NET Core 應用程式，請參閱[在 Azure 中建立 ASP.NET Core Web 應用程式](/azure/app-service/app-service-web-get-started-dotnet)。
-
-* [Azure Functions](/azure/azure-functions/functions-overview)：Azure Functions 非常適合由事件驅動的工作流程。 範例包括：Webhook 的回應、佇列或 Blob 儲存體中的項目處理及計時器。 若要開始使用 Azure Functions，請參閱[使用 Visual Studio 建立您的第一個函式](/azure/azure-functions/functions-create-your-first-function-visual-studio)。
-
-* [Azure 虛擬機器](/azure/virtual-machines/)：如果因為特定相依性，使得 App Service 無法符合您託管現有應用程式的需求，那麼最簡單的方式是從虛擬機器開始使用。 若要開始使用虛擬機器和 ASP.NET 或 WCF，請參閱[將 ASP.NET 應用程式部署到 Azure 虛擬機器](https://tutorials.visualstudio.com/aspnet-vm/intro)。
-
-> [!TIP]
-> 如需有關選擇服務的詳細資訊，請參閱 [為您的應用程式選擇 Azure 計算服務](/azure/architecture/guide/technology-choices/compute-decision-tree)。
-
-## <a name="choose-a-data-storage-service"></a>選擇資料儲存體服務
-
-根據您的需求，Azure 提供多個儲存資料的服務。 適用於 .NET 開發人員的最常見資料服務為：
-
-* [Azure SQL Database](/azure/sql-database/)：如果您想要將已使用 SQL Server 的應用程式遷移至雲端，那麼 Azure SQL Database 就是理所當然的起點。 若要開始，請參閱[教學課程：在 Azure 中搭配 SQL Database 來建置 ASP.NET 應用程式](/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase)。
-
-* [Azure Cosmos DB](/azure/cosmos-db/)；Azure Cosmos DB 是針對雲端設計的新式資料庫。 當您開始建置尚未有特定資料庫相依性的新應用程式時，應該考慮使用 Azure Cosmos DB。 對於新的 Web、行動裝置、遊戲和 IoT 應用程式，若其中自動調整規模、可預測的效能、快速回應時間，以及查詢無結構描述資料的能力都很重要，則 Cosmos DB 是個不錯的選擇。 若要開始，請參閱[教學課程：使用 SQL API 和 Azure 入口網站建置採用 Azure Cosmos DB 的 .NET 應用程式](/azure/cosmos-db/create-sql-api-dotnet)。
-
-* [Azure Blob 儲存體](/azure/storage/)：Azure Blob 儲存體最適合用於儲存和擷取大型二進位物件，例如影像、檔案和資料流。 物件存放區能讓您管理極大量非結構化資料。 若要開始，請參閱[快速入門：使用 .NET 在物件儲存體中建立 Blob](/azure/storage/blobs/storage-quickstart-blobs-dotnet)。
-
-> [!TIP]
-> 如需詳細資訊，請參閱[選擇正確的資料存放區](/azure/architecture/guide/technology-choices/data-store-overview)。
-
-## <a name="connect-to-azure-services"></a>連線到 Azure 服務
-
-如果您使用 Visual Studio，可以將部分 Azure 服務新增至您的專案。 Visual Studio 的**已連線的服務**對話方塊可讓您在專案中輕鬆新增所有必要的參考、連線程式碼及組態設定。 一些常用的 Azure 服務可立即提供支援，例如[儲存體](/azure/vs-azure-tools-connected-services-storage)、[Azure Active Directory](/azure/active-directory/develop/vs-active-directory-add-connected-service) 驗證、[Azure Key Vault](/azure/key-vault/vs-key-vault-add-connected-service)和[認知服務](/azure/cognitive-services/)，例如[電腦視覺](/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service)。 其他包含第三方的更多服務，會在 [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?term=connected%20service&target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Relevance) 中以擴充功能提供。
-
-## <a name="using-the-azure-sdk-for-net"></a>使用 Azure SDK for .NET
-
-如果您是使用 Azure SDK for .NET 來存取或管理您的 Azure 資源，請注意下列事項：
-
-* **驗證**： SDK 中有許多程式庫都使用常見的驗證基礎結構，而某些程式庫則使用其所取用服務專屬的驗證機制。 如需詳細資訊，請參閱 [使用 AZURE SDK for .net 進行驗證](authentication.md)。
-* **記錄**：如果支援，用戶端程式庫就會包含記錄用戶端程式庫作業的能力。 如需詳細資訊，請參閱 [使用 AZURE SDK for .net 進行記錄](logging.md)。
-* **REST API**： azure SDK for .net 是建置於 [azure REST API](/rest/api/azure/)上的抽象概念。 若有需要，Azure REST API 可以用來代替 Azure SDK for .NET 或搭配使用。
-
-## <a name="diagnosing-problems-in-the-cloud"></a>診斷雲端中的問題
-
-將您的應用程式部署至 Azure 後，可能會遇到應用程式可以在開發環境中運作，但無法在 Azure 中運作的狀況。 以下是診斷問題時適用的兩個入門方法：
-
-* **從 Visual Studio 進行遠端偵錯**：大部分的 Azure 計算服務 (包括本文件中討論的服務) 皆支援透過 Visual Studio 進行遠端偵錯及取得記錄。 若要用您的應用程式來探索 Visual Studio 的功能，請在 Visual Studio 的快速啟動工具列 (位在右上角) 中，輸入 'Cloud Explorer' 來開啟 Cloud Explorer 工具視窗，然後在樹狀目錄中尋找您的應用程式。 如需詳細資訊，請參閱[使用 Visual Studio 對 Azure App Service 中的 Web 應用程式進行疑難排解](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug)。
-
-* **Application Insights**：[Application Insights](/azure/application-insights/) 是完整的應用程式效能監控 (APM) 解決方案，可自動擷取應用程式中的診斷資料、遙測和效能資料。 若要開始收集您應用程式的診斷資料，請參閱[開始監視 ASP.NET Web 應用程式](/azure/application-insights/quick-monitor-portal)。
+![顯示 .NET 應用程式如何使用 Azure SDK 來存取 Azure 服務的圖表](./media/azure-sdk-for-dotnet-overview.png)
 
 ## <a name="next-steps"></a>後續步驟
 
-* [將第一個 ASP.NET Core Web 應用程式部署至 Azure](/azure/app-service/app-service-web-get-started-dotnet)
-* [瞭解 Azure SDK for .NET 中的驗證](authentication.md)
-* [診斷雲端應用程式中的錯誤](https://devblogs.microsoft.com/aspnet/diagnosing-errors-on-your-cloud-apps/)
-* 下載免費電子書：[適用於 .NET 開發人員的 Azure 快速入門手冊](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook)
+接下來，瞭解最 [常使用的 Azure 服務](./key-azure-services.md) 以進行 .net 開發。

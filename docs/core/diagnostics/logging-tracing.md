@@ -2,12 +2,12 @@
 title: 記錄和追蹤-.NET Core
 description: .NET Core 記錄和追蹤的簡介。
 ms.date: 10/12/2020
-ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820575"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753623"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 記錄和追蹤
 
@@ -36,11 +36,11 @@ ms.locfileid: "94820575"
   - 適用於客戶可能需要在發行版本中看到的資訊。
   - 因為這是最簡單的方法，所以通常用於進行臨機操作的暫時性偵錯。 此偵錯程式碼通常絕對不會簽入到原始程式碼控制。
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - 只有在定義 `TRACE` 時才會啟用。
+  - 只有在透過 `TRACE` 加入 `#define TRACE` 至您的來源或在編譯時指定選項來定義時，才會啟用 `/d:TRACE` 。
   - <xref:System.Diagnostics.Trace.Listeners>依預設，寫入至附加 <xref:System.Diagnostics.DefaultTraceListener> 。
   - 在建立將在大部分組建中啟用的記錄時，使用此 API。
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - 只有在定義 `DEBUG` 時才會啟用。
+  - 只有在透過 `DEBUG` 加入 `#define DEBUG` 至您的來源或在編譯時指定選項來定義時，才會啟用 `/d:DEBUG` 。
   - 寫入到已連結的偵錯工具。
   - 如果設定，則在 `*nix` 寫入至 stderr 時 `COMPlus_DebugWriteToStdErr` 。
   - 在建立將只會在偵錯組建中啟用的記錄時，使用此 API。
@@ -95,6 +95,8 @@ ms.locfileid: "94820575"
 - [C # 字串插補](../../csharp/language-reference/tokens/interpolated.md) 可簡化撰寫記錄程式碼的程式。
 
 - [執行時間提供者事件清單](../../fundamentals/diagnostics/runtime-events.md)
+
+- [.NET 中的知名事件提供者](well-known-event-providers.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType>屬性適用于記錄例外狀況。
 

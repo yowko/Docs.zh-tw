@@ -2,12 +2,12 @@
 title: dotnet-符號診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet 符號 CLI 工具，以下載 .NET 傾印和小型傾印的偵錯工具所需的檔案。
 ms.date: 11/17/2020
-ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 69c05544e886d9d41113c8a2383f760b85d01124
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825334"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764990"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>符號下載程式 (dotnet-符號) 
 
@@ -15,7 +15,7 @@ ms.locfileid: "94825334"
 
 ## <a name="install"></a>安裝
 
-若要安裝 `dotnet-trace` [NuGet 套件](https://www.nuget.org/packages/dotnet-trace)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+若要安裝 `dotnet-symbol` [NuGet 套件](https://www.nuget.org/packages/dotnet-symbol)的最新版本，請使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
 
 ```dotnetcli
 dotnet tool install --global dotnet-symbol
@@ -27,7 +27,7 @@ dotnet tool install --global dotnet-symbol
 dotnet-symbol [-h|--help] [options] <FILES>
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 全域工具會將檔案 `dotnet-symbol` 下載 (符號、DAC、模組等，) 調試核心傾印和小型傾印所需的檔案。 當您在另一部電腦上捕獲到的傾印時，這會很有用。 `dotnet-symbol` 可以下載分析傾印所需的模組和符號。
 
@@ -55,7 +55,7 @@ dotnet-symbol [-h|--help] [options] <FILES>
 
 - **`--host-only`**
 
-  只下載主機程式 (例如，lldb 需要載入核心傾印的 dotnet) 。
+  只下載主機程式 (也就是 lldb 載入核心傾印所需的 dotnet) 。
 
 - **`--symbols`**
 
@@ -98,3 +98,8 @@ dotnet-symbol --host-only --debugging <dump file path>
 - 下載符號時，找不到404。
 
    只有透過官方通道取得的官方 .NET Core 執行階段版本才支援符號下載，例如 [官方網站](https://dotnet.microsoft.com/download/dotnet-core) 和 [dotnet 安裝腳本中的預設來源](../tools/dotnet-install-script.md)。 下載偵錯工具檔時發生404錯誤，可能表示已從另一個來源以 .NET Core 執行時間建立傾印，例如在本機或針對特定的 Linux 發行版本，或從 archlinux 之類的社區網站建立的轉儲。 在這種情況下，必須從這些來源或從建立傾印檔案的環境複製 (dotnet、libcoreclr.so 和 libmscordaccore.so) 所需的檔案。
+
+## <a name="see-also"></a>請參閱
+
+* [使用符號進行調試](/windows/win32/dxtecharts/debugging-with-symbols)
+* [便攜 Pdb](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)

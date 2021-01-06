@@ -3,12 +3,12 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 0aa404497cb7d6a488fb51e1df8f7f45d4f213fd
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678102"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753610"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -35,6 +35,10 @@ ms.locfileid: "97678102"
 ## <a name="dumps"></a>傾印
 
 傾 [印是一種檔案](./dumps.md) ，其中包含建立時進程的快照集。 這些可能有助於檢查應用程式的狀態，以進行偵測。
+
+## <a name="symbols"></a>符號
+
+符號是偵錯工具和其他診斷工具的基本需求。 符號檔的內容會因語言、編譯器和平臺而異。 非常高層級的符號是原始程式碼和編譯器所產生的二進位檔之間的對應。 這些對應是用來在診斷工具（例如 [Visual Studio](/visualstudio/debugger/what-is-debugging) 和 [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)）中提供一些像是行號資訊和區域變數名稱的專案。  下列連結包含 Windows [符號](/windows/win32/dxtecharts/debugging-with-symbols) 的詳細說明，雖然許多概念也適用于其他平臺。 [.Net 可移植符號](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) 具有類似于 windows pdb 的「PDB」副檔名，但與 windows pdb 格式不相容。
 
 ## <a name="collect-diagnostics-in-containers"></a>在容器中收集診斷
 
@@ -64,7 +68,7 @@ ms.locfileid: "97678102"
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md) 可用來將 [sos 偵錯工具擴充](../../framework/tools/sos-dll-sos-debugging-extension.md) 功能安裝在 Linux 或 MacOS (或 Windows 上（如果使用舊版偵錯工具) ）。
+[dotnet-sos](dotnet-sos.md) 會在 Linux 和 macOS (以及在 Windows 上安裝 [sos 調試延伸](sos-debugging-extension.md) 模組（如果您使用 [Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)) ）。
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -83,6 +87,10 @@ ms.locfileid: "97678102"
 ### <a name="debug-deadlock"></a>針對死結進行偵錯
 
 [教學課程： Debug 鎖死](debug-deadlock.md) 會示範如何使用 [dotnet](dotnet-dump.md) 傾印工具來調查執行緒和鎖定。
+
+### <a name="debug-a-stackoverflow"></a>StackOverflow 的 Debug
+
+[教學課程： StackOverflow 的 debug](debug-stackoverflow.md) 會示範如何 <xref:System.StackOverflowException> 在 Linux 上的進行 debug 錯。
 
 ### <a name="debug-linux-dumps"></a>對 Linux 傾印進行偵錯
 

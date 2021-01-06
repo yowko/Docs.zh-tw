@@ -2,12 +2,12 @@
 title: 微服務架構中的通訊
 description: 探索微服務之間的不同通訊方式，並了解同步和非同步方式的影響。
 ms.date: 01/30/2020
-ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a918ea7573d7402a82d2df2c63301e4838fa66dc
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169254"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899596"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -39,7 +39,7 @@ ms.locfileid: "91169254"
 
 微服務應用程式通常會使用這些通訊樣式的組合。 叫用一般 Web API HTTP 服務時，最常見的類型是使用 HTTP/HTTPS 等同步通訊協定的單一接收者通訊。 微服務通常也會使用傳訊通訊協定，來進行微服務之間的非同步通訊。
 
-這些軸可讓您對可能的通訊機制一目了然，但它們不是建置微服務時的重要考量。 在整合微服務時，用戶端執行緒執行的非同步本質或者所選通訊協定的非同步本質兩者都不是重點。 真正的重點** 在於您要能夠以非同步方式整合微服務，同時保持微服務的獨立性，如下節所述。
+這些軸可讓您對可能的通訊機制一目了然，但它們不是建置微服務時的重要考量。 在整合微服務時，用戶端執行緒執行的非同步本質或者所選通訊協定的非同步本質兩者都不是重點。 真正的重點在於您要能夠以非同步方式整合微服務，同時保持微服務的獨立性，如下節所述。
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>非同步的微服務整合可強化微服務的自主性
 
@@ -103,7 +103,7 @@ ms.locfileid: "91169254"
 
 ![此圖顯示以 SignalR 為基礎的推播和即時批註。](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
-**圖 4-17**： 一對一的即時非同步訊息通訊
+**圖 4-17**： 一對多即時非同步訊息通訊
 
 SignalR 很適合用來完成將內容從後端伺服器推送到用戶端的即時通訊。 由於是即時通訊，因此用戶端應用程式幾乎會立即顯示變更。 一般來說，其會由 WebSockets 這類通訊協定使用許多 Websocket 連線 (每個用戶端一個) 來進行處理。 典型的範例是：某個服務同時向許多用戶端 Web 應用程式傳達運動遊戲之分數變更的情況。
 

@@ -2,12 +2,12 @@
 title: 對 Linux 傾印進行偵錯
 description: 在本文中，您將瞭解如何收集和分析來自 Linux 環境的傾印。
 ms.date: 08/27/2020
-ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099142"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753597"
 ---
 # <a name="debug-linux-dumps"></a>對 Linux 傾印進行偵錯
 
@@ -15,7 +15,10 @@ ms.locfileid: "95099142"
 
 ## <a name="collect-dumps-on-linux"></a>在 Linux 上收集傾印
 
-在 Linux 上收集傾印的兩個建議方法是 [`dotnet-dump`](dotnet-dump.md) 或 [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) 工具。
+在 Linux 上收集傾印的兩個建議方法如下：
+
+* [`dotnet-dump`](dotnet-dump.md) CLI 工具
+* 在損毀時收集傾印的[環境變數](dumps.md#collecting-dumps-on-crash)
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>受控傾印 `dotnet-dump`
 
@@ -25,7 +28,7 @@ ms.locfileid: "95099142"
 
 除了 `dotnet-dump` 建立僅限受控傾印之外，也是在 [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) Linux 上建立核心傾印的建議工具，其中包含原生和受控資訊。 其他工具（例如 gdb 或 gcore）也可以用來建立核心傾印，但可能會遺失 managed 偵錯工具所需的狀態，在分析期間導致「未知」類型或函式名稱。
 
-此 `createdump` 工具會與 .Net Core 執行時間一起安裝，並可在 libcoreclr.so 的旁邊找到， (通常位於 "/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]" ) 。 此工具會採用處理序識別碼來收集傾印作為其主要引數，也可以使用選擇性參數來指定要收集的傾印類型 (使用堆積的小型傾印是預設) 。 這些選項包括：
+此 `createdump` 工具會與 .Net Core 執行時間一起安裝，並可在 libcoreclr.so 的旁邊找到， (通常位於 "/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]" ) 。 此工具會採用處理序識別碼來收集傾印作為其主要引數，也可以使用選擇性參數來指定要收集的傾印類型 (使用堆積的小型傾印是預設) 。 選項包括：
 
 - **`<input-filename>`**
 
@@ -81,7 +84,7 @@ lldb --core <dump-file> <host-program>
 
 開始 LLDB 之後，您可能必須使用 `setsymbolserver` 命令來指向正確的符號位置， (`setsymbolserver -ms` 使用 Microsoft 的符號伺服器或 `setsymbolserver -directory <path>` 指定本機路徑) 。 您可以藉由執行來載入原生符號 `loadsymbols` 。 此時，可以使用 [SOS 命令](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) 來分析傾印。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [dotnet-sos](dotnet-sos.md) ，以取得安裝 sos 擴充功能的詳細資料。
 - [dotnet-符號](dotnet-symbol.md) ，以取得安裝和使用符號下載工具的詳細資料。

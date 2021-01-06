@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/29/2020
 ms.topic: guide
-ms.openlocfilehash: 092fdc70bd5d6bae82c4c1da96db4d5ac08df452
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 6b12d0d607dc0aed8f281943cecf3afa69b0575a
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063164"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899437"
 ---
 # <a name="dependency-injection-guidelines"></a>相依性插入指導方針
 
@@ -83,7 +83,7 @@ public void ConfigureServices(IServiceCollection services)
 
 在上述程式碼中：
 
-- 此 `ExampleService` 實例不 **not** 是由服務容器所建立。
+- 此 `ExampleService` 實例不是由服務容器所建立。
 - 架構 **不會自動處置服務** 。
 - 開發人員負責處置服務。
 
@@ -98,7 +98,7 @@ public void ConfigureServices(IServiceCollection services)
 -  (根容器) 的根範圍中解析實例。
 - 實例應該在範圍結束之前處置。
 
-**方案**
+**解決方案**
 
 使用 factory 模式，在父範圍之外建立實例。 在這種情況下，應用程式通常會有 `Create` 方法可直接呼叫最終型別的函式。 如果最終類型有其他相依性，factory 可以：
 
@@ -111,7 +111,7 @@ public void ConfigureServices(IServiceCollection services)
 
 應用程式需要 <xref:System.IDisposable> 跨多個服務的共用實例，但 <xref:System.IDisposable> 實例的存留期應受限。
 
-**方案**
+**解決方案**
 
 註冊具有範圍存留期的實例。 使用 <xref:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory.CreateScope%2A?displayProperty=nameWithType> 建立新的 <xref:Microsoft.Extensions.DependencyInjection.IServiceScope> 。 使用範圍 <xref:System.IServiceProvider> 來取得所需的服務。 不再需要時處置範圍。
 
@@ -149,7 +149,7 @@ public void ConfigureServices(IServiceCollection services)
 
 建立具備執行緒安全性的 singleton 服務。 如果單一服務相依于暫時性服務，暫時性服務可能也需要執行緒安全性，取決於 singleton 使用它的方式。
 
-單一服務的 factory 方法（例如 >addsingleton 的第二個自 [變數 \<TService> (IServiceCollection、Func \<IServiceProvider,TService>) ](xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton%2A)）不需要是安全線程。 如同型別 () 的函式 `static` ，它保證只能由單一線程呼叫一次。
+單一服務的 factory 方法（例如 >addsingleton 的第二個引數 [ \<TService> (IServiceCollection、Func \<IServiceProvider,TService>) ](xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton%2A)）不需要是安全線程。 如同型別 () 的函式 `static` ，它保證只能由單一線程呼叫一次。
 
 ## <a name="recommendations"></a>建議
 
@@ -165,7 +165,7 @@ public void ConfigureServices(IServiceCollection services)
 
 就像所有的建議集，您可能會遇到需要忽略建議的情況。 例外狀況很罕見，大多是架構本身內的特殊案例。
 
-DI 是靜態/全域物件存取模式的「替代」  選項。 如果您將 DI 與靜態物件存取混合，則可能無法實現 DI 的優點。
+DI 是靜態/全域物件存取模式的「替代」選項。 如果您將 DI 與靜態物件存取混合，則可能無法實現 DI 的優點。
 
 ## <a name="example-anti-patterns"></a>範例反模式
 
@@ -190,7 +190,7 @@ DI 是靜態/全域物件存取模式的「替代」  選項。 如果您將 DI 
 
 :::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="32-45" highlight="4-8":::
 
-在上述程式碼中， `implementationFactory` 會指定 lambda 運算式，其中主體會在傳回的 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 方法上呼叫 `Task<Bar>` 。 這 ***會造成鎖死*** 。 `GetBarAsync`方法只會使用來模擬非同步作業作業 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> ，然後再呼叫 <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> 。
+在上述程式碼中， `implementationFactory` 會指定 lambda 運算式，其中主體會在傳回的 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 方法上呼叫 `Task<Bar>` 。 這 ***會造成鎖死***。 `GetBarAsync`方法只會使用來模擬非同步作業作業 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> ，然後再呼叫 <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> 。
 
 :::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="47-53":::
 
@@ -220,7 +220,7 @@ DI 是靜態/全域物件存取模式的「替代」  選項。 如果您將 DI 
 
 在上述程式碼中， `Bar` 是在中的 <xref:Microsoft.Extensions.DependencyInjection.IServiceScope> ，它是正確的。 反模式是在範圍外的抓取 `Bar` ，並命名變數 `avoid` 以顯示不正確的範例抓取。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 中的相依性插入](dependency-injection.md)
 - [教學課程：在 .NET 中使用相依性插入](dependency-injection-usage.md)

@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827915"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765055"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 樣式專案中的目標 framework
 
@@ -22,7 +22,7 @@ ms.locfileid: "94827915"
 
 針對某些目標 framework （例如 .NET Framework），Api 是由架構安裝在系統上的元件所定義，而且可能包含應用程式架構 Api (例如 ASP.NET) 。
 
-針對以套件為基礎的目標 framework (例如，.NET 5、.NET Core 和 .NET Standard) ，Api 是由應用程式或程式庫中包含的套件所定義。 「中繼套件」是 NuGet 套件，本身沒有任何內容，而是一份相依性 (其他專案) 清單。 以 NuGet 套件為基礎的目標 Framework 會隱含指定一個中繼套件，該套件會參考組成架構的所有套件。
+針對以套件為基礎的目標 framework (例如，.NET 5、.NET Core 和 .NET Standard) ，Api 是由應用程式或程式庫中包含的 NuGet 套件所定義。
 
 ## <a name="latest-versions"></a>最新版本
 

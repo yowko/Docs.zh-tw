@@ -4,12 +4,12 @@ description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3b58fd080439c73ee30d5c8dc59c50c0410db164
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 27944a6726f8d74a3b00c7c774faa8037c0f2f0e
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851571"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899622"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
@@ -185,7 +185,7 @@ ms.locfileid: "96851571"
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
-`AnalysisLevel`屬性可讓您指定程式碼分析層級。 例如，如果您想要存取預覽程式碼分析器，請將設定 `AnalysisLevel` 為 `preview` 。 預設值為 `latest`。
+`AnalysisLevel`屬性可讓您指定程式碼分析層級。 例如，如果您想要存取預覽程式碼分析器，請將設定 `AnalysisLevel` 為 `preview` 。 預設值是 `latest`。
 
 ```xml
 <PropertyGroup>
@@ -365,6 +365,7 @@ ms.locfileid: "96851571"
 ## <a name="reference-properties-and-items"></a>參考屬性和專案
 
 - [AssetTargetFallback](#assettargetfallback)
+- [DisableImplicitFrameworkReferences](#disableimplicitframeworkreferences)
 - [PackageReference](#packagereference)
 - [專案參考](#projectreference)
 - [參考](#reference)
@@ -379,6 +380,18 @@ ms.locfileid: "96851571"
 ```xml
 <PropertyGroup>
   <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
+```
+
+### <a name="disableimplicitframeworkreferences"></a>DisableImplicitFrameworkReferences
+
+以 `DisableImplicitFrameworkReferences` `FrameworkReference` .net Core 3.0 和更新版本為目標時，屬性會控制隱含專案。 以 .NET Core 2.1 或 .NET Standard 2.0 和更早版本為目標時，它會在中繼套件中控制封裝的隱含 [PackageReference](#packagereference) 專案。  (中繼套件是以架構為基礎的封裝，其中只包含其他封裝的相依性。 ) 此屬性也會控制以 `System` .NET Framework 為 `System.Core` 目標時的隱含參考，例如和。
+
+將這個屬性設定為， `true` 以停用隱含 `FrameworkReference` 或 [PackageReference](#packagereference) 專案。 如果您將此屬性設定為 `true` ，您可以只將明確參考新增至所需的架構或封裝。
+
+```xml
+<PropertyGroup>
+  <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
 </PropertyGroup>
 ```
 
@@ -436,6 +449,36 @@ ms.locfileid: "96851571"
 </PropertyGroup>
 ```
 
+## <a name="run-properties"></a>執行屬性
+
+下列屬性是用來使用命令來啟動應用程式 [`dotnet run`](../tools/dotnet-run.md) ：
+
+- [RunArguments](#runarguments)
+- [RunWorkingDirectory](#runworkingdirectory)
+
+### <a name="runarguments"></a>RunArguments
+
+`RunArguments`屬性會定義在應用程式執行時傳遞給該應用程式的引數。
+
+```xml
+<PropertyGroup>
+  <RunArguments>-mode dryrun</RunArguments>
+</PropertyGroup>
+```
+
+> [!TIP]
+> 您可以使用的[ `--` 選項 `dotnet run` ](../tools/dotnet-run.md#options)，指定要傳遞至應用程式的其他引數。
+
+### <a name="runworkingdirectory"></a>RunWorkingDirectory
+
+`RunWorkingDirectory`屬性會定義要在其中啟動應用程式進程的工作目錄。 如果您未指定目錄， `OutDir` 則會使用做為工作目錄。
+
+```xml
+<PropertyGroup>
+  <RunWorkingDirectory>c:\temp</RunWorkingDirectory>
+</PropertyGroup>
+```
+
 ## <a name="hosting-properties-and-items"></a>裝載屬性和專案
 
 - [EnableComHosting](#enablecomhosting)
@@ -467,7 +510,7 @@ ms.locfileid: "96851571"
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [MSBuild 架構參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [一般 MSBuild 屬性](/visualstudio/msbuild/common-msbuild-project-properties)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: 1a9df3c95d6f5052821be8db5ecf5a8ed99a8ba7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 075ec5ecd8f71f5cb85bab0e2baff56409709191
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137054"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899609"
 ---
 # <a name="reference-types-c-reference"></a>參考類型 (C# 參考)
 
@@ -27,6 +27,7 @@ C# 中有兩種類型：參考類型和實值類型。 參考類型的變數會�
 - [interface](interface.md)
 
 - [delegate](../builtin-types/reference-types.md)
+- [記錄](../builtin-types/reference-types.md)
 
  C# 還提供下列內建參考類型：
 
@@ -36,7 +37,7 @@ C# 中有兩種類型：參考類型和實值類型。 參考類型的變數會�
 
 - [string](../builtin-types/reference-types.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 參考](../index.md)
 - [C # 關鍵字](index.md)

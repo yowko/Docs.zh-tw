@@ -2,12 +2,12 @@
 title: 類型擴充
 description: '瞭解 F # 類型延伸模組如何讓您將新成員加入至先前定義的物件類型。'
 ms.date: 02/05/2020
-ms.openlocfilehash: 8fdb2d5e527643b23d24a6118e8cef6b11f1a546
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c9adddb3133a4af57a12be0b09c22954a8bff6a7
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559124"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737264"
 ---
 # <a name="type-extensions"></a>類型延伸模組
 
@@ -34,7 +34,7 @@ open System.Runtime.CompilerServices
 [<Extension>]
 type Extensions() =
     [<Extension>]
-    static member self-identifier.extension-name (ty: typename, [args]) =
+    static member extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -177,7 +177,7 @@ do ()
 
 最後，如果有多個類型的內建類型延伸，則所有成員都必須是唯一的。 對於選擇性的類型延伸，相同類型之不同類型延伸中的成員可以有相同的名稱。 只有當用戶端程式代碼開啟兩個定義相同成員名稱的不同範圍時，才會發生不明確的錯誤。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F # 語言參考](index.md)
 - [成員](./members/index.md)

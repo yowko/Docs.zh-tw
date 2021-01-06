@@ -2,12 +2,12 @@
 title: 記錄
 description: '瞭解 F # 記錄如何代表簡單的命名值匯總，並選擇性地包含成員。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2da31da0ec830d458a370e64ca105048181f5d74
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682025"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899635"
 ---
 # <a name="records"></a>記錄
 
@@ -163,7 +163,7 @@ let weirdString = p.WeirdToString()
 
 ## <a name="differences-between-records-and-classes"></a>記錄與類別之間的差異
 
-記錄欄位與類別不同之處在于它們會自動公開為屬性，並用於建立和複製記錄。 記錄結構與類別結構也不同。 在記錄類型中，您無法定義函數。 相反地，本主題所述的結構語法也適用。 類別在兩個函式參數、欄位和屬性之間沒有直接關聯性。
+[記錄欄位] 與 [類別] 欄位不同之處在于它們會自動公開為屬性，並用於建立和複製記錄。 記錄結構與類別結構也不同。 在記錄類型中，您無法定義函數。 相反地，本主題所述的結構語法也適用。 類別在兩個函式參數、欄位和屬性之間沒有直接關聯性。
 
 如同 union 和 structure 型別，記錄具有結構化相等的語法。 類別具有參考相等的語法。 下列程式碼範例示範此工作。
 
@@ -179,7 +179,7 @@ The records are equal.
 
 如果您需要記錄的參考相等，請在 `[<ReferenceEquality>]` 記錄上方加入屬性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F# 類型](fsharp-types.md)
 - [類別](classes.md)

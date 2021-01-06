@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: c8caf7e34397faf9f7085d6634287cffcb37eb08
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e0efad959d5212f6c07d4c4b5344761490018a4c
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141877"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899661"
 ---
 # <a name="yield-c-reference"></a>yield (C# 參考)
 
@@ -42,7 +42,7 @@ yield break;
 
 - 傳回類型必須是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-- 宣告不可包含任何 [in、](in-parameter-modifier.md) [ref](ref.md) 或 [out](out-parameter-modifier.md) 參數。
+- 宣告不能有任何 [in](in-parameter-modifier.md)、 [ref](ref.md)或 [out](out-parameter-modifier.md) 參數。
 
 傳回 `yield` 或 <xref:System.Collections.IEnumerable> 的 <xref:System.Collections.IEnumerator> 類型迭代器為 `object`。  如果迭代器傳回 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.Generic.IEnumerator%601>，則 `yield return` 陳述式中必須進行從運算式類型轉換成泛型類型參數的隱含轉換。
 
@@ -96,7 +96,7 @@ Iterator 方法的傳回類型是 <xref:System.Collections.IEnumerable>，其為
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)

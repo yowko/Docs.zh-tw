@@ -3,18 +3,18 @@ title: 使用 .NET Core 中的 EventCounters 測量效能
 description: 在本教學課程中，您將瞭解如何使用 EventCounters 來測量效能。
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2ed7f234b685dab91ab275105d26b474e3bd1a87
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437452"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700739"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>教學課程：在 .NET Core 中使用 EventCounters 測量效能
 
 本文 **適用于：✔️** .net CORE 3.0 SDK 和更新版本
 
-在本教學課程中，您將瞭解如何 <xref:System.Diagnostics.Tracing.EventCounter> 使用高頻率的事件來測量效能。 您可以使用各種官方 .NET Core 套件、協力廠商提供者所發行的 [可用計數器](event-counters.md#available-counters) ，或建立您自己的計量來進行監視。
+在本教學課程中，您將瞭解如何 <xref:System.Diagnostics.Tracing.EventCounter> 使用高頻率的事件來測量效能。 您可以使用各種官方 .NET Core 套件、協力廠商提供者所發行的 [可用計數器](available-counters.md) ，或建立您自己的計量來進行監視。
 
 在本教學課程中，您將：
 
@@ -23,7 +23,7 @@ ms.locfileid: "96437452"
 > - 執行 <xref:System.Diagnostics.Tracing.EventSource> 。
 > - 使用 [dotnet 計數器](dotnet-counters.md)監視計數器。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 教學課程會使用：
 
