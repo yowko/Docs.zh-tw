@@ -3,13 +3,13 @@ title: 在 Debian 上安裝 .NET-.NET
 description: 示範在 Debian 上安裝 .NET SDK 和 .NET 執行時間的各種方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 683d0a9c47edf3cf9c47426d659e778eeb6f84df
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 913d8bffdd6c0b5e88a70dae0ec4c8d732e80cc0
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031887"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970833"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>在 Debian 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -27,11 +27,11 @@ ms.locfileid: "96031887"
 - ❌指出該 Debian 版本不支援 Debian 或 .net 版本。
 - 當版本的 Debian 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
+| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](#debian-10-)     | ✔️2。1        | ✔️3。1        | ✔️5。0 |
 | ✔️ [9](#debian-9-)       | ✔️2。1        | ✔️3。1        | ✔️5。0 |
-| ❌ [8](#debian-8-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
+| ❌[8](#debian-8-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 |
 
 不再支援下列 .NET 版本。 這些內容的下載仍會保持發佈：
 
@@ -42,10 +42,6 @@ ms.locfileid: "96031887"
 ## <a name="remove-preview-versions"></a>移除預覽版本
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>如何安裝其他版本
-
-[!INCLUDE [hack-pkgname](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="debian-10-"></a>Debian 10 ✔️
 
@@ -90,7 +86,11 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 [!INCLUDE [linux-apt-install-21](includes/linux-install-21-apt.md)]
 
-## <a name="apt-update-sdk-or-runtime"></a>APT 更新 SDK 或執行時間
+## <a name="how-to-install-other-versions"></a>如何安裝其他版本
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="use-apt-to-update-net"></a>使用 APT 更新 .NET
 
 當 .NET 有新的修補程式版本時，您可以使用下列命令透過 APT 升級：
 
@@ -129,10 +129,6 @@ sudo apt-get update; \
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a>單元
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>相依性
 
 當您使用套件管理員進行安裝時，系統會為您安裝這些程式庫。 但是，如果您手動安裝 .NET Core 或發行獨立應用程式，則必須確定已安裝這些程式庫：
@@ -156,14 +152,7 @@ sudo apt-get update; \
   > [!WARNING]
   > 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 *libgdiplus* 。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
 
-## <a name="scripted-install"></a>腳本式安裝
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動安裝
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>後續步驟
 
+- [如何啟用 .NET CLI 的 TAB 鍵自動完成](../tools/enable-tab-autocomplete.md)
 - [教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code](../tutorials/with-visual-studio-code.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: b4432e7a137720216e7c0941b3384ce7ad7049e9
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009881"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970911"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>JSON 序列化和還原序列化 (.NET 中的封送處理和 unmarshalling) -總覽
 
@@ -51,5 +51,6 @@ ms.locfileid: "97009881"
 * [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
 * [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
 * [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
+* [中支援的集合類型 System.Text.Json](system-text-json-supported-collection-types.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
 * [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

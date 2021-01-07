@@ -4,12 +4,12 @@ description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 27944a6726f8d74a3b00c7c774faa8037c0f2f0e
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899622"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970703"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
@@ -81,11 +81,37 @@ ms.locfileid: "97899622"
 
 ## <a name="publish-properties-and-items"></a>發佈屬性和專案
 
+- [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
+- [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
+
+`AppendTargetFrameworkToOutputPath`屬性控制是否要將[目標 framework 標記 (TFM) ](../../standard/frameworks.md)附加至[OutputPath](/visualstudio/msbuild/common-msbuild-project-properties#list-of-common-properties-and-parameters)) 所定義的輸出路徑 (。 .NET SDK 會自動將目標 framework （如果有的話）附加至輸出路徑的執行時間識別碼。 設定 `AppendTargetFrameworkToOutputPath` 以 `false` 防止將 TFM 附加至輸出路徑。 但是，如果沒有 TFM 在輸出路徑中，多個組建成品可能會互相覆寫。
+
+例如，針對 .NET 5.0 應用程式，輸出路徑會從變更 `bin\Debug\net5.0` 為， `bin\Debug` 並具有下列設定：
+
+```xml
+<PropertyGroup>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+</PropertyGroup>
+```
+
+### <a name="appendruntimeidentifiertooutputpath"></a>AppendRuntimeIdentifierToOutputPath
+
+`AppendRuntimeIdentifierToOutputPath`屬性控制是否要將[執行時間識別碼 (RID) ](../rid-catalog.md)附加至輸出路徑。 .NET SDK 會自動將目標 framework （如果有的話）附加至輸出路徑的執行時間識別碼。 設定 `AppendRuntimeIdentifierToOutputPath` 以 `false` 防止將 RID 附加至輸出路徑。
+
+例如，針對 .NET 5.0 應用程式和的 RID `win10-x64` ，輸出路徑會從變更為， `bin\Debug\net5.0\win10-x64` `bin\Debug\net5.0` 並具有下列設定：
+
+```xml
+<PropertyGroup>
+  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+</PropertyGroup>
+```
 
 ### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
 
@@ -181,7 +207,86 @@ ms.locfileid: "97899622"
 
 如需詳細資訊，請參閱 [c # 語言版本控制](../../csharp/language-reference/configure-language-version.md#override-a-default)。
 
+## <a name="default-item-inclusion-properties"></a>預設專案包含屬性
+
+- [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
+- [DefaultItemExcludes](#defaultitemexcludes)
+- [EnableDefaultCompileItems](#enabledefaultcompileitems)
+- [EnableDefaultEmbeddedResourceItems](#enabledefaultembeddedresourceitems)
+- [EnableDefaultItems](#enabledefaultitems)
+- [EnableDefaultNoneItems](#enabledefaultnoneitems)
+
+如需詳細資訊，請參閱 [預設包含和排除](overview.md#default-includes-and-excludes)。
+
+### <a name="defaultitemexcludes"></a>DefaultItemExcludes
+
+您 `DefaultItemExcludes` 可以使用屬性來定義應從包含、排除和移除 glob 中排除之檔案和資料夾的 glob 模式。 根據預設， */bin* 和 *./obj* 資料夾會從 glob 模式中排除。
+
+```xml
+<PropertyGroup>
+  <DefaultItemExcludes>$(DefaultItemExcludes);**/*.myextension</DefaultItemExcludes>
+</PropertyGroup>
+```
+
+### <a name="defaultexcludesinprojectfolder"></a>DefaultExcludesInProjectFolder
+
+您 `DefaultExcludesInProjectFolder` 可以使用屬性來定義專案資料夾中檔案和資料夾的 glob 模式，這些檔案和資料夾應從 include、exclude 和 remove glob 中排除。 根據預設，以句點開頭的資料夾 (`.`) （例如， *git* 和 *.*.）會從 glob 模式中排除。
+
+這個屬性與屬性非常類似 `DefaultItemExcludes` ，不同之處在于它只會考慮專案資料夾中的檔案和資料夾。 當 glob 模式不慎比對專案資料夾外的相對路徑專案時，請使用屬性， `DefaultExcludesInProjectFolder` 而非 `DefaultItemExcludes` 屬性。
+
+```xml
+<PropertyGroup>
+  <DefaultExcludesInProjectFolder>$(DefaultExcludesInProjectFolder);**/myprefix*/**</DefaultExcludesInProjectFolder>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultitems"></a>EnableDefaultItems
+
+`EnableDefaultItems`屬性會控制編譯專案、內嵌資源專案和專案是否 `None` 會以隱含方式包含在專案中。 預設值是 `true`。 將 `EnableDefaultItems` 屬性設為， `false` 以停用所有隱含檔案包含。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultcompileitems"></a>EnableDefaultCompileItems
+
+`EnableDefaultCompileItems`屬性會控制編譯專案是否會以隱含方式包含在專案中。 預設值是 `true`。 將 `EnableDefaultCompileItems` 屬性設為， `false` 以停用隱含包含 * .cs 和其他語言擴充檔。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultembeddedresourceitems"></a>EnableDefaultEmbeddedResourceItems
+
+`EnableDefaultEmbeddedResourceItems`屬性會控制內嵌的資源專案是否會以隱含方式包含在專案中。 預設值是 `true`。 將 `EnableDefaultEmbeddedResourceItems` 屬性設為， `false` 以停用隱含包含內嵌的資源檔。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultnoneitems"></a>EnableDefaultNoneItems
+
+`EnableDefaultNoneItems`屬性會控制在 `None` 組建程式) 中， (沒有角色之檔案的專案是否會以隱含方式包含在專案中。 預設值是 `true`。 將 `EnableDefaultNoneItems` 屬性設為， `false` 以停用隱含包含 `None` 專案。
+
+```xml
+<PropertyGroup>
+  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+</PropertyGroup>
+```
+
 ## <a name="code-analysis-properties"></a>程式碼分析屬性
+
+- [AnalysisLevel](#analysislevel)
+- [AnalysisMode](#analysismode)
+- [CodeAnalysisTreatWarningsAsErrors](#codeanalysistreatwarningsaserrors)
+- [EnableNETAnalyzers](#enablenetanalyzers)
+- [EnforceCodeStyleInBuild](#enforcecodestyleinbuild)
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
@@ -425,7 +530,7 @@ ms.locfileid: "97899622"
 </ItemGroup>
 ```
 
-### <a name="reference"></a>參考
+### <a name="reference"></a>參考資料
 
 `Reference`專案會定義元件檔的參考。
 
@@ -471,7 +576,7 @@ ms.locfileid: "97899622"
 
 ### <a name="runworkingdirectory"></a>RunWorkingDirectory
 
-`RunWorkingDirectory`屬性會定義要在其中啟動應用程式進程的工作目錄。 如果您未指定目錄， `OutDir` 則會使用做為工作目錄。
+`RunWorkingDirectory`屬性會定義要在其中啟動應用程式進程的工作目錄。 它可以是絕對路徑或相對於專案目錄的路徑。 如果您未指定目錄， `OutDir` 則會使用做為工作目錄。
 
 ```xml
 <PropertyGroup>
@@ -479,7 +584,7 @@ ms.locfileid: "97899622"
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties-and-items"></a>裝載屬性和專案
+## <a name="hosting-properties"></a>裝載屬性
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)

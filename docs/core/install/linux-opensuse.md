@@ -3,13 +3,13 @@ title: 在 openSUSE 上安裝 .NET-.NET
 description: 示範在 openSUSE 上安裝 .NET SDK 和 .NET 執行時間的各種方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a519f19f708e1f12af1e9715bad4f38a607f9c3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031861"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970807"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>在 openSUSE 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -27,7 +27,7 @@ OpenSUSE 支援 .NET。 本文說明如何在 openSUSE 上安裝 .NET。
 - ❌指出該 openSUSE 版本不支援 openSUSE 或 .net 版本。
 - 當版本的 openSUSE 和 .NET 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
+| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](#opensuse-15-)     | ✔️2。1        | ✔️3。1        | ✔️5。0 |
 
@@ -40,10 +40,6 @@ OpenSUSE 支援 .NET。 本文說明如何在 openSUSE 上安裝 .NET。
 ## <a name="remove-preview-versions"></a>移除預覽版本
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>如何安裝其他版本
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="opensuse-15-"></a>openSUSE 15 ✔️
 
@@ -59,6 +55,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>如何安裝其他版本
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>針對套件管理員進行疑難排解
 
 本節提供使用套件管理員安裝 .NET 時可能會遇到的常見錯誤的相關資訊。
@@ -70,10 +70,6 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ### <a name="failed-to-fetch"></a>無法提取
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
-
-## <a name="snap"></a>單元
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
 ## <a name="dependencies"></a>相依性
 
@@ -94,14 +90,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
   > [!WARNING]
   > 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 *libgdiplus* 。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
 
-## <a name="scripted-install"></a>腳本式安裝
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動安裝
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>後續步驟
 
+- [如何啟用 .NET CLI 的 TAB 鍵自動完成](../tools/enable-tab-autocomplete.md)
 - [教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code](../tutorials/with-visual-studio-code.md)

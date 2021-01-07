@@ -3,12 +3,12 @@ title: project.json 與 csproj 比較
 description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427017"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970872"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -30,7 +30,7 @@ ms.locfileid: "87427017"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>NAME
+### <a name="name"></a>name
 
 ```json
 {
@@ -144,7 +144,7 @@ And it's really great!</Description>
 ## <a name="dependencies"></a>相依性
 
 > [!IMPORTANT]
-> 如果相依性是**專案**而不是套件，則格式會不同。
+> 如果相依性是 **專案** 而不是套件，則格式會不同。
 > 如需詳細資訊，請參閱[相依性類型](#dependency-type)一節。
 
 ### <a name="netstandardlibrary-metapackage"></a>NETStandard.Library 中繼套件
@@ -179,7 +179,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-已 `<RuntimeFrameworkVersion>` 遷移專案中的值取決於已安裝的 SDK 版本。
+已 `<RuntimeFrameworkVersion>` 遷移專案中的值取決於所安裝的 SDK 版本。
 
 ### <a name="top-level-dependencies"></a>最上層相依性
 
@@ -333,7 +333,7 @@ And it's really great!</Description>
 ### <a name="standalone-apps-self-contained-deployment"></a>獨立應用程式 (獨立性部署)
 
 在 project.json 中，定義 `runtimes` 區段表示應用程式在建置和發行期間是獨立的。
-在 MSBuild 中，所有專案在建置期間都是「可攜式」**，但可發行為獨立專案。
+在 MSBuild 中，所有專案在建置期間都是「可攜式」，但可發行為獨立專案。
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
@@ -485,7 +485,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以使用 MSBuild `<Description>` 屬性。 的值 `summary` 不會自動遷移至該屬性，因為該屬性會對應至 [`description`](#other-common-root-level-options) 元素。  [PackageIconUrl 已被取代](/nuget/reference/msbuild-targets#packageiconurl)而改用 PackageIcon。
+MSBuild 中的 `owners` 項目沒有對應項。 若為 `summary` ，您可以使用 MSBuild `<Description>` 屬性。 的值 `summary` 不會自動遷移至該屬性，因為該屬性會對應到 [`description`](#other-common-root-level-options) 元素。  [PackageIconUrl 已被取代為](/nuget/reference/msbuild-targets#packageiconurl) PackageIcon。
 
 ## <a name="scripts"></a>指令碼
 
@@ -498,7 +498,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 }
 ```
 
-其在 MSBuild 中的對等專案為[目標](/visualstudio/msbuild/msbuild-targets)：
+在 MSBuild 中的對應專案是 [目標](/visualstudio/msbuild/msbuild-targets)：
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -527,7 +527,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 }
 ```
 
-這個群組中的所有設定（屬性除外） `System.GC.Server` 都會放入專案資料夾中名為*runtimeconfig.template.js*的檔案中，而在遷移程式期間，會將選項提升至根物件：
+此群組中的所有設定（除了屬性以外） `System.GC.Server` 都會放入專案資料夾中名為 *runtimeconfig.template.js* 的檔案，並在遷移過程中將選項帶到根物件：
 
 ```json
 {
@@ -540,7 +540,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 }
 ```
 
-`System.GC.Server`屬性會遷移到 .csproj 檔案中：
+`System.GC.Server`屬性會遷移至 .csproj 檔案：
 
 ```xml
 <PropertyGroup>
@@ -568,7 +568,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 }
 ```
 
-在 csproj 中不支援。 相反地，請在您的*nuspec*檔案中建立包含內容檔案。
+在 csproj 中不支援。 請改為在 *nuspec* 檔案中建立 include 內容檔。
 如需詳細資訊，請參閱[包含內容檔](/nuget/schema/nuspec#including-content-files)。
 
 ## <a name="files"></a>files
@@ -620,7 +620,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 ```
 
 > [!NOTE]
-> .NET Core SDK 會自動新增許多預設 [Glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。 如需詳細資訊，請參閱[預設編譯包含](../project-sdk/overview.md#default-compilation-includes)。
+> .NET Core SDK 會自動新增許多預設 [Glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。 如需詳細資訊，請參閱 [預設編譯包含](../project-sdk/overview.md#default-includes-and-excludes)。
 
 所有 MSBuild `ItemGroup` 項目都支援 `Include`、`Exclude` 和 `Remove`。
 
@@ -671,6 +671,6 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLI 中變更的高階概觀](cli-msbuild-architecture.md)

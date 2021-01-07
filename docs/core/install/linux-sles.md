@@ -3,13 +3,13 @@ title: 在 SLES 上安裝 .NET-.NET
 description: 示範在 SLES 上安裝 .NET SDK 和 .NET 執行時間的各種方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: f351a9b11ab16910963a1db88d88b6949b56ae11
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 80da69616dd1507b809ef56d439645d569a6a805
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031796"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970781"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>在 SLES 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -25,7 +25,7 @@ SLES 支援 .NET。 本文說明如何在 SLES 上安裝 .NET。
 - ❌表示該 sles 版本不支援 sles 或 .net 的版本。
 - 當 SLES 和某個版本的 .NET 都✔️時，支援該作業系統和 .NET 組合。
 
-| SLES                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5。0 |
+| SLES                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](#sles-15-)     | ✔️2。1        | ✔️3。1        | ✔️5。0 |
 | ✔️ [12 SP2](#sles-12-) | ✔️2。1        | ✔️3。1        | ✔️5。0 |
@@ -39,10 +39,6 @@ SLES 支援 .NET。 本文說明如何在 SLES 上安裝 .NET。
 ## <a name="remove-preview-versions"></a>移除預覽版本
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>如何安裝其他版本
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="sles-15-"></a>SLES 15 ✔️
 
@@ -72,6 +68,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>如何安裝其他版本
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>針對套件管理員進行疑難排解
 
 本節提供使用套件管理員安裝 .NET 時可能會遇到的常見錯誤的相關資訊。
@@ -99,14 +99,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
   > [!WARNING]
   > 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 *libgdiplus* 。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
 
-## <a name="scripted-install"></a>腳本式安裝
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動安裝
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>後續步驟
 
+- [如何啟用 .NET CLI 的 TAB 鍵自動完成](../tools/enable-tab-autocomplete.md)
 - [教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code](../tutorials/with-visual-studio-code.md)

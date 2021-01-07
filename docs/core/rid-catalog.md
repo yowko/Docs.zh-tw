@@ -2,12 +2,12 @@
 title: .NET Core 執行時間識別碼 (RID) 目錄
 description: 深入瞭解執行時間識別碼 (RID) 以及如何在 .NET Core 中使用 Rid。
 ms.date: 12/15/2020
-ms.openlocfilehash: f818ab2d503be7960d9eb8450a7dd749766637a6
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 6b45c42d626de41c7d67c66aac7dc31c51c36a22
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633607"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970664"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -39,7 +39,7 @@ RID 是執行時間 *識別碼* 的縮寫。 RID 值是用來識別應用程式�
 
 ## <a name="rid-graph"></a>RID 圖表
 
-RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在存放庫中的 [*runtime.js*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案中，看到支援的 RID 和 RID 圖形清單 `dotnet/runtime` 。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
+RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在儲存機制中的檔案 [*runtime.js*](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) 中，看到支援的 RID 和 RID 圖形清單 `dotnet/runtime` 。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
 
 當 NuGet 還原套件時，它會嘗試尋找與所指定執行階段完全相符的項目。
 若找不到完全相符的項目，NuGet 會返回到圖形，直到它根據 RID 圖形找到最接近的相容系統。
@@ -80,7 +80,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 ## <a name="using-rids"></a>使用 RID
 
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
-如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
+如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json)參閱存放庫中的 `dotnet/runtime` 檔案runtime.js。
 
 .NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值，適用於 .NET Core 2.0 和更新版本。 由於大部分發行版本的 RID 都會對應至可攜式 RID，因此在處理多個 Linux 發行版本時特別有用。
 
@@ -88,7 +88,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="windows-rids"></a>Windows RID
 
-僅列出常見值。 如需最新的完整版本，請參閱存放庫上的檔案 [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
+僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json)參閱存放庫中的 `dotnet/runtime` 檔案runtime.js。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `win-x64`
@@ -112,7 +112,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="linux-rids"></a>Linux RID
 
-僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
+僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json)參閱存放庫中的 `dotnet/runtime` 檔案runtime.js。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
 
 - 可攜式
   - `linux-x64` (大部分的桌面散發套件，例如 CentOS、Debian、Fedora、Ubuntu 和衍生) 
@@ -131,7 +131,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
+macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json)參閱存放庫中的 `dotnet/runtime` 檔案runtime.js。
 
 - 可攜式
   - `osx-x64` (最低 OS 版本為 macOS 10.12 Sierra)
@@ -155,4 +155,4 @@ macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的�
 
 ## <a name="see-also"></a>請參閱
 
-- [執行階段識別碼](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [執行階段識別碼](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/readme.md)

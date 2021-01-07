@@ -1,19 +1,19 @@
 ---
 title: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 description: 取得使用 Docker 和 Microsoft 平臺和工具開發和部署容器化應用程式的開發和部署程式的概要說明。
-ms.date: 11/10/2020
-ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 94c277e349bacee9b9fc7b160043005dd4135958
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506658"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970111"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 
 ![書籍封面](./media/devops-book-cover-large-we.png)
 
-**版本 3.1** -更新為 ASP.NET Core 3。1
+**版本5.0 版** -更新為 ASP.NET Core 5。0
 
 請參閱 [變更記錄](https://aka.ms/DockerLifecycleEbookChangelog) ，以取得書籍更新和社區貢獻。
 
@@ -29,7 +29,7 @@ ms.locfileid: "94506658"
 
 作者︰
 
-> **Cesar de la Torre** ，Sr. Microsoft Corp. .NET 產品小組 PM
+> **Cesar de la Torre**，Sr. Microsoft Corp. .NET 產品小組 PM
 
 收購編輯器：
 
@@ -53,7 +53,7 @@ Copyeditor:
 
 參與者和檢閱者：
 
-> **Nish Anil** ，Microsoft NET 小組資深方案經理
+> **Nish Anil**，Microsoft NET 小組資深方案經理
 >
 > 以簡單的概念 **Miguel Veloso** 軟體發展工程師
 >
@@ -71,7 +71,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-&copy;Microsoft Corporation 的著作權2020
+&copy;Microsoft Corporation 的著作權2021
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 840e5b0e6a523ac8e3f24586d4980958cd58f613
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009813"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970885"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>在 .NET 中比較字串的最佳作法
 
@@ -194,7 +194,7 @@ InvariantCulture: a + ̊ = å
 
 下表概述從語義字串內容到列舉成員的對應 <xref:System.StringComparison> ：
 
-|資料|行為|對應的 System.StringComparison<br /><br /> 值|
+|資料|行為|對應的 System.StringComparison<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 區分大小寫的安全性相關設定。|位元組完全相符的非語言識別項。|<xref:System.StringComparison.Ordinal>|
 |不區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 檔案路徑。<br /><br /> 登錄機碼和值。<br /><br /> 環境變數。<br /><br /> 資源識別項 (例如控制代碼名稱)。<br /><br /> 不區分大小寫的安全性相關設定。|大小寫不重要的非語言識別項，特別是大部分 Windows 系統服務中儲存的資料。|<xref:System.StringComparison.OrdinalIgnoreCase>|
@@ -234,7 +234,7 @@ InvariantCulture: a + ̊ = å
 
 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。
 
-請小心使用這些方法，因為強制將字串轉換為大寫或小寫，通常是做為比較不區分大小寫字串時的輕微正規化。 如果是這樣，請考慮使用不區分大小寫的比較。
+當您使用 <xref:System.String.ToUpper?displayProperty=nameWithType> 和 <xref:System.String.ToLower?displayProperty=nameWithType> 方法時請小心，因為強制字串為大寫或小寫通常用來做為比較字串的小型正規化，而不考慮大小寫。 如果是這樣，請考慮使用不區分大小寫的比較。
 
 您也可以使用 <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> 方法。 <xref:System.String.ToUpperInvariant%2A> 是將大小寫正規化的標準方式。 使用 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 進行的比較在行為上由兩次呼叫所構成：在兩個字串引數上都呼叫 <xref:System.String.ToUpperInvariant%2A> ，然後使用 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>進行比較。
 
@@ -244,7 +244,7 @@ InvariantCulture: a + ̊ = å
 
 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。
 
-這些方法的運作類似於上一節描述的 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法。
+<xref:System.Char.ToUpper(System.Char)?displayProperty=nameWithType>和 <xref:System.Char.ToLower(System.Char)?displayProperty=nameWithType> 方法的運作方式類似于 <xref:System.String.ToUpper?displayProperty=nameWithType> <xref:System.String.ToLower?displayProperty=nameWithType> 上一節中所述的和方法。
 
 ### <a name="stringstartswith-and-stringendswith"></a>String.StartsWith 和 String.EndsWith
 

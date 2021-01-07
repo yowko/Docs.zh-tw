@@ -4,12 +4,12 @@ titleSuffix: ''
 description: 瞭解 .NET 專案 Sdk。
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247565"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970690"
 ---
 # <a name="net-project-sdks"></a>.NET 專案 Sdk
 
@@ -73,7 +73,7 @@ ms.locfileid: "91247565"
 ```
 
 > [!TIP]
-> 在 Windows 電腦上，您可以在 *%ProgramFiles%\dotnet\sdk \\ [version] \Sdks\Microsoft.NET.Sdk\Sdk*資料夾中找到 *.props*和*sdk .targets*檔案。
+> 在 Windows 電腦上，您可以在 *%ProgramFiles%\dotnet\sdk \\ [version] \Sdks\Microsoft.NET.Sdk\Sdk* 資料夾中找到 *.props* 和 *sdk .targets* 檔案。
 
 ### <a name="preprocess-the-project-file"></a>前置處理專案檔
 
@@ -83,20 +83,20 @@ ms.locfileid: "91247565"
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>預設編譯包含
+### <a name="default-includes-and-excludes"></a>預設包含和排除
 
-編譯專案、內嵌資源和專案的預設包含和排除 `None` 會定義在 SDK 中。 不同于非 SDK .NET Framework 專案，您不需要在專案檔中指定這些專案，因為預設值涵蓋最常見的使用案例。 如果需要的話，這會讓專案檔更小且更容易瞭解並手動編輯。
+[ `Compile` 專案](/visualstudio/msbuild/common-msbuild-project-items#compile)、[內嵌資源](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource)和[ `None` 專案](/visualstudio/msbuild/common-msbuild-project-items#none)的預設包含和排除會定義在 SDK 中。 不同于非 SDK .NET Framework 專案，您不需要在專案檔中指定這些專案，因為預設值涵蓋最常見的使用案例。 此行為可讓專案檔更小且更容易瞭解，並以手動方式進行編輯（如有需要）。
 
 下表顯示 .NET SDK 中包含和排除哪些元素和哪些 [glob](https://en.wikipedia.org/wiki/Glob_(programming)) ：
 
-| 項目           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
+| 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
-| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
+| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | 不適用                      |
+| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | 不適用                      |
 | 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx |
 
 > [!NOTE]
-> 和 `./bin` `./obj` MSBuild 屬性代表的和資料夾， `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` 預設會從 glob 中排除。 排除會以屬性工作表示 `$(DefaultItemExcludes)` 。
+> 和 `./bin` `./obj` MSBuild 屬性代表的和資料夾， `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` 預設會從 glob 中排除。 [排除] 會以 [DefaultItemExcludes 屬性](msbuild-props.md#defaultitemexcludes)表示。
 
 #### <a name="build-errors"></a>建置錯誤
 
@@ -110,7 +110,7 @@ ms.locfileid: "91247565"
 
 - 移除符合上 `Compile` `EmbeddedResource` 表所 `None` 列之隱含專案的明確、或專案。
 
-- 將 `EnableDefaultItems` 屬性設為， `false` 以停用所有隱含檔案包含：
+- 將 [EnableDefaultItems 屬性](msbuild-props.md#enabledefaultitems) 設定為， `false` 以停用所有隱含檔案包含：
 
   ```xml
   <PropertyGroup>
@@ -120,7 +120,7 @@ ms.locfileid: "91247565"
 
   如果您想要指定要與應用程式一起發行的檔案，您仍然可以針對該專案使用已知的 MSBuild 機制，例如 `Content` 元素。
 
-- 藉 `Compile` `EmbeddedResource` `None` 由將 `EnableDefaultCompileItems` 、 `EnableDefaultEmbeddedResourceItems` 或 `EnableDefaultNoneItems` 屬性設定為 `false` ，選擇性地停用、或 glob：
+- 選擇性地停 `Compile` `EmbeddedResource` 用、或 `None` glob，方法是將 [EnableDefaultCompileItems](msbuild-props.md#enabledefaultcompileitems)、 [EnableDefaultEmbeddedResourceItems](msbuild-props.md#enabledefaultembeddedresourceitems)或 [EnableDefaultNoneItems](msbuild-props.md#enabledefaultnoneitems) 屬性設定為 `false` ：
 
   ```xml
   <PropertyGroup>
@@ -176,7 +176,7 @@ ms.locfileid: "91247565"
 
 您可以設定如何使用自訂目標。 因為它是 MSBuild 目標，所以它可以相依于指定的目標、在另一個目標之後執行，或使用命令手動叫用 `dotnet msbuild -t:<target-name>` 。 不過，若要提供更好的使用者體驗，您可以結合每個專案工具和自訂目標。 在此案例中，每個專案工具會接受任何需要的參數，並將其轉譯為執行目標所需的 [`dotnet msbuild`](../tools/dotnet-msbuild.md) 調用。 您可以在 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 專案中的 [MVP Summit 2016 Hackathon 範例](https://github.com/dotnet/MVPSummitHackathon2016)儲存機制，查看此類協同作用範例。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安裝 .NET Core](../install/index.yml)
 - [如何使用 MSBuild 專案 Sdk](/visualstudio/msbuild/how-to-use-project-sdk)

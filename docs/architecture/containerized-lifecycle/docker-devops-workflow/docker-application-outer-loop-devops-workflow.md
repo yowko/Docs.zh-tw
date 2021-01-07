@@ -1,13 +1,13 @@
 ---
 title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: 了解 DevOps 工作流程的「外部迴圈」步驟
-ms.date: 08/06/2020
-ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.date: 01/06/2021
+ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271903"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970293"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 
@@ -23,7 +23,7 @@ ms.locfileid: "89271903"
 
 此步驟會在第 4 章中詳細說明，但概括而言，這是外部迴圈開始的位置，此時開發人員會將程式碼推送到原始檔控制管理系統 (例如 Git) 以起始 CI 管線動作。
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>步驟2：使用 Azure DevOps Services 和 Git 的原始程式碼控制整合和管理
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>步驟2：使用 Azure DevOps Services 和 Git Source-Code 控制整合和管理
 
 在此步驟中，您需要有版本控制系統，才能收集來自小組中不同開發人員的所有程式碼合併版本。
 
@@ -37,13 +37,13 @@ Azure DevOps Services 和 Team Foundation Server 支援 Git 和 Team Foundation 
 
 CI 已脫穎而出成為現代軟體測試和傳遞的標準。 Docker 解決方案會在開發小組與作業小組之間維持清楚的關注點分離。 Docker 映像的不變性確保在已開發、已透過 CI 測試並在生產環境中執行的項目之間可重複部署。 跨開發人員膝上型電腦與測試基礎結構部署的 Docker 引擎，可讓容器移植到不同的環境。
 
-此時，在您讓版本控制系統提交正確的程式碼之後，您需要「組建服務」** 才能選擇程式碼並執行全域建置和測試。
+此時，在您讓版本控制系統提交正確的程式碼之後，您需要「組建服務」才能選擇程式碼並執行全域建置和測試。
 
 此步驟的內部工作流程 (CI、建置、測試) 與 CI 管線的建構相關，其中包含您的程式碼存放庫 (Git 等)、您的組建伺服器 (Azure DevOps Services)、Docker 引擎和 Docker 登錄。
 
 您可以使用 Azure DevOps Services 作為基礎，來建置您的應用程式並設定 CI 管線，以及將組建「成品」發佈到「成品存放庫」，其將在下一個步驟中進行說明。
 
-使用 Docker 進行部署時，所要部署的「最終成品」是 Docker 映像，其中內嵌您的應用程式或服務。 這些映像會推送或發佈到「Docker 登錄」**(例如您可以在 Azure Container Registry 中擁有的私人存放庫，或 Docker Hub Registry 之類的公用存放庫，後者通常會用於官方基底映像)。
+使用 Docker 進行部署時，所要部署的「最終成品」是 Docker 映像，其中內嵌您的應用程式或服務。 這些映像會推送或發佈到「Docker 登錄」(例如您可以在 Azure Container Registry 中擁有的私人存放庫，或 Docker Hub Registry 之類的公用存放庫，後者通常會用於官方基底映像)。
 
 以下是基本概念： CI 管線將會藉由認可至 SCC 儲存機制（例如 Git）來開始進行。 認可會使 Azure DevOps Services 在 Docker 容器中執行組建作業，並在該作業成功完成時，將 Docker 映像推送到 Docker 登錄，如圖 5-2 示。 外部迴圈的第一個部分牽涉到步驟1到3，從程式碼、執行、偵測和驗證，然後將程式碼存放庫移至組建和測試 CI 步驟。
 
@@ -77,7 +77,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 
 有了這些 Visual Studio Team Services 工作、Linux-Docker 主機/VM 佈建在 Azure 中的組建，以及您慣用的 Docker 登錄 (Azure Container Registry、Docker Hub、私人 Docker DTR 或任何其他 Docker 登錄)，您就能夠以非常一致的方式來組合 Docker CI 管線。
 
-***需求：***
+**_需求：_* _
 
 - Azure DevOps Services，或是 Team Foundation Server 2015 Update 3 或更新版本 (適用於內部部署安裝)。
 
@@ -90,7 +90,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 > - 以 Docker 容器執行 Visual Studio Team Services (現在為 Azure DevOps Services) 代理程式：\
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
-> - 使用 Azure DevOps Services 建置 .NET Core Linux Docker 映像：\
+> - 使用 Azure DevOps Services 建立 .NET Linux Docker 映射： \
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - 透過 Docker 支援建置 Linux 型 Visual Studio Team Service 組建電腦：\
@@ -126,7 +126,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 
 ![此圖顯示如何將自訂映射推送至容器登錄。](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-**圖 5-4**。 將自訂映像發佈到 Docker 登錄
+_ * 圖 5-4 * *。 將自訂映像發佈到 Docker 登錄
 
 在步驟 3 中，針對建置整合與測試 (CI)，您可能會將產生的 docker 映像發佈到私人或公用登錄。 Azure Container Registry、Amazon Web Services Container Registry、Google Container Registry、Quay Registry 等雲端廠商提供多種 Docker 登錄服務。
 

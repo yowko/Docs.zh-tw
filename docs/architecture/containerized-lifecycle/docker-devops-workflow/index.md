@@ -1,13 +1,13 @@
 ---
 title: 使用 Microsoft 工具的 Docker 應用程式 DevOps 工作流程
 description: 使用 Microsoft 工具之 Microsoft 平台及工具 DevOps 工作流程的容器化 Docker 應用程式生命週期
-ms.date: 08/06/2020
-ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: 7f2d380dec046804772ea7d13e764ab6f3224c12
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915209"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970150"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>使用 Microsoft 工具的 Docker 應用程式 DevOps 工作流程
 
@@ -15,15 +15,15 @@ ms.locfileid: "87915209"
 
 在雲端中使用 Visual Studio 和 Azure DevOps Services，以及在內部部署環境中使用 Team Foundation Server，開發小組就可以有效率地建置、測試和發行以 Windows 或 Linux 為目標的容器化應用程式。
 
-Microsoft 工具可以自動化特定容器化應用程式實作的管線 (Docker、.NET Core 或與其他平台的任意組合)，範圍從全域組建和持續整合 (CI) 並使用 Azure DevOps Services 或 Team Foundation Server 的測試，到持續部署 (CD) 至 Docker 環境 (開發、預備、生產)，以及透過 Azure 監視器將服務的分析資訊傳輸至開發小組。 每個程式碼認可都可以啟始建置 (CI)，並將服務自動部署至特定容器化環境 (CD)。
+Microsoft 工具可以將容器化應用程式的特定實施（Docker、.NET 或任何與其他平臺的組合）自動化，包括通用群組建和持續整合 (CI) 和 Azure DevOps Services 或 Team Foundation Server 的測試，持續部署 (CD) 至 Docker 環境 (開發、預備、生產) ，以及透過 Azure 監視器將服務的相關分析資訊傳送給開發小組。 每個程式碼認可都可以啟始建置 (CI)，並將服務自動部署至特定容器化環境 (CD)。
 
 開發人員和測試人員可以使用 Microsoft Azure 中的範本，以根據 Docker 輕鬆且快速地佈建類似生產環境的開發和測試環境。
 
-根據商務複雜性和延展性需求，容器化應用程式開發的複雜度會穩定增加。 這種複雜度之良好範例為根據微服務架構的應用程式。 若要在這類環境中成功，您的專案必須自動化整個生命週期：不僅是建置和部署，還必須管理版本及遙測集合。 Azure DevOps Services 和 Azure 提供下列功能：
+根據商務複雜性和延展性需求，容器化應用程式開發的複雜度會穩定增加。 這種複雜度之良好範例為根據微服務架構的應用程式。 若要在這類環境中成功，您的專案必須自動化整個生命週期：不僅建置和部署，也必須管理版本和遙測集合。 Azure DevOps Services 和 Azure 提供下列功能：
 
 - Azure DevOps Services/Team Foundation Server 原始程式碼管理 (根據 Git 或 Team Foundation 版本控制)、Agile 規劃 (支援 Agile、Scrum 和 CMMI)、CI、發行管理，以及 Agile 小組的其他工具。
 
-- Azure DevOps Services 和 Team Foundation Server 包含第一個和協力廠商擴充功能的強大且成長的生態系統，可讓您輕鬆地為微服務建立 CI、組建、測試、傳遞和發行管理管線。
+- Azure DevOps Services 和 Team Foundation Server 包含一和協力廠商擴充功能的強大且不斷成長的生態系統，可讓您輕鬆地為微服務建立 CI、組建、測試、傳遞和發行管理管線。
 
 - 在 Azure DevOps Services 中，於組建管線期間執行自動化測試。
 

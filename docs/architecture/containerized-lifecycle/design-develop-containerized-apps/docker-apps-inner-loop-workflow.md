@@ -1,13 +1,13 @@
 ---
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 瞭解 Docker 應用程式的「內部迴圈」開發工作流程。
-ms.date: 08/06/2020
-ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/06/2021
+ms.openlocfilehash: 78c593890d56a6888d4c4ea6752497918222ebee
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676526"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970557"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -85,11 +85,11 @@ Microsoft 提供的 Visual Studio Code 是 Windows、Linux 和 macOS 上所支�
 
 **圖 4-23**： 在 Visual Studio Code 中安裝 Docker 延伸模組
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步驟2：建立與現有映射相關的 DockerFile， (一般 OS 或開發環境（例如 .NET Core、Node.js 和 Ruby）) 
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-nodejs-and-ruby"></a>步驟2：建立與現有映射相關的 DockerFile， (一般 OS 或開發環境，例如 .NET、Node.js 和 Ruby) 
 
 針對每個要建置的自訂映像，以及每個要部署的容器，您都需要一個 `DockerFile`。 如果您的應用程式是由單一自訂服務所組成，您將需要一個 `DockerFile` 。 但如果您的應用程式由多個服務所組成 (如同在微服務架構中)，針對每項服務您將需要一個 `Dockerfile`。
 
-`DockerFile` 通常放在應用程式或服務的根資料夾中，並包含必要的命令，以讓 Docker 知道如何設定並執行該應用程式或服務。 您可以建立您的 `DockerFile`，並將其與您的程式碼 (node.js、.NET Core 等) 一起新增至專案中；如果您還不熟悉環境，請查看下列提示。
+`DockerFile` 通常放在應用程式或服務的根資料夾中，並包含必要的命令，以讓 Docker 知道如何設定並執行該應用程式或服務。 您可以建立 `DockerFile` 並將它與您的程式碼一起新增至您的專案， ( # A0、.net 等 ) ，或者，如果您不熟悉環境，請參閱下列秘訣。
 
 > [!TIP]
 > 您可以使用 Docker 延伸模組來引導您使用與 Docker 容器相關的 `Dockerfile` 和 `docker-compose.yml` 檔案。 最後，您可能會在沒有此工具的情況下撰寫這類檔案，但使用 Docker 延伸模組是不錯的起點，可加速您的學習曲線。
@@ -107,7 +107,7 @@ Microsoft 提供的 Visual Studio Code 是 Windows、Linux 和 macOS 上所支�
 
 **圖 4-24**： 使用 [ **將 docker 檔案新增至工作區** ] 命令新增的 docker 檔案
 
-當您新增 DockerFile 時，您會指定要使用的基底 Docker 映射 (例如使用 `FROM mcr.microsoft.com/dotnet/aspnet`) 。 您通常會在基底映像之上建置自訂映像，該基底映像可從 [Docker Hub登錄](https://hub.docker.com/)的任何官方存放庫取得 (例如 [.NET Core 的映像](https://hub.docker.com/_/microsoft-dotnet/)或 [Node.js](https://hub.docker.com/_/node/) 的映像)。
+當您新增 DockerFile 時，您會指定要使用的基底 Docker 映射 (例如使用 `FROM mcr.microsoft.com/dotnet/aspnet`) 。 您通常會在基底映射之上建立您的自訂映射，該基底映射位於 [Docker Hub](https://hub.docker.com/) 登錄的任何官方存放庫 (例如 [適用于 .net 的映射](https://hub.docker.com/_/microsoft-dotnet/) ，或 [Node.js](https://hub.docker.com/_/node/)) 的映射。
 
 > [!TIP]
 > 您必須針對應用程式中的每個專案重複此程式。 不過，此延伸模組會要求您在第一次之後覆寫產生的 docker 撰寫檔案。 您應回復不覆寫它，讓擴充功能建立個別的 docker 組成檔案，您可以在執行 docker 撰寫之前，手動合併這些檔案。
@@ -116,15 +116,15 @@ Microsoft 提供的 Visual Studio Code 是 Windows、Linux 和 macOS 上所支�
 
 使用具有版本號碼的官方語言堆疊存放庫，可確保所有電腦上都能使用相同的語言功能 (包括開發、測試和生產環境)。
 
-下列是 .NET Core 容器的範例 DockerFile：
+以下是 .NET 容器的範例 DockerFile：
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,22 +141,22 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-在此情況下，映射是以正式 ASP.NET Core Docker 映射的3.1 版為基礎， (多架構的 Linux 和 Windows) （依據這一行） `FROM mcr.microsoft.com/dotnet/aspnet:3.1` 。 (如需本主題的詳細資訊，請參閱 [ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-aspnet/)頁面及 [.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet/)頁面)。
+在此情況下，映射是以正式 ASP.NET Core Docker 映射的5.0 版為基礎， (多架構的 Linux 和 Windows) （依據這一行） `FROM mcr.microsoft.com/dotnet/aspnet:5.0` 。  (如需有關本主題的詳細資訊，請參閱 [ASP.NET Core Docker 映射](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 頁面和 [.net Docker 映射](https://hub.docker.com/_/microsoft-dotnet/) 頁面) 。
 
 在 DockerFile 中，您也可以指示 Docker 接聽您將在執行時間使用的 TCP 埠 (例如埠80或 443) 。
 
-您可在 Dockerfile 中指定其他的組態設定，視您使用的語言和架構而定。 例如，`ENTRYPOINT` 行中有 `["dotnet", "WebMvcApplication.dll"]` 會指示 Docker 執行 .NET Core 應用程式。 如果您使用 SDK 和 .NET Core CLI (`dotnet CLI`) 建置及執行 .NET 應用程式，此設定會有所不同。 此處的重點，是 ENTRYPOINT 行與其他設定會視您選擇的應用程式語言和平台而定。
+您可在 Dockerfile 中指定其他的組態設定，視您使用的語言和架構而定。 例如，包含的 `ENTRYPOINT` 程式碼會 `["dotnet", "WebMvcApplication.dll"]` 指示 Docker 執行 .net 應用程式。 如果您使用 SDK 和 .NET CLI (`dotnet CLI`) 來建立和執行 .net 應用程式，則此設定會有所不同。 此處的重點，是 ENTRYPOINT 行與其他設定會視您選擇的應用程式語言和平台而定。
 
 > [!TIP]
-> 如需如何建置 .NET Core 應用程式之 Docker 映像的詳細資訊，請瀏覽 <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
+> 如需建立 .NET 應用程式之 Docker 映射的詳細資訊，請移至 <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images> 。
 >
 > 若要深入了解如何建置您自己的映像，請瀏覽 <https://docs.docker.com/engine/tutorials/dockerimages/>。
 
 **使用多架構映像存放庫**
 
-存放庫中的單一映像名稱可以包含多種平台變化，例如 Linux 映像和 Windows 映像。 這項功能可讓 Microsoft (基底映像建立者) 等廠商建立單一存放庫以涵蓋多個平台 (即 Linux 和 Windows)。 例如，Docker Hub 登錄提供的 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 存放庫，會使用相同的映像名稱提供 Linux 和 Windows Nano Server 支援。
+存放庫中的單一映像名稱可以包含多種平台變化，例如 Linux 映像和 Windows 映像。 這項功能可讓 Microsoft (基底映像建立者) 等廠商建立單一存放庫以涵蓋多個平台 (即 Linux 和 Windows)。 例如，Docker Hub 登錄中提供的 [dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 存放庫，會使用相同的映射名稱提供 Linux 和 Windows Nano Server 的支援。
 
-從 Windows 主機提取 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 映像會提取 Windows 變化，而從 Linux 主機提取相同的映像名稱則會提取 Linux 變化。
+從 Windows 主機提取 [dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 映射會提取 windows 變異數，而從 linux 主機提取相同的映射名稱則會提取 linux 變異。
 
 **_從頭開始建立您的基底映射_**
 
@@ -181,7 +181,7 @@ ENTRYPOINT ["dotnet", "WebApi.dll"]
 
 (選用) 不直接從專案資料夾執行 `docker build`，而是先使用 run `dotnet publish` 命令產生具有所需 .NET 程式庫的可部署資料夾，然後執行 `docker build`。
 
-此範例使用名稱 `explore-docker-vscode/webapi:latest` 來建立 Docker 映像 (`:latest` 是標籤，例如特定版本)。 您可以透過數個容器，為組成 Docker 應用程式所需建立的每個自訂映像採用此步驟。 不過，我們會在下一節中看到使用來進行這項作業比較容易 `docker-compose` 。
+此範例使用名稱 `webapi:latest` 來建立 Docker 映像 (`:latest` 是標籤，例如特定版本)。 您可以透過數個容器，為組成 Docker 應用程式所需建立的每個自訂映像採用此步驟。 不過，我們會在下一節中看到使用來進行這項作業比較容易 `docker-compose` 。
 
 您可以使用命令，在您的開發電腦)  (您的本機存放庫中找到現有的映射 `docker images` ，如圖4-26 所示。
 
@@ -249,7 +249,7 @@ services:
 您可以使用 docker run 命令執行 Docker 映像，如下所示：
 
 ```console
-docker run -t -d -p 50080:80 explore-docker-vscode/webapp:latest
+docker run -t -d -p 50080:80 webapp:latest
 ```
 
 針對此特定部署，我們會將傳送至主機上端口50080的要求重新導向至內部埠80。
@@ -272,7 +272,7 @@ docker run -t -d -p 50080:80 explore-docker-vscode/webapp:latest
 
 此步驟會隨應用程式執行的作業而異。
 
-在部署為單一容器或服務的簡單 .NET Core Web API "Hello World" 中，您只需要提供 DockerFile 中指定的 TCP 連接埠來存取服務。
+在部署為單一容器或服務的簡單 .NET Web API "Hello World" 中，您只需要提供在 DockerFile 中指定的 TCP 埠即可存取服務。
 
 在 Docker 主機上，開啟瀏覽器並巡覽至該網站；您應該會看到您的應用程式/服務正在執行，如圖 4-29 所示。
 
@@ -290,9 +290,9 @@ docker run -t -d -p 50080:80 explore-docker-vscode/webapp:latest
 
 **對在 Docker 上執行的容器進行偵錯**
 
-Visual Studio Code 支援對 Docker 的偵錯，如果您使用 Node.js 和像是 .NET Core 容器的其他平台。
+如果您使用 Node.js 和其他平臺（例如 .NET 容器），Visual Studio Code 支援調試 Docker。
 
-在使用適用於 Windows 或 Mac 的 Visual Studio 時，您也可以對 Docker 中的 .NET Core 或 .NET Framework 容器進行偵錯，如下一節中所述。
+您也可以在使用適用于 Windows 或 Mac 的 Visual Studio 時，在 Docker 中進行 .NET 或 .NET Framework 容器的偵測，如下一節所述。
 
 > [!TIP]
 > 若要深入瞭解 Node.js Docker 容器的調試，請參閱 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more> 。

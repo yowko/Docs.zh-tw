@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bd257cf8d79ea2afa209fe71ad7eff969a62d6b2
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: 541ac80ce40b0410167b14f96e36b354d19411db
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938711"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970898"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -311,5 +311,6 @@ System.Text.Json在 .Net Core 3.1 中不支援欄位。 [自訂轉換器](system
 * [撰寫自訂序列化程式和還原序列化程式](write-custom-serializer-deserializer.md)
 * [撰寫 JSON 序列化的自訂轉換器](system-text-json-converters-how-to.md)
 * [DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
+* [中支援的集合類型 System.Text.Json](system-text-json-supported-collection-types.md)
 * [System.Text.Json API 參考](xref:System.Text.Json)
 * [System.Text.Json.序列化 API 參考](xref:System.Text.Json.Serialization)

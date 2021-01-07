@@ -2,12 +2,12 @@
 title: 從 project.json 進行的 .NET Core 移轉
 description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
 ms.date: 07/19/2017
-ms.openlocfilehash: 0d4190a02389089a888d8b52dd8e7c412636b575
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 73fbfed6943e3eb535e6eead3b3496edd3426c26
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538246"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970716"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
@@ -30,13 +30,13 @@ ms.locfileid: "90538246"
 
 ### <a name="visual-studio"></a>Visual Studio
 
-當您開啟 *xproj* 檔或參考 *xproj* 檔案的方案檔時 Visual Studio 2017 或 Visual Studio 2019 16.2 版及更早版本中，會出現 **單向升級** 對話方塊。 此對話方塊會顯示要移轉的專案。 如果您開啟方案檔，則會列出方案檔中指定的所有專案。 檢閱要移轉的專案清單，然後選取 [確定]****。
+當您開啟 *xproj* 檔或參考 *xproj* 檔案的方案檔時 Visual Studio 2017 或 Visual Studio 2019 16.2 版及更早版本中，會出現 **單向升級** 對話方塊。 此對話方塊會顯示要移轉的專案。 如果您開啟方案檔，則會列出方案檔中指定的所有專案。 檢閱要移轉的專案清單，然後選取 [確定]。
 
 ![[單向升級] 對話方塊顯示要移轉的專案清單](media/one-way-upgrade.jpg)
 
 Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您未選擇所有專案，則會出現相同的對話方塊，要求您從該方案升級其餘專案。 在遷移專案之後，您可以在 [ **方案總管** ] 視窗中的專案上按一下滑鼠右鍵，然後選取 [ **編輯 \<project name> .csproj**]，以查看並修改其內容。
 
-已遷移 (*project.js*的檔案、 *global.json*、 *xproj*和方案檔) 都會移至 *備份* 資料夾。 遷移的解決方案檔會升級為 Visual Studio 2017 或 Visual Studio 2019，您將無法在 Visual Studio 2015 或更早版本中開啟該方案檔。 包含遷移報表的名稱為 *UpgradeLog.htm* 的檔案也會自動儲存並開啟。
+已遷移 (*project.js* 的檔案、 *global.json*、 *xproj* 和方案檔) 都會移至 *備份* 資料夾。 遷移的解決方案檔會升級為 Visual Studio 2017 或 Visual Studio 2019，您將無法在 Visual Studio 2015 或更早版本中開啟該方案檔。 包含遷移報表的名稱為 *UpgradeLog.htm* 的檔案也會自動儲存並開啟。
 
 > [!IMPORTANT]
 > 在 Visual Studio 2019 16.3 版和更新版本中，您無法載入或遷移 *xproj* 檔。 此外，Visual Studio 2015 不提供遷移 *xproj* 檔案的能力。 如果您使用其中一個 Visual Studio 版本，請安裝適當版本的 Visual Studio，或使用接下來所述的命令列遷移工具。
@@ -45,7 +45,7 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 
 在命令列案例中，您可以使用 [`dotnet migrate`](../tools/dotnet-migrate.md) 命令。 它會根據找到的專案、方案或一組資料夾，以該順序遷移專案、方案或資料夾。 當您移轉專案時，會移轉專案及其所有相依性。
 
-已遷移 (*project.json*、 *global.json*和 *. xproj*) 的檔案會移至 *備份* 資料夾。
+已遷移 (*project.json*、 *global.json* 和 *. xproj*) 的檔案會移至 *備份* 資料夾。
 
 > [!NOTE]
 > 如果您使用 Visual Studio Code，此 `dotnet migrate` 命令不會修改 Visual Studio Code 特定的檔案，例如 *tasks.js*。 這些檔案必須以手動方式變更。
@@ -80,12 +80,12 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 - 移除專案頂端和底部的 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 和 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 陳述式。 這些 import 陳述式是由 SDK 所隱含，因此專案中不需要有這些陳述式。
 - 如果您的 `Microsoft.NETCore.App` 專案中有或專案 `NETStandard.Library` `<PackageReference>` ，則應該移除它們。 這些套件參考是[由 SDK 所隱含](../tools/csproj.md)。
 - 移除專案 `Microsoft.NET.Sdk` `<PackageReference>` （如果有的話）。 SDK 參考是來自 `<Project>` 項目上的 `Sdk` 屬性。
-- 移除[SDK 所隱含](../project-sdk/overview.md#default-compilation-includes)的[glob](https://en.wikipedia.org/wiki/Glob_(programming)) 。 在您的專案中留下這些 Glob 會在建置時造成錯誤，因為編譯項目將會重複。
+- 移除[SDK 所隱含](../project-sdk/overview.md#default-includes-and-excludes)的[glob](https://en.wikipedia.org/wiki/Glob_(programming)) 。 在您的專案中留下這些 Glob 會在建置時造成錯誤，因為編譯項目將會重複。
 
 完成這些步驟之後，您的專案應該會與 RTM .NET Core csproj 格式完全相容。
 
 如需從舊的 csproj 格式移轉至新格式的前後範例，請參閱 .NET 部落格上的 [Updating Visual Studio 2017 RC - .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (更新 Visual Studio 2017 RC - .NET Core 工具改進) 文章。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [移植、遷移及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

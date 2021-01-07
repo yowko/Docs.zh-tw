@@ -1,13 +1,13 @@
 ---
 title: 適用于 WCF 開發人員的 Docker gRPC
 description: 建立 ASP.NET Core gRPC 應用程式的 Docker 映射
-ms.date: 12/15/2020
-ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: f59518a28b0a1dee75c792ba03bd4af826638502
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938412"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970085"
 ---
 # <a name="create-docker-images"></a>建立 Docker 映射
 
@@ -15,7 +15,7 @@ ms.locfileid: "97938412"
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>適用于 ASP.NET Core 應用程式的 Microsoft 基礎映射
 
-Microsoft 提供一系列基礎映射來建立和執行 .NET Core 應用程式。 若要建立 ASP.NET Core 3.0 映射，您可以使用兩個基底映射：
+Microsoft 提供一系列基礎映射來建立和執行 .NET 應用程式。 若要建立 ASP.NET Core 5.0 映射，您可以使用兩個基底映射：
 
 - 用來建立和發佈應用程式的 SDK 映射。
 - 用於部署的執行時間映射。
@@ -27,12 +27,11 @@ Microsoft 提供一系列基礎映射來建立和執行 .NET Core 應用程式�
 
 每個映射都有四個以不同 Linux 散發套件為基礎的變化，並依標記區分。
 
-| 影像標記 (s)  | Linux | 注意 |
+| 影像標記 (s)  | Linux | 附註 |
 | --------- | ----- | ----- |
-| 5.0-buster、5。0 | Debian 10 | 如果未指定作業系統變數，則為預設映射。 |
-| 5.0-alpine | Alpine 3。9 | Alpine 基底映射遠小於 Debian 或 Ubuntu。 |
-| 5.0-disco | Ubuntu 19.04 | |
-| 5.0-bionic | Ubuntu 18.04 | |
+| 5.0-buster-超薄、5。0 | Debian 10 | 如果未指定作業系統變數，則為預設映射。 |
+| 5.0-alpine | Alpine 3.12 | Alpine 基底映射遠小於 Debian 或 Ubuntu。 |
+| 5.0-焦點| Ubuntu 20.04 | |
 
 Alpine 基底映射大約是 100 MB，相較于 Debian 和 Ubuntu 映射的 200 MB。 某些軟體套件或程式庫可能無法在 Alpine 的套件管理中使用。 如果您不確定要使用哪個映射，您應該選擇預設 Debian。
 
@@ -116,7 +115,7 @@ obj/
 針對 `StockKube.sln` 包含兩個不同應用程式 `StockData` 和的方案 `StockWeb` ，最簡單的方式是將每個應用程式的 Dockerfile 放在基底目錄中。 在此情況下，若要建立映射，請 `docker build` 從檔案所在的相同目錄中使用下列命令 `.sln` 。
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 Confusingly 命名的 `--tag` 旗標 (可以縮短為 `-t`) 指定影像的整個名稱，包括實際標記（如果有指定的話）。 `.`結束時，會指定將在其中執行組建的內容; `COPY` Dockerfile 中命令的目前工作目錄。
@@ -124,7 +123,7 @@ Confusingly 命名的 `--tag` 旗標 (可以縮短為 `-t`) 指定影像的整�
 如果您在單一解決方案中有多個應用程式，您可以將每個應用程式的 Dockerfile 保留在檔案旁的資料夾中 `.csproj` 。 您仍然應該 `docker build` 從基底目錄執行此命令，以確保方案和所有專案都會複製到映射中。 您可以使用 `--file` (或) 旗標，在目前的目錄下指定 Dockerfile `-f` 。
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>在您電腦上的容器中執行映射

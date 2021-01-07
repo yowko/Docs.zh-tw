@@ -3,13 +3,13 @@ title: 在 RHEL 上安裝 .NET-.NET
 description: 示範在 RHEL 上安裝 .NET SDK 和 .NET 執行時間的各種方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 0b6138185bfd3e2f50c1b31e82779165715a5b6e
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 01/06/2021
+ms.openlocfilehash: d585017919507a8fdcbb24778a0ff3ab3d9049c2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851636"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970794"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>在 RHEL 上安裝 .NET SDK 或 .NET 執行時間
 
@@ -43,10 +43,6 @@ RHEL 支援 .NET。 本文說明如何在 RHEL 上安裝 .NET。
 ## <a name="remove-preview-versions"></a>移除預覽版本
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>如何安裝其他版本
-
-請參閱 [.net 的 Red Hat 檔](https://access.redhat.com/documentation/net/5.0/) ，以瞭解安裝其他 .net 版本所需的步驟。
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
@@ -140,22 +136,15 @@ source scl_source enable rh-dotnet31
 
 除了 ASP.NET Core 執行時間之外，您還可以安裝不包含 ASP.NET Core 支援的 .NET Core 執行時間： `rh-dotnet31-aspnetcore-runtime-3.1` 在上述命令中將取代為 `rh-dotnet31-dotnet-runtime-3.1` 。
 
-## <a name="snap"></a>單元
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>相依性
 
 [!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a>腳本式安裝
+## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>手動安裝
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
+請參閱 [.net 的 Red Hat 檔](https://access.redhat.com/documentation/net/5.0/) ，以瞭解安裝其他 .net 版本所需的步驟。
 
 ## <a name="next-steps"></a>後續步驟
 
+- [如何啟用 .NET CLI 的 TAB 鍵自動完成](../tools/enable-tab-autocomplete.md)
 - [教學課程：使用 .NET SDK 建立主控台應用程式 Visual Studio Code](../tutorials/with-visual-studio-code.md)

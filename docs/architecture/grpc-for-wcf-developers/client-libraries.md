@@ -1,13 +1,13 @@
 ---
 title: 建立 gRPC 用戶端程式庫-適用于 WCF 開發人員的 gRPC
 description: 討論 gRPC 服務的共用用戶端程式庫/套件。
-ms.date: 12/15/2020
-ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c55b6d1da2377af0b687e32e7776f12b96b0a2ba
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938425"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970124"
 ---
 # <a name="create-grpc-client-libraries"></a>建立 gRPC 用戶端程式庫
 
@@ -145,9 +145,9 @@ namespace Grpc.Core
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
-<xref:System.IAsyncDisposable>和 <xref:System.IObservable%601> 模型都是妥善支援的方式，而且是在 .net 中處理非同步資料流程的完整記錄方式。 gRPC 資料流程對應到兩個範例，提供與 .NET 的緊密整合，以及回應式和非同步程式設計樣式。
+<xref:System.Collections.Generic.IAsyncEnumerable%601>和 <xref:System.IObservable%601> 模型都是妥善支援的方式，而且是在 .net 中處理非同步資料流程的完整記錄方式。 gRPC 資料流程對應到兩個範例，提供與 .NET 的緊密整合，以及回應式和非同步程式設計樣式。
 
 >[!div class="step-by-step"]
 >[上一個](streaming-versus-repeated.md) 
