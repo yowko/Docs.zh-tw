@@ -19,7 +19,7 @@ items:
             href: ../core/install/macos.md
           - name: 安裝在 Linux 上
             items:
-              - name: 概觀
+              - name: 總覽
                 href: ../core/install/linux.md
               - name: Ubuntu
                 href: ../core/install/linux-ubuntu.md
@@ -193,7 +193,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: .NET Core CLI
         items:
-          - name: 概觀
+          - name: 總覽
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
           - name: 參考
@@ -393,19 +393,33 @@ items:
               - name: 概觀
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
+              - name: 對 StackOverflow 進行偵錯
+                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Linux 傾印
                 href: ../core/diagnostics/debug-linux-dumps.md
+              - name: SOS 偵錯工具擴充功能
+                href: ../core/diagnostics/sos-debugging-extension.md
           - name: EventCounters
-            href: ../core/diagnostics/event-counters.md
+            items:
+              - name: 總覽
+                displayName: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: .NET 中已知的計數器
+                href: ../core/diagnostics/available-counters.md
           - name: EventPipe
             href: ../core/diagnostics/eventpipe.md
           - name: 記錄和追蹤
-            href: ../core/diagnostics/logging-tracing.md
+            items:
+              - name: 總覽
+                displayName: logging and tracing
+                href: ../core/diagnostics/logging-tracing.md
+              - name: 已知的事件提供者
+                href: ../core/diagnostics/well-known-event-providers.md
           - name: 執行階段事件
             items:
-              - name: 概觀
+              - name: 總覽
                 href: ../fundamentals/diagnostics/runtime-events.md
-              - name: 爭用事件
+              - name: 競爭事件
                 href: ../fundamentals/diagnostics/runtime-contention-events.md
               - name: 例外狀況事件
                 href: ../fundamentals/diagnostics/runtime-exception-events.md
@@ -478,7 +492,7 @@ items:
                     href: code-analysis/quality-rules/index.md
                   - name: 設計規則
                     items:
-                      - name: 概觀
+                      - name: 總覽
                         displayName: design rules
                         href: code-analysis/quality-rules/design-warnings.md
                       - name: CA1000
@@ -579,8 +593,6 @@ items:
                         href: code-analysis/quality-rules/ca1069.md
                       - name: CA1070
                         href: code-analysis/quality-rules/ca1070.md
-                      - name: CA1071
-                        href: code-analysis/quality-rules/ca1071.md
                   - name: 文件規則
                     items:
                       - name: 概觀
@@ -590,7 +602,7 @@ items:
                         href: code-analysis/quality-rules/ca1200.md
                   - name: 全球化規則
                     items:
-                      - name: 概觀
+                      - name: 總覽
                         displayName: globalization rules
                         href: code-analysis/quality-rules/globalization-warnings.md
                       - name: CA1303
@@ -1182,7 +1194,7 @@ items:
                             href: code-analysis/style-rules/ide0084.md
                       - name: 程式碼區塊喜好設定
                         items:
-                          - name: 概觀
+                          - name: 總覽
                             href: code-analysis/style-rules/code-block-preferences.md
                           - name: IDE0011
                             href: code-analysis/style-rules/ide0011.md
@@ -1243,7 +1255,7 @@ items:
                         href: code-analysis/style-rules/formatting-rules.md
                   - name: 命名規則
                     items:
-                      - name: 概觀
+                      - name: 總覽
                         displayName: naming rules
                         href: code-analysis/style-rules/naming-rules.md
           - name: 平台相容性分析器
@@ -1844,7 +1856,7 @@ items:
         href: /ef/core/
   - name: 平行處理、並行與非同步
     items:
-      - name: 概觀
+      - name: 總覽
         href: ../standard/parallel-processing-and-concurrency.md
         displayName: 'Parallel processing, concurrency, async'
       - name: 非同步程式設計

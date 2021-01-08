@@ -5,16 +5,18 @@
   items:
     - name: Azure 與 .NET 簡介
       href: intro.md
-    - name: 開發人員工具
-      href: tools.md
-    - name: 驗證
-      href: authentication.md
-    - name: 記錄
-      href: logging.md
-    - name: 套件
-      href: packages.md
-    - name: SDK 範例
-      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
+    - name: 適用於 .NET 開發人員的關鍵 Azure 服務
+      href: key-azure-services.md
+    - name: 設定您的開發環境
+      items:
+        - name: 建立 Azure 帳戶
+          href: create-azure-account.md
+        - name: 設定適用於 Azure 開發的 Visual Studio (Windows)
+          href: configure-visual-studio.md
+        - name: 設定適用於 Azure 開發的 VS Code (跨平台)
+          href: configure-vs-code.md
+        - name: 安裝 Azure CLI
+          href: install-azure-cli.md
 - name: 移轉至 Azure
   items:
     - name: 選擇正確的 Azure 裝載選項
@@ -25,6 +27,20 @@
       href: ./migration/vm.md
     - name: 將 SQL Server 資料庫移轉至 Azure
       href: ./migration/sql.md
+- name: 適用於 .NET 的 Azure SDK
+  items:
+    - name: 什麼是 Azure SDK for .NET？
+      href: ./sdk/azure-sdk-for-dotnet.md
+    - name: 驗證
+      href: authentication.md
+    - name: 記錄
+      href: logging.md
+    - name: 設定 Proxy 伺服器
+      href: ./sdk/azure-sdk-configure-proxy.md
+    - name: 套件清單
+      href: packages.md
+    - name: SDK 範例
+      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
 - name: 範例程式碼
   items:
     - name: Web apps 和無伺服器
