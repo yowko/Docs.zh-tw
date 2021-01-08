@@ -15,5 +15,7 @@
       href: ./fs0009.md
     - name: FS0025 - 模式比對不完整
       href: ./fs0025.md
+    - name: FS0037 - 重複定義
+      href: ./fs0037.md
     - name: FS0052 - 防禦性複製
       href: ./fs0052.md
