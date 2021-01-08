@@ -12,7 +12,7 @@
         - name: 重大變更
           href: fx-core.md
         - name: 無法使用的技術
-          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+          href: ../porting/net-framework-tech-unavailable.md
         - name: 永遠擲回的 API
           href: unsupported-apis.md
     - name: 依版本的中斷性變更
