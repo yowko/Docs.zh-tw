@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 5d14bd0d9930d41a8c60b58b9f5b0522f0c0e398
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b5766012b77da88ae9a696939b6e498ebc421522
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700767"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025038"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 與 .NET 簡介
 
 ## <a name="what-is-azure"></a>何謂 Azure？
 
-Azure 是一個雲端平臺，旨在簡化新式應用程式的建立流程。  無論您選擇將應用程式完全裝載在 Azure 中，或使用 Azure 服務擴充您的內部部署應用程式，Azure 都可協助您建立可調整、可靠且可維護的應用程式。  隨著您已經使用的工具廣泛支援，例如 Visual Studio 和 Visual Studio Code 以及全方位的 SDK 程式庫，Azure 的設計可讓您從一開始就能成為 .NET 開發人員的生產力。
+Azure 是一個雲端平臺，旨在簡化新式應用程式的建立流程。  無論您選擇將應用程式完全裝載在 Azure 中，或使用 Azure 服務擴充您的內部部署應用程式，Azure 都可協助您建立可調整、可靠且可維護的應用程式。  透過您已經使用的工具廣泛支援，例如 Visual Studio 和 Visual Studio Code 以及全方位的 SDK 程式庫，Azure 的設計可讓您從一開始就成為 .NET 開發人員的生產力。
 
 ## <a name="application-development-scenarios-on-azure"></a>Azure 上的應用程式開發案例
 

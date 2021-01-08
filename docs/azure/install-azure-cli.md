@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 43737aaf5dfd02b8c4ffa6c213d7221cfe38162f
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: aa2739cc6c11145887e64921398c72affeaec729
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97701099"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025025"
 ---
 # <a name="install-the-azure-cli"></a>安裝 Azure CLI
 
@@ -35,3 +35,7 @@ Azure CLI 適用于 Windows、macOS 和 Linux。
 您也可以使用 Azure Cloud Shell 中的 Azure CLI [https://shell.azure.com](https://shell.azure.com) 。  Azure Cloud Shell 是可用於管理 Azure 資源的功能完整、以瀏覽器為基礎的 Shell。  當您需要命令列環境，但在無法安裝 Azure CLI 的裝置上工作時，Azure Cloud Shell 會很有用。
 
 ![在瀏覽器中執行之 Azure Cloud Shell 的螢幕擷取畫面](media/azure-cloud-shell.png)
+
+### <a name="next-steps"></a>後續步驟
+
+接下來，您會想要 [安裝額外的 azure 工具](./azure-tools.md) ，例如 Azure 儲存體總管和 Azure Data Studio，讓您更有效率地使用 Azure。

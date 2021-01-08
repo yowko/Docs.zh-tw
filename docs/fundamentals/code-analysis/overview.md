@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009842"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025077"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET source 程式碼分析總覽
 
@@ -42,14 +42,14 @@ ms.locfileid: "97009842"
 
 | 診斷識別碼 | 類別 | 嚴重性 | 描述 |
 | - | - | - | - |
-| [CA1416](/visualstudio/code-quality/ca1416) | 互通性 | 警告 | 平台相容性分析器 |
-| [CA1417](/visualstudio/code-quality/ca1417) | 互通性 | 警告 | 請勿 `OutAttribute` 在 P/invoke 的字串參數上使用 |
-| [CA1831](/visualstudio/code-quality/ca1831) | 效能 | 警告 | `AsSpan`適當時，請使用而不是字串以範圍為基礎的索引子 |
-| [CA2013](/visualstudio/code-quality/ca2013) | 可靠性 | 警告 | 請勿搭配實 `ReferenceEquals` 數值型別使用 |
-| [CA2014](/visualstudio/code-quality/ca2014) | 可靠性 | 警告 | 不要 `stackalloc` 在迴圈中使用 |
-| [CA2015](/visualstudio/code-quality/ca2015) | 可靠性 | 警告 | 請勿針對衍生自的類型定義完成項 <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 使用方式 | 警告 | 必須重新擲回以保存堆疊詳細資料
-| [CA2247](/visualstudio/code-quality/ca2247) | 使用方式 | 警告 | 傳遞至 >taskcompletionsource 函式的引數應該是 <xref:System.Threading.Tasks.TaskCreationOptions> 列舉，而不是 <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA1416](/visualstudio/code-quality/ca1416) | 互通性 | Warning | 平台相容性分析器 |
+| [CA1417](/visualstudio/code-quality/ca1417) | 互通性 | Warning | 請勿 `OutAttribute` 在 P/invoke 的字串參數上使用 |
+| [CA1831](/visualstudio/code-quality/ca1831) | 效能 | Warning | `AsSpan`適當時，請使用而不是字串以範圍為基礎的索引子 |
+| [CA2013](/visualstudio/code-quality/ca2013) | 可靠性 | Warning | 請勿搭配實 `ReferenceEquals` 數值型別使用 |
+| [CA2014](/visualstudio/code-quality/ca2014) | 可靠性 | Warning | 不要 `stackalloc` 在迴圈中使用 |
+| [CA2015](/visualstudio/code-quality/ca2015) | 可靠性 | Warning | 請勿針對衍生自的類型定義完成項 <xref:System.Buffers.MemoryManager%601> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 使用方式 | Warning | 必須重新擲回以保存堆疊詳細資料
+| [CA2247](/visualstudio/code-quality/ca2247) | 使用方式 | Warning | 傳遞至 >taskcompletionsource 函式的引數應該是 <xref:System.Threading.Tasks.TaskCreationOptions> 列舉，而不是 <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 您可以變更這些規則的嚴重性來停用它們，或將它們提升為錯誤。 您也可以 [啟用更多規則](#enable-additional-rules)。
 
@@ -104,13 +104,16 @@ ms.locfileid: "97009842"
 程式 *代碼樣式分析* ( "IDExxxx" ) 規則可讓您在程式碼基底中定義和維護一致的程式碼樣式。 預設啟用設定為：
 
 - 命令列組建：針對命令列組建上的所有 .NET 專案，預設會停用程式碼樣式分析。
-- Visual Studio：程式碼樣式分析預設會針對 Visual Studio 中的所有 .NET 專案啟用，因為程式 [代碼會重構快速動作](/visualstudio/ide/code-generation-in-visual-studio)。
 
-從 .NET 5.0 開始，您可以在命令列和 Visual Studio 內啟用組建的程式碼樣式分析。 程式碼樣式違規會顯示為「IDE」前置詞的警告或錯誤。 這可讓您在組建階段強制執行一致的程式碼樣式。
+  從 .NET 5.0 開始，您可以在命令列和 Visual Studio 內 [啟用組建的程式碼樣式分析](#enable-on-build)。 程式碼樣式違規會顯示為「IDE」前置詞的警告或錯誤。 這可讓您在組建階段強制執行一致的程式碼樣式。
+
+- Visual Studio：程式碼樣式分析預設會針對 Visual Studio 中的所有 .NET 專案啟用，因為程式 [代碼會重構快速動作](/visualstudio/ide/code-generation-in-visual-studio)。
 
 如需程式碼樣式分析規則的完整清單，請參閱程式 [代碼樣式規則](style-rules/index.md)。
 
 ### <a name="enable-on-build"></a>在組建時啟用
+
+使用 .NET 5.0 SDK 和更新版本時，您可以在從命令列和 Visual Studio 中建立時啟用程式碼樣式分析。  (不過，基於效能的考慮， [少數的程式碼樣式規則](https://github.com/dotnet/roslyn/blob/9f87b444da9c48a4d492b19f8337339056bf2b95/src/Analyzers/Core/Analyzers/EnforceOnBuildValues.cs#L95) 仍只適用于 Visual Studio IDE。 ) 
 
 遵循下列步驟來啟用組建的程式碼樣式分析：
 
@@ -155,7 +158,7 @@ Visual Studio 提供其他方式來隱藏程式碼分析規則的警告。 如�
 
 除了正式的 .NET 分析器，您也可以安裝協力廠商分析器，例如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、 [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/)、 [XUnit 分析器](https://www.nuget.org/packages/xunit.analyzers/)和 [聲納 Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程式碼品質分析規則參考](quality-rules/index.md)
 - [程式碼樣式分析規則參考](style-rules/index.md)

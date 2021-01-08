@@ -1,14 +1,14 @@
 ---
 title: 使用 .NET Core 來建立 REST 用戶端
-description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
+description: '本教學課程會教您有關 .NET Core 和 c # 語言的一些功能。'
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899648"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98024973"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -21,16 +21,16 @@ ms.locfileid: "97899648"
 * 處理 JSON 資訊
 * 使用「屬性」來管理組態。
 
-您將建置一個對 GitHub 上的 REST 服務發出「HTTP 要求」的應用程式。 您將讀取 JSON 格式的資訊，並將該 JSON 封包轉換成 C# 物件。 最後，您將了解如何使用 C# 物件。
+您將會建立一個應用程式，將 HTTP 要求發出至 GitHub 上的 REST 服務。 您將讀取 JSON 格式的資訊，並將該 JSON 封包轉換成 C# 物件。 最後，您將了解如何使用 C# 物件。
 
-本教學課程中有許多功能。 讓我們來逐一建置它們。
+本教學課程中有許多功能。 讓我們逐一建立它們。
 
-如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#view-and-download-samples)。
+如果您想要遵循這篇文章的 [最後一個範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) ，您可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core 下載](https://dotnet.microsoft.com/download) 頁面上找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
-您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code](https://code.visualstudio.com/)，這是一個開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
+您必須設定電腦以執行 .NET core。 您可以在 [.NET Core 下載](https://dotnet.microsoft.com/download) 頁面上找到安裝指示。 您可以在 Windows、Linux 或 macOS 上執行此應用程式，或在 Docker 容器中執行此應用程式。
+您必須安裝您最愛的程式碼編輯器。 以下說明使用 [Visual Studio Code](https://code.visualstudio.com/)，這是一個開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
 ## <a name="create-the-application"></a>建立應用程式
 
@@ -129,7 +129,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-第一個版本會提出 Web 要求來讀取 dotnet foundation 組織底下的所有儲存機制清單。 (.NET Foundation 的 gitHub 識別碼是 'dotnet')。 前幾行會為這個要求設定 <xref:System.Net.Http.HttpClient>。 首先，會將它設定為接受 GitHub JSON 回應。
+第一個版本會提出 Web 要求來讀取 dotnet foundation 組織底下的所有儲存機制清單。  (.NET Foundation 的 GitHub 識別碼 `dotnet` 。 ) 前幾行設定 <xref:System.Net.Http.HttpClient> 此要求的。 首先，會將它設定為接受 GitHub JSON 回應。
 此格式就是 JSON。 下一行會將「使用者代理程式」標頭新增到來自此物件的所有要求。 這兩個標頭會受到 GitHub 伺服器程式碼檢查，並且是從 GitHub 擷取資訊的必要標頭。
 
 設定 <xref:System.Net.Http.HttpClient> 之後，您需提出 Web 要求並擷取回應。 在這個第一版中，您會使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 便利方法。 這個便利方法會啟動一個提出 Web 要求的工作，然後當要求返回時，它會讀取回應資料流並從該資料流擷取內容。 回應本文會以 <xref:System.String> 的形式傳回。 當工作完成時，就會提供該字串。
@@ -191,7 +191,7 @@ foreach (var repo in repositories)
     Console.WriteLine(repo.name);
 ```
 
-編譯並執行應用程式。 它將會列印出隸屬於 .NET Foundation 的儲存機制名稱。
+編譯並執行應用程式。 它會列印屬於 .NET Foundation 的儲存機制名稱。
 
 ## <a name="controlling-serialization"></a>控制序列化
 

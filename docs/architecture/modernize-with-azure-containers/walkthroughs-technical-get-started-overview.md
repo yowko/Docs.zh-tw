@@ -1,13 +1,13 @@
 ---
 title: 逐步解說和技術入門概觀
 description: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化 |逐步解說和技術入門簡介
-ms.date: 04/28/2018
-ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 6bfa25e3eeeecf5a936f378df3ae548d6fa37a30
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172140"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025273"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術入門概觀
 
@@ -21,7 +21,7 @@ ms.locfileid: "91172140"
 
 下列每個逐步解說都會使用新的範例 eShopLegacy 和 eShopModernizing 應用程式，這些應用程式可在 GitHub 上取得 <https://github.com/dotnet-architecture/eShopModernizing> 。
 
-- **EShop 繼承應用程式的導覽， (基準應用程式來現代化) **
+- **EShop 繼承應用程式的導覽， (基準應用程式來現代化)**
 
 - **使用 Windows 容器 (WebForms & MVC) 來將現有的 ASP.NET web 應用程式**
 
@@ -117,7 +117,7 @@ ASP.NET 4.x 或舊版中的相依性 (針對 MVC 或 Web Form) 表示這些應�
 
 另一個優點是，開發人員可以在 Windows 容器所提供的一致環境中執行應用程式。 只有特定版本才會出現的問題可以立即找出，而不是在預備環境或生產環境中呈現。 當應用程式在容器中執行時，開發小組成員所使用的開發環境差異較小。
 
-容器化應用程式也有更簡維的相應放大麯線。 容器化應用程式可讓您根據 VM 或實體機器中) 的容器， (更多應用程式和服務實例，相較于每部機器的一般應用程式部署。 這會轉譯為較高的密度和較少的必要資源，特別是當您使用協調器時，例如 Kubernetes。
+容器化應用程式也有更簡維的相應放大麯線。 容器化應用程式可讓您根據 VM 或實體機器中) 的容器， (更多應用程式和服務實例，相較于每部機器的一般應用程式部署。 這種方法會轉譯為較高的密度和較少的必要資源，特別是當您使用協調器時，例如 Kubernetes。
 
 容器化在理想的情況下，不需要對應用程式程式碼進行任何變更， (C \#) 。 在大部分的情況下，您只需要 (Dockerfile 和 Docker Compose 檔案) 的 Docker 部署中繼資料檔案。
 
@@ -228,7 +228,7 @@ EShopModernizing GitHub 存放庫 wiki 提供完整的技術逐步解說：
 
 ### <a name="overview"></a>概觀
 
-以 Windows 容器為基礎的應用程式，很快就需要使用平臺，甚至是從 IaaS Vm 移離。 這是為了輕鬆達成高擴充性和更佳的自動化擴充性，並大幅改善自動化部署和版本設定的必要。 您可以使用[Azure Container service](https://azure.microsoft.com/services/container-service/)中提供的 orchestrator [Kubernetes](https://kubernetes.io/)來達成這些目標。
+以 Windows 容器為基礎的應用程式，很快就需要使用平臺，甚至是從 IaaS Vm 移離。 需要這種方法，才能輕鬆達成高擴充性和更佳的自動化擴充性，並大幅改進自動化的部署和版本控制。 您可以使用[Azure Container service](https://azure.microsoft.com/services/container-service/)中提供的 orchestrator [Kubernetes](https://kubernetes.io/)來達成這些目標。
 
 ### <a name="goals"></a>目標
 
@@ -294,13 +294,13 @@ EShopModernizing GitHub 存放庫 wiki 提供完整的技術逐步解說：
 
 本逐步解說的目標是要瞭解如何部署 Windows 容器型應用程式，以從登錄 (Docker Hub 或 Azure Container Registry) 的容器 Azure App Service。
 
-### <a name="scenario"></a>狀況
+### <a name="scenario"></a>案例
 
 ![將 Windows 容器型應用程式部署至適用于容器的 Azure App Service](./media/image5-11.png)
 
 ### <a name="benefits"></a>優點
 
-部署至適用于容器的 Azure App Service 可提供容器的優點，與 Azure App Service 的 PaaS 優點配對。 您可以輕鬆地垂直和水準調整 app service，也可以設定自動調整以符合不斷變化的需求。 您可以輕鬆地設定從登錄零停機和設定持續部署的更新。
+部署至適用于容器的 Azure App Service 可提供容器的優點，與 Azure App Service 的 PaaS 優點配對。 您可以輕鬆地垂直和水準調整 app service，也可以設定自動調整以符合不斷變化的需求。 您可以使用零停機時間來執行更新，也可以輕鬆地設定從登錄進行連續部署的設定。
 
 ### <a name="next-steps"></a>後續步驟
 

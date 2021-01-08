@@ -1,13 +1,13 @@
 ---
 title: 打造適用于雲端的復原服務。 接受雲端中的暫時性失敗
 description: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化 |打造適用于雲端的復原服務。 接受雲端中的暫時性失敗
-ms.date: 04/30/2018
-ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 4d592a5761cdf696f3e57516d747cbd770512053
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172153"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025325"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建置準備好在雲端執行的彈性服務：接受雲端中的暫時性失敗
 
@@ -35,7 +35,7 @@ ms.locfileid: "91172153"
 
 當您在執行可存取資料庫的復原通訊時，視您使用的 .NET 版本而定，它可以很簡單 (例如， [Entity Framework 6 或更新](/ef/ef6/fundamentals/connection-resiliency/retry-logic)版本。 這只是設定資料庫連接) 。 或者，您可能需要使用其他程式庫（例如 [暫時性錯誤處理應用程式區塊](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (針對舊版 .net) ），或甚至是執行您自己的程式庫。
 
-當您執行 HTTP 重試和斷路器時，.NET 的建議是使用 [Polly](https://github.com/App-vNext/Polly) 程式庫，該程式庫的目標 .NET Framework 4.0、.NET Framework 4.5 和 .NET Standard 1.1，其中包括 .net Core 支援。
+在實施 HTTP 重試和斷路器時，.NET 的建議是使用 [Polly](https://github.com/App-vNext/Polly) 程式庫，其目標為 .NET Standard 1.1 (涵蓋範圍： .net core 1.0、Mono、XAMARIN、UWP、wp 8.1 +) 和 .NET Standard 2.0 + (涵蓋範圍： .net core 2.0 +、.net Core 3.0 和更新版本的 Mono、XAMARIN 和 UWP 目標) 。 Nuget 套件也包含 .NET Framework 4.6.1 和4.7.2 的直接目標。
 
 若要瞭解如何在雲端中執行處理部分失敗的策略，請參閱下列參考。
 
@@ -45,7 +45,7 @@ ms.locfileid: "91172153"
 
     [https://docs.microsoft.com/dotnet/architecture/microservices/implement-resilient-applications/partial-failure-strategies](../../microservices/implement-resilient-applications/partial-failure-strategies.md)
 
-- **Entity Framework 連接復原和重試邏輯 (第6版和更新版本) **
+- **Entity Framework 連接復原和重試邏輯 (第6版和更新版本)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 

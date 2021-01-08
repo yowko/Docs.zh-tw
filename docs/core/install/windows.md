@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 Windows 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 9d39ec28ea2cea875ddd6da34b92eeb740ee6638
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970742"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025449"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安裝 .NET
 
@@ -180,30 +180,21 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 
 ### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7/Vista/8.1/Server 2008 R2/Server 2012 R2
 
-如果您要在下列 Windows 版本上安裝 .NET SDK 或執行時間，則需要額外的相依性：
+如果您要在下列 Windows 版本上安裝 .NET SDK 或執行時間，則需要更多相依性：
 
-- Windows 7 SP1 [ESU][esu]
-- Windows Vista SP 2
-- Windows 8.1
-- Windows Server 2008 R2
-- Windows Server 2012 R2
+| 作業系統         | Prerequisites                                                                    |
+|--------------------------|----------------------------------------------------------------------------------|
+| Windows 7 SP1 [ESU][esu] | -Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 <br> -KB3063858 [64-位][kb64]  /  [32][kb32]位 <br> - [MicrosoftRootCertificateAuthority2011 .cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) ( 僅限 .net Core 2.1)  |
+| Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 |
+| Windows 8.1              | Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 |
+| Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 |
+| Windows Server 2012 R2   | Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 |
 
-安裝下列項目：
+如果您收到下列任一 dll 的相關錯誤，也需要先前的需求：
 
-- [Microsoft Visual C++ 2015](https://www.microsoft.com/download/details.aspx?id=52685)可轉散發套件更新3。
-- [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
-
-如果您遇到下列其中一個錯誤，也需要先前的需求：
-
-> 程式無法啟動，因為您的電腦遺漏 *api-ms-win-crt-runtime-l1-1-0.dll* 。 請嘗試重新安裝程式以修正此問題。
->
-> \- 或 -
->
-> 程式無法啟動，因為您的電腦遺漏 *api-ms-win-cor-timezone-l1-1-0.dll* 。 請嘗試重新安裝程式以修正此問題。
->
-> \- 或 -
->
-> 找到程式庫 *hostfxr.dll* ，但從 *C： \\ \<path_to_app> \\hostfxr.dll* 載入該程式庫失敗。
+- *api-ms-win-crt-runtime-l1-1-0.dll*
+- *api-ms-win-cor-timezone-l1-1-0.dll*
+- *hostfxr.dll*
 
 ## <a name="install-with-powershell-automation"></a>使用 PowerShell 自動化安裝
 
@@ -318,3 +309,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 - [教學課程：將 .Net Core 應用程式](../docker/build-container.md)。
 
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
+[vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
+[vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
+[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409

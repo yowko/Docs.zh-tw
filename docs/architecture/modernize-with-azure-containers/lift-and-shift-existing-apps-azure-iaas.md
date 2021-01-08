@@ -1,27 +1,27 @@
 ---
 title: '將現有的 .NET 應用程式隨即轉移到 Azure IaaS (雲端基礎結構就緒) '
 description: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化。
-ms.date: 04/28/2018
-ms.openlocfilehash: d610222aa6649c1b28e198c074794dd316f895ec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: fb875c38cac236826007bba217189238b7c00898
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172166"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025390"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>將現有的 .NET 應用程式隨即轉移到 Azure IaaS (雲端基礎結構就緒) 
 
 > 願景：第一個步驟是減少內部部署的投資，以及硬體和網路維護的總成本，只要在雲端重新裝載現有的應用程式即可。
 
-在*瞭解如何*將現有的應用程式遷移至 azure 基礎結構即服務 (IaaS) 平臺之前，請務必先分析您想要直接遷移至 Azure 中 IaaS*的原因。* 這個現代化成熟度層級的案例基本上是開始使用雲端中的 Vm，而不是繼續使用您目前的內部部署基礎結構。
+在 *瞭解如何* 將現有的應用程式遷移至 azure 基礎結構即服務 (IaaS) 平臺之前，請務必先分析您想要直接遷移至 Azure 中 IaaS *的原因。* 這個現代化成熟度層級的案例基本上是開始使用雲端中的 Vm，而不是繼續使用您目前的內部部署基礎結構。
 
 要分析的另一個 *重點是，* 您可能想要遷移至單純的 IaaS 雲端，而不是只在 Azure 中新增更先進的受控服務。 判斷哪些案例可能需要 IaaS。
 
-圖2-1 將雲端基礎結構就緒的應用程式置於現代化成熟度層級：
+圖2-1 將雲端 Infrastructure-Ready 應用程式置於現代化成熟度等級：
 
-![定位雲端基礎結構就緒的應用程式](./media/image2-1.png)
+![定位雲端 Infrastructure-Ready 應用程式](./media/image2-1.png)
 
-**圖2-1。** 定位雲端基礎結構就緒的應用程式
+**圖2-1。** 定位雲端 Infrastructure-Ready 應用程式
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>將現有 .NET web 應用程式遷移至 Azure IaaS 的原因
 
@@ -29,13 +29,13 @@ ms.locfileid: "91172166"
 
 決定將您的應用程式移至雲端之後，您可能會選擇 IaaS 而非更先進的選項（例如 PaaS），因為 IaaS 環境將更加熟悉。 移至與您目前的內部部署環境類似的環境，可提供較低的學習曲線，讓它成為最快的雲端途徑。
 
-不過，採用最快的雲端途徑，並不表示您在雲端中執行應用程式時，將獲得最大效益。 任何組織都能從雲端遷移中獲得最大的優勢，也就是已推出的雲端優化和雲端原生成熟度等級。
+不過，採用最快的雲端途徑，並不表示您在雲端中執行應用程式時，將獲得最大效益。 任何組織都可以在已推出的 Cloud-Optimized 和 Cloud-Native 成熟度層級，獲得雲端遷移的最大效益。
 
-此外，當應用程式已在雲端中執行時，甚至是在 IaaS 上執行時，也會變得更容易現代化和重新架構。 已達到應用程式資料移轉。 此外，您的組織也會獲得在雲端中工作所需的技能，並讓轉變成為「雲端文化」中的運作方式。
+此外，當應用程式已在雲端中執行時，甚至是在 IaaS 上執行時，也會變得更容易現代化和重新架構。 已達到應用程式資料移轉。 此外，您的組織將獲得在雲端中工作所需的技能，並讓轉變成為「雲端文化」中的運作。
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>何時遷移至 IaaS 而非 PaaS
 
-接下來的幾節將討論大部分的雲端優化應用程式，這些應用程式大多是以 PaaS 平臺和服務為基礎。 這些應用程式可讓您從遷移至雲端獲得最大效益。
+下一節將討論大部分的 Cloud-Optimized 應用程式，這些應用程式大多是以 PaaS 平臺和服務為基礎。 這些應用程式可讓您從遷移至雲端獲得最大效益。
 
 如果您的目標只是要將現有的應用程式移至雲端，請先找出不需要大量修改才能在 Azure App Service 中執行的現有應用程式。 這些應用程式應該是第一個雲端優化的候選項目。
 
@@ -63,9 +63,9 @@ Azure Migrate 可讓您安心地遷移工作負載，對企業的影響最低，
 
 圖2-2 顯示 Azure Migrate 所執行之所有伺服器和應用程式連接的內建相依性對應。
 
-![定位雲端基礎結構就緒的應用程式](./media/image2-2.png)
+![定位雲端 Infrastructure-Ready 應用程式](./media/image2-2.png)
 
-**圖2-2。** 定位雲端基礎結構就緒的應用程式
+**圖2-2。** 定位雲端 Infrastructure-Ready 應用程式
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>使用 Azure Site Recovery 將現有的 Vm 遷移至 Azure Vm
 
@@ -75,9 +75,9 @@ Site Recovery 也專門針對部分在內部部署且部分在 Azure 上的混�
 
 圖2-3 顯示如何使用 Azure Site Recovery 來執行多個 VM 遷移。
 
-![定位雲端基礎結構就緒的應用程式](./media/image2-3.png)
+![定位雲端 Infrastructure-Ready 應用程式](./media/image2-3.png)
 
-**圖2-3。** 定位雲端基礎結構就緒的應用程式
+**圖2-3。** 定位雲端 Infrastructure-Ready 應用程式
 
 ### <a name="additional-resources"></a>其他資源
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599098"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025429"
 ---
 # <a name="structure-types-c-reference"></a>結構類型 (c # 參考) 
 
@@ -30,11 +30,7 @@ ms.locfileid: "96599098"
 
 ## <a name="readonly-struct"></a>`readonly` 結構
 
-從 c # 7.2 開始，您可以使用 `readonly` 修飾詞來宣告結構類型是不可變的：
-
-[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
-
-結構的所有資料成員都 `readonly` 必須是唯讀的，如下所示：
+從 c # 7.2 開始，您可以使用 `readonly` 修飾詞來宣告結構類型是不可變的。 結構的所有資料成員都 `readonly` 必須是唯讀的，如下所示：
 
 - 任何欄位宣告都必須有[ `readonly` 修飾](../keywords/readonly.md)詞
 - 任何屬性（包括自動執行的屬性）都必須是唯讀的。 在 c # 9.0 和更新版本中，屬性可能具有[ `init` 存取](../../whats-new/csharp-9.md#init-only-setters)子。
@@ -43,6 +39,10 @@ ms.locfileid: "96599098"
 
 > [!NOTE]
 > 在 `readonly` 結構中，可變動參考型別的資料成員仍可以改變本身的狀態。 例如，您無法取代 <xref:System.Collections.Generic.List%601> 實例，但是可以在其中加入新的元素。
+
+下列程式碼會定義 `readonly` 具有僅限初始屬性 setter 的結構，可在 c # 9.0 和更新版本中使用：
+
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 ## <a name="readonly-instance-members"></a>`readonly` 實例成員
 

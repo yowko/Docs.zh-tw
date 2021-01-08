@@ -3,13 +3,13 @@ title: .NET 中的高效能記錄
 author: IEvangelist
 description: 了解如何使用 LoggerMessage 來建立可快取的委派，其對於高效能記錄案例需要較少的物件配置。
 ms.author: dapine
-ms.date: 09/25/2020
-ms.openlocfilehash: 9111b9553c913cff2937b574250b65e633250f4f
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 01/04/2021
+ms.openlocfilehash: 0031ff7a9f70cb0cf724fdf6dfa4fbe0a44af7c1
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804758"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025441"
 ---
 # <a name="high-performance-logging-in-net"></a>.NET 中的高效能記錄
 
@@ -30,7 +30,7 @@ ms.locfileid: "91804758"
 
 每個記錄訊息都是 [LoggerMessage.Define](xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A) 所建立之靜態欄位中保存的 <xref:System.Action>。 例如，範例應用程式會建立一個欄位來描述處理工作專案的記錄訊息：
 
-:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkField":::
+:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="FailedProcessingField":::
 
 針對 <xref:System.Action>，請指定：
 
@@ -40,19 +40,15 @@ ms.locfileid: "91804758"
 
 當工作專案被清除佇列來處理背景工作服務應用程式時，會將下列專案設定為：
 
-- 將記錄層級設定為 `Critical`。
+- 將記錄層級設定為 <xref:Microsoft.Extensions.Logging.LogLevel.Critical?displayProperty=nameWithType>。
 - 將事件識別碼設定為含有 `FailedToProcessWorkItem` 方法名稱的 `13`。
 - 將訊息範本 (具名格式字串) 設定為字串。
 
-:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkAssignment":::
+:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="FailedProcessingAssignment":::
 
 結構化的記錄存放區提供事件識別碼來加強記錄時，可以使用事件名稱。 例如，[Serilog](https://github.com/serilog/serilog-extensions-logging) 會使用事件名稱。
 
-<xref:System.Action> 是透過強型別擴充方法叫用。 `FailedToProcessWorkItem`方法會在每次處理工作專案時記錄訊息：
-
-:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkMethod":::
-
-`FailedToProcessWorkItem``ExecuteAsync`當發生錯誤時，會在*Worker.cs*中方法的記錄器上呼叫：
+<xref:System.Action> 是透過強型別擴充方法叫用。 `PriorityItemProcessed`方法會在每次處理工作專案時記錄訊息。 然而， `FailedToProcessWorkItem` 會在 (時呼叫，如果) 例外狀況，則會呼叫：
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Worker.cs" range="18-39" highlight="15-18":::
 
@@ -70,7 +66,7 @@ crit: WorkerServiceOptions.Example.Worker[13]
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingItemField":::
 
-委派的記錄訊息範本會從所提供的類型接收其預留位置值。 範例應用程式會定義新增引述的委派，其中的引述參數是 `WorkItem`：
+委派的記錄訊息範本會從所提供的類型接收其預留位置值。 範例應用程式會定義委派，以新增專案參數為的工作專案 `WorkItem` ：
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingItemAssignment":::
 
@@ -95,19 +91,15 @@ info: WorkerServiceOptions.Example.Worker[1]
 
 就像 <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A> 方法的情況一樣，提供給 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 方法的字串是範本，而不是內插字串。 預留位置會依照指定類型的順序填入。 範本中的預留位置名稱應該是描述性名稱，而且在範本之間應該保持一致。 它們將作為結構化記錄資料內的屬性名稱。 建議您針對預留位置名稱使用 [Pascal 大小寫](../../standard/design-guidelines/capitalization-conventions.md)。 例如，`{Item}`、`{DateTime}`。
 
-使用 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 方法，定義要套用至一系列記錄訊息的[記錄範圍](logging.md#log-scopes)。
-
-範例應用程式具有 [全部清除]**** 按鈕，可用來刪除資料庫中的所有引述。 也可透過逐一移除引述來刪除它們。 每次刪除引述時，就會在記錄器上呼叫 `QuoteDeleted` 方法。 記錄範圍會新增至這些記錄訊息。
-
-在 *appsettings.json* 的主控台記錄器區段中啟用 `IncludeScopes`：
+使用 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 方法，定義要套用至一系列記錄訊息的[記錄範圍](logging.md#log-scopes)。 在 *appsettings.json* 的主控台記錄器區段中啟用 `IncludeScopes`：
 
 :::code language="json" source="snippets/configuration/worker-service-options/appsettings.json" highlight="3-5":::
 
-若要建立記錄範圍，請新增欄位以保留該範圍的 <xref:System.Func%601> 委派。 範例應用程式會建立稱為 `_allQuotesDeletedScope` (*Internal/LoggerExtensions.cs*) 的欄位：
+若要建立記錄範圍，請新增欄位以保留該範圍的 <xref:System.Func%601> 委派。 範例應用程式會建立稱為 `_processingWorkScope` (*Internal/LoggerExtensions.cs*) 的欄位：
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkField":::
 
-請使用 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 來建立委派。 叫用委派時，最多可以指定三種類型作為範本引數。 範例應用程式會使用包含已刪除引述數目 (`int` 類型) 的訊息範本：
+請使用 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 來建立委派。 叫用委派時，最多可以指定三種類型作為範本引數。 範例應用程式會使用訊息範本，其中包含處理開始的日期時間：
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkAssignment":::
 
@@ -119,7 +111,7 @@ info: WorkerServiceOptions.Example.Worker[1]
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Worker.cs" range="18-39" highlight="4":::
 
-檢查應用程式主控台輸出中的記錄訊息。 下列結果顯示包含記錄範圍訊息的三個刪除引述：
+檢查應用程式主控台輸出中的記錄訊息。 下列結果會顯示記錄檔訊息的優先順序順序，其中包含記錄範圍訊息：
 
 ```console
 info: WorkerServiceOptions.Example.Worker[1]
@@ -151,6 +143,6 @@ info: WorkerServiceOptions.Example.Worker[1]
       Processing priority item: Priority-Deferred (37bf736c-7a26-4a2a-9e56-e89bcf3b8f35): 'Set process state'
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 中的記錄](logging.md)

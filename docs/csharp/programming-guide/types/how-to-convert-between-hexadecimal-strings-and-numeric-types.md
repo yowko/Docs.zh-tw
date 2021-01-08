@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 18021156af879f324993beca04531c8a822725db
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 35cf1af661071c70b8d68de2e47ce555be7b9fef
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513233"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025403"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何在十六進位字串和數位類型之間轉換 (c # 程式設計手冊) 
 
@@ -61,7 +61,13 @@ ms.locfileid: "97513233"
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="example"></a>範例  
+
+ 下列範例示範如何藉由呼叫[](../../language-reference/builtin-types/integral-numeric-types.md) <xref:System.Convert.ToHexString%2A?displayProperty=nameWithType> .net 5.0 中引進的方法，將位元組陣列轉換為十六進位字串。
+  
+ [!code-csharp[csProgGuideTypes#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#47)]  
+  
+## <a name="see-also"></a>另請參閱
 
 - [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md) \(部分機器翻譯\)
 - [類型](./index.md)

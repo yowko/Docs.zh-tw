@@ -1,35 +1,35 @@
 ---
 title: 移轉至混合式雲端案例
-description: 使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化 |遷移到混合雲方案
-ms.date: 04/30/2018
-ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化 |遷移至混合式雲端案例
+ms.date: 12/21/2020
+ms.openlocfilehash: d5bf7f08381f3718061742b37c73604d8e57f1e2
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937368"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025221"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>移轉至混合式雲端案例
 
-由於法規或他們自己的策略，某些組織和企業無法將其某些應用程式遷移到公共雲（如 Microsoft Azure 或任何其他公共雲）。 但是，任何組織都有可能從在公共雲和其他本地應用程式中部署某些應用程式中獲益。 但是，由於公共雲中使用的平臺和技術與本地環境不同，混合環境可能會導致環境中過於複雜。
+某些組織和企業無法將部分應用程式遷移至公用雲端，例如 Microsoft Azure 或其他任何公用雲端（因為法規或其本身的原則）。 不過，在公用雲端和其他內部部署應用程式中，可能會有任何組織受益。 但是，混合的環境可能會在環境中造成過度複雜的情況，因為公用雲端與內部部署環境中使用不同的平臺和技術。
 
-Microsoft 提供了最佳的混合雲解決方案，您可以在其中優化本地和公共雲中的現有資產，同時確保 Azure 混合雲的一致性。 您可以最大化現有技能，並獲得一種靈活、統一的方法來構建可在雲或本地運行的應用，這要歸功於 Azure 堆疊（本地）和 Azure（公共雲）。
+Microsoft 提供最佳的混合式雲端解決方案，可讓您在內部部署和公用雲端中優化現有的資產，同時確保 Azure 混合式雲端中的一致性。 您可以充分發揮現有技能的最大效用，並取得彈性、統一的方法來建立可在雲端或內部部署中執行的應用程式，因為 Azure Stack (內部部署) 和 Azure (公用雲端) 。
 
-在安全性方面，您可以將管理和安全性集中到混合雲中。 通過提供本地和雲應用的單一登入，您可以控制從資料中心到雲的所有資產。 通過將 Active Directory 擴展到混合雲並使用標識管理來實現此目的。
+在安全性方面，您可以在混合式雲端集中管理和安全性。 您可以藉由提供對內部部署和雲端應用程式的單一登入，來掌控所有資產，從資料中心到雲端。 您可以藉由將 Active Directory 延伸至混合式雲端，以及使用身分識別管理來完成這項功能。
 
-最後，您可以無縫分發和分析資料，對雲和本地資產使用相同的查詢語言，並在 Azure 中應用分析和深度學習來豐富資料，而不管資料的來源如何。
+最後，您可以順暢地散發和分析資料、針對雲端和內部部署資產使用相同的查詢語言，並在 Azure 中套用分析和深度學習，以豐富您的資料，不論其來源為何。
 
 ## <a name="azure-stack"></a>Azure Stack
 
-Azure 堆疊是一個混合雲平臺，允許您從組織的資料中心提供 Azure 服務。 Azure Stack 旨在支援關鍵方案中的現代應用程式的新選項，如邊緣和未連接的環境，或滿足特定的安全性和合規性要求。
+Azure Stack 是混合式雲端平臺，可讓您從組織的資料中心提供 Azure 服務。 Azure Stack 的設計目的是在主要案例（例如 edge 和未連線的環境）中支援新式應用程式的新選項，或符合特定的安全性和合規性需求。
 
-圖 4-13 顯示了 Microsoft 提供的真實混合雲平臺的概述。
+圖4-13 顯示 Microsoft 所提供之真正混合式雲端平臺的總覽。
 
-![具有 Azure 堆疊和 Azure 的 Microsoft 混合雲平臺圖。](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
+![Microsoft 混合式雲端平臺與 Azure Stack 和 Azure 的圖表。](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
-**圖 4-13。** 微軟混合雲平臺與 Azure 堆疊和 Azure
+**圖4-13。** 使用 Azure Stack 和 Azure 的 Microsoft 混合式雲端平臺
 
-Azure 堆疊提供兩種部署選項，以滿足您的需求：
+Azure Stack 提供兩種部署選項，以符合您的需求：
 
 - Azure Stack 整合系統
 
@@ -37,19 +37,19 @@ Azure 堆疊提供兩種部署選項，以滿足您的需求：
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack 整合系統
 
-Azure 堆疊集成系統通過 Microsoft 和硬體合作夥伴的合作夥伴關係提供。 該合作夥伴關係創造了一種解決方案，提供雲節奏創新，在管理上實現簡單性。 由於是以硬體與軟體的整合系統形式來提供 Azure Stack，因此除了仍然會採用來自雲端的創新之外，您還有適度的彈性和控制。 Azure Stack 集成系統的大小範圍從 4 到 12 個節點，並且由硬體合作夥伴和 Microsoft 共同支援。 使用 Azure 堆疊集成系統為生產工作負荷實施新方案。
+Azure Stack 整合系統是透過 Microsoft 與硬體合作夥伴的合作關係來提供。 合作關係所建立的解決方案可提供雲端進度的創新，並與管理中的簡易性保持平衡。 由於是以硬體與軟體的整合系統形式來提供 Azure Stack，因此除了仍然會採用來自雲端的創新之外，您還有適度的彈性和控制。 Azure Stack 整合式系統的大小範圍從4到12個節點，且由硬體合作夥伴與 Microsoft 共同支援。 使用 Azure Stack 整合系統，為您的生產工作負載執行新案例。
 
 ### <a name="azure-stack-development-kit"></a>Azure Stack 開發套件
 
-「Microsoft Azure Stack 開發套件」是單一節點的 Azure Stack 部署，您可以用來評估和瞭解 Azure Stack。 還可以將 Azure 堆疊開發工具組用作開發人員環境，您可以在其中使用與 Azure 一致的 API 和工具進行開發。 「Azure Stack 開發套件」不應該用來作為生產環境。
+「Microsoft Azure Stack 開發套件」是單一節點的 Azure Stack 部署，您可以用來評估和瞭解 Azure Stack。 您也可以使用 Azure Stack 開發套件作為開發人員環境，您可以在其中使用與 Azure 一致的 Api 和工具進行開發。 「Azure Stack 開發套件」不應該用來作為生產環境。
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Azure 混合雲**
+- **Azure 混合式雲端**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
-- **Azure 堆疊**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
@@ -57,14 +57,14 @@ Azure 堆疊集成系統通過 Microsoft 和硬體合作夥伴的合作夥伴關
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
-- **創建支援活動目錄的容器**
+- **建立具有 Active Directory 支援的容器**
 
     <https://docs.microsoft.com/archive/blogs/containerstuff/create-a-container-with-active-directory-support>
 
-- **Azure 混合權益許可**
+- **Azure Hybrid Benefit 授權**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[上一個](life-cycle-ci-cd-pipelines-devops-tools.md)
->[下一個](../walkthroughs-technical-get-started-overview.md)
+>[上一個](life-cycle-ci-cd-pipelines-devops-tools.md) 
+>[下一步](../walkthroughs-technical-get-started-overview.md)

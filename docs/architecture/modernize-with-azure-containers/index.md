@@ -1,21 +1,25 @@
 ---
-title: 利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
+title: 利用 Azure 雲端及 Windows 容器將現有的 .NET 應用程式現代化
 description: 了解如何利用這本電子書，將現有的應用程式原形移轉到 Azure 雲端及容器並加以現代化。
-ms.date: 04/28/2018
-ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/07/2021
+ms.openlocfilehash: bf6e6dff75c939508947aabeda14955b880f5a89
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705328"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025464"
 ---
-# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
+# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers"></a>使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化
 
 ![將 .NET 應用程式現代化指南的封面影像。](./media/index/web-application-guide-cover-image.png)
 
+**版本 v 5。0**
+
+請參閱 [變更記錄](https://aka.ms/modernize-ebook-changelog) ，以取得書籍更新和社區貢獻。
+
 由 Microsoft 按下 Microsoft Corporation 的 microsoft DevDiv 部門和 Microsoft 部門發佈，並由 microsoft 部門華盛頓州華盛頓98052-6399 州雷德蒙德
 
-Microsoft Corporation 的著作權©2020
+Microsoft Corporation 的著作權©2021
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
 
@@ -37,7 +41,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 ## <a name="introduction"></a>簡介
 
-當您決定要將 Web 應用程式或服務現代化，並將其移至雲端時，您未必需要全面重新建構您的應用程式。 基於成本和時間的限制，使用微服務這類先進方法來重新建構應用程式，不一定每次都適合。 重新建構應用程式也不是必然，必須取決於應用程式的類型。 為了讓組織的雲端移轉策略發揮最高成本效益，考量您的業務需求與應用程式需求便成了重要的一環。 您必須判斷：
+當您決定要將 Web 應用程式或服務現代化，並將其移至雲端時，您未必需要全面重新建構您的應用程式。 基於成本和時間的限制，使用微服務這類先進方法來重新建構應用程式，不一定每次都適合。 重新建構應用程式也不是必然，必須取決於應用程式的類型。 若要將組織的雲端遷移策略的成本效益優化，請務必考慮您的業務需求和應用程式的需求。 您必須判斷：
 
 - 哪些應用程式需要轉換或重新建構。
 
@@ -47,7 +51,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 ## <a name="about-this-guide"></a>關於本指南
 
-本指南主要著重於現有 Microsoft .NET Framework Web 應用程式或服務導向應用程式的第一次現代化，意即將工作負載移至較新或更現代化環境的動作，所以不會大幅改變應用程式的程式碼與基本架構。
+本指南主要著重于現有 Microsoft .NET Framework web 或服務導向應用程式的初步現代化，這表示將工作負載移至較新或更新式環境的動作，而不會大幅改變應用程式的程式碼和基本架構。
 
 本指南也摘要列出將應用程式移至雲端，以及使用特定一組新技術及方法 (例如 Windows 容器及 Azure 支援之 Windows 容器中的相關計算平台)，將應用程式局部現代化的好處。
 
@@ -72,7 +76,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 **層級1：雲端基礎結構就緒** 應用程式：在這種遷移方法中，您只需將目前的內部部署應用程式遷移或重新裝載至基礎結構即服務 ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) 平臺。 您的應用程式結構和以前幾乎相同，但您現已將其部署到雲端中的 VM。
 這種簡單的移轉類型在業界我們稱為「原形移轉」。
 
-**層級2：雲端優化** 應用程式：在此層級，但仍未重新架構或改變重要的程式碼，您可以利用容器和其他雲端管理的服務等新式技術，在雲端中執行應用程式，以獲得更多優點。 您可藉由精簡企業開發營運 (DevOps) 程序來增加應用程式的靈活度，加快出貨速度。 您可以使用採用 Docker 引擎的 Windows 容器等技術來達到此目的。 容器免除了在多個階段部署時，因應用程式相依性而引起的衝突。 在此成熟度模型中，您一方面可以在 IaaS 或 PaaS 上部署容器，一方面可以利用更多雲端管的資料庫服務、快取即服務、監視及持續整合/持續部署 (CI/CD) 管線服務等等。
+**層級2：雲端優化** 應用程式：在此層級，但仍未重新架構或改變重要的程式碼，您可以利用容器和其他雲端管理的服務等新式技術，在雲端中執行應用程式，以獲得更多優點。 您可藉由精簡企業開發營運 (DevOps) 程序來增加應用程式的靈活度，加快出貨速度。 您可以使用以 Docker 引擎為基礎的 Windows 容器等技術來達成此功能。 容器免除了在多個階段部署時，因應用程式相依性而引起的衝突。 在此成熟度模型中，您一方面可以在 IaaS 或 PaaS 上部署容器，一方面可以利用更多雲端管的資料庫服務、快取即服務、監視及持續整合/持續部署 (CI/CD) 管線服務等等。
 
 第三等級的成熟度是雲端的終極目標，但對大多數應用程式而言並非必要，且非本指南的主要重點：
 
@@ -80,7 +84,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 表 1-1 描述了選擇各項移轉或現代化方法的主要優點及理由。
 
-| **雲端基礎結構就緒** <br /> *隨即轉移* | **雲端最佳化** <br /> *現代化* | **雲端原生** <br /> *現代化、重新架構及重新編寫* |
+| **雲端基礎結構就緒** <br /> *隨即轉移* | **雲端最佳化** <br /> *現代化* | **雲端原生** <br /> *現代化、重新架構和重寫* |
 |---|---|---|
 | **應用程式的計算目標** |
 | 在 Azure 中部署到 VM 的應用程式 | 部署到 Azure App Service、Azure 容器執行個體 (ACI)、搭載容器的 VM 或 AKS (Azure Kubernetes Service) 的整合型或多層式架構 (N-Tier) 應用程式 | 容器化 Azure Kubernetes Service (AKS) 上的微服務及 (或) Azure Functions 上的無伺服器微服務。 |
@@ -89,7 +93,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 | **優點**|
 | <li>無須重新架構，也無須增加新的程式碼 <li> 以最少心力快速移轉 <li> Azure 中支援的最普及選項 <li> 保證基本可用性 <li> 移至雲端後更容易現代化 | <li> 無須重新架構 <li> 最少的程式碼/設定變更 <li> 因容器而獲得改善的部署及 DevOps 發行靈活度 <li> 增加密度並降低部署成本 <li> 應用程式及相依性的可攜性 <li> 主機目標的彈性： PaaS 方法或 IaaS | <li> 雲端架構，可以發揮雲端最大效益，但需要編寫新的程式碼 <li> 微服務雲端原生方法 <li> 現代化的任務關鍵性應用程式，具備可高度靈活調整的雲端復原能力 <li> 完整受控的服務 <li> 經最佳化以調整規模 <li> 為子系統的自主靈活度最佳化 <li> 建基於部署及 DevOps |
 | **挑戰** |
-| <li> 除了轉入營業費用或關閉資料中心之外，雲端價值較低 <li> 管理小小：無 OS 或中介軟體修補;可能會使用基礎結構解決方案，例如 Terraform、Spinnaker 或 Puppet | <li> 對於開發人員與 IT 營運來說，容器化是學習曲線之外的另一個步驟 <li> DevOps 和 CI/CD 管線通常是這種方法的「a 必須」。 若目前的組織文化中沒有這兩項，就可能形成另一項挑戰| <li> 需要重新架構雲端原生應用程式及微服務架構，而且在現代化時，通常需要重新分解或重新編寫重要的程式碼 (增加時間及預算)|
+| <li> 較小的雲端價值，而非營運費用或關閉資料中心的轉移 <li> 管理小小：無 OS 或中介軟體修補;可能會使用基礎結構解決方案，例如 Terraform、Spinnaker 或 Puppet | <li> 對於開發人員與 IT 營運來說，容器化是學習曲線之外的另一個步驟 <li> DevOps 和 CI/CD 管線通常是這種方法的「a 必須」。 若目前的組織文化中沒有這兩項，就可能形成另一項挑戰| <li> 需要適用于雲端原生應用程式和微服務架構的重新架構，而且通常需要在現代化 (增加時間和預算時進行大量的程式碼重構或重寫) |
 > **表 1-1。** 現有 .NET 應用程式及服務現代化路徑的優點與挑戰
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>依成熟度等級分階的主要技術及架構
@@ -145,11 +149,11 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 **圖1-6。** 雲端最佳化應用程式案例範例，搭載 Windows 容器與受控服務
 
-更進一步來說，您可以針對特定案例新增一些微服務來延伸現有的雲端最佳化應用程式。 這會讓您有部分前進到雲端原生模型，但這不是本指導的重點。
+更進一步來說，您可以針對特定案例新增一些微服務來延伸現有的雲端最佳化應用程式。 這種方法會將您部分移至 Cloud-Native 模型的層級，而這不是目前指引的主要焦點。
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 
-本指南涵蓋一部份的特定範例案例，如圖 1-7 所示。 本指南僅著重在原形移轉案例，乃至於雲端最佳化模型。 雲端最佳化模型會使用 Windows 容器加上像是監視和 CI/CD 管線等元件，將 .NET Framework 應用程式現代化。 若要以快速且具彈性的方式將應用程式部署到雲端，每項元件都是不可或缺的要素。
+本指南涵蓋一部份的特定範例案例，如圖 1-7 所示。 本指南只著重于隨即轉移案例，最後是在 Cloud-Optimized 模型上。 雲端最佳化模型會使用 Windows 容器加上像是監視和 CI/CD 管線等元件，將 .NET Framework 應用程式現代化。 若要以快速且具彈性的方式將應用程式部署到雲端，每項元件都是不可或缺的要素。
 
 ![本指南不包括雲端原生](./media/image1-7.png)
 
@@ -184,7 +188,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 ## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>將舊版應用程式現代化的範例應用程式：eShopModernizing
 
-GitHub 上的 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 存放庫提供兩個模擬舊版整合型 Web 應用程式的範例應用程式。 第一個 Web 應用程式採用 ASP.NET MVC 開發而成；第二個 Web 應用程式採用 ASP.NET Web Forms 開發而成；第三個應用程式採用多層式架構 (N-Tier) 搭配 WinForms 用戶端桌面應用程式，加上使用 WCF 服務後端。 所有應用程式都採用傳統的 .NET Framework。 因為這些範例程式理應是要現代化的現有/舊版 .NET Framework 應用程式，所以不會使用 .NET Core 或 ASP.NET Core。
+GitHub 上的 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 存放庫提供兩個模擬舊版整合型 Web 應用程式的範例應用程式。 第一個 Web 應用程式採用 ASP.NET MVC 開發而成；第二個 Web 應用程式採用 ASP.NET Web Forms 開發而成；第三個應用程式採用多層式架構 (N-Tier) 搭配 WinForms 用戶端桌面應用程式，加上使用 WCF 服務後端。 所有應用程式都採用傳統的 .NET Framework。 這些範例應用程式不會使用 .NET Core 或 .NET 5.0 或 ASP.NET Core，因為它們應該是現有/舊版的 .NET Framework 應用程式才能現代化。
 
 這些範例應用程式都有現代化版程式碼第二個版本，十分容易。 應用程式版本間最主要的差異在於，第二個版本使用了 Windows 容器作為部署選項。 第二個版本也多了一些附加功能，像是用來管理影像的 Azure 儲存體 Blob、用來管理安全性的 Azure Active Directory，以及用來監視與稽核應用程式的 Azure Application Insights。
 
