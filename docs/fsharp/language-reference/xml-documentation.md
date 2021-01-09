@@ -2,12 +2,12 @@
 title: XML 文件
 description: '瞭解 F # 中的支援，以從批註產生檔。'
 ms.date: 09/15/2020
-ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 2f8788e79ea964143eecfaddbeb039474dd61f8e
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099005"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025012"
 ---
 # <a name="document-your-code-with-xml-comments"></a>使用 XML 批註記錄您的程式碼
 
@@ -53,7 +53,7 @@ XML 檔批註（如同所有其他批註）將會被編譯器忽略，除非已�
 
 如果您使用 XML 標記，下表描述 F # XML 程式碼批註中所識別的外部標記。
 
-| 標記語法                                  | Description |
+| 標記語法                                  | 描述 |
 |---------------------------------------------|-----------|
 | `<summary>`**_文本_**`</summary>`           | 指定 *文字* 是程式元素的簡短描述。 描述通常是一或兩個句子。|
 | `<remarks>`**_文本_**`</remarks>`           | 指定 *文字* 包含程式元素的補充資訊。|
@@ -65,7 +65,7 @@ XML 檔批註（如同所有其他批註）將會被編譯器忽略，除非已�
 
 下表描述在 [描述] 區段內使用的標記：
 
-| 標記語法                                | Description |
+| 標記語法                                | 描述 |
 |-------------------------------------------|-------------|
 | `<para>`**_文本_**`</para>`               | 指定文欄位落。 這是用來分隔 **備註** 標記內的文字。|
 | `<code>`**_文本_**`</code>`               | 指定 *文字* 是多行程式碼。 檔產生器可以使用這個標記，以適用于程式碼的字型來顯示文字。|
@@ -101,7 +101,7 @@ type SomeType
 
 ## <a name="limitations"></a>限制
 
-C # 中不支援 XML 檔的某些功能（c # 和其他 .NET 語言）。
+F # 不支援 c # 和其他 .NET 語言中的 XML 檔的某些功能。
 
 - 例如，在 F # 中，交互參考必須使用對應符號的完整 XML 簽章 `cref="T:System.Console"` 。
   簡單的 c # 樣式交互參考（例如） `cref="Console"` 不會針對完整的 XML 簽章進行詳細檢查，而且 F # 編譯器不會檢查這些元素。 某些檔工具可能會允許後續處理使用這些交叉參考，但是應該使用完整簽章。
