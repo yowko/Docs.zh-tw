@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 541ac80ce40b0410167b14f96e36b354d19411db
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: fd92c067fc76bea6bede1e5370e7ac168856fa9b
+ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970898"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98058098"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -25,7 +25,7 @@ ms.locfileid: "97970898"
 
 指示和範例程式碼會直接使用程式庫，而不是透過 [ASP.NET Core](/aspnet/core/)的架構。
 
-大部分的序列化程式碼範例會將設定 <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> 為「 `true` 美觀」的 JSON (，以縮排和空白字元來取得可讀性) 。 針對生產用途，您通常會接受此設定的預設值 `false` 。
+大部分的序列化程式碼範例會將設定 <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> 為「 `true` 美觀」的 JSON (，以縮排和空白字元來取得可讀性) 。 在生產環境中，您通常會接受此設定的預設值 `false` ，因為新增不必要的空白字元可能會對效能和頻寬使用量產生明顯的負面影響。
 
 程式碼範例參考下列類別和它的變異：
 
@@ -294,7 +294,7 @@ System.Text.Json在 .Net Core 3.1 中不支援欄位。 [自訂轉換器](system
 和上的擴充方法在 `HttpClient` `HttpContent` System.Text.Json .net Core 3.1 中無法使用。
 ::: zone-end
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
 * [具現化 JsonSerializerOptions 實例](system-text-json-configure-options.md)
