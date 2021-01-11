@@ -19,7 +19,7 @@ items:
             href: ../core/install/macos.md
           - name: 安裝在 Linux 上
             items:
-              - name: 總覽
+              - name: 概觀
                 href: ../core/install/linux.md
               - name: Ubuntu
                 href: ../core/install/linux-ubuntu.md
@@ -37,6 +37,10 @@ items:
                 href: ../core/install/linux-rhel.md
               - name: SLES
                 href: ../core/install/linux-sles.md
+              - name: 使用 Snap 安裝
+                href: ../core/install/linux-snap.md
+              - name: 安裝指令碼和二進位檔
+                href: ../core/install/linux-scripted-manual.md
           - name: 移除過時的執行階段及 SDK
             href: ../core/install/remove-runtime-sdk-versions.md
           - name: 管理 .NET 範本
@@ -193,7 +197,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: .NET Core CLI
         items:
-          - name: 總覽
+          - name: 概觀
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
           - name: 參考
@@ -401,7 +405,7 @@ items:
                 href: ../core/diagnostics/sos-debugging-extension.md
           - name: EventCounters
             items:
-              - name: 總覽
+              - name: 概觀
                 displayName: EventCounters
                 href: ../core/diagnostics/event-counters.md
               - name: .NET 中已知的計數器
@@ -410,14 +414,14 @@ items:
             href: ../core/diagnostics/eventpipe.md
           - name: 記錄和追蹤
             items:
-              - name: 總覽
+              - name: 概觀
                 displayName: logging and tracing
                 href: ../core/diagnostics/logging-tracing.md
               - name: 已知的事件提供者
                 href: ../core/diagnostics/well-known-event-providers.md
           - name: 執行階段事件
             items:
-              - name: 總覽
+              - name: 概觀
                 href: ../fundamentals/diagnostics/runtime-events.md
               - name: 競爭事件
                 href: ../fundamentals/diagnostics/runtime-contention-events.md
@@ -492,7 +496,7 @@ items:
                     href: code-analysis/quality-rules/index.md
                   - name: 設計規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: design rules
                         href: code-analysis/quality-rules/design-warnings.md
                       - name: CA1000
@@ -602,7 +606,7 @@ items:
                         href: code-analysis/quality-rules/ca1200.md
                   - name: 全球化規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: globalization rules
                         href: code-analysis/quality-rules/globalization-warnings.md
                       - name: CA1303
@@ -1194,7 +1198,7 @@ items:
                             href: code-analysis/style-rules/ide0084.md
                       - name: 程式碼區塊喜好設定
                         items:
-                          - name: 總覽
+                          - name: 概觀
                             href: code-analysis/style-rules/code-block-preferences.md
                           - name: IDE0011
                             href: code-analysis/style-rules/ide0011.md
@@ -1255,7 +1259,7 @@ items:
                         href: code-analysis/style-rules/formatting-rules.md
                   - name: 命名規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: naming rules
                         href: code-analysis/style-rules/naming-rules.md
           - name: 平台相容性分析器
@@ -1644,6 +1648,8 @@ items:
                     href: ../standard/serialization/system-text-json-polymorphism.md
               - name: 如何從 Newtonsoft.Json 移轉
                 href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+              - name: 支援的集合類型
+                href: ../standard/serialization/system-text-json-supported-collection-types.md
               - name: 進階
                 items:
                   - name: 自訂字元編碼
@@ -1856,7 +1862,7 @@ items:
         href: /ef/core/
   - name: 平行處理、並行與非同步
     items:
-      - name: 總覽
+      - name: 概觀
         href: ../standard/parallel-processing-and-concurrency.md
         displayName: 'Parallel processing, concurrency, async'
       - name: 非同步程式設計
@@ -2290,7 +2296,7 @@ items:
           - name: 整理專案在 .NET Core 中使用
             href: ../core/porting/project-structure.md
           - name: 無法使用的技術
-            href: ../core/porting/net-framework-tech-unavailable.md
+            href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
           - name: 工具
             href: ../core/porting/tools.md
           - name: 使用 Windows 相容性套件
