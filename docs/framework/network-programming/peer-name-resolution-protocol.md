@@ -3,12 +3,12 @@ title: 對等名稱解析通訊協定
 description: 深入瞭解對等名稱解析通訊協定 (PNRP) ，這是安全、可調整的動態名稱註冊和名稱解析通訊協定。
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: d50514569d066d04391ce65522df789ed421dbed
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9ab46566b3c0d6ceff694eca266bdb6e10441374
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239389"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191231"
 ---
 # <a name="peer-name-resolution-protocol"></a>對等名稱解析通訊協定
 
@@ -53,7 +53,3 @@ ms.locfileid: "96239389"
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [網路程式設計範例](network-programming-samples.md)
-
-<!-- to-do: review sample links
-- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)
--->

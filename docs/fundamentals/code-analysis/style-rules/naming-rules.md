@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 8ce209e64ee7f9f9028c221daedef8fc6a993ef7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 0eea5e89ac5055a45d9ead14363cc2f2fc574401
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96586674"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191075"
 ---
 # <a name="naming-rules"></a>命名規則
 
@@ -79,7 +79,7 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 | -- | -- |
 | `symbols` | 符號群組的標題，定義應套用此規則的符號 |
 | `style` | 應與此規則相關聯之命名樣式的標題 |
-| `severity` |  設定用來強制執行命名規則的嚴重性。 將相關聯的值設定為其中一個可用的 [嚴重性層級](https://docs.microsoft.com/dotnet/fundamentals/code-analysis/configuration-options#severity-level)。<sup>1</sup> |
+| `severity` |  設定用來強制執行命名規則的嚴重性。 將相關聯的值設定為其中一個可用的 [嚴重性層級](../configuration-options.md#severity-level)。<sup>1</sup> |
 
 **注意：**
 

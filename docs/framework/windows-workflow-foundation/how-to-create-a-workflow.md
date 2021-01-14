@@ -3,12 +3,12 @@ title: 作法：建立工作流程
 description: 完成本節中的三個選項之一，以建立工作流程作為此 Workflow Foundation 教學課程的一部分。
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: 1b2b03d672f86a351bcf36343d6a17e351d40ed0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ea9fd023ba15ae23a10f5b8cf6f82c49ca9af6c8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248782"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190438"
 ---
 # <a name="how-to-create-a-workflow"></a>作法：建立工作流程
 
@@ -16,9 +16,6 @@ ms.locfileid: "96248782"
   
 > [!NOTE]
 > 「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成 [如何：建立活動](how-to-create-an-activity.md)。  
-  
-> [!NOTE]
-> 若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-section"></a>本節內容  
 

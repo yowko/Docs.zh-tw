@@ -3,12 +3,12 @@ title: project.json 與 csproj 比較
 description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 3c9b2f266c2fcc3acdfbe40e19509edde20eec93
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970872"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190178"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -30,7 +30,7 @@ ms.locfileid: "97970872"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>name
+### <a name="name"></a>NAME
 
 ```json
 {
@@ -253,6 +253,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
+> [!NOTE]
+> `PackageTargetFallback`屬性已被取代。 請改用 [AssetTargetFallback](../project-sdk/msbuild-props.md#assettargetfallback) 。
+
 ### <a name="dependency-type"></a>相依性類型
 
 #### <a name="type-project"></a>類型︰專案
@@ -356,7 +359,9 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> 在 csproj 中不支援對工具進行 `imports`。 需要 imports 的工具將無法搭配新的 `Microsoft.NET.Sdk` 使用。
+>
+> - 在 csproj 中不支援對工具進行 `imports`。 需要匯入的工具將無法使用 `Microsoft.NET.Sdk` 。
+> - `DotNetCliToolReference` 已被取代為使用 [本機工具](global-tools.md#install-a-local-tool)。
 
 ## <a name="buildoptions"></a>buildOptions
 
@@ -609,7 +614,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 若為 `summary` ，您可以�
   <EmbeddedResource Include="..\Shared\*.resx" />
   <Content Include="Views\**\*" PackagePath="%(Identity)" />
   <None Include="some/path/in/project.txt" Pack="true" PackagePath="in/package.txt" />
-  
+
   <None Include="notes.txt" CopyToOutputDirectory="Always" />
   <!-- CopyToOutputDirectory = { Always, PreserveNewest, Never } -->
 
@@ -671,6 +676,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 若為 `summary` ，您可以�
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLI 中變更的高階概觀](cli-msbuild-architecture.md)
+- [.NET SDK 專案的 MSBuild 參考](../project-sdk/msbuild-props.md)

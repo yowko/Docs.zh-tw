@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: f8e0703591629a72e0a8f6eeb05dd9d19c8c4c91
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: eb30a3a21ffc4cffe64d2f5d0bc741728f1ea87d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275823"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190477"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>作法：建立流程圖工作流程
 
@@ -19,9 +19,6 @@ ms.locfileid: "96275823"
   
 > [!NOTE]
 > 「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成 [如何：建立活動](how-to-create-an-activity.md)。  
-  
-> [!NOTE]
-> 若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow"></a>建立工作流程  
   
@@ -101,7 +98,7 @@ ms.locfileid: "96275823"
   
 5. 從 [**工具箱**] 的 [**基本**] 區段中拖曳 [**指派**] 活動，並使用上一個步驟中所述的其中一個方法來連接它，使其位於 [**提示**] 活動下方。  
   
-6. 在 [到] 方塊中輸入 `Turns` ，然後 **To** `Turns + 1` 在 [**輸入 c # 運算式**] 或 [**輸入 VB 運算式**] 方塊中輸入。  
+6. 在 [到] 方塊中輸入 `Turns` ，然後 `Turns + 1` 在 [**輸入 c # 運算式**] 或 [**輸入 VB 運算式**] 方塊中輸入。  
   
 7. 從 [**工具箱**] 的 [**流程圖**] 區段中拖曳 **FlowDecision** ，然後將它連接至 [**指派**] 活動下方。 在 [ **屬性] 視窗** 中，于 [ **條件** ] 屬性值方塊中輸入下列運算式。  
   

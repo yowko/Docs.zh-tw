@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c347dbc6af46d4c334445d606d7cedfdf17e43f6
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098706"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190243"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -74,8 +74,6 @@ C # 提供一組標準的內建類型，以表示整數、浮點數、布林運�
 - CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這些類型包括 .NET 類別庫中的所有自訂類型，以及您自己的使用者定義類型。 您使用 [struct](../../language-reference/builtin-types/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
 下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。
-
-下圖顯示 CTS 中的實值型別和參考型別：
 
 ![顯示 CTS 實值型別和參考型別的螢幕擷取畫面。](./media/index/value-reference-types-common-type-system.png)
 
@@ -173,7 +171,7 @@ C # 提供一組標準的內建類型，以表示整數、浮點數、布林運�
 如需詳細資訊，請參閱下列文章：
 
 - [轉換和類型轉換](./casting-and-type-conversions.md)
-- [Boxing 和 Unboxing](./boxing-and-unboxing.md)
+- [裝箱和取消取消](./boxing-and-unboxing.md)
 - [使用動態類型](./using-type-dynamic.md)
 - [實數值型別](../../language-reference/builtin-types/value-types.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)

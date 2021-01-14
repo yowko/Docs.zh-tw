@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dddd10846c5c57c88d23fef6d6851e288bd2d4b1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238648"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191088"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 
@@ -25,7 +25,7 @@ ms.locfileid: "96238648"
 - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -262,7 +262,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 | | |
 |-|-|
 | 答案 | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | 版本 |
+| 名稱 | 版本 |
 | 類型 | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
@@ -279,7 +279,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -316,19 +316,19 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 請參閱下列內容：
 
-- [背景智慧型傳送服務 (BITS) 錯誤碼](https://go.microsoft.com/fwlink/?LinkId=180946)
+- [背景智慧型傳送服務 (BITS) 錯誤碼](/windows/win32/bits/bits-return-values)
 
-- [URL Moniker 錯誤碼](https://go.microsoft.com/fwlink/?LinkId=180947)
+- [URL Moniker 錯誤碼](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145(v=vs.85))
 
-- [WinHttp 錯誤碼](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [WinHttp 錯誤碼](/windows/win32/winhttp/error-messages)
 
 #### <a name="other-error-codes"></a>其他錯誤碼
 
 請參閱下列內容：
 
-- [Windows 安裝程式錯誤碼](https://go.microsoft.com/fwlink/?LinkId=180949)
+- [Windows 安裝程式錯誤碼](/previous-versions/aa368542(v=vs.85))
 
-- [Windows Update 代理程式結果碼](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Windows Update 代理程式結果碼](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="uninstalling-the-net-framework"></a>解除安裝 .NET Framework
 
@@ -343,7 +343,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 下表列出您將 .NET Framework 4.5 可轉散發套件鏈結至您的應用程式安裝程式時，可以包含的選項。
 
-|選項|描述|
+|選項|Description|
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
 |**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 如需連結套件的範例，請參閱 [從安裝套件取得進度資訊](/previous-versions/cc825975(v=vs.100))。|
@@ -381,7 +381,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |1041|日文|ja|
 |1042|韓文|ko|
 |1043|荷蘭文 – 荷蘭|nl|
-|1044|挪威文 (巴克摩)|否|
+|1044|挪威文 (巴克摩)|不可以|
 |1045|波蘭文|pl|
 |1046|葡萄牙文 – 巴西|pt-BR|
 |1049|俄文|ru|

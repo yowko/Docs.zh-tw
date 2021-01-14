@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45ae10a92b66bc1b487e3ed4e1e29b6905b895f5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543707"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190776"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -38,15 +38,15 @@ ms.locfileid: "90543707"
 |**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **包含在：**<br/><br/>Windows 10 2019 年 5 月更新<br/>[Visual Studio 2019 (16.3 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br /><br/>  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
 |**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **包含在：** <br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br/>[Visual Studio 2017 (15.8 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server，1709 版 (含) 以前版本<br /><br/>  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
 |**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **包含在：** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server 1709 版<br/>[Visual Studio 2017 (15.5 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br/><br/> Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2016 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
-|**4.7**   | [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **包含在：** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (15.3 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br /><br/> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2016 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
+|**4.7**   | [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **包含在：** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (15.3 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br /><br/> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2016 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
 |**4.6.2** | [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) | **包含在：** <br/><br/>Windows 10 年度更新<br /><br /> **您可以安裝於：**<br /><br/> Windows 10 11 月更新 <br/> Windows 10 <br /> Windows 8.1 和更舊版本<br /> Windows Server 2012 R2 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) |
 |**4.6.1** | [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461) | **包含在：** <br/><br/>[Visual Studio 2015 Update 2](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br/><br/>**您可以安裝於：**<br /><br/> Windows 10 <br /> Windows 8.1 和更舊版本<br /> Windows Server 2012 R2 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) |
-|**4.6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **包含在：** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **您可以安裝於：**<br /><br/> Windows 8.1 和更舊版本<br /> Windows Server 2012 R2 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) |
+|**4.6**   | [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **包含在：** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **您可以安裝於：**<br /><br/> Windows 8.1 和更舊版本<br /> Windows Server 2012 R2 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) |
 |**4.5.2** | [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) | **您可以安裝於：**<br/><br/> Windows 8.1 和更舊版本<br /> Windows Server 2012 R2 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) |
 |**4.5.1** | [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) | **包含在：**<br/><br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **您可以安裝於：**<br /><br/> Windows 8 及更早版本<br /> Windows Server 2012 及更早版本<br /> (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) |
 |**4.5**   | [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)    | **包含在：** <br/><br/>Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **您可以安裝於：**<br/><br /> Windows 7 (含) 以前版本<br /> Windows Server 2008 SP2 (含) 以前版本 <br /> (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) |
 
-您可以在所有支援的平台上，安裝特定 .NET Framework 版本的**開發人員套件** (如果有的話)。
+您可以在所有支援的平台上，安裝特定 .NET Framework 版本的 **開發人員套件** (如果有的話)。
 
 您可以在下列版本上安裝 **Web 或離線安裝程式**：
 
@@ -64,27 +64,27 @@ ms.locfileid: "90543707"
 
 ### <a name="to-install-the-net-framework-developer-pack-or-targeting-pack"></a>安裝 .NET Framework 開發人員套件或目標套件
 
-「目標套件」** 可讓您的應用程式在 Visual Studio 和其他開發環境中開發時，以特定版本的 .NET Framework 為目標。 「開發人員套件」** 包含特定版本的 .NET Framework 和其隨附的 SDK，以及對應的目標套件。
+「目標套件」可讓您的應用程式在 Visual Studio 和其他開發環境中開發時，以特定版本的 .NET Framework 為目標。 「開發人員套件」包含特定版本的 .NET Framework 和其隨附的 SDK，以及對應的目標套件。
 
 .NET Framework 4.5.1 或 4.5.2 的開發人員套件、.NET Framework 4.6 的目標套件以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的開發人員套件，提供特定 .NET Framework 版本的參考組件、語言套件以及 IntelliSense 檔案，供用於 Visual Studio 這類的整合式開發環境。  若是使用 Visual Studio，開發人員套件或目標套件也會將已安裝的 .NET Framework 版本加入您在建立新專案時所選擇的目標。  選擇下列其中之一：
 
 - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) 在 Windows 8.1 或更早版本、Visual Studio 2013、Visual Studio 2012 或其他 ide 上安裝4.5.2 版本。
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) 在 Visual Studio 2012 或其他 ide 上安裝4.5.1 版。
 
-從開發人員套件下載頁面選擇 [下載]****。 接下來選擇 [執行]**** 或 [儲存]****，然後在出現提示時遵循指示進行。 您也可以安裝 .NET Framework 特定版本的開發人員套件或目標套件，方法是從 Visual Studio 安裝程式的 [.NET 桌面開發]**** 工作負載中的選用元件選取它，如下圖所示。
+從開發人員套件下載頁面選擇 [下載]。 接下來選擇 [執行] 或 [儲存]，然後在出現提示時遵循指示進行。 您也可以安裝 .NET Framework 特定版本的開發人員套件或目標套件，方法是從 Visual Studio 安裝程式的 [.NET 桌面開發] 工作負載中的選用元件選取它，如下圖所示。
 
    ![Visual Studio 安裝程式與 .NET 桌面開發工作負載](./media/visual-studio-installer.jpg)
 
 當您以 .NET Framework 的特定版本為目標時，您的應用程式會使用該版本開發人員套件隨附的參考組件來建立。 在執行階段，會從全域組件快取解析組件，且不會使用參考組件。
 
-從 Visual Studio 或從命令列使用 MSBuild 建置應用程式時，MSBuild 可能會顯示錯誤 MSB3644：「找不到架構 <架構版本>** 的參考組件。」 若要解決錯誤，請下載該版本 .NET Framework 的開發人員套件或目標套件。
+從 Visual Studio 或從命令列使用 MSBuild 建置應用程式時，MSBuild 可能會顯示錯誤 MSB3644：「找不到架構 <架構版本> 的參考組件。」 若要解決錯誤，請下載該版本 .NET Framework 的開發人員套件或目標套件。
 
 ### <a name="to-install-or-download-the-net-framework-redistributable"></a>安裝或下載 .NET Framework 可轉散發套件
 
@@ -105,10 +105,10 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
    - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
    - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
    - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-   - [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+   - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
    - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
    - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-   - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+   - [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
    - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
    - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
    - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -117,13 +117,13 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 1. 選擇 [ **下載**]。
 
-1. 如果出現提示，請選取符合您系統架構的下載，然後選擇 [下一步]****。
+1. 如果出現提示，請選取符合您系統架構的下載，然後選擇 [下一步]。
 
-1. 出現下載提示時，請執行下列「其中一個」**** 動作：
+1. 出現下載提示時，請執行下列「其中一個」動作：
 
-   - 如果您要在電腦上安裝 .NET Framework，請選擇 [執行]****，然後依照螢幕上的提示執行。
+   - 如果您要在電腦上安裝 .NET Framework，請選擇 [執行]，然後依照螢幕上的提示執行。
 
-   - 如果您要下載轉散發的 .NET Framework，請選擇 [儲存]****，然後依照螢幕上的提示執行。
+   - 如果您要下載轉散發的 .NET Framework，請選擇 [儲存]，然後依照螢幕上的提示執行。
 
 1. 如果您要下載其他語言的資源，請依照下一節中的指示安裝一個或多個語言套件。
 
@@ -134,7 +134,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - .NET Framework 4.5 和更新版本會取代 .NET Framework 4.0。 如果您在已安裝 .NET Framework 4 的系統上安裝這些版本，組件就會被取代。
 
-- 卸載 .NET Framework 4.5 或更新版本也會移除既有的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱 [安裝 .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665)。
+- 卸載 .NET Framework 4.5 或更新版本也會移除既有的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱 [安裝 .NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
 
 - 您必須具有系統管理認證，才能安裝 .NET Framework 4.5 或更新版本。
 
@@ -152,10 +152,10 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
    - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
    - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
    - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-   - [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+   - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
    - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
    - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-   - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+   - [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
    - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
    - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
    - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -166,7 +166,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 下表列出支援的語言。
 
-| Language              | 文化特性 |
+| 語言              | 文化特性 |
 | --------------------- | :-----: |
 | 阿拉伯文                | ar      |
 | 捷克文                 | cs      |

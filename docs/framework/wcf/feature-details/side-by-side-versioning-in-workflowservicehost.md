@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 878e610bd1fe0b7e2496f251333a3ad21909788a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1505582e5ac7303a2df20539fdcf67435746b9d3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245090"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190490"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost 中的並存版本控制
 
 <xref:System.ServiceModel.Activities.WorkflowServiceHost>.NET Framework 4.5 中引進的並存版本控制功能，可讓您在單一端點上裝載多個版本的工作流程服務。 提供的並存功能可讓工作流程服務進行設定，以便工作流程服務的新執行個體是使用新的工作流程定義所建立，而執行中的執行個體則是使用現有的定義完成。 本主題提供使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 並存執行工作流程服務的概觀。  
-  
-> [!NOTE]
-> 若要下載範例並觀賞 workflow service 並存版本設定的影片逐步解說，請參閱 [使用 Web-Hosted Service1.xamlx 工作流程服務的並存版本控制](https://go.microsoft.com/fwlink/?LinkId=393746)。  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>在工作流程服務中裝載多個版本  
 
@@ -80,7 +77,7 @@ With service
 End With  
 ```  
   
- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>雖然只有一個工作流程服務版本可以有 null，但不是必要的 **null** <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 。  
+ <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>雖然只有一個工作流程服務版本可以有 null，但不是必要的 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 。  
   
 > [!NOTE]
 > 如果服務在最初部署中沒有設定 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>，而又建立更新版本，那麼這種做法會很有用。  

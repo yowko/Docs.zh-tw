@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 5f00997b059d7ea6f6ac6fb6d7bd83e4515ac02a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6fc8584b979c606a32e70e971be30a4bed89bdc2
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275797"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190503"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>作法：建立自訂追蹤參與者
 
 工作流程追蹤會提供工作流程執行狀態的可見性。 工作流程執行階段會發出追蹤記錄，其中描述工作流程開發週期事件、活動開發週期事件、書籤繼續及錯誤。 這些追蹤記錄由追蹤參與者使用。 Windows Workflow Foundation (WF) 包含標準的追蹤參與者，可將追蹤記錄寫入為 Windows 的事件追蹤 (ETW) 事件。 如果不符合需求，您也可以寫入自訂的追蹤參與者。 本教學課程步驟描述如何建立擷取 `WriteLine` 活動輸出的自訂追蹤參與者和追蹤設定檔，以便向使用者顯示這些項目。  
-  
-> [!NOTE]
-> 「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成此主題，您必須先完成之前的主題。 若要下載教學課程的完整版或觀看影片逐步解說，請參閱 [Windows Workflow Foundation (WF45) 消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程。  
   
 ## <a name="to-create-the-custom-tracking-participant"></a>建立自訂追蹤參與者  
   

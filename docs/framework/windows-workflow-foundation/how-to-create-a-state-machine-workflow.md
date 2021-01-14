@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 9df911779422ca2710686963a040a95258db8891
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8e977a182d55143f8d877d61a0f0345bbe6bded4
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248915"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190464"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>作法：建立狀態機器工作流程
 
@@ -19,9 +19,6 @@ ms.locfileid: "96248915"
   
 > [!NOTE]
 > 「快速入門」教學課程中的每個主題都與之前的主題息息相關。 若要完成本主題，您必須先完成 [如何：建立活動](how-to-create-an-activity.md)。  
-  
-> [!NOTE]
-> 若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow"></a>建立工作流程  
   
@@ -106,7 +103,7 @@ ms.locfileid: "96248915"
   
 9. 將 [**指派**] 活動從 [**工具箱**] 的 [**基本**] 區段拖放到狀態 **的 [結束] 區段。**  
   
-10. 在 [到] 方塊中輸入 `Turns` ，然後 **To** `Turns + 1` 在 [**輸入 c # 運算式**] 或 [**輸入 VB 運算式**] 方塊中輸入。  
+10. 在 [到] 方塊中輸入 `Turns` ，然後 `Turns + 1` 在 [**輸入 c # 運算式**] 或 [**輸入 VB 運算式**] 方塊中輸入。  
   
 11. 在工作流程設計工具頂端的階層連結顯示中，按一下 [ **StateMachine** ]，回到工作流程設計工具中的整體狀態機器查看。  
   
@@ -139,7 +136,6 @@ ms.locfileid: "96248915"
   
     > [!NOTE]
     > 您也可以在轉換設計工具中，按一下 [轉換設計工具] 底部的 [ **加入共用觸發程式轉換** ]，然後從 [ **要連接的可用狀態]** 下拉式清單中選取所需的目標狀態，藉以建立共用轉換。  
-  
     > [!NOTE]
     > 請注意，如果轉換的 <xref:System.Activities.Statements.Transition.Condition%2A> 值評估為 `false` (或所有共用觸發轉換的條件皆評估為 `false`)，則不會發生轉換，且會重新排程該狀態之所有轉換的所有觸發。 由於設定條件的方式，在本教學課程中不會發生這種情況 (我們對於猜測是否正確有具體的動作)。  
   
