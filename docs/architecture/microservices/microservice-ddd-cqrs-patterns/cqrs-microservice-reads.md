@@ -1,17 +1,17 @@
 ---
 title: 在 CQRS 微服務中實作讀取/查詢
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 查詢端使用 Dapper 在 eShopOnContainers 訂購微服務上的實作。
-ms.date: 10/08/2018
-ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.date: 01/13/2021
+ms.openlocfilehash: 047fc3893dcaf72a17d29f5560c928879757d024
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678799"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188916"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 
-如需讀取/查詢，eShopOnContainers 參考應用程式的訂購微服務，會在 DDD 模型和交易區域之外實作查詢。 這項作業能夠完成，主要是因為查詢和交易的需求大不相同。 寫入的執行交易必須與網域邏輯相容。 另一方面，查詢具有等冪性，可從網域規則中隔離。
+如需讀取/查詢，eShopOnContainers 參考應用程式的訂購微服務，會在 DDD 模型和交易區域之外實作查詢。 這種執行主要是因為查詢和交易的要求明顯不同。 寫入的執行交易必須與網域邏輯相容。 另一方面，查詢具有等冪性，可從網域規則中隔離。
 
 方法很簡單，如圖 7-3 所示。 API 介面是由 Web API 控制器實作，這些控制器會使用任何基礎結構，例如 Dapper 等微物件關聯式對應 (ORM)，並根據 UI 應用程式的需求傳回動態 ViewModel。
 
@@ -21,7 +21,7 @@ ms.locfileid: "90678799"
 
 以簡化的 CQRS 方法查詢端最簡單的方法，就是使用類似 Dapper 的微 ORM 查詢資料庫，傳回動態 Viewmodel。 查詢定義會查詢資料庫，並傳回每個查詢立即建立的動態 ViewModel。 因為查詢都具有等冪性，所以無論您執行查詢多少次，它們都不會變更資料。 因此，您不必受限於交易端使用的任何 DDD 模式，例如彙總及其他模式，這就是查詢與交易區域分開的原因。 您可以查詢資料庫，以找出 UI 所需的資料，並傳回不需要在任何地方以靜態方式定義的動態 ViewModel， (沒有) Viewmodel 的類別，除了 SQL 語句本身之外。
 
-因為這種方法很簡單，所以查詢端所需的程式碼 (例如使用 [Dapper](https://github.com/StackExchange/Dapper)) 等微型 ORM 的程式碼，可以在 [相同的 Web API 專案內](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)執行。 如圖 7-4 所示。 查詢是在 eShopOnContainers 解決方案內的 **Ordering.API** 微服務專案中所定義。
+因為這種方法很簡單，所以查詢端所需的程式碼 (例如使用 [Dapper](https://github.com/StackExchange/Dapper)) 等微型 ORM 的程式碼，可以在 [相同的 Web API 專案內](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)執行。 圖7-4 顯示此方法。 查詢是在 eShopOnContainers 解決方案內的 **Ordering.API** 微服務專案中所定義。
 
 ![排序. API 專案的 [查詢] 資料夾的螢幕擷取畫面。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
@@ -33,7 +33,7 @@ ms.locfileid: "90678799"
 
 傳回的資料 (ViewModel) 可以是多個實體或資料庫多資料表的聯結資料結果，甚至可以是跨多個在交易區域網域模型中定義的彙總結果。 在此情況下，因為您要建立與網域模型無關的查詢，所以會忽略匯總界限和條件約束，而且您可以自由地查詢任何您可能需要的資料表和資料行。 此方法為開發人員建立或更新查詢提供了極大的彈性和生產力。
 
-Viewmodel 可以是在類別中定義的靜態類型 (如同在訂購微服務) 中執行一樣。 或者，您也可以根據執行的查詢來動態建立它們，這對開發人員而言非常靈活。
+Viewmodel 可以是在類別中定義的靜態類型 (如同在訂購微服務) 中執行一樣。 或者，您也可以根據執行的查詢來動態建立它們，這對開發人員而言是敏捷的。
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>將 Dapper 用作微 ORM 以執行查詢
 
@@ -55,7 +55,7 @@ Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overf
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel 作為動態類型
 
-如下列程式碼所示，透過傳回在內部以查詢所傳回屬性為基礎的「動態」** 類型，查詢可以直接傳回 `ViewModel`。 這表示要傳回的屬性子集是以查詢本身為基礎。 因此，如果您在查詢或聯結中新增新的資料行，該資料會以動態方式新增至傳回的 `ViewModel`。
+如下列程式碼所示，透過傳回在內部以查詢所傳回屬性為基礎的「動態」類型，查詢可以直接傳回 `ViewModel`。 這表示要傳回的屬性子集是以查詢本身為基礎。 因此，如果您在查詢或聯結中新增新的資料行，該資料會以動態方式新增至傳回的 `ViewModel`。
 
 ```csharp
 using Dapper;
@@ -99,7 +99,7 @@ public class OrderQueries : IOrderQueries
 
 **缺點：** 如前所述，更新程式碼時，它會採用更多步驟來更新 DTO 類別。
 
-以*我們的經驗為基礎的秘訣*：在 EShopOnContainers 的訂購微服務上所執行的查詢中，我們開始使用動態 viewmodel 進行開發，因為它在早期開發階段是直接且敏捷的。 但在穩定開發之後，我們選擇重構 Api，並針對 Viewmodel 使用靜態或預先定義的 Dto，因為更清楚地讓微服務的取用者知道明確的 DTO 型別，用來作為「合約」。
+以 *我們的經驗為基礎的秘訣*：在 EShopOnContainers 的訂購微服務上所執行的查詢中，我們開始使用動態 viewmodel 進行開發，因為它在早期開發階段是直接且敏捷的。 但在穩定開發之後，我們選擇重構 Api，並針對 Viewmodel 使用靜態或預先定義的 Dto，因為更清楚地讓微服務的取用者知道明確的 DTO 型別，用來作為「合約」。
 
 在下例中，您會看到查詢如何使用明確的 ViewModel DTO 類別：OrderSummary 類別，傳回資料。
 
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-這是就長期而言，明確的傳回型別優於動態類型的另一個原因。 使用屬性時 `ProducesResponseType` ，您也可以指定預期的 HTTP 錯誤/代碼可能結果，例如200、400等等。
+這是就長期而言，明確的傳回型別優於動態類型的另一個原因。 使用屬性時 `ProducesResponseType` ，您也可以指定可能的 HTTP 錯誤/代碼的預期結果，例如200、400等等。
 
 在下圖中，您會看到 Swagger UI 如何顯示 ResponseType 資訊。
 
@@ -188,7 +188,7 @@ public class OrderSummary
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman。資料點-Dapper、Entity Framework 和混合式應用程式 (MSDN 雜誌文章) **  
+- **Julie Lerman。資料點-Dapper、Entity Framework 和混合式應用程式 (MSDN 雜誌文章)**  
   <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **使用 Swagger 來 ASP.NET Core Web API 說明頁面**  

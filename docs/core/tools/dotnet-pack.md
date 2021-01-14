@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: Dotnet pack 命令會建立 .NET 專案的 NuGet 套件。
 ms.date: 04/28/2020
-ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674797"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190074"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -30,7 +30,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet pack -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件 (也就是 *nupkg* 檔案) 。
 
@@ -46,7 +46,7 @@ dotnet pack -h|--help
 > [!NOTE]
 > 在某些情況下，無法執行隱含組建。 當設定時，就會發生這種情況 `GeneratePackageOnBuild` ，以避免組建和套件目標之間有迴圈相依性。 如果有鎖定的檔案或其他問題，組建也會失敗。
 
-您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild -p 參數的方法。
+您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 套件目標屬性](/nuget/reference/msbuild-targets#pack-target) 和 [MSBuild Command-Line 參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節會示範如何在 `-p` 幾個不同的案例中使用 MSBuild 參數。
 
 Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
 
@@ -64,7 +64,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 `PROJECT | SOLUTION`
 
-  要封裝的專案或方案。 它是 [.csproj](csproj.md)檔案、vbproj 檔案、>.fsproj 檔案、方案檔或目錄的路徑。 如果未指定，命令會在目前的目錄中搜尋專案或方案檔。
+  要封裝的專案或方案。 它可以是 .csproj、vbproj 或 >.fsproj 檔案的路徑，也可以是方案檔或目錄。 如果未指定，命令會在目前的目錄中搜尋專案或方案檔。
 
 ## <a name="options"></a>選項
 

@@ -6,12 +6,12 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 ms.date: 12/01/2020
-ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 75c696d881ad0586b11cdbd264f3ff90ec3bce8d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851662"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187960"
 ---
 # <a name="common-client-side-web-technologies"></a>通用用戶端 Web 技術
 
@@ -113,7 +113,7 @@ Microsoft 開發了一個參考應用程式 eShopOnContainers，其中包含一�
 
 React 最重要的功能之一是使用虛擬 DOM。 虛擬 DOM 為 React 提供了幾項優勢，包括效能 (虛擬 DOM 可最佳化實際 DOM 的哪些部分需要更新) 和可測試性 (無需使用瀏覽器測試 React 及其與虛擬 DOM 的互動)。
 
-React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如︰
+React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如：
 
 ```js
 <ul>
@@ -169,7 +169,7 @@ WebAssembly (縮寫) 可讓您在網頁瀏覽器內執行 .NET 程式碼 `wasm` 
 
 WebAssembly 程式碼可以透過 JavaScript 存取瀏覽器的完整功能，稱為 JavaScript 互通性，通常會縮短為 JavaScript interop 或 JS interop。 在瀏覽器中透過 WebAssembly 執行的 .NET 程式碼會在瀏覽器的 JavaScript 沙箱執行，且受沙箱所提供對用戶端電腦之惡意動作的保護。
 
-如需詳細資訊，請參閱[ASP.NET Core Blazor 簡介](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0)
+如需詳細資訊，請參閱[ASP.NET Core Blazor 簡介](/aspnet/core/blazor/)。
 
 ### <a name="choosing-a-spa-framework"></a>選擇 SPA 架構
 

@@ -4,12 +4,12 @@ description: 瞭解如何建立時間序列資料的異常偵測應用程式。 
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3451a44f8fa7ae85625687b7d52f120c411df1b6
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: f001cb912bb695a7edb0917f3306ca9bfbe311ac
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97634049"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187778"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>教學課程：使用 ML.NET 偵測時間序列中的異常
 
@@ -24,11 +24,11 @@ ms.locfileid: "97634049"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * 已安裝「.NET Core 跨平臺開發」工作負載[Visual Studio 2019 16.7.8 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
-* [phone-calls.csv 資料集](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv)
+* [phone-calls.csv 資料集](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)。
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
@@ -50,7 +50,7 @@ ms.locfileid: "97634049"
 
 1. 下載資料集，並儲存至您先前建立的 *Data* 資料夾：
 
-    以滑鼠右鍵按一下 [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv) ，然後選取 [儲存連結 (或目標) 為 ...]
+    以滑鼠右鍵按一下 [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) ，然後選取 [儲存連結 (或目標) 為 ...]
 
      請務必將 \*.csv 檔案儲存至 *Data* 資料夾，或儲存在其他位置之後將 \*.csv 檔案移至 *Data* 資料夾。
 
@@ -258,7 +258,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 > * 偵測時間序列資料的期間
 > * 偵測時間序列資料的異常狀況
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 請查看機器學習範例 GitHub 存放庫，以探索耗電量異常偵測範例。
 > [!div class="nextstepaction"]

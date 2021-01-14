@@ -3,12 +3,12 @@ title: 從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 247e709ac6898a6a89318626e3aa9a2a8e239a9a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687408"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189931"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>從 .NET Framework 移植到 .NET Core 的總覽
 
@@ -53,7 +53,7 @@ ms.locfileid: "94687408"
 
 1. 將您的專案檔轉換成新的 SDK 樣式檔案結構。 您可以建立適用于 .NET Core 的新專案並複製原始程式檔，或嘗試使用工具來轉換現有的專案檔。
 
-   .NET Core 使用簡化的 (和不同的) [專案檔案格式](../tools/csproj.md) ，而非 .NET Framework。 您必須將專案檔案轉換成此格式才能繼續。 此專案樣式也可讓您以 .NET Framework 為目標，此時您仍會想要鎖定目標。
+   .NET Core 使用簡化的 (和不同的) [專案檔案格式](../project-sdk/overview.md) ，而非 .NET Framework。 您必須將專案檔案轉換成此格式才能繼續。 此專案樣式也可讓您以 .NET Framework 為目標，此時您仍會想要鎖定目標。
 
    您可以使用 dotnet 的 [ [嘗試轉換](https://github.com/dotnet/try-convert) ] 工具，嘗試將一項作業中較小的解決方案或個別專案移植到 .net Core 專案檔案格式。 `dotnet try-convert` 不保證適用于您所有的專案，而且可能會導致您相依的行為有細微的變更。 您可以使用它做為自動化可自動化之基本專案的 _起點_ 。 這不是遷移專案的保證解決方案，因為與舊樣式專案檔相較之下，SDK 樣式專案所使用的目標有許多差異。
 

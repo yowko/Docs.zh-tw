@@ -3,18 +3,18 @@ title: 將程式庫移植到 .NET Core
 description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 09874899018abc09051af17771c9df829b8dbe96
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633906"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189677"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>將 .NET Framework 程式庫移植到 .NET Core
 
 瞭解如何將 .NET Framework 程式庫程式碼移植到 .NET Core，在其中執行跨平臺，並擴充使用它的應用程式的範圍。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 本文假設您已具備下列條件：
 
@@ -30,8 +30,8 @@ ms.locfileid: "97633906"
 [使用跨平臺工具開發程式庫](../tutorials/libraries.md)\
 本文說明如何使用 .NET Core CLI 來撰寫程式庫。
 
-[適用於 .NET Core 之 *csproj* 格式的新增項目](../tools/csproj.md)\
-本文概述從改為使用 *csproj* 和 MSBuild 時，新增至專案檔的變更。
+[.NET 專案 Sdk](../project-sdk/overview.md)\
+本文說明 SDK 樣式的專案檔案格式。
 
 [移植到 .NET Core-分析協力廠商相依性](third-party-deps.md)\
 本文討論協力廠商相依性的可攜性，以及 NuGet 套件相依性不在 .NET Core 上執行時該怎麼辦。
@@ -127,7 +127,7 @@ ms.locfileid: "97633906"
 
 如果您是從程式庫基底向外進行移植，並視需要測試每一層，移植將會是個系統化的程序，並將所有問題都隔離在單層的程式碼內。
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 >[!div class="nextstepaction"]
 >[整理專案在 .NET Core 中使用](project-structure.md)

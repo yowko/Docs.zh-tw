@@ -1,19 +1,19 @@
 ---
 title: 實作微服務之間的事件通訊 (整合事件)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整合事件以實作微服務之間的事件通訊。
-ms.date: 10/02/2018
-ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 65c0414184fdd1bccfbc61ef4df8fdcb88284ebe
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152529"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188201"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
 如前所述，當您使用事件通訊時，微服務會在發生值得注意的事件時發行事件，例如當它更新商務實體時。 其他微服務會訂閱這些事件。 當微服務收到事件時，它可以更新自己的商務實體，這可能會導致發行更多的事件。 這是最終一致性概念的本質。 此發行/訂閱系統通常藉由使用事件匯流排實作來執行。 事件匯流排可設計為介面，並具備訂閱及取消訂閱事件以及發行事件所需的 API。 它也可以有一或多個實作以任何處理序間或傳訊通訊為基礎，例如支援非同步通訊和發行/訂閱模型的傳訊佇列或服務匯流排。
 
-您可以使用事件來實作橫跨多個服務的商務交易，這樣將提供這些服務之間的最終一致性。 最終一致的交易是由一系列的分散式動作所組成。 在每個動作中，微服務會更新商務實體，並發行觸發下一個動作的事件。 圖6-18 顯示透過事件匯流排發佈的 PriceUpdated 事件，因此價格更新會傳播到購物籃和其他微服務。
+您可以使用事件來執行跨多個服務的商務交易，讓您在這些服務之間獲得最終一致性。 最終一致的交易是由一系列的分散式動作所組成。 在每個動作中，微服務會更新商務實體，並發行觸發下一個動作的事件。 圖6-18 顯示透過事件匯流排發佈的 PriceUpdated 事件，因此價格更新會傳播到購物籃和其他微服務。
 
 ![與事件匯流排進行非同步事件驅動通訊的圖表。](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
@@ -35,7 +35,7 @@ ms.locfileid: "91152529"
 
 ## <a name="integration-events"></a>整合事件
 
-整合事件用來讓跨多個微服務或外部系統的領域狀態同步。 這是藉由在微服務以外發行整合事件而達成。 當事件發行到多個接收者微服務時 (微服務的數量為訂閱整合事件的微服務數量)，每個接收者微服務中的適當事件處理常式會處理事件。
+整合事件用來讓跨多個微服務或外部系統的領域狀態同步。 這項功能是藉由在微服務之外發佈整合事件來完成。 當事件發行到多個接收者微服務時 (微服務的數量為訂閱整合事件的微服務數量)，每個接收者微服務中的適當事件處理常式會處理事件。
 
 整合事件基本上是保存資料的類別，如下列範例所示：
 
@@ -76,7 +76,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>發佈/訂閱 (Pub/Sub) 模式
 
-[發佈/訂閱模式](/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播會直接從可觀察到觀察者執行，因此它們彼此「知道」。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
+[發佈/訂閱模式](/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播會直接從可觀察到觀察者執行，因此它們彼此「知道」。 但在使用 Pub/Sub 模式時，有第三個元件（稱為 broker）或訊息代理程式或事件匯流排（發行者和訂閱者都知道）。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
 
 ### <a name="the-middleman-or-event-bus"></a>中間人或事件匯流排
 
@@ -90,7 +90,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 在圖 6-19 中，您可以看到從應用程式的觀點而言，事件匯流排只不過是發佈/訂閱通道。 實作這個非同步通訊的方式可能有所不同。 它可能有多種實作，因此您可以根據環境需求 (例如，生產與開發環境)，在兩者之間交換。
 
-在圖 6-20 中，您可以看到事件匯流排的抽象概念，其中具有根據基礎結構傳訊技術 (例如 RabbitMQ、Azure 服務匯流排或其他事件/訊息代理程式) 的多個實作。
+在圖6-20 中，您可以看到事件匯流排的抽象概念，其中具有以基礎結構訊息技術（例如 RabbitMQ、Azure 服務匯流排或其他事件/訊息代理程式）為基礎的多個實現。
 
 ![顯示新增事件匯流排抽象層的圖表。](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 

@@ -2,12 +2,12 @@
 title: dotnet-傾印診斷工具-.NET CLI
 description: 瞭解如何在不使用任何原生偵錯工具的情況下，安裝和使用 dotnet 傾印 CLI 工具來收集和分析 Windows 和 Linux 傾印。
 ms.date: 11/17/2020
-ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765042"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189800"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印收集和分析公用程式 (dotnet-傾印) 
 
@@ -38,13 +38,16 @@ ms.locfileid: "97765042"
   | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \|[arm](https://aka.ms/dotnet-dump/linux-arm) \|[arm64](https://aka.ms/dotnet-dump/linux-arm64) \|[musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \|[musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
+> [!NOTE]
+> 若要 `dotnet-dump` 在 x86 應用程式上使用，您需要工具的對應 x86 版本。
+
 ## <a name="synopsis"></a>概要
 
 ```console
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet-dump`全域工具可收集和分析 Windows 和 linux 傾印，而不需要任何與 Linux 相關的原生偵錯工具 `lldb` 。 這項工具在 Alpine Linux 等平臺上很重要，因為無法使用完整的工作 `lldb` 。 此 `dotnet-dump` 工具可讓您執行 SOS 命令來分析損毀和垃圾收集行程 (GC) ，但它不是原生偵錯工具，因此不支援顯示原生堆疊框架之類的動作。
 
@@ -114,6 +117,12 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--out
 
   啟用傾印收集診斷記錄。
 
+> [!NOTE]
+> 在 Linux 和 macOS 上，此命令會預期目標應用程式，並 `dotnet-dump` 共用相同的 `TMPDIR` 環境變數。 否則，此命令將會超時。
+
+> [!NOTE]
+> 若要使用收集傾印 `dotnet-dump` ，必須以執行目標進程的使用者和根使用者的相同使用者來執行。 否則，此工具將無法建立與目標進程的連接。
+
 ## <a name="dotnet-dump-analyze"></a>dotnet-傾印分析
 
 啟動互動式 shell 以探索傾印。 Shell 接受各種 [SOS 命令](#analyze-sos-commands)。
@@ -138,7 +147,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ### <a name="analyze-sos-commands"></a>分析 SOS 命令
 
-| 命令                             | 函數                                                                                      |
+| 命令                             | 函式                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
 | `soshelp`                           | 顯示所有可用的命令                                                               |
 | `soshelp|help <command>`            | 顯示指定的命令。                                                               |
@@ -246,7 +255,7 @@ HResult: 80131604
 
 若要解決這個問題，請安裝 "libc6-dev" 套件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [收集和分析記憶體傾印的 blog](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/)
 - [堆積分析工具 (dotnet-gcdump) ](dotnet-gcdump.md)

@@ -3,12 +3,12 @@ title: 產生 Self-Signed 憑證總覽
 description: 概述 Microsoft dotnet dev 憑證工具，其可為 .NET Core 和 ASP.NET Core 專案新增功能，以及其他使用自我簽署憑證的選項。
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: b5bf4b719495c2d6ec248e8592367ac452be91c1
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032173"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189137"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>使用 .NET CLI 產生自我簽署憑證
 
@@ -16,7 +16,7 @@ ms.locfileid: "96032173"
 
 然後，您可以使用範例（例如容器中裝載的 [ASP.NET Core 應用程式](https://github.com/dotnet/dotnet-docker/blob/master/samples/run-aspnetcore-https-development.md) ）來驗證憑證是否會載入。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 在範例中，您可以使用 .NET Core 3.1 或 .NET 5。
 
@@ -210,7 +210,7 @@ dotnet dev-certs https --clean
 
 ### <a name="with-powershell"></a>透過 PowerShell
 
-您可以使用 PowerShell 來產生自我簽署憑證。 [PKI 用戶端](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserver-view=true)可以用來產生自我簽署憑證。
+您可以使用 PowerShell 來產生自我簽署憑證。 [PKI 用戶端](/powershell/module/pkiclient/new-selfsignedcertificate?preserve-view=true&view=win10-ps)可以用來產生自我簽署憑證。
 
 ```powershell
 $cert = New-SelfSignedCertificate -DnsName @("contoso.com", "www.contoso.com") -CertStoreLocation "cert:\LocalMachine\My"

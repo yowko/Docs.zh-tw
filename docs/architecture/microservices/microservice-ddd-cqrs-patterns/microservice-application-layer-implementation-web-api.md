@@ -1,13 +1,13 @@
 ---
 title: 使用 Web API 實作微服務應用程式層
 description: 瞭解相依性插入和中繼程式模式，以及其在 Web API 應用層中的實作為詳細資料。
-ms.date: 08/17/2020
-ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.date: 01/13/2021
+ms.openlocfilehash: bf37b0bfc7d9438752673d1c617657822b2a48ad
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437795"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188968"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -27,7 +27,7 @@ ASP.NET Core 包含簡單[內建 IoC 容器](/aspnet/core/fundamentals/dependenc
 
 一般而言，您會想要插入可實作基礎結構物件的相依性。 要插入的一般相依性是存放庫。 但是，您可以插入可能會有的任何其他基礎結構相依性。 為求更簡單的實作，您可以直接插入工作單元模式物件 (EF DbContext 物件)，因為 DBContext 也是您基礎結構持續性物件的實作。
 
-在下列範例中，您可以查看 .NET Core 如何透過建構函式插入所需的存放庫物件。 類別是命令處理常式，將在下一節中討論。
+在下列範例中，您可以看到 .NET 如何透過此函式來插入所需的存放庫物件。 類別是命令處理常式，將在下一節中討論。
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -111,7 +111,7 @@ public void ConfigureServices(IServiceCollection services)
 
 #### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>使用 Scrutor 程式庫進行自動類型註冊
 
-在 .NET Core 中使用 DI 時，您可能想要可以掃描組件，並依照慣例自動註冊其類型。 ASP.NET Core 目前未提供此功能。 不過，您可以使用 [Scrutor](https://github.com/khellang/Scrutor) 程式庫來進行這項作業。 當您有數個需要在 IoC 容器中註冊的類型時，這種方法十分方便。
+在 .NET 中使用 DI 時，您可能會想要能夠掃描元件，並依慣例自動註冊其類型。 ASP.NET Core 目前未提供此功能。 不過，您可以使用 [Scrutor](https://github.com/khellang/Scrutor) 程式庫來進行這項作業。 當您有數個需要在 IoC 容器中註冊的類型時，這種方法十分方便。
 
 #### <a name="additional-resources"></a>其他資源
 
@@ -503,7 +503,7 @@ public class CreateOrderCommandHandler
 
 作為範例實作，本指南建議根據中繼程序模式來使用同處理序管道，在記憶體內部將命令擷取和路由命令驅動到正確命令處理常式。 本指南也會建議套用[行為](https://github.com/jbogard/MediatR/wiki/Behaviors)以區隔跨領域關注。
 
-針對 .NET Core 中的實作，有多個開放原始碼程式庫可用來實作中繼程序模式。 本指南中所使用的程式庫是 [MediatR](https://github.com/jbogard/MediatR) 開放原始碼程式庫 (由 Jimmy Bogard 所建立)，但您可以使用另一種方法。 MediatR 是小型且簡單的程式庫，可讓您處理命令這類記憶體內部訊息，同時套用裝飾項目或行為。
+在 .NET 中執行時，有多個開放原始碼程式庫可執行中繼程式模式。 本指南中所使用的程式庫是 [MediatR](https://github.com/jbogard/MediatR) 開放原始碼程式庫 (由 Jimmy Bogard 所建立)，但您可以使用另一種方法。 MediatR 是小型且簡單的程式庫，可讓您處理命令這類記憶體內部訊息，同時套用裝飾項目或行為。
 
 使用中繼程序模式可協助您減少結合，並找出所要求工作的關注，同時自動連接至執行該工作的處理常式，在此情況下，是連接至命令處理常式。
 

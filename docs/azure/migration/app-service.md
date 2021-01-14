@@ -3,12 +3,12 @@ title: 將您的 .NET Web 應用程式或服務遷移至 Azure App Service
 description: 瞭解如何從內部部署將 .NET web 應用程式或服務遷移至 Azure App Service。
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e2aaa23aedabef007878901ec7297711f140533
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539082"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189248"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>將您的 .NET Web 應用程式或服務遷移至 Azure App Service
 
@@ -24,7 +24,7 @@ ms.locfileid: "90539082"
 
 * 使用 [Azure 虛擬網路](/azure/app-service/web-sites-integrate-with-vnet)建立 VPN，讓 App Service 與內部部署資源連線。
 * 使用 [Azure 轉送](/azure/service-bus-relay/relay-what-is-it)安全地將內部部署服務公開至雲端，而不變更防火牆。
-* 將例如 [SQL 資料庫](https://go.microsoft.com/fwlink/?linkid=863217) 的相依性遷移至 Azure。
+* 將例如 [SQL 資料庫](./sql.md) 的相依性遷移至 Azure。
 * 使用雲端中的平臺即服務供應專案來減少相依性。 例如，請考慮使用 [SendGrid](/azure/sendgrid-dotnet-how-to-send-email)，而不是連線到內部部署郵件伺服器。
 
 ### <a name="port-bindings"></a>連接埠繫結
@@ -33,7 +33,7 @@ Azure App Service 支援連接埠 80 (適用於 HTTP) 和連接埠 443 (適用�
 
 針對 WCF，支援下列繫結：
 
-| 繫結 | 注意 |
+| 繫結 | 備註 |
 |--|--|
 | `BasicHttp` |  |
 | `WSHttp` |  |
@@ -54,7 +54,7 @@ Azure App Service 預設支援匿名驗證，在想要使用時支援表單驗�
 
 ### <a name="iis-settings"></a>IIS 設定
 
-傳統上透過應用程式中 applicationHost.config 設定的所有項目現在皆可透過 Azure 入口網站設定。 這適用于 AppPool 位、啟用/停用 Websocket、受控管線版本、.NET Framework 版本 (2.0/4.0) 等等。 若要修改[應用程式設定](/azure/app-service/web-sites-configure)，瀏覽至 [Azure 入口網站](https://portal.azure.com)，開啟 Web 應用程式刀鋒視窗，然後選取 [應用程式設定]**** 索引標籤。
+傳統上透過應用程式中 applicationHost.config 設定的所有項目現在皆可透過 Azure 入口網站設定。 這適用于 AppPool 位、啟用/停用 Websocket、受控管線版本、.NET Framework 版本 (2.0/4.0) 等等。 若要修改[應用程式設定](/azure/app-service/web-sites-configure)，瀏覽至 [Azure 入口網站](https://portal.azure.com)，開啟 Web 應用程式刀鋒視窗，然後選取 [應用程式設定] 索引標籤。
 
 #### <a name="iis5-compatibility-mode"></a>IIS5 相容性模式
 

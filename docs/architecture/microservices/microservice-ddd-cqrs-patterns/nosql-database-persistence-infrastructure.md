@@ -1,13 +1,13 @@
 ---
 title: 使用 NoSQL 資料庫作為持續性基礎結構
 description: 請先瞭解 NoSql 資料庫的一般使用方式，並 Azure Cosmos DB 特別是執行持續性的選項。
-ms.date: 01/30/2020
-ms.openlocfilehash: 2877c7eaf08dccfdf6126939b195a6a9a7195dfa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 32f32a3fd247f49ac54deaf33605bcc2ac7b55dc
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173372"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188825"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -62,7 +62,7 @@ ms.locfileid: "91173372"
 
 ```csharp
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
-// *** Domain Model Code ***
+// **_ Domain Model Code _*_
 // Aggregate: Create an Order object with its child entities and/or value objects.
 // Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
@@ -98,9 +98,9 @@ OrderItem orderItem1 = new OrderItem
 
 //Using methods with domain logic within the entity. No anemic-domain model
 orderAggregate.AddOrderItem(orderItem1);
-// *** End of Domain Model Code ***
+// _*_ End of Domain Model Code _*_
 
-// *** Infrastructure Code using Cosmos DB Client API ***
+// _*_ Infrastructure Code using Cosmos DB Client API _*_
 Uri collectionUri = UriFactory.CreateDocumentCollectionUri(databaseName,
     collectionName);
 
@@ -134,7 +134,7 @@ Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊
 
 ![此圖顯示 Cosmos DB 支援 .NET 和 MongoDB 有線通訊協定。](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
-**圖 7-20**。 使用 MongoDB API 和通訊協定存取 Azure Cosmos DB
+_ * 圖 7-20 * *。 使用 MongoDB API 和通訊協定存取 Azure Cosmos DB
 
 這是含 Linux 容器之 Docker 環境中概念證明的極方便使用方法，因為 [MongoDB Docker 映像](https://hub.docker.com/r/_/mongo/)是支援 Docker Linux 容器和 Docker Windows 容器的多架構映像。
 
@@ -146,7 +146,7 @@ Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊
 
 生產環境 Azure Cosmos DB 會在 Azure 的雲端中以 PaaS 和可擴充服務的形式執行。
 
-自訂 .NET Core 容器可以在本機開發 Docker 主機 (其在 Windows 10 電腦中將使用 Docker for Windows) 上執行，或部署至生產環境 (例如 Azure AKS or Azure Service Fabric 中的 Kubernetes)。 在第二個環境中，您只會部署 .NET Core 自訂容器，而不是 MongoDB 容器，因為您會在雲端中使用 Azure Cosmos DB 在生產環境中處理資料。
+您的自訂 .NET 容器可以在本機開發 Docker 主機上執行，該主機 (使用 Windows 10 機器中的適用於 Windows 的 Docker) 或部署到生產環境，例如 Azure AKS 或 Azure Service Fabric 中的 Kubernetes。 在第二個環境中，您只會部署 .NET 自訂容器，而不是 MongoDB 容器，因為您會在雲端中使用 Azure Cosmos DB 在生產環境中處理資料。
 
 使用 MongoDB API 的清楚優點在於您的解決方案可以透過資料庫引擎 (MongoDB 或 Azure Cosmos DB) 執行，因此，移轉至不同環境應該相當簡單。 不過，有時值得使用原生 API (即原生 Cosmos DB API) 來充分利用特定資料庫引擎的功能。
 
@@ -162,13 +162,13 @@ Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊
 
 基本上，這只是一項免責聲明，表示您不應該一律使用 MongoDB API 來進行 Azure Cosmos DB，如同我們在 eShopOnContainers 中所做的一樣，因為它是 Linux 容器的方便選擇。 這項決策應該根據您需要為生產應用程式所執行的特定需求和測試。
 
-### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>程式碼：在 .NET Core 應用程式中使用 MongoDB API
+### <a name="the-code-use-mongodb-api-in-net-applications"></a>程式碼：在 .NET 應用程式中使用 MongoDB API
 
 MongoDB API for .NET 是以您需要新增至專案的 NuGet 套件為基礎，如同下圖所示的 Locations.API 專案中一樣。
 
 ![MongoDB NuGet 套件中相依性的螢幕擷取畫面。](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
-**圖 7-22**。 .NET Core 專案中的 MongoDB API NuGet 套件參考
+**圖 7-22**。 .NET 專案中的 MongoDB API NuGet 套件參考
 
 讓我們先調查下列各節中的程式碼。
 
@@ -317,7 +317,7 @@ services:
 - **將 NoSQL 資料庫的檔資料模型化** \
   <https://docs.microsoft.com/azure/cosmos-db/modeling-data>
 
-- **Vaughn Vernon。理想的領域驅動設計匯總存放區？** \
+- **Vaughn Vernon。理想的 Domain-Driven 設計匯總存放區？** \
   <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Azure Cosmos DB 的簡介：適用于 MongoDB 的 API**  \
@@ -332,10 +332,10 @@ services:
 - **將 MongoDB 應用程式連線至 Azure Cosmos DB**  \
   <https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account>
 
-- **Cosmos DB 模擬器 Docker 映射 (Windows 容器) **  \
+- **Cosmos DB 模擬器 Docker 映射 (Windows 容器)**  \
   <https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/>
 
-- **MongoDB Docker 映射 (Linux 和 Windows 容器) **  \
+- **MongoDB Docker 映射 (Linux 和 Windows 容器)**  \
   <https://hub.docker.com/_/mongo/>
 
 - **搭配使用 MongoChef (Studio 3T) 與 Azure Cosmos DB：適用于 MongoDB 的 API 帳戶**  \

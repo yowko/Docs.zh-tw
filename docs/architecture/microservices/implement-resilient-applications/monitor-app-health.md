@@ -1,13 +1,13 @@
 ---
 title: 健康狀況監視
 description: 瀏覽實作健康情況監視的其中一種方式。
-ms.date: 03/02/2020
-ms.openlocfilehash: 3e3e8ec41de1469f0c397d8d80d224dd2f7a2bd2
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 01/13/2021
+ms.openlocfilehash: 4b85193c260b950b0c7a1c97ca5c83dfc87e5fb3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267889"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189059"
 ---
 # <a name="health-monitoring"></a>健康狀況監視
 
@@ -31,10 +31,10 @@ ms.locfileid: "88267889"
 
 首先，您需要為每個微服務定義健康狀態良好的構成項目。 在範例應用程式中，如果微服務的 API 可透過 HTTP 存取，而其相關的 SQL Server 資料庫也可供使用，我們會定義狀況良好。
 
-在 .NET Core 3.1 中，使用內建 Api，您可以設定服務，以這種方式新增微服務及其相依 SQL Server 資料庫的健康情況檢查：
+在 .NET 5 中，您可以使用內建 Api 來設定服務，並以這種方式新增微服務及其相依 SQL Server 資料庫的健康情況檢查：
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web API sample
+// Startup.cs from .NET 5 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
@@ -109,7 +109,7 @@ public class SqlConnectionHealthCheck : IHealthCheck
 最後，新增可回應 url 路徑的中介軟體 `/hc` ：
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web Api sample
+// Startup.cs from .NET 5 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
@@ -130,7 +130,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 eShopOnContainers 中的微服務依賴多個服務來執行其工作。 例如，來自 eShopOnContainers 的 `Catalog.API` 微服務依賴多個服務，例如 Azure Blob 儲存體、SQL Server 和 RabbitMQ。 因此，它具有數個使用 `AddCheck()` 方法新增的健康情況檢查。 針對每個相依服務， `IHealthCheck` 會需要加入自訂的執行，以定義其各自的健康情況狀態。
 
-開放原始碼專案 [AspNetCore](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 可解決這個問題，方法是為這些企業服務提供自訂的健康情況檢查，這些都是以 .net Core 3.1 為基礎。 每個健康情況檢查都可當成個別 NuGet 套件提供，然後便可輕鬆地將其新增至專案。 eShopOnContainers 會在其所有微服務中廣泛使用它們。
+開放原始碼專案 [AspNetCore](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 可解決這個問題，方法是為這些企業服務提供自訂的健康情況檢查，這些都是以 .net 5 為基礎所建立的。 每個健康情況檢查都可當成個別 NuGet 套件提供，然後便可輕鬆地將其新增至專案。 eShopOnContainers 會在其所有微服務中廣泛使用它們。
 
 例如，在 `Catalog.API` 微服務中，已新增下列 NuGet 套件：
 
@@ -241,7 +241,7 @@ eShopOnContainers 範例包含顯示範例健康情況檢查報告的網頁，�
 }
 ```
 
-新增 HealthChecksUI 的*Startup.cs*檔案：
+新增 HealthChecksUI 的 *Startup.cs* 檔案：
 
 ```csharp
 // Startup.cs from WebStatus(Watch Dog) service
@@ -267,7 +267,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 比方說，大部分協調器可以使用健康狀態檢查來管理零停機部署。 只有當服務/容器的狀態變更為健康狀態良好時，協調器才會開始將流量路由到服務/容器的執行個體。
 
-當協調器執行應用程式升級時，健康狀態監視尤為重要。 某些協調器 (例如 Azure Service Fabric) 會分階段升級服務 — 例如，它們可能會為每個應用程式升級進行五分之一的叢集介面更新。 在相同時間升級的一組節點即為一個「升級網域」**。 每個升級網域都已升級並可供使用者使用之後，該升級網域還必須通過健康狀態檢查，部署才會移到下一個升級網域。
+當協調器執行應用程式升級時，健康狀態監視尤為重要。 某些協調器 (例如 Azure Service Fabric) 會分階段升級服務 — 例如，它們可能會為每個應用程式升級進行五分之一的叢集介面更新。 在相同時間升級的一組節點即為一個「升級網域」。 每個升級網域都已升級並可供使用者使用之後，該升級網域還必須通過健康狀態檢查，部署才會移到下一個升級網域。
 
 服務健全狀況的另一個層面是來自服務的報告計量。 這是 Service Fabric 等協調器的一項健康狀態模型進階功能。 使用協調器時，計量非常重要，因為其可用來平衡資源使用狀況。 計量也可以當做系統健全狀況的指標。 比方說，您的應用程式可能有許多微服務，而每個執行個體都會報告每秒要求數 (RPS) 計量。 如果某一個服務比其他服務使用更多資源 (記憶體、處理器等)，協調器可以在叢集中移動服務執行個體，以嘗試維護平均的資源使用率。
 

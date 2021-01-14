@@ -3,13 +3,13 @@ title: .NET 中的選項模式
 author: IEvangelist
 description: 瞭解如何使用選項模式來代表 .NET 應用程式中的相關設定群組。
 ms.author: dapine
-ms.date: 12/04/2020
-ms.openlocfilehash: 14a81608c41f63abfc562e1a845ca893ff7cdf25
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.date: 01/06/2021
+ms.openlocfilehash: 392b3abca01864349f8b1b25ffb3109132d2435a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764917"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189728"
 ---
 # <a name="options-pattern-in-net"></a>.NET 中的選項模式
 
@@ -22,18 +22,20 @@ ms.locfileid: "97764917"
 
 ## <a name="bind-hierarchical-configuration"></a>系結階層式設定
 
-讀取相關設定值的慣用方式是使用選項模式。 例如，若要讀取下列設定值：
+讀取相關設定值的慣用方式是使用選項模式。 您可以透過 <xref:Microsoft.Extensions.Options.IOptions%601> 介面（泛型型別參數受限於）來使用選項模式 `TOptions` `class` 。 `IOptions<TOptions>`之後可透過相依性插入來提供。 如需詳細資訊，請參閱 [.net 中](dependency-injection.md)的相依性插入。
+
+例如，若要讀取下列設定值：
 
 :::code language="json" source="snippets/configuration/console-json/appsettings.json" range="3-6":::
 
 建立下列 `TransientFaultHandlingOptions` 類別：
 
-:::code language="csharp" source="snippets/configuration/console-json/TransientFaultHandlingOptions.cs" range="5-6":::
+:::code language="csharp" source="snippets/configuration/console-json/TransientFaultHandlingOptions.cs" range="5-9":::
 
-Options 類別：
+<span id="options-class"></span> 使用選項模式時，選項類別：
 
-* 必須是具有公用無參數函數的非抽象
-* 包含用來系結的公用讀寫屬性 (欄位為 ***not** _ 系結) 
+- 必須是具有公用無參數函數的非抽象
+- 包含用來系結的公用讀寫屬性 (欄位為 ***not** _ 系結) 
 
 下列程式碼：
 
@@ -51,13 +53,16 @@ IConfigurationRoot configurationRoot = configuration.Build();
 
 var options =
     configurationRoot.GetSection(nameof(TransientFaultHandlingOptions))
-        .Get<TransientFaultHandlingOptions>();
+                     .Get<TransientFaultHandlingOptions>();
 
 Console.WriteLine($"TransientFaultHandlingOptions.Enabled={options.Enabled}");
 Console.WriteLine($"TransientFaultHandlingOptions.AutoRetryDelay={options.AutoRetryDelay}");
 ```
 
 在上述程式碼中，會讀取應用程式啟動後的 JSON 設定檔變更。
+
+> [!IMPORTANT]
+> <xref:Microsoft.Extensions.Configuration.ConfigurationBinder>類別會公開數個 api （例如和），這些 api 不 `.Bind(object instance)` `.Get<T>()` 會受限於 `class` 。 使用任何 [選項介面](#options-interfaces)時，您必須遵守上述的 [選項類別條件約束](#options-class)。
 
 使用選項模式時的替代方法是系結 `"TransientFaultHandlingOptions"` 區段，並將它加入至相依性 [插入服務容器](dependency-injection.md)。 在下列程式碼中， `TransientFaultHandlingOptions` 會新增至服務容器， <xref:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure%2A> 並系結至設定：
 
@@ -68,7 +73,7 @@ services.Configure<TransientFaultHandlingOptions>(
 ```
 
 > [!TIP]
-> `key`參數是要搜尋之設定區段的名稱。 它 *不* 需要與代表它的型別名稱相符。 例如，您可能會有一個名為的區段 `"FaultHandling"` ，而且可以由 `TransientFaultHandlingOptions` 類別表示。 在此情況下，您會 `"FaultHandling"` 改為傳遞給 <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> 函數。 `nameof`當已命名的區段符合其對應的型別時，就會使用運算子作為便利性。
+> `key`參數是要搜尋之設定區段的名稱。 _Not * 必須符合代表它的型別名稱。 例如，您可能會有一個名為的區段 `"FaultHandling"` ，而且可以由 `TransientFaultHandlingOptions` 類別表示。 在此情況下，您會 `"FaultHandling"` 改為傳遞給 <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> 函數。 `nameof`當已命名的區段符合其對應的型別時，就會使用運算子作為便利性。
 
 使用上述程式碼，下列程式碼會讀取位置選項：
 
@@ -339,6 +344,6 @@ services.PostConfigureAll<CustomOptions>(customOptions =>
 });
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 中的設定](configuration.md)

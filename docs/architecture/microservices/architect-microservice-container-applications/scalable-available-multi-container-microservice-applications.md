@@ -1,13 +1,13 @@
 ---
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 探索協調微服務和多容器應用程式之高延展性和可用性的各種選項，以及開發 Kubernetes 應用程式生命週期時使用 Azure Dev Spaces 的可能性。
-ms.date: 01/30/2020
-ms.openlocfilehash: a61e883ab0d27300e00b177c2621c6521e85ac84
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 7ba0367bca98edbab1be2059ee37e863359edad3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172498"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189409"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -21,15 +21,15 @@ ms.locfileid: "91172498"
 
 您可以為每個服務執行個體各使用一個容器。 Docker 容器是「部署的單位」，而容器是 Docker 的實例。 主機會處理許多容器。 看起來像邏輯方法。 不過，您該如何處理這些組成應用程式的負載平衡、路由及協調作業？
 
-如果是一部主機上單一映像執行個體的管理需求，可靠單一 Docker 主機中的單純 Docker 引擎來滿足，但若是更複雜的分散式應用程式，它就無法滿足部署於多個主機上多個容器的管理需求。 在大部分情況下，您需要的管理平台應能自動啟動容器、向外延展容器 (其中每個映像含多個執行個體)、視需要暫停或關閉它們，最好也能控制資源 (例如網路和資料儲存體) 的存取方式。
+如果是一部主機上單一映像執行個體的管理需求，可靠單一 Docker 主機中的單純 Docker 引擎來滿足，但若是更複雜的分散式應用程式，它就無法滿足部署於多個主機上多個容器的管理需求。 在大多數情況下，您需要一個管理平臺，以自動啟動容器、向外延展容器（每個映射具有多個實例）、暫停它們或在需要時關閉它們，而且在理想情況下也會控制其存取資源的方式，例如網路和資料儲存體。
 
-如果您不只要管理個別容器或組成非常簡單的應用程式，而是要進展到含有微服務的大型企業應用程式，就必須採用協調流程和叢集平台。
+如果您不只要管理個別容器或組成簡單的應用程式，而是要進展到具有微服務的大型企業應用程式，就必須採用協調流程和叢集平台。
 
 從架構和開發角度來看，如果您要建置由微服務應用程式所組成的大型企業應用程式，請務必了解下列可支援進階案例的平台和產品：
 
 **叢集和協調器**： 當您要跨許多 Docker 主機向外延展應用程式時 (亦即大型微服務應用程式)，您必須簡化基礎平台的複雜性，並以單一叢集的形式來管理其中的所有主機。 而這正是容器叢集和協調器所提供的功能。 Kubernetes 是協調器的一個範例，可以透過 Azure Kubernetes Service 在 Azure 中取得。
 
-**排程器**： 「排程」** 可讓系統管理員啟動叢集中的容器，因此這些排程器也會提供 UI。 叢集排程器有下列職責：有效率地使用叢集的資源、設定使用者所提供的條件約束、跨節點或主機有效進行容器負載平衡，以及維持容錯性並保障高可用性。
+**排程器**： 「排程」可讓系統管理員啟動叢集中的容器，因此這些排程器也會提供 UI。 叢集排程器有下列職責：有效率地使用叢集的資源、設定使用者所提供的條件約束、跨節點或主機有效進行容器負載平衡，以及維持容錯性並保障高可用性。
 
 叢集與排程器的概念密切相關，因此不同廠商所提供的產品通常會兩組功能都提供。 下列清單顯示您可以針對叢集和排程器選擇的最重要平台和軟體。 一般來說，Azure 這類公用雲端都會提供這些協調器。
 
@@ -56,11 +56,11 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 **圖 4-24**： Kubernetes 叢集的簡化結構和拓撲
 
-如您在圖 4-24 中所見，Kubernetes 叢集結構中的主要節點 (VM) 會控制大部分的叢集協調，而且您可以將容器部署到其餘節點。從應用程式角度來看，這些節點是以單一集區來管理，並可讓您擴充到數以千計或甚至數以萬計的容器。
+在圖4-24 中，您可以看到 Kubernetes 叢集的結構，其中的主要節點 (VM) 控制叢集的大部分協調，而您可以將容器部署到其他節點，這些節點會從應用程式的觀點來當作單一集區來管理，並可讓您擴充至數千個或甚至數千個容器。
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes 的開發環境
 
-在開發環境中，[Docker 於 2018 年 7 月宣佈](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) Kubernetes 也可以在單一開發電腦 (Windows 10 或 macOS) 上執行，只要安裝 [Docker Desktop](https://docs.docker.com/install/) 即可。 您稍後可以部署到雲端 (AKS) 來進一步執行整合測試，如圖 4-25 所示。
+在開發環境中， [docker 于2018年7月宣佈](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) ，Kubernetes 也可以在單一開發電腦上執行， (Windows 10 或 macOS) 安裝 [Docker Desktop](https://docs.docker.com/install/)。 您稍後可以部署到雲端 (AKS) 來進一步執行整合測試，如圖 4-25 所示。
 
 ![此圖顯示開發電腦上的 Kubernetes，然後部署至 AKS](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 
@@ -70,7 +70,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 若要開始使用 AKS，請從 Azure 入口網站或使用 CLI 部署 AKS 叢集。 如需在 Azure 中部署 Kubernetes 叢集的詳細資訊，請參閱[部署 Azure Kubernetes Service (AKS) 叢集](/azure/aks/kubernetes-walkthrough-portal)。
 
-隨附於 AKS 預設安裝的軟體均不會收取任何費用。 所有預設選項都是使用開放原始碼軟體來實作。 AKS 可供 Azure 中的多部虛擬機器使用。 您僅需支付所選計算執行個體的費用，以及其他已使用的基礎結構資源費用，例如儲存體和網路功能。 AKS 本身沒有任何累加的費用。
+隨附於 AKS 預設安裝的軟體均不會收取任何費用。 所有預設選項都是使用開放原始碼軟體來實作。 AKS 可供 Azure 中的多部虛擬機器使用。 您只需支付所選計算實例的費用，以及所耗用的其他基礎結構資源，例如儲存體和網路功能。 AKS 本身沒有任何累加的費用。
 
 Kubernetes 的預設生產部署選項是使用下一節所引進的 Helm 圖表。
 
@@ -80,9 +80,9 @@ Kubernetes 的預設生產部署選項是使用下一節所引進的 Helm 圖表
 
 即便是最複雜的 Kubernetes 應用程式，Helm 圖表也能協助您定義、設定版本、安裝、共用、升級或復原。
 
-此外，建議使用 Helm 還有一個原因，那就是因為 Azure 中的其他 Kubernetes 環境 (例如 [Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces)) 也是以 Helm 圖表為依據。
+此外，也建議使用 Helm，因為 Azure 中的其他 Kubernetes 環境（例如 [Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces) ）也是以 Helm 圖表為基礎。
 
-Helm 是由 [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) 以及 Microsoft、Google、Bitnami 和 Helm 參與者社群共同維護。
+Helm 是由 [雲端原生運算基礎來維護， () CNCF ](https://www.cncf.io/) 與 Microsoft、Google、Bitnami 和 Helm 參與者社區共同合作。
 
 如需有關 Helm 圖表和 Kubernetes 的詳細資訊，請參閱 [使用 Helm 圖表部署 eShopOnContainers 至 AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)) 文章。
 
@@ -92,7 +92,7 @@ Helm 是由 [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) 以
 
 如前所述，Azure Dev Spaces 在部署容器型應用程式時使用 Helm 圖表。
 
-Azure Dev Spaces 可協助開發小組在 Kubernetes 上更具生產力，因為它可讓您直接在 Azure 的全域 Kubernetes 叢集中快速逐一查看和偵測程式碼，只要使用 Visual Studio 2019 或 Visual Studio Code 即可。 Azure 中的 Kubernetes 叢集是共用的受控 Kubernetes 叢集，讓您的小組可以共同合作。 您可以在隔離的狀況下開發程式碼，然後部署到全域叢集並使用其他元件進行端對端測試，不需要複寫或模擬相依性。
+Azure Dev Spaces 可協助開發小組在 Kubernetes 上更具生產力，因為它可讓您使用 Visual Studio 2019 或 Visual Studio Code，直接在 Azure 的全域 Kubernetes 叢集中快速逐一查看和偵測程式碼。 Azure 中的 Kubernetes 叢集是共用的受控 Kubernetes 叢集，讓您的小組可以共同合作。 您可以在隔離的狀況下開發程式碼，然後部署到全域叢集並使用其他元件進行端對端測試，不需要複寫或模擬相依性。
 
 如圖 4-26 所示，Azure Dev Spaces 中最與眾不同的功能，就是能夠建立與叢集中全域部署其餘部分整合的執行「空間」。
 
@@ -108,11 +108,11 @@ Azure Dev Spaces 提供空間概念，讓您能夠在相對隔離的狀況下工
 
 若要取得具體範例的實際觀點，請參閱 [Azure Dev Spaces 上的 eShopOnContainers wiki 頁面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)。
 
-如需進一步資訊，請參閱[使用 Azure Dev Spaces 進行小組開發](/azure/dev-spaces/team-development-netcore)一文。
+如需詳細資訊，請參閱 [使用 Azure Dev Spaces 的小組開發](/azure/dev-spaces/team-development-netcore)文章。
 
 ## <a name="additional-resources"></a>其他資源
 
-- **開始使用 Azure Kubernetes Service (AKS) ** \
+- **開始使用 Azure Kubernetes Service (AKS)** \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \

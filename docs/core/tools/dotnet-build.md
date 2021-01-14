@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 02/14/2020
-ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc8c6ed30dbf8ff0602fb19e5001f618a8380f16
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634477"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189950"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -29,7 +29,7 @@ dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet build -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔包含中繼語言的專案程式碼 (IL) 檔案，副檔名為 *.dll* 。  視專案類型和設定而定，可能會包含其他檔案，例如：
 
@@ -83,7 +83,7 @@ dotnet build -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](csproj.md)中。
+  針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](../project-sdk/overview.md)中。
 
 - **`--force`**
 

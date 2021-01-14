@@ -5,12 +5,12 @@ ms.date: 11/30/2020
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 3ec1ee9e8da3a6e03581ce2a29a655ec0d68fe54
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b547e105b13d380ffae049ab55e76aa25abe8cc3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97701070"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189196"
 ---
 # <a name="azure-sdk-for-net-overview"></a>Azure SDK for .NET 總覽
 
@@ -32,4 +32,4 @@ Azure SDK for .NET 是以 NuGet 套件系列的形式提供，可在 .NET Core (
 
 3. **在您的應用程式中使用 SDK 撰寫程式碼-** 使用 Azure 服務時，您的程式碼會先建立用戶端物件來使用服務，然後在該用戶端物件上呼叫方法，以與服務進行互動。  同時提供同步和非同步方法。  Azure 檔中提供了使用每個個別 SDK 套件的範例。
 
-4. **設定 SDK 的記錄 (選擇性) -** 如果您需要診斷您的應用程式與 Azure 之間的問題，您可以 [在 AZURE SDK for .net 中啟用記錄功能](./logging.md)。
+4. **設定 SDK 的記錄 (選擇性) -** 如果您需要診斷您的應用程式與 Azure 之間的問題，您可以 [在 AZURE SDK for .net 中啟用記錄功能](../logging.md)。

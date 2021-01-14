@@ -1,13 +1,13 @@
 ---
 title: 測試 ASP.NET Core 服務和 Web 應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索在容器中用於測試 ASP.NET Core 服務和 Web 應用程式的架構。
-ms.date: 08/07/2020
-ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.date: 01/13/2021
+ms.openlocfilehash: dfd0a320491f92154bc9e2804d56c00120224e62
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633945"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187999"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -15,13 +15,13 @@ ms.locfileid: "97633945"
 
 您需要測試控制器根據有效或無效輸入的運作方式，以及測試根據所執行商務作業結果的控制器回應。 不過，您的微服務應該有這些類型的測試：
 
-- 單元測試。 這些可確保應用程式的個別元件會如預期般運作。 判斷提示測試元件 API。
+- 單元測試。 這些測試可確保應用程式的個別元件能如預期般運作。 判斷提示測試元件 API。
 
-- 整合測試。 這些可確保針對外部成品 (如資料庫) 的元件互動會如預期般運作。 判斷提示可以測試元件 API、UI 或資料庫 I/O、記錄之類的動作副作用。
+- 整合測試。 這些測試可確保元件互動會如預期般針對外部成品（例如資料庫）運作。 判斷提示可以測試元件 API、UI 或資料庫 I/O、記錄之類的動作副作用。
 
-- 每個微服務的功能測試。 這些可確保應用程式從使用者的觀點來看如預期般運作。
+- 每個微服務的功能測試。 這些測試可確保應用程式從使用者的觀點來看如預期般運作。
 
-- 服務測試。 這些可確保會測試端對端的服務使用案例，包括在相同的時間測試多個服務。 針對這種測試，您需要先準備環境。 在此情況下，這表示啟動服務 (例如，使用 docker-compose up)。
+- 服務測試。 這些測試可確保測試端對端服務使用案例，包括同時測試多個服務。 針對這種測試，您需要先準備環境。 在此情況下，這表示啟動服務 (例如，使用 docker-compose up)。
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>實作 ASP.NET Core Web API 的單元測試
 
@@ -70,7 +70,7 @@ public async Task Get_order_detail_success()
 
 ASP.NET Core 包含內建的測試 web 主機，可用來處理 HTTP 要求，而不會有網路額外負荷，這表示您可以比使用真正的 web 主機更快執行這些測試。 測試 Web 主機 (TestServer) 可透過 Microsoft.AspNetCore.TestHost NuGet 元件取得。 它可以新增至整合測試專案，並用於裝載 ASP.NET Core 應用程式。
 
-您可以在下列程式碼中看到，當您建立 ASP.NET Core 控制器的整合測試時，您會透過測試主機將控制器具現化。 這相當於 HTTP 要求，但執行速度較快。
+您可以在下列程式碼中看到，當您建立 ASP.NET Core 控制器的整合測試時，您會透過測試主機將控制器具現化。 這項功能相當於 HTTP 要求，但執行速度更快。
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith。整合測試** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **使用 dotnet test 的 .NET Core 單元測試** \
+- **使用 dotnet 測試在 .NET 中進行單元測試** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. 官方網站。 \
@@ -146,7 +146,7 @@ compose 應用程式啟動且執行之後，如果您正在執行 Visual Studio�
 
 **圖 6-25**。 eShopOnContainers 中的測試資料夾結構
 
-微服務和應用程式功能/整合測試會使用一般測試執行器從 Visual Studio 執行，但您必須先透過一組包含在解決方案測試資料夾中的 docker-compose 檔案，來啟動必要的基礎結構服務：
+微服務和應用程式的功能/整合測試是從 Visual Studio 使用一般測試執行器來執行，但首先您需要啟動必要的基礎結構服務，並使用一組包含在方案測試檔案夾中的 docker 組成檔案：
 
 **docker-compose-test.yml**
 
@@ -194,7 +194,7 @@ services:
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-如您所見，這些 docker-compose 檔案只啟動 Redis、RabbitMQ、SQL Server 和 MongoDB 微服務。
+如您所見，這些 docker 撰寫的檔案只會啟動 Redis、RabbitMQ、SQL Server 和 MongoDB 微服務。
 
 ### <a name="additional-resources"></a>其他資源
 

@@ -1,21 +1,21 @@
 ---
 title: 建立以微服務為基礎的複合 UI
 description: 微服務架構不只可用於後端。 預覽以了解如何用於前端。
-ms.date: 09/20/2018
-ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 3d866172cf7d15486dd2cc0d5dbb286c77693cea
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72275736"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189406"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>建立以微服務為基礎的複合 UI
 
-微服務體系結構通常從伺服器端處理資料和邏輯開始，但在許多情況下，UI 仍作為單體處理。 但是，一個更高級的方法（稱為[微前端](https://martinfowler.com/articles/micro-frontends.html)）也是基於微服務設計應用程式 UI。 這表示具有微服務所產生的複合 UI，而不是在伺服器上擁有多個微服務，並只由一個整合型用戶端應用程式來取用這些微服務。 透過此方法，您建置的微服務就會同時具備邏輯和視覺表示。
+微服務架構通常是從伺服器端處理資料和邏輯開始，但在許多情況下，UI 仍會以單體的方式處理。 不過，更先進的方法稱為 [微前端](https://martinfowler.com/articles/micro-frontends.html)，也就是根據微服務來設計您的應用程式 UI。 這表示具有微服務所產生的複合 UI，而不是在伺服器上擁有多個微服務，並只由一個整合型用戶端應用程式來取用這些微服務。 透過此方法，您建置的微服務就會同時具備邏輯和視覺表示。
 
 圖 4-20 顯示更簡單的方法，該方法只會從整合型用戶端應用程式取用微服務。 當然，您在產生 HTML 與 JavaScript 之間可能會有 ASP.NET MVC 服務。 下圖已經過簡化，顯示您有取用微服務的單一 (整合型) 用戶端 UI，只著重於邏輯和資料，而不是 UI 形狀 (HTML 和 JavaScript)。
 
-![連接到微服務的單片 UI 應用圖。](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
+![連接至微服務的整合型 UI 應用程式圖表。](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
 **圖 4-20**： 取用後端微服務的整合型 UI 應用程式
 
@@ -23,13 +23,13 @@ ms.locfileid: "72275736"
 
 用戶端應用程式啟動時，每個用戶端 UI 元件 (例如 TypeScript 類別) 會向基礎結構微服務註冊其本身，以便能夠針對指定案例提供 ViewModel。 如果微服務變更形狀，UI 也會變更。
 
-圖 4-21 顯示此複合 UI 方法的版本。 這已經過簡化，因為您可能會有根據不同技術彙總更細緻部分的其他微服務。 這取決於您建置的是傳統 Web 方法 (ASP.NET MVC) 或 SPA (單頁應用程式)。
+圖 4-21 顯示此複合 UI 方法的版本。 這種方法已經過簡化，因為您可能會有其他微服務會匯總以不同技術為基礎的細微部分。 這取決於您建置的是傳統 Web 方法 (ASP.NET MVC) 或 SPA (單頁應用程式)。
 
-![由許多視圖模型組成的複合 UI 圖。](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
+![複合 UI 的圖表，由許多視圖模型組成。](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 
 **圖 4-21**： 由後端微服務成形的複合 UI 應用程式範例
 
-每個 UI 組合微服務會類似於小型 API 閘道。 但在這種情況下，每個區域都負責一個小的 UI 區域。
+每個 UI 組合微服務會類似於小型 API 閘道。 但在這種情況下，每一個都有一個小的 UI 區域。
 
 根據您所使用的 UI 技術，微服務導向的複合 UI 方法可能挑戰性很高，也可能很低。 例如，您不會使用與用來建置 SPA 或原生行動應用程式相同的技術來建置傳統 Web 應用程式 (例如開發 Xamarin 應用程式時，此方法的挑戰性可能更高)。
 
@@ -39,27 +39,27 @@ ms.locfileid: "72275736"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **微型前鋒（馬丁·福勒的博客）**  
+- **微前端 (聖馬丁 Fowler 的 blog)**  
   <https://martinfowler.com/articles/micro-frontends.html>
   
-- **微型前端（邁克爾·蓋爾斯網站）**  
+- **微前端 (Michael Geers 網站)**  
   <https://micro-frontends.org/>
   
 - **使用 ASP.NET 的複合 UI (特定研討)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **魯本·奧斯丁加微服務體系結構中的單片前端**  
+- **Ruben Oostinga。微服務架構中的整合前端**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **毛羅·塞爾文蒂更好的 UI 組合的秘訣**  
+- **Mauro Servienti。更好的 UI 組合秘密**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **維克多·法契奇將前端 Web 元件納入微服務**  
+- **Viktor Farcic.將 Front-End Web 元件納入微服務**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
 - **Managing Frontend in the Microservices Architecture (管理微服務架構中的前端)**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]
->[上一個](microservices-addressability-service-registry.md)
->[下一個](resilient-high-availability-microservices.md)
+>[上一個](microservices-addressability-service-registry.md) 
+>[下一步](resilient-high-availability-microservices.md)

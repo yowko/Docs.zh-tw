@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634379"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189150"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 此 `dotnet test` 命令可用來在指定的解決方案中執行單元測試。 此 `dotnet test` 命令會建立方案，並針對方案中的每個測試專案執行測試主機應用程式。 測試主機會使用測試架構在指定的專案中執行測試，例如： MSTest、NUnit 或 xUnit，並報告每項測試的成功或失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。
 
@@ -146,7 +146,7 @@ dotnet test -h|--help
 
 - **`-l|--logger <LOGGER>`**
 
-  指定測試結果的記錄器。 與 MSBuild 不同的是，dotnet test 不接受縮寫：而不是 `-l "console;v=d"` 使用 `-l "console;verbosity=detailed"` 。
+  指定測試結果的記錄器。 與 MSBuild 不同的是，dotnet test 不接受縮寫：而不是 `-l "console;v=d"` 使用 `-l "console;verbosity=detailed"` 。 指定參數多次以啟用多個記錄器。
 
 - **`--no-build`**
 
@@ -270,7 +270,7 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | 或者       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。

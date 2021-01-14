@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: ba7113c88db728f30812821deaf7c06a80663d1f
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509802"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189085"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>應用程式的專案結構 Blazor
 
@@ -132,7 +132,7 @@ ASP.NET Web Forms 應用程式中的設定通常是使用一或多個 *web.confi
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages
+## <a name="pages"></a>頁面
 
 應用程式中的頁面在哪裡 Blazor ？ Blazor 不會為可定址的頁面定義個別的副檔名，例如 ASP.NET Web Forms apps 中的 *.aspx* 檔案。 相反地，頁面是藉由指派元件的路由來定義。 路由通常會使用 Razor 指示詞來指派 `@page` 。 例如， `Counter` *頁面/計數器 razor* 檔案中撰寫的元件會定義下列路由：
 
@@ -146,7 +146,7 @@ ASP.NET Web Forms 應用程式中的設定通常是使用一或多個 *web.confi
 
 在 Blazor [ [頁面]、[路由] 和 [版面](./pages-routing-layouts.md) 配置] 區段中，我們將更詳細地查看路由。
 
-## <a name="layout"></a>配置
+## <a name="layout"></a>Layout
 
 在 ASP.NET Web Forms 應用程式中，會使用主版 *頁面 (的*) 來處理常見的頁面配置。 在 Blazor 應用程式中，會使用版面配置元件 (*共用/MainLayout razor*) 來處理頁面配置。 版面配置元件將會在 [頁面] [、[路由] 和 [版面](./pages-routing-layouts.md) 配置] 區段中更詳細地討論。
 
@@ -159,7 +159,7 @@ ASP.NET Web Forms 應用程式中的設定通常是使用一或多個 *web.confi
 
 在 Blazor 伺服器應用程式中，根元件的主機頁面會定義在 *_Host 的 cshtml* 檔案中。 此檔案會定義 Razor 頁面，而不是元件。 Razor Pages 使用 Razor 語法來定義伺服器可定址的頁面，非常類似 *.aspx* 頁面。 `Html.RenderComponentAsync<TComponent>(RenderMode)`方法是用來定義應呈現根層級元件的位置。 `RenderMode`選項表示元件的呈現方式。 下表概述支援的 `RenderMode` 選項。
 
-|選項                        |說明       |
+|選項                        |Description       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |一旦建立與瀏覽器的連線之後，以互動方式轉譯|
 |`RenderMode.ServerPrerendered`|第一個資源清單，然後以互動方式轉譯|
@@ -223,7 +223,7 @@ ASP.NET Web Forms 應用程式中的設定通常是使用一或多個 *web.confi
 
 ```
 
-要轉譯的根元件是在應用程式的方法中設定， `Program.Main` 並具有可透過相依性插入來註冊不同服務的彈性。您可以參考將服務新增至應用程式[ Blazor WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly)
+要轉譯的根元件是在應用程式的方法中指定， `Program.Main` 並具有可透過相依性插入來註冊服務的彈性。 如需詳細資訊，請參閱 ASP.NET Core 相依性 [ Blazor 插入](/aspnet/core/blazor/fundamentals/dependency-injection?pivots=webassembly)。
 
 ```csharp
 public class Program

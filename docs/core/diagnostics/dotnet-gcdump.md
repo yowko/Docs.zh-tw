@@ -2,12 +2,12 @@
 title: dotnet-gcdump 診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet-gcdump CLI 工具，以使用 .NET EventPipe 收集即時 .NET 進程的 GC (垃圾收集行程) 傾印。
 ms.date: 11/17/2020
-ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: fe7772eed642daadbd1754627751f58d0ab57b8e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593366"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188565"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>堆積分析工具 (dotnet-gcdump) 
 
@@ -35,13 +35,16 @@ ms.locfileid: "97593366"
   | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \|[arm](https://aka.ms/dotnet-gcdump/linux-arm) \|[arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \|[musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \|[musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
 
+> [!NOTE]
+> 若要 `dotnet-gcdump` 在 x86 應用程式上使用，您需要工具的對應 x86 版本。
+
 ## <a name="synopsis"></a>概要
 
 ```console
 dotnet-gcdump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet-gcdump`全域工具會使用[EventPipe](./eventpipe.md)收集即時 .NET 進程的 GC (垃圾收集行程) 傾印。 GC 傾印的建立方式，是在目標進程中觸發 GC、開啟特殊事件，以及從事件資料流程重新產生物件根目錄的圖形。 此程式可讓您在進程執行時收集 GC 傾印，並以最少量的額外負荷進行收集。 這些傾印適用于數種案例：
 
@@ -103,6 +106,12 @@ dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-f
 - **`-n|--name <name>`**
 
   要從中收集 GC 傾印的進程名稱。
+
+> [!NOTE]
+> 在 Linux 和 macOS 上，此命令會預期目標應用程式，並 `dotnet-gcdump` 共用相同的 `TMPDIR` 環境變數。 否則，此命令將會超時。
+
+> [!NOTE]
+> 若要使用收集 GC 傾印 `dotnet-gcdump` ，必須以執行目標進程的使用者和根使用者的相同使用者來執行。 否則，此工具將無法建立與目標進程的連接。
 
 ## `dotnet-gcdump ps`
 

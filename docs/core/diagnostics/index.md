@@ -3,12 +3,12 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753610"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188474"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -68,7 +68,7 @@ ms.locfileid: "97753610"
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md) 會在 Linux 和 macOS (以及在 Windows 上安裝 [sos 調試延伸](sos-debugging-extension.md) 模組（如果您使用 [Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)) ）。
+[dotnet-sos](dotnet-sos.md) 會在 Linux 和 macOS (以及在 Windows 上安裝 [sos 調試延伸](sos-debugging-extension.md) 模組（如果您使用 [Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools)) ）。
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -88,7 +88,7 @@ ms.locfileid: "97753610"
 
 [教學課程： Debug 鎖死](debug-deadlock.md) 會示範如何使用 [dotnet](dotnet-dump.md) 傾印工具來調查執行緒和鎖定。
 
-### <a name="debug-a-stackoverflow"></a>StackOverflow 的 Debug
+### <a name="debug-a-stackoverflow"></a>對 StackOverflow 進行偵錯
 
 [教學課程： StackOverflow 的 debug](debug-stackoverflow.md) 會示範如何 <xref:System.StackOverflowException> 在 Linux 上的進行 debug 錯。
 

@@ -4,16 +4,16 @@ description: 瞭解如何使用適用于 .NET 單元測試的程式碼涵蓋範�
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538143"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189651"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>使用程式碼涵蓋範圍進行單元測試
 
-單元測試有助於確保功能，並提供重構工作的驗證方法。 程式碼涵蓋範圍是測量單元測試所執行的程式碼數量，也就是行、分支或方法。 舉例來說，如果您有一個簡單的應用程式，其中只有兩個程式碼的條件式分支 (_分支 a_和 _分支 b_) ，則驗證條件 _分支 a_ 的單元測試將會報告分支程式碼涵蓋範圍50%。
+單元測試有助於確保功能，並提供重構工作的驗證方法。 程式碼涵蓋範圍是測量單元測試所執行的程式碼數量，也就是行、分支或方法。 舉例來說，如果您有一個簡單的應用程式，其中只有兩個程式碼的條件式分支 (_分支 a_ 和 _分支 b_) ，則驗證條件 _分支 a_ 的單元測試將會報告分支程式碼涵蓋範圍50%。
 
 本文討論如何使用程式碼涵蓋範圍來進行使用 Coverlet 的單元測試，以及使用 ReportGenerator 產生報表。 雖然本文著重于以 c # 和 xUnit 作為測試架構，但 MSTest 和 NUnit 也可以運作。 Coverlet 是 [GitHub 上的開放原始碼專案](https://github.com/coverlet-coverage/coverlet) ，可提供適用于 c # 的跨平臺程式碼涵蓋範圍架構。 [Coverlet](https://dotnetfoundation.org/projects/coverlet) 是 .net foundation 的一部分。 Coverlet 會收集 Cobertura 涵蓋範圍測試回合資料，用於產生報告。
 
@@ -33,7 +33,7 @@ ms.locfileid: "90538143"
 dotnet new classlib -n Numbers
 ```
 
-下列程式碼片段會定義簡單的 `PrimeService` 類別，以提供檢查數位是否為質數的功能。 複製下列程式碼片段，並取代在 [*數位*] 目錄中自動建立的*Class1.cs*檔案內容。 將 *Class1.cs* 檔案重新命名為 *PrimeService.cs*。
+下列程式碼片段會定義簡單的 `PrimeService` 類別，以提供檢查數位是否為質數的功能。 複製下列程式碼片段，並取代在 [*數位*] 目錄中自動建立的 *Class1.cs* 檔案內容。 將 *Class1.cs* 檔案重新命名為 *PrimeService.cs*。
 
 ```csharp
 namespace System.Numbers
@@ -65,7 +65,7 @@ namespace System.Numbers
 
 ### <a name="create-test-projects"></a>建立測試專案
 
-使用下列命令，從相同的命令提示字元建立兩個新的 **XUnit 測試專案 ( .Net Core) ** 範本 [`dotnet new xunit`](../tools/dotnet-new.md#test) ：
+使用下列命令，從相同的命令提示字元建立兩個新的 **XUnit 測試專案 ( .Net Core)** 範本 [`dotnet new xunit`](../tools/dotnet-new.md#test) ：
 
 ```dotnetcli
 dotnet new xunit -n XUnit.Coverlet.Collector
@@ -85,7 +85,7 @@ dotnet add XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj reference Nu
 dotnet add XUnit.Coverlet.MSBuild\XUnit.Coverlet.MSBuild.csproj reference Numbers\Numbers.csproj
 ```
 
-*Msbuild*專案的命名方式正確，因為它將相依于[coverlet msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet 套件。 藉由執行下列命令來新增此套件相依性 [`dotnet add package`](../tools/dotnet-add-package.md) ：
+*Msbuild* 專案的命名方式正確，因為它將相依于 [coverlet msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet 套件。 藉由執行下列命令來新增此套件相依性 [`dotnet add package`](../tools/dotnet-add-package.md) ：
 
 ```dotnetcli
 cd XUnit.Coverlet.MSBuild && dotnet add package coverlet.msbuild && cd ..
@@ -297,7 +297,7 @@ reportgenerator
 
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Studio 單元測試涵蓋範圍](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+- [Visual Studio 單元測試程式碼涵蓋範圍](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
 - [GitHub-Coverlet 儲存機制](https://github.com/coverlet-coverage/coverlet)
 - [GitHub-ReportGenerator 儲存機制](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator 專案網站](https://danielpalme.github.io/ReportGenerator)

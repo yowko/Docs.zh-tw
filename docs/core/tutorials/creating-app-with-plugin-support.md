@@ -4,12 +4,12 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247588"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187895"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
@@ -20,9 +20,12 @@ ms.locfileid: "91247588"
 - 使用 <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 類型以允許外掛程式具有相依性。
 - 撰寫只要複製組建成品即可輕鬆部署的外掛程式。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
-- 安裝 [.Net Core 3.0 SDK](https://dotnet.microsoft.com/download) 或更新版本。
+- 安裝 [.net 5 SDK](https://dotnet.microsoft.com/download) 或更新版本。
+
+> [!NOTE]
+> 此範例程式碼的目標是 .NET 5，但它使用的所有功能都是在 .NET Core 3.0 中引進，之後所有 .NET 版本都有提供。
 
 ## <a name="create-the-application"></a>建立應用程式
 
@@ -239,7 +242,7 @@ static Assembly LoadPlugin(string relativePath)
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -287,7 +290,7 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="plugin-target-framework-recommendations"></a>外掛程式目標 Framework 建議
 
-因為外掛程式相依性載入使用檔案 * 上的.deps.js* ，所以會有與外掛程式的目標架構相關的陷阱。 具體來說，您的外掛程式應以執行階段為目標 (例如 .NET Core 3.0)，而不是 .NET Standard 版本。 *.deps.json* 檔案是根據專案的目標 Framework 所產生；由於許多 .NET Standard 相容套件提供針對 .NET Standard 進行建置的參考組件，以及適用於特定執行階段的實作組件，因此 *.deps.json* 可能無法正確看到實作組件，或可能抓取 .NET Standard 版本的組件，而不是您預期的 .NET Core 版本。
+因為外掛程式相依性載入使用檔案 *上的.deps.js* ，所以會有與外掛程式的目標架構相關的陷阱。 具體而言，您的外掛程式應以執行時間（例如 .NET 5）為目標，而不是 .NET Standard 版本。 *.deps.json* 檔案是根據專案的目標 Framework 所產生；由於許多 .NET Standard 相容套件提供針對 .NET Standard 進行建置的參考組件，以及適用於特定執行階段的實作組件，因此 *.deps.json* 可能無法正確看到實作組件，或可能抓取 .NET Standard 版本的組件，而不是您預期的 .NET Core 版本。
 
 ## <a name="plugin-framework-references"></a>外掛程式架構參考
 

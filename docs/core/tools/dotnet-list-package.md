@@ -2,12 +2,12 @@
 title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
 ms.date: 11/11/2020
-ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 684b73dec553a424252e1368c265847622fb7850
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556884"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189892"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -29,7 +29,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet list package` 命令提供一個便利選項，可列出適用於特定專案或解決方案的所有 NuGet 套件參考。 您需要先建置專案，才能具備處理此命令所需的資產。 下列範例會針對 [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 專案顯示 `dotnet list package` 命令的輸出：
 
@@ -43,7 +43,7 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-**Requested** 欄會參考專案檔中所指定的套件版本，而且可以是一個範圍。 **Resolved** 欄會列出專案目前正在使用的版本，且一律為單一值。 名稱旁邊顯示 `(A)` 的套件代表[隱含的套件參考](csproj.md#implicit-package-references)，可從您的專案設定 (`Sdk` 類型、`<TargetFramework>` 或 `<TargetFrameworks>` 屬性等) 進行推斷。
+**Requested** 欄會參考專案檔中所指定的套件版本，而且可以是一個範圍。 **Resolved** 欄會列出專案目前正在使用的版本，且一律為單一值。 在名稱旁邊顯示的封裝 `(A)` 代表隱含的封裝參考，這些參考是從專案設定 (`Sdk` 類型或 `<TargetFramework>` 屬性) 推斷而來 `<TargetFrameworks>` 。
 
 使用 `--outdated` 選項，以找出您在專案中所使用的套件是否有較新版本可供使用。 除非已解析的版本也是發行前版本，否則 `--outdated` 預設會列出最新的穩定套件。 若要在列出較新的版本時包含發行前版本，也需指定 `--include-prerelease` 選項。 下列範例會針對與上一個範例相同的專案顯示 `dotnet list package --outdated --include-prerelease` 命令的輸出：
 

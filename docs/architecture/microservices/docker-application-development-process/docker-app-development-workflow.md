@@ -1,13 +1,13 @@
 ---
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
-ms.date: 01/30/2020
-ms.openlocfilehash: 4019eed6b814f4c7e8bc4f32758e8cfd7f4c7ec9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: fff0a59bb6001eeb50c31c68bfeceeb71c439223
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711171"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189536"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -59,7 +59,7 @@ Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼、2寫入
 
 **圖 5-2**。 在 Visual Studio 2019 安裝期間選取 **.Net Core 跨平臺開發** 工作負載
 
-您甚至可以在於您的應用程式中啟用 Docker，並在 Docker 中部署與測試之前，只使用 .NET 開始撰寫應用程式的程式碼 (如果您打算使用容器通常會使用 .NET Core)。 不過，建議您盡快開始使用 Docker，因為它會成為實際環境，可以盡快發現任何問題。 我們鼓勵您這麼做，是因為 Visual Studio 和 Docker 合作很容易，您幾乎感覺不到它，最佳範例是從 Visual Studio 偵錯多容器應用程式時。
+如果) 您打算在應用程式中啟用 Docker，並在 Docker 中部署和測試之前，您可以在純 .NET Core 或更新版本中開始撰寫應用程式的程式碼， (通常是在 .NET Core 或更新版本中。 不過，建議您盡快開始使用 Docker，因為它會成為實際環境，可以盡快發現任何問題。 我們鼓勵您這麼做，是因為 Visual Studio 和 Docker 合作很容易，您幾乎感覺不到它，最佳範例是從 Visual Studio 偵錯多容器應用程式時。
 
 ### <a name="additional-resources"></a>其他資源
 
@@ -97,14 +97,14 @@ Dockerfile 放在您應用程式或服務的根資料夾中。 它包含告訴 D
 
 您通常會在基底映像的基礎上，為您的容器建置自訂映像，此基底映像可從 [Docker Hub](https://hub.docker.com/) 登錄等官方存放庫取得。 這就是當您在 Visual Studio 中啟用 Docker 支援時，實際發生的狀況。 您的 Dockerfile 會使用現有 `dotnet/core/aspnet` 映像。
 
-前文曾說明您可以使用的 Docker 映像和存放庫，視您選擇的架構和作業系統而定。 例如，如果您想要使用 ASP.NET Core (Linux 或 Windows)，則要使用的映像就是 `mcr.microsoft.com/dotnet/aspnet:3.1`。 因此，您只需要指定要為容器使用的基底 Docker 映像。 將 `FROM mcr.microsoft.com/dotnet/aspnet:3.1` 新增至您的 Dockerfile 即可完成此作業。 Visual Studio 會自動執行此作業，但如打算更新版本，則要更新此值。
+前文曾說明您可以使用的 Docker 映像和存放庫，視您選擇的架構和作業系統而定。 例如，如果您想要使用 ASP.NET Core (Linux 或 Windows)，則要使用的映像就是 `mcr.microsoft.com/dotnet/aspnet:5.0`。 因此，您只需要指定要為容器使用的基底 Docker 映像。 將 `FROM mcr.microsoft.com/dotnet/aspnet:5.0` 新增至您的 Dockerfile 即可完成此作業。 Visual Studio 會自動執行此作業，但如打算更新版本，則要更新此值。
 
 使用 Docker Hub 中有版本號碼的官方 .NET 映像存放庫，可確保所有電腦上都能使用相同的語言功能 (包括開發、測試和生產環境)。
 
 下例示範 ASP.NET Core 容器的範例 Dockerfile。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,13 +112,13 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-在此情況下，映射是以正式 ASP.NET Core Docker 映射的3.1 版為基礎， (多架構的 Linux 和 Windows) 。 這是 `FROM mcr.microsoft.com/dotnet/aspnet:3.1` 設定。  (如需此基底映射的詳細資訊，請參閱 [ASP.NET Core Docker 映射](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 頁面。在 Dockerfile 中 ) ，您也必須指示 docker 接聽您將在執行時間使用的 TCP 通訊埠 (在此案例中為埠80，如使用公開設定) 所設定。
+在此情況下，映射是以正式 ASP.NET Core Docker 映射的5.0 版為基礎， (多架構的 Linux 和 Windows) 。 這是 `FROM mcr.microsoft.com/dotnet/aspnet:5.0` 設定。  (如需此基底映射的詳細資訊，請參閱 [ASP.NET Core Docker 映射](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 頁面。在 Dockerfile 中 ) ，您也必須指示 docker 接聽您將在執行時間使用的 TCP 通訊埠 (在此案例中為埠80，如使用公開設定) 所設定。
 
-您可在 Dockerfile 中指定其他的組態設定，視您使用的語言和架構而定。 例如，ENTRYPOINT 行中有 `["dotnet", "MySingleContainerWebApp.dll"]` 會指示 Docker 執行 .NET Core 應用程式。 如果您使用 SDK 和 .NET Core CLI (dotnet CLI) 建置及執行 .NET 應用程式，此設定會有所不同。 重點是 ENTRYPOINT 行與其他設定會不一樣，視您選擇的應用程式語言和平台而定。
+您可在 Dockerfile 中指定其他的組態設定，視您使用的語言和架構而定。 例如，具有 `["dotnet", "MySingleContainerWebApp.dll"]` 指示 Docker 執行 .net 應用程式的進入點行。 如果您使用 SDK 和 .NET CLI (dotnet CLI) 來建立和執行 .NET 應用程式，此設定會有所不同。 重點是 ENTRYPOINT 行與其他設定會不一樣，視您選擇的應用程式語言和平台而定。
 
 ### <a name="additional-resources"></a>其他資源
 
-- **建立適用于 .NET Core 應用程式的 Docker 映射** \
+- **建立適用于 .NET 5 應用程式的 Docker 映射** \
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **組建您自己的映像**. 在官方 Docker 文件中。\
@@ -136,16 +136,16 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 如果您指定標籤，如下列案例一樣明確鎖定平台：
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim` \
-  目標：僅適用于 Linux 上的 .NET Core 3.1 執行時間
+- `mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim` \
+  目標： .NET 5 執行時間-僅限 Linux 上的執行時間
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1-nanoserver-1909` \
-  目標： Windows Nano Server 上的僅限 .NET Core 3.1 執行時間
+- `mcr.microsoft.com/dotnet/aspnet:5.0-nanoserver-1909` \
+  目標： Windows Nano Server 上的僅限 .NET 5 執行時間
 
 但如果您指定相同的映像名稱，甚至是使用相同的標籤，多架構映像 (例如 `aspnet` 映像) 將會根據您目前部署的 Docker 主機 OS 使用 Linux 或 Windows 版本，如下列範例所示：
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1` \
-  多架構：僅適用于 Linux 或 Windows Nano Server 上的 .NET Core 3.1 執行時間，視 Docker 主機 OS 而定
+- `mcr.microsoft.com/dotnet/aspnet:5.0` \
+  多架構：僅適用于 Linux 或 Windows Nano Server 上的 .NET 5 執行時間，視 Docker 主機 OS 而定
 
 如此一來，當您從 Windows 主機提取映像時，它會提取 Windows variant，而從 Linux 主機提取相同的映像名稱則會提取 Linux variant。
 
@@ -174,11 +174,11 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 初始 Dockerfile 看起來可能像這樣：
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+ 5  FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
@@ -277,11 +277,11 @@ RUN dotnet restore
 產生的檔案如下：
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS publish
+ 5  FROM mcr.microsoft.com/dotnet/sdk:5.0 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

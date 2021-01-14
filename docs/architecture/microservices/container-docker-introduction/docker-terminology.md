@@ -1,13 +1,13 @@
 ---
 title: Docker 術語
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
-ms.date: 01/30/2020
-ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: 567635060502ec3b2293f5eee6dd8dfe4d934ff7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707760"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189339"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -35,7 +35,7 @@ docker build
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映射**：在多重架構中，這是一項功能，可根據 Docker 執行所在的平臺，簡化選取適當的映射。 例如，當 Dockerfile 從登錄要求 **mcr.microsoft.com/dotnet/sdk:3.1** 的基底映射時，它實際上會取得 **3.1-sdk-nanoserver-1909**、 **3.1-sdk-nanoserver-1809** 或 **3.1-sdk-buster-超薄**，視執行 Docker 的作業系統和版本而定。
+**多架構映射**：在多重架構中，這是一項功能，可根據 Docker 執行所在的平臺，簡化選取適當的映射。 例如，當 Dockerfile 要求從登錄 **mcr.microsoft.com/dotnet/sdk:5.0** 的基底映射時，它實際上會取得 **5.0-nanoserver-1909**、 **5.0-nanoserver-1809** 或 **5.0-buster-超薄**，視執行 Docker 的作業系統和版本而定。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 
@@ -43,7 +43,7 @@ docker build
 
 **Docker Trusted Registry (DTR)**：可在內部部署安裝的 Docker 登錄服務 (來自 Docker)，以便存在於組織的資料中心和網路內。 這會方便在企業內管理私人映像。 Docker Trusted Registry 隨附於 Docker Datacenter 產品中。 如需詳細資訊，請參閱 [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
 
-**Docker Community Edition (CE)**：適用於 Windows 和 macOS 的開發工具，可在本機建置、執行及測試容器。 Docker CE for Windows 提供適用於 Linux 和 Windows 容器的開發環境。 Windows 上的 Linux Docker 主機是以 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 虛擬機器為基礎。 Windows 容器的主機則是直接以 Windows 為基礎。 Docker CE for Mac 是以 Apple Hypervisor 架構和 [xhyve hypervisor](https://github.com/mist64/xhyve) 為基礎，其提供 Mac OS X 版的 Linux Docker 主機虛擬機器。Docker CE for Windows 和 Docker CE for Mac 取代以 Oracle VirtualBox 為基礎的 Docker Toolbox。
+**Docker Community Edition (CE)**：適用於 Windows 和 macOS 的開發工具，可在本機建置、執行及測試容器。 Docker CE for Windows 提供適用於 Linux 和 Windows 容器的開發環境。 Windows 上的 Linux Docker 主機是以 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 虛擬機器為基礎。 Windows 容器的主機則是直接以 Windows 為基礎。 Docker CE for Mac 是以 Apple 基礎程式架構和 [>xhyve 虛擬](https://github.com/mist64/xhyve)程式為基礎，它會在 macOS X 上提供 Linux Docker 主機虛擬機器。適用於 Windows 的 Docker CE 和 Mac 會取代以 Oracle VirtualBox 為基礎的 docker 工具箱。
 
 **Docker Enterprise Edition (EE)**：適用於 Linux 和 Windows 開發之企業級版本的 Docker 工具。
 

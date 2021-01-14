@@ -2,16 +2,16 @@
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
 ms.date: 02/14/2020
-ms.openlocfilehash: a59922feba75e940a5cee2dfeb500f4f86372870
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1023f13c7662abb7dad613128631c7644ca15bb9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463706"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189599"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
+本文 **適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -28,7 +28,7 @@ dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet clean -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
 
@@ -38,15 +38,15 @@ dotnet clean -h|--help
 
 要清除的 MSBuild 專案或方案。 MSBuild 會在目前工作目錄中搜尋副檔名以 *proj* 或 *sln* 結尾的檔案，並使用該檔案。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 * **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大多數項目的預設值為,`Debug`但您可以覆蓋專案中的生成配置設置。 如果在建置階段指定此選項，清除時才需要使用它。
+  定義組建組態。 大部分專案的預設值為 `Debug` ，但您可以覆寫專案中的組建設定。 如果在建置階段指定此選項，清除時才需要使用它。
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  在建置時間指定的[架構](../../standard/frameworks.md)。 架構必須定義於[專案檔](csproj.md)中。 如果在建置階段指定架構，則您必須在清除時指定該架構。
+  在建置時間指定的[架構](../../standard/frameworks.md)。 架構必須定義於[專案檔](../project-sdk/overview.md)中。 如果在建置階段指定架構，則您必須在清除時指定該架構。
 
 * **`-h|--help`**
 
@@ -70,7 +70,7 @@ dotnet clean -h|--help
 
 * **`-v|--verbosity <LEVEL>`**
 
-  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
+  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `normal`。
 
 ## <a name="examples"></a>範例
 

@@ -4,12 +4,12 @@ description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可�
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: e0c86b377d4ea73bb275bc48c0f0cccb2db249dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938672"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189996"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -24,7 +24,7 @@ ms.locfileid: "97938672"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [通用 Windows 平台 (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [遊戲](https://dotnet.microsoft.com/apps/games)
-* [物聯網 (IoT)](/dotnet/iot)
+* [物聯網 (IoT)](../iot/index.yml)
 * [機器學習服務](../machine-learning/index.yml)
 * [主控台應用程式](tutorials/with-visual-studio-code.md)
 * [Windows 服務](/aspnet/core/host-and-deploy/windows-service)

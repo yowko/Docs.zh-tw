@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: Dotnet publish 命令會將 .NET 專案或方案發佈至目錄。
 ms.date: 11/11/2020
-ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634425"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190061"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -32,11 +32,11 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 此輸出包含下列資產：
 
-- 組件中的中繼語言 (IL) 程式碼，副檔名為 *dll* 。
+- 組件中的中繼語言 (IL) 程式碼，副檔名為 *dll*。
 - 檔案 *上的.deps.js* ，其中包含專案的所有相依性。
 - *.runtimeconfig.json* 檔案，指定應用程式預期的共用執行時間，以及執行時間 (的其他設定選項，例如垃圾收集類型) 。
 - 應用程式的相依性，這些相依性會從 NuGet 快取複製到輸出資料夾。
@@ -72,10 +72,10 @@ dotnet publish -p:PublishProfile=FolderProfile
 - **`PROJECT|SOLUTION`**
 
   要發行的專案或方案。
-  
-  * `PROJECT` 是 [c #](csproj.md)、f # 或 Visual Basic 專案檔的路徑和檔案名，或是包含 c #、f # 或 Visual Basic 專案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。
 
-  * `SOLUTION` 這是方案檔的路徑和檔案名 ( *.sln* 副檔名) ，或包含方案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。 自 .NET Core 3.0 SDK 起提供。
+  * `PROJECT` 是 c #、F # 或 Visual Basic 專案檔的路徑和檔案名，或是包含 c #、F # 或 Visual Basic 專案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。
+
+  * `SOLUTION` 這是方案檔的路徑和檔案名 (*.sln* 副檔名) ，或包含方案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。 自 .NET Core 3.0 SDK 起提供。
 
 ## <a name="options"></a>選項
 
@@ -125,23 +125,23 @@ dotnet publish -p:PublishProfile=FolderProfile
   
   如果未指定，它會預設為 framework 相依可執行檔和跨平臺二進位檔的 *[project_file_folder]/bin/[configuration]/[framework]/publish/* 。 它預設為獨立可執行檔的 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 。
 
-  在 Web 專案中，如果輸出檔案夾位於專案資料夾中，後續的 `dotnet publish` 命令會產生嵌套的輸出檔案夾。 例如，如果專案資料夾是 *myproject* ，而 [發行輸出] 資料夾是 [ *myproject]/[發佈* ]，而您執行了 `dotnet publish` 兩次，則第二次執行會在 *myproject/publish/publish* 中放入 *.config* 和檔案等內容 *檔案。* 若要避免嵌套發行資料夾，請指定不在專案資料夾 **下的** 發行資料夾，或從專案中排除 [發行] 資料夾。 若要排除名為 *publishoutput* 的發行資料夾，請將下列元素新增至 `PropertyGroup` *.csproj* 檔案中的專案：
+  在 Web 專案中，如果輸出檔案夾位於專案資料夾中，後續的 `dotnet publish` 命令會產生嵌套的輸出檔案夾。 例如，如果專案資料夾是 *myproject*，而 [發行輸出] 資料夾是 [ *myproject]/[發佈*]，而您執行了 `dotnet publish` 兩次，則第二次執行會在 *myproject/publish/publish* 中放入 *.config* 和檔案等內容 *檔案。* 若要避免嵌套發行資料夾，請指定不在專案資料夾 **下的** 發行資料夾，或從專案中排除 [發行] 資料夾。 若要排除名為 *publishoutput* 的發行資料夾，請將下列元素新增至 `PropertyGroup` *.csproj* 檔案中的專案：
 
   ```xml
   <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
   ```
 
   - .NET Core 3.x SDK 和更新版本
-  
-    如果發行專案時指定了相對路徑，則產生的輸出目錄會相對於目前的工作目錄，而不是專案檔案位置。
 
-    如果在發行方案時指定了相對路徑，則所有專案的所有輸出都會移至指定的資料夾（相對於目前的工作目錄）。 若要讓發行輸出移至每個專案的個別資料夾，請使用 msbuild 屬性來指定相對路徑， `PublishDir` 而不是使用 `--output` 選項。 例如， `dotnet publish -p:PublishDir=.\publish` 將每個專案的發行輸出傳送至 `publish` 包含專案檔之資料夾下的資料夾。
+    如果您在發行專案時指定相對路徑，則產生的輸出目錄會相對於目前的工作目錄，而不是專案檔案位置。
+
+    如果您在發行方案時指定相對路徑，則所有專案的所有輸出都會移至指定的資料夾（相對於目前的工作目錄）。 若要讓發行輸出移至每個專案的個別資料夾，請使用 msbuild 屬性來指定相對路徑， `PublishDir` 而不是使用 `--output` 選項。 例如， `dotnet publish -p:PublishDir=.\publish` 將每個專案的發行輸出傳送至 `publish` 包含專案檔之資料夾下的資料夾。
 
   - .NET Core 2.x SDK
-  
-    如果在發行專案時指定了相對路徑，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
 
-    如果在發行方案時指定了相對路徑，則每個專案的輸出都會進入與專案檔位置相對的個別資料夾。 如果在發行方案時指定絕對路徑，則所有專案的所有發行輸出都會移至指定的資料夾。
+    如果您在發行專案時指定相對路徑，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
+
+    如果您在發行方案時指定相對路徑，則每個專案的輸出都會移至相對於專案檔位置的個別資料夾。 如果您在發行方案時指定絕對路徑，則所有專案的所有發行輸出都會移至指定的資料夾。
 
 - **`-p:PublishReadyToRun=true`**
 

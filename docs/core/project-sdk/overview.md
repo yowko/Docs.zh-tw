@@ -4,12 +4,12 @@ titleSuffix: ''
 description: 瞭解 .NET 專案 Sdk。
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970690"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189664"
 ---
 # <a name="net-project-sdks"></a>.NET 專案 Sdk
 
@@ -83,7 +83,7 @@ ms.locfileid: "97970690"
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-includes-and-excludes"></a>預設包含和排除
+## <a name="default-includes-and-excludes"></a>預設包含和排除
 
 [ `Compile` 專案](/visualstudio/msbuild/common-msbuild-project-items#compile)、[內嵌資源](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource)和[ `None` 專案](/visualstudio/msbuild/common-msbuild-project-items#none)的預設包含和排除會定義在 SDK 中。 不同于非 SDK .NET Framework 專案，您不需要在專案檔中指定這些專案，因為預設值涵蓋最常見的使用案例。 此行為可讓專案檔更小且更容易瞭解，並以手動方式進行編輯（如有需要）。
 
@@ -98,7 +98,7 @@ ms.locfileid: "97970690"
 > [!NOTE]
 > 和 `./bin` `./obj` MSBuild 屬性代表的和資料夾， `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` 預設會從 glob 中排除。 [排除] 會以 [DefaultItemExcludes 屬性](msbuild-props.md#defaultitemexcludes)表示。
 
-#### <a name="build-errors"></a>建置錯誤
+### <a name="build-errors"></a>建置錯誤
 
 如果您在專案檔中明確定義任何這些專案，您可能會收到類似下列的「NETSDK1022」組建錯誤：
 
@@ -131,6 +131,31 @@ ms.locfileid: "97970690"
   ```
 
   如果您只停 `Compile` 用 glob，方案總管在 Visual Studio 仍會 \* 將 .cs 專案顯示為專案的一部分，包含為 `None` 專案。 若要停用隱含 `None` glob，請將設定 `EnableDefaultNoneItems` 為 `false` 。
+
+## <a name="build-events"></a>建置事件
+
+在 SDK 樣式專案中，使用名為或的 MSBuild 目標， `PreBuild` `PostBuild` 並設定的 `BeforeTargets` 屬性或的屬性 `PreBuild` `AfterTargets` `PostBuild` 。
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>
+> - 您可以使用任何名稱作為 MSBuild 目標。 不過，Visual Studio 的 IDE `PreBuild` 會辨識和 `PostBuild` 目標，因此藉由使用這些名稱，您可以在 IDE 中編輯命令。
+> - `PreBuildEvent` `PostBuildEvent` 在 SDK 樣式專案中不建議使用屬性，因為不會解析像這樣的宏 `$(ProjectDir)` 。 例如，不支援下列程式碼：
+>
+> ```xml
+> <PropertyGroup>
+>   <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
+> </PropertyGroup>
+> ```
 
 ## <a name="customize-the-build"></a>自訂群組建
 
@@ -168,7 +193,7 @@ ms.locfileid: "97970690"
     </ItemGroup>
   </Target>
   ...
-  
+
 </Project>
 ```
 
@@ -176,7 +201,7 @@ ms.locfileid: "97970690"
 
 您可以設定如何使用自訂目標。 因為它是 MSBuild 目標，所以它可以相依于指定的目標、在另一個目標之後執行，或使用命令手動叫用 `dotnet msbuild -t:<target-name>` 。 不過，若要提供更好的使用者體驗，您可以結合每個專案工具和自訂目標。 在此案例中，每個專案工具會接受任何需要的參數，並將其轉譯為執行目標所需的 [`dotnet msbuild`](../tools/dotnet-msbuild.md) 調用。 您可以在 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 專案中的 [MVP Summit 2016 Hackathon 範例](https://github.com/dotnet/MVPSummitHackathon2016)儲存機制，查看此類協同作用範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安裝 .NET Core](../install/index.yml)
 - [如何使用 MSBuild 專案 Sdk](/visualstudio/msbuild/how-to-use-project-sdk)

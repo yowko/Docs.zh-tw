@@ -1,19 +1,19 @@
 ---
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 瞭解如何使用 .NET Core 2.1 之後提供的 IHttpClientFactory 來建立 `HttpClient` 實例，讓您輕鬆地在應用程式中使用。
-ms.date: 08/31/2020
-ms.openlocfilehash: 4ebb82395dd685d30846b3549b654abf7c41d43f
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 01/13/2021
+ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804805"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188994"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
 <xref:System.Net.Http.IHttpClientFactory> 是 `DefaultHttpClientFactory` 實作為固定 factory （自 .Net Core 2.1 起提供）的合約，可用來建立 <xref:System.Net.Http.HttpClient> 要在應用程式中使用的實例。
 
-## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core 中原始 HttpClient 類別的問題
+## <a name="issues-with-the-original-httpclient-class-available-in-net"></a>.NET 中提供的原始 HttpClient 類別問題
 
 您 <xref:System.Net.Http.HttpClient> 可以輕鬆地使用原始和知名的類別，但在某些情況下，許多開發人員都沒有正確使用它。
 
@@ -190,7 +190,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他資源
 
-- **使用 .NET Core 中的 HttpClientFactory**  
+- **在 .NET 中使用 HttpClientFactory**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
 - **HttpClientFactory GitHub 存放庫中的原始程式碼 `dotnet/extensions`**  
@@ -199,7 +199,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 - **Polly (.NET 復原和暫時性錯誤處理程式庫)**  
   <http://www.thepollyproject.org/>
   
-- **使用 IHttpClientFactory 而不使用相依性插入 (GitHub 問題) **  
+- **使用 IHttpClientFactory 而不使用相依性插入 (GitHub 問題)**  
   <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]

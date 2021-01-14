@@ -1,13 +1,13 @@
 ---
 title: 使用 docker-compose.yml 定義多容器應用程式
 description: 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
-ms.date: 01/30/2020
-ms.openlocfilehash: 81303be621da54b7336228585e86d1120a6b7598
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: 224b06c6a10834b42218746964f05b055d947235
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739785"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188786"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -17,7 +17,7 @@ ms.locfileid: "96739785"
 
 基本上，您會定義您想要部署的每個容器，以及每個容器部署的特定特性。 具有多容器部署描述檔案之後，即可使用單一動作部署 [docker-compose up](https://docs.docker.com/compose/overview/) CLI 命令所協調的整個解決方案，或可從 Visual Studio 透明地進行部署。 否則，您必須使用 Docker CLI，從命令列使用 `docker run` 命令，透過多個步驟逐一部署容器。 因此，docker-compose.yml 中所定義的每個服務都只能指定一個映像或組建。 其他金鑰是選擇性的，而且類似其 `docker run` 命令列對應項目。
 
-下列 YAML 程式碼是 eShopOnContainers 範例之可能全域但單一 docker-compose.yml 檔案的定義。 這不是 eShopOnContainers 中的實際 docker-compose 檔案。 相反地，它是單一檔案中的簡化和合併版本，但這不是使用 docker-compose 檔案的最佳方式，我們將會在稍後進行說明。
+下列 YAML 程式碼是 eShopOnContainers 範例之可能全域但單一 docker-compose.yml 檔案的定義。 這段程式碼並非 eShopOnContainers 中實際的 docker 撰寫檔案。 相反地，它是單一檔案中的簡化和合併版本，但這不是使用 docker-compose 檔案的最佳方式，我們將會在稍後進行說明。
 
 ```yml
 version: '3.4'
@@ -127,7 +127,7 @@ services:
 
 - 它會將容器上的公開連接埠 80 轉送至 Docker 主機 (Linux VM) 上的連接埠 5101。
 
-- 它會將 web 服務連結至 **sqldata** 服務， (在容器) 中執行之 Linux 資料庫的 SQL Server 實例。 當您指定此相依性時，類別目錄 api 容器將不會啟動，直到已啟動 sqldata 容器為止;這點很重要，因為目錄 api 必須先讓 SQL Server 資料庫啟動並執行。 不過，在許多情況下，這種容器相依性不足，因為 Docker 只會在容器層級進行檢查。 服務 (在此情況下是 SQL Server) 有時可能仍然未準備就緒，因此建議您在用戶端微服務中實作含指數輪詢的重試邏輯。 這樣一來，如果相依性容器短時間內無法準備好，則應用程式仍會具有恢復功能。
+- 它會將 web 服務連結至 **sqldata** 服務， (在容器) 中執行之 Linux 資料庫的 SQL Server 實例。 當您指定此相依性時，類別目錄 api 容器將不會啟動，直到已啟動 sqldata 容器為止;這一點很重要，因為目錄 api 必須先讓 SQL Server 資料庫啟動並執行。 不過，在許多情況下，這種容器相依性不足，因為 Docker 只會在容器層級進行檢查。 服務 (在此情況下是 SQL Server) 有時可能仍然未準備就緒，因此建議您在用戶端微服務中實作含指數輪詢的重試邏輯。 這樣一來，如果相依性容器短時間內無法準備好，則應用程式仍會具有恢復功能。
 
 - 它已設定為允許存取外部伺服器：額外的 \_ 主機設定可讓您存取 Docker 主機以外的外部伺服器或電腦 (也就是在預設的 LINUX VM 之外，也就是開發 Docker 主機) ，例如開發電腦上的本機 SQL Server 實例。
 
@@ -169,7 +169,7 @@ docker-compose -f docker-compose.yml -f docker-compose-test.override.yml down
 
 ### <a name="using-multiple-docker-compose-files-to-handle-several-environments"></a>使用多個 docker-compose 檔案來處理數個環境
 
-以不同環境為目標時，您應該使用多個 Compose 檔案。 根據環境，這可讓您建立多個組態變化。
+以不同環境為目標時，您應該使用多個 Compose 檔案。 這種方法可讓您根據環境建立多個設定變數。
 
 #### <a name="overriding-the-base-docker-compose-file"></a>覆寫基底 docker-compose 檔案
 
@@ -434,10 +434,10 @@ Docker 撰寫會預期 env 檔案中的每一行都採用格式 \<variable\> = \
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>建置最佳化 ASP.NET Core Docker 映像
 
-如果您要在網際網路上探索來源上的 Docker 和 .NET Core，則會發現 Dockerfiles，以將您的來源複製至容器來示範建置 Docker 映像的簡單性。 這些範例建議透過使用簡單組態，您可以擁有具有與您應用程式一起封裝之環境的 Docker 映像。 下列範例示範類似的簡單 Dockerfile。
+如果您要在網際網路上探索來源上的 Docker 和 .NET，您會發現 Dockerfile 會將您的來源複製到容器，以示範建立 Docker 映射的簡易性。 這些範例建議透過使用簡單組態，您可以擁有具有與您應用程式一起封裝之環境的 Docker 映像。 下列範例示範類似的簡單 Dockerfile。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -448,9 +448,9 @@ ENTRYPOINT ["dotnet", "run"]
 
 這類 Dockerfile 將會運作。 不過，您可以持續最佳化映像，特別是生產映像。
 
-在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Kubernetes 和 Azure Service Fabric) 只會建立映像的新執行個體。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 請勿在執行時間使用和 CLI 命令來還原和編譯， `dotnet restore` `dotnet build` 您可能會在有關 .net Core 和 Docker 的 blog 文章中看到。
+在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Kubernetes 和 Azure Service Fabric) 建立映射的新實例。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 請勿在執行時間使用和 CLI 命令來還原和編譯， `dotnet restore` `dotnet build` 如您在 .Net 和 Docker 的 blog 文章中所見。
 
-.NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 *dotnet/core* 的 Docker Hub 登錄中加以發佈：
+.NET 小組已進行重要的工作，讓 .NET 和 ASP.NET Core 容器優化架構。 .NET 不只是記憶體使用量很低的輕量架構;小組著重于三個主要案例的優化 Docker 映射，並將其發佈至位於 *dotnet/* 的 Docker Hub 登錄，從2.1 版開始：
 
 1. **開發**：優先順序是能夠快速逐一查看和偵測變更，且大小為次要。
 
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **生產**：焦點是快速部署和啟動容器，因此這些映射僅限於執行應用程式所需的二進位檔和內容。
 
-.NET 小組在 Docker Hub) 的 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) (中提供四種基本變化：
+.NET 小組在 Docker Hub) 的 [dotnet/](https://hub.docker.com/_/microsoft-dotnet/) (中提供四種基本變化：
 
 1. **sdk**：適用於開發與建置環節
 1. **aspnet**：ASP.NET 生產環境案例
@@ -472,7 +472,7 @@ ENTRYPOINT ["dotnet", "run"]
 - **使用 ASP.NET Core 建立優化的 Docker 映射**
   <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
-- **建立適用于 .NET Core 應用程式的 Docker 映射**
+- **建立適用于 .NET 應用程式的 Docker 映射**
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]

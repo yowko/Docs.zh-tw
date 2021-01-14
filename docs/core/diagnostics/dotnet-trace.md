@@ -2,12 +2,12 @@
 title: dotnet-追蹤診斷工具-.NET CLI
 description: 瞭解如何安裝和使用 dotnet 追蹤 CLI 工具，以使用 .NET EventPipe 來收集執行中進程的 .NET 追蹤，而不使用原生 profiler。
 ms.date: 11/17/2020
-ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753662"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189695"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -35,13 +35,16 @@ ms.locfileid: "97753662"
   | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \|[arm](https://aka.ms/dotnet-trace/linux-arm) \|[arm64](https://aka.ms/dotnet-trace/linux-arm64) \|[musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \|[musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
+> [!NOTE]
+> 若要 `dotnet-trace` 在 x86 應用程式上使用，您需要工具的對應 x86 版本。
+
 ## <a name="synopsis"></a>概要
 
 ```console
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet-trace`工具：
 
@@ -95,7 +98,47 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--clrevents <clrevents>`**
 
-  要發出之 CLR 運行時間事件的清單。
+  要啟用以符號分隔的 CLR 執行時間提供者關鍵字清單 `+` 。 這是簡單的對應，可讓您透過字串別名（而非其十六進位值）指定事件關鍵字。 例如，會 `dotnet-trace collect --providers Microsoft-Windows-DotNETRuntime:3:4` 要求與相同的一組事件 `dotnet-trace collect --clrevents gc+gchandle --clreventlevel informational` 。 下表顯示可用關鍵字的清單：
+
+  | 關鍵字字串別名 | 關鍵字十六進位值 |
+  | ------------ | ------------------- |
+  | `gc` | `0x1` |
+  | `gchandle` | `0x2` |
+  | `fusion` | `0x4` |
+  | `loader` | `0x8` |
+  | `jit` | `0x10` |
+  | `ngen` | `0x20` |
+  | `startenumeration` | `0x40` |
+  | `endenumeration` | `0x80` |
+  | `security` | `0x400` |
+  | `appdomainresourcemanagement` | `0x800` |
+  | `jittracing` | `0x1000` |
+  | `interop` | `0x2000` |
+  | `contention` | `0x4000` |
+  | `exception` | `0x8000` |
+  | `threading` | `0x10000` |
+  | `jittedmethodiltonativemap` | `0x20000` |
+  | `overrideandsuppressngenevents` | `0x40000` |
+  | `type` | `0x80000` |
+  | `gcheapdump` | `0x100000` |
+  | `gcsampledobjectallocationhigh` | `0x200000` |
+  | `gcheapsurvivalandmovement` | `0x400000` |
+  | `gcheapcollect` | `0x800000` |
+  | `gcheapandtypenames` | `0x1000000` |
+  | `gcsampledobjectallocationlow` | `0x2000000` |
+  | `perftrack` | `0x20000000` |
+  | `stack` | `0x40000000` |
+  | `threadtransfer` | `0x80000000` |
+  | `debugger` | `0x100000000` |
+  | `monitoring` | `0x200000000` |
+  | `codesymbols` | `0x400000000` |
+  | `eventsource` | `0x800000000` |
+  | `compilation` | `0x1000000000` |
+  | `compilationdiagnostic` | `0x2000000000` |
+  | `methoddiagnostic` | `0x4000000000` |
+  | `typediagnostic` | `0x8000000000` |
+
+  您可以進一步瞭解有關 CLR 提供者的詳細資訊，請參閱 [.net 執行時間提供者參考檔](../../fundamentals/diagnostics/runtime-events.md)。
 
 - **`--format {Chromium|NetTrace|Speedscope}`**
 
@@ -146,6 +189,12 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 > [!NOTE]
 > 針對大型應用程式，停止追蹤可能需要很長的時間 (最多幾分鐘的時間) 。 執行時間必須針對追蹤中所捕捉的所有 managed 程式碼，傳送類型快取。
+
+> [!NOTE]
+> 在 Linux 和 macOS 上，此命令會預期目標應用程式，並 `dotnet-trace` 共用相同的 `TMPDIR` 環境變數。 否則，此命令將會超時。
+
+> [!NOTE]
+> 若要使用收集追蹤 `dotnet-trace` ，必須以執行目標進程的使用者和根使用者的相同使用者來執行。 否則，此工具將無法建立與目標進程的連接。
 
 ## <a name="dotnet-trace-convert"></a>dotnet-追蹤轉換
 
@@ -360,6 +409,6 @@ Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDia
 dotnet-trace @myprofile.rsp
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [來自 .NET 的知名事件提供者](well-known-event-providers.md)

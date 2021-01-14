@@ -4,12 +4,12 @@ description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970703"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189972"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
@@ -79,15 +79,43 @@ ms.locfileid: "97970703"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-and-items"></a>發佈屬性和專案
+## <a name="publish-properties-items-and-metadata"></a>發行屬性、專案和中繼資料
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [連結](#linkbase)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+`CopyToPublishDirectory`MSBuild 專案的中繼資料會控制將專案複製到發佈目錄的時間。 允許的值為 `PreserveNewest` ，只有在已變更時才會複製專案， `Always` 這一律會複製專案，而且 `Never` 永遠不會複製專案。 從效能的觀點來看，最好 `PreserveNewest` 是因為它會啟用增量組建。
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>連結
+
+針對專案目錄及其子目錄以外的專案，發行目標會使用專案的 [連結中繼資料](/visualstudio/msbuild/common-msbuild-item-metadata) 來決定要將專案複製到何處。 `Link` 也會決定專案樹狀結構外的專案如何顯示在 Visual Studio 的方案總管視窗中。
+
+如果 `Link` 未針對專案錐形以外的專案指定，則預設為 `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` 。 `LinkBase` 讓您為專案錐形以外的專案指定合理的基底資料夾。 基底資料夾下的資料夾階層會透過進行保留 `RecursiveDir` 。 如果 `LinkBase` 未指定，則會省略路徑中的 `Link` 。
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+下圖顯示透過上一個專案 glob 所包含的檔案如何 `Include` 在方案總管中顯示。
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="方案總管顯示具有程式庫中繼資料的專案。":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -478,7 +506,7 @@ ms.locfileid: "97970703"
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-`AssetTargetFallback`屬性可讓您為專案參考和 NuGet 套件指定其他相容的架構版本。 例如，如果您使用指定套件相依性， `PackageReference` 但該套件未包含與您的專案相容的資產 `TargetFramework` ，則此 `AssetTargetFallback` 屬性會進入 play。 參考封裝的相容性是使用中所指定的每一個目標架構來間隔 `AssetTargetFallback` 。
+`AssetTargetFallback`屬性可讓您為專案參考和 NuGet 套件指定其他相容的架構版本。 例如，如果您使用指定套件相依性， `PackageReference` 但該套件未包含與您的專案相容的資產 `TargetFramework` ，則此 `AssetTargetFallback` 屬性會進入 play。 參考封裝的相容性是使用中所指定的每一個目標架構來間隔 `AssetTargetFallback` 。 這個屬性會取代已被取代的屬性 `PackageTargetFallback` 。
 
 您可以將 `AssetTargetFallback` 屬性設定為一或多個 [目標 framework 版本](../../standard/frameworks.md#supported-target-frameworks)。
 
@@ -504,7 +532,7 @@ ms.locfileid: "97970703"
 
 `PackageReference`專案會定義 NuGet 套件的參考。
 
-`Include` 屬性會指定套件識別碼。 `Version`屬性會指定版本或版本範圍。 如需有關如何指定最小版本、最大版本、範圍或完全相符的詳細資訊，請參閱 [版本範圍](/nuget/concepts/package-versioning#version-ranges)。 您也可以將下列中繼資料加入至專案參考： `IncludeAssets` 、 `ExcludeAssets` 和 `PrivateAssets` 。
+`Include` 屬性會指定套件識別碼。 `Version`屬性會指定版本或版本範圍。 如需有關如何指定最小版本、最大版本、範圍或完全相符的詳細資訊，請參閱 [版本範圍](/nuget/concepts/package-versioning#version-ranges)。 您也可以將 [資產屬性](#asset-attributes) 新增至套件參考。
 
 下列範例中的專案檔程式碼片段會參考 [system.object](https://www.nuget.org/packages/System.Runtime/) 套件。
 
@@ -515,6 +543,30 @@ ms.locfileid: "97970703"
 ```
 
 如需詳細資訊，請參閱 [專案檔中的套件參考](/nuget/consume-packages/package-references-in-project-files)。
+
+#### <a name="asset-attributes"></a>資產屬性
+
+`IncludeAssets`、 `ExcludeAssets` 和 `PrivateAssets` 中繼資料可以加入至封裝參考。
+
+| 屬性 | 描述 |
+| - | - |
+| `IncludeAssets` | 指定應取用屬於指定之套件的資產 `<PackageReference>` 。 根據預設，所有套件資產均包含在內。 |
+| `ExcludeAssets`| 指定不應取用屬於指定之套件的資產 `<PackageReference>` 。 |
+| `PrivateAssets` | 指定應取用屬於指定之套件的資產， `<PackageReference>` 但無法流向下一個專案。 `Analyzers` `Build` `ContentFiles` 當這個屬性不存在時，、和資產預設為私用。 |
+
+這些屬性可包含下列一或多個專案，如果列出一個以上的專案，則以分號分隔 `;` ：
+
+- `Compile` – *lib* 資料夾的內容可供編譯。
+- `Runtime` – *運行* 時間資料夾的內容已散發。
+- `ContentFiles` –使用 *contentfiles* 資料夾的內容。
+- `Build` –使用 *組建* 資料夾中的 .props/目標。
+- `Native` –原生資產的內容會複製到執行時間的 *輸出* 資料夾。
+- `Analyzers` – 會使用分析器。
+
+另外，該屬性也可以包含︰
+
+- `None` – 未使用任何資產。
+- `All` – 會使用所有資產。
 
 ### <a name="projectreference"></a>專案參考
 
@@ -530,7 +582,7 @@ ms.locfileid: "97970703"
 </ItemGroup>
 ```
 
-### <a name="reference"></a>參考資料
+### <a name="reference"></a>參考
 
 `Reference`專案會定義元件檔的參考。
 
@@ -615,7 +667,7 @@ ms.locfileid: "97970703"
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [MSBuild 架構參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [一般 MSBuild 屬性](/visualstudio/msbuild/common-msbuild-project-properties)

@@ -2,12 +2,12 @@
 title: 重大變更： BinaryFormatter 序列化方法已淘汰且禁止在 ASP.NET apps 中
 description: 瞭解在 BinaryFormatter、格式器和 IFormatter 上序列化和還原序列化方法的核心 .NET 程式庫中的 .NET 5.0 重大變更。
 ms.date: 11/01/2020
-ms.openlocfilehash: 5807a7d4e6beab26b9848b803922396dd893075b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760705"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189840"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>ASP.NET apps 已淘汰且禁止 BinaryFormatter 序列化方法
 
@@ -75,7 +75,7 @@ ms.locfileid: "95760705"
   </PropertyGroup>
   ```
 
-如需建議動作的詳細資訊，請參閱 [解決 BinaryFormatter obsoletion 和停用錯誤](https://aka.ms/binaryformatter)。
+如需建議動作的詳細資訊，請參閱 [解決 BinaryFormatter obsoletion 和停用錯誤](../../../../standard/serialization/binaryformatter-security-guide.md)。
 
 ## <a name="affected-apis"></a>受影響的 API
 

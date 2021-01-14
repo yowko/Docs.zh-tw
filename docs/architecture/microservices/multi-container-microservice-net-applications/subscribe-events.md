@@ -1,17 +1,17 @@
 ---
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
-ms.date: 01/30/2020
-ms.openlocfilehash: 838aaebbd390a66142c2bcdfa2f3b0ee4c32b7f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: c9146ddbdfbf00e743108c07af1f74d7690a17a8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172205"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188721"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
-使用事件匯流排的第一個步驟是訂閱所要接收之事件的微服務。 這應該在接收者微服務中完成。
+使用事件匯流排的第一個步驟是訂閱所要接收之事件的微服務。 這項功能應該在接收者微服務中完成。
 
 下列簡單程式碼顯示每個接收者微服務在啟動服務時必須實作的項目 (也就是在 `Startup` 類別中)，以便訂閱所需的事件。 在本例中，`basket-api` 微服務需要訂閱 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 訊息。
 
@@ -32,7 +32,7 @@ eventBus.Subscribe<OrderStartedIntegrationEvent,
 
 ## <a name="publishing-events-through-the-event-bus"></a>透過事件匯流排發行事件
 
-最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件  (這是簡化的範例，此範例不會將不可部分完成的帳戶納入考慮。 ) 當事件必須傳播到多個微服務時，通常會在從原始微服務認可資料或交易之後，執行類似的程式碼。
+最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件  (這種方法是簡化的範例，並不會將不可部分完成性納入考慮。 ) 您只要在多個微服務之間傳播事件，通常會在從原始微服務認可資料或交易之後，執行類似的程式碼。
 
 首先，事件匯流排實作物件 (採用 RabbitMQ 或採用服務匯流排) 會插入控制器建構函式，如下列程式碼所示：
 
@@ -91,25 +91,25 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>設計發行至事件匯流排時的不可部分完成性和復原
 
-當您透過分散式傳訊系統 (例如您的事件匯流排) 發佈整合事件時，會發生以不可部分完成方式更新原始資料庫及發佈事件的問題 (也就是兩個作業皆完成或皆未完成)。 例如，在稍早所示的簡化範例中，程式碼會在產品價格變更時將資料認可至資料庫，然後發行 ProductPriceChangedIntegrationEvent 訊息。 乍看之下，以不可分割方式執行這兩個作業可能很重要。 不過，如果您使用涉及資料庫和訊息代理程式的分散式交易，如同您在 [Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) 等較舊系統中的做法，則不建議這樣做，原因如 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所述。
+當您透過分散式傳訊系統 (例如您的事件匯流排) 發佈整合事件時，會發生以不可部分完成方式更新原始資料庫及發佈事件的問題 (也就是兩個作業皆完成或皆未完成)。 例如，在稍早所示的簡化範例中，程式碼會在產品價格變更時將資料認可至資料庫，然後發行 ProductPriceChangedIntegrationEvent 訊息。 乍看之下，以不可分割方式執行這兩個作業可能很重要。 但是，如果您使用的分散式交易牽涉到資料庫和訊息代理程式，就像您在 [Microsoft Message Queuing (MSMQ) ](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))等舊版系統中所做的一樣，基於 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所述的原因不建議使用此方法。
 
 基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建立 (分散式) 資料庫 (或擁有其模型) 持續可用、高度一致 *且* 可容忍任何資料分割的微服務。 您必須從這三個屬性中選擇兩個。
 
 在以微服務為基礎的架構中，您應該選擇可用性和容錯功能，而且應該消除強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
 
-讓我們回到初始問題及其範例。 如果服務在更新資料庫之後損毀 (在這種情況下，請在程式程式碼後面 `_context.SaveChangesAsync()`) ，但在整合事件發行之前，整體系統可能會不一致。 視您正在處理的特定商務作業而定，這可能具商務關鍵性。
+讓我們回到初始問題及其範例。 如果服務在更新資料庫之後損毀 (在這種情況下，請在程式程式碼後面 `_context.SaveChangesAsync()`) ，但在整合事件發行之前，整體系統可能會不一致。 這種方法可能是商務關鍵性的，視您處理的特定商務操作而定。
 
 如稍早的＜架構＞一節中所述，您有數個方法可解決這個問題：
 
 - 使用完整的[事件溯源模式](/azure/architecture/patterns/event-sourcing)。
 
-- 使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
+- 使用交易記錄採礦。
 
 - 使用[寄件匣模式](https://www.kamilgrzybek.com/design/the-outbox-pattern/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
 
-在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」** 方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
+在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
 
-使用交易記錄挖掘的選項一開始看起來是透明的。 不過，若要使用此方法，微服務必須與 RDBMS 交易記錄結合，例如 SQL Server 交易記錄。 這可能不適當。 另一個缺點是，交易記錄中記錄的低層級更新可能不會與高層級整合事件位於相同層級。 如果是這樣，可能會很難處理這些交易記錄作業的反向工程。
+使用交易記錄挖掘的選項一開始看起來是透明的。 不過，若要使用此方法，微服務必須與 RDBMS 交易記錄結合，例如 SQL Server 交易記錄。 這種方法可能不理想。 另一個缺點是，交易記錄中記錄的低層級更新可能不會與高層級整合事件位於相同層級。 如果是這樣，可能會很難處理這些交易記錄作業的反向工程。
 
 一個平衡的方法是混合交易式資料庫資料表和簡化的 ES 模式。 您可以使用「準備發行事件」之類的狀態，這是您在將其認可至整合事件資料表時，在原始事件中設定的狀態。 然後，您可以嘗試將事件發行至事件匯流排。 如果發行事件動作成功，您會在源服務中啟動另一項交易，並將狀態從「準備發行事件」移至「已發行的事件」。
 
@@ -322,7 +322,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
-- **使用 NServiceBus (特定軟體的分叉 eShopOnContainers) ** \
+- **使用 NServiceBus (特定軟體的分叉 eShopOnContainers)** \
     <https://go.particular.net/eShopOnContainers>
 
 - **事件驅動的訊息** \
@@ -355,7 +355,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **Event Store 資料庫**. 官方網站。 \
     <https://geteventstore.com/>
 
-- **派翠克 Nommensen。微服務的事件驅動資料管理** \
+- **派翠克 Nommensen。適用于微服務的 Event-Driven 資料管理** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **端點定理** \

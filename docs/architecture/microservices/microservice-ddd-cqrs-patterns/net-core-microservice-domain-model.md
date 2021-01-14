@@ -1,17 +1,17 @@
 ---
-title: 使用 .NET Core 實作微服務領域模型
+title: 使用 .NET 執行微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 導向領域模型的實作詳細資料。
-ms.date: 10/08/2018
-ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152542"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188266"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型
 
-上一節解釋了設計領域模型的基本設計準則及模式。 現在是探索使用 .NET Core (純 C\# 程式碼) 及 EF Core 實作領域模型之可能方式的時候了。 您的領域模型只會由您的程式碼組成。 它只會有 EF Core 模型需求，而非真正對 EF 的相依性。 您不應該在您的領域模型中對 EF Core 或任何其他的 ORM 具有硬式相依性或參考。
+上一節解釋了設計領域模型的基本設計準則及模式。 現在，您可以使用 .NET (的純 C 程式 \# 代碼) 和 EF Core，探索執行領域模型的可能方法。 您的領域模型只會由您的程式碼組成。 它只會有 EF Core 模型需求，而非真正對 EF 的相依性。 您不應該在您的領域模型中對 EF Core 或任何其他的 ORM 具有硬式相依性或參考。
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>自訂 .NET Standard 程式庫中的領域模型結構
 
@@ -46,7 +46,7 @@ OrderAggregate 資料夾的詳細檢視：Address.cs 是值物件、IOrderReposi
 您可以藉由建立實作您領域實體的 POCO 類別，來在 .NET 中實作領域模型。 在下列範例中，Order 類別已定義為一個實體，同時也是彙總根。 因為 Order 類別衍生自 Entity 基底類別，它可重複使用與實體相關的常見程式碼。 請記住，這些基底類別和介面是您在領域模型物件中定義的，因此它是您的程式碼，而非來自像是 EF 之類的 ORM 的基礎結構程式碼。
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 5.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
@@ -97,7 +97,7 @@ public class Order : Entity, IAggregateRoot
 
 請務必注意，這是實作為 POCO 類別的領域實體。 它對 Entity Framework Core 或任何其他基礎結構架構都沒有任何直接相依性。 此實作為它應該在 DDD 中，只是執行網域模型的 c # 程式碼。
 
-此外，類別會使用名為 IAggregateRoot 的介面裝飾。 該介面是一個空介面，有時候稱之為*標記介面 (marker interface)*，單純用於指出此實體類別同時也是一個彙總根。
+此外，類別會使用名為 IAggregateRoot 的介面裝飾。 該介面是一個空介面，有時候稱之為 *標記介面 (marker interface)*，單純用於指出此實體類別同時也是一個彙總根。
 
 標記介面有時候會被視為「反模式 (anti-pattern)」。然而，它同時也是一種標記類別的明瞭方式，尤其是在該介面可能會進一步發展的情況下。 屬性也可以是用於標記的另外一個選擇，但通常看見 IAggregate 介面旁邊的基底類別 (Entity)，會比將 Aggregate 屬性標記放在類別上方要來得更快。 這在任何案例中都只是一種喜好設定。
 
@@ -109,7 +109,7 @@ public class Order : Entity, IAggregateRoot
 
 在先前的程式碼中，請注意許多屬性都是唯讀或私用，且只能透過類別方法進行更新，以使得任何更新都必須考量到類別方法中指定的商務領域變異及邏輯。
 
-例如，根據 DDD 模式，**您「不」** 應從任何命令處理常式方法或應用程式層類別進行下列動作** (實際上，您應該無法這麼做)：
+例如，根據 DDD 模式，**您「不」應從任何命令處理常式方法或應用程式層類別進行下列動作** (實際上，您應該無法這麼做)：
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -170,10 +170,10 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Vaughn Vernon。使用 DDD 和 Entity Framework 模型化匯總。** 請注意，這*並非* Entity Framework Core。 \
+- **Vaughn Vernon。使用 DDD 和 Entity Framework 模型化匯總。** 請注意，這 *並非* Entity Framework Core。 \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman。資料點-為領域驅動設計撰寫程式碼：適用于以資料為導向的開發人員秘訣** \
+- **Julie Lerman。資料點-Domain-Driven 設計的編碼： Data-Focused 開發人員的秘訣** \
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan。如何建立完整封裝的網域模型** \

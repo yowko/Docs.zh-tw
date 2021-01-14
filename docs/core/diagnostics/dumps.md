@@ -2,12 +2,12 @@
 title: 傾印-.NET
 description: .NET 中傾印的簡介。
 ms.date: 10/12/2020
-ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: f68d9bd804350366625df014df4d9ca0641d5d4d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764938"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188552"
 ---
 # <a name="dumps"></a>傾印
 
@@ -19,7 +19,6 @@ ms.locfileid: "97764938"
 
 > [!NOTE]
 > 在容器內收集傾印需要 PTRACE 功能，可透過 `--cap-add=SYS_PTRACE` 或新增 `--privileged` 。
-
 > [!NOTE]
 > 傾印可能包含機密資訊，因為它們可以包含執行中進程的完整記憶體。 請注意任何安全性限制和 guidances 的處理方式。
 
@@ -53,15 +52,14 @@ ms.locfileid: "97764938"
 
 ## <a name="analyze-dumps"></a>分析傾印
 
-您可以使用 [`dotnet-dump`](dotnet-dump.md) CLI 工具或 [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files)來 anlayze 傾印。
+您可以使用 [`dotnet-dump`](dotnet-dump.md) CLI 工具或 [Visual Studio](/visualstudio/debugger/using-dump-files)來 anlayze 傾印。
 
 > [!NOTE]
 > Visual Studio 16.8 版和更新版本可讓您開啟在 .NET Core 3.1.7 或更新版本上產生的 [Linux](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/) 傾印。  
-
 > [!NOTE]
 > 如果需要原生偵錯工具，則可以[在 Linux 和 macOS 上](debug-linux-dumps.md#analyze-dumps-on-linux)搭配使用[SOS 偵錯工具擴充](sos-debugging-extension.md)功能與 LLDB。 Windows 上的 [Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools) 也支援 SOS，但建議使用 Visual Studio。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 深入瞭解您可以如何運用傾印來協助診斷 .NET 應用程式中的問題。
 

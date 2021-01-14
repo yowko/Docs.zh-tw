@@ -2,12 +2,12 @@
 title: 從 project.json 進行的 .NET Core 移轉
 description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
 ms.date: 07/19/2017
-ms.openlocfilehash: 73fbfed6943e3eb535e6eead3b3496edd3426c26
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 28da1723ed91d169305c2865c5346b8ce6e0b3d1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970716"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189699"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
@@ -78,7 +78,7 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 - 從 `<Project>` 項目移除 XML 命名空間 (`xmlns`)。
 - 如果不存在，則將 `Sdk` 屬性新增至 `<Project>` 項目，並將它設定為 `Microsoft.NET.Sdk` 或 `Microsoft.NET.Sdk.Web`。 這個屬性會指定專案使用可用的 SDK。 `Microsoft.NET.Sdk.Web` 適用於 Web 應用程式。
 - 移除專案頂端和底部的 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 和 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 陳述式。 這些 import 陳述式是由 SDK 所隱含，因此專案中不需要有這些陳述式。
-- 如果您的 `Microsoft.NETCore.App` 專案中有或專案 `NETStandard.Library` `<PackageReference>` ，則應該移除它們。 這些套件參考是[由 SDK 所隱含](../tools/csproj.md)。
+- 如果您的 `Microsoft.NETCore.App` 專案中有或專案 `NETStandard.Library` `<PackageReference>` ，則應該移除它們。 這些套件參考是[由 SDK 所隱含](../project-sdk/overview.md)。
 - 移除專案 `Microsoft.NET.Sdk` `<PackageReference>` （如果有的話）。 SDK 參考是來自 `<Project>` 項目上的 `Sdk` 屬性。
 - 移除[SDK 所隱含](../project-sdk/overview.md#default-includes-and-excludes)的[glob](https://en.wikipedia.org/wiki/Glob_(programming)) 。 在您的專案中留下這些 Glob 會在建置時造成錯誤，因為編譯項目將會重複。
 
@@ -86,6 +86,6 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 
 如需從舊的 csproj 格式移轉至新格式的前後範例，請參閱 .NET 部落格上的 [Updating Visual Studio 2017 RC - .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (更新 Visual Studio 2017 RC - .NET Core 工具改進) 文章。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [移植、遷移及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

@@ -1,19 +1,19 @@
 ---
 title: 使用 Entity Framework Core 實作基礎結構持續層
 description: 容器化 .NET 應用程式的 .NET 微服務架構 |使用 Entity Framework Core 探索基礎結構持續性層的執行詳細資料。
-ms.date: 01/30/2020
-ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 2c7b6dbe2f59a26d33a4842e74aed2b7588bd14d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172348"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188890"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
 當您使用例如 SQL Server、Oracle 或 PostgreSQL 等關聯式資料庫時，建議的方法是根據 Entity Framework (EF) 來實作持續層。 EF 支援 LINQ，並為您的模型提供強型別的物件，以及資料庫的簡化持續性。
 
-Entity Framework 是 .NET Framework 的一部分，有著悠久的歷史。 當您使用 .NET Core 時，您也應該使用 Entity Framework Core，它在 Windows 或 Linux 上以與 .NET Core 相同的方式執行。 EF Core 是完全重寫的 Entity Framework，以較小的使用量和效能的重要改善來實行。
+Entity Framework 是 .NET Framework 的一部分，有著悠久的歷史。 當您使用 .NET 時，您也應該使用在 Windows 或 Linux 上執行的 Entity Framework Core，其方式與 .NET 相同。 EF Core 是完全重寫的 Entity Framework，以較小的使用量和效能的重要改善來實行。
 
 ## <a name="introduction-to-entity-framework-core"></a>Entity Framework Core 簡介
 
@@ -37,7 +37,7 @@ Entity Framework (EF) Core 是常見 Entity Framework 資料存取技術的輕�
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 觀點的 Entity Framework Core 基礎結構
 
-從 DDD 觀點來看，EF 的一項重要功能是能夠使用 POCO 網域實體，在 EF 術語中也稱為 POCO「程式碼優先的實體」**。 如果您使用 POCO 網域實體，您的網域模型類別會是持續性無知 (persistence-ignorant)，並遵循 [Persistence Ignorance](https://deviq.com/persistence-ignorance/) (持續性無知) 和 [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) (基礎結構無知) 準則。
+從 DDD 觀點來看，EF 的一項重要功能是能夠使用 POCO 網域實體，在 EF 術語中也稱為 POCO「程式碼優先的實體」。 如果您使用 POCO 網域實體，您的網域模型類別會是持續性無知 (persistence-ignorant)，並遵循 [Persistence Ignorance](https://deviq.com/persistence-ignorance/) (持續性無知) 和 [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) (基礎結構無知) 準則。
 
 根據 DDD 模式，您應該將網域行為和規則封裝在實體類別本身內，讓它可以在存取任何集合時控制非變異項目、驗證及規則。 因此，在 DDD 中允許對子系實體或值物件之集合的公用存取權並不是一項好的做法。 相反地，您會想要公開可控制欄位和屬性集合更新方式與時機，以及發生這種情況時應發生哪些行為和動作的方法。
 
@@ -243,7 +243,7 @@ builder.RegisterType<OrderRepository>()
 
 ## <a name="table-mapping"></a>資料表對應
 
-資料表對應會識別要從中查詢的資料表資料，並儲存到資料庫。 先前您已看到如何使用網域實體 (例如產品或訂單網域) 來產生相關的資料庫結構描述。 EF 的設計高度圍繞著「慣例」** 的概念。 慣例會解決像是「資料表名稱是什麼？」的問題。 或「主要金鑰是什麼屬性？」 慣例通常是以傳統名稱為基礎。 例如，主要索引鍵通常是以結尾的屬性 `Id` 。
+資料表對應會識別要從中查詢的資料表資料，並儲存到資料庫。 先前您已看到如何使用網域實體 (例如產品或訂單網域) 來產生相關的資料庫結構描述。 EF 的設計高度圍繞著「慣例」的概念。 慣例會解決像是「資料表名稱是什麼？」的問題。 或「主要金鑰是什麼屬性？」 慣例通常是以傳統名稱為基礎。 例如，主要索引鍵通常是以結尾的屬性 `Id` 。
 
 依照慣例，每個實體都會設定成對應至與 `DbSet<TEntity>` 屬性同名的資料表，該屬性會在衍生內容上公開實體。 如不為指定的實體提供 `DbSet<TEntity>` 值，即使用類別名稱。
 
