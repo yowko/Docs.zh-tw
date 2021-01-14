@@ -23,4 +23,4 @@
     - name: 偵錯
       href: debugging.md
 - name: 應用程式開發介面參考
-  href: /dotnet/api?view=iot-dotnet-1.1
+  href: ../../api/index.md?view=iot-dotnet-1.1

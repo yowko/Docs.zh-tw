@@ -2,12 +2,12 @@
 title: 'F # 5.0 中的新功能-F # 指南'
 description: '深入瞭解 F # 5.0 中可用的新功能。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740181"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190724"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5.0 的新功能
 
@@ -407,7 +407,7 @@ printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
 
 ## <a name="simplified-interop-with-nullable-value-types"></a>使用可為 null 的實數值型別簡化 interop
 
-[可為 null 的 (值) 類型](https://docs.microsoft.com/dotnet/api/system.nullable-1) (稱為可為 null 的型別，在過去) 已經由 F # 所支援，但是與它們進行互動是因為您在 `Nullable` `Nullable<SomeType>` 每次想要傳遞值時都必須建立或包裝函式。 現在， `Nullable<ThatValueType>` 如果目標型別相符，則編譯器會將實值型別隱含轉換成。 現在可以執行下列程式碼：
+[可為 null 的 (值) 類型](/dotnet/api/system.nullable-1) (稱為可為 null 的型別，在過去) 已經由 F # 所支援，但是與它們進行互動是因為您在 `Nullable` `Nullable<SomeType>` 每次想要傳遞值時都必須建立或包裝函式。 現在， `Nullable<ThatValueType>` 如果目標型別相符，則編譯器會將實值型別隱含轉換成。 現在可以執行下列程式碼：
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"
