@@ -1,13 +1,13 @@
 ---
 title: 在雲端中使用 CI/CD 管線和 DevOps 工具將應用程式生命週期現代化
 description: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化 |使用雲端中的 CI/CD 管線和 DevOps 工具將應用程式的生命週期現代化
-ms.date: 12/21/2018
-ms.openlocfilehash: e7ad76edb659fbacfc85cb398ec0c9fe9e3c66c9
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.date: 12/21/2020
+ms.openlocfilehash: f8517ebe8570b8d2be7b49c3cb9e1bc436076af2
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025247"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235335"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>在雲端中使用 CI/CD 管線和 DevOps 工具將應用程式生命週期現代化
 

@@ -1,7 +1,7 @@
 ---
 title: '如何使用 c # 序列化和還原序列化 JSON-.NET'
 description: 瞭解如何 System.Text.Json 在 .net 中使用命名空間進行序列化，並從 JSON 還原序列化。 包含範例程式碼。
-ms.date: 01/04/2021
+ms.date: 01/12/2021
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fd92c067fc76bea6bede1e5370e7ac168856fa9b
-ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
+ms.openlocfilehash: 6e7c9d9c87eb8407489939ec77ba4fbe9b20cc82
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2021
-ms.locfileid: "98058098"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235296"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -32,7 +32,12 @@ ms.locfileid: "98058098"
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
 > [!NOTE]
-> System.Text.Json 使用 Visual Basic 不支援的 [ref 結構](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 如果您嘗試搭配 System.Text.Json Visual Basic 使用 api，您會收到 BC40000 的編譯錯誤。 此錯誤訊息表示問題是已淘汰的 API，但實際的問題在於 `ref struct` 編譯器中缺乏支援。
+> System.Text.JsonVisual Basic 不支援的部分使用[ref 結構](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 如果您嘗試使用 System.Text.Json ref 結構 api 搭配 Visual Basic 您會收到 BC40000 編譯器錯誤。 錯誤訊息指出問題是已淘汰的 API，但實際的問題是編譯器中缺少 ref 結構支援。 Visual Basic 的下列部分 System.Text.Json 無法使用：
+>
+> * <xref:System.Text.Json.Utf8JsonReader> 類別。
+> * 包含類型之其他 Api 的多載 <xref:System.Memory%601.Span> 。 大部分的方法都包含使用的多載， `String` 而不是 `Span` 。
+>
+> 這些限制已存在，因為 ref 結構無法安全地使用，而不需要語言支援，即使只是「透過傳遞資料」。 破壞此錯誤會導致 Visual Basic 可能損毀記憶體的程式碼，因此不應該這麼做。
 
 ## <a name="namespaces"></a>命名空間
 

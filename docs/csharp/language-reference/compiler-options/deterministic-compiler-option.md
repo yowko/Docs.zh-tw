@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: 9d0bcc2957e5a666c21cdc2ce61e74fc90fe3530
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d64f4d4b0d4e9b5ed2cc1ee40662dc669fc6660d
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125822"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235322"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -27,7 +27,7 @@ ms.locfileid: "89125822"
 
 ## <a name="remarks"></a>備註
 
-根據預設，一組指定輸入的編譯器輸出是唯一的，因為編譯器會新增時間戳記以及透過亂數所產生的 GUID。 您可以使用 `-deterministic` 選項來產生「確定性組件」**，這是只要輸入維持不變，其二進位內容在編譯之間就相同的組件。
+根據預設，指定輸入集合中的編譯器輸出是唯一的，因為編譯器會新增從亂數字產生的時間戳記和 MVID。 您可以使用 `-deterministic` 選項來產生「確定性組件」，這是只要輸入維持不變，其二進位內容在編譯之間就相同的組件。 在這種組建中，時間戳記和 MVID 欄位將會取代為從所有編譯輸入的雜湊衍生的值。
 
 編譯器會基於確定性而考慮下列輸入：
 
@@ -55,5 +55,5 @@ ms.locfileid: "89125822"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

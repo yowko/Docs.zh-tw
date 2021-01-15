@@ -1,7 +1,8 @@
 ---
 description: C# 參考資料
 title: C# 參考資料
-ms.date: 02/14/2017
+ms.date: 01/13/2021
+ms.custom: updateeachrelease
 f1_keywords:
 - _CSharpKeyword
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127187"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235231"
 ---
 # <a name="c-reference"></a>C# 參考資料
 
@@ -36,7 +37,7 @@ ms.locfileid: "89127187"
  [C # 預處理器指示詞](./preprocessor-directives/index.md)  
  提供有關 C# 原始程式碼內嵌之編譯器命令的資訊連結。  
   
- [C # 編譯器選項](./compiler-options/index.md)  
+ [C# 編譯器選項](./compiler-options/index.md)  
  包含編譯器選項及其使用方式的相關資訊。  
   
  [C # 編譯器錯誤](./compiler-messages/index.md)  
@@ -61,7 +62,10 @@ ms.locfileid: "89127187"
   
  [C # 8.0 規格提案](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C # 8.0 適用于 .NET Core 3.0。 這些功能包含可為 null 的參考型別、遞迴模式比對、預設介面方法、非同步資料流程、範圍和索引、使用和使用宣告的模式、null 聯合指派，以及唯讀實例成員。
-  
+
+ [C # 9.0 規格提案](../../../_csharplang/proposals/csharp-9.0/records.md)  
+ .NET 5.0 提供 c # 9.0。 這些功能包括記錄、最上層語句、模式比對增強功能、僅初始化 setter、目標型別新運算式、模組初始化運算式、擴充部分方法、靜態匿名函式、目標型別條件運算式、協變數傳回型別、在 foreach 迴圈中的延伸模組 GetEnumerator、原生大小的整數、函式指標、隱藏發出 localsinit 旗標，以及不受限制的
+
 ## <a name="related-sections"></a>相關章節  
 
  [使用適用於 C# 的 Visual Studio 開發環境](/visualstudio/get-started/csharp)  
