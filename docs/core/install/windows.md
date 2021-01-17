@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 Windows 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025449"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536121"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安裝 .NET
 
@@ -260,11 +260,31 @@ Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，�
 
 .NET 的 [下載頁面](https://dotnet.microsoft.com/download/dotnet-core) 提供 Windows Installer 可執行檔。
 
-當您使用 MSI 檔案來安裝 .NET 時< 您可以藉由設定和參數來自訂安裝路徑 `DOTNETHOME_X64` `DOTNETHOME_X86` ：
+當您使用 Windows 安裝程式安裝 .NET 時，您可以藉由設定和參數來自訂安裝路徑 `DOTNETHOME_X64` `DOTNETHOME_X86` ：
 
 ```console
 dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
 ```
+
+如果您想要以無訊息方式安裝 .NET，例如在生產環境中或為了支援持續整合，請使用下列參數：
+
+- `/install`\
+安裝 .NET。
+
+- `/quiet`\
+防止顯示任何 UI 和提示。
+
+- `norestart`\
+抑制任何重新啟動嘗試。
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
+```
+
+如需詳細資訊，請參閱 [標準安裝程式 Command-Line 選項](/windows/win32/msi/standard-installer-command-line-options)。
+
+> [!TIP]
+> 安裝程式會傳回結束代碼0表示成功，結束代碼為3010表示需要重新開機。 任何其他值通常都是錯誤碼。
 
 ## <a name="download-and-manually-install"></a>下載並手動安裝
 

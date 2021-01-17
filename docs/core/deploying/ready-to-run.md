@@ -1,15 +1,15 @@
 ---
 title: ReadyToRun 部署總覽
 description: 瞭解什麼是 ReadyToRun 部署，以及為什麼您應該考慮在使用 .NET 5 和 .NET Core 3.0 和更新版本發行應用程式時使用它。
-author: davidwr
+author: davidwrighton
 ms.author: davidwr
 ms.date: 09/21/2020
-ms.openlocfilehash: 3302e5e18a20965a1eff1f09737910e924ed6d08
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 2d4aaac2534bbb1279eb88d8e24e1f5f022afe7d
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188604"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536095"
 ---
 # <a name="readytorun-compilation"></a>ReadyToRun 編譯
 

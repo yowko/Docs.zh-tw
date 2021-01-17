@@ -1,36 +1,38 @@
 ---
-title: .NET Framework 協助工具的新功能
+title: .NET Framework 中協助工具的新功能
+titleSuffix: ''
 description: 從 .NET Framework 4.7.1 開始，請參閱 .NET 協助工具的新功能。 協助工具功能可讓應用程式為輔助技術使用者提供適當的體驗。
-ms.date: 04/18/2019
+ms.date: 01/05/2021
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: d204bea7f5ec1ed0c25b7b2dedd04d61c7f3e93d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: c2ebaed8bf347eb8d8764f4bdf76dcc33db86bad
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679543"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536160"
 ---
-# <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
+# <a name="whats-new-in-accessibility-in-net-framework"></a>.NET Framework 中協助工具的新功能
 
-.NET Framework 的目標在於讓使用者更容易存取應用程式。 協助工具功能可讓應用程式提供適當的輔助技術使用者體驗。 從 .NET Framework 4.7.1 開始，.NET Framework 包含大量協助工具改善，可讓開發人員建立無障礙應用程式。
+.NET Framework 的目標是讓您的使用者更容易存取應用程式。 協助工具功能可讓應用程式提供適當的輔助技術使用者體驗。 從 .NET Framework 4.7.1 開始，.NET Framework 包含大量的協助工具改善，可讓開發人員建立可存取的應用程式。
 
 ## <a name="accessibility-switches"></a>協助工具參數
 
 如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 每個包含協助工具功能的 .NET Framework 版本都有一個版本特定的協助工具參數，您可以將其新增至 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 應用程式佈建檔區段中的元素。 以下是支援的參數：
 
-|版本|交換器|
+|版本|參數|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
 |.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
+|2020年8月11日-KB4569746 .NET Framework 4.8 的累積更新|"UseLegacyAccessibilityFeatures. 4"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>利用協助工具增強功能
 
-針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.7.1 或更新版本上執行的應用程式可以選擇不使用舊版的協助工具 (行為，藉由 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 在應用程式佈建檔區段的元素中加入參數，並將其值設定為，以利用) 的協助工具改進 `false` 。 下列顯示如何選擇加入 .NET Framework 4.7.1 中引進的協助工具增強功能：
+針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.7.1 或更新版本上執行的應用程式可以選擇不使用舊版的協助工具 (行為，藉由 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 在應用程式佈建檔區段的元素中加入參數，並將其值設定為，以利用) 的協助工具改進 `false` 。 下列程式碼片段說明如何加入宣告 .NET Framework 4.7.1 中引進的協助工具增強功能：
 
 ```xml
 <runtime>
@@ -39,7 +41,7 @@ ms.locfileid: "90679543"
 </runtime>
 ```
 
-如果您選擇加入 .NET Framework 較新版本中的協助工具功能，您必須同時明確加入來自舊版 .NET Framework 的功能。 設定您的應用程式以利用 .NET Framework 4.7.1 和4.7.2 中的協助工具改善，需要下列 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
+如果您選擇在稍後的 .NET Framework 版本中加入宣告協助工具功能，您也必須明確地加入舊版的功能。 若要設定您的應用程式以利用 .NET Framework 4.7.1 和4.7.2 中的協助工具改善，請新增下列 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
 
 ```xml
 <runtime>
@@ -48,18 +50,18 @@ ms.locfileid: "90679543"
 </runtime>
 ```
 
-設定您的應用程式以利用 .NET Framework 4.7.1、4.7.2 和4.8 的協助工具改善時，需要下列 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
+若要將您的應用程式設定為利用 .NET Framework 4.7.1、4.7.2、4.8 和2020年8月累積 4.8 .NET Framework 更新的協助工具改善，請新增下列 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
-    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+    <AppContextSwitchOverrides value=Switch.UseLegacyAccessibilityFeatures=false|Switch.UseLegacyAccessibilityFeatures.2=false|Switch.UseLegacyAccessibilityFeatures.3=false|Switch.UseLegacyAccessibilityFeatures.4=false"/>
 </runtime>
 ```
 
 ### <a name="restoring-legacy-behavior"></a>還原舊版行為
 
-以4.7.1 開頭之 .NET Framework 版本的應用程式可以停用協助工具功能，方法是將參數加入至 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 應用程式佈建檔區段中的元素，並將其值設定為 `true` 。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：
+以4.7.1 開頭之 .NET Framework 版本的應用程式可以停用協助工具功能，方法是將參數加入至 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 應用程式佈建檔區段中的專案，並將其值設定為 `true` 。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：
 
 ```xml
 <runtime>
@@ -67,6 +69,20 @@ ms.locfileid: "90679543"
     <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures.2=true" />
 </runtime>
 ```
+
+## <a name="whats-new-in-accessibility-in-the-august-11-2020-cumulative-update-for-net-framework-48"></a>2020年8月11日的協助工具新功能，.NET Framework 4.8 的累積更新
+
+2020年8月11日 KB4569746 .NET Framework 4.8 的累積更新包含 Windows Forms 中的新協助工具功能：
+
+- 解決通知 `PropertyGrid` 控制項專案的問題，以及螢幕讀取器的類別展開/折迭狀態。
+
+- 更新 `PropertyGrid` 控制項和其內部元素的可存取模式。
+
+- 更新控制項內部專案的可存取名稱， `PropertyGrid` 讓螢幕讀取器正確地宣告這些專案。
+
+- 定址控制項的周框矩形可存取屬性 `PropertyGridView` 。
+
+- 讓螢幕讀取器正確宣佈下拉式列示方塊資料格的展開/折迭狀態 `DataGridView` 。
 
 ## <a name="whats-new-in-accessibility-in-net-framework-48"></a>.NET Framework 4.8 協助工具的新功能
 
@@ -149,7 +165,7 @@ if (raiseMethod != null) {
 
 **鍵盤存取的工具提示**
 
-在目標為 .NET Framework 4.7.2 和更早版本的應用程式中，只有將滑鼠指標移到控制項中才會觸發跳出該控制項的[工具提示](xref:System.Windows.Forms.ToolTip)。 從 .NET Framework 4.8 開始，不論有無輔助按鍵，鍵盤使用者均可使用 Tab 鍵或方向鍵把焦點放在控制項上，藉此觸發控制項的工具提示。 這個特定協助工具增強功能需要額外的 [AppContext 參數](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)：
+在目標為 .NET Framework 4.7.2 和更早版本的應用程式中，只有將滑鼠指標移到控制項中才會觸發跳出該控制項的[工具提示](xref:System.Windows.Forms.ToolTip)。 從 .NET Framework 4.8 開始，鍵盤使用者可以使用 Tab 鍵或方向鍵（不論是否有輔助按鍵）來將控制項放在一起，以觸發控制項的工具提示。 這個特定協助工具增強功能需要額外的 [AppContext 參數](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -181,7 +197,7 @@ if (raiseMethod != null) {
 
 **搭配使用非 Adorner 文字選取範圍的 SelectionTextBrush 屬性**
 
-在 .NET Framework 4.7.2 中，WPF 新增了繪製 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.PasswordBox> 文字選取範圍的功能，而不需使用 Adorner 圖層。 在此案例中，選取文字的前景色彩取決於 <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>。
+在 .NET Framework 4.7.2 中，WPF 新增了在 <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.PasswordBox> 不使用裝飾項層的情況下繪製和文字選取的功能。 在此案例中，選取文字的前景色彩取決於 <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>。
 
 .NET Framework 4.8 新增 `SelectionTextBrush` 屬性，可讓開發人員在使用非 Adorner 文字選取範圍時，針對選取的文字選取特定筆刷。 此屬性僅適用於 WPF 應用程式 (已啟用非 Adorner 文字選取範圍) 中 <xref:System.Windows.Controls.Primitives.TextBoxBase> 衍生的控制項和 <xref:System.Windows.Controls.PasswordBox> 控制項。 此屬性不適用於 <xref:System.Windows.Controls.RichTextBox> 控制項。 如果未啟用非 Adorner 文字選取範圍，則會忽略這個屬性。
 
@@ -472,7 +488,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **High contrast**
 
-從 .NET Framework 4.7.1 開始，已對各種 WPF 控制項進行高對比改善。 現在，設定 <xref:System.Windows.SystemParameters.HighContrast%2A> 佈景主題時，可以看到它們。 它們包括：
+從 .NET Framework 4.7.1 開始，已對各種 WPF 控制項進行高對比改善。 現在，設定 <xref:System.Windows.SystemParameters.HighContrast%2A> 佈景主題時，可以看到它們。 其中包含：
 
 - <xref:System.Windows.Controls.Expander> 控制項
 
@@ -562,7 +578,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **高對比模式中改善的顯示**
 
-從 .NET Framework 4.7.1 開始，各種 WinForms 控制項都提供作業系統適用的高對比模式呈現改善。 Windows 10 已變更某些高對比系統色彩的值，而且 Windows Forms 是以 Windows 10 Win32 架構為基礎。 為獲得最佳體驗，請在最新版的 Windows 上執行，並新增最新 OS 變更，方法是在測試應用程式中新增 app.manifest 檔案，並將 Windows 10 支援的 OS 列取消註解，使它看起來如下：
+從 .NET Framework 4.7.1 開始，各種 WinForms 控制項都提供作業系統適用的高對比模式呈現改善。 Windows 10 已變更某些高對比系統色彩的值，而且 Windows Forms 是以 Windows 10 Win32 架構為基礎。 為獲得最佳體驗，在最新版的 Windows 上執行，並新增最新作業系統變更，方法是在測試應用程式中新增 app.manifest 檔案，並將 Windows 10 支援的作業系統列取消註解，使它看起來如下：
 
 ```xml
 <!-- Windows 10 -->
@@ -628,7 +644,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 版開始，ASP.NET 改進了 ASP.NET web 控制項如何與 Visual Studio 中的協助工具技術搭配運作。 變更包括下列項目：
 
-- 在控制項中執行遺失 UI 協助工具模式的變更，例如 [**詳細資料] View** wizard 中的 [**加入欄位**] 對話方塊，或是**ListView** wizard 的 [**設定 listview** ] 對話方塊。
+- 在控制項中執行遺失 UI 協助工具模式的變更，例如 [**詳細資料] View** wizard 中的 [**加入欄位**] 對話方塊，或是 **ListView** wizard 的 [**設定 listview** ] 對話方塊。
 
 - 變更以改善高對比模式中的顯示，例如 **資料頁 [欄位編輯器**]。
 
@@ -660,9 +676,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   - 可透過鍵盤存取警告圖示。
 
-  - 可透過鍵盤存取 [屬性]**** 視窗中的 [其他屬性]**** 按鈕。
+  - 可透過鍵盤存取 [屬性] 視窗中的 [其他屬性] 按鈕。
 
-  - 鍵盤使用者可以存取工作流程設計工具之 [引數]**** 和 [變數]**** 窗格中的標頭項目。
+  - 鍵盤使用者可以存取工作流程設計工具之 [引數] 和 [變數] 窗格中的標頭項目。
 
 - 在以下這類情況發生時，已改善具有焦點之項目的可見性：
 
