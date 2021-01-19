@@ -342,8 +342,6 @@ items:
                     href: /aspnet/core/razor-pages/sdk?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
           - name: 目標 Framework
             href: ../standard/frameworks.md
-          - name: csproj 格式的新增項目
-            href: ../core/tools/csproj.md
           - name: 相依性管理
             href: ../core/tools/dependencies.md
       - name: 全域和本機工具
@@ -397,8 +395,6 @@ items:
               - name: 概觀
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
-              - name: 對 StackOverflow 進行偵錯
-                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Linux 傾印
                 href: ../core/diagnostics/debug-linux-dumps.md
               - name: SOS 偵錯工具擴充功能
@@ -467,6 +463,8 @@ items:
                 href: ../core/diagnostics/debug-highcpu.md
               - name: 針對死結進行偵錯
                 href: ../core/diagnostics/debug-deadlock.md
+              - name: 對 StackOverflow 進行偵錯
+                href: ../core/diagnostics/debug-stackoverflow.md
       - name: 程式碼分析
         items:
           - name: 概觀
@@ -2281,6 +2279,8 @@ items:
             href: ../core/migration/index.md
           - name: project.json 與 csproj 的對應
             href: ../core/tools/project-json-to-csproj.md
+          - name: 將 AssemblyInfo 屬性對應至屬性
+            href: ../core/migration/assembly-info.md
           - name: CLI 的變更概觀
             href: ../core/tools/cli-msbuild-architecture.md
           - name: 從 DNX 移轉
