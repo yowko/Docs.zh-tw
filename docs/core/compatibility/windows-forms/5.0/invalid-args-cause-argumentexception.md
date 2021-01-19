@@ -1,13 +1,13 @@
 ---
 title: 重大變更： WinForms 方法現在會擲回 ArgumentException
-description: 瞭解 .NET 5.0 中的重大變更，其中 sWindows 的表單方法現在會擲回無效引數的 ArgumentException。
+description: 瞭解 .NET 5.0 中的重大變更，其中某些 Windows Forms 方法現在會針對不正確引數擲回 ArgumentException。
 ms.date: 07/18/2020
-ms.openlocfilehash: 46fe3f3b1208a5cd676e1b7546507bed36a850f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 892f4d16b80f3e42187480a7fcfb24e81868d07c
+ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760800"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570212"
 ---
 # <a name="winforms-methods-now-throw-argumentexception"></a>WinForms 方法現在會擲回 ArgumentException
 
@@ -21,7 +21,7 @@ ms.locfileid: "95760800"
 
 ## <a name="version-introduced"></a>引進的版本
 
-.NET 5。0
+.NET 5.0
 
 ## <a name="recommended-action"></a>建議的動作
 
