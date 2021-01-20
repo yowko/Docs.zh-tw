@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 2ae63396c0b1bb0bf1fe5c33b1103f69f6dcf664
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556838"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615863"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda 運算式 (c # 參考) 
 
-「Lambda 運算式」是下列兩種形式之一的運算式：
+您可以使用 *lambda 運算式* 來建立匿名函式。 請使用 [Lambda 宣告運算子 `=>`](lambda-operator.md) 來分隔 Lambda 的參數清單及其主體。 Lambda 運算式可以是下列兩種形式的任一個：
 
 - 以運算式作為主體的[運算式 Lambda](#expression-lambdas)：
 
@@ -32,7 +32,7 @@ ms.locfileid: "94556838"
   (input-parameters) => { <sequence-of-statements> }
   ```
 
-請使用 [Lambda 宣告運算子 `=>`](lambda-operator.md) 來分隔 Lambda 的參數清單及其主體。 若要建立 Lambda 運算式，請在 Lambda 運算子 的左邊指定輸入參數 (如果有的話)，並在另一邊指定運算式或陳述式區塊。
+若要建立 Lambda 運算式，請在 Lambda 運算子 的左邊指定輸入參數 (如果有的話)，並在另一邊指定運算式或陳述式區塊。
 
 任何 Lambda 運算式可轉換成[委派](../builtin-types/reference-types.md#the-delegate-type)型別。 Lambda 運算式可以轉換成的委派型別，是由其參數和傳回值的型別所定義。 如果 Lambda 運算式不會傳回值，則其可轉換成其中一個 `Action` 委派型別；否則可轉換成其中一個 `Func` 委派型別。 例如，具有兩個參數且不會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Action%602> 委派。 具有一個參數且會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Func%602> 委派。 在下列範例中，lambda 運算式 `x => x * x` 會指定名為的參數，並傳回 `x` `x` 平方值，並指派給委派類型的變數：
 
