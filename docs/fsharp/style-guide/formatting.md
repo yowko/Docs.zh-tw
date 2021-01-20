@@ -2,48 +2,48 @@
 title: F# 程式碼格式方針
 description: '瞭解格式化 F # 程式碼的指導方針。'
 ms.date: 08/31/2020
-ms.openlocfilehash: 01a5f9ce0c9b5a67bb0c70bce0829ac300032883
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: b4b70d86b36f2ba50318cb50e54d65cc6abff450
+ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97737186"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570225"
 ---
-# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="a9f00-103">F# 程式碼格式方針</span><span class="sxs-lookup"><span data-stu-id="a9f00-103">F# code formatting guidelines</span></span>
+# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="3fe18-103">F# 程式碼格式方針</span><span class="sxs-lookup"><span data-stu-id="3fe18-103">F# code formatting guidelines</span></span>
 
-<span data-ttu-id="a9f00-104">本文提供如何格式化程式碼的指導方針，讓您的 F # 程式碼為：</span><span class="sxs-lookup"><span data-stu-id="a9f00-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
+<span data-ttu-id="3fe18-104">本文提供如何格式化程式碼的指導方針，讓您的 F # 程式碼為：</span><span class="sxs-lookup"><span data-stu-id="3fe18-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
 
-* <span data-ttu-id="a9f00-105">更清晰</span><span class="sxs-lookup"><span data-stu-id="a9f00-105">More legible</span></span>
-* <span data-ttu-id="a9f00-106">根據 Visual Studio 和其他編輯器中格式化工具所套用的慣例</span><span class="sxs-lookup"><span data-stu-id="a9f00-106">In accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
-* <span data-ttu-id="a9f00-107">類似于線上的其他程式碼</span><span class="sxs-lookup"><span data-stu-id="a9f00-107">Similar to other code online</span></span>
+* <span data-ttu-id="3fe18-105">更清晰</span><span class="sxs-lookup"><span data-stu-id="3fe18-105">More legible</span></span>
+* <span data-ttu-id="3fe18-106">根據 Visual Studio 和其他編輯器中格式化工具所套用的慣例</span><span class="sxs-lookup"><span data-stu-id="3fe18-106">In accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
+* <span data-ttu-id="3fe18-107">類似于線上的其他程式碼</span><span class="sxs-lookup"><span data-stu-id="3fe18-107">Similar to other code online</span></span>
 
-<span data-ttu-id="a9f00-108">這些指導方針是根據[Anh->ahn-dung (英文 phan) ](https://github.com/dungpa)的[F # 格式慣例的完整指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)。</span><span class="sxs-lookup"><span data-stu-id="a9f00-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
+<span data-ttu-id="3fe18-108">這些指導方針是根據[Anh->ahn-dung (英文 phan) ](https://github.com/dungpa)的[F # 格式慣例的完整指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)。</span><span class="sxs-lookup"><span data-stu-id="3fe18-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
 
-## <a name="general-rules-for-indentation"></a><span data-ttu-id="a9f00-109">縮排的一般規則</span><span class="sxs-lookup"><span data-stu-id="a9f00-109">General rules for indentation</span></span>
+## <a name="general-rules-for-indentation"></a><span data-ttu-id="3fe18-109">縮排的一般規則</span><span class="sxs-lookup"><span data-stu-id="3fe18-109">General rules for indentation</span></span>
 
-<span data-ttu-id="a9f00-110">F # 預設會使用顯著的空白字元。</span><span class="sxs-lookup"><span data-stu-id="a9f00-110">F# uses significant white space by default.</span></span> <span data-ttu-id="a9f00-111">下列指導方針旨在提供有關如何操控這項可能強加的一些挑戰的指引。</span><span class="sxs-lookup"><span data-stu-id="a9f00-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
+<span data-ttu-id="3fe18-110">F # 預設會使用顯著的空白字元。</span><span class="sxs-lookup"><span data-stu-id="3fe18-110">F# uses significant white space by default.</span></span> <span data-ttu-id="3fe18-111">下列指導方針旨在提供有關如何操控這項可能強加的一些挑戰的指引。</span><span class="sxs-lookup"><span data-stu-id="3fe18-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
 
-### <a name="using-spaces"></a><span data-ttu-id="a9f00-112">使用空格</span><span class="sxs-lookup"><span data-stu-id="a9f00-112">Using spaces</span></span>
+### <a name="using-spaces"></a><span data-ttu-id="3fe18-112">使用空格</span><span class="sxs-lookup"><span data-stu-id="3fe18-112">Using spaces</span></span>
 
-<span data-ttu-id="a9f00-113">需要縮排時，您必須使用空格，而不是索引標籤。</span><span class="sxs-lookup"><span data-stu-id="a9f00-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="a9f00-114">至少需要一個空格。</span><span class="sxs-lookup"><span data-stu-id="a9f00-114">At least one space is required.</span></span> <span data-ttu-id="a9f00-115">您的組織可以建立編碼標準，以指定要用於縮排的空間數目;一般情況下，會在每個層級上有兩個、三個或四個空格的縮排。</span><span class="sxs-lookup"><span data-stu-id="a9f00-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three, or four spaces of indentation at each level where indentation occurs is typical.</span></span>
+<span data-ttu-id="3fe18-113">需要縮排時，您必須使用空格，而不是索引標籤。</span><span class="sxs-lookup"><span data-stu-id="3fe18-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="3fe18-114">至少需要一個空格。</span><span class="sxs-lookup"><span data-stu-id="3fe18-114">At least one space is required.</span></span> <span data-ttu-id="3fe18-115">您的組織可以建立編碼標準，以指定要用於縮排的空間數目;一般情況下，會在每個層級上有兩個、三個或四個空格的縮排。</span><span class="sxs-lookup"><span data-stu-id="3fe18-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three, or four spaces of indentation at each level where indentation occurs is typical.</span></span>
 
-<span data-ttu-id="a9f00-116">**我們建議每個縮排有四個空格。**</span><span class="sxs-lookup"><span data-stu-id="a9f00-116">**We recommend four spaces per indentation.**</span></span>
+<span data-ttu-id="3fe18-116">**我們建議每個縮排有四個空格。**</span><span class="sxs-lookup"><span data-stu-id="3fe18-116">**We recommend four spaces per indentation.**</span></span>
 
-<span data-ttu-id="a9f00-117">也就是說，程式的縮排是一項主觀的考慮。</span><span class="sxs-lookup"><span data-stu-id="a9f00-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="a9f00-118">變化是正常的，但您應該遵循的第一個規則是 *縮排的一致性*。</span><span class="sxs-lookup"><span data-stu-id="a9f00-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="a9f00-119">選擇一般接受的縮排樣式，並在整個程式碼基底中有系統地使用。</span><span class="sxs-lookup"><span data-stu-id="a9f00-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
+<span data-ttu-id="3fe18-117">也就是說，程式的縮排是一項主觀的考慮。</span><span class="sxs-lookup"><span data-stu-id="3fe18-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="3fe18-118">變化是正常的，但您應該遵循的第一個規則是 *縮排的一致性*。</span><span class="sxs-lookup"><span data-stu-id="3fe18-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="3fe18-119">選擇一般接受的縮排樣式，並在整個程式碼基底中有系統地使用。</span><span class="sxs-lookup"><span data-stu-id="3fe18-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
 
-## <a name="formatting-white-space"></a><span data-ttu-id="a9f00-120">將空白字元格式化</span><span class="sxs-lookup"><span data-stu-id="a9f00-120">Formatting white space</span></span>
+## <a name="formatting-white-space"></a><span data-ttu-id="3fe18-120">將空白字元格式化</span><span class="sxs-lookup"><span data-stu-id="3fe18-120">Formatting white space</span></span>
 
-<span data-ttu-id="a9f00-121">F # 是區分泛空白字元。</span><span class="sxs-lookup"><span data-stu-id="a9f00-121">F# is white space sensitive.</span></span> <span data-ttu-id="a9f00-122">雖然泛空白字元的大部分語法都是由適當的縮排所涵蓋，但還有其他一些需要考慮的事項。</span><span class="sxs-lookup"><span data-stu-id="a9f00-122">Although most semantics from white space are covered by proper indentation, there are some other things to consider.</span></span>
+<span data-ttu-id="3fe18-121">F # 是區分泛空白字元。</span><span class="sxs-lookup"><span data-stu-id="3fe18-121">F# is white space sensitive.</span></span> <span data-ttu-id="3fe18-122">雖然泛空白字元的大部分語法都是由適當的縮排所涵蓋，但還有其他一些需要考慮的事項。</span><span class="sxs-lookup"><span data-stu-id="3fe18-122">Although most semantics from white space are covered by proper indentation, there are some other things to consider.</span></span>
 
-### <a name="formatting-operators-in-arithmetic-expressions"></a><span data-ttu-id="a9f00-123">算術運算式中的格式化運算子</span><span class="sxs-lookup"><span data-stu-id="a9f00-123">Formatting operators in arithmetic expressions</span></span>
+### <a name="formatting-operators-in-arithmetic-expressions"></a><span data-ttu-id="3fe18-123">算術運算式中的格式化運算子</span><span class="sxs-lookup"><span data-stu-id="3fe18-123">Formatting operators in arithmetic expressions</span></span>
 
-<span data-ttu-id="a9f00-124">一律在二元算術運算式周圍使用空白字元：</span><span class="sxs-lookup"><span data-stu-id="a9f00-124">Always use white space around binary arithmetic expressions:</span></span>
+<span data-ttu-id="3fe18-124">一律在二元算術運算式周圍使用空白字元：</span><span class="sxs-lookup"><span data-stu-id="3fe18-124">Always use white space around binary arithmetic expressions:</span></span>
 
 ```fsharp
 let subtractThenAdd x = x - 1 + 3
 ```
 
-<span data-ttu-id="a9f00-125">一元 `-` 運算子應該一律緊接在其所否定的值之後：</span><span class="sxs-lookup"><span data-stu-id="a9f00-125">Unary `-` operators should always be immediately followed by the value they are negating:</span></span>
+<span data-ttu-id="3fe18-125">一元 `-` 運算子應該一律緊接在其所否定的值之後：</span><span class="sxs-lookup"><span data-stu-id="3fe18-125">Unary `-` operators should always be immediately followed by the value they are negating:</span></span>
 
 ```fsharp
 // OK
@@ -53,18 +53,18 @@ let negate x = -x
 let negateBad x = - x
 ```
 
-<span data-ttu-id="a9f00-126">在操作員之後加入空白字元 `-` 可能會讓其他人混淆。</span><span class="sxs-lookup"><span data-stu-id="a9f00-126">Adding a white-space character after the `-` operator can lead to confusion for others.</span></span>
+<span data-ttu-id="3fe18-126">在操作員之後加入空白字元 `-` 可能會讓其他人混淆。</span><span class="sxs-lookup"><span data-stu-id="3fe18-126">Adding a white-space character after the `-` operator can lead to confusion for others.</span></span>
 
-<span data-ttu-id="a9f00-127">總而言之，一定要：</span><span class="sxs-lookup"><span data-stu-id="a9f00-127">In summary, it's important to always:</span></span>
+<span data-ttu-id="3fe18-127">總而言之，一定要：</span><span class="sxs-lookup"><span data-stu-id="3fe18-127">In summary, it's important to always:</span></span>
 
-* <span data-ttu-id="a9f00-128">以空白字元括住二元運算子</span><span class="sxs-lookup"><span data-stu-id="a9f00-128">Surround binary operators with white space</span></span>
-* <span data-ttu-id="a9f00-129">一元運算子之後永遠沒有尾端空白字元</span><span class="sxs-lookup"><span data-stu-id="a9f00-129">Never have trailing white space after a unary operator</span></span>
+* <span data-ttu-id="3fe18-128">以空白字元括住二元運算子</span><span class="sxs-lookup"><span data-stu-id="3fe18-128">Surround binary operators with white space</span></span>
+* <span data-ttu-id="3fe18-129">一元運算子之後永遠沒有尾端空白字元</span><span class="sxs-lookup"><span data-stu-id="3fe18-129">Never have trailing white space after a unary operator</span></span>
 
-<span data-ttu-id="a9f00-130">二元算術運算子的指導方針特別重要。</span><span class="sxs-lookup"><span data-stu-id="a9f00-130">The binary arithmetic operator guideline is especially important.</span></span> <span data-ttu-id="a9f00-131">若無法圍住二元 `-` 運算子，與某些格式化選項結合時，可能會導致將它解釋為一元 `-` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-131">Failing to surround a binary `-` operator, when combined with certain formatting choices, could lead to interpreting it as a unary `-`.</span></span>
+<span data-ttu-id="3fe18-130">二元算術運算子的指導方針特別重要。</span><span class="sxs-lookup"><span data-stu-id="3fe18-130">The binary arithmetic operator guideline is especially important.</span></span> <span data-ttu-id="3fe18-131">若無法圍住二元 `-` 運算子，與某些格式化選項結合時，可能會導致將它解釋為一元 `-` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-131">Failing to surround a binary `-` operator, when combined with certain formatting choices, could lead to interpreting it as a unary `-`.</span></span>
 
-### <a name="surround-a-custom-operator-definition-with-white-space"></a><span data-ttu-id="a9f00-132">以空白字元括住自訂運算子定義</span><span class="sxs-lookup"><span data-stu-id="a9f00-132">Surround a custom operator definition with white space</span></span>
+### <a name="surround-a-custom-operator-definition-with-white-space"></a><span data-ttu-id="3fe18-132">以空白字元括住自訂運算子定義</span><span class="sxs-lookup"><span data-stu-id="3fe18-132">Surround a custom operator definition with white space</span></span>
 
-<span data-ttu-id="a9f00-133">一律使用空白字元來圍繞運算子定義：</span><span class="sxs-lookup"><span data-stu-id="a9f00-133">Always use white space to surround an operator definition:</span></span>
+<span data-ttu-id="3fe18-133">一律使用空白字元來圍繞運算子定義：</span><span class="sxs-lookup"><span data-stu-id="3fe18-133">Always use white space to surround an operator definition:</span></span>
 
 ```fsharp
 // OK
@@ -74,11 +74,11 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-<span data-ttu-id="a9f00-134">若為任何以和為開頭 `*` 且包含多個字元的自訂運算子，您需要在定義的開頭加上空白字元，以避免編譯器的混淆。</span><span class="sxs-lookup"><span data-stu-id="a9f00-134">For any custom operator that starts with `*` and that has more than one character, you need to add a white space to the beginning of the definition to avoid a compiler ambiguity.</span></span> <span data-ttu-id="a9f00-135">基於這個原因，我們建議您只使用單一空白字元來括住所有運算子的定義。</span><span class="sxs-lookup"><span data-stu-id="a9f00-135">Because of this, we recommend that you simply surround the definitions of all operators with a single white-space character.</span></span>
+<span data-ttu-id="3fe18-134">若為任何以和為開頭 `*` 且包含多個字元的自訂運算子，您需要在定義的開頭加上空白字元，以避免編譯器的混淆。</span><span class="sxs-lookup"><span data-stu-id="3fe18-134">For any custom operator that starts with `*` and that has more than one character, you need to add a white space to the beginning of the definition to avoid a compiler ambiguity.</span></span> <span data-ttu-id="3fe18-135">基於這個原因，我們建議您只使用單一空白字元來括住所有運算子的定義。</span><span class="sxs-lookup"><span data-stu-id="3fe18-135">Because of this, we recommend that you simply surround the definitions of all operators with a single white-space character.</span></span>
 
-### <a name="surround-function-parameter-arrows-with-white-space"></a><span data-ttu-id="a9f00-136">以空白字元括住函式參數箭號</span><span class="sxs-lookup"><span data-stu-id="a9f00-136">Surround function parameter arrows with white space</span></span>
+### <a name="surround-function-parameter-arrows-with-white-space"></a><span data-ttu-id="3fe18-136">以空白字元括住函式參數箭號</span><span class="sxs-lookup"><span data-stu-id="3fe18-136">Surround function parameter arrows with white space</span></span>
 
-<span data-ttu-id="a9f00-137">定義函式的簽章時，請使用空格括住 `->` 符號：</span><span class="sxs-lookup"><span data-stu-id="a9f00-137">When defining the signature of a function, use white space around the `->` symbol:</span></span>
+<span data-ttu-id="3fe18-137">定義函式的簽章時，請使用空格括住 `->` 符號：</span><span class="sxs-lookup"><span data-stu-id="3fe18-137">When defining the signature of a function, use white space around the `->` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -88,9 +88,9 @@ type MyFun = int -> int -> string
 type MyFunBad = int->int->string
 ```
 
-### <a name="surround-function-arguments-with-white-space"></a><span data-ttu-id="a9f00-138">以空白字元括住函式引數</span><span class="sxs-lookup"><span data-stu-id="a9f00-138">Surround function arguments with white space</span></span>
+### <a name="surround-function-arguments-with-white-space"></a><span data-ttu-id="3fe18-138">以空白字元括住函式引數</span><span class="sxs-lookup"><span data-stu-id="3fe18-138">Surround function arguments with white space</span></span>
 
-<span data-ttu-id="a9f00-139">定義函式時，請在每個引數前後使用空白字元。</span><span class="sxs-lookup"><span data-stu-id="a9f00-139">When defining a function, use white space around each argument.</span></span>
+<span data-ttu-id="3fe18-139">定義函式時，請在每個引數前後使用空白字元。</span><span class="sxs-lookup"><span data-stu-id="3fe18-139">When defining a function, use white space around each argument.</span></span>
 
 ```fsharp
 // OK
@@ -100,9 +100,9 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="avoid-name-sensitive-alignments"></a><span data-ttu-id="a9f00-140">避免區分名稱的對齊</span><span class="sxs-lookup"><span data-stu-id="a9f00-140">Avoid name-sensitive alignments</span></span>
+### <a name="avoid-name-sensitive-alignments"></a><span data-ttu-id="3fe18-140">避免區分名稱的對齊</span><span class="sxs-lookup"><span data-stu-id="3fe18-140">Avoid name-sensitive alignments</span></span>
 
-<span data-ttu-id="a9f00-141">一般來說，請搜尋以避免對命名敏感的縮排和對齊：</span><span class="sxs-lookup"><span data-stu-id="a9f00-141">In general, seek to avoid indentation and alignment that is sensitive to naming:</span></span>
+<span data-ttu-id="3fe18-141">一般來說，請搜尋以避免對命名敏感的縮排和對齊：</span><span class="sxs-lookup"><span data-stu-id="3fe18-141">In general, seek to avoid indentation and alignment that is sensitive to naming:</span></span>
 
 ```fsharp
 // OK
@@ -116,13 +116,13 @@ let myLongValueName = someExpression
                       |> anotherExpression
 ```
 
-<span data-ttu-id="a9f00-142">這有時稱為「虛名對齊」或「虛名縮排」。</span><span class="sxs-lookup"><span data-stu-id="a9f00-142">This is sometimes called “vanity alignment” or “vanity indentation”.</span></span> <span data-ttu-id="a9f00-143">避免這種情況的主要原因如下：</span><span class="sxs-lookup"><span data-stu-id="a9f00-143">The primary reasons for avoiding this are:</span></span>
+<span data-ttu-id="3fe18-142">這有時稱為「虛名對齊」或「虛名縮排」。</span><span class="sxs-lookup"><span data-stu-id="3fe18-142">This is sometimes called “vanity alignment” or “vanity indentation”.</span></span> <span data-ttu-id="3fe18-143">避免這種情況的主要原因如下：</span><span class="sxs-lookup"><span data-stu-id="3fe18-143">The primary reasons for avoiding this are:</span></span>
 
-* <span data-ttu-id="a9f00-144">重要的程式碼會移到右邊</span><span class="sxs-lookup"><span data-stu-id="a9f00-144">Important code is moved far to the right</span></span>
-* <span data-ttu-id="a9f00-145">實際程式碼的寬度較低</span><span class="sxs-lookup"><span data-stu-id="a9f00-145">There is less width left for the actual code</span></span>
-* <span data-ttu-id="a9f00-146">重新命名可能會中斷對齊</span><span class="sxs-lookup"><span data-stu-id="a9f00-146">Renaming can break the alignment</span></span>
+* <span data-ttu-id="3fe18-144">重要的程式碼會移到右邊</span><span class="sxs-lookup"><span data-stu-id="3fe18-144">Important code is moved far to the right</span></span>
+* <span data-ttu-id="3fe18-145">實際程式碼的寬度較低</span><span class="sxs-lookup"><span data-stu-id="3fe18-145">There is less width left for the actual code</span></span>
+* <span data-ttu-id="3fe18-146">重新命名可能會中斷對齊</span><span class="sxs-lookup"><span data-stu-id="3fe18-146">Renaming can break the alignment</span></span>
 
-<span data-ttu-id="a9f00-147">請為提供相同的，以便 `do` / `do!` 讓縮排與保持一致 `let` / `let!` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-147">Do the same for `do`/`do!` in order to keep the indentation consistent with `let`/`let!`.</span></span> <span data-ttu-id="a9f00-148">以下是 `do` 在類別中使用的範例：</span><span class="sxs-lookup"><span data-stu-id="a9f00-148">Here is an example using `do` in a class:</span></span>
+<span data-ttu-id="3fe18-147">請為提供相同的，以便 `do` / `do!` 讓縮排與保持一致 `let` / `let!` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-147">Do the same for `do`/`do!` in order to keep the indentation consistent with `let`/`let!`.</span></span> <span data-ttu-id="3fe18-148">以下是 `do` 在類別中使用的範例：</span><span class="sxs-lookup"><span data-stu-id="3fe18-148">Here is an example using `do` in a class:</span></span>
 
 ```fsharp
 // OK
@@ -147,7 +147,7 @@ type Foo () =
        |> theQuickBrownFoxJumpedOverTheLazyDog
 ```
 
-<span data-ttu-id="a9f00-149">以下是 `do!` 使用2個空格進行縮排 (的範例，因為在 `do!` 縮排) 使用4個空格時，方法之間沒有剛好差異：</span><span class="sxs-lookup"><span data-stu-id="a9f00-149">Here is an example with `do!` using 2 spaces of indentation (because with `do!` there is coincidentally no difference between the approaches when using 4 spaces of indentation):</span></span>
+<span data-ttu-id="3fe18-149">以下是 `do!` 使用2個空格進行縮排 (的範例，因為在 `do!` 縮排) 使用4個空格時，方法之間沒有剛好差異：</span><span class="sxs-lookup"><span data-stu-id="3fe18-149">Here is an example with `do!` using 2 spaces of indentation (because with `do!` there is coincidentally no difference between the approaches when using 4 spaces of indentation):</span></span>
 
 ```fsharp
 // OK
@@ -174,9 +174,9 @@ async {
 }
 ```
 
-### <a name="place-parameters-on-a-new-line-for-long-definitions"></a><span data-ttu-id="a9f00-150">將參數放置在新的一行上以進行長定義</span><span class="sxs-lookup"><span data-stu-id="a9f00-150">Place parameters on a new line for long definitions</span></span>
+### <a name="place-parameters-on-a-new-line-for-long-definitions"></a><span data-ttu-id="3fe18-150">將參數放置在新的一行上以進行長定義</span><span class="sxs-lookup"><span data-stu-id="3fe18-150">Place parameters on a new line for long definitions</span></span>
 
-<span data-ttu-id="a9f00-151">如果您有較長的函式定義，請將參數放在新行上，然後將它們縮排，以符合後續參數的縮排層級。</span><span class="sxs-lookup"><span data-stu-id="a9f00-151">If you have a long function definition, place the parameters on new lines and indent them to match the indentation level of the subsequent parameter.</span></span>
+<span data-ttu-id="3fe18-151">如果您有較長的函式定義，請將參數放在新行上，然後將它們縮排，以符合後續參數的縮排層級。</span><span class="sxs-lookup"><span data-stu-id="3fe18-151">If you have a long function definition, place the parameters on new lines and indent them to match the indentation level of the subsequent parameter.</span></span>
 
 ```fsharp
 module M =
@@ -211,7 +211,7 @@ module M =
         // ... the body of the method follows
 ```
 
-<span data-ttu-id="a9f00-152">這也適用于使用元組的成員、函式和參數：</span><span class="sxs-lookup"><span data-stu-id="a9f00-152">This also applies to members, constructors, and parameters using tuples:</span></span>
+<span data-ttu-id="3fe18-152">這也適用于使用元組的成員、函式和參數：</span><span class="sxs-lookup"><span data-stu-id="3fe18-152">This also applies to members, constructors, and parameters using tuples:</span></span>
 
 ```fsharp
 type TM() =
@@ -232,16 +232,15 @@ type TC
     // ... the body of the class follows
 ```
 
-<span data-ttu-id="a9f00-153">如果參數是 currified，或有明確的傳回型別批註，最好將 `=` 字元放在新行上：</span><span class="sxs-lookup"><span data-stu-id="a9f00-153">If the parameters are currified or there's an explicit return type annotation, it is preferable to place the `=` character on a new line:</span></span>
+<span data-ttu-id="3fe18-153">如果參數是 currified，請將 `=` 字元連同任何傳回型別放在新行上：</span><span class="sxs-lookup"><span data-stu-id="3fe18-153">If the parameters are currified, place the `=` character along with any return type on a new line:</span></span>
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters
-        (
-            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
-        ) : AReturnType =
+    member _.LongMethodWithLotsOfCurrifiedParamsAndReturnType
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        : ReturnType =
         // ... the body of the method
     member _.LongMethodWithLotsOfCurrifiedParams
         (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
@@ -251,13 +250,13 @@ type C() =
         // ... the body of the method
 ```
 
-<span data-ttu-id="a9f00-154">這是避免太長的行 (的方法。如果傳回類型可能具有長名稱) ，而且在新增參數時有較少的行損毀。</span><span class="sxs-lookup"><span data-stu-id="a9f00-154">This is a way to avoid too long lines (in case return type might have long name) and have less line-damage when adding parameters.</span></span>
+<span data-ttu-id="3fe18-154">這是避免太長的行 (的方法。如果傳回類型可能具有長名稱) ，而且在新增參數時有較少的行損毀。</span><span class="sxs-lookup"><span data-stu-id="3fe18-154">This is a way to avoid too long lines (in case return type might have long name) and have less line-damage when adding parameters.</span></span>
 
-### <a name="type-annotations"></a><span data-ttu-id="a9f00-155">類型注釋</span><span class="sxs-lookup"><span data-stu-id="a9f00-155">Type annotations</span></span>
+### <a name="type-annotations"></a><span data-ttu-id="3fe18-155">類型注釋</span><span class="sxs-lookup"><span data-stu-id="3fe18-155">Type annotations</span></span>
 
-#### <a name="right-pad-function-argument-type-annotations"></a><span data-ttu-id="a9f00-156">右邊的函式引數類型注釋</span><span class="sxs-lookup"><span data-stu-id="a9f00-156">Right-pad function argument type annotations</span></span>
+#### <a name="right-pad-function-argument-type-annotations"></a><span data-ttu-id="3fe18-156">右邊的函式引數類型注釋</span><span class="sxs-lookup"><span data-stu-id="3fe18-156">Right-pad function argument type annotations</span></span>
 
-<span data-ttu-id="a9f00-157">在定義具有類型注釋的引數時，請使用符號後面的空白字元 `:` ：</span><span class="sxs-lookup"><span data-stu-id="a9f00-157">When defining arguments with type annotations, use white space after the `:` symbol:</span></span>
+<span data-ttu-id="3fe18-157">在定義具有類型注釋的引數時，請使用符號後面的空白字元 `:` ：</span><span class="sxs-lookup"><span data-stu-id="3fe18-157">When defining arguments with type annotations, use white space after the `:` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -267,9 +266,9 @@ let complexFunction (a: int) (b: int) c = a + b + c
 let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
 ```
 
-#### <a name="surround-return-type-annotations-with-white-space"></a><span data-ttu-id="a9f00-158">以空白字元括住傳回型別注釋</span><span class="sxs-lookup"><span data-stu-id="a9f00-158">Surround return type annotations with white space</span></span>
+#### <a name="surround-return-type-annotations-with-white-space"></a><span data-ttu-id="3fe18-158">以空白字元括住傳回型別注釋</span><span class="sxs-lookup"><span data-stu-id="3fe18-158">Surround return type annotations with white space</span></span>
 
-<span data-ttu-id="a9f00-159">在 let 系結函式或實數值型別注釋中，如果函式) 的情況下 (傳回型別，請使用符號前後的空白字元 `:` ：</span><span class="sxs-lookup"><span data-stu-id="a9f00-159">In a let-bound function or value type annotation (return type in the case of a function), use white space before and after the `:` symbol:</span></span>
+<span data-ttu-id="3fe18-159">在 let 系結函式或實數值型別注釋中，如果函式) 的情況下 (傳回型別，請使用符號前後的空白字元 `:` ：</span><span class="sxs-lookup"><span data-stu-id="3fe18-159">In a let-bound function or value type annotation (return type in the case of a function), use white space before and after the `:` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -281,16 +280,16 @@ let expensiveToComputeBad2 :int = 2
 let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
-## <a name="formatting-blank-lines"></a><span data-ttu-id="a9f00-160">格式化空白行</span><span class="sxs-lookup"><span data-stu-id="a9f00-160">Formatting blank lines</span></span>
+## <a name="formatting-blank-lines"></a><span data-ttu-id="3fe18-160">格式化空白行</span><span class="sxs-lookup"><span data-stu-id="3fe18-160">Formatting blank lines</span></span>
 
-* <span data-ttu-id="a9f00-161">以兩個空白行分隔最上層函數和類別定義。</span><span class="sxs-lookup"><span data-stu-id="a9f00-161">Separate top-level function and class definitions with two blank lines.</span></span>
-* <span data-ttu-id="a9f00-162">類別內的方法定義會以單一空白行分隔。</span><span class="sxs-lookup"><span data-stu-id="a9f00-162">Method definitions inside a class are separated by a single blank line.</span></span>
-* <span data-ttu-id="a9f00-163">額外的空白行可 (謹慎地使用) 來分隔相關函式的群組。</span><span class="sxs-lookup"><span data-stu-id="a9f00-163">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="a9f00-164">您可以在一堆相關的囉 (之間省略空白行，例如，一組虛擬實) 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-164">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
-* <span data-ttu-id="a9f00-165">請謹慎使用函式中的空白行，以表示邏輯區段。</span><span class="sxs-lookup"><span data-stu-id="a9f00-165">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
+* <span data-ttu-id="3fe18-161">以兩個空白行分隔最上層函數和類別定義。</span><span class="sxs-lookup"><span data-stu-id="3fe18-161">Separate top-level function and class definitions with two blank lines.</span></span>
+* <span data-ttu-id="3fe18-162">類別內的方法定義會以單一空白行分隔。</span><span class="sxs-lookup"><span data-stu-id="3fe18-162">Method definitions inside a class are separated by a single blank line.</span></span>
+* <span data-ttu-id="3fe18-163">額外的空白行可 (謹慎地使用) 來分隔相關函式的群組。</span><span class="sxs-lookup"><span data-stu-id="3fe18-163">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="3fe18-164">您可以在一堆相關的囉 (之間省略空白行，例如，一組虛擬實) 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-164">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
+* <span data-ttu-id="3fe18-165">請謹慎使用函式中的空白行，以表示邏輯區段。</span><span class="sxs-lookup"><span data-stu-id="3fe18-165">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
 
-## <a name="formatting-comments"></a><span data-ttu-id="a9f00-166">格式化批註</span><span class="sxs-lookup"><span data-stu-id="a9f00-166">Formatting comments</span></span>
+## <a name="formatting-comments"></a><span data-ttu-id="3fe18-166">格式化批註</span><span class="sxs-lookup"><span data-stu-id="3fe18-166">Formatting comments</span></span>
 
-<span data-ttu-id="a9f00-167">通常會優先使用多個雙斜線批註，而不是 ML 樣式的區塊批註。</span><span class="sxs-lookup"><span data-stu-id="a9f00-167">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
+<span data-ttu-id="3fe18-167">通常會優先使用多個雙斜線批註，而不是 ML 樣式的區塊批註。</span><span class="sxs-lookup"><span data-stu-id="3fe18-167">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -302,17 +301,17 @@ let myFunBad (a: decimal) b c:decimal = a + b + c
 *)
 ```
 
-<span data-ttu-id="a9f00-168">內嵌批註應為第一個字母大寫。</span><span class="sxs-lookup"><span data-stu-id="a9f00-168">Inline comments should capitalize the first letter.</span></span>
+<span data-ttu-id="3fe18-168">內嵌批註應為第一個字母大寫。</span><span class="sxs-lookup"><span data-stu-id="3fe18-168">Inline comments should capitalize the first letter.</span></span>
 
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a><span data-ttu-id="a9f00-169">命名規範</span><span class="sxs-lookup"><span data-stu-id="a9f00-169">Naming conventions</span></span>
+## <a name="naming-conventions"></a><span data-ttu-id="3fe18-169">命名規範</span><span class="sxs-lookup"><span data-stu-id="3fe18-169">Naming conventions</span></span>
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="a9f00-170">針對類別系結、運算式系結和模式系結值和函數使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="a9f00-170">Use camelCase for class-bound, expression-bound, and pattern-bound values and functions</span></span>
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="3fe18-170">針對類別系結、運算式系結和模式系結值和函數使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="3fe18-170">Use camelCase for class-bound, expression-bound, and pattern-bound values and functions</span></span>
 
-<span data-ttu-id="a9f00-171">這是常見且接受的 F # 樣式，可針對系結為區域變數或模式比對和函式定義中的所有名稱使用 camelCase。</span><span class="sxs-lookup"><span data-stu-id="a9f00-171">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
+<span data-ttu-id="3fe18-171">這是常見且接受的 F # 樣式，可針對系結為區域變數或模式比對和函式定義中的所有名稱使用 camelCase。</span><span class="sxs-lookup"><span data-stu-id="3fe18-171">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
 
 ```fsharp
 // OK
@@ -325,7 +324,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-<span data-ttu-id="a9f00-172">類別中的本機系結函式也應使用 camelCase。</span><span class="sxs-lookup"><span data-stu-id="a9f00-172">Locally bound functions in classes should also use camelCase.</span></span>
+<span data-ttu-id="3fe18-172">類別中的本機系結函式也應使用 camelCase。</span><span class="sxs-lookup"><span data-stu-id="3fe18-172">Locally bound functions in classes should also use camelCase.</span></span>
 
 ```fsharp
 type MyClass() =
@@ -339,9 +338,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="a9f00-173">針對模組系結公用函式使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="a9f00-173">Use camelCase for module-bound public functions</span></span>
+### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="3fe18-173">針對模組系結公用函式使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="3fe18-173">Use camelCase for module-bound public functions</span></span>
 
-<span data-ttu-id="a9f00-174">當模組系結函式是公用 API 的一部分時，它應該使用 camelCase：</span><span class="sxs-lookup"><span data-stu-id="a9f00-174">When a module-bound function is part of a public API, it should use camelCase:</span></span>
+<span data-ttu-id="3fe18-174">當模組系結函式是公用 API 的一部分時，它應該使用 camelCase：</span><span class="sxs-lookup"><span data-stu-id="3fe18-174">When a module-bound function is part of a public API, it should use camelCase:</span></span>
 
 ```fsharp
 module MyAPI =
@@ -350,22 +349,22 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="a9f00-175">針對內部和私用模組系結值和函式使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="a9f00-175">Use camelCase for internal and private module-bound values and functions</span></span>
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="3fe18-175">針對內部和私用模組系結值和函式使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="3fe18-175">Use camelCase for internal and private module-bound values and functions</span></span>
 
-<span data-ttu-id="a9f00-176">將 camelCase 用於私用模組系結的值，包括下列各項：</span><span class="sxs-lookup"><span data-stu-id="a9f00-176">Use camelCase for private module-bound values, including the following:</span></span>
+<span data-ttu-id="3fe18-176">將 camelCase 用於私用模組系結的值，包括下列各項：</span><span class="sxs-lookup"><span data-stu-id="3fe18-176">Use camelCase for private module-bound values, including the following:</span></span>
 
-* <span data-ttu-id="a9f00-177">腳本中的特定函數</span><span class="sxs-lookup"><span data-stu-id="a9f00-177">Ad hoc functions in scripts</span></span>
+* <span data-ttu-id="3fe18-177">腳本中的特定函數</span><span class="sxs-lookup"><span data-stu-id="3fe18-177">Ad hoc functions in scripts</span></span>
 
-* <span data-ttu-id="a9f00-178">組成模組或型別內部執行的值</span><span class="sxs-lookup"><span data-stu-id="a9f00-178">Values making up the internal implementation of a module or type</span></span>
+* <span data-ttu-id="3fe18-178">組成模組或型別內部執行的值</span><span class="sxs-lookup"><span data-stu-id="3fe18-178">Values making up the internal implementation of a module or type</span></span>
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="a9f00-179">針對參數使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="a9f00-179">Use camelCase for parameters</span></span>
+### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="3fe18-179">針對參數使用 camelCase</span><span class="sxs-lookup"><span data-stu-id="3fe18-179">Use camelCase for parameters</span></span>
 
-<span data-ttu-id="a9f00-180">所有參數都應該根據 .NET 命名慣例使用 camelCase。</span><span class="sxs-lookup"><span data-stu-id="a9f00-180">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
+<span data-ttu-id="3fe18-180">所有參數都應該根據 .NET 命名慣例使用 camelCase。</span><span class="sxs-lookup"><span data-stu-id="3fe18-180">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
 
 ```fsharp
 module MyModule =
@@ -375,9 +374,9 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="a9f00-181">針對模組使用 PascalCase</span><span class="sxs-lookup"><span data-stu-id="a9f00-181">Use PascalCase for modules</span></span>
+### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="3fe18-181">針對模組使用 PascalCase</span><span class="sxs-lookup"><span data-stu-id="3fe18-181">Use PascalCase for modules</span></span>
 
-<span data-ttu-id="a9f00-182"> (頂層、內部、私用、嵌套) 的所有模組都應該使用 PascalCase。</span><span class="sxs-lookup"><span data-stu-id="a9f00-182">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
+<span data-ttu-id="3fe18-182"> (頂層、內部、私用、嵌套) 的所有模組都應該使用 PascalCase。</span><span class="sxs-lookup"><span data-stu-id="3fe18-182">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
 
 ```fsharp
 module MyTopLevelModule
@@ -389,9 +388,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="a9f00-183">針對類型宣告、成員和標籤使用 PascalCase</span><span class="sxs-lookup"><span data-stu-id="a9f00-183">Use PascalCase for type declarations, members, and labels</span></span>
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="3fe18-183">針對類型宣告、成員和標籤使用 PascalCase</span><span class="sxs-lookup"><span data-stu-id="3fe18-183">Use PascalCase for type declarations, members, and labels</span></span>
 
-<span data-ttu-id="a9f00-184">類別、介面、結構、列舉、委派、記錄和區分等位都應該以 PascalCase 命名。</span><span class="sxs-lookup"><span data-stu-id="a9f00-184">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="a9f00-185">記錄和差異聯集的類型與標籤內的成員也應使用 PascalCase。</span><span class="sxs-lookup"><span data-stu-id="a9f00-185">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
+<span data-ttu-id="3fe18-184">類別、介面、結構、列舉、委派、記錄和區分等位都應該以 PascalCase 命名。</span><span class="sxs-lookup"><span data-stu-id="3fe18-184">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="3fe18-185">記錄和差異聯集的類型與標籤內的成員也應使用 PascalCase。</span><span class="sxs-lookup"><span data-stu-id="3fe18-185">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
 
 ```fsharp
 type IMyInterface =
@@ -409,19 +408,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="a9f00-186">針對 .NET 內建函式使用 PascalCase</span><span class="sxs-lookup"><span data-stu-id="a9f00-186">Use PascalCase for constructs intrinsic to .NET</span></span>
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="3fe18-186">針對 .NET 內建函式使用 PascalCase</span><span class="sxs-lookup"><span data-stu-id="3fe18-186">Use PascalCase for constructs intrinsic to .NET</span></span>
 
-<span data-ttu-id="a9f00-187">命名空間、例外狀況、事件和專案/ `.dll` 名稱也應使用 PascalCase。</span><span class="sxs-lookup"><span data-stu-id="a9f00-187">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="a9f00-188">這不僅會讓取用者更自然地使用其他 .NET 語言，它也與您可能遇到的 .NET 命名慣例一致。</span><span class="sxs-lookup"><span data-stu-id="a9f00-188">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
+<span data-ttu-id="3fe18-187">命名空間、例外狀況、事件和專案/ `.dll` 名稱也應使用 PascalCase。</span><span class="sxs-lookup"><span data-stu-id="3fe18-187">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="3fe18-188">這不僅會讓取用者更自然地使用其他 .NET 語言，它也與您可能遇到的 .NET 命名慣例一致。</span><span class="sxs-lookup"><span data-stu-id="3fe18-188">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
 
-### <a name="avoid-underscores-in-names"></a><span data-ttu-id="a9f00-189">避免名稱中有底線</span><span class="sxs-lookup"><span data-stu-id="a9f00-189">Avoid underscores in names</span></span>
+### <a name="avoid-underscores-in-names"></a><span data-ttu-id="3fe18-189">避免名稱中有底線</span><span class="sxs-lookup"><span data-stu-id="3fe18-189">Avoid underscores in names</span></span>
 
-<span data-ttu-id="a9f00-190">在過去，某些 F # 程式庫在名稱中使用底線。</span><span class="sxs-lookup"><span data-stu-id="a9f00-190">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="a9f00-191">不過，這不會再被廣泛接受，部分原因是它與 .NET 命名慣例相衝突。</span><span class="sxs-lookup"><span data-stu-id="a9f00-191">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="a9f00-192">話雖如此，某些 F # 程式設計人員會大量使用底線，部分基於歷史原因，而且容錯和尊重很重要。</span><span class="sxs-lookup"><span data-stu-id="a9f00-192">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="a9f00-193">不過，此樣式通常是由有關於是否使用它的其他人不喜歡。</span><span class="sxs-lookup"><span data-stu-id="a9f00-193">However, the style is often disliked by others who have a choice about whether to use it.</span></span>
+<span data-ttu-id="3fe18-190">在過去，某些 F # 程式庫在名稱中使用底線。</span><span class="sxs-lookup"><span data-stu-id="3fe18-190">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="3fe18-191">不過，這不會再被廣泛接受，部分原因是它與 .NET 命名慣例相衝突。</span><span class="sxs-lookup"><span data-stu-id="3fe18-191">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="3fe18-192">話雖如此，某些 F # 程式設計人員會大量使用底線，部分基於歷史原因，而且容錯和尊重很重要。</span><span class="sxs-lookup"><span data-stu-id="3fe18-192">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="3fe18-193">不過，此樣式通常是由有關於是否使用它的其他人不喜歡。</span><span class="sxs-lookup"><span data-stu-id="3fe18-193">However, the style is often disliked by others who have a choice about whether to use it.</span></span>
 
-<span data-ttu-id="a9f00-194">其中一個例外狀況包含與原生元件的互通性，其中的底線是通用的。</span><span class="sxs-lookup"><span data-stu-id="a9f00-194">One exception includes interoperating with native components, where underscores are common.</span></span>
+<span data-ttu-id="3fe18-194">其中一個例外狀況包含與原生元件的互通性，其中的底線是通用的。</span><span class="sxs-lookup"><span data-stu-id="3fe18-194">One exception includes interoperating with native components, where underscores are common.</span></span>
 
-### <a name="use-standard-f-operators"></a><span data-ttu-id="a9f00-195">使用標準 F # 運算子</span><span class="sxs-lookup"><span data-stu-id="a9f00-195">Use standard F# operators</span></span>
+### <a name="use-standard-f-operators"></a><span data-ttu-id="3fe18-195">使用標準 F # 運算子</span><span class="sxs-lookup"><span data-stu-id="3fe18-195">Use standard F# operators</span></span>
 
-<span data-ttu-id="a9f00-196">下列運算子是在 F # 標準程式庫中定義，而且應該使用，而不是定義對等專案。</span><span class="sxs-lookup"><span data-stu-id="a9f00-196">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="a9f00-197">建議使用這些運算子，因為它通常會讓程式碼更容易閱讀及慣用。</span><span class="sxs-lookup"><span data-stu-id="a9f00-197">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="a9f00-198">背景 OCaml 或其他功能性程式設計語言的開發人員，可能習慣于不同的慣用語。</span><span class="sxs-lookup"><span data-stu-id="a9f00-198">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="a9f00-199">下列清單摘要說明建議的 F # 運算子。</span><span class="sxs-lookup"><span data-stu-id="a9f00-199">The following list summarizes the recommended F# operators.</span></span>
+<span data-ttu-id="3fe18-196">下列運算子是在 F # 標準程式庫中定義，而且應該使用，而不是定義對等專案。</span><span class="sxs-lookup"><span data-stu-id="3fe18-196">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="3fe18-197">建議使用這些運算子，因為它通常會讓程式碼更容易閱讀及慣用。</span><span class="sxs-lookup"><span data-stu-id="3fe18-197">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="3fe18-198">背景 OCaml 或其他功能性程式設計語言的開發人員，可能習慣于不同的慣用語。</span><span class="sxs-lookup"><span data-stu-id="3fe18-198">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="3fe18-199">下列清單摘要說明建議的 F # 運算子。</span><span class="sxs-lookup"><span data-stu-id="3fe18-199">The following list summarizes the recommended F# operators.</span></span>
 
 ```fsharp
 x |> f // Forward pipeline
@@ -441,23 +440,23 @@ x &&& y // Bitwise and, also for working with “flags” enumeration
 x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 ```
 
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="a9f00-200">使用泛型的前置詞語法 (`Foo<T>`) 喜好設定為後置語法 (`T Foo`) </span><span class="sxs-lookup"><span data-stu-id="a9f00-200">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="3fe18-200">使用泛型的前置詞語法 (`Foo<T>`) 喜好設定為後置語法 (`T Foo`) </span><span class="sxs-lookup"><span data-stu-id="3fe18-200">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
 
-<span data-ttu-id="a9f00-201">F # 會同時繼承命名泛型型別的後置 ML 樣式 (例如， `int list`) 和前置詞 .net 樣式 (例如 `list<int>`) 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-201">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="a9f00-202">偏好使用 .NET 樣式，除了五個特定的類型：</span><span class="sxs-lookup"><span data-stu-id="a9f00-202">Prefer the .NET style, except for five specific types:</span></span>
+<span data-ttu-id="3fe18-201">F # 會同時繼承命名泛型型別的後置 ML 樣式 (例如， `int list`) 和前置詞 .net 樣式 (例如 `list<int>`) 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-201">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="3fe18-202">偏好使用 .NET 樣式，除了五個特定的類型：</span><span class="sxs-lookup"><span data-stu-id="3fe18-202">Prefer the .NET style, except for five specific types:</span></span>
 
-1. <span data-ttu-id="a9f00-203">針對 F # 清單，請使用後置格式： `int list` 而不是 `list<int>` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-203">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
-2. <span data-ttu-id="a9f00-204">針對 F # 選項，請使用後置格式： `int option` 而不是 `option<int>` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-204">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
-3. <span data-ttu-id="a9f00-205">針對 F # 值選項，請使用後置格式： `int voption` 而不是 `voption<int>` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-205">For F# Value Options, use the postfix form: `int voption` rather than `voption<int>`.</span></span>
-4. <span data-ttu-id="a9f00-206">針對 F # 陣列，請使用語法名稱， `int[]` 而不是 `int array` 或 `array<int>` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-206">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
-5. <span data-ttu-id="a9f00-207">針對參考資料格，請使用 `int ref` 而不是 `ref<int>` 或 `Ref<int>` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-207">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
+1. <span data-ttu-id="3fe18-203">針對 F # 清單，請使用後置格式： `int list` 而不是 `list<int>` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-203">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
+2. <span data-ttu-id="3fe18-204">針對 F # 選項，請使用後置格式： `int option` 而不是 `option<int>` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-204">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
+3. <span data-ttu-id="3fe18-205">針對 F # 值選項，請使用後置格式： `int voption` 而不是 `voption<int>` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-205">For F# Value Options, use the postfix form: `int voption` rather than `voption<int>`.</span></span>
+4. <span data-ttu-id="3fe18-206">針對 F # 陣列，請使用語法名稱， `int[]` 而不是 `int array` 或 `array<int>` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-206">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
+5. <span data-ttu-id="3fe18-207">針對參考資料格，請使用 `int ref` 而不是 `ref<int>` 或 `Ref<int>` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-207">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
 
-<span data-ttu-id="a9f00-208">若為所有其他類型，請使用前置詞形式。</span><span class="sxs-lookup"><span data-stu-id="a9f00-208">For all other types, use the prefix form.</span></span>
+<span data-ttu-id="3fe18-208">若為所有其他類型，請使用前置詞形式。</span><span class="sxs-lookup"><span data-stu-id="3fe18-208">For all other types, use the prefix form.</span></span>
 
-## <a name="formatting-tuples"></a><span data-ttu-id="a9f00-209">格式化元組</span><span class="sxs-lookup"><span data-stu-id="a9f00-209">Formatting tuples</span></span>
+## <a name="formatting-tuples"></a><span data-ttu-id="3fe18-209">格式化元組</span><span class="sxs-lookup"><span data-stu-id="3fe18-209">Formatting tuples</span></span>
 
-<span data-ttu-id="a9f00-210">元組具現化應該是以括弧括住，而且其中的分隔逗點後面應該接著一個空格，例如： `(1, 2)` ， `(x, y, z)` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-210">A tuple instantiation should be parenthesized, and the delimiting commas within it should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
+<span data-ttu-id="3fe18-210">元組具現化應該是以括弧括住，而且其中的分隔逗點後面應該接著一個空格，例如： `(1, 2)` ， `(x, y, z)` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-210">A tuple instantiation should be parenthesized, and the delimiting commas within it should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
 
-<span data-ttu-id="a9f00-211">通常會接受在元組的模式比對中省略括弧：</span><span class="sxs-lookup"><span data-stu-id="a9f00-211">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
+<span data-ttu-id="3fe18-211">通常會接受在元組的模式比對中省略括弧：</span><span class="sxs-lookup"><span data-stu-id="3fe18-211">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
 
 ```fsharp
 let (x, y) = z // Destructuring
@@ -470,7 +469,7 @@ match x, y with
 | x, y -> 1
 ```
 
-<span data-ttu-id="a9f00-212">如果元組是函式的傳回值，通常也會接受省略括弧：</span><span class="sxs-lookup"><span data-stu-id="a9f00-212">It is also commonly accepted to omit parentheses if the tuple is the return value of a function:</span></span>
+<span data-ttu-id="3fe18-212">如果元組是函式的傳回值，通常也會接受省略括弧：</span><span class="sxs-lookup"><span data-stu-id="3fe18-212">It is also commonly accepted to omit parentheses if the tuple is the return value of a function:</span></span>
 
 ```fsharp
 // OK
@@ -480,11 +479,11 @@ let update model msg =
     | _ -> model, [ msg ]
 ```
 
-<span data-ttu-id="a9f00-213">總而言之，建議使用括弧化元組具現化，但使用元組進行模式比對或傳回值時，會將其視為可避免括弧。</span><span class="sxs-lookup"><span data-stu-id="a9f00-213">In summary, prefer parenthesized tuple instantiations, but when using tuples for pattern matching or a return value, it is considered fine to avoid parentheses.</span></span>
+<span data-ttu-id="3fe18-213">總而言之，建議使用括弧化元組具現化，但使用元組進行模式比對或傳回值時，會將其視為可避免括弧。</span><span class="sxs-lookup"><span data-stu-id="3fe18-213">In summary, prefer parenthesized tuple instantiations, but when using tuples for pattern matching or a return value, it is considered fine to avoid parentheses.</span></span>
 
-## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="a9f00-214">格式化區分聯集宣告</span><span class="sxs-lookup"><span data-stu-id="a9f00-214">Formatting discriminated union declarations</span></span>
+## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="3fe18-214">格式化區分聯集宣告</span><span class="sxs-lookup"><span data-stu-id="3fe18-214">Formatting discriminated union declarations</span></span>
 
-<span data-ttu-id="a9f00-215">`|`在類型定義中縮排四個空格：</span><span class="sxs-lookup"><span data-stu-id="a9f00-215">Indent `|` in type definition by four spaces:</span></span>
+<span data-ttu-id="3fe18-215">`|`在類型定義中縮排四個空格：</span><span class="sxs-lookup"><span data-stu-id="3fe18-215">Indent `|` in type definition by four spaces:</span></span>
 
 ```fsharp
 // OK
@@ -500,9 +499,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-## <a name="formatting-discriminated-unions"></a><span data-ttu-id="a9f00-216">設定區分等位的格式</span><span class="sxs-lookup"><span data-stu-id="a9f00-216">Formatting discriminated unions</span></span>
+## <a name="formatting-discriminated-unions"></a><span data-ttu-id="3fe18-216">設定區分等位的格式</span><span class="sxs-lookup"><span data-stu-id="3fe18-216">Formatting discriminated unions</span></span>
 
-<span data-ttu-id="a9f00-217">跨多行分割的具現化差異聯集，應該為包含的資料提供具有縮排的新範圍：</span><span class="sxs-lookup"><span data-stu-id="a9f00-217">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
+<span data-ttu-id="3fe18-217">跨多行分割的具現化差異聯集，應該為包含的資料提供具有縮排的新範圍：</span><span class="sxs-lookup"><span data-stu-id="3fe18-217">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
 
 ```fsharp
 let tree1 =
@@ -511,7 +510,7 @@ let tree1 =
          BinaryNode(BinaryValue 3, BinaryValue 4))
 ```
 
-<span data-ttu-id="a9f00-218">右括弧也可以在新行上：</span><span class="sxs-lookup"><span data-stu-id="a9f00-218">The closing parenthesis can also be on a new line:</span></span>
+<span data-ttu-id="3fe18-218">右括弧也可以在新行上：</span><span class="sxs-lookup"><span data-stu-id="3fe18-218">The closing parenthesis can also be on a new line:</span></span>
 
 ```fsharp
 let tree1 =
@@ -521,9 +520,9 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-record-declarations"></a><span data-ttu-id="a9f00-219">格式化記錄聲明</span><span class="sxs-lookup"><span data-stu-id="a9f00-219">Formatting record declarations</span></span>
+## <a name="formatting-record-declarations"></a><span data-ttu-id="3fe18-219">格式化記錄聲明</span><span class="sxs-lookup"><span data-stu-id="3fe18-219">Formatting record declarations</span></span>
 
-<span data-ttu-id="a9f00-220">`{`在類型定義中縮排四個空格，並在同一行上啟動欄位清單：</span><span class="sxs-lookup"><span data-stu-id="a9f00-220">Indent `{` in type definition by four spaces and start the field list on the same line:</span></span>
+<span data-ttu-id="3fe18-220">`{`在類型定義中縮排四個空格，並在同一行上啟動欄位清單：</span><span class="sxs-lookup"><span data-stu-id="3fe18-220">Indent `{` in type definition by four spaces and start the field list on the same line:</span></span>
 
 ```fsharp
 // OK
@@ -549,7 +548,7 @@ type PostalAddress =
     }
 ```
 
-<span data-ttu-id="a9f00-221">如果您要在記錄上宣告介面或成員，最好將開頭標記放在新行上，然後將結束記號放在新行上：</span><span class="sxs-lookup"><span data-stu-id="a9f00-221">Placing the opening token on a new line and the closing token on a new line is preferable if you are declaring interface implementations or members on the record:</span></span>
+<span data-ttu-id="3fe18-221">如果您要在記錄上宣告介面或成員，最好將開頭標記放在新行上，然後將結束記號放在新行上：</span><span class="sxs-lookup"><span data-stu-id="3fe18-221">Placing the opening token on a new line and the closing token on a new line is preferable if you are declaring interface implementations or members on the record:</span></span>
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -568,15 +567,15 @@ type MyRecord =
     interface IMyInterface
 ```
 
-## <a name="formatting-records"></a><span data-ttu-id="a9f00-222">格式化記錄</span><span class="sxs-lookup"><span data-stu-id="a9f00-222">Formatting records</span></span>
+## <a name="formatting-records"></a><span data-ttu-id="3fe18-222">格式化記錄</span><span class="sxs-lookup"><span data-stu-id="3fe18-222">Formatting records</span></span>
 
-<span data-ttu-id="a9f00-223">簡短記錄可以用一行撰寫：</span><span class="sxs-lookup"><span data-stu-id="a9f00-223">Short records can be written in one line:</span></span>
+<span data-ttu-id="3fe18-223">簡短記錄可以用一行撰寫：</span><span class="sxs-lookup"><span data-stu-id="3fe18-223">Short records can be written in one line:</span></span>
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-<span data-ttu-id="a9f00-224">較長的記錄應該使用新的標籤行：</span><span class="sxs-lookup"><span data-stu-id="a9f00-224">Records that are longer should use new lines for labels:</span></span>
+<span data-ttu-id="3fe18-224">較長的記錄應該使用新的標籤行：</span><span class="sxs-lookup"><span data-stu-id="3fe18-224">Records that are longer should use new lines for labels:</span></span>
 
 ```fsharp
 let rainbow =
@@ -584,10 +583,10 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-<span data-ttu-id="a9f00-225">如果您是下列情況，最好將開啟權杖放在新的一行上，將內容索引標籤為一個範圍，並將結束記號放在新行上：</span><span class="sxs-lookup"><span data-stu-id="a9f00-225">Placing the opening token on a new line, the contents tabbed over one scope, and the closing token on a new line is preferable if you are:</span></span>
+<span data-ttu-id="3fe18-225">如果您是下列情況，最好將開啟權杖放在新的一行上，將內容索引標籤為一個範圍，並將結束記號放在新行上：</span><span class="sxs-lookup"><span data-stu-id="3fe18-225">Placing the opening token on a new line, the contents tabbed over one scope, and the closing token on a new line is preferable if you are:</span></span>
 
-* <span data-ttu-id="a9f00-226">在具有不同縮排範圍的程式碼中移動記錄</span><span class="sxs-lookup"><span data-stu-id="a9f00-226">Moving records around in code with different indentation scopes</span></span>
-* <span data-ttu-id="a9f00-227">將它們輸送至函式</span><span class="sxs-lookup"><span data-stu-id="a9f00-227">Piping them into a function</span></span>
+* <span data-ttu-id="3fe18-226">在具有不同縮排範圍的程式碼中移動記錄</span><span class="sxs-lookup"><span data-stu-id="3fe18-226">Moving records around in code with different indentation scopes</span></span>
+* <span data-ttu-id="3fe18-227">將它們輸送至函式</span><span class="sxs-lookup"><span data-stu-id="3fe18-227">Piping them into a function</span></span>
 
 ```fsharp
 let rainbow =
@@ -618,19 +617,19 @@ let foo a =
             })
 ```
 
-<span data-ttu-id="a9f00-228">相同的規則適用于清單和陣列元素。</span><span class="sxs-lookup"><span data-stu-id="a9f00-228">The same rules apply for list and array elements.</span></span>
+<span data-ttu-id="3fe18-228">相同的規則適用于清單和陣列元素。</span><span class="sxs-lookup"><span data-stu-id="3fe18-228">The same rules apply for list and array elements.</span></span>
 
-## <a name="formatting-copy-and-update-record-expressions"></a><span data-ttu-id="a9f00-229">格式化複製和更新記錄運算式</span><span class="sxs-lookup"><span data-stu-id="a9f00-229">Formatting copy-and-update record expressions</span></span>
+## <a name="formatting-copy-and-update-record-expressions"></a><span data-ttu-id="3fe18-229">格式化複製和更新記錄運算式</span><span class="sxs-lookup"><span data-stu-id="3fe18-229">Formatting copy-and-update record expressions</span></span>
 
-<span data-ttu-id="a9f00-230">複製和更新記錄運算式仍是一筆記錄，因此適用類似的指導方針。</span><span class="sxs-lookup"><span data-stu-id="a9f00-230">A copy-and-update record expression is still a record, so similar guidelines apply.</span></span>
+<span data-ttu-id="3fe18-230">複製和更新記錄運算式仍是一筆記錄，因此適用類似的指導方針。</span><span class="sxs-lookup"><span data-stu-id="3fe18-230">A copy-and-update record expression is still a record, so similar guidelines apply.</span></span>
 
-<span data-ttu-id="a9f00-231">簡短運算式可以容納在同一行：</span><span class="sxs-lookup"><span data-stu-id="a9f00-231">Short expressions can fit on one line:</span></span>
+<span data-ttu-id="3fe18-231">簡短運算式可以容納在同一行：</span><span class="sxs-lookup"><span data-stu-id="3fe18-231">Short expressions can fit on one line:</span></span>
 
 ```fsharp
 let point2 = { point with X = 1; Y = 2 }
 ```
 
-<span data-ttu-id="a9f00-232">較長的運算式應該使用新的行：</span><span class="sxs-lookup"><span data-stu-id="a9f00-232">Longer expressions should use new lines:</span></span>
+<span data-ttu-id="3fe18-232">較長的運算式應該使用新的行：</span><span class="sxs-lookup"><span data-stu-id="3fe18-232">Longer expressions should use new lines:</span></span>
 
 ```fsharp
 let rainbow2 =
@@ -639,7 +638,7 @@ let rainbow2 =
         Lackeys = [ "Zippy"; "George"; "Bungle" ] }
 ```
 
-<span data-ttu-id="a9f00-233">如同記錄指引，您可能會想要為大括弧專用不同的行，並使用運算式將一個範圍向右縮排。</span><span class="sxs-lookup"><span data-stu-id="a9f00-233">And as with the record guidance, you may want to dedicate separate lines for the braces and indent one scope to the right with the expression.</span></span> <span data-ttu-id="a9f00-234">在某些特殊情況下（例如，使用不含括弧的選擇性包裝值），您可能需要將大括弧放在同一行：</span><span class="sxs-lookup"><span data-stu-id="a9f00-234">In some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:</span></span>
+<span data-ttu-id="3fe18-233">如同記錄指引，您可能會想要為大括弧專用不同的行，並使用運算式將一個範圍向右縮排。</span><span class="sxs-lookup"><span data-stu-id="3fe18-233">And as with the record guidance, you may want to dedicate separate lines for the braces and indent one scope to the right with the expression.</span></span> <span data-ttu-id="3fe18-234">在某些特殊情況下（例如，使用不含括弧的選擇性包裝值），您可能需要將大括弧放在同一行：</span><span class="sxs-lookup"><span data-stu-id="3fe18-234">In some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:</span></span>
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -657,18 +656,18 @@ let newState =
     }
 ```
 
-## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="a9f00-235">格式化清單和陣列</span><span class="sxs-lookup"><span data-stu-id="a9f00-235">Formatting lists and arrays</span></span>
+## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="3fe18-235">格式化清單和陣列</span><span class="sxs-lookup"><span data-stu-id="3fe18-235">Formatting lists and arrays</span></span>
 
-<span data-ttu-id="a9f00-236">`x :: l`以括弧括住的空格撰寫 `::` (`::` 是中置運算子，因此以空格) 括住。</span><span class="sxs-lookup"><span data-stu-id="a9f00-236">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces).</span></span>
+<span data-ttu-id="3fe18-236">`x :: l`以括弧括住的空格撰寫 `::` (`::` 是中置運算子，因此以空格) 括住。</span><span class="sxs-lookup"><span data-stu-id="3fe18-236">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces).</span></span>
 
-<span data-ttu-id="a9f00-237">在一行上宣告的清單和陣列，在左括弧之後和右括弧前面都必須有一個空格：</span><span class="sxs-lookup"><span data-stu-id="a9f00-237">List and arrays declared on a single line should have a space after the opening bracket and before the closing bracket:</span></span>
+<span data-ttu-id="3fe18-237">在一行上宣告的清單和陣列，在左括弧之後和右括弧前面都必須有一個空格：</span><span class="sxs-lookup"><span data-stu-id="3fe18-237">List and arrays declared on a single line should have a space after the opening bracket and before the closing bracket:</span></span>
 
 ```fsharp
 let xs = [ 1; 2; 3 ]
 let ys = [| 1; 2; 3; |]
 ```
 
-<span data-ttu-id="a9f00-238">請一律在兩個不同的大括弧運算子之間使用至少一個空格。</span><span class="sxs-lookup"><span data-stu-id="a9f00-238">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="a9f00-239">例如，在和之間保留一個空格 `[` `{` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-239">For example, leave a space between a `[` and a `{`.</span></span>
+<span data-ttu-id="3fe18-238">請一律在兩個不同的大括弧運算子之間使用至少一個空格。</span><span class="sxs-lookup"><span data-stu-id="3fe18-238">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="3fe18-239">例如，在和之間保留一個空格 `[` `{` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-239">For example, leave a space between a `[` and a `{`.</span></span>
 
 ```fsharp
 // OK
@@ -686,9 +685,9 @@ let ys = [| 1; 2; 3; |]
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-<span data-ttu-id="a9f00-240">相同的指導方針適用于元組的清單或陣列。</span><span class="sxs-lookup"><span data-stu-id="a9f00-240">The same guideline applies for lists or arrays of tuples.</span></span>
+<span data-ttu-id="3fe18-240">相同的指導方針適用于元組的清單或陣列。</span><span class="sxs-lookup"><span data-stu-id="3fe18-240">The same guideline applies for lists or arrays of tuples.</span></span>
 
-<span data-ttu-id="a9f00-241">分割成多行的清單和陣列，會遵循與記錄相同的規則：</span><span class="sxs-lookup"><span data-stu-id="a9f00-241">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
+<span data-ttu-id="3fe18-241">分割成多行的清單和陣列，會遵循與記錄相同的規則：</span><span class="sxs-lookup"><span data-stu-id="3fe18-241">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
 
 ```fsharp
 let pascalsTriangle =
@@ -705,9 +704,9 @@ let pascalsTriangle =
     |]
 ```
 
-<span data-ttu-id="a9f00-242">和記錄一樣，在自己的行上宣告左右括弧將會讓程式碼四處移動和輸送至函式。</span><span class="sxs-lookup"><span data-stu-id="a9f00-242">And as with records, declaring the opening and closing brackets on their own line will make moving code around and piping into functions easier.</span></span>
+<span data-ttu-id="3fe18-242">和記錄一樣，在自己的行上宣告左右括弧將會讓程式碼四處移動和輸送至函式。</span><span class="sxs-lookup"><span data-stu-id="3fe18-242">And as with records, declaring the opening and closing brackets on their own line will make moving code around and piping into functions easier.</span></span>
 
-<span data-ttu-id="a9f00-243">以程式設計方式產生陣列和清單時，最好不要在 `->` `do ... yield` 永遠產生值時使用：</span><span class="sxs-lookup"><span data-stu-id="a9f00-243">When generating arrays and lists programmatically, prefer `->` over `do ... yield` when a value is always generated:</span></span>
+<span data-ttu-id="3fe18-243">以程式設計方式產生陣列和清單時，最好不要在 `->` `do ... yield` 永遠產生值時使用：</span><span class="sxs-lookup"><span data-stu-id="3fe18-243">When generating arrays and lists programmatically, prefer `->` over `do ... yield` when a value is always generated:</span></span>
 
 ```fsharp
 // Preferred
@@ -717,7 +716,7 @@ let squares = [ for x in 1..10 -> x * x ]
 let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
-<span data-ttu-id="a9f00-244">舊版的 F # 語言需要 `yield` 在可能有條件地產生資料的情況下指定，或可能有連續的運算式可供評估。</span><span class="sxs-lookup"><span data-stu-id="a9f00-244">Older versions of the F# language required specifying `yield` in situations where data may be generated conditionally, or there may be consecutive expressions to be evaluated.</span></span> <span data-ttu-id="a9f00-245">`yield`除非您必須使用較舊的 F # 語言版本進行編譯，否則偏好省略這些關鍵字：</span><span class="sxs-lookup"><span data-stu-id="a9f00-245">Prefer omitting these `yield` keywords unless you must compile with an older F# language version:</span></span>
+<span data-ttu-id="3fe18-244">舊版的 F # 語言需要 `yield` 在可能有條件地產生資料的情況下指定，或可能有連續的運算式可供評估。</span><span class="sxs-lookup"><span data-stu-id="3fe18-244">Older versions of the F# language required specifying `yield` in situations where data may be generated conditionally, or there may be consecutive expressions to be evaluated.</span></span> <span data-ttu-id="3fe18-245">`yield`除非您必須使用較舊的 F # 語言版本進行編譯，否則偏好省略這些關鍵字：</span><span class="sxs-lookup"><span data-stu-id="3fe18-245">Prefer omitting these `yield` keywords unless you must compile with an older F# language version:</span></span>
 
 ```fsharp
 // Preferred
@@ -747,21 +746,21 @@ let daysOfWeek' includeWeekend =
     ]
 ```
 
-<span data-ttu-id="a9f00-246">在某些情況下， `do...yield` 可能有助於提高可讀性。</span><span class="sxs-lookup"><span data-stu-id="a9f00-246">In some cases, `do...yield` may aid in readability.</span></span> <span data-ttu-id="a9f00-247">不過，您應該將這些情況納入主觀考慮。</span><span class="sxs-lookup"><span data-stu-id="a9f00-247">These cases, though subjective, should be taken into consideration.</span></span>
+<span data-ttu-id="3fe18-246">在某些情況下， `do...yield` 可能有助於提高可讀性。</span><span class="sxs-lookup"><span data-stu-id="3fe18-246">In some cases, `do...yield` may aid in readability.</span></span> <span data-ttu-id="3fe18-247">不過，您應該將這些情況納入主觀考慮。</span><span class="sxs-lookup"><span data-stu-id="3fe18-247">These cases, though subjective, should be taken into consideration.</span></span>
 
-## <a name="formatting-if-expressions"></a><span data-ttu-id="a9f00-248">格式化 if 運算式</span><span class="sxs-lookup"><span data-stu-id="a9f00-248">Formatting if expressions</span></span>
+## <a name="formatting-if-expressions"></a><span data-ttu-id="3fe18-248">格式化 if 運算式</span><span class="sxs-lookup"><span data-stu-id="3fe18-248">Formatting if expressions</span></span>
 
-<span data-ttu-id="a9f00-249">條件的縮排取決於構成它們的運算式大小和複雜度。</span><span class="sxs-lookup"><span data-stu-id="a9f00-249">Indentation of conditionals depends on the size and complexity of the expressions that make them up.</span></span>
-<span data-ttu-id="a9f00-250">當下列情況時，請將它們寫入一行：</span><span class="sxs-lookup"><span data-stu-id="a9f00-250">Write them on one line when:</span></span>
+<span data-ttu-id="3fe18-249">條件的縮排取決於構成它們的運算式大小和複雜度。</span><span class="sxs-lookup"><span data-stu-id="3fe18-249">Indentation of conditionals depends on the size and complexity of the expressions that make them up.</span></span>
+<span data-ttu-id="3fe18-250">當下列情況時，請將它們寫入一行：</span><span class="sxs-lookup"><span data-stu-id="3fe18-250">Write them on one line when:</span></span>
 
-- <span data-ttu-id="a9f00-251">`cond`、 `e1` 和 `e2` 是簡短的</span><span class="sxs-lookup"><span data-stu-id="a9f00-251">`cond`, `e1`, and `e2` are short</span></span>
-- <span data-ttu-id="a9f00-252">`e1` 和 `e2` 本身並非 `if/then/else` 運算式本身。</span><span class="sxs-lookup"><span data-stu-id="a9f00-252">`e1` and `e2` are not `if/then/else` expressions themselves.</span></span>
+- <span data-ttu-id="3fe18-251">`cond`、 `e1` 和 `e2` 是簡短的</span><span class="sxs-lookup"><span data-stu-id="3fe18-251">`cond`, `e1`, and `e2` are short</span></span>
+- <span data-ttu-id="3fe18-252">`e1` 和 `e2` 本身並非 `if/then/else` 運算式本身。</span><span class="sxs-lookup"><span data-stu-id="3fe18-252">`e1` and `e2` are not `if/then/else` expressions themselves.</span></span>
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-<span data-ttu-id="a9f00-253">如果任何運算式為多行或運算式，則為 `if/then/else` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-253">If any of the expressions are multi-line or `if/then/else` expressions.</span></span>
+<span data-ttu-id="3fe18-253">如果任何運算式為多行或運算式，則為 `if/then/else` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-253">If any of the expressions are multi-line or `if/then/else` expressions.</span></span>
 
 ```fsharp
 if cond then
@@ -770,7 +769,7 @@ else
     e2
 ```
 
-<span data-ttu-id="a9f00-254">使用和的多個條件， `elif` `else` 會在 `if` 遵循一行運算式的規則時，在與相同的範圍中縮排 `if/then/else` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-254">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if` when they follow the rules of the one line `if/then/else` expressions.</span></span>
+<span data-ttu-id="3fe18-254">使用和的多個條件， `elif` `else` 會在 `if` 遵循一行運算式的規則時，在與相同的範圍中縮排 `if/then/else` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-254">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if` when they follow the rules of the one line `if/then/else` expressions.</span></span>
 
 ```fsharp
 if cond1 then e1
@@ -779,7 +778,7 @@ elif cond3 then e3
 else e4
 ```
 
-<span data-ttu-id="a9f00-255">如果有任何條件或運算式為多行，則整個 `if/then/else` 運算式為多行：</span><span class="sxs-lookup"><span data-stu-id="a9f00-255">If any of the conditions or expressions is multi-line, the entire `if/then/else` expression is multi-line:</span></span>
+<span data-ttu-id="3fe18-255">如果有任何條件或運算式為多行，則整個 `if/then/else` 運算式為多行：</span><span class="sxs-lookup"><span data-stu-id="3fe18-255">If any of the conditions or expressions is multi-line, the entire `if/then/else` expression is multi-line:</span></span>
 
 ```fsharp
 if cond1 then
@@ -792,9 +791,9 @@ else
     e4
 ```
 
-### <a name="pattern-matching-constructs"></a><span data-ttu-id="a9f00-256">模式比對結構</span><span class="sxs-lookup"><span data-stu-id="a9f00-256">Pattern matching constructs</span></span>
+### <a name="pattern-matching-constructs"></a><span data-ttu-id="3fe18-256">模式比對結構</span><span class="sxs-lookup"><span data-stu-id="3fe18-256">Pattern matching constructs</span></span>
 
-<span data-ttu-id="a9f00-257">`|`針對相符的每個子句（沒有縮排）使用。</span><span class="sxs-lookup"><span data-stu-id="a9f00-257">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="a9f00-258">如果運算式很短，則如果每個子運算式也很簡單，您可以考慮使用一行。</span><span class="sxs-lookup"><span data-stu-id="a9f00-258">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
+<span data-ttu-id="3fe18-257">`|`針對相符的每個子句（沒有縮排）使用。</span><span class="sxs-lookup"><span data-stu-id="3fe18-257">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="3fe18-258">如果運算式很短，則如果每個子運算式也很簡單，您可以考慮使用一行。</span><span class="sxs-lookup"><span data-stu-id="3fe18-258">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
 
 ```fsharp
 // OK
@@ -810,7 +809,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-<span data-ttu-id="a9f00-259">如果模式比對箭號右邊的運算式太大，請將它移到下一行，從縮排一個步驟 `match` / `|` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-259">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
+<span data-ttu-id="3fe18-259">如果模式比對箭號右邊的運算式太大，請將它移到下一行，從縮排一個步驟 `match` / `|` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-259">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
 
 ```fsharp
 match lam with
@@ -822,7 +821,7 @@ match lam with
 
 ```
 
-<span data-ttu-id="a9f00-260">匿名函式的模式比對（從開始 `function` ）通常不會縮排太遠。</span><span class="sxs-lookup"><span data-stu-id="a9f00-260">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="a9f00-261">例如，如下所示將一個範圍縮排，如下所示：</span><span class="sxs-lookup"><span data-stu-id="a9f00-261">For example, indenting one scope as follows is fine:</span></span>
+<span data-ttu-id="3fe18-260">匿名函式的模式比對（從開始 `function` ）通常不會縮排太遠。</span><span class="sxs-lookup"><span data-stu-id="3fe18-260">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="3fe18-261">例如，如下所示將一個範圍縮排，如下所示：</span><span class="sxs-lookup"><span data-stu-id="3fe18-261">For example, indenting one scope as follows is fine:</span></span>
 
 ```fsharp
 lambdaList
@@ -833,7 +832,7 @@ lambdaList
         | Var v -> 1)
 ```
 
-<span data-ttu-id="a9f00-262">在開頭的函式中的模式比 `let` `let rec` 對應該在開始之後縮排四個空格 `let` ，即使 `function` 使用關鍵字也是如此：</span><span class="sxs-lookup"><span data-stu-id="a9f00-262">Pattern matching in functions defined by `let` or `let rec` should be indented four spaces after starting of `let`, even if `function` keyword is used:</span></span>
+<span data-ttu-id="3fe18-262">在開頭的函式中的模式比 `let` `let rec` 對應該在開始之後縮排四個空格 `let` ，即使 `function` 使用關鍵字也是如此：</span><span class="sxs-lookup"><span data-stu-id="3fe18-262">Pattern matching in functions defined by `let` or `let rec` should be indented four spaces after starting of `let`, even if `function` keyword is used:</span></span>
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -842,11 +841,11 @@ let rec sizeLambda acc = function
     | Var v -> succ acc
 ```
 
-<span data-ttu-id="a9f00-263">我們不建議對齊箭號。</span><span class="sxs-lookup"><span data-stu-id="a9f00-263">We do not recommend aligning arrows.</span></span>
+<span data-ttu-id="3fe18-263">我們不建議對齊箭號。</span><span class="sxs-lookup"><span data-stu-id="3fe18-263">We do not recommend aligning arrows.</span></span>
 
-## <a name="formatting-trywith-expressions"></a><span data-ttu-id="a9f00-264">格式化 try/with 運算式</span><span class="sxs-lookup"><span data-stu-id="a9f00-264">Formatting try/with expressions</span></span>
+## <a name="formatting-trywith-expressions"></a><span data-ttu-id="3fe18-264">格式化 try/with 運算式</span><span class="sxs-lookup"><span data-stu-id="3fe18-264">Formatting try/with expressions</span></span>
 
-<span data-ttu-id="a9f00-265">例外狀況類型的模式比對應該在與相同的層級上縮排 `with` 。</span><span class="sxs-lookup"><span data-stu-id="a9f00-265">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
+<span data-ttu-id="3fe18-265">例外狀況類型的模式比對應該在與相同的層級上縮排 `with` 。</span><span class="sxs-lookup"><span data-stu-id="3fe18-265">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
 
 ```fsharp
 try
@@ -861,9 +860,9 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a><span data-ttu-id="a9f00-266">格式化函式參數應用程式</span><span class="sxs-lookup"><span data-stu-id="a9f00-266">Formatting function parameter application</span></span>
+## <a name="formatting-function-parameter-application"></a><span data-ttu-id="3fe18-266">格式化函式參數應用程式</span><span class="sxs-lookup"><span data-stu-id="3fe18-266">Formatting function parameter application</span></span>
 
-<span data-ttu-id="a9f00-267">一般而言，大部分引數都是在同一行提供：</span><span class="sxs-lookup"><span data-stu-id="a9f00-267">In general, most arguments are provided on the same line:</span></span>
+<span data-ttu-id="3fe18-267">一般而言，大部分引數都是在同一行提供：</span><span class="sxs-lookup"><span data-stu-id="3fe18-267">In general, most arguments are provided on the same line:</span></span>
 
 ```fsharp
 let x = sprintf "\t%s - %i\n\r" x.IngredientName x.Quantity
@@ -872,7 +871,7 @@ let printListWithOffset a list1 =
     List.iter (fun elem -> printfn $"%d{a + elem}") list1
 ```
 
-<span data-ttu-id="a9f00-268">當管線很在意時，通常也會有同樣的情況，也就是在同一行上以引數的形式來套用局部函數：</span><span class="sxs-lookup"><span data-stu-id="a9f00-268">When pipelines are concerned, the same is typically also true, where a curried function is applied as an argument on the same line:</span></span>
+<span data-ttu-id="3fe18-268">當管線很在意時，通常也會有同樣的情況，也就是在同一行上以引數的形式來套用局部函數：</span><span class="sxs-lookup"><span data-stu-id="3fe18-268">When pipelines are concerned, the same is typically also true, where a curried function is applied as an argument on the same line:</span></span>
 
 ```
 let printListWithOffsetPiped a list1 =
@@ -880,7 +879,7 @@ let printListWithOffsetPiped a list1 =
     |> List.iter (fun elem -> printfn $"%d{a + elem}")
 ```
 
-<span data-ttu-id="a9f00-269">不過，您可能會想要在新行上將引數傳遞至函式，因為可讀性或引數清單或引數名稱太長。</span><span class="sxs-lookup"><span data-stu-id="a9f00-269">However, you may wish to pass arguments to a function on a new line, as a matter of readability or because the list of arguments or the argument names are too long.</span></span> <span data-ttu-id="a9f00-270">在此情況下，請使用一個範圍縮排：</span><span class="sxs-lookup"><span data-stu-id="a9f00-270">In that case, indent with one scope:</span></span>
+<span data-ttu-id="3fe18-269">不過，您可能會想要在新行上將引數傳遞至函式，因為可讀性或引數清單或引數名稱太長。</span><span class="sxs-lookup"><span data-stu-id="3fe18-269">However, you may wish to pass arguments to a function on a new line, as a matter of readability or because the list of arguments or the argument names are too long.</span></span> <span data-ttu-id="3fe18-270">在此情況下，請使用一個範圍縮排：</span><span class="sxs-lookup"><span data-stu-id="3fe18-270">In that case, indent with one scope:</span></span>
 
 ```fsharp
 
@@ -901,7 +900,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-<span data-ttu-id="a9f00-271">針對 lambda 運算式，您可能也想要考慮將 lambda 運算式的主體放在新行上（以一個範圍縮排，如果夠長）：</span><span class="sxs-lookup"><span data-stu-id="a9f00-271">For lambda expressions, you may also want to consider placing the body of a lambda expression on a new line, indented by one scope, if it is long enough:</span></span>
+<span data-ttu-id="3fe18-271">針對 lambda 運算式，您可能也想要考慮將 lambda 運算式的主體放在新行上（以一個範圍縮排，如果夠長）：</span><span class="sxs-lookup"><span data-stu-id="3fe18-271">For lambda expressions, you may also want to consider placing the body of a lambda expression on a new line, indented by one scope, if it is long enough:</span></span>
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -917,13 +916,13 @@ let printListWithOffsetPiped a list1 =
             printfn $"%d{a + elem}")
 ```
 
-<span data-ttu-id="a9f00-272">如果 lambda 運算式的主體長度為多行，您應該考慮將它重構至本機範圍的函式。</span><span class="sxs-lookup"><span data-stu-id="a9f00-272">If the body of a lambda expression is multiple lines long, you should consider refactoring it into a locally-scoped function.</span></span>
+<span data-ttu-id="3fe18-272">如果 lambda 運算式的主體長度為多行，您應該考慮將它重構至本機範圍的函式。</span><span class="sxs-lookup"><span data-stu-id="3fe18-272">If the body of a lambda expression is multiple lines long, you should consider refactoring it into a locally-scoped function.</span></span>
 
-### <a name="formatting-infix-operators"></a><span data-ttu-id="a9f00-273">格式化中置運算子</span><span class="sxs-lookup"><span data-stu-id="a9f00-273">Formatting infix operators</span></span>
+### <a name="formatting-infix-operators"></a><span data-ttu-id="3fe18-273">格式化中置運算子</span><span class="sxs-lookup"><span data-stu-id="3fe18-273">Formatting infix operators</span></span>
 
-<span data-ttu-id="a9f00-274">以空格分隔運算子。</span><span class="sxs-lookup"><span data-stu-id="a9f00-274">Separate operators by spaces.</span></span> <span data-ttu-id="a9f00-275">這項規則的明顯例外是 `!` 和 `.` 運算子。</span><span class="sxs-lookup"><span data-stu-id="a9f00-275">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
+<span data-ttu-id="3fe18-274">以空格分隔運算子。</span><span class="sxs-lookup"><span data-stu-id="3fe18-274">Separate operators by spaces.</span></span> <span data-ttu-id="3fe18-275">這項規則的明顯例外是 `!` 和 `.` 運算子。</span><span class="sxs-lookup"><span data-stu-id="3fe18-275">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
 
-<span data-ttu-id="a9f00-276">中置運算式可在相同資料行上進行組合：</span><span class="sxs-lookup"><span data-stu-id="a9f00-276">Infix expressions are OK to lineup on same column:</span></span>
+<span data-ttu-id="3fe18-276">中置運算式可在相同資料行上進行組合：</span><span class="sxs-lookup"><span data-stu-id="3fe18-276">Infix expressions are OK to lineup on same column:</span></span>
 
 ```fsharp
 acc +
@@ -935,9 +934,9 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators-or-mutable-assignments"></a><span data-ttu-id="a9f00-277">格式化管線運算子或可變指派</span><span class="sxs-lookup"><span data-stu-id="a9f00-277">Formatting pipeline operators or mutable assignments</span></span>
+### <a name="formatting-pipeline-operators-or-mutable-assignments"></a><span data-ttu-id="3fe18-277">格式化管線運算子或可變指派</span><span class="sxs-lookup"><span data-stu-id="3fe18-277">Formatting pipeline operators or mutable assignments</span></span>
 
-<span data-ttu-id="a9f00-278">管線 `|>` 運算子應該在其運作的運算式底下。</span><span class="sxs-lookup"><span data-stu-id="a9f00-278">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
+<span data-ttu-id="3fe18-278">管線 `|>` 運算子應該在其運作的運算式底下。</span><span class="sxs-lookup"><span data-stu-id="3fe18-278">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
 
 ```fsharp
 // Preferred approach
@@ -969,7 +968,7 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
                |> Array.concat
 ```
 
-<span data-ttu-id="a9f00-279">這也適用于可變的 setter：</span><span class="sxs-lookup"><span data-stu-id="a9f00-279">This also applies to mutable setters:</span></span>
+<span data-ttu-id="3fe18-279">這也適用于可變的 setter：</span><span class="sxs-lookup"><span data-stu-id="3fe18-279">This also applies to mutable setters:</span></span>
 
 ```fsharp
 // Preferred approach
@@ -986,9 +985,9 @@ ctx.Response.Headers.[HeaderNames.ContentLength] <- bytes.Length
                                                     |> StringValues
 ```
 
-### <a name="formatting-modules"></a><span data-ttu-id="a9f00-280">格式化模組</span><span class="sxs-lookup"><span data-stu-id="a9f00-280">Formatting modules</span></span>
+### <a name="formatting-modules"></a><span data-ttu-id="3fe18-280">格式化模組</span><span class="sxs-lookup"><span data-stu-id="3fe18-280">Formatting modules</span></span>
 
-<span data-ttu-id="a9f00-281">本機模組中的程式碼必須相對於模組進行縮排，但是最上層模組中的程式碼不應該縮排。</span><span class="sxs-lookup"><span data-stu-id="a9f00-281">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="a9f00-282">命名空間元素不需要縮排。</span><span class="sxs-lookup"><span data-stu-id="a9f00-282">Namespace elements do not have to be indented.</span></span>
+<span data-ttu-id="3fe18-281">本機模組中的程式碼必須相對於模組進行縮排，但是最上層模組中的程式碼不應該縮排。</span><span class="sxs-lookup"><span data-stu-id="3fe18-281">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="3fe18-282">命名空間元素不需要縮排。</span><span class="sxs-lookup"><span data-stu-id="3fe18-282">Namespace elements do not have to be indented.</span></span>
 
 ```fsharp
 // A is a top-level module.
@@ -1006,9 +1005,9 @@ module A2 =
     let function2 a b = a * a - b * b
 ```
 
-### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="a9f00-283">格式化物件運算式和介面</span><span class="sxs-lookup"><span data-stu-id="a9f00-283">Formatting object expressions and interfaces</span></span>
+### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="3fe18-283">格式化物件運算式和介面</span><span class="sxs-lookup"><span data-stu-id="3fe18-283">Formatting object expressions and interfaces</span></span>
 
-<span data-ttu-id="a9f00-284">物件運算式和介面的對齊方式應該與在 `member` 四個空格之後縮排的方式相同。</span><span class="sxs-lookup"><span data-stu-id="a9f00-284">Object expressions and interfaces should be aligned in the same way with `member` being indented after four spaces.</span></span>
+<span data-ttu-id="3fe18-284">物件運算式和介面的對齊方式應該與在 `member` 四個空格之後縮排的方式相同。</span><span class="sxs-lookup"><span data-stu-id="3fe18-284">Object expressions and interfaces should be aligned in the same way with `member` being indented after four spaces.</span></span>
 
 ```fsharp
 let comparer =
@@ -1020,9 +1019,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="a9f00-285">格式化運算式中的空白字元</span><span class="sxs-lookup"><span data-stu-id="a9f00-285">Formatting white space in expressions</span></span>
+### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="3fe18-285">格式化運算式中的空白字元</span><span class="sxs-lookup"><span data-stu-id="3fe18-285">Formatting white space in expressions</span></span>
 
-<span data-ttu-id="a9f00-286">避免 F # 運算式中有多餘的空白字元。</span><span class="sxs-lookup"><span data-stu-id="a9f00-286">Avoid extraneous white space in F# expressions.</span></span>
+<span data-ttu-id="3fe18-286">避免 F # 運算式中有多餘的空白字元。</span><span class="sxs-lookup"><span data-stu-id="3fe18-286">Avoid extraneous white space in F# expressions.</span></span>
 
 ```fsharp
 // OK
@@ -1032,7 +1031,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-<span data-ttu-id="a9f00-287">具名引數也不應該有周圍的空格 `=` ：</span><span class="sxs-lookup"><span data-stu-id="a9f00-287">Named arguments should also not have space surrounding the `=`:</span></span>
+<span data-ttu-id="3fe18-287">具名引數也不應該有周圍的空格 `=` ：</span><span class="sxs-lookup"><span data-stu-id="3fe18-287">Named arguments should also not have space surrounding the `=`:</span></span>
 
 ```fsharp
 // OK
@@ -1042,9 +1041,9 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
 
-### <a name="formatting-constructors-static-members-and-member-invocations"></a><span data-ttu-id="a9f00-288">格式化函式、靜態成員和成員調用</span><span class="sxs-lookup"><span data-stu-id="a9f00-288">Formatting constructors, static members, and member invocations</span></span>
+### <a name="formatting-constructors-static-members-and-member-invocations"></a><span data-ttu-id="3fe18-288">格式化函式、靜態成員和成員調用</span><span class="sxs-lookup"><span data-stu-id="3fe18-288">Formatting constructors, static members, and member invocations</span></span>
 
-<span data-ttu-id="a9f00-289">如果運算式是簡短的，請以空格分隔引數，並將它保留在同一行。</span><span class="sxs-lookup"><span data-stu-id="a9f00-289">If the expression is short, separate arguments with spaces and keep it in one line.</span></span>
+<span data-ttu-id="3fe18-289">如果運算式是簡短的，請以空格分隔引數，並將它保留在同一行。</span><span class="sxs-lookup"><span data-stu-id="3fe18-289">If the expression is short, separate arguments with spaces and keep it in one line.</span></span>
 
 ```fsharp
 let person = new Person(a1, a2)
@@ -1054,7 +1053,7 @@ let myRegexMatch = Regex.Match(input, regex)
 let untypedRes = checker.ParseFile(file, source, opts)
 ```
 
-<span data-ttu-id="a9f00-290">如果運算式很長，請使用分行符號和縮排一個範圍，而不是縮排到括弧。</span><span class="sxs-lookup"><span data-stu-id="a9f00-290">If the expression is long, use newlines and indent one scope, rather than indenting to the bracket.</span></span>
+<span data-ttu-id="3fe18-290">如果運算式很長，請使用分行符號和縮排一個範圍，而不是縮排到括弧。</span><span class="sxs-lookup"><span data-stu-id="3fe18-290">If the expression is long, use newlines and indent one scope, rather than indenting to the bracket.</span></span>
 
 ```fsharp
 let person =
@@ -1077,9 +1076,9 @@ let untypedRes =
     )
 ```
 
-## <a name="formatting-attributes"></a><span data-ttu-id="a9f00-291">格式化屬性</span><span class="sxs-lookup"><span data-stu-id="a9f00-291">Formatting attributes</span></span>
+## <a name="formatting-attributes"></a><span data-ttu-id="3fe18-291">格式化屬性</span><span class="sxs-lookup"><span data-stu-id="3fe18-291">Formatting attributes</span></span>
 
-<span data-ttu-id="a9f00-292">[屬性](../language-reference/attributes.md) 位於結構的上方：</span><span class="sxs-lookup"><span data-stu-id="a9f00-292">[Attributes](../language-reference/attributes.md) are placed above a construct:</span></span>
+<span data-ttu-id="3fe18-292">[屬性](../language-reference/attributes.md) 位於結構的上方：</span><span class="sxs-lookup"><span data-stu-id="3fe18-292">[Attributes](../language-reference/attributes.md) are placed above a construct:</span></span>
 
 ```fsharp
 [<SomeAttribute>]
@@ -1095,7 +1094,7 @@ type MyRecord =
       Label2: string }
 ```
 
-<span data-ttu-id="a9f00-293">它們應該位於任何 XML 檔之後：</span><span class="sxs-lookup"><span data-stu-id="a9f00-293">They should go after any XML documentation:</span></span>
+<span data-ttu-id="3fe18-293">它們應該位於任何 XML 檔之後：</span><span class="sxs-lookup"><span data-stu-id="3fe18-293">They should go after any XML documentation:</span></span>
 
 ```fsharp
 /// Module with some things in it.
@@ -1104,9 +1103,9 @@ module M =
     let f x = x
 ```
 
-### <a name="formatting-attributes-on-parameters"></a><span data-ttu-id="a9f00-294">格式化參數上的屬性</span><span class="sxs-lookup"><span data-stu-id="a9f00-294">Formatting attributes on parameters</span></span>
+### <a name="formatting-attributes-on-parameters"></a><span data-ttu-id="3fe18-294">格式化參數上的屬性</span><span class="sxs-lookup"><span data-stu-id="3fe18-294">Formatting attributes on parameters</span></span>
 
-<span data-ttu-id="a9f00-295">屬性也可以放在參數上。</span><span class="sxs-lookup"><span data-stu-id="a9f00-295">Attributes can also be placed on parameters.</span></span> <span data-ttu-id="a9f00-296">在此情況下，請將它放在與參數相同的行上，然後在名稱之前：</span><span class="sxs-lookup"><span data-stu-id="a9f00-296">In this case, place then on the same line as the parameter and before the name:</span></span>
+<span data-ttu-id="3fe18-295">屬性也可以放在參數上。</span><span class="sxs-lookup"><span data-stu-id="3fe18-295">Attributes can also be placed on parameters.</span></span> <span data-ttu-id="3fe18-296">在此情況下，請將它放在與參數相同的行上，然後在名稱之前：</span><span class="sxs-lookup"><span data-stu-id="3fe18-296">In this case, place then on the same line as the parameter and before the name:</span></span>
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.
@@ -1114,9 +1113,9 @@ type C() =
     member _.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
 ```
 
-### <a name="formatting-multiple-attributes"></a><span data-ttu-id="a9f00-297">格式化多個屬性</span><span class="sxs-lookup"><span data-stu-id="a9f00-297">Formatting multiple attributes</span></span>
+### <a name="formatting-multiple-attributes"></a><span data-ttu-id="3fe18-297">格式化多個屬性</span><span class="sxs-lookup"><span data-stu-id="3fe18-297">Formatting multiple attributes</span></span>
 
-<span data-ttu-id="a9f00-298">當您將多個屬性套用至非參數的結構時，應該將它們放在每行一個屬性中：</span><span class="sxs-lookup"><span data-stu-id="a9f00-298">When multiple attributes are applied to a construct that is not a parameter, they should be placed such that there is one attribute per line:</span></span>
+<span data-ttu-id="3fe18-298">當您將多個屬性套用至非參數的結構時，應該將它們放在每行一個屬性中：</span><span class="sxs-lookup"><span data-stu-id="3fe18-298">When multiple attributes are applied to a construct that is not a parameter, they should be placed such that there is one attribute per line:</span></span>
 
 ```fsharp
 [<Struct>]
@@ -1126,11 +1125,11 @@ type MyRecord =
       Label2: string }
 ```
 
-<span data-ttu-id="a9f00-299">套用至參數時，它們必須在同一行，並以 `;` 分隔符號分隔。</span><span class="sxs-lookup"><span data-stu-id="a9f00-299">When applied to a parameter, they must be on the same line and separated by a `;` separator.</span></span>
+<span data-ttu-id="3fe18-299">套用至參數時，它們必須在同一行，並以 `;` 分隔符號分隔。</span><span class="sxs-lookup"><span data-stu-id="3fe18-299">When applied to a parameter, they must be on the same line and separated by a `;` separator.</span></span>
 
-## <a name="formatting-literals"></a><span data-ttu-id="a9f00-300">格式化常值</span><span class="sxs-lookup"><span data-stu-id="a9f00-300">Formatting literals</span></span>
+## <a name="formatting-literals"></a><span data-ttu-id="3fe18-300">格式化常值</span><span class="sxs-lookup"><span data-stu-id="3fe18-300">Formatting literals</span></span>
 
-<span data-ttu-id="a9f00-301">使用屬性的[F # 常](../language-reference/literals.md)值 `Literal` 應該將屬性放在其本身的行，並使用 PascalCase 命名：</span><span class="sxs-lookup"><span data-stu-id="a9f00-301">[F# literals](../language-reference/literals.md) using the `Literal` attribute should place the attribute on its own line and use PascalCase naming:</span></span>
+<span data-ttu-id="3fe18-301">使用屬性的[F # 常](../language-reference/literals.md)值 `Literal` 應該將屬性放在其本身的行，並使用 PascalCase 命名：</span><span class="sxs-lookup"><span data-stu-id="3fe18-301">[F# literals](../language-reference/literals.md) using the `Literal` attribute should place the attribute on its own line and use PascalCase naming:</span></span>
 
 ```fsharp
 [<Literal>]
@@ -1140,11 +1139,11 @@ let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
-<span data-ttu-id="a9f00-302">避免將屬性放在與值相同的行上。</span><span class="sxs-lookup"><span data-stu-id="a9f00-302">Avoid placing the attribute on the same line as the value.</span></span>
+<span data-ttu-id="3fe18-302">避免將屬性放在與值相同的行上。</span><span class="sxs-lookup"><span data-stu-id="3fe18-302">Avoid placing the attribute on the same line as the value.</span></span>
 
-## <a name="formatting-computation-expression-operations"></a><span data-ttu-id="a9f00-303">格式化計算運算式作業</span><span class="sxs-lookup"><span data-stu-id="a9f00-303">Formatting computation expression operations</span></span>
+## <a name="formatting-computation-expression-operations"></a><span data-ttu-id="3fe18-303">格式化計算運算式作業</span><span class="sxs-lookup"><span data-stu-id="3fe18-303">Formatting computation expression operations</span></span>
 
-<span data-ttu-id="a9f00-304">建立 [計算運算式](../language-reference/computation-expressions.md)的自訂作業時，建議使用 camelCase 命名：</span><span class="sxs-lookup"><span data-stu-id="a9f00-304">When creating custom operations for [computation expressions](../language-reference/computation-expressions.md), it is recommended to use camelCase naming:</span></span>
+<span data-ttu-id="3fe18-304">建立 [計算運算式](../language-reference/computation-expressions.md)的自訂作業時，建議使用 camelCase 命名：</span><span class="sxs-lookup"><span data-stu-id="3fe18-304">When creating custom operations for [computation expressions](../language-reference/computation-expressions.md), it is recommended to use camelCase naming:</span></span>
 
 ```fsharp
 type MathBuilder () =
@@ -1183,5 +1182,5 @@ let myNumber =
     }
 ```
 
-<span data-ttu-id="a9f00-305">正在建立模型的網域最後應該會驅動命名慣例。</span><span class="sxs-lookup"><span data-stu-id="a9f00-305">The domain that's being modeled should ultimately drive the naming convention.</span></span>
-<span data-ttu-id="a9f00-306">如果慣用為使用不同的慣例，則應改用該慣例。</span><span class="sxs-lookup"><span data-stu-id="a9f00-306">If it is idiomatic to use a different convention, that convention should be used instead.</span></span>
+<span data-ttu-id="3fe18-305">正在建立模型的網域最後應該會驅動命名慣例。</span><span class="sxs-lookup"><span data-stu-id="3fe18-305">The domain that's being modeled should ultimately drive the naming convention.</span></span>
+<span data-ttu-id="3fe18-306">如果慣用為使用不同的慣例，則應改用該慣例。</span><span class="sxs-lookup"><span data-stu-id="3fe18-306">If it is idiomatic to use a different convention, that convention should be used instead.</span></span>
