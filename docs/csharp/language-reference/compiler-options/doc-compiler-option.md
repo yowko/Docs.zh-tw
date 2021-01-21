@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: e55b86e5b028fb871f309d80217477cfd164c106
+ms.sourcegitcommit: f0eb7eeedf3ceec726499fa678786d03083214ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91173252"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98629250"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
 
@@ -54,15 +54,19 @@ ms.locfileid: "91173252"
   
  如需從程式碼中的註解產生文件的方式，請參閱[建議使用的文件註解標籤](../../programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
-  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-2019-development-environment"></a>在 Visual Studio 2019 開發環境中設定這個編譯器選項  
+
 1. 開啟專案的 [屬性] 頁面。  
+2. 按一下 [建置] 索引標籤。
+3. 修改 **XML 文件檔案** 屬性。
   
-2. 按一下 [建置] 索引標籤。  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-for-mac-development-environment"></a>在 Visual Studio for Mac 開發環境中設定這個編譯器選項  
   
-3. 修改 **XML 文件檔案** 屬性。  
-  
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
+1. 開啟專案的 [ **選項** ] 頁面。
+2. 選取 [ **編譯器** ] 索引標籤。
+3. 選取 [ **產生 xml** 檔]，然後在文字方塊中輸入檔案名。
+
+如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
   
 ## <a name="see-also"></a>另請參閱
 
