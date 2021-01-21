@@ -18,6 +18,14 @@
     - name: 依版本的中斷性變更
       expanded: true
       items:
+        - name: .NET 6.0
+          items:
+            - name: 概觀
+              href: 6.0.md
+            - name: Windows Forms
+              items:
+                - name: TableLayoutSettings 屬性擲回 InvalidEnumArgumentException
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
         - name: .NET 5.0
           items:
             - name: 概觀
@@ -551,6 +559,10 @@
               href: visualbasic.md
         - name: Windows Forms
           items:
+            - name: .NET 6.0
+              items:
+                - name: TableLayoutSettings 屬性擲回 InvalidEnumArgumentException
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
             - name: .NET 5.0
               items:
                 - name: OutputType 設定為 WinExe
