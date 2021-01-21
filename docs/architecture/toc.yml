@@ -15,7 +15,7 @@
       href: containerized-lifecycle/
     - name: 使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化
       href: modernize-with-azure-containers/
-    - name: 使用 .NET Core 3.1 在 Windows 10 上將傳統型應用程式現代化
+    - name: 使用 .NET 5 在 Windows 10 將傳統型應用程式現代化
       href: modernize-desktop/
     - name: .NET 微服務：容器化之 .NET 應用程式的架構
       href: microservices/
