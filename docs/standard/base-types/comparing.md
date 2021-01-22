@@ -2,6 +2,7 @@
 title: 在 .NET 中比較字串
 description: 深入瞭解在 .NET 中比較字串的方法。 瞭解 Compare、CompareOrdinal、CompareTo、StartsWith、EndsWith、Equals、IndexOf & LastIndexOf 方法。
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 08a92e314ad0900679d46cc759c80db89b43f0f0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ca2e89fa8c42807757f4ed004c8f8ddaaeafba3b
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823143"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693068"
 ---
 # <a name="compare-strings-in-net"></a>比較 .NET 中的字串
 
@@ -156,7 +157,7 @@ ms.locfileid: "94823143"
 
  搭配方法使用時，這兩種方法都很有用 <xref:System.String.Remove%2A?displayProperty=nameWithType> 。 您可以使用 `IndexOf` 或 `LastIndexOf` 方法來取出字元的位置，然後提供該位置給 `Remove` 方法，以移除字元或以該字元開頭的單字。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 .NET 中使用字串的最佳做法](best-practices-strings.md)
 - [基底字元串作業](basic-string-operations.md)

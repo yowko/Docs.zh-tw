@@ -2,6 +2,7 @@
 title: char.Net 中的 acter 編碼簡介
 description: 瞭解如何 char 在 .net 中 acter 編碼和解碼。
 ms.date: 03/09/2020
+ms.topic: conceptual
 no-loc:
 - Rune
 - char
@@ -10,12 +11,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 92710e2d223d1d765efc7e877cb16546ef372907
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282306"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693133"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 
@@ -46,7 +47,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-每個 char acter 都是以單一 `char` 值表示。 這種模式適用于大部分世界的語言。 例如，以下是兩個中文 acters 的輸出 char ，這聽起來像是 *nǐ hǎo* ，意思是 *Hello* ：
+每個 char acter 都是以單一 `char` 值表示。 這種模式適用于大部分世界的語言。 例如，以下是兩個中文 acters 的輸出 char ，這聽起來像是 *nǐ hǎo* ，意思是 *Hello*：
 
 ```csharp
 PrintChars("你好");
@@ -97,7 +98,7 @@ s[1] = '�' ('\udc02')
 
 這些範例顯示的值 `string.Length` （指出 `char` 實例數目）不一定表示顯示的 char acters 數目。 單一 `char` 實例本身不一定代表 char acter。
 
-`char`對應至單一 acter 的配對 char 稱為 *代理配對* 。 若要瞭解其運作方式，您必須瞭解 Unicode 和 UTF-16 編碼。
+`char`對應至單一 acter 的配對 char 稱為 *代理配對*。 若要瞭解其運作方式，您必須瞭解 Unicode 和 UTF-16 編碼。
 
 ## <a name="unicode-code-points"></a>Unicode 字碼指標
 
@@ -128,7 +129,7 @@ Unicode 標準定義1100000以上的程式 [代碼點](https://www.unicode.org/g
 
 ## <a name="utf-16-code-units"></a>UTF-16 程式碼單位
 
-16位 Unicode 轉換格式 ( [utf-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) 是 char acter 編碼系統，使用16位程式 *代碼單位* 來代表 Unicode 程式碼點。 .NET 使用 UTF-16 將中的文字編碼 `string` 。 `char`實例代表16位程式碼單位。
+16位 Unicode 轉換格式 ([utf-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) 是 char acter 編碼系統，使用16位程式 *代碼單位* 來代表 Unicode 程式碼點。 .NET 使用 UTF-16 將中的文字編碼 `string` 。 `char`實例代表16位程式碼單位。
 
 單一16位程式碼單位可以代表基本多語系平面之16位範圍內的任何程式碼點。 但是針對補充範圍中的程式碼點，需要兩個 `char` 實例。
 
@@ -266,7 +267,7 @@ charActer 可能會因為多個程式碼點組合而產生的結果，因此更�
 
 ### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>範例： count char 、 Rune 和 text 元素實例
 
-在 .NET Api 中，語素簇叢集稱為「 *文字」元素* 。 下列方法示範 `char` 、 `Rune` 和中的 text 元素實例之間的差異 `string` ：
+在 .NET Api 中，語素簇叢集稱為「 *文字」元素*。 下列方法示範 `char` 、 `Rune` 和中的 text 元素實例之間的差異 `string` ：
 
 ：：： code language = "csharp" source = "程式碼片段/ char acter-編碼-簡介/csharp/CountTextElements .cs" id = "SnippetCountMethod"：：：
 

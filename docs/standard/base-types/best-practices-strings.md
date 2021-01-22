@@ -2,6 +2,7 @@
 title: 在 .NET 中比較字串的最佳作法
 description: 瞭解如何在 .NET 應用程式中有效地比較字串。
 ms.date: 05/01/2019
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 840e5b0e6a523ac8e3f24586d4980958cd58f613
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 7e495edbf3cdfe5886a2dfbf06eee04d4f6a7567
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970885"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693107"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>在 .NET 中比較字串的最佳作法
 
@@ -194,7 +195,7 @@ InvariantCulture: a + ̊ = å
 
 下表概述從語義字串內容到列舉成員的對應 <xref:System.StringComparison> ：
 
-|資料|行為|對應的 System.StringComparison<br /><br /> value|
+|資料|行為|對應的 System.StringComparison<br /><br /> 值|
 |----------|--------------|-----------------------------------------------------|
 |區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 區分大小寫的安全性相關設定。|位元組完全相符的非語言識別項。|<xref:System.StringComparison.Ordinal>|
 |不區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 檔案路徑。<br /><br /> 登錄機碼和值。<br /><br /> 環境變數。<br /><br /> 資源識別項 (例如控制代碼名稱)。<br /><br /> 不區分大小寫的安全性相關設定。|大小寫不重要的非語言識別項，特別是大部分 Windows 系統服務中儲存的資料。|<xref:System.StringComparison.OrdinalIgnoreCase>|
@@ -299,6 +300,6 @@ InvariantCulture: a + ̊ = å
 [!code-csharp[Conceptual.Strings.BestPractices#10](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect2.cs#10)]
 [!code-vb[Conceptual.Strings.BestPractices#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect2.vb#10)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 應用程式中的全球化](../globalization-localization/globalization.md)

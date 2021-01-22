@@ -2,6 +2,7 @@
 title: 複合格式
 description: 深入瞭解 .NET 複合格式，其採用物件清單和複合格式字串（包含具有索引預留位置的固定文字）作為輸入。
 ms.date: 10/26/2018
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c5c1233ebdfc3ad624b2e4f2a8231969657eef1
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683949"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693042"
 ---
 # <a name="composite-formatting"></a>複合格式
 

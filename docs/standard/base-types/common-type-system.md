@@ -2,6 +2,7 @@
 title: 一般類型系統
 description: 探索 .NET 中的型別系統。 深入瞭解 .NET 中的型別 (值型別或參考型別) 、類型定義、類型成員和類型成員特性。
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: 0f80be2d1da43341f8e2af6f32580be2e01289dc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c25ff63d3bfb318144d42f98e2e20bdb9dd709e4
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723216"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692938"
 ---
 # <a name="common-type-system"></a>一般型別系統
 
@@ -179,7 +180,7 @@ ms.locfileid: "95723216"
 
  所有型別都具有修飾詞 (Modifier)，負責控制其他型別的存取範圍。 下表說明執行階段所支援的型別存取範圍。  
   
-|Accessibility|描述|  
+|協助工具選項|描述|  
 |-------------------|-----------------|  
 |public|型別可供所有組件存取|  
 |組件|型別只能在本身的組件中存取|  

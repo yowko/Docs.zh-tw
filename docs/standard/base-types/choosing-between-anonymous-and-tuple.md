@@ -3,13 +3,14 @@ title: 在匿名和元組類型之間選擇
 description: 瞭解何時適合在匿名型別和元組類型之間進行選擇。
 author: IEvangelist
 ms.author: dapine
+ms.topic: conceptual
 ms.date: 07/01/2020
-ms.openlocfilehash: f8465b2f22ecfafd739355ddd35635e2eee49232
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1f171851c383862828600f6f43ce1e3fc1b3a168
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823195"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693080"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>在匿名和元組類型之間選擇
 
@@ -99,7 +100,7 @@ foreach (var (formatted, ticks) in
 
 ### <a name="key-differences"></a>主要差異
 
-| 名稱                     | 存取修飾詞 | 類型     | 自訂成員名稱 | 解構支援 | 運算式樹狀架構支援 |
+| Name                     | 存取修飾詞 | 類型     | 自訂成員名稱 | 解構支援 | 運算式樹狀架構支援 |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | 匿名型別          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -117,7 +118,7 @@ foreach (var (formatted, ticks) in
 
 當開發人員在元組和匿名型別之間進行選擇時，需要考慮幾個因素。 一般來說，如果您不是使用 [運算式樹狀](../../csharp/expression-trees.md)架構，而且您熟悉元組語法，則請選擇 <xref:System.ValueTuple> 其提供實值型別，而且可以彈性地命名屬性。 如果您是使用運算式樹狀架構，而且想要命名屬性，請選擇 [匿名型別]。 否則，使用 <xref:System.Tuple>。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [匿名型別](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [運算式樹狀架構](../../csharp/expression-trees.md)

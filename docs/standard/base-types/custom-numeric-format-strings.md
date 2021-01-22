@@ -2,6 +2,7 @@
 title: 自訂數值格式字串
 description: 瞭解如何建立自訂數值格式字串，以在 .NET 中格式化數值資料。 自訂數值格式字串有一或多個自訂數值指定名稱。
 ms.date: 06/25/2018
+ms.topic: reference
 dev_langs:
 - csharp
 - vb
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 7665c0980d631069728bcce8178763eb934e054b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 52cdf8a28a43239d5c218b7154d67a1d0b3c210d
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824385"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693003"
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 
@@ -34,7 +35,7 @@ ms.locfileid: "94824385"
 
 <a name="table"></a> 下表說明自訂數值格式規範，並顯示每個格式範例所產生的範例輸出。 如需使用自訂數值格式字串的詳細資訊，請參閱 [注意](#NotesCustomFormatting) 一節，如需其用法的完整解說，請參閱 [範例](#example) 一節。
 
-|格式規範|名稱|描述|範例|
+|格式規範|Name|描述|範例|
 |----------------------|----------|-----------------|--------------|
 |"0"|零值預留位置|以對應的數字 (如果有的話) 取代零，否則結果字串中會出現零。<br /><br /> 詳細資訊： ["0" 自訂規範](#Specifier0)。|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|數字預留位置|將 "#" 符號取代為對應的數字 (如果有的話)，否則結果字串中不會出現任何數字。<br /><br /> 請注意，如果輸入字串中對應的數字是不重要的 0，結果字串中就不會顯示任何數字。 例如，0003 ("####") -> 3。<br /><br /> 詳細資訊： ["#" 自訂規範](#SpecifierD)。|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
@@ -205,7 +206,7 @@ ms.locfileid: "94824385"
 
 冒號 (;) 是條件式格式規範，這個規範會根據數字的值是正數、負數還是零，將不同的格式套用至數字。 若要產生這個行為，自訂格式字串可以包含多達三個以分號分隔的區段， 下表將說明這些區段。
 
-|區段數|說明|
+|區段數|描述|
 |------------------------|-----------------|
 |一個區段|此格式字串適用於所有的值。|
 |兩個區段|第一個區段適用於正數值及零值，第二個區段適用於負數值。<br /><br /> 如果要格式化的數字為負數，但依照第二個區段的格式四捨五入之後成為零，則產生的零會依照第一個區段來格式化。|
@@ -255,7 +256,7 @@ ms.locfileid: "94824385"
 
 <a name="NotesCustomFormatting"></a>
 
-## <a name="notes"></a>注意
+## <a name="notes"></a>備註
 
 ### <a name="floating-point-infinities-and-nan"></a>無限浮點數和 NaN
 
@@ -285,11 +286,11 @@ ms.locfileid: "94824385"
 
 [回到表格](#table)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [格式化類型](formatting-types.md)
 - [標準數值格式字串](standard-numeric-format-strings.md) \(部分機器翻譯\)
-- [如何：以前置字元零來填補數字](how-to-pad-a-number-with-leading-zeros.md)
+- [作法：以前置字元零來填補數字](how-to-pad-a-number-with-leading-zeros.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#) (範例：.NET Core WinForms 格式化公用程式 (C#))](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Sample: .NET Core WinForms Formatting Utility (Visual Basic) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

@@ -2,6 +2,7 @@
 title: 將字串轉換成類型
 description: 瞭解 .NET 中的字串剖析。 剖析會將代表 .NET 基底類型的字串轉換成該基底類型。 剖析是格式化的反向操作。
 ms.date: 03/30/2017
+ms.topic: conceptual
 helpviewer_keywords:
 - parsing strings, about parsing strings
 - IFormatProvider interface, parsing strings
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: a5c38c29a45a9ce6f8aed7205c5bd44bebb023c2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff357f8b8225c84e2f6c0e022b269f0ab774dfed
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683715"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692847"
 ---
 # <a name="parse-strings-in-net"></a>在 .NET 中剖析字串
 

@@ -4,12 +4,12 @@ description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189972"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692704"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
@@ -86,6 +86,8 @@ ms.locfileid: "98189972"
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [CopyToPublishDirectory](#copytopublishdirectory)
 - [連結](#linkbase)
+- [PreserveCompilationCoNtext](#preservecompilationcontext)
+- [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
@@ -153,6 +155,30 @@ ms.locfileid: "98189972"
 
 > [!TIP]
 > 或者，您可以使用 `dotnet publish` 來發行類別庫。 如需詳細資訊，請參閱 [dotnet publish](../tools/dotnet-publish.md)。
+
+### <a name="preservecompilationcontext"></a>PreserveCompilationCoNtext
+
+`PreserveCompilationContext`屬性可讓已建立或已發佈的應用程式在執行時間使用在組建階段使用的相同設定，在執行時間編譯更多程式碼。 在組建階段參考的元件將會複製到輸出目錄的 *ref* 子目錄中。 參考元件的名稱會儲存在應用程式的 *.deps.js* 檔案中，以及傳遞給編譯器的選項。 您可以使用和屬性來取得此資訊 <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompileLibraries?displayProperty=nameWithType> <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompilationOptions?displayProperty=nameWithType> 。
+
+這項功能大多是由 ASP.NET Core MVC 和 Razor pages 在內部使用，以支援 Razor 檔案的執行時間編譯。
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationContext>true</PreserveCompilationContext>
+</PropertyGroup>
+```
+
+### <a name="preservecompilationreferences"></a>PreserveCompilationReferences
+
+`PreserveCompilationReferences`屬性與 [PreserveCompilationCoNtext](#preservecompilationcontext)屬性類似，不同之處在于它只會將參考的元件複製到發行目錄，而不是檔案 *上的.deps.js* 。
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationReferences>true</PreserveCompilationReferences>
+</PropertyGroup>
+```
+
+如需詳細資訊，請參閱 [RAZOR SDK 屬性](/aspnet/core/razor-pages/sdk#properties)。
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
