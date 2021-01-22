@@ -1,6 +1,7 @@
 ---
 title: .NET 中的類型轉換
 description: 瞭解 .NET 中的類型轉換，它會在新類型中建立相當於舊型別值的值，但可能不會保留原始的身分識別。
+ms.topic: conceptual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 8e1ea153ccd65de967a34e79d4a26c96e678c4ad
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9dcd1533312c259fd1e120c224c49efa4f829fee
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831022"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692639"
 ---
 # <a name="type-conversion-in-net"></a>.NET 中的類型轉換
 
@@ -45,7 +46,7 @@ ms.locfileid: "94831022"
   
 - 從介面物件轉換回實作該介面的原始類型。  在 C# 中，這種轉換需要轉型運算子。 在 Visual Basic 中，如果已 `Option Strict` 開啟則需要 `CType` 運算子。  
   
-除了這些自動轉換以外，.NET 還提供多項支援自訂類型轉換的功能。 其中包括下列各項：  
+除了這些自動轉換以外，.NET 還提供多項支援自訂類型轉換的功能。 這些選項包括：  
   
 - `Implicit` 運算子，這個運算子定義類型之間可用的擴展轉換。 如需詳細資訊，請參閱 [使用隱含運算子的隱含轉換](#implicit-conversion-with-the-implicit-operator) 一節。  
   
@@ -198,7 +199,7 @@ ms.locfileid: "94831022"
   
  如需使用類型轉換子執行轉換的詳細資訊，請參閱 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>

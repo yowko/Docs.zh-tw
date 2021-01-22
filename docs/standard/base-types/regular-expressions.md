@@ -1,6 +1,7 @@
 ---
 title: .NET 規則運算式
 description: 使用正則運算式來尋找特定字元模式、驗證文字、使用文字子字串，& 在 .NET 中將解壓縮的字串新增至集合。
+ms.topic: conceptual
 ms.date: 06/30/2020
 dev_langs:
 - csharp
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - .NET regular expressions
 - strings [.NET], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 6fa791005aa9fa9956a3169f8f9ddecfa201bcda
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ea6b16909b79236245b35238ad43d778eec3051a
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831334"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692769"
 ---
 # <a name="net-regular-expressions"></a>.NET 規則運算式
 
@@ -91,7 +92,7 @@ ms.locfileid: "94831334"
  規則運算式模式 `\b(\w+?)\s\1\b` 可解譯如下：  
   
 > [!div class="mx-tdCol2BreakAll"]
-> |模式|解譯|  
+> |模式|解讀|  
 > |-|-|
 > |`\b`|從字緣開始。|  
 > |`(\w+?)`|比對一或多個字元，但字元數愈少愈好。 這些一起構成可稱之為 `\1` 的群組。|  
@@ -113,7 +114,7 @@ ms.locfileid: "94831334"
  在目前文化特性為 English - United States (en-US) 的電腦上，此範例會動態建立規則運算式 `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`。 此規則運算式模式可解譯如下：  
 
 > [!div class="mx-tdCol2BreakAll"]
-> |模式|解譯|  
+> |模式|解讀|  
 > |-|-|  
 > |`\$`|在輸入字串中尋找單獨出現的貨幣符號 (`$`)。 規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。 單獨 (`$` 符號，表示正則運算式引擎應該嘗試在字串結尾處開始比對 ) 。若要確保目前文化特性的貨幣符號不會誤譯為正則運算式符號，此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> 方法來將該字元換用。|  
 > |`\s*`|尋找出現零或多次的空格字元。|  
@@ -129,7 +130,7 @@ ms.locfileid: "94831334"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|  
 |[規則運算式物件模型](the-regular-expression-object-model.md)|提供資訊和程式碼範例，說明如何使用規則運算式類別。|  

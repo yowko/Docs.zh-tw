@@ -1,6 +1,7 @@
 ---
 title: 在規則運算式中執行替代
 description: 使用 .NET 中的正則運算式進行替代，以取代相符的文字。 替代專案是只有在取代模式內才能辨識的語言元素。
+ms.topic: conceptual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: f1cab01e7a6ee48bd01f65d4cc8a8a540fbabc61
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa889f449f2e020b8a7d90a50eb7a9a14d70f4e6
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734201"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692652"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 
@@ -28,7 +29,7 @@ ms.locfileid: "95734201"
   
 |Substitution|描述|  
 |------------------|-----------------|  
-|$ *number*|包括在取代字串中與 *數字* 所指定之擷取群組相符的最後一個子字串，其中 *數字* 是十進位值。 如需詳細資訊，請參閱 [替代編號群組](#substituting-a-numbered-group)。|  
+|$ *數量*|包括在取代字串中與 *數字* 所指定之擷取群組相符的最後一個子字串，其中 *數字* 是十進位值。 如需詳細資訊，請參閱 [替代編號群組](#substituting-a-numbered-group)。|  
 |${ *name* }|包含由 `(?<` 取代字串中的 *名稱* 所指定之指定群組所比對的最後一個子字串 `> )` 。 如需詳細資訊，請參閱 [替代具名群組](#substituting-a-named-group)。|  
 |$$|取代字串中包括單一 "$" 常值。 如需詳細資訊，請參閱 [替代 "$" 符號](#substituting-a--character)。|  
 |$&|取代字串中包括整個相符項目的複本。 如需詳細資訊，請參閱 [替代整個相符項目](#substituting-the-entire-match)。|  
@@ -52,7 +53,7 @@ ms.locfileid: "95734201"
   
  `$` 後面接著的所有數字都會解譯為屬於 *數字* 群組。 如果這不是您的目的，可以改為替代具名群組。 例如，您可以使用取代字串 `${1}1` 而非 `$11` ，將取代字串定義為第一個擷取之群組的值連同數字 "1"。 如需詳細資訊，請參閱 [替代具名群組](#substituting-a-named-group)。  
   
- 未使用名稱語法明確指派名稱的捕獲群組， `(?<` *name* `>)` 會從1開始由左至右編號。 具名群組是從最後一個未命名群組的索引加一開始，由左至右編號。 例如，在規則運算式 `(\w)(?<digit>\d)`中， `digit` 具名群組的索引為 2。  
+ 未使用名稱語法明確指派名稱的捕獲群組， `(?<`  `>)` 會從1開始由左至右編號。 具名群組是從最後一個未命名群組的索引加一開始，由左至右編號。 例如，在規則運算式 `(\w)(?<digit>\d)`中， `digit` 具名群組的索引為 2。  
   
  如果 *數字* 沒有指定在規則運算式模式中定義的有效擷取群組， `$`*數字* 就會解譯為用以取代每個相符項目的常值字元序列。  
   

@@ -2,6 +2,7 @@
 title: 標準 TimeSpan 格式字串
 description: 請參閱標準 TimeSpan 格式字串，其使用單一格式規範來定義 .NET 中 TimeSpan 值的文字標記法。
 ms.date: 03/30/2017
+ms.topic: reference
 dev_langs:
 - csharp
 - vb
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d9872bab996244b630d1ca33c85b06dce6a315ef
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734240"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692600"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 
@@ -40,7 +41,7 @@ ms.locfileid: "95734240"
   
 下表列出標準時間間隔格式規範。  
   
-|格式規範|名稱|描述|範例|  
+|格式規範|Name|描述|範例|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|常數 (非變異) 格式|這個規範不區分文化特性。 它採用 `[-][d'.']hh':'mm':'ss['.'fffffff]` 格式<br /><br /> \ ("t" 與 "T" 格式字串會產生相同的結果)。<br /><br /> 詳細資訊：[常數 ("c") 格式規範](#the-constant-c-format-specifier)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|一般短格式|這個規範只會輸出需要的內容。 它會區分文化特性，並採用 `[-][d':']h':'mm':'ss[.FFFFFFF]` 格式。<br /><br /> 詳細資訊：[一般短 ("g") 格式規範](#the-general-short-g-format-specifier)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (fr-FR)|  

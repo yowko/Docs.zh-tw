@@ -1,13 +1,14 @@
 ---
 title: 比較 .NET 5 + 上的字串時的行為變更
 description: 瞭解 Windows 上 .NET 5 和更新版本中的字串比較行為變更。
+ms.topic: conceptual
 ms.date: 12/07/2020
-ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 0db8477ce4e8c3a7167c719e2a29a32e5346a8e7
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851747"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692691"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>比較 .NET 5 + 上的字串時的行為變更
 

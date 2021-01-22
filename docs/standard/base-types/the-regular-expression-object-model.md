@@ -1,6 +1,7 @@
 ---
 title: 規則運算式物件模型
 description: 請參閱 .NET 中的正則運算式物件模型。 使用正則運算式引擎，& 物件 & 與相符、群組、& 捕捉相關的集合。
+ms.topic: conceptual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 996a8cca8222e3de6517ee6fa7cef3c4f44fc5a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 115955f48f0470adf584acf2c2e72680cef105cb
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734179"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692561"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 
