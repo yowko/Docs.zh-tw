@@ -24,6 +24,8 @@
               href: 6.0.md
             - name: Windows Forms
               items:
+                - name: NotifyIcon。文字長度上限增加
+                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings 屬性擲回 InvalidEnumArgumentException
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
         - name: .NET 5.0
@@ -508,7 +510,6 @@
                   href: msbuild/5.0/publishdepsfilepath-behavior-change.md
                 - name: TargetFramework 從 netcoreapp 變更為 net
                   href: msbuild/5.0/targetframework-name-change.md
-            - name: (此檔案最後會消失)
             - name: .NET 3.0
               href: msbuild.md
         - name: 網路功能
@@ -561,6 +562,8 @@
           items:
             - name: .NET 6.0
               items:
+                - name: NotifyIcon。文字長度上限增加
+                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings 屬性擲回 InvalidEnumArgumentException
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
             - name: .NET 5.0
