@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 2671cbe6f610cfa8aa98e63e67f3240a1650cd6b
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189150"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757872"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>描述
 
 此 `dotnet test` 命令可用來在指定的解決方案中執行單元測試。 此 `dotnet test` 命令會建立方案，並針對方案中的每個測試專案執行測試主機應用程式。 測試主機會使用測試架構在指定的專案中執行測試，例如： MSTest、NUnit 或 xUnit，並報告每項測試的成功或失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。
 
@@ -65,7 +65,7 @@ dotnet test -h|--help
 
   如果未指定，則會在目前的目錄中搜尋專案或方案。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
@@ -250,7 +250,7 @@ dotnet test -h|--help
 | 測試架構 | 支援的屬性                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>名稱</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特性</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>類別</li></ul>                                 |
 | NUnit          | <ul><li>FullyQualifiedName</li><li>名稱</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
 
 `<operator>` 描述屬性和值之間的關聯性：
@@ -270,7 +270,7 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | 或者       |
+| <code>&#124;</code> | OR       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。

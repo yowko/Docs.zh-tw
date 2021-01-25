@@ -3,12 +3,12 @@ title: .NET SDK 遙測
 description: 探索收集使用量資訊以進行分析的 .NET SDK 遙測功能、收集的資料，以及如何停用。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633865"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757833"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK 遙測
 
@@ -16,13 +16,13 @@ ms.locfileid: "94633865"
 
 收集的資料會在「 [創意 Commons](https://creativecommons.org/licenses/by/4.0/)屬性」授權下的匯總中發行。
 
-## <a name="scope"></a>範圍
+## <a name="scope"></a>影響範圍
 
 `dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」遙測：
 
 - `dotnet [path-to-app].dll`
 
-使用任何 [.NET CLI 命令](index.md)時， *會收集* 遙測，例如：
+使用任何 [.NET CLI 命令](index.md)時，*會收集* 遙測，例如：
 
 - `dotnet build`
 - `dotnet pack`
@@ -33,6 +33,9 @@ ms.locfileid: "94633865"
 預設會啟用 .NET SDK 遙測功能。 若要退出遙測功能，請將 `DOTNET_CLI_TELEMETRY_OPTOUT` 環境變數設定為 `1` 或 `true`。
 
 當安裝成功時，.NET SDK 安裝程式也會傳送單一遙測專案。 若要退出，請在 `DOTNET_CLI_TELEMETRY_OPTOUT` 安裝 .NET SDK 之前先設定環境變數。
+
+> [!IMPORTANT]
+> 若要在啟動安裝程式之後退出，請關閉安裝程式、設定環境變數，然後使用該設定的值重新執行安裝程式。
 
 ## <a name="disclosure"></a>公開
 

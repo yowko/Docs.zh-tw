@@ -2,12 +2,12 @@
 title: 執行時間設定選項
 description: 瞭解如何使用執行時間設定設定來設定 .NET Core 應用程式。
 ms.date: 01/21/2020
-ms.openlocfilehash: 21673a221d0f21202febf4730b955da66132d5f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e9f292476cf953c3e63bb8e89268f7cc06b3bfc
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538194"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757846"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 執行時間設定
 
@@ -33,16 +33,16 @@ ms.locfileid: "90538194"
 
 某些設定值也可以透過呼叫方法，以程式設計方式設定 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 。
 
-本檔的這一節中的文章是依類別目錄組織，例如， [調試](debugging-profiling.md) 程式和 [垃圾收集](garbage-collector.md)。 在適用的情況下，會針對檔案、MSBuild 屬性、環境變數和 .NET Framework 專案的交互參照*app.config*檔案，顯示*runtimeconfig.js*的設定選項。
+本檔的這一節中的文章是依類別目錄組織，例如， [調試](debugging-profiling.md) 程式和 [垃圾收集](garbage-collector.md)。 在適用的情況下，會針對檔案、MSBuild 屬性、環境變數和 .NET Framework 專案的交互參照 *app.config* 檔案，顯示 *runtimeconfig.js* 的設定選項。
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.js開啟
 
-[建立](../tools/dotnet-build.md)專案時，會在輸出目錄中產生檔案的 *[appname] .runtimeconfig.js* 。 如果檔案 *runtimeconfig.template.js* 存在於與專案檔相同的資料夾中，其包含的任何設定選項都會合並到檔案的 *[appname] .runtimeconfig.js* 中。 如果您要自行建立應用程式，請將任何設定選項放在 *runtimeconfig.template.js* 檔案中。 如果您只是執行應用程式，請將它們直接插入檔案中的 *[appname] .runtimeconfig.js* 。
+[建立](../tools/dotnet-build.md)專案時，會在輸出目錄中產生檔案的 *[appname] .runtimeconfig.js* 。 如果檔案 *runtimeconfig.template.js* 存在於與專案檔相同的資料夾中，其包含的任何設定選項都會插入檔案的 *[appname] .runtimeconfig.js* 中。 如果您要自行建立應用程式，請將任何設定選項放在 *runtimeconfig.template.js* 檔案中。 如果您只是執行應用程式，請將它們直接插入檔案中的 *[appname] .runtimeconfig.js* 。
 
 > [!NOTE]
 > 檔案上的 *[appname] .runtimeconfig.js* 將會在後續的組建中遭到覆寫。
 
-在檔案*runtimeconfig.js*的 [ **configProperties** ] 區段中指定執行時間設定選項。 此區段的格式如下：
+在檔案 *runtimeconfig.js* 的 [ **configProperties** ] 區段中指定執行時間設定選項。 此區段的格式如下：
 
 ```json
 "configProperties": {
@@ -88,7 +88,7 @@ ms.locfileid: "90538194"
 
 ## <a name="msbuild-properties"></a>MSBuild 屬性
 
-您可以使用 SDK 樣式之 .NET Core 專案的 *.csproj* 或 *vbproj* 檔案中的 MSBuild 屬性來設定某些執行時間設定選項。 MSBuild 屬性優先于在檔案的 *runtimeconfig.template.js* 中設定的選項。 它們也會覆寫您在組建階段于檔案的 *[appname] .runtimeconfig.js* 中設定的任何選項。
+您可以使用 SDK 樣式之 .NET Core 專案的 *.csproj* 或 *vbproj* 檔案中的 MSBuild 屬性來設定某些執行時間設定選項。 MSBuild 屬性優先于在檔案的 *runtimeconfig.template.js* 中設定的選項。
 
 以下是範例 SDK 樣式的專案檔，其中包含用來設定執行時間行為的 MSBuild 屬性：
 
