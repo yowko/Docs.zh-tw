@@ -4,12 +4,12 @@ description: 此進階教學課程示範如何使用模式比對技術，以個�
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: be1c330973859df62cd4706e5f6f9ca4326fb221
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513220"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794814"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>教學課程：使用模式比對來建立型別驅動和資料驅動的演算法。
 
@@ -23,7 +23,7 @@ C# 7 引進基本的模式比對功能。 這些功能是在 c # 8 和 c # 9 中
 > - 使用模式比對運算式根據類型和屬性值實作行為。
 > - 結合模式比對與其他技術，建立完整的演算法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 您將需要設定您的電腦以執行 .NET 5，其中包括 c # 9 編譯器。 從 [Visual Studio 2019 16.9 版 preview 1](https://visualstudio.microsoft.com/vs/preview/) 或 [.net 5.0 SDK](https://dot.net/get-dotnet5)開始，可以使用 c # 9 編譯器。
 
@@ -152,7 +152,7 @@ namespace toll_calculator
 - 小於 50% 載滿的巴士要付額外的 $2.00。
 - 大於 90% 載滿的巴士可折價 $1.00。
 
-這些規則可以在相同的 switch 運算式中使用 **屬性模式** 來實作。 一旦判斷出型別，屬性模式就會檢查物件的屬性。 單一的 `Car` 案例展開為四個不同案例：
+這些規則可以在相同的 switch 運算式中使用 **屬性模式** 來實作。 屬性模式是 `when` 比較屬性值與常數值的子句。 一旦判斷出型別，屬性模式就會檢查物件的屬性。 單一的 `Car` 案例展開為四個不同案例：
 
 ```csharp
 vehicle switch

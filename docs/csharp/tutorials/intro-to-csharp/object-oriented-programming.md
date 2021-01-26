@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 description: 'C # 提供物件導向程式設計的完整支援，包括抽象、封裝、繼承和多型。'
 ms.date: 09/30/2020
-ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: b778b7c42bbfb1f20bdd2d83b9cb10512ea3f41b
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687990"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794842"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented c # 程式設計 (c # ) 
 
@@ -99,7 +99,16 @@ public BankAccount(string name, decimal initialBalance)
 
 確認結果。 現在，為下列各項新增一組類似的測試程式碼 `LineOfCreditAccount` ：
 
-:::code language="csharp" source="./snippets/object-oriented-programming/Program.cs" ID="TestLineOfCredit":::
+```
+    var lineOfCredit = new LineOfCreditAccount("line of credit", 0);
+    // How much is too much to borrow?
+    lineOfCredit.MakeWithdrawal(1000m, DateTime.Now, "Take out monthly advance");
+    lineOfCredit.MakeDeposit(50m, DateTime.Now, "Pay back small amount");
+    lineOfCredit.MakeWithdrawal(5000m, DateTime.Now, "Emergency funds for repairs");
+    lineOfCredit.MakeDeposit(150m, DateTime.Now, "Partial restoration on repairs");
+    lineOfCredit.PerformMonthEndTransactions();
+    Console.WriteLine(lineOfCredit.GetAccountHistory());
+ ```
 
 當您新增上述程式碼並執行程式時，將會看到類似下列的錯誤：
 
@@ -181,6 +190,6 @@ Overdrawn 帳戶時，覆寫會傳回費用交易。 如果提款未超過限制
 - 當您在每個類別中保留許多詳細資料時，就會使用 *抽象概念* `private` 。
 - 當您針對每個不同的帳戶類型定義了類別時，就會使用 *封裝* 。 這些類別描述了該帳戶類型的行為。
 - 當您利用已在類別中建立的實存程式碼時，就會使用 *繼承* `BankAccount` 。
-- 當您 *Polymorphism* 建立 `virtual` 衍生類別可覆寫的方法，以建立該帳戶類型的特定行為時，您會使用多型。
+- 當您建立 `virtual` 衍生類別可覆寫的方法，以建立該帳戶類型的特定行為時，您會使用多型。
 
 恭喜，您已完成所有的 c # 教學課程簡介。 若要深入瞭解，請嘗試更多 [教學](../index.md)課程。

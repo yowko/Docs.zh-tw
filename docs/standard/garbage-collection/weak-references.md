@@ -8,12 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1eb5e57f5cc1065f1b8510e4fb0a980a85abca29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a364435a5b0a480b0f6f70315e2d5465f61e6b5a
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714207"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794668"
 ---
 # <a name="weak-references"></a>弱式參考
 
@@ -27,7 +27,7 @@ ms.locfileid: "95714207"
   
  當使用者切換到應用程式的另一個部分時，您可以使用 <xref:System.WeakReference> 類別來建立樹狀結構的弱式參考，並終結所有強式參考。 使用者切換回樹狀結構時，應用程式會嘗試取得樹狀結構的強式參考，如果成功，可以避免重新建構樹狀結構。  
   
- 若要建立物件的弱式參考，請使用要追蹤之物件的執行個體來建立 <xref:System.WeakReference>。 接著將 <xref:System.WeakReference.Target%2A> 屬性設定為該物件，並將物件的原始參考設定為 `null`。 如需程式碼範例，請參閱類別庫中的 <xref:System.WeakReference>。  
+ 若要建立物件的弱式參考，請使用要追蹤之物件的執行個體來建立 <xref:System.WeakReference>。 如需程式碼範例，請參閱類別庫中的 <xref:System.WeakReference>。  
   
 ## <a name="short-and-long-weak-references"></a>簡短和完整弱式參考  
 

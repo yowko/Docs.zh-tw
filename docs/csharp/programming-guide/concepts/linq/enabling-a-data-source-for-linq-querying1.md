@@ -3,12 +3,12 @@ title: 啟用資料來源以進行 LINQ 查詢
 description: '瞭解如何在 c # 中擴充 LINQ，讓任何資料來源能夠使用 LINQ 模式進行查詢，讓用戶端可以輕鬆地查詢資料來源。'
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d7d751c0584072e740b4e5292071e400a5020f82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84769e27e3f8b8d7ee30b79c219b180333337af9
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202613"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794834"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
 
@@ -32,7 +32,7 @@ ms.locfileid: "91202613"
   
 ### <a name="remote-data"></a>遠端資料  
 
- 啟用遠端資料源之 LINQ 查詢的最佳選項是執行 <xref:System.Linq.IQueryable%601> 介面。 不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 不同。 在 Visual Studio 2008 中，沒有任何提供者模型可用來將現有的 LINQ 技術（例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ）擴充至其他資料來源類型。
+ 啟用遠端資料源之 LINQ 查詢的最佳選項是執行 <xref:System.Linq.IQueryable%601> 介面。 不過，這與擴充資料來源之提供者 (例如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) 不同。
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ 提供者  
 

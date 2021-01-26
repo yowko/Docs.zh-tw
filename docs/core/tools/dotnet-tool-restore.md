@@ -2,18 +2,18 @@
 title: dotnet tool restore 命令
 description: Dotnet tool restore 命令會在您的電腦上安裝目前目錄範圍內的 .NET 本機工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 3425bc6b78fd53f578c209013f83b006305dbb81
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 87bdfb77cda361b800f107c565cbbed6ad75ec78
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242925"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794864"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
 本文 **適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet tool restore` -安裝目前目錄範圍內的 .NET 本機工具。
 
@@ -22,7 +22,7 @@ ms.locfileid: "96242925"
 ```dotnetcli
 dotnet tool restore
     [--configfile <FILE>] [--add-source <SOURCE>]
-    [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
+    [--tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
     [--ignore-failed-sources] [--no-cache] [--interactive]
     [-v|--verbosity <LEVEL>]
 
@@ -33,7 +33,7 @@ dotnet tool restore -h|--help
 
 此 `dotnet tool restore` 命令會尋找目前目錄範圍內的工具資訊清單檔，並安裝其中所列的工具。 如需資訊清單檔案的相關資訊，請參閱 [安裝本機工具](global-tools.md#install-a-local-tool) 和叫 [用本機工具](global-tools.md#invoke-a-local-tool)。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`--configfile <FILE>`**
 

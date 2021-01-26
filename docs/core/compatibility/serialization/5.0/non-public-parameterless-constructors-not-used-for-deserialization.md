@@ -2,14 +2,14 @@
 title: 重大變更：非公用、無參數的函式未使用於還原序列化
 description: 瞭解 .NET 5.0 中的重大變更，其中非公用、無參數的函式不再用於以 JsonSerializer 還原序列化。
 ms.date: 10/18/2020
-ms.openlocfilehash: 6bdcc92c61008aa4ee27370bbac4dbf4ee3ef7c8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760766"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794697"
 ---
-# <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>非公用、無參數的函式不會用於還原序列化
+# <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>非公用的無參數函式不會用於還原序列化
 
 為了在所有支援的目標 framework 標記之間保持一致性 (Tfm) ，非公用的無參數函式預設不會再用於還原序列化 <xref:System.Text.Json.JsonSerializer> 。
 
@@ -37,7 +37,7 @@ ms.locfileid: "95760766"
 ## <a name="recommended-action"></a>建議的動作
 
 - 如果您擁有類型且可行，請將無參數的函式設為公用。
-- 否則，請 `JsonConverter<T>` 針對類型執行，並控制還原序列化行為。
+- 否則，請 <xref:System.Text.Json.Serialization.JsonConverter%601> 針對類型執行，並控制還原序列化行為。 <xref:System.Text.Json.Serialization.JsonConverter%601>如果該案例的 c # 協助工具規則允許，您可以從實作為呼叫非公用的函式。
 
 ## <a name="affected-apis"></a>受影響的 API
 

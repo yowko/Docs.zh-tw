@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e395122e59f17ed66bbd9d83b01610993f663ce1
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: a3a27c1baaab135108ef475d77c35d607c45fa82
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915914"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794792"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET 主控台應用程式
 
@@ -108,7 +108,7 @@ End Module
 
    這段程式碼會在主控台視窗中顯示提示，並等候使用者輸入字串，然後按 <kbd>Enter</kbd> 鍵。 它會將此字串儲存在名為的變數中 `name` 。 它也會抓取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性值，其中包含目前的當地時間，並將它指派給 `date` Visual Basic) 中名為 (的變數 `currentDate` 。 它會在主控台視窗中顯示這些值。 最後，它會在主控台視窗中顯示提示，並呼叫 <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> 方法來等候使用者輸入。
 
-   `\n` `vbCrLf` Visual Basic) 中的 (代表換行字元。
+   `\n` (或 `vbCrLf` 在 Visual Basic 的程式碼中) 代表分行符號。
 
    字串前面的貨幣符號 (`$`) 可讓您在字串中將運算式（例如變數名稱）放在大括弧中。 運算式值會插入字串以取代運算式。 這個語法稱為 [插補字串](../../csharp/language-reference/tokens/interpolated.md)。
 
