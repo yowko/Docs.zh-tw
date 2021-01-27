@@ -6,14 +6,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d3da2ca9cd958fc70d3b91362dde71d68dc9d8a
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549675"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898748"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+## <a name="overview"></a>概觀
 
 WCF Data Services (之前稱為「ADO.NET 資料服務」 ) 是 .NET Framework 的元件，可讓您建立使用開放式資料通訊協定 (OData) 的服務，利用 [具像狀態傳輸 (REST) ](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)的語法，透過 Web 或內部網路公開及取用資料。 OData 會將資料公開為可由 URI 定址的資源。 資料是使用 GET、PUT、POST 和 DELETE 的標準 HTTP 動作來存取及變更。 OData 使用 [實體資料模型](../adonet/entity-data-model.md) 的實體關聯慣例，將資源公開為依關聯性相關的實體集。
 

@@ -3,20 +3,19 @@ title: 在 .NET Core 和 .NET 5 + 上無法使用 .NET Framework 技術
 titleSuffix: ''
 description: 瞭解 .NET Core 和 .NET 5.0 和更新版本上無法使用的 .NET Framework 技術。
 author: cartermp
-ms.date: 10/13/2020
-ms.openlocfilehash: 492aace9db3dc3acef18e995f10b7b5fbe251558
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.date: 01/26/2021
+ms.openlocfilehash: d5926d2c0cfe6d2073ac6ad74046ca48b9cb18f1
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161032"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898771"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core-and-net-5"></a>在 .NET Core 和 .NET 5 + 上無法使用 .NET Framework 技術
 
-.NET Framework 程式庫所提供的數種技術，無法與 .NET Core 和 .NET 5.0 和更新版本搭配使用，例如應用程式域、遠端處理、代碼啟用安全性 (CAS) 、安全性透明度和 <xref:System.EnterpriseServices?displayProperty=fullName> 。 如果您的程式庫依賴一或多個這些技術，請考慮此處所述的替代方法。 如需 API 相容性的詳細資訊，請參閱 [.net 中的重大變更](../compatibility/breaking-changes.md)。
+.NET Framework 程式庫所提供的數種技術，無法與 .NET Core 和 .NET 5.0 和更新版本搭配使用，例如應用程式域、遠端處理和代碼啟用安全性 (CAS) 。 如果您的程式庫依賴此頁面上所列的一或多項技術，請考慮所述的替代方法。
 
-> [!TIP]
-> 目前未實作的 API或技術，並不代表我們是刻意不支援它。 搜尋 .NET GitHub 存放庫，以查看您遇到的特定問題是否為設計。 如果您找不到這類指標，請在 [dotnet/runtime 存放庫](https://github.com/dotnet/runtime/issues) 中提出問題，以要求特定的 api 和技術。
+如需 API 相容性的詳細資訊，請參閱 [.net 中的重大變更](../compatibility/breaking-changes.md)。
 
 ## <a name="application-domains"></a>應用程式網域
 
@@ -47,6 +46,10 @@ ms.locfileid: "92161032"
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
 <xref:System.EnterpriseServices?displayProperty=fullName> .NET Core 和 .NET 5 + 不支援 (COM +) 。
+
+## <a name="workflow-foundation-and-wcf"></a>Workflow Foundation 和 WCF
+
+.NET 5 + (不支援 Windows Workflow Foundation (WF) 和 Windows Communication Foundation) WCF (，包括 .NET Core) 。 如需替代方法，請參閱 [CoreWF](https://github.com/UiPath/corewf) 和 [CoreWCF](https://github.com/CoreWCF/CoreWCF)。
 
 ## <a name="see-also"></a>另請參閱
 
