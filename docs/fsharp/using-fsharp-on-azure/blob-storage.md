@@ -1,25 +1,25 @@
 ---
-title: 使用 F# 開始使用 Azure Blob 儲存體
-description: 使用 Azure Blob 儲存體在雲端中儲存非結構化資料。
+title: 以 F 開始使用 Azure Blob 儲存體#
+description: 使用 Azure Blob 儲存體將非結構化資料儲存在雲端。
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 58c120c26a1e99481b49ae3a0fb096a2188f359e
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756243"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794803"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>使用 F 開始使用 Azure Blob 儲存體\#
+# <a name="get-started-with-azure-blob-storage-using-f"></a>以 F 開始使用 Azure Blob 儲存體\#
 
-Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
+Azure Blob 儲存體是將非結構化資料儲存在雲端作為物件/blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
 
 本文說明如何使用 Blob 儲存體執行一般工作。 這些範例是使用適用于 .NET 的 Azure 儲存體用戶端程式庫，以 F # 撰寫。 涵蓋的工作包括如何上傳、列出、下載和刪除 blob。
 
 如需 blob 儲存體的概念總覽，請參閱 [適用于 blob 儲存體的 .net 指南](/azure/storage/blobs/storage-quickstart-blobs-dotnet)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/common/storage-account-create)。 您也需要此帳戶的儲存體存取金鑰。
 
@@ -185,7 +185,7 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 ## <a name="concurrent-access"></a>並行存取
 
-若要支援從多個用戶端或多個程序執行個體並行存取 Blob，您可以使用 **ETags** 或「租用」****。
+若要支援從多個用戶端或多個程序執行個體並行存取 Blob，您可以使用 **ETags** 或「租用」。
 
 - **Etag** - 提供方法來偵測 Blob 或容器已被另一個程序修改過
 
