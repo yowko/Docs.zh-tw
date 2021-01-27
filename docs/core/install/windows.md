@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 Windows 上安裝 .NET。
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: 33492cc6fa6c64ec3a1d745a4fa0c6cc418f87bd
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536121"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898784"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安裝 .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "98536121"
 >
 > - [在 Windows 上安裝](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [在 Linux 上安裝](linux.md)
+> - [安裝在 Linux 上](linux.md)
 
 在本文中，您將瞭解如何在 Windows 上安裝 .NET。 .NET 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET 應用程式，且不一定會包含在應用程式中。 SDK 是用來建立 .NET 應用程式和程式庫。 .NET 執行時間一律會與 SDK 一起安裝。
 
@@ -56,7 +56,7 @@ Windows 10 版本的服務結束日期會依版本分割。 下表只考慮 **�
 
 ## <a name="unsupported-releases"></a>不支援的版本
 
-不再支援下列 .NET 版本 ❌ 。 這些內容的下載仍會保持發佈：
+不再支援下列 .NET 版本 ❌ 。 這些版本的下載仍會保持發佈：
 
 - 3.0
 - 2.2
@@ -102,7 +102,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 | Windows 用戶端      | 7 SP1 +、8。1   | x64、x86        |
 | Windows Server      | 2012 R2 +      | x64、x86        |
 | Windows 伺服器核心 | 2012 R2 +      | x64、x86        |
-| Nano Server         | 版本 1809 + | x64             |
+| Nano 伺服器         | 版本 1809 + | x64             |
 
 如需 .NET 5.0 支援的作業系統、發行版本和生命週期原則的詳細資訊，請參閱 [.net 5.0 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md)。
 
@@ -118,7 +118,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 1607+ 版                  | x64、x86        |
 | Windows Server                | 2012 R2 +                       | x64、x86        |
-| Nano Server                   | 1803+ 版                  | x64、ARM32      |
+| Nano 伺服器                   | 1803+ 版                  | x64、ARM32      |
 
 如需 .NET Core 3.1 支援的作業系統、散發套件和生命週期原則的詳細資訊，請參閱 [.Net core 3.1 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)。
 
@@ -136,7 +136,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 1607+ 版                  | x64、x86        |
 | Windows Server                | 2012 R2 +                       | x64、x86        |
-| Nano Server                   | 1803+ 版                  | x64、ARM32      |
+| Nano 伺服器                   | 1803+ 版                  | x64、ARM32      |
 
 如需 .NET Core 3.0 支援的作業系統、散發套件和生命週期原則的詳細資訊，請參閱 [.Net core 3.0 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
 
@@ -154,7 +154,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 1607+ 版                  | x64、x86        |
 | Windows Server                | 2008 R2 SP1 +                   | x64、x86        |
-| Nano Server                   | 1803+ 版                   | x64、ARM32      |
+| Nano 伺服器                   | 1803+ 版                   | x64、ARM32      |
 
 如需 .NET Core 2.2 支援的作業系統、散發套件和生命週期原則的詳細資訊，請參閱 [.Net core 2.2 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。
 
@@ -170,9 +170,21 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 1607+ 版                  | x64、x86        |
 | Windows Server                | 2008 R2 SP1 +                   | x64、x86        |
-| Nano Server                   | 1803+ 版                  | 64            |
+| Nano 伺服器                   | 1803+ 版                  | 64            |
 
 如需 .NET Core 2.1 支援的作業系統、散發套件和生命週期原則的詳細資訊，請參閱 [.Net core 2.1 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)。
+
+### <a name="offline-install-for-windows-7"></a>適用于 Windows 7 的離線安裝
+
+在 Windows 7 上進行 .NET Core 2.1 的離線安裝時，您必須先確定已在目的電腦上安裝最新的 [Microsoft 根憑證授權單位 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) 。
+
+_certmgr.exe_ 工具可以自動安裝憑證，並從 Visual Studio 或 Windows SDK 取得。 執行 .NET Core 2.1 安裝程式之前，會使用下列命令來安裝憑證：
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
+
+請務必檢查 [以下 Windows 7](#additional-deps)所需的相依性。
 
 ---
 
@@ -184,7 +196,7 @@ SDK 可用來建立及發佈 .NET 應用程式和程式庫。 安裝 SDK 包含�
 
 | 作業系統         | Prerequisites                                                                    |
 |--------------------------|----------------------------------------------------------------------------------|
-| Windows 7 SP1 [ESU][esu] | -Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 <br> -KB3063858 [64-位][kb64]  /  [32][kb32]位 <br> - [MicrosoftRootCertificateAuthority2011 .cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) ( 僅限 .net Core 2.1)  |
+| Windows 7 SP1 [ESU][esu] | -Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 <br> -KB3063858 [64-位][kb64]  /  [32][kb32]位 <br> - [Microsoft 根憑證授權單位 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) ( .net Core 2.1 離線安裝程式)  |
 | Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 |
 | Windows 8.1              | Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 |
 | Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 可轉散發套件[64][vcc64]位  /  [32][vcc32]位 |
@@ -288,7 +300,7 @@ dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
 
 ## <a name="download-and-manually-install"></a>下載並手動安裝
 
-您也可以下載並手動安裝 SDK 或執行時間，以替代適用于 .NET 的 Windows 安裝程式。 手動安裝通常會做為持續整合測試的一部分來執行。 針對開發人員或使用者，通常最好是使用 [安裝程式](https://dotnet.microsoft.com/download/dotnet-core)。
+您也可以下載並手動安裝 SDK 或執行時間，以替代適用于 .NET 的 Windows 安裝程式。 手動安裝通常是在持續整合測試中完成。 針對開發人員或使用者，通常最好是使用 [安裝程式](https://dotnet.microsoft.com/download/dotnet-core)。
 
 .NET SDK 和 .NET 執行時間都可以在下載之後手動安裝。 如果您安裝的是 .NET SDK，就不需要安裝對應的執行時間。 首先，從下列其中一個網站下載 SDK 或執行時間的二進位版本：
 
@@ -331,5 +343,5 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
 [vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
 [vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
-[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
-[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409
+[kb64]: https://www.microsoft.com/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/download/details.aspx?id=47409

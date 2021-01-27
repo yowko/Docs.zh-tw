@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 6f6f02125ba09b8a49e097cd3dfedf3d8ef7e505
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: a4d969617b450fcd788764e97afe3aa1ff19a48c
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512751"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898797"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何瞭解傳遞結構和傳遞類別參考給方法之間的差異 (c # 程式設計手冊) 
 
@@ -28,7 +28,7 @@ ms.locfileid: "97512751"
   
 ## <a name="example"></a>範例  
 
- [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
+ [!code-csharp[PassingStructVsClass](snippets/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method/Program.cs)]  
   
 ## <a name="see-also"></a>另請參閱
 

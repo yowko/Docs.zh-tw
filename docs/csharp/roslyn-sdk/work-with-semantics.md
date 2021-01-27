@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 語意模型
 description: 此概觀可讓您了解用來了解和管理程式碼語意模型的類型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 8575988cd98a4c0ba3f24107788f065f7472f55d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0d254045a168f82888c5cc77a34f194a68aed0e
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156931"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899122"
 ---
 # <a name="work-with-semantics"></a>使用語意
 
@@ -23,7 +23,7 @@ ms.locfileid: "79156931"
 
 原始程式碼中具有程式項目，而且程式也可以參考以組件檔封裝的先前已編譯程式庫。 雖然沒有原始程式碼可用於組件，因而沒有語法節點或樹狀結構，但是程式仍然可以參考其內的項目。
 
-針對這些工作，您需要**語意模型**。
+針對這些工作，您需要 **語意模型**。
 
 除了原始程式碼的語法模型之外，語意模型還會封裝語言規則，讓您輕鬆且正確地比對識別碼與所參考的正確程式項目。
 
@@ -35,13 +35,13 @@ ms.locfileid: "79156931"
 
 與語法樹狀結構類似，編譯為不可變。 建立編譯之後，您或可能與其共用的其他人就無法變更它。 不過，您可以從現有編譯建立新的編譯，並指定這麼做的變更。 例如，您可以建立與現有編譯完全相同的編譯，差異在於它可以包含其他原始程式檔或組件參考。
 
-## <a name="symbols"></a>Symbols
+## <a name="symbols"></a>符號
 
 符號代表由原始程式碼所宣告或從組件中匯入為中繼資料的相異項目。 每個命名空間、類型、方法、屬性、欄位、事件、參數或區域變數都是以符號呈現。
 
 <xref:Microsoft.CodeAnalysis.Compilation> 類型上的各種不同方法和屬性可協助您尋找符號。 例如，您可以依其一般中繼資料名稱來找到已宣告類型的符號。 您也可以存取整個符號表作為全域命名空間之根符號的樹狀結構。
 
-符號也會包含編譯器從來源或中繼資料判斷而來的其他資訊，例如其他參考的符號。 每種符號都是由衍生自 <xref:Microsoft.CodeAnalysis.ISymbol> 的個別介面所代表，而每個介面都有詳述編譯器所收集資訊的專屬方法和屬性。 其中許多屬性都是直接參考其他符號。 例如，<xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> 屬性會告知方法宣告所參考的實際類型符號。
+符號也會包含編譯器從來源或中繼資料判斷而來的其他資訊，例如其他參考的符號。 每種符號都是由衍生自 <xref:Microsoft.CodeAnalysis.ISymbol> 的個別介面所代表，而每個介面都有詳述編譯器所收集資訊的專屬方法和屬性。 其中許多屬性都是直接參考其他符號。 例如， <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> 屬性會告訴您該方法傳回的實際型別符號。
 
 符號會呈現原始程式碼與中繼資料間之命名空間、類型和成員的一般表示。 例如，在原始程式碼中宣告的方法以及從中繼資料匯入的方法，都是使用具有相同屬性的 <xref:Microsoft.CodeAnalysis.IMethodSymbol> 所呈現。
 

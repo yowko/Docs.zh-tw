@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879e57cfbce82f1aa77f8810e23d6a61a6ea5bc8
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810933"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899447"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 
@@ -29,19 +29,19 @@ ms.locfileid: "88810933"
 
 方法參數會放在括號中，並以逗號分隔。 空括號表示方法不需要任何參數。 這個類別包含四個方法：
 
-[!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]
+[!code-csharp[DifferentModifiersOnMethods#1](snippets/methods/Program.cs#1)]
 
 ## <a name="method-access"></a>方法存取
 
 在物件上呼叫方法，就像是存取欄位。 在物件名稱後面加上句點、方法的名稱與括號。 引數會在括號中列出，並以逗號分隔。 因此可以如下列範例所示呼叫 `Motorcycle` 類別的方法：
 
-[!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]
+[!code-csharp[CallingMethods#2](snippets/methods/Program.cs#2)]
 
 ## <a name="method-parameters-vs-arguments"></a>方法參數與引數
 
 方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數必須與參數類型相容，但如果呼叫程式碼中使用的任何) 不需要與方法中所定義的參數相同，則引數名稱 (。 例如：
 
-[!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
+[!code-csharp[MethodExamples#3](snippets/methods/Program.cs#3)]
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>以傳址方式傳遞與以傳值方式傳遞
 
@@ -51,11 +51,11 @@ ms.locfileid: "88810933"
 
 您可以使用關鍵字來建立參考型別 `class` ，如下列範例所示：
 
-[!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]
+[!code-csharp[SampleRefTypeClass#4](snippets/methods/Program.cs#4)]
 
 現在，如果您將此類型為基礎的物件傳遞至方法，即會傳遞物件的參考。 下列範例會將型別的物件傳遞 `SampleRefType` 給方法 `ModifyObject` ：
 
-[!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
+[!code-csharp[PassingAReferenceType#5](snippets/methods/Program.cs#5)]
 
 此範例會執行與上一個範例基本上相同的動作，依傳值方式將引數傳遞至方法。 但是，由於使用參考類型，結果會不同。 `ModifyObject` 中對參數 `value` 的 `obj`欄位做的修改，也會變更 `value` 方法中引數 `rt`的 `TestRefType` 欄位。 `TestRefType` 方法會顯示 33 做為輸出。
 
@@ -76,13 +76,13 @@ public ref double GetEstimatedDistance()
 
 `return` 關鍵字也會停止執行方法。 如果傳回類型為 `void`，不含值的 `return` 陳述式對於停止方法的執行仍很有用。 若沒有 `return` 關鍵字，在方法到達程式碼區塊的結尾時，方法將會停止執行。 具有非 void 傳回類型的方法需要使用 `return` 關鍵字以傳回值。 例如，這兩種方法使用 `return` 關鍵字傳回整數：
 
-[!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]
+[!code-csharp[SimpleMathClass#6](snippets/methods/Program.cs#6)]
 
 若要使用從方法傳回的值，呼叫方法可以在使用相同類型值的任意位置使用方法呼叫本身即已足夠。 您也可以指派傳回值給變數。 例如，下列兩個程式碼範例會達到相同的目標：
 
-[!code-csharp[csProgGuideObjects#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#45)]
+[!code-csharp[SquareANumberWithAddTwoNumbersUsingLocalVariable#7](snippets/methods/Program.cs#7)]
 
-[!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]
+[!code-csharp[SquareANumberWithAddTwoNumbersInTheSameLine#8](snippets/methods/Program.cs#8)]
 
 使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。
 
@@ -176,6 +176,6 @@ public Customer this[long id] => store.LookupCustomer(id);
 - [抽象和密封類別以及類別成員](abstract-and-sealed-classes-and-class-members.md)
 - [params](../../language-reference/keywords/params.md)
 - [返回](../../language-reference/keywords/return.md)
-- [擴展](../../language-reference/keywords/out.md)
-- [裁判](../../language-reference/keywords/ref.md)
+- [out](../../language-reference/keywords/out.md)
+- [ref](../../language-reference/keywords/ref.md)
 - [傳遞參數](passing-parameters.md)

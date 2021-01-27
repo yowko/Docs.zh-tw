@@ -5,14 +5,18 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: a1844ab3449b6bce526276eba693a1f2da0ebf6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6f085f87286aa5af4a3c2aaf2b74c9bf19023356
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202171"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899434"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+## <a name="overview"></a>概觀
 
 WCF Data Services 使用開放式資料通訊協定 (OData) ，讓 Web 或內部網路的資料服務建立和取用。 OData 可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題概述 OData 定義的模式和做法，以及 WCF Data Services 所提供的功能，以利用以 .NET Framework 為基礎的應用程式中的 OData。  
   

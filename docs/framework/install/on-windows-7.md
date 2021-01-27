@@ -2,12 +2,12 @@
 title: 在 Windows 7 SP1 上安裝 .NET Framework
 description: 了解如何在 Windows 7 SP1 上安裝 .NET Framework。
 ms.date: 04/18/2019
-ms.openlocfilehash: 3f94562f2a14c108a021343b89a8279e95215f30
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 900b38110626a93f37829045a8676ea87101d7e9
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558851"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899083"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>在 Windows 7 SP1 和 Windows Server 2008 R2 上安裝 .NET Framework
 
@@ -23,6 +23,16 @@ ms.locfileid: "88558851"
 > [下載 .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
+
+### <a name="offline-installer"></a>離線安裝程式
+
+在 Windows 7 上進行 .NET Framework 的離線安裝時，必須先確定已在目的電腦上安裝最新的 [Microsoft 根憑證授權單位 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) 。
+
+_certmgr.exe_ 工具可以自動安裝憑證，並從 Visual Studio 或 Windows SDK 取得。 執行 .NET Framework 安裝程式之前，會使用下列命令來安裝憑證：
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

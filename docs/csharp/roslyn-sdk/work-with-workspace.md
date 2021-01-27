@@ -3,16 +3,16 @@ title: 使用 .NET Compiler Platform SDK 工作區模型
 description: 此概觀可讓您了解用來查詢與管理程式碼之工作區和專案的類型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: d21873b132d5f0788033693a319e556feeac59a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b613c85c01cc054dea9dd4bb9cf0062ffedb08bf
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156879"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899109"
 ---
 # <a name="work-with-a-workspace"></a>使用工作區
 
-[工作區]**** 層是執行程式碼分析以及重構整個方案的起點。 在這層內，工作區 API 可協助您將方案中的所有專案資訊都組織成單一物件模型，以讓您直接存取原始程式文字、語法樹狀結構、語意模型和編譯這類編譯器層物件模型，而不需要剖析檔案、設定選項，或管理專案間相依性。
+[工作區] 層是執行程式碼分析以及重構整個方案的起點。 在這層內，工作區 API 可協助您將方案中的所有專案資訊都組織成單一物件模型，以讓您直接存取原始程式文字、語法樹狀結構、語意模型和編譯這類編譯器層物件模型，而不需要剖析檔案、設定選項，或管理專案間相依性。
 
 IDE 這類主機環境為您提供對應至開啟方案的工作區。 只要載入方案檔，也可以在 IDE 外部使用此模型。
 
@@ -24,7 +24,7 @@ IDE 這類主機環境為您提供對應至開啟方案的工作區。 只要載
 
 您也可以建立獨立工作區，而獨立工作區與主機環境中斷連線，或用於沒有主機環境的應用程式中。
 
-## <a name="solutions-projects-documents"></a>方案, 專案, 文件
+## <a name="solutions-projects-and-documents"></a>方案、專案和檔
 
 雖然每次按下按鍵時都可能變更工作區，但是您可以分開使用方案的模型。
 
@@ -40,4 +40,4 @@ IDE 這類主機環境為您提供對應至開啟方案的工作區。 只要載
 
 ## <a name="summary"></a>摘要
 
-Roslyn 會公開一組編譯器 API 和工作區 API，以提供您原始程式碼的豐富資訊，並且使用 C# 和 Visual Basic 語言也完全不失真。  .NET Compiler Platform SDK 可大幅降低建立以程式碼為中心之工具和應用程式的入門障礙。 它在元程式設計、代碼生成和轉換、C# 和 Visual Basic 語言的交互使用以及將 C# 和 Visual Basic 嵌入到特定于域的語言等領域創造了許多創新機會。  
+Roslyn 會公開一組編譯器 API 和工作區 API，以提供您原始程式碼的豐富資訊，並且使用 C# 和 Visual Basic 語言也完全不失真。  .NET Compiler Platform SDK 可大幅降低建立以程式碼為中心之工具和應用程式的入門障礙。 它會在多個區域中創造創新的機會，例如中繼程式設計、程式碼產生和轉換、c # 和 Visual Basic 語言的互動式使用，以及在特定領域語言中內嵌 c # 和 Visual Basic。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 9eff44f3260f0f50fef956ba60b01e2497d7d2dd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4783aff8e9424c90e46cb52692a3e645e995d914
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91199207"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899070"
 ---
 # <a name="constants-c-programming-guide"></a>常數 (C# 程式設計手冊)
 
@@ -23,7 +23,7 @@ ms.locfileid: "91199207"
   
  常數必須在宣告時進行初始化。 例如：  
   
- [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
+ [!code-csharp[Calendar#1](snippets/constants/Calendar.cs#1)]
   
  在此範例中，`Months` 常數一律為 12，而且甚至類別本身也不能進行變更。 事實上，編譯器在 C# 原始程式碼中遇到常數識別碼 (例如　`Months`) 時，會直接將常值替代為它所產生的中繼語言 (IL) 程式碼。 因為在執行階段沒有與常數相關聯的變數位址，所以無法以傳址方式傳遞 `const` 欄位，而且無法顯示為運算式中的左值。  
   
@@ -32,17 +32,17 @@ ms.locfileid: "91199207"
   
  可以同時宣告相同類型的多個常數，例如︰  
   
- [!code-csharp[csProgGuideObjects#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#65)]  
+ [!code-csharp[Calendar#2](snippets/constants/Calendar.cs#2)]
   
  如果用來初始化常數的運算式未建立循環參考，則可以參照另一個常數。 例如：  
   
- [!code-csharp[csProgGuideObjects#66](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#66)]  
+ [!code-csharp[Calendar#3](snippets/constants/Calendar.cs#3)]
   
  常數可以標記為 [public](../../language-reference/keywords/public.md)、[private](../../language-reference/keywords/private.md)、[protected](../../language-reference/keywords/protected.md)、[internal](../../language-reference/keywords/internal.md)、[protected internal](../../language-reference/keywords/protected-internal.md) 或 [private protected](../../language-reference/keywords/private-protected.md)。 這些存取修飾詞定義類別使用者如何存取常數。 如需詳細資訊，請參閱[存取修飾詞](./access-modifiers.md)。  
   
  因為類型之所有執行個體的常數值都會相同，所以常數的存取方式就像它們是 [static](../../language-reference/keywords/static.md) 欄位一樣。 您未使用 `static` 關鍵字來宣告它們。 不在定義常數之類別中的運算式必須使用類別名稱、句號以及存取常數的常數名稱。 例如：  
   
- [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
+ [!code-csharp[Calendar#4](snippets/constants/Calendar.cs#4)]
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 792159786131654d6ee0363f7ab7b87ac50d32bb
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: cfda3b89bfd9dc046274dfa53d62a0789d4d597e
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864744"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899096"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 
@@ -28,7 +28,7 @@ ms.locfileid: "86864744"
 
 - 若要分割類別定義，請使用 [partial](../../language-reference/keywords/partial-type.md) 關鍵字修飾詞，如下所示︰
 
-  [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
+  [!code-csharp[EmployeeExample#1](snippets/partial-classes-and-methods/Program.cs#1)]
 
 `partial` 關鍵字表示可在命名空間中定義類別、結構或介面的其他組件。 所有組件都必須使用 `partial` 關鍵字。 所有組件都必須可在編譯時間取得，以形成最後的型別。 所有組件必須有相同的存取範圍，例如 `public`、`private` 等等。
 
@@ -41,15 +41,15 @@ ms.locfileid: "86864744"
 
 下例會顯示可為部分的巢狀型別，即使巢狀型別所在的型別不是部分本身。
 
-[!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]
+[!code-csharp[NestedPartialTypes#2](snippets/partial-classes-and-methods/Program.cs#2)]
 
 在編譯時期會合併部分型別定義的屬性。 例如，請考慮下列宣告：
 
-[!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]
+[!code-csharp[PartialMoonDeclarations#3](snippets/partial-classes-and-methods/Program.cs#3)]
 
 它們與下列宣告相同：
 
-[!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]
+[!code-csharp[SingleMoonDeclaration#4](snippets/partial-classes-and-methods/Program.cs#4)]
 
 以下是合併自所有部分型別定義︰
 
@@ -65,11 +65,11 @@ ms.locfileid: "86864744"
 
 例如，請考慮下列宣告：
 
-[!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]
+[!code-csharp[PartialEarthDeclarations#5](snippets/partial-classes-and-methods/Program.cs#5)]
 
 它們與下列宣告相同：
 
-[!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
+[!code-csharp[SingleEarthDeclaration#6](snippets/partial-classes-and-methods/Program.cs#6)]
 
 ### <a name="restrictions"></a>限制
 
@@ -77,13 +77,13 @@ ms.locfileid: "86864744"
 
 - 表示同型別組件的所有部分型別定義都必須使用 `partial` 來修改。 例如，下列類別宣告會產生錯誤︰
 
-  [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]
+  [!code-csharp[AllDefinitionsMustBePartials#7](snippets/partial-classes-and-methods/Program.cs#7)]
 
 - `partial` 修飾詞只能緊貼在關鍵字 `class`、`struct` 或 `interface` 之前。
 
 - 部分型別定義中允許巢狀部分型別，如下例所示︰
 
-  [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]
+  [!code-csharp[NestedPartialTypes#8](snippets/partial-classes-and-methods/Program.cs#8)]
 
 - 表示同型別組件的所有部分型別定義都必須在相同的組件和相同的模組 (.exe 或 .dll 檔案) 中定義。 部分定義不能跨越多個模組。
 
@@ -95,11 +95,11 @@ ms.locfileid: "86864744"
 
   - [私人](../../language-reference/keywords/private.md)
 
-  - [protected](../../language-reference/keywords/protected.md)
+  - [受保護](../../language-reference/keywords/protected.md)
 
   - [內部](../../language-reference/keywords/internal.md)
 
-  - [概要](../../language-reference/keywords/abstract.md)
+  - [抽象](../../language-reference/keywords/abstract.md)
 
   - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -119,7 +119,7 @@ ms.locfileid: "86864744"
 
 ### <a name="code"></a>程式碼
 
-[!code-csharp[csProgGuideObjects#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#17)]
+[!code-csharp[CoordsExample#9](snippets/partial-classes-and-methods/Program.cs#9)]
 
 ## <a name="example-2"></a>範例 2
 
@@ -129,7 +129,7 @@ ms.locfileid: "86864744"
 
 ### <a name="code"></a>程式碼
 
-[!code-csharp[csProgGuideObjects#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#18)]
+[!code-csharp[PartialStructsAndInterfaces#10](snippets/partial-classes-and-methods/Program.cs#10)]
 
 ## <a name="partial-methods"></a>部分方法
 

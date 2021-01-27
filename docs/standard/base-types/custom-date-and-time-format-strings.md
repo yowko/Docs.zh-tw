@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 70e68de3ce736bc4935dea80e37cc805068b0bc5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 296c69e5238bca9a13aa28197926c67b6ac5c5ef
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722462"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898888"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
@@ -221,7 +221,7 @@ ms.locfileid: "95722462"
 
 ### <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a> "F" 自訂格式規範
 
-"F" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。 如果數字為零，則不會顯示任何內容。
+"F" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。 如果數位為零，則不會顯示任何內容，而且也不會顯示在秒數之後的小數點。
 
 如果單獨使用 "F" 格式規範，而沒有其他格式規範，則會將它解譯為 "F" 標準日期和時間格式規範。 如需如何使用單一格式規範的詳細資訊，請參閱本文稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。
 
@@ -236,7 +236,7 @@ ms.locfileid: "95722462"
 
 ### <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a> "FF" 自訂格式規範
 
-"FF" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。 不過，結尾的零或兩個零的數字都不會顯示。
+"FF" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。 不會顯示尾端的零。 如果兩個有效位數為零，則不會顯示任何專案，在此情況下，也不會顯示在秒數之後的小數點。
 
 下列範例會在自訂格式字串中加入 "FF" 自訂格式規範。
 
@@ -247,7 +247,7 @@ ms.locfileid: "95722462"
 
 ### <a name="the-fff-custom-format-specifier"></a><a name="FFF_Specifier"></a> "FFF" 自訂格式規範
 
-"FFF" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。 不過，結尾的零或三個零的數字都不會顯示。
+"FFF" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。 不會顯示尾端的零。 如果三個有效位數為零，則不會顯示任何專案，在此情況下，也不會顯示在秒數之後的小數點。
 
 下列範例會在自訂格式字串中加入 "FFF" 自訂格式規範。
 
@@ -258,7 +258,7 @@ ms.locfileid: "95722462"
 
 ### <a name="the-ffff-custom-format-specifier"></a><a name="FFFF_Specifier"></a> "FFFF" 自訂格式規範
 
-"FFFF" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。 不過，結尾的零或四個零的數字都不會顯示。
+"FFFF" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。 不會顯示尾端的零。 如果四個有效位數為零，則不會顯示任何專案，在此情況下，也不會顯示在秒數之後的小數點。
 
 雖然時間值的秒數部分可以顯示到萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。
 
@@ -266,7 +266,7 @@ ms.locfileid: "95722462"
 
 ### <a name="the-fffff-custom-format-specifier"></a><a name="FFFFF_Specifier"></a> "FFFFF" 自訂格式規範
 
-"FFFFF" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。 不過，結尾的零或五個零的數字都不會顯示。
+"FFFFF" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。 不會顯示尾端的零。 如果五個有效位數為零，則不會顯示任何專案，在此情況下，也不會顯示在秒數之後的小數點。
 
 雖然時間值的秒數部分可以顯示到萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。
 
@@ -274,7 +274,7 @@ ms.locfileid: "95722462"
 
 ### <a name="the-ffffff-custom-format-specifier"></a><a name="FFFFFF_Specifier"></a> "FFFFFF" 自訂格式規範
 
-"FFFFFF" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。 不過，結尾的零或六個零的數字都不會顯示。
+"FFFFFF" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。 不會顯示尾端的零。 如果六個有效位數為零，則不會顯示任何專案，在此情況下，也不會顯示在秒數之後的小數點。
 
 雖然時間值的秒數部分可以顯示到百萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。
 
@@ -282,7 +282,7 @@ ms.locfileid: "95722462"
 
 ### <a name="the-fffffff-custom-format-specifier"></a><a name="FFFFFFF_Specifier"></a> "FFFFFFF" 自訂格式規範
 
-"FFFFFFF" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。 不過，結尾的零或七個零的數字都不會顯示。
+"FFFFFFF" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。 不會顯示尾端的零。 如果七個有效位數為零，則不會顯示任何專案，在此情況下，也不會顯示在秒數之後的小數點。
 
 雖然時間值的秒數部分可以顯示到千萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。
 
@@ -683,7 +683,7 @@ ms.locfileid: "95722462"
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>備忘稿
+## <a name="notes"></a>備註
 
 ### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a> 使用單一自訂格式規範
 

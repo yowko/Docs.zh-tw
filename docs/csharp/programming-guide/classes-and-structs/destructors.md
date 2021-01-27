@@ -7,16 +7,16 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 61a00e766b0f975691b9f2a7c7561bb4f1d33c02
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a2f4f5f9342d5df1f9fa741c86cfe6f8b1d88bd1
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174299"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899057"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
 
-完成項 (也稱為**解構函式**) 可在記憶體回收行程收集類別執行個體時，用來執行任何必要的最後清除。  
+完成項 (也稱為 **解構函式**) 可在記憶體回收行程收集類別執行個體時，用來執行任何必要的最後清除。  
   
 ## <a name="remarks"></a>備註  
   
@@ -32,7 +32,7 @@ ms.locfileid: "91174299"
   
  例如，下列是 `Car` 類別的完成項宣告。
   
- [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
+ [!code-csharp[csProgGuideObjects#86](snippets/destructors/Program.cs#2)]
 
 完成項也可以實作為運算式主體定義，如下列範例所示。
 
@@ -77,7 +77,7 @@ protected override void Finalize()
   
 - [清除 Unmanaged 資源](../../../standard/garbage-collection/unmanaged.md)  
   
-- [執行 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
+- [實作 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
 - [using 陳述式](../../language-reference/keywords/using-statement.md)  
   
@@ -85,7 +85,7 @@ protected override void Finalize()
 
  下列範例會建立三個產生繼承鏈結的類別。 `First` 類別是基底類別、`Second` 衍生自 `First`，而 `Third` 衍生自 `Second`。 所有這三個都有完成項。 在 `Main` 中，會建立最高衍生性類別的執行個體。 程式執行時，請注意，會依最高衍生性到最低衍生性的順序，自動呼叫這三個類別的完成項。  
   
- [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
+ [!code-csharp[Destructors#1](snippets/destructors/Program.cs#1)]
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
