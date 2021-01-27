@@ -1,1472 +1,1471 @@
-- name: C# 文件
-  href: index.yml
-- name: 開始使用
-  items:
-    - name: C# 語言與 .NET 簡介
-      displayName: get started
-      href: getting-started/index.md
-    - name: C# 導覽
-      items:
-        - name: 簡介
-          href: tour-of-csharp/index.md
-        - name: 類型
-          href: tour-of-csharp/types.md
-        - name: 程式建置區塊
-          href: tour-of-csharp/program-building-blocks.md
-        - name: 主要語言區域
-          href: tour-of-csharp/features.md
-- name: 教學課程
-  items:
-    - name: 總覽
-      displayName: tutorials
-      href: tutorials/index.md
-    - name: 使用 C# 設計程式的簡介
-      items:
-        - name: 選擇您的第一課
-          href: tutorials/intro-to-csharp/index.md
-        - name: Hello World
-          href: tutorials/intro-to-csharp/hello-world.yml
-        - name: C# 中的數字
-          href: tutorials/intro-to-csharp/numbers-in-csharp.yml
-        - name: 分支和迴圈
-          href: tutorials/intro-to-csharp/branches-and-loops.yml
-        - name: 清單集合
-          href: tutorials/intro-to-csharp/list-collection.yml
-        - name: 在您的本機環境中運作
-          items:
-            - name: 設定環境
-              href: tutorials/intro-to-csharp/local-environment.md
-            - name: C# 中的數字
-              href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
-            - name: 分支和迴圈
-              href: tutorials/intro-to-csharp/branches-and-loops-local.md
-            - name: 清單集合
-              href: tutorials/intro-to-csharp/arrays-and-collections.md
-            - name: 類別簡介
-              href: tutorials/intro-to-csharp/introduction-to-classes.md
-            - name: 物件導向程式設計
-              href: tutorials/intro-to-csharp/object-oriented-programming.md
-    - name: 探索記錄類型
-      href: tutorials/exploration/records.md
-    - name: 探索最上層陳述式
-      href: tutorials/exploration/top-level-statements.md
-    - name: 探索物件中的模式
-      href: tutorials/exploration/patterns-objects.md
-    - name: 探索字串插補 - 互動式
-      href: tutorials/exploration/interpolated-strings.yml
-    - name: 探索您環境中的字串插補
-      href: tutorials/exploration/interpolated-strings-local.md
-    - name: 字串插補的進階案例
-      href: tutorials/string-interpolation.md
-    - name: 使用預設介面方法安全地更新介面
-      href: tutorials/default-interface-methods-versions.md
-    - name: 使用預設介面的方法，建立 mixin 功能
-      href: tutorials/mixins-with-default-interface-methods.md
-    - name: 探索索引及範圍
-      href: tutorials/ranges-indexes.md
-    - name: 使用可以為 null 的參考類型
-      href: tutorials/nullable-reference-types.md
-    - name: 將應用程式升級成可以為 null 的參考類型
-      href: tutorials/upgrade-to-nullable-references.md
-    - name: 產生及使用非同步串流
-      href: tutorials/generate-consume-asynchronous-stream.md
-    - name: 使用模式比對建立資料驅動演算法
-      href: tutorials/pattern-matching.md
-    - name: 主控台應用程式
-      href: tutorials/console-teleprompter.md
-    - name: REST 用戶端
-      href: tutorials/console-webapiclient.md
-    - name: C# 和 .NET 中的繼承
-      href: tutorials/inheritance.md
-    - name: 使用 LINQ
-      href: tutorials/working-with-linq.md
-    - name: 使用屬性
-      href: tutorials/attributes.md
-- name: C# 的新功能
-  items:
-    - name: C# 9.0
-      displayName: what's new
-      href: whats-new/csharp-9.md
-    - name: C# 8.0
-      href: whats-new/csharp-8.md
-    - name: C# 7.0-7.3
-      href: whats-new/csharp-7.md
-    - name: 編譯器的重大變更
-      href: whats-new/breaking-changes.md
-    - name: C# 的版本歷程記錄
-      href: whats-new/csharp-version-history.md
-    - name: 語言與架構的關聯性
-      href: whats-new/relationships-between-language-and-library.md
-    - name: 版本與更新考量
-      href: whats-new/version-update-considerations.md
-- name: C# 概念
-  items:
-    - name: C# 型別系統
-      href: programming-guide/types/index.md
-    - name: 可為 Null 的參考型別
-      href: nullable-references.md
-    - name: 選擇可為 Null 之參考型別的策略
-      href: nullable-migration-strategies.md
-    - name: 命名空間
-      href: programming-guide/namespaces/index.md
-    - name: 基本類型
-      href: basic-types.md
-    - name: 類別
-      href: programming-guide/classes-and-structs/classes.md
-    - name: 解構元組和其他類型
-      href: deconstruct.md
-    - name: 介面
-      href: programming-guide/interfaces/index.md
-    - name: 方法
-      href: methods.md
-    - name: 屬性
-      href: properties.md
-    - name: 索引子
-      href: indexers.md
-    - name: 捨棄
-      href: discards.md
-    - name: 泛型
-      href: programming-guide/generics/index.md
-    - name: 迭代器
-      href: iterators.md
-    - name: 委派和事件
-      items:
-        - name: 委派簡介
-          href: delegates-overview.md
-        - name: System.Delegate 與 delegate 關鍵字
-          href: delegate-class.md
-        - name: 強類型委派
-          href: delegates-strongly-typed.md
-        - name: 委派的一般模式
-          href: delegates-patterns.md
-        - name: 事件簡介
-          href: events-overview.md
-        - name: 標準的 .NET 事件模式
-          href: event-pattern.md
-        - name: 更新的 .NET 事件模式
-          href: modern-events.md
-        - name: 區別委派和事件
-          href: distinguish-delegates-events.md
-    - name: Language-Integrated Query (LINQ)
-      items:
-        - name: LINQ 概觀
-          href: linq/index.md
-        - name: 查詢運算式基本概念
-          href: linq/query-expression-basics.md
-        - name: C# 中的 LINQ
-          href: linq/linq-in-csharp.md
-        - name: 在 C# 中撰寫 LINQ 查詢
-          href: linq/write-linq-queries.md
-        - name: 查詢物件的集合
-          href: linq/query-a-collection-of-objects.md
-        - name: 從方法傳回查詢
-          href: linq/return-a-query-from-a-method.md
-        - name: 將查詢的結果儲存在記憶體中
-          href: linq/store-the-results-of-a-query-in-memory.md
-        - name: 將查詢結果分組
-          href: linq/group-query-results.md
-        - name: 建立巢狀群組
-          href: linq/create-a-nested-group.md
-        - name: 在分組作業上執行子查詢
-          href: linq/perform-a-subquery-on-a-grouping-operation.md
-        - name: 以相鄰索引鍵將結果分組
-          href: linq/group-results-by-contiguous-keys.md
-        - name: 在執行階段動態指定述詞篩選
-          href: linq/dynamically-specify-predicate-filters-at-runtime.md
-        - name: 執行內部聯結
-          href: linq/perform-inner-joins.md
-        - name: 執行群組聯結
-          href: linq/perform-grouped-joins.md
-        - name: 執行左方外部聯結
-          href: linq/perform-left-outer-joins.md
-        - name: 排序 join 子句的結果
-          href: linq/order-the-results-of-a-join-clause.md
-        - name: 使用複合索引鍵執行聯結
-          href: linq/join-by-using-composite-keys.md
-        - name: 執行自訂的聯結作業
-          href: linq/perform-custom-join-operations.md
-        - name: 處理查詢運算式中的 Null 值
-          href: linq/handle-null-values-in-query-expressions.md
-        - name: 處理查詢運算式中的例外狀況
-          href: linq/handle-exceptions-in-query-expressions.md
-    - name: 非同步程式設計
-      href: async.md
-    - name: 模式比對
-      href: pattern-matching.md
-    - name: 撰寫安全有效率的程式碼
-      href: write-safe-efficient-code.md
-    - name: 運算式樹狀架構
-      items:
-        - name: 運算式樹狀架構簡介
-          href: expression-trees.md
-        - name: 說明運算式樹狀架構
-          href: expression-trees-explained.md
-        - name: 支援運算式樹狀架構的架構類型
-          href: expression-classes.md
-        - name: 執行運算式
-          href: expression-trees-execution.md
-        - name: 解譯運算式
-          href: expression-trees-interpreting.md
-        - name: 建置運算式
-          href: expression-trees-building.md
-        - name: 轉譯運算式
-          href: expression-trees-translating.md
-        - name: 總結
-          href: expression-trees-summary.md
-    - name: 原生互通性
-      href: programming-guide/interop/index.md
-    - name: 加入程式碼註解
-      href: codedoc.md
-    - name: 版本控制
-      href: versioning.md
-- name: 操作說明 C# 文章
-  items:
-    - name: 文章索引
-      displayName: how to's
-      href: how-to/index.md
-    - name: 將字串分割成子字串
-      href: how-to/parse-strings-using-split.md
-    - name: 串連字串
-      href: how-to/concatenate-multiple-strings.md
-    - name: 搜尋字串
-      href: how-to/search-strings.md
-    - name: 修改字串內容
-      href: how-to/modify-string-contents.md
-    - name: 比較字串
-      href: how-to/compare-strings.md
-    - name: 使用模式比對與 is/as 運算子安全地進行轉換
-      href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
-- name: .NET Compiler Platform SDK (Roslyn API)
-  items:
-    - name: .NET Compiler Platform SDK (Roslyn API) 概觀
-      href: roslyn-sdk/index.md
-    - name: 了解編譯器 API 模型
-      href: roslyn-sdk/compiler-api-model.md
-    - name: 使用語法
-      href: roslyn-sdk/work-with-syntax.md
-    - name: 使用語意
-      href: roslyn-sdk/work-with-semantics.md
-    - name: 使用工作區
-      href: roslyn-sdk/work-with-workspace.md
-    - name: 利用語法視覺化檢視探索程式碼
-      href: roslyn-sdk/syntax-visualizer.md
-    - name: 快速入門
-      items:
-        - name: 語法分析
-          href: roslyn-sdk/get-started/syntax-analysis.md
-        - name: 語意分析
-          href: roslyn-sdk/get-started/semantic-analysis.md
-        - name: 語法轉換
-          href: roslyn-sdk/get-started/syntax-transformation.md
-    - name: 教學課程
-      items:
-        - name: 建置您的第一個分析器和程式碼修正
-          href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
-- name: C# 程式設計手冊
-  items:
-    - name: 總覽
-      displayName: programming guide
-      href: programming-guide/index.md
-    - name: C# 程式深入解析
-      items:
-        - name: C# 程式深入解析
-          href: programming-guide/inside-a-program/index.md
-        - name: Hello World -- 您的第一個程式
-          href: programming-guide/inside-a-program/hello-world-your-first-program.md
-        - name: C# 程式的一般結構
-          href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
-        - name: 識別碼名稱
-          href: programming-guide/inside-a-program/identifier-names.md
-        - name: C# 編碼慣例
-          href: programming-guide/inside-a-program/coding-conventions.md
-    - name: Main() 和命令列引數
-      items:
-        - name: 總覽
-          displayName: main method
-          href: programming-guide/main-and-command-args/index.md
-        - name: 命令列引數
-          href: programming-guide/main-and-command-args/command-line-arguments.md
-        - name: 如何顯示命令列引數
-          href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
-        - name: Main() 傳回值
-          href: programming-guide/main-and-command-args/main-return-values.md
-    - name: 程式設計概念
-      items:
-        - name: 總覽
-          displayName: programming concepts
-          href: programming-guide/concepts/index.md
-        - name: 非同步程式設計
-          displayName: 'async, await, asynchronous programming, task, cancellation'
-          items:
-            - name: 總覽
-              displayName: asynchronous programming
-              href: programming-guide/concepts/async/index.md
-            - name: 非同步工作程式設計模型
-              href: programming-guide/concepts/async/task-asynchronous-programming-model.md
-            - name: 非同步傳回型別
-              href: programming-guide/concepts/async/async-return-types.md
-            - name: 取消工作
-              items:
-                - name: 取消工作清單
-                  href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
-                - name: 在一段時間後取消工作
-                  href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
-            - name: 在非同步工作完成時進行處理
-              href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
-            - name: 非同步檔案存取
-              href: programming-guide/concepts/async/using-async-for-file-access.md
-        - name: 屬性
-          items:
-            - name: 總覽
-              displayName: attributes
-              href: programming-guide/concepts/attributes/index.md
-            - name: 建立自訂屬性
-              href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: 使用反映存取屬性
-              href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
-            - name: 如何使用屬性建立 C/C++ 等位
-              href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-        - name: 集合
-          href: programming-guide/concepts/collections.md
-        - name: 共變數和反變數
-          items:
-            - name: 總覽
-              displayName: covariance and contravariance
-              href: programming-guide/concepts/covariance-contravariance/index.md
-            - name: 泛型介面中的變異數
-              href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
-              items:
-                - name: 建立 Variant 泛型介面
-                  href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
-                - name: 針對泛型集合使用介面中的變異數
-                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
-            - name: 委派中的變異數
-              href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
-              items:
-                - name: 在委派中使用變異數
-                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
-                - name: 針對 Func 與 Action 泛型委派使用變異數
-                  href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
-        - name: 運算式樹狀架構
-          items:
-            - name: 總覽
-              displayName: expression trees
-              href: programming-guide/concepts/expression-trees/index.md
-            - name: 如何執行運算式樹狀架構
-              href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
-            - name: 如何修改運算式樹狀架構
-              href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
-            - name: 如何使用運算式樹狀架構建置動態查詢
-              href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
-            - name: 在 Visual Studio 中對運算式樹狀架構進行偵錯
-              href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
-            - name: DebugView 語法
-              href: programming-guide/concepts/expression-trees/debugview-syntax.md
-        - name: 迭代器
-          href: programming-guide/concepts/iterators.md
-        - name: Language-Integrated Query (LINQ)
-          items:
-            - name: 總覽
-              displayName: LINQ overview
-              href: programming-guide/concepts/linq/index.md
-            - name: 開始使用 C# 中的 LINQ
-              items:
-                - name: LINQ 查詢簡介
-                  href: programming-guide/concepts/linq/introduction-to-linq-queries.md
-                - name: LINQ 和泛型型別
-                  href: programming-guide/concepts/linq/linq-and-generic-types.md
-                - name: 基本 LINQ 查詢作業
-                  href: programming-guide/concepts/linq/basic-linq-query-operations.md
-                - name: 使用 LINQ 轉換資料
-                  href: programming-guide/concepts/linq/data-transformations-with-linq.md
-                - name: LINQ 查詢作業中的型別關聯性
-                  href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
-                - name: LINQ 中的查詢語法及方法語法
-                  href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
-                - name: 支援 LINQ 的 C# 功能
-                  href: programming-guide/concepts/linq/features-that-support-linq.md
-                - name: 逐步解說：在 C# 中撰寫查詢 (LINQ)
-                  href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
-            - name: 標準查詢運算子概觀
-              items:
-                - name: 總覽
-                  href: programming-guide/concepts/linq/standard-query-operators-overview.md
-                - name: 標準查詢運算子的查詢運算式語法
-                  href: programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md
-                - name: 根據執行方式分類標準查詢運算子
-                  href: programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md
-                - name: 排序資料
-                  href: programming-guide/concepts/linq/sorting-data.md
-                - name: 設定作業
-                  href: programming-guide/concepts/linq/set-operations.md
-                - name: 篩選資料
-                  href: programming-guide/concepts/linq/filtering-data.md
-                - name: 數量詞作業
-                  href: programming-guide/concepts/linq/quantifier-operations.md
-                - name: 投影作業
-                  href: programming-guide/concepts/linq/projection-operations.md
-                - name: 分割資料
-                  href: programming-guide/concepts/linq/partitioning-data.md
-                - name: 聯結作業
-                  href: programming-guide/concepts/linq/join-operations.md
-                - name: 分組資料
-                  href: programming-guide/concepts/linq/grouping-data.md
-                - name: 產生作業
-                  href: programming-guide/concepts/linq/generation-operations.md
-                - name: 相等比較作業
-                  href: programming-guide/concepts/linq/equality-operations.md
-                - name: 項目作業
-                  href: programming-guide/concepts/linq/element-operations.md
-                - name: 轉換資料類型
-                  href: programming-guide/concepts/linq/converting-data-types.md
-                - name: 串連作業
-                  href: programming-guide/concepts/linq/concatenation-operations.md
-                - name: 彙總作業
-                  href: programming-guide/concepts/linq/aggregation-operations.md
-            - name: LINQ to Objects
-              items:
-                - name: 總覽
-                  href: programming-guide/concepts/linq/linq-to-objects.md
-                - name: LINQ 和字串
-                  href: programming-guide/concepts/linq/linq-and-strings.md
-                - name: 操作說明文章
-                  items:
-                    - name: 如何計算某個字在字串中出現的次數 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
-                    - name: 如何查詢包含指定詞組的句子 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
-                    - name: 如何查詢字串中的字元 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
-                    - name: 如何合併 LINQ 查詢與規則運算式
-                      href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
-                    - name: 如何尋找兩份清單間的集合差異 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
-                    - name: 如何依任何字詞或欄位排序或篩選文字資料 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
-                    - name: 如何重新排列有分隔符號的檔案中欄位 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
-                    - name: 如何合併和比較字串集合 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
-                    - name: 如何從多個來源填入物件集合 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
-                    - name: 如何使用群組將一份檔案分割成許多檔案 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
-                    - name: 如何聯結不同檔案的內容 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
-                    - name: 如何計算 CSV 文字檔案中的資料行值 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
-                - name: LINQ 和反映
-                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
-                - name: 如何使用反映查詢組件的中繼資料 (LINQ)
-                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
-                - name: LINQ 和檔案目錄
-                  items:
-                    - name: 總覽
-                      href: programming-guide/concepts/linq/linq-and-file-directories.md
-                    - name: 如何查詢具有指定屬性或名稱的檔案
-                      href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
-                    - name: 如何依副檔名分組檔案 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
-                    - name: 如何查詢一組資料夾中的位元組總數 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-                    - name: 如何比較兩個資料夾的內容 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
-                    - name: 如何查詢目錄樹狀中的最大檔案 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
-                    - name: 如何查詢目錄樹狀結構中的重複檔案 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-                    - name: 如何查詢資料夾中的檔案內容 (LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
-                - name: 如何使用 LINQ 查詢 ArrayList
-                  href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
-                - name: 如何新增 LINQ 查詢的自訂方法
-                  href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
-            - name: LINQ to ADO.NET (入口網站頁面)
-              href: programming-guide/concepts/linq/linq-to-adonet-portal-page.md
-            - name: 啟用資料來源以進行 LINQ 查詢
-              href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
-            - name: LINQ 的 Visual Studio IDE 和工具支援
-              href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
-        - name: 反射
-          href: programming-guide/concepts/reflection.md
-        - name: 序列化 (C#)
-          items:
-            - name: 總覽
-              displayName: serialization
-              href: programming-guide/concepts/serialization/index.md
-            - name: 如何將物件資料寫入 XML 檔案
-              href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
-            - name: 如何從 XML 檔案讀取物件資料
-              href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
-            - name: 逐步解說：在 Visual Studio 中保存物件
-              href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
-    - name: 陳述式、運算式和運算子
-      items:
-        - name: 概觀
-          displayName: 'statements, expressions, operators'
-          href: programming-guide/statements-expressions-operators/index.md
-        - name: 陳述式
-          href: programming-guide/statements-expressions-operators/statements.md
-        - name: 運算式主體成員
-          href: programming-guide/statements-expressions-operators/expression-bodied-members.md
-        - name: 匿名函式
-          items:
-            - name: 總覽
-              href: programming-guide/statements-expressions-operators/anonymous-functions.md
-            - name: 如何在查詢中使用 Lambda 運算式
-              href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
-        - name: 相等及相等比較
-          items:
-            - name: 相等比較
-              href: programming-guide/statements-expressions-operators/equality-comparisons.md
-            - name: 如何定義類型的實值相等性
-              href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
-            - name: 如何測試參考相等性 (身分識別)
-              href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
-    - name: 型別
-      items:
-        - name: 使用及定義型別
-          href: programming-guide/types/index.md
-        - name: 轉換和類型轉換
-          href: programming-guide/types/casting-and-type-conversions.md
-        - name: Boxing 和 Unboxing
-          href: programming-guide/types/boxing-and-unboxing.md
-        - name: 如何將位元組陣列轉換成整數
-          href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
-        - name: 如何將字串轉換為數值
-          href: programming-guide/types/how-to-convert-a-string-to-a-number.md
-        - name: 如何在十六進位字串和數字類型間轉換
-          href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
-        - name: 使用動態類型
-          href: programming-guide/types/using-type-dynamic.md
-        - name: 逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
-          href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
-    - name: 類別和結構
-      items:
-        - name: 總覽
-          displayName: classes
-          href: programming-guide/classes-and-structs/index.md
-        - name: 類別
-          href: programming-guide/classes-and-structs/classes.md
-        - name: 物件
-          href: programming-guide/classes-and-structs/objects.md
-        - name: 繼承
-          href: programming-guide/classes-and-structs/inheritance.md
-        - name: 多型
-          items:
-            - name: 總覽
-              displayName: polymorphism
-              href: programming-guide/classes-and-structs/polymorphism.md
-            - name: 使用 Override 和 New 關鍵字進行版本設定
-              href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
-            - name: 了解使用 Override 和 New 關鍵字的時機
-              href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
-            - name: 如何覆寫 ToString 方法
-              href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
-        - name: 成員
-          items:
-            - name: 成員概觀
-              href: programming-guide/classes-and-structs/members.md
-            - name: 抽象和密封類別以及類別成員
-              href: programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md
-            - name: 靜態類別和靜態類別成員
-              href: programming-guide/classes-and-structs/static-classes-and-static-class-members.md
-            - name: 存取修飾詞
-              href: programming-guide/classes-and-structs/access-modifiers.md
-            - name: 欄位
-              href: programming-guide/classes-and-structs/fields.md
-            - name: 常數
-              href: programming-guide/classes-and-structs/constants.md
-            - name: 如何定義抽象屬性
-              href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: 如何在 C# 中定義常數
-              href: programming-guide/classes-and-structs/how-to-define-constants.md
-        - name: 屬性
-          items:
-            - name: 屬性概觀
-              href: programming-guide/classes-and-structs/properties.md
-            - name: 使用屬性
-              href: programming-guide/classes-and-structs/using-properties.md
-            - name: 介面屬性
-              href: programming-guide/classes-and-structs/interface-properties.md
-            - name: 限制存取子協助工具
-              href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
-            - name: 如何宣告及使用讀寫屬性
-              href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
-            - name: 自動實作的屬性
-              href: programming-guide/classes-and-structs/auto-implemented-properties.md
-            - name: 如何使用自動實作的屬性來實作輕量型類別
-              href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
-        - name: 方法
-          items:
-            - name: 方法概觀
-              href: programming-guide/classes-and-structs/methods.md
-            - name: 區域函式
-              href: programming-guide/classes-and-structs/local-functions.md
-            - name: ref 傳回值和 ref 區域變數
-              href: programming-guide/classes-and-structs/ref-returns.md
-            - name: 參數
-              items:
-                - name: 傳遞參數
-                  href: programming-guide/classes-and-structs/passing-parameters.md
-                - name: 傳遞實值型別參數
-                  href: programming-guide/classes-and-structs/passing-value-type-parameters.md
-                - name: 傳遞參考型別參數
-                  href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
-                - name: 如何了解傳遞結構和傳遞類別參考給方法之間的差異
-                  href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
-            - name: 隱含類型區域變數
-              href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
-            - name: 如何在查詢運算式中使用隱含類型區域變數和陣列
-              href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
-            - name: 擴充方法
-              href: programming-guide/classes-and-structs/extension-methods.md
-            - name: 如何實作和呼叫自訂擴充方法
-              href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
-            - name: 如何建立列舉的新方法
-              href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
-            - name: 具名和選擇性引數
-              href: programming-guide/classes-and-structs/named-and-optional-arguments.md
-            - name: 如何在 Office 程式設計中使用具名和選擇性引數
-              href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
-        - name: 建構函式
-          items:
-            - name: 建構函式概觀
-              href: programming-guide/classes-and-structs/constructors.md
-            - name: 使用建構函式
-              href: programming-guide/classes-and-structs/using-constructors.md
-            - name: 執行個體建構函式
-              href: programming-guide/classes-and-structs/instance-constructors.md
-            - name: 私用建構函式
-              href: programming-guide/classes-and-structs/private-constructors.md
-            - name: 靜態建構函式
-              href: programming-guide/classes-and-structs/static-constructors.md
-            - name: 如何撰寫複製建構函式
-              href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
-        - name: 完成項
-          href: programming-guide/classes-and-structs/destructors.md
-        - name: 物件和集合初始設定式
-          href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: 如何使用物件初始設定式初始化物件
-          href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
-        - name: 如何使用集合初始設定式初始化字典
-          href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
-        - name: 巢狀類型
-          href: programming-guide/classes-and-structs/nested-types.md
-        - name: 部分類別和方法
-          href: programming-guide/classes-and-structs/partial-classes-and-methods.md
-        - name: 匿名類型
-          href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: 如何在查詢中傳回元素屬性的子集
-          href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
-    - name: 介面
-      items:
-        - name: 總覽
-          displayName: interfaces
-          href: programming-guide/interfaces/index.md
-        - name: 明確介面實作
-          href: programming-guide/interfaces/explicit-interface-implementation.md
-        - name: 如何明確實作介面成員
-          href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
-        - name: 如何明確實作兩個介面的成員
-          href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
-    - name: 委派
-      items:
-        - name: 總覽
-          displayName: delegates
-          href: programming-guide/delegates/index.md
-        - name: 使用委派
-          href: programming-guide/delegates/using-delegates.md
-        - name: 具名方法委派與匿名方法
-          href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
-        - name: 如何合併委派 (多點傳送委派) (C# 程式設計手冊)
-          href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
-        - name: 如何宣告、具現化和使用委派
-          href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
-    - name: 陣列
-      items:
-        - name: 總覽
-          displayName: arrays
-          href: programming-guide/arrays/index.md
-        - name: 陣列作為物件
-          href: programming-guide/arrays/arrays-as-objects.md
-        - name: 一維陣列
-          href: programming-guide/arrays/single-dimensional-arrays.md
-        - name: 多維陣列
-          href: programming-guide/arrays/multidimensional-arrays.md
-        - name: 不規則陣列
-          href: programming-guide/arrays/jagged-arrays.md
-        - name: 搭配陣列使用 foreach
-          href: programming-guide/arrays/using-foreach-with-arrays.md
-        - name: 傳遞陣列作為引數
-          href: programming-guide/arrays/passing-arrays-as-arguments.md
-        - name: 隱含型別陣列
-          href: programming-guide/arrays/implicitly-typed-arrays.md
-    - name: 字串
-      items:
-        - name: 使用字串進行程式設計
-          href: programming-guide/strings/index.md
-        - name: 如何判斷字串是否表示數值
-          href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
-    - name: 索引子
-      items:
-        - name: 總覽
-          displayName: indexers
-          href: programming-guide/indexers/index.md
-        - name: 使用索引子
-          href: programming-guide/indexers/using-indexers.md
-        - name: 介面中的索引子
-          href: programming-guide/indexers/indexers-in-interfaces.md
-        - name: 屬性與索引子之間的比較
-          href: programming-guide/indexers/comparison-between-properties-and-indexers.md
-    - name: 事件
-      items:
-        - name: 總覽
-          displayName: events
-          href: programming-guide/events/index.md
-        - name: 如何訂閱及取消訂閱事件
-          href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: 如何發佈符合 .NET 指導方針的事件
-          href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
-        - name: 如何在衍生類別中引發基底類別事件
-          href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
-        - name: 如何實作介面事件
-          href: programming-guide/events/how-to-implement-interface-events.md
-        - name: 如何實作自訂事件存取子
-          href: programming-guide/events/how-to-implement-custom-event-accessors.md
-    - name: 泛型
-      items:
-        - name: 總覽
-          displayName: generics
-          href: programming-guide/generics/index.md
-        - name: 泛型類型參數
-          href: programming-guide/generics/generic-type-parameters.md
-        - name: 型別參數的條件約束
-          href: programming-guide/generics/constraints-on-type-parameters.md
-        - name: 泛型類別
-          href: programming-guide/generics/generic-classes.md
-        - name: 泛型介面
-          href: programming-guide/generics/generic-interfaces.md
-        - name: 泛型方法
-          href: programming-guide/generics/generic-methods.md
-        - name: 泛型和陣列
-          href: programming-guide/generics/generics-and-arrays.md
-        - name: 泛型委派
-          href: programming-guide/generics/generic-delegates.md
-        - name: C++ 範本和 C# 泛型之間的差異
-          href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
-        - name: 執行階段中的泛型
-          href: programming-guide/generics/generics-in-the-run-time.md
-        - name: 泛型和反映
-          href: programming-guide/generics/generics-and-reflection.md
-        - name: 泛型和屬性
-          href: programming-guide/generics/generics-and-attributes.md
-    - name: 命名空間
-      items:
-        - name: 總覽
-          displayName: namespaces
-          href: programming-guide/namespaces/index.md
-        - name: 使用命名空間
-          href: programming-guide/namespaces/using-namespaces.md
-        - name: 如何使用 My 命名空間
-          href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: 不安全的程式碼和指標
-      items:
-        - name: 概觀及限制
-          displayName: unsafe code pointers
-          href: programming-guide/unsafe-code-pointers/index.md
-        - name: 固定大小的緩衝區
-          href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
-        - name: 指標類型
-          items:
-            - name: 總覽
-              displayName: pointer types
-              href: programming-guide/unsafe-code-pointers/pointer-types.md
-            - name: 指標轉換
-              href: programming-guide/unsafe-code-pointers/pointer-conversions.md
-            - name: 如何使用指標複製位元組陣列
-              href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
-    - name: XML 文件註解
-      items:
-        - name: 總覽
-          displayName: xml documentation comments
-          href: programming-guide/xmldoc/index.md
-        - name: 建議使用的文件註解標籤
-          href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
-        - name: 處理 XML 檔案
-          href: programming-guide/xmldoc/processing-the-xml-file.md
-        - name: 文件標籤的分隔符號
-          href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
-        - name: 如何使用 XML 文件功能
-          href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
-        - name: 文件標籤參考
-          items:
-            - name: <c>
-              href: programming-guide/xmldoc/code-inline.md
-            - name: <code>
-              href: programming-guide/xmldoc/code.md
-            - name: cref 屬性
-              href: programming-guide/xmldoc/cref-attribute.md
-            - name: <example>
-              href: programming-guide/xmldoc/example.md
-            - name: <exception>
-              href: programming-guide/xmldoc/exception.md
-            - name: <include>
-              href: programming-guide/xmldoc/include.md
-            - name: <inheritdoc>
-              href: programming-guide/xmldoc/inheritdoc.md
-            - name: <list>
-              href: programming-guide/xmldoc/list.md
-            - name: <para>
-              href: programming-guide/xmldoc/para.md
-            - name: <param>
-              href: programming-guide/xmldoc/param.md
-            - name: <paramref>
-              href: programming-guide/xmldoc/paramref.md
-            - name: <permission>
-              href: programming-guide/xmldoc/permission.md
-            - name: <remarks>
-              href: programming-guide/xmldoc/remarks.md
-            - name: <returns>
-              href: programming-guide/xmldoc/returns.md
-            - name: <see>
-              href: programming-guide/xmldoc/see.md
-            - name: <seealso>
-              href: programming-guide/xmldoc/seealso.md
-            - name: <summary>
-              href: programming-guide/xmldoc/summary.md
-            - name: <typeparam>
-              href: programming-guide/xmldoc/typeparam.md
-            - name: <typeparamref>
-              href: programming-guide/xmldoc/typeparamref.md
-            - name: <value>
-              href: programming-guide/xmldoc/value.md
-    - name: 例外狀況和例外狀況處理
-      items:
-        - name: 總覽
-          displayName: exceptions
-          href: programming-guide/exceptions/index.md
-        - name: 使用例外狀況
-          href: programming-guide/exceptions/using-exceptions.md
-        - name: 例外狀況處理
-          href: programming-guide/exceptions/exception-handling.md
-        - name: 建立和擲回例外狀況
-          href: programming-guide/exceptions/creating-and-throwing-exceptions.md
-        - name: 編譯器所產生的例外狀況
-          href: programming-guide/exceptions/compiler-generated-exceptions.md
-        - name: 如何使用 try-catch 處理例外狀況
-          href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
-        - name: 如何使用 finally 執行清除程式碼
-          href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
-        - name: 如何攔截非 CLS 例外狀況
-          href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
-    - name: 檔案系統和登錄
-      items:
-        - name: 總覽
-          displayName: file system registry
-          href: programming-guide/file-system/index.md
-        - name: 如何逐一查看目錄樹狀結構
-          href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
-        - name: 如何取得有關檔案、資料夾和磁碟機的資訊
-          href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
-        - name: 如何建立檔案或資料夾
-          href: programming-guide/file-system/how-to-create-a-file-or-folder.md
-        - name: 如何複製、刪除及移動檔案和資料夾
-          href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
-        - name: 如何提供檔案作業的進度對話方塊
-          href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
-        - name: 如何寫入文字檔
-          href: programming-guide/file-system/how-to-write-to-a-text-file.md
-        - name: 如何讀取文字檔
-          href: programming-guide/file-system/how-to-read-from-a-text-file.md
-        - name: 如何一次一行讀取文字檔
-          href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
-        - name: 如何在登錄中建立機碼
-          href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
-    - name: 互通性
-      items:
-        - name: .NET 互通性
-          href: programming-guide/interop/index.md
-        - name: 互通性概觀
-          href: programming-guide/interop/interoperability-overview.md
-        - name: 如何使用 C# 功能存取 Office Interop 物件
-          href: programming-guide/interop/how-to-access-office-onterop-objects.md
-        - name: 如何在 COM Interop 程式設計中使用已編製索引的屬性
-          href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
-        - name: 如何使用平台叫用播放 WAV 檔
-          href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
-        - name: 逐步解說：Office 程式設計 (C# 與 Visual Basic)
-          href: programming-guide/interop/walkthrough-office-programming.md
-        - name: 範例 COM 類別
-          href: programming-guide/interop/example-com-class.md
-- name: 語言參考
-  items:
-    - name: 總覽
-      displayName: language reference
-      href: language-reference/index.md
-    - name: 設定語言版本
-      href: language-reference/configure-language-version.md
-    - name: 型別
-      items:
-        - name: 值類型
-          items:
-            - name: 總覽
-              href: language-reference/builtin-types/value-types.md
-              displayName: 'value types, simple types'
-            - name: 整數數值類型
-              href: language-reference/builtin-types/integral-numeric-types.md
-              displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
-            - name: 浮點數值類型
-              href: language-reference/builtin-types/floating-point-numeric-types.md
-              displayName: 'float, decimal, double, rational, real, literal'
-            - name: 內建數值轉換
-              href: language-reference/builtin-types/numeric-conversions.md
-            - name: bool
-              href: language-reference/builtin-types/bool.md
-              displayName: 'Boolean, true, false'
-            - name: char
-              href: language-reference/builtin-types/char.md
-              displayName: 'Unicode, character, UTF-16'
-            - name: 列舉類型
-              href: language-reference/builtin-types/enum.md
-              displayName: 'enum, bit flags, bit field'
-            - name: 結構類型
-              href: language-reference/builtin-types/struct.md
-              displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
-            - name: Tuple 型別
-              href: language-reference/builtin-types/value-tuples.md
-              displayName: 'value tuples, ValueTuple'
-            - name: 可為 Null 的實值型別
-              href: language-reference/builtin-types/nullable-value-types.md
-              displayName: '? token, ? symbol'
-        - name: 參考型別
-          items:
-            - name: 參考類型的功能
-              href: language-reference/keywords/reference-types.md
-            - name: 內建參考類型
-              displayName: 'object, delegate, dynamic, string'
-              href: language-reference/builtin-types/reference-types.md
-            - name: Class - 類別
-              href: language-reference/keywords/class.md
-            - name: interface
-              href: language-reference/keywords/interface.md
-            - name: 可為 Null 的參考型別
-              href: language-reference/builtin-types/nullable-reference-types.md
-              displayName: '? token, ? symbol'
-        - name: void
-          href: language-reference/builtin-types/void.md
-        - name: var
-          href: language-reference/keywords/var.md
-        - name: 內建類型
-          href: language-reference/builtin-types/built-in-types.md
-        - name: 非受控類型
-          href: language-reference/builtin-types/unmanaged-types.md
-        - name: 預設值
-          href: language-reference/builtin-types/default-values.md
-    - name: 關鍵字
-      items:
-        - name: 概觀
-          displayName: keywords
-          href: language-reference/keywords/index.md
-        - name: 修飾詞
-          items:
-            - name: 存取修飾詞
-              items:
-                - name: 快速參考
-                  href: language-reference/keywords/access-modifiers.md
-                - name: 協助工具層級
-                  href: language-reference/keywords/accessibility-levels.md
-                - name: 協助工具定義域
-                  href: language-reference/keywords/accessibility-domain.md
-                - name: 使用協助工具層級的限制
-                  href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
-                - name: internal
-                  href: language-reference/keywords/internal.md
-                - name: private
-                  href: language-reference/keywords/private.md
-                - name: protected
-                  href: language-reference/keywords/protected.md
-                - name: public
-                  href: language-reference/keywords/public.md
-                - name: protected internal
-                  href: language-reference/keywords/protected-internal.md
-                - name: private protected
-                  href: language-reference/keywords/private-protected.md
-            - name: abstract
-              href: language-reference/keywords/abstract.md
-            - name: async
-              href: language-reference/keywords/async.md
-              displayName: await
-            - name: const
-              href: language-reference/keywords/const.md
-            - name: event
-              href: language-reference/keywords/event.md
-            - name: extern
-              href: language-reference/keywords/extern.md
-            - name: in (泛型修飾詞)
-              href: language-reference/keywords/in-generic-modifier.md
-            - name: new (成員修飾詞)
-              href: language-reference/keywords/new-modifier.md
-            - name: out (泛型修飾詞)
-              href: language-reference/keywords/out-generic-modifier.md
-            - name: override
-              href: language-reference/keywords/override.md
-            - name: readonly
-              href: language-reference/keywords/readonly.md
-            - name: sealed
-              href: language-reference/keywords/sealed.md
-            - name: static
-              href: language-reference/keywords/static.md
-            - name: unsafe
-              href: language-reference/keywords/unsafe.md
-            - name: virtual
-              href: language-reference/keywords/virtual.md
-            - name: volatile
-              href: language-reference/keywords/volatile.md
-        - name: 陳述式關鍵字
-          items:
-            - name: 陳述式類別
-              href: language-reference/keywords/statement-keywords.md
-            - name: 選取範圍陳述式
-              items:
-                - name: if-else
-                  href: language-reference/keywords/if-else.md
-                - name: switch
-                  href: language-reference/keywords/switch.md
-            - name: 反覆運算陳述式
-              items:
-                - name: do
-                  href: language-reference/keywords/do.md
-                - name: for
-                  href: language-reference/keywords/for.md
-                - name: foreach、in
-                  href: language-reference/keywords/foreach-in.md
-                - name: while
-                  href: language-reference/keywords/while.md
-            - name: 跳躍陳述式
-              items:
-                - name: break
-                  href: language-reference/keywords/break.md
-                - name: continue
-                  href: language-reference/keywords/continue.md
-                - name: goto
-                  href: language-reference/keywords/goto.md
-                - name: return
-                  href: language-reference/keywords/return.md
-            - name: 例外狀況處理陳述式
-              items:
-                - name: throw
-                  href: language-reference/keywords/throw.md
-                - name: try-catch
-                  href: language-reference/keywords/try-catch.md
-                - name: try-finally
-                  href: language-reference/keywords/try-finally.md
-                - name: try-catch-finally
-                  href: language-reference/keywords/try-catch-finally.md
-            - name: Checked 與 Unchecked
-              items:
-                - name: 總覽
-                  displayName: checked unchecked
-                  href: language-reference/keywords/checked-and-unchecked.md
-                - name: checked
-                  href: language-reference/keywords/checked.md
-                - name: unchecked
-                  href: language-reference/keywords/unchecked.md
-            - name: fixed 陳述式
-              href: language-reference/keywords/fixed-statement.md
-            - name: lock 陳述式
-              href: language-reference/keywords/lock-statement.md
-        - name: 方法參數
-          items:
-            - name: 傳遞參數
-              href: language-reference/keywords/method-parameters.md
-            - name: params
-              href: language-reference/keywords/params.md
-            - name: in (參數修飾詞)
-              href: language-reference/keywords/in-parameter-modifier.md
-            - name: ref
-              href: language-reference/keywords/ref.md
-            - name: out (參數修飾詞)
-              href: language-reference/keywords/out-parameter-modifier.md
-        - name: 命名空間關鍵字
-          items:
-            - name: namespace
-              href: language-reference/keywords/namespace.md
-            - name: using
-              items:
-                - name: 使用內容
-                  href: language-reference/keywords/using.md
-                - name: using 指示詞
-                  href: language-reference/keywords/using-directive.md
-                - name: using static 指示詞
-                  href: language-reference/keywords/using-static.md
-                - name: using 陳述式
-                  href: language-reference/keywords/using-statement.md
-            - name: extern alias
-              href: language-reference/keywords/extern-alias.md
-        - name: 類型測試關鍵字
-          items:
-            - name: is
-              href: language-reference/keywords/is.md
-        - name: 泛型型別條件約束關鍵字
-          items:
-            - name: new 條件約束
-              href: language-reference/keywords/new-constraint.md
-            - name: where
-              href: language-reference/keywords/where-generic-type-constraint.md
-        - name: 存取關鍵字
-          items:
-            - name: base
-              href: language-reference/keywords/base.md
-            - name: this
-              href: language-reference/keywords/this.md
-        - name: 常值關鍵字
-          items:
-            - name: 'null'
-              href: language-reference/keywords/null.md
-            - name: true 與 false
-              href: language-reference/builtin-types/bool.md
-            - name: default
-              href: language-reference/keywords/default.md
-        - name: 內容關鍵字
-          items:
-            - name: 快速參考
-              displayName: contextual keywords
-              href: language-reference/keywords/contextual-keywords.md
-            - name: add
-              href: language-reference/keywords/add.md
-            - name: get
-              href: language-reference/keywords/get.md
-            - name: partial (類型)
-              href: language-reference/keywords/partial-type.md
-            - name: partial (方法)
-              href: language-reference/keywords/partial-method.md
-            - name: remove
-              href: language-reference/keywords/remove.md
-            - name: set
-              href: language-reference/keywords/set.md
-            - name: when (篩選條件)
-              href: language-reference/keywords/when.md
-            - name: value
-              href: language-reference/keywords/value.md
-            - name: yield
-              href: language-reference/keywords/yield.md
-        - name: 查詢關鍵字
-          items:
-            - name: 快速參考
-              displayName: query keywords
-              href: language-reference/keywords/query-keywords.md
-            - name: from 子句
-              href: language-reference/keywords/from-clause.md
-            - name: where 子句
-              href: language-reference/keywords/where-clause.md
-            - name: select 子句
-              href: language-reference/keywords/select-clause.md
-            - name: group 子句
-              href: language-reference/keywords/group-clause.md
-            - name: into
-              href: language-reference/keywords/into.md
-            - name: orderby 子句
-              href: language-reference/keywords/orderby-clause.md
-            - name: join 子句
-              href: language-reference/keywords/join-clause.md
-            - name: let 子句
-              href: language-reference/keywords/let-clause.md
-            - name: ascending
-              href: language-reference/keywords/ascending.md
-            - name: descending
-              href: language-reference/keywords/descending.md
-            - name: 'on'
-              href: language-reference/keywords/on.md
-            - name: equals
-              href: language-reference/keywords/equals.md
-            - name: by
-              href: language-reference/keywords/by.md
-            - name: in
-              href: language-reference/keywords/in.md
-    - name: 運算子和運算式
-      items:
-        - name: 總覽
-          href: language-reference/operators/index.md
-          displayName: 'operator precedence, operator associativity, expressions'
-        - name: 算術運算子
-          href: language-reference/operators/arithmetic-operators.md
-          displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
-        - name: 布林值邏輯運算子
-          href: language-reference/operators/boolean-logical-operators.md
-          displayName: '!, &&, ||, &, |, ^, &=, |=, ^=, AND, XOR, OR'
-        - name: 位元與移位運算子
-          href: language-reference/operators/bitwise-and-shift-operators.md
-          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>=, AND, XOR, OR'
-        - name: 等號比較運算子
-          href: language-reference/operators/equality-operators.md
-          displayName: '==, !='
-        - name: 比較運算子
-          href: language-reference/operators/comparison-operators.md
-          displayName: '>, <, >=, <=, greater, less'
-        - name: 成員存取運算子與運算式
-          href: language-reference/operators/member-access-operators.md
-          displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
-        - name: 類型測試運算子及 Cast 運算式
-          href: language-reference/operators/type-testing-and-cast.md
-          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
-        - name: 使用者定義轉換運算子
-          href: language-reference/operators/user-defined-conversion-operators.md
-          displayName: 'implicit, explicit'
-        - name: 與指標相關的運算子
-          href: language-reference/operators/pointer-related-operators.md
-          displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: 指派運算子
-          href: language-reference/operators/assignment-operator.md
-          displayName: '=, ref, compound'
-        - name: Lambda 運算式
-          href: language-reference/operators/lambda-expressions.md
-          displayName: anonymous functions
-        - name: + 及 += 運算子
-          href: language-reference/operators/addition-operator.md
-          displayName: 'string concatenation, delegate combination, event subscription'
-        - name: '- 及 -= 運算子'
-          href: language-reference/operators/subtraction-operator.md
-          displayName: 'delegate removal, event unsubscription'
-        - name: '?: 運算子'
-          href: language-reference/operators/conditional-operator.md
-          displayName: 'conditional, ternary, ref'
-        - name: '! (Null 容許) 運算子'
-          href: language-reference/operators/null-forgiving.md
-          displayName: 'nullable reference, null-forgiveness, null suppression'
-        - name: '?? 與 ??= 運算子'
-          href: language-reference/operators/null-coalescing-operator.md
-          displayName: 'null-coalescing, assignment'
-        - name: '=> 運算子'
-          href: language-reference/operators/lambda-operator.md
-          displayName: 'lambda, expression body definition'
-        - name: ':: 運算子'
-          href: language-reference/operators/namespace-alias-qualifier.md
-          displayName: 'namespace alias qualifier, global namespace'
-        - name: await 運算子
-          href: language-reference/operators/await.md
-          displayName: async
-        - name: 預設值運算式
-          href: language-reference/operators/default.md
-          displayName: 'default value, default operator, default literal, type default'
-        - name: delegate 運算子
-          href: language-reference/operators/delegate-operator.md
-          displayName: anonymous
-        - name: nameof 運算式
-          href: language-reference/operators/nameof.md
-          displayName: nameof operator
-        - name: new 運算子
-          href: language-reference/operators/new-operator.md
-          displayName: constructor
-        - name: sizeof 運算子
-          href: language-reference/operators/sizeof.md
-        - name: stackalloc 運算式
-          href: language-reference/operators/stackalloc.md
-          displayName: 'stack allocation, span, stackalloc operator'
-        - name: switch 運算式
-          href: language-reference/operators/switch-expression.md
-          displayName: 'switch, pattern matching, patterns'
-        - name: true 和 false 運算子
-          href: language-reference/operators/true-false-operators.md
-        - name: 含運算式
-          href: language-reference/operators/with-expression.md
-          displayName: 'records, copy'
-        - name: 運算子多載
-          href: language-reference/operators/operator-overloading.md
-    - name: 特殊字元
-      items:
-        - name: 總覽
-          displayName: special characters
-          href: language-reference/tokens/index.md
-        - name: $ -- 字串插補
-          href: language-reference/tokens/interpolated.md
-        - name: '@ -- 逐字識別項'
-          href: language-reference/tokens/verbatim.md
-    - name: 編譯器所讀取的屬性
-      items:
-        - name: 全域屬性
-          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
-          href: language-reference/attributes/global.md
-        - name: 一般
-          displayName: 'Conditional, Obsolete, AttributeUsage'
-          href: language-reference/attributes/general.md
-        - name: 呼叫者資訊
-          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
-          href: language-reference/attributes/caller-information.md
-        - name: 可為 Null 靜態分析
-          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
-          href: language-reference/attributes/nullable-analysis.md
-    - name: 前置處理器指示詞
-      items:
-        - name: 總覽
-          displayName: preprocessor directives
-          href: language-reference/preprocessor-directives/index.md
-        - name: '#if'
-          href: language-reference/preprocessor-directives/preprocessor-if.md
-        - name: '#else'
-          href: language-reference/preprocessor-directives/preprocessor-else.md
-        - name: '#elif'
-          href: language-reference/preprocessor-directives/preprocessor-elif.md
-        - name: '#endif'
-          href: language-reference/preprocessor-directives/preprocessor-endif.md
-        - name: '#define'
-          href: language-reference/preprocessor-directives/preprocessor-define.md
-        - name: '#undef'
-          href: language-reference/preprocessor-directives/preprocessor-undef.md
-        - name: '#warning'
-          href: language-reference/preprocessor-directives/preprocessor-warning.md
-        - name: '#error'
-          href: language-reference/preprocessor-directives/preprocessor-error.md
-        - name: '#line'
-          href: language-reference/preprocessor-directives/preprocessor-line.md
-        - name: '#可為 null 的'
-          href: language-reference/preprocessor-directives/preprocessor-nullable.md
-        - name: '#region'
-          href: language-reference/preprocessor-directives/preprocessor-region.md
-        - name: '#endregion'
-          href: language-reference/preprocessor-directives/preprocessor-endregion.md
-        - name: '#pragma'
-          href: language-reference/preprocessor-directives/preprocessor-pragma.md
-        - name: '#pragma warning'
-          href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
-        - name: '#pragma checksum'
-          href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
-    - name: 編譯器選項
-      items:
-        - name: 總覽
-          displayName: compiler options
-          href: language-reference/compiler-options/index.md
-        - name: 使用 csc.exe 建置命令列
-          href: language-reference/compiler-options/command-line-building-with-csc-exe.md
-        - name: 如何為 Visual Studio 命令列設定環境變數
-          href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
-        - name: 依分類列出的 C# 編譯器選項
-          href: language-reference/compiler-options/listed-by-category.md
-        - name: 依字母順序列出 C# 編譯器選項
-          href: language-reference/compiler-options/listed-alphabetically.md
-          items:
-            - name: '@'
-              href: language-reference/compiler-options/response-file-compiler-option.md
-            - name: '-addmodule'
-              href: language-reference/compiler-options/addmodule-compiler-option.md
-            - name: '-appconfig'
-              href: language-reference/compiler-options/appconfig-compiler-option.md
-            - name: '-baseaddress'
-              href: language-reference/compiler-options/baseaddress-compiler-option.md
-            - name: '-bugreport'
-              href: language-reference/compiler-options/bugreport-compiler-option.md
-            - name: '-checked'
-              href: language-reference/compiler-options/checked-compiler-option.md
-            - name: '-codepage'
-              href: language-reference/compiler-options/codepage-compiler-option.md
-            - name: '-debug'
-              href: language-reference/compiler-options/debug-compiler-option.md
-            - name: '-define'
-              href: language-reference/compiler-options/define-compiler-option.md
-            - name: '-delaysign'
-              href: language-reference/compiler-options/delaysign-compiler-option.md
-            - name: '-deterministic'
-              href: language-reference/compiler-options/deterministic-compiler-option.md
-            - name: '-doc'
-              href: language-reference/compiler-options/doc-compiler-option.md
-            - name: '-errorreport'
-              href: language-reference/compiler-options/errorreport-compiler-option.md
-            - name: '-filealign'
-              href: language-reference/compiler-options/filealign-compiler-option.md
-            - name: '-fullpaths'
-              href: language-reference/compiler-options/fullpaths-compiler-option.md
-            - name: '-help、-?'
-              href: language-reference/compiler-options/help-compiler-option.md
-            - name: '-highentropyva'
-              href: language-reference/compiler-options/highentropyva-compiler-option.md
-            - name: '-keycontainer'
-              href: language-reference/compiler-options/keycontainer-compiler-option.md
-            - name: '-keyfile'
-              href: language-reference/compiler-options/keyfile-compiler-option.md
-            - name: '-langversion'
-              href: language-reference/compiler-options/langversion-compiler-option.md
-            - name: '-lib'
-              href: language-reference/compiler-options/lib-compiler-option.md
-            - name: '-link'
-              href: language-reference/compiler-options/link-compiler-option.md
-            - name: '-linkresource'
-              href: language-reference/compiler-options/linkresource-compiler-option.md
-            - name: '-main'
-              href: language-reference/compiler-options/main-compiler-option.md
-            - name: '-moduleassemblyname'
-              href: language-reference/compiler-options/moduleassemblyname-compiler-option.md
-            - name: '-noconfig'
-              href: language-reference/compiler-options/noconfig-compiler-option.md
-            - name: '-nologo'
-              href: language-reference/compiler-options/nologo-compiler-option.md
-            - name: '-nostdlib'
-              href: language-reference/compiler-options/nostdlib-compiler-option.md
-            - name: '-nowarn'
-              href: language-reference/compiler-options/nowarn-compiler-option.md
-            - name: '-nowin32manifest'
-              href: language-reference/compiler-options/nowin32manifest-compiler-option.md
-            - name: '-nullable'
-              href: language-reference/compiler-options/nullable-compiler-option.md
-            - name: '-optimize'
-              href: language-reference/compiler-options/optimize-compiler-option.md
-            - name: '-out'
-              href: language-reference/compiler-options/out-compiler-option.md
-            - name: '-pathmap'
-              href: language-reference/compiler-options/pathmap-compiler-option.md
-            - name: '-pdb'
-              href: language-reference/compiler-options/pdb-compiler-option.md
-            - name: '-platform'
-              href: language-reference/compiler-options/platform-compiler-option.md
-            - name: '-preferreduilang'
-              href: language-reference/compiler-options/preferreduilang-compiler-option.md
-            - name: '-publicsign'
-              href: language-reference/compiler-options/publicsign-compiler-option.md
-            - name: '-recurse'
-              href: language-reference/compiler-options/recurse-compiler-option.md
-            - name: '-reference'
-              href: language-reference/compiler-options/reference-compiler-option.md
-            - name: '-refout'
-              href: language-reference/compiler-options/refout-compiler-option.md
-            - name: '-refonly'
-              href: language-reference/compiler-options/refonly-compiler-option.md
-            - name: '-resource'
-              href: language-reference/compiler-options/resource-compiler-option.md
-            - name: '-subsystemversion'
-              href: language-reference/compiler-options/subsystemversion-compiler-option.md
-            - name: '-target'
-              href: language-reference/compiler-options/target-compiler-option.md
-              items:
-                - name: '-target:appcontainerexe'
-                  href: language-reference/compiler-options/target-appcontainerexe-compiler-option.md
-                - name: '-target:exe'
-                  href: language-reference/compiler-options/target-exe-compiler-option.md
-                - name: '-target:library'
-                  href: language-reference/compiler-options/target-library-compiler-option.md
-                - name: '-target:module'
-                  href: language-reference/compiler-options/target-module-compiler-option.md
-                - name: '-target:winexe'
-                  href: language-reference/compiler-options/target-winexe-compiler-option.md
-                - name: '-target:winmdobj'
-                  href: language-reference/compiler-options/target-winmdobj-compiler-option.md
-            - name: '-unsafe'
-              href: language-reference/compiler-options/unsafe-compiler-option.md
-            - name: '-utf8output'
-              href: language-reference/compiler-options/utf8output-compiler-option.md
-            - name: '-warn'
-              href: language-reference/compiler-options/warn-compiler-option.md
-            - name: '-warnaserror'
-              href: language-reference/compiler-options/warnaserror-compiler-option.md
-            - name: '-win32icon'
-              href: language-reference/compiler-options/win32icon-compiler-option.md
-            - name: '-win32manifest'
-              href: language-reference/compiler-options/win32manifest-compiler-option.md
-            - name: '-win32res'
-              href: language-reference/compiler-options/win32res-compiler-option.md
-    - name: 編譯器錯誤
-      href: language-reference/compiler-messages/index.md
-    - name: C# 6.0 草稿規格
-      href: language-reference/specification/
-    - name: C# 7.0 - 9.0 提案
-      href: language-reference/proposals/
-- name: 逐步解說
-  href: walkthroughs.md
+items:
+  - name: C# 文件
+    href: index.yml
+  - name: 開始使用
+    items:
+      - name: C# 語言與 .NET 簡介
+        displayName: get started
+        href: getting-started/index.md
+      - name: C# 導覽
+        items:
+          - name: 簡介
+            href: tour-of-csharp/index.md
+          - name: 類型
+            href: tour-of-csharp/types.md
+          - name: 程式建置區塊
+            href: tour-of-csharp/program-building-blocks.md
+          - name: 主要語言區域
+            href: tour-of-csharp/features.md
+  - name: 教學課程
+    items:
+      - name: 總覽
+        displayName: tutorials
+        href: tutorials/index.md
+      - name: 使用 C# 設計程式的簡介
+        items:
+          - name: 選擇您的第一課
+            href: tutorials/intro-to-csharp/index.md
+          - name: Hello World
+            href: tutorials/intro-to-csharp/hello-world.yml
+          - name: C# 中的數字
+            href: tutorials/intro-to-csharp/numbers-in-csharp.yml
+          - name: 分支和迴圈
+            href: tutorials/intro-to-csharp/branches-and-loops.yml
+          - name: 清單集合
+            href: tutorials/intro-to-csharp/list-collection.yml
+          - name: 在您的本機環境中運作
+            items:
+              - name: 設定環境
+                href: tutorials/intro-to-csharp/local-environment.md
+              - name: C# 中的數字
+                href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
+              - name: 分支和迴圈
+                href: tutorials/intro-to-csharp/branches-and-loops-local.md
+              - name: 清單集合
+                href: tutorials/intro-to-csharp/arrays-and-collections.md
+              - name: 類別簡介
+                href: tutorials/intro-to-csharp/introduction-to-classes.md
+              - name: 物件導向程式設計
+                href: tutorials/intro-to-csharp/object-oriented-programming.md
+      - name: 探索記錄類型
+        href: tutorials/exploration/records.md
+      - name: 探索最上層陳述式
+        href: tutorials/exploration/top-level-statements.md
+      - name: 探索物件中的模式
+        href: tutorials/exploration/patterns-objects.md
+      - name: 探索字串插補 - 互動式
+        href: tutorials/exploration/interpolated-strings.yml
+      - name: 探索您環境中的字串插補
+        href: tutorials/exploration/interpolated-strings-local.md
+      - name: 字串插補的進階案例
+        href: tutorials/string-interpolation.md
+      - name: 使用預設介面方法安全地更新介面
+        href: tutorials/default-interface-methods-versions.md
+      - name: 使用預設介面的方法，建立 mixin 功能
+        href: tutorials/mixins-with-default-interface-methods.md
+      - name: 探索索引及範圍
+        href: tutorials/ranges-indexes.md
+      - name: 使用可以為 null 的參考類型
+        href: tutorials/nullable-reference-types.md
+      - name: 將應用程式升級成可以為 null 的參考類型
+        href: tutorials/upgrade-to-nullable-references.md
+      - name: 產生及使用非同步串流
+        href: tutorials/generate-consume-asynchronous-stream.md
+      - name: 使用模式比對建立資料驅動演算法
+        href: tutorials/pattern-matching.md
+      - name: 主控台應用程式
+        href: tutorials/console-teleprompter.md
+      - name: REST 用戶端
+        href: tutorials/console-webapiclient.md
+      - name: C# 和 .NET 中的繼承
+        href: tutorials/inheritance.md
+      - name: 使用 LINQ
+        href: tutorials/working-with-linq.md
+      - name: 使用屬性
+        href: tutorials/attributes.md
+  - name: C# 的新功能
+    items:
+      - name: C# 9.0
+        displayName: what's new
+        href: whats-new/csharp-9.md
+      - name: C# 8.0
+        href: whats-new/csharp-8.md
+      - name: C# 7.0-7.3
+        href: whats-new/csharp-7.md
+      - name: 編譯器的重大變更
+        href: whats-new/breaking-changes.md
+      - name: C# 的版本歷程記錄
+        href: whats-new/csharp-version-history.md
+      - name: 語言與架構的關聯性
+        href: whats-new/relationships-between-language-and-library.md
+      - name: 版本與更新考量
+        href: whats-new/version-update-considerations.md
+  - name: C# 概念
+    items:
+      - name: C# 型別系統
+        href: programming-guide/types/index.md
+      - name: 可為 Null 的參考型別
+        href: nullable-references.md
+      - name: 選擇可為 Null 之參考型別的策略
+        href: nullable-migration-strategies.md
+      - name: 命名空間
+        href: programming-guide/namespaces/index.md
+      - name: 基本類型
+        href: basic-types.md
+      - name: 類別
+        href: programming-guide/classes-and-structs/classes.md
+      - name: 解構元組和其他類型
+        href: deconstruct.md
+      - name: 介面
+        href: programming-guide/interfaces/index.md
+      - name: 方法
+        href: methods.md
+      - name: 屬性
+        href: properties.md
+      - name: 索引子
+        href: indexers.md
+      - name: 捨棄
+        href: discards.md
+      - name: 泛型
+        href: programming-guide/generics/index.md
+      - name: 迭代器
+        href: iterators.md
+      - name: 委派和事件
+        items:
+          - name: 委派簡介
+            href: delegates-overview.md
+          - name: System.Delegate 與 delegate 關鍵字
+            href: delegate-class.md
+          - name: 強類型委派
+            href: delegates-strongly-typed.md
+          - name: 委派的一般模式
+            href: delegates-patterns.md
+          - name: 事件簡介
+            href: events-overview.md
+          - name: 標準的 .NET 事件模式
+            href: event-pattern.md
+          - name: 更新的 .NET 事件模式
+            href: modern-events.md
+          - name: 區別委派和事件
+            href: distinguish-delegates-events.md
+      - name: Language-Integrated Query (LINQ)
+        items:
+          - name: LINQ 概觀
+            href: linq/index.md
+          - name: 查詢運算式基本概念
+            href: linq/query-expression-basics.md
+          - name: C# 中的 LINQ
+            href: linq/linq-in-csharp.md
+          - name: 在 C# 中撰寫 LINQ 查詢
+            href: linq/write-linq-queries.md
+          - name: 查詢物件的集合
+            href: linq/query-a-collection-of-objects.md
+          - name: 從方法傳回查詢
+            href: linq/return-a-query-from-a-method.md
+          - name: 將查詢的結果儲存在記憶體中
+            href: linq/store-the-results-of-a-query-in-memory.md
+          - name: 將查詢結果分組
+            href: linq/group-query-results.md
+          - name: 建立巢狀群組
+            href: linq/create-a-nested-group.md
+          - name: 在分組作業上執行子查詢
+            href: linq/perform-a-subquery-on-a-grouping-operation.md
+          - name: 以相鄰索引鍵將結果分組
+            href: linq/group-results-by-contiguous-keys.md
+          - name: 在執行階段動態指定述詞篩選
+            href: linq/dynamically-specify-predicate-filters-at-runtime.md
+          - name: 執行內部聯結
+            href: linq/perform-inner-joins.md
+          - name: 執行群組聯結
+            href: linq/perform-grouped-joins.md
+          - name: 執行左方外部聯結
+            href: linq/perform-left-outer-joins.md
+          - name: 排序 join 子句的結果
+            href: linq/order-the-results-of-a-join-clause.md
+          - name: 使用複合索引鍵執行聯結
+            href: linq/join-by-using-composite-keys.md
+          - name: 執行自訂的聯結作業
+            href: linq/perform-custom-join-operations.md
+          - name: 處理查詢運算式中的 Null 值
+            href: linq/handle-null-values-in-query-expressions.md
+          - name: 處理查詢運算式中的例外狀況
+            href: linq/handle-exceptions-in-query-expressions.md
+      - name: 非同步程式設計
+        href: async.md
+      - name: 模式比對
+        href: pattern-matching.md
+      - name: 撰寫安全有效率的程式碼
+        href: write-safe-efficient-code.md
+      - name: 運算式樹狀架構
+        items:
+          - name: 運算式樹狀架構簡介
+            href: expression-trees.md
+          - name: 說明運算式樹狀架構
+            href: expression-trees-explained.md
+          - name: 支援運算式樹狀架構的架構類型
+            href: expression-classes.md
+          - name: 執行運算式
+            href: expression-trees-execution.md
+          - name: 解譯運算式
+            href: expression-trees-interpreting.md
+          - name: 建置運算式
+            href: expression-trees-building.md
+          - name: 轉譯運算式
+            href: expression-trees-translating.md
+          - name: 總結
+            href: expression-trees-summary.md
+      - name: 原生互通性
+        href: programming-guide/interop/index.md
+      - name: 加入程式碼註解
+        href: codedoc.md
+      - name: 版本控制
+        href: versioning.md
+  - name: 操作說明 C# 文章
+    items:
+      - name: 文章索引
+        displayName: how to's
+        href: how-to/index.md
+      - name: 將字串分割成子字串
+        href: how-to/parse-strings-using-split.md
+      - name: 串連字串
+        href: how-to/concatenate-multiple-strings.md
+      - name: 搜尋字串
+        href: how-to/search-strings.md
+      - name: 修改字串內容
+        href: how-to/modify-string-contents.md
+      - name: 比較字串
+        href: how-to/compare-strings.md
+      - name: 使用模式比對與 is/as 運算子安全地進行轉換
+        href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+  - name: .NET Compiler Platform SDK (Roslyn API)
+    items:
+      - name: .NET Compiler Platform SDK (Roslyn API) 概觀
+        href: roslyn-sdk/index.md
+      - name: 了解編譯器 API 模型
+        href: roslyn-sdk/compiler-api-model.md
+      - name: 使用語法
+        href: roslyn-sdk/work-with-syntax.md
+      - name: 使用語意
+        href: roslyn-sdk/work-with-semantics.md
+      - name: 使用工作區
+        href: roslyn-sdk/work-with-workspace.md
+      - name: 利用語法視覺化檢視探索程式碼
+        href: roslyn-sdk/syntax-visualizer.md
+      - name: 快速入門
+        items:
+          - name: 語法分析
+            href: roslyn-sdk/get-started/syntax-analysis.md
+          - name: 語意分析
+            href: roslyn-sdk/get-started/semantic-analysis.md
+          - name: 語法轉換
+            href: roslyn-sdk/get-started/syntax-transformation.md
+      - name: 教學課程
+        items:
+          - name: 建置您的第一個分析器和程式碼修正
+            href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
+  - name: C# 程式設計手冊
+    items:
+      - name: 總覽
+        displayName: programming guide
+        href: programming-guide/index.md
+      - name: C# 程式深入解析
+        items:
+          - name: C# 程式深入解析
+            href: programming-guide/inside-a-program/index.md
+          - name: Hello World -- 您的第一個程式
+            href: programming-guide/inside-a-program/hello-world-your-first-program.md
+          - name: C# 程式的一般結構
+            href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
+          - name: 識別碼名稱
+            href: programming-guide/inside-a-program/identifier-names.md
+          - name: C# 編碼慣例
+            href: programming-guide/inside-a-program/coding-conventions.md
+      - name: Main() 和命令列引數
+        items:
+          - name: 總覽
+            displayName: main method
+            href: programming-guide/main-and-command-args/index.md
+          - name: 命令列引數
+            href: programming-guide/main-and-command-args/command-line-arguments.md
+          - name: 如何顯示命令列引數
+            href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
+          - name: Main() 傳回值
+            href: programming-guide/main-and-command-args/main-return-values.md
+      - name: 程式設計概念
+        items:
+          - name: 總覽
+            displayName: programming concepts
+            href: programming-guide/concepts/index.md
+          - name: 非同步程式設計
+            displayName: 'async, await, asynchronous programming, task, cancellation'
+            items:
+              - name: 總覽
+                displayName: asynchronous programming
+                href: programming-guide/concepts/async/index.md
+              - name: 非同步工作程式設計模型
+                href: programming-guide/concepts/async/task-asynchronous-programming-model.md
+              - name: 非同步傳回型別
+                href: programming-guide/concepts/async/async-return-types.md
+              - name: 取消工作
+                items:
+                  - name: 取消工作清單
+                    href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
+                  - name: 在一段時間後取消工作
+                    href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
+              - name: 在非同步工作完成時進行處理
+                href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+              - name: 非同步檔案存取
+                href: programming-guide/concepts/async/using-async-for-file-access.md
+          - name: 屬性
+            items:
+              - name: 總覽
+                displayName: attributes
+                href: programming-guide/concepts/attributes/index.md
+              - name: 建立自訂屬性
+                href: programming-guide/concepts/attributes/creating-custom-attributes.md
+              - name: 使用反映存取屬性
+                href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
+              - name: 如何使用屬性建立 C/C++ 等位
+                href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
+          - name: 集合
+            href: programming-guide/concepts/collections.md
+          - name: 共變數和反變數
+            items:
+              - name: 總覽
+                displayName: covariance and contravariance
+                href: programming-guide/concepts/covariance-contravariance/index.md
+              - name: 泛型介面中的變異數
+                href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
+                items:
+                  - name: 建立 Variant 泛型介面
+                    href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
+                  - name: 針對泛型集合使用介面中的變異數
+                    href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
+              - name: 委派中的變異數
+                href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
+                items:
+                  - name: 在委派中使用變異數
+                    href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
+                  - name: 針對 Func 與 Action 泛型委派使用變異數
+                    href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
+          - name: 運算式樹狀架構
+            items:
+              - name: 總覽
+                displayName: expression trees
+                href: programming-guide/concepts/expression-trees/index.md
+              - name: 如何執行運算式樹狀架構
+                href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
+              - name: 如何修改運算式樹狀架構
+                href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
+              - name: 如何使用運算式樹狀架構建置動態查詢
+                href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
+              - name: 在 Visual Studio 中對運算式樹狀架構進行偵錯
+                href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
+              - name: DebugView 語法
+                href: programming-guide/concepts/expression-trees/debugview-syntax.md
+          - name: 迭代器
+            href: programming-guide/concepts/iterators.md
+          - name: Language-Integrated Query (LINQ)
+            items:
+              - name: 總覽
+                displayName: LINQ overview
+                href: programming-guide/concepts/linq/index.md
+              - name: 開始使用 C# 中的 LINQ
+                items:
+                  - name: LINQ 查詢簡介
+                    href: programming-guide/concepts/linq/introduction-to-linq-queries.md
+                  - name: LINQ 和泛型型別
+                    href: programming-guide/concepts/linq/linq-and-generic-types.md
+                  - name: 基本 LINQ 查詢作業
+                    href: programming-guide/concepts/linq/basic-linq-query-operations.md
+                  - name: 使用 LINQ 轉換資料
+                    href: programming-guide/concepts/linq/data-transformations-with-linq.md
+                  - name: LINQ 查詢作業中的型別關聯性
+                    href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
+                  - name: LINQ 中的查詢語法及方法語法
+                    href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
+                  - name: 支援 LINQ 的 C# 功能
+                    href: programming-guide/concepts/linq/features-that-support-linq.md
+                  - name: 逐步解說：在 C# 中撰寫查詢 (LINQ)
+                    href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
+              - name: 標準查詢運算子概觀
+                items:
+                  - name: 總覽
+                    href: programming-guide/concepts/linq/standard-query-operators-overview.md
+                  - name: 標準查詢運算子的查詢運算式語法
+                    href: programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md
+                  - name: 根據執行方式分類標準查詢運算子
+                    href: programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md
+                  - name: 排序資料
+                    href: programming-guide/concepts/linq/sorting-data.md
+                  - name: 設定作業
+                    href: programming-guide/concepts/linq/set-operations.md
+                  - name: 篩選資料
+                    href: programming-guide/concepts/linq/filtering-data.md
+                  - name: 數量詞作業
+                    href: programming-guide/concepts/linq/quantifier-operations.md
+                  - name: 投影作業
+                    href: programming-guide/concepts/linq/projection-operations.md
+                  - name: 分割資料
+                    href: programming-guide/concepts/linq/partitioning-data.md
+                  - name: 聯結作業
+                    href: programming-guide/concepts/linq/join-operations.md
+                  - name: 分組資料
+                    href: programming-guide/concepts/linq/grouping-data.md
+                  - name: 產生作業
+                    href: programming-guide/concepts/linq/generation-operations.md
+                  - name: 相等比較作業
+                    href: programming-guide/concepts/linq/equality-operations.md
+                  - name: 項目作業
+                    href: programming-guide/concepts/linq/element-operations.md
+                  - name: 轉換資料類型
+                    href: programming-guide/concepts/linq/converting-data-types.md
+                  - name: 串連作業
+                    href: programming-guide/concepts/linq/concatenation-operations.md
+                  - name: 彙總作業
+                    href: programming-guide/concepts/linq/aggregation-operations.md
+              - name: LINQ to Objects
+                items:
+                  - name: 總覽
+                    href: programming-guide/concepts/linq/linq-to-objects.md
+                  - name: LINQ 和字串
+                    href: programming-guide/concepts/linq/linq-and-strings.md
+                  - name: 操作說明文章
+                    items:
+                      - name: 如何計算某個字在字串中出現的次數 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
+                      - name: 如何查詢包含指定詞組的句子 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
+                      - name: 如何查詢字串中的字元 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
+                      - name: 如何合併 LINQ 查詢與規則運算式
+                        href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
+                      - name: 如何尋找兩份清單間的集合差異 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
+                      - name: 如何依任何字詞或欄位排序或篩選文字資料 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
+                      - name: 如何重新排列有分隔符號的檔案中欄位 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
+                      - name: 如何合併和比較字串集合 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
+                      - name: 如何從多個來源填入物件集合 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
+                      - name: 如何使用群組將一份檔案分割成許多檔案 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
+                      - name: 如何聯結不同檔案的內容 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
+                      - name: 如何計算 CSV 文字檔案中的資料行值 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
+                  - name: LINQ 和反映
+                    href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+                  - name: 如何使用反映查詢組件的中繼資料 (LINQ)
+                    href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+                  - name: LINQ 和檔案目錄
+                    items:
+                      - name: 總覽
+                        href: programming-guide/concepts/linq/linq-and-file-directories.md
+                      - name: 如何查詢具有指定屬性或名稱的檔案
+                        href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
+                      - name: 如何依副檔名分組檔案 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
+                      - name: 如何查詢一組資料夾中的位元組總數 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
+                      - name: 如何比較兩個資料夾的內容 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
+                      - name: 如何查詢目錄樹狀中的最大檔案 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
+                      - name: 如何查詢目錄樹狀結構中的重複檔案 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
+                      - name: 如何查詢資料夾中的檔案內容 (LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
+                  - name: 如何使用 LINQ 查詢 ArrayList
+                    href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
+                  - name: 如何新增 LINQ 查詢的自訂方法
+                    href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
+              - name: LINQ to ADO.NET (入口網站頁面)
+                href: programming-guide/concepts/linq/linq-to-adonet-portal-page.md
+              - name: 啟用資料來源以進行 LINQ 查詢
+                href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
+              - name: LINQ 的 Visual Studio IDE 和工具支援
+                href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
+          - name: 反射
+            href: programming-guide/concepts/reflection.md
+          - name: 序列化 (C#)
+            items:
+              - name: 總覽
+                displayName: serialization
+                href: programming-guide/concepts/serialization/index.md
+              - name: 如何將物件資料寫入 XML 檔案
+                href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
+              - name: 如何從 XML 檔案讀取物件資料
+                href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
+              - name: 逐步解說：在 Visual Studio 中保存物件
+                href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
+      - name: 陳述式、運算式和運算子
+        items:
+          - name: 概觀
+            displayName: 'statements, expressions, operators'
+            href: programming-guide/statements-expressions-operators/index.md
+          - name: 陳述式
+            href: programming-guide/statements-expressions-operators/statements.md
+          - name: 運算式主體成員
+            href: programming-guide/statements-expressions-operators/expression-bodied-members.md
+          - name: 匿名函式
+            items:
+              - name: 總覽
+                href: programming-guide/statements-expressions-operators/anonymous-functions.md
+              - name: 如何在查詢中使用 Lambda 運算式
+                href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
+          - name: 相等及相等比較
+            items:
+              - name: 相等比較
+                href: programming-guide/statements-expressions-operators/equality-comparisons.md
+              - name: 如何定義類型的實值相等性
+                href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
+              - name: 如何測試參考相等性 (身分識別)
+                href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
+      - name: 型別
+        items:
+          - name: 使用及定義型別
+            href: programming-guide/types/index.md
+          - name: 轉換和類型轉換
+            href: programming-guide/types/casting-and-type-conversions.md
+          - name: Boxing 和 Unboxing
+            href: programming-guide/types/boxing-and-unboxing.md
+          - name: 如何將位元組陣列轉換成整數
+            href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
+          - name: 如何將字串轉換為數值
+            href: programming-guide/types/how-to-convert-a-string-to-a-number.md
+          - name: 如何在十六進位字串和數字類型間轉換
+            href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+          - name: 使用動態類型
+            href: programming-guide/types/using-type-dynamic.md
+          - name: 逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
+            href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
+      - name: 類別和結構
+        items:
+          - name: 總覽
+            displayName: classes
+            href: programming-guide/classes-and-structs/index.md
+          - name: 類別
+            href: programming-guide/classes-and-structs/classes.md
+          - name: 物件
+            href: programming-guide/classes-and-structs/objects.md
+          - name: 繼承
+            href: programming-guide/classes-and-structs/inheritance.md
+          - name: 多型
+            items:
+              - name: 總覽
+                displayName: polymorphism
+                href: programming-guide/classes-and-structs/polymorphism.md
+              - name: 使用 Override 和 New 關鍵字進行版本設定
+                href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
+              - name: 了解使用 Override 和 New 關鍵字的時機
+                href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
+              - name: 如何覆寫 ToString 方法
+                href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
+          - name: 成員
+            items:
+              - name: 成員概觀
+                href: programming-guide/classes-and-structs/members.md
+              - name: 抽象和密封類別以及類別成員
+                href: programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md
+              - name: 靜態類別和靜態類別成員
+                href: programming-guide/classes-and-structs/static-classes-and-static-class-members.md
+              - name: 存取修飾詞
+                href: programming-guide/classes-and-structs/access-modifiers.md
+              - name: 欄位
+                href: programming-guide/classes-and-structs/fields.md
+              - name: 常數
+                href: programming-guide/classes-and-structs/constants.md
+              - name: 如何定義抽象屬性
+                href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
+              - name: 如何在 C# 中定義常數
+                href: programming-guide/classes-and-structs/how-to-define-constants.md
+          - name: 屬性
+            items:
+              - name: 屬性概觀
+                href: programming-guide/classes-and-structs/properties.md
+              - name: 使用屬性
+                href: programming-guide/classes-and-structs/using-properties.md
+              - name: 介面屬性
+                href: programming-guide/classes-and-structs/interface-properties.md
+              - name: 限制存取子協助工具
+                href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
+              - name: 如何宣告及使用讀寫屬性
+                href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
+              - name: 自動實作的屬性
+                href: programming-guide/classes-and-structs/auto-implemented-properties.md
+              - name: 如何使用自動實作的屬性來實作輕量型類別
+                href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+          - name: 方法
+            items:
+              - name: 方法概觀
+                href: programming-guide/classes-and-structs/methods.md
+              - name: 區域函式
+                href: programming-guide/classes-and-structs/local-functions.md
+              - name: ref 傳回值和 ref 區域變數
+                href: programming-guide/classes-and-structs/ref-returns.md
+              - name: 參數
+                items:
+                  - name: 傳遞參數
+                    href: programming-guide/classes-and-structs/passing-parameters.md
+                  - name: 傳遞實值型別參數
+                    href: programming-guide/classes-and-structs/passing-value-type-parameters.md
+                  - name: 傳遞參考型別參數
+                    href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
+                  - name: 如何了解傳遞結構和傳遞類別參考給方法之間的差異
+                    href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+              - name: 隱含類型區域變數
+                href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
+              - name: 如何在查詢運算式中使用隱含類型區域變數和陣列
+                href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+              - name: 擴充方法
+                href: programming-guide/classes-and-structs/extension-methods.md
+              - name: 如何實作和呼叫自訂擴充方法
+                href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
+              - name: 如何建立列舉的新方法
+                href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
+              - name: 具名和選擇性引數
+                href: programming-guide/classes-and-structs/named-and-optional-arguments.md
+              - name: 如何在 Office 程式設計中使用具名和選擇性引數
+                href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
+          - name: 建構函式
+            items:
+              - name: 建構函式概觀
+                href: programming-guide/classes-and-structs/constructors.md
+              - name: 使用建構函式
+                href: programming-guide/classes-and-structs/using-constructors.md
+              - name: 執行個體建構函式
+                href: programming-guide/classes-and-structs/instance-constructors.md
+              - name: 私用建構函式
+                href: programming-guide/classes-and-structs/private-constructors.md
+              - name: 靜態建構函式
+                href: programming-guide/classes-and-structs/static-constructors.md
+              - name: 如何撰寫複製建構函式
+                href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
+          - name: 完成項
+            href: programming-guide/classes-and-structs/destructors.md
+          - name: 物件和集合初始設定式
+            href: programming-guide/classes-and-structs/object-and-collection-initializers.md
+          - name: 如何使用物件初始設定式初始化物件
+            href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
+          - name: 如何使用集合初始設定式初始化字典
+            href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
+          - name: 巢狀類型
+            href: programming-guide/classes-and-structs/nested-types.md
+          - name: 部分類別和方法
+            href: programming-guide/classes-and-structs/partial-classes-and-methods.md
+          - name: 匿名類型
+            href: programming-guide/classes-and-structs/anonymous-types.md
+          - name: 如何在查詢中傳回元素屬性的子集
+            href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
+      - name: 介面
+        items:
+          - name: 總覽
+            displayName: interfaces
+            href: programming-guide/interfaces/index.md
+          - name: 明確介面實作
+            href: programming-guide/interfaces/explicit-interface-implementation.md
+          - name: 如何明確實作介面成員
+            href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
+          - name: 如何明確實作兩個介面的成員
+            href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
+      - name: 委派
+        items:
+          - name: 總覽
+            displayName: delegates
+            href: programming-guide/delegates/index.md
+          - name: 使用委派
+            href: programming-guide/delegates/using-delegates.md
+          - name: 具名方法委派與匿名方法
+            href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
+          - name: 如何合併委派 (多點傳送委派) (C# 程式設計手冊)
+            href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
+          - name: 如何宣告、具現化和使用委派
+            href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
+      - name: 陣列
+        items:
+          - name: 總覽
+            displayName: arrays
+            href: programming-guide/arrays/index.md
+          - name: 一維陣列
+            href: programming-guide/arrays/single-dimensional-arrays.md
+          - name: 多維陣列
+            href: programming-guide/arrays/multidimensional-arrays.md
+          - name: 不規則陣列
+            href: programming-guide/arrays/jagged-arrays.md
+          - name: 搭配陣列使用 foreach
+            href: programming-guide/arrays/using-foreach-with-arrays.md
+          - name: 傳遞陣列作為引數
+            href: programming-guide/arrays/passing-arrays-as-arguments.md
+          - name: 隱含型別陣列
+            href: programming-guide/arrays/implicitly-typed-arrays.md
+      - name: 字串
+        items:
+          - name: 使用字串進行程式設計
+            href: programming-guide/strings/index.md
+          - name: 如何判斷字串是否表示數值
+            href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
+      - name: 索引子
+        items:
+          - name: 總覽
+            displayName: indexers
+            href: programming-guide/indexers/index.md
+          - name: 使用索引子
+            href: programming-guide/indexers/using-indexers.md
+          - name: 介面中的索引子
+            href: programming-guide/indexers/indexers-in-interfaces.md
+          - name: 屬性與索引子之間的比較
+            href: programming-guide/indexers/comparison-between-properties-and-indexers.md
+      - name: 事件
+        items:
+          - name: 總覽
+            displayName: events
+            href: programming-guide/events/index.md
+          - name: 如何訂閱及取消訂閱事件
+            href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
+          - name: 如何發佈符合 .NET 指導方針的事件
+            href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
+          - name: 如何在衍生類別中引發基底類別事件
+            href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
+          - name: 如何實作介面事件
+            href: programming-guide/events/how-to-implement-interface-events.md
+          - name: 如何實作自訂事件存取子
+            href: programming-guide/events/how-to-implement-custom-event-accessors.md
+      - name: 泛型
+        items:
+          - name: 總覽
+            displayName: generics
+            href: programming-guide/generics/index.md
+          - name: 泛型類型參數
+            href: programming-guide/generics/generic-type-parameters.md
+          - name: 型別參數的條件約束
+            href: programming-guide/generics/constraints-on-type-parameters.md
+          - name: 泛型類別
+            href: programming-guide/generics/generic-classes.md
+          - name: 泛型介面
+            href: programming-guide/generics/generic-interfaces.md
+          - name: 泛型方法
+            href: programming-guide/generics/generic-methods.md
+          - name: 泛型和陣列
+            href: programming-guide/generics/generics-and-arrays.md
+          - name: 泛型委派
+            href: programming-guide/generics/generic-delegates.md
+          - name: C++ 範本和 C# 泛型之間的差異
+            href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
+          - name: 執行階段中的泛型
+            href: programming-guide/generics/generics-in-the-run-time.md
+          - name: 泛型和反映
+            href: programming-guide/generics/generics-and-reflection.md
+          - name: 泛型和屬性
+            href: programming-guide/generics/generics-and-attributes.md
+      - name: 命名空間
+        items:
+          - name: 總覽
+            displayName: namespaces
+            href: programming-guide/namespaces/index.md
+          - name: 使用命名空間
+            href: programming-guide/namespaces/using-namespaces.md
+          - name: 如何使用 My 命名空間
+            href: programming-guide/namespaces/how-to-use-the-my-namespace.md
+      - name: 不安全的程式碼和指標
+        items:
+          - name: 概觀及限制
+            displayName: unsafe code pointers
+            href: programming-guide/unsafe-code-pointers/index.md
+          - name: 固定大小的緩衝區
+            href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
+          - name: 指標類型
+            items:
+              - name: 總覽
+                displayName: pointer types
+                href: programming-guide/unsafe-code-pointers/pointer-types.md
+              - name: 指標轉換
+                href: programming-guide/unsafe-code-pointers/pointer-conversions.md
+              - name: 如何使用指標複製位元組陣列
+                href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
+      - name: XML 文件註解
+        items:
+          - name: 總覽
+            displayName: xml documentation comments
+            href: programming-guide/xmldoc/index.md
+          - name: 建議使用的文件註解標籤
+            href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
+          - name: 處理 XML 檔案
+            href: programming-guide/xmldoc/processing-the-xml-file.md
+          - name: 文件標籤的分隔符號
+            href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
+          - name: 如何使用 XML 文件功能
+            href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
+          - name: 文件標籤參考
+            items:
+              - name: <c>
+                href: programming-guide/xmldoc/code-inline.md
+              - name: <code>
+                href: programming-guide/xmldoc/code.md
+              - name: cref 屬性
+                href: programming-guide/xmldoc/cref-attribute.md
+              - name: <example>
+                href: programming-guide/xmldoc/example.md
+              - name: <exception>
+                href: programming-guide/xmldoc/exception.md
+              - name: <include>
+                href: programming-guide/xmldoc/include.md
+              - name: <inheritdoc>
+                href: programming-guide/xmldoc/inheritdoc.md
+              - name: <list>
+                href: programming-guide/xmldoc/list.md
+              - name: <para>
+                href: programming-guide/xmldoc/para.md
+              - name: <param>
+                href: programming-guide/xmldoc/param.md
+              - name: <paramref>
+                href: programming-guide/xmldoc/paramref.md
+              - name: <permission>
+                href: programming-guide/xmldoc/permission.md
+              - name: <remarks>
+                href: programming-guide/xmldoc/remarks.md
+              - name: <returns>
+                href: programming-guide/xmldoc/returns.md
+              - name: <see>
+                href: programming-guide/xmldoc/see.md
+              - name: <seealso>
+                href: programming-guide/xmldoc/seealso.md
+              - name: <summary>
+                href: programming-guide/xmldoc/summary.md
+              - name: <typeparam>
+                href: programming-guide/xmldoc/typeparam.md
+              - name: <typeparamref>
+                href: programming-guide/xmldoc/typeparamref.md
+              - name: <value>
+                href: programming-guide/xmldoc/value.md
+      - name: 例外狀況和例外狀況處理
+        items:
+          - name: 總覽
+            displayName: exceptions
+            href: programming-guide/exceptions/index.md
+          - name: 使用例外狀況
+            href: programming-guide/exceptions/using-exceptions.md
+          - name: 例外狀況處理
+            href: programming-guide/exceptions/exception-handling.md
+          - name: 建立和擲回例外狀況
+            href: programming-guide/exceptions/creating-and-throwing-exceptions.md
+          - name: 編譯器所產生的例外狀況
+            href: programming-guide/exceptions/compiler-generated-exceptions.md
+          - name: 如何使用 try-catch 處理例外狀況
+            href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
+          - name: 如何使用 finally 執行清除程式碼
+            href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
+          - name: 如何攔截非 CLS 例外狀況
+            href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
+      - name: 檔案系統和登錄
+        items:
+          - name: 總覽
+            displayName: file system registry
+            href: programming-guide/file-system/index.md
+          - name: 如何逐一查看目錄樹狀結構
+            href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
+          - name: 如何取得有關檔案、資料夾和磁碟機的資訊
+            href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
+          - name: 如何建立檔案或資料夾
+            href: programming-guide/file-system/how-to-create-a-file-or-folder.md
+          - name: 如何複製、刪除及移動檔案和資料夾
+            href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
+          - name: 如何提供檔案作業的進度對話方塊
+            href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
+          - name: 如何寫入文字檔
+            href: programming-guide/file-system/how-to-write-to-a-text-file.md
+          - name: 如何讀取文字檔
+            href: programming-guide/file-system/how-to-read-from-a-text-file.md
+          - name: 如何一次一行讀取文字檔
+            href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
+          - name: 如何在登錄中建立機碼
+            href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
+      - name: 互通性
+        items:
+          - name: .NET 互通性
+            href: programming-guide/interop/index.md
+          - name: 互通性概觀
+            href: programming-guide/interop/interoperability-overview.md
+          - name: 如何使用 C# 功能存取 Office Interop 物件
+            href: programming-guide/interop/how-to-access-office-onterop-objects.md
+          - name: 如何在 COM Interop 程式設計中使用已編製索引的屬性
+            href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
+          - name: 如何使用平台叫用播放 WAV 檔
+            href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
+          - name: 逐步解說：Office 程式設計 (C# 與 Visual Basic)
+            href: programming-guide/interop/walkthrough-office-programming.md
+          - name: 範例 COM 類別
+            href: programming-guide/interop/example-com-class.md
+  - name: 語言參考
+    items:
+      - name: 總覽
+        displayName: language reference
+        href: language-reference/index.md
+      - name: 設定語言版本
+        href: language-reference/configure-language-version.md
+      - name: 型別
+        items:
+          - name: 值類型
+            items:
+              - name: 總覽
+                href: language-reference/builtin-types/value-types.md
+                displayName: 'value types, simple types'
+              - name: 整數數值類型
+                href: language-reference/builtin-types/integral-numeric-types.md
+                displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
+              - name: 浮點數值類型
+                href: language-reference/builtin-types/floating-point-numeric-types.md
+                displayName: 'float, decimal, double, rational, real, literal'
+              - name: 內建數值轉換
+                href: language-reference/builtin-types/numeric-conversions.md
+              - name: bool
+                href: language-reference/builtin-types/bool.md
+                displayName: 'Boolean, true, false'
+              - name: char
+                href: language-reference/builtin-types/char.md
+                displayName: 'Unicode, character, UTF-16'
+              - name: 列舉類型
+                href: language-reference/builtin-types/enum.md
+                displayName: 'enum, bit flags, bit field'
+              - name: 結構類型
+                href: language-reference/builtin-types/struct.md
+                displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
+              - name: Tuple 型別
+                href: language-reference/builtin-types/value-tuples.md
+                displayName: 'value tuples, ValueTuple'
+              - name: 可為 Null 的實值型別
+                href: language-reference/builtin-types/nullable-value-types.md
+                displayName: '? token, ? symbol'
+          - name: 參考型別
+            items:
+              - name: 參考類型的功能
+                href: language-reference/keywords/reference-types.md
+              - name: 內建參考類型
+                displayName: 'object, delegate, dynamic, string'
+                href: language-reference/builtin-types/reference-types.md
+              - name: Class - 類別
+                href: language-reference/keywords/class.md
+              - name: interface
+                href: language-reference/keywords/interface.md
+              - name: 可為 Null 的參考型別
+                href: language-reference/builtin-types/nullable-reference-types.md
+                displayName: '? token, ? symbol'
+          - name: void
+            href: language-reference/builtin-types/void.md
+          - name: var
+            href: language-reference/keywords/var.md
+          - name: 內建類型
+            href: language-reference/builtin-types/built-in-types.md
+          - name: 非受控類型
+            href: language-reference/builtin-types/unmanaged-types.md
+          - name: 預設值
+            href: language-reference/builtin-types/default-values.md
+      - name: 關鍵字
+        items:
+          - name: 概觀
+            displayName: keywords
+            href: language-reference/keywords/index.md
+          - name: 修飾詞
+            items:
+              - name: 存取修飾詞
+                items:
+                  - name: 快速參考
+                    href: language-reference/keywords/access-modifiers.md
+                  - name: 協助工具層級
+                    href: language-reference/keywords/accessibility-levels.md
+                  - name: 協助工具定義域
+                    href: language-reference/keywords/accessibility-domain.md
+                  - name: 使用協助工具層級的限制
+                    href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
+                  - name: internal
+                    href: language-reference/keywords/internal.md
+                  - name: private
+                    href: language-reference/keywords/private.md
+                  - name: protected
+                    href: language-reference/keywords/protected.md
+                  - name: public
+                    href: language-reference/keywords/public.md
+                  - name: protected internal
+                    href: language-reference/keywords/protected-internal.md
+                  - name: private protected
+                    href: language-reference/keywords/private-protected.md
+              - name: abstract
+                href: language-reference/keywords/abstract.md
+              - name: async
+                href: language-reference/keywords/async.md
+                displayName: await
+              - name: const
+                href: language-reference/keywords/const.md
+              - name: event
+                href: language-reference/keywords/event.md
+              - name: extern
+                href: language-reference/keywords/extern.md
+              - name: in (泛型修飾詞)
+                href: language-reference/keywords/in-generic-modifier.md
+              - name: new (成員修飾詞)
+                href: language-reference/keywords/new-modifier.md
+              - name: out (泛型修飾詞)
+                href: language-reference/keywords/out-generic-modifier.md
+              - name: override
+                href: language-reference/keywords/override.md
+              - name: readonly
+                href: language-reference/keywords/readonly.md
+              - name: sealed
+                href: language-reference/keywords/sealed.md
+              - name: static
+                href: language-reference/keywords/static.md
+              - name: unsafe
+                href: language-reference/keywords/unsafe.md
+              - name: virtual
+                href: language-reference/keywords/virtual.md
+              - name: volatile
+                href: language-reference/keywords/volatile.md
+          - name: 陳述式關鍵字
+            items:
+              - name: 陳述式類別
+                href: language-reference/keywords/statement-keywords.md
+              - name: 選取範圍陳述式
+                items:
+                  - name: if-else
+                    href: language-reference/keywords/if-else.md
+                  - name: switch
+                    href: language-reference/keywords/switch.md
+              - name: 反覆運算陳述式
+                items:
+                  - name: do
+                    href: language-reference/keywords/do.md
+                  - name: for
+                    href: language-reference/keywords/for.md
+                  - name: foreach、in
+                    href: language-reference/keywords/foreach-in.md
+                  - name: while
+                    href: language-reference/keywords/while.md
+              - name: 跳躍陳述式
+                items:
+                  - name: break
+                    href: language-reference/keywords/break.md
+                  - name: continue
+                    href: language-reference/keywords/continue.md
+                  - name: goto
+                    href: language-reference/keywords/goto.md
+                  - name: return
+                    href: language-reference/keywords/return.md
+              - name: 例外狀況處理陳述式
+                items:
+                  - name: throw
+                    href: language-reference/keywords/throw.md
+                  - name: try-catch
+                    href: language-reference/keywords/try-catch.md
+                  - name: try-finally
+                    href: language-reference/keywords/try-finally.md
+                  - name: try-catch-finally
+                    href: language-reference/keywords/try-catch-finally.md
+              - name: Checked 與 Unchecked
+                items:
+                  - name: 總覽
+                    displayName: checked unchecked
+                    href: language-reference/keywords/checked-and-unchecked.md
+                  - name: checked
+                    href: language-reference/keywords/checked.md
+                  - name: unchecked
+                    href: language-reference/keywords/unchecked.md
+              - name: fixed 陳述式
+                href: language-reference/keywords/fixed-statement.md
+              - name: lock 陳述式
+                href: language-reference/keywords/lock-statement.md
+          - name: 方法參數
+            items:
+              - name: 傳遞參數
+                href: language-reference/keywords/method-parameters.md
+              - name: params
+                href: language-reference/keywords/params.md
+              - name: in (參數修飾詞)
+                href: language-reference/keywords/in-parameter-modifier.md
+              - name: ref
+                href: language-reference/keywords/ref.md
+              - name: out (參數修飾詞)
+                href: language-reference/keywords/out-parameter-modifier.md
+          - name: 命名空間關鍵字
+            items:
+              - name: namespace
+                href: language-reference/keywords/namespace.md
+              - name: using
+                items:
+                  - name: 使用內容
+                    href: language-reference/keywords/using.md
+                  - name: using 指示詞
+                    href: language-reference/keywords/using-directive.md
+                  - name: using static 指示詞
+                    href: language-reference/keywords/using-static.md
+                  - name: using 陳述式
+                    href: language-reference/keywords/using-statement.md
+              - name: extern alias
+                href: language-reference/keywords/extern-alias.md
+          - name: 類型測試關鍵字
+            items:
+              - name: is
+                href: language-reference/keywords/is.md
+          - name: 泛型型別條件約束關鍵字
+            items:
+              - name: new 條件約束
+                href: language-reference/keywords/new-constraint.md
+              - name: where
+                href: language-reference/keywords/where-generic-type-constraint.md
+          - name: 存取關鍵字
+            items:
+              - name: base
+                href: language-reference/keywords/base.md
+              - name: this
+                href: language-reference/keywords/this.md
+          - name: 常值關鍵字
+            items:
+              - name: 'null'
+                href: language-reference/keywords/null.md
+              - name: true 與 false
+                href: language-reference/builtin-types/bool.md
+              - name: default
+                href: language-reference/keywords/default.md
+          - name: 內容關鍵字
+            items:
+              - name: 快速參考
+                displayName: contextual keywords
+                href: language-reference/keywords/contextual-keywords.md
+              - name: add
+                href: language-reference/keywords/add.md
+              - name: get
+                href: language-reference/keywords/get.md
+              - name: partial (類型)
+                href: language-reference/keywords/partial-type.md
+              - name: partial (方法)
+                href: language-reference/keywords/partial-method.md
+              - name: remove
+                href: language-reference/keywords/remove.md
+              - name: set
+                href: language-reference/keywords/set.md
+              - name: when (篩選條件)
+                href: language-reference/keywords/when.md
+              - name: value
+                href: language-reference/keywords/value.md
+              - name: yield
+                href: language-reference/keywords/yield.md
+          - name: 查詢關鍵字
+            items:
+              - name: 快速參考
+                displayName: query keywords
+                href: language-reference/keywords/query-keywords.md
+              - name: from 子句
+                href: language-reference/keywords/from-clause.md
+              - name: where 子句
+                href: language-reference/keywords/where-clause.md
+              - name: select 子句
+                href: language-reference/keywords/select-clause.md
+              - name: group 子句
+                href: language-reference/keywords/group-clause.md
+              - name: into
+                href: language-reference/keywords/into.md
+              - name: orderby 子句
+                href: language-reference/keywords/orderby-clause.md
+              - name: join 子句
+                href: language-reference/keywords/join-clause.md
+              - name: let 子句
+                href: language-reference/keywords/let-clause.md
+              - name: ascending
+                href: language-reference/keywords/ascending.md
+              - name: descending
+                href: language-reference/keywords/descending.md
+              - name: 'on'
+                href: language-reference/keywords/on.md
+              - name: equals
+                href: language-reference/keywords/equals.md
+              - name: by
+                href: language-reference/keywords/by.md
+              - name: in
+                href: language-reference/keywords/in.md
+      - name: 運算子和運算式
+        items:
+          - name: 總覽
+            href: language-reference/operators/index.md
+            displayName: 'operator precedence, operator associativity, expressions'
+          - name: 算術運算子
+            href: language-reference/operators/arithmetic-operators.md
+            displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+          - name: 布林值邏輯運算子
+            href: language-reference/operators/boolean-logical-operators.md
+            displayName: '!, &&, ||, &, |, ^, &=, |=, ^=, AND, XOR, OR'
+          - name: 位元與移位運算子
+            href: language-reference/operators/bitwise-and-shift-operators.md
+            displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>=, AND, XOR, OR'
+          - name: 等號比較運算子
+            href: language-reference/operators/equality-operators.md
+            displayName: '==, !='
+          - name: 比較運算子
+            href: language-reference/operators/comparison-operators.md
+            displayName: '>, <, >=, <=, greater, less'
+          - name: 成員存取運算子與運算式
+            href: language-reference/operators/member-access-operators.md
+            displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
+          - name: 類型測試運算子及 Cast 運算式
+            href: language-reference/operators/type-testing-and-cast.md
+            displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
+          - name: 使用者定義轉換運算子
+            href: language-reference/operators/user-defined-conversion-operators.md
+            displayName: 'implicit, explicit'
+          - name: 與指標相關的運算子
+            href: language-reference/operators/pointer-related-operators.md
+            displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
+          - name: 指派運算子
+            href: language-reference/operators/assignment-operator.md
+            displayName: '=, ref, compound'
+          - name: Lambda 運算式
+            href: language-reference/operators/lambda-expressions.md
+            displayName: anonymous functions
+          - name: + 及 += 運算子
+            href: language-reference/operators/addition-operator.md
+            displayName: 'string concatenation, delegate combination, event subscription'
+          - name: '- 及 -= 運算子'
+            href: language-reference/operators/subtraction-operator.md
+            displayName: 'delegate removal, event unsubscription'
+          - name: '?: 運算子'
+            href: language-reference/operators/conditional-operator.md
+            displayName: 'conditional, ternary, ref'
+          - name: '! (Null 容許) 運算子'
+            href: language-reference/operators/null-forgiving.md
+            displayName: 'nullable reference, null-forgiveness, null suppression'
+          - name: '?? 與 ??= 運算子'
+            href: language-reference/operators/null-coalescing-operator.md
+            displayName: 'null-coalescing, assignment'
+          - name: '=> 運算子'
+            href: language-reference/operators/lambda-operator.md
+            displayName: 'lambda, expression body definition'
+          - name: ':: 運算子'
+            href: language-reference/operators/namespace-alias-qualifier.md
+            displayName: 'namespace alias qualifier, global namespace'
+          - name: await 運算子
+            href: language-reference/operators/await.md
+            displayName: async
+          - name: 預設值運算式
+            href: language-reference/operators/default.md
+            displayName: 'default value, default operator, default literal, type default'
+          - name: delegate 運算子
+            href: language-reference/operators/delegate-operator.md
+            displayName: anonymous
+          - name: nameof 運算式
+            href: language-reference/operators/nameof.md
+            displayName: nameof operator
+          - name: new 運算子
+            href: language-reference/operators/new-operator.md
+            displayName: constructor
+          - name: sizeof 運算子
+            href: language-reference/operators/sizeof.md
+          - name: stackalloc 運算式
+            href: language-reference/operators/stackalloc.md
+            displayName: 'stack allocation, span, stackalloc operator'
+          - name: switch 運算式
+            href: language-reference/operators/switch-expression.md
+            displayName: 'switch, pattern matching, patterns'
+          - name: true 和 false 運算子
+            href: language-reference/operators/true-false-operators.md
+          - name: 含運算式
+            href: language-reference/operators/with-expression.md
+            displayName: 'records, copy'
+          - name: 運算子多載
+            href: language-reference/operators/operator-overloading.md
+      - name: 特殊字元
+        items:
+          - name: 總覽
+            displayName: special characters
+            href: language-reference/tokens/index.md
+          - name: $ -- 字串插補
+            href: language-reference/tokens/interpolated.md
+          - name: '@ -- 逐字識別項'
+            href: language-reference/tokens/verbatim.md
+      - name: 編譯器所讀取的屬性
+        items:
+          - name: 全域屬性
+            displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+            href: language-reference/attributes/global.md
+          - name: 一般
+            displayName: 'Conditional, Obsolete, AttributeUsage'
+            href: language-reference/attributes/general.md
+          - name: 呼叫者資訊
+            displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+            href: language-reference/attributes/caller-information.md
+          - name: 可為 Null 靜態分析
+            displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+            href: language-reference/attributes/nullable-analysis.md
+      - name: 前置處理器指示詞
+        items:
+          - name: 總覽
+            displayName: preprocessor directives
+            href: language-reference/preprocessor-directives/index.md
+          - name: '#if'
+            href: language-reference/preprocessor-directives/preprocessor-if.md
+          - name: '#else'
+            href: language-reference/preprocessor-directives/preprocessor-else.md
+          - name: '#elif'
+            href: language-reference/preprocessor-directives/preprocessor-elif.md
+          - name: '#endif'
+            href: language-reference/preprocessor-directives/preprocessor-endif.md
+          - name: '#define'
+            href: language-reference/preprocessor-directives/preprocessor-define.md
+          - name: '#undef'
+            href: language-reference/preprocessor-directives/preprocessor-undef.md
+          - name: '#warning'
+            href: language-reference/preprocessor-directives/preprocessor-warning.md
+          - name: '#error'
+            href: language-reference/preprocessor-directives/preprocessor-error.md
+          - name: '#line'
+            href: language-reference/preprocessor-directives/preprocessor-line.md
+          - name: '#可為 null 的'
+            href: language-reference/preprocessor-directives/preprocessor-nullable.md
+          - name: '#region'
+            href: language-reference/preprocessor-directives/preprocessor-region.md
+          - name: '#endregion'
+            href: language-reference/preprocessor-directives/preprocessor-endregion.md
+          - name: '#pragma'
+            href: language-reference/preprocessor-directives/preprocessor-pragma.md
+          - name: '#pragma warning'
+            href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
+          - name: '#pragma checksum'
+            href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
+      - name: 編譯器選項
+        items:
+          - name: 總覽
+            displayName: compiler options
+            href: language-reference/compiler-options/index.md
+          - name: 使用 csc.exe 建置命令列
+            href: language-reference/compiler-options/command-line-building-with-csc-exe.md
+          - name: 如何為 Visual Studio 命令列設定環境變數
+            href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
+          - name: 依分類列出的 C# 編譯器選項
+            href: language-reference/compiler-options/listed-by-category.md
+          - name: 依字母順序列出 C# 編譯器選項
+            href: language-reference/compiler-options/listed-alphabetically.md
+            items:
+              - name: '@'
+                href: language-reference/compiler-options/response-file-compiler-option.md
+              - name: '-addmodule'
+                href: language-reference/compiler-options/addmodule-compiler-option.md
+              - name: '-appconfig'
+                href: language-reference/compiler-options/appconfig-compiler-option.md
+              - name: '-baseaddress'
+                href: language-reference/compiler-options/baseaddress-compiler-option.md
+              - name: '-bugreport'
+                href: language-reference/compiler-options/bugreport-compiler-option.md
+              - name: '-checked'
+                href: language-reference/compiler-options/checked-compiler-option.md
+              - name: '-codepage'
+                href: language-reference/compiler-options/codepage-compiler-option.md
+              - name: '-debug'
+                href: language-reference/compiler-options/debug-compiler-option.md
+              - name: '-define'
+                href: language-reference/compiler-options/define-compiler-option.md
+              - name: '-delaysign'
+                href: language-reference/compiler-options/delaysign-compiler-option.md
+              - name: '-deterministic'
+                href: language-reference/compiler-options/deterministic-compiler-option.md
+              - name: '-doc'
+                href: language-reference/compiler-options/doc-compiler-option.md
+              - name: '-errorreport'
+                href: language-reference/compiler-options/errorreport-compiler-option.md
+              - name: '-filealign'
+                href: language-reference/compiler-options/filealign-compiler-option.md
+              - name: '-fullpaths'
+                href: language-reference/compiler-options/fullpaths-compiler-option.md
+              - name: '-help、-?'
+                href: language-reference/compiler-options/help-compiler-option.md
+              - name: '-highentropyva'
+                href: language-reference/compiler-options/highentropyva-compiler-option.md
+              - name: '-keycontainer'
+                href: language-reference/compiler-options/keycontainer-compiler-option.md
+              - name: '-keyfile'
+                href: language-reference/compiler-options/keyfile-compiler-option.md
+              - name: '-langversion'
+                href: language-reference/compiler-options/langversion-compiler-option.md
+              - name: '-lib'
+                href: language-reference/compiler-options/lib-compiler-option.md
+              - name: '-link'
+                href: language-reference/compiler-options/link-compiler-option.md
+              - name: '-linkresource'
+                href: language-reference/compiler-options/linkresource-compiler-option.md
+              - name: '-main'
+                href: language-reference/compiler-options/main-compiler-option.md
+              - name: '-moduleassemblyname'
+                href: language-reference/compiler-options/moduleassemblyname-compiler-option.md
+              - name: '-noconfig'
+                href: language-reference/compiler-options/noconfig-compiler-option.md
+              - name: '-nologo'
+                href: language-reference/compiler-options/nologo-compiler-option.md
+              - name: '-nostdlib'
+                href: language-reference/compiler-options/nostdlib-compiler-option.md
+              - name: '-nowarn'
+                href: language-reference/compiler-options/nowarn-compiler-option.md
+              - name: '-nowin32manifest'
+                href: language-reference/compiler-options/nowin32manifest-compiler-option.md
+              - name: '-nullable'
+                href: language-reference/compiler-options/nullable-compiler-option.md
+              - name: '-optimize'
+                href: language-reference/compiler-options/optimize-compiler-option.md
+              - name: '-out'
+                href: language-reference/compiler-options/out-compiler-option.md
+              - name: '-pathmap'
+                href: language-reference/compiler-options/pathmap-compiler-option.md
+              - name: '-pdb'
+                href: language-reference/compiler-options/pdb-compiler-option.md
+              - name: '-platform'
+                href: language-reference/compiler-options/platform-compiler-option.md
+              - name: '-preferreduilang'
+                href: language-reference/compiler-options/preferreduilang-compiler-option.md
+              - name: '-publicsign'
+                href: language-reference/compiler-options/publicsign-compiler-option.md
+              - name: '-recurse'
+                href: language-reference/compiler-options/recurse-compiler-option.md
+              - name: '-reference'
+                href: language-reference/compiler-options/reference-compiler-option.md
+              - name: '-refout'
+                href: language-reference/compiler-options/refout-compiler-option.md
+              - name: '-refonly'
+                href: language-reference/compiler-options/refonly-compiler-option.md
+              - name: '-resource'
+                href: language-reference/compiler-options/resource-compiler-option.md
+              - name: '-subsystemversion'
+                href: language-reference/compiler-options/subsystemversion-compiler-option.md
+              - name: '-target'
+                href: language-reference/compiler-options/target-compiler-option.md
+                items:
+                  - name: '-target:appcontainerexe'
+                    href: language-reference/compiler-options/target-appcontainerexe-compiler-option.md
+                  - name: '-target:exe'
+                    href: language-reference/compiler-options/target-exe-compiler-option.md
+                  - name: '-target:library'
+                    href: language-reference/compiler-options/target-library-compiler-option.md
+                  - name: '-target:module'
+                    href: language-reference/compiler-options/target-module-compiler-option.md
+                  - name: '-target:winexe'
+                    href: language-reference/compiler-options/target-winexe-compiler-option.md
+                  - name: '-target:winmdobj'
+                    href: language-reference/compiler-options/target-winmdobj-compiler-option.md
+              - name: '-unsafe'
+                href: language-reference/compiler-options/unsafe-compiler-option.md
+              - name: '-utf8output'
+                href: language-reference/compiler-options/utf8output-compiler-option.md
+              - name: '-warn'
+                href: language-reference/compiler-options/warn-compiler-option.md
+              - name: '-warnaserror'
+                href: language-reference/compiler-options/warnaserror-compiler-option.md
+              - name: '-win32icon'
+                href: language-reference/compiler-options/win32icon-compiler-option.md
+              - name: '-win32manifest'
+                href: language-reference/compiler-options/win32manifest-compiler-option.md
+              - name: '-win32res'
+                href: language-reference/compiler-options/win32res-compiler-option.md
+      - name: 編譯器錯誤
+        href: language-reference/compiler-messages/index.md
+      - name: C# 6.0 草稿規格
+        href: language-reference/specification/
+      - name: C# 7.0 - 9.0 提案
+        href: language-reference/proposals/
+  - name: 逐步解說
+    href: walkthroughs.md
