@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: d3f3a282cfa9274a1939d312987dd58b24eab2af
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7c76bfe169a23322a5a0cdfe0d2e2e5d82f0346
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255789"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957870"
 ---
 # <a name="composition-analysis-tool-mefx"></a>撰寫分析工具 (Mefx)
 
@@ -130,11 +130,11 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
 <a name="white_lists"></a>
 
-## <a name="white-lists"></a>允許清單  
+## <a name="allow-lists"></a>允許清單
 
- `/whitelist` 選項可讓您指定列出預期要拒絕之組件的文字檔。 非預期的拒絕將加上旗標。 當您分析不完整的程式庫或遺漏某些相依性的子程式庫時，這個選項可能會很實用。 `/whitelist` 選項可以套用至 `/rejected` 或 `/causes` 動作。  
+ `/whitelist` 選項可讓您指定列出預期要拒絕之組件的文字檔。 非預期的拒絕將加上旗標。 當您分析不完整的程式庫或遺漏某些相依性的 sublibrary 時，這會很有用。 `/whitelist` 選項可以套用至 `/rejected` 或 `/causes` 動作。  
   
- 以名為 test.txt 且其中包含 "ClassLibrary1.ChainOne" 文字的檔案為例。 如果您對上述範例執行 `/rejected` 動作與 `/whitelist` 選項，它將會產生下列輸出：  
+ 以名為 test.txt 且其中包含 "ClassLibrary1.ChainOne" 文字的檔案為例。 如果您 `/rejected` 使用 `/whitelist` 上一個範例的選項來執行動作，它會產生下列輸出：  
   
 ```console
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  

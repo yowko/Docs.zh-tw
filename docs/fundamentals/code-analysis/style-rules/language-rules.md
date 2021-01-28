@@ -12,12 +12,12 @@ helpviewer_keywords:
 - language code style rules [EditorConfig]
 - language rules
 - EditorConfig language conventions
-ms.openlocfilehash: b77d9aa2a528a6cf540babd5e5acc148e48c489c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2aa2261534363f1da6a2109f092e08d210ebd915
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96586675"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957971"
 ---
 # <a name="language-rules"></a>語言規則
 
@@ -31,10 +31,21 @@ ms.locfileid: "96586675"
 
 您可以使用下列格式，在 EditorConfig 檔中指定語言規則的選項：
 
+`option_name = value` (Visual Studio 2019 16.9 版 Preview 2 和更新版本) 
+
+或
+
 `option_name = value:severity`
 
-- **值**：針對每個語言規則，您可以指定一個值來定義偏好樣式的時機或時機。 許多規則接受的值 `true` (偏好以此樣式) 或 `false` (不偏好使用此樣式) 。 其他規則接受值，例如 `when_on_single_line` 或 `never` 。
-- **嚴重性**：規則的第二個部分會指定規則的 [嚴重性層級](../configuration-options.md#severity-level) 。 只有在開發 Ide （例如 Visual Studio）中，才能採用嚴重性規格做為上述選項語法的一部分。 C # 或 VB 編譯器無法理解這項設定，因此不會在組建期間遵守。 相反地，若要強制執行組建的程式碼樣式規則，您應該流量分析器的規則識別碼型嚴重性設定語法來設定嚴重性。 語法的格式如下 `dotnet_diagnostic.<rule ID>.severity = <severity>` `dotnet_diagnostic.IDE0040.severity = silent` 。 如需詳細資訊，請參閱此 [GitHub 問題](https://github.com/dotnet/roslyn/issues/44201)。
+- **值**
+
+  針對每個語言規則，您可以指定一個值來定義偏好樣式的時機或時機。 許多規則接受的值 `true` (偏好以此樣式) 或 `false` (不偏好使用此樣式) 。 其他規則接受值，例如 `when_on_single_line` 或 `never` 。
+
+- **嚴重性** (Visual Studio 2019 16.9 版 Preview 2 和更新版本中的選擇性) 
+
+  規則的第二個部分會指定規則的 [嚴重性層級](../configuration-options.md#severity-level) 。 以這種方式指定時，只會在開發 Ide （例如 Visual Studio）中遵守嚴重性設定。 在組建期間 *不* 遵守。
+
+  若要在組建階段強制執行程式碼樣式規則，請改為流量分析器的規則識別碼型嚴重性設定語法來設定嚴重性。 語法的格式如下 `dotnet_diagnostic.<rule ID>.severity = <severity>` `dotnet_diagnostic.IDE0040.severity = silent` 。 如需詳細資訊，請參閱 [嚴重性層級](../configuration-options.md#severity-level)。
 
 > [!TIP]
 >

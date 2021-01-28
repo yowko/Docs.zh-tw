@@ -4,12 +4,12 @@ description: 以不同方式將企業架構部署至雲端的指南，其中包�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 89a8e6a52331b563be334a867f563e9ded8d8cc4
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173337"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957958"
 ---
 # <a name="architecture-deployment-approaches"></a>架構部署方法
 
@@ -101,7 +101,7 @@ PaaS 可解決 IaaS 常見的挑戰。 PaaS 可讓開發人員專注于程式碼
 
 跨主機管理容器通常需要協調流程工具，例如 Kubernetes。 設定和管理協調流程解決方案可能會增加專案的額外負荷和複雜度。 幸運的是，許多雲端提供者都透過 PaaS 解決方案提供協調流程服務，以簡化容器的管理工作。
 
-下圖說明 Kubernetes 安裝的範例。 安裝位址中的節點會相應放大及容錯移轉。 它們會執行主伺服器所管理的 Docker 容器實例。 *Kubelet*是將命令從 Kubernetes 轉送至 Docker 的用戶端。
+下圖說明 Kubernetes 安裝的範例。 安裝位址中的節點會相應放大及容錯移轉。 它們會執行主伺服器所管理的 Docker 容器實例。 *Kubelet* 是將命令從 Kubernetes 轉送至 Docker 的用戶端。
 
 ![Kubernetes](./media/kubernetes-example.png)
 
@@ -111,7 +111,7 @@ PaaS 可解決 IaaS 常見的挑戰。 PaaS 可讓開發人員專注于程式碼
 
 ## <a name="serverless"></a>無伺服器
 
-無伺服器架構可讓程式碼與其裝載環境之間有清楚的分隔。 您可以在由*觸發*程式叫*用的函*式中執行程式碼。 該函式結束之後，可能會釋出其所有所需的資源。 觸發程式可能是手動、計時進程、HTTP 要求或檔案上傳。 觸發程式的結果就是程式碼的執行。 雖然無伺服器平臺不同，但大部分會提供預先定義之 Api 和系結的存取權，以簡化工作（例如寫入資料庫或將結果排入佇列）的作業。
+無伺服器架構可讓程式碼與其裝載環境之間有清楚的分隔。 您可以在由 *觸發* 程式叫 *用的函* 式中執行程式碼。 該函式結束之後，可能會釋出其所有所需的資源。 觸發程式可能是手動、計時進程、HTTP 要求或檔案上傳。 觸發程式的結果就是程式碼的執行。 雖然無伺服器平臺不同，但大部分會提供預先定義之 Api 和系結的存取權，以簡化工作（例如寫入資料庫或將結果排入佇列）的作業。
 
 無伺服器是一種架構，主要依賴于退出主機環境以專注于程式碼。 您可以將它視為 *較少的伺服器*。
 
@@ -138,7 +138,7 @@ PaaS 可解決 IaaS 常見的挑戰。 PaaS 可讓開發人員專注于程式碼
 
 |         |IaaS     |PaaS     |容器|無伺服器|
 |---------|---------|---------|---------|----------|
-|**調整**|VM       |執行個體 |應用程式      |函式  |
+|**縮放**|VM       |執行個體 |應用程式      |函式  |
 |**文摘**|硬體|平台|OS 主機|執行階段   |
 |**單位** |VM       |Project  |映像    |程式碼      |
 |**存留期**|月|天到數個月|分鐘到數天|毫秒到分鐘|

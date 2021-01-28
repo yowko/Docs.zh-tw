@@ -2,16 +2,16 @@
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET SDK 和共用執行時間的 dotnet 安裝腳本。
 ms.date: 09/22/2020
-ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634438"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957869"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet-install.ps1` | `dotnet-install.sh` -用來安裝 .NET SDK 和共用執行時間的腳本。
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
 `dotnet-install`腳本會執行 .NET SDK 的非系統管理員安裝，其中包含 .NET CLI 和共用執行時間。 有兩個腳本：
 
@@ -157,9 +157,15 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   - `aspnetcore` - `Microsoft.AspNetCore.App` 共用執行階段。
   - `windowsdesktop` - `Microsoft.WindowsDesktop.App` 共用執行階段。
 
-- **`--runtime-id <RID>`**
+- **`--runtime-id <RID>` 否決**
 
-  指定要安裝工具的 [執行時間識別碼](../rid-catalog.md) 。 用於 `linux-x64` 可移植的 Linux。  (僅適用于 Linux/macOS。 ) 
+  指定要安裝工具的 [執行時間識別碼](../rid-catalog.md) 。 用於 `linux-x64` 可移植的 Linux。  (僅適用于 Linux/macOS 和 .NET Core 2.1 之前的版本。 ) 
+
+  **`--os <OPERATING_SYSTEM>`**
+
+  指定要安裝工具的作業系統。 可能的值為： `osx` 、 `linux` 、 `linux-musl` 、 `freebsd` 、 `rhel.6` 。  (適用于 .NET Core 2.1 和更新版本。 ) 
+
+  參數是選擇性的，只有在需要覆寫腳本所偵測到的作業系統時，才應使用此參數。
 
 - **`-SharedRuntime|--shared-runtime`**
 
@@ -170,7 +176,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  如果已經有非版本控制的檔案 (例如 *dotnet.exe* ) 存在，便略過其安裝。
+  如果已經有非版本控制的檔案 (例如 *dotnet.exe*) 存在，便略過其安裝。
 
 - **`-UncachedFeed|--uncached-feed`**
 

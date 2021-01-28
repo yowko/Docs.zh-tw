@@ -1,16 +1,16 @@
 ---
 title: Microsoft XML 序列化程式產生器
 description: Microsoft XML 序列化程式產生器的概觀。 您可以使用 XML 序列化程式產生器，為專案中包含的類型產生 XML 序列化組件。
-author: mlacouture
+author: honggit
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8005a8a3e5202b0255ec482dfb7e3c284bc2e19b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4b408326bb9f1bc3b82acb92e8daabfd90be43f6
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538900"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957893"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
@@ -64,7 +64,7 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 在文字編輯器中，開啟 *MyApp.csproj*。
 
-[`dotnet add package`](../tools/dotnet-add-package.md)執行命令之後，會將下列幾行新增至您的*MyApp*專案檔：
+[`dotnet add package`](../tools/dotnet-add-package.md)執行命令之後，會將下列幾行新增至您的 *MyApp* 專案檔：
 
  ```xml
  <ItemGroup>

@@ -6,20 +6,20 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 3889088ce32046f72a9a3392e28a5a36cda4745e
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687599"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957841"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>將適用于 Apache Spark 的 .NET 連線到 MongoDB
 
 在本文中，您將瞭解如何從 .NET 針對 Apache Spark 應用程式連接到 MongoDB 實例。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-1. 將 MongoDB 伺服器啟動並執行，並在其中加入一個 [資料庫，](https://docs.mongodb.com/manual/core/databases-and-collections/) (為本機伺服器下載 [此台伺服器](https://www.mongodb.com/try/download/community) ，或者您可以嘗試使用 [MongoDB](https://www.mongodb.com/cloud/atlas) 的 mongodb 服務。 ) 
+- 將 MongoDB 伺服器啟動並執行，並在其中加入一個 [資料庫，](https://docs.mongodb.com/manual/core/databases-and-collections/) (為本機伺服器下載 [此台伺服器](https://www.mongodb.com/try/download/community) ，或者您可以嘗試使用 [MongoDB](https://www.mongodb.com/cloud/atlas) 的 mongodb 服務。 ) 
 
 ## <a name="set-up-your-mongodb-instance"></a>設定您的 MongoDB 實例
 
@@ -38,7 +38,7 @@ ms.locfileid: "94687599"
     )
     ```
 
-2. 確定您的 .NET for Apache Spark 應用程式執行所在的電腦 IP 位址已列入允許清單，以便 MongoDB 伺服器能夠連線。 您可以參考 [本指南](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/) 來瞭解如何進行。
+2. 確定您的 .NET for Apache Spark 應用程式執行所在的電腦 IP 位址是 allowlisted，以便 MongoDB 伺服器能夠連線。 您可以參考 [本指南](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/) 來瞭解如何進行。
 
 ## <a name="configure-your-net-for-apache-spark-application"></a>設定您的 .NET 以 Apache Spark 應用程式
 
@@ -79,7 +79,7 @@ ms.locfileid: "94687599"
 
 ## <a name="run-your-application"></a>執行您的應用程式
 
-若要執行 Apache Spark 應用程式的 .NET，您應該在 `mongo-spark-connector` Spark 專案中將模組定義為組建定義的一部分，並 `libraryDependency` 在 `build.sbt` sbt 專案中使用。 針對 (或) 這類 Spark 環境 `spark-submit` `spark-shell` ，您應該使用 `--packages` 命令列選項，如下所示：
+若要執行 Apache Spark 應用程式的 .NET，您應該在 `mongo-spark-connector` Spark 專案中將模組定義為組建定義的一部分，並 `libraryDependency` 在 `build.sbt` sbt 專案中使用。 針對 (或) 這類 Spark 環境 `spark-submit` `spark-shell` ，請使用 `--packages` 命令列選項，如下所示：
 
 ```bash
 spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar yourApp.exe
