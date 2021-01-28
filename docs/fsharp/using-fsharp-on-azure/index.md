@@ -4,12 +4,12 @@ description: 使用 Azure 服務搭配 F 的指南#
 author: sylvanc
 ms.date: 07/29/2020
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: c3235db9274065f81e5476d8d0e06b99d7c987a0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 16599aa48776acee05edf8201cdd148a87507cdb
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100135"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899403"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -42,10 +42,10 @@ Azure Functions 支援 F# 作為第一級語言，可以在有效率、易於反
 
 Azure 儲存體是新式應用程式的儲存體服務基礎層，這些應用程式依賴持久性、可用性和延展性來符合客戶的需求。 您可以使用下列文章中所述的技術，直接與 Azure 儲存體服務互動 F # 程式。
 
-* [使用 F# 開始使用 Azure Blob 儲存體](blob-storage.md)
-* [使用 F# 開始使用 Azure 檔案儲存體](file-storage.md)
-* [使用 F# 開始使用 Azure 佇列儲存體](queue-storage.md)
-* [使用 F# 開始使用 Azure 資料表儲存體](table-storage.md)
+* [以 F 開始使用 Azure Blob 儲存體#](blob-storage.md)
+* [以 F 開始使用 Azure 檔案儲存體#](file-storage.md)
+* [以 F 開始使用 Azure 佇列儲存體#](queue-storage.md)
+* [以 F 開始使用 Azure 資料表儲存體#](table-storage.md)
 
 Azure 儲存體也可以透過宣告式組態 (而不是明確的 API 呼叫) 與 Azure Functions 一起使用。 請參閱包含 F# 範例的 [Azure 儲存體的 Azure Functions 觸發程序和繫結](/azure/azure-functions/functions-bindings-storage)。
 

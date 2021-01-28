@@ -1,19 +1,19 @@
 ---
-title: 使用 F# 開始使用 Azure 資料表儲存體
-description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 將結構化資料儲存在雲端。
+title: 以 F 開始使用 Azure 資料表儲存體#
+description: 使用 Azure 資料表儲存體或 Azure Cosmos DB，將結構化資料儲存在雲端中。
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bc8e111636013930f7c7d4f59d1ef0720298cb9f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756204"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899278"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和使用 F 的 Azure Cosmos DB 資料表 API\#
 
-Azure 表格儲存體是可將結構化的 NoSQL 資料儲存在雲端中的服務。 表格儲存體是具有無結構描述設計的索引鍵/屬性存放區。 由於表格儲存體並無結構描述，因此可輕易隨著應用程式發展需求改寫資料。 所有類型的應用程式都可以用快速且具成本效益的方式存取資料。 相較於類似資料量的傳統 SQL，資料表儲存體通常可大幅降低成本。
+Azure 資料表儲存體是一項服務，可將結構化的 NoSQL 資料儲存在雲端中。 表格儲存體是具有無結構描述設計的索引鍵/屬性存放區。 由於表格儲存體並無結構描述，因此可輕易隨著應用程式發展需求改寫資料。 所有類型的應用程式都可以用快速且具成本效益的方式存取資料。 相較於類似資料量的傳統 SQL，資料表儲存體通常可大幅降低成本。
 
 您可以使用表格儲存體來儲存具彈性的資料集，例如 Web 應用程式的使用者資料、通訊錄、裝置資訊，以及服務所需的任何其他中繼資料類型。 您可以在資料表中儲存任意數目的實體，且儲存體帳戶可包含任意數目的資料表，最高可達儲存體帳戶的容量限制。
 
@@ -25,7 +25,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，且需要高階
 - 保證高可用性。
 - 自動次要索引。
 
-針對 Azure 資料表儲存體所撰寫的應用程式可使用資料表 API (不變更程式碼) 來移轉至 Azure Cosmos DB，並且利用進階功能。 資料表 API 具有適用於 .NET、Java、Python 和 Node.js 的用戶端 SDK。
+針對 Azure 資料表儲存體所撰寫的應用程式可以使用資料表 API 來遷移至 Azure Cosmos DB，而不需要變更程式碼並利用 premium 功能。 資料表 API 具有適用於 .NET、Java、Python 和 Node.js 的用戶端 SDK。
 
 如需詳細資訊，請參閱 [Azure Cosmos DB 資料表 API 簡介](/azure/cosmos-db/table-introduction)。
 
@@ -33,7 +33,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，且需要高階
 
 本教學課程說明如何使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API 撰寫 F # 程式碼來進行一些常見工作，包括建立和刪除資料表，以及插入、更新、刪除和查詢資料表資料。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account) 或 [Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。
 

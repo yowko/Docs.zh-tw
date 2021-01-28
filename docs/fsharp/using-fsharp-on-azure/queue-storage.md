@@ -1,27 +1,27 @@
 ---
-title: 使用 F# 開始使用 Azure 佇列儲存體
+title: 以 F 開始使用 Azure 佇列儲存體#
 description: Azure 佇列可在應用程式元件之間提供可靠的非同步傳訊。 雲端傳訊可讓您的應用程式元件獨立擴充。
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 0ab131647e37985d45073966ffc01b9a7f379e2f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756217"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899291"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>以 F 開始使用 Azure 佇列儲存體\#
 
-Azure 佇列儲存體可提供應用程式元件之間的雲端傳訊。 設計擴充性的應用程式時，會經常分離應用程式元件，以便進行個別擴充。 佇列儲存體可針對應用程式元件間的通訊，提供非同步傳訊，無論應用程式元件是在雲端、桌面、內部部署伺服器或行動裝置上執行。 佇列儲存體也支援管理非同步工作並建置處理工作流程。
+Azure 佇列儲存體可提供應用程式元件之間的雲端通訊。 設計擴充性的應用程式時，會經常分離應用程式元件，以便進行個別擴充。 佇列儲存體可針對應用程式元件間的通訊，提供非同步傳訊，無論應用程式元件是在雲端、桌面、內部部署伺服器或行動裝置上執行。 佇列儲存體也支援管理非同步工作並建置處理工作流程。
 
 ### <a name="about-this-tutorial"></a>關於本教學課程
 
-本教學課程示範如何使用 Azure 佇列儲存體來撰寫一些常見工作的 F # 程式碼。 涵蓋的工作包括建立和刪除佇列，以及新增、讀取和刪除佇列訊息。
+本教學課程說明如何使用 Azure 佇列儲存體來撰寫一些常見工作的 F # 程式碼。 涵蓋的工作包括建立和刪除佇列，以及新增、讀取和刪除佇列訊息。
 
 如需佇列儲存體的概念總覽，請參閱 [佇列儲存體的 .net 指南](/azure/storage/storage-dotnet-how-to-use-queues)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。
 您也需要此帳戶的儲存體存取金鑰。

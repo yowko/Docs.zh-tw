@@ -1,23 +1,23 @@
 ---
-title: 使用 F# 開始使用 Azure 檔案儲存體
-description: 使用 Azure 檔案儲存體在雲端中儲存檔案資料，並從 Azure 虛擬機器 (VM) 或執行 Windows 的內部部署應用程式掛接雲端檔案共用。
+title: 以 F 開始使用 Azure 檔案儲存體#
+description: 使用 Azure 檔案儲存體在雲端中儲存檔案資料，並從 Azure 虛擬機器 (VM) 或從執行 Windows 的內部部署應用程式掛接雲端檔案共用。
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcea58b4bf756fc9d696cd5a1010b0feffb127a7
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100122"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899420"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>以 F 開始使用 Azure 檔案儲存體\#
 
-Azure 檔案儲存體是一項服務，可使用標準 [伺服器訊息區 (SMB) 通訊協定](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)，在雲端中提供檔案共用。 SMB 2.1 和 SMB 3.0 皆受到支援。 使用 Azure 檔案儲存體時，您可以快速地將依賴檔案共用功能的舊式應用程式移轉至 Azure，而不必浪費成本來重新撰寫程式。 在 Azure 虛擬機器、雲端服務或內部部署中執行的應用程式，可掛接雲端中的檔案共用，就像桌面應用程式掛接一般 SMB 共用一樣。 可同時掛接和存取檔案儲存體共用的應用程式元件數量沒有限制。
+Azure 檔案儲存體是一項服務，可使用標準 [伺服器訊息區 (SMB) 通訊協定](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)，在雲端中提供檔案共用。 SMB 2.1 和 SMB 3.0 皆受到支援。 透過 Azure 檔案儲存體，您可以快速地將依賴檔案共用的繼承應用程式遷移到 Azure，而不需要重寫成本。 在 Azure 虛擬機器、雲端服務或內部部署中執行的應用程式，可掛接雲端中的檔案共用，就像桌面應用程式掛接一般 SMB 共用一樣。 可同時掛接和存取檔案儲存體共用的應用程式元件數量沒有限制。
 
 如需檔案儲存體的概念總覽，請參閱檔案 [儲存體的 .net 指南](/azure/storage/storage-dotnet-how-to-use-files)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。
 您也需要此帳戶的儲存體存取金鑰。
@@ -147,14 +147,14 @@ Azure 儲存體分析支援檔儲存體的計量。 利用度量資料，您可�
 - [如何搭配使用 AzCopy 與 Microsoft Azure 儲存體](/azure/storage/storage-use-azcopy)
 - [使用 Azure CLI 上傳、下載及列出 Blob](/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>參考資料
+### <a name="reference"></a>參考
 
 - [Storage Client Library for .NET 參考資料](/dotnet/api/overview/azure/storage)
 - [檔案服務 REST API 參考](/rest/api/storageservices/fileservices/File-Service-REST-API)
 
 ### <a name="blog-posts"></a>部落格文章
 
-- [Azure 檔案儲存體現已公開推出](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
+- [Azure 檔案儲存體現已正式推出](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Azure 檔案儲存體內部](https://azure.microsoft.com/blog/inside-azure-file-storage/)
 - [Microsoft Azure 檔案服務簡介](/archive/blogs/windowsazurestorage/introducing-microsoft-azure-file-service)
 - [保留與 Microsoft Azure 檔案的連線](/archive/blogs/windowsazurestorage/persisting-connections-to-microsoft-azure-files)
