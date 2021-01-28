@@ -282,13 +282,13 @@
 - name: 在 Azure 上使用 F#
   href: using-fsharp-on-azure/index.md
   items:
-    - name: 使用 F# 開始使用 Azure Blob 儲存體
+    - name: 以 F 開始使用 Azure Blob 儲存體#
       href: using-fsharp-on-azure/blob-storage.md
-    - name: 使用 F# 開始使用 Azure 檔案儲存體
+    - name: 以 F 開始使用 Azure 檔案儲存體#
       href: using-fsharp-on-azure/file-storage.md
-    - name: 使用 F# 開始使用 Azure 佇列儲存體
+    - name: 以 F 開始使用 Azure 佇列儲存體#
       href: using-fsharp-on-azure/queue-storage.md
-    - name: 使用 F# 開始使用 Azure 資料表儲存體
+    - name: 以 F 開始使用 Azure 資料表儲存體#
       href: using-fsharp-on-azure/table-storage.md
     - name: F# Azure 相依性的套件管理
       href: using-fsharp-on-azure/package-management.md
