@@ -1,7 +1,7 @@
 ---
 title: 如何撰寫 JSON 序列化的自訂轉換器-.NET
 description: 瞭解如何針對命名空間中提供的 JSON 序列化類別，建立自訂的轉換器 System.Text.Json 。
-ms.date: 12/14/2020
+ms.date: 01/22/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 390438e3dca7a5d40dd9957090f498b495996e05
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 5406f862eeec83b619f660716e68b85f3d90b28f
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513194"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216352"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化的自訂轉換器 (封送處理) 
 
@@ -243,6 +243,18 @@ Path: $.TemperatureRanges | LineNumber: 4 | BytePositionInLine: 24
 * 字串至 `string`
 * 其他專案 `JsonElement`
 
+::: zone pivot="dotnet-5-0"
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterInferredTypesToObject.cs":::
+
+此範例會顯示轉換器程式碼和 `WeatherForecast` 具有屬性的類別 `object` 。 `Main`方法會先將 JSON 字串還原序列化為 `WeatherForecast` 實例，而不使用轉換器，然後使用轉換器。 主控台輸出顯示，如果沒有轉換器，屬性的執行時間類型 `Date` 為 `JsonElement` ; 使用轉換器時，執行時間類型為 `DateTime` 。
+
+命名空間中的 [單元測試資料夾](https://github.com/dotnet/runtime/tree/c72b54243ade2e1118ab24476220a2eba6057466/src/libraries/System.Text.Json/tests/Serialization/) `System.Text.Json.Serialization` 有更多的自訂轉換器範例，可處理屬性的還原序列化 `object` 。
+
+:::zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs":::
 
 下列程式碼會註冊轉換器：
@@ -266,6 +278,8 @@ Path: $.TemperatureRanges | LineNumber: 4 | BytePositionInLine: 24
 如果沒有自訂轉換器，還原序列化會 `JsonElement` 在每個屬性中放置。
 
 命名空間中的 [單元測試資料夾](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) `System.Text.Json.Serialization` 有更多的自訂轉換器範例，可處理屬性的還原序列化 `object` 。
+
+:::zone-end
 
 ::: zone pivot="dotnet-core-3-1"
 

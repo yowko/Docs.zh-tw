@@ -1,21 +1,21 @@
 ---
-title: .NET Core 執行時間識別碼 (RID) 目錄
-description: 深入瞭解執行時間識別碼 (RID) 以及如何在 .NET Core 中使用 Rid。
-ms.date: 12/15/2020
-ms.openlocfilehash: 6b45c42d626de41c7d67c66aac7dc31c51c36a22
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+title: .NET 執行時間識別碼 (RID) 目錄
+description: 深入瞭解執行時間識別碼 (RID) 以及如何在 .NET 中使用 Rid。
+ms.date: 01/28/2021
+ms.openlocfilehash: e5e1c4712965211b25a02b14a7cf2c91d74d8306
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970664"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216001"
 ---
-# <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
+# <a name="net-rid-catalog"></a>.NET RID 目錄
 
 RID 是執行時間 *識別碼* 的縮寫。 RID 值是用來識別應用程式執行所在的目標平台。
 .NET 套件會使用它們來代表 NuGet 套件中的平台特定資產。 下列值是 RID 的範例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。
 針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。
 
-單一 RID 可在您專案檔的 `<RuntimeIdentifier>` 元素中設定。 可以在專案檔的 `<RuntimeIdentifiers>` 元素中，將多個 RID 定義為以分號分隔的清單。 它們也可以透過以`--runtime`選項搭配下列 [.NET Core CLI 命令](./tools/index.md)來使用：
+單一 RID 可在您專案檔的 `<RuntimeIdentifier>` 元素中設定。 可以在專案檔的 `<RuntimeIdentifiers>` 元素中，將多個 RID 定義為以分號分隔的清單。 您也可以使用 `--runtime` 下列 [.net CLI 命令](./tools/index.md)透過選項來使用它們：
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -82,7 +82,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json)參閱存放庫中的 `dotnet/runtime` 檔案runtime.js。
 
-.NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值，適用於 .NET Core 2.0 和更新版本。 由於大部分發行版本的 RID 都會對應至可攜式 RID，因此在處理多個 Linux 發行版本時特別有用。
+可移植 Rid 是新增至 RID 圖形的值，不會系結至特定版本或 OS 散發套件。 這些是慣用的選擇，特別是在處理多個 Linux 散發版本時，因為大部分的散發 Rid 都對應到可移植 Rid。
 
 下列清單顯示用於每個 OS 的一小部分最常見 RID。
 
@@ -90,7 +90,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 僅列出常見值。 如需最新的完整版本，請[](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json)參閱存放庫中的 `dotnet/runtime` 檔案runtime.js。
 
-- 可攜式 (.NET Core 2.0 或更新版本)
+- 可攜式
   - `win-x64`
   - `win-x86`
   - `win-arm`
@@ -108,7 +108,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `win10-arm`
   - `win10-arm64`
 
-如需詳細資訊，請參閱 [.Net Core 相依性和需求](./install/windows.md#dependencies)。
+如需詳細資訊，請參閱 .Net 相依性 [和需求](./install/windows.md#dependencies)。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -127,7 +127,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-如需詳細資訊，請參閱 [.Net Core 相依性和需求](./install/linux.md)。
+如需詳細資訊，請參閱 .Net 相依性 [和需求](./install/linux.md)。
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -151,8 +151,8 @@ macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的�
   - `osx.11.0-x64`
   - `osx.11.0-arm64`
 
-如需詳細資訊，請參閱 [.Net Core 相依性和需求](./install/macos.md#dependencies)。
+如需詳細資訊，請參閱 .Net 相依性 [和需求](./install/macos.md#dependencies)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段識別碼](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/readme.md)

@@ -3,12 +3,12 @@ title: 開始使用 .NET 的教學課程
 description: 選擇學習 .NET 應用程式開發或其中一種 .NET 程式設計語言的教學課程。
 author: tdykstra
 ms.date: 09/30/2020
-ms.openlocfilehash: 3002b23dcae44b38c9e4dbc2679a2919f1a8d1ce
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e41a6ce0ae3e1c58b9d83eb644b2e68362cc04ed
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827174"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215903"
 ---
 # <a name="tutorials-for-getting-started-with-net"></a>開始使用 .NET 的教學課程
 
@@ -44,7 +44,7 @@ ms.locfileid: "94827174"
 
 ## <a name="resources-for-learning-net-languages"></a>學習 .NET 語言的資源
 
-* [開始使用 C#](../csharp/getting-started/index.md)
+* [開始使用 C#](../csharp/tour-of-csharp/index.md)
 * [開始使用 F#](../fsharp/get-started/index.md)
 * [開始使用 Visual Basic](../visual-basic/getting-started/index.md)
 
@@ -52,9 +52,9 @@ ms.locfileid: "94827174"
 
 下列資源適用于開始開發 .NET 應用程式，但不是逐步教學課程：
 
-* [物聯網 (IoT) ](https://dotnet.microsoft.com/apps/iot)
+* [物聯網 (IoT)](https://dotnet.microsoft.com/apps/iot)
 * [機器學習](../machine-learning/index.yml)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 若要深入瞭解 .NET，請參閱 [.Net 簡介](../core/introduction.md)。

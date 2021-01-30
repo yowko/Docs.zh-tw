@@ -1,20 +1,20 @@
 ---
-title: 管理 .NET Core 中的相依性
-description: 說明如何管理 .NET Core 應用程式的專案相依性。
+title: 管理 .NET 中的相依性
+description: 說明如何管理 .NET 應用程式的專案相依性。
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
 ms.topic: how-to
-ms.date: 02/25/2020
-ms.openlocfilehash: 2aeedb56f774b51076764c2772eb02b2fa095d92
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.date: 01/28/2021
+ms.openlocfilehash: 9f5f814d0b4dc7aa3ff1a938c172475169a55bf2
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062856"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216124"
 ---
-# <a name="manage-dependencies-in-net-core-applications"></a>管理 .NET Core 應用程式中的相依性
+# <a name="manage-dependencies-in-net-applications"></a>管理 .NET 應用程式中的相依性
 
 本文說明如何藉由編輯專案檔或使用 CLI 來新增和移除相依性。
 
@@ -26,10 +26,10 @@ ms.locfileid: "88062856"
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-`Include`屬性會指定要加入至專案的封裝識別碼。 `Version`屬性會指定要取得的版本。 版本是根據[NuGet 版本規則](/nuget/create-packages/dependency-versions#version-ranges)來指定。
+`Include`屬性會指定要加入至專案的封裝識別碼。 `Version`屬性會指定要取得的版本。 版本是依據 [NuGet 版本規則](/nuget/create-packages/dependency-versions#version-ranges)來指定。
 
 > [!NOTE]
-> 如果您不熟悉專案檔語法，請參閱[MSBuild 專案參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)檔以取得詳細資訊。
+> 如果您不熟悉專案檔語法，請參閱 [MSBuild 專案參考](/visualstudio/msbuild/msbuild-project-file-schema-reference) 檔，以取得詳細資訊。
 
 使用條件來新增只能在特定目標中使用的相依性，如下列範例所示：
 
@@ -37,11 +37,11 @@ ms.locfileid: "88062856"
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-上述範例中的相依性只有在該指定目標的組建發生時才有效。 `$(TargetFramework)`條件中的是在專案中設定的 MSBuild 屬性。 對於最常見的 .NET Core 應用程式，您不需要這麼做。
+上述範例中的相依性只有在針對該指定目標進行組建時，才會是有效的。 `$(TargetFramework)`條件中的是在專案中設定的 MSBuild 屬性。 針對大部分常見的 .NET 應用程式，您不需要這麼做。
 
-## <a name="add-a-dependency-by-editing-the-project-file"></a>藉由編輯專案檔來新增相依性
+## <a name="add-a-dependency-by-editing-the-project-file"></a>藉由編輯專案檔案來新增相依性
 
-若要新增相依性，請 `<PackageReference>` 在專案內加入元素 `<ItemGroup>` 。 您可以將加入至現有的， `<ItemGroup>` 或建立一個新的。 下列範例會使用所建立的預設主控台應用程式專案 `dotnet new console` ：
+若要加入相依性，請 `<PackageReference>` 在元素內新增專案 `<ItemGroup>` 。 您可以加入現有的 `<ItemGroup>` 或建立一個新的。 下列範例會使用由建立的預設主控台應用程式專案 `dotnet new console` ：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -65,7 +65,7 @@ ms.locfileid: "88062856"
 dotnet add package Microsoft.EntityFrameworkCore
 ```
 
-## <a name="remove-a-dependency-by-editing-the-project-file"></a>藉由編輯專案檔來移除相關性
+## <a name="remove-a-dependency-by-editing-the-project-file"></a>藉由編輯專案檔案來移除相依性
 
 若要移除相依性，請 `<PackageReference>` 從專案檔中移除其元素。
 
@@ -80,4 +80,4 @@ dotnet remove package Microsoft.EntityFrameworkCore
 ## <a name="see-also"></a>另請參閱
 
 * [專案檔中的套件參考](../project-sdk/msbuild-props.md#reference-properties-and-items)
-* [dotnet list package命令](dotnet-list-package.md)
+* [dotnet list package 命令](dotnet-list-package.md)

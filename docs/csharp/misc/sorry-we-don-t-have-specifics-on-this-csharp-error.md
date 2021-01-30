@@ -1,5 +1,6 @@
 ---
 title: 抱歉，我們沒有這個 C# 錯誤的具體內容。
+description: 尚未記載之編譯器錯誤和警告的可能資源清單。
 ms.date: 08/04/2020
 f1_keywords:
 - CS0181
@@ -736,12 +737,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 16420ee5889779e3aefdbc15f1050aeeeea8f624
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: c16698fbbf42e0967978a3502243793835f541c5
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804608"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216898"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>抱歉，我們沒有這個 C# 錯誤的具體內容。
 
@@ -753,11 +754,9 @@ ms.locfileid: "91804608"
  [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  
 針對 Visual c # 的相關問題提供 QA 網站。  
 
- 也請參閱：  
- [Visual C# 程式設計人員的其他資源](../getting-started/index.md)  
-  
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../programming-guide/index.md)
 - [C # 參考](../language-reference/index.md)
 - [與我們交談](/visualstudio/ide/feedback-options)
+- [Visual C# 程式設計人員的其他資源](../tour-of-csharp/index.md)

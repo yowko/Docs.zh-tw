@@ -3,13 +3,13 @@ title: .NET 中的選項模式
 author: IEvangelist
 description: 瞭解如何使用選項模式來代表 .NET 應用程式中的相關設定群組。
 ms.author: dapine
-ms.date: 01/06/2021
-ms.openlocfilehash: 392b3abca01864349f8b1b25ffb3109132d2435a
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 01/21/2021
+ms.openlocfilehash: 413f731337a6012bb1e29f1f38c2df6da7525867
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189728"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216026"
 ---
 # <a name="options-pattern-in-net"></a>.NET 中的選項模式
 
@@ -347,3 +347,4 @@ services.PostConfigureAll<CustomOptions>(customOptions =>
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 中的設定](configuration.md)
+- [.NET 程式庫作者的選項模式指引](options-library-authors.md)

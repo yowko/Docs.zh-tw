@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025077"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216469"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET source 程式碼分析總覽
 
@@ -42,14 +42,14 @@ ms.locfileid: "98025077"
 
 | 診斷識別碼 | 類別 | 嚴重性 | 描述 |
 | - | - | - | - |
-| [CA1416](/visualstudio/code-quality/ca1416) | 互通性 | Warning | 平台相容性分析器 |
-| [CA1417](/visualstudio/code-quality/ca1417) | 互通性 | Warning | 請勿 `OutAttribute` 在 P/invoke 的字串參數上使用 |
-| [CA1831](/visualstudio/code-quality/ca1831) | 效能 | Warning | `AsSpan`適當時，請使用而不是字串以範圍為基礎的索引子 |
-| [CA2013](/visualstudio/code-quality/ca2013) | 可靠性 | Warning | 請勿搭配實 `ReferenceEquals` 數值型別使用 |
-| [CA2014](/visualstudio/code-quality/ca2014) | 可靠性 | Warning | 不要 `stackalloc` 在迴圈中使用 |
-| [CA2015](/visualstudio/code-quality/ca2015) | 可靠性 | Warning | 請勿針對衍生自的類型定義完成項 <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 使用方式 | Warning | 必須重新擲回以保存堆疊詳細資料
-| [CA2247](/visualstudio/code-quality/ca2247) | 使用方式 | Warning | 傳遞至 >taskcompletionsource 函式的引數應該是 <xref:System.Threading.Tasks.TaskCreationOptions> 列舉，而不是 <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA1416](/visualstudio/code-quality/ca1416) | 互通性 | 警告 | 平台相容性分析器 |
+| [CA1417](/visualstudio/code-quality/ca1417) | 互通性 | 警告 | 請勿 `OutAttribute` 在 P/invoke 的字串參數上使用 |
+| [CA1831](/visualstudio/code-quality/ca1831) | 效能 | 警告 | `AsSpan`適當時，請使用而不是字串以範圍為基礎的索引子 |
+| [CA2013](/visualstudio/code-quality/ca2013) | 可靠性 | 警告 | 請勿搭配實 `ReferenceEquals` 數值型別使用 |
+| [CA2014](/visualstudio/code-quality/ca2014) | 可靠性 | 警告 | 不要 `stackalloc` 在迴圈中使用 |
+| [CA2015](/visualstudio/code-quality/ca2015) | 可靠性 | 警告 | 請勿針對衍生自的類型定義完成項 <xref:System.Buffers.MemoryManager%601> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 使用方式 | 警告 | 必須重新擲回以保存堆疊詳細資料
+| [CA2247](/visualstudio/code-quality/ca2247) | 使用方式 | 警告 | 傳遞至 >taskcompletionsource 函式的引數應該是 <xref:System.Threading.Tasks.TaskCreationOptions> 列舉，而不是 <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 您可以變更這些規則的嚴重性來停用它們，或將它們提升為錯誤。 您也可以 [啟用更多規則](#enable-additional-rules)。
 
@@ -127,7 +127,7 @@ ms.locfileid: "98025077"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   或者，您可以將整個「樣式」類別設定為警告或錯誤（依預設，），然後選擇性地關閉您不想在組建上執行的規則。 例如：
+   或者，您也可以將整個類別設定為警告或錯誤，依預設，然後選擇性地關閉該類別中不想要在組建上執行的規則。 例如：
 
    ```ini
    [*.{cs,vb}]

@@ -1,17 +1,17 @@
 ---
 title: C# 程式深入解析
-description: '使用這些資源來瞭解 c # 程式的一般結構，包括標準範例： Hello，World！'
+description: '您可以使用這些資源來瞭解 c # 程式的一般結構，包括標準範例： Hello，World！'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: ecf526d77fcf9df83fa832c57de0e1921d27e3f3
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 05b0d6542e5a786d0aa36a034c08b07acea26e74
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303344"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216820"
 ---
 # <a name="inside-a-c-program"></a>C# 程式深入解析
 
@@ -29,7 +29,7 @@ ms.locfileid: "87303344"
 
 ## <a name="related-sections"></a>相關章節
 
-- [C# 使用者入門](../../getting-started/index.md)
+- [使用 C 的開始#](../../tour-of-csharp/index.md)
 
 - [C # 程式設計指南](../index.md)
 

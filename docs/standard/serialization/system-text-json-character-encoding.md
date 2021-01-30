@@ -1,7 +1,7 @@
 ---
 title: 如何使用自訂字元編碼 System.Text.Json
 description: 瞭解如何自訂字元編碼，以及如何在 .NET 中從 JSON 序列化和還原序列化。
-ms.date: 11/30/2020
+ms.date: 01/22/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: cfb83af0c58e0c9dfb73ecb8e2177d255e403fae
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 136a75ab73767fd79f99caa1d1387706ab655473
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009621"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215975"
 ---
 # <a name="how-to-customize-character-encoding-with-no-locsystemtextjson"></a>如何使用自訂字元編碼 System.Text.Json
 
@@ -47,6 +47,8 @@ ms.locfileid: "97009621"
 }
 ```
 
+根據預設，編碼器會以 <xref:System.Text.Unicode.UnicodeRanges.BasicLatin> 範圍初始化。
+
 若要在不經過轉義的情況下序列化所有語言集，請使用 <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType> 。
 
 ## <a name="serialize-specific-characters"></a>序列化特定字元
@@ -67,6 +69,20 @@ ms.locfileid: "97009621"
 }
 ```
 
+## <a name="block-lists"></a>封鎖清單
+
+上述各節顯示如何指定您不想要加入的程式碼點或範圍的允許清單。 不過，有全域和編碼器專屬的區塊清單，可覆寫您允許清單中的特定程式碼點。 區塊清單中的程式碼點一律會進行轉義，即使它們包含在您的允許清單中也一樣。
+
+### <a name="global-block-list"></a>全域封鎖清單
+
+全域封鎖清單包括私用字元、控制字元、未定義的程式碼點，以及某些 Unicode 類別，例如 [Space_Separator 分類](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5B:General_Category=Space_Separator:%5D)（排除） `U+0020 SPACE` 。 例如， `U+3000 IDEOGRAPHIC SPACE` 即使您指定 Unicode 範圍 [CJK 符號和標點符號 (u +3000-U + 303F) ](xref:System.Text.Unicode.UnicodeRanges.CjkSymbolsandPunctuation) 做為您的允許清單，也會進行轉義。
+
+全域封鎖清單是每個 .NET Core 和 .NET 5 版本中已變更的實做詳細資料。 請勿相依于屬於 (成員或不是) 全域封鎖清單成員的字元。
+
+### <a name="encoder-specific-block-lists"></a>編碼器特定的區塊清單
+
+編碼器特定封鎖的程式碼點範例包括 `'<'` 和 `'&'` 適用于 [HTML 編碼器](xref:System.Text.Encodings.Web.HtmlEncoder)、 `'\'` [JSON 編碼器](xref:System.Text.Encodings.Web.JavaScriptEncoder)，以及 `'%'` [URL 編碼器](xref:System.Text.Encodings.Web.UrlEncoder)。 例如， `'&'` 即使連字號是在範圍內， `BasicLatin` 而且所有編碼器都會依預設初始化，HTML 編碼程式一律會將 & 符號 () `BasicLatin` 。
+
 ## <a name="serialize-all-characters"></a>序列化所有字元
 
 若要最小化可以使用 <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType> 的轉義，如下列範例所示：
@@ -83,7 +99,7 @@ ms.locfileid: "97009621"
 >
 > 只有在已知用戶端會將產生的承載解讀為 UTF-8 編碼的 JSON 時，才使用 unsafe 編碼器。 例如，如果伺服器正在傳送回應標頭，您可以使用它 `Content-Type: application/json; charset=utf-8` 。 絕不允許將原始 `UnsafeRelaxedJsonEscaping` 輸出發出至 HTML 網頁或 `<script>` 元素。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [System.Text.Json 概述](system-text-json-overview.md)
 * [如何將 JSON 序列化及還原序列化](system-text-json-how-to.md)

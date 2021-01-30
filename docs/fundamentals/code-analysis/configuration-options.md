@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 0687bcb16cae6a0a2dde6c7864a1af1d0027e122
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851786"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216456"
 ---
 # <a name="configuration-options-for-code-analysis"></a>程式碼分析的設定選項
 
@@ -60,7 +60,7 @@ generated_code = true
 
 下表顯示您可以為所有分析器規則（包括程式 [代碼品質](quality-rules/index.md) 和程式 [代碼樣式](style-rules/index.md) 規則）設定的不同規則嚴重性。
 
-| Severity | 組建階段行為 |
+| 嚴重性 | 組建階段行為 |
 |-|-|
 | `error` | 違規會顯示為組建 *錯誤* ，導致組建失敗。|
 | `warning` | 違規會顯示為組建 *警告* ，但不會造成組建失敗 (除非您有選項設定為 [錯誤時將警告視為錯誤]) 。 |
@@ -80,7 +80,7 @@ generated_code = true
 dotnet_diagnostic.<rule ID>.severity = <severity value>
 ```
 
-若要設定分析器規則類別的預設規則嚴重性，請使用下列語法。
+若要設定分析器規則類別的預設規則嚴重性，請使用下列語法。 每個規則的類別都是在個別規則參考頁面中提供，例如 [CA1000](quality-rules/ca1000.md)。
 
 ```ini
 dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity value>

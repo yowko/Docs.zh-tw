@@ -2,14 +2,16 @@
 title: 定義類型及其成員-C 的教學課程#
 description: '程式的建立要素為類型。 瞭解如何在 c # 中建立類別、結構、介面等等。'
 ms.date: 08/06/2020
-ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b1ce24611fec6fdf01d5ecb8d6ae974e147c78c5
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88559111"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216599"
 ---
 # <a name="types-and-members"></a>類型和成員
+
+C# 為物件導向語言，支援封裝、繼承和多型的概念。 類別可直接繼承自一個父類別，而且可能會執行任意數目的介面。 覆寫父類別中虛擬方法的方法需要利用 `override` 關鍵字，避免意外重複定義。 在 c # 中，結構就像輕量類別;它是堆疊配置的型別，可以執行介面，但不支援繼承。 C # 也提供記錄，也就是其用途主要儲存資料值的類別類型。
 
 ## <a name="classes-and-objects"></a>類別與物件
 
@@ -32,7 +34,7 @@ ms.locfileid: "88559111"
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="CreatePoints":::
 
-當物件不再可供存取時，系統會自動回收物件所佔用的記憶體。 不需要也不可能在 c # 中明確解除配置物件。
+當物件不再可供存取時，系統會自動回收物件所佔用的記憶體。 您不需要或無法在 c # 中明確解除配置物件。
 
 ### <a name="type-parameters"></a>型別參數
 
