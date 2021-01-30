@@ -1,6 +1,6 @@
 ---
 title: 將 .NET Core 元件公開給 COM
-description: 本教學課程說明如何從 .NET Core 向 COM 公開類別。 您可以針對免登錄的 COM 產生 COM 伺服器和並存伺服器資訊清單。
+description: 本教學課程說明如何從 .NET Core 向 COM 公開類別。 您可以為 Registry-Free COM 產生 COM 伺服器和並存伺服器資訊清單。
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 13c91e5cb6728c5669642d1b5f7bb461efdd44f8
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608345"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065047"
 ---
 # <a name="exposing-net-core-components-to-com"></a>將 .NET Core 元件公開給 COM
 
@@ -24,7 +24,7 @@ ms.locfileid: "88608345"
 - 在建置您的 .NET Core 程式庫時，一併產生 COM 伺服器。
 - 自動為 Registry-Free COM 產生並存伺服器資訊清單。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 安裝 [.Net Core 3.0 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 
@@ -92,6 +92,9 @@ GitHub 上的 dotnet/samples 存放庫提供功能完整的 [COM 伺服器範例
 ## <a name="additional-notes"></a>其他注意事項
 
 不同於 .NET Framework，.NET Core 不支援從 .NET Core 組件產生 COM 型別程式庫 (TLB)。 本指引是針對 COM 介面的原生宣告，手動寫入 IDL 檔案或 C/c + + 標頭。
+
+> [!IMPORTANT]
+> 在 .NET Framework 中，32位和64位用戶端都可以使用「任何 CPU」元件。 根據預設，在 .NET Core、.NET 5 和更新版本中，「任何 CPU」元件都伴隨著64位的 *\*.comhost.dll*。 因此，只有64位用戶端才能使用它們。 這是預設值，因為這是 SDK 所代表的。 此行為與「獨立式」功能的發佈方式相同：根據預設，它會使用 SDK 提供的功能。 `NETCoreSdkRuntimeIdentifier`MSBuild 屬性會決定 *\*.comhost.dll* 的位數。 受控元件實際上是與預期無關的位，但隨附的原生資產預設為目標 SDK。
 
 不支援 COM 元件的[獨立部署](../deploying/index.md#publish-self-contained)。 僅支援與 [framework 相依](../deploying/index.md#publish-framework-dependent) 的 COM 元件部署。
 
