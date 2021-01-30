@@ -2,12 +2,12 @@
 title: 官方 .NET Docker 映像
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET Docker 映像
 ms.date: 01/13/2021
-ms.openlocfilehash: 3f4b58b2775c4e80b69cbd707396ebe98ccfe29c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 072e565260bf81c123ee837ccca46fbdf7c67361
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188617"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065118"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -48,7 +48,7 @@ ms.locfileid: "98188617"
 | 映像 | 註解 |
 |-------|----------|
 | mcr.microsoft.com/dotnet/aspnet：**5.0** | Linux 和 Windows 上的 ASP.NET Core，具有僅執行階段和 ASP.NET Core 最佳化 (多架構) |
-| mcr.microsoft.com/dotnet/sdk：**5.01** | Linux 和 Windows 上的 .NET 5 包含 Sdk， (多架構的)  |
+| mcr.microsoft.com/dotnet/sdk：**5.0** | Linux 和 Windows 上的 .NET 5 包含 Sdk， (多架構的)  |
 
 > [!div class="step-by-step"]
 > [上一個](net-container-os-targets.md) 
