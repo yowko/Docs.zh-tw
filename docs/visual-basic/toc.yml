@@ -338,16 +338,17 @@
         - name: UShort 資料類型
           href: language-reference/data-types/ushort-data-type.md
     - name: 指示詞
-      href: language-reference/directives/index.md
       items:
-        - name: '#Const 指示詞'
+        - name: '#常數'
           href: language-reference/directives/const-directive.md
-        - name: '#ExternalSource 指示詞'
+        - name: '#ExternalSource'
           href: language-reference/directives/externalsource-directive.md
-        - name: '#If...Then...#Else 指示詞'
+        - name: '#如果。。。Then ... #Else'
           href: language-reference/directives/if-then-else-directives.md
-        - name: '#Region 指示詞'
+        - name: '#區域'
           href: language-reference/directives/region-directive.md
+        - name: '#停用和 #Enable'
+          href: language-reference/directives/disable-enable.md
     - name: 函式
       href: language-reference/functions/index.md
       items:

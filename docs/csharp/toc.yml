@@ -1,21 +1,16 @@
 items:
   - name: C# 文件
     href: index.yml
-  - name: 開始使用
+  - name: C# 導覽
     items:
-      - name: C# 語言與 .NET 簡介
-        displayName: get started
-        href: getting-started/index.md
-      - name: C# 導覽
-        items:
-          - name: 簡介
-            href: tour-of-csharp/index.md
-          - name: 類型
-            href: tour-of-csharp/types.md
-          - name: 程式建置區塊
-            href: tour-of-csharp/program-building-blocks.md
-          - name: 主要語言區域
-            href: tour-of-csharp/features.md
+      - name: 簡介
+        href: tour-of-csharp/index.md
+      - name: 類型
+        href: tour-of-csharp/types.md
+      - name: 程式建置區塊
+        href: tour-of-csharp/program-building-blocks.md
+      - name: 主要語言區域
+        href: tour-of-csharp/features.md
   - name: 教學課程
     items:
       - name: 總覽
