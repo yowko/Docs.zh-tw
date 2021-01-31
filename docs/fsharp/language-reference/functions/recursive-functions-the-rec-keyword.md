@@ -2,12 +2,12 @@
 title: 遞迴函式：rec 關鍵字
 description: "瞭解如何搭配 ' let ' 關鍵字使用 F # ' rec ' 關鍵字來定義遞迴函數。"
 ms.date: 08/12/2020
-ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 27f215f7b6f09646e847898c2618cfac10175e6e
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438070"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215708"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>遞迴函式：rec 關鍵字
 
@@ -33,12 +33,12 @@ and function2-nameparameter-list =
 
 遞迴函式-呼叫本身的函式會在 F # 語言中使用關鍵字明確識別 `rec` 。 關鍵字讓系結的 `rec` 名稱 `let` 可在其主體中使用。
 
-下列範例顯示的遞迴函式，會使用數學定義來計算<sup>第</sup> *n*個斐的量值。
+下列範例顯示的遞迴函式，會使用數學定義來計算 <sup>第</sup> *n* 個斐的量值。
 
 ```fsharp
 let rec fib n =
     match n with
-    | 0 | 1 -> 1
+    | 0 | 1 -> n
     | n -> fib (n-1) + fib (n-2)
 ```
 
@@ -51,7 +51,7 @@ let rec fib n =
 type MyClass() =
     member this.Fib(n) =
         match n with
-        | 0 | 1 -> 1
+        | 0 | 1 -> n
         | n -> this.Fib(n-1) + this.Fib(n-2)
 ```
 
@@ -86,7 +86,7 @@ let fib n =
 
 ## <a name="mutually-recursive-functions"></a>相互遞迴函數
 
-有時候函式是 *相互遞迴*的，這表示呼叫會形成圓形，其中一個函式會呼叫另一個函式，而後者會呼叫另一個函式，並在其間有任意數目的呼叫。 您必須在一個系結中一起定義這類函數 `let` ， `and` 並使用關鍵字將它們連結在一起。
+有時候函式是 *相互遞迴* 的，這表示呼叫會形成圓形，其中一個函式會呼叫另一個函式，而後者會呼叫另一個函式，並在其間有任意數目的呼叫。 您必須在一個系結中一起定義這類函數 `let` ， `and` 並使用關鍵字將它們連結在一起。
 
 下列範例顯示兩個互相遞迴的函式。
 
