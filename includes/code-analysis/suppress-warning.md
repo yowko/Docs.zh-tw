@@ -1,20 +1,11 @@
 ---
-ms.openlocfilehash: b26e346f7076a57aef8ae7587ab1222b4100a323
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 8ce8b233169ec2854f6f92b166ff9a367f562553
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957932"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99217626"
 ---
-## <a name="suppress-a-warning"></a><span data-ttu-id="4b49e-101">隱藏警告</span><span class="sxs-lookup"><span data-stu-id="4b49e-101">Suppress a warning</span></span>
+## <a name="suppress-a-warning"></a><span data-ttu-id="9cc21-101">隱藏警告</span><span class="sxs-lookup"><span data-stu-id="9cc21-101">Suppress a warning</span></span>
 
-<span data-ttu-id="4b49e-102">若要隱藏規則違規，請在 EditorConfig 檔案中將特定規則識別碼的嚴重性選項設定為 `none` 。</span><span class="sxs-lookup"><span data-stu-id="4b49e-102">To suppress a rule violation, set the severity option for the specific rule ID to `none` in an EditorConfig file.</span></span> <span data-ttu-id="4b49e-103">例如：</span><span class="sxs-lookup"><span data-stu-id="4b49e-103">For example:</span></span>
-
-```ini
-[*.{cs,vb}]
-dotnet_diagnostic.CA1822.severity = none
-```
-
-<span data-ttu-id="4b49e-104">Visual Studio 提供其他方式來隱藏程式碼分析規則的警告。</span><span class="sxs-lookup"><span data-stu-id="4b49e-104">Visual Studio provides additional ways to suppress warnings from code analysis rules.</span></span> <span data-ttu-id="4b49e-105">如需詳細資訊，請參閱 [隱藏違規](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations)。</span><span class="sxs-lookup"><span data-stu-id="4b49e-105">For more information, see [Suppress violations](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).</span></span>
-
-<span data-ttu-id="4b49e-106">如需有關規則嚴重性的詳細資訊，請參閱 [設定規則嚴重性](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level)。</span><span class="sxs-lookup"><span data-stu-id="4b49e-106">For more information about rule severities, see [Configure rule severity](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level).</span></span>
+<span data-ttu-id="9cc21-102">有多種方式可以隱藏程式碼分析警告，包括停用專案的規則、使用預處理器指示詞針對特定的程式程式碼停用它，或是套用 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 屬性。</span><span class="sxs-lookup"><span data-stu-id="9cc21-102">There are various ways to suppress a code analysis warning, including disabling the rule for the project, using a preprocessor directive to disable it for a specific line of code, or by applying the <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> attribute.</span></span> <span data-ttu-id="9cc21-103">如需詳細資訊，請參閱 [如何隱藏程式碼分析警告](../../docs/fundamentals/code-analysis/suppress-warnings.md)。</span><span class="sxs-lookup"><span data-stu-id="9cc21-103">For more information, see [How to suppress code analysis warnings](../../docs/fundamentals/code-analysis/suppress-warnings.md).</span></span>
