@@ -17,7 +17,7 @@ ms.locfileid: "97899451"
 .NET 5.0 是 .NET Core 3.1 之後的下一個主要版本。 我們將這個新版本命名為 .NET 5.0 （而不是 .NET Core 4.0）有以下兩個原因：
 
 - 我們略過了版本號碼4.x，以避免與 .NET Framework 4.x 混淆。
-- 我們從名稱中捨棄了「核心」，以強調這是未來的 .NET 主要實作為。 .NET 5.0 支援比 .NET Core 或 .NET Framework 更多類型的應用程式和平臺。
+- 我們從名稱中捨棄了 `Core`，以強調這是未來的 .NET 主要實作為。 .NET 5.0 支援比 .NET Core 或 .NET Framework 更多類型的應用程式和平臺。
 
 ASP.NET Core 5.0 是以 .NET 5.0 為基礎，但會保留 "Core" 的名稱，以避免與 ASP.NET MVC 5 混淆。 同樣地，Entity Framework Core 5.0 會保留 "Core" 的名稱，以避免與 Entity Framework 5 和6混淆。
 
