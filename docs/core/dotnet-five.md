@@ -26,7 +26,7 @@ ASP.NET Core 5.0 是以 .NET 5.0 為基礎，但會保留 "Core" 的名稱，以
 - [C # 更新](#c-updates)
 - [F # 更新](#f-updates)
 - [Visual Basic 更新](#visual-basic-updates)
-- [ 新功能的System.Text.Js](#systemtextjson-new-features)
+- [System.Text.Json 的新功能](#systemtextjson-new-features)
 - [單一檔案應用程式](deploying/single-file.md)
 - [應用程式修剪](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - Windows ARM64 和 ARM64 內建函式
@@ -137,9 +137,9 @@ let message = $"%s{name} is %d{age} years old."
 
 如需 .NET CLI 專案範本的詳細資訊，請參閱 [`dotnet new`](tools/dotnet-new.md) 。
 
-## <a name="systemtextjson-new-features"></a>新功能的 System.Text.Js
+## <a name="systemtextjson-new-features"></a>System.Text.Json 的新功能
 
-和中有 [System.Text.Js](../standard/serialization/system-text-json-overview.md)的新功能：
+[System.Text.Json](../standard/serialization/system-text-json-overview.md) 的新功能：
 
 - [保留參考並處理迴圈參考](../standard/serialization/system-text-json-preserve-references.md)
 - [HttpClient 和 HttpContent 擴充方法](../standard/serialization/system-text-json-how-to.md#httpclient-and-httpcontent-extension-methods)
