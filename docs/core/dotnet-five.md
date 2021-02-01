@@ -14,7 +14,7 @@ ms.locfileid: "97899451"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
-.NET 5.0 是下一個 .NET Core 的主要版本，之後是3.1。 我們將這個新版本的 .NET 5.0 （而不是 .NET Core 4.0）命名為以下兩個原因：
+.NET 5.0 是 .NET Core 3.1 之後的下一個主要版本。 我們將這個新版本命名為 .NET 5.0 （而不是 .NET Core 4.0）有以下兩個原因：
 
 - 我們略過了版本號碼4.x，以避免與 .NET Framework 4.x 混淆。
 - 我們從名稱中捨棄了「核心」，以強調這是未來的 .NET 主要實作為。 .NET 5.0 支援比 .NET Core 或 .NET Framework 更多類型的應用程式和平臺。
